@@ -18,7 +18,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:microsoft-graph-beta:1.8.+')
+    compile('com.microsoft.graph:microsoft-graph-beta:0.1.0-SNAPSHOT')
 }
 ```
 
@@ -28,7 +28,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
 	<groupId>com.microsoft.graph</groupId>
 	<artifactId>microsoft-graph-beta</artifactId>
-	<version>1.8.0</version>
+	<version>0.1.0-SNAPSHOT</version>
 </dependency>
 ```
 
