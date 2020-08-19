@@ -30,5 +30,5 @@ public interface IImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder
     IImportedWindowsAutopilotDeviceIdentityRequestBuilder byId(final String id);
 
 
-    IImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder import(final java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities);
+    IImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder importStuff(final java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities);
 }
