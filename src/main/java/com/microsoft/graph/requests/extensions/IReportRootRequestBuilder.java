@@ -1,0 +1,374 @@
+// ------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+// ------------------------------------------------------------------------------
+
+package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.requests.extensions.IReportRootRequest;
+import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetAzureADLicenseUsageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetAzureADUserFeatureUsageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetAzureADFeatureUsageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetCredentialUserRegistrationCountCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetCredentialUsageSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetRelyingPartyDetailedSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationUserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureTrendsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentAbandonmentDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ServicesUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityGroupCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityStorageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityFileCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageAppsUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageVersionsUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageMailboxCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageStorageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityFileCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageFileCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageStorageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityFileCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityPagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageFileCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageSiteCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageStorageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsagePagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessOrganizerActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageDistributionUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityGroupCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserDetailCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetM365AppUserDetailRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetM365AppUserDetailRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetM365AppUserCountsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetM365AppPlatformUserCountsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootGetTenantSecureScoresRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.options.Option;
+import java.util.EnumSet;
+
+// **NOTE** This file was generated by a tool and any changes will be overwritten.
+
+/**
+ * The interface for the Report Root Request Builder.
+ */
+public interface IReportRootRequestBuilder extends IRequestBuilder {
+    /**
+     * Creates the request
+     *
+     * @return the IReportRootRequest instance
+     */
+    IReportRootRequest buildRequest();
+
+    /**
+     * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IReportRootRequest instance
+     */
+    IReportRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+
+
+    IApplicationSignInDetailedSummaryCollectionRequestBuilder applicationSignInDetailedSummary();
+
+    IApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(final String id);
+
+    ICredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails();
+
+    ICredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails(final String id);
+
+    IUserCredentialUsageDetailsCollectionRequestBuilder userCredentialUsageDetails();
+
+    IUserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails(final String id);
+
+    IPrintUsageSummaryByUserCollectionRequestBuilder dailyPrintUsageSummariesByUser();
+
+    IPrintUsageSummaryByUserRequestBuilder dailyPrintUsageSummariesByUser(final String id);
+
+    IPrintUsageSummaryByUserCollectionRequestBuilder monthlyPrintUsageSummariesByUser();
+
+    IPrintUsageSummaryByUserRequestBuilder monthlyPrintUsageSummariesByUser(final String id);
+
+    IPrintUsageSummaryByPrinterCollectionRequestBuilder dailyPrintUsageSummariesByPrinter();
+
+    IPrintUsageSummaryByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter(final String id);
+
+    IPrintUsageSummaryByPrinterCollectionRequestBuilder monthlyPrintUsageSummariesByPrinter();
+
+    IPrintUsageSummaryByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter(final String id);
+
+    IReportRootGetAzureADLicenseUsageCollectionRequestBuilder getAzureADLicenseUsage(final String period);
+
+    IReportRootGetAzureADUserFeatureUsageCollectionRequestBuilder getAzureADUserFeatureUsage();
+
+    IReportRootGetAzureADFeatureUsageCollectionRequestBuilder getAzureADFeatureUsage(final String period);
+
+    IReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder getAzureADApplicationSignInSummary(final String period);
+
+    IReportRootGetCredentialUserRegistrationCountCollectionRequestBuilder getCredentialUserRegistrationCount();
+
+    IReportRootGetCredentialUsageSummaryCollectionRequestBuilder getCredentialUsageSummary(final String period);
+
+    IReportRootGetRelyingPartyDetailedSummaryCollectionRequestBuilder getRelyingPartyDetailedSummary(final String period);
+    IReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity();
+    IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity();
+    IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails();
+    IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken);
+    IReportRootManagedDeviceEnrollmentFailureTrendsRequestBuilder managedDeviceEnrollmentFailureTrends();
+    IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures();
+    IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period);
+    IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequestBuilder managedDeviceEnrollmentAbandonmentSummary(final Integer skip, final Integer top, final String filter, final String skipToken);
+    IReportRootManagedDeviceEnrollmentAbandonmentDetailsRequestBuilder managedDeviceEnrollmentAbandonmentDetails(final Integer skip, final Integer top, final String filter, final String skipToken);
+
+    IReportRootGetOffice365ActivationsUserDetailCollectionRequestBuilder getOffice365ActivationsUserDetail();
+
+    IReportRootGetOffice365ActivationCountsCollectionRequestBuilder getOffice365ActivationCounts();
+
+    IReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder getOffice365ActivationsUserCounts();
+
+    IReportRootGetOffice365ActiveUserDetailCollectionRequestBuilder getOffice365ActiveUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetOffice365ActiveUserDetailCollectionRequestBuilder getOffice365ActiveUserDetail(final String period);
+
+    IReportRootGetOffice365ServicesUserCountsCollectionRequestBuilder getOffice365ServicesUserCounts(final String period);
+
+    IReportRootGetOffice365ActiveUserCountsCollectionRequestBuilder getOffice365ActiveUserCounts(final String period);
+
+    IReportRootGetOffice365GroupsActivityDetailCollectionRequestBuilder getOffice365GroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetOffice365GroupsActivityDetailCollectionRequestBuilder getOffice365GroupsActivityDetail(final String period);
+
+    IReportRootGetOffice365GroupsActivityCountsCollectionRequestBuilder getOffice365GroupsActivityCounts(final String period);
+
+    IReportRootGetOffice365GroupsActivityGroupCountsCollectionRequestBuilder getOffice365GroupsActivityGroupCounts(final String period);
+
+    IReportRootGetOffice365GroupsActivityStorageCollectionRequestBuilder getOffice365GroupsActivityStorage(final String period);
+
+    IReportRootGetOffice365GroupsActivityFileCountsCollectionRequestBuilder getOffice365GroupsActivityFileCounts(final String period);
+
+    IReportRootGetEmailActivityUserDetailCollectionRequestBuilder getEmailActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetEmailActivityUserDetailCollectionRequestBuilder getEmailActivityUserDetail(final String period);
+
+    IReportRootGetEmailActivityCountsCollectionRequestBuilder getEmailActivityCounts(final String period);
+
+    IReportRootGetEmailActivityUserCountsCollectionRequestBuilder getEmailActivityUserCounts(final String period);
+
+    IReportRootGetEmailAppUsageUserDetailCollectionRequestBuilder getEmailAppUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetEmailAppUsageUserDetailCollectionRequestBuilder getEmailAppUsageUserDetail(final String period);
+
+    IReportRootGetEmailAppUsageAppsUserCountsCollectionRequestBuilder getEmailAppUsageAppsUserCounts(final String period);
+
+    IReportRootGetEmailAppUsageUserCountsCollectionRequestBuilder getEmailAppUsageUserCounts(final String period);
+
+    IReportRootGetEmailAppUsageVersionsUserCountsCollectionRequestBuilder getEmailAppUsageVersionsUserCounts(final String period);
+
+    IReportRootGetMailboxUsageDetailCollectionRequestBuilder getMailboxUsageDetail(final String period);
+
+    IReportRootGetMailboxUsageMailboxCountsCollectionRequestBuilder getMailboxUsageMailboxCounts(final String period);
+
+    IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequestBuilder getMailboxUsageQuotaStatusMailboxCounts(final String period);
+
+    IReportRootGetMailboxUsageStorageCollectionRequestBuilder getMailboxUsageStorage(final String period);
+
+    IReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder getOneDriveActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder getOneDriveActivityUserDetail(final String period);
+
+    IReportRootGetOneDriveActivityUserCountsCollectionRequestBuilder getOneDriveActivityUserCounts(final String period);
+
+    IReportRootGetOneDriveActivityFileCountsCollectionRequestBuilder getOneDriveActivityFileCounts(final String period);
+
+    IReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder getOneDriveUsageAccountDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder getOneDriveUsageAccountDetail(final String period);
+
+    IReportRootGetOneDriveUsageAccountCountsCollectionRequestBuilder getOneDriveUsageAccountCounts(final String period);
+
+    IReportRootGetOneDriveUsageFileCountsCollectionRequestBuilder getOneDriveUsageFileCounts(final String period);
+
+    IReportRootGetOneDriveUsageStorageCollectionRequestBuilder getOneDriveUsageStorage(final String period);
+
+    IReportRootGetSharePointActivityUserDetailCollectionRequestBuilder getSharePointActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetSharePointActivityUserDetailCollectionRequestBuilder getSharePointActivityUserDetail(final String period);
+
+    IReportRootGetSharePointActivityFileCountsCollectionRequestBuilder getSharePointActivityFileCounts(final String period);
+
+    IReportRootGetSharePointActivityUserCountsCollectionRequestBuilder getSharePointActivityUserCounts(final String period);
+
+    IReportRootGetSharePointActivityPagesCollectionRequestBuilder getSharePointActivityPages(final String period);
+
+    IReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder getSharePointSiteUsageDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder getSharePointSiteUsageDetail(final String period);
+
+    IReportRootGetSharePointSiteUsageFileCountsCollectionRequestBuilder getSharePointSiteUsageFileCounts(final String period);
+
+    IReportRootGetSharePointSiteUsageSiteCountsCollectionRequestBuilder getSharePointSiteUsageSiteCounts(final String period);
+
+    IReportRootGetSharePointSiteUsageStorageCollectionRequestBuilder getSharePointSiteUsageStorage(final String period);
+
+    IReportRootGetSharePointSiteUsagePagesCollectionRequestBuilder getSharePointSiteUsagePages(final String period);
+
+    IReportRootGetSkypeForBusinessActivityUserDetailCollectionRequestBuilder getSkypeForBusinessActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetSkypeForBusinessActivityUserDetailCollectionRequestBuilder getSkypeForBusinessActivityUserDetail(final String period);
+
+    IReportRootGetSkypeForBusinessActivityCountsCollectionRequestBuilder getSkypeForBusinessActivityCounts(final String period);
+
+    IReportRootGetSkypeForBusinessActivityUserCountsCollectionRequestBuilder getSkypeForBusinessActivityUserCounts(final String period);
+
+    IReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(final String period);
+
+    IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsCollectionRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(final String period);
+
+    IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(final String period);
+
+    IReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionRequestBuilder getSkypeForBusinessOrganizerActivityCounts(final String period);
+
+    IReportRootGetSkypeForBusinessOrganizerActivityUserCountsCollectionRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(final String period);
+
+    IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsCollectionRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(final String period);
+
+    IReportRootGetSkypeForBusinessParticipantActivityCountsCollectionRequestBuilder getSkypeForBusinessParticipantActivityCounts(final String period);
+
+    IReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(final String period);
+
+    IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(final String period);
+
+    IReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final String period);
+
+    IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(final String period);
+
+    IReportRootGetSkypeForBusinessDeviceUsageUserCountsCollectionRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(final String period);
+
+    IReportRootGetYammerActivityUserDetailCollectionRequestBuilder getYammerActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetYammerActivityUserDetailCollectionRequestBuilder getYammerActivityUserDetail(final String period);
+
+    IReportRootGetYammerActivityCountsCollectionRequestBuilder getYammerActivityCounts(final String period);
+
+    IReportRootGetYammerActivityUserCountsCollectionRequestBuilder getYammerActivityUserCounts(final String period);
+
+    IReportRootGetYammerDeviceUsageUserDetailCollectionRequestBuilder getYammerDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetYammerDeviceUsageUserDetailCollectionRequestBuilder getYammerDeviceUsageUserDetail(final String period);
+
+    IReportRootGetYammerDeviceUsageDistributionUserCountsCollectionRequestBuilder getYammerDeviceUsageDistributionUserCounts(final String period);
+
+    IReportRootGetYammerDeviceUsageUserCountsCollectionRequestBuilder getYammerDeviceUsageUserCounts(final String period);
+
+    IReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder getYammerGroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder getYammerGroupsActivityDetail(final String period);
+
+    IReportRootGetYammerGroupsActivityGroupCountsCollectionRequestBuilder getYammerGroupsActivityGroupCounts(final String period);
+
+    IReportRootGetYammerGroupsActivityCountsCollectionRequestBuilder getYammerGroupsActivityCounts(final String period);
+
+    IReportRootGetTeamsUserActivityUserDetailCollectionRequestBuilder getTeamsUserActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetTeamsUserActivityUserDetailCollectionRequestBuilder getTeamsUserActivityUserDetail(final String period);
+
+    IReportRootGetTeamsUserActivityCountsCollectionRequestBuilder getTeamsUserActivityCounts(final String period);
+
+    IReportRootGetTeamsUserActivityUserCountsCollectionRequestBuilder getTeamsUserActivityUserCounts(final String period);
+
+    IReportRootGetTeamsDeviceUsageUserDetailCollectionRequestBuilder getTeamsDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+
+    IReportRootGetTeamsDeviceUsageUserDetailCollectionRequestBuilder getTeamsDeviceUsageUserDetail(final String period);
+
+    IReportRootGetTeamsDeviceUsageUserCountsCollectionRequestBuilder getTeamsDeviceUsageUserCounts(final String period);
+
+    IReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionRequestBuilder getTeamsDeviceUsageDistributionUserCounts(final String period);
+    IReportRootGetM365AppUserDetailRequestBuilder getM365AppUserDetail(final com.microsoft.graph.models.extensions.DateOnly date);
+    IReportRootGetM365AppUserDetailRequestBuilder getM365AppUserDetail(final String period);
+    IReportRootGetM365AppUserCountsRequestBuilder getM365AppUserCounts(final String period);
+    IReportRootGetM365AppPlatformUserCountsRequestBuilder getM365AppPlatformUserCounts(final String period);
+    IReportRootGetTenantSecureScoresRequestBuilder getTenantSecureScores(final Integer period);
+
+}
