@@ -73,7 +73,7 @@ publishing {
             artifact sourceJar
             pom.withXml {
                 def root = asNode()
-                root.appendNode('name', 'Microsoft Graph SDK for Java')
+                root.appendNode('name', 'Microsoft Graph Beta SDK for Java')
                 root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-beta-sdk-java')
                 root.children().last() + pomConfig
                 def pomFile = file("${project.buildDir}/libs/microsoft-graph-beta.pom")
