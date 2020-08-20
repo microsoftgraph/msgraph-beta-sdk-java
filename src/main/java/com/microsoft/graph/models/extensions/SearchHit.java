@@ -43,7 +43,7 @@ public class SearchHit implements IJsonBackedObject {
      */
     @SerializedName("_id")
     @Expose
-    public String string;
+    public String _id;
 
     /**
      * The _score.
@@ -51,7 +51,7 @@ public class SearchHit implements IJsonBackedObject {
      */
     @SerializedName("_score")
     @Expose
-    public Integer int32;
+    public Integer _score;
 
     /**
      * The _sort Field.
@@ -59,7 +59,7 @@ public class SearchHit implements IJsonBackedObject {
      */
     @SerializedName("_sortField")
     @Expose
-    public String string;
+    public String _sortField;
 
     /**
      * The _summary.
@@ -67,7 +67,7 @@ public class SearchHit implements IJsonBackedObject {
      */
     @SerializedName("_summary")
     @Expose
-    public String string;
+    public String _summary;
 
     /**
      * The _source.
@@ -75,7 +75,7 @@ public class SearchHit implements IJsonBackedObject {
      */
     @SerializedName("_source")
     @Expose
-    public Entity entity;
+    public Entity _source;
 
 
     /**

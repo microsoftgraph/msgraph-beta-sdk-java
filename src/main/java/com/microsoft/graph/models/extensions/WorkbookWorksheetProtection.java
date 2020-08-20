@@ -42,7 +42,7 @@ public class WorkbookWorksheetProtection extends Entity implements IJsonBackedOb
      */
     @SerializedName("protected")
     @Expose
-    public Boolean msgraphprotected;
+    public Boolean msgraphProtected;
 
 
     /**

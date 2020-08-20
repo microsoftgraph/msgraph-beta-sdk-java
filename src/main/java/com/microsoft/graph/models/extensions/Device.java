@@ -259,7 +259,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName("Name")
     @Expose
-    public String string;
+    public String name;
 
     /**
      * The Manufacturer.
@@ -267,7 +267,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName("Manufacturer")
     @Expose
-    public String string;
+    public String manufacturer;
 
     /**
      * The Model.
@@ -275,7 +275,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName("Model")
     @Expose
-    public String string;
+    public String model;
 
     /**
      * The Kind.
@@ -283,7 +283,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName("Kind")
     @Expose
-    public String string;
+    public String kind;
 
     /**
      * The Status.
@@ -291,7 +291,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName("Status")
     @Expose
-    public String string;
+    public String status;
 
     /**
      * The Platform.
@@ -299,7 +299,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      */
     @SerializedName("Platform")
     @Expose
-    public String string;
+    public String platform;
 
     /**
      * The Member Of.

@@ -60,7 +60,7 @@ public class CallRoute implements IJsonBackedObject {
      */
     @SerializedName("final")
     @Expose
-    public IdentitySet msgraphfinal;
+    public IdentitySet msgraphFinal;
 
 
     /**

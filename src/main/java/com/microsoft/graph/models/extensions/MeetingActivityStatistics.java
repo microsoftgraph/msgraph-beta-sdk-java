@@ -57,7 +57,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
      */
     @SerializedName("long")
     @Expose
-    public javax.xml.datatype.Duration msgraphlong;
+    public javax.xml.datatype.Duration msgraphLong;
 
     /**
      * The Conflicting.

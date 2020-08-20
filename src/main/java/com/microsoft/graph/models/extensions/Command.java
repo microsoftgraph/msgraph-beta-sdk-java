@@ -35,7 +35,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("Status")
     @Expose
-    public String string;
+    public String status;
 
     /**
      * The Type.
@@ -43,7 +43,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("Type")
     @Expose
-    public String string;
+    public String type;
 
     /**
      * The App Service Name.
@@ -51,7 +51,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("AppServiceName")
     @Expose
-    public String string;
+    public String appServiceName;
 
     /**
      * The Package Family Name.
@@ -59,7 +59,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("PackageFamilyName")
     @Expose
-    public String string;
+    public String packageFamilyName;
 
     /**
      * The Error.
@@ -67,7 +67,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("Error")
     @Expose
-    public String string;
+    public String error;
 
     /**
      * The Payload.
@@ -75,7 +75,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("Payload")
     @Expose
-    public PayloadRequest payloadRequest;
+    public PayloadRequest payload;
 
     /**
      * The Permission Ticket.
@@ -83,7 +83,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("PermissionTicket")
     @Expose
-    public String string;
+    public String permissionTicket;
 
     /**
      * The Post Back Uri.
@@ -91,7 +91,7 @@ public class Command extends Entity implements IJsonBackedObject {
      */
     @SerializedName("PostBackUri")
     @Expose
-    public String string;
+    public String postBackUri;
 
     /**
      * The Responsepayload.

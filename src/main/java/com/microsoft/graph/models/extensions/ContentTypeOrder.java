@@ -42,7 +42,7 @@ public class ContentTypeOrder implements IJsonBackedObject {
      */
     @SerializedName("default")
     @Expose
-    public Boolean msgraphdefault;
+    public Boolean msgraphDefault;
 
     /**
      * The Position.

@@ -48,7 +48,7 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder exte
 
 
 
-    public IImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder importStuff(final java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities) {
+    public IImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder msgraphImport(final java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities) {
         return new ImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.import"), getClient(), null, importedWindowsAutopilotDeviceIdentities);
     }
 }

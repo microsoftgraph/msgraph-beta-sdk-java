@@ -44,7 +44,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
      */
     @SerializedName("SingleSignOnMode")
     @Expose
-    public SingleSignOnMode singleSignOnModeProperty;
+    public SingleSignOnMode singleSignOnMode;
 
     /**
      * The Kerberos Sign On Settings.
@@ -52,7 +52,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
      */
     @SerializedName("KerberosSignOnSettings")
     @Expose
-    public KerberosSignOnSettings kerberosSignOnSettingsProperty;
+    public KerberosSignOnSettings kerberosSignOnSettings;
 
 
     /**

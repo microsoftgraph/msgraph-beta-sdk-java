@@ -144,7 +144,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName("package")
     @Expose
-    public com.microsoft.graph.models.extensions.Package msgraphpackage;
+    public com.microsoft.graph.models.extensions.Package msgraphPackage;
 
     /**
      * The Pending Operations.

@@ -132,7 +132,7 @@ public class RemoteItem implements IJsonBackedObject {
      */
     @SerializedName("package")
     @Expose
-    public com.microsoft.graph.models.extensions.Package msgraphpackage;
+    public com.microsoft.graph.models.extensions.Package msgraphPackage;
 
     /**
      * The Parent Reference.
