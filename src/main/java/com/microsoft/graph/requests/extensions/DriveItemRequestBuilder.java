@@ -35,8 +35,8 @@ import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionReques
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemContentStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCheckinRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequestBuilder;
@@ -190,8 +190,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
         return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
-    public IDriveItemStreamRequestBuilder content() {
-        return new DriveItemStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
+    public IDriveItemContentStreamRequestBuilder content() {
+        return new DriveItemContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
     public IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment) {

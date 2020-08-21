@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequest;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemVersionContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRestoreVersionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -33,7 +33,7 @@ public interface IDriveItemVersionRequestBuilder extends IRequestBuilder {
     IDriveItemVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IDriveItemVersionStreamRequestBuilder content();
+    IDriveItemVersionContentStreamRequestBuilder content();
     IDriveItemVersionRestoreVersionRequestBuilder restoreVersion();
 
 }

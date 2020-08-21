@@ -31,8 +31,8 @@ import com.microsoft.graph.requests.extensions.IConnectorGroupWithReferenceReque
 import com.microsoft.graph.requests.extensions.ConnectorGroupWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationLogoStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationLogoStreamRequestBuilder;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.requests.extensions.IApplicationAddKeyRequestBuilder;
@@ -151,8 +151,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
         return new SynchronizationRequestBuilder(getRequestUrlWithAdditionalSegment("synchronization"), getClient(), null);
     }
 
-    public IApplicationStreamRequestBuilder logo() {
-        return new ApplicationStreamRequestBuilder(getRequestUrlWithAdditionalSegment("logo"), getClient(), null);
+    public IApplicationLogoStreamRequestBuilder logo() {
+        return new ApplicationLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("logo"), getClient(), null);
     }
 
     public IApplicationAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof) {

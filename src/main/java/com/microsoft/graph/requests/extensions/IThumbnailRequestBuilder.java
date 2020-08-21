@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IThumbnailRequest;
-import com.microsoft.graph.requests.extensions.IThumbnailStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThumbnailContentStreamRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,6 +32,6 @@ public interface IThumbnailRequestBuilder extends IRequestBuilder {
     IThumbnailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IThumbnailStreamRequestBuilder content();
+    IThumbnailContentStreamRequestBuilder content();
 
 }

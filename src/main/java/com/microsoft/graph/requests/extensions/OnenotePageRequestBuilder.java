@@ -9,8 +9,8 @@ import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePageStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenotePageContentStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenotePageContentStreamRequestBuilder;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.requests.extensions.IOnenotePageOnenotePatchContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageOnenotePatchContentRequestBuilder;
@@ -81,8 +81,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
-    public IOnenotePageStreamRequestBuilder content() {
-        return new OnenotePageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
+    public IOnenotePageContentStreamRequestBuilder content() {
+        return new OnenotePageContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
     public IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {

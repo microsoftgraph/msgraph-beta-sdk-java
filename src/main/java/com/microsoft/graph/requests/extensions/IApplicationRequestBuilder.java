@@ -17,7 +17,7 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWit
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorGroupWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationLogoStreamRequestBuilder;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.requests.extensions.IApplicationAddKeyRequestBuilder;
@@ -93,7 +93,7 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
      */
     ISynchronizationRequestBuilder synchronization();
 
-    IApplicationStreamRequestBuilder logo();
+    IApplicationLogoStreamRequestBuilder logo();
     IApplicationAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof);
     IApplicationAddPasswordRequestBuilder addPassword(final PasswordCredential passwordCredential);
     IApplicationRemoveKeyRequestBuilder removeKey(final java.util.UUID keyId, final String proof);

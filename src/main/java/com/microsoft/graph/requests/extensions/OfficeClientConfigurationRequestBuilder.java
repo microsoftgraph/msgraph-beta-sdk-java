@@ -9,10 +9,10 @@ import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignm
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationPolicyPayloadStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfficeClientConfigurationPolicyPayloadStreamRequestBuilder;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCollectionRequestBuilder;
@@ -68,12 +68,12 @@ public class OfficeClientConfigurationRequestBuilder extends BaseRequestBuilder 
         return new OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
-    public IOfficeClientConfigurationStreamRequestBuilder userPreferencePayload() {
-        return new OfficeClientConfigurationStreamRequestBuilder(getRequestUrlWithAdditionalSegment("userPreferencePayload"), getClient(), null);
+    public IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder userPreferencePayload() {
+        return new OfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder(getRequestUrlWithAdditionalSegment("userPreferencePayload"), getClient(), null);
     }
 
-    public IOfficeClientConfigurationStreamRequestBuilder policyPayload() {
-        return new OfficeClientConfigurationStreamRequestBuilder(getRequestUrlWithAdditionalSegment("policyPayload"), getClient(), null);
+    public IOfficeClientConfigurationPolicyPayloadStreamRequestBuilder policyPayload() {
+        return new OfficeClientConfigurationPolicyPayloadStreamRequestBuilder(getRequestUrlWithAdditionalSegment("policyPayload"), getClient(), null);
     }
 
     public IOfficeClientConfigurationAssignCollectionRequestBuilder assign(final java.util.List<OfficeClientConfigurationAssignment> officeConfigurationAssignments) {

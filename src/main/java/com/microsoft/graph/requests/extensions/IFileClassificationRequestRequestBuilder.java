@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequest;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestFileStreamRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,6 +32,6 @@ public interface IFileClassificationRequestRequestBuilder extends IRequestBuilde
     IFileClassificationRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IFileClassificationRequestStreamRequestBuilder file();
+    IFileClassificationRequestFileStreamRequestBuilder file();
 
 }

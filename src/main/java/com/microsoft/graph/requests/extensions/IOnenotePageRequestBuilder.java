@@ -6,7 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequest;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenotePageContentStreamRequestBuilder;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.requests.extensions.IOnenotePageOnenotePatchContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageCopyToSectionRequestBuilder;
@@ -52,7 +52,7 @@ public interface IOnenotePageRequestBuilder extends IRequestBuilder {
      */
     INotebookRequestBuilder parentNotebook();
 
-    IOnenotePageStreamRequestBuilder content();
+    IOnenotePageContentStreamRequestBuilder content();
     IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
     IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId);
     IOnenotePagePreviewRequestBuilder preview();

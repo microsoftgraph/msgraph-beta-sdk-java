@@ -5,12 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequest;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequest;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingBackgroundImageStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingBackgroundImageStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingBannerLogoStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingBannerLogoStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingSquareLogoStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingSquareLogoStreamRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -56,16 +56,16 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder imp
 
 
 
-    public IOrganizationalBrandingStreamRequestBuilder backgroundImage() {
-        return new OrganizationalBrandingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("backgroundImage"), getClient(), null);
+    public IOrganizationalBrandingBackgroundImageStreamRequestBuilder backgroundImage() {
+        return new OrganizationalBrandingBackgroundImageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("backgroundImage"), getClient(), null);
     }
 
-    public IOrganizationalBrandingStreamRequestBuilder bannerLogo() {
-        return new OrganizationalBrandingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("bannerLogo"), getClient(), null);
+    public IOrganizationalBrandingBannerLogoStreamRequestBuilder bannerLogo() {
+        return new OrganizationalBrandingBannerLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("bannerLogo"), getClient(), null);
     }
 
-    public IOrganizationalBrandingStreamRequestBuilder squareLogo() {
-        return new OrganizationalBrandingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogo"), getClient(), null);
+    public IOrganizationalBrandingSquareLogoStreamRequestBuilder squareLogo() {
+        return new OrganizationalBrandingSquareLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogo"), getClient(), null);
     }
 }
 

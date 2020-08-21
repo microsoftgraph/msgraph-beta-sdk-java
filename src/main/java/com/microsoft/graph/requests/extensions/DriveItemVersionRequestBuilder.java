@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRequest;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemVersionStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemVersionContentStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemVersionContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRestoreVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRestoreVersionRequestBuilder;
 
@@ -54,8 +54,8 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder implement
 
 
 
-    public IDriveItemVersionStreamRequestBuilder content() {
-        return new DriveItemVersionStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
+    public IDriveItemVersionContentStreamRequestBuilder content() {
+        return new DriveItemVersionContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
     public IDriveItemVersionRestoreVersionRequestBuilder restoreVersion() {

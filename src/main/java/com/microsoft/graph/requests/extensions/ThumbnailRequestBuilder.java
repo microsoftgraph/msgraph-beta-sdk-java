@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IThumbnailRequest;
 import com.microsoft.graph.requests.extensions.ThumbnailRequest;
-import com.microsoft.graph.requests.extensions.IThumbnailStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.ThumbnailStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThumbnailContentStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailContentStreamRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -52,8 +52,8 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThum
 
 
 
-    public IThumbnailStreamRequestBuilder content() {
-        return new ThumbnailStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
+    public IThumbnailContentStreamRequestBuilder content() {
+        return new ThumbnailContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }
 

@@ -4,9 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequest;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingBackgroundImageStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingBannerLogoStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingSquareLogoStreamRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -34,10 +34,10 @@ public interface IOrganizationalBrandingRequestBuilder extends IRequestBuilder {
     IOrganizationalBrandingRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IOrganizationalBrandingStreamRequestBuilder backgroundImage();
+    IOrganizationalBrandingBackgroundImageStreamRequestBuilder backgroundImage();
 
-    IOrganizationalBrandingStreamRequestBuilder bannerLogo();
+    IOrganizationalBrandingBannerLogoStreamRequestBuilder bannerLogo();
 
-    IOrganizationalBrandingStreamRequestBuilder squareLogo();
+    IOrganizationalBrandingSquareLogoStreamRequestBuilder squareLogo();
 
 }

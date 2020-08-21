@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPictureRequest;
-import com.microsoft.graph.requests.extensions.IPictureStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPictureContentStreamRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,6 +32,6 @@ public interface IPictureRequestBuilder extends IRequestBuilder {
     IPictureRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IPictureStreamRequestBuilder content();
+    IPictureContentStreamRequestBuilder content();
 
 }

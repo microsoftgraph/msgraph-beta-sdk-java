@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequest;
 import com.microsoft.graph.requests.extensions.FileClassificationRequestRequest;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestFileStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestFileStreamRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -52,8 +52,8 @@ public class FileClassificationRequestRequestBuilder extends BaseRequestBuilder 
 
 
 
-    public IFileClassificationRequestStreamRequestBuilder file() {
-        return new FileClassificationRequestStreamRequestBuilder(getRequestUrlWithAdditionalSegment("file"), getClient(), null);
+    public IFileClassificationRequestFileStreamRequestBuilder file() {
+        return new FileClassificationRequestFileStreamRequestBuilder(getRequestUrlWithAdditionalSegment("file"), getClient(), null);
     }
 }
 

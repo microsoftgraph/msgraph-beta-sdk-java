@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequest;
 import com.microsoft.graph.requests.extensions.OnenoteResourceRequest;
-import com.microsoft.graph.requests.extensions.IOnenoteResourceStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteResourceStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteResourceContentStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteResourceContentStreamRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -52,8 +52,8 @@ public class OnenoteResourceRequestBuilder extends BaseRequestBuilder implements
 
 
 
-    public IOnenoteResourceStreamRequestBuilder content() {
-        return new OnenoteResourceStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
+    public IOnenoteResourceContentStreamRequestBuilder content() {
+        return new OnenoteResourceContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }
 

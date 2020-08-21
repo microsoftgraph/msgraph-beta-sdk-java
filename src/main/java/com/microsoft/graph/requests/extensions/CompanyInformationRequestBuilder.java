@@ -5,8 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICompanyInformationRequest;
 import com.microsoft.graph.requests.extensions.CompanyInformationRequest;
-import com.microsoft.graph.requests.extensions.ICompanyInformationStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.CompanyInformationStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICompanyInformationPictureStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.CompanyInformationPictureStreamRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -52,8 +52,8 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder impleme
 
 
 
-    public ICompanyInformationStreamRequestBuilder picture() {
-        return new CompanyInformationStreamRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    public ICompanyInformationPictureStreamRequestBuilder picture() {
+        return new CompanyInformationPictureStreamRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 }
 
