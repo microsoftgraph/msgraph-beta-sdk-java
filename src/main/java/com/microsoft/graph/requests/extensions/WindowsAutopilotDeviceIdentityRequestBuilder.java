@@ -102,4 +102,3 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
         return new WindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unassignResourceAccountFromDevice"), getClient(), null);
     }
 }
-

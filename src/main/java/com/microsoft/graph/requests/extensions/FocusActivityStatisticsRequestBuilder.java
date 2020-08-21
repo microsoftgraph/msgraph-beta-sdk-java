@@ -50,4 +50,3 @@ public class FocusActivityStatisticsRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

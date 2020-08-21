@@ -50,4 +50,3 @@ public class YammerDeviceUsageUserCountsRequestBuilder extends BaseRequestBuilde
 
 
 }
-

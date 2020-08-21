@@ -61,4 +61,3 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
         return new SynchronizationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 }
-

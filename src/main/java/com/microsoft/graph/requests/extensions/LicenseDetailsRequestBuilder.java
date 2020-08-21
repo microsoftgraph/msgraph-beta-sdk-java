@@ -50,4 +50,3 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder implements 
 
 
 }
-

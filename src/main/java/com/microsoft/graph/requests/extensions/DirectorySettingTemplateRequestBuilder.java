@@ -50,4 +50,3 @@ public class DirectorySettingTemplateRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

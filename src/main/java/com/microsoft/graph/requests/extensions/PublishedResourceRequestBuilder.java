@@ -61,4 +61,3 @@ public class PublishedResourceRequestBuilder extends BaseRequestBuilder implemen
         return new OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
     }
 }
-

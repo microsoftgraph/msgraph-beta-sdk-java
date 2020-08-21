@@ -50,4 +50,3 @@ public class GroupPolicyConfigurationAssignmentRequestBuilder extends BaseReques
 
 
 }
-

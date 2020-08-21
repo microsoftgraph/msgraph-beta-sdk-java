@@ -50,4 +50,3 @@ public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

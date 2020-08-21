@@ -50,4 +50,3 @@ public class AzureADFeatureUsageRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

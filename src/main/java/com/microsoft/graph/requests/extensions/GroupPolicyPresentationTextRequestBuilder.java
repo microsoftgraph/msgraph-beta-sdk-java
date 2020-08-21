@@ -50,4 +50,3 @@ public class GroupPolicyPresentationTextRequestBuilder extends BaseRequestBuilde
 
 
 }
-

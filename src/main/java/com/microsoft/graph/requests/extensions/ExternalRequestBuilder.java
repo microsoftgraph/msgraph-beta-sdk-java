@@ -61,4 +61,3 @@ public class ExternalRequestBuilder extends BaseRequestBuilder implements IExter
         return new ExternalConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections") + "/" + id, getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class AndroidForWorkVpnConfigurationRequestBuilder extends BaseRequestBui
         return new AndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

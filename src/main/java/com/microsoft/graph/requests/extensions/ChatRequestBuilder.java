@@ -93,4 +93,3 @@ public class ChatRequestBuilder extends BaseRequestBuilder implements IChatReque
         return new ChatSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, topic, activityType, chainId, previewText, templateParameters, recipient);
     }
 }
-

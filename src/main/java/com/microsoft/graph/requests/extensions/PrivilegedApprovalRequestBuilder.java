@@ -72,4 +72,3 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
         return new PrivilegedRoleRequestBuilder(getRequestUrlWithAdditionalSegment("roleInfo"), getClient(), null);
     }
 }
-

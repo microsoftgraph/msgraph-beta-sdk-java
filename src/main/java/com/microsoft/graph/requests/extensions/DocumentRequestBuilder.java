@@ -61,4 +61,3 @@ public class DocumentRequestBuilder extends BaseRequestBuilder implements IDocum
         return new DocumentCommentRequestBuilder(getRequestUrlWithAdditionalSegment("comments") + "/" + id, getClient(), null);
     }
 }
-

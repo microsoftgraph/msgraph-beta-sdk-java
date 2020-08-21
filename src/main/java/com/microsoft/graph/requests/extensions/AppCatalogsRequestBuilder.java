@@ -61,4 +61,3 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
         return new TeamsAppRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps") + "/" + id, getClient(), null);
     }
 }
-

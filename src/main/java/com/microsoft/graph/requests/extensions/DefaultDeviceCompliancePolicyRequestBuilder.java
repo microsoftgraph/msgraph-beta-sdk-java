@@ -50,4 +50,3 @@ public class DefaultDeviceCompliancePolicyRequestBuilder extends BaseRequestBuil
 
 
 }
-

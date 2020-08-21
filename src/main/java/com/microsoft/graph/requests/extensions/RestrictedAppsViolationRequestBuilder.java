@@ -50,4 +50,3 @@ public class RestrictedAppsViolationRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

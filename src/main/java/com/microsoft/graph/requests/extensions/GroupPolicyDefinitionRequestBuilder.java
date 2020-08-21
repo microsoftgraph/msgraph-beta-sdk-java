@@ -83,4 +83,3 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder impl
         return new GroupPolicyPresentationRequestBuilder(getRequestUrlWithAdditionalSegment("presentations") + "/" + id, getClient(), null);
     }
 }
-

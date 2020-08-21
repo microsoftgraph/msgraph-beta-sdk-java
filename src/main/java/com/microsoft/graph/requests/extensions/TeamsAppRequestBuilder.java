@@ -61,4 +61,3 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
         return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
     }
 }
-

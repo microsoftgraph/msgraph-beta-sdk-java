@@ -83,4 +83,3 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder extends
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

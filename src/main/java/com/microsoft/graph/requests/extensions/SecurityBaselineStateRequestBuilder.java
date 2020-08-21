@@ -61,4 +61,3 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder impl
         return new SecurityBaselineSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates") + "/" + id, getClient(), null);
     }
 }
-

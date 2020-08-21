@@ -78,4 +78,3 @@ public class WindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequest
         return new WindowsAutopilotDeploymentProfileAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, deviceIds);
     }
 }
-

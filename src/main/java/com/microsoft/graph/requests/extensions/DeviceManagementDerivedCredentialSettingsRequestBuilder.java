@@ -50,4 +50,3 @@ public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends Bas
 
 
 }
-

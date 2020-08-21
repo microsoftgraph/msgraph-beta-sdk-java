@@ -50,4 +50,3 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
 
 
 }
-

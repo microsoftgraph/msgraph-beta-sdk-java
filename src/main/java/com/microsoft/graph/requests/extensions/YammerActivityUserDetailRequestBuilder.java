@@ -50,4 +50,3 @@ public class YammerActivityUserDetailRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

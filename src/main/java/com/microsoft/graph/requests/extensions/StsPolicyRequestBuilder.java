@@ -61,4 +61,3 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class EducationPointsOutcomeRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

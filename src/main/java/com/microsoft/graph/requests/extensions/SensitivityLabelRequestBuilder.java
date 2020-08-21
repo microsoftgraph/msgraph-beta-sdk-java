@@ -61,4 +61,3 @@ public class SensitivityLabelRequestBuilder extends BaseRequestBuilder implement
         return new SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sublabels") + "/" + id, getClient(), null);
     }
 }
-

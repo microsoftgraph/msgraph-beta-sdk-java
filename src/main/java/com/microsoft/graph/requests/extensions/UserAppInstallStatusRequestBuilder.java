@@ -72,4 +72,3 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
         return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 }
-

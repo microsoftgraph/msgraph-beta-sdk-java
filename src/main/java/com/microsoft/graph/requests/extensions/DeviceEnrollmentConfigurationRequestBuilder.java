@@ -74,4 +74,3 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, enrollmentConfigurationAssignments);
     }
 }
-

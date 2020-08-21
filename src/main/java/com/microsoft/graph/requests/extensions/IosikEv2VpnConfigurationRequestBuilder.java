@@ -50,4 +50,3 @@ public class IosikEv2VpnConfigurationRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

@@ -78,4 +78,3 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
         return new JournalPostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
     }
 }
-

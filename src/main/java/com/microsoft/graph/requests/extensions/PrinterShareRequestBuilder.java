@@ -83,4 +83,3 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder implements IP
         return new PrintIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
     }
 }
-

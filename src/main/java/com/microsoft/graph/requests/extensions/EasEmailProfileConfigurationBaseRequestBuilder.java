@@ -50,4 +50,3 @@ public class EasEmailProfileConfigurationBaseRequestBuilder extends BaseRequestB
 
 
 }
-

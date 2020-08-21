@@ -50,4 +50,3 @@ public class IosWiFiConfigurationRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

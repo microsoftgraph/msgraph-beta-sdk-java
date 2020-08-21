@@ -50,4 +50,3 @@ public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

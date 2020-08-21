@@ -61,4 +61,3 @@ public class IosImportedPFXCertificateProfileRequestBuilder extends BaseRequestB
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

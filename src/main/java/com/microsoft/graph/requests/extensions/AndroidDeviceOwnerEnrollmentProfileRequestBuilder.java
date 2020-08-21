@@ -62,4 +62,3 @@ public class AndroidDeviceOwnerEnrollmentProfileRequestBuilder extends BaseReque
         return new AndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createToken"), getClient(), null, tokenValidityInSeconds);
     }
 }
-

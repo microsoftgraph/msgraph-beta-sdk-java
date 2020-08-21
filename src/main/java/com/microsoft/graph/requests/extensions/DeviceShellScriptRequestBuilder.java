@@ -113,4 +113,3 @@ public class DeviceShellScriptRequestBuilder extends BaseRequestBuilder implemen
         return new DeviceShellScriptAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, deviceManagementScriptGroupAssignments, deviceManagementScriptAssignments);
     }
 }
-

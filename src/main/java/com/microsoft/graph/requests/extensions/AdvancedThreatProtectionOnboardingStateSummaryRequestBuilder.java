@@ -61,4 +61,3 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
         return new AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates") + "/" + id, getClient(), null);
     }
 }
-

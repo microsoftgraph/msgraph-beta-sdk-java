@@ -50,4 +50,3 @@ public class AppleVppTokenTroubleshootingEventRequestBuilder extends BaseRequest
 
 
 }
-

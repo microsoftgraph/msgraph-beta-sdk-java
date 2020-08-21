@@ -68,4 +68,3 @@ public class RoleScopeTagRequestBuilder extends BaseRequestBuilder implements IR
         return new RoleScopeTagAssignCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

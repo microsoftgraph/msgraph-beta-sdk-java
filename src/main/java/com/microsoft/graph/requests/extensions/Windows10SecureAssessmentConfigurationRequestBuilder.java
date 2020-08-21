@@ -50,4 +50,3 @@ public class Windows10SecureAssessmentConfigurationRequestBuilder extends BaseRe
 
 
 }
-

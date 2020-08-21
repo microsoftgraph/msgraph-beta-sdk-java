@@ -61,4 +61,3 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder im
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
 }
-

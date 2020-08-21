@@ -155,4 +155,3 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
         return new ScheduleShareRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.share"), getClient(), null, notifyTeam, startDateTime, endDateTime);
     }
 }
-

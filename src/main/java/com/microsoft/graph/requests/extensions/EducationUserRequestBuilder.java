@@ -116,4 +116,3 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder implements I
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
     }
 }
-

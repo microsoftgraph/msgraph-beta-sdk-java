@@ -106,4 +106,3 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder implem
         return new WorkbookRangeFormatAutofitRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitRows"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class OutlookTaskGroupRequestBuilder extends BaseRequestBuilder implement
         return new OutlookTaskFolderRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders") + "/" + id, getClient(), null);
     }
 }
-

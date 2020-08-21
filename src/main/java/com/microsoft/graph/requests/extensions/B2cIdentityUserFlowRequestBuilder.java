@@ -61,4 +61,3 @@ public class B2cIdentityUserFlowRequestBuilder extends BaseRequestBuilder implem
         return new IdentityProviderWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
     }
 }
-

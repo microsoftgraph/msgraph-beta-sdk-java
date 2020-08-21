@@ -50,4 +50,3 @@ public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBui
 
 
 }
-

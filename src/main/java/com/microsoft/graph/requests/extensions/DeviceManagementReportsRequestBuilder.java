@@ -149,4 +149,3 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
         return new DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getWindowsUpdateAlertsPerPolicyPerDeviceReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
 }
-

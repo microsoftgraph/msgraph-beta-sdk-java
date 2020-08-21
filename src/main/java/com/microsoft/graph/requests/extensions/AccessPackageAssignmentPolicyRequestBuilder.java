@@ -72,4 +72,3 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
         return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalog"), getClient(), null);
     }
 }
-

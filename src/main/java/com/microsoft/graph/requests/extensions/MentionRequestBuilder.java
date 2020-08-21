@@ -50,4 +50,3 @@ public class MentionRequestBuilder extends BaseRequestBuilder implements IMentio
 
 
 }
-

@@ -2246,4 +2246,3 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookFunctionsZ_TestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.z_Test"), getClient(), null, array, x, sigma);
     }
 }
-

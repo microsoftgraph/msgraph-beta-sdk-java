@@ -61,4 +61,3 @@ public class AndroidWorkProfileEasEmailProfileBaseRequestBuilder extends BaseReq
         return new AndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

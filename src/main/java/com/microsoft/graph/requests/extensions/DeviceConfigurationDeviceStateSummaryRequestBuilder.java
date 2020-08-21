@@ -50,4 +50,3 @@ public class DeviceConfigurationDeviceStateSummaryRequestBuilder extends BaseReq
 
 
 }
-

@@ -57,4 +57,3 @@ public class DeviceAppManagementTaskRequestBuilder extends BaseRequestBuilder im
         return new DeviceAppManagementTaskUpdateStatusRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateStatus"), getClient(), null, status, note);
     }
 }
-

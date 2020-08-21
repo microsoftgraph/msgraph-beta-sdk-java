@@ -61,4 +61,3 @@ public class WorkbookCommentRequestBuilder extends BaseRequestBuilder implements
         return new WorkbookCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }
-

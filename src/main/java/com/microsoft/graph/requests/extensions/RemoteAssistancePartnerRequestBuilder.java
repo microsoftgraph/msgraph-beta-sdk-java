@@ -62,4 +62,3 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
         return new RemoteAssistancePartnerDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);
     }
 }
-

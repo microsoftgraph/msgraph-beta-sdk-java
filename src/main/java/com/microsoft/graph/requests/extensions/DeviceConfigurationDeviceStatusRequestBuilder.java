@@ -50,4 +50,3 @@ public class DeviceConfigurationDeviceStatusRequestBuilder extends BaseRequestBu
 
 
 }
-

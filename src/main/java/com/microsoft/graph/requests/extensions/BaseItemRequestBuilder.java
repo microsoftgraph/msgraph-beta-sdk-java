@@ -72,4 +72,3 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 }
-

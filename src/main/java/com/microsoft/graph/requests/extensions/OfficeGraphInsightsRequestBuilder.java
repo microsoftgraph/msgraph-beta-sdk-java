@@ -83,4 +83,3 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
         return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
     }
 }
-

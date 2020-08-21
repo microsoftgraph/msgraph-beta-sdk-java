@@ -50,4 +50,3 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
 
 
 }
-

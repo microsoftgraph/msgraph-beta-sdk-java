@@ -50,4 +50,3 @@ public class ManagedDeviceEncryptionStateRequestBuilder extends BaseRequestBuild
 
 
 }
-

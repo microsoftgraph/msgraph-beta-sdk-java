@@ -50,4 +50,3 @@ public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder implemen
 
 
 }
-

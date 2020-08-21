@@ -83,4 +83,3 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
         return new Windows81TrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificateForClientValidation"), getClient(), null);
     }
 }
-

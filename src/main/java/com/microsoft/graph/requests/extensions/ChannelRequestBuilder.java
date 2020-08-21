@@ -94,4 +94,3 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
     }
 }
-

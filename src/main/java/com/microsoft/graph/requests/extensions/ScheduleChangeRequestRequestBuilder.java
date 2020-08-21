@@ -62,4 +62,3 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
         return new ScheduleChangeRequestDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, message);
     }
 }
-

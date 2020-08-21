@@ -72,4 +72,3 @@ public class SharedInsightRequestBuilder extends BaseRequestBuilder implements I
         return new EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }
-

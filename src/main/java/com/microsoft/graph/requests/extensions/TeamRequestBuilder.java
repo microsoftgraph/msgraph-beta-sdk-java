@@ -190,4 +190,3 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
         return new TeamUnarchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unarchive"), getClient(), null);
     }
 }
-

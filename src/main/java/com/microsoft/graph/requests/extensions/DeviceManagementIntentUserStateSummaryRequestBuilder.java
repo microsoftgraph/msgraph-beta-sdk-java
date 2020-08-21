@@ -50,4 +50,3 @@ public class DeviceManagementIntentUserStateSummaryRequestBuilder extends BaseRe
 
 
 }
-

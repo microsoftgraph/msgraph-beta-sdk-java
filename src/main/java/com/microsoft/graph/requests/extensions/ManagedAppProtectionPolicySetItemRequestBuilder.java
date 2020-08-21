@@ -50,4 +50,3 @@ public class ManagedAppProtectionPolicySetItemRequestBuilder extends BaseRequest
 
 
 }
-

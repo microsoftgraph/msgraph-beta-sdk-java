@@ -50,4 +50,3 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
 
 
 }
-

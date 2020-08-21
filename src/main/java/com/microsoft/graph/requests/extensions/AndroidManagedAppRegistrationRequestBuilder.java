@@ -50,4 +50,3 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
 
 
 }
-

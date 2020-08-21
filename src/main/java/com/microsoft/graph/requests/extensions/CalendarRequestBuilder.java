@@ -119,4 +119,3 @@ public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalen
         return new CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.allowedCalendarSharingRoles"), getClient(), null, user);
     }
 }
-

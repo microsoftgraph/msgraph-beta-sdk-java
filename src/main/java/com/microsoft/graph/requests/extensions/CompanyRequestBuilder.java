@@ -435,4 +435,3 @@ public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompan
         return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }
-

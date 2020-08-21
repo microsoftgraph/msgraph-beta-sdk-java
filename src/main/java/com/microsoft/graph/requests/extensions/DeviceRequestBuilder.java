@@ -116,4 +116,3 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
         return new CommandRequestBuilder(getRequestUrlWithAdditionalSegment("commands") + "/" + id, getClient(), null);
     }
 }
-

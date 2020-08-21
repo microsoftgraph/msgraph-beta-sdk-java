@@ -50,4 +50,3 @@ public class DeviceManagementIntentAssignmentRequestBuilder extends BaseRequestB
 
 
 }
-

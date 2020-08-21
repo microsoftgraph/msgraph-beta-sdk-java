@@ -50,4 +50,3 @@ public class MeetingActivityStatisticsRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

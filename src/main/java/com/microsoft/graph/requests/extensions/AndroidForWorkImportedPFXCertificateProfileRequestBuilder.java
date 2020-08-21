@@ -61,4 +61,3 @@ public class AndroidForWorkImportedPFXCertificateProfileRequestBuilder extends B
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

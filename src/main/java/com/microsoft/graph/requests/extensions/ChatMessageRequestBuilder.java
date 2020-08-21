@@ -72,4 +72,3 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder implements ICo
         return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);
     }
 }
-

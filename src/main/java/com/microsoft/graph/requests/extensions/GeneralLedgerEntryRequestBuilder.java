@@ -61,4 +61,3 @@ public class GeneralLedgerEntryRequestBuilder extends BaseRequestBuilder impleme
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

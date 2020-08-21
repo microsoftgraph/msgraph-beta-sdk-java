@@ -50,4 +50,3 @@ public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

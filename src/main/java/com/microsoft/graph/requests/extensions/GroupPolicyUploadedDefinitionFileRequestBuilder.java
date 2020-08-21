@@ -95,4 +95,3 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
         return new GroupPolicyUploadedDefinitionFileRemoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null);
     }
 }
-

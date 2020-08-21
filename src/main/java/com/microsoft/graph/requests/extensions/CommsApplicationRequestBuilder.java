@@ -72,4 +72,3 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder implement
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
 }
-

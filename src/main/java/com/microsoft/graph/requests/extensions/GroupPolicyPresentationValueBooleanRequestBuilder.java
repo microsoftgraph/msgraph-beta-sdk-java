@@ -50,4 +50,3 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
 
 
 }
-

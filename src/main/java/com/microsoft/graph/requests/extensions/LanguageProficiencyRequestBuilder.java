@@ -50,4 +50,3 @@ public class LanguageProficiencyRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

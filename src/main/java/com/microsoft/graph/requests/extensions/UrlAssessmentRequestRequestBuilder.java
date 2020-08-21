@@ -50,4 +50,3 @@ public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

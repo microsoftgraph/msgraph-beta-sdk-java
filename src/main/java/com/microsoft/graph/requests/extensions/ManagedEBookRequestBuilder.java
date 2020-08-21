@@ -112,4 +112,3 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
         return new ManagedEBookAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, managedEBookAssignments);
     }
 }
-

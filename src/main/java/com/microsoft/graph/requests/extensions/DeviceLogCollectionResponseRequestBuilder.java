@@ -56,4 +56,3 @@ public class DeviceLogCollectionResponseRequestBuilder extends BaseRequestBuilde
         return new DeviceLogCollectionResponseCreateDownloadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createDownloadUrl"), getClient(), null);
     }
 }
-

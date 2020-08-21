@@ -50,4 +50,3 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder implements I
 
 
 }
-

@@ -72,4 +72,3 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
         return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }
-

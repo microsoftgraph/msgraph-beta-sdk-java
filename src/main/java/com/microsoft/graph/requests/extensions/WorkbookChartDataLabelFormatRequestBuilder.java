@@ -72,4 +72,3 @@ public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuild
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }
-

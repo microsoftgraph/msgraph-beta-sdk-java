@@ -136,4 +136,3 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder implements I
         return new WorkbookTableTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);
     }
 }
-

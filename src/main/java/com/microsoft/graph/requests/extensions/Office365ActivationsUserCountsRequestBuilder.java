@@ -50,4 +50,3 @@ public class Office365ActivationsUserCountsRequestBuilder extends BaseRequestBui
 
 
 }
-

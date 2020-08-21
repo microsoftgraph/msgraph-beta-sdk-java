@@ -72,4 +72,3 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder impl
         return new AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles") + "/" + id, getClient(), null);
     }
 }
-

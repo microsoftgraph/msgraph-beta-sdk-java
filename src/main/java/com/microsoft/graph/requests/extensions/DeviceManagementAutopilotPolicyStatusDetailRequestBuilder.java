@@ -50,4 +50,3 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequestBuilder extends B
 
 
 }
-

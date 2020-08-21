@@ -50,4 +50,3 @@ public class BookingCurrencyRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

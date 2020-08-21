@@ -50,4 +50,3 @@ public class SecurityBaselineStateSummaryRequestBuilder extends BaseRequestBuild
 
 
 }
-

@@ -116,4 +116,3 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
 }
-

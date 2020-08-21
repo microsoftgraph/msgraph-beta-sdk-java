@@ -61,4 +61,3 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
         return new OnPremisesConditionalAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessSettings"), getClient(), null);
     }
 }
-

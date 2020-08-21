@@ -61,4 +61,3 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFin
         return new CompanyRequestBuilder(getRequestUrlWithAdditionalSegment("companies") + "/" + id, getClient(), null);
     }
 }
-

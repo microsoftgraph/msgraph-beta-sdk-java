@@ -50,4 +50,3 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
 
 
 }
-

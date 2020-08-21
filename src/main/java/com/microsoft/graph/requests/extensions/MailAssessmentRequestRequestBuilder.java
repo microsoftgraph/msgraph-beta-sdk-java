@@ -50,4 +50,3 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

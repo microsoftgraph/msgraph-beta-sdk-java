@@ -72,4 +72,3 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
         return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps") + "/" + id, getClient(), null);
     }
 }
-

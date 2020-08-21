@@ -61,4 +61,3 @@ public class TeamsTabRequestBuilder extends BaseRequestBuilder implements ITeams
         return new TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
     }
 }
-

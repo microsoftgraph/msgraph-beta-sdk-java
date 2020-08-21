@@ -61,4 +61,3 @@ public class ExternalGroupRequestBuilder extends BaseRequestBuilder implements I
         return new ExternalGroupMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }
-

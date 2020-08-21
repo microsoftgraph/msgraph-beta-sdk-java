@@ -50,4 +50,3 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

@@ -83,4 +83,3 @@ public class PlannerRequestBuilder extends BaseRequestBuilder implements IPlanne
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
     }
 }
-

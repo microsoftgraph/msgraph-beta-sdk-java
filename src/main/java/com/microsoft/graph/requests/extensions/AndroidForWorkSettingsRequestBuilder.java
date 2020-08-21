@@ -74,4 +74,3 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder imp
         return new AndroidForWorkSettingsUnbindRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unbind"), getClient(), null);
     }
 }
-

@@ -62,4 +62,3 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder implements IVppTo
         return new VppTokenRevokeLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeLicenses"), getClient(), null, notifyManagedDevices);
     }
 }
-

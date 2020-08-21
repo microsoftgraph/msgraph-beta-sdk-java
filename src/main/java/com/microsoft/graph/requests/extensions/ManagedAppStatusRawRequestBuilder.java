@@ -50,4 +50,3 @@ public class ManagedAppStatusRawRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

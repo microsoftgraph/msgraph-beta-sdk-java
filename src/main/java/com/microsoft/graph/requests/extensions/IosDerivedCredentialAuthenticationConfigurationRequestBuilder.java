@@ -61,4 +61,3 @@ public class IosDerivedCredentialAuthenticationConfigurationRequestBuilder exten
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

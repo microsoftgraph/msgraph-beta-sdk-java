@@ -50,4 +50,3 @@ public class LookupResultRowRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

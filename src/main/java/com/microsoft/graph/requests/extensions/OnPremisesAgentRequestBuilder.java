@@ -61,4 +61,3 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder implements
         return new OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
     }
 }
-

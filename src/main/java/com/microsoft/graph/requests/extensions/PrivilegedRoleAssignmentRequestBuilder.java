@@ -73,4 +73,3 @@ public class PrivilegedRoleAssignmentRequestBuilder extends BaseRequestBuilder i
         return new PrivilegedRoleAssignmentMakeEligibleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makeEligible"), getClient(), null);
     }
 }
-

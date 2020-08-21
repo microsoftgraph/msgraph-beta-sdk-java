@@ -50,4 +50,3 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

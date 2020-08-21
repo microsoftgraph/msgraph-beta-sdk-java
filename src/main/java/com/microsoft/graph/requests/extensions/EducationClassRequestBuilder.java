@@ -116,4 +116,3 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder implements
         return new AccessReviewScheduleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
     }
 }
-

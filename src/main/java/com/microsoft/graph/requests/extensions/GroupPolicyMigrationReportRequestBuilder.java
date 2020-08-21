@@ -72,4 +72,3 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
         return new UnsupportedGroupPolicyExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions") + "/" + id, getClient(), null);
     }
 }
-

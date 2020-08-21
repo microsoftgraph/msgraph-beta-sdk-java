@@ -57,4 +57,3 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
         return new DeviceManagementExchangeConnectorSyncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sync"), getClient(), null, syncType);
     }
 }
-

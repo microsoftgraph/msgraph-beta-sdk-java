@@ -50,4 +50,3 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements 
 
 
 }
-

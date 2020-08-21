@@ -72,4 +72,3 @@ public class GroupPolicyPresentationValueRequestBuilder extends BaseRequestBuild
         return new GroupPolicyPresentationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presentation"), getClient(), null);
     }
 }
-

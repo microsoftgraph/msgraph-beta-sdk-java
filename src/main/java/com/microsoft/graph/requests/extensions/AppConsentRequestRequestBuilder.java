@@ -61,4 +61,3 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implemen
         return new UserConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests") + "/" + id, getClient(), null);
     }
 }
-

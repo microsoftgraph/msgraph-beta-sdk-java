@@ -50,4 +50,3 @@ public class DeviceConfigurationPolicySetItemRequestBuilder extends BaseRequestB
 
 
 }
-

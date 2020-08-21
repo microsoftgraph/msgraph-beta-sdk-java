@@ -61,4 +61,3 @@ public class PrinterBaseRequestBuilder extends BaseRequestBuilder implements IPr
         return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
 }
-

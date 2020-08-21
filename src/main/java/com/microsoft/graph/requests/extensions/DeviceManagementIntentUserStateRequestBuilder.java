@@ -50,4 +50,3 @@ public class DeviceManagementIntentUserStateRequestBuilder extends BaseRequestBu
 
 
 }
-

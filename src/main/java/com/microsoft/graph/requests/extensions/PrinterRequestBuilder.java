@@ -117,4 +117,3 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
         return new PrinterGetCapabilitiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCapabilities"), getClient(), null);
     }
 }
-

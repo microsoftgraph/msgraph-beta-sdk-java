@@ -50,4 +50,3 @@ public class JobResponseBaseRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

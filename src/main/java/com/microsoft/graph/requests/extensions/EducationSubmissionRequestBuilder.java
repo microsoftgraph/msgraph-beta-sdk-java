@@ -101,4 +101,3 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder implem
         return new EducationSubmissionUnsubmitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubmit"), getClient(), null);
     }
 }
-

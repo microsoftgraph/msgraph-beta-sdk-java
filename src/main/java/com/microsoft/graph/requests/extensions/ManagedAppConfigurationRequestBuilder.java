@@ -50,4 +50,3 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

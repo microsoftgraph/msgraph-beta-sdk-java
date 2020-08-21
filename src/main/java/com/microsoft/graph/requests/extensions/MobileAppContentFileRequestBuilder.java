@@ -63,4 +63,3 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
         return new MobileAppContentFileRenewUploadRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renewUpload"), getClient(), null);
     }
 }
-

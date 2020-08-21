@@ -171,4 +171,3 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder implements 
         return new TemporaryAccessPassAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods") + "/" + id, getClient(), null);
     }
 }
-

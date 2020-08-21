@@ -72,4 +72,3 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
         return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
     }
 }
-

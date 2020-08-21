@@ -61,4 +61,3 @@ public class AccessPackageSubjectRequestBuilder extends BaseRequestBuilder imple
         return new ConnectedOrganizationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganization"), getClient(), null);
     }
 }
-

@@ -56,4 +56,3 @@ public class PictureRequestBuilder extends BaseRequestBuilder implements IPictur
         return new PictureContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }
-

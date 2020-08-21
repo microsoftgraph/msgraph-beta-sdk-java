@@ -72,4 +72,3 @@ public class DirectoryRoleRequestBuilder extends BaseRequestBuilder implements I
         return new ScopedRoleMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("scopedMembers") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class ExactMatchJobBaseRequestBuilder extends BaseRequestBuilder implemen
 
 
 }
-

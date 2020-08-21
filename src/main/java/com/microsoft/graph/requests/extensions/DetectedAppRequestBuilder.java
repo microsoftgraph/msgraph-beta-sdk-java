@@ -61,4 +61,3 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder implements IDe
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
 }
-

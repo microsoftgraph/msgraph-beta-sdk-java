@@ -72,4 +72,3 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("applications") + "/" + id, getClient(), null);
     }
 }
-

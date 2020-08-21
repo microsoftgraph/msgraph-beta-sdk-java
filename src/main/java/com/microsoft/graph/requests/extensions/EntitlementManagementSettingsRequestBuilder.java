@@ -50,4 +50,3 @@ public class EntitlementManagementSettingsRequestBuilder extends BaseRequestBuil
 
 
 }
-

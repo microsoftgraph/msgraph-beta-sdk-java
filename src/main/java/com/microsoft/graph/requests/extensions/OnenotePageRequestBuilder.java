@@ -97,4 +97,3 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
         return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);
     }
 }
-

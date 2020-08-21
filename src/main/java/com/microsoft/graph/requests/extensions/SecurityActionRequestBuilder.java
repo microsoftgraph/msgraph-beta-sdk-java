@@ -56,4 +56,3 @@ public class SecurityActionRequestBuilder extends BaseRequestBuilder implements 
         return new SecurityActionCancelSecurityActionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelSecurityAction"), getClient(), null);
     }
 }
-

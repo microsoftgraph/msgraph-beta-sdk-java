@@ -50,4 +50,3 @@ public class EducationSynchronizationProfileStatusRequestBuilder extends BaseReq
 
 
 }
-

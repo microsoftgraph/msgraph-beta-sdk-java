@@ -96,4 +96,3 @@ public class GovernanceRoleAssignmentRequestRequestBuilder extends BaseRequestBu
         return new GovernanceRoleAssignmentRequestUpdateRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateRequest"), getClient(), null, decision, assignmentState, schedule, reason);
     }
 }
-

@@ -50,4 +50,3 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

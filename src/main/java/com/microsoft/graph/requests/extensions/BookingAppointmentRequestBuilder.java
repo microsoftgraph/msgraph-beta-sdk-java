@@ -56,4 +56,3 @@ public class BookingAppointmentRequestBuilder extends BaseRequestBuilder impleme
         return new BookingAppointmentCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, cancellationMessage);
     }
 }
-

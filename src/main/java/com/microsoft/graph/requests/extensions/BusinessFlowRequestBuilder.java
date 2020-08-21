@@ -56,4 +56,3 @@ public class BusinessFlowRequestBuilder extends BaseRequestBuilder implements IB
         return new BusinessFlowRecordDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordDecisions"), getClient(), null, reviewResult, justification);
     }
 }
-

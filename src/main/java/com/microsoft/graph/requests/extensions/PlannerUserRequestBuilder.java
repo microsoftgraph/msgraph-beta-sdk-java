@@ -105,4 +105,3 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
         return new PlannerDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("all") + "/" + id, getClient(), null);
     }
 }
-

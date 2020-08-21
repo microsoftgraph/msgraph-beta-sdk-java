@@ -79,4 +79,3 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder implements IIosV
         return new IosVppAppRevokeDeviceLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeDeviceLicense"), getClient(), null, managedDeviceId, notifyManagedDevices);
     }
 }
-

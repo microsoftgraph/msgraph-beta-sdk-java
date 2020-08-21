@@ -56,4 +56,3 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
         return new WorkbookChartLineFormatClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 }
-

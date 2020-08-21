@@ -61,4 +61,3 @@ public class DimensionRequestBuilder extends BaseRequestBuilder implements IDime
         return new DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
     }
 }
-

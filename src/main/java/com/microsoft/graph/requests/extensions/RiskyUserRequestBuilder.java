@@ -61,4 +61,3 @@ public class RiskyUserRequestBuilder extends BaseRequestBuilder implements IRisk
         return new RiskyUserHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
     }
 }
-

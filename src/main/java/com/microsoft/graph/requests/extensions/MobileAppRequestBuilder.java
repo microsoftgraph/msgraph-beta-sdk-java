@@ -136,4 +136,3 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
         return new MobileAppGetRelatedAppStatesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRelatedAppStates"), getClient(), null, userPrincipalName, deviceId);
     }
 }
-

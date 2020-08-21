@@ -61,4 +61,3 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements I
         return new ActivityStatisticsRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics") + "/" + id, getClient(), null);
     }
 }
-

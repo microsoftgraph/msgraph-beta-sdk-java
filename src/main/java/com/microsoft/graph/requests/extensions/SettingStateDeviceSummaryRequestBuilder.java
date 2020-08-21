@@ -50,4 +50,3 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

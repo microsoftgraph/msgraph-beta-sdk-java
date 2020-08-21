@@ -61,4 +61,3 @@ public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder imp
         return new WorkbookChartAxisTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }
-

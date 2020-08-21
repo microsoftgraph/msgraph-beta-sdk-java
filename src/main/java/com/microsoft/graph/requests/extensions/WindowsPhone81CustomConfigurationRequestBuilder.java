@@ -50,4 +50,3 @@ public class WindowsPhone81CustomConfigurationRequestBuilder extends BaseRequest
 
 
 }
-

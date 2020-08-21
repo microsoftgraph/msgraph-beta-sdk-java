@@ -61,4 +61,3 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
         return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps") + "/" + id, getClient(), null);
     }
 }
-

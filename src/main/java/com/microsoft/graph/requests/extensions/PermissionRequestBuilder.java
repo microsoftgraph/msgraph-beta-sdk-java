@@ -57,4 +57,3 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
         return new PermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.grant"), getClient(), null, roles, recipients);
     }
 }
-

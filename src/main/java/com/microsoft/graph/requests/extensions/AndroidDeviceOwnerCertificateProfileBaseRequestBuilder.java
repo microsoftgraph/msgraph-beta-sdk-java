@@ -61,4 +61,3 @@ public class AndroidDeviceOwnerCertificateProfileBaseRequestBuilder extends Base
         return new AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISe
 
 
 }
-

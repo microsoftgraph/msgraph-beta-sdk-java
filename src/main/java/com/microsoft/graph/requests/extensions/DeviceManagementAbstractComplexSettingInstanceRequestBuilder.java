@@ -61,4 +61,3 @@ public class DeviceManagementAbstractComplexSettingInstanceRequestBuilder extend
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("value") + "/" + id, getClient(), null);
     }
 }
-

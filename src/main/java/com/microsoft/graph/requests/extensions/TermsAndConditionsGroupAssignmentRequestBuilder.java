@@ -61,4 +61,3 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
         return new TermsAndConditionsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
     }
 }
-

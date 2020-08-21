@@ -61,4 +61,3 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder imp
         return new WorkbookChartGridlinesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }
-

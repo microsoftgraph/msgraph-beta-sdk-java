@@ -50,4 +50,3 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends Ba
 
 
 }
-

@@ -80,4 +80,3 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder implements
         return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
     }
 }
-

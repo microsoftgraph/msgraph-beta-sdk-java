@@ -50,4 +50,3 @@ public class DeviceManagementComplexSettingDefinitionRequestBuilder extends Base
 
 
 }
-

@@ -61,4 +61,3 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
         return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }
-

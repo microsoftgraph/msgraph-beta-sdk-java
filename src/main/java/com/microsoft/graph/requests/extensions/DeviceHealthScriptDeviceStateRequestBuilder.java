@@ -61,4 +61,3 @@ public class DeviceHealthScriptDeviceStateRequestBuilder extends BaseRequestBuil
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevice"), getClient(), null);
     }
 }
-

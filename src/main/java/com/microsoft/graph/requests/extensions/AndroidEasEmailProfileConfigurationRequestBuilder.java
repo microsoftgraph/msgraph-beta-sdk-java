@@ -72,4 +72,3 @@ public class AndroidEasEmailProfileConfigurationRequestBuilder extends BaseReque
         return new AndroidCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("smimeSigningCertificate"), getClient(), null);
     }
 }
-

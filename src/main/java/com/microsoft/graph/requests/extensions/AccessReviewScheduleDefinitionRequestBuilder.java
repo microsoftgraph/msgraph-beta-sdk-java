@@ -67,4 +67,3 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
         return new AccessReviewScheduleDefinitionStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }
-

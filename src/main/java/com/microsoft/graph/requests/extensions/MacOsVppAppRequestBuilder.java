@@ -61,4 +61,3 @@ public class MacOsVppAppRequestBuilder extends BaseRequestBuilder implements IMa
         return new MacOsVppAppAssignedLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("assignedLicenses") + "/" + id, getClient(), null);
     }
 }
-

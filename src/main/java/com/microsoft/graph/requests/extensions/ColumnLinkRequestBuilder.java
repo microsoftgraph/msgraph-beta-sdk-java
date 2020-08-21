@@ -50,4 +50,3 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
 
 
 }
-

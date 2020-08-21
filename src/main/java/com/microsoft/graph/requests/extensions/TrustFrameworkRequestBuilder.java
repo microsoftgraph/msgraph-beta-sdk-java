@@ -72,4 +72,3 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
         return new TrustFrameworkKeySetRequestBuilder(getRequestUrlWithAdditionalSegment("keySets") + "/" + id, getClient(), null);
     }
 }
-

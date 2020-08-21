@@ -193,4 +193,3 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
     }
 }
-

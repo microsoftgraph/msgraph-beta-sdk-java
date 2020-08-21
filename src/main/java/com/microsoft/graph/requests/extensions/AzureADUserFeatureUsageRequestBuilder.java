@@ -50,4 +50,3 @@ public class AzureADUserFeatureUsageRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

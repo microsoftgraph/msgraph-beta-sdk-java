@@ -68,4 +68,3 @@ public class EnrollmentProfileRequestBuilder extends BaseRequestBuilder implemen
         return new EnrollmentProfileExportMobileConfigRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportMobileConfig"), getClient(), null);
     }
 }
-

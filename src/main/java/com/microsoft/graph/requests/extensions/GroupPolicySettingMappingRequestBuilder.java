@@ -50,4 +50,3 @@ public class GroupPolicySettingMappingRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

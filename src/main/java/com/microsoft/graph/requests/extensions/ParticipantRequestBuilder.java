@@ -56,4 +56,3 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
         return new ParticipantMuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mute"), getClient(), null, clientContext);
     }
 }
-

@@ -100,4 +100,3 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
         return new OrganizationSetMobileDeviceManagementAuthorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setMobileDeviceManagementAuthority"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder implements ICom
         return new EdiscoveryRequestBuilder(getRequestUrlWithAdditionalSegment("ediscovery"), getClient(), null);
     }
 }
-

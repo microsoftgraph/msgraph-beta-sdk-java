@@ -94,4 +94,3 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder implem
         return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
     }
 }
-

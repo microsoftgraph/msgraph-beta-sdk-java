@@ -61,4 +61,3 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 }
-

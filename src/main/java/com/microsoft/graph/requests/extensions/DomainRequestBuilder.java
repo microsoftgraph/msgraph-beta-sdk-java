@@ -95,4 +95,3 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);
     }
 }
-

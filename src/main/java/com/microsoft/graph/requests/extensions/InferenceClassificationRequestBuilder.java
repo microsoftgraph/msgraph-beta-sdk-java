@@ -61,4 +61,3 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder im
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class DeviceComplianceUserOverviewRequestBuilder extends BaseRequestBuild
 
 
 }
-

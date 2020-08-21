@@ -61,4 +61,3 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitl
         return new BitlockerRecoveryKeyRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class WorkbookFunctionResultRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

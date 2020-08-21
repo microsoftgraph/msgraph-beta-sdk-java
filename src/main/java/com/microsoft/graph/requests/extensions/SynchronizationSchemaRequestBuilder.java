@@ -81,4 +81,3 @@ public class SynchronizationSchemaRequestBuilder extends BaseRequestBuilder impl
         return new SynchronizationSchemaFilterOperatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.filterOperators"), getClient(), null);
     }
 }
-

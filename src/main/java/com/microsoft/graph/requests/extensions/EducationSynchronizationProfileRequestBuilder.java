@@ -102,4 +102,3 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
         return new EducationSynchronizationProfileUploadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadUrl"), getClient(), null);
     }
 }
-

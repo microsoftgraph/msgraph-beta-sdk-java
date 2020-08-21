@@ -50,4 +50,3 @@ public class SharePointSiteUsagePagesRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

@@ -62,4 +62,3 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder imple
         return new GroupLifecyclePolicyRemoveGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeGroup"), getClient(), null, groupId);
     }
 }
-

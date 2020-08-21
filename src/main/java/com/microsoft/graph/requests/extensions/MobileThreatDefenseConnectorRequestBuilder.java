@@ -50,4 +50,3 @@ public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuild
 
 
 }
-

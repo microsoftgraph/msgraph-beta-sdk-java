@@ -61,4 +61,3 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder implements ITeamw
         return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }
 }
-

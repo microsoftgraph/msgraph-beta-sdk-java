@@ -50,4 +50,3 @@ public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

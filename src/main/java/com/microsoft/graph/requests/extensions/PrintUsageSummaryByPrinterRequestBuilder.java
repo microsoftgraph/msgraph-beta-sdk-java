@@ -50,4 +50,3 @@ public class PrintUsageSummaryByPrinterRequestBuilder extends BaseRequestBuilder
 
 
 }
-

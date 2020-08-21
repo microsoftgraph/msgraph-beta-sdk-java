@@ -50,4 +50,3 @@ public class WindowsVpnConfigurationRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

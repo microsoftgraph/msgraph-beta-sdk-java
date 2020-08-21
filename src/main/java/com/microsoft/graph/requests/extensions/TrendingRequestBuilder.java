@@ -61,4 +61,3 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
         return new EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }
-

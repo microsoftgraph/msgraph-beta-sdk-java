@@ -50,4 +50,3 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

@@ -50,4 +50,3 @@ public class ItemFacetRequestBuilder extends BaseRequestBuilder implements IItem
 
 
 }
-

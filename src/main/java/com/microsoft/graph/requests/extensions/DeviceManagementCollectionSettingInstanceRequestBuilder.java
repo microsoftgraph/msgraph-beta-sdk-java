@@ -61,4 +61,3 @@ public class DeviceManagementCollectionSettingInstanceRequestBuilder extends Bas
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("value") + "/" + id, getClient(), null);
     }
 }
-

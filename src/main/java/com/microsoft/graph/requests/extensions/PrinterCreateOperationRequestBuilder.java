@@ -61,4 +61,3 @@ public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder imp
         return new PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
     }
 }
-

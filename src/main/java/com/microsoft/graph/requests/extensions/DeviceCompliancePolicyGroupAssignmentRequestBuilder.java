@@ -61,4 +61,3 @@ public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseReq
         return new DeviceCompliancePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicy"), getClient(), null);
     }
 }
-

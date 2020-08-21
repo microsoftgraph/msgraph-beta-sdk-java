@@ -50,4 +50,3 @@ public class SharePointSiteUsageDetailRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

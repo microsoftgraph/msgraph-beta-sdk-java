@@ -50,4 +50,3 @@ public class DeviceConfigurationConflictSummaryRequestBuilder extends BaseReques
 
 
 }
-

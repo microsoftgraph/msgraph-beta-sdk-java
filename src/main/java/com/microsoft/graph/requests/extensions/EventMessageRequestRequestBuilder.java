@@ -70,4 +70,3 @@ public class EventMessageRequestRequestBuilder extends BaseRequestBuilder implem
         return new EventMessageRequestTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, proposedNewTime, sendResponse, comment);
     }
 }
-

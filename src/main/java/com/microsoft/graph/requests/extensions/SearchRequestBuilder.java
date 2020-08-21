@@ -57,4 +57,3 @@ public class SearchRequestBuilder extends BaseRequestBuilder implements ISearchR
         return new SearchQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.query"), getClient(), null, requests);
     }
 }
-

@@ -135,4 +135,3 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
         return new SalesInvoiceSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 }
-

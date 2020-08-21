@@ -61,4 +61,3 @@ public class Windows10ImportedPFXCertificateProfileRequestBuilder extends BaseRe
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

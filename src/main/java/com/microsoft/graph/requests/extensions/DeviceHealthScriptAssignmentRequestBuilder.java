@@ -50,4 +50,3 @@ public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuild
 
 
 }
-

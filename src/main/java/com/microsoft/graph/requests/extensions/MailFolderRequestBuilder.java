@@ -128,4 +128,3 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder implements IMai
         return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 }
-

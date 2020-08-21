@@ -95,4 +95,3 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder implements 
         return new PrivilegedRoleSelfDeactivateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.selfDeactivate"), getClient(), null);
     }
 }
-

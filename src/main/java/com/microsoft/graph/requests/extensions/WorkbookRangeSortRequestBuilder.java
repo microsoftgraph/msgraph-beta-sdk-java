@@ -57,4 +57,3 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookRangeSortApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null, fields, matchCase, hasHeaders, orientation, method);
     }
 }
-

@@ -72,4 +72,3 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
         return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScope"), getClient(), null);
     }
 }
-

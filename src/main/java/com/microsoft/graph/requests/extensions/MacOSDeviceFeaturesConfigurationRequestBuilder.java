@@ -61,4 +61,3 @@ public class MacOSDeviceFeaturesConfigurationRequestBuilder extends BaseRequestB
         return new MacOSCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("singleSignOnExtensionPkinitCertificate"), getClient(), null);
     }
 }
-

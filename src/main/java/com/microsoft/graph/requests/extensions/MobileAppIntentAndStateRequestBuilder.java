@@ -50,4 +50,3 @@ public class MobileAppIntentAndStateRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

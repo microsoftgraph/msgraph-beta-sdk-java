@@ -50,4 +50,3 @@ public class NetworkIPv6ConfigurationManagementConditionRequestBuilder extends B
 
 
 }
-

@@ -102,4 +102,3 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
         return new IosLobAppProvisioningConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, appProvisioningConfigurationGroupAssignments, iOSLobAppProvisioningConfigAssignments);
     }
 }
-

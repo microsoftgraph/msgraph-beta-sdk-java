@@ -90,4 +90,3 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder implements IPrint
         return new PrintJobRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, destinationPrinterId);
     }
 }
-

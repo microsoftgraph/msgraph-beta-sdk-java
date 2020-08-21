@@ -72,4 +72,3 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 }
-

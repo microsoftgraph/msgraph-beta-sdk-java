@@ -50,4 +50,3 @@ public class PrivilegedRoleSummaryRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

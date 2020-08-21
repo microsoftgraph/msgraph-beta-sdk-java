@@ -68,4 +68,3 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
         return new TargetedManagedAppProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

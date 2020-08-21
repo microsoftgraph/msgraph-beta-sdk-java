@@ -72,4 +72,3 @@ public class SalesCreditMemoLineRequestBuilder extends BaseRequestBuilder implem
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

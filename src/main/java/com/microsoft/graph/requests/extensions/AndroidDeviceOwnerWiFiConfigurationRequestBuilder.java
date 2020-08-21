@@ -50,4 +50,3 @@ public class AndroidDeviceOwnerWiFiConfigurationRequestBuilder extends BaseReque
 
 
 }
-

@@ -94,4 +94,3 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder implements
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
 }
-

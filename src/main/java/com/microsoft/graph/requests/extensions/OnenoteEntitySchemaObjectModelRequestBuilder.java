@@ -50,4 +50,3 @@ public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBui
 
 
 }
-

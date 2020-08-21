@@ -102,4 +102,3 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
         return new AccessReviewInstanceAcceptRecommendationsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acceptRecommendations"), getClient(), null);
     }
 }
-

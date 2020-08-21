@@ -50,4 +50,3 @@ public class ShiftRequestBuilder extends BaseRequestBuilder implements IShiftReq
 
 
 }
-

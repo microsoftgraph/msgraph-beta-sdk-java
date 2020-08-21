@@ -61,4 +61,3 @@ public class RoleAssignmentRequestBuilder extends BaseRequestBuilder implements 
         return new RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class SharePointSiteUsageSiteCountsRequestBuilder extends BaseRequestBuil
 
 
 }
-

@@ -61,4 +61,3 @@ public class ManagedMobileLobAppRequestBuilder extends BaseRequestBuilder implem
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
 }
-

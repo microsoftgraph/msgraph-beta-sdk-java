@@ -50,4 +50,3 @@ public class GroupPolicyPresentationDecimalTextBoxRequestBuilder extends BaseReq
 
 
 }
-

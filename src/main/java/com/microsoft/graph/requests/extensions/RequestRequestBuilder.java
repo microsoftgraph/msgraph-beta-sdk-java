@@ -73,4 +73,3 @@ public class RequestRequestBuilder extends BaseRequestBuilder implements IReques
         return new RequestRecordDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordDecisions"), getClient(), null, reviewResult, justification);
     }
 }
-

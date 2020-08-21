@@ -61,4 +61,3 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder implements IP
         return new PrintServiceEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
     }
 }
-

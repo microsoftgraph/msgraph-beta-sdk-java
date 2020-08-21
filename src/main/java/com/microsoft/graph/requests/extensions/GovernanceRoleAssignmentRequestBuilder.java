@@ -94,4 +94,3 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
         return new GovernanceRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedEligibleRoleAssignment"), getClient(), null);
     }
 }
-

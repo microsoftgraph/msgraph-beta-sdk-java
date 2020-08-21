@@ -67,4 +67,3 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
         return new NotificationMessageTemplateSendTestMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendTestMessage"), getClient(), null);
     }
 }
-

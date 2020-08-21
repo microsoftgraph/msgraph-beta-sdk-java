@@ -50,4 +50,3 @@ public class TaxAreaRequestBuilder extends BaseRequestBuilder implements ITaxAre
 
 
 }
-

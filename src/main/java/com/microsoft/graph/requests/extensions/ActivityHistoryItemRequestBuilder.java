@@ -61,4 +61,3 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder implem
         return new UserActivityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activity"), getClient(), null);
     }
 }
-

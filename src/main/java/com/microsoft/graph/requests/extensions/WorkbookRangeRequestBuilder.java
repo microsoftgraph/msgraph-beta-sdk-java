@@ -251,4 +251,3 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
         return new WorkbookRangeVisibleViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.visibleView"), getClient(), null);
     }
 }
-

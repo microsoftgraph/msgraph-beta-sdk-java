@@ -853,4 +853,3 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedDevicesWithFailedOrPendingApps"), getClient(), null);
     }
 }
-

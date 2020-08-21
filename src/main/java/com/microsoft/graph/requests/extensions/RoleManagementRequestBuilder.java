@@ -72,4 +72,3 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
         return new RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagement"), getClient(), null);
     }
 }
-

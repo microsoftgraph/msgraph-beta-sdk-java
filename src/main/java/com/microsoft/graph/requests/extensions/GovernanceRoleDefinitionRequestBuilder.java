@@ -72,4 +72,3 @@ public class GovernanceRoleDefinitionRequestBuilder extends BaseRequestBuilder i
         return new GovernanceRoleSettingRequestBuilder(getRequestUrlWithAdditionalSegment("roleSetting"), getClient(), null);
     }
 }
-

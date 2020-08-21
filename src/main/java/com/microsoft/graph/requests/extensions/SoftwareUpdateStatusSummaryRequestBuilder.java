@@ -50,4 +50,3 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
 
 
 }
-

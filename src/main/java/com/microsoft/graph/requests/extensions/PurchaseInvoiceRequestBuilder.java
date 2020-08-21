@@ -89,4 +89,3 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
         return new PurchaseInvoicePostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
     }
 }
-

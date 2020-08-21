@@ -94,4 +94,3 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
 }
-

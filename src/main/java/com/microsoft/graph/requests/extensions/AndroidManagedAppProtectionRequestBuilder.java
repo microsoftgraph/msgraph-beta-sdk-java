@@ -72,4 +72,3 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
         return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

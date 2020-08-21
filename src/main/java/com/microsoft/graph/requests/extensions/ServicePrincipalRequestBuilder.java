@@ -241,4 +241,3 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
         return new ServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updatePasswordSingleSignOnCredentials"), getClient(), null, id, credentials);
     }
 }
-

@@ -56,4 +56,3 @@ public class ApplicationTemplateRequestBuilder extends BaseRequestBuilder implem
         return new ApplicationTemplateInstantiateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.instantiate"), getClient(), null, displayName);
     }
 }
-

@@ -50,4 +50,3 @@ public class CircularGeofenceManagementConditionRequestBuilder extends BaseReque
 
 
 }
-

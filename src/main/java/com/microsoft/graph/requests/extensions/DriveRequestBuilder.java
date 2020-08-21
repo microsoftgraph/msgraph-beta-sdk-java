@@ -145,4 +145,3 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
         return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedWithMe"), getClient(), null);
     }
 }
-

@@ -72,4 +72,3 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
         return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
     }
 }
-

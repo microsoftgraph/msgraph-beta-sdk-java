@@ -72,4 +72,3 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
         return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }
-

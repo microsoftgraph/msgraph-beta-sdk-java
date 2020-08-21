@@ -50,4 +50,3 @@ public class DeviceSetupConfigurationRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

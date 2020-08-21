@@ -61,4 +61,3 @@ public class CustomerPaymentRequestBuilder extends BaseRequestBuilder implements
         return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
     }
 }
-

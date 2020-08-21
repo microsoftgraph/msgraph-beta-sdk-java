@@ -72,4 +72,3 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
         return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps") + "/" + id, getClient(), null);
     }
 }
-

@@ -100,4 +100,3 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder impleme
         return new SynchronizationJobValidateCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateCredentials"), getClient(), null, applicationIdentifier, templateId, useSavedCredentials, credentials);
     }
 }
-

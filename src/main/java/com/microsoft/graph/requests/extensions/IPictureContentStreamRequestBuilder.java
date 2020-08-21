@@ -4,8 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPictureContentStreamRequest;
+import com.microsoft.graph.requests.extensions.PictureContentStreamRequest;
 
-import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
 
@@ -15,6 +17,7 @@ import java.util.EnumSet;
  * The interface for the Picture Content Stream Request Builder.
  */
 public interface IPictureContentStreamRequestBuilder extends IRequestBuilder {
+
     /**
      * Creates the request
      *
@@ -29,6 +32,5 @@ public interface IPictureContentStreamRequestBuilder extends IRequestBuilder {
      * @return the IPictureContentStreamRequest instance
      */
     IPictureContentStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
-
 
 }

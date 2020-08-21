@@ -67,4 +67,3 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements
         return new ListItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }
 }
-

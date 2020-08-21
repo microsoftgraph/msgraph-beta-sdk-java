@@ -50,4 +50,3 @@ public class WindowsStoreAppRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

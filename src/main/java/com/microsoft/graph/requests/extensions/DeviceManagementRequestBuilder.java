@@ -1162,4 +1162,3 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
         return new DeviceManagementScopedForResourceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.scopedForResource"), getClient(), null, resource);
     }
 }
-

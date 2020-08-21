@@ -61,4 +61,3 @@ public class MobileLobAppRequestBuilder extends BaseRequestBuilder implements IM
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
 }
-

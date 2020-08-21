@@ -50,4 +50,3 @@ public class AndroidManagedStoreAppConfigurationSchemaRequestBuilder extends Bas
 
 
 }
-

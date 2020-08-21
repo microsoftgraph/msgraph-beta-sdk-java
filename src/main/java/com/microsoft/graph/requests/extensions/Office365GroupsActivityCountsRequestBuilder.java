@@ -50,4 +50,3 @@ public class Office365GroupsActivityCountsRequestBuilder extends BaseRequestBuil
 
 
 }
-

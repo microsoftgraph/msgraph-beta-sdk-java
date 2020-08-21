@@ -751,4 +751,3 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
         return new ReportRootGetTenantSecureScoresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTenantSecureScores"), getClient(), null, period);
     }
 }
-

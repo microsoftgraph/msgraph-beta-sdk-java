@@ -50,4 +50,3 @@ public class RiskDetectionRequestBuilder extends BaseRequestBuilder implements I
 
 
 }
-

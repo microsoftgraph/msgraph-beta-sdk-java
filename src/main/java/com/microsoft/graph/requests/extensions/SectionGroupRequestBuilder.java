@@ -94,4 +94,3 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
 }
-

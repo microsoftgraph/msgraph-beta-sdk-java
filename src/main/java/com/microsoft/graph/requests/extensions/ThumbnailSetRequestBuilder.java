@@ -54,4 +54,3 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
     }
 
 }
-

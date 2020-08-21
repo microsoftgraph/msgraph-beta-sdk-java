@@ -61,4 +61,3 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implem
         return new PrintTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }
-

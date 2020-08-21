@@ -50,4 +50,3 @@ public class EmailActivityUserDetailRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

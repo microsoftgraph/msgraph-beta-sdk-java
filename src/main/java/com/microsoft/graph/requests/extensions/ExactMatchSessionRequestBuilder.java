@@ -79,4 +79,3 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
         return new ExactMatchSessionRenewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renew"), getClient(), null);
     }
 }
-

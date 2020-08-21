@@ -50,4 +50,3 @@ public class IosVppAppAssignedDeviceLicenseRequestBuilder extends BaseRequestBui
 
 
 }
-

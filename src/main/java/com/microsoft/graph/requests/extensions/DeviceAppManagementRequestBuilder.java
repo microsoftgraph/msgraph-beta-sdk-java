@@ -331,4 +331,3 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
         return new DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncMicrosoftStoreForBusinessApps"), getClient(), null);
     }
 }
-

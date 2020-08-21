@@ -333,4 +333,3 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
         return new ManagedDeviceGetFileVaultKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFileVaultKey"), getClient(), null);
     }
 }
-

@@ -112,4 +112,3 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
         return new ManagedDeviceMobileAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

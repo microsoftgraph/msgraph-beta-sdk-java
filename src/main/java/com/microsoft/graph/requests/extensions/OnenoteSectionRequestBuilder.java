@@ -95,4 +95,3 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements 
         return new OnenoteSectionCopyToSectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSectionGroup"), getClient(), null, id, groupId, renameAs, siteCollectionId, siteId);
     }
 }
-

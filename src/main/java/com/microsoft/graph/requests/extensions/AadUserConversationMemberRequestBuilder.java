@@ -61,4 +61,3 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder 
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
     }
 }
-

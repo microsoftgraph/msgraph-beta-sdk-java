@@ -50,4 +50,3 @@ public class SharePointActivityPagesRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

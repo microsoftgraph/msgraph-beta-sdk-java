@@ -50,4 +50,3 @@ public class SkillProficiencyRequestBuilder extends BaseRequestBuilder implement
 
 
 }
-

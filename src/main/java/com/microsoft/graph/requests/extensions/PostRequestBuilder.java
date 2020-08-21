@@ -130,4 +130,3 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
         return new PostForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
     }
 }
-

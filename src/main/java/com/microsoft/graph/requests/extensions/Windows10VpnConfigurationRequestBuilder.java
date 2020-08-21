@@ -61,4 +61,3 @@ public class Windows10VpnConfigurationRequestBuilder extends BaseRequestBuilder 
         return new WindowsCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

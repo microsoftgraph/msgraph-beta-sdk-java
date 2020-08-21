@@ -50,4 +50,3 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
 
 
 }
-

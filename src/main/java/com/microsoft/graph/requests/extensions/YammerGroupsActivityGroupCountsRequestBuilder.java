@@ -50,4 +50,3 @@ public class YammerGroupsActivityGroupCountsRequestBuilder extends BaseRequestBu
 
 
 }
-

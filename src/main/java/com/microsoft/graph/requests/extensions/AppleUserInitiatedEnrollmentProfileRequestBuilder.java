@@ -67,4 +67,3 @@ public class AppleUserInitiatedEnrollmentProfileRequestBuilder extends BaseReque
         return new AppleUserInitiatedEnrollmentProfileSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
     }
 }
-

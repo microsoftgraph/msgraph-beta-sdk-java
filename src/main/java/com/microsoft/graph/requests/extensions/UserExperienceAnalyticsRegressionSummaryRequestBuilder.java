@@ -90,4 +90,3 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
         return new UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.summarizeDeviceRegressionPerformance"), getClient(), null, summarizeBy);
     }
 }
-

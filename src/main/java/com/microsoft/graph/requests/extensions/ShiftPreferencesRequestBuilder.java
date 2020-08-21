@@ -50,4 +50,3 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder implement
 
 
 }
-

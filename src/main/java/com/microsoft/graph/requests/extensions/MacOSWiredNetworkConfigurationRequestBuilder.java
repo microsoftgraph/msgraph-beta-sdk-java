@@ -72,4 +72,3 @@ public class MacOSWiredNetworkConfigurationRequestBuilder extends BaseRequestBui
         return new MacOSCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
 }
-

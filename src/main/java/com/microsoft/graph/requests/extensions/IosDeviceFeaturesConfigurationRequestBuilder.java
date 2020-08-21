@@ -72,4 +72,3 @@ public class IosDeviceFeaturesConfigurationRequestBuilder extends BaseRequestBui
         return new IosCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("singleSignOnExtensionPkinitCertificate"), getClient(), null);
     }
 }
-

@@ -56,4 +56,3 @@ public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder im
         return new AppLogCollectionRequestCreateDownloadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createDownloadUrl"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

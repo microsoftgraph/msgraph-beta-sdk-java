@@ -56,4 +56,3 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder i
         return new ChatMessageHostedContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }
-

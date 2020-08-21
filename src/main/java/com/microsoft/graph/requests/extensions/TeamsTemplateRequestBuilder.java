@@ -50,4 +50,3 @@ public class TeamsTemplateRequestBuilder extends BaseRequestBuilder implements I
 
 
 }
-

@@ -50,4 +50,3 @@ public class WindowsAssignedAccessProfileRequestBuilder extends BaseRequestBuild
 
 
 }
-

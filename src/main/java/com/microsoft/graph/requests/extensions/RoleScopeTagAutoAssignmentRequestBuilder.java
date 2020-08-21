@@ -50,4 +50,3 @@ public class RoleScopeTagAutoAssignmentRequestBuilder extends BaseRequestBuilder
 
 
 }
-

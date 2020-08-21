@@ -72,4 +72,3 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
         return new PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
     }
 }
-

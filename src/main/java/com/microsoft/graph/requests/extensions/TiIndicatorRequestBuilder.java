@@ -50,4 +50,3 @@ public class TiIndicatorRequestBuilder extends BaseRequestBuilder implements ITi
 
 
 }
-

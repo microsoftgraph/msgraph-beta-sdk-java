@@ -56,4 +56,3 @@ public class FileClassificationRequestRequestBuilder extends BaseRequestBuilder 
         return new FileClassificationRequestFileStreamRequestBuilder(getRequestUrlWithAdditionalSegment("file"), getClient(), null);
     }
 }
-

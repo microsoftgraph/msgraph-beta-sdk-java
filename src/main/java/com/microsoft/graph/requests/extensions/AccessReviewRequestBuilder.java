@@ -118,4 +118,3 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
         return new AccessReviewApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDecisions"), getClient(), null);
     }
 }
-

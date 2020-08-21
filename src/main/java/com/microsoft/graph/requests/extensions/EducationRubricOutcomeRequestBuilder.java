@@ -50,4 +50,3 @@ public class EducationRubricOutcomeRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

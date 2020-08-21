@@ -50,4 +50,3 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
 
 
 }
-

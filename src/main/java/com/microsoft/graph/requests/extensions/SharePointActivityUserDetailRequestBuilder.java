@@ -50,4 +50,3 @@ public class SharePointActivityUserDetailRequestBuilder extends BaseRequestBuild
 
 
 }
-

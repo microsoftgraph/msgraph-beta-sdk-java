@@ -72,4 +72,3 @@ public class SalesInvoiceLineRequestBuilder extends BaseRequestBuilder implement
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

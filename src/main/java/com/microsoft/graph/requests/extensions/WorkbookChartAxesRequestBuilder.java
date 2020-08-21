@@ -83,4 +83,3 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);
     }
 }
-

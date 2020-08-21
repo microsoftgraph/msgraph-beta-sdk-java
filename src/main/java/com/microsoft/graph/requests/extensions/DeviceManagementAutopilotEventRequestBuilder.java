@@ -61,4 +61,3 @@ public class DeviceManagementAutopilotEventRequestBuilder extends BaseRequestBui
         return new DeviceManagementAutopilotPolicyStatusDetailRequestBuilder(getRequestUrlWithAdditionalSegment("policyStatusDetails") + "/" + id, getClient(), null);
     }
 }
-

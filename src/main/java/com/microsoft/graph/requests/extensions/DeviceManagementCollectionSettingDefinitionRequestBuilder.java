@@ -50,4 +50,3 @@ public class DeviceManagementCollectionSettingDefinitionRequestBuilder extends B
 
 
 }
-

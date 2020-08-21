@@ -68,4 +68,3 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder impleme
         return new ConversationThreadReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }
-

@@ -50,4 +50,3 @@ public class FilterOperatorSchemaRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

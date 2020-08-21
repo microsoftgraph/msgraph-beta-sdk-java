@@ -69,4 +69,3 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookTableSortReapplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reapply"), getClient(), null);
     }
 }
-

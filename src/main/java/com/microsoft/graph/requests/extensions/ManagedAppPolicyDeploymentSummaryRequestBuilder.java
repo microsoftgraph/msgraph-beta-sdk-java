@@ -50,4 +50,3 @@ public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequest
 
 
 }
-

@@ -50,4 +50,3 @@ public class SecurityBaselineCategoryStateSummaryRequestBuilder extends BaseRequ
 
 
 }
-

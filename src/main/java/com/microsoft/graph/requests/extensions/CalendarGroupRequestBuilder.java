@@ -61,4 +61,3 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder implements I
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
 }
-

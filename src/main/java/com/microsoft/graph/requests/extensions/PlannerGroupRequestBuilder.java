@@ -61,4 +61,3 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }
-

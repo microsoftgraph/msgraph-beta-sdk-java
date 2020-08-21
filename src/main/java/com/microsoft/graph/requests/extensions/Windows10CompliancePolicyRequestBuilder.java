@@ -50,4 +50,3 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

@@ -56,4 +56,3 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder i
         return new WindowsAutopilotSettingsSyncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sync"), getClient(), null);
     }
 }
-

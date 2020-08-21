@@ -62,4 +62,3 @@ public class AndroidForWorkEnrollmentProfileRequestBuilder extends BaseRequestBu
         return new AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createToken"), getClient(), null, tokenValidityInSeconds);
     }
 }
-

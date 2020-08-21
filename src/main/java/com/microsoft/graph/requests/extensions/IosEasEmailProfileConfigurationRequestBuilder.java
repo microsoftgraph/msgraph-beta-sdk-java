@@ -94,4 +94,3 @@ public class IosEasEmailProfileConfigurationRequestBuilder extends BaseRequestBu
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

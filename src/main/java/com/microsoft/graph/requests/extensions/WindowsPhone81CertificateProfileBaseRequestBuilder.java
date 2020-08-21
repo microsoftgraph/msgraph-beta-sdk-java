@@ -50,4 +50,3 @@ public class WindowsPhone81CertificateProfileBaseRequestBuilder extends BaseRequ
 
 
 }
-

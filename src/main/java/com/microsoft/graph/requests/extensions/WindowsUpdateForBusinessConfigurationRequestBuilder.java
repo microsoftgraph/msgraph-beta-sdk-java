@@ -73,4 +73,3 @@ public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseReq
         return new WindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.extendQualityUpdatesPause"), getClient(), null);
     }
 }
-

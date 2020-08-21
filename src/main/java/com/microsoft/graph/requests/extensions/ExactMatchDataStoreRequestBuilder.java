@@ -67,4 +67,3 @@ public class ExactMatchDataStoreRequestBuilder extends BaseRequestBuilder implem
         return new ExactMatchDataStoreLookupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lookup"), getClient(), null, key, values, resultColumnNames);
     }
 }
-

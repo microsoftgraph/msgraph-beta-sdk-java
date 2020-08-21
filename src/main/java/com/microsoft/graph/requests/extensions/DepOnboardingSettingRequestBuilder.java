@@ -130,4 +130,3 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder imple
         return new DepOnboardingSettingGetEncryptionPublicKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEncryptionPublicKey"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class EmailActivitySummaryRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

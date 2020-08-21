@@ -79,4 +79,3 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
         return new EmbeddedSIMActivationCodePoolAssignCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

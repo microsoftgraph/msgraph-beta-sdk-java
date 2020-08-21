@@ -61,4 +61,3 @@ public class Windows10PkcsCertificateProfileRequestBuilder extends BaseRequestBu
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

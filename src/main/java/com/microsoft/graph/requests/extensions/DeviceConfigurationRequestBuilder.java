@@ -149,4 +149,3 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder implem
         return new DeviceConfigurationAssignedAccessMultiModeProfilesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignedAccessMultiModeProfiles"), getClient(), null, assignedAccessMultiModeProfiles);
     }
 }
-

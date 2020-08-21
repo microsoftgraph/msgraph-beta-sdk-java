@@ -83,4 +83,3 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
         return new BusinessFlowRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlowsWithRequestsAwaitingMyDecision") + "/" + id, getClient(), null);
     }
 }
-

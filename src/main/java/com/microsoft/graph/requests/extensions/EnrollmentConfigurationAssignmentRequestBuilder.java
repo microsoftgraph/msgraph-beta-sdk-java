@@ -50,4 +50,3 @@ public class EnrollmentConfigurationAssignmentRequestBuilder extends BaseRequest
 
 
 }
-

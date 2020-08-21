@@ -68,4 +68,3 @@ public class IntuneBrandingProfileRequestBuilder extends BaseRequestBuilder impl
         return new IntuneBrandingProfileAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

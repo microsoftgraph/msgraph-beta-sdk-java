@@ -50,4 +50,3 @@ public class SkypeForBusinessActivityUserDetailRequestBuilder extends BaseReques
 
 
 }
-

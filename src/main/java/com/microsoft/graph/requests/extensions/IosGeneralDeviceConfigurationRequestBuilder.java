@@ -50,4 +50,3 @@ public class IosGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuil
 
 
 }
-

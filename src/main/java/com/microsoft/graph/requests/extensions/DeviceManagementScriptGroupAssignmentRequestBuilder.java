@@ -50,4 +50,3 @@ public class DeviceManagementScriptGroupAssignmentRequestBuilder extends BaseReq
 
 
 }
-

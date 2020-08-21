@@ -78,4 +78,3 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder imple
         return new TeamsAppInstallationUpgradeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upgrade"), getClient(), null);
     }
 }
-

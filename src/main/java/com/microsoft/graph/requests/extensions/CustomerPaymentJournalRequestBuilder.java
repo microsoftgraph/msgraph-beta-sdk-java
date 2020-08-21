@@ -72,4 +72,3 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

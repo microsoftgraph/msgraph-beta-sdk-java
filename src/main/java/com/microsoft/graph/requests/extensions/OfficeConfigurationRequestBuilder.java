@@ -61,4 +61,3 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implem
         return new OfficeClientConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations") + "/" + id, getClient(), null);
     }
 }
-

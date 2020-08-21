@@ -61,4 +61,3 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
         return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues") + "/" + id, getClient(), null);
     }
 }
-

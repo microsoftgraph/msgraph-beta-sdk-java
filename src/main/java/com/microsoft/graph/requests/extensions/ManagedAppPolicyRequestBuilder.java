@@ -57,4 +57,3 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
         return new ManagedAppPolicyTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
 }
-

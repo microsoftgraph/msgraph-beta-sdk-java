@@ -50,4 +50,3 @@ public class PrivilegedRoleSettingsRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

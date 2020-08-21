@@ -114,4 +114,3 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
         return new InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateLabelsAndPolicies"), getClient(), null, evaluateSensitivityLabels, evaluateDataLossPreventionPolicies, classifyText);
     }
 }
-

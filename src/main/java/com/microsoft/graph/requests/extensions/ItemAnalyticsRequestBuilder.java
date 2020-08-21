@@ -83,4 +83,3 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastSevenDays"), getClient(), null);
     }
 }
-

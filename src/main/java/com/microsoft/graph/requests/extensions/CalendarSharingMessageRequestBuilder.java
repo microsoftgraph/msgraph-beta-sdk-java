@@ -56,4 +56,3 @@ public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder imp
         return new CalendarSharingMessageAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null);
     }
 }
-

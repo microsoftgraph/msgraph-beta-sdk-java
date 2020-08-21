@@ -50,4 +50,3 @@ public class PaymentTermRequestBuilder extends BaseRequestBuilder implements IPa
 
 
 }
-

@@ -124,4 +124,3 @@ public class WorkbookFilterRequestBuilder extends BaseRequestBuilder implements 
         return new WorkbookFilterClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 }
-

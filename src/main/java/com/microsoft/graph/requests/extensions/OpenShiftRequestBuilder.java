@@ -50,4 +50,3 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
 
 
 }
-

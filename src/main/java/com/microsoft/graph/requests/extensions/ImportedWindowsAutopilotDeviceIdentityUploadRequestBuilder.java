@@ -61,4 +61,3 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
         return new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities") + "/" + id, getClient(), null);
     }
 }
-

@@ -56,4 +56,3 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
         return new FileAttachmentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }
-

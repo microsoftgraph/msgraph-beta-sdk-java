@@ -106,4 +106,3 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder implem
         return new EducationAssignmentGetResourcesFolderUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getResourcesFolderUrl"), getClient(), null);
     }
 }
-

@@ -72,4 +72,3 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
         return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
     }
 }
-

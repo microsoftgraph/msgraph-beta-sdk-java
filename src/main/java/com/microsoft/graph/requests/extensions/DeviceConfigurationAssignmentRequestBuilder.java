@@ -50,4 +50,3 @@ public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuil
 
 
 }
-

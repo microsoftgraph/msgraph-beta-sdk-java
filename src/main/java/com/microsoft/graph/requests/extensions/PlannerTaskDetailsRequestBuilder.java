@@ -50,4 +50,3 @@ public class PlannerTaskDetailsRequestBuilder extends BaseRequestBuilder impleme
 
 
 }
-

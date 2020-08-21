@@ -163,4 +163,3 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder implements I
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height, fittingMode);
     }
 }
-

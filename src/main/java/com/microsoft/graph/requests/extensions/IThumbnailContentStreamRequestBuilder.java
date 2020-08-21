@@ -4,8 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IThumbnailContentStreamRequest;
+import com.microsoft.graph.requests.extensions.ThumbnailContentStreamRequest;
 
-import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
 
@@ -15,6 +17,7 @@ import java.util.EnumSet;
  * The interface for the Thumbnail Content Stream Request Builder.
  */
 public interface IThumbnailContentStreamRequestBuilder extends IRequestBuilder {
+
     /**
      * Creates the request
      *
@@ -29,6 +32,5 @@ public interface IThumbnailContentStreamRequestBuilder extends IRequestBuilder {
      * @return the IThumbnailContentStreamRequest instance
      */
     IThumbnailContentStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
-
 
 }

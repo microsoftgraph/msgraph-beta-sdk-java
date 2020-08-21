@@ -50,4 +50,3 @@ public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder
 
 
 }
-

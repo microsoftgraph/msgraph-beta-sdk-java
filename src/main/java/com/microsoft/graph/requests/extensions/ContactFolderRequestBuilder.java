@@ -94,4 +94,3 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder implements I
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class WindowsHealthMonitoringConfigurationRequestBuilder extends BaseRequ
 
 
 }
-

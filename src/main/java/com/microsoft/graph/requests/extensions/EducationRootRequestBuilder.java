@@ -105,4 +105,3 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
         return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
     }
 }
-

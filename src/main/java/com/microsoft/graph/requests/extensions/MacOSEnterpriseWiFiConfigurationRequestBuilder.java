@@ -83,4 +83,3 @@ public class MacOSEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestB
         return new MacOSCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseReq
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
 }
-

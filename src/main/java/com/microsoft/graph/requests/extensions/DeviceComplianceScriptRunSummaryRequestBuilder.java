@@ -50,4 +50,3 @@ public class DeviceComplianceScriptRunSummaryRequestBuilder extends BaseRequestB
 
 
 }
-

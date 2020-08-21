@@ -61,4 +61,3 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
         return new WindowsDomainJoinConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("domainJoinConfiguration"), getClient(), null);
     }
 }
-

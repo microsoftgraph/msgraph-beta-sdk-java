@@ -50,4 +50,3 @@ public class SkypeForBusinessOrganizerActivityUserCountsRequestBuilder extends B
 
 
 }
-

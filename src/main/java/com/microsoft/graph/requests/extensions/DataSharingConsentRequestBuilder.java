@@ -56,4 +56,3 @@ public class DataSharingConsentRequestBuilder extends BaseRequestBuilder impleme
         return new DataSharingConsentConsentToDataSharingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.consentToDataSharing"), getClient(), null);
     }
 }
-

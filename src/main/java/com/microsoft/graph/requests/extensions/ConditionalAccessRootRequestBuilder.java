@@ -72,4 +72,3 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
     }
 }
-

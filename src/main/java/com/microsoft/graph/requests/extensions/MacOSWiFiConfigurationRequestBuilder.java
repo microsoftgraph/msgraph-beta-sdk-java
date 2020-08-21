@@ -50,4 +50,3 @@ public class MacOSWiFiConfigurationRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

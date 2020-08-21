@@ -89,4 +89,3 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
         return new AccessPackageAssignmentRequestCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Cancel"), getClient(), null);
     }
 }
-

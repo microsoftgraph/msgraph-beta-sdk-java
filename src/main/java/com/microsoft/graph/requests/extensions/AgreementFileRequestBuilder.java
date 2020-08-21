@@ -61,4 +61,3 @@ public class AgreementFileRequestBuilder extends BaseRequestBuilder implements I
         return new AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("localizations") + "/" + id, getClient(), null);
     }
 }
-

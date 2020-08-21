@@ -50,4 +50,3 @@ public class AuthenticationMethodTargetRequestBuilder extends BaseRequestBuilder
 
 
 }
-

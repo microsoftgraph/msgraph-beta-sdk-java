@@ -57,4 +57,3 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
         return new ManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
 }
-

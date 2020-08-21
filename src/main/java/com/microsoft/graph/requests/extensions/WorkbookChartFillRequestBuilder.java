@@ -62,4 +62,3 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookChartFillSetSolidColorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setSolidColor"), getClient(), null, color);
     }
 }
-

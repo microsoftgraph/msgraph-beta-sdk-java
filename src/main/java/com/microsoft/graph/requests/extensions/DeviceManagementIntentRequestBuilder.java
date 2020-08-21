@@ -170,4 +170,3 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
         return new DeviceManagementIntentCompareCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.compare"), getClient(), null, templateId);
     }
 }
-

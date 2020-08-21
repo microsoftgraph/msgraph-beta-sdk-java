@@ -89,4 +89,3 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder implem
         return new CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getPresencesByUserId"), getClient(), null, ids);
     }
 }
-

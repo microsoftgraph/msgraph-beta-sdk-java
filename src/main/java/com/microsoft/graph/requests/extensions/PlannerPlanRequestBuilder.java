@@ -83,4 +83,3 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
         return new PlannerPlanDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
 }
-

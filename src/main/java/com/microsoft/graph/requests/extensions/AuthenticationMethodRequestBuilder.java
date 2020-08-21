@@ -68,4 +68,3 @@ public class AuthenticationMethodRequestBuilder extends BaseRequestBuilder imple
         return new AuthenticationMethodResetPasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetPassword"), getClient(), null, newPassword, requireChangeOnNextSignIn);
     }
 }
-

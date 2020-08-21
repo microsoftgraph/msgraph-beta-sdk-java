@@ -61,4 +61,3 @@ public class AndroidVpnConfigurationRequestBuilder extends BaseRequestBuilder im
         return new AndroidCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

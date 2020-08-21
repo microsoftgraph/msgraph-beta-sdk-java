@@ -56,4 +56,3 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder impleme
         return new CompanyInformationPictureStreamRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 }
-

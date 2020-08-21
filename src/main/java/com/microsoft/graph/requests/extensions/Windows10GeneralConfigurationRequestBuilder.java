@@ -61,4 +61,3 @@ public class Windows10GeneralConfigurationRequestBuilder extends BaseRequestBuil
         return new WindowsPrivacyDataAccessControlItemRequestBuilder(getRequestUrlWithAdditionalSegment("privacyAccessControls") + "/" + id, getClient(), null);
     }
 }
-

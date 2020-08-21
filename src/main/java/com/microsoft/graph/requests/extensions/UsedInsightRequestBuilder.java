@@ -61,4 +61,3 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
         return new EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }
-

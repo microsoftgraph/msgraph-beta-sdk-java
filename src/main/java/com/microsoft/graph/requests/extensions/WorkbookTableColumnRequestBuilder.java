@@ -85,4 +85,3 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder implem
         return new WorkbookTableColumnTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);
     }
 }
-

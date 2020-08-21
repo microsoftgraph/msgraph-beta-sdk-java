@@ -62,4 +62,3 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder implement
         return new DriveItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }
 }
-

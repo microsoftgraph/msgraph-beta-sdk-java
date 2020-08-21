@@ -50,4 +50,3 @@ public class ShipmentMethodRequestBuilder extends BaseRequestBuilder implements 
 
 
 }
-

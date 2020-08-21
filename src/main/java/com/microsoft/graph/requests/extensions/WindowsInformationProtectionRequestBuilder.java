@@ -90,4 +90,3 @@ public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuild
         return new WindowsInformationProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

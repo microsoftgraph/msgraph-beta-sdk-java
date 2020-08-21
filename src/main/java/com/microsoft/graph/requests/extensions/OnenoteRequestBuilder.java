@@ -116,4 +116,3 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder implements IOnenot
         return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }
-

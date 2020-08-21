@@ -61,4 +61,3 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
         return new WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
 }
-

@@ -72,4 +72,3 @@ public class IosScepCertificateProfileRequestBuilder extends BaseRequestBuilder 
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

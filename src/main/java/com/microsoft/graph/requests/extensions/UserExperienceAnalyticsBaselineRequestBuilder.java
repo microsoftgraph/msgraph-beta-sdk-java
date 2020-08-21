@@ -72,4 +72,3 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }
 }
-

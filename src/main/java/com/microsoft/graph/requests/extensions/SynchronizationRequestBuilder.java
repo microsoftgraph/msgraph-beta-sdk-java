@@ -85,4 +85,3 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder implements
         return new SynchronizationPingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Ping"), getClient(), null);
     }
 }
-

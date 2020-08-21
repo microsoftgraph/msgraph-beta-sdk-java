@@ -50,4 +50,3 @@ public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

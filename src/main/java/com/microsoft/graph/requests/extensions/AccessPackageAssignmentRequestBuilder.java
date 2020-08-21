@@ -105,4 +105,3 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder im
         return new AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
     }
 }
-

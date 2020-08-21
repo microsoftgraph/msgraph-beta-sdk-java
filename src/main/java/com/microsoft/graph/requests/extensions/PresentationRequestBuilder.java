@@ -61,4 +61,3 @@ public class PresentationRequestBuilder extends BaseRequestBuilder implements IP
         return new DocumentCommentRequestBuilder(getRequestUrlWithAdditionalSegment("comments") + "/" + id, getClient(), null);
     }
 }
-

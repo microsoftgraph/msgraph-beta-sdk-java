@@ -94,4 +94,3 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder implements IPl
         return new PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);
     }
 }
-

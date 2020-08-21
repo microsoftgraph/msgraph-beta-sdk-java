@@ -105,4 +105,3 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder implement
         return new GovernanceRoleSettingRequestBuilder(getRequestUrlWithAdditionalSegment("roleSettings") + "/" + id, getClient(), null);
     }
 }
-

@@ -56,4 +56,3 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
         return new ResourceOperationGetScopesForUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getScopesForUser"), getClient(), null, userid);
     }
 }
-

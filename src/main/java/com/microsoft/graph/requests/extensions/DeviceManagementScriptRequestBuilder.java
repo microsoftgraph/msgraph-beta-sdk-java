@@ -113,4 +113,3 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder imp
         return new DeviceManagementScriptAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, deviceManagementScriptGroupAssignments, deviceManagementScriptAssignments);
     }
 }
-

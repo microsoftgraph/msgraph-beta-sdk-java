@@ -50,4 +50,3 @@ public class SensitiveTypeRequestBuilder extends BaseRequestBuilder implements I
 
 
 }
-

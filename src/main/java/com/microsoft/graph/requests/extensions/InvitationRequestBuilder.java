@@ -61,4 +61,3 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUser"), getClient(), null);
     }
 }
-

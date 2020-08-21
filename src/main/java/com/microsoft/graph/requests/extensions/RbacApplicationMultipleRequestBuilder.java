@@ -72,4 +72,3 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder im
         return new UnifiedRoleAssignmentMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class MobileAppInstallSummaryRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

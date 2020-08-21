@@ -50,4 +50,3 @@ public class BookingCustomerRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

@@ -67,4 +67,3 @@ public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBu
         return new PrivilegedRoleAssignmentRequestCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 }
-

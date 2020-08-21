@@ -50,4 +50,3 @@ public class DeviceAndAppManagementAssignmentFilterRequestBuilder extends BaseRe
 
 
 }
-

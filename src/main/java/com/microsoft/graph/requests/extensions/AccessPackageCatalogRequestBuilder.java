@@ -94,4 +94,3 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
         return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
 }
-

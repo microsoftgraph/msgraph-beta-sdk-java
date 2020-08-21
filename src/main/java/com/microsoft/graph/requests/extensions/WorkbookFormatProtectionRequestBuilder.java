@@ -50,4 +50,3 @@ public class WorkbookFormatProtectionRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

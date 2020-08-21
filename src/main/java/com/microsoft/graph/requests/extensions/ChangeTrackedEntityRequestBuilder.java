@@ -56,4 +56,3 @@ public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implem
         return new ChangeTrackedEntityStageForDeletionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stageForDeletion"), getClient(), null);
     }
 }
-

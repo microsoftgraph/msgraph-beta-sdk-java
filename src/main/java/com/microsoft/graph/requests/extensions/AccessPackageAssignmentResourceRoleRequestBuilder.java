@@ -94,4 +94,3 @@ public class AccessPackageAssignmentResourceRoleRequestBuilder extends BaseReque
         return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments") + "/" + id, getClient(), null);
     }
 }
-

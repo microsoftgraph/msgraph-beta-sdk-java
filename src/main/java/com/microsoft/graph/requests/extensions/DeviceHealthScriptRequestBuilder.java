@@ -108,4 +108,3 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder impleme
         return new DeviceHealthScriptGetRemediationHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRemediationHistory"), getClient(), null);
     }
 }
-

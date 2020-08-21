@@ -72,4 +72,3 @@ public class SalesQuoteLineRequestBuilder extends BaseRequestBuilder implements 
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

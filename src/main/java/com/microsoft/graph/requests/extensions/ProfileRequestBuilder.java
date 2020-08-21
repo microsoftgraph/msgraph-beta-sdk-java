@@ -259,4 +259,3 @@ public class ProfileRequestBuilder extends BaseRequestBuilder implements IProfil
         return new PersonWebsiteRequestBuilder(getRequestUrlWithAdditionalSegment("websites") + "/" + id, getClient(), null);
     }
 }
-

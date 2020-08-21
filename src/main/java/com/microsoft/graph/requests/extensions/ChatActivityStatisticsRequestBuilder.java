@@ -50,4 +50,3 @@ public class ChatActivityStatisticsRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

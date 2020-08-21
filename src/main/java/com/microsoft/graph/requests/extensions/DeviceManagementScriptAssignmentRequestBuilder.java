@@ -50,4 +50,3 @@ public class DeviceManagementScriptAssignmentRequestBuilder extends BaseRequestB
 
 
 }
-

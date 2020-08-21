@@ -61,4 +61,3 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder imp
         return new WindowsDeviceMalwareStateRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState") + "/" + id, getClient(), null);
     }
 }
-

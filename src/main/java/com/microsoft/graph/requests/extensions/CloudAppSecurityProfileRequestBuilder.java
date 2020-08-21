@@ -50,4 +50,3 @@ public class CloudAppSecurityProfileRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

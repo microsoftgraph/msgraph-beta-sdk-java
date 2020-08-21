@@ -182,4 +182,3 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
         return new SecurityActionRequestBuilder(getRequestUrlWithAdditionalSegment("securityActions") + "/" + id, getClient(), null);
     }
 }
-

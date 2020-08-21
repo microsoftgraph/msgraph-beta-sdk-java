@@ -61,4 +61,3 @@ public class EventMessageRequestBuilder extends BaseRequestBuilder implements IE
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
     }
 }
-

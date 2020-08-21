@@ -50,4 +50,3 @@ public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

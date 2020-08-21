@@ -50,4 +50,3 @@ public class SchedulingGroupRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

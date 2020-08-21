@@ -50,4 +50,3 @@ public class EditionUpgradeConfigurationRequestBuilder extends BaseRequestBuilde
 
 
 }
-

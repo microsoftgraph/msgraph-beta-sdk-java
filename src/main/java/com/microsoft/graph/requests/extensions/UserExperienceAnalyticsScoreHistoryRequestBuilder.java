@@ -50,4 +50,3 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
 
 
 }
-

@@ -61,4 +61,3 @@ public class MacOSVpnConfigurationRequestBuilder extends BaseRequestBuilder impl
         return new MacOSCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

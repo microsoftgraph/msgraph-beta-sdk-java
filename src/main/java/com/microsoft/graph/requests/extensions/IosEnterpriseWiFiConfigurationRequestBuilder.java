@@ -83,4 +83,3 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

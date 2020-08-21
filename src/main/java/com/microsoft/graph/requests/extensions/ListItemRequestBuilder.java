@@ -111,4 +111,3 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 }
-

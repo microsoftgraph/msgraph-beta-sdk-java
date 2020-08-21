@@ -50,4 +50,3 @@ public class AndroidGeneralDeviceConfigurationRequestBuilder extends BaseRequest
 
 
 }
-

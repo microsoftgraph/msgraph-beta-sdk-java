@@ -61,4 +61,3 @@ public class WindowsPhone81VpnConfigurationRequestBuilder extends BaseRequestBui
         return new WindowsPhone81CertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

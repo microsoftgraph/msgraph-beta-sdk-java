@@ -61,4 +61,3 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
         return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class SkypeForBusinessActivityCountsRequestBuilder extends BaseRequestBui
 
 
 }
-

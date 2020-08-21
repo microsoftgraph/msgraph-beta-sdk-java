@@ -50,4 +50,3 @@ public class TeamsUserActivityCountsRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

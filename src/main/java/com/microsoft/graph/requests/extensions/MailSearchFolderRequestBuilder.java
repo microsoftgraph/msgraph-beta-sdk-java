@@ -50,4 +50,3 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implement
 
 
 }
-

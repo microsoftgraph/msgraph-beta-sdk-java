@@ -50,4 +50,3 @@ public class Windows81VpnConfigurationRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

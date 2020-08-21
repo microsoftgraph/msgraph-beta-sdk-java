@@ -61,4 +61,3 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder implements I
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }
-

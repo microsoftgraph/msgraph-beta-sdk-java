@@ -96,4 +96,3 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder i
         return new DeviceManagementTemplateCompareCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.compare"), getClient(), null, templateId);
     }
 }
-

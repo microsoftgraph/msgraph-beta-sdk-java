@@ -94,4 +94,3 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmplo
         return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }
-

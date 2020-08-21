@@ -50,4 +50,3 @@ public class AndroidOmaCpConfigurationRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

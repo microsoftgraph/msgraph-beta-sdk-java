@@ -72,4 +72,3 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder imp
         return new RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
     }
 }
-

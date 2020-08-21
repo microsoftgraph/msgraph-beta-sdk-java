@@ -50,4 +50,3 @@ public class IpNamedLocationRequestBuilder extends BaseRequestBuilder implements
 
 
 }
-

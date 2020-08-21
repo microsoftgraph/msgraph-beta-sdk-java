@@ -61,4 +61,3 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder implements IRevi
         return new ReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
     }
 }
-

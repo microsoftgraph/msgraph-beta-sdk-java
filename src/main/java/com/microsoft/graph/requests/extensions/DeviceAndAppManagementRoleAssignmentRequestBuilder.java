@@ -61,4 +61,3 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
         return new RoleScopeTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleScopeTags") + "/" + id, getClient(), null);
     }
 }
-

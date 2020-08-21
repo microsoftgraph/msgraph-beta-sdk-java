@@ -50,4 +50,3 @@ public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder impleme
 
 
 }
-

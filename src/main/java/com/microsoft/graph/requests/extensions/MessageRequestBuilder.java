@@ -173,4 +173,3 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new MessageUnsubscribeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubscribe"), getClient(), null);
     }
 }
-

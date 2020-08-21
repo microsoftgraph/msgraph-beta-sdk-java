@@ -61,4 +61,3 @@ public class WindowsPhone81ImportedPFXCertificateProfileRequestBuilder extends B
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

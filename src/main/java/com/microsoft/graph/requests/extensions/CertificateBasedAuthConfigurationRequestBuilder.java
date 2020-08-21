@@ -50,4 +50,3 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
 
 
 }
-

@@ -72,4 +72,3 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder impl
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors") + "/" + id, getClient(), null);
     }
 }
-

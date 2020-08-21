@@ -50,4 +50,3 @@ public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseReque
 
 
 }
-

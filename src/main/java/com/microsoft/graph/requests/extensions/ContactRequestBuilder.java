@@ -94,4 +94,3 @@ public class ContactRequestBuilder extends BaseRequestBuilder implements IContac
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 }
-

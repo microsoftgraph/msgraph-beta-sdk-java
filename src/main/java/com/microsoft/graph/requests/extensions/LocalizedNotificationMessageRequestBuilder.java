@@ -50,4 +50,3 @@ public class LocalizedNotificationMessageRequestBuilder extends BaseRequestBuild
 
 
 }
-

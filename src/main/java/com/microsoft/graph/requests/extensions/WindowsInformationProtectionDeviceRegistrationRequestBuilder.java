@@ -56,4 +56,3 @@ public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extend
         return new WindowsInformationProtectionDeviceRegistrationWipeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipe"), getClient(), null);
     }
 }
-

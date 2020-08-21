@@ -50,4 +50,3 @@ public class SkypeForBusinessDeviceUsageUserDetailRequestBuilder extends BaseReq
 
 
 }
-

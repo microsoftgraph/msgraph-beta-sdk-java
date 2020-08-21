@@ -61,4 +61,3 @@ public class ExactMatchLookupJobRequestBuilder extends BaseRequestBuilder implem
         return new LookupResultRowRequestBuilder(getRequestUrlWithAdditionalSegment("matchingRows") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class ProviderTenantSettingRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

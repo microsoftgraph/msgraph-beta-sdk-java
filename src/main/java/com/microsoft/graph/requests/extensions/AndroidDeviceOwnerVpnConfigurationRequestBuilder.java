@@ -72,4 +72,3 @@ public class AndroidDeviceOwnerVpnConfigurationRequestBuilder extends BaseReques
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

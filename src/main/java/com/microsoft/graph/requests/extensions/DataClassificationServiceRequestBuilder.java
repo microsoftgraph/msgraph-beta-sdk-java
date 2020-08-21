@@ -189,4 +189,3 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
         return new DataClassificationServiceClassifyExactMatchesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.classifyExactMatches"), getClient(), null, text, timeoutInMs, sensitiveTypeIds, contentClassifications);
     }
 }
-

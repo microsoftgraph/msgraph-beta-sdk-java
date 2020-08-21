@@ -50,4 +50,3 @@ public class DeviceComplianceUserStatusRequestBuilder extends BaseRequestBuilder
 
 
 }
-

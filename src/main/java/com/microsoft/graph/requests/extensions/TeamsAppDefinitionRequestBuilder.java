@@ -50,4 +50,3 @@ public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder impleme
 
 
 }
-

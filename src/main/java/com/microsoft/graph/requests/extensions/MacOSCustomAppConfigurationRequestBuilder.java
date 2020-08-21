@@ -50,4 +50,3 @@ public class MacOSCustomAppConfigurationRequestBuilder extends BaseRequestBuilde
 
 
 }
-

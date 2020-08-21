@@ -90,4 +90,3 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
         return new WindowsDefenderApplicationControlSupplementalPolicyAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, wdacPolicyAssignments);
     }
 }
-

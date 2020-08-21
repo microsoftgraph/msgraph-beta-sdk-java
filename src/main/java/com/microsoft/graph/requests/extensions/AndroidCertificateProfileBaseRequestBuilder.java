@@ -61,4 +61,3 @@ public class AndroidCertificateProfileBaseRequestBuilder extends BaseRequestBuil
         return new AndroidTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 }
-

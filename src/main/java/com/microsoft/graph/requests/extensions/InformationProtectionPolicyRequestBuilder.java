@@ -61,4 +61,3 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
         return new InformationProtectionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("labels") + "/" + id, getClient(), null);
     }
 }
-

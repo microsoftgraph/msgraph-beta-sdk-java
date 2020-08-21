@@ -61,4 +61,3 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
         return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
     }
 }
-

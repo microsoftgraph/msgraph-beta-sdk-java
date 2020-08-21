@@ -50,4 +50,3 @@ public class WindowsMicrosoftEdgeAppRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

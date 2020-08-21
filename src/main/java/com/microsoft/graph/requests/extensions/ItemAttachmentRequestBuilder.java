@@ -61,4 +61,3 @@ public class ItemAttachmentRequestBuilder extends BaseRequestBuilder implements 
         return new OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
     }
 }
-

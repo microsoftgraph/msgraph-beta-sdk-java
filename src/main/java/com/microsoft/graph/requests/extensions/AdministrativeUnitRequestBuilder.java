@@ -83,4 +83,3 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder impleme
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 }
-

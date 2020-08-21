@@ -50,4 +50,3 @@ public class TeamsDeviceUsageUserCountsRequestBuilder extends BaseRequestBuilder
 
 
 }
-

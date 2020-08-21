@@ -50,4 +50,3 @@ public class RelyingPartyDetailedSummaryRequestBuilder extends BaseRequestBuilde
 
 
 }
-

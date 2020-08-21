@@ -72,4 +72,3 @@ public class IosManagedAppProtectionRequestBuilder extends BaseRequestBuilder im
         return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
     }
 }
-

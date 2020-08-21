@@ -50,4 +50,3 @@ public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilde
 
 
 }
-

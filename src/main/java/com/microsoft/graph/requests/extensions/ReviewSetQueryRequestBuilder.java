@@ -50,4 +50,3 @@ public class ReviewSetQueryRequestBuilder extends BaseRequestBuilder implements 
 
 
 }
-

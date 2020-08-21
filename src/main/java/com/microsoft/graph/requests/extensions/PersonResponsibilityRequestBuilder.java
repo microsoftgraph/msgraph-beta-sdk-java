@@ -50,4 +50,3 @@ public class PersonResponsibilityRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

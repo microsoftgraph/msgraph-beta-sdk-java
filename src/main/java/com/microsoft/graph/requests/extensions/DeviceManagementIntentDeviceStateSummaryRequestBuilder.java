@@ -50,4 +50,3 @@ public class DeviceManagementIntentDeviceStateSummaryRequestBuilder extends Base
 
 
 }
-

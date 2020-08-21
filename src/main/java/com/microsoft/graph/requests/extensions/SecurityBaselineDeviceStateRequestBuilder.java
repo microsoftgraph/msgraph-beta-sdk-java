@@ -50,4 +50,3 @@ public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilde
 
 
 }
-

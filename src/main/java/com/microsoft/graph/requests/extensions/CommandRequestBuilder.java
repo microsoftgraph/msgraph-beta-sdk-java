@@ -61,4 +61,3 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
         return new PayloadResponseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("responsepayload"), getClient(), null);
     }
 }
-

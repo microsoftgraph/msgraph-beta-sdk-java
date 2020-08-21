@@ -94,4 +94,3 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
         return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
     }
 }
-

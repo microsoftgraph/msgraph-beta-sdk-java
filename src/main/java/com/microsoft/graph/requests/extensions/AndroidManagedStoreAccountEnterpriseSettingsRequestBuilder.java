@@ -92,4 +92,3 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
         return new AndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setAndroidDeviceOwnerFullyManagedEnrollmentState"), getClient(), null, enabled);
     }
 }
-

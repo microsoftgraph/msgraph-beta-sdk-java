@@ -50,4 +50,3 @@ public class EvaluateLabelJobResponseRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

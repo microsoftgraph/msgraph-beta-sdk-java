@@ -56,4 +56,3 @@ public class DirectoryDefinitionRequestBuilder extends BaseRequestBuilder implem
         return new DirectoryDefinitionDiscoverRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.discover"), getClient(), null);
     }
 }
-

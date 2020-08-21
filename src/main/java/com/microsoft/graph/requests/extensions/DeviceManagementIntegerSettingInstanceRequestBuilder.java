@@ -50,4 +50,3 @@ public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRe
 
 
 }
-

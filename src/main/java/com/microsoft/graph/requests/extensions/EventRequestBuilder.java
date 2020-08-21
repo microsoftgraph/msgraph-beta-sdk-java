@@ -171,4 +171,3 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
         return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, comment);
     }
 }
-

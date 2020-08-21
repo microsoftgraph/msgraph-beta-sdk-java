@@ -50,4 +50,3 @@ public class GroupPolicyPresentationCheckBoxRequestBuilder extends BaseRequestBu
 
 
 }
-

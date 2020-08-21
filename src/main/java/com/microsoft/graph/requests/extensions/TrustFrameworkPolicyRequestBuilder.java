@@ -56,4 +56,3 @@ public class TrustFrameworkPolicyRequestBuilder extends BaseRequestBuilder imple
         return new TrustFrameworkPolicyStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }
-

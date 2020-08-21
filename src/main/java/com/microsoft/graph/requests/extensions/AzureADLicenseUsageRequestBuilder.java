@@ -50,4 +50,3 @@ public class AzureADLicenseUsageRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

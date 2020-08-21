@@ -50,4 +50,3 @@ public class AppleEnrollmentProfileAssignmentRequestBuilder extends BaseRequestB
 
 
 }
-

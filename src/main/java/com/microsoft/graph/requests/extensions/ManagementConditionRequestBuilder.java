@@ -61,4 +61,3 @@ public class ManagementConditionRequestBuilder extends BaseRequestBuilder implem
         return new ManagementConditionStatementWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements") + "/" + id, getClient(), null);
     }
 }
-

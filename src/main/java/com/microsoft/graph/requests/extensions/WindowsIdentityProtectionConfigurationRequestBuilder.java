@@ -50,4 +50,3 @@ public class WindowsIdentityProtectionConfigurationRequestBuilder extends BaseRe
 
 
 }
-

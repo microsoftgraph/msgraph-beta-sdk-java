@@ -61,4 +61,3 @@ public class AndroidForWorkCertificateProfileBaseRequestBuilder extends BaseRequ
         return new AndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder imple
         return new WindowsManagementAppHealthStateRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates") + "/" + id, getClient(), null);
     }
 }
-

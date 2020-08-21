@@ -61,4 +61,3 @@ public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJo
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

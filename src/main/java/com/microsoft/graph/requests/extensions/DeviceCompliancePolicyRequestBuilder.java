@@ -141,4 +141,3 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
         return new DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.scheduleActionsForRules"), getClient(), null, deviceComplianceScheduledActionForRules);
     }
 }
-

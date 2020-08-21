@@ -50,4 +50,3 @@ public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBu
 
 
 }
-

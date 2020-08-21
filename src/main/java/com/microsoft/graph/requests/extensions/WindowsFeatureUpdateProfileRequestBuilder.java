@@ -79,4 +79,3 @@ public class WindowsFeatureUpdateProfileRequestBuilder extends BaseRequestBuilde
         return new WindowsFeatureUpdateProfileAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
-

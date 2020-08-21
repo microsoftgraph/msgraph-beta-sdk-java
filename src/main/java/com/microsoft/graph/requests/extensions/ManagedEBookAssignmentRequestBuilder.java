@@ -50,4 +50,3 @@ public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

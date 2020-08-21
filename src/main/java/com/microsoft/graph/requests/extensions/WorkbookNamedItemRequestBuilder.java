@@ -67,4 +67,3 @@ public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookNamedItemRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class EmailFileAssessmentRequestRequestBuilder extends BaseRequestBuilder
 
 
 }
-

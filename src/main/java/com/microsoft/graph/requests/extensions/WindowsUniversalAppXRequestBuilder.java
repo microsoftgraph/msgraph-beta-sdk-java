@@ -61,4 +61,3 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
         return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("committedContainedApps") + "/" + id, getClient(), null);
     }
 }
-

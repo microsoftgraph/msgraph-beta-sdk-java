@@ -73,4 +73,3 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder implements 
         return new EdiscoveryCaseReopenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reopen"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
         return new AppLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests") + "/" + id, getClient(), null);
     }
 }
-

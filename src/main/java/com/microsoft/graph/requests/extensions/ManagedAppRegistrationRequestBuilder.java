@@ -83,4 +83,3 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder imp
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }
-

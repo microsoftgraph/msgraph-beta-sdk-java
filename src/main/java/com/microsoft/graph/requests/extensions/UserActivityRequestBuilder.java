@@ -61,4 +61,3 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
         return new ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems") + "/" + id, getClient(), null);
     }
 }
-

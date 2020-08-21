@@ -50,4 +50,3 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

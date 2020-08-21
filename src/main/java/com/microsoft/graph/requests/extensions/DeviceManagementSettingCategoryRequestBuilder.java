@@ -61,4 +61,3 @@ public class DeviceManagementSettingCategoryRequestBuilder extends BaseRequestBu
         return new DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
 }
-

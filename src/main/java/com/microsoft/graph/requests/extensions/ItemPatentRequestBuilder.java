@@ -50,4 +50,3 @@ public class ItemPatentRequestBuilder extends BaseRequestBuilder implements IIte
 
 
 }
-

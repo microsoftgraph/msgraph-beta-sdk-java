@@ -50,4 +50,3 @@ public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder
 
 
 }
-

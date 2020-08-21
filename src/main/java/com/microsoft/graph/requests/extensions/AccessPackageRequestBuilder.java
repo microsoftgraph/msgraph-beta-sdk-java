@@ -83,4 +83,3 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
         return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
     }
 }
-

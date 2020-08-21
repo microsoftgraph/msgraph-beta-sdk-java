@@ -56,4 +56,3 @@ public class ProfilePhotoRequestBuilder extends BaseRequestBuilder implements IP
         return new ProfilePhotoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }
-

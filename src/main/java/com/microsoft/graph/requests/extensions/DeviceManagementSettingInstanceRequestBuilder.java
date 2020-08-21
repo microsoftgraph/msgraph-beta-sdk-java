@@ -50,4 +50,3 @@ public class DeviceManagementSettingInstanceRequestBuilder extends BaseRequestBu
 
 
 }
-

@@ -50,4 +50,3 @@ public class BookingNamedEntityRequestBuilder extends BaseRequestBuilder impleme
 
 
 }
-

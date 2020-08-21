@@ -83,4 +83,3 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
         return new TermsOfUseContainerRequestBuilder(getRequestUrlWithAdditionalSegment("termsOfUse"), getClient(), null);
     }
 }
-

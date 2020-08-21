@@ -89,4 +89,3 @@ public class OutlookTaskRequestBuilder extends BaseRequestBuilder implements IOu
         return new OutlookTaskCompleteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.complete"), getClient(), null);
     }
 }
-

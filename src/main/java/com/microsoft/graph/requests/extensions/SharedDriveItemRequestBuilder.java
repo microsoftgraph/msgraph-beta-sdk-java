@@ -127,4 +127,3 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
     }
 }
-

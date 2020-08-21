@@ -50,4 +50,3 @@ public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuild
 
 
 }
-

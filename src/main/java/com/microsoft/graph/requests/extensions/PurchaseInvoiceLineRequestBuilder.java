@@ -72,4 +72,3 @@ public class PurchaseInvoiceLineRequestBuilder extends BaseRequestBuilder implem
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

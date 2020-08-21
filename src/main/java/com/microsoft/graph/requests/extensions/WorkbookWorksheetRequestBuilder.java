@@ -135,4 +135,3 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 }
-

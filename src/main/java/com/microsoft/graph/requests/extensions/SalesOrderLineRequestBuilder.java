@@ -72,4 +72,3 @@ public class SalesOrderLineRequestBuilder extends BaseRequestBuilder implements 
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }
-

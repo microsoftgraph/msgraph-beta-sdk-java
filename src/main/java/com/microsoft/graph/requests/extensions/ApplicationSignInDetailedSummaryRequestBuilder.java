@@ -50,4 +50,3 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
 
 
 }
-

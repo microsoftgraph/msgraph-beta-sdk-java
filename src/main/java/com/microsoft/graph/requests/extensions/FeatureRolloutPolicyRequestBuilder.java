@@ -61,4 +61,3 @@ public class FeatureRolloutPolicyRequestBuilder extends BaseRequestBuilder imple
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }
-

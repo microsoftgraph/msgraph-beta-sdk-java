@@ -61,4 +61,3 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
         return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class PresenceRequestBuilder extends BaseRequestBuilder implements IPrese
 
 
 }
-

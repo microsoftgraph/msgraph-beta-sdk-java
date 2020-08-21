@@ -62,4 +62,3 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.downloadApplePushNotificationCertificateSigningRequest"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class AndroidScepCertificateProfileRequestBuilder extends BaseRequestBuil
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class SiteActivitySummaryRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

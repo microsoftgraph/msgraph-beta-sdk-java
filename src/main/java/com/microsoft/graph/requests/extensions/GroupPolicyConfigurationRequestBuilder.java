@@ -87,4 +87,3 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder i
         return new GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateDefinitionValues"), getClient(), null, added, updated, deletedIds);
     }
 }
-

@@ -50,4 +50,3 @@ public class ManagedAllDeviceCertificateStateRequestBuilder extends BaseRequestB
 
 
 }
-

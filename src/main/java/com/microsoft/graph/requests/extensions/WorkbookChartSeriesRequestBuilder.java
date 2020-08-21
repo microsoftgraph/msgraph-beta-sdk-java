@@ -72,4 +72,3 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
         return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
     }
 }
-

@@ -171,4 +171,3 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
         return new ApplicationRemovePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removePassword"), getClient(), null, keyId);
     }
 }
-

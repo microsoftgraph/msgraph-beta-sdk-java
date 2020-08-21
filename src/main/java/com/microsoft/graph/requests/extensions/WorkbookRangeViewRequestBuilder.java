@@ -67,4 +67,3 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookRangeViewRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }
-

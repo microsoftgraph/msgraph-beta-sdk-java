@@ -61,4 +61,3 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
         return new DeviceConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfiguration"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class OneDriveActivityUserDetailRequestBuilder extends BaseRequestBuilder
 
 
 }
-

@@ -83,4 +83,3 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder impleme
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
     }
 }
-

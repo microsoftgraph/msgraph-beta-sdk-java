@@ -61,4 +61,3 @@ public class AndroidForWorkScepCertificateProfileRequestBuilder extends BaseRequ
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

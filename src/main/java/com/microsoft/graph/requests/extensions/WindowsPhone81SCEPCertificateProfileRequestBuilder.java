@@ -72,4 +72,3 @@ public class WindowsPhone81SCEPCertificateProfileRequestBuilder extends BaseRequ
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

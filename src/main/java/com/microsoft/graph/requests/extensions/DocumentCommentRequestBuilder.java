@@ -61,4 +61,3 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements
         return new DocumentCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }
-

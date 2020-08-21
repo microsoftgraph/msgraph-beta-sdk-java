@@ -50,4 +50,3 @@ public class GroupPolicyPresentationValueDecimalRequestBuilder extends BaseReque
 
 
 }
-

@@ -171,4 +171,3 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
         return new ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
     }
 }
-

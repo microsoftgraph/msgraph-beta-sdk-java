@@ -138,4 +138,3 @@ public class PrintRequestBuilder extends BaseRequestBuilder implements IPrintReq
         return new PrintTaskDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("taskDefinitions") + "/" + id, getClient(), null);
     }
 }
-

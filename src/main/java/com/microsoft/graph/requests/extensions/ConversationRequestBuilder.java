@@ -61,4 +61,3 @@ public class ConversationRequestBuilder extends BaseRequestBuilder implements IC
         return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }
 }
-

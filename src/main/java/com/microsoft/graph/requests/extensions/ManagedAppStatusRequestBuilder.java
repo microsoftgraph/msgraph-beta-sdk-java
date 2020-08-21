@@ -50,4 +50,3 @@ public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder implement
 
 
 }
-

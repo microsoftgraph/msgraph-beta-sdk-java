@@ -61,4 +61,3 @@ public class AndroidWorkProfileVpnConfigurationRequestBuilder extends BaseReques
         return new AndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
     }
 }
-

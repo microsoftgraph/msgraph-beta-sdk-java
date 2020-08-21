@@ -50,4 +50,3 @@ public class WindowsManagementAppHealthSummaryRequestBuilder extends BaseRequest
 
 
 }
-

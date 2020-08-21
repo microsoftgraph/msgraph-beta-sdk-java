@@ -4,8 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemContentStreamRequest;
+import com.microsoft.graph.requests.extensions.DriveItemContentStreamRequest;
 
-import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
 
@@ -15,6 +17,7 @@ import java.util.EnumSet;
  * The interface for the Drive Item Content Stream Request Builder.
  */
 public interface IDriveItemContentStreamRequestBuilder extends IRequestBuilder {
+
     /**
      * Creates the request
      *
@@ -29,6 +32,5 @@ public interface IDriveItemContentStreamRequestBuilder extends IRequestBuilder {
      * @return the IDriveItemContentStreamRequest instance
      */
     IDriveItemContentStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
-
 
 }

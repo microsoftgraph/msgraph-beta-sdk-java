@@ -72,4 +72,3 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
         return new FeatureRolloutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies") + "/" + id, getClient(), null);
     }
 }
-

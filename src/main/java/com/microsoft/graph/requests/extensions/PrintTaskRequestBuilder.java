@@ -72,4 +72,3 @@ public class PrintTaskRequestBuilder extends BaseRequestBuilder implements IPrin
         return new PrintTaskTriggerWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("trigger"), getClient(), null);
     }
 }
-

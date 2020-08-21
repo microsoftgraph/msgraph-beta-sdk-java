@@ -50,4 +50,3 @@ public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implemen
 
 
 }
-

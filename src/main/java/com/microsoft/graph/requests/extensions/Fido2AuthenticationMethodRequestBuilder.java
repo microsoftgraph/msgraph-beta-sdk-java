@@ -50,4 +50,3 @@ public class Fido2AuthenticationMethodRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

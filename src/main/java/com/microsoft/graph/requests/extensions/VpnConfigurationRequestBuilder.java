@@ -50,4 +50,3 @@ public class VpnConfigurationRequestBuilder extends BaseRequestBuilder implement
 
 
 }
-

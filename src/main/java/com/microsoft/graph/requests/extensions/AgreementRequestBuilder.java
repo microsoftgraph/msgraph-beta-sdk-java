@@ -83,4 +83,3 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
         return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances") + "/" + id, getClient(), null);
     }
 }
-

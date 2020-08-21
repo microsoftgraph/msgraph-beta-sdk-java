@@ -117,4 +117,3 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements
         return new BookingBusinessUnpublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unpublish"), getClient(), null);
     }
 }
-

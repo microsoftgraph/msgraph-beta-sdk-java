@@ -61,4 +61,3 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder implement
         return new ItemActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
 }
-

@@ -83,4 +83,3 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder implemen
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
 }
-

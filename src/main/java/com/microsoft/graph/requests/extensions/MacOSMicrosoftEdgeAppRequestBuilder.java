@@ -50,4 +50,3 @@ public class MacOSMicrosoftEdgeAppRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

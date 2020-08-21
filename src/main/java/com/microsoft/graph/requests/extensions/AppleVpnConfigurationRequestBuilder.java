@@ -50,4 +50,3 @@ public class AppleVpnConfigurationRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

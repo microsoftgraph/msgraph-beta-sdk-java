@@ -4,8 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementDataContentStreamRequest;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementDataContentStreamRequest;
 
-import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
 
@@ -15,6 +17,7 @@ import java.util.EnumSet;
  * The interface for the Device And App Management Data Content Stream Request Builder.
  */
 public interface IDeviceAndAppManagementDataContentStreamRequestBuilder extends IRequestBuilder {
+
     /**
      * Creates the request
      *
@@ -29,6 +32,5 @@ public interface IDeviceAndAppManagementDataContentStreamRequestBuilder extends 
      * @return the IDeviceAndAppManagementDataContentStreamRequest instance
      */
     IDeviceAndAppManagementDataContentStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
-
 
 }

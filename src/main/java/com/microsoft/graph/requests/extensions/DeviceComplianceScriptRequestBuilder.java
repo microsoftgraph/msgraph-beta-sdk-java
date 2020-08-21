@@ -90,4 +90,3 @@ public class DeviceComplianceScriptRequestBuilder extends BaseRequestBuilder imp
         return new DeviceComplianceScriptAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, deviceHealthScriptAssignments);
     }
 }
-

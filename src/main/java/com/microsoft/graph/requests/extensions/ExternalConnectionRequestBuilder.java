@@ -94,4 +94,3 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
         return new ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
     }
 }
-

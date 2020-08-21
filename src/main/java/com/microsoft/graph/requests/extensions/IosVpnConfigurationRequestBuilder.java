@@ -72,4 +72,3 @@ public class IosVpnConfigurationRequestBuilder extends BaseRequestBuilder implem
         return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 }
-

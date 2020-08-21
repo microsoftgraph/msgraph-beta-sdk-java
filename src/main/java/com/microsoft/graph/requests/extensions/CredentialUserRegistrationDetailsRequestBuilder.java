@@ -50,4 +50,3 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
 
 
 }
-

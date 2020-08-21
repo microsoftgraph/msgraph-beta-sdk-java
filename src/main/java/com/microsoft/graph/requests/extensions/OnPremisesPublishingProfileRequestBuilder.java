@@ -105,4 +105,3 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
         return new ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups") + "/" + id, getClient(), null);
     }
 }
-

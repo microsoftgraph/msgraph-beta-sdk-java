@@ -61,4 +61,3 @@ public class DeviceComplianceScriptDeviceStateRequestBuilder extends BaseRequest
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevice"), getClient(), null);
     }
 }
-

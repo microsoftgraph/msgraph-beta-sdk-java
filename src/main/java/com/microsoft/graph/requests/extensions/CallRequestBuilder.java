@@ -178,4 +178,3 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
         return new CallUpdateRecordingStatusRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateRecordingStatus"), getClient(), null, status, clientContext);
     }
 }
-

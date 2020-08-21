@@ -81,4 +81,3 @@ public class PolicySetRequestBuilder extends BaseRequestBuilder implements IPoli
         return new PolicySetUpdateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.update"), getClient(), null, addedPolicySetItems, updatedPolicySetItems, deletedPolicySetItems, assignments);
     }
 }
-

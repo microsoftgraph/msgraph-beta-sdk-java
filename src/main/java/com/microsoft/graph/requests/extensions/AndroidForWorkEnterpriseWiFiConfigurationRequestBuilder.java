@@ -72,4 +72,3 @@ public class AndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extends Bas
         return new AndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
 }
-

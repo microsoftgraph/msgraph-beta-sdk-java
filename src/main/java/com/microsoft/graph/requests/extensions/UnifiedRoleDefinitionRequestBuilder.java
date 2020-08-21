@@ -61,4 +61,3 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder impl
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom") + "/" + id, getClient(), null);
     }
 }
-

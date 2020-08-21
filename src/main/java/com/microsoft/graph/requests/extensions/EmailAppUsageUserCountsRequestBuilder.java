@@ -50,4 +50,3 @@ public class EmailAppUsageUserCountsRequestBuilder extends BaseRequestBuilder im
 
 
 }
-

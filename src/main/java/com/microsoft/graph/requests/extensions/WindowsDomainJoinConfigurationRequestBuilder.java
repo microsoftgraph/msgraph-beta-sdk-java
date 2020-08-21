@@ -61,4 +61,3 @@ public class WindowsDomainJoinConfigurationRequestBuilder extends BaseRequestBui
         return new DeviceConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("networkAccessConfigurations") + "/" + id, getClient(), null);
     }
 }
-

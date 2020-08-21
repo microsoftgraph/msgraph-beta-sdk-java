@@ -72,4 +72,3 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
         return new ItemInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
     }
 }
-

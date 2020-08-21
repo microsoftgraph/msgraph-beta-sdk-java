@@ -50,4 +50,3 @@ public class LocationManagementConditionRequestBuilder extends BaseRequestBuilde
 
 
 }
-

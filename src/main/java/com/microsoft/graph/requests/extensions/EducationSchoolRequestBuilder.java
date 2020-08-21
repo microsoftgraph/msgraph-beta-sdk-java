@@ -83,4 +83,3 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements
         return new AdministrativeUnitWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnit"), getClient(), null);
     }
 }
-

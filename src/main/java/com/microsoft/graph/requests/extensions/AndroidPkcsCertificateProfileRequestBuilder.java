@@ -61,4 +61,3 @@ public class AndroidPkcsCertificateProfileRequestBuilder extends BaseRequestBuil
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

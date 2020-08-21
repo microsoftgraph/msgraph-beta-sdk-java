@@ -61,4 +61,3 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder impleme
         return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }
-

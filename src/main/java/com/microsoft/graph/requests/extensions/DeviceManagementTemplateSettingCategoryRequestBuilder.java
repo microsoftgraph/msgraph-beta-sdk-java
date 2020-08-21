@@ -61,4 +61,3 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("recommendedSettings") + "/" + id, getClient(), null);
     }
 }
-

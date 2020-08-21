@@ -61,4 +61,3 @@ public class AccessPackageResourceScopeRequestBuilder extends BaseRequestBuilder
         return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResource"), getClient(), null);
     }
 }
-

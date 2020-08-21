@@ -50,4 +50,3 @@ public class AndroidWiFiConfigurationRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

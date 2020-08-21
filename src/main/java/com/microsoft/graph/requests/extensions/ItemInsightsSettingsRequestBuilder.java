@@ -50,4 +50,3 @@ public class ItemInsightsSettingsRequestBuilder extends BaseRequestBuilder imple
 
 
 }
-

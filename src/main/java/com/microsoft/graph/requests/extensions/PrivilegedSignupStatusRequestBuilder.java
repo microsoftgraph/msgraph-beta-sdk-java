@@ -50,4 +50,3 @@ public class PrivilegedSignupStatusRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

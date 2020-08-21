@@ -117,4 +117,3 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
         return new SalesQuoteSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 }
-

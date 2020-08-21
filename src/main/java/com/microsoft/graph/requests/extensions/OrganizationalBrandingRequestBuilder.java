@@ -68,4 +68,3 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder imp
         return new OrganizationalBrandingSquareLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogo"), getClient(), null);
     }
 }
-

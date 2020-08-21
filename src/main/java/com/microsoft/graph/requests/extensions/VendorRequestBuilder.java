@@ -94,4 +94,3 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
         return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
     }
 }
-

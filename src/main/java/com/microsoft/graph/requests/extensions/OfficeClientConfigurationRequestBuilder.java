@@ -80,4 +80,3 @@ public class OfficeClientConfigurationRequestBuilder extends BaseRequestBuilder 
         return new OfficeClientConfigurationAssignCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, officeConfigurationAssignments);
     }
 }
-

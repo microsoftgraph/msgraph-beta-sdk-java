@@ -151,4 +151,3 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
         return new WorkbookSessionInfoResourceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sessionInfoResource"), getClient(), null, key);
     }
 }
-

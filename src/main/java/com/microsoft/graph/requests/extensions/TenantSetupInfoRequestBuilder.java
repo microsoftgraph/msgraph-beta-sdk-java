@@ -61,4 +61,3 @@ public class TenantSetupInfoRequestBuilder extends BaseRequestBuilder implements
         return new PrivilegedRoleSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultRolesSettings"), getClient(), null);
     }
 }
-

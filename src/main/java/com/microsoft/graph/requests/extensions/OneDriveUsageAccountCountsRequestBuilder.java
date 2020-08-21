@@ -50,4 +50,3 @@ public class OneDriveUsageAccountCountsRequestBuilder extends BaseRequestBuilder
 
 
 }
-

@@ -50,4 +50,3 @@ public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IW
 
 
 }
-

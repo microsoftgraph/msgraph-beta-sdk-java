@@ -56,4 +56,3 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder implem
         return new WorkbookApplicationCalculateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calculate"), getClient(), null, calculationType);
     }
 }
-

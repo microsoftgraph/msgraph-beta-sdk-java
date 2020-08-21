@@ -67,4 +67,3 @@ public class ManagementConditionStatementRequestBuilder extends BaseRequestBuild
         return new ManagementConditionStatementGetManagementConditionStatementExpressionStringRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagementConditionStatementExpressionString"), getClient(), null);
     }
 }
-

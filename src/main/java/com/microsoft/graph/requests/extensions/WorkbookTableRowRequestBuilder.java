@@ -56,4 +56,3 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implement
         return new WorkbookTableRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }
-

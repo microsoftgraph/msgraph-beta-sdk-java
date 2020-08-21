@@ -80,4 +80,3 @@ public class TrustFrameworkKeySetRequestBuilder extends BaseRequestBuilder imple
         return new TrustFrameworkKeySetGetActiveKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActiveKey"), getClient(), null);
     }
 }
-

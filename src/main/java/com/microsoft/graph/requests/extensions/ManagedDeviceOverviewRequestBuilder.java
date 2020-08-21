@@ -50,4 +50,3 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

@@ -70,4 +70,3 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder implements IU
         return new UserTeamworkSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, topic, activityType, chainId, previewText, templateParameters);
     }
 }
-

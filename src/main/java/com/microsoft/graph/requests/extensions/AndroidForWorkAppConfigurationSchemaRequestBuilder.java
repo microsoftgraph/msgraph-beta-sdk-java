@@ -50,4 +50,3 @@ public class AndroidForWorkAppConfigurationSchemaRequestBuilder extends BaseRequ
 
 
 }
-

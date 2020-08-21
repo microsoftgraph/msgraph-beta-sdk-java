@@ -78,4 +78,3 @@ public class NotebookRequestBuilder extends BaseRequestBuilder implements INoteb
         return new NotebookCopyNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyNotebook"), getClient(), null, groupId, renameAs, notebookFolder, siteCollectionId, siteId);
     }
 }
-

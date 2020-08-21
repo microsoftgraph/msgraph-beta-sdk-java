@@ -50,4 +50,3 @@ public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

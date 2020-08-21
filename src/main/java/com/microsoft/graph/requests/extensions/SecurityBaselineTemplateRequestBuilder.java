@@ -83,4 +83,3 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
         return new SecurityBaselineCategoryStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("categoryDeviceStateSummaries") + "/" + id, getClient(), null);
     }
 }
-

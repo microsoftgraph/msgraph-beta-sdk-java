@@ -94,4 +94,3 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
         return new AppScopeRequestBuilder(getRequestUrlWithAdditionalSegment("appScopes") + "/" + id, getClient(), null);
     }
 }
-

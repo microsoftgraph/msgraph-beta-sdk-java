@@ -56,4 +56,3 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
         return new SitePagePublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.publish"), getClient(), null);
     }
 }
-

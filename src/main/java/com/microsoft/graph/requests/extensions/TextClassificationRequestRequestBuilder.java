@@ -50,4 +50,3 @@ public class TextClassificationRequestRequestBuilder extends BaseRequestBuilder 
 
 
 }
-

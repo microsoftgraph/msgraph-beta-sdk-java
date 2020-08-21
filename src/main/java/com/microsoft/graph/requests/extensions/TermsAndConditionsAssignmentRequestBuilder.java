@@ -50,4 +50,3 @@ public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuild
 
 
 }
-

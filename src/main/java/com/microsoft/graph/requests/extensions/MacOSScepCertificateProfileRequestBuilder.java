@@ -72,4 +72,3 @@ public class MacOSScepCertificateProfileRequestBuilder extends BaseRequestBuilde
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

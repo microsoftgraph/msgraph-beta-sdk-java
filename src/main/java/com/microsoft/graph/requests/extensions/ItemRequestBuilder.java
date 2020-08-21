@@ -72,4 +72,3 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
         return new ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategory"), getClient(), null);
     }
 }
-

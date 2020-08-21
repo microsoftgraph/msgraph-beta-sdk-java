@@ -61,4 +61,3 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder imp
         return new MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
     }
 }
-

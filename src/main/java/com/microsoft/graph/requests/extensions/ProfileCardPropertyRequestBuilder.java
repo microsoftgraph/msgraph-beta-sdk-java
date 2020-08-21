@@ -50,4 +50,3 @@ public class ProfileCardPropertyRequestBuilder extends BaseRequestBuilder implem
 
 
 }
-

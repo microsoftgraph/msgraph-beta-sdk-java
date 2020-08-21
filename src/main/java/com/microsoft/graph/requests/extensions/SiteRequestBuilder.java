@@ -172,4 +172,3 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
         return new SiteGetByPathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByPath"), getClient(), null, path);
     }
 }
-

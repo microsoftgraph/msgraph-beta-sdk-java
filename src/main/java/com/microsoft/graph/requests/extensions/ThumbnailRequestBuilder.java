@@ -56,4 +56,3 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThum
         return new ThumbnailContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }
-

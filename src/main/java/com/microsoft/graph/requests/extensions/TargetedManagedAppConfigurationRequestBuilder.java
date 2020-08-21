@@ -97,4 +97,3 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
         return new TargetedManagedAppConfigurationTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
 }
-

@@ -61,4 +61,3 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdi
         return new EdiscoveryCaseRequestBuilder(getRequestUrlWithAdditionalSegment("cases") + "/" + id, getClient(), null);
     }
 }
-

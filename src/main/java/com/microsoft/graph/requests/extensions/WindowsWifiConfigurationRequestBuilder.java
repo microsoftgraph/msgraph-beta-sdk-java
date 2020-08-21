@@ -50,4 +50,3 @@ public class WindowsWifiConfigurationRequestBuilder extends BaseRequestBuilder i
 
 
 }
-

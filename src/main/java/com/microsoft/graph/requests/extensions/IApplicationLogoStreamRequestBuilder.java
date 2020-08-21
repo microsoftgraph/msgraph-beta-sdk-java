@@ -4,8 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApplicationLogoStreamRequest;
+import com.microsoft.graph.requests.extensions.ApplicationLogoStreamRequest;
 
-import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
 
@@ -15,6 +17,7 @@ import java.util.EnumSet;
  * The interface for the Application Logo Stream Request Builder.
  */
 public interface IApplicationLogoStreamRequestBuilder extends IRequestBuilder {
+
     /**
      * Creates the request
      *
@@ -29,6 +32,5 @@ public interface IApplicationLogoStreamRequestBuilder extends IRequestBuilder {
      * @return the IApplicationLogoStreamRequest instance
      */
     IApplicationLogoStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
-
 
 }

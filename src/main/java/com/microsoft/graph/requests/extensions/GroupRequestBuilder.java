@@ -419,4 +419,3 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
         return new GroupRenewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renew"), getClient(), null);
     }
 }
-

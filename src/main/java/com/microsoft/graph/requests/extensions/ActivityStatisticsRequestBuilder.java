@@ -50,4 +50,3 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder impleme
 
 
 }
-

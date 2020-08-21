@@ -50,4 +50,3 @@ public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseR
 
 
 }
-

@@ -50,4 +50,3 @@ public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

@@ -50,4 +50,3 @@ public class CredentialUsageSummaryRequestBuilder extends BaseRequestBuilder imp
 
 
 }
-

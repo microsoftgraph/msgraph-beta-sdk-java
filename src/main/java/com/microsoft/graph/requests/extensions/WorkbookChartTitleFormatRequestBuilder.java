@@ -72,4 +72,3 @@ public class WorkbookChartTitleFormatRequestBuilder extends BaseRequestBuilder i
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }
-

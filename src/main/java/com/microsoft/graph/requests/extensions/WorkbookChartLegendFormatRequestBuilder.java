@@ -72,4 +72,3 @@ public class WorkbookChartLegendFormatRequestBuilder extends BaseRequestBuilder 
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }
-

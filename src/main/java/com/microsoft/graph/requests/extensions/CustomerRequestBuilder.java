@@ -105,4 +105,3 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
         return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
     }
 }
-

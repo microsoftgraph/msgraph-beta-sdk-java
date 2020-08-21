@@ -63,4 +63,3 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
         return new WorkbookWorksheetProtectionUnprotectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unprotect"), getClient(), null);
     }
 }
-

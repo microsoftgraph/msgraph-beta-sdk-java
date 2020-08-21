@@ -61,4 +61,3 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
         return new PrintTaskDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }
-

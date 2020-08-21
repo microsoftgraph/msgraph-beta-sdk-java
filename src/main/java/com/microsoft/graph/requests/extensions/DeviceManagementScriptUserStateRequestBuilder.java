@@ -61,4 +61,3 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
         return new DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
 }
-

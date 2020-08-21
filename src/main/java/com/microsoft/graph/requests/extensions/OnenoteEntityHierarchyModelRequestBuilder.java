@@ -50,4 +50,3 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
 
 
 }
-

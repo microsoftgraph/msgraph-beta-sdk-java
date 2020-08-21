@@ -56,4 +56,3 @@ public class PrintDocumentRequestBuilder extends BaseRequestBuilder implements I
         return new PrintDocumentUploadDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadData"), getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
         return new ChatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("chat"), getClient(), null);
     }
 }
-

@@ -50,4 +50,3 @@ public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRe
 
 
 }
-

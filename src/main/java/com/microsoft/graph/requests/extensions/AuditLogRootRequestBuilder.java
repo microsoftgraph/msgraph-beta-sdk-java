@@ -105,4 +105,3 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
         return new ProvisioningObjectSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning") + "/" + id, getClient(), null);
     }
 }
-

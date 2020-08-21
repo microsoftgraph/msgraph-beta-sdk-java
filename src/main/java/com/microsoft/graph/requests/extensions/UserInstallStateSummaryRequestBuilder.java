@@ -61,4 +61,3 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder im
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 }
-

@@ -61,4 +61,3 @@ public class MacOSImportedPFXCertificateProfileRequestBuilder extends BaseReques
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }
-

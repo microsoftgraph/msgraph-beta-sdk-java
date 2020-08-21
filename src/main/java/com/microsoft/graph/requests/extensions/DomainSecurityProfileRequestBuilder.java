@@ -50,4 +50,3 @@ public class DomainSecurityProfileRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

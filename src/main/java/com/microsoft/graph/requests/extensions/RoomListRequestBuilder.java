@@ -61,4 +61,3 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }
 }
-

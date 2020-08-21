@@ -50,4 +50,3 @@ public class OAuth2PermissionGrantRequestBuilder extends BaseRequestBuilder impl
 
 
 }
-

@@ -113,4 +113,3 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null, timeZoneStandard);
     }
 }
-

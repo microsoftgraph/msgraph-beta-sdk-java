@@ -50,4 +50,3 @@ public class CurrencyRequestBuilder extends BaseRequestBuilder implements ICurre
 
 
 }
-
