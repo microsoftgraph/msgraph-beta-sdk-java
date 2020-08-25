@@ -57,8 +57,20 @@ public class CompanyInformationPictureStreamRequest extends BaseStreamRequest<Co
      * Uploads to the stream
      *
      * @param fileContents the contents of the stream to upload
+          * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents) {
-        send(fileContents);
+    public void put(final byte[] fileContents, final ICallback<CompanyInformation> callback) {
+        send(fileContents, callback);
+    }
+
+    /**
+     * Uploads to the stream
+     *
+     * @param fileContents the contents of the stream to upload
+     * @return the result of the upload
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    public CompanyInformation put(final byte[] fileContents) throws ClientException {
+        return send(fileContents);
     }
 }

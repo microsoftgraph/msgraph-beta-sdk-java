@@ -44,6 +44,16 @@ public interface IFileAttachmentStreamRequest extends IHttpStreamRequest {
      * Uploads to the stream
      *
      * @param fileContents the contents of the stream to upload
+     * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents);
+    void put(final byte[] fileContents, final ICallback<FileAttachment> callback);
+
+    /**
+     * Uploads to the stream
+     *
+     * @param fileContents the contents of the stream to upload
+     * @return the result of the upload
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    FileAttachment put(final byte[] fileContents) throws ClientException;
 }
