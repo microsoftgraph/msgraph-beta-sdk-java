@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailSearchFolderRequest;
-import com.microsoft.graph.requests.extensions.MailSearchFolderRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,50 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implement
      * @return the IMailSearchFolderRequest instance
      */
     public IMailSearchFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MailSearchFolderRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MailSearchFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    }
+
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    }
+
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+    public IMessageCollectionRequestBuilder messages() {
+        return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
+    }
+
+    public IMessageRequestBuilder messages(final String id) {
+        return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    }
+    public IMessageRuleCollectionRequestBuilder messageRules() {
+        return new MessageRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules"), getClient(), null);
+    }
+
+    public IMessageRuleRequestBuilder messageRules(final String id) {
+        return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules") + "/" + id, getClient(), null);
+    }
+    public IMailFolderCollectionRequestBuilder childFolders() {
+        return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
+    }
+
+    public IMailFolderRequestBuilder childFolders(final String id) {
+        return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
+    }
+    public IUserConfigurationCollectionRequestBuilder userConfigurations() {
+        return new UserConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userConfigurations"), getClient(), null);
+    }
+
+    public IUserConfigurationRequestBuilder userConfigurations(final String id) {
+        return new UserConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("userConfigurations") + "/" + id, getClient(), null);
+    }
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppOperationRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder implem
      * @return the IManagedAppOperationRequest instance
      */
     public IManagedAppOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

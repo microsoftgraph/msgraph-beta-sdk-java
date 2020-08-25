@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsOfficeClientSecurityConfigurationRequest;
+import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IWindowsOfficeClientSecurityConfigurationRequestBuilder extends
      */
     IWindowsOfficeClientSecurityConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IOfficeClientConfigurationAssignmentCollectionRequestBuilder assignments();
+
+    IOfficeClientConfigurationAssignmentRequestBuilder assignments(final String id);
 
 }

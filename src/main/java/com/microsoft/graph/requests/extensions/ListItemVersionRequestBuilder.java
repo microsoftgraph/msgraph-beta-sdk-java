@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IListItemVersionRequest;
-import com.microsoft.graph.requests.extensions.ListItemVersionRequest;
 import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionRestoreVersionRequestBuilder;
@@ -49,7 +48,7 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements
      * @return the IListItemVersionRequest instance
      */
     public IListItemVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ListItemVersionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ListItemVersionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

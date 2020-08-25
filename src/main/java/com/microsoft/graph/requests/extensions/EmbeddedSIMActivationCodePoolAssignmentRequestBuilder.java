@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentRequest;
-import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentRequestBuilder extends BaseR
      * @return the IEmbeddedSIMActivationCodePoolAssignmentRequest instance
      */
     public IEmbeddedSIMActivationCodePoolAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmbeddedSIMActivationCodePoolAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

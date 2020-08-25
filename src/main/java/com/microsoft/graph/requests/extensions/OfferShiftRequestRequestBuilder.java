@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequest;
-import com.microsoft.graph.requests.extensions.OfferShiftRequestRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder implemen
      * @return the IOfferShiftRequestRequest instance
      */
     public IOfferShiftRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OfferShiftRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OfferShiftRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

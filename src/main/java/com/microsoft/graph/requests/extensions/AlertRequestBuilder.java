@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAlertRequest;
-import com.microsoft.graph.requests.extensions.AlertRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * @return the IAlertRequest instance
      */
     public IAlertRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AlertRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AlertRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

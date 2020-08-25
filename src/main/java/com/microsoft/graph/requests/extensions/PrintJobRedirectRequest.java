@@ -8,6 +8,9 @@ import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.requests.extensions.IPrintJobRedirectRequest;
 import com.microsoft.graph.requests.extensions.PrintJobRedirectRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsTabRequest;
-import com.microsoft.graph.requests.extensions.TeamsTabRequest;
 import com.microsoft.graph.requests.extensions.ITeamsAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class TeamsTabRequestBuilder extends BaseRequestBuilder implements ITeams
      * @return the ITeamsTabRequest instance
      */
     public ITeamsTabRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsTabRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsTabRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

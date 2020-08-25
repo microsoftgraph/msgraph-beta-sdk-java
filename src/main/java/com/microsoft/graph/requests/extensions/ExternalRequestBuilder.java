@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExternalRequest;
-import com.microsoft.graph.requests.extensions.ExternalRequest;
 import com.microsoft.graph.requests.extensions.IExternalConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalConnectionRequestBuilder;
@@ -49,7 +48,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder implements IExter
      * @return the IExternalRequest instance
      */
     public IExternalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExternalRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExternalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

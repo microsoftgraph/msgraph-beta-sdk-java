@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICartToClassAssociationRequest;
-import com.microsoft.graph.requests.extensions.CartToClassAssociationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CartToClassAssociationRequestBuilder extends BaseRequestBuilder imp
      * @return the ICartToClassAssociationRequest instance
      */
     public ICartToClassAssociationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CartToClassAssociationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CartToClassAssociationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

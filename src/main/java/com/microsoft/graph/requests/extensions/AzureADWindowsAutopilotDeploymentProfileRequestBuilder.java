@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAzureADWindowsAutopilotDeploymentProfileRequest;
-import com.microsoft.graph.requests.extensions.AzureADWindowsAutopilotDeploymentProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,22 @@ public class AzureADWindowsAutopilotDeploymentProfileRequestBuilder extends Base
      * @return the IAzureADWindowsAutopilotDeploymentProfileRequest instance
      */
     public IAzureADWindowsAutopilotDeploymentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AzureADWindowsAutopilotDeploymentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AzureADWindowsAutopilotDeploymentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IWindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
+        return new WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
+    }
+
+    public IWindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(final String id) {
+        return new WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
+    }
+    public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
+        return new WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(final String id) {
+        return new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 }

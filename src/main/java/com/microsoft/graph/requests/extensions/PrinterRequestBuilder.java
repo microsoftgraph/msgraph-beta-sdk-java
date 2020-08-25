@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrinterRequest;
-import com.microsoft.graph.requests.extensions.PrinterRequest;
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
@@ -67,7 +66,7 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
      * @return the IPrinterRequest instance
      */
     public IPrinterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrinterRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrinterRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -107,6 +106,13 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
 
     public IPrintTaskTriggerRequestBuilder taskTriggers(final String id) {
         return new PrintTaskTriggerRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers") + "/" + id, getClient(), null);
+    }
+    public IPrintJobCollectionRequestBuilder jobs() {
+        return new PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    }
+
+    public IPrintJobRequestBuilder jobs(final String id) {
+        return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
 
     public IPrinterResetDefaultsRequestBuilder resetDefaults() {

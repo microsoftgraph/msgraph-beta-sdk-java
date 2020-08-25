@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationRubricOutcomeRequest;
-import com.microsoft.graph.requests.extensions.EducationRubricOutcomeRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationRubricOutcomeRequestBuilder extends BaseRequestBuilder imp
      * @return the IEducationRubricOutcomeRequest instance
      */
     public IEducationRubricOutcomeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationRubricOutcomeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationRubricOutcomeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

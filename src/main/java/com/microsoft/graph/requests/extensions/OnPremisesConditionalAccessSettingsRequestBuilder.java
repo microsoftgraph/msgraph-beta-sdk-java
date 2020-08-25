@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequest;
-import com.microsoft.graph.requests.extensions.OnPremisesConditionalAccessSettingsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseReque
      * @return the IOnPremisesConditionalAccessSettingsRequest instance
      */
     public IOnPremisesConditionalAccessSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnPremisesConditionalAccessSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnPremisesConditionalAccessSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

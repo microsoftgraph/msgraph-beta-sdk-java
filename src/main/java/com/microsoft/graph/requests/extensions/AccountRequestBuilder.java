@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccountRequest;
-import com.microsoft.graph.requests.extensions.AccountRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder implements IAccoun
      * @return the IAccountRequest instance
      */
     public IAccountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccountRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccountRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

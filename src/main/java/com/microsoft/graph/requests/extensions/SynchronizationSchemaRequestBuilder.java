@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequest;
-import com.microsoft.graph.requests.extensions.SynchronizationSchemaRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
@@ -57,7 +56,7 @@ public class SynchronizationSchemaRequestBuilder extends BaseRequestBuilder impl
      * @return the ISynchronizationSchemaRequest instance
      */
     public ISynchronizationSchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SynchronizationSchemaRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SynchronizationSchemaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

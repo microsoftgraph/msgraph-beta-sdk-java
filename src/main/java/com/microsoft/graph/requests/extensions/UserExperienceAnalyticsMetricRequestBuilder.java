@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserExperienceAnalyticsMetricRequestBuilder extends BaseRequestBuil
      * @return the IUserExperienceAnalyticsMetricRequest instance
      */
     public IUserExperienceAnalyticsMetricRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsMetricRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

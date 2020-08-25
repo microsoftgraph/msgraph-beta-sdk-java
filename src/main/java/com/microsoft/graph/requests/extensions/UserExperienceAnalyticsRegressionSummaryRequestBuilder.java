@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummaryRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRegressionSummaryRequest;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
@@ -60,7 +59,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @return the IUserExperienceAnalyticsRegressionSummaryRequest instance
      */
     public IUserExperienceAnalyticsRegressionSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsRegressionSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRegressionSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

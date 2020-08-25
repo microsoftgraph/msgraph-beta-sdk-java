@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISalesOrderLineRequest;
-import com.microsoft.graph.requests.extensions.SalesOrderLineRequest;
 import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
@@ -49,7 +48,7 @@ public class SalesOrderLineRequestBuilder extends BaseRequestBuilder implements 
      * @return the ISalesOrderLineRequest instance
      */
     public ISalesOrderLineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SalesOrderLineRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SalesOrderLineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

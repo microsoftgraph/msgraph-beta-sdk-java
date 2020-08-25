@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventMessageResponseRequest;
-import com.microsoft.graph.requests.extensions.EventMessageResponseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class EventMessageResponseRequestBuilder extends BaseRequestBuilder imple
      * @return the IEventMessageResponseRequest instance
      */
     public IEventMessageResponseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EventMessageResponseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EventMessageResponseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for Event
+     *
+     * @return the IEventRequestBuilder instance
+     */
+    public IEventRequestBuilder event() {
+        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
+    }
 }

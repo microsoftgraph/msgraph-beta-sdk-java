@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDetectedAppRequest;
-import com.microsoft.graph.requests.extensions.DetectedAppRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder implements IDe
      * @return the IDetectedAppRequest instance
      */
     public IDetectedAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DetectedAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DetectedAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationMultiTextBoxRequest;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +31,12 @@ public interface IGroupPolicyPresentationMultiTextBoxRequestBuilder extends IReq
      */
     IGroupPolicyPresentationMultiTextBoxRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for GroupPolicyDefinition
+     *
+     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     */
+    IGroupPolicyDefinitionWithReferenceRequestBuilder definition();
 
 }

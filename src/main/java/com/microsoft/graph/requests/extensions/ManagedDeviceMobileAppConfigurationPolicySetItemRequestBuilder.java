@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationPolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationPolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequestBuilder exte
      * @return the IManagedDeviceMobileAppConfigurationPolicySetItemRequest instance
      */
     public IManagedDeviceMobileAppConfigurationPolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedDeviceMobileAppConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

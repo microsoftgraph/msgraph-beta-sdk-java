@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVppAppRequest;
-import com.microsoft.graph.requests.extensions.IosVppAppRequest;
 import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseRequestBuilder;
@@ -55,7 +54,7 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder implements IIosV
      * @return the IIosVppAppRequest instance
      */
     public IIosVppAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosVppAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosVppAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -65,6 +64,50 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder implements IIosV
 
     public IIosVppAppAssignedLicenseRequestBuilder assignedLicenses(final String id) {
         return new IosVppAppAssignedLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("assignedLicenses") + "/" + id, getClient(), null);
+    }
+    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    }
+
+    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+        return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    }
+    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for MobileAppInstallSummary
+     *
+     * @return the IMobileAppInstallSummaryRequestBuilder instance
+     */
+    public IMobileAppInstallSummaryRequestBuilder installSummary() {
+        return new MobileAppInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
+    }
+    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    }
+
+    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
+        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    }
+    public IUserAppInstallStatusCollectionRequestBuilder userStatuses() {
+        return new UserAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IUserAppInstallStatusRequestBuilder userStatuses(final String id) {
+        return new UserAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
+    public IMobileAppRelationshipCollectionRequestBuilder relationships() {
+        return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
+    }
+
+    public IMobileAppRelationshipRequestBuilder relationships(final String id) {
+        return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
 
     public IIosVppAppRevokeAllLicensesRequestBuilder revokeAllLicenses(final Boolean notifyManagedDevices) {

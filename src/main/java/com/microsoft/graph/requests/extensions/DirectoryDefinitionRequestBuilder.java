@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequest;
-import com.microsoft.graph.requests.extensions.DirectoryDefinitionRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionDiscoverRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryDefinitionDiscoverRequestBuilder;
 
@@ -47,7 +46,7 @@ public class DirectoryDefinitionRequestBuilder extends BaseRequestBuilder implem
      * @return the IDirectoryDefinitionRequest instance
      */
     public IDirectoryDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

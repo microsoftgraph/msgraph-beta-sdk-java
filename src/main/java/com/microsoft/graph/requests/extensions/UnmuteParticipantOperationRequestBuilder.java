@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUnmuteParticipantOperationRequest;
-import com.microsoft.graph.requests.extensions.UnmuteParticipantOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder
      * @return the IUnmuteParticipantOperationRequest instance
      */
     public IUnmuteParticipantOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UnmuteParticipantOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UnmuteParticipantOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

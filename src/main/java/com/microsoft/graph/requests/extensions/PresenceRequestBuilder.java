@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPresenceRequest;
-import com.microsoft.graph.requests.extensions.PresenceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder implements IPrese
      * @return the IPresenceRequest instance
      */
     public IPresenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PresenceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PresenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

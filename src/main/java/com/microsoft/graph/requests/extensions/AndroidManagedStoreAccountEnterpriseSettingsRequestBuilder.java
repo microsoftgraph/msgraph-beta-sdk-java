@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsRequest;
-import com.microsoft.graph.requests.extensions.AndroidManagedStoreAccountEnterpriseSettingsRequest;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder;
@@ -59,7 +58,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsRequest instance
      */
     public IAndroidManagedStoreAccountEnterpriseSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidManagedStoreAccountEnterpriseSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidManagedStoreAccountEnterpriseSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

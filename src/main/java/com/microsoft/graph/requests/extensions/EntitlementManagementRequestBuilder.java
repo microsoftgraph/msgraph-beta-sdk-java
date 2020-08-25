@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequest;
-import com.microsoft.graph.requests.extensions.EntitlementManagementRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
@@ -87,7 +86,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
      * @return the IEntitlementManagementRequest instance
      */
     public IEntitlementManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EntitlementManagementRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EntitlementManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

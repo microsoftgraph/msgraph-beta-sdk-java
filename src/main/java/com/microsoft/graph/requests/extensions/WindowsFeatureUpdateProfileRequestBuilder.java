@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileRequest;
-import com.microsoft.graph.requests.extensions.WindowsFeatureUpdateProfileRequest;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssignmentRequestBuilder;
@@ -56,7 +55,7 @@ public class WindowsFeatureUpdateProfileRequestBuilder extends BaseRequestBuilde
      * @return the IWindowsFeatureUpdateProfileRequest instance
      */
     public IWindowsFeatureUpdateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsFeatureUpdateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsFeatureUpdateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

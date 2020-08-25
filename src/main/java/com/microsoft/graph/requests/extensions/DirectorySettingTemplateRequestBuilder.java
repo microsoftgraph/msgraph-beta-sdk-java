@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectorySettingTemplateRequest;
-import com.microsoft.graph.requests.extensions.DirectorySettingTemplateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DirectorySettingTemplateRequestBuilder extends BaseRequestBuilder i
      * @return the IDirectorySettingTemplateRequest instance
      */
     public IDirectorySettingTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectorySettingTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectorySettingTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

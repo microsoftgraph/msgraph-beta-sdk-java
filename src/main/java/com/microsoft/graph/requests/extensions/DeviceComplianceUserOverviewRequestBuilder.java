@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequest;
-import com.microsoft.graph.requests.extensions.DeviceComplianceUserOverviewRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceComplianceUserOverviewRequestBuilder extends BaseRequestBuild
      * @return the IDeviceComplianceUserOverviewRequest instance
      */
     public IDeviceComplianceUserOverviewRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceComplianceUserOverviewRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceComplianceUserOverviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

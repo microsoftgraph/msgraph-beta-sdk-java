@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISharePointActivityUserDetailRequest;
-import com.microsoft.graph.requests.extensions.SharePointActivityUserDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SharePointActivityUserDetailRequestBuilder extends BaseRequestBuild
      * @return the ISharePointActivityUserDetailRequest instance
      */
     public ISharePointActivityUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SharePointActivityUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SharePointActivityUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

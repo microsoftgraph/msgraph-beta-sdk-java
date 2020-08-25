@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOffice365ActivationsUserDetailRequest;
-import com.microsoft.graph.requests.extensions.Office365ActivationsUserDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Office365ActivationsUserDetailRequestBuilder extends BaseRequestBui
      * @return the IOffice365ActivationsUserDetailRequest instance
      */
     public IOffice365ActivationsUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Office365ActivationsUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Office365ActivationsUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

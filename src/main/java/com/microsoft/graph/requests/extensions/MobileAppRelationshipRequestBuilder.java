@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequest;
-import com.microsoft.graph.requests.extensions.MobileAppRelationshipRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MobileAppRelationshipRequestBuilder extends BaseRequestBuilder impl
      * @return the IMobileAppRelationshipRequest instance
      */
     public IMobileAppRelationshipRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppRelationshipRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppRelationshipRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

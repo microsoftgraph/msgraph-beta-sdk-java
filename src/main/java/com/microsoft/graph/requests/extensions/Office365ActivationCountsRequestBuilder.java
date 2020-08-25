@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOffice365ActivationCountsRequest;
-import com.microsoft.graph.requests.extensions.Office365ActivationCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Office365ActivationCountsRequestBuilder extends BaseRequestBuilder 
      * @return the IOffice365ActivationCountsRequest instance
      */
     public IOffice365ActivationCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Office365ActivationCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Office365ActivationCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

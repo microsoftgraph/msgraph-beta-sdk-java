@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsUserActivityUserCountsRequest;
-import com.microsoft.graph.requests.extensions.TeamsUserActivityUserCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilde
      * @return the ITeamsUserActivityUserCountsRequest instance
      */
     public ITeamsUserActivityUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsUserActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsUserActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

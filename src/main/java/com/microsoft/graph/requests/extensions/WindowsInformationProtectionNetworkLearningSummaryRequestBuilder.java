@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryRequest;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequestBuilder ex
      * @return the IWindowsInformationProtectionNetworkLearningSummaryRequest instance
      */
     public IWindowsInformationProtectionNetworkLearningSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsInformationProtectionNetworkLearningSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

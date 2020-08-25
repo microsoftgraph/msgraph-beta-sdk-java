@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosImportedPFXCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.IosImportedPFXCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
@@ -49,7 +48,7 @@ public class IosImportedPFXCertificateProfileRequestBuilder extends BaseRequestB
      * @return the IIosImportedPFXCertificateProfileRequest instance
      */
     public IIosImportedPFXCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

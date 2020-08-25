@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICompanyInformationRequest;
-import com.microsoft.graph.requests.extensions.CompanyInformationRequest;
 import com.microsoft.graph.requests.extensions.ICompanyInformationPictureStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyInformationPictureStreamRequestBuilder;
 
@@ -47,7 +46,7 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder impleme
      * @return the ICompanyInformationRequest instance
      */
     public ICompanyInformationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CompanyInformationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CompanyInformationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

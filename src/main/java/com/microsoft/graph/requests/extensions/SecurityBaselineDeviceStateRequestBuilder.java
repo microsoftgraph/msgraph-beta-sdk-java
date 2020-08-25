@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequest;
-import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilde
      * @return the ISecurityBaselineDeviceStateRequest instance
      */
     public ISecurityBaselineDeviceStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SecurityBaselineDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

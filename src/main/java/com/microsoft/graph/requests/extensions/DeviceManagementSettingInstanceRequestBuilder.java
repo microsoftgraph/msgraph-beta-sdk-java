@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementSettingInstanceRequestBuilder extends BaseRequestBu
      * @return the IDeviceManagementSettingInstanceRequest instance
      */
     public IDeviceManagementSettingInstanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

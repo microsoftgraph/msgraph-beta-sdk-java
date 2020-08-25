@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChannelRequest;
-import com.microsoft.graph.requests.extensions.ChannelRequest;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
@@ -59,7 +58,7 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
      * @return the IChannelRequest instance
      */
     public IChannelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ChannelRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ChannelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

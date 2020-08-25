@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ILanguageProficiencyRequest;
-import com.microsoft.graph.requests.extensions.LanguageProficiencyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class LanguageProficiencyRequestBuilder extends BaseRequestBuilder implem
      * @return the ILanguageProficiencyRequest instance
      */
     public ILanguageProficiencyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new LanguageProficiencyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.LanguageProficiencyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

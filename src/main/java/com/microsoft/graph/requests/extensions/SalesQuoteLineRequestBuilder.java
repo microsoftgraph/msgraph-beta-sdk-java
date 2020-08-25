@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequest;
-import com.microsoft.graph.requests.extensions.SalesQuoteLineRequest;
 import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
@@ -49,7 +48,7 @@ public class SalesQuoteLineRequestBuilder extends BaseRequestBuilder implements 
      * @return the ISalesQuoteLineRequest instance
      */
     public ISalesQuoteLineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SalesQuoteLineRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SalesQuoteLineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

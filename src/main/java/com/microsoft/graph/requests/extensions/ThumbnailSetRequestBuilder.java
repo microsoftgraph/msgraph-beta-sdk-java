@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequest;
-import com.microsoft.graph.requests.extensions.ThumbnailSetRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
      * @return the IThumbnailSetRequest instance
      */
     public IThumbnailSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     @Override

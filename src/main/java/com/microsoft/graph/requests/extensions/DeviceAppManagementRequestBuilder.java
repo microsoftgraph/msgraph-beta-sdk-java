@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequest;
-import com.microsoft.graph.requests.extensions.DeviceAppManagementRequest;
 import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
@@ -143,7 +142,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
      * @return the IDeviceAppManagementRequest instance
      */
     public IDeviceAppManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceAppManagementRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceAppManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

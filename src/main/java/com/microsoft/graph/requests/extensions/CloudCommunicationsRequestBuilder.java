@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequest;
-import com.microsoft.graph.requests.extensions.CloudCommunicationsRequest;
 import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
@@ -59,7 +58,7 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder implem
      * @return the ICloudCommunicationsRequest instance
      */
     public ICloudCommunicationsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CloudCommunicationsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CloudCommunicationsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

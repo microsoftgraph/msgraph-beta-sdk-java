@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequest;
-import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseReques
      * @return the IPlannerProgressTaskBoardTaskFormatRequest instance
      */
     public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerProgressTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

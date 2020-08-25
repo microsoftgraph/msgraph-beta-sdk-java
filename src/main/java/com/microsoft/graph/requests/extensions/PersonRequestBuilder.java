@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPersonRequest;
-import com.microsoft.graph.requests.extensions.PersonRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PersonRequestBuilder extends BaseRequestBuilder implements IPersonR
      * @return the IPersonRequest instance
      */
     public IPersonRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PersonRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PersonRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

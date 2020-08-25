@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequest;
-import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * @return the IIdentitySecurityDefaultsEnforcementPolicyRequest instance
      */
     public IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IdentitySecurityDefaultsEnforcementPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

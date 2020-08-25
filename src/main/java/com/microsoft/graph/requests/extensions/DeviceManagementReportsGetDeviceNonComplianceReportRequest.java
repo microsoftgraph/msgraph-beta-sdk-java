@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.DeviceManagementReportsGetDeviceNon
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetDeviceNonComplianceReportRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetDeviceNonComplianceReportRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

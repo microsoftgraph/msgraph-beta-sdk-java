@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISharePointActivityUserCountsRequest;
-import com.microsoft.graph.requests.extensions.SharePointActivityUserCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SharePointActivityUserCountsRequestBuilder extends BaseRequestBuild
      * @return the ISharePointActivityUserCountsRequest instance
      */
     public ISharePointActivityUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SharePointActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SharePointActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationRequest;
-import com.microsoft.graph.requests.extensions.OrganizationRequest;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
@@ -61,7 +60,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
      * @return the IOrganizationRequest instance
      */
     public IOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OrganizationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

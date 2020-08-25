@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookFilterRequest;
-import com.microsoft.graph.requests.extensions.WorkbookFilterRequest;
 import com.microsoft.graph.models.extensions.WorkbookFilterCriteria;
 import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyRequestBuilder;
@@ -71,7 +70,7 @@ public class WorkbookFilterRequestBuilder extends BaseRequestBuilder implements 
      * @return the IWorkbookFilterRequest instance
      */
     public IWorkbookFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookFilterRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookFilterRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

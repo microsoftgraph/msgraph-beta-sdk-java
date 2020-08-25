@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class GroupPolicyOperationRequestBuilder extends BaseRequestBuilder imple
      * @return the IGroupPolicyOperationRequest instance
      */
     public IGroupPolicyOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

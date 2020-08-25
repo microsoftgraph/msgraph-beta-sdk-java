@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequest;
-import com.microsoft.graph.requests.extensions.EducationCategoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationCategoryRequestBuilder extends BaseRequestBuilder implemen
      * @return the IEducationCategoryRequest instance
      */
     public IEducationCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

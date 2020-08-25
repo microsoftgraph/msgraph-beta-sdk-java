@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRequest;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScriptRequest;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
@@ -58,7 +57,7 @@ public class DeviceComplianceScriptRequestBuilder extends BaseRequestBuilder imp
      * @return the IDeviceComplianceScriptRequest instance
      */
     public IDeviceComplianceScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceComplianceScriptRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceComplianceScriptRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

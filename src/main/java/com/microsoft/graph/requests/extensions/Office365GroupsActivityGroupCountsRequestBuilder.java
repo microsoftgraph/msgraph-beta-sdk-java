@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOffice365GroupsActivityGroupCountsRequest;
-import com.microsoft.graph.requests.extensions.Office365GroupsActivityGroupCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Office365GroupsActivityGroupCountsRequestBuilder extends BaseReques
      * @return the IOffice365GroupsActivityGroupCountsRequest instance
      */
     public IOffice365GroupsActivityGroupCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Office365GroupsActivityGroupCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Office365GroupsActivityGroupCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

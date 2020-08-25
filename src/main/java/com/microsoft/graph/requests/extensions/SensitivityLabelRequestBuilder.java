@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequest;
-import com.microsoft.graph.requests.extensions.SensitivityLabelRequest;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
@@ -49,7 +48,7 @@ public class SensitivityLabelRequestBuilder extends BaseRequestBuilder implement
      * @return the ISensitivityLabelRequest instance
      */
     public ISensitivityLabelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SensitivityLabelRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SensitivityLabelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

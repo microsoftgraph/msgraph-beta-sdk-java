@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.WindowsAutopilotDeviceIdentityUpdat
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemRequest;
-import com.microsoft.graph.requests.extensions.DriveItemRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
@@ -112,7 +111,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
      * @return the IDriveItemRequest instance
      */
     public IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     @Override
@@ -188,6 +187,24 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemVersionRequestBuilder versions(final String id) {
         return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     public IDriveItemContentStreamRequestBuilder content() {

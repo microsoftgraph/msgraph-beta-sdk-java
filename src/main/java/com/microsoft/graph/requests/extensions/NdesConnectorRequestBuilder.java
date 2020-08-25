@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INdesConnectorRequest;
-import com.microsoft.graph.requests.extensions.NdesConnectorRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class NdesConnectorRequestBuilder extends BaseRequestBuilder implements I
      * @return the INdesConnectorRequest instance
      */
     public INdesConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new NdesConnectorRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.NdesConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExternalGroupRequest;
-import com.microsoft.graph.requests.extensions.ExternalGroupRequest;
 import com.microsoft.graph.requests.extensions.IExternalGroupMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupMemberRequestBuilder;
@@ -49,7 +48,7 @@ public class ExternalGroupRequestBuilder extends BaseRequestBuilder implements I
      * @return the IExternalGroupRequest instance
      */
     public IExternalGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExternalGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExternalGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

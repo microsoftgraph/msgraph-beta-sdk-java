@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeSortRequest;
-import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequest;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeSortApplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeSortApplyRequestBuilder;
@@ -48,7 +47,7 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookRangeSortRequest instance
      */
     public IWorkbookRangeSortRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookRangeSortRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookRangeSortRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMuteParticipantsOperationRequest;
-import com.microsoft.graph.requests.extensions.MuteParticipantsOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MuteParticipantsOperationRequestBuilder extends BaseRequestBuilder 
      * @return the IMuteParticipantsOperationRequest instance
      */
     public IMuteParticipantsOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MuteParticipantsOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MuteParticipantsOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

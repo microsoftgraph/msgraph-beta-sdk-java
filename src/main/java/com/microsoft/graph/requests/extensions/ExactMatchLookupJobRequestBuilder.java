@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExactMatchLookupJobRequest;
-import com.microsoft.graph.requests.extensions.ExactMatchLookupJobRequest;
 import com.microsoft.graph.requests.extensions.ILookupResultRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LookupResultRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILookupResultRowRequestBuilder;
@@ -49,7 +48,7 @@ public class ExactMatchLookupJobRequestBuilder extends BaseRequestBuilder implem
      * @return the IExactMatchLookupJobRequest instance
      */
     public IExactMatchLookupJobRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExactMatchLookupJobRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExactMatchLookupJobRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

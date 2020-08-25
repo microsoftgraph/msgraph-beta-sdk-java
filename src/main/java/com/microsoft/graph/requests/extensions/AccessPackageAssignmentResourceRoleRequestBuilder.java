@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
@@ -55,7 +54,7 @@ public class AccessPackageAssignmentResourceRoleRequestBuilder extends BaseReque
      * @return the IAccessPackageAssignmentResourceRoleRequest instance
      */
     public IAccessPackageAssignmentResourceRoleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageAssignmentResourceRoleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

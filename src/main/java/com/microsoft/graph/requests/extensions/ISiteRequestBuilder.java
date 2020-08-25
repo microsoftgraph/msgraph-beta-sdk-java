@@ -21,6 +21,8 @@ import com.microsoft.graph.requests.extensions.ISitePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetByPathRequestBuilder;
 
@@ -98,6 +100,20 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
      * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval);
     ISiteGetByPathRequestBuilder getByPath(final String path);

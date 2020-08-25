@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBitlockerRequest;
-import com.microsoft.graph.requests.extensions.BitlockerRequest;
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyRequestBuilder;
@@ -49,7 +48,7 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitl
      * @return the IBitlockerRequest instance
      */
     public IBitlockerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BitlockerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BitlockerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

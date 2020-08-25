@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRoomListRequest;
-import com.microsoft.graph.requests.extensions.RoomListRequest;
 import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
@@ -49,7 +48,7 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * @return the IRoomListRequest instance
      */
     public IRoomListRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RoomListRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RoomListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

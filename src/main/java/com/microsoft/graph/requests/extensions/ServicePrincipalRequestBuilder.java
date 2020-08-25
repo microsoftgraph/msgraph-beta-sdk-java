@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IServicePrincipalRequest;
-import com.microsoft.graph.requests.extensions.ServicePrincipalRequest;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
@@ -113,7 +112,7 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
      * @return the IServicePrincipalRequest instance
      */
     public IServicePrincipalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ServicePrincipalRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ServicePrincipalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

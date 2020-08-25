@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequest;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
@@ -64,7 +63,7 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * @return the IManagedDeviceMobileAppConfigurationRequest instance
      */
     public IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedDeviceMobileAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

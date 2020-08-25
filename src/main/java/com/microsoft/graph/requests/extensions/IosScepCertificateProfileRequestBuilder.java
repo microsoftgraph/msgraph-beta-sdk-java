@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosScepCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.IosScepCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
@@ -51,7 +50,7 @@ public class IosScepCertificateProfileRequestBuilder extends BaseRequestBuilder 
      * @return the IIosScepCertificateProfileRequest instance
      */
     public IIosScepCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosScepCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosScepCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

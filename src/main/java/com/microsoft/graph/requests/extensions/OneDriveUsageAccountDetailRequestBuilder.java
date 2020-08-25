@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOneDriveUsageAccountDetailRequest;
-import com.microsoft.graph.requests.extensions.OneDriveUsageAccountDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OneDriveUsageAccountDetailRequestBuilder extends BaseRequestBuilder
      * @return the IOneDriveUsageAccountDetailRequest instance
      */
     public IOneDriveUsageAccountDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OneDriveUsageAccountDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OneDriveUsageAccountDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

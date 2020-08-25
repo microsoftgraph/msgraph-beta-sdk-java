@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequest;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder im
      * @return the IGroupPolicyPresentationRequest instance
      */
     public IGroupPolicyPresentationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyPresentationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

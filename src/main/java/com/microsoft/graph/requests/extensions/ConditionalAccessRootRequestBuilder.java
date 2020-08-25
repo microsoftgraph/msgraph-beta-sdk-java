@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequest;
-import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequest;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
@@ -53,7 +52,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * @return the IConditionalAccessRootRequest instance
      */
     public IConditionalAccessRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ConditionalAccessRootRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ConditionalAccessRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

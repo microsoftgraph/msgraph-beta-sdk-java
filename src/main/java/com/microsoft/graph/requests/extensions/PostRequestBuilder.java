@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPostRequest;
-import com.microsoft.graph.requests.extensions.PostRequest;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -73,7 +72,7 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
      * @return the IPostRequest instance
      */
     public IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PostRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PostRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

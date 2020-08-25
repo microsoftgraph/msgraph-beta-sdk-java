@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppProtectionPolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppProtectionPolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedAppProtectionPolicySetItemRequestBuilder extends BaseRequest
      * @return the IManagedAppProtectionPolicySetItemRequest instance
      */
     public IManagedAppProtectionPolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppProtectionPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppProtectionPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

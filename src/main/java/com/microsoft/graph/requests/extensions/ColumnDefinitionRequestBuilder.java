@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequest;
-import com.microsoft.graph.requests.extensions.ColumnDefinitionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder implement
      * @return the IColumnDefinitionRequest instance
      */
     public IColumnDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ColumnDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ColumnDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

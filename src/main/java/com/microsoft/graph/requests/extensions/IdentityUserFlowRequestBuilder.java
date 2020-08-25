@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequest;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IdentityUserFlowRequestBuilder extends BaseRequestBuilder implement
      * @return the IIdentityUserFlowRequest instance
      */
     public IIdentityUserFlowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IdentityUserFlowRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IdentityUserFlowRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

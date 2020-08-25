@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOneDriveUsageFileCountsRequest;
-import com.microsoft.graph.requests.extensions.OneDriveUsageFileCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OneDriveUsageFileCountsRequestBuilder extends BaseRequestBuilder im
      * @return the IOneDriveUsageFileCountsRequest instance
      */
     public IOneDriveUsageFileCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OneDriveUsageFileCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OneDriveUsageFileCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

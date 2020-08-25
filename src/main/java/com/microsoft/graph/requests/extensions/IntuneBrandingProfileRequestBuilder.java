@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileRequest;
-import com.microsoft.graph.requests.extensions.IntuneBrandingProfileRequest;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentRequestBuilder;
@@ -52,7 +51,7 @@ public class IntuneBrandingProfileRequestBuilder extends BaseRequestBuilder impl
      * @return the IIntuneBrandingProfileRequest instance
      */
     public IIntuneBrandingProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IntuneBrandingProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IntuneBrandingProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequest;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder i
      * @return the IHomeRealmDiscoveryPolicyRequest instance
      */
     public IHomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new HomeRealmDiscoveryPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
+    }
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequest;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentMakePermanentRequestBuilder;
@@ -51,7 +50,7 @@ public class PrivilegedRoleAssignmentRequestBuilder extends BaseRequestBuilder i
      * @return the IPrivilegedRoleAssignmentRequest instance
      */
     public IPrivilegedRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrivilegedRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

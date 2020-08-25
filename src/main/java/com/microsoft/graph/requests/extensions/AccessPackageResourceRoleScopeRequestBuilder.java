@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
@@ -49,7 +48,7 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
      * @return the IAccessPackageResourceRoleScopeRequest instance
      */
     public IAccessPackageResourceRoleScopeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageResourceRoleScopeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

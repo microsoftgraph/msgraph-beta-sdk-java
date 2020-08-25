@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerGroupRequest;
-import com.microsoft.graph.requests.extensions.PlannerGroupRequest;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
@@ -49,7 +48,7 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
      * @return the IPlannerGroupRequest instance
      */
     public IPlannerGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApplicationRequest;
-import com.microsoft.graph.requests.extensions.ApplicationRequest;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
@@ -84,7 +83,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
      * @return the IApplicationRequest instance
      */
     public IApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApplicationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

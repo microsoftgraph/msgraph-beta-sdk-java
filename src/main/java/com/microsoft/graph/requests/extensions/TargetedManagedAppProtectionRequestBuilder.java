@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppProtectionRequest;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppProtectionRequest;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
@@ -52,7 +51,7 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
      * @return the ITargetedManagedAppProtectionRequest instance
      */
     public ITargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TargetedManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TargetedManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

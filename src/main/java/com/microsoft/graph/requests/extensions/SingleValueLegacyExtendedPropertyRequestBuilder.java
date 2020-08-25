@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequest;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequest
      * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
     public ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SingleValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

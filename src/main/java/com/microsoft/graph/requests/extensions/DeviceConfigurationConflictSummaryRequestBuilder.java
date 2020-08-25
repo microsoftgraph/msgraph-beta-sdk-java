@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationConflictSummaryRequest;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationConflictSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceConfigurationConflictSummaryRequestBuilder extends BaseReques
      * @return the IDeviceConfigurationConflictSummaryRequest instance
      */
     public IDeviceConfigurationConflictSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceConfigurationConflictSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceConfigurationConflictSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

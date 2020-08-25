@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemActivityRequest;
-import com.microsoft.graph.requests.extensions.ItemActivityRequest;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
      * @return the IItemActivityRequest instance
      */
     public IItemActivityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemActivityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsPhone81SCEPCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.WindowsPhone81SCEPCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IWindowsPhone81TrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPhone81TrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
@@ -51,7 +50,7 @@ public class WindowsPhone81SCEPCertificateProfileRequestBuilder extends BaseRequ
      * @return the IWindowsPhone81SCEPCertificateProfileRequest instance
      */
     public IWindowsPhone81SCEPCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsPhone81SCEPCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsPhone81SCEPCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

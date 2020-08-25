@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationOrganizationRequest;
-import com.microsoft.graph.requests.extensions.EducationOrganizationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
      * @return the IEducationOrganizationRequest instance
      */
     public IEducationOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

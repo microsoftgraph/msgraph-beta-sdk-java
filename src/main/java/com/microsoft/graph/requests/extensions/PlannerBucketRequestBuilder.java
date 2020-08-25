@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
-import com.microsoft.graph.requests.extensions.PlannerBucketRequest;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
@@ -49,7 +48,7 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder implements I
      * @return the IPlannerBucketRequest instance
      */
     public IPlannerBucketRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerBucketRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerBucketRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.EnrollmentProfileRequest;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileSetDefaultProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentProfileSetDefaultProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileUpdateDeviceProfileAssignmentRequestBuilder;
@@ -51,7 +50,7 @@ public class EnrollmentProfileRequestBuilder extends BaseRequestBuilder implemen
      * @return the IEnrollmentProfileRequest instance
      */
     public IEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

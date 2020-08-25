@@ -4,6 +4,18 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailSearchFolderRequest;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserConfigurationRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +42,29 @@ public interface IMailSearchFolderRequestBuilder extends IRequestBuilder {
      */
     IMailSearchFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    IMessageCollectionRequestBuilder messages();
+
+    IMessageRequestBuilder messages(final String id);
+
+    IMessageRuleCollectionRequestBuilder messageRules();
+
+    IMessageRuleRequestBuilder messageRules(final String id);
+
+    IMailFolderCollectionRequestBuilder childFolders();
+
+    IMailFolderRequestBuilder childFolders(final String id);
+
+    IUserConfigurationCollectionRequestBuilder userConfigurations();
+
+    IUserConfigurationRequestBuilder userConfigurations(final String id);
 
 }

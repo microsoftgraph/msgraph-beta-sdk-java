@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemAttachmentRequest;
-import com.microsoft.graph.requests.extensions.ItemAttachmentRequest;
 import com.microsoft.graph.requests.extensions.IOutlookItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookItemRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ItemAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * @return the IItemAttachmentRequest instance
      */
     public IItemAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

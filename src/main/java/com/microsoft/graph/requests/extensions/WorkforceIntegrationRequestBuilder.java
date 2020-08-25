@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkforceIntegrationRequest;
-import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder imple
      * @return the IWorkforceIntegrationRequest instance
      */
     public IWorkforceIntegrationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkforceIntegrationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkforceIntegrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

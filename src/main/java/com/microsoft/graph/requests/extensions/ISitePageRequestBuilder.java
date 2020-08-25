@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISitePageRequest;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISitePagePublishRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -31,6 +33,20 @@ public interface ISitePageRequestBuilder extends IRequestBuilder {
      */
     ISitePageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
     ISitePagePublishRequestBuilder publish();
 
 }

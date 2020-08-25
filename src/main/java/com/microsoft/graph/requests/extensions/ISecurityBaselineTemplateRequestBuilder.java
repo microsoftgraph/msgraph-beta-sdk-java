@@ -9,6 +9,12 @@ import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateColle
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -50,5 +56,17 @@ public interface ISecurityBaselineTemplateRequestBuilder extends IRequestBuilder
     ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder categoryDeviceStateSummaries();
 
     ISecurityBaselineCategoryStateSummaryRequestBuilder categoryDeviceStateSummaries(final String id);
+
+    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
+
+    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
+
+    IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories();
+
+    IDeviceManagementTemplateSettingCategoryRequestBuilder categories(final String id);
+
+    IDeviceManagementTemplateCollectionRequestBuilder migratableTo();
+
+    IDeviceManagementTemplateRequestBuilder migratableTo(final String id);
 
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequest;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuild
      * @return the ITermsAndConditionsAssignmentRequest instance
      */
     public ITermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TermsAndConditionsAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

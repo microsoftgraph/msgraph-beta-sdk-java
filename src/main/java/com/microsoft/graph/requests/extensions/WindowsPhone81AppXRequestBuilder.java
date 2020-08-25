@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsPhone81AppXRequest;
-import com.microsoft.graph.requests.extensions.WindowsPhone81AppXRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class WindowsPhone81AppXRequestBuilder extends BaseRequestBuilder impleme
      * @return the IWindowsPhone81AppXRequest instance
      */
     public IWindowsPhone81AppXRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsPhone81AppXRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsPhone81AppXRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+        return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
+    }
+
+    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+        return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
+    }
 }

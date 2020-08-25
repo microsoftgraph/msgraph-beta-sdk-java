@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDelegatedPermissionClassificationRequest;
-import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DelegatedPermissionClassificationRequestBuilder extends BaseRequest
      * @return the IDelegatedPermissionClassificationRequest instance
      */
     public IDelegatedPermissionClassificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DelegatedPermissionClassificationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

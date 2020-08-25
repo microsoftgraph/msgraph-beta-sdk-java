@@ -8,6 +8,9 @@ import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCreateDeviceLogCollectionRequestRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCreateDeviceLogCollectionRequestRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

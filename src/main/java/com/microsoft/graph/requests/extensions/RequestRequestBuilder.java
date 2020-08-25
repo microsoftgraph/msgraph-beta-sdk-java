@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRequestRequest;
-import com.microsoft.graph.requests.extensions.RequestRequest;
 import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRequestStopRequestBuilder;
@@ -51,7 +50,7 @@ public class RequestRequestBuilder extends BaseRequestBuilder implements IReques
      * @return the IRequestRequest instance
      */
     public IRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

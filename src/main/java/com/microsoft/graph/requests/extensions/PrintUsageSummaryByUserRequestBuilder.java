@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequest;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PrintUsageSummaryByUserRequestBuilder extends BaseRequestBuilder im
      * @return the IPrintUsageSummaryByUserRequest instance
      */
     public IPrintUsageSummaryByUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintUsageSummaryByUserRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

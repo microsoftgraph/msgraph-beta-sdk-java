@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequest;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
@@ -45,6 +47,10 @@ public interface IGroupPolicyUploadedDefinitionFileRequestBuilder extends IReque
     IGroupPolicyOperationCollectionRequestBuilder groupPolicyOperations();
 
     IGroupPolicyOperationRequestBuilder groupPolicyOperations(final String id);
+
+    IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions();
+
+    IGroupPolicyDefinitionWithReferenceRequestBuilder definitions(final String id);
     IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder addLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);
     IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder removeLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);
     IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBuilder updateLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequest;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationSubmissionResourceRequestBuilder extends BaseRequestBuilde
      * @return the IEducationSubmissionResourceRequest instance
      */
     public IEducationSubmissionResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationSubmissionResourceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

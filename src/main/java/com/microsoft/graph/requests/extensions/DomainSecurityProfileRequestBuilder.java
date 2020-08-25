@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDomainSecurityProfileRequest;
-import com.microsoft.graph.requests.extensions.DomainSecurityProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DomainSecurityProfileRequestBuilder extends BaseRequestBuilder impl
      * @return the IDomainSecurityProfileRequest instance
      */
     public IDomainSecurityProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DomainSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DomainSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

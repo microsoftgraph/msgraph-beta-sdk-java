@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryRequest;
-import com.microsoft.graph.requests.extensions.DeviceCategoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements 
      * @return the IDeviceCategoryRequest instance
      */
     public IDeviceCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

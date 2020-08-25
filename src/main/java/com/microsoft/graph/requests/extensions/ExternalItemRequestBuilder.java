@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExternalItemRequest;
-import com.microsoft.graph.requests.extensions.ExternalItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ExternalItemRequestBuilder extends BaseRequestBuilder implements IE
      * @return the IExternalItemRequest instance
      */
     public IExternalItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExternalItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExternalItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

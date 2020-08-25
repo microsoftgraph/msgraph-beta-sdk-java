@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartTitleRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartTitleRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartTitleFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartTitleFormatRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookChartTitleRequestBuilder extends BaseRequestBuilder impleme
      * @return the IWorkbookChartTitleRequest instance
      */
     public IWorkbookChartTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartTitleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartTitleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

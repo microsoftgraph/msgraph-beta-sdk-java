@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequest;
-import com.microsoft.graph.requests.extensions.DirectoryRoleAccessReviewPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
      * @return the IDirectoryRoleAccessReviewPolicyRequest instance
      */
     public IDirectoryRoleAccessReviewPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryRoleAccessReviewPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryRoleAccessReviewPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

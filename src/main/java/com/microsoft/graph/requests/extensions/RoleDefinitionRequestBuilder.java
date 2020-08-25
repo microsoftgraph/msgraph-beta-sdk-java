@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRoleDefinitionRequest;
-import com.microsoft.graph.requests.extensions.RoleDefinitionRequest;
 import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
@@ -49,7 +48,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder implements 
      * @return the IRoleDefinitionRequest instance
      */
     public IRoleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

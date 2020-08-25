@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITelecomExpenseManagementPartnerRequest;
-import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBu
      * @return the ITelecomExpenseManagementPartnerRequest instance
      */
     public ITelecomExpenseManagementPartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TelecomExpenseManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserRequest;
-import com.microsoft.graph.requests.extensions.UserRequest;
 import com.microsoft.graph.requests.extensions.IUserAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
@@ -305,7 +304,7 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      * @return the IUserRequest instance
      */
     public IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

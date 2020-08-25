@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDomainJoinConnectorRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseReque
      * @return the IDeviceManagementDomainJoinConnectorRequest instance
      */
     public IDeviceManagementDomainJoinConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementDomainJoinConnectorRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

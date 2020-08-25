@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequest;
-import com.microsoft.graph.requests.extensions.IdentityProtectionRootRequest;
 import com.microsoft.graph.requests.extensions.IRiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskDetectionRequestBuilder;
@@ -53,7 +52,7 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder imp
      * @return the IIdentityProtectionRootRequest instance
      */
     public IIdentityProtectionRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IdentityProtectionRootRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IdentityProtectionRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

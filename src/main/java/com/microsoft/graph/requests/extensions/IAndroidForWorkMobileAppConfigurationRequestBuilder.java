@@ -4,6 +4,14 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkMobileAppConfigurationRequest;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +38,31 @@ public interface IAndroidForWorkMobileAppConfigurationRequestBuilder extends IRe
      */
     IAndroidForWorkMobileAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments();
+
+    IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id);
+
+    IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
+
+    IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
+
+    IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
+    /**
+     * Gets the request builder for ManagedDeviceMobileAppConfigurationDeviceSummary
+     *
+     * @return the IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
+     */
+    IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary();
+
+    /**
+     * Gets the request builder for ManagedDeviceMobileAppConfigurationUserSummary
+     *
+     * @return the IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
+     */
+    IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary();
 
 }

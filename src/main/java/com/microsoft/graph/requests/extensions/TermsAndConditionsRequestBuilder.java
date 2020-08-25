@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequest;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsRequest;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentRequestBuilder;
@@ -57,7 +56,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder impleme
      * @return the ITermsAndConditionsRequest instance
      */
     public ITermsAndConditionsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TermsAndConditionsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TermsAndConditionsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

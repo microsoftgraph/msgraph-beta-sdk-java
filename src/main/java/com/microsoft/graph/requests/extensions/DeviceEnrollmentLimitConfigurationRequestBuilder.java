@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentLimitConfigurationRequest;
-import com.microsoft.graph.requests.extensions.DeviceEnrollmentLimitConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseReques
      * @return the IDeviceEnrollmentLimitConfigurationRequest instance
      */
     public IDeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceEnrollmentLimitConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceEnrollmentLimitConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+        return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 }

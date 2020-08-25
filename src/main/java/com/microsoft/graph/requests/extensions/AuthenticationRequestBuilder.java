@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAuthenticationRequest;
-import com.microsoft.graph.requests.extensions.AuthenticationRequest;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
@@ -89,7 +88,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder implements 
      * @return the IAuthenticationRequest instance
      */
     public IAuthenticationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AuthenticationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AuthenticationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

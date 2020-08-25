@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest;
-import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest instance
      */
     public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

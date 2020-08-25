@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContractRequest;
-import com.microsoft.graph.requests.extensions.ContractRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * @return the IContractRequest instance
      */
     public IContractRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ContractRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ContractRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

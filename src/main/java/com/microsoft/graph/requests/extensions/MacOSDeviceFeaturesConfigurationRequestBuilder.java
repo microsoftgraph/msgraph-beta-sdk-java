@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOSDeviceFeaturesConfigurationRequest;
-import com.microsoft.graph.requests.extensions.MacOSDeviceFeaturesConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class MacOSDeviceFeaturesConfigurationRequestBuilder extends BaseRequestB
      * @return the IMacOSDeviceFeaturesConfigurationRequest instance
      */
     public IMacOSDeviceFeaturesConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOSDeviceFeaturesConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOSDeviceFeaturesConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

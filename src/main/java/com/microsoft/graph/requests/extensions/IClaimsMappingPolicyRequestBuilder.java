@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequest;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IClaimsMappingPolicyRequestBuilder extends IRequestBuilder {
      */
     IClaimsMappingPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo();
+
+    IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id);
 
 }

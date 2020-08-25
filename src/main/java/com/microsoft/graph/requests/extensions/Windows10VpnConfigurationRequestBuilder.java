@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows10VpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.Windows10VpnConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsCertificateProfileBaseWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class Windows10VpnConfigurationRequestBuilder extends BaseRequestBuilder 
      * @return the IWindows10VpnConfigurationRequest instance
      */
     public IWindows10VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows10VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows10VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

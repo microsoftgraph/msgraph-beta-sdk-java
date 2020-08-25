@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationDecimalTextBoxRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyPresentationDecimalTextBoxRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class GroupPolicyPresentationDecimalTextBoxRequestBuilder extends BaseReq
      * @return the IGroupPolicyPresentationDecimalTextBoxRequest instance
      */
     public IGroupPolicyPresentationDecimalTextBoxRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyPresentationDecimalTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationDecimalTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for GroupPolicyDefinition
+     *
+     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    }
 }

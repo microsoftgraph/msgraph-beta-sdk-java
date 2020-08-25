@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INetworkManagementConditionRequest;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface INetworkManagementConditionRequestBuilder extends IRequestBuild
      */
     INetworkManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements();
+
+    IManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(final String id);
 
 }

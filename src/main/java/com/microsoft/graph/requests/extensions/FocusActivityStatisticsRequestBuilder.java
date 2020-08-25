@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFocusActivityStatisticsRequest;
-import com.microsoft.graph.requests.extensions.FocusActivityStatisticsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class FocusActivityStatisticsRequestBuilder extends BaseRequestBuilder im
      * @return the IFocusActivityStatisticsRequest instance
      */
     public IFocusActivityStatisticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FocusActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FocusActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

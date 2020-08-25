@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIpSecurityProfileRequest;
-import com.microsoft.graph.requests.extensions.IpSecurityProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IpSecurityProfileRequestBuilder extends BaseRequestBuilder implemen
      * @return the IIpSecurityProfileRequest instance
      */
     public IIpSecurityProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IpSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IpSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

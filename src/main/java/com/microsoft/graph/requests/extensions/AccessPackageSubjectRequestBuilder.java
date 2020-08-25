@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequest;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class AccessPackageSubjectRequestBuilder extends BaseRequestBuilder imple
      * @return the IAccessPackageSubjectRequest instance
      */
     public IAccessPackageSubjectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageSubjectRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageSubjectRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

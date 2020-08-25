@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentRequest;
-import com.microsoft.graph.requests.extensions.PolicySetAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PolicySetAssignmentRequestBuilder extends BaseRequestBuilder implem
      * @return the IPolicySetAssignmentRequest instance
      */
     public IPolicySetAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PolicySetAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PolicySetAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

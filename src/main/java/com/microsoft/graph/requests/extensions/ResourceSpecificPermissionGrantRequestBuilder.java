@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequest;
-import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ResourceSpecificPermissionGrantRequestBuilder extends BaseRequestBu
      * @return the IResourceSpecificPermissionGrantRequest instance
      */
     public IResourceSpecificPermissionGrantRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ResourceSpecificPermissionGrantRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

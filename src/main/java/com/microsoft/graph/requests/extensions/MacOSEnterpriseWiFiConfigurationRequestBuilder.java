@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOSEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.MacOSEnterpriseWiFiConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateCollectionRequestBuilder;
@@ -53,7 +52,7 @@ public class MacOSEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestB
      * @return the IMacOSEnterpriseWiFiConfigurationRequest instance
      */
     public IMacOSEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOSEnterpriseWiFiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOSEnterpriseWiFiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

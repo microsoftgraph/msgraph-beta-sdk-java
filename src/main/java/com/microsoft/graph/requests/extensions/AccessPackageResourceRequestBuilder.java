@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
@@ -53,7 +52,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder impl
      * @return the IAccessPackageResourceRequest instance
      */
     public IAccessPackageResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageResourceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageResourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IosEnterpriseWiFiConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
@@ -53,7 +52,7 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
      * @return the IIosEnterpriseWiFiConfigurationRequest instance
      */
     public IIosEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosEnterpriseWiFiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosEnterpriseWiFiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosLobAppRequest;
+import com.microsoft.graph.requests.extensions.IMobileAppContentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppContentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IIosLobAppRequestBuilder extends IRequestBuilder {
      */
     IIosLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IMobileAppContentCollectionRequestBuilder contentVersions();
+
+    IMobileAppContentRequestBuilder contentVersions(final String id);
 
 }

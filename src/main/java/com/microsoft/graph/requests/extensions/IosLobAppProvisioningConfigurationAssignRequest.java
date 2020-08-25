@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationA
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

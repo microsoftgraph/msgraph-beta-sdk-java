@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequest;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
@@ -53,7 +52,7 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
      * @return the IGovernanceRoleAssignmentRequest instance
      */
     public IGovernanceRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GovernanceRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

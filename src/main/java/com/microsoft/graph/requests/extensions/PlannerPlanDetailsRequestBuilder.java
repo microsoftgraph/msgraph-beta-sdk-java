@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
-import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PlannerPlanDetailsRequestBuilder extends BaseRequestBuilder impleme
      * @return the IPlannerPlanDetailsRequest instance
      */
     public IPlannerPlanDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerPlanDetailsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityRequest;
-import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder imp
      * @return the IImportedDeviceIdentityRequest instance
      */
     public IImportedDeviceIdentityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ImportedDeviceIdentityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ImportedDeviceIdentityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

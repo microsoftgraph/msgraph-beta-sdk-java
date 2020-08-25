@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows10EnrollmentCompletionPageConfigurationRequest;
-import com.microsoft.graph.requests.extensions.Windows10EnrollmentCompletionPageConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extend
      * @return the IWindows10EnrollmentCompletionPageConfigurationRequest instance
      */
     public IWindows10EnrollmentCompletionPageConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows10EnrollmentCompletionPageConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows10EnrollmentCompletionPageConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+        return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 }

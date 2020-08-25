@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequest;
-import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequest;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyAddGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyAddGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRemoveGroupRequestBuilder;
@@ -49,7 +48,7 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder imple
      * @return the IGroupLifecyclePolicyRequest instance
      */
     public IGroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupLifecyclePolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

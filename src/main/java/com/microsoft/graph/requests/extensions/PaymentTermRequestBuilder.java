@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequest;
-import com.microsoft.graph.requests.extensions.PaymentTermRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PaymentTermRequestBuilder extends BaseRequestBuilder implements IPa
      * @return the IPaymentTermRequest instance
      */
     public IPaymentTermRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PaymentTermRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PaymentTermRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICommsOperationRequest;
-import com.microsoft.graph.requests.extensions.CommsOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CommsOperationRequestBuilder extends BaseRequestBuilder implements 
      * @return the ICommsOperationRequest instance
      */
     public ICommsOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CommsOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CommsOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

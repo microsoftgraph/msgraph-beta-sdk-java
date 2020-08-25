@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequest;
-import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequest;
 import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
@@ -57,7 +56,7 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
      * @return the IOfficeGraphInsightsRequest instance
      */
     public IOfficeGraphInsightsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OfficeGraphInsightsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

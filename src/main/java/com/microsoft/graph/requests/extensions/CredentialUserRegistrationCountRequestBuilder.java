@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationCountRequest;
-import com.microsoft.graph.requests.extensions.CredentialUserRegistrationCountRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CredentialUserRegistrationCountRequestBuilder extends BaseRequestBu
      * @return the ICredentialUserRegistrationCountRequest instance
      */
     public ICredentialUserRegistrationCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CredentialUserRegistrationCountRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CredentialUserRegistrationCountRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

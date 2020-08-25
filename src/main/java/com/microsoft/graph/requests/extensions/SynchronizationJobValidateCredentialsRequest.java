@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.SynchronizationJobValidateCredentia
 import com.microsoft.graph.requests.extensions.ISynchronizationJobValidateCredentialsRequest;
 import com.microsoft.graph.requests.extensions.SynchronizationJobValidateCredentialsRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAgreementRequest;
-import com.microsoft.graph.requests.extensions.AgreementRequest;
 import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
@@ -55,7 +54,7 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
      * @return the IAgreementRequest instance
      */
     public IAgreementRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AgreementRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AgreementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

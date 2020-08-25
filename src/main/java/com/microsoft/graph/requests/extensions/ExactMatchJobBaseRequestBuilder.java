@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExactMatchJobBaseRequest;
-import com.microsoft.graph.requests.extensions.ExactMatchJobBaseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ExactMatchJobBaseRequestBuilder extends BaseRequestBuilder implemen
      * @return the IExactMatchJobBaseRequest instance
      */
     public IExactMatchJobBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExactMatchJobBaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExactMatchJobBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

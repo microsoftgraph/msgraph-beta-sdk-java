@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.AuthenticationMethodRequest;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodEnableSmsSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodEnableSmsSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodDisableSmsSignInRequestBuilder;
@@ -51,7 +50,7 @@ public class AuthenticationMethodRequestBuilder extends BaseRequestBuilder imple
      * @return the IAuthenticationMethodRequest instance
      */
     public IAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

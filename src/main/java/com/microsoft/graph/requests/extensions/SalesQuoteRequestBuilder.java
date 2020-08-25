@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISalesQuoteRequest;
-import com.microsoft.graph.requests.extensions.SalesQuoteRequest;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
@@ -61,7 +60,7 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
      * @return the ISalesQuoteRequest instance
      */
     public ISalesQuoteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SalesQuoteRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SalesQuoteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

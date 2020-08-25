@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPresentationRequest;
-import com.microsoft.graph.requests.extensions.PresentationRequest;
 import com.microsoft.graph.requests.extensions.IDocumentCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DocumentCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDocumentCommentRequestBuilder;
@@ -49,7 +48,7 @@ public class PresentationRequestBuilder extends BaseRequestBuilder implements IP
      * @return the IPresentationRequest instance
      */
     public IPresentationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PresentationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PresentationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

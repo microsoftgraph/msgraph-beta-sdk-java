@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoRequest;
-import com.microsoft.graph.requests.extensions.SalesCreditMemoRequest;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineRequestBuilder;
@@ -55,7 +54,7 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder implements
      * @return the ISalesCreditMemoRequest instance
      */
     public ISalesCreditMemoRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SalesCreditMemoRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SalesCreditMemoRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

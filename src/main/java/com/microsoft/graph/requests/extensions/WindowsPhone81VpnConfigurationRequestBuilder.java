@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsPhone81VpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.WindowsPhone81VpnConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IWindowsPhone81CertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPhone81CertificateProfileBaseWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WindowsPhone81VpnConfigurationRequestBuilder extends BaseRequestBui
      * @return the IWindowsPhone81VpnConfigurationRequest instance
      */
     public IWindowsPhone81VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsPhone81VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsPhone81VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TemporaryAccessPassAuthenticationMethodRequestBuilder extends BaseR
      * @return the ITemporaryAccessPassAuthenticationMethodRequest instance
      */
     public ITemporaryAccessPassAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TemporaryAccessPassAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

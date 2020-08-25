@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INetworkIPv6ConfigurationManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.NetworkIPv6ConfigurationManagementConditionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequestBuilder extends B
      * @return the INetworkIPv6ConfigurationManagementConditionRequest instance
      */
     public INetworkIPv6ConfigurationManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new NetworkIPv6ConfigurationManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.NetworkIPv6ConfigurationManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerformanceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * @return the IUserExperienceAnalyticsDevicePerformanceRequest instance
      */
     public IUserExperienceAnalyticsDevicePerformanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsDevicePerformanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerformanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

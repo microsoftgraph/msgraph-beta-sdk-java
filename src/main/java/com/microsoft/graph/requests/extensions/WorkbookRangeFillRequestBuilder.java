@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequest;
-import com.microsoft.graph.requests.extensions.WorkbookRangeFillRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFillClearRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillClearRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookRangeFillRequest instance
      */
     public IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookRangeFillRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookRangeFillRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

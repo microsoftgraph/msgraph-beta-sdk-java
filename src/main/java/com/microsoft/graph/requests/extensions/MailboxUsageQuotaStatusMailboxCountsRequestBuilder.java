@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailboxUsageQuotaStatusMailboxCountsRequest;
-import com.microsoft.graph.requests.extensions.MailboxUsageQuotaStatusMailboxCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MailboxUsageQuotaStatusMailboxCountsRequestBuilder extends BaseRequ
      * @return the IMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
     public IMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MailboxUsageQuotaStatusMailboxCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MailboxUsageQuotaStatusMailboxCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

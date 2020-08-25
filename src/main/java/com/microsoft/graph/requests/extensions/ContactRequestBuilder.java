@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContactRequest;
-import com.microsoft.graph.requests.extensions.ContactRequest;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -59,7 +58,7 @@ public class ContactRequestBuilder extends BaseRequestBuilder implements IContac
      * @return the IContactRequest instance
      */
     public IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ContactRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ContactRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

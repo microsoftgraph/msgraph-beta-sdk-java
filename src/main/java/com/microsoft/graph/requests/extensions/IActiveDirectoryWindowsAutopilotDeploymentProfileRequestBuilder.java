@@ -5,6 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IActiveDirectoryWindowsAutopilotDeploymentProfileRequest;
 import com.microsoft.graph.requests.extensions.IWindowsDomainJoinConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,5 +42,13 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder
      * @return the IWindowsDomainJoinConfigurationRequestBuilder instance
      */
     IWindowsDomainJoinConfigurationRequestBuilder domainJoinConfiguration();
+
+    IWindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices();
+
+    IWindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(final String id);
+
+    IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments();
+
+    IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(final String id);
 
 }

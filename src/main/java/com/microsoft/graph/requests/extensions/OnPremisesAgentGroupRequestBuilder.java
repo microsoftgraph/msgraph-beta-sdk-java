@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequest;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequest;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
@@ -53,7 +52,7 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
      * @return the IOnPremisesAgentGroupRequest instance
      */
     public IOnPremisesAgentGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnPremisesAgentGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICloudAppSecurityProfileRequest;
-import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CloudAppSecurityProfileRequestBuilder extends BaseRequestBuilder im
      * @return the ICloudAppSecurityProfileRequest instance
      */
     public ICloudAppSecurityProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CloudAppSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CloudAppSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

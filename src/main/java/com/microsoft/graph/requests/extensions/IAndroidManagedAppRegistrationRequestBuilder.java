@@ -4,6 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppRegistrationRequest;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +36,17 @@ public interface IAndroidManagedAppRegistrationRequestBuilder extends IRequestBu
      */
     IAndroidManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IManagedAppPolicyCollectionRequestBuilder appliedPolicies();
+
+    IManagedAppPolicyRequestBuilder appliedPolicies(final String id);
+
+    IManagedAppPolicyCollectionRequestBuilder intendedPolicies();
+
+    IManagedAppPolicyRequestBuilder intendedPolicies(final String id);
+
+    IManagedAppOperationCollectionRequestBuilder operations();
+
+    IManagedAppOperationRequestBuilder operations(final String id);
 
 }

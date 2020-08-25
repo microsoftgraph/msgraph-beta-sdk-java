@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequest;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequest;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetGenerateKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetGenerateKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadSecretRequestBuilder;
@@ -55,7 +54,7 @@ public class TrustFrameworkKeySetRequestBuilder extends BaseRequestBuilder imple
      * @return the ITrustFrameworkKeySetRequest instance
      */
     public ITrustFrameworkKeySetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TrustFrameworkKeySetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

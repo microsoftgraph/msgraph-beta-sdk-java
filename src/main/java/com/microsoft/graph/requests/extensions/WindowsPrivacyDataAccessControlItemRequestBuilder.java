@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsPrivacyDataAccessControlItemRequest;
-import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsPrivacyDataAccessControlItemRequestBuilder extends BaseReque
      * @return the IWindowsPrivacyDataAccessControlItemRequest instance
      */
     public IWindowsPrivacyDataAccessControlItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsPrivacyDataAccessControlItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

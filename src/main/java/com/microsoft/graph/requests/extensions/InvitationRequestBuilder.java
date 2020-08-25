@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInvitationRequest;
-import com.microsoft.graph.requests.extensions.InvitationRequest;
 import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
      * @return the IInvitationRequest instance
      */
     public IInvitationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new InvitationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.InvitationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

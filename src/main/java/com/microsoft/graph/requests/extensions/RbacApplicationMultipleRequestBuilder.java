@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRbacApplicationMultipleRequest;
-import com.microsoft.graph.requests.extensions.RbacApplicationMultipleRequest;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
@@ -53,7 +52,7 @@ public class RbacApplicationMultipleRequestBuilder extends BaseRequestBuilder im
      * @return the IRbacApplicationMultipleRequest instance
      */
     public IRbacApplicationMultipleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RbacApplicationMultipleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RbacApplicationMultipleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatClearRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatClearRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
      * @return the IWorkbookChartLineFormatRequest instance
      */
     public IWorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartLineFormatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApplicationTemplateRequest;
-import com.microsoft.graph.requests.extensions.ApplicationTemplateRequest;
 import com.microsoft.graph.requests.extensions.IApplicationTemplateInstantiateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationTemplateInstantiateRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ApplicationTemplateRequestBuilder extends BaseRequestBuilder implem
      * @return the IApplicationTemplateRequest instance
      */
     public IApplicationTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApplicationTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApplicationTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

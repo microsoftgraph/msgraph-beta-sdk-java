@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequest;
-import com.microsoft.graph.requests.extensions.UserSecurityProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserSecurityProfileRequestBuilder extends BaseRequestBuilder implem
      * @return the IUserSecurityProfileRequest instance
      */
     public IUserSecurityProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

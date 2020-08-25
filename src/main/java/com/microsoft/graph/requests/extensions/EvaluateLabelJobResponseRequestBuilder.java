@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEvaluateLabelJobResponseRequest;
-import com.microsoft.graph.requests.extensions.EvaluateLabelJobResponseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EvaluateLabelJobResponseRequestBuilder extends BaseRequestBuilder i
      * @return the IEvaluateLabelJobResponseRequest instance
      */
     public IEvaluateLabelJobResponseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EvaluateLabelJobResponseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EvaluateLabelJobResponseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

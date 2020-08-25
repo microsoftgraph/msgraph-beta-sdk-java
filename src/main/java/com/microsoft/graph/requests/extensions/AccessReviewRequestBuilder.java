@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessReviewRequest;
-import com.microsoft.graph.requests.extensions.AccessReviewRequest;
 import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
@@ -69,7 +68,7 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
      * @return the IAccessReviewRequest instance
      */
     public IAccessReviewRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessReviewRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessReviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

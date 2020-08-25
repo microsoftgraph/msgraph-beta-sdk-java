@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentRequest;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * @return the IDeviceAndAppManagementRoleAssignmentRequest instance
      */
     public IDeviceAndAppManagementRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceAndAppManagementRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,14 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
 
     public IRoleScopeTagWithReferenceRequestBuilder roleScopeTags(final String id) {
         return new RoleScopeTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleScopeTags") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for RoleDefinition
+     *
+     * @return the IRoleDefinitionWithReferenceRequestBuilder instance
+     */
+    public IRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

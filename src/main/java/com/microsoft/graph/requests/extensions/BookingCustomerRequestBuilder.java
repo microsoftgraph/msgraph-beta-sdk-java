@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBookingCustomerRequest;
-import com.microsoft.graph.requests.extensions.BookingCustomerRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class BookingCustomerRequestBuilder extends BaseRequestBuilder implements
      * @return the IBookingCustomerRequest instance
      */
     public IBookingCustomerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BookingCustomerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BookingCustomerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

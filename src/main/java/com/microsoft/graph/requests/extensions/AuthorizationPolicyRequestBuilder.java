@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequest;
-import com.microsoft.graph.requests.extensions.AuthorizationPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder implem
      * @return the IAuthorizationPolicyRequest instance
      */
     public IAuthorizationPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AuthorizationPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AuthorizationPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

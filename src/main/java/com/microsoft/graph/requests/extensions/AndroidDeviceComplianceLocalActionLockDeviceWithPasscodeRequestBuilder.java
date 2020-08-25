@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest;
-import com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuil
      * @return the IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest instance
      */
     public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

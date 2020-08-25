@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRiskDetectionRequest;
-import com.microsoft.graph.requests.extensions.RiskDetectionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RiskDetectionRequestBuilder extends BaseRequestBuilder implements I
      * @return the IRiskDetectionRequest instance
      */
     public IRiskDetectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RiskDetectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RiskDetectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

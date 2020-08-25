@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IShiftPreferencesRequest;
-import com.microsoft.graph.requests.extensions.ShiftPreferencesRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder implement
      * @return the IShiftPreferencesRequest instance
      */
     public IShiftPreferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ShiftPreferencesRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ShiftPreferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

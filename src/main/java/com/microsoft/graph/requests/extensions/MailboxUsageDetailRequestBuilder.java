@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailboxUsageDetailRequest;
-import com.microsoft.graph.requests.extensions.MailboxUsageDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MailboxUsageDetailRequestBuilder extends BaseRequestBuilder impleme
      * @return the IMailboxUsageDetailRequest instance
      */
     public IMailboxUsageDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MailboxUsageDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MailboxUsageDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

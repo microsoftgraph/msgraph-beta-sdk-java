@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAuditEventRequest;
-import com.microsoft.graph.requests.extensions.AuditEventRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AuditEventRequestBuilder extends BaseRequestBuilder implements IAud
      * @return the IAuditEventRequest instance
      */
     public IAuditEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AuditEventRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AuditEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

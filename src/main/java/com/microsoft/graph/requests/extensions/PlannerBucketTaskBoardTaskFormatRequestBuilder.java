@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerBucketTaskBoardTaskFormatRequest;
-import com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestB
      * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
      */
     public IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerBucketTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPersonNameRequest;
-import com.microsoft.graph.requests.extensions.PersonNameRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PersonNameRequestBuilder extends BaseRequestBuilder implements IPer
      * @return the IPersonNameRequest instance
      */
     public IPersonNameRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PersonNameRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PersonNameRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

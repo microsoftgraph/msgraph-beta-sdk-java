@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentRequest;
-import com.microsoft.graph.requests.extensions.BookingAppointmentRequest;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentCancelRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingAppointmentCancelRequestBuilder;
 
@@ -47,7 +46,7 @@ public class BookingAppointmentRequestBuilder extends BaseRequestBuilder impleme
      * @return the IBookingAppointmentRequest instance
      */
     public IBookingAppointmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BookingAppointmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BookingAppointmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

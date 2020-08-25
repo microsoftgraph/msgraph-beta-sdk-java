@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISearchRequest;
-import com.microsoft.graph.requests.extensions.SearchRequest;
 import com.microsoft.graph.models.extensions.SearchRequest;
 import com.microsoft.graph.requests.extensions.ISearchQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SearchQueryCollectionRequestBuilder;
@@ -48,7 +47,7 @@ public class SearchRequestBuilder extends BaseRequestBuilder implements ISearchR
      * @return the ISearchRequest instance
      */
     public ISearchRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SearchRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SearchRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

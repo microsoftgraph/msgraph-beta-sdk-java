@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISubscriptionRequest;
-import com.microsoft.graph.requests.extensions.SubscriptionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SubscriptionRequestBuilder extends BaseRequestBuilder implements IS
      * @return the ISubscriptionRequest instance
      */
     public ISubscriptionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SubscriptionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SubscriptionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

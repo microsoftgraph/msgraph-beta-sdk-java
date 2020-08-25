@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INotificationRequest;
-import com.microsoft.graph.requests.extensions.NotificationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class NotificationRequestBuilder extends BaseRequestBuilder implements IN
      * @return the INotificationRequest instance
      */
     public INotificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new NotificationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.NotificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppStatusRawRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppStatusRawRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedAppStatusRawRequestBuilder extends BaseRequestBuilder implem
      * @return the IManagedAppStatusRawRequest instance
      */
     public IManagedAppStatusRawRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppStatusRawRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppStatusRawRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

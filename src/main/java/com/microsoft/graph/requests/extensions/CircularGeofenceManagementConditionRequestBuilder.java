@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICircularGeofenceManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.CircularGeofenceManagementConditionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CircularGeofenceManagementConditionRequestBuilder extends BaseReque
      * @return the ICircularGeofenceManagementConditionRequest instance
      */
     public ICircularGeofenceManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CircularGeofenceManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CircularGeofenceManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

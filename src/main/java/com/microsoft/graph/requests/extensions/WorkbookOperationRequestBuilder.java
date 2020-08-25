@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookOperationRequest;
-import com.microsoft.graph.requests.extensions.WorkbookOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WorkbookOperationRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookOperationRequest instance
      */
     public IWorkbookOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

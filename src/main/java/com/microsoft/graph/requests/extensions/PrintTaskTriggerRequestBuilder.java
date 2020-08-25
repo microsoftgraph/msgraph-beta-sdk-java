@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequest;
-import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequest;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
      * @return the IPrintTaskTriggerRequest instance
      */
     public IPrintTaskTriggerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintTaskTriggerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintTaskTriggerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

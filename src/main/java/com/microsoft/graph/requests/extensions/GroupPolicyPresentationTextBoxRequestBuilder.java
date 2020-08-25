@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationTextBoxRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyPresentationTextBoxRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBui
      * @return the IGroupPolicyPresentationTextBoxRequest instance
      */
     public IGroupPolicyPresentationTextBoxRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyPresentationTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for GroupPolicyDefinition
+     *
+     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    }
 }

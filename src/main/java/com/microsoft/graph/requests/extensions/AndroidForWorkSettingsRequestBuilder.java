@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequest;
-import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsRequest;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequestSignupUrlRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsRequestSignupUrlRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsCompleteSignupRequestBuilder;
@@ -53,7 +52,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder imp
      * @return the IAndroidForWorkSettingsRequest instance
      */
     public IAndroidForWorkSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidForWorkSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidForWorkSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

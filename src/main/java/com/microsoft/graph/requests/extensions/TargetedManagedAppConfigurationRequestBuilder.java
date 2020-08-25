@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequest;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
@@ -61,7 +60,7 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @return the ITargetedManagedAppConfigurationRequest instance
      */
     public ITargetedManagedAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TargetedManagedAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

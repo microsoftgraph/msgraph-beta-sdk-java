@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequest;
-import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
      * @return the IApplicationSignInDetailedSummaryRequest instance
      */
     public IApplicationSignInDetailedSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApplicationSignInDetailedSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

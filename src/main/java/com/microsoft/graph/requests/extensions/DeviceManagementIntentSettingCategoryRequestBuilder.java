@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseReq
      * @return the IDeviceManagementIntentSettingCategoryRequest instance
      */
     public IDeviceManagementIntentSettingCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementIntentSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,12 @@ public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseReq
 
     public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
+        return new DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
+    }
+
+    public IDeviceManagementSettingDefinitionRequestBuilder settingDefinitions(final String id) {
+        return new DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
 }

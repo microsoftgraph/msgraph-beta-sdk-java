@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IProfileRequest;
-import com.microsoft.graph.requests.extensions.ProfileRequest;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAccountInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationRequestBuilder;
@@ -121,7 +120,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder implements IProfil
      * @return the IProfileRequest instance
      */
     public IProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

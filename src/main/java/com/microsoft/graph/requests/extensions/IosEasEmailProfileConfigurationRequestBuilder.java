@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosEasEmailProfileConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IosEasEmailProfileConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileWithReferenceRequestBuilder;
@@ -53,7 +52,7 @@ public class IosEasEmailProfileConfigurationRequestBuilder extends BaseRequestBu
      * @return the IIosEasEmailProfileConfigurationRequest instance
      */
     public IIosEasEmailProfileConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosEasEmailProfileConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosEasEmailProfileConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

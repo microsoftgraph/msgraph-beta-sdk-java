@@ -31,6 +31,18 @@ public enum ResultantAppStateDetail
     */
     DEPENDENCY_WITH_AUTO_INSTALL_DISABLED,
     /**
+    * ios App Store Update Failed To Install
+    */
+    IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL,
+    /**
+    * vpp App Has Update Available
+    */
+    VPP_APP_HAS_UPDATE_AVAILABLE,
+    /**
+    * user Rejected Update
+    */
+    USER_REJECTED_UPDATE,
+    /**
     * see Install Error Code
     */
     SEE_INSTALL_ERROR_CODE,
@@ -38,6 +50,18 @@ public enum ResultantAppStateDetail
     * auto Install Disabled
     */
     AUTO_INSTALL_DISABLED,
+    /**
+    * managed App No Longer Present
+    */
+    MANAGED_APP_NO_LONGER_PRESENT,
+    /**
+    * user Rejected Install
+    */
+    USER_REJECTED_INSTALL,
+    /**
+    * user Is Not Logged Into App Store
+    */
+    USER_IS_NOT_LOGGED_INTO_APP_STORE,
     /**
     * see Uninstall Error Code
     */

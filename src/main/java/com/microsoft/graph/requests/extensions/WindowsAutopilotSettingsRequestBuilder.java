@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotSettingsRequest;
-import com.microsoft.graph.requests.extensions.WindowsAutopilotSettingsRequest;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotSettingsSyncRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotSettingsSyncRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder i
      * @return the IWindowsAutopilotSettingsRequest instance
      */
     public IWindowsAutopilotSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsAutopilotSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsAutopilotSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

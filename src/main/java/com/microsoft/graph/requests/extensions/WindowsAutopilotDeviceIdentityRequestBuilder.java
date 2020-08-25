@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequest;
-import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityRequest;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
@@ -59,7 +58,7 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
      * @return the IWindowsAutopilotDeviceIdentityRequest instance
      */
     public IWindowsAutopilotDeviceIdentityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsAutopilotDeviceIdentityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

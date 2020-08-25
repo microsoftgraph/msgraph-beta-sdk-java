@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueTextRequest;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,19 @@ public interface IGroupPolicyPresentationValueTextRequestBuilder extends IReques
      */
     IGroupPolicyPresentationValueTextRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for GroupPolicyDefinitionValue
+     *
+     * @return the IGroupPolicyDefinitionValueWithReferenceRequestBuilder instance
+     */
+    IGroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue();
+
+    /**
+     * Gets the request builder for GroupPolicyPresentation
+     *
+     * @return the IGroupPolicyPresentationWithReferenceRequestBuilder instance
+     */
+    IGroupPolicyPresentationWithReferenceRequestBuilder presentation();
 
 }

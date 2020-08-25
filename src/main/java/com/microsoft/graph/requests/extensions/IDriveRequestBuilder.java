@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRecentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequestBuilder;
@@ -79,6 +81,20 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
     IDriveItemCollectionRequestBuilder special();
 
     IDriveItemRequestBuilder special(final String id);
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     IDriveRecentCollectionRequestBuilder recent();
 

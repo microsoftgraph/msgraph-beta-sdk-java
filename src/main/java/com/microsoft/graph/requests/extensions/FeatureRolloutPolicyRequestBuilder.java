@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequest;
-import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
@@ -49,7 +48,7 @@ public class FeatureRolloutPolicyRequestBuilder extends BaseRequestBuilder imple
      * @return the IFeatureRolloutPolicyRequest instance
      */
     public IFeatureRolloutPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FeatureRolloutPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FeatureRolloutPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

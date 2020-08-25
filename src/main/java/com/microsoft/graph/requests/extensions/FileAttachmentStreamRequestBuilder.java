@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileAttachmentRequest;
-import com.microsoft.graph.requests.extensions.FileAttachmentRequest;
 import com.microsoft.graph.requests.extensions.IFileAttachmentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileAttachmentStreamRequestBuilder;
 

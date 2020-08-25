@@ -4,6 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemInsightsRequest;
+import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +36,17 @@ public interface IItemInsightsRequestBuilder extends IRequestBuilder {
      */
     IItemInsightsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    ITrendingCollectionRequestBuilder trending();
+
+    ITrendingRequestBuilder trending(final String id);
+
+    ISharedInsightCollectionRequestBuilder shared();
+
+    ISharedInsightRequestBuilder shared(final String id);
+
+    IUsedInsightCollectionRequestBuilder used();
+
+    IUsedInsightRequestBuilder used(final String id);
 
 }

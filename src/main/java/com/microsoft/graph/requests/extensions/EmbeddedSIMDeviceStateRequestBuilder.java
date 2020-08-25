@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMDeviceStateRequest;
-import com.microsoft.graph.requests.extensions.EmbeddedSIMDeviceStateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EmbeddedSIMDeviceStateRequestBuilder extends BaseRequestBuilder imp
      * @return the IEmbeddedSIMDeviceStateRequest instance
      */
     public IEmbeddedSIMDeviceStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmbeddedSIMDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmbeddedSIMDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserActivityRequest;
-import com.microsoft.graph.requests.extensions.UserActivityRequest;
 import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
@@ -49,7 +48,7 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
      * @return the IUserActivityRequest instance
      */
     public IUserActivityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserActivityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

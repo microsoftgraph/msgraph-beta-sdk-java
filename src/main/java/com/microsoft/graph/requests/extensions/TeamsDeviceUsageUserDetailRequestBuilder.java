@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsDeviceUsageUserDetailRequest;
-import com.microsoft.graph.requests.extensions.TeamsDeviceUsageUserDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TeamsDeviceUsageUserDetailRequestBuilder extends BaseRequestBuilder
      * @return the ITeamsDeviceUsageUserDetailRequest instance
      */
     public ITeamsDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsDeviceUsageUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsDeviceUsageUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

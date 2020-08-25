@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineTemplateRequest;
-import com.microsoft.graph.requests.extensions.SecurityBaselineTemplateRequest;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
@@ -55,7 +54,7 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
      * @return the ISecurityBaselineTemplateRequest instance
      */
     public ISecurityBaselineTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SecurityBaselineTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SecurityBaselineTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -81,5 +80,26 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
 
     public ISecurityBaselineCategoryStateSummaryRequestBuilder categoryDeviceStateSummaries(final String id) {
         return new SecurityBaselineCategoryStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("categoryDeviceStateSummaries") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
+        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+
+    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
+        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories() {
+        return new DeviceManagementTemplateSettingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    }
+
+    public IDeviceManagementTemplateSettingCategoryRequestBuilder categories(final String id) {
+        return new DeviceManagementTemplateSettingCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementTemplateCollectionRequestBuilder migratableTo() {
+        return new DeviceManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo"), getClient(), null);
+    }
+
+    public IDeviceManagementTemplateRequestBuilder migratableTo(final String id) {
+        return new DeviceManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo") + "/" + id, getClient(), null);
     }
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleRequest;
-import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleRequest;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -59,7 +58,7 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
      * @return the IUnifiedRoleAssignmentMultipleRequest instance
      */
     public IUnifiedRoleAssignmentMultipleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UnifiedRoleAssignmentMultipleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequest;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implem
      * @return the ITokenIssuancePolicyRequest instance
      */
     public ITokenIssuancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TokenIssuancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
+    }
 }

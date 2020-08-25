@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBookingBusinessRequest;
-import com.microsoft.graph.requests.extensions.BookingBusinessRequest;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
@@ -69,7 +68,7 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements
      * @return the IBookingBusinessRequest instance
      */
     public IBookingBusinessRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BookingBusinessRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BookingBusinessRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

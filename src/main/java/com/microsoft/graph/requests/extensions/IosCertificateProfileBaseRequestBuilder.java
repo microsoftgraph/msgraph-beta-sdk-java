@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequest;
-import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosCertificateProfileBaseRequestBuilder extends BaseRequestBuilder 
      * @return the IIosCertificateProfileBaseRequest instance
      */
     public IIosCertificateProfileBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosCertificateProfileBaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

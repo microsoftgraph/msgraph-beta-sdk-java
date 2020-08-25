@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentPlatformRestrictionsConfigurationRequest;
+import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilde
      */
     IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments();
+
+    IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id);
 
 }

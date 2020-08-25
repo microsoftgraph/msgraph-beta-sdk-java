@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsPhoneEASEmailProfileConfigurationRequest;
-import com.microsoft.graph.requests.extensions.WindowsPhoneEASEmailProfileConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequestBuilder extends Base
      * @return the IWindowsPhoneEASEmailProfileConfigurationRequest instance
      */
     public IWindowsPhoneEASEmailProfileConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsPhoneEASEmailProfileConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsPhoneEASEmailProfileConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

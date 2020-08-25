@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationLongDecimalTextBoxRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyPresentationLongDecimalTextBoxRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
      * @return the IGroupPolicyPresentationLongDecimalTextBoxRequest instance
      */
     public IGroupPolicyPresentationLongDecimalTextBoxRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyPresentationLongDecimalTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationLongDecimalTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for GroupPolicyDefinition
+     *
+     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    }
 }

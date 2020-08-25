@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateRequest;
-import com.microsoft.graph.requests.extensions.ManagedDeviceEncryptionStateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedDeviceEncryptionStateRequestBuilder extends BaseRequestBuild
      * @return the IManagedDeviceEncryptionStateRequest instance
      */
     public IManagedDeviceEncryptionStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedDeviceEncryptionStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedDeviceEncryptionStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

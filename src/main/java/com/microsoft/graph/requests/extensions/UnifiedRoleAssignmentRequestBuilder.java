@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequest;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -53,7 +52,7 @@ public class UnifiedRoleAssignmentRequestBuilder extends BaseRequestBuilder impl
      * @return the IUnifiedRoleAssignmentRequest instance
      */
     public IUnifiedRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UnifiedRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

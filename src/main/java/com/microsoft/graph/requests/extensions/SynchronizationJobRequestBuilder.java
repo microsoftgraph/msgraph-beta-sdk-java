@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobRequest;
-import com.microsoft.graph.requests.extensions.SynchronizationJobRequest;
 import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobPauseRequestBuilder;
@@ -62,7 +61,7 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder impleme
      * @return the ISynchronizationJobRequest instance
      */
     public ISynchronizationJobRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SynchronizationJobRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SynchronizationJobRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

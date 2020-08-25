@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IScheduleRequest;
-import com.microsoft.graph.requests.extensions.ScheduleRequest;
 import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
@@ -83,7 +82,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
      * @return the IScheduleRequest instance
      */
     public IScheduleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ScheduleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ScheduleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

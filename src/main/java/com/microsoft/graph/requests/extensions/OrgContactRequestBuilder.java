@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrgContactRequest;
-import com.microsoft.graph.requests.extensions.OrgContactRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -59,7 +58,7 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
      * @return the IOrgContactRequest instance
      */
     public IOrgContactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OrgContactRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OrgContactRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequest;
-import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequest;
 import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
@@ -53,7 +52,7 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
      * @return the ITermsOfUseContainerRequest instance
      */
     public ITermsOfUseContainerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TermsOfUseContainerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TermsOfUseContainerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IScheduleChangeRequestRequest;
-import com.microsoft.graph.requests.extensions.ScheduleChangeRequestRequest;
 import com.microsoft.graph.requests.extensions.IScheduleChangeRequestApproveRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleChangeRequestApproveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScheduleChangeRequestDeclineRequestBuilder;
@@ -49,7 +48,7 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
      * @return the IScheduleChangeRequestRequest instance
      */
     public IScheduleChangeRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ScheduleChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ScheduleChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

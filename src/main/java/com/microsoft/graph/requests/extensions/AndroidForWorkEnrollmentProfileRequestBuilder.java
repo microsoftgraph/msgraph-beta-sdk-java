@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.AndroidForWorkEnrollmentProfileRequest;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileCreateTokenRequestBuilder;
@@ -49,7 +48,7 @@ public class AndroidForWorkEnrollmentProfileRequestBuilder extends BaseRequestBu
      * @return the IAndroidForWorkEnrollmentProfileRequest instance
      */
     public IAndroidForWorkEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidForWorkEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidForWorkEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -6,6 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequest;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleDefinitionWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,5 +37,12 @@ public interface IDeviceAndAppManagementRoleAssignmentRequestBuilder extends IRe
     IRoleScopeTagCollectionWithReferencesRequestBuilder roleScopeTags();
 
     IRoleScopeTagWithReferenceRequestBuilder roleScopeTags(final String id);
+
+    /**
+     * Gets the request builder for RoleDefinition
+     *
+     * @return the IRoleDefinitionWithReferenceRequestBuilder instance
+     */
+    IRoleDefinitionWithReferenceRequestBuilder roleDefinition();
 
 }

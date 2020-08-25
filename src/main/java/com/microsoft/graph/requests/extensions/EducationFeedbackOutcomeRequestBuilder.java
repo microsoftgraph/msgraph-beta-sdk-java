@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationFeedbackOutcomeRequest;
-import com.microsoft.graph.requests.extensions.EducationFeedbackOutcomeRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder i
      * @return the IEducationFeedbackOutcomeRequest instance
      */
     public IEducationFeedbackOutcomeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationFeedbackOutcomeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationFeedbackOutcomeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

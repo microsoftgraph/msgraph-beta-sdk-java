@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IosVpnConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class IosVpnConfigurationRequestBuilder extends BaseRequestBuilder implem
      * @return the IIosVpnConfigurationRequest instance
      */
     public IIosVpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosVpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosVpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

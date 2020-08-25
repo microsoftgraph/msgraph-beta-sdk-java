@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SecurityQuestionAuthenticationMethodRequestBuilder extends BaseRequ
      * @return the ISecurityQuestionAuthenticationMethodRequest instance
      */
     public ISecurityQuestionAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SecurityQuestionAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

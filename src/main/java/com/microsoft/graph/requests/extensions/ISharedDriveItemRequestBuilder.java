@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -84,5 +86,19 @@ public interface ISharedDriveItemRequestBuilder extends IRequestBuilder {
      * @return the ISiteRequestBuilder instance
      */
     ISiteRequestBuilder site();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
 }

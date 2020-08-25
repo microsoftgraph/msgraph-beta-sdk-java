@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequest;
-import com.microsoft.graph.requests.extensions.PrinterShareRequest;
 import com.microsoft.graph.requests.extensions.IPrinterWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
@@ -55,7 +54,7 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder implements IP
      * @return the IPrinterShareRequest instance
      */
     public IPrinterShareRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrinterShareRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrinterShareRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -81,5 +80,12 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder implements IP
 
     public IPrintIdentityRequestBuilder allowedGroups(final String id) {
         return new PrintIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
+    }
+    public IPrintJobCollectionRequestBuilder jobs() {
+        return new PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    }
+
+    public IPrintJobRequestBuilder jobs(final String id) {
+        return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
 }

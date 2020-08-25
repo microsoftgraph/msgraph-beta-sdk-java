@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequest;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequest;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
@@ -49,7 +48,7 @@ public class OutlookTaskGroupRequestBuilder extends BaseRequestBuilder implement
      * @return the IOutlookTaskGroupRequest instance
      */
     public IOutlookTaskGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OutlookTaskGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OutlookTaskGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

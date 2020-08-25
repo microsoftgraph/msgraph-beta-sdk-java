@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IActiveDirectoryWindowsAutopilotDeploymentProfileRequest;
-import com.microsoft.graph.requests.extensions.ActiveDirectoryWindowsAutopilotDeploymentProfileRequest;
 import com.microsoft.graph.requests.extensions.IWindowsDomainJoinConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDomainJoinConfigurationRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
      * @return the IActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
      */
     public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ActiveDirectoryWindowsAutopilotDeploymentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ActiveDirectoryWindowsAutopilotDeploymentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,19 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
      */
     public IWindowsDomainJoinConfigurationRequestBuilder domainJoinConfiguration() {
         return new WindowsDomainJoinConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("domainJoinConfiguration"), getClient(), null);
+    }
+    public IWindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
+        return new WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
+    }
+
+    public IWindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(final String id) {
+        return new WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
+    }
+    public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
+        return new WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(final String id) {
+        return new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

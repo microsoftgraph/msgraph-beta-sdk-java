@@ -7,6 +7,8 @@ import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionReque
 import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -44,5 +46,9 @@ public interface IAndroidManagedAppProtectionRequestBuilder extends IRequestBuil
      * @return the IManagedAppPolicyDeploymentSummaryRequestBuilder instance
      */
     IManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary();
+
+    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
+
+    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
 
 }

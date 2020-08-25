@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequest;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequest;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingBackgroundImageStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingBackgroundImageStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingBannerLogoStreamRequestBuilder;
@@ -51,7 +50,7 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder imp
      * @return the IOrganizationalBrandingRequest instance
      */
     public IOrganizationalBrandingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OrganizationalBrandingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OrganizationalBrandingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IComplianceRequest;
-import com.microsoft.graph.requests.extensions.ComplianceRequest;
 import com.microsoft.graph.requests.extensions.IEdiscoveryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EdiscoveryRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder implements ICom
      * @return the IComplianceRequest instance
      */
     public IComplianceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ComplianceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ComplianceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

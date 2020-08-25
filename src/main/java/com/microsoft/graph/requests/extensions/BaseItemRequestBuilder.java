@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBaseItemRequest;
-import com.microsoft.graph.requests.extensions.BaseItemRequest;
 import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
      * @return the IBaseItemRequest instance
      */
     public IBaseItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BaseItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BaseItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

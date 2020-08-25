@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequest;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestB
      * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
     public IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MultiValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

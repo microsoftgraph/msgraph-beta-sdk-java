@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
@@ -49,7 +48,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @return the IAccessPackageAssignmentPolicyRequest instance
      */
     public IAccessPackageAssignmentPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageAssignmentPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

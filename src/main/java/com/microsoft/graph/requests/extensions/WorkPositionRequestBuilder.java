@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkPositionRequest;
-import com.microsoft.graph.requests.extensions.WorkPositionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IW
      * @return the IWorkPositionRequest instance
      */
     public IWorkPositionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkPositionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkPositionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

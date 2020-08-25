@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITenantSetupInfoRequest;
-import com.microsoft.graph.requests.extensions.TenantSetupInfoRequest;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleSettingsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleSettingsWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class TenantSetupInfoRequestBuilder extends BaseRequestBuilder implements
      * @return the ITenantSetupInfoRequest instance
      */
     public ITenantSetupInfoRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TenantSetupInfoRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TenantSetupInfoRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

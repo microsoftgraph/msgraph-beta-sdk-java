@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingStateSummaryRequest;
-import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingStateSummaryRequest;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
@@ -49,7 +48,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * @return the IAdvancedThreatProtectionOnboardingStateSummaryRequest instance
      */
     public IAdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AdvancedThreatProtectionOnboardingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

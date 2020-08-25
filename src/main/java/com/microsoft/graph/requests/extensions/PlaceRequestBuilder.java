@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlaceRequest;
-import com.microsoft.graph.requests.extensions.PlaceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
      * @return the IPlaceRequest instance
      */
     public IPlaceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlaceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlaceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

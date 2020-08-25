@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupRequest;
-import com.microsoft.graph.requests.extensions.GroupRequest;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
@@ -164,7 +163,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      * @return the IGroupRequest instance
      */
     public IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

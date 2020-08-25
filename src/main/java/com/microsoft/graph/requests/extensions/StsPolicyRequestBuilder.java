@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IStsPolicyRequest;
-import com.microsoft.graph.requests.extensions.StsPolicyRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
      * @return the IStsPolicyRequest instance
      */
     public IStsPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new StsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.StsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

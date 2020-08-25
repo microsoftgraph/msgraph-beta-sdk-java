@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequest;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyTargetAppsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyTargetAppsRequestBuilder;
@@ -48,7 +47,7 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
      * @return the IManagedAppPolicyRequest instance
      */
     public IManagedAppPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

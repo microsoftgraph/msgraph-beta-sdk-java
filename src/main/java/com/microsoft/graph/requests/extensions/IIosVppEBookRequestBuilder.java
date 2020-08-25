@@ -4,6 +4,15 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVppEBookRequest;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +39,28 @@ public interface IIosVppEBookRequestBuilder extends IRequestBuilder {
      */
     IIosVppEBookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories();
+
+    IManagedEBookCategoryWithReferenceRequestBuilder categories(final String id);
+
+    IManagedEBookAssignmentCollectionRequestBuilder assignments();
+
+    IManagedEBookAssignmentRequestBuilder assignments(final String id);
+
+    /**
+     * Gets the request builder for EBookInstallSummary
+     *
+     * @return the IEBookInstallSummaryRequestBuilder instance
+     */
+    IEBookInstallSummaryRequestBuilder installSummary();
+
+    IDeviceInstallStateCollectionRequestBuilder deviceStates();
+
+    IDeviceInstallStateRequestBuilder deviceStates(final String id);
+
+    IUserInstallStateSummaryCollectionRequestBuilder userStateSummary();
+
+    IUserInstallStateSummaryRequestBuilder userStateSummary(final String id);
 
 }

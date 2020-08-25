@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAreaFormatRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartAreaFormatRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
@@ -49,7 +48,7 @@ public class WorkbookChartAreaFormatRequestBuilder extends BaseRequestBuilder im
      * @return the IWorkbookChartAreaFormatRequest instance
      */
     public IWorkbookChartAreaFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartAreaFormatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartAreaFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

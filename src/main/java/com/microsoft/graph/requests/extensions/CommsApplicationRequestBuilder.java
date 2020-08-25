@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICommsApplicationRequest;
-import com.microsoft.graph.requests.extensions.CommsApplicationRequest;
 import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
@@ -53,7 +52,7 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder implement
      * @return the ICommsApplicationRequest instance
      */
     public ICommsApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CommsApplicationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CommsApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

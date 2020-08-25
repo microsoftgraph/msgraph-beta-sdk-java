@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequest;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequest;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
@@ -49,7 +48,7 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder impl
      * @return the IUnifiedRoleDefinitionRequest instance
      */
     public IUnifiedRoleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UnifiedRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

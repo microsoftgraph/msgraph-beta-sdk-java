@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceRequest;
-import com.microsoft.graph.requests.extensions.PurchaseInvoiceRequest;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
@@ -55,7 +54,7 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
      * @return the IPurchaseInvoiceRequest instance
      */
     public IPurchaseInvoiceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PurchaseInvoiceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PurchaseInvoiceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

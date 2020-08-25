@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequest;
-import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsAutopilotDeploymentProfileAssignmentRequestBuilder extends B
      * @return the IWindowsAutopilotDeploymentProfileAssignmentRequest instance
      */
     public IWindowsAutopilotDeploymentProfileAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsAutopilotDeploymentProfileAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

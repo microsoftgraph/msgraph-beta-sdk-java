@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementComplexSettingDefinitionRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementComplexSettingDefinitionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementComplexSettingDefinitionRequestBuilder extends Base
      * @return the IDeviceManagementComplexSettingDefinitionRequest instance
      */
     public IDeviceManagementComplexSettingDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementComplexSettingDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementComplexSettingDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

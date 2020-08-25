@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICallRequest;
-import com.microsoft.graph.requests.extensions.CallRequest;
 import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
@@ -96,7 +95,7 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
      * @return the ICallRequest instance
      */
     public ICallRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CallRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CallRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

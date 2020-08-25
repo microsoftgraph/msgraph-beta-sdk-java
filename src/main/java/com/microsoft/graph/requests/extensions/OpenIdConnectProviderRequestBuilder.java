@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOpenIdConnectProviderRequest;
-import com.microsoft.graph.requests.extensions.OpenIdConnectProviderRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OpenIdConnectProviderRequestBuilder extends BaseRequestBuilder impl
      * @return the IOpenIdConnectProviderRequest instance
      */
     public IOpenIdConnectProviderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OpenIdConnectProviderRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OpenIdConnectProviderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

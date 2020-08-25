@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOffice365GroupsActivityStorageRequest;
-import com.microsoft.graph.requests.extensions.Office365GroupsActivityStorageRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Office365GroupsActivityStorageRequestBuilder extends BaseRequestBui
      * @return the IOffice365GroupsActivityStorageRequest instance
      */
     public IOffice365GroupsActivityStorageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Office365GroupsActivityStorageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Office365GroupsActivityStorageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

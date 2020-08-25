@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPermissionRequest;
-import com.microsoft.graph.requests.extensions.PermissionRequest;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
@@ -48,7 +47,7 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
      * @return the IPermissionRequest instance
      */
     public IPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PermissionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PermissionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

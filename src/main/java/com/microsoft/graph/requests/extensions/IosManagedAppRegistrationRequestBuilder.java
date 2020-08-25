@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosManagedAppRegistrationRequest;
-import com.microsoft.graph.requests.extensions.IosManagedAppRegistrationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,29 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
      * @return the IIosManagedAppRegistrationRequest instance
      */
     public IIosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
+        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
+    }
+
+    public IManagedAppPolicyRequestBuilder appliedPolicies(final String id) {
+        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
+    }
+    public IManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
+        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
+    }
+
+    public IManagedAppPolicyRequestBuilder intendedPolicies(final String id) {
+        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
+    }
+    public IManagedAppOperationCollectionRequestBuilder operations() {
+        return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    public IManagedAppOperationRequestBuilder operations(final String id) {
+        return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
 }

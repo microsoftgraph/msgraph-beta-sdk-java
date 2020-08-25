@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IProgramRequest;
-import com.microsoft.graph.requests.extensions.ProgramRequest;
 import com.microsoft.graph.requests.extensions.IProgramControlCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProgramControlRequestBuilder;
@@ -49,7 +48,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder implements IProgra
      * @return the IProgramRequest instance
      */
     public IProgramRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ProgramRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ProgramRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApprovalWorkflowProviderRequest;
-import com.microsoft.graph.requests.extensions.ApprovalWorkflowProviderRequest;
 import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
@@ -57,7 +56,7 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
      * @return the IApprovalWorkflowProviderRequest instance
      */
     public IApprovalWorkflowProviderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApprovalWorkflowProviderRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApprovalWorkflowProviderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectPartnerReferenceRequest;
-import com.microsoft.graph.requests.extensions.DirectoryObjectPartnerReferenceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBu
      * @return the IDirectoryObjectPartnerReferenceRequest instance
      */
     public IDirectoryObjectPartnerReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryObjectPartnerReferenceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryObjectPartnerReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceComplianceLocalActionBaseRequest;
-import com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionBaseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequestBuilder extends BaseRe
      * @return the IAndroidDeviceComplianceLocalActionBaseRequest instance
      */
     public IAndroidDeviceComplianceLocalActionBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidDeviceComplianceLocalActionBaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

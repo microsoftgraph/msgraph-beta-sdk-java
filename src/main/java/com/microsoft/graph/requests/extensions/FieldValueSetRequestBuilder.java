@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFieldValueSetRequest;
-import com.microsoft.graph.requests.extensions.FieldValueSetRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class FieldValueSetRequestBuilder extends BaseRequestBuilder implements I
      * @return the IFieldValueSetRequest instance
      */
     public IFieldValueSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FieldValueSetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FieldValueSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

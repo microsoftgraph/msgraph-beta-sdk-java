@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequest;
-import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequest;
 import com.microsoft.graph.requests.extensions.IMobileAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
@@ -51,7 +50,7 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
      * @return the IUserAppInstallStatusRequest instance
      */
     public IUserAppInstallStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserAppInstallStatusRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserAppInstallStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

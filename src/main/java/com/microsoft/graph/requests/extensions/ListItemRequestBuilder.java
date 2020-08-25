@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IListItemRequest;
-import com.microsoft.graph.requests.extensions.ListItemRequest;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
@@ -61,7 +60,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
      * @return the IListItemRequest instance
      */
     public IListItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ListItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ListItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -105,6 +104,24 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
 
     public IListItemVersionRequestBuilder versions(final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     public IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {

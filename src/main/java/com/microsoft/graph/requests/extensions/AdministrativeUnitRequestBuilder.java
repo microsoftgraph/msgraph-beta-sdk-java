@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequest;
-import com.microsoft.graph.requests.extensions.AdministrativeUnitRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -57,7 +56,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder impleme
      * @return the IAdministrativeUnitRequest instance
      */
     public IAdministrativeUnitRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AdministrativeUnitRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AdministrativeUnitRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationRequest;
-import com.microsoft.graph.requests.extensions.LongRunningOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class LongRunningOperationRequestBuilder extends BaseRequestBuilder imple
      * @return the ILongRunningOperationRequest instance
      */
     public ILongRunningOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new LongRunningOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.LongRunningOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

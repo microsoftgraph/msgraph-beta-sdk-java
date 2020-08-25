@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DepMacOSEnrollmentProfileRequestBuilder extends BaseRequestBuilder 
      * @return the IDepMacOSEnrollmentProfileRequest instance
      */
     public IDepMacOSEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DepMacOSEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

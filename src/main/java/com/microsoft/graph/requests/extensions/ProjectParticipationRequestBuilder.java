@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IProjectParticipationRequest;
-import com.microsoft.graph.requests.extensions.ProjectParticipationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ProjectParticipationRequestBuilder extends BaseRequestBuilder imple
      * @return the IProjectParticipationRequest instance
      */
     public IProjectParticipationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ProjectParticipationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ProjectParticipationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

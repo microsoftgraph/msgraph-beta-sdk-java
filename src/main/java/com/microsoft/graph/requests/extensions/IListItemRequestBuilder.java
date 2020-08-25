@@ -11,6 +11,8 @@ import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemGetActivitiesByIntervalCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -67,6 +69,20 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
     IListItemVersionCollectionRequestBuilder versions();
 
     IListItemVersionRequestBuilder versions(final String id);
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval);
 

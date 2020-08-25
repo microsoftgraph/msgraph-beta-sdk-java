@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileAttachmentRequest;
-import com.microsoft.graph.requests.extensions.FileAttachmentRequest;
 import com.microsoft.graph.requests.extensions.IFileAttachmentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileAttachmentStreamRequestBuilder;
 
@@ -47,7 +46,7 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * @return the IFileAttachmentRequest instance
      */
     public IFileAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FileAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FileAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

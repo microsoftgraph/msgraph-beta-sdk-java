@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
@@ -61,7 +60,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
      * @return the IAccessPackageCatalogRequest instance
      */
     public IAccessPackageCatalogRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageCatalogRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageCatalogRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

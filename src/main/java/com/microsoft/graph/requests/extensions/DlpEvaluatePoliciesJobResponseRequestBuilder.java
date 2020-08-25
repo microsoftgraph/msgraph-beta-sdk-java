@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDlpEvaluatePoliciesJobResponseRequest;
-import com.microsoft.graph.requests.extensions.DlpEvaluatePoliciesJobResponseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DlpEvaluatePoliciesJobResponseRequestBuilder extends BaseRequestBui
      * @return the IDlpEvaluatePoliciesJobResponseRequest instance
      */
     public IDlpEvaluatePoliciesJobResponseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DlpEvaluatePoliciesJobResponseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DlpEvaluatePoliciesJobResponseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrivilegedAccessRequest;
-import com.microsoft.graph.requests.extensions.PrivilegedAccessRequest;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
@@ -65,7 +64,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder implement
      * @return the IPrivilegedAccessRequest instance
      */
     public IPrivilegedAccessRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrivilegedAccessRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrivilegedAccessRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

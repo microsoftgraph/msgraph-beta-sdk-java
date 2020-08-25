@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemFacetRequest;
-import com.microsoft.graph.requests.extensions.ItemFacetRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemFacetRequestBuilder extends BaseRequestBuilder implements IItem
      * @return the IItemFacetRequest instance
      */
     public IItemFacetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemFacetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemFacetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

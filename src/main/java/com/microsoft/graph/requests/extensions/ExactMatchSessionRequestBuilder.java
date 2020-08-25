@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionRequest;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionRequest;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionCancelRequestBuilder;
@@ -53,7 +52,7 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
      * @return the IExactMatchSessionRequest instance
      */
     public IExactMatchSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExactMatchSessionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExactMatchSessionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

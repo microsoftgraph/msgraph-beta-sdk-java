@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementAssignmentFilterRequest;
-import com.microsoft.graph.requests.extensions.DeviceAndAppManagementAssignmentFilterRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceAndAppManagementAssignmentFilterRequestBuilder extends BaseRe
      * @return the IDeviceAndAppManagementAssignmentFilterRequest instance
      */
     public IDeviceAndAppManagementAssignmentFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceAndAppManagementAssignmentFilterRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceAndAppManagementAssignmentFilterRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

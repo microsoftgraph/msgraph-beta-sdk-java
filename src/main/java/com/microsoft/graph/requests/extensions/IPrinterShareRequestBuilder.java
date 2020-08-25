@@ -9,6 +9,8 @@ import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionReque
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintJobCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintJobRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -50,5 +52,9 @@ public interface IPrinterShareRequestBuilder extends IRequestBuilder {
     IPrintIdentityCollectionRequestBuilder allowedGroups();
 
     IPrintIdentityRequestBuilder allowedGroups(final String id);
+
+    IPrintJobCollectionRequestBuilder jobs();
+
+    IPrintJobRequestBuilder jobs(final String id);
 
 }

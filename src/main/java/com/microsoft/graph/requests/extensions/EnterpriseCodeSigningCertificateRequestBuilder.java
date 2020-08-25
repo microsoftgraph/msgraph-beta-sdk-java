@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateRequest;
-import com.microsoft.graph.requests.extensions.EnterpriseCodeSigningCertificateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EnterpriseCodeSigningCertificateRequestBuilder extends BaseRequestB
      * @return the IEnterpriseCodeSigningCertificateRequest instance
      */
     public IEnterpriseCodeSigningCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EnterpriseCodeSigningCertificateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EnterpriseCodeSigningCertificateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

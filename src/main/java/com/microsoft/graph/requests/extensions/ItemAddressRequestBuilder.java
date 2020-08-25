@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemAddressRequest;
-import com.microsoft.graph.requests.extensions.ItemAddressRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemAddressRequestBuilder extends BaseRequestBuilder implements IIt
      * @return the IItemAddressRequest instance
      */
     public IItemAddressRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemAddressRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemAddressRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

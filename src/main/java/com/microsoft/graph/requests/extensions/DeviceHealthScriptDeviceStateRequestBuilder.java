@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateRequest;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class DeviceHealthScriptDeviceStateRequestBuilder extends BaseRequestBuil
      * @return the IDeviceHealthScriptDeviceStateRequest instance
      */
     public IDeviceHealthScriptDeviceStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceHealthScriptDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidWorkProfileEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.AndroidWorkProfileEnterpriseWiFiConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IAndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfigurationRequestBuilder extends
      * @return the IAndroidWorkProfileEnterpriseWiFiConfigurationRequest instance
      */
     public IAndroidWorkProfileEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidWorkProfileEnterpriseWiFiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidWorkProfileEnterpriseWiFiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileRequest;
-import com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileRequest;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
@@ -65,7 +64,7 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @return the IOnPremisesPublishingProfileRequest instance
      */
     public IOnPremisesPublishingProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnPremisesPublishingProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

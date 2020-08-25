@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnenoteEntitySchemaObjectModelRequest;
-import com.microsoft.graph.requests.extensions.OnenoteEntitySchemaObjectModelRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBui
      * @return the IOnenoteEntitySchemaObjectModelRequest instance
      */
     public IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnenoteEntitySchemaObjectModelRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnenoteEntitySchemaObjectModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

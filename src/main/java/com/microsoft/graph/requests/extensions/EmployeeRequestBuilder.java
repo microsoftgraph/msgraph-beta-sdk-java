@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmployeeRequest;
-import com.microsoft.graph.requests.extensions.EmployeeRequest;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
@@ -49,7 +48,7 @@ public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmplo
      * @return the IEmployeeRequest instance
      */
     public IEmployeeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmployeeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmployeeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

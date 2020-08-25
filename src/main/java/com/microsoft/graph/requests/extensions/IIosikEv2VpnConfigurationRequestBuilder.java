@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosikEv2VpnConfigurationRequest;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,19 @@ public interface IIosikEv2VpnConfigurationRequestBuilder extends IRequestBuilder
      */
     IIosikEv2VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for IosCertificateProfileBase
+     *
+     * @return the IIosCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    IIosCertificateProfileBaseWithReferenceRequestBuilder identityCertificate();
+
+    /**
+     * Gets the request builder for DeviceManagementDerivedCredentialSettings
+     *
+     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
+     */
+    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
 
 }

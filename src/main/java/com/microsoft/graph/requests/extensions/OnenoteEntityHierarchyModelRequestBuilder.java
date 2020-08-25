@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnenoteEntityHierarchyModelRequest;
-import com.microsoft.graph.requests.extensions.OnenoteEntityHierarchyModelRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
      * @return the IOnenoteEntityHierarchyModelRequest instance
      */
     public IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnenoteEntityHierarchyModelRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnenoteEntityHierarchyModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

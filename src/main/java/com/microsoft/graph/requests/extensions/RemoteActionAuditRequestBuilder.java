@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRemoteActionAuditRequest;
-import com.microsoft.graph.requests.extensions.RemoteActionAuditRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RemoteActionAuditRequestBuilder extends BaseRequestBuilder implemen
      * @return the IRemoteActionAuditRequest instance
      */
     public IRemoteActionAuditRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RemoteActionAuditRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RemoteActionAuditRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

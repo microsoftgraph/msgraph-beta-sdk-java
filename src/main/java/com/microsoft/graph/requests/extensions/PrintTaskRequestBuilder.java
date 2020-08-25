@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintTaskRequest;
-import com.microsoft.graph.requests.extensions.PrintTaskRequest;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class PrintTaskRequestBuilder extends BaseRequestBuilder implements IPrin
      * @return the IPrintTaskRequest instance
      */
     public IPrintTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintTaskRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

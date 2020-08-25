@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAllDeviceCertificateStateRequest;
-import com.microsoft.graph.requests.extensions.ManagedAllDeviceCertificateStateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedAllDeviceCertificateStateRequestBuilder extends BaseRequestB
      * @return the IManagedAllDeviceCertificateStateRequest instance
      */
     public IManagedAllDeviceCertificateStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAllDeviceCertificateStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAllDeviceCertificateStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

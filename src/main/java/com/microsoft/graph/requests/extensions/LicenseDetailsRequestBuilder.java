@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsRequest;
-import com.microsoft.graph.requests.extensions.LicenseDetailsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder implements 
      * @return the ILicenseDetailsRequest instance
      */
     public ILicenseDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new LicenseDetailsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.LicenseDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

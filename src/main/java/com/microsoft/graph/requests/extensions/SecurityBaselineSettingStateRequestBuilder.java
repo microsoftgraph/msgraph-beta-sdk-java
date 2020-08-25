@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineSettingStateRequest;
-import com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SecurityBaselineSettingStateRequestBuilder extends BaseRequestBuild
      * @return the ISecurityBaselineSettingStateRequest instance
      */
     public ISecurityBaselineSettingStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SecurityBaselineSettingStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

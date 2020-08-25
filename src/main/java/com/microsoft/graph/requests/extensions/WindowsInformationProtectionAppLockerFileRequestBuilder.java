@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequest;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * @return the IWindowsInformationProtectionAppLockerFileRequest instance
      */
     public IWindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsInformationProtectionAppLockerFileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

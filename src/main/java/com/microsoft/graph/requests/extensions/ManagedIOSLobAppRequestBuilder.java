@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedIOSLobAppRequest;
-import com.microsoft.graph.requests.extensions.ManagedIOSLobAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder implement
      * @return the IManagedIOSLobAppRequest instance
      */
     public IManagedIOSLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedIOSLobAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedIOSLobAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+        return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
+    }
+
+    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+        return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
+    }
 }

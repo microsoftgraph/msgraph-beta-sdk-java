@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsOfficeClientSecurityConfigurationRequest;
-import com.microsoft.graph.requests.extensions.WindowsOfficeClientSecurityConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
      * @return the IWindowsOfficeClientSecurityConfigurationRequest instance
      */
     public IWindowsOfficeClientSecurityConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsOfficeClientSecurityConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsOfficeClientSecurityConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IOfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new OfficeClientConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IOfficeClientConfigurationAssignmentRequestBuilder assignments(final String id) {
+        return new OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 }

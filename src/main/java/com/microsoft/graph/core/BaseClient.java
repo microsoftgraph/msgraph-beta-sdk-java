@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.core;
 
+import com.microsoft.graph.requests.extensions.*;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;

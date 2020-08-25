@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISharedDriveItemRequest;
-import com.microsoft.graph.requests.extensions.SharedDriveItemRequest;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
@@ -61,7 +60,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
      * @return the ISharedDriveItemRequest instance
      */
     public ISharedDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SharedDriveItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SharedDriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -125,5 +124,23 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
      */
     public ISiteRequestBuilder site() {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 }

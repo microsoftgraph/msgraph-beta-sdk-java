@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IResourceOperationRequest;
-import com.microsoft.graph.requests.extensions.ResourceOperationRequest;
 import com.microsoft.graph.requests.extensions.IResourceOperationGetScopesForUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceOperationGetScopesForUserCollectionRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
      * @return the IResourceOperationRequest instance
      */
     public IResourceOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ResourceOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ResourceOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

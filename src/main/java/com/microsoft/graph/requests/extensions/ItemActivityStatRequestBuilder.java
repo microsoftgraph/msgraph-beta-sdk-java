@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemActivityStatRequest;
-import com.microsoft.graph.requests.extensions.ItemActivityStatRequest;
 import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
@@ -49,7 +48,7 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder implement
      * @return the IItemActivityStatRequest instance
      */
     public IItemActivityStatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemActivityStatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemActivityStatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

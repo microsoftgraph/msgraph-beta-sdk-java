@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityRequest;
-import com.microsoft.graph.requests.extensions.SecurityRequest;
 import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
@@ -93,7 +92,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
      * @return the ISecurityRequest instance
      */
     public ISecurityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SecurityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SecurityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

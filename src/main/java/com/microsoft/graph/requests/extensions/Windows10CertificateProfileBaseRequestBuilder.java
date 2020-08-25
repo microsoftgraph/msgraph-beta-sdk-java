@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows10CertificateProfileBaseRequest;
-import com.microsoft.graph.requests.extensions.Windows10CertificateProfileBaseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Windows10CertificateProfileBaseRequestBuilder extends BaseRequestBu
      * @return the IWindows10CertificateProfileBaseRequest instance
      */
     public IWindows10CertificateProfileBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows10CertificateProfileBaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows10CertificateProfileBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

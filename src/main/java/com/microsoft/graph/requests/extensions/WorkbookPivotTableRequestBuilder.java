@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequest;
-import com.microsoft.graph.requests.extensions.WorkbookPivotTableRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRefreshRequestBuilder;
@@ -49,7 +48,7 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder impleme
      * @return the IWorkbookPivotTableRequest instance
      */
     public IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookPivotTableRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookPivotTableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

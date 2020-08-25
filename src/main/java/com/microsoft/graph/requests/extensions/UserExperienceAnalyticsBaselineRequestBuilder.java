@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineRequest;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the IUserExperienceAnalyticsBaselineRequest instance
      */
     public IUserExperienceAnalyticsBaselineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsBaselineRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

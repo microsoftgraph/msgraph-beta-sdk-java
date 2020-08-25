@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppPolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.MobileAppPolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MobileAppPolicySetItemRequestBuilder extends BaseRequestBuilder imp
      * @return the IMobileAppPolicySetItemRequest instance
      */
     public IMobileAppPolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

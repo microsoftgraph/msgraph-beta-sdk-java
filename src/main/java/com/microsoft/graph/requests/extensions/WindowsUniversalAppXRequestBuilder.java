@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsUniversalAppXRequest;
-import com.microsoft.graph.requests.extensions.WindowsUniversalAppXRequest;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
@@ -49,7 +48,7 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
      * @return the IWindowsUniversalAppXRequest instance
      */
     public IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsUniversalAppXRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsUniversalAppXRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,12 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
 
     public IMobileContainedAppRequestBuilder committedContainedApps(final String id) {
         return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("committedContainedApps") + "/" + id, getClient(), null);
+    }
+    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+        return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
+    }
+
+    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+        return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
 }

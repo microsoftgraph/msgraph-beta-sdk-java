@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeOnPremisesPolicyRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementExchangeOnPremisesPolicyRequest;
 import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesConditionalAccessSettingsRequestBuilder;
 
@@ -47,7 +46,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
      * @return the IDeviceManagementExchangeOnPremisesPolicyRequest instance
      */
     public IDeviceManagementExchangeOnPremisesPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementExchangeOnPremisesPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementExchangeOnPremisesPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkRequest;
-import com.microsoft.graph.requests.extensions.TrustFrameworkRequest;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
@@ -53,7 +52,7 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
      * @return the ITrustFrameworkRequest instance
      */
     public ITrustFrameworkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TrustFrameworkRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TrustFrameworkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

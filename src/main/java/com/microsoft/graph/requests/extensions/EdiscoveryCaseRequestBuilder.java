@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequest;
-import com.microsoft.graph.requests.extensions.EdiscoveryCaseRequest;
 import com.microsoft.graph.requests.extensions.IReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
@@ -53,7 +52,7 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder implements 
      * @return the IEdiscoveryCaseRequest instance
      */
     public IEdiscoveryCaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EdiscoveryCaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EdiscoveryCaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

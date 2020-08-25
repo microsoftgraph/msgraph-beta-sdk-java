@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventMessageResponseRequest;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +31,12 @@ public interface IEventMessageResponseRequestBuilder extends IRequestBuilder {
      */
     IEventMessageResponseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for Event
+     *
+     * @return the IEventRequestBuilder instance
+     */
+    IEventRequestBuilder event();
 
 }

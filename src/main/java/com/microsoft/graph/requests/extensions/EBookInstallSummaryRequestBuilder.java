@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequest;
-import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder implem
      * @return the IEBookInstallSummaryRequest instance
      */
     public IEBookInstallSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EBookInstallSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EBookInstallSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

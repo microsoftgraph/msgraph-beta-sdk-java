@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows10ImportedPFXCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.Windows10ImportedPFXCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
@@ -49,7 +48,7 @@ public class Windows10ImportedPFXCertificateProfileRequestBuilder extends BaseRe
      * @return the IWindows10ImportedPFXCertificateProfileRequest instance
      */
     public IWindows10ImportedPFXCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows10ImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows10ImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

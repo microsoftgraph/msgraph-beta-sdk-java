@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceSetupConfigurationRequest;
-import com.microsoft.graph.requests.extensions.DeviceSetupConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceSetupConfigurationRequestBuilder extends BaseRequestBuilder i
      * @return the IDeviceSetupConfigurationRequest instance
      */
     public IDeviceSetupConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceSetupConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceSetupConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

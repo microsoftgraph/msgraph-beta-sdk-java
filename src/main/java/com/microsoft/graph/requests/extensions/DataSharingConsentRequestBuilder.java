@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataSharingConsentRequest;
-import com.microsoft.graph.requests.extensions.DataSharingConsentRequest;
 import com.microsoft.graph.requests.extensions.IDataSharingConsentConsentToDataSharingRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataSharingConsentConsentToDataSharingRequestBuilder;
 
@@ -47,7 +46,7 @@ public class DataSharingConsentRequestBuilder extends BaseRequestBuilder impleme
      * @return the IDataSharingConsentRequest instance
      */
     public IDataSharingConsentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DataSharingConsentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DataSharingConsentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

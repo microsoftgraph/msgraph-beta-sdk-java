@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequest;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder extend
      * @return the IManagedDeviceMobileAppConfigurationUserSummaryRequest instance
      */
     public IManagedDeviceMobileAppConfigurationUserSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedDeviceMobileAppConfigurationUserSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

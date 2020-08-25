@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISharedInsightRequest;
-import com.microsoft.graph.requests.extensions.SharedInsightRequest;
 import com.microsoft.graph.requests.extensions.IEntityWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntityWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class SharedInsightRequestBuilder extends BaseRequestBuilder implements I
      * @return the ISharedInsightRequest instance
      */
     public ISharedInsightRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SharedInsightRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SharedInsightRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

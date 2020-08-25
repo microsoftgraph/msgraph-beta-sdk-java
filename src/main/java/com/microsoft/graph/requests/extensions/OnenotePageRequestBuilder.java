@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequest;
-import com.microsoft.graph.requests.extensions.OnenotePageRequest;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
@@ -58,7 +57,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
      * @return the IOnenotePageRequest instance
      */
     public IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnenotePageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnenotePageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ILocationManagementConditionRequest;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface ILocationManagementConditionRequestBuilder extends IRequestBuil
      */
     ILocationManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements();
+
+    IManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(final String id);
 
 }

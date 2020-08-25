@@ -4,6 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAzureADWindowsAutopilotDeploymentProfileRequest;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +34,13 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequestBuilder extends
      */
     IAzureADWindowsAutopilotDeploymentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IWindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices();
+
+    IWindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(final String id);
+
+    IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments();
+
+    IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(final String id);
 
 }

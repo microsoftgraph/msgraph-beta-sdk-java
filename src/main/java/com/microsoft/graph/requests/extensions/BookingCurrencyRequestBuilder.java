@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBookingCurrencyRequest;
-import com.microsoft.graph.requests.extensions.BookingCurrencyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class BookingCurrencyRequestBuilder extends BaseRequestBuilder implements
      * @return the IBookingCurrencyRequest instance
      */
     public IBookingCurrencyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BookingCurrencyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BookingCurrencyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

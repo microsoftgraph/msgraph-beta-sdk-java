@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SoftwareOathAuthenticationMethodRequestBuilder extends BaseRequestB
      * @return the ISoftwareOathAuthenticationMethodRequest instance
      */
     public ISoftwareOathAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SoftwareOathAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

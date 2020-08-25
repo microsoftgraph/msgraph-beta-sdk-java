@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppRegistrationRequest;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
@@ -57,7 +56,7 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder imp
      * @return the IManagedAppRegistrationRequest instance
      */
     public IManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

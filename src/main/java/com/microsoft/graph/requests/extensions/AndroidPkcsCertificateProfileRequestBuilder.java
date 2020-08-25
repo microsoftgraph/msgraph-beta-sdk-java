@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidPkcsCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.AndroidPkcsCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
@@ -49,7 +48,7 @@ public class AndroidPkcsCertificateProfileRequestBuilder extends BaseRequestBuil
      * @return the IAndroidPkcsCertificateProfileRequest instance
      */
     public IAndroidPkcsCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidPkcsCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidPkcsCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,14 @@ public class AndroidPkcsCertificateProfileRequestBuilder extends BaseRequestBuil
 
     public IManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(final String id) {
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AndroidTrustedRootCertificate
+     *
+     * @return the IAndroidTrustedRootCertificateWithReferenceRequestBuilder instance
+     */
+    public IAndroidTrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
+        return new AndroidTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 }

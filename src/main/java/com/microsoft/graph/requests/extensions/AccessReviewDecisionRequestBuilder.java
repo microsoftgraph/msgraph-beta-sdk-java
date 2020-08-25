@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequest;
-import com.microsoft.graph.requests.extensions.AccessReviewDecisionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AccessReviewDecisionRequestBuilder extends BaseRequestBuilder imple
      * @return the IAccessReviewDecisionRequest instance
      */
     public IAccessReviewDecisionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessReviewDecisionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessReviewDecisionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

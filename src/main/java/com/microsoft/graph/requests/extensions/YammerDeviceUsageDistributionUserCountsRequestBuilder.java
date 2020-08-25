@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IYammerDeviceUsageDistributionUserCountsRequest;
-import com.microsoft.graph.requests.extensions.YammerDeviceUsageDistributionUserCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class YammerDeviceUsageDistributionUserCountsRequestBuilder extends BaseR
      * @return the IYammerDeviceUsageDistributionUserCountsRequest instance
      */
     public IYammerDeviceUsageDistributionUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new YammerDeviceUsageDistributionUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.YammerDeviceUsageDistributionUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

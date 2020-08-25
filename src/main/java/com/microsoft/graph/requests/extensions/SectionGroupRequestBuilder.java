@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequest;
-import com.microsoft.graph.requests.extensions.SectionGroupRequest;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
@@ -57,7 +56,7 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
      * @return the ISectionGroupRequest instance
      */
     public ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SectionGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SectionGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

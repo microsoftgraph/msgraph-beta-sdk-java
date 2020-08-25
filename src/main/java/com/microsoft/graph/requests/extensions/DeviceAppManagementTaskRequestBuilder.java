@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskRequest;
-import com.microsoft.graph.requests.extensions.DeviceAppManagementTaskRequest;
 import com.microsoft.graph.models.generated.DeviceAppManagementTaskStatus;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskUpdateStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementTaskUpdateStatusRequestBuilder;
@@ -48,7 +47,7 @@ public class DeviceAppManagementTaskRequestBuilder extends BaseRequestBuilder im
      * @return the IDeviceAppManagementTaskRequest instance
      */
     public IDeviceAppManagementTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceAppManagementTaskRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceAppManagementTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

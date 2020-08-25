@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDimensionRequest;
-import com.microsoft.graph.requests.extensions.DimensionRequest;
 import com.microsoft.graph.requests.extensions.IDimensionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDimensionValueRequestBuilder;
@@ -49,7 +48,7 @@ public class DimensionRequestBuilder extends BaseRequestBuilder implements IDime
      * @return the IDimensionRequest instance
      */
     public IDimensionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DimensionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DimensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

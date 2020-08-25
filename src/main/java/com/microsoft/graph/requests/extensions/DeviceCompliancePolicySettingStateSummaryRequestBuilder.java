@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryRequest;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryRequest;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * @return the IDeviceCompliancePolicySettingStateSummaryRequest instance
      */
     public IDeviceCompliancePolicySettingStateSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceCompliancePolicySettingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

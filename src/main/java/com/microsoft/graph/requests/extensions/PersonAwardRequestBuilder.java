@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPersonAwardRequest;
-import com.microsoft.graph.requests.extensions.PersonAwardRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PersonAwardRequestBuilder extends BaseRequestBuilder implements IPe
      * @return the IPersonAwardRequest instance
      */
     public IPersonAwardRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PersonAwardRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PersonAwardRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

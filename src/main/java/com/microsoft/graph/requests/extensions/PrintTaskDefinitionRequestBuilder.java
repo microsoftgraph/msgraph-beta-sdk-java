@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequest;
-import com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequest;
 import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
@@ -49,7 +48,7 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implem
      * @return the IPrintTaskDefinitionRequest instance
      */
     public IPrintTaskDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintTaskDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAgreementFilePropertiesRequest;
-import com.microsoft.graph.requests.extensions.AgreementFilePropertiesRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AgreementFilePropertiesRequestBuilder extends BaseRequestBuilder im
      * @return the IAgreementFilePropertiesRequest instance
      */
     public IAgreementFilePropertiesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AgreementFilePropertiesRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AgreementFilePropertiesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

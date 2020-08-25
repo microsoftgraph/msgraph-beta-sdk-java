@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsWifiEnterpriseEAPConfigurationRequest;
-import com.microsoft.graph.requests.extensions.WindowsWifiEnterpriseEAPConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
@@ -53,7 +52,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
      * @return the IWindowsWifiEnterpriseEAPConfigurationRequest instance
      */
     public IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsWifiEnterpriseEAPConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsWifiEnterpriseEAPConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

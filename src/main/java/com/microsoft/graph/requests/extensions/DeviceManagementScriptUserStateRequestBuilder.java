@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
      * @return the IDeviceManagementScriptUserStateRequest instance
      */
     public IDeviceManagementScriptUserStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementScriptUserStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -79,6 +79,10 @@ public enum AppleVpnConnectionType
     */
     MICROSOFT_TUNNEL,
     /**
+    * net Motion Mobility
+    */
+    NET_MOTION_MOBILITY,
+    /**
     * For AppleVpnConnectionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

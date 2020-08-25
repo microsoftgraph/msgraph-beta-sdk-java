@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyMigrationReportRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyMigrationReportRequest;
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingRequestBuilder;
@@ -53,7 +52,7 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * @return the IGroupPolicyMigrationReportRequest instance
      */
     public IGroupPolicyMigrationReportRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyMigrationReportRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyMigrationReportRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

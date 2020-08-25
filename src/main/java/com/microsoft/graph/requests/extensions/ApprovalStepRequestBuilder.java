@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApprovalStepRequest;
-import com.microsoft.graph.requests.extensions.ApprovalStepRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ApprovalStepRequestBuilder extends BaseRequestBuilder implements IA
      * @return the IApprovalStepRequest instance
      */
     public IApprovalStepRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApprovalStepRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApprovalStepRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

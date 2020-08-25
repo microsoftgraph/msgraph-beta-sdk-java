@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITaxGroupRequest;
-import com.microsoft.graph.requests.extensions.TaxGroupRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TaxGroupRequestBuilder extends BaseRequestBuilder implements ITaxGr
      * @return the ITaxGroupRequest instance
      */
     public ITaxGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TaxGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TaxGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerEnrollmentProfileRequest;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder;
@@ -49,7 +48,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequestBuilder extends BaseReque
      * @return the IAndroidDeviceOwnerEnrollmentProfileRequest instance
      */
     public IAndroidDeviceOwnerEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidDeviceOwnerEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidDeviceOwnerEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

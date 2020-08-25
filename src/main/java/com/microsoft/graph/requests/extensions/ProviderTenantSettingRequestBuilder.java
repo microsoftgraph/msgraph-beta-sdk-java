@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IProviderTenantSettingRequest;
-import com.microsoft.graph.requests.extensions.ProviderTenantSettingRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ProviderTenantSettingRequestBuilder extends BaseRequestBuilder impl
      * @return the IProviderTenantSettingRequest instance
      */
     public IProviderTenantSettingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ProviderTenantSettingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ProviderTenantSettingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateRequest;
-import com.microsoft.graph.requests.extensions.TeamsTemplateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TeamsTemplateRequestBuilder extends BaseRequestBuilder implements I
      * @return the ITeamsTemplateRequest instance
      */
     public ITeamsTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

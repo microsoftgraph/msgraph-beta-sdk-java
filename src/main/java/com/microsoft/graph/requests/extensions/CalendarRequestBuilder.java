@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICalendarRequest;
-import com.microsoft.graph.requests.extensions.CalendarRequest;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -71,7 +70,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalen
      * @return the ICalendarRequest instance
      */
     public ICalendarRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CalendarRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CalendarRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

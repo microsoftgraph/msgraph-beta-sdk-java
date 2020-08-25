@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IListRequest;
-import com.microsoft.graph.requests.extensions.ListRequest;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
@@ -67,7 +66,7 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
      * @return the IListRequest instance
      */
     public IListRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ListRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -114,5 +113,23 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
 
     public ISubscriptionRequestBuilder subscriptions(final String id) {
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 }

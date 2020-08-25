@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContentTypeRequest;
-import com.microsoft.graph.requests.extensions.ContentTypeRequest;
 import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
@@ -49,7 +48,7 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder implements ICo
      * @return the IContentTypeRequest instance
      */
     public IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ContentTypeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ContentTypeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

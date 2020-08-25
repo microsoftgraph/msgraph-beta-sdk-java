@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequest;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,29 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the IMdmWindowsInformationProtectionPolicyRequest instance
      */
     public IMdmWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MdmWindowsInformationProtectionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles() {
+        return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles"), getClient(), null);
+    }
+
+    public IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id) {
+        return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles") + "/" + id, getClient(), null);
+    }
+    public IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles() {
+        return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles"), getClient(), null);
+    }
+
+    public IWindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(final String id) {
+        return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles") + "/" + id, getClient(), null);
+    }
+    public ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
+        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 }

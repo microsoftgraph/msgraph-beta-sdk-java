@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequest;
-import com.microsoft.graph.requests.extensions.ConnectedOrganizationRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
@@ -53,7 +52,7 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder impl
      * @return the IConnectedOrganizationRequest instance
      */
     public IConnectedOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ConnectedOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ConnectedOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

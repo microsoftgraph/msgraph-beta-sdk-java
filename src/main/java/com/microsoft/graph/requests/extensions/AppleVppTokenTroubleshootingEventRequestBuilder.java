@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppleVppTokenTroubleshootingEventRequest;
-import com.microsoft.graph.requests.extensions.AppleVppTokenTroubleshootingEventRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AppleVppTokenTroubleshootingEventRequestBuilder extends BaseRequest
      * @return the IAppleVppTokenTroubleshootingEventRequest instance
      */
     public IAppleVppTokenTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppleVppTokenTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppleVppTokenTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

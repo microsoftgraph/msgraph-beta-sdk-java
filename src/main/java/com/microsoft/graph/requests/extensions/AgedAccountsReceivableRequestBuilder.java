@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAgedAccountsReceivableRequest;
-import com.microsoft.graph.requests.extensions.AgedAccountsReceivableRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AgedAccountsReceivableRequestBuilder extends BaseRequestBuilder imp
      * @return the IAgedAccountsReceivableRequest instance
      */
     public IAgedAccountsReceivableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AgedAccountsReceivableRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AgedAccountsReceivableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

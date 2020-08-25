@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseRequest;
-import com.microsoft.graph.requests.extensions.DeviceLogCollectionResponseRequest;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseCreateDownloadUrlRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceLogCollectionResponseCreateDownloadUrlRequestBuilder;
 
@@ -47,7 +46,7 @@ public class DeviceLogCollectionResponseRequestBuilder extends BaseRequestBuilde
      * @return the IDeviceLogCollectionResponseRequest instance
      */
     public IDeviceLogCollectionResponseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceLogCollectionResponseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceLogCollectionResponseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

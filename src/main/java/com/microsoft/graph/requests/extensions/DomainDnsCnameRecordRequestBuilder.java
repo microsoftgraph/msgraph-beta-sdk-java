@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDomainDnsCnameRecordRequest;
-import com.microsoft.graph.requests.extensions.DomainDnsCnameRecordRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder imple
      * @return the IDomainDnsCnameRecordRequest instance
      */
     public IDomainDnsCnameRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DomainDnsCnameRecordRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DomainDnsCnameRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

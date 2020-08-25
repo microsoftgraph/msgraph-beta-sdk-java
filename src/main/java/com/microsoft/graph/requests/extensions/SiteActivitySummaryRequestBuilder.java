@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISiteActivitySummaryRequest;
-import com.microsoft.graph.requests.extensions.SiteActivitySummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SiteActivitySummaryRequestBuilder extends BaseRequestBuilder implem
      * @return the ISiteActivitySummaryRequest instance
      */
     public ISiteActivitySummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SiteActivitySummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SiteActivitySummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

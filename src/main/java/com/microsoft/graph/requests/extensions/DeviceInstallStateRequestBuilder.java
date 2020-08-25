@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequest;
-import com.microsoft.graph.requests.extensions.DeviceInstallStateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder impleme
      * @return the IDeviceInstallStateRequest instance
      */
     public IDeviceInstallStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceInstallStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceInstallStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

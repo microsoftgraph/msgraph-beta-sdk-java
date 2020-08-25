@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityResultRequest;
-import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityResultRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ImportedAppleDeviceIdentityResultRequestBuilder extends BaseRequest
      * @return the IImportedAppleDeviceIdentityResultRequest instance
      */
     public IImportedAppleDeviceIdentityResultRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ImportedAppleDeviceIdentityResultRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityResultRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

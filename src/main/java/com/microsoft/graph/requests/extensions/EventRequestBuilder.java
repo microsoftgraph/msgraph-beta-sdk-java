@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventRequest;
-import com.microsoft.graph.requests.extensions.EventRequest;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
@@ -87,7 +86,7 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
      * @return the IEventRequest instance
      */
     public IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EventRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

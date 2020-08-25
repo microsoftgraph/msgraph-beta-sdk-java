@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionWithRefe
 import com.microsoft.graph.requests.extensions.IPrintConnectorWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintJobCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterResetDefaultsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterGetCapabilitiesRequestBuilder;
 
@@ -64,6 +66,10 @@ public interface IPrinterRequestBuilder extends IRequestBuilder {
     IPrintTaskTriggerCollectionRequestBuilder taskTriggers();
 
     IPrintTaskTriggerRequestBuilder taskTriggers(final String id);
+
+    IPrintJobCollectionRequestBuilder jobs();
+
+    IPrintJobRequestBuilder jobs(final String id);
     IPrinterResetDefaultsRequestBuilder resetDefaults();
     IPrinterGetCapabilitiesRequestBuilder getCapabilities();
 

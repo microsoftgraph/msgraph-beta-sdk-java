@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUnitOfMeasureRequest;
-import com.microsoft.graph.requests.extensions.UnitOfMeasureRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UnitOfMeasureRequestBuilder extends BaseRequestBuilder implements I
      * @return the IUnitOfMeasureRequest instance
      */
     public IUnitOfMeasureRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UnitOfMeasureRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UnitOfMeasureRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequest;
-import com.microsoft.graph.requests.extensions.OrganizationSettingsRequest;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyRequestBuilder;
@@ -51,7 +50,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
      * @return the IOrganizationSettingsRequest instance
      */
     public IOrganizationSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OrganizationSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OrganizationSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

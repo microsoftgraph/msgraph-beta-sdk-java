@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PasswordAuthenticationMethodRequestBuilder extends BaseRequestBuild
      * @return the IPasswordAuthenticationMethodRequest instance
      */
     public IPasswordAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PasswordAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailAssessmentRequestRequest;
-import com.microsoft.graph.requests.extensions.MailAssessmentRequestRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * @return the IMailAssessmentRequestRequest instance
      */
     public IMailAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MailAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MailAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IThreatAssessmentResultCollectionRequestBuilder results() {
+        return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
+    }
+
+    public IThreatAssessmentResultRequestBuilder results(final String id) {
+        return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
+    }
 }

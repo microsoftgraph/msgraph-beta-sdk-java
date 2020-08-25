@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequest;
-import com.microsoft.graph.requests.extensions.NotificationMessageTemplateRequest;
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageRequestBuilder;
@@ -51,7 +50,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @return the INotificationMessageTemplateRequest instance
      */
     public INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new NotificationMessageTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.NotificationMessageTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

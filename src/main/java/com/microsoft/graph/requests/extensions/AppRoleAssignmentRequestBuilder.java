@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implemen
      * @return the IAppRoleAssignmentRequest instance
      */
     public IAppRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

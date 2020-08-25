@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRequest;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptRequest;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
@@ -64,7 +63,7 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder impleme
      * @return the IDeviceHealthScriptRequest instance
      */
     public IDeviceHealthScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceHealthScriptRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceHealthScriptRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

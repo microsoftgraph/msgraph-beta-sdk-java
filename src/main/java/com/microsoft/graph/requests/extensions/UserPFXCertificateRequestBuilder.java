@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateRequest;
-import com.microsoft.graph.requests.extensions.UserPFXCertificateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserPFXCertificateRequestBuilder extends BaseRequestBuilder impleme
      * @return the IUserPFXCertificateRequest instance
      */
     public IUserPFXCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserPFXCertificateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserPFXCertificateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

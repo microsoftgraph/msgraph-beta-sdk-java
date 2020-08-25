@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBusinessFlowRequest;
-import com.microsoft.graph.requests.extensions.BusinessFlowRequest;
 import com.microsoft.graph.requests.extensions.IBusinessFlowRecordDecisionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowRecordDecisionsRequestBuilder;
 
@@ -47,7 +46,7 @@ public class BusinessFlowRequestBuilder extends BaseRequestBuilder implements IB
      * @return the IBusinessFlowRequest instance
      */
     public IBusinessFlowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BusinessFlowRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BusinessFlowRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntegerSettingInstanceRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntegerSettingInstanceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRe
      * @return the IDeviceManagementIntegerSettingInstanceRequest instance
      */
     public IDeviceManagementIntegerSettingInstanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementIntegerSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementIntegerSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

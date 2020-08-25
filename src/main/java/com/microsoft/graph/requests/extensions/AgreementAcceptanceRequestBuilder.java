@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequest;
-import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AgreementAcceptanceRequestBuilder extends BaseRequestBuilder implem
      * @return the IAgreementAcceptanceRequest instance
      */
     public IAgreementAcceptanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AgreementAcceptanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AgreementAcceptanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

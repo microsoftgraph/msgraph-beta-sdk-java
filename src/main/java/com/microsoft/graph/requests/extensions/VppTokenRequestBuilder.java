@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IVppTokenRequest;
-import com.microsoft.graph.requests.extensions.VppTokenRequest;
 import com.microsoft.graph.requests.extensions.IVppTokenSyncLicensesRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenSyncLicensesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenRevokeLicensesRequestBuilder;
@@ -49,7 +48,7 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder implements IVppTo
      * @return the IVppTokenRequest instance
      */
     public IVppTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new VppTokenRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.VppTokenRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

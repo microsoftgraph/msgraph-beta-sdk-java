@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequest;
-import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class RiskyUserHistoryItemRequestBuilder extends BaseRequestBuilder imple
      * @return the IRiskyUserHistoryItemRequest instance
      */
     public IRiskyUserHistoryItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RiskyUserHistoryItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RiskyUserHistoryItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IRiskyUserHistoryItemCollectionRequestBuilder history() {
+        return new RiskyUserHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
+    }
+
+    public IRiskyUserHistoryItemRequestBuilder history(final String id) {
+        return new RiskyUserHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
+    }
 }

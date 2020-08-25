@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionRequest;
-import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionRequest;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
@@ -51,7 +50,7 @@ public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @return the IDefaultManagedAppProtectionRequest instance
      */
     public IDefaultManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DefaultManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

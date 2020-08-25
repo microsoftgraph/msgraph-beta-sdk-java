@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintOperationRequest;
-import com.microsoft.graph.requests.extensions.PrintOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PrintOperationRequestBuilder extends BaseRequestBuilder implements 
      * @return the IPrintOperationRequest instance
      */
     public IPrintOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

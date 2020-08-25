@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAttachmentRequest;
-import com.microsoft.graph.requests.extensions.AttachmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
      * @return the IAttachmentRequest instance
      */
     public IAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AttachmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

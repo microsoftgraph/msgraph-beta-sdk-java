@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDomainDnsSrvRecordRequest;
-import com.microsoft.graph.requests.extensions.DomainDnsSrvRecordRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DomainDnsSrvRecordRequestBuilder extends BaseRequestBuilder impleme
      * @return the IDomainDnsSrvRecordRequest instance
      */
     public IDomainDnsSrvRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DomainDnsSrvRecordRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DomainDnsSrvRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

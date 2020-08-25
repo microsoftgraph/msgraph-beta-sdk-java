@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFilterOperatorSchemaRequest;
-import com.microsoft.graph.requests.extensions.FilterOperatorSchemaRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class FilterOperatorSchemaRequestBuilder extends BaseRequestBuilder imple
      * @return the IFilterOperatorSchemaRequest instance
      */
     public IFilterOperatorSchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FilterOperatorSchemaRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FilterOperatorSchemaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

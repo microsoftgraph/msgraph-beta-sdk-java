@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequest;
-import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder i
      * @return the IGovernancePolicyTemplateRequest instance
      */
     public IGovernancePolicyTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GovernancePolicyTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GovernancePolicyTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

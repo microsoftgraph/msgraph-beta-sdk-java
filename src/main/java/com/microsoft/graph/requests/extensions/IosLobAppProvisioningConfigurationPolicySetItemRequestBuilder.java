@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationPolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationPolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequestBuilder exten
      * @return the IIosLobAppProvisioningConfigurationPolicySetItemRequest instance
      */
     public IIosLobAppProvisioningConfigurationPolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosLobAppProvisioningConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

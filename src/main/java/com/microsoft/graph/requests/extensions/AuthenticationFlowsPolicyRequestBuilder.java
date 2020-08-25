@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequest;
-import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
      * @return the IAuthenticationFlowsPolicyRequest instance
      */
     public IAuthenticationFlowsPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AuthenticationFlowsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedEBookRequest;
-import com.microsoft.graph.requests.extensions.ManagedEBookRequest;
 import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookCategoryWithReferenceRequestBuilder;
@@ -66,7 +65,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
      * @return the IManagedEBookRequest instance
      */
     public IManagedEBookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedEBookRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedEBookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChatRequest;
-import com.microsoft.graph.requests.extensions.ChatRequest;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
@@ -63,7 +62,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder implements IChatReque
      * @return the IChatRequest instance
      */
     public IChatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ChatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ChatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStatusRequest;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileStatusRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationSynchronizationProfileStatusRequestBuilder extends BaseReq
      * @return the IEducationSynchronizationProfileStatusRequest instance
      */
     public IEducationSynchronizationProfileStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationSynchronizationProfileStatusRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationSynchronizationProfileStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

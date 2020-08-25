@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartPointRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointFormatRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder impleme
      * @return the IWorkbookChartPointRequest instance
      */
     public IWorkbookChartPointRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartPointRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartPointRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

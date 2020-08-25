@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookTableSortRequest;
-import com.microsoft.graph.requests.extensions.WorkbookTableSortRequest;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import com.microsoft.graph.requests.extensions.IWorkbookTableSortApplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortApplyRequestBuilder;
@@ -52,7 +51,7 @@ public class WorkbookTableSortRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookTableSortRequest instance
      */
     public IWorkbookTableSortRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookTableSortRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookTableSortRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

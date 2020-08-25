@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequest;
-import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationRequest;
 import com.microsoft.graph.requests.extensions.IChatWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * @return the IUserScopeTeamsAppInstallationRequest instance
      */
     public IUserScopeTeamsAppInstallationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserScopeTeamsAppInstallationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,23 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      */
     public IChatWithReferenceRequestBuilder chat() {
         return new ChatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("chat"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TeamsApp
+     *
+     * @return the ITeamsAppWithReferenceRequestBuilder instance
+     */
+    public ITeamsAppWithReferenceRequestBuilder teamsApp() {
+        return new TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TeamsAppDefinition
+     *
+     * @return the ITeamsAppDefinitionWithReferenceRequestBuilder instance
+     */
+    public ITeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
+        return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
     }
 }

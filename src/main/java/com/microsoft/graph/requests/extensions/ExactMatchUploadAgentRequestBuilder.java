@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequest;
-import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ExactMatchUploadAgentRequestBuilder extends BaseRequestBuilder impl
      * @return the IExactMatchUploadAgentRequest instance
      */
     public IExactMatchUploadAgentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExactMatchUploadAgentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.GroupLifecyclePolicyRenewGroupBody;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRenewGroupRequest;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRenewGroupRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

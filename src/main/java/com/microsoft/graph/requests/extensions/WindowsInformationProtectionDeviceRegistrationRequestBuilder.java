@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationRequest;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationRequest;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationWipeRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationWipeRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extend
      * @return the IWindowsInformationProtectionDeviceRegistrationRequest instance
      */
     public IWindowsInformationProtectionDeviceRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsInformationProtectionDeviceRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

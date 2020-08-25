@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequest;
-import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequest;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentStreamRequestBuilder;
 

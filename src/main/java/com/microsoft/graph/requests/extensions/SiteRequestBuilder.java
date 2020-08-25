@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISiteRequest;
-import com.microsoft.graph.requests.extensions.SiteRequest;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
@@ -83,7 +82,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      * @return the ISiteRequest instance
      */
     public ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SiteRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SiteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -162,6 +161,24 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {

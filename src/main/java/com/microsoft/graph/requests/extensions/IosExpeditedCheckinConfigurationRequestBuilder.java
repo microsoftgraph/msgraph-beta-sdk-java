@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosExpeditedCheckinConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IosExpeditedCheckinConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosExpeditedCheckinConfigurationRequestBuilder extends BaseRequestB
      * @return the IIosExpeditedCheckinConfigurationRequest instance
      */
     public IIosExpeditedCheckinConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosExpeditedCheckinConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosExpeditedCheckinConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

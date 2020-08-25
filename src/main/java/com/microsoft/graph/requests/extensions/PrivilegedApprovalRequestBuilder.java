@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrivilegedApprovalRequest;
-import com.microsoft.graph.requests.extensions.PrivilegedApprovalRequest;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
@@ -49,7 +48,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
      * @return the IPrivilegedApprovalRequest instance
      */
     public IPrivilegedApprovalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrivilegedApprovalRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrivilegedApprovalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFinancialsRequest;
-import com.microsoft.graph.requests.extensions.FinancialsRequest;
 import com.microsoft.graph.requests.extensions.ICompanyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICompanyRequestBuilder;
@@ -49,7 +48,7 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFin
      * @return the IFinancialsRequest instance
      */
     public IFinancialsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FinancialsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FinancialsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

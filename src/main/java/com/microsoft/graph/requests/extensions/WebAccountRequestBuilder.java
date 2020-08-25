@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWebAccountRequest;
-import com.microsoft.graph.requests.extensions.WebAccountRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WebAccountRequestBuilder extends BaseRequestBuilder implements IWeb
      * @return the IWebAccountRequest instance
      */
     public IWebAccountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WebAccountRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WebAccountRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

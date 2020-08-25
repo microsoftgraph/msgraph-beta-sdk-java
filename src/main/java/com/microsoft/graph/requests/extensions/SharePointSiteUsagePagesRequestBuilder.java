@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISharePointSiteUsagePagesRequest;
-import com.microsoft.graph.requests.extensions.SharePointSiteUsagePagesRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SharePointSiteUsagePagesRequestBuilder extends BaseRequestBuilder i
      * @return the ISharePointSiteUsagePagesRequest instance
      */
     public ISharePointSiteUsagePagesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SharePointSiteUsagePagesRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SharePointSiteUsagePagesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

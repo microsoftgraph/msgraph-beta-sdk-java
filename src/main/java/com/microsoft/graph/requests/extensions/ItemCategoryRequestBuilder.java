@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemCategoryRequest;
-import com.microsoft.graph.requests.extensions.ItemCategoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemCategoryRequestBuilder extends BaseRequestBuilder implements II
      * @return the IItemCategoryRequest instance
      */
     public IItemCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

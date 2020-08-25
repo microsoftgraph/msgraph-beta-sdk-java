@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICustomerRequest;
-import com.microsoft.graph.requests.extensions.CustomerRequest;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
@@ -57,7 +56,7 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
      * @return the ICustomerRequest instance
      */
     public ICustomerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CustomerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CustomerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

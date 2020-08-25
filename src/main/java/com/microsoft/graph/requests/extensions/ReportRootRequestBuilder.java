@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IReportRootRequest;
-import com.microsoft.graph.requests.extensions.ReportRootRequest;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
@@ -281,7 +280,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
      * @return the IReportRootRequest instance
      */
     public IReportRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ReportRootRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ReportRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

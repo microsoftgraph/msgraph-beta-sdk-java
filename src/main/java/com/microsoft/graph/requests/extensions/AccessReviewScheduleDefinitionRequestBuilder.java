@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequest;
-import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequest;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
@@ -51,7 +50,7 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
      * @return the IAccessReviewScheduleDefinitionRequest instance
      */
     public IAccessReviewScheduleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessReviewScheduleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

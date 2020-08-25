@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsUniversalAppXContainedAppRequest;
-import com.microsoft.graph.requests.extensions.WindowsUniversalAppXContainedAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsUniversalAppXContainedAppRequestBuilder extends BaseRequestB
      * @return the IWindowsUniversalAppXContainedAppRequest instance
      */
     public IWindowsUniversalAppXContainedAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsUniversalAppXContainedAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsUniversalAppXContainedAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

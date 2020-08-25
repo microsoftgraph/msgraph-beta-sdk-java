@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestRequest;
+import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +31,12 @@ public interface IUserConsentRequestRequestBuilder extends IRequestBuilder {
      */
     IUserConsentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for Approval
+     *
+     * @return the IApprovalRequestBuilder instance
+     */
+    IApprovalRequestBuilder approval();
 
 }

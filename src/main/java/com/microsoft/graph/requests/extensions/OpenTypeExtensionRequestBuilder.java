@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOpenTypeExtensionRequest;
-import com.microsoft.graph.requests.extensions.OpenTypeExtensionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder implemen
      * @return the IOpenTypeExtensionRequest instance
      */
     public IOpenTypeExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OpenTypeExtensionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OpenTypeExtensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

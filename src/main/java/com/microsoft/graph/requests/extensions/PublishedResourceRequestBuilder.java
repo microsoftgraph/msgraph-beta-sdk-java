@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPublishedResourceRequest;
-import com.microsoft.graph.requests.extensions.PublishedResourceRequest;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
@@ -49,7 +48,7 @@ public class PublishedResourceRequestBuilder extends BaseRequestBuilder implemen
      * @return the IPublishedResourceRequest instance
      */
     public IPublishedResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PublishedResourceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PublishedResourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

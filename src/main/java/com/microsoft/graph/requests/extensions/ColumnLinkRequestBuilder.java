@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IColumnLinkRequest;
-import com.microsoft.graph.requests.extensions.ColumnLinkRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
      * @return the IColumnLinkRequest instance
      */
     public IColumnLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ColumnLinkRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ColumnLinkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

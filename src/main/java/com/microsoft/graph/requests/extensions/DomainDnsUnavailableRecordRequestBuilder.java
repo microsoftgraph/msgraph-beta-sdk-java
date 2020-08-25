@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDomainDnsUnavailableRecordRequest;
-import com.microsoft.graph.requests.extensions.DomainDnsUnavailableRecordRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DomainDnsUnavailableRecordRequestBuilder extends BaseRequestBuilder
      * @return the IDomainDnsUnavailableRecordRequest instance
      */
     public IDomainDnsUnavailableRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DomainDnsUnavailableRecordRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DomainDnsUnavailableRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

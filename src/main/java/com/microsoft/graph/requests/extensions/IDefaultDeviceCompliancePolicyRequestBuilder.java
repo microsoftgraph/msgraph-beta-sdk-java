@@ -4,6 +4,18 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDefaultDeviceCompliancePolicyRequest;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +42,39 @@ public interface IDefaultDeviceCompliancePolicyRequestBuilder extends IRequestBu
      */
     IDefaultDeviceCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule();
+
+    IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id);
+
+    IDeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses();
+
+    IDeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id);
+
+    IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id);
+
+    /**
+     * Gets the request builder for DeviceComplianceDeviceOverview
+     *
+     * @return the IDeviceComplianceDeviceOverviewRequestBuilder instance
+     */
+    IDeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview();
+
+    /**
+     * Gets the request builder for DeviceComplianceUserOverview
+     *
+     * @return the IDeviceComplianceUserOverviewRequestBuilder instance
+     */
+    IDeviceComplianceUserOverviewRequestBuilder userStatusOverview();
+
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
+    IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments();
+
+    IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id);
 
 }

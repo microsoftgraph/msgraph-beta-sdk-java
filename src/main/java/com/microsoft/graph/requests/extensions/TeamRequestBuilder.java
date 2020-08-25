@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamRequest;
-import com.microsoft.graph.requests.extensions.TeamRequest;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
@@ -89,7 +88,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
      * @return the ITeamRequest instance
      */
     public ITeamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

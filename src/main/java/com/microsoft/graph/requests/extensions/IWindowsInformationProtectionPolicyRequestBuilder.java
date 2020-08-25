@@ -4,6 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequest;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +36,17 @@ public interface IWindowsInformationProtectionPolicyRequestBuilder extends IRequ
      */
     IWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles();
+
+    IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id);
+
+    IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles();
+
+    IWindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(final String id);
+
+    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
+
+    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
 
 }

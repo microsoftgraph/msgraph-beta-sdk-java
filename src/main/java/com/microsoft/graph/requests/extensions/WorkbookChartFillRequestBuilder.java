@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartFillRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFillClearRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillClearRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFillSetSolidColorRequestBuilder;
@@ -49,7 +48,7 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookChartFillRequest instance
      */
     public IWorkbookChartFillRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartFillRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartFillRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

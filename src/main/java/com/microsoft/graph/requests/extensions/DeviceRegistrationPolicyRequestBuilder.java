@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequest;
-import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder i
      * @return the IDeviceRegistrationPolicyRequest instance
      */
     public IDeviceRegistrationPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceRegistrationPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

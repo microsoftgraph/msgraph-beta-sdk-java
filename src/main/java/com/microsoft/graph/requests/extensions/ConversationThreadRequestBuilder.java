@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequest;
-import com.microsoft.graph.requests.extensions.ConversationThreadRequest;
 import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
@@ -52,7 +51,7 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder impleme
      * @return the IConversationThreadRequest instance
      */
     public IConversationThreadRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ConversationThreadRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ConversationThreadRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

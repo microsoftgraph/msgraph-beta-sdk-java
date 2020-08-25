@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequest;
-import com.microsoft.graph.requests.extensions.UserSettingsRequest;
 import com.microsoft.graph.requests.extensions.IRegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.RegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
@@ -49,7 +48,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
      * @return the IUserSettingsRequest instance
      */
     public IUserSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

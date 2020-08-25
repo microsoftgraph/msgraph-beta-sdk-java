@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequest;
-import com.microsoft.graph.requests.extensions.DataClassificationServiceRequest;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
@@ -96,7 +95,7 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
      * @return the IDataClassificationServiceRequest instance
      */
     public IDataClassificationServiceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DataClassificationServiceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DataClassificationServiceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -95,6 +95,10 @@ public enum DeviceType
     */
     ANDROIDN_GMS,
     /**
+    * cloud PC
+    */
+    CLOUD_PC,
+    /**
     * blackberry
     */
     BLACKBERRY,

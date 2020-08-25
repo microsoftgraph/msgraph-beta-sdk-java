@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class GroupPolicyConfigurationAssignmentRequestBuilder extends BaseReques
      * @return the IGroupPolicyConfigurationAssignmentRequest instance
      */
     public IGroupPolicyConfigurationAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

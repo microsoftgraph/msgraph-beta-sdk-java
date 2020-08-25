@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedIOSStoreAppRequest;
-import com.microsoft.graph.requests.extensions.ManagedIOSStoreAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder impleme
      * @return the IManagedIOSStoreAppRequest instance
      */
     public IManagedIOSStoreAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedIOSStoreAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedIOSStoreAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

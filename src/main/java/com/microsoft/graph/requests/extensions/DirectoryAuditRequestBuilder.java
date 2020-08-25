@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryAuditRequest;
-import com.microsoft.graph.requests.extensions.DirectoryAuditRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements 
      * @return the IDirectoryAuditRequest instance
      */
     public IDirectoryAuditRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryAuditRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryAuditRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

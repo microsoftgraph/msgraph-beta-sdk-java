@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppleUserInitiatedEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.AppleUserInitiatedEnrollmentProfileRequest;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppleEnrollmentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentRequestBuilder;
@@ -51,7 +50,7 @@ public class AppleUserInitiatedEnrollmentProfileRequestBuilder extends BaseReque
      * @return the IAppleUserInitiatedEnrollmentProfileRequest instance
      */
     public IAppleUserInitiatedEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppleUserInitiatedEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppleUserInitiatedEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

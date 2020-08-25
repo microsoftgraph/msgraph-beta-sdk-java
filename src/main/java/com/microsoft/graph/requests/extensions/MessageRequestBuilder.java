@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageRequest;
-import com.microsoft.graph.requests.extensions.MessageRequest;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -93,7 +92,7 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
      * @return the IMessageRequest instance
      */
     public IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MessageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

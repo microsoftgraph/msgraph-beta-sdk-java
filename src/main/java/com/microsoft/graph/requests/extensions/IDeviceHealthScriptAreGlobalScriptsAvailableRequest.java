@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.models.extensions.GlobalDeviceHealthScriptState;
+import com.microsoft.graph.models.generated.GlobalDeviceHealthScriptState;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAreGlobalScriptsAvailableRequest;
 
 import com.microsoft.graph.concurrency.ICallback;

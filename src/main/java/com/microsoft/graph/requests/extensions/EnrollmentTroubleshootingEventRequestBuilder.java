@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEnrollmentTroubleshootingEventRequest;
-import com.microsoft.graph.requests.extensions.EnrollmentTroubleshootingEventRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBui
      * @return the IEnrollmentTroubleshootingEventRequest instance
      */
     public IEnrollmentTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EnrollmentTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EnrollmentTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

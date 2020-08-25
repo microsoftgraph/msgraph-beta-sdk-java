@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPictureRequest;
-import com.microsoft.graph.requests.extensions.PictureRequest;
 import com.microsoft.graph.requests.extensions.IPictureContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureContentStreamRequestBuilder;
 
@@ -47,7 +46,7 @@ public class PictureRequestBuilder extends BaseRequestBuilder implements IPictur
      * @return the IPictureRequest instance
      */
     public IPictureRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PictureRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PictureRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

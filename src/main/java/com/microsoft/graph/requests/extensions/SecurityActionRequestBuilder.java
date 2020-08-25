@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityActionRequest;
-import com.microsoft.graph.requests.extensions.SecurityActionRequest;
 import com.microsoft.graph.requests.extensions.ISecurityActionCancelSecurityActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityActionCancelSecurityActionRequestBuilder;
 
@@ -47,7 +46,7 @@ public class SecurityActionRequestBuilder extends BaseRequestBuilder implements 
      * @return the ISecurityActionRequest instance
      */
     public ISecurityActionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SecurityActionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SecurityActionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

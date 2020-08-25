@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISalesOrderRequest;
-import com.microsoft.graph.requests.extensions.SalesOrderRequest;
 import com.microsoft.graph.requests.extensions.ISalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesOrderLineRequestBuilder;
@@ -55,7 +54,7 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
      * @return the ISalesOrderRequest instance
      */
     public ISalesOrderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SalesOrderRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SalesOrderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

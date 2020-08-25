@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAllowedDataLocationRequest;
-import com.microsoft.graph.requests.extensions.AllowedDataLocationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AllowedDataLocationRequestBuilder extends BaseRequestBuilder implem
      * @return the IAllowedDataLocationRequest instance
      */
     public IAllowedDataLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AllowedDataLocationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AllowedDataLocationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

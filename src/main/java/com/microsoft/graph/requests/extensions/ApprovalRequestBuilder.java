@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApprovalRequest;
-import com.microsoft.graph.requests.extensions.ApprovalRequest;
 import com.microsoft.graph.requests.extensions.IApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApprovalStepRequestBuilder;
@@ -53,7 +52,7 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
      * @return the IApprovalRequest instance
      */
     public IApprovalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApprovalRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApprovalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

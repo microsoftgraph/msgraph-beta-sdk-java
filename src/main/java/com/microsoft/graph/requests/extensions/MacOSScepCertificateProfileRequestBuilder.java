@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOSScepCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.MacOSScepCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
@@ -51,7 +50,7 @@ public class MacOSScepCertificateProfileRequestBuilder extends BaseRequestBuilde
      * @return the IMacOSScepCertificateProfileRequest instance
      */
     public IMacOSScepCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOSScepCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOSScepCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

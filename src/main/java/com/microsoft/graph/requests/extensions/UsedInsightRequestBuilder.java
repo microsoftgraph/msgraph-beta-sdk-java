@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUsedInsightRequest;
-import com.microsoft.graph.requests.extensions.UsedInsightRequest;
 import com.microsoft.graph.requests.extensions.IEntityWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
      * @return the IUsedInsightRequest instance
      */
     public IUsedInsightRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UsedInsightRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UsedInsightRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

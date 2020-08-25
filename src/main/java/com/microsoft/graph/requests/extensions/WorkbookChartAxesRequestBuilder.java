@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxesRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartAxesRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxisRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxisRequestBuilder;
@@ -51,7 +50,7 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookChartAxesRequest instance
      */
     public IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartAxesRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartAxesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

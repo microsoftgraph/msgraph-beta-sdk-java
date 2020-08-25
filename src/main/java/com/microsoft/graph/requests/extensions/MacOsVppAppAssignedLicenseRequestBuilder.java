@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseRequest;
-import com.microsoft.graph.requests.extensions.MacOsVppAppAssignedLicenseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MacOsVppAppAssignedLicenseRequestBuilder extends BaseRequestBuilder
      * @return the IMacOsVppAppAssignedLicenseRequest instance
      */
     public IMacOsVppAppAssignedLicenseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOsVppAppAssignedLicenseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOsVppAppAssignedLicenseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

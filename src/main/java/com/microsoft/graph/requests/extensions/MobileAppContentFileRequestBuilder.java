@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequest;
-import com.microsoft.graph.requests.extensions.MobileAppContentFileRequest;
 import com.microsoft.graph.models.extensions.FileEncryptionInfo;
 import com.microsoft.graph.requests.extensions.IMobileAppContentFileCommitRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCommitRequestBuilder;
@@ -50,7 +49,7 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
      * @return the IMobileAppContentFileRequest instance
      */
     public IMobileAppContentFileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppContentFileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppContentFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

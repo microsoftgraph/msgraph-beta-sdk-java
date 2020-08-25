@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows10EasEmailProfileConfigurationRequest;
-import com.microsoft.graph.requests.extensions.Windows10EasEmailProfileConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Windows10EasEmailProfileConfigurationRequestBuilder extends BaseReq
      * @return the IWindows10EasEmailProfileConfigurationRequest instance
      */
     public IWindows10EasEmailProfileConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows10EasEmailProfileConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows10EasEmailProfileConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

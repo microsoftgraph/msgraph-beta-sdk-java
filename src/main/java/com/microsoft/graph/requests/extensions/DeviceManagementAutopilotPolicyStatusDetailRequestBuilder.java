@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementAutopilotPolicyStatusDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequestBuilder extends B
      * @return the IDeviceManagementAutopilotPolicyStatusDetailRequest instance
      */
     public IDeviceManagementAutopilotPolicyStatusDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementAutopilotPolicyStatusDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementAutopilotPolicyStatusDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequest;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequest;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionProtectRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionProtectRequestBuilder;
@@ -50,7 +49,7 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @return the IWorkbookWorksheetProtectionRequest instance
      */
     public IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookWorksheetProtectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

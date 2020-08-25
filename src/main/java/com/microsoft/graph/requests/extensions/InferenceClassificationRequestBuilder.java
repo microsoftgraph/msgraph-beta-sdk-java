@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationRequest;
-import com.microsoft.graph.requests.extensions.InferenceClassificationRequest;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
@@ -49,7 +48,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder im
      * @return the IInferenceClassificationRequest instance
      */
     public IInferenceClassificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new InferenceClassificationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.InferenceClassificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

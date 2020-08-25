@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleDefinitionRequest;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IDeviceAndAppManagementRoleDefinitionRequestBuilder extends IRe
      */
     IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IRoleAssignmentCollectionRequestBuilder roleAssignments();
+
+    IRoleAssignmentRequestBuilder roleAssignments(final String id);
 
 }

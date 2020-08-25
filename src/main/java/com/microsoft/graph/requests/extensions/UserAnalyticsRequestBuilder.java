@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserAnalyticsRequest;
-import com.microsoft.graph.requests.extensions.UserAnalyticsRequest;
 import com.microsoft.graph.requests.extensions.IActivityStatisticsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityStatisticsRequestBuilder;
@@ -49,7 +48,7 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * @return the IUserAnalyticsRequest instance
      */
     public IUserAnalyticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

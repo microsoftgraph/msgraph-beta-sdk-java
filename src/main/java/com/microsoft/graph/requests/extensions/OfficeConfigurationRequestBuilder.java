@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequest;
-import com.microsoft.graph.requests.extensions.OfficeConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequestBuilder;
@@ -49,7 +48,7 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implem
      * @return the IOfficeConfigurationRequest instance
      */
     public IOfficeConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OfficeConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OfficeConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

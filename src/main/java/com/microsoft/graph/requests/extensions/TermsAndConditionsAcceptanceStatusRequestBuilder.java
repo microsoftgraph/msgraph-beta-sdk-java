@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequest;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequest;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class TermsAndConditionsAcceptanceStatusRequestBuilder extends BaseReques
      * @return the ITermsAndConditionsAcceptanceStatusRequest instance
      */
     public ITermsAndConditionsAcceptanceStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TermsAndConditionsAcceptanceStatusRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

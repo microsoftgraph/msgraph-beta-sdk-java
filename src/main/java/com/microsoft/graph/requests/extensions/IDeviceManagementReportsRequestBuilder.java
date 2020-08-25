@@ -11,6 +11,8 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobRequest
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetActiveMalwareReportRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetMalwareSummaryReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetPolicyNonComplianceReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetPolicyNonComplianceMetadataRequestBuilder;
@@ -60,6 +62,8 @@ public interface IDeviceManagementReportsRequestBuilder extends IRequestBuilder 
 
     IDeviceManagementReportScheduleRequestBuilder reportSchedules(final String id);
     IDeviceManagementReportsGetActiveMalwareReportRequestBuilder getActiveMalwareReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
+    IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder getUnhealthyDefenderAgentsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
+    IDeviceManagementReportsGetMalwareSummaryReportRequestBuilder getMalwareSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
     IDeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
     IDeviceManagementReportsGetPolicyNonComplianceReportRequestBuilder getPolicyNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
     IDeviceManagementReportsGetPolicyNonComplianceMetadataRequestBuilder getPolicyNonComplianceMetadata(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);

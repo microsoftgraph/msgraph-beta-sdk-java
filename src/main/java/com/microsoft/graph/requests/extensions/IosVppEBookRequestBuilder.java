@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVppEBookRequest;
-import com.microsoft.graph.requests.extensions.IosVppEBookRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,45 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
      * @return the IIosVppEBookRequest instance
      */
     public IIosVppEBookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosVppEBookRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosVppEBookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new ManagedEBookCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    }
+
+    public IManagedEBookCategoryWithReferenceRequestBuilder categories(final String id) {
+        return new ManagedEBookCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    }
+    public IManagedEBookAssignmentCollectionRequestBuilder assignments() {
+        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
+        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EBookInstallSummary
+     *
+     * @return the IEBookInstallSummaryRequestBuilder instance
+     */
+    public IEBookInstallSummaryRequestBuilder installSummary() {
+        return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
+    }
+    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
+    }
+
+    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
+        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
+    }
+    public IUserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
+        return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
+    }
+
+    public IUserInstallStateSummaryRequestBuilder userStateSummary(final String id) {
+        return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
+    }
 }

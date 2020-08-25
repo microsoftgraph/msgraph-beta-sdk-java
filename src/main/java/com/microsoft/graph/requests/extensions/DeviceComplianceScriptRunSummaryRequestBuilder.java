@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRunSummaryRequest;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScriptRunSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceComplianceScriptRunSummaryRequestBuilder extends BaseRequestB
      * @return the IDeviceComplianceScriptRunSummaryRequest instance
      */
     public IDeviceComplianceScriptRunSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceComplianceScriptRunSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceComplianceScriptRunSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

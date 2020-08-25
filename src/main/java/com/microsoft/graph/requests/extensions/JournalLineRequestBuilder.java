@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IJournalLineRequest;
-import com.microsoft.graph.requests.extensions.JournalLineRequest;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 
@@ -47,7 +46,7 @@ public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJo
      * @return the IJournalLineRequest instance
      */
     public IJournalLineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new JournalLineRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.JournalLineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

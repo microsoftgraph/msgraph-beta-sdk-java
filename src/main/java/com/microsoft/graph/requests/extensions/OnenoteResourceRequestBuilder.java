@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequest;
-import com.microsoft.graph.requests.extensions.OnenoteResourceRequest;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceContentStreamRequestBuilder;
 
@@ -47,7 +46,7 @@ public class OnenoteResourceRequestBuilder extends BaseRequestBuilder implements
      * @return the IOnenoteResourceRequest instance
      */
     public IOnenoteResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnenoteResourceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnenoteResourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

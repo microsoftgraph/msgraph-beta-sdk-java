@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISideLoadingKeyRequest;
-import com.microsoft.graph.requests.extensions.SideLoadingKeyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SideLoadingKeyRequestBuilder extends BaseRequestBuilder implements 
      * @return the ISideLoadingKeyRequest instance
      */
     public ISideLoadingKeyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SideLoadingKeyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SideLoadingKeyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

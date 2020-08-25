@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDomainRequest;
-import com.microsoft.graph.requests.extensions.DomainRequest;
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
@@ -61,7 +60,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
      * @return the IDomainRequest instance
      */
     public IDomainRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DomainRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DomainRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

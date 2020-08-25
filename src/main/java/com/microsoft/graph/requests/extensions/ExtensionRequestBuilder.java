@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExtensionRequest;
-import com.microsoft.graph.requests.extensions.ExtensionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ExtensionRequestBuilder extends BaseRequestBuilder implements IExte
      * @return the IExtensionRequest instance
      */
     public IExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExtensionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExtensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

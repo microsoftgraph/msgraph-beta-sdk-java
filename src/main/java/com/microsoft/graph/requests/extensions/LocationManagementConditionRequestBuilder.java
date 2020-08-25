@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ILocationManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.LocationManagementConditionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class LocationManagementConditionRequestBuilder extends BaseRequestBuilde
      * @return the ILocationManagementConditionRequest instance
      */
     public ILocationManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new LocationManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.LocationManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements() {
+        return new ManagementConditionStatementCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements"), getClient(), null);
+    }
+
+    public IManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(final String id) {
+        return new ManagementConditionStatementWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements") + "/" + id, getClient(), null);
+    }
 }

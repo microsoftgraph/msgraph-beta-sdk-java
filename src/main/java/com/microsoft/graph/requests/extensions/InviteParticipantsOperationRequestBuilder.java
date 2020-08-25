@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInviteParticipantsOperationRequest;
-import com.microsoft.graph.requests.extensions.InviteParticipantsOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class InviteParticipantsOperationRequestBuilder extends BaseRequestBuilde
      * @return the IInviteParticipantsOperationRequest instance
      */
     public IInviteParticipantsOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new InviteParticipantsOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.InviteParticipantsOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

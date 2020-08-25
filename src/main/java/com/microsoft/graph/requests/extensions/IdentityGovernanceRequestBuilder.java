@@ -4,11 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequest;
-import com.microsoft.graph.requests.extensions.IdentityGovernanceRequest;
-import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequestBuilder;
 
@@ -51,19 +50,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      * @return the IIdentityGovernanceRequest instance
      */
     public IIdentityGovernanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IdentityGovernanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IdentityGovernanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-
-    /**
-     * Gets the request builder for AccessReviewSet
-     *
-     * @return the IAccessReviewSetRequestBuilder instance
-     */
-    public IAccessReviewSetRequestBuilder accessReviews() {
-        return new AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
-    }
 
     /**
      * Gets the request builder for EntitlementManagement
@@ -72,6 +62,15 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      */
     public IEntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AccessReviewSet
+     *
+     * @return the IAccessReviewSetRequestBuilder instance
+     */
+    public IAccessReviewSetRequestBuilder accessReviews() {
+        return new AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
     }
 
     /**

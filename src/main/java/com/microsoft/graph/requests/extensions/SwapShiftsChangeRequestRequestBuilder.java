@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequest;
-import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder im
      * @return the ISwapShiftsChangeRequestRequest instance
      */
     public ISwapShiftsChangeRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SwapShiftsChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

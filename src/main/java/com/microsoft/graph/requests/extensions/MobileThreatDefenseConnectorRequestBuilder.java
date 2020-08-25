@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequest;
-import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuild
      * @return the IMobileThreatDefenseConnectorRequest instance
      */
     public IMobileThreatDefenseConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileThreatDefenseConnectorRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

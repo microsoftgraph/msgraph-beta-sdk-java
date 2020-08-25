@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemInsightsSettingsRequest;
-import com.microsoft.graph.requests.extensions.ItemInsightsSettingsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemInsightsSettingsRequestBuilder extends BaseRequestBuilder imple
      * @return the IItemInsightsSettingsRequest instance
      */
     public IItemInsightsSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemInsightsSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemInsightsSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

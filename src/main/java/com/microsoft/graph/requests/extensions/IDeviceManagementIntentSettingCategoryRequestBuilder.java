@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,5 +38,9 @@ public interface IDeviceManagementIntentSettingCategoryRequestBuilder extends IR
     IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
 
     IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
+
+    IDeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions();
+
+    IDeviceManagementSettingDefinitionRequestBuilder settingDefinitions(final String id);
 
 }

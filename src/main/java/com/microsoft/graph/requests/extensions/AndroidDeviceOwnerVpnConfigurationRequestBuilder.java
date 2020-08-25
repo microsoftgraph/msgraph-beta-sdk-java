@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerVpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerVpnConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class AndroidDeviceOwnerVpnConfigurationRequestBuilder extends BaseReques
      * @return the IAndroidDeviceOwnerVpnConfigurationRequest instance
      */
     public IAndroidDeviceOwnerVpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidDeviceOwnerVpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidDeviceOwnerVpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

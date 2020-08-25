@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestB
      * @return the IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
      */
     public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

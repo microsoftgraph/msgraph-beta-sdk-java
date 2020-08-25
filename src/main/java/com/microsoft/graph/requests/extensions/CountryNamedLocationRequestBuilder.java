@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICountryNamedLocationRequest;
-import com.microsoft.graph.requests.extensions.CountryNamedLocationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder imple
      * @return the ICountryNamedLocationRequest instance
      */
     public ICountryNamedLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CountryNamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CountryNamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

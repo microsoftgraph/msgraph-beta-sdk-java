@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequest;
-import com.microsoft.graph.requests.extensions.UserTeamworkRequest;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequestBuilder;
@@ -54,7 +53,7 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder implements IU
      * @return the IUserTeamworkRequest instance
      */
     public IUserTeamworkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserTeamworkRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserTeamworkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

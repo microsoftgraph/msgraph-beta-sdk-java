@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequest;
-import com.microsoft.graph.requests.extensions.AccessReviewInstanceRequest;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemRequestBuilder;
@@ -61,7 +60,7 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
      * @return the IAccessReviewInstanceRequest instance
      */
     public IAccessReviewInstanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessReviewInstanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessReviewInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

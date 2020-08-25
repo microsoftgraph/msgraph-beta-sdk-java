@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyPolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyPolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequestBuilder ex
      * @return the IMdmWindowsInformationProtectionPolicyPolicySetItemRequest instance
      */
     public IMdmWindowsInformationProtectionPolicyPolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MdmWindowsInformationProtectionPolicyPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISkillProficiencyRequest;
-import com.microsoft.graph.requests.extensions.SkillProficiencyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SkillProficiencyRequestBuilder extends BaseRequestBuilder implement
      * @return the ISkillProficiencyRequest instance
      */
     public ISkillProficiencyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SkillProficiencyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SkillProficiencyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

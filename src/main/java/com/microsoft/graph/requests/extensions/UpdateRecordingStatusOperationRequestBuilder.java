@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUpdateRecordingStatusOperationRequest;
-import com.microsoft.graph.requests.extensions.UpdateRecordingStatusOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBui
      * @return the IUpdateRecordingStatusOperationRequest instance
      */
     public IUpdateRecordingStatusOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UpdateRecordingStatusOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UpdateRecordingStatusOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequest;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder implemen
      * @return the IMobileAppCategoryRequest instance
      */
     public IMobileAppCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

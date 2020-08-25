@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartDataLabelFormatRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartDataLabelFormatRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
@@ -49,7 +48,7 @@ public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuild
      * @return the IWorkbookChartDataLabelFormatRequest instance
      */
     public IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartDataLabelFormatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartDataLabelFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

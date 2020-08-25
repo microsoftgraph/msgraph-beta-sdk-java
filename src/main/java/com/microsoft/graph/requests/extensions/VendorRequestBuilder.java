@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IVendorRequest;
-import com.microsoft.graph.requests.extensions.VendorRequest;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
@@ -55,7 +54,7 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
      * @return the IVendorRequest instance
      */
     public IVendorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new VendorRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.VendorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

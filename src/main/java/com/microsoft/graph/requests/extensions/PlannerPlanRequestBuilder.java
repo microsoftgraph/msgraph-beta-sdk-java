@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequest;
-import com.microsoft.graph.requests.extensions.PlannerPlanRequest;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
@@ -55,7 +54,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
      * @return the IPlannerPlanRequest instance
      */
     public IPlannerPlanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerPlanRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerPlanRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

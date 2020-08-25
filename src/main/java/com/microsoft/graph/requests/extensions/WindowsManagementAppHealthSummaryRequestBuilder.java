@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthSummaryRequest;
-import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsManagementAppHealthSummaryRequestBuilder extends BaseRequest
      * @return the IWindowsManagementAppHealthSummaryRequest instance
      */
     public IWindowsManagementAppHealthSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsManagementAppHealthSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsManagementAppHealthSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

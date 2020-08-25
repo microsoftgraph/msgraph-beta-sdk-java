@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOutlookUserRequest;
-import com.microsoft.graph.requests.extensions.OutlookUserRequest;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
@@ -68,7 +67,7 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
      * @return the IOutlookUserRequest instance
      */
     public IOutlookUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OutlookUserRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OutlookUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequest;
-import com.microsoft.graph.requests.extensions.InformationProtectionRequest;
 import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
@@ -66,7 +65,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
      * @return the IInformationProtectionRequest instance
      */
     public IInformationProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new InformationProtectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.InformationProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

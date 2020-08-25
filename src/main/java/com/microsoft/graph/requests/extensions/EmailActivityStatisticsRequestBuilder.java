@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmailActivityStatisticsRequest;
-import com.microsoft.graph.requests.extensions.EmailActivityStatisticsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EmailActivityStatisticsRequestBuilder extends BaseRequestBuilder im
      * @return the IEmailActivityStatisticsRequest instance
      */
     public IEmailActivityStatisticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmailActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmailActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

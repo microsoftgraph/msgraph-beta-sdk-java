@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleRequest;
-import com.microsoft.graph.requests.extensions.DirectoryRoleRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -53,7 +52,7 @@ public class DirectoryRoleRequestBuilder extends BaseRequestBuilder implements I
      * @return the IDirectoryRoleRequest instance
      */
     public IDirectoryRoleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryRoleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryRoleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

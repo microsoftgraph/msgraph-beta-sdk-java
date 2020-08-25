@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceComplianceLocalActionLockDeviceRequest;
-import com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionLockDeviceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequestBuilder extends 
      * @return the IAndroidDeviceComplianceLocalActionLockDeviceRequest instance
      */
     public IAndroidDeviceComplianceLocalActionLockDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidDeviceComplianceLocalActionLockDeviceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionLockDeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

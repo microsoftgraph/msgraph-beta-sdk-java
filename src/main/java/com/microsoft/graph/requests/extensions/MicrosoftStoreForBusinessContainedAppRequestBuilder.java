@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMicrosoftStoreForBusinessContainedAppRequest;
-import com.microsoft.graph.requests.extensions.MicrosoftStoreForBusinessContainedAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MicrosoftStoreForBusinessContainedAppRequestBuilder extends BaseReq
      * @return the IMicrosoftStoreForBusinessContainedAppRequest instance
      */
     public IMicrosoftStoreForBusinessContainedAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MicrosoftStoreForBusinessContainedAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MicrosoftStoreForBusinessContainedAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

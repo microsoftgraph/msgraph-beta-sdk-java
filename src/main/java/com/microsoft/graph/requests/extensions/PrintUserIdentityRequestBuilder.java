@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequest;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PrintUserIdentityRequestBuilder extends BaseRequestBuilder implemen
      * @return the IPrintUserIdentityRequest instance
      */
     public IPrintUserIdentityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintUserIdentityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintUserIdentityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequest;
-import com.microsoft.graph.requests.extensions.DataPolicyOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DataPolicyOperationRequestBuilder extends BaseRequestBuilder implem
      * @return the IDataPolicyOperationRequest instance
      */
     public IDataPolicyOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DataPolicyOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DataPolicyOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

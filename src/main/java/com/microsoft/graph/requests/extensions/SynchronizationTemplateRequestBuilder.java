@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateRequest;
-import com.microsoft.graph.requests.extensions.SynchronizationTemplateRequest;
 import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationSchemaRequestBuilder;
 
@@ -47,7 +46,7 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
      * @return the ISynchronizationTemplateRequest instance
      */
     public ISynchronizationTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SynchronizationTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SynchronizationTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

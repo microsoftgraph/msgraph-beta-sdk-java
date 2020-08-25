@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserConfigurationRequest;
-import com.microsoft.graph.requests.extensions.UserConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserConfigurationRequestBuilder extends BaseRequestBuilder implemen
      * @return the IUserConfigurationRequest instance
      */
     public IUserConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

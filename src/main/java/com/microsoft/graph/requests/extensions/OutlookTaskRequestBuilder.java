@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequest;
-import com.microsoft.graph.requests.extensions.OutlookTaskRequest;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -59,7 +58,7 @@ public class OutlookTaskRequestBuilder extends BaseRequestBuilder implements IOu
      * @return the IOutlookTaskRequest instance
      */
     public IOutlookTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OutlookTaskRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OutlookTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

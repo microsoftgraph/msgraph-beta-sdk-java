@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequest;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileRequest;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationErrorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorRequestBuilder;
@@ -61,7 +60,7 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
      * @return the IEducationSynchronizationProfileRequest instance
      */
     public IEducationSynchronizationProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationSynchronizationProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationSynchronizationProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationUserRequest;
-import com.microsoft.graph.requests.extensions.EducationUserRequest;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
@@ -67,7 +66,7 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder implements I
      * @return the IEducationUserRequest instance
      */
     public IEducationUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationUserRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

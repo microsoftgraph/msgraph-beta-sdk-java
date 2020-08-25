@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequest;
-import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder implem
      * @return the IMobileAppAssignmentRequest instance
      */
     public IMobileAppAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

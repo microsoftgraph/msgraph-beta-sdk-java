@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRequest;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyRequest;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
@@ -75,7 +74,7 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
      * @return the IDeviceCompliancePolicyRequest instance
      */
     public IDeviceCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

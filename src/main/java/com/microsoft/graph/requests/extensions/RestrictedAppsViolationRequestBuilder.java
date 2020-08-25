@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRestrictedAppsViolationRequest;
-import com.microsoft.graph.requests.extensions.RestrictedAppsViolationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RestrictedAppsViolationRequestBuilder extends BaseRequestBuilder im
      * @return the IRestrictedAppsViolationRequest instance
      */
     public IRestrictedAppsViolationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RestrictedAppsViolationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RestrictedAppsViolationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

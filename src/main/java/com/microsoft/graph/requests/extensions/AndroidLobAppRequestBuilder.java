@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidLobAppRequest;
-import com.microsoft.graph.requests.extensions.AndroidLobAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class AndroidLobAppRequestBuilder extends BaseRequestBuilder implements I
      * @return the IAndroidLobAppRequest instance
      */
     public IAndroidLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidLobAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidLobAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+        return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
+    }
+
+    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+        return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
+    }
 }

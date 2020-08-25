@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementExportJobRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementExportJobRequestBuilder extends BaseRequestBuilder 
      * @return the IDeviceManagementExportJobRequest instance
      */
     public IDeviceManagementExportJobRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementExportJobRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementExportJobRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

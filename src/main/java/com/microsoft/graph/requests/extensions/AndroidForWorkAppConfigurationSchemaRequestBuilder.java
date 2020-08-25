@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkAppConfigurationSchemaRequest;
-import com.microsoft.graph.requests.extensions.AndroidForWorkAppConfigurationSchemaRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AndroidForWorkAppConfigurationSchemaRequestBuilder extends BaseRequ
      * @return the IAndroidForWorkAppConfigurationSchemaRequest instance
      */
     public IAndroidForWorkAppConfigurationSchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidForWorkAppConfigurationSchemaRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidForWorkAppConfigurationSchemaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

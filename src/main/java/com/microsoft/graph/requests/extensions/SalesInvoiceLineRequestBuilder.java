@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequest;
-import com.microsoft.graph.requests.extensions.SalesInvoiceLineRequest;
 import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
@@ -49,7 +48,7 @@ public class SalesInvoiceLineRequestBuilder extends BaseRequestBuilder implement
      * @return the ISalesInvoiceLineRequest instance
      */
     public ISalesInvoiceLineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SalesInvoiceLineRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SalesInvoiceLineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

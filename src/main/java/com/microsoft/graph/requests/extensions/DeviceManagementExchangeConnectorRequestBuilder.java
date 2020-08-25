@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorRequest;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
 import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorSyncRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorSyncRequestBuilder;
@@ -48,7 +47,7 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
      * @return the IDeviceManagementExchangeConnectorRequest instance
      */
     public IDeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementExchangeConnectorRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

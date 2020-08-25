@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmailActivityUserDetailRequest;
-import com.microsoft.graph.requests.extensions.EmailActivityUserDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EmailActivityUserDetailRequestBuilder extends BaseRequestBuilder im
      * @return the IEmailActivityUserDetailRequest instance
      */
     public IEmailActivityUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmailActivityUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmailActivityUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

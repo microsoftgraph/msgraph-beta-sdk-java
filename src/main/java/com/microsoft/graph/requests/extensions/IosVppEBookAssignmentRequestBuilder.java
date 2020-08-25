@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVppEBookAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IosVppEBookAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder impl
      * @return the IIosVppEBookAssignmentRequest instance
      */
     public IIosVppEBookAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosVppEBookAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosVppEBookAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

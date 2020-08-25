@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISharePointSiteUsageFileCountsRequest;
-import com.microsoft.graph.requests.extensions.SharePointSiteUsageFileCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SharePointSiteUsageFileCountsRequestBuilder extends BaseRequestBuil
      * @return the ISharePointSiteUsageFileCountsRequest instance
      */
     public ISharePointSiteUsageFileCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SharePointSiteUsageFileCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SharePointSiteUsageFileCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

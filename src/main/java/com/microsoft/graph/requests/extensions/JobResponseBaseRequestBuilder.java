@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseRequest;
-import com.microsoft.graph.requests.extensions.JobResponseBaseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class JobResponseBaseRequestBuilder extends BaseRequestBuilder implements
      * @return the IJobResponseBaseRequest instance
      */
     public IJobResponseBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new JobResponseBaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.JobResponseBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

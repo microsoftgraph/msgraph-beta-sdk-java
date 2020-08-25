@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequest;
-import com.microsoft.graph.requests.extensions.ManagedMobileAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedMobileAppRequestBuilder extends BaseRequestBuilder implement
      * @return the IManagedMobileAppRequest instance
      */
     public IManagedMobileAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedMobileAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedMobileAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

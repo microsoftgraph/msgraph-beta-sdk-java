@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerRequest;
-import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerRequest;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerBeginOnboardingRequestBuilder;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerBeginOnboardingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerDisconnectRequestBuilder;
@@ -49,7 +48,7 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
      * @return the IRemoteAssistancePartnerRequest instance
      */
     public IRemoteAssistancePartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RemoteAssistancePartnerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RemoteAssistancePartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,6 +4,18 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosEducationDeviceConfigurationRequest;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +42,39 @@ public interface IIosEducationDeviceConfigurationRequestBuilder extends IRequest
      */
     IIosEducationDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
+
+    IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
+
+    IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
+
+    IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
+    /**
+     * Gets the request builder for DeviceConfigurationDeviceOverview
+     *
+     * @return the IDeviceConfigurationDeviceOverviewRequestBuilder instance
+     */
+    IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
+
+    /**
+     * Gets the request builder for DeviceConfigurationUserOverview
+     *
+     * @return the IDeviceConfigurationUserOverviewRequestBuilder instance
+     */
+    IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
+
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
 
 }

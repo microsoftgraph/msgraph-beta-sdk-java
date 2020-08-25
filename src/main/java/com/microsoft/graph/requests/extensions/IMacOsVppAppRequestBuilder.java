@@ -6,6 +6,17 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppRequest;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,5 +47,32 @@ public interface IMacOsVppAppRequestBuilder extends IRequestBuilder {
     IMacOsVppAppAssignedLicenseCollectionRequestBuilder assignedLicenses();
 
     IMacOsVppAppAssignedLicenseRequestBuilder assignedLicenses(final String id);
+
+    IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
+
+    IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
+
+    IMobileAppAssignmentCollectionRequestBuilder assignments();
+
+    IMobileAppAssignmentRequestBuilder assignments(final String id);
+
+    /**
+     * Gets the request builder for MobileAppInstallSummary
+     *
+     * @return the IMobileAppInstallSummaryRequestBuilder instance
+     */
+    IMobileAppInstallSummaryRequestBuilder installSummary();
+
+    IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses();
+
+    IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id);
+
+    IUserAppInstallStatusCollectionRequestBuilder userStatuses();
+
+    IUserAppInstallStatusRequestBuilder userStatuses(final String id);
+
+    IMobileAppRelationshipCollectionRequestBuilder relationships();
+
+    IMobileAppRelationshipRequestBuilder relationships(final String id);
 
 }

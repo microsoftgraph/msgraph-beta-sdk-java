@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWin32LobAppRequest;
-import com.microsoft.graph.requests.extensions.Win32LobAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class Win32LobAppRequestBuilder extends BaseRequestBuilder implements IWi
      * @return the IWin32LobAppRequest instance
      */
     public IWin32LobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Win32LobAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Win32LobAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+        return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
+    }
+
+    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+        return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
+    }
 }

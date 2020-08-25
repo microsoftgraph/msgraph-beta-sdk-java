@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequest;
-import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
@@ -54,7 +53,7 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @return the IDeviceEnrollmentConfigurationRequest instance
      */
     public IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceEnrollmentConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

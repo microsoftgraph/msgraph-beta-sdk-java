@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppProtectionRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppProtectionRequest;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.requests.extensions.IManagedAppProtectionTargetAppsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppProtectionTargetAppsRequestBuilder;
@@ -48,7 +47,7 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
      * @return the IManagedAppProtectionRequest instance
      */
     public IManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

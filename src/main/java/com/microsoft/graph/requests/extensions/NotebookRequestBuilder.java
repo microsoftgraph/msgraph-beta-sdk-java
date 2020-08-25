@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INotebookRequest;
-import com.microsoft.graph.requests.extensions.NotebookRequest;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
@@ -55,7 +54,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder implements INoteb
      * @return the INotebookRequest instance
      */
     public INotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new NotebookRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.NotebookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

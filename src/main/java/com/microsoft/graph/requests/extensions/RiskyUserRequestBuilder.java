@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRiskyUserRequest;
-import com.microsoft.graph.requests.extensions.RiskyUserRequest;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequestBuilder;
@@ -49,7 +48,7 @@ public class RiskyUserRequestBuilder extends BaseRequestBuilder implements IRisk
      * @return the IRiskyUserRequest instance
      */
     public IRiskyUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RiskyUserRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RiskyUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

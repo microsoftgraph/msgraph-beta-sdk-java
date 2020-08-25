@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppConsentRequestRequest;
-import com.microsoft.graph.requests.extensions.AppConsentRequestRequest;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestRequestBuilder;
@@ -49,7 +48,7 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implemen
      * @return the IAppConsentRequestRequest instance
      */
     public IAppConsentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppConsentRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppConsentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

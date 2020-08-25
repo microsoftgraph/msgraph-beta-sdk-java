@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequest;
-import com.microsoft.graph.requests.extensions.WorkbookFunctionsRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAbsRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAbsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAccrIntRequestBuilder;
@@ -777,7 +776,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookFunctionsRequest instance
      */
     public IWorkbookFunctionsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookFunctionsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookFunctionsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

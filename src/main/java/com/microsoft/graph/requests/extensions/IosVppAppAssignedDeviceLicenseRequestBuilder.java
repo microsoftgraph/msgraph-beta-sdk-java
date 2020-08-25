@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVppAppAssignedDeviceLicenseRequest;
-import com.microsoft.graph.requests.extensions.IosVppAppAssignedDeviceLicenseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosVppAppAssignedDeviceLicenseRequestBuilder extends BaseRequestBui
      * @return the IIosVppAppAssignedDeviceLicenseRequest instance
      */
     public IIosVppAppAssignedDeviceLicenseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosVppAppAssignedDeviceLicenseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosVppAppAssignedDeviceLicenseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

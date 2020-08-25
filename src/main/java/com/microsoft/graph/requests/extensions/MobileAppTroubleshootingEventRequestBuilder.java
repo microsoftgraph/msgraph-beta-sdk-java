@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppTroubleshootingEventRequest;
-import com.microsoft.graph.requests.extensions.MobileAppTroubleshootingEventRequest;
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestRequestBuilder;
@@ -49,7 +48,7 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
      * @return the IMobileAppTroubleshootingEventRequest instance
      */
     public IMobileAppTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

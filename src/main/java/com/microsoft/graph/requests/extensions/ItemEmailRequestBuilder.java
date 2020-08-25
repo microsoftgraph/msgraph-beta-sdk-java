@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemEmailRequest;
-import com.microsoft.graph.requests.extensions.ItemEmailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemEmailRequestBuilder extends BaseRequestBuilder implements IItem
      * @return the IItemEmailRequest instance
      */
     public IItemEmailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemEmailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemEmailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

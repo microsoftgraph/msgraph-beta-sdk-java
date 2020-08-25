@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICalendarPermissionRequest;
-import com.microsoft.graph.requests.extensions.CalendarPermissionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CalendarPermissionRequestBuilder extends BaseRequestBuilder impleme
      * @return the ICalendarPermissionRequest instance
      */
     public ICalendarPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CalendarPermissionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CalendarPermissionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

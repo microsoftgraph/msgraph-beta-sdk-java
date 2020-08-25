@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequest;
-import com.microsoft.graph.requests.extensions.WorkbookApplicationRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookApplicationCalculateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookApplicationCalculateRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder implem
      * @return the IWorkbookApplicationRequest instance
      */
     public IWorkbookApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookApplicationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

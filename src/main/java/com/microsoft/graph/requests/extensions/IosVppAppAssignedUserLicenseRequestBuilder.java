@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosVppAppAssignedUserLicenseRequest;
-import com.microsoft.graph.requests.extensions.IosVppAppAssignedUserLicenseRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosVppAppAssignedUserLicenseRequestBuilder extends BaseRequestBuild
      * @return the IIosVppAppAssignedUserLicenseRequest instance
      */
     public IIosVppAppAssignedUserLicenseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosVppAppAssignedUserLicenseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosVppAppAssignedUserLicenseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

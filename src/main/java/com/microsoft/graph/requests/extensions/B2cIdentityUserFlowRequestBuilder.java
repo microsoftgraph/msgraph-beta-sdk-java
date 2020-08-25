@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequest;
-import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowRequest;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class B2cIdentityUserFlowRequestBuilder extends BaseRequestBuilder implem
      * @return the IB2cIdentityUserFlowRequest instance
      */
     public IB2cIdentityUserFlowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new B2cIdentityUserFlowRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.B2cIdentityUserFlowRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IYammerActivitySummaryRequest;
-import com.microsoft.graph.requests.extensions.YammerActivitySummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class YammerActivitySummaryRequestBuilder extends BaseRequestBuilder impl
      * @return the IYammerActivitySummaryRequest instance
      */
     public IYammerActivitySummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new YammerActivitySummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.YammerActivitySummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

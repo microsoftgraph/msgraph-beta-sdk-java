@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementScriptGroupAssignmentRequestBuilder extends BaseReq
      * @return the IDeviceManagementScriptGroupAssignmentRequest instance
      */
     public IDeviceManagementScriptGroupAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementScriptGroupAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

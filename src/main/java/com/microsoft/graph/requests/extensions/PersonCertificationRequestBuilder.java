@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPersonCertificationRequest;
-import com.microsoft.graph.requests.extensions.PersonCertificationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PersonCertificationRequestBuilder extends BaseRequestBuilder implem
      * @return the IPersonCertificationRequest instance
      */
     public IPersonCertificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PersonCertificationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PersonCertificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

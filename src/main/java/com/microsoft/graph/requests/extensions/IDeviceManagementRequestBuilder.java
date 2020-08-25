@@ -107,6 +107,10 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceSta
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComanagementEligibleDeviceCollectionRequestBuilder;
@@ -487,6 +491,14 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder userExperienceAnalyticsScoreHistory();
 
     IUserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory(final String id);
+
+    IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsMetricHistory();
+
+    IUserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory(final String id);
+
+    IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance();
+
+    IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance(final String id);
 
     IManagedDeviceCollectionRequestBuilder comanagedDevices();
 

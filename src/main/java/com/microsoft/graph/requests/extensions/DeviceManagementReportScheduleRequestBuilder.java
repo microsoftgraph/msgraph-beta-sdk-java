@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementReportScheduleRequestBuilder extends BaseRequestBui
      * @return the IDeviceManagementReportScheduleRequest instance
      */
     public IDeviceManagementReportScheduleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementReportScheduleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

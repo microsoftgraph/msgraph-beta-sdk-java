@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmailAppUsageAppsUserCountsRequest;
-import com.microsoft.graph.requests.extensions.EmailAppUsageAppsUserCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EmailAppUsageAppsUserCountsRequestBuilder extends BaseRequestBuilde
      * @return the IEmailAppUsageAppsUserCountsRequest instance
      */
     public IEmailAppUsageAppsUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmailAppUsageAppsUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmailAppUsageAppsUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

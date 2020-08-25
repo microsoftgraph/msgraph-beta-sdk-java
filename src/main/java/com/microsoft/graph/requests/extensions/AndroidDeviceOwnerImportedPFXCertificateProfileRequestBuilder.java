@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerImportedPFXCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerImportedPFXCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
@@ -49,7 +48,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequestBuilder exten
      * @return the IAndroidDeviceOwnerImportedPFXCertificateProfileRequest instance
      */
     public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidDeviceOwnerImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidDeviceOwnerImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,14 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequestBuilder exten
 
     public IManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(final String id) {
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AndroidDeviceOwnerTrustedRootCertificate
+     *
+     * @return the IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder instance
+     */
+    public IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
+        return new AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
 }

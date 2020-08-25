@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IActivityStatisticsRequest;
-import com.microsoft.graph.requests.extensions.ActivityStatisticsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder impleme
      * @return the IActivityStatisticsRequest instance
      */
     public IActivityStatisticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

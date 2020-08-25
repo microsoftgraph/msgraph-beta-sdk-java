@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRowRequest;
-import com.microsoft.graph.requests.extensions.WorkbookTableRowRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRowRangeRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowRangeRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implement
      * @return the IWorkbookTableRowRequest instance
      */
     public IWorkbookTableRowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookTableRowRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookTableRowRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

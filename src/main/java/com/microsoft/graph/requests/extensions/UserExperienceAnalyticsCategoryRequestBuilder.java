@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryRequest;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
@@ -49,7 +48,7 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
      * @return the IUserExperienceAnalyticsCategoryRequest instance
      */
     public IUserExperienceAnalyticsCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IYammerGroupsActivityCountsRequest;
-import com.microsoft.graph.requests.extensions.YammerGroupsActivityCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder
      * @return the IYammerGroupsActivityCountsRequest instance
      */
     public IYammerGroupsActivityCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new YammerGroupsActivityCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.YammerGroupsActivityCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

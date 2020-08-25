@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequest;
 import com.microsoft.graph.requests.extensions.IChatWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,5 +40,19 @@ public interface IUserScopeTeamsAppInstallationRequestBuilder extends IRequestBu
      * @return the IChatWithReferenceRequestBuilder instance
      */
     IChatWithReferenceRequestBuilder chat();
+
+    /**
+     * Gets the request builder for TeamsApp
+     *
+     * @return the ITeamsAppWithReferenceRequestBuilder instance
+     */
+    ITeamsAppWithReferenceRequestBuilder teamsApp();
+
+    /**
+     * Gets the request builder for TeamsAppDefinition
+     *
+     * @return the ITeamsAppDefinitionWithReferenceRequestBuilder instance
+     */
+    ITeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition();
 
 }

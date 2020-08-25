@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequest;
-import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -35,18 +35,18 @@ public interface IIdentityGovernanceRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for AccessReviewSet
-     *
-     * @return the IAccessReviewSetRequestBuilder instance
-     */
-    IAccessReviewSetRequestBuilder accessReviews();
-
-    /**
      * Gets the request builder for EntitlementManagement
      *
      * @return the IEntitlementManagementRequestBuilder instance
      */
     IEntitlementManagementRequestBuilder entitlementManagement();
+
+    /**
+     * Gets the request builder for AccessReviewSet
+     *
+     * @return the IAccessReviewSetRequestBuilder instance
+     */
+    IAccessReviewSetRequestBuilder accessReviews();
 
     /**
      * Gets the request builder for TermsOfUseContainer

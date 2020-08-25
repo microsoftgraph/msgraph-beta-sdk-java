@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequest;
-import com.microsoft.graph.requests.extensions.IdentityContainerRequest;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
@@ -59,7 +58,7 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * @return the IIdentityContainerRequest instance
      */
     public IIdentityContainerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IdentityContainerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IdentityContainerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOSImportedPFXCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.MacOSImportedPFXCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
@@ -49,7 +48,7 @@ public class MacOSImportedPFXCertificateProfileRequestBuilder extends BaseReques
      * @return the IMacOSImportedPFXCertificateProfileRequest instance
      */
     public IMacOSImportedPFXCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOSImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOSImportedPFXCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

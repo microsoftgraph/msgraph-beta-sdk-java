@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequest;
-import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequest;
 import com.microsoft.graph.requests.extensions.IUserActivityWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder implem
      * @return the IActivityHistoryItemRequest instance
      */
     public IActivityHistoryItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ActivityHistoryItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ActivityHistoryItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

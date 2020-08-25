@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedMobileLobAppRequest;
-import com.microsoft.graph.requests.extensions.ManagedMobileLobAppRequest;
 import com.microsoft.graph.requests.extensions.IMobileAppContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppContentRequestBuilder;
@@ -49,7 +48,7 @@ public class ManagedMobileLobAppRequestBuilder extends BaseRequestBuilder implem
      * @return the IManagedMobileLobAppRequest instance
      */
     public IManagedMobileLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedMobileLobAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedMobileLobAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

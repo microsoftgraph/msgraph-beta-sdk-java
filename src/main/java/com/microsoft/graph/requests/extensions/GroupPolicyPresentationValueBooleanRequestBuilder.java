@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueBooleanRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueBooleanRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,26 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
      * @return the IGroupPolicyPresentationValueBooleanRequest instance
      */
     public IGroupPolicyPresentationValueBooleanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyPresentationValueBooleanRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueBooleanRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for GroupPolicyDefinitionValue
+     *
+     * @return the IGroupPolicyDefinitionValueWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
+        return new GroupPolicyDefinitionValueWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValue"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for GroupPolicyPresentation
+     *
+     * @return the IGroupPolicyPresentationWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyPresentationWithReferenceRequestBuilder presentation() {
+        return new GroupPolicyPresentationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presentation"), getClient(), null);
+    }
 }

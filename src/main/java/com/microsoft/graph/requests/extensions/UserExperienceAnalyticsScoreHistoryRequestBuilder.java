@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
      * @return the IUserExperienceAnalyticsScoreHistoryRequest instance
      */
     public IUserExperienceAnalyticsScoreHistoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsScoreHistoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

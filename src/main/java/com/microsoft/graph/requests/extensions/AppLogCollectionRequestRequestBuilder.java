@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestRequest;
-import com.microsoft.graph.requests.extensions.AppLogCollectionRequestRequest;
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestCreateDownloadUrlRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCreateDownloadUrlRequestBuilder;
 
@@ -47,7 +46,7 @@ public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder im
      * @return the IAppLogCollectionRequestRequest instance
      */
     public IAppLogCollectionRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppLogCollectionRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppLogCollectionRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppScopeRequest;
-import com.microsoft.graph.requests.extensions.AppScopeRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder implements IAppSc
      * @return the IAppScopeRequest instance
      */
     public IAppScopeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppScopeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppScopeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

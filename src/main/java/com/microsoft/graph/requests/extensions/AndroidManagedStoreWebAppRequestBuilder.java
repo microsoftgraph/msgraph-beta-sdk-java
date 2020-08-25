@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidManagedStoreWebAppRequest;
-import com.microsoft.graph.requests.extensions.AndroidManagedStoreWebAppRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AndroidManagedStoreWebAppRequestBuilder extends BaseRequestBuilder 
      * @return the IAndroidManagedStoreWebAppRequest instance
      */
     public IAndroidManagedStoreWebAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidManagedStoreWebAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidManagedStoreWebAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

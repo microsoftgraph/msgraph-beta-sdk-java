@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemPatentRequest;
-import com.microsoft.graph.requests.extensions.ItemPatentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemPatentRequestBuilder extends BaseRequestBuilder implements IIte
      * @return the IItemPatentRequest instance
      */
     public IItemPatentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemPatentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemPatentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

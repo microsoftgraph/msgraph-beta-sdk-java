@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISitePageRequest;
-import com.microsoft.graph.requests.extensions.SitePageRequest;
 import com.microsoft.graph.requests.extensions.ISitePagePublishRequestBuilder;
 import com.microsoft.graph.requests.extensions.SitePagePublishRequestBuilder;
 
@@ -47,10 +46,28 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
      * @return the ISitePageRequest instance
      */
     public ISitePageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SitePageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SitePageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    }
 
     public ISitePagePublishRequestBuilder publish() {
         return new SitePagePublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.publish"), getClient(), null);

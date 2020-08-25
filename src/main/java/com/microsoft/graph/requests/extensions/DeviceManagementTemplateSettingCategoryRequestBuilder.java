@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
      * @return the IDeviceManagementTemplateSettingCategoryRequest instance
      */
     public IDeviceManagementTemplateSettingCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementTemplateSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,12 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
 
     public IDeviceManagementSettingInstanceRequestBuilder recommendedSettings(final String id) {
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("recommendedSettings") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
+        return new DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
+    }
+
+    public IDeviceManagementSettingDefinitionRequestBuilder settingDefinitions(final String id) {
+        return new DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
 }

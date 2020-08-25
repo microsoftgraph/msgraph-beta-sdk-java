@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingCategoryRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingCategoryRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceManagementSettingCategoryRequestBuilder extends BaseRequestBu
      * @return the IDeviceManagementSettingCategoryRequest instance
      */
     public IDeviceManagementSettingCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

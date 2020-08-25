@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentReplyRequest;
-import com.microsoft.graph.requests.extensions.WorkbookCommentReplyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder imple
      * @return the IWorkbookCommentReplyRequest instance
      */
     public IWorkbookCommentReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookCommentReplyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookCommentReplyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

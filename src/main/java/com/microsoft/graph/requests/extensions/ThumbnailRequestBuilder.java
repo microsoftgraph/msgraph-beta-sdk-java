@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IThumbnailRequest;
-import com.microsoft.graph.requests.extensions.ThumbnailRequest;
 import com.microsoft.graph.requests.extensions.IThumbnailContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThumbnailContentStreamRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThum
      * @return the IThumbnailRequest instance
      */
     public IThumbnailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ThumbnailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ThumbnailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

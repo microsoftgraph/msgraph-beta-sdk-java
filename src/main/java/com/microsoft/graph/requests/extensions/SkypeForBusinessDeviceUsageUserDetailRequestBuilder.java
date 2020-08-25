@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISkypeForBusinessDeviceUsageUserDetailRequest;
-import com.microsoft.graph.requests.extensions.SkypeForBusinessDeviceUsageUserDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SkypeForBusinessDeviceUsageUserDetailRequestBuilder extends BaseReq
      * @return the ISkypeForBusinessDeviceUsageUserDetailRequest instance
      */
     public ISkypeForBusinessDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SkypeForBusinessDeviceUsageUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SkypeForBusinessDeviceUsageUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

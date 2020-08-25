@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequest;
-import com.microsoft.graph.requests.extensions.ManagedDeviceRequest;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
@@ -141,7 +140,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
      * @return the IManagedDeviceRequest instance
      */
     public IManagedDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedDeviceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedDeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

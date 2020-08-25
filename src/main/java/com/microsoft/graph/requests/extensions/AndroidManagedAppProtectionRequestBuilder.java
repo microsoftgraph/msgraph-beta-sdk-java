@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionRequest;
-import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionRequest;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
@@ -51,7 +50,7 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @return the IAndroidManagedAppProtectionRequest instance
      */
     public IAndroidManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -70,5 +69,12 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      */
     public IManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary() {
         return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
+    }
+    public ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
+        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

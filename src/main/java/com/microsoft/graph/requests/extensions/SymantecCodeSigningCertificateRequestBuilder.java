@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRequest;
-import com.microsoft.graph.requests.extensions.SymantecCodeSigningCertificateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
      * @return the ISymantecCodeSigningCertificateRequest instance
      */
     public ISymantecCodeSigningCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SymantecCodeSigningCertificateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SymantecCodeSigningCertificateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

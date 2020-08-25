@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemContentStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequestBuilder;
@@ -117,6 +119,20 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemVersionCollectionRequestBuilder versions();
 
     IDriveItemVersionRequestBuilder versions(final String id);
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     IDriveItemContentStreamRequestBuilder content();
     IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment);

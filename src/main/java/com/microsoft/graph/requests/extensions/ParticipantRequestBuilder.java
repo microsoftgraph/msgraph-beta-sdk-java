@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IParticipantRequest;
-import com.microsoft.graph.requests.extensions.ParticipantRequest;
 import com.microsoft.graph.requests.extensions.IParticipantMuteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ParticipantMuteRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
      * @return the IParticipantRequest instance
      */
     public IParticipantRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ParticipantRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ParticipantRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

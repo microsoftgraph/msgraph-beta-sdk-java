@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICallActivityStatisticsRequest;
-import com.microsoft.graph.requests.extensions.CallActivityStatisticsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CallActivityStatisticsRequestBuilder extends BaseRequestBuilder imp
      * @return the ICallActivityStatisticsRequest instance
      */
     public ICallActivityStatisticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CallActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CallActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

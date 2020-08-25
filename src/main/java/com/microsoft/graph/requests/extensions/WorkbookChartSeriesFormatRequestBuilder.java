@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesFormatRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartSeriesFormatRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatRequestBuilder;
@@ -49,7 +48,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      * @return the IWorkbookChartSeriesFormatRequest instance
      */
     public IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartSeriesFormatRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartSeriesFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

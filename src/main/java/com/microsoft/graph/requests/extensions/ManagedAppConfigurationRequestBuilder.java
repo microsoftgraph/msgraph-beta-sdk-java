@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedAppConfigurationRequest;
-import com.microsoft.graph.requests.extensions.ManagedAppConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder im
      * @return the IManagedAppConfigurationRequest instance
      */
     public IManagedAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

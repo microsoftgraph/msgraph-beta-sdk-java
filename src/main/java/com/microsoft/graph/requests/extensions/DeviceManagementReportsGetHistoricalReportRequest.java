@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.DeviceManagementReportsGetHistorica
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetHistoricalReportRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetHistoricalReportRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;

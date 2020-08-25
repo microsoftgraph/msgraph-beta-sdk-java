@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICalendarSharingMessageRequest;
-import com.microsoft.graph.requests.extensions.CalendarSharingMessageRequest;
 import com.microsoft.graph.requests.extensions.ICalendarSharingMessageAcceptRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarSharingMessageAcceptRequestBuilder;
 
@@ -47,10 +46,45 @@ public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder imp
      * @return the ICalendarSharingMessageRequest instance
      */
     public ICalendarSharingMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CalendarSharingMessageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CalendarSharingMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    }
+
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    }
+
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+    public IAttachmentCollectionRequestBuilder attachments() {
+        return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    }
+
+    public IAttachmentRequestBuilder attachments(final String id) {
+        return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    }
+    public IExtensionCollectionRequestBuilder extensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder extensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
+    public IMentionCollectionRequestBuilder mentions() {
+        return new MentionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mentions"), getClient(), null);
+    }
+
+    public IMentionRequestBuilder mentions(final String id) {
+        return new MentionRequestBuilder(getRequestUrlWithAdditionalSegment("mentions") + "/" + id, getClient(), null);
+    }
 
     public ICalendarSharingMessageAcceptRequestBuilder accept() {
         return new CalendarSharingMessageAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null);

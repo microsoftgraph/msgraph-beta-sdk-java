@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequest;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OAuth2PermissionGrantRequestBuilder extends BaseRequestBuilder impl
      * @return the IOAuth2PermissionGrantRequest instance
      */
     public IOAuth2PermissionGrantRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OAuth2PermissionGrantRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

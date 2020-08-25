@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IReviewSetRequest;
-import com.microsoft.graph.requests.extensions.ReviewSetRequest;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryRequestBuilder;
@@ -49,7 +48,7 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder implements IRevi
      * @return the IReviewSetRequest instance
      */
     public IReviewSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ReviewSetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ReviewSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRoleManagementRequest;
-import com.microsoft.graph.requests.extensions.RoleManagementRequest;
 import com.microsoft.graph.requests.extensions.IRbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRbacApplicationMultipleRequestBuilder;
@@ -49,7 +48,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
      * @return the IRoleManagementRequest instance
      */
     public IRoleManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RoleManagementRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RoleManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

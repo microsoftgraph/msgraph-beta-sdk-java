@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAadUserConversationMemberRequest;
-import com.microsoft.graph.requests.extensions.AadUserConversationMemberRequest;
 import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder 
      * @return the IAadUserConversationMemberRequest instance
      */
     public IAadUserConversationMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AadUserConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AadUserConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

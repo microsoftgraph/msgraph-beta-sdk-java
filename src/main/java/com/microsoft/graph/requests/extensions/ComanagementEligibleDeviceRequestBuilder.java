@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IComanagementEligibleDeviceRequest;
-import com.microsoft.graph.requests.extensions.ComanagementEligibleDeviceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ComanagementEligibleDeviceRequestBuilder extends BaseRequestBuilder
      * @return the IComanagementEligibleDeviceRequest instance
      */
     public IComanagementEligibleDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ComanagementEligibleDeviceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ComanagementEligibleDeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

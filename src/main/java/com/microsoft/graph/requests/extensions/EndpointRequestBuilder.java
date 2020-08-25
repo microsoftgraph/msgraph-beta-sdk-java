@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEndpointRequest;
-import com.microsoft.graph.requests.extensions.EndpointRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpo
      * @return the IEndpointRequest instance
      */
     public IEndpointRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EndpointRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EndpointRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

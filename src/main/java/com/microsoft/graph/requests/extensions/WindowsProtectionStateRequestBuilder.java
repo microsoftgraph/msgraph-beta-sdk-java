@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsProtectionStateRequest;
-import com.microsoft.graph.requests.extensions.WindowsProtectionStateRequest;
 import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateRequestBuilder;
@@ -49,7 +48,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder imp
      * @return the IWindowsProtectionStateRequest instance
      */
     public IWindowsProtectionStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsProtectionStateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsProtectionStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContactFolderRequest;
-import com.microsoft.graph.requests.extensions.ContactFolderRequest;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -61,7 +60,7 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder implements I
      * @return the IContactFolderRequest instance
      */
     public IContactFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ContactFolderRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ContactFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

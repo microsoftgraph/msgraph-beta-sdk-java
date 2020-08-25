@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolRequest;
-import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolRequest;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentRequestBuilder;
@@ -56,7 +55,7 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
      * @return the IEmbeddedSIMActivationCodePoolRequest instance
      */
     public IEmbeddedSIMActivationCodePoolRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EmbeddedSIMActivationCodePoolRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

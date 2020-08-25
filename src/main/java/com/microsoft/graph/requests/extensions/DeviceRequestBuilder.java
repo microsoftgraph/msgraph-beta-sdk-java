@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceRequest;
-import com.microsoft.graph.requests.extensions.DeviceRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -69,7 +68,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
      * @return the IDeviceRequest instance
      */
     public IDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

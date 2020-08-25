@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementRequest;
 import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
@@ -211,6 +210,14 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHist
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
@@ -417,7 +424,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
      * @return the IDeviceManagementRequest instance
      */
     public IDeviceManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -852,6 +859,20 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
 
     public IUserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory(final String id) {
         return new UserExperienceAnalyticsScoreHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsScoreHistory") + "/" + id, getClient(), null);
+    }
+    public IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsMetricHistory() {
+        return new UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory(final String id) {
+        return new UserExperienceAnalyticsMetricHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory") + "/" + id, getClient(), null);
+    }
+    public IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformance"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance(final String id) {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformance") + "/" + id, getClient(), null);
     }
     public IManagedDeviceCollectionRequestBuilder comanagedDevices() {
         return new ManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("comanagedDevices"), getClient(), null);

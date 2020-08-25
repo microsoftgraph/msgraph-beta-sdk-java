@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISchemaRequest;
-import com.microsoft.graph.requests.extensions.SchemaRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder implements ISchemaR
      * @return the ISchemaRequest instance
      */
     public ISchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SchemaRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SchemaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

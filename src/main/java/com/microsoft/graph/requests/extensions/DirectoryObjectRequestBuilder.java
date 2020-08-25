@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequest;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
@@ -55,7 +54,7 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder implements
      * @return the IDirectoryObjectRequest instance
      */
     public IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryObjectRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryObjectRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

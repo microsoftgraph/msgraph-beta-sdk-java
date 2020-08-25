@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAppCatalogsRequest;
-import com.microsoft.graph.requests.extensions.AppCatalogsRequest;
 import com.microsoft.graph.requests.extensions.ITeamsAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppRequestBuilder;
@@ -49,7 +48,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
      * @return the IAppCatalogsRequest instance
      */
     public IAppCatalogsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AppCatalogsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AppCatalogsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

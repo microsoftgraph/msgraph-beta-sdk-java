@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequest;
-import com.microsoft.graph.requests.extensions.AuditLogRootRequest;
 import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
@@ -65,7 +64,7 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
      * @return the IAuditLogRootRequest instance
      */
     public IAuditLogRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AuditLogRootRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AuditLogRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

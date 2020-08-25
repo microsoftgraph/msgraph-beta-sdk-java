@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequest;
-import com.microsoft.graph.requests.extensions.EntitlementManagementSettingsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EntitlementManagementSettingsRequestBuilder extends BaseRequestBuil
      * @return the IEntitlementManagementSettingsRequest instance
      */
     public IEntitlementManagementSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EntitlementManagementSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EntitlementManagementSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

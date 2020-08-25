@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosikEv2VpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IosikEv2VpnConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,26 @@ public class IosikEv2VpnConfigurationRequestBuilder extends BaseRequestBuilder i
      * @return the IIosikEv2VpnConfigurationRequest instance
      */
     public IIosikEv2VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosikEv2VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosikEv2VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for IosCertificateProfileBase
+     *
+     * @return the IIosCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    public IIosCertificateProfileBaseWithReferenceRequestBuilder identityCertificate() {
+        return new IosCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DeviceManagementDerivedCredentialSettings
+     *
+     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
+     */
+    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings() {
+        return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
+    }
 }

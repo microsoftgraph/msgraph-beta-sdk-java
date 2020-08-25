@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementIntentAssignmentRequestBuilder extends BaseRequestB
      * @return the IDeviceManagementIntentAssignmentRequest instance
      */
     public IDeviceManagementIntentAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementIntentAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequest;
-import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder impl
      * @return the IDirectoryRoleTemplateRequest instance
      */
     public IDirectoryRoleTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DirectoryRoleTemplateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DirectoryRoleTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

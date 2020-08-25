@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequest;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
      * @return the ISettingStateDeviceSummaryRequest instance
      */
     public ISettingStateDeviceSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SettingStateDeviceSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

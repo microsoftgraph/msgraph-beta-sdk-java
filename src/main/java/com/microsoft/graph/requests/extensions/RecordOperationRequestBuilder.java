@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRecordOperationRequest;
-import com.microsoft.graph.requests.extensions.RecordOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RecordOperationRequestBuilder extends BaseRequestBuilder implements
      * @return the IRecordOperationRequest instance
      */
     public IRecordOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RecordOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RecordOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

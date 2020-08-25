@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOSPkcsCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.MacOSPkcsCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
@@ -49,7 +48,7 @@ public class MacOSPkcsCertificateProfileRequestBuilder extends BaseRequestBuilde
      * @return the IMacOSPkcsCertificateProfileRequest instance
      */
     public IMacOSPkcsCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOSPkcsCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOSPkcsCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

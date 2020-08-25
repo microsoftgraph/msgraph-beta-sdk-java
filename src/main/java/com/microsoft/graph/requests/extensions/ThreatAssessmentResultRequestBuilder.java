@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentResultRequest;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
      * @return the IThreatAssessmentResultRequest instance
      */
     public IThreatAssessmentResultRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ThreatAssessmentResultRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

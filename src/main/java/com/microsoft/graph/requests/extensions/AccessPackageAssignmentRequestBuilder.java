@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequest;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
@@ -59,7 +58,7 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder im
      * @return the IAccessPackageAssignmentRequest instance
      */
     public IAccessPackageAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessPackageAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

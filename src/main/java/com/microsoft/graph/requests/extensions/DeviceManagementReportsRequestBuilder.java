@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationRequestBuilder;
@@ -19,6 +18,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRe
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetActiveMalwareReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetActiveMalwareReportRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetMalwareSummaryReportRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetMalwareSummaryReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetPolicyNonComplianceReportRequestBuilder;
@@ -79,7 +82,7 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
      * @return the IDeviceManagementReportsRequest instance
      */
     public IDeviceManagementReportsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementReportsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementReportsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -107,6 +110,14 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
 
     public IDeviceManagementReportsGetActiveMalwareReportRequestBuilder getActiveMalwareReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
         return new DeviceManagementReportsGetActiveMalwareReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActiveMalwareReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder getUnhealthyDefenderAgentsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUnhealthyDefenderAgentsReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetMalwareSummaryReportRequestBuilder getMalwareSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetMalwareSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMalwareSummaryReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
 
     public IDeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {

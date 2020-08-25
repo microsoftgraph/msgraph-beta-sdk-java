@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICompanyRequest;
-import com.microsoft.graph.requests.extensions.CompanyRequest;
 import com.microsoft.graph.requests.extensions.IItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
@@ -185,7 +184,7 @@ public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompan
      * @return the ICompanyRequest instance
      */
     public ICompanyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CompanyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CompanyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

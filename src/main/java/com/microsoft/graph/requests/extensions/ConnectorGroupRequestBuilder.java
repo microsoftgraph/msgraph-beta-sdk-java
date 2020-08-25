@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IConnectorGroupRequest;
-import com.microsoft.graph.requests.extensions.ConnectorGroupRequest;
 import com.microsoft.graph.requests.extensions.IConnectorCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorWithReferenceRequestBuilder;
@@ -53,7 +52,7 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
      * @return the IConnectorGroupRequest instance
      */
     public IConnectorGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ConnectorGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ConnectorGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

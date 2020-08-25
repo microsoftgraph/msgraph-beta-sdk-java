@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkNineWorkEasConfigurationRequest;
-import com.microsoft.graph.requests.extensions.AndroidForWorkNineWorkEasConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class AndroidForWorkNineWorkEasConfigurationRequestBuilder extends BaseRe
      * @return the IAndroidForWorkNineWorkEasConfigurationRequest instance
      */
     public IAndroidForWorkNineWorkEasConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidForWorkNineWorkEasConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidForWorkNineWorkEasConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for AndroidForWorkCertificateProfileBase
+     *
+     * @return the IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    public IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder identityCertificate() {
+        return new AndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
+    }
 }

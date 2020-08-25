@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestRequest;
-import com.microsoft.graph.requests.extensions.UserConsentRequestRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder impleme
      * @return the IUserConsentRequestRequest instance
      */
     public IUserConsentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserConsentRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserConsentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for Approval
+     *
+     * @return the IApprovalRequestBuilder instance
+     */
+    public IApprovalRequestBuilder approval() {
+        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approval"), getClient(), null);
+    }
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentRequest;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceCompliancePolicyAssignmentRequestBuilder extends BaseRequestB
      * @return the IDeviceCompliancePolicyAssignmentRequest instance
      */
     public IDeviceCompliancePolicyAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceCompliancePolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

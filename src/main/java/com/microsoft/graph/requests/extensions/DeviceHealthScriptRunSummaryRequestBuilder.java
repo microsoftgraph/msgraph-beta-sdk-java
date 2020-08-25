@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRunSummaryRequest;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptRunSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuild
      * @return the IDeviceHealthScriptRunSummaryRequest instance
      */
     public IDeviceHealthScriptRunSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceHealthScriptRunSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceHealthScriptRunSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequest;
-import com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequest;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
@@ -49,7 +48,7 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
      * @return the IGovernanceRoleSettingRequest instance
      */
     public IGovernanceRoleSettingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GovernanceRoleSettingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

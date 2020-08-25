@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosDeviceFeaturesConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IosDeviceFeaturesConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class IosDeviceFeaturesConfigurationRequestBuilder extends BaseRequestBui
      * @return the IIosDeviceFeaturesConfigurationRequest instance
      */
     public IIosDeviceFeaturesConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosDeviceFeaturesConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosDeviceFeaturesConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

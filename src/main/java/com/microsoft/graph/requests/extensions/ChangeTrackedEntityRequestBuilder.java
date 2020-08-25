@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChangeTrackedEntityRequest;
-import com.microsoft.graph.requests.extensions.ChangeTrackedEntityRequest;
 import com.microsoft.graph.requests.extensions.IChangeTrackedEntityStageForDeletionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChangeTrackedEntityStageForDeletionRequestBuilder;
 
@@ -47,7 +46,7 @@ public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implem
      * @return the IChangeTrackedEntityRequest instance
      */
     public IChangeTrackedEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ChangeTrackedEntityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ChangeTrackedEntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

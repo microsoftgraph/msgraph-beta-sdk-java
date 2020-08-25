@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGeneralLedgerEntryRequest;
-import com.microsoft.graph.requests.extensions.GeneralLedgerEntryRequest;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 
@@ -47,7 +46,7 @@ public class GeneralLedgerEntryRequestBuilder extends BaseRequestBuilder impleme
      * @return the IGeneralLedgerEntryRequest instance
      */
     public IGeneralLedgerEntryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GeneralLedgerEntryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GeneralLedgerEntryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

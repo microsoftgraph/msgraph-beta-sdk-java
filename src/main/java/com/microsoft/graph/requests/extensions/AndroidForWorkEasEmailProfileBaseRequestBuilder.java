@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkEasEmailProfileBaseRequest;
-import com.microsoft.graph.requests.extensions.AndroidForWorkEasEmailProfileBaseRequest;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class AndroidForWorkEasEmailProfileBaseRequestBuilder extends BaseRequest
      * @return the IAndroidForWorkEasEmailProfileBaseRequest instance
      */
     public IAndroidForWorkEasEmailProfileBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidForWorkEasEmailProfileBaseRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidForWorkEasEmailProfileBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -59,5 +58,58 @@ public class AndroidForWorkEasEmailProfileBaseRequestBuilder extends BaseRequest
      */
     public IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder identityCertificate() {
         return new AndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
+    }
+    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
+        return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+        return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    }
+
+    public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+        return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DeviceConfigurationDeviceOverview
+     *
+     * @return the IDeviceConfigurationDeviceOverviewRequestBuilder instance
+     */
+    public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
+        return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DeviceConfigurationUserOverview
+     *
+     * @return the IDeviceConfigurationUserOverviewRequestBuilder instance
+     */
+    public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
+        return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
+    }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
 }

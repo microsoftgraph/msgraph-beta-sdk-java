@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDepEnrollmentBaseProfileRequest;
-import com.microsoft.graph.requests.extensions.DepEnrollmentBaseProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DepEnrollmentBaseProfileRequestBuilder extends BaseRequestBuilder i
      * @return the IDepEnrollmentBaseProfileRequest instance
      */
     public IDepEnrollmentBaseProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DepEnrollmentBaseProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DepEnrollmentBaseProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

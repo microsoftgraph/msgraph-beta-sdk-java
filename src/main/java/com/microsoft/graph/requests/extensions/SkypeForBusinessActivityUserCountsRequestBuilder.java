@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISkypeForBusinessActivityUserCountsRequest;
-import com.microsoft.graph.requests.extensions.SkypeForBusinessActivityUserCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SkypeForBusinessActivityUserCountsRequestBuilder extends BaseReques
      * @return the ISkypeForBusinessActivityUserCountsRequest instance
      */
     public ISkypeForBusinessActivityUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SkypeForBusinessActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SkypeForBusinessActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

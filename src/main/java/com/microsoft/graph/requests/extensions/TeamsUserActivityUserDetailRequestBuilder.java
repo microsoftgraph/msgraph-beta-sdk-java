@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsUserActivityUserDetailRequest;
-import com.microsoft.graph.requests.extensions.TeamsUserActivityUserDetailRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TeamsUserActivityUserDetailRequestBuilder extends BaseRequestBuilde
      * @return the ITeamsUserActivityUserDetailRequest instance
      */
     public ITeamsUserActivityUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsUserActivityUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsUserActivityUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

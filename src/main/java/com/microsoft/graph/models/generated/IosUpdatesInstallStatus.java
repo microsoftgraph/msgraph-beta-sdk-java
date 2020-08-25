@@ -27,6 +27,14 @@ public enum IosUpdatesInstallStatus
     */
     UNKNOWN,
     /**
+    * mdm Client Crashed
+    */
+    MDM_CLIENT_CRASHED,
+    /**
+    * timeout
+    */
+    TIMEOUT,
+    /**
     * downloading
     */
     DOWNLOADING,
@@ -79,9 +87,17 @@ public enum IosUpdatesInstallStatus
     */
     SHARED_DEVICE_USER_LOGGED_IN_ERROR,
     /**
+    * update Error
+    */
+    UPDATE_ERROR,
+    /**
     * device Os Higher Than Desired Os Version
     */
     DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION,
+    /**
+    * update Scan Failed
+    */
+    UPDATE_SCAN_FAILED,
     /**
     * For IosUpdatesInstallStatus values that were not expected from the service
     */

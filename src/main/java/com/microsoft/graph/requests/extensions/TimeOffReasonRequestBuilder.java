@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonRequest;
-import com.microsoft.graph.requests.extensions.TimeOffReasonRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TimeOffReasonRequestBuilder extends BaseRequestBuilder implements I
      * @return the ITimeOffReasonRequest instance
      */
     public ITimeOffReasonRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TimeOffReasonRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TimeOffReasonRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRelyingPartyDetailedSummaryRequest;
-import com.microsoft.graph.requests.extensions.RelyingPartyDetailedSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RelyingPartyDetailedSummaryRequestBuilder extends BaseRequestBuilde
      * @return the IRelyingPartyDetailedSummaryRequest instance
      */
     public IRelyingPartyDetailedSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RelyingPartyDetailedSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RelyingPartyDetailedSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

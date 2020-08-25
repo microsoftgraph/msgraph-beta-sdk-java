@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class GroupPolicySettingMappingRequestBuilder extends BaseRequestBuilder 
      * @return the IGroupPolicySettingMappingRequest instance
      */
     public IGroupPolicySettingMappingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicySettingMappingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicySettingMappingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

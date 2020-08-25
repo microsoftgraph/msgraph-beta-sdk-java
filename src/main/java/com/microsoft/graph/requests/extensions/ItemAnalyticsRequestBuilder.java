@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsRequest;
-import com.microsoft.graph.requests.extensions.ItemAnalyticsRequest;
 import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
@@ -53,7 +52,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * @return the IItemAnalyticsRequest instance
      */
     public IItemAnalyticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

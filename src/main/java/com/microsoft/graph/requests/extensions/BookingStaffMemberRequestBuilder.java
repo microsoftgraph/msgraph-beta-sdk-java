@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBookingStaffMemberRequest;
-import com.microsoft.graph.requests.extensions.BookingStaffMemberRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class BookingStaffMemberRequestBuilder extends BaseRequestBuilder impleme
      * @return the IBookingStaffMemberRequest instance
      */
     public IBookingStaffMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BookingStaffMemberRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BookingStaffMemberRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

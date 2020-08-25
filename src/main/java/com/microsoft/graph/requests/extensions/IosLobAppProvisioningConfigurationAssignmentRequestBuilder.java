@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosLobAppProvisioningConfigurationAssignmentRequestBuilder extends 
      * @return the IIosLobAppProvisioningConfigurationAssignmentRequest instance
      */
     public IIosLobAppProvisioningConfigurationAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosLobAppProvisioningConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends Bas
      * @return the IDeviceManagementDerivedCredentialSettingsRequest instance
      */
     public IDeviceManagementDerivedCredentialSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementDerivedCredentialSettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

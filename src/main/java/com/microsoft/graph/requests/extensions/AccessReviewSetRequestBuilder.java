@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequest;
-import com.microsoft.graph.requests.extensions.AccessReviewSetRequest;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
@@ -49,7 +48,7 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder implements
      * @return the IAccessReviewSetRequest instance
      */
     public IAccessReviewSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AccessReviewSetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AccessReviewSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

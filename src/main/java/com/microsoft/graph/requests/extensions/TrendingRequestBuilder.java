@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITrendingRequest;
-import com.microsoft.graph.requests.extensions.TrendingRequest;
 import com.microsoft.graph.requests.extensions.IEntityWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
      * @return the ITrendingRequest instance
      */
     public ITrendingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TrendingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TrendingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequest;
-import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequest;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
@@ -49,7 +48,7 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder im
      * @return the IUserInstallStateSummaryRequest instance
      */
     public IUserInstallStateSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserInstallStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

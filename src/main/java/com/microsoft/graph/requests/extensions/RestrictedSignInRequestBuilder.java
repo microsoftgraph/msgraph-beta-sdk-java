@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRestrictedSignInRequest;
-import com.microsoft.graph.requests.extensions.RestrictedSignInRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RestrictedSignInRequestBuilder extends BaseRequestBuilder implement
      * @return the IRestrictedSignInRequest instance
      */
     public IRestrictedSignInRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RestrictedSignInRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RestrictedSignInRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

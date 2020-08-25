@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemPhoneRequest;
-import com.microsoft.graph.requests.extensions.ItemPhoneRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemPhoneRequestBuilder extends BaseRequestBuilder implements IItem
      * @return the IItemPhoneRequest instance
      */
     public IItemPhoneRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemPhoneRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemPhoneRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

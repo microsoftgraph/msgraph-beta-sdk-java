@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartLegendRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartLegendRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartLegendFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLegendFormatRequestBuilder;
 
@@ -47,7 +46,7 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
      * @return the IWorkbookChartLegendRequest instance
      */
     public IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookChartLegendRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookChartLegendRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

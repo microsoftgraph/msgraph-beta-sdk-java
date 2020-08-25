@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends Ba
      * @return the IMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
     public IMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MicrosoftAuthenticatorAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

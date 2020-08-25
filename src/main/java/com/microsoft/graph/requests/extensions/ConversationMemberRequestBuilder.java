@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequest;
-import com.microsoft.graph.requests.extensions.ConversationMemberRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ConversationMemberRequestBuilder extends BaseRequestBuilder impleme
      * @return the IConversationMemberRequest instance
      */
     public IConversationMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

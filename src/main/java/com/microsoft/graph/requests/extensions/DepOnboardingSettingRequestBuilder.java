@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDepOnboardingSettingRequest;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingRequest;
 import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DepIOSEnrollmentProfileWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileWithReferenceRequestBuilder;
@@ -69,7 +68,7 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder imple
      * @return the IDepOnboardingSettingRequest instance
      */
     public IDepOnboardingSettingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DepOnboardingSettingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DepOnboardingSettingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

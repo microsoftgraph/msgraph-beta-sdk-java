@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppRequest;
-import com.microsoft.graph.requests.extensions.WindowsManagementAppRequest;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
@@ -49,7 +48,7 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder imple
      * @return the IWindowsManagementAppRequest instance
      */
     public IWindowsManagementAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsManagementAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsManagementAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIpNamedLocationRequest;
-import com.microsoft.graph.requests.extensions.IpNamedLocationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IpNamedLocationRequestBuilder extends BaseRequestBuilder implements
      * @return the IIpNamedLocationRequest instance
      */
     public IIpNamedLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IpNamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IpNamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

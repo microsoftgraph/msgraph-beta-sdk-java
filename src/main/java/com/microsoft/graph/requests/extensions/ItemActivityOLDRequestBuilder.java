@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequest;
-import com.microsoft.graph.requests.extensions.ItemActivityOLDRequest;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
@@ -49,7 +48,7 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements
      * @return the IItemActivityOLDRequest instance
      */
     public IItemActivityOLDRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemActivityOLDRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemActivityOLDRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

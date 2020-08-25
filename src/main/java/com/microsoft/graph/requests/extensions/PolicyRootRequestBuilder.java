@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPolicyRootRequest;
-import com.microsoft.graph.requests.extensions.PolicyRootRequest;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
@@ -87,7 +86,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      * @return the IPolicyRootRequest instance
      */
     public IPolicyRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PolicyRootRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PolicyRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

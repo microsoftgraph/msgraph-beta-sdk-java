@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequest;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequest;
 import com.microsoft.graph.requests.extensions.ITeamsAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionWithReferenceRequestBuilder;
@@ -51,7 +50,7 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder imple
      * @return the ITeamsAppInstallationRequest instance
      */
     public ITeamsAppInstallationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsAppInstallationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsAppInstallationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

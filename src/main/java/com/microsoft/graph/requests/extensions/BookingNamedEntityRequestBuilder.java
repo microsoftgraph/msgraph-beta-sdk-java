@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IBookingNamedEntityRequest;
-import com.microsoft.graph.requests.extensions.BookingNamedEntityRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class BookingNamedEntityRequestBuilder extends BaseRequestBuilder impleme
      * @return the IBookingNamedEntityRequest instance
      */
     public IBookingNamedEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new BookingNamedEntityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.BookingNamedEntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

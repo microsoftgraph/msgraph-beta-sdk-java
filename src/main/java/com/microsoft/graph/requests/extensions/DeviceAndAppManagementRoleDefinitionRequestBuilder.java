@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleDefinitionRequest;
-import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleDefinitionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,15 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
      */
     public IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceAndAppManagementRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public IRoleAssignmentCollectionRequestBuilder roleAssignments() {
+        return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
+    }
+
+    public IRoleAssignmentRequestBuilder roleAssignments(final String id) {
+        return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
+    }
 }

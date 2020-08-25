@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequest;
-import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilde
      * @return the IComplianceManagementPartnerRequest instance
      */
     public IComplianceManagementPartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ComplianceManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ComplianceManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

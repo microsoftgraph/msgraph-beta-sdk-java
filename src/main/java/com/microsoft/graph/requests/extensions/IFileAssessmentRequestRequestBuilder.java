@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileAssessmentRequestRequest;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentResultCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentResultRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IFileAssessmentRequestRequestBuilder extends IRequestBuilder {
      */
     IFileAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IThreatAssessmentResultCollectionRequestBuilder results();
+
+    IThreatAssessmentResultRequestBuilder results(final String id);
 
 }

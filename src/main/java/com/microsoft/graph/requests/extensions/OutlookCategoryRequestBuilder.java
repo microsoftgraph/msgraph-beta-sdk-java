@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequest;
-import com.microsoft.graph.requests.extensions.OutlookCategoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OutlookCategoryRequestBuilder extends BaseRequestBuilder implements
      * @return the IOutlookCategoryRequest instance
      */
     public IOutlookCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OutlookCategoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OutlookCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMentionRequest;
-import com.microsoft.graph.requests.extensions.MentionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MentionRequestBuilder extends BaseRequestBuilder implements IMentio
      * @return the IMentionRequest instance
      */
     public IMentionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MentionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MentionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

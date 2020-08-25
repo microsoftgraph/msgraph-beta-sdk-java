@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISoftwareUpdateStatusSummaryRequest;
-import com.microsoft.graph.requests.extensions.SoftwareUpdateStatusSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
      * @return the ISoftwareUpdateStatusSummaryRequest instance
      */
     public ISoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SoftwareUpdateStatusSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SoftwareUpdateStatusSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequest;
-import com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SensitivityPolicySettingsRequestBuilder extends BaseRequestBuilder 
      * @return the ISensitivityPolicySettingsRequest instance
      */
     public ISensitivityPolicySettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SensitivityPolicySettingsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

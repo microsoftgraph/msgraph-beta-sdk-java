@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentRequest;
-import com.microsoft.graph.requests.extensions.CustomerPaymentRequest;
 import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 
@@ -47,7 +46,7 @@ public class CustomerPaymentRequestBuilder extends BaseRequestBuilder implements
      * @return the ICustomerPaymentRequest instance
      */
     public ICustomerPaymentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CustomerPaymentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CustomerPaymentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

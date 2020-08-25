@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequest;
-import com.microsoft.graph.requests.extensions.ProfilePhotoRequest;
 import com.microsoft.graph.requests.extensions.IProfilePhotoStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoStreamRequestBuilder;
 

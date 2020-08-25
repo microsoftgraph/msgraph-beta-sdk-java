@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.ManagementConditionRequest;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementWithReferenceRequestBuilder;
@@ -49,7 +48,7 @@ public class ManagementConditionRequestBuilder extends BaseRequestBuilder implem
      * @return the IManagementConditionRequest instance
      */
     public IManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

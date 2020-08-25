@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPersonAnniversaryRequest;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PersonAnniversaryRequestBuilder extends BaseRequestBuilder implemen
      * @return the IPersonAnniversaryRequest instance
      */
     public IPersonAnniversaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PersonAnniversaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PersonAnniversaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

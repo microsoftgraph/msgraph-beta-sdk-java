@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
      * @return the IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
     public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

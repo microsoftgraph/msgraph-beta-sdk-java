@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAudioRoutingGroupRequest;
-import com.microsoft.graph.requests.extensions.AudioRoutingGroupRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AudioRoutingGroupRequestBuilder extends BaseRequestBuilder implemen
      * @return the IAudioRoutingGroupRequest instance
      */
     public IAudioRoutingGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AudioRoutingGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AudioRoutingGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequest;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
      * @return the ITargetedManagedAppPolicyAssignmentRequest instance
      */
     public ITargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TargetedManagedAppPolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkGmailEasConfigurationRequest;
-import com.microsoft.graph.requests.extensions.AndroidForWorkGmailEasConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,17 @@ public class AndroidForWorkGmailEasConfigurationRequestBuilder extends BaseReque
      * @return the IAndroidForWorkGmailEasConfigurationRequest instance
      */
     public IAndroidForWorkGmailEasConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AndroidForWorkGmailEasConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AndroidForWorkGmailEasConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+
+    /**
+     * Gets the request builder for AndroidForWorkCertificateProfileBase
+     *
+     * @return the IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    public IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder identityCertificate() {
+        return new AndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificate"), getClient(), null);
+    }
 }

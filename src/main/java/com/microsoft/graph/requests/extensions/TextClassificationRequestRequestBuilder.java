@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestRequest;
-import com.microsoft.graph.requests.extensions.TextClassificationRequestRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TextClassificationRequestRequestBuilder extends BaseRequestBuilder 
      * @return the ITextClassificationRequestRequest instance
      */
     public ITextClassificationRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TextClassificationRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TextClassificationRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

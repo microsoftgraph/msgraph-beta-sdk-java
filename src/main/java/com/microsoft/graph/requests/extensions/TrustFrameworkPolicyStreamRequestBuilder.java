@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequest;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequest;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyStreamRequestBuilder;
 

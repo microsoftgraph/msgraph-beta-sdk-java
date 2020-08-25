@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDocumentCommentRequest;
-import com.microsoft.graph.requests.extensions.DocumentCommentRequest;
 import com.microsoft.graph.requests.extensions.IDocumentCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DocumentCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDocumentCommentReplyRequestBuilder;
@@ -49,7 +48,7 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements
      * @return the IDocumentCommentRequest instance
      */
     public IDocumentCommentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DocumentCommentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DocumentCommentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

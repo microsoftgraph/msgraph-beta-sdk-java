@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequest;
-import com.microsoft.graph.requests.extensions.PlannerDeltaRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PlannerDeltaRequestBuilder extends BaseRequestBuilder implements IP
      * @return the IPlannerDeltaRequest instance
      */
     public IPlannerDeltaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlannerDeltaRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlannerDeltaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

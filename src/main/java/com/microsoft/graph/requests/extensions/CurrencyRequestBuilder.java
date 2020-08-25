@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICurrencyRequest;
-import com.microsoft.graph.requests.extensions.CurrencyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class CurrencyRequestBuilder extends BaseRequestBuilder implements ICurre
      * @return the ICurrencyRequest instance
      */
     public ICurrencyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CurrencyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CurrencyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

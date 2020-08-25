@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemPublicationRequest;
-import com.microsoft.graph.requests.extensions.ItemPublicationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ItemPublicationRequestBuilder extends BaseRequestBuilder implements
      * @return the IItemPublicationRequest instance
      */
     public IItemPublicationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemPublicationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemPublicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

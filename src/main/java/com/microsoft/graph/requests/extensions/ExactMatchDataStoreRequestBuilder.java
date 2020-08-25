@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequest;
-import com.microsoft.graph.requests.extensions.ExactMatchDataStoreRequest;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionRequestBuilder;
@@ -51,7 +50,7 @@ public class ExactMatchDataStoreRequestBuilder extends BaseRequestBuilder implem
      * @return the IExactMatchDataStoreRequest instance
      */
     public IExactMatchDataStoreRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ExactMatchDataStoreRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ExactMatchDataStoreRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

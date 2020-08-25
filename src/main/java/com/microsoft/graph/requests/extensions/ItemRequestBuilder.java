@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemRequest;
-import com.microsoft.graph.requests.extensions.ItemRequest;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
@@ -51,7 +50,7 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
      * @return the IItemRequest instance
      */
     public IItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

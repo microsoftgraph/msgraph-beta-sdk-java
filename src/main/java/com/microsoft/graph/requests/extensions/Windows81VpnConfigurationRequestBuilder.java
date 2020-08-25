@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindows81VpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.Windows81VpnConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class Windows81VpnConfigurationRequestBuilder extends BaseRequestBuilder 
      * @return the IWindows81VpnConfigurationRequest instance
      */
     public IWindows81VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new Windows81VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.Windows81VpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

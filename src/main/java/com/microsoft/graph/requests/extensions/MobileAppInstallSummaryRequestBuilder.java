@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequest;
-import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MobileAppInstallSummaryRequestBuilder extends BaseRequestBuilder im
      * @return the IMobileAppInstallSummaryRequest instance
      */
     public IMobileAppInstallSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppInstallSummaryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

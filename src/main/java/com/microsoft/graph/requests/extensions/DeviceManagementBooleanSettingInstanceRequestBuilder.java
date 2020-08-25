@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementBooleanSettingInstanceRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementBooleanSettingInstanceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementBooleanSettingInstanceRequestBuilder extends BaseRe
      * @return the IDeviceManagementBooleanSettingInstanceRequest instance
      */
     public IDeviceManagementBooleanSettingInstanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementBooleanSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementBooleanSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

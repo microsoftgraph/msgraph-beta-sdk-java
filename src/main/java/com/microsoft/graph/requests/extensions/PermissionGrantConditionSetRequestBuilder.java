@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequest;
-import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilde
      * @return the IPermissionGrantConditionSetRequest instance
      */
     public IPermissionGrantConditionSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PermissionGrantConditionSetRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

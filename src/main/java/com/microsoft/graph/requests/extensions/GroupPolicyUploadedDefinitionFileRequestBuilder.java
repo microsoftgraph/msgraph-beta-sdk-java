@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequest;
-import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileRequest;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequestBuilder;
@@ -63,7 +62,7 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
      * @return the IGroupPolicyUploadedDefinitionFileRequest instance
      */
     public IGroupPolicyUploadedDefinitionFileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new GroupPolicyUploadedDefinitionFileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -73,6 +72,13 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
 
     public IGroupPolicyOperationRequestBuilder groupPolicyOperations(final String id) {
         return new GroupPolicyOperationRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyOperations") + "/" + id, getClient(), null);
+    }
+    public IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
+        return new GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
+    }
+
+    public IGroupPolicyDefinitionWithReferenceRequestBuilder definitions(final String id) {
+        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
     }
 
     public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder addLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequest;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder im
      * @return the IConditionalAccessPolicyRequest instance
      */
     public IConditionalAccessPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ConditionalAccessPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAttributeMappingFunctionSchemaRequest;
-import com.microsoft.graph.requests.extensions.AttributeMappingFunctionSchemaRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBui
      * @return the IAttributeMappingFunctionSchemaRequest instance
      */
     public IAttributeMappingFunctionSchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AttributeMappingFunctionSchemaRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AttributeMappingFunctionSchemaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

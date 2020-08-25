@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsUniversalAppXRequest;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppContentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppContentRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,5 +38,9 @@ public interface IWindowsUniversalAppXRequestBuilder extends IRequestBuilder {
     IMobileContainedAppCollectionRequestBuilder committedContainedApps();
 
     IMobileContainedAppRequestBuilder committedContainedApps(final String id);
+
+    IMobileAppContentCollectionRequestBuilder contentVersions();
+
+    IMobileAppContentRequestBuilder contentVersions(final String id);
 
 }

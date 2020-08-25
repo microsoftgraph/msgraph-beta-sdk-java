@@ -5,6 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventMessageRequest;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,5 +48,25 @@ public interface IEventMessageRequestBuilder extends IRequestBuilder {
      * @return the IEventRequestBuilder instance
      */
     IEventRequestBuilder event();
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    IAttachmentCollectionRequestBuilder attachments();
+
+    IAttachmentRequestBuilder attachments(final String id);
+
+    IExtensionCollectionRequestBuilder extensions();
+
+    IExtensionRequestBuilder extensions(final String id);
+
+    IMentionCollectionRequestBuilder mentions();
+
+    IMentionRequestBuilder mentions(final String id);
 
 }

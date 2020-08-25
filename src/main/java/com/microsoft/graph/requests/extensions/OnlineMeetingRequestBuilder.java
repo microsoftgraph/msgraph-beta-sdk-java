@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequest;
-import com.microsoft.graph.requests.extensions.OnlineMeetingRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
      * @return the IOnlineMeetingRequest instance
      */
     public IOnlineMeetingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OnlineMeetingRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OnlineMeetingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

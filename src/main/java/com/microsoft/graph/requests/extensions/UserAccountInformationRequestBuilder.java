@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationRequest;
-import com.microsoft.graph.requests.extensions.UserAccountInformationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserAccountInformationRequestBuilder extends BaseRequestBuilder imp
      * @return the IUserAccountInformationRequest instance
      */
     public IUserAccountInformationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserAccountInformationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserAccountInformationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

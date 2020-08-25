@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequest;
-import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateRequest;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateGenerateApplePushNotificationCertificateSigningRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateGenerateApplePushNotificationCertificateSigningRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
@@ -49,7 +48,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @return the IApplePushNotificationCertificateRequest instance
      */
     public IApplePushNotificationCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ApplePushNotificationCertificateRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

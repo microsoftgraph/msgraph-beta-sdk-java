@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationRootRequest;
-import com.microsoft.graph.requests.extensions.EducationRootRequest;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequestBuilder;
@@ -63,7 +62,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
      * @return the IEducationRootRequest instance
      */
     public IEducationRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationRootRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

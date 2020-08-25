@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventMessageRequestRequest;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventMessageRequestAcceptRequestBuilder;
 import com.microsoft.graph.models.extensions.TimeSlot;
 import com.microsoft.graph.requests.extensions.IEventMessageRequestDeclineRequestBuilder;
@@ -35,6 +36,13 @@ public interface IEventMessageRequestRequestBuilder extends IRequestBuilder {
      */
     IEventMessageRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for Event
+     *
+     * @return the IEventRequestBuilder instance
+     */
+    IEventRequestBuilder event();
     IEventMessageRequestAcceptRequestBuilder accept(final Boolean sendResponse, final String comment);
     IEventMessageRequestDeclineRequestBuilder decline(final TimeSlot proposedNewTime, final Boolean sendResponse, final String comment);
     IEventMessageRequestTentativelyAcceptRequestBuilder tentativelyAccept(final TimeSlot proposedNewTime, final Boolean sendResponse, final String comment);

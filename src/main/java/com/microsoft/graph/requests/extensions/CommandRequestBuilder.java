@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICommandRequest;
-import com.microsoft.graph.requests.extensions.CommandRequest;
 import com.microsoft.graph.requests.extensions.IPayloadResponseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PayloadResponseWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
      * @return the ICommandRequest instance
      */
     public ICommandRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CommandRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CommandRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

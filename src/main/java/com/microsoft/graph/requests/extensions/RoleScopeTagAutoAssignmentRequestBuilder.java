@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentRequest;
-import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class RoleScopeTagAutoAssignmentRequestBuilder extends BaseRequestBuilder
      * @return the IRoleScopeTagAutoAssignmentRequest instance
      */
     public IRoleScopeTagAutoAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new RoleScopeTagAutoAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

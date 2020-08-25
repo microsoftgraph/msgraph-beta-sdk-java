@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailFolderRequest;
-import com.microsoft.graph.requests.extensions.MailFolderRequest;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -73,7 +72,7 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder implements IMai
      * @return the IMailFolderRequest instance
      */
     public IMailFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MailFolderRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MailFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

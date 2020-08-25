@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEntityRequest;
-import com.microsoft.graph.requests.extensions.EntityRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityR
      * @return the IEntityRequest instance
      */
     public IEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EntityRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

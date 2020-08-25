@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequest;
-import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * @return the IPhoneAuthenticationMethodRequest instance
      */
     public IPhoneAuthenticationMethodRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PhoneAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

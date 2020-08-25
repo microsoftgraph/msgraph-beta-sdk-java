@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICalendarGroupRequest;
-import com.microsoft.graph.requests.extensions.CalendarGroupRequest;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
@@ -49,7 +48,7 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder implements I
      * @return the ICalendarGroupRequest instance
      */
     public ICalendarGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new CalendarGroupRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.CalendarGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

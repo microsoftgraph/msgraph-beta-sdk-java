@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusRequest;
-import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
      * @return the IIosUpdateDeviceStatusRequest instance
      */
     public IIosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new IosUpdateDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemInsightsRequest;
-import com.microsoft.graph.requests.extensions.ItemInsightsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,29 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements II
      * @return the IItemInsightsRequest instance
      */
     public IItemInsightsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ItemInsightsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ItemInsightsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public ITrendingCollectionRequestBuilder trending() {
+        return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
+    }
+
+    public ITrendingRequestBuilder trending(final String id) {
+        return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
+    }
+    public ISharedInsightCollectionRequestBuilder shared() {
+        return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
+    }
+
+    public ISharedInsightRequestBuilder shared(final String id) {
+        return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
+    }
+    public IUsedInsightCollectionRequestBuilder used() {
+        return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);
+    }
+
+    public IUsedInsightRequestBuilder used(final String id) {
+        return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
+    }
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileSecurityProfileRequest;
-import com.microsoft.graph.requests.extensions.FileSecurityProfileRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class FileSecurityProfileRequestBuilder extends BaseRequestBuilder implem
      * @return the IFileSecurityProfileRequest instance
      */
     public IFileSecurityProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new FileSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.FileSecurityProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

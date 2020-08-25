@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMacOSVpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.MacOSVpnConfigurationRequest;
 import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseWithReferenceRequestBuilder;
 
@@ -47,7 +46,7 @@ public class MacOSVpnConfigurationRequestBuilder extends BaseRequestBuilder impl
      * @return the IMacOSVpnConfigurationRequest instance
      */
     public IMacOSVpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MacOSVpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MacOSVpnConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISensitiveTypeRequest;
-import com.microsoft.graph.requests.extensions.SensitiveTypeRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SensitiveTypeRequestBuilder extends BaseRequestBuilder implements I
      * @return the ISensitiveTypeRequest instance
      */
     public ISensitiveTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SensitiveTypeRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SensitiveTypeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

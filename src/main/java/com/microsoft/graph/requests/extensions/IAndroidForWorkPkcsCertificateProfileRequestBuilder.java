@@ -6,6 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkPkcsCertificateProfileRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,5 +37,12 @@ public interface IAndroidForWorkPkcsCertificateProfileRequestBuilder extends IRe
     IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates();
 
     IManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(final String id);
+
+    /**
+     * Gets the request builder for AndroidForWorkTrustedRootCertificate
+     *
+     * @return the IAndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder instance
+     */
+    IAndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder rootCertificate();
 
 }

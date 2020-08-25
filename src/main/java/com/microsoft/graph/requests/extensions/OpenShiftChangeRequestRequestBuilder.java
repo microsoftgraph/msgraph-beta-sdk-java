@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequest;
-import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder imp
      * @return the IOpenShiftChangeRequestRequest instance
      */
     public IOpenShiftChangeRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new OpenShiftChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

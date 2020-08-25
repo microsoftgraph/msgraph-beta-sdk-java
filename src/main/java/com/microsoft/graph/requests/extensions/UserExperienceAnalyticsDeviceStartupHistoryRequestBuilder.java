@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupHistoryRequest;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupHistoryRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
      * @return the IUserExperienceAnalyticsDeviceStartupHistoryRequest instance
      */
     public IUserExperienceAnalyticsDeviceStartupHistoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new UserExperienceAnalyticsDeviceStartupHistoryRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupHistoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

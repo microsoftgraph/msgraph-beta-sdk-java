@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailboxUsageStorageRequest;
-import com.microsoft.graph.requests.extensions.MailboxUsageStorageRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MailboxUsageStorageRequestBuilder extends BaseRequestBuilder implem
      * @return the IMailboxUsageStorageRequest instance
      */
     public IMailboxUsageStorageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MailboxUsageStorageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MailboxUsageStorageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

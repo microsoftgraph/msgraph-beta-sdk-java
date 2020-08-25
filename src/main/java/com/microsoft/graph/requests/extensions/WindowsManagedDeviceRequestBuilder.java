@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsManagedDeviceRequest;
-import com.microsoft.graph.requests.extensions.WindowsManagedDeviceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,8 +44,75 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
      * @return the IWindowsManagedDeviceRequest instance
      */
     public IWindowsManagedDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsManagedDeviceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsManagedDeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
+    public ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
+        return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
+    }
+
+    public ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id) {
+        return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
+        return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
+    }
+
+    public IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id) {
+        return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
+    }
+    public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
+        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
+    }
+
+    public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
+        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    }
+    public IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates() {
+        return new ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates"), getClient(), null);
+    }
+
+    public IManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(final String id) {
+        return new ManagedDeviceMobileAppConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates") + "/" + id, getClient(), null);
+    }
+    public IDetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
+        return new DetectedAppCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);
+    }
+
+    public IDetectedAppWithReferenceRequestBuilder detectedApps(final String id) {
+        return new DetectedAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DeviceCategory
+     *
+     * @return the IDeviceCategoryRequestBuilder instance
+     */
+    public IDeviceCategoryRequestBuilder deviceCategory() {
+        return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WindowsProtectionState
+     *
+     * @return the IWindowsProtectionStateRequestBuilder instance
+     */
+    public IWindowsProtectionStateRequestBuilder windowsProtectionState() {
+        return new WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionState"), getClient(), null);
+    }
+    public IUserCollectionRequestBuilder users() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    }
+
+    public IUserRequestBuilder users(final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    }
+    public IDeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests() {
+        return new DeviceLogCollectionResponseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests"), getClient(), null);
+    }
+
+    public IDeviceLogCollectionResponseRequestBuilder logCollectionRequests(final String id) {
+        return new DeviceLogCollectionResponseRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests") + "/" + id, getClient(), null);
+    }
 }

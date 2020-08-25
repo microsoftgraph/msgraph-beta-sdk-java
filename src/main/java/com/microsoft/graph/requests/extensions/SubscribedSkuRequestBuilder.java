@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISubscribedSkuRequest;
-import com.microsoft.graph.requests.extensions.SubscribedSkuRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SubscribedSkuRequestBuilder extends BaseRequestBuilder implements I
      * @return the ISubscribedSkuRequest instance
      */
     public ISubscribedSkuRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SubscribedSkuRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SubscribedSkuRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

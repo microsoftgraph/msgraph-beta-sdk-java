@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChatActivityStatisticsRequest;
-import com.microsoft.graph.requests.extensions.ChatActivityStatisticsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ChatActivityStatisticsRequestBuilder extends BaseRequestBuilder imp
      * @return the IChatActivityStatisticsRequest instance
      */
     public IChatActivityStatisticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ChatActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ChatActivityStatisticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

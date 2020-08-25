@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotEventRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementAutopilotEventRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailRequestBuilder;
@@ -49,7 +48,7 @@ public class DeviceManagementAutopilotEventRequestBuilder extends BaseRequestBui
      * @return the IDeviceManagementAutopilotEventRequest instance
      */
     public IDeviceManagementAutopilotEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementAutopilotEventRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementAutopilotEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

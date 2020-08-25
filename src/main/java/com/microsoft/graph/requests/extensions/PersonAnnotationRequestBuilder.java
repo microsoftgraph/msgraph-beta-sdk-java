@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPersonAnnotationRequest;
-import com.microsoft.graph.requests.extensions.PersonAnnotationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PersonAnnotationRequestBuilder extends BaseRequestBuilder implement
      * @return the IPersonAnnotationRequest instance
      */
     public IPersonAnnotationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PersonAnnotationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PersonAnnotationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequest;
-import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder imp
      * @return the IManagedEBookAssignmentRequest instance
      */
     public IManagedEBookAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ManagedEBookAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

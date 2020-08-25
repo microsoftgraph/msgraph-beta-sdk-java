@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsDeviceUsageDistributionUserCountsRequest;
-import com.microsoft.graph.requests.extensions.TeamsDeviceUsageDistributionUserCountsRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRe
      * @return the ITeamsDeviceUsageDistributionUserCountsRequest instance
      */
     public ITeamsDeviceUsageDistributionUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamsDeviceUsageDistributionUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamsDeviceUsageDistributionUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

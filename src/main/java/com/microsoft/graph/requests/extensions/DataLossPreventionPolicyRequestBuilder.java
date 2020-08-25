@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequest;
-import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DataLossPreventionPolicyRequestBuilder extends BaseRequestBuilder i
      * @return the IDataLossPreventionPolicyRequest instance
      */
     public IDataLossPreventionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DataLossPreventionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DataLossPreventionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

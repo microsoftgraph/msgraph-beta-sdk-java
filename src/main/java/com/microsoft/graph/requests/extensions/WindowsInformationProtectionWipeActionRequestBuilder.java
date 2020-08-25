@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionRequest;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRe
      * @return the IWindowsInformationProtectionWipeActionRequest instance
      */
     public IWindowsInformationProtectionWipeActionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsInformationProtectionWipeActionRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

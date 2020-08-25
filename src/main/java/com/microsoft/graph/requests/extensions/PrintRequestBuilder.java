@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrintRequest;
-import com.microsoft.graph.requests.extensions.PrintRequest;
 import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
@@ -77,7 +76,7 @@ public class PrintRequestBuilder extends BaseRequestBuilder implements IPrintReq
      * @return the IPrintRequest instance
      */
     public IPrintRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PrintRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PrintRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

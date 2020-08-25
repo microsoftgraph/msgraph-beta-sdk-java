@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISiteUsageStorageRequest;
-import com.microsoft.graph.requests.extensions.SiteUsageStorageRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class SiteUsageStorageRequestBuilder extends BaseRequestBuilder implement
      * @return the ISiteUsageStorageRequest instance
      */
     public ISiteUsageStorageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new SiteUsageStorageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.SiteUsageStorageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

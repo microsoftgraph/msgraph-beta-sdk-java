@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfilePolicySetItemRequest;
-import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfilePolicySetItemRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extend
      * @return the IWindowsAutopilotDeploymentProfilePolicySetItemRequest instance
      */
     public IWindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WindowsAutopilotDeploymentProfilePolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfilePolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

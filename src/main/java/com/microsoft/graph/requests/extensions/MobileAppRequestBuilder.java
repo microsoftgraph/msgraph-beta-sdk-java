@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppRequest;
-import com.microsoft.graph.requests.extensions.MobileAppRequest;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryWithReferenceRequestBuilder;
@@ -75,7 +74,7 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
      * @return the IMobileAppRequest instance
      */
     public IMobileAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

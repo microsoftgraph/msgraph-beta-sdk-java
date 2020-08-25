@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequest;
+import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,9 @@ public interface IRiskyUserHistoryItemRequestBuilder extends IRequestBuilder {
      */
     IRiskyUserHistoryItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IRiskyUserHistoryItemCollectionRequestBuilder history();
+
+    IRiskyUserHistoryItemRequestBuilder history(final String id);
 
 }

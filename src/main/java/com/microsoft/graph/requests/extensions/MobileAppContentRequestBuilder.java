@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMobileAppContentRequest;
-import com.microsoft.graph.requests.extensions.MobileAppContentRequest;
 import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
@@ -53,7 +52,7 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
      * @return the IMobileAppContentRequest instance
      */
     public IMobileAppContentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MobileAppContentRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MobileAppContentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

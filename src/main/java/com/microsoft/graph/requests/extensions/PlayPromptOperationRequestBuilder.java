@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlayPromptOperationRequest;
-import com.microsoft.graph.requests.extensions.PlayPromptOperationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implem
      * @return the IPlayPromptOperationRequest instance
      */
     public IPlayPromptOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new PlayPromptOperationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.PlayPromptOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

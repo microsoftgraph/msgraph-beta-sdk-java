@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageRuleRequest;
-import com.microsoft.graph.requests.extensions.MessageRuleRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
      * @return the IMessageRuleRequest instance
      */
     public IMessageRuleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new MessageRuleRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.MessageRuleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

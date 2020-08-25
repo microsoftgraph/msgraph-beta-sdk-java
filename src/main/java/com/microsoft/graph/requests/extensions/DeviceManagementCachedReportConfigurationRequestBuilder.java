@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class DeviceManagementCachedReportConfigurationRequestBuilder extends Bas
      * @return the IDeviceManagementCachedReportConfigurationRequest instance
      */
     public IDeviceManagementCachedReportConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new DeviceManagementCachedReportConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

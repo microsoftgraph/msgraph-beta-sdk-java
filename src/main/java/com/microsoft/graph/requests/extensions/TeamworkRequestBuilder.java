@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamworkRequest;
-import com.microsoft.graph.requests.extensions.TeamworkRequest;
 import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkforceIntegrationRequestBuilder;
@@ -49,7 +48,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder implements ITeamw
      * @return the ITeamworkRequest instance
      */
     public ITeamworkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new TeamworkRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamworkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequest;
-import com.microsoft.graph.requests.extensions.EducationAssignmentResourceRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class EducationAssignmentResourceRequestBuilder extends BaseRequestBuilde
      * @return the IEducationAssignmentResourceRequest instance
      */
     public IEducationAssignmentResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new EducationAssignmentResourceRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.EducationAssignmentResourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

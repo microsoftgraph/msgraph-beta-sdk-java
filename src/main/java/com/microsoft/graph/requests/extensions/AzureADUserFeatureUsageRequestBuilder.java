@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IAzureADUserFeatureUsageRequest;
-import com.microsoft.graph.requests.extensions.AzureADUserFeatureUsageRequest;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -45,7 +44,7 @@ public class AzureADUserFeatureUsageRequestBuilder extends BaseRequestBuilder im
      * @return the IAzureADUserFeatureUsageRequest instance
      */
     public IAzureADUserFeatureUsageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new AzureADUserFeatureUsageRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.AzureADUserFeatureUsageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

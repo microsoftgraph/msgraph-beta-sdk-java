@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequest;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRangeRequestBuilder;
@@ -49,7 +48,7 @@ public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder implemen
      * @return the IWorkbookNamedItemRequest instance
      */
     public IWorkbookNamedItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookNamedItemRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.WorkbookNamedItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
