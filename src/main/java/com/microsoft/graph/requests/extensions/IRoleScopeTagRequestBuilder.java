@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleScopeTag;
+import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentRequestBuilder;
-import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagAssignCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +37,7 @@ public interface IRoleScopeTagRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IRoleScopeTagRequest instance
      */
-    IRoleScopeTagRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRoleScopeTagRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IRoleScopeTagAutoAssignmentCollectionRequestBuilder assignments();

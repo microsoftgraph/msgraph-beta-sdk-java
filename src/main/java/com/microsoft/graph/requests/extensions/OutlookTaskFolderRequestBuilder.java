@@ -3,20 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookTaskFolder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,7 +42,7 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookTaskFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OutlookTaskFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

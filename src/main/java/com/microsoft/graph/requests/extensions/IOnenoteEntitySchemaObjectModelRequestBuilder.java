@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenoteEntitySchemaObjectModelRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnenoteEntitySchemaObjectModel;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IOnenoteEntitySchemaObjectModelRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IOnenoteEntitySchemaObjectModelRequest instance
      */
-    IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

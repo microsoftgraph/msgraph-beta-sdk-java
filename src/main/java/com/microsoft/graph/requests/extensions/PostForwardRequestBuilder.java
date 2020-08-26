@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPostForwardRequest;
 import com.microsoft.graph.requests.extensions.PostForwardRequest;
 import com.microsoft.graph.models.extensions.Recipient;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder implemen
      * @param comment the comment
      * @param toRecipients the toRecipients
      */
-    public PostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
+    public PostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("comment", comment);
         bodyParams.put("toRecipients", toRecipients);
@@ -52,7 +49,7 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder implemen
      * @param requestOptions the options for the request
      * @return the IPostForwardRequest instance
      */
-    public IPostForwardRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPostForwardRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PostForwardRequest request = new PostForwardRequest(
                 getRequestUrl(),
                 getClient(),

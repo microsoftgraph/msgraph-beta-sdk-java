@@ -28,5 +28,5 @@ public interface IManagedDeviceRevokeAppleVppLicensesRequestBuilder extends IReq
      * @param requestOptions the options for the request
      * @return the IManagedDeviceRevokeAppleVppLicensesRequest instance
      */
-    IManagedDeviceRevokeAppleVppLicensesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceRevokeAppleVppLicensesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

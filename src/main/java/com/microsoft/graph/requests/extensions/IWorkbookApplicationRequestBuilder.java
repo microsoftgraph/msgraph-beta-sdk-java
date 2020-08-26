@@ -3,9 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookApplicationCalculateRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookApplication;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +34,7 @@ public interface IWorkbookApplicationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookApplicationRequest instance
      */
-    IWorkbookApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookApplicationCalculateRequestBuilder calculate(final String calculationType);
 

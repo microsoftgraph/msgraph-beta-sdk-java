@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceComplianceScript;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class DeviceHealthScriptAssignmentCollectionRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceHealthScriptAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceHealthScriptAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class DeviceHealthScriptAssignmentCollectionRequestBuilder extends BaseRe
         return buildRequest(getOptions());
     }
 
-    public IDeviceHealthScriptAssignmentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceHealthScriptAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceHealthScriptAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

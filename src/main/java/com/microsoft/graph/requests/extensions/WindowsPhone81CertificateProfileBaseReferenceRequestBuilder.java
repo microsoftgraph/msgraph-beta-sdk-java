@@ -6,7 +6,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsPhone81CertificateProfileBase;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +31,7 @@ public class WindowsPhone81CertificateProfileBaseReferenceRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81CertificateProfileBaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsPhone81CertificateProfileBaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +50,7 @@ public class WindowsPhone81CertificateProfileBaseReferenceRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IWindowsPhone81CertificateProfileBaseReferenceRequest instance
      */
-    public IWindowsPhone81CertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsPhone81CertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsPhone81CertificateProfileBaseReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

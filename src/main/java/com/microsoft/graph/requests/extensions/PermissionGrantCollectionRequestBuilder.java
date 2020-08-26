@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequest
 import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequest;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequest;
 import com.microsoft.graph.models.extensions.Permission;
-import com.microsoft.graph.models.extensions.DriveRecipient;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,7 +37,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBu
      * @param roles the roles
      * @param recipients the recipients
      */
-    public PermissionGrantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
+    public PermissionGrantCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);
   	 if(roles!=null){
 			bodyParams.put("roles", roles);
@@ -50,7 +51,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBu
         return buildRequest(getOptions());
     }
 
-    public IPermissionGrantCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PermissionGrantCollectionRequest request = new PermissionGrantCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -28,5 +28,5 @@ public interface IDeviceLogCollectionResponseCreateDownloadUrlRequestBuilder ext
      * @param requestOptions the options for the request
      * @return the IDeviceLogCollectionResponseCreateDownloadUrlRequest instance
      */
-    IDeviceLogCollectionResponseCreateDownloadUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceLogCollectionResponseCreateDownloadUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

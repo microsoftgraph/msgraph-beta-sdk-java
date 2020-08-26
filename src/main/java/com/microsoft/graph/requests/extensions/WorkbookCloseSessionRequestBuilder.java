@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class WorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookCloseSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookCloseSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +45,7 @@ public class WorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookCloseSessionRequest instance
      */
-    public IWorkbookCloseSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookCloseSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookCloseSessionRequest request = new WorkbookCloseSessionRequest(
                 getRequestUrl(),
                 getClient(),

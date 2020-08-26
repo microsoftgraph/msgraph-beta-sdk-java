@@ -3,9 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IBookingBusinessRequest;
-import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.BookingBusiness;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingCustomerCollectionRequestBuilder;
@@ -14,9 +16,9 @@ import com.microsoft.graph.requests.extensions.IBookingServiceCollectionRequestB
 import com.microsoft.graph.requests.extensions.IBookingServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingStaffMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingStaffMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingBusinessPublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingBusinessUnpublishRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +42,7 @@ public interface IBookingBusinessRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IBookingBusinessRequest instance
      */
-    IBookingBusinessRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IBookingBusinessRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IBookingAppointmentCollectionRequestBuilder appointments();

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookTableColumnCountRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookTableColumnCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,14 +45,14 @@ public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnCountRequest instance
      */
-    public IWorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableColumnCountRequest request = new WorkbookTableColumnCountRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

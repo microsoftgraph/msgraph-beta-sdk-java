@@ -28,5 +28,5 @@ public interface IDeviceManagementReportsGetSettingNonComplianceReportRequestBui
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetSettingNonComplianceReportRequest instance
      */
-    IDeviceManagementReportsGetSettingNonComplianceReportRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementReportsGetSettingNonComplianceReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

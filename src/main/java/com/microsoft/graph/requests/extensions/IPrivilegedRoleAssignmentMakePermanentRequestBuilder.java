@@ -28,5 +28,5 @@ public interface IPrivilegedRoleAssignmentMakePermanentRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentMakePermanentRequest instance
      */
-    IPrivilegedRoleAssignmentMakePermanentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleAssignmentMakePermanentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

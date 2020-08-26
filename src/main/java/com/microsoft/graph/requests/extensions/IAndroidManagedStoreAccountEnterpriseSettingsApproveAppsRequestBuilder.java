@@ -28,5 +28,5 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

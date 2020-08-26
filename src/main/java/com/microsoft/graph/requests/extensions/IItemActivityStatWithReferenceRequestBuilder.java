@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +36,7 @@ public interface IItemActivityStatWithReferenceRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IItemActivityStatWithReferenceRequest instance
      */
-    IItemActivityStatWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IItemActivityStatWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IItemActivityStatReferenceRequestBuilder reference();
 

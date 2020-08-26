@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +35,7 @@ public interface IPrivilegedRoleAssignmentWithReferenceRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IPrivilegedRoleAssignmentWithReferenceRequest instance
      */
-    IPrivilegedRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IPrivilegedRoleAssignmentReferenceRequestBuilder reference();
 

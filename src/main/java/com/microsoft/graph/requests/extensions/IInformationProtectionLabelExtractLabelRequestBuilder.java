@@ -28,5 +28,5 @@ public interface IInformationProtectionLabelExtractLabelRequestBuilder extends I
      * @param requestOptions the options for the request
      * @return the IInformationProtectionLabelExtractLabelRequest instance
      */
-    IInformationProtectionLabelExtractLabelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInformationProtectionLabelExtractLabelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

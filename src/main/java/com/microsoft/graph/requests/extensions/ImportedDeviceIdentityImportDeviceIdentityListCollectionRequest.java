@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,8 +17,6 @@ import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityImportDevic
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityImportDeviceIdentityListCollectionResponse;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityImportDeviceIdentityListBody;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -42,7 +43,7 @@ public class ImportedDeviceIdentityImportDeviceIdentityListCollectionRequest ext
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedDeviceIdentityImportDeviceIdentityListCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ImportedDeviceIdentityImportDeviceIdentityListCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ImportedDeviceIdentityImportDeviceIdentityListCollectionResponse.class, IImportedDeviceIdentityImportDeviceIdentityListCollectionPage.class);
         body = new ImportedDeviceIdentityImportDeviceIdentityListBody();
     }
@@ -87,7 +88,7 @@ public class ImportedDeviceIdentityImportDeviceIdentityListCollectionRequest ext
      * @return the updated request
      */
     public IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest)this;
     }
 
@@ -98,7 +99,7 @@ public class ImportedDeviceIdentityImportDeviceIdentityListCollectionRequest ext
      * @return the updated request
      */
     public IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest)this;
     }
 
@@ -109,7 +110,7 @@ public class ImportedDeviceIdentityImportDeviceIdentityListCollectionRequest ext
      * @return the updated request
      */
     public IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest)this;
     }
 

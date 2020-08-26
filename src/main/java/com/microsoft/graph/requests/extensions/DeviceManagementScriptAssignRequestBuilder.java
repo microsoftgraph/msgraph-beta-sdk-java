@@ -5,14 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignRequest;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-
+import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +28,7 @@ public class DeviceManagementScriptAssignRequestBuilder extends BaseActionReques
      * @param deviceManagementScriptGroupAssignments the deviceManagementScriptGroupAssignments
      * @param deviceManagementScriptAssignments the deviceManagementScriptAssignments
      */
-    public DeviceManagementScriptAssignRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DeviceManagementScriptGroupAssignment> deviceManagementScriptGroupAssignments, final java.util.List<DeviceManagementScriptAssignment> deviceManagementScriptAssignments) {
+    public DeviceManagementScriptAssignRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceManagementScriptGroupAssignment> deviceManagementScriptGroupAssignments, final java.util.List<DeviceManagementScriptAssignment> deviceManagementScriptAssignments) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("deviceManagementScriptGroupAssignments", deviceManagementScriptGroupAssignments);
         bodyParams.put("deviceManagementScriptAssignments", deviceManagementScriptAssignments);
@@ -53,7 +49,7 @@ public class DeviceManagementScriptAssignRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IDeviceManagementScriptAssignRequest instance
      */
-    public IDeviceManagementScriptAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementScriptAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementScriptAssignRequest request = new DeviceManagementScriptAssignRequest(
                 getRequestUrl(),
                 getClient(),

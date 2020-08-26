@@ -5,16 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.IntuneBrandingProfileAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfile;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileCollectionPage;
@@ -37,7 +39,7 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IntuneBrandingProfileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IntuneBrandingProfileCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IntuneBrandingProfileCollectionResponse.class, IIntuneBrandingProfileCollectionPage.class);
     }
 
@@ -81,7 +83,7 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
      * @return the updated request
      */
     public IIntuneBrandingProfileCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IntuneBrandingProfileCollectionRequest)this;
     }
 
@@ -92,7 +94,7 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
      * @return the updated request
      */
     public IIntuneBrandingProfileCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IntuneBrandingProfileCollectionRequest)this;
     }
 
@@ -103,7 +105,7 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
      * @return the updated request
      */
     public IIntuneBrandingProfileCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (IntuneBrandingProfileCollectionRequest)this;
     }
 

@@ -3,20 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedRole;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleSelfActivateRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrivilegedRoleSelfActivateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleSelfDeactivateRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrivilegedRoleSelfDeactivateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,7 +38,7 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrivilegedRoleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

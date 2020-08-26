@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAuthenticationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Authentication;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
@@ -27,6 +31,8 @@ import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequest
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -50,7 +56,7 @@ public interface IAuthenticationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAuthenticationRequest instance
      */
-    IAuthenticationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAuthenticationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAuthenticationMethodCollectionRequestBuilder methods();

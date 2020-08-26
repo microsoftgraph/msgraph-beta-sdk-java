@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetReportF
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -37,7 +35,7 @@ public class DeviceManagementReportsGetReportFiltersRequestBuilder extends BaseA
      * @param sessionId the sessionId
      * @param filter the filter
      */
-    public DeviceManagementReportsGetReportFiltersRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+    public DeviceManagementReportsGetReportFiltersRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("name", name);
         bodyParams.put("select", select);
@@ -65,7 +63,7 @@ public class DeviceManagementReportsGetReportFiltersRequestBuilder extends BaseA
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetReportFiltersRequest instance
      */
-    public IDeviceManagementReportsGetReportFiltersRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementReportsGetReportFiltersRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementReportsGetReportFiltersRequest request = new DeviceManagementReportsGetReportFiltersRequest(
                 getRequestUrl(),
                 getClient(),

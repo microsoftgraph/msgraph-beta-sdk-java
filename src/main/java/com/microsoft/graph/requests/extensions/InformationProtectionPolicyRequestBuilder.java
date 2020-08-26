@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
+import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public InformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

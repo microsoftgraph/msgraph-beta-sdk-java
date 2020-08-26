@@ -3,20 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingRequest;
-import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DepOnboardingSetting;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingGenerateEncryptionPublicKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingUploadDepTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingGetEncryptionPublicKeyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +40,7 @@ public interface IDepOnboardingSettingRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDepOnboardingSettingRequest instance
      */
-    IDepOnboardingSettingRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

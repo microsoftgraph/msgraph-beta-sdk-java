@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISecurityConfigurationTaskRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SecurityConfigurationTask;
 import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface ISecurityConfigurationTaskRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the ISecurityConfigurationTaskRequest instance
      */
-    ISecurityConfigurationTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecurityConfigurationTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IVulnerableManagedDeviceCollectionRequestBuilder managedDevices();

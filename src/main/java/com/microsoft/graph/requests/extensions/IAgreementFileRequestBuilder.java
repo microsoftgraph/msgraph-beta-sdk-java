@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAgreementFileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AgreementFile;
 import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IAgreementFileRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAgreementFileRequest instance
      */
-    IAgreementFileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAgreementFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAgreementFileLocalizationCollectionRequestBuilder localizations();

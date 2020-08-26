@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRank_AvgRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBu
      * @param ref the ref
      * @param order the order
      */
-    public WorkbookFunctionsRank_AvgRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement ref, final com.google.gson.JsonElement order) {
+    public WorkbookFunctionsRank_AvgRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement ref, final com.google.gson.JsonElement order) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("ref", ref);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_AvgRequest instance
      */
-    public IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRank_AvgRequest request = new WorkbookFunctionsRank_AvgRequest(
                 getRequestUrl(),
                 getClient(),

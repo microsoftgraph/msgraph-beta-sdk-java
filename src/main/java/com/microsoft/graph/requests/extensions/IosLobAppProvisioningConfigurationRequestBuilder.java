@@ -3,28 +3,32 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -44,7 +48,7 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosLobAppProvisioningConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosLobAppProvisioningConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

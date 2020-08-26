@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPrinterCreateRequest;
 import com.microsoft.graph.requests.extensions.PrinterCreateRequest;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -36,7 +33,7 @@ public class PrinterCreateRequestBuilder extends BaseActionRequestBuilder implem
      * @param certificateSigningRequest the certificateSigningRequest
      * @param connectorId the connectorId
      */
-    public PrinterCreateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String displayName, final String manufacturer, final String model, final String physicalDeviceId, final Boolean hasPhysicalDevice, final PrintCertificateSigningRequest certificateSigningRequest, final String connectorId) {
+    public PrinterCreateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String displayName, final String manufacturer, final String model, final String physicalDeviceId, final Boolean hasPhysicalDevice, final PrintCertificateSigningRequest certificateSigningRequest, final String connectorId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("displayName", displayName);
         bodyParams.put("manufacturer", manufacturer);
@@ -62,7 +59,7 @@ public class PrinterCreateRequestBuilder extends BaseActionRequestBuilder implem
      * @param requestOptions the options for the request
      * @return the IPrinterCreateRequest instance
      */
-    public IPrinterCreateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPrinterCreateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PrinterCreateRequest request = new PrinterCreateRequest(
                 getRequestUrl(),
                 getClient(),

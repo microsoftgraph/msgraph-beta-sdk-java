@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessReviewSetRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReviewSet;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewSetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessReviewSetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

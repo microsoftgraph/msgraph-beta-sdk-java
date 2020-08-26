@@ -28,5 +28,5 @@ public interface IServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBu
      * @param requestOptions the options for the request
      * @return the IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest instance
      */
-    IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

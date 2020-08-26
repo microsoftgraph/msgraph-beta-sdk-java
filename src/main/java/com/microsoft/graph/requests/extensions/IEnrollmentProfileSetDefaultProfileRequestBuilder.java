@@ -28,5 +28,5 @@ public interface IEnrollmentProfileSetDefaultProfileRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return the IEnrollmentProfileSetDefaultProfileRequest instance
      */
-    IEnrollmentProfileSetDefaultProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEnrollmentProfileSetDefaultProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

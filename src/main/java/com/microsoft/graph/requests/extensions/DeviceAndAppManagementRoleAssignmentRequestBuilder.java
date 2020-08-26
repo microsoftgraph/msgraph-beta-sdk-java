@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.RoleScopeTagWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,7 +37,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementGetEffectivePermissionsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, IDeviceManagementGetEffectivePermissionsCollectionPage.class);
     }
 
@@ -79,7 +81,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @return the updated request
      */
     public IDeviceManagementGetEffectivePermissionsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
@@ -90,7 +92,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @return the updated request
      */
     public IDeviceManagementGetEffectivePermissionsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
@@ -101,7 +103,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @return the updated request
      */
     public IDeviceManagementGetEffectivePermissionsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 

@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrintTaskDefinition;
+import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +37,5 @@ public interface IPrintTaskDefinitionReferenceRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IPrintTaskDefinitionReferenceRequest instance
      */
-    IPrintTaskDefinitionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrintTaskDefinitionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

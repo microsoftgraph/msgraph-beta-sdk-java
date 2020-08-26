@@ -5,7 +5,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleScopeTag;
+import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +41,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleScopeTagWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public RoleScopeTagWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleScopeTag.class);
     }
 
@@ -81,7 +89,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
      * @return the updated request
      */
     public IRoleScopeTagWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IRoleScopeTagWithReferenceRequest)this;
     }
 
@@ -92,7 +100,7 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
      * @return the updated request
      */
     public IRoleScopeTagWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleScopeTagWithReferenceRequest)this;
     }
 }

@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ILocationManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.LocationManagementCondition;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface ILocationManagementConditionRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the ILocationManagementConditionRequest instance
      */
-    ILocationManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ILocationManagementConditionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements();

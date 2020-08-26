@@ -3,9 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxisTitleRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookChartAxisTitle;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxisTitleFormatRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +35,7 @@ public interface IWorkbookChartAxisTitleRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookChartAxisTitleRequest instance
      */
-    IWorkbookChartAxisTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartAxisTitleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

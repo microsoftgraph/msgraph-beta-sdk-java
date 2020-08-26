@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventMessageRequestDeclineRequest;
 import com.microsoft.graph.requests.extensions.EventMessageRequestDeclineRequest;
 import com.microsoft.graph.models.extensions.TimeSlot;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +29,7 @@ public class EventMessageRequestDeclineRequestBuilder extends BaseActionRequestB
      * @param sendResponse the sendResponse
      * @param comment the comment
      */
-    public EventMessageRequestDeclineRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final TimeSlot proposedNewTime, final Boolean sendResponse, final String comment) {
+    public EventMessageRequestDeclineRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TimeSlot proposedNewTime, final Boolean sendResponse, final String comment) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("proposedNewTime", proposedNewTime);
         bodyParams.put("sendResponse", sendResponse);
@@ -54,7 +51,7 @@ public class EventMessageRequestDeclineRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IEventMessageRequestDeclineRequest instance
      */
-    public IEventMessageRequestDeclineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEventMessageRequestDeclineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventMessageRequestDeclineRequest request = new EventMessageRequestDeclineRequest(
                 getRequestUrl(),
                 getClient(),

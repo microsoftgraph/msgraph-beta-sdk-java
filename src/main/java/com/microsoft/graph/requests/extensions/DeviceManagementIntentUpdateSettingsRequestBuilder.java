@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUpdateSettingsRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUpdateSettingsRequest;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class DeviceManagementIntentUpdateSettingsRequestBuilder extends BaseActi
      * @param requestOptions the options for this request
      * @param settings the settings
      */
-    public DeviceManagementIntentUpdateSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DeviceManagementSettingInstance> settings) {
+    public DeviceManagementIntentUpdateSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceManagementSettingInstance> settings) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settings", settings);
     }
@@ -50,7 +47,7 @@ public class DeviceManagementIntentUpdateSettingsRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentUpdateSettingsRequest instance
      */
-    public IDeviceManagementIntentUpdateSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementIntentUpdateSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementIntentUpdateSettingsRequest request = new DeviceManagementIntentUpdateSettingsRequest(
                 getRequestUrl(),
                 getClient(),

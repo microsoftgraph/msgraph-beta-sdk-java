@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder e
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder e
         return buildRequest(getOptions());
     }
 
-    public IDeviceCompliancePolicySettingStateSummaryCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceCompliancePolicySettingStateSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceCompliancePolicySettingStateSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

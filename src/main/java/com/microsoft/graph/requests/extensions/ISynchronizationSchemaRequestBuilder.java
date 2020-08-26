@@ -3,15 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SynchronizationSchema;
 import com.microsoft.graph.models.extensions.ExpressionInputObject;
 import com.microsoft.graph.models.extensions.AttributeDefinition;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaParseExpressionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaFunctionsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaFilterOperatorsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +38,7 @@ public interface ISynchronizationSchemaRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISynchronizationSchemaRequest instance
      */
-    ISynchronizationSchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationSchemaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryDefinitionCollectionRequestBuilder directories();

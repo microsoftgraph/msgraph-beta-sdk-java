@@ -5,7 +5,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CommsApplication;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
+import com.microsoft.graph.models.extensions.MediaConfig;
+import com.microsoft.graph.models.generated.Modality;
+import com.microsoft.graph.models.generated.ScreenSharingRole;
+import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.generated.CallDisposition;
+import com.microsoft.graph.models.generated.RejectReason;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.generated.RecordingStatus;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedAppRegistration;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +38,7 @@ public interface IManagedAppRegistrationWithReferenceRequestBuilder extends IReq
      * @param requestOptions the options for this request
      * @return the IManagedAppRegistrationWithReferenceRequest instance
      */
-    IManagedAppRegistrationWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppRegistrationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedAppRegistrationReferenceRequestBuilder reference();
 

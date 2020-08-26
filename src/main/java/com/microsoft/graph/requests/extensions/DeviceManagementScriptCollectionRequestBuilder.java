@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +37,7 @@ public class DeviceManagementScriptCollectionRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementScriptCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +45,7 @@ public class DeviceManagementScriptCollectionRequestBuilder extends BaseRequestB
         return buildRequest(getOptions());
     }
 
-    public IDeviceManagementScriptCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementScriptCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementScriptCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

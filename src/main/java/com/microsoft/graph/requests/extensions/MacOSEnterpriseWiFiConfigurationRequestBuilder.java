@@ -3,16 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMacOSEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOSEnterpriseWiFiConfiguration;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +38,7 @@ public class MacOSEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSEnterpriseWiFiConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MacOSEnterpriseWiFiConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

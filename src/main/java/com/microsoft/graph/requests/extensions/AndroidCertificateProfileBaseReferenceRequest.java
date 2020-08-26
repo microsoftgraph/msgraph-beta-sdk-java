@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
+import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +37,7 @@ public class AndroidCertificateProfileBaseReferenceRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidCertificateProfileBaseReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public AndroidCertificateProfileBaseReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidCertificateProfileBase.class);
     }
 
@@ -51,7 +56,7 @@ public class AndroidCertificateProfileBaseReferenceRequest extends BaseRequest i
      * @return the updated request
      */
     public IAndroidCertificateProfileBaseReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AndroidCertificateProfileBaseReferenceRequest)this;
     }
 
@@ -62,7 +67,7 @@ public class AndroidCertificateProfileBaseReferenceRequest extends BaseRequest i
      * @return the updated request
      */
     public IAndroidCertificateProfileBaseReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AndroidCertificateProfileBaseReferenceRequest)this;
     }
     /**

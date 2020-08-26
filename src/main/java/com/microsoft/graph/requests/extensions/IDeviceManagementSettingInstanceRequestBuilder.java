@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IDeviceManagementSettingInstanceRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IDeviceManagementSettingInstanceRequest instance
      */
-    IDeviceManagementSettingInstanceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementSettingInstanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,5 +28,5 @@ public interface IManagedDeviceRotateFileVaultKeyRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return the IManagedDeviceRotateFileVaultKeyRequest instance
      */
-    IManagedDeviceRotateFileVaultKeyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceRotateFileVaultKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

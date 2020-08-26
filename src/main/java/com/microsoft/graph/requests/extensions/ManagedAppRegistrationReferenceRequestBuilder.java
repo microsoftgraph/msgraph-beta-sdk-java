@@ -6,7 +6,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedAppRegistration;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +39,7 @@ public class ManagedAppRegistrationReferenceRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedAppRegistrationReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +58,7 @@ public class ManagedAppRegistrationReferenceRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IManagedAppRegistrationReferenceRequest instance
      */
-    public IManagedAppRegistrationReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedAppRegistrationReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

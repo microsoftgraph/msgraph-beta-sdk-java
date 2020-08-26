@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_InvReque
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionReques
      * @param mean the mean
      * @param standardDev the standardDev
      */
-    public WorkbookFunctionsLogNorm_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
+    public WorkbookFunctionsLogNorm_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("probability", probability);
         bodyParams.put("mean", mean);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
-    public IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLogNorm_InvRequest request = new WorkbookFunctionsLogNorm_InvRequest(
                 getRequestUrl(),
                 getClient(),

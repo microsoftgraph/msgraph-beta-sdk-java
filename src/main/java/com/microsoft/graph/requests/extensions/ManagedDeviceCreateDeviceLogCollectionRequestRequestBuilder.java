@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCreateDeviceLogCollectionRequestRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCreateDeviceLogCollectionRequestRequest;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class ManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder extends
      * @param requestOptions the options for this request
      * @param templateType the templateType
      */
-    public ManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DeviceLogCollectionRequest templateType) {
+    public ManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final DeviceLogCollectionRequest templateType) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("templateType", templateType);
     }
@@ -50,7 +47,7 @@ public class ManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IManagedDeviceCreateDeviceLogCollectionRequestRequest instance
      */
-    public IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceCreateDeviceLogCollectionRequestRequest request = new ManagedDeviceCreateDeviceLogCollectionRequestRequest(
                 getRequestUrl(),
                 getClient(),

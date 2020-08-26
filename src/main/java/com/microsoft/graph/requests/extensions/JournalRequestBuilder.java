@@ -3,16 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IJournalRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Journal;
+import com.microsoft.graph.requests.extensions.IJournalLineCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IJournalLineRequestBuilder;
+import com.microsoft.graph.requests.extensions.JournalLineCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.JournalLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.JournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.JournalLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalPostRequestBuilder;
-import com.microsoft.graph.requests.extensions.JournalPostRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +36,7 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public JournalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public JournalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

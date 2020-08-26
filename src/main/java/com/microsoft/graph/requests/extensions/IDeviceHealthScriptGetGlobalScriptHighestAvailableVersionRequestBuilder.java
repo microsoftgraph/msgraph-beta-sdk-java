@@ -28,5 +28,5 @@ public interface IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionReques
      * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest instance
      */
-    IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

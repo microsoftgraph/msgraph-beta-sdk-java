@@ -28,5 +28,5 @@ public interface IInformationProtectionEvaluateLabelsAndPoliciesRequestBuilder e
      * @param requestOptions the options for the request
      * @return the IInformationProtectionEvaluateLabelsAndPoliciesRequest instance
      */
-    IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsMidbRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBuilde
      * @param startNum the startNum
      * @param numBytes the numBytes
      */
-    public WorkbookFunctionsMidbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes) {
+    public WorkbookFunctionsMidbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
         bodyParams.put("startNum", startNum);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMidbRequest instance
      */
-    public IWorkbookFunctionsMidbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsMidbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMidbRequest request = new WorkbookFunctionsMidbRequest(
                 getRequestUrl(),
                 getClient(),

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddLYieldRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -36,7 +34,7 @@ public class WorkbookFunctionsOddLYieldRequestBuilder extends BaseActionRequestB
      * @param frequency the frequency
      * @param basis the basis
      */
-    public WorkbookFunctionsOddLYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsOddLYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -63,7 +61,7 @@ public class WorkbookFunctionsOddLYieldRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOddLYieldRequest instance
      */
-    public IWorkbookFunctionsOddLYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsOddLYieldRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsOddLYieldRequest request = new WorkbookFunctionsOddLYieldRequest(
                 getRequestUrl(),
                 getClient(),

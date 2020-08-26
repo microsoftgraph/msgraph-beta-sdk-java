@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TermsOfUseContainer;
 import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface ITermsOfUseContainerRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITermsOfUseContainerRequest instance
      */
-    ITermsOfUseContainerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITermsOfUseContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAgreementCollectionRequestBuilder agreements();

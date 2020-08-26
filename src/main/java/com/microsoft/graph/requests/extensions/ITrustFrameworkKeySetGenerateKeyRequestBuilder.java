@@ -28,5 +28,5 @@ public interface ITrustFrameworkKeySetGenerateKeyRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetGenerateKeyRequest instance
      */
-    ITrustFrameworkKeySetGenerateKeyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITrustFrameworkKeySetGenerateKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

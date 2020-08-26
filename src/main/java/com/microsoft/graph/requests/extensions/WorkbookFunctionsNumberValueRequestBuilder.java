@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsNumberValueReque
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionReques
      * @param decimalSeparator the decimalSeparator
      * @param groupSeparator the groupSeparator
      */
-    public WorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
+    public WorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
         bodyParams.put("decimalSeparator", decimalSeparator);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNumberValueRequest instance
      */
-    public IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNumberValueRequest request = new WorkbookFunctionsNumberValueRequest(
                 getRequestUrl(),
                 getClient(),

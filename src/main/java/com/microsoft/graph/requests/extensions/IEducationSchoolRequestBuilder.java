@@ -3,13 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequest;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -33,7 +39,7 @@ public interface IEducationSchoolRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationSchoolRequest instance
      */
-    IEducationSchoolRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationClassCollectionWithReferencesRequestBuilder classes();

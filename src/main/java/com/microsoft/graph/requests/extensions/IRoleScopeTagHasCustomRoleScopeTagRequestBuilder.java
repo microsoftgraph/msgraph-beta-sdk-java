@@ -28,5 +28,5 @@ public interface IRoleScopeTagHasCustomRoleScopeTagRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IRoleScopeTagHasCustomRoleScopeTagRequest instance
      */
-    IRoleScopeTagHasCustomRoleScopeTagRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRoleScopeTagHasCustomRoleScopeTagRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

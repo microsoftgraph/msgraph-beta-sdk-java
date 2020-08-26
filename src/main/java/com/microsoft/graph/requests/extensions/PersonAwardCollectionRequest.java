@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Profile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.PersonAward;
 import com.microsoft.graph.requests.extensions.IPersonAwardCollectionPage;
@@ -37,7 +38,7 @@ public class PersonAwardCollectionRequest extends BaseCollectionRequest<PersonAw
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonAwardCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PersonAwardCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonAwardCollectionResponse.class, IPersonAwardCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class PersonAwardCollectionRequest extends BaseCollectionRequest<PersonAw
      * @return the updated request
      */
     public IPersonAwardCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PersonAwardCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class PersonAwardCollectionRequest extends BaseCollectionRequest<PersonAw
      * @return the updated request
      */
     public IPersonAwardCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PersonAwardCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class PersonAwardCollectionRequest extends BaseCollectionRequest<PersonAw
      * @return the updated request
      */
     public IPersonAwardCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PersonAwardCollectionRequest)this;
     }
 

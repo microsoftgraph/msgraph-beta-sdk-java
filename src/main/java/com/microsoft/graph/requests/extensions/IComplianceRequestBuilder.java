@@ -3,9 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IComplianceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Compliance;
 import com.microsoft.graph.requests.extensions.IEdiscoveryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +35,7 @@ public interface IComplianceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IComplianceRequest instance
      */
-    IComplianceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IComplianceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

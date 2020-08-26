@@ -28,5 +28,5 @@ public interface IIosLobAppProvisioningConfigurationAssignRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IIosLobAppProvisioningConfigurationAssignRequest instance
      */
-    IIosLobAppProvisioningConfigurationAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosLobAppProvisioningConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

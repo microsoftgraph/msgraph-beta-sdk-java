@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,10 +34,10 @@ public class AuditEventGetAuditActivityTypesCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param category the category
      */
-    public AuditEventGetAuditActivityTypesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String category) {
+    public AuditEventGetAuditActivityTypesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String category) {
         super(requestUrl, client, requestOptions);
      	 if(category!=null){
-			functionOptions.add(new FunctionOption("category", category));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("category", category));
 		}
       }
 
@@ -43,14 +45,14 @@ public class AuditEventGetAuditActivityTypesCollectionRequestBuilder extends Bas
         return buildRequest(getOptions());
     }
 
-    public IAuditEventGetAuditActivityTypesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAuditEventGetAuditActivityTypesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AuditEventGetAuditActivityTypesCollectionRequest request = new AuditEventGetAuditActivityTypesCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

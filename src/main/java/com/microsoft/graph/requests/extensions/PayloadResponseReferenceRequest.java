@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PayloadResponse;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class PayloadResponseReferenceRequest extends BaseRequest implements IPay
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PayloadResponseReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public PayloadResponseReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PayloadResponse.class);
     }
 
@@ -51,7 +54,7 @@ public class PayloadResponseReferenceRequest extends BaseRequest implements IPay
      * @return the updated request
      */
     public IPayloadResponseReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PayloadResponseReferenceRequest)this;
     }
 
@@ -62,7 +65,7 @@ public class PayloadResponseReferenceRequest extends BaseRequest implements IPay
      * @return the updated request
      */
     public IPayloadResponseReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PayloadResponseReferenceRequest)this;
     }
     /**

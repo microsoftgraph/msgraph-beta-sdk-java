@@ -28,5 +28,5 @@ public interface ISynchronizationPingRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ISynchronizationPingRequest instance
      */
-    ISynchronizationPingRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationPingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

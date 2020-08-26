@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageResource;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +43,7 @@ public class AccessPackageResourceReferenceRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public AccessPackageResourceReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageResource.class);
     }
 
@@ -51,7 +62,7 @@ public class AccessPackageResourceReferenceRequest extends BaseRequest implement
      * @return the updated request
      */
     public IAccessPackageResourceReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AccessPackageResourceReferenceRequest)this;
     }
 
@@ -62,7 +73,7 @@ public class AccessPackageResourceReferenceRequest extends BaseRequest implement
      * @return the updated request
      */
     public IAccessPackageResourceReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AccessPackageResourceReferenceRequest)this;
     }
     /**

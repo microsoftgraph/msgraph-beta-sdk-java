@@ -5,15 +5,28 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CommsApplication;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
+import com.microsoft.graph.models.extensions.MediaConfig;
+import com.microsoft.graph.models.generated.Modality;
+import com.microsoft.graph.models.generated.ScreenSharingRole;
+import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.generated.CallDisposition;
+import com.microsoft.graph.models.generated.RejectReason;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.generated.RecordingStatus;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallCollectionRequest;
-import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
-
 import com.microsoft.graph.requests.extensions.ICallLogTeleconferenceDeviceQualityRequestBuilder;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.options.Option;
@@ -34,7 +47,7 @@ public class CallCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CallCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +55,7 @@ public class CallCollectionRequestBuilder extends BaseRequestBuilder implements 
         return buildRequest(getOptions());
     }
 
-    public ICallCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICallCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CallCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

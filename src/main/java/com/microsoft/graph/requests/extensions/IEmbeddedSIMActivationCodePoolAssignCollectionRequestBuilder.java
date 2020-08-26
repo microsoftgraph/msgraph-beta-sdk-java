@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,6 +24,6 @@ public interface IEmbeddedSIMActivationCodePoolAssignCollectionRequestBuilder ex
 
     IEmbeddedSIMActivationCodePoolAssignCollectionRequest buildRequest();
 
-    IEmbeddedSIMActivationCodePoolAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEmbeddedSIMActivationCodePoolAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

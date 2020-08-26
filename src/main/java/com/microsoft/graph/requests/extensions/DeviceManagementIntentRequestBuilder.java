@@ -3,48 +3,44 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementIntent;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateSummaryRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUpdateSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentUpdateSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentMigrateToTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentMigrateToTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentCreateCopyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentCreateCopyRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentCompareCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentCompareCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -64,7 +60,7 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementIntentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

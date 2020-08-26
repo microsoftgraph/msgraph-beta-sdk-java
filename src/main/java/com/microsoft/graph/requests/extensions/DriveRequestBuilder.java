@@ -3,38 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRecentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveRecentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveSearchCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveSearchCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -54,7 +42,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

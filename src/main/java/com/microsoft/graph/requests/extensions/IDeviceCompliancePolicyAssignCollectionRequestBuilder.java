@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,6 +24,6 @@ public interface IDeviceCompliancePolicyAssignCollectionRequestBuilder extends I
 
     IDeviceCompliancePolicyAssignCollectionRequest buildRequest();
 
-    IDeviceCompliancePolicyAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

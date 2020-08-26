@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldDiscRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +31,7 @@ public class WorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequestB
      * @param redemption the redemption
      * @param basis the basis
      */
-    public WorkbookFunctionsYieldDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsYieldDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -57,7 +55,7 @@ public class WorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldDiscRequest instance
      */
-    public IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsYieldDiscRequest request = new WorkbookFunctionsYieldDiscRequest(
                 getRequestUrl(),
                 getClient(),

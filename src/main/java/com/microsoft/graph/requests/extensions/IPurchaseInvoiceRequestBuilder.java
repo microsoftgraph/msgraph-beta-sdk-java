@@ -3,13 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PurchaseInvoice;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoicePostRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -33,7 +38,7 @@ public interface IPurchaseInvoiceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPurchaseInvoiceRequest instance
      */
-    IPurchaseInvoiceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPurchaseInvoiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines();

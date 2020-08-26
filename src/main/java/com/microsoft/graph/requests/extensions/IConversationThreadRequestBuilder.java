@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IConversationThreadRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConversationThread;
+import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
-import com.microsoft.graph.models.extensions.Post;
-import com.microsoft.graph.requests.extensions.IConversationThreadReplyRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +37,7 @@ public interface IConversationThreadRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IConversationThreadRequest instance
      */
-    IConversationThreadRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConversationThreadRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPostCollectionRequestBuilder posts();

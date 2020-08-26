@@ -5,7 +5,19 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationUser;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationRubricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +44,5 @@ public interface IEducationUserReferenceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationUserReferenceRequest instance
      */
-    IEducationUserReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationUserReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

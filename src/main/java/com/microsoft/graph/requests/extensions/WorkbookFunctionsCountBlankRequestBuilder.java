@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountBlankReques
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param range the range
      */
-    public WorkbookFunctionsCountBlankRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range) {
+    public WorkbookFunctionsCountBlankRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement range) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("range", range);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCountBlankRequest instance
      */
-    public IWorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCountBlankRequest request = new WorkbookFunctionsCountBlankRequest(
                 getRequestUrl(),
                 getClient(),

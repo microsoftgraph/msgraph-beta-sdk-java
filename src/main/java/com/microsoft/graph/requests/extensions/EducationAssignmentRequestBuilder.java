@@ -3,26 +3,28 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationAssignment;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentPublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationAssignmentPublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentGetResourcesFolderUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationAssignmentGetResourcesFolderUrlRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -42,7 +44,7 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -5,7 +5,26 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageCatalog;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +52,7 @@ public class AccessPackageCatalogWithReferenceRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageCatalogWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public AccessPackageCatalogWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageCatalog.class);
     }
 
@@ -81,7 +100,7 @@ public class AccessPackageCatalogWithReferenceRequest extends BaseRequest implem
      * @return the updated request
      */
     public IAccessPackageCatalogWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IAccessPackageCatalogWithReferenceRequest)this;
     }
 
@@ -92,7 +111,7 @@ public class AccessPackageCatalogWithReferenceRequest extends BaseRequest implem
      * @return the updated request
      */
     public IAccessPackageCatalogWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AccessPackageCatalogWithReferenceRequest)this;
     }
 }

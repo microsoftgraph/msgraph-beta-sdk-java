@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceTriggerConfigurationManagerActionRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceTriggerConfigurationManagerActionRequest;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class ManagedDeviceTriggerConfigurationManagerActionRequestBuilder extend
      * @param requestOptions the options for this request
      * @param configurationManagerAction the configurationManagerAction
      */
-    public ManagedDeviceTriggerConfigurationManagerActionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final ConfigurationManagerAction configurationManagerAction) {
+    public ManagedDeviceTriggerConfigurationManagerActionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final ConfigurationManagerAction configurationManagerAction) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("configurationManagerAction", configurationManagerAction);
     }
@@ -50,7 +47,7 @@ public class ManagedDeviceTriggerConfigurationManagerActionRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IManagedDeviceTriggerConfigurationManagerActionRequest instance
      */
-    public IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceTriggerConfigurationManagerActionRequest request = new ManagedDeviceTriggerConfigurationManagerActionRequest(
                 getRequestUrl(),
                 getClient(),

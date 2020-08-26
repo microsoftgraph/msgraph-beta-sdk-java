@@ -28,5 +28,5 @@ public interface IDeviceManagementReportsGetPolicyNonComplianceMetadataRequestBu
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest instance
      */
-    IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

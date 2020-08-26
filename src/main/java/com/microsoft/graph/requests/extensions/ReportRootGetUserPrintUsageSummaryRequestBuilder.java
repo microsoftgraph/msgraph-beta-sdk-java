@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ReportRootGetUserPrintUsageSummar
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -31,11 +29,11 @@ public class ReportRootGetUserPrintUsageSummaryRequestBuilder extends BaseFuncti
      * @param periodStart the periodStart
      * @param periodEnd the periodEnd
      */
-    public ReportRootGetUserPrintUsageSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String userId, final java.util.Calendar periodStart, final java.util.Calendar periodEnd) {
+    public ReportRootGetUserPrintUsageSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String userId, final java.util.Calendar periodStart, final java.util.Calendar periodEnd) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("userId", userId));
-        functionOptions.add(new FunctionOption("periodStart", periodStart));
-        functionOptions.add(new FunctionOption("periodEnd", periodEnd));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("userId", userId));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodStart", periodStart));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodEnd", periodEnd));
     }
 
     /**
@@ -53,14 +51,14 @@ public class ReportRootGetUserPrintUsageSummaryRequestBuilder extends BaseFuncti
      * @param requestOptions the options for the request
      * @return the IReportRootGetUserPrintUsageSummaryRequest instance
      */
-    public IReportRootGetUserPrintUsageSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetUserPrintUsageSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetUserPrintUsageSummaryRequest request = new ReportRootGetUserPrintUsageSummaryRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

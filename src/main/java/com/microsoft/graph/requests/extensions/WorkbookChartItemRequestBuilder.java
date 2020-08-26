@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookChartItemRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -29,9 +27,9 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder 
      * @param requestOptions the options for this request
      * @param name the name
      */
-    public WorkbookChartItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name) {
+    public WorkbookChartItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String name) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("name", name));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("name", name));
     }
 
     /**
@@ -49,14 +47,14 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWorkbookChartItemRequest instance
      */
-    public IWorkbookChartItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartItemRequest request = new WorkbookChartItemRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

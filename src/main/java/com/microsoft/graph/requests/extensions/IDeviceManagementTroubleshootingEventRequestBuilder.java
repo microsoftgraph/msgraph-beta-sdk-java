@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IDeviceManagementTroubleshootingEventRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IDeviceManagementTroubleshootingEventRequest instance
      */
-    IDeviceManagementTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

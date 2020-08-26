@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetCachedR
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -35,7 +33,7 @@ public class DeviceManagementReportsGetCachedReportRequestBuilder extends BaseAc
      * @param skip the skip
      * @param top the top
      */
-    public DeviceManagementReportsGetCachedReportRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top) {
+    public DeviceManagementReportsGetCachedReportRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String id, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("id", id);
         bodyParams.put("select", select);
@@ -61,7 +59,7 @@ public class DeviceManagementReportsGetCachedReportRequestBuilder extends BaseAc
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetCachedReportRequest instance
      */
-    public IDeviceManagementReportsGetCachedReportRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementReportsGetCachedReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementReportsGetCachedReportRequest request = new DeviceManagementReportsGetCachedReportRequest(
                 getRequestUrl(),
                 getClient(),

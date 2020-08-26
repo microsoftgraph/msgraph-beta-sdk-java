@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyAddGroupReque
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param groupId the groupId
      */
-    public GroupLifecyclePolicyAddGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId) {
+    public GroupLifecyclePolicyAddGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String groupId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("groupId", groupId);
     }
@@ -49,7 +47,7 @@ public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyAddGroupRequest instance
      */
-    public IGroupLifecyclePolicyAddGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupLifecyclePolicyAddGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupLifecyclePolicyAddGroupRequest request = new GroupLifecyclePolicyAddGroupRequest(
                 getRequestUrl(),
                 getClient(),

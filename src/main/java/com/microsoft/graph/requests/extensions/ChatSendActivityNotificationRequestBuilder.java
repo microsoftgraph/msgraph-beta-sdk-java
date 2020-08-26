@@ -5,16 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChatSendActivityNotificationRequest;
 import com.microsoft.graph.requests.extensions.ChatSendActivityNotificationRequest;
-import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;import com.microsoft.graph.models.extensions.ItemBody;import com.microsoft.graph.models.extensions.KeyValuePair;import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -38,7 +32,7 @@ public class ChatSendActivityNotificationRequestBuilder extends BaseActionReques
      * @param templateParameters the templateParameters
      * @param recipient the recipient
      */
-    public ChatSendActivityNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient) {
+    public ChatSendActivityNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("topic", topic);
         bodyParams.put("activityType", activityType);
@@ -63,7 +57,7 @@ public class ChatSendActivityNotificationRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IChatSendActivityNotificationRequest instance
      */
-    public IChatSendActivityNotificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IChatSendActivityNotificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ChatSendActivityNotificationRequest request = new ChatSendActivityNotificationRequest(
                 getRequestUrl(),
                 getClient(),

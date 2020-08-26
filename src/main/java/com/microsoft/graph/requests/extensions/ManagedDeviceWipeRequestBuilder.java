@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceWipeRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class ManagedDeviceWipeRequestBuilder extends BaseActionRequestBuilder im
      * @param macOsUnlockCode the macOsUnlockCode
      * @param useProtectedWipe the useProtectedWipe
      */
-    public ManagedDeviceWipeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode, final Boolean useProtectedWipe) {
+    public ManagedDeviceWipeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode, final Boolean useProtectedWipe) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("keepEnrollmentData", keepEnrollmentData);
         bodyParams.put("keepUserData", keepUserData);
@@ -55,7 +53,7 @@ public class ManagedDeviceWipeRequestBuilder extends BaseActionRequestBuilder im
      * @param requestOptions the options for the request
      * @return the IManagedDeviceWipeRequest instance
      */
-    public IManagedDeviceWipeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceWipeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceWipeRequest request = new ManagedDeviceWipeRequest(
                 getRequestUrl(),
                 getClient(),

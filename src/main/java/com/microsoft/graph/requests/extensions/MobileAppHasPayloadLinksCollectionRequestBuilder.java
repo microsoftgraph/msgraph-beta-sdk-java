@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +35,7 @@ public class MobileAppHasPayloadLinksCollectionRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param payloadIds the payloadIds
      */
-    public MobileAppHasPayloadLinksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> payloadIds) {
+    public MobileAppHasPayloadLinksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> payloadIds) {
         super(requestUrl, client, requestOptions);
   	 if(payloadIds!=null){
 			bodyParams.put("payloadIds", payloadIds);
@@ -44,7 +46,7 @@ public class MobileAppHasPayloadLinksCollectionRequestBuilder extends BaseAction
         return buildRequest(getOptions());
     }
 
-    public IMobileAppHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMobileAppHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MobileAppHasPayloadLinksCollectionRequest request = new MobileAppHasPayloadLinksCollectionRequest(
                 getRequestUrl(),
                 getClient(),

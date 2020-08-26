@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidWorkProfileEnterpriseWiFiConfiguration;
+import com.microsoft.graph.requests.extensions.IAndroidWorkProfileTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IAndroidWorkProfileEnterpriseWiFiConfigurationRequestBuilder ex
      * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileEnterpriseWiFiConfigurationRequest instance
      */
-    IAndroidWorkProfileEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidWorkProfileEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

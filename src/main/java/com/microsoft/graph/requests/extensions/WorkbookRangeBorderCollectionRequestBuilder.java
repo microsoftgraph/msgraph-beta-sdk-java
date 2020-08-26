@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +36,7 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeBorderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookRangeBorderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -41,7 +44,7 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuil
         return buildRequest(getOptions());
     }
 
-    public IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookRangeBorderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

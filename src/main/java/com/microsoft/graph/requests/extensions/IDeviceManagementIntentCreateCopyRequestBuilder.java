@@ -28,5 +28,5 @@ public interface IDeviceManagementIntentCreateCopyRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentCreateCopyRequest instance
      */
-    IDeviceManagementIntentCreateCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementIntentCreateCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

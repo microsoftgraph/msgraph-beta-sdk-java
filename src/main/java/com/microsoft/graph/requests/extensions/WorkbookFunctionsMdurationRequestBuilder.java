@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsMdurationRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -34,7 +32,7 @@ public class WorkbookFunctionsMdurationRequestBuilder extends BaseActionRequestB
      * @param frequency the frequency
      * @param basis the basis
      */
-    public WorkbookFunctionsMdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsMdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -59,7 +57,7 @@ public class WorkbookFunctionsMdurationRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMdurationRequest instance
      */
-    public IWorkbookFunctionsMdurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsMdurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMdurationRequest request = new WorkbookFunctionsMdurationRequest(
                 getRequestUrl(),
                 getClient(),

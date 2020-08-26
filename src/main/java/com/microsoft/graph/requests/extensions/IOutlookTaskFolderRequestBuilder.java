@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookTaskFolder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -11,6 +15,8 @@ import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropert
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +40,7 @@ public interface IOutlookTaskFolderRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOutlookTaskFolderRequest instance
      */
-    IOutlookTaskFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOutlookTaskFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOutlookTaskCollectionRequestBuilder tasks();

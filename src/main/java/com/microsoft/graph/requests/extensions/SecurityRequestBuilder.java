@@ -3,56 +3,62 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISecurityRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
+import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudAppSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudAppSecurityProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainSecurityProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileSecurityProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHostSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.HostSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHostSecurityProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.HostSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HostSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIpSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IpSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIpSecurityProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IpSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IpSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProviderTenantSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProviderTenantSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProviderTenantSettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProviderTenantSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProviderTenantSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
+import com.microsoft.graph.requests.extensions.TiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -72,7 +78,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SecurityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

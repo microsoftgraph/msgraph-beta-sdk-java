@@ -3,9 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestRequest;
-import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestCreateDownloadUrlRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AppLogCollectionRequest;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +34,7 @@ public interface IAppLogCollectionRequestRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IAppLogCollectionRequestRequest instance
      */
-    IAppLogCollectionRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAppLogCollectionRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAppLogCollectionRequestCreateDownloadUrlRequestBuilder createDownloadUrl();
 

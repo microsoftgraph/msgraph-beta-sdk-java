@@ -28,5 +28,5 @@ public interface IBusinessFlowRecordDecisionsRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IBusinessFlowRecordDecisionsRequest instance
      */
-    IBusinessFlowRecordDecisionsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IBusinessFlowRecordDecisionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

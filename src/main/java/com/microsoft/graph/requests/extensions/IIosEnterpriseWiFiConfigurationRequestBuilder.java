@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosEnterpriseWiFiConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosEnterpriseWiFiConfiguration;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface IIosEnterpriseWiFiConfigurationRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IIosEnterpriseWiFiConfigurationRequest instance
      */
-    IIosEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IIosTrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation();

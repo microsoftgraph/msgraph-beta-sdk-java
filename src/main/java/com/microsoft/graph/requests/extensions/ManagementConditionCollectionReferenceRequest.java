@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementConditionStatement;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +36,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagementConditionCollectionResponse.class, IManagementConditionCollectionPage.class);
     }
 
@@ -58,7 +62,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
      * @return the updated request
      */
     public IManagementConditionCollectionReferenceRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagementConditionCollectionReferenceRequest)this;
     }
 
@@ -69,7 +73,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
      * @return the updated request
      */
     public IManagementConditionCollectionReferenceRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagementConditionCollectionReferenceRequest)this;
     }
 
@@ -80,7 +84,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
      * @return the updated request
      */
     public IManagementConditionCollectionReferenceRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagementConditionCollectionReferenceRequest)this;
     }
 }

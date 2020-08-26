@@ -5,16 +5,19 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SensitivityLabel;
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
+import com.microsoft.graph.models.extensions.CurrentLabel;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionPage;
@@ -37,7 +40,7 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SensitivityLabelCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SensitivityLabelCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SensitivityLabelCollectionResponse.class, ISensitivityLabelCollectionPage.class);
     }
 
@@ -81,7 +84,7 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
      * @return the updated request
      */
     public ISensitivityLabelCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SensitivityLabelCollectionRequest)this;
     }
 
@@ -92,7 +95,7 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
      * @return the updated request
      */
     public ISensitivityLabelCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SensitivityLabelCollectionRequest)this;
     }
 
@@ -103,7 +106,7 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
      * @return the updated request
      */
     public ISensitivityLabelCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SensitivityLabelCollectionRequest)this;
     }
 

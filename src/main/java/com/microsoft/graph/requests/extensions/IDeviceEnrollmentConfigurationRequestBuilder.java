@@ -3,13 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationSetPriorityRequestBuilder;
-import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationAssignRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -33,7 +37,7 @@ public interface IDeviceEnrollmentConfigurationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentConfigurationRequest instance
      */
-    IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments();

@@ -3,14 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsFeatureUpdateProfile;
+import com.microsoft.graph.models.extensions.WindowsFeatureUpdateProfileAssignment;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateRequestBuilder;
-import com.microsoft.graph.models.extensions.WindowsFeatureUpdateProfileAssignment;
-import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssignRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +39,7 @@ public interface IWindowsFeatureUpdateProfileRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IWindowsFeatureUpdateProfileRequest instance
      */
-    IWindowsFeatureUpdateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsFeatureUpdateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder assignments();

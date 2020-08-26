@@ -5,14 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelEvaluateRequest;
 import com.microsoft.graph.requests.extensions.SensitivityLabelEvaluateRequest;
-import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
-import com.microsoft.graph.models.extensions.CurrentLabel;
-
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;import com.microsoft.graph.models.extensions.CurrentLabel;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +28,7 @@ public class SensitivityLabelEvaluateRequestBuilder extends BaseActionRequestBui
      * @param discoveredSensitiveTypes the discoveredSensitiveTypes
      * @param currentLabel the currentLabel
      */
-    public SensitivityLabelEvaluateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes, final CurrentLabel currentLabel) {
+    public SensitivityLabelEvaluateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes, final CurrentLabel currentLabel) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("discoveredSensitiveTypes", discoveredSensitiveTypes);
         bodyParams.put("currentLabel", currentLabel);
@@ -53,7 +49,7 @@ public class SensitivityLabelEvaluateRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the ISensitivityLabelEvaluateRequest instance
      */
-    public ISensitivityLabelEvaluateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISensitivityLabelEvaluateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SensitivityLabelEvaluateRequest request = new SensitivityLabelEvaluateRequest(
                 getRequestUrl(),
                 getClient(),

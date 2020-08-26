@@ -28,5 +28,5 @@ public interface IPrivilegedSignupStatusSignUpRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IPrivilegedSignupStatusSignUpRequest instance
      */
-    IPrivilegedSignupStatusSignUpRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedSignupStatusSignUpRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

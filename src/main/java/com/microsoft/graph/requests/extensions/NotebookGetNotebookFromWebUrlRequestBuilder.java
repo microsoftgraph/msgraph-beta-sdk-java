@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.NotebookGetNotebookFromWebUrlRequ
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param webUrl the webUrl
      */
-    public NotebookGetNotebookFromWebUrlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String webUrl) {
+    public NotebookGetNotebookFromWebUrlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String webUrl) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("webUrl", webUrl);
     }
@@ -49,7 +47,7 @@ public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return the INotebookGetNotebookFromWebUrlRequest instance
      */
-    public INotebookGetNotebookFromWebUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public INotebookGetNotebookFromWebUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         NotebookGetNotebookFromWebUrlRequest request = new NotebookGetNotebookFromWebUrlRequest(
                 getRequestUrl(),
                 getClient(),

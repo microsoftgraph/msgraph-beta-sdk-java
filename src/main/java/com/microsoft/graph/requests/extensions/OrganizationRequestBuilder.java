@@ -3,24 +3,28 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOrganizationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationSetMobileDeviceManagementAuthorityRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -40,7 +44,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OrganizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

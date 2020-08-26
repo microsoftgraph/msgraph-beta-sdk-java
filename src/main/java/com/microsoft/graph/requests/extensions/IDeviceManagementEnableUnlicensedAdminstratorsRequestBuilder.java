@@ -28,5 +28,5 @@ public interface IDeviceManagementEnableUnlicensedAdminstratorsRequestBuilder ex
      * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableUnlicensedAdminstratorsRequest instance
      */
-    IDeviceManagementEnableUnlicensedAdminstratorsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementEnableUnlicensedAdminstratorsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

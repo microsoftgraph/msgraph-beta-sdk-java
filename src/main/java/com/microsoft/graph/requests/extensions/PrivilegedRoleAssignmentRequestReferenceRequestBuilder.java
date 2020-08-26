@@ -6,7 +6,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedRoleAssignmentRequest;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +33,7 @@ public class PrivilegedRoleAssignmentRequestReferenceRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleAssignmentRequestReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrivilegedRoleAssignmentRequestReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +52,7 @@ public class PrivilegedRoleAssignmentRequestReferenceRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the IPrivilegedRoleAssignmentRequestReferenceRequest instance
      */
-    public IPrivilegedRoleAssignmentRequestReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPrivilegedRoleAssignmentRequestReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PrivilegedRoleAssignmentRequestReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

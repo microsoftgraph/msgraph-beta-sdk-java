@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RiskyUser;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class RiskyUserHistoryItemCollectionRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RiskyUserHistoryItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public RiskyUserHistoryItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class RiskyUserHistoryItemCollectionRequestBuilder extends BaseRequestBui
         return buildRequest(getOptions());
     }
 
-    public IRiskyUserHistoryItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRiskyUserHistoryItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RiskyUserHistoryItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -5,7 +5,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +47,7 @@ public class AdministrativeUnitReferenceRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public AdministrativeUnitReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdministrativeUnit.class);
     }
 
@@ -51,7 +66,7 @@ public class AdministrativeUnitReferenceRequest extends BaseRequest implements I
      * @return the updated request
      */
     public IAdministrativeUnitReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AdministrativeUnitReferenceRequest)this;
     }
 
@@ -62,7 +77,7 @@ public class AdministrativeUnitReferenceRequest extends BaseRequest implements I
      * @return the updated request
      */
     public IAdministrativeUnitReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AdministrativeUnitReferenceRequest)this;
     }
     /**

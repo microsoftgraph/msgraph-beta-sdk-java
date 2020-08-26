@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAppConsentRequestRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AppConsentRequest;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IAppConsentRequestRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAppConsentRequestRequest instance
      */
-    IAppConsentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAppConsentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IUserConsentRequestCollectionRequestBuilder userConsentRequests();

@@ -5,7 +5,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyCategory;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +47,7 @@ public class GroupPolicyCategoryReferenceRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyCategoryReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyCategoryReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyCategory.class);
     }
 
@@ -51,7 +66,7 @@ public class GroupPolicyCategoryReferenceRequest extends BaseRequest implements 
      * @return the updated request
      */
     public IGroupPolicyCategoryReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupPolicyCategoryReferenceRequest)this;
     }
 
@@ -62,7 +77,7 @@ public class GroupPolicyCategoryReferenceRequest extends BaseRequest implements 
      * @return the updated request
      */
     public IGroupPolicyCategoryReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupPolicyCategoryReferenceRequest)this;
     }
     /**

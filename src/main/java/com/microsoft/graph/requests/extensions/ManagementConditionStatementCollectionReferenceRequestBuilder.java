@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementCondition;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +31,7 @@ public class ManagementConditionStatementCollectionReferenceRequestBuilder exten
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionStatementCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionStatementCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -35,7 +39,7 @@ public class ManagementConditionStatementCollectionReferenceRequestBuilder exten
         return buildRequest(getOptions());
     }
 
-    public IManagementConditionStatementCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionStatementCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionStatementCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

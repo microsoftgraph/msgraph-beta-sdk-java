@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExactMatchDataStore;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.ExactMatchSession;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionCollectionPage;
@@ -37,7 +38,7 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchSessionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ExactMatchSessionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExactMatchSessionCollectionResponse.class, IExactMatchSessionCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
      * @return the updated request
      */
     public IExactMatchSessionCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ExactMatchSessionCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
      * @return the updated request
      */
     public IExactMatchSessionCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ExactMatchSessionCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class ExactMatchSessionCollectionRequest extends BaseCollectionRequest<Ex
      * @return the updated request
      */
     public IExactMatchSessionCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ExactMatchSessionCollectionRequest)this;
     }
 

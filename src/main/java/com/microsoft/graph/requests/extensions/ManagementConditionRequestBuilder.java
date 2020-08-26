@@ -3,12 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagementConditionStatementWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementCondition;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionStatementRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +35,7 @@ public class ManagementConditionRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

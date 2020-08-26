@@ -3,17 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosVppEBookRequest;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosVppEBook;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +34,7 @@ public interface IIosVppEBookRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosVppEBookRequest instance
      */
-    IIosVppEBookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosVppEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories();

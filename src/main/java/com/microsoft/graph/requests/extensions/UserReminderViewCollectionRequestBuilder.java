@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -34,13 +36,13 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionReques
      * @param startDateTime the startDateTime
      * @param endDateTime the endDateTime
      */
-    public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String startDateTime, final String endDateTime) {
+    public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime) {
         super(requestUrl, client, requestOptions);
      	 if(startDateTime!=null){
-			functionOptions.add(new FunctionOption("startDateTime", startDateTime));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
 		}
        	 if(endDateTime!=null){
-			functionOptions.add(new FunctionOption("endDateTime", endDateTime));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
 		}
       }
 
@@ -48,14 +50,14 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionReques
         return buildRequest(getOptions());
     }
 
-    public IUserReminderViewCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserReminderViewCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserReminderViewCollectionRequest request = new UserReminderViewCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

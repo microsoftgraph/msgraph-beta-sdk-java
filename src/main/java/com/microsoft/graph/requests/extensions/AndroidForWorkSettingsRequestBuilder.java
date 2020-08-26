@@ -3,16 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequest;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequestSignupUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsRequestSignupUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsCompleteSignupRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsCompleteSignupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsSyncAppsRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsSyncAppsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsUnbindRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsUnbindRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidForWorkSettings;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +30,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidForWorkSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

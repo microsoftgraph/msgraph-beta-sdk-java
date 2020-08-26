@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMacOSPkcsCertificateProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOSPkcsCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IMacOSPkcsCertificateProfileRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IMacOSPkcsCertificateProfileRequest instance
      */
-    IMacOSPkcsCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOSPkcsCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates();

@@ -3,9 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IProgramControlRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ProgramControl;
 import com.microsoft.graph.requests.extensions.IProgramRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +35,7 @@ public interface IProgramControlRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IProgramControlRequest instance
      */
-    IProgramControlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IProgramControlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

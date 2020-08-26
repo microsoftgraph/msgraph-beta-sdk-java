@@ -28,5 +28,5 @@ public interface IManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder ex
      * @param requestOptions the options for the request
      * @return the IManagedDeviceCreateDeviceLogCollectionRequestRequest instance
      */
-    IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

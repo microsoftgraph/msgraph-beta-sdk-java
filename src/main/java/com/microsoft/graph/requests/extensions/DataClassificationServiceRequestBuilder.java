@@ -3,59 +3,43 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DataClassificationService;
+import com.microsoft.graph.models.extensions.ContentClassification;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitiveTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequestBuilder;
-import com.microsoft.graph.models.extensions.ContentClassification;
-import com.microsoft.graph.requests.extensions.IDataClassificationServiceClassifyExactMatchesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DataClassificationServiceClassifyExactMatchesRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -75,7 +59,7 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataClassificationServiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DataClassificationServiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

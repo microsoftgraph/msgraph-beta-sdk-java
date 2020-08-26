@@ -3,17 +3,61 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAuthenticationRequest;
-import com.microsoft.graph.requests.extensions.AuthenticationRequest;
-import com.microsoft.graph.models.extensions.Authentication;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Authentication;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.LongRunningOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -29,7 +73,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuthenticationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AuthenticationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Authentication.class);
     }
 
@@ -119,7 +163,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @return the updated request
      */
      public IAuthenticationRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("$select", value));
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AuthenticationRequest)this;
      }
 
@@ -130,7 +174,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @return the updated request
      */
      public IAuthenticationRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("$expand", value));
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AuthenticationRequest)this;
      }
 

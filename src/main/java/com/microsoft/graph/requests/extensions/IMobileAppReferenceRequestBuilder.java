@@ -5,7 +5,23 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MobileApp;
+import com.microsoft.graph.models.extensions.MobileAppAssignment;
+import com.microsoft.graph.models.extensions.MobileAppRelationship;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +48,5 @@ public interface IMobileAppReferenceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMobileAppReferenceRequest instance
      */
-    IMobileAppReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileAppReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

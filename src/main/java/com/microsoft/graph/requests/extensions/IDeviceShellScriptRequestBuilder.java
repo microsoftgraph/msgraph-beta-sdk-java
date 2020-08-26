@@ -3,20 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceShellScriptRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceShellScript;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceShellScriptAssignRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +45,7 @@ public interface IDeviceShellScriptRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceShellScriptRequest instance
      */
-    IDeviceShellScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceShellScriptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments();

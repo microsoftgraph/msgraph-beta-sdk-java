@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
+import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -20,5 +24,5 @@ public interface IRoleScopeTagCollectionReferenceRequestBuilder extends IRequest
 
     IRoleScopeTagCollectionReferenceRequest buildRequest();
 
-    IRoleScopeTagCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRoleScopeTagCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

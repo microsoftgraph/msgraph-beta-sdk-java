@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationUser;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,7 +24,7 @@ public interface IEducationClassCollectionWithReferencesRequestBuilder extends I
 
     IEducationClassCollectionWithReferencesRequest buildRequest();
 
-    IEducationClassCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationClassCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IEducationClassWithReferenceRequestBuilder byId(final String id);
 

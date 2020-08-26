@@ -28,5 +28,5 @@ public interface ISensitivityLabelEvaluateRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the ISensitivityLabelEvaluateRequest instance
      */
-    ISensitivityLabelEvaluateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISensitivityLabelEvaluateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

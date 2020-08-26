@@ -5,7 +5,13 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.models.extensions.KeyCredential;
+import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.models.extensions.PasswordCredential;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -20,5 +26,5 @@ public interface IApplicationCollectionReferenceRequestBuilder extends IRequestB
 
     IApplicationCollectionReferenceRequest buildRequest();
 
-    IApplicationCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApplicationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

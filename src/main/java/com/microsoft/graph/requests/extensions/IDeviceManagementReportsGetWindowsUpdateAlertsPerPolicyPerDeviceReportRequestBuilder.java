@@ -28,5 +28,5 @@ public interface IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDevic
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest instance
      */
-    IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

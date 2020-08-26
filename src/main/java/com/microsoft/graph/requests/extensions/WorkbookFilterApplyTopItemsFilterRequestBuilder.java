@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyTopItemsFilter
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param count the count
      */
-    public WorkbookFilterApplyTopItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
+    public WorkbookFilterApplyTopItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("count", count);
     }
@@ -49,7 +47,7 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyTopItemsFilterRequest request = new WorkbookFilterApplyTopItemsFilterRequest(
                 getRequestUrl(),
                 getClient(),

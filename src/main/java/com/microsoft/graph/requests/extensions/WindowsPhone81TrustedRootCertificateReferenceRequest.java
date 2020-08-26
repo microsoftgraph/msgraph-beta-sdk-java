@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsPhone81TrustedRootCertificate;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class WindowsPhone81TrustedRootCertificateReferenceRequest extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81TrustedRootCertificateReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public WindowsPhone81TrustedRootCertificateReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhone81TrustedRootCertificate.class);
     }
 
@@ -51,7 +54,7 @@ public class WindowsPhone81TrustedRootCertificateReferenceRequest extends BaseRe
      * @return the updated request
      */
     public IWindowsPhone81TrustedRootCertificateReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WindowsPhone81TrustedRootCertificateReferenceRequest)this;
     }
 
@@ -62,7 +65,7 @@ public class WindowsPhone81TrustedRootCertificateReferenceRequest extends BaseRe
      * @return the updated request
      */
     public IWindowsPhone81TrustedRootCertificateReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WindowsPhone81TrustedRootCertificateReferenceRequest)this;
     }
     /**

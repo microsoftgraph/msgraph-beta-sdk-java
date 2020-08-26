@@ -3,32 +3,30 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IBookingBusinessRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.BookingBusiness;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingAppointmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingAppointmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingCustomerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingCustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingCustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.BookingCustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingServiceRequestBuilder;
+import com.microsoft.graph.requests.extensions.BookingServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingStaffMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingStaffMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingStaffMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.BookingStaffMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingStaffMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingBusinessPublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingBusinessPublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingBusinessUnpublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.BookingBusinessUnpublishRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -48,7 +46,7 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BookingBusinessRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public BookingBusinessRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

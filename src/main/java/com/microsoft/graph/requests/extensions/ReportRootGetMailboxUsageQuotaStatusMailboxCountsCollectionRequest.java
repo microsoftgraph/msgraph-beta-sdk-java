@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,7 +38,7 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionResponse.class, IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionPage.class);
     }
 
@@ -80,7 +82,7 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest 
      * @return the updated request
      */
     public IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest)this;
     }
 
@@ -91,7 +93,7 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest 
      * @return the updated request
      */
     public IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest)this;
     }
 
@@ -102,7 +104,7 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest 
      * @return the updated request
      */
     public IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest)this;
     }
 

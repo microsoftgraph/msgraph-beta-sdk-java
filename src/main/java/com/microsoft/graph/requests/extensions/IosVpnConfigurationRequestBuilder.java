@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosVpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosVpnConfiguration;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class IosVpnConfigurationRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosVpnConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosVpnConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IGroupEvaluateDynamicMembershipRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IGroupEvaluateDynamicMembershipRequest instance
      */
-    IGroupEvaluateDynamicMembershipRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupEvaluateDynamicMembershipRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

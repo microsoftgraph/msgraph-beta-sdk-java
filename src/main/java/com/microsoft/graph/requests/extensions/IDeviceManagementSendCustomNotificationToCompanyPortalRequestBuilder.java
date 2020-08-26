@@ -28,5 +28,5 @@ public interface IDeviceManagementSendCustomNotificationToCompanyPortalRequestBu
      * @param requestOptions the options for the request
      * @return the IDeviceManagementSendCustomNotificationToCompanyPortalRequest instance
      */
-    IDeviceManagementSendCustomNotificationToCompanyPortalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementSendCustomNotificationToCompanyPortalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

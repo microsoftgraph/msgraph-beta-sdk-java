@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Workbook;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookWorksheetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +43,7 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseRequestBuilde
         return buildRequest(getOptions());
     }
 
-    public IWorkbookWorksheetCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookWorksheetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookWorksheetCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

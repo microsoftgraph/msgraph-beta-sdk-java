@@ -28,5 +28,5 @@ public interface IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuil
      * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest instance
      */
-    IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

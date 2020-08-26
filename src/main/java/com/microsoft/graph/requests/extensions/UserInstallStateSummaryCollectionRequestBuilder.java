@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedEBook;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserInstallStateSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserInstallStateSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequest
         return buildRequest(getOptions());
     }
 
-    public IUserInstallStateSummaryCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserInstallStateSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserInstallStateSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

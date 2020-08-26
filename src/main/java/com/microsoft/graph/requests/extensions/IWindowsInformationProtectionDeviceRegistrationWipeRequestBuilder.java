@@ -28,5 +28,5 @@ public interface IWindowsInformationProtectionDeviceRegistrationWipeRequestBuild
      * @param requestOptions the options for the request
      * @return the IWindowsInformationProtectionDeviceRegistrationWipeRequest instance
      */
-    IWindowsInformationProtectionDeviceRegistrationWipeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsInformationProtectionDeviceRegistrationWipeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

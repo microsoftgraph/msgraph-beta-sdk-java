@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceAppManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosManagedAppProtectionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosManagedAppProtectionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +43,7 @@ public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequest
         return buildRequest(getOptions());
     }
 
-    public IIosManagedAppProtectionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIosManagedAppProtectionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosManagedAppProtectionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

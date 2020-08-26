@@ -5,16 +5,24 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.AttendeeBase;
+import com.microsoft.graph.models.extensions.LocationConstraint;
+import com.microsoft.graph.models.extensions.TimeConstraint;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.generated.MailTipsType;
+import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
@@ -37,7 +45,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, IUserCollectionPage.class);
     }
 
@@ -81,7 +89,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
      * @return the updated request
      */
     public IUserCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserCollectionRequest)this;
     }
 
@@ -92,7 +100,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
      * @return the updated request
      */
     public IUserCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserCollectionRequest)this;
     }
 
@@ -103,7 +111,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
      * @return the updated request
      */
     public IUserCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (UserCollectionRequest)this;
     }
 

@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
+import com.microsoft.graph.models.extensions.AccessPackageResourceRequest;import com.microsoft.graph.models.extensions.EntitlementManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +35,7 @@ public class AccessPackageResourceRequestCollectionRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRequestCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessPackageResourceRequestCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +43,7 @@ public class AccessPackageResourceRequestCollectionRequestBuilder extends BaseRe
         return buildRequest(getOptions());
     }
 
-    public IAccessPackageResourceRequestCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAccessPackageResourceRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessPackageResourceRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

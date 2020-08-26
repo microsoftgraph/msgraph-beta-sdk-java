@@ -3,29 +3,33 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedEBookRequest;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedEBook;
+import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookAssignRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -45,7 +49,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedEBookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

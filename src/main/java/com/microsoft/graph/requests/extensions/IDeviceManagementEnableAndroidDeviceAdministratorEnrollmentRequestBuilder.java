@@ -28,5 +28,5 @@ public interface IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequ
      * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest instance
      */
-    IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

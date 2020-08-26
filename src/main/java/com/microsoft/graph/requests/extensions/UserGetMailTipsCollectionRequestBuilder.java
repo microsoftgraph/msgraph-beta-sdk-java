@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.generated.MailTipsType;
+import java.util.EnumSet;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +17,6 @@ import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequest
 import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequest;
 import com.microsoft.graph.models.extensions.MailTips;
-import com.microsoft.graph.models.generated.MailTipsType;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,7 +38,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBu
      * @param emailAddresses the emailAddresses
      * @param mailTipsOptions the mailTipsOptions
      */
-    public UserGetMailTipsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
+    public UserGetMailTipsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
         super(requestUrl, client, requestOptions);
   	 if(emailAddresses!=null){
 			bodyParams.put("emailAddresses", emailAddresses);
@@ -50,7 +52,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBu
         return buildRequest(getOptions());
     }
 
-    public IUserGetMailTipsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserGetMailTipsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserGetMailTipsCollectionRequest request = new UserGetMailTipsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

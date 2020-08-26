@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionRequest
      * @param requestOptions the options for this request
      * @param q the q
      */
-    public DriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String q) {
+    public DriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String q) {
         super(requestUrl, client, requestOptions);
      	 if(q!=null){
-			functionOptions.add(new FunctionOption("q", q));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("q", q));
 		}
       }
 
@@ -44,14 +46,14 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionRequest
         return buildRequest(getOptions());
     }
 
-    public IDriveItemSearchCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemSearchCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemSearchCollectionRequest request = new DriveItemSearchCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

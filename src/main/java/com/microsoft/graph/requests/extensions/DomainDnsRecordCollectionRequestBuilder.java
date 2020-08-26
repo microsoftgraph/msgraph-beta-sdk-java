@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +33,7 @@ public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsRecordCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DomainDnsRecordCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +41,7 @@ public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder 
         return buildRequest(getOptions());
     }
 
-    public IDomainDnsRecordCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDomainDnsRecordCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DomainDnsRecordCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

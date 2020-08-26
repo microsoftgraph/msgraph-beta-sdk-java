@@ -3,16 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
+import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +38,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConditionalAccessRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

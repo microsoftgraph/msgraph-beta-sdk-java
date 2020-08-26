@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ServicePrincipal;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +30,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -35,7 +38,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
         return buildRequest(getOptions());
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

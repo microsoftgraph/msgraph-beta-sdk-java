@@ -3,19 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICalendarSharingMessageRequest;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarSharingMessageAcceptRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CalendarSharingMessage;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -39,7 +34,7 @@ public interface ICalendarSharingMessageRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICalendarSharingMessageRequest instance
      */
-    ICalendarSharingMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICalendarSharingMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

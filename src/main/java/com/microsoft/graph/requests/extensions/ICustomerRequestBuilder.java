@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICustomerRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
@@ -11,6 +15,8 @@ import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +40,7 @@ public interface ICustomerRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICustomerRequest instance
      */
-    ICustomerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICustomerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPictureCollectionRequestBuilder picture();

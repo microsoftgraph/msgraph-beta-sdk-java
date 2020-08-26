@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsLogicalRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param value the value
      */
-    public WorkbookFunctionsIsLogicalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
+    public WorkbookFunctionsIsLogicalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("value", value);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsLogicalRequest instance
      */
-    public IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsLogicalRequest request = new WorkbookFunctionsIsLogicalRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,11 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateSendTestMessageRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +36,7 @@ public interface INotificationMessageTemplateRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the INotificationMessageTemplateRequest instance
      */
-    INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ILocalizedNotificationMessageCollectionRequestBuilder localizedNotificationMessages();

@@ -5,15 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequest;
-import com.microsoft.graph.models.generated.DevicePlatformType;
-
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.ManagementConditionStatement;
 import com.microsoft.graph.options.Option;
@@ -34,7 +36,7 @@ public class ManagementConditionStatementCollectionRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionStatementCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionStatementCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,7 @@ public class ManagementConditionStatementCollectionRequestBuilder extends BaseRe
         return buildRequest(getOptions());
     }
 
-    public IManagementConditionStatementCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionStatementCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionStatementCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

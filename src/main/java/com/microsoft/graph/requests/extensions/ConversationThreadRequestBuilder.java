@@ -3,15 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IConversationThreadRequest;
-import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
-import com.microsoft.graph.requests.extensions.PostRequestBuilder;
-import com.microsoft.graph.models.extensions.Post;
-import com.microsoft.graph.requests.extensions.IConversationThreadReplyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationThreadReplyRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConversationThread;
+import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
+import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PostRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -31,7 +35,7 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConversationThreadRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConversationThreadRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -3,16 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummaryRequest;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
-import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsRegressionSummary;
+import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -36,7 +37,7 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsRegressionSummaryRequest instance
      */
-    IUserExperienceAnalyticsRegressionSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserExperienceAnalyticsRegressionSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression();

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AndroidForWorkEnrollmentProfileCr
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param tokenValidityInSeconds the tokenValidityInSeconds
      */
-    public AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer tokenValidityInSeconds) {
+    public AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer tokenValidityInSeconds) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("tokenValidityInSeconds", tokenValidityInSeconds);
     }
@@ -49,7 +47,7 @@ public class AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder extends Ba
      * @param requestOptions the options for the request
      * @return the IAndroidForWorkEnrollmentProfileCreateTokenRequest instance
      */
-    public IAndroidForWorkEnrollmentProfileCreateTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidForWorkEnrollmentProfileCreateTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AndroidForWorkEnrollmentProfileCreateTokenRequest request = new AndroidForWorkEnrollmentProfileCreateTokenRequest(
                 getRequestUrl(),
                 getClient(),

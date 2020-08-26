@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.NdesConnector;
 import com.microsoft.graph.requests.extensions.INdesConnectorCollectionPage;
@@ -37,7 +38,7 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NdesConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public NdesConnectorCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NdesConnectorCollectionResponse.class, INdesConnectorCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
      * @return the updated request
      */
     public INdesConnectorCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (NdesConnectorCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
      * @return the updated request
      */
     public INdesConnectorCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (NdesConnectorCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class NdesConnectorCollectionRequest extends BaseCollectionRequest<NdesCo
      * @return the updated request
      */
     public INdesConnectorCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (NdesConnectorCollectionRequest)this;
     }
 

@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskUpdateStatusRequest;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementTaskUpdateStatusRequest;
 import com.microsoft.graph.models.generated.DeviceAppManagementTaskStatus;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class DeviceAppManagementTaskUpdateStatusRequestBuilder extends BaseActio
      * @param status the status
      * @param note the note
      */
-    public DeviceAppManagementTaskUpdateStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DeviceAppManagementTaskStatus status, final String note) {
+    public DeviceAppManagementTaskUpdateStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final DeviceAppManagementTaskStatus status, final String note) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("status", status);
         bodyParams.put("note", note);
@@ -52,7 +49,7 @@ public class DeviceAppManagementTaskUpdateStatusRequestBuilder extends BaseActio
      * @param requestOptions the options for the request
      * @return the IDeviceAppManagementTaskUpdateStatusRequest instance
      */
-    public IDeviceAppManagementTaskUpdateStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceAppManagementTaskUpdateStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceAppManagementTaskUpdateStatusRequest request = new DeviceAppManagementTaskUpdateStatusRequest(
                 getRequestUrl(),
                 getClient(),

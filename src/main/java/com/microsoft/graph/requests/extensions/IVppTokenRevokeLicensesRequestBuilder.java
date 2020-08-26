@@ -28,5 +28,5 @@ public interface IVppTokenRevokeLicensesRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IVppTokenRevokeLicensesRequest instance
      */
-    IVppTokenRevokeLicensesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IVppTokenRevokeLicensesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -6,7 +6,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrintTaskDefinition;
+import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +35,7 @@ public class PrintTaskDefinitionReferenceRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintTaskDefinitionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrintTaskDefinitionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +54,7 @@ public class PrintTaskDefinitionReferenceRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IPrintTaskDefinitionReferenceRequest instance
      */
-    public IPrintTaskDefinitionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPrintTaskDefinitionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PrintTaskDefinitionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

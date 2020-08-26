@@ -3,20 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessReviewRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReview;
 import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewStopRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewSendReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewResetDecisionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewApplyDecisionsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +40,7 @@ public interface IAccessReviewRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAccessReviewRequest instance
      */
-    IAccessReviewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessReviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAccessReviewReviewerCollectionRequestBuilder reviewers();

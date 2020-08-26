@@ -6,7 +6,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DepMacOSEnrollmentProfile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +31,7 @@ public class DepMacOSEnrollmentProfileReferenceRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepMacOSEnrollmentProfileReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DepMacOSEnrollmentProfileReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +50,7 @@ public class DepMacOSEnrollmentProfileReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IDepMacOSEnrollmentProfileReferenceRequest instance
      */
-    public IDepMacOSEnrollmentProfileReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDepMacOSEnrollmentProfileReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DepMacOSEnrollmentProfileReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

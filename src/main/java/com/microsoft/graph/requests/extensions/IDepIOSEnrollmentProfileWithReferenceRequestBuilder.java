@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DepIOSEnrollmentProfile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public interface IDepIOSEnrollmentProfileWithReferenceRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IDepIOSEnrollmentProfileWithReferenceRequest instance
      */
-    IDepIOSEnrollmentProfileWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepIOSEnrollmentProfileWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDepIOSEnrollmentProfileReferenceRequestBuilder reference();
 

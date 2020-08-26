@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookChartSetPositionRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
      * @param startCell the startCell
      * @param endCell the endCell
      */
-    public WorkbookChartSetPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
+    public WorkbookChartSetPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startCell", startCell);
         bodyParams.put("endCell", endCell);
@@ -51,7 +49,7 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookChartSetPositionRequest instance
      */
-    public IWorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartSetPositionRequest request = new WorkbookChartSetPositionRequest(
                 getRequestUrl(),
                 getClient(),

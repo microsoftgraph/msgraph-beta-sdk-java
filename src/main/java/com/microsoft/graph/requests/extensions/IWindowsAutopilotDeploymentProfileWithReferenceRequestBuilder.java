@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfile;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +38,7 @@ public interface IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder e
      * @param requestOptions the options for this request
      * @return the IWindowsAutopilotDeploymentProfileWithReferenceRequest instance
      */
-    IWindowsAutopilotDeploymentProfileWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotDeploymentProfileWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsAutopilotDeploymentProfileReferenceRequestBuilder reference();
 

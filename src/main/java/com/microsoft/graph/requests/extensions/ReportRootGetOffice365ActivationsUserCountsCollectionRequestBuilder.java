@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +34,7 @@ public class ReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,14 +42,14 @@ public class ReportRootGetOffice365ActivationsUserCountsCollectionRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetOffice365ActivationsUserCountsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetOffice365ActivationsUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365ActivationsUserCountsCollectionRequest request = new ReportRootGetOffice365ActivationsUserCountsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

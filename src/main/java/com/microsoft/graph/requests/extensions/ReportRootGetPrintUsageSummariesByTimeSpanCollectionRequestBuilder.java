@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,16 +37,16 @@ public class ReportRootGetPrintUsageSummariesByTimeSpanCollectionRequestBuilder 
      * @param periodEnd the periodEnd
      * @param timeSpanInMinutes the timeSpanInMinutes
      */
-    public ReportRootGetPrintUsageSummariesByTimeSpanCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.Calendar periodStart, final java.util.Calendar periodEnd, final Integer timeSpanInMinutes) {
+    public ReportRootGetPrintUsageSummariesByTimeSpanCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.Calendar periodStart, final java.util.Calendar periodEnd, final Integer timeSpanInMinutes) {
         super(requestUrl, client, requestOptions);
      	 if(periodStart!=null){
-			functionOptions.add(new FunctionOption("periodStart", periodStart));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodStart", periodStart));
 		}
        	 if(periodEnd!=null){
-			functionOptions.add(new FunctionOption("periodEnd", periodEnd));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodEnd", periodEnd));
 		}
        	 if(timeSpanInMinutes!=null){
-			functionOptions.add(new FunctionOption("timeSpanInMinutes", timeSpanInMinutes));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("timeSpanInMinutes", timeSpanInMinutes));
 		}
       }
 
@@ -52,14 +54,14 @@ public class ReportRootGetPrintUsageSummariesByTimeSpanCollectionRequestBuilder 
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetPrintUsageSummariesByTimeSpanCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetPrintUsageSummariesByTimeSpanCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetPrintUsageSummariesByTimeSpanCollectionRequest request = new ReportRootGetPrintUsageSummariesByTimeSpanCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

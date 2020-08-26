@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequest;
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
+import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IB2cIdentityUserFlowRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IB2cIdentityUserFlowRequest instance
      */
-    IB2cIdentityUserFlowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IB2cIdentityUserFlowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IIdentityProviderCollectionWithReferencesRequestBuilder identityProviders();

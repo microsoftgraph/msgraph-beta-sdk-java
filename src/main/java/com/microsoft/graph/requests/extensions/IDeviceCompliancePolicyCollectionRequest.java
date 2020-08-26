@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.generated.ScheduledRetireState;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 

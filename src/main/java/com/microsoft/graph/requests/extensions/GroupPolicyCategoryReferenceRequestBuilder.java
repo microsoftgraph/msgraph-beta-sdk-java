@@ -6,7 +6,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyCategory;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +43,7 @@ public class GroupPolicyCategoryReferenceRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyCategoryReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyCategoryReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +62,7 @@ public class GroupPolicyCategoryReferenceRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IGroupPolicyCategoryReferenceRequest instance
      */
-    public IGroupPolicyCategoryReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyCategoryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyCategoryReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

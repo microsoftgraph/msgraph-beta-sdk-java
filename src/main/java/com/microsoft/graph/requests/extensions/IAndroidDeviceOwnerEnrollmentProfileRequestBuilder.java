@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerEnrollmentProfile;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequestBuilder extends IReq
      * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerEnrollmentProfileRequest instance
      */
-    IAndroidDeviceOwnerEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidDeviceOwnerEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder revokeToken();
     IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder createToken(final Integer tokenValidityInSeconds);

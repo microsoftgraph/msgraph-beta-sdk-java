@@ -3,14 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequest;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyCategory;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +40,7 @@ public interface IGroupPolicyCategoryRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGroupPolicyCategoryRequest instance
      */
-    IGroupPolicyCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

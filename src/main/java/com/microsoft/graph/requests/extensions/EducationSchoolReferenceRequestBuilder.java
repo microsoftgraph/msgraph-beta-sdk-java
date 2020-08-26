@@ -6,7 +6,20 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +41,7 @@ public class EducationSchoolReferenceRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationSchoolReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +60,7 @@ public class EducationSchoolReferenceRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IEducationSchoolReferenceRequest instance
      */
-    public IEducationSchoolReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEducationSchoolReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationSchoolReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

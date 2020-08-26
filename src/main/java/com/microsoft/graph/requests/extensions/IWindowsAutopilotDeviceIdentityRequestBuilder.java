@@ -3,15 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequest;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsAutopilotDeviceIdentity;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +35,7 @@ public interface IWindowsAutopilotDeviceIdentityRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IWindowsAutopilotDeviceIdentityRequest instance
      */
-    IWindowsAutopilotDeviceIdentityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotDeviceIdentityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

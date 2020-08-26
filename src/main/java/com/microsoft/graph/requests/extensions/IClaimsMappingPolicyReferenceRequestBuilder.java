@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +35,5 @@ public interface IClaimsMappingPolicyReferenceRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IClaimsMappingPolicyReferenceRequest instance
      */
-    IClaimsMappingPolicyReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IClaimsMappingPolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

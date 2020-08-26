@@ -5,7 +5,13 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.KeyValuePair;
+import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +38,7 @@ public class ChatCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ChatCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +46,7 @@ public class ChatCollectionRequestBuilder extends BaseRequestBuilder implements 
         return buildRequest(getOptions());
     }
 
-    public IChatCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IChatCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChatCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

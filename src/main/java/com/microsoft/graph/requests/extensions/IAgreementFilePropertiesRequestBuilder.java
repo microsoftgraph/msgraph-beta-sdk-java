@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAgreementFilePropertiesRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AgreementFileProperties;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IAgreementFilePropertiesRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IAgreementFilePropertiesRequest instance
      */
-    IAgreementFilePropertiesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAgreementFilePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

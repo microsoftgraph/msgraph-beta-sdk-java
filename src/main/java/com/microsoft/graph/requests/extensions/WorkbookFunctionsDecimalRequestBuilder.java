@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDecimalRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBui
      * @param number the number
      * @param radix the radix
      */
-    public WorkbookFunctionsDecimalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix) {
+    public WorkbookFunctionsDecimalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("radix", radix);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDecimalRequest instance
      */
-    public IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDecimalRequest request = new WorkbookFunctionsDecimalRequest(
                 getRequestUrl(),
                 getClient(),

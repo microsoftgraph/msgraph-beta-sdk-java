@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class UnifiedRoleDefinitionWithReferenceRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRoleDefinitionWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UnifiedRoleDefinitionWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class UnifiedRoleDefinitionWithReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUnifiedRoleDefinitionWithReferenceRequest instance
      */
-    public IUnifiedRoleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUnifiedRoleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UnifiedRoleDefinitionWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +39,5 @@ public interface IConnectorGroupReferenceRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IConnectorGroupReferenceRequest instance
      */
-    IConnectorGroupReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConnectorGroupReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

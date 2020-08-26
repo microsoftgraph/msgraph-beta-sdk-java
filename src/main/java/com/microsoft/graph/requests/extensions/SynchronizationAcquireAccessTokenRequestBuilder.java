@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationAcquireAccessTokenRequest;
 import com.microsoft.graph.requests.extensions.SynchronizationAcquireAccessTokenRequest;
 import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class SynchronizationAcquireAccessTokenRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param credentials the credentials
      */
-    public SynchronizationAcquireAccessTokenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<SynchronizationSecretKeyStringValuePair> credentials) {
+    public SynchronizationAcquireAccessTokenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<SynchronizationSecretKeyStringValuePair> credentials) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("credentials", credentials);
     }
@@ -50,7 +47,7 @@ public class SynchronizationAcquireAccessTokenRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return the ISynchronizationAcquireAccessTokenRequest instance
      */
-    public ISynchronizationAcquireAccessTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISynchronizationAcquireAccessTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SynchronizationAcquireAccessTokenRequest request = new SynchronizationAcquireAccessTokenRequest(
                 getRequestUrl(),
                 getClient(),

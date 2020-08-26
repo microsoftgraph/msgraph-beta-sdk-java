@@ -28,5 +28,5 @@ public interface ISecurityActionCancelSecurityActionRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return the ISecurityActionCancelSecurityActionRequest instance
      */
-    ISecurityActionCancelSecurityActionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecurityActionCancelSecurityActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

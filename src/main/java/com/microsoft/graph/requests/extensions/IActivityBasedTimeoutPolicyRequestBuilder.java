@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IActivityBasedTimeoutPolicyRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IActivityBasedTimeoutPolicyRequest instance
      */
-    IActivityBasedTimeoutPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IActivityBasedTimeoutPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo();

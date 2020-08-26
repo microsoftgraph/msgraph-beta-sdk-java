@@ -5,16 +5,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
+import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionPage;
@@ -37,7 +43,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
@@ -81,7 +87,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @return the updated request
      */
     public IManagedDeviceCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceCollectionRequest)this;
     }
 
@@ -92,7 +98,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @return the updated request
      */
     public IManagedDeviceCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedDeviceCollectionRequest)this;
     }
 
@@ -103,7 +109,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      * @return the updated request
      */
     public IManagedDeviceCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedDeviceCollectionRequest)this;
     }
 

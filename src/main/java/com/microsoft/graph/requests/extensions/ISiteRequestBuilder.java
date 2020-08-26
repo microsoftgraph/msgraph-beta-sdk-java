@@ -3,13 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISiteRequest;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
@@ -20,12 +24,12 @@ import com.microsoft.graph.requests.extensions.ISitePageCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ISitePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteGetByPathRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -49,7 +53,7 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISiteRequest instance
      */
-    ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISiteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

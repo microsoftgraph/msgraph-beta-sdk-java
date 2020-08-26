@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.OfficeClientConfigurationUpdatePr
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class OfficeClientConfigurationUpdatePrioritiesRequestBuilder extends Bas
      * @param officeConfigurationPolicyIds the officeConfigurationPolicyIds
      * @param officeConfigurationPriorities the officeConfigurationPriorities
      */
-    public OfficeClientConfigurationUpdatePrioritiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> officeConfigurationPolicyIds, final java.util.List<Integer> officeConfigurationPriorities) {
+    public OfficeClientConfigurationUpdatePrioritiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> officeConfigurationPolicyIds, final java.util.List<Integer> officeConfigurationPriorities) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("officeConfigurationPolicyIds", officeConfigurationPolicyIds);
         bodyParams.put("officeConfigurationPriorities", officeConfigurationPriorities);
@@ -51,7 +49,7 @@ public class OfficeClientConfigurationUpdatePrioritiesRequestBuilder extends Bas
      * @param requestOptions the options for the request
      * @return the IOfficeClientConfigurationUpdatePrioritiesRequest instance
      */
-    public IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OfficeClientConfigurationUpdatePrioritiesRequest request = new OfficeClientConfigurationUpdatePrioritiesRequest(
                 getRequestUrl(),
                 getClient(),

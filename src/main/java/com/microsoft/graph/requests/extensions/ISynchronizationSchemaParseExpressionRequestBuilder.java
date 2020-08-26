@@ -28,5 +28,5 @@ public interface ISynchronizationSchemaParseExpressionRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the ISynchronizationSchemaParseExpressionRequest instance
      */
-    ISynchronizationSchemaParseExpressionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationSchemaParseExpressionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

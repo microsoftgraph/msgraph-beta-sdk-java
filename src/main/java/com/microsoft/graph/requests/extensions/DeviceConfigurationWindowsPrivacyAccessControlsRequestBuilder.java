@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationWindowsPrivacyAccessControlsRequest;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationWindowsPrivacyAccessControlsRequest;
 import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class DeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder exten
      * @param requestOptions the options for this request
      * @param windowsPrivacyAccessControls the windowsPrivacyAccessControls
      */
-    public DeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<WindowsPrivacyDataAccessControlItem> windowsPrivacyAccessControls) {
+    public DeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<WindowsPrivacyDataAccessControlItem> windowsPrivacyAccessControls) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("windowsPrivacyAccessControls", windowsPrivacyAccessControls);
     }
@@ -50,7 +47,7 @@ public class DeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder exten
      * @param requestOptions the options for the request
      * @return the IDeviceConfigurationWindowsPrivacyAccessControlsRequest instance
      */
-    public IDeviceConfigurationWindowsPrivacyAccessControlsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceConfigurationWindowsPrivacyAccessControlsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceConfigurationWindowsPrivacyAccessControlsRequest request = new DeviceConfigurationWindowsPrivacyAccessControlsRequest(
                 getRequestUrl(),
                 getClient(),

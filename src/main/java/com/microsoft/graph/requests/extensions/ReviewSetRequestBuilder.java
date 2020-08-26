@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReviewSetRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ReviewSet;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetQueryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder implements IRevi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReviewSetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReviewSetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

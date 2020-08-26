@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IRoleScopeTagAssignCollectionRequ
 import com.microsoft.graph.requests.extensions.IRoleScopeTagAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.RoleScopeTagAssignCollectionRequest;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +36,7 @@ public class RoleScopeTagAssignCollectionRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param assignments the assignments
      */
-    public RoleScopeTagAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<RoleScopeTagAutoAssignment> assignments) {
+    public RoleScopeTagAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<RoleScopeTagAutoAssignment> assignments) {
         super(requestUrl, client, requestOptions);
   	 if(assignments!=null){
 			bodyParams.put("assignments", assignments);
@@ -46,7 +47,7 @@ public class RoleScopeTagAssignCollectionRequestBuilder extends BaseActionReques
         return buildRequest(getOptions());
     }
 
-    public IRoleScopeTagAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRoleScopeTagAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         RoleScopeTagAssignCollectionRequest request = new RoleScopeTagAssignCollectionRequest(
                 getRequestUrl(),
                 getClient(),

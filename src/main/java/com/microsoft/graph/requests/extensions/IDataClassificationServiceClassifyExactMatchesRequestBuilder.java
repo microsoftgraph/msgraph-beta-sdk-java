@@ -28,5 +28,5 @@ public interface IDataClassificationServiceClassifyExactMatchesRequestBuilder ex
      * @param requestOptions the options for the request
      * @return the IDataClassificationServiceClassifyExactMatchesRequest instance
      */
-    IDataClassificationServiceClassifyExactMatchesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDataClassificationServiceClassifyExactMatchesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

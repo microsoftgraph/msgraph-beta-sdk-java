@@ -28,5 +28,5 @@ public interface IDeviceConfigurationAssignedAccessMultiModeProfilesRequestBuild
      * @param requestOptions the options for the request
      * @return the IDeviceConfigurationAssignedAccessMultiModeProfilesRequest instance
      */
-    IDeviceConfigurationAssignedAccessMultiModeProfilesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationAssignedAccessMultiModeProfilesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

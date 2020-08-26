@@ -3,9 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileGmailEasConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidWorkProfileGmailEasConfiguration;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +34,7 @@ public interface IAndroidWorkProfileGmailEasConfigurationRequestBuilder extends 
      * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileGmailEasConfigurationRequest instance
      */
-    IAndroidWorkProfileGmailEasConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidWorkProfileGmailEasConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

@@ -28,5 +28,5 @@ public interface IRequestStopRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IRequestStopRequest instance
      */
-    IRequestStopRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRequestStopRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

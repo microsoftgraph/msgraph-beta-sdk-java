@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +37,7 @@ public interface IItemAnalyticsRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IItemAnalyticsRequest instance
      */
-    IItemAnalyticsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IItemActivityStatCollectionRequestBuilder itemActivityStats();

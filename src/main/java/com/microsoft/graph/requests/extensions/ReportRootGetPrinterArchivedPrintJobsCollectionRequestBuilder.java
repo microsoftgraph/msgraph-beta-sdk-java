@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,16 +37,16 @@ public class ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder exten
      * @param periodStart the periodStart
      * @param periodEnd the periodEnd
      */
-    public ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String printerId, final java.util.Calendar periodStart, final java.util.Calendar periodEnd) {
+    public ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String printerId, final java.util.Calendar periodStart, final java.util.Calendar periodEnd) {
         super(requestUrl, client, requestOptions);
      	 if(printerId!=null){
-			functionOptions.add(new FunctionOption("printerId", printerId));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("printerId", printerId));
 		}
        	 if(periodStart!=null){
-			functionOptions.add(new FunctionOption("periodStart", periodStart));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodStart", periodStart));
 		}
        	 if(periodEnd!=null){
-			functionOptions.add(new FunctionOption("periodEnd", periodEnd));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodEnd", periodEnd));
 		}
       }
 
@@ -52,14 +54,14 @@ public class ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder exten
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetPrinterArchivedPrintJobsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetPrinterArchivedPrintJobsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetPrinterArchivedPrintJobsCollectionRequest request = new ReportRootGetPrinterArchivedPrintJobsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

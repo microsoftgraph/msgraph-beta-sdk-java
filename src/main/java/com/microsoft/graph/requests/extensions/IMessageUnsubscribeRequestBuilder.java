@@ -28,5 +28,5 @@ public interface IMessageUnsubscribeRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IMessageUnsubscribeRequest instance
      */
-    IMessageUnsubscribeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMessageUnsubscribeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

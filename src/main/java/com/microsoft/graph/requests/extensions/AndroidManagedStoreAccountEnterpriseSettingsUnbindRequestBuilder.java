@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AndroidManagedStoreAccountEnterpr
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder ex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +45,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder ex
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AndroidManagedStoreAccountEnterpriseSettingsUnbindRequest request = new AndroidManagedStoreAccountEnterpriseSettingsUnbindRequest(
                 getRequestUrl(),
                 getClient(),

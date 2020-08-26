@@ -3,16 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceStopRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceSendReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceResetDecisionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceApplyDecisionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceAcceptRecommendationsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -36,7 +37,7 @@ public interface IAccessReviewInstanceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAccessReviewInstanceRequest instance
      */
-    IAccessReviewInstanceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessReviewInstanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAccessReviewInstanceDecisionItemCollectionRequestBuilder decisions();

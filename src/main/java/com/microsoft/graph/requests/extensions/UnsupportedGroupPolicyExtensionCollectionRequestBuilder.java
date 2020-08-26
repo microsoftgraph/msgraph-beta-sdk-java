@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyMigrationReport;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class UnsupportedGroupPolicyExtensionCollectionRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnsupportedGroupPolicyExtensionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UnsupportedGroupPolicyExtensionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class UnsupportedGroupPolicyExtensionCollectionRequestBuilder extends Bas
         return buildRequest(getOptions());
     }
 
-    public IUnsupportedGroupPolicyExtensionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUnsupportedGroupPolicyExtensionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UnsupportedGroupPolicyExtensionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

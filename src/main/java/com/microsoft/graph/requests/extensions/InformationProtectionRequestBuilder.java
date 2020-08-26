@@ -3,29 +3,33 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IInformationProtectionRequest;
-import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InformationProtection;
 import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
 import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;
-import com.microsoft.graph.requests.extensions.IInformationProtectionEvaluateLabelsAndPoliciesRequestBuilder;
-import com.microsoft.graph.requests.extensions.InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -45,7 +49,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public InformationProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

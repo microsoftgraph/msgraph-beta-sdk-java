@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReviewSetRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ReviewSet;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetQueryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IReviewSetRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IReviewSetRequest instance
      */
-    IReviewSetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReviewSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IReviewSetQueryCollectionRequestBuilder queries();

@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequest;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface IGroupPolicyDefinitionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGroupPolicyDefinitionRequest instance
      */
-    IGroupPolicyDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

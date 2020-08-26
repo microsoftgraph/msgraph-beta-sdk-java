@@ -28,5 +28,5 @@ public interface IAuthenticationMethodEnableSmsSignInRequestBuilder extends IReq
      * @param requestOptions the options for the request
      * @return the IAuthenticationMethodEnableSmsSignInRequest instance
      */
-    IAuthenticationMethodEnableSmsSignInRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAuthenticationMethodEnableSmsSignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

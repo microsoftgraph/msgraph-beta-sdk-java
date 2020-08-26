@@ -3,22 +3,28 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageAssignment;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,7 +44,7 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessPackageAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

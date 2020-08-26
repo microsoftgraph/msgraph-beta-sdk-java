@@ -3,11 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IRequestRequest;
-import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRequestStopRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRequestRecordDecisionsRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Request;
+import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +35,7 @@ public interface IRequestRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IRequestRequest instance
      */
-    IRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

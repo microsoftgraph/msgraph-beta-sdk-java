@@ -28,5 +28,5 @@ public interface IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBui
      * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

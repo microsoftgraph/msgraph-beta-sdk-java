@@ -28,5 +28,5 @@ public interface IDeviceHealthScriptGetRemediationSummaryRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptGetRemediationSummaryRequest instance
      */
-    IDeviceHealthScriptGetRemediationSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceHealthScriptGetRemediationSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AuthenticationMethodResetPassword
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class AuthenticationMethodResetPasswordRequestBuilder extends BaseActionR
      * @param newPassword the newPassword
      * @param requireChangeOnNextSignIn the requireChangeOnNextSignIn
      */
-    public AuthenticationMethodResetPasswordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String newPassword, final Boolean requireChangeOnNextSignIn) {
+    public AuthenticationMethodResetPasswordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String newPassword, final Boolean requireChangeOnNextSignIn) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("newPassword", newPassword);
         bodyParams.put("requireChangeOnNextSignIn", requireChangeOnNextSignIn);
@@ -51,7 +49,7 @@ public class AuthenticationMethodResetPasswordRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return the IAuthenticationMethodResetPasswordRequest instance
      */
-    public IAuthenticationMethodResetPasswordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAuthenticationMethodResetPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AuthenticationMethodResetPasswordRequest request = new AuthenticationMethodResetPasswordRequest(
                 getRequestUrl(),
                 getClient(),

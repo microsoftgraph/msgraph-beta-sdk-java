@@ -28,5 +28,5 @@ public interface IDeviceCompliancePolicyValidateComplianceScriptRequestBuilder e
      * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyValidateComplianceScriptRequest instance
      */
-    IDeviceCompliancePolicyValidateComplianceScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyValidateComplianceScriptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

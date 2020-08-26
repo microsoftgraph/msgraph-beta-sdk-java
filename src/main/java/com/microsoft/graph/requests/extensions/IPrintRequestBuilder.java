@@ -3,15 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrintRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Print;
 import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuilder;
@@ -21,6 +23,8 @@ import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -44,7 +48,7 @@ public interface IPrintRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPrintRequest instance
      */
-    IPrintRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrintRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPrintServiceCollectionRequestBuilder services();

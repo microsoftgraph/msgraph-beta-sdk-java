@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Windows10GeneralConfiguration;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPrivacyDataAccessControlItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsPrivacyDataAccessControlItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequestBuilder extends
         return buildRequest(getOptions());
     }
 
-    public IWindowsPrivacyDataAccessControlItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsPrivacyDataAccessControlItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsPrivacyDataAccessControlItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

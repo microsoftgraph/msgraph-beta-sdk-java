@@ -3,25 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRecentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveSearchCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -45,7 +40,7 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDriveRequest instance
      */
-    IDriveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDriveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IItemActivityOLDCollectionRequestBuilder activities();

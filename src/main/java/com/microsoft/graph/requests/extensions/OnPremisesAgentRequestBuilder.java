@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnPremisesAgent;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesAgentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnPremisesAgentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

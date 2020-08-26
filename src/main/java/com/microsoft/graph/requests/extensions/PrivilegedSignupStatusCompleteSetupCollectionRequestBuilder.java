@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TenantSetupInfo;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCompleteSe
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCompleteSetupCollectionRequest;
 import com.microsoft.graph.requests.extensions.PrivilegedSignupStatusCompleteSetupCollectionRequest;
 import com.microsoft.graph.models.extensions.RoleSuccessStatistics;
-import com.microsoft.graph.models.extensions.TenantSetupInfo;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +36,7 @@ public class PrivilegedSignupStatusCompleteSetupCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @param tenantSetupInfo the tenantSetupInfo
      */
-    public PrivilegedSignupStatusCompleteSetupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final TenantSetupInfo tenantSetupInfo) {
+    public PrivilegedSignupStatusCompleteSetupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TenantSetupInfo tenantSetupInfo) {
         super(requestUrl, client, requestOptions);
   	 if(tenantSetupInfo!=null){
 			bodyParams.put("tenantSetupInfo", tenantSetupInfo);
@@ -46,7 +47,7 @@ public class PrivilegedSignupStatusCompleteSetupCollectionRequestBuilder extends
         return buildRequest(getOptions());
     }
 
-    public IPrivilegedSignupStatusCompleteSetupCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPrivilegedSignupStatusCompleteSetupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PrivilegedSignupStatusCompleteSetupCollectionRequest request = new PrivilegedSignupStatusCompleteSetupCollectionRequest(
                 getRequestUrl(),
                 getClient(),

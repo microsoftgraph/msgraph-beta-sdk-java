@@ -4,8 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.generated.ClonableTeamParts;
+import com.microsoft.graph.models.generated.TeamVisibilityType;import com.microsoft.graph.models.generated.ClonableTeamParts;import java.util.EnumSet;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

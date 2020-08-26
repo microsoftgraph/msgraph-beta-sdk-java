@@ -5,7 +5,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +42,7 @@ public class AdministrativeUnitWithReferenceRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AdministrativeUnitWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +61,7 @@ public class AdministrativeUnitWithReferenceRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IAdministrativeUnitWithReferenceRequest instance
      */
-    public IAdministrativeUnitWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAdministrativeUnitWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AdministrativeUnitWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

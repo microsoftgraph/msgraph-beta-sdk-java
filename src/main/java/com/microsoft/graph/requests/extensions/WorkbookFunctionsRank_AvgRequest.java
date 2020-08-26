@@ -14,8 +14,6 @@ import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -34,7 +32,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsRank_AvgRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsRank_AvgRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsRank_AvgBody();
     }
@@ -54,7 +52,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
      * @return the updated request
      */
     public IWorkbookFunctionsRank_AvgRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsRank_AvgRequest)this;
     }
 
@@ -65,7 +63,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
      * @return the updated request
      */
     public IWorkbookFunctionsRank_AvgRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsRank_AvgRequest)this;
     }
 
@@ -76,7 +74,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
      * @return the updated request
      */
     public IWorkbookFunctionsRank_AvgRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsRank_AvgRequest)this;
     }
 

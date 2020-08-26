@@ -3,46 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementReports;
 import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementExportJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementExportJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementExportJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetActiveMalwareReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetActiveMalwareReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetMalwareSummaryReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetMalwareSummaryReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetPolicyNonComplianceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetPolicyNonComplianceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetPolicyNonComplianceMetadataRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetPolicyNonComplianceMetadataRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetPolicyNonComplianceSummaryReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetPolicyNonComplianceSummaryReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetSettingNonComplianceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetSettingNonComplianceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetReportFiltersRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetReportFiltersRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetHistoricalReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetHistoricalReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetCachedReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetCachedReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -62,7 +42,7 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementReportsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementReportsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

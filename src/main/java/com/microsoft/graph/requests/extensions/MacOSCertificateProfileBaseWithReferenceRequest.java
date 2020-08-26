@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOSCertificateProfileBase;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +36,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSCertificateProfileBaseWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public MacOSCertificateProfileBaseWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSCertificateProfileBase.class);
     }
 
@@ -81,7 +84,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
      * @return the updated request
      */
     public IMacOSCertificateProfileBaseWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IMacOSCertificateProfileBaseWithReferenceRequest)this;
     }
 
@@ -92,7 +95,7 @@ public class MacOSCertificateProfileBaseWithReferenceRequest extends BaseRequest
      * @return the updated request
      */
     public IMacOSCertificateProfileBaseWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MacOSCertificateProfileBaseWithReferenceRequest)this;
     }
 }

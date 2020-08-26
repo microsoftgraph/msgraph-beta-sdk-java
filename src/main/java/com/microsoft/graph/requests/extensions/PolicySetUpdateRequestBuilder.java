@@ -5,15 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPolicySetUpdateRequest;
 import com.microsoft.graph.requests.extensions.PolicySetUpdateRequest;
-import com.microsoft.graph.models.extensions.PolicySetItem;
-import com.microsoft.graph.models.extensions.PolicySetItem;
-import com.microsoft.graph.models.extensions.PolicySetAssignment;
-
+import com.microsoft.graph.models.extensions.PolicySetItem;import com.microsoft.graph.models.extensions.PolicySetAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -35,7 +30,7 @@ public class PolicySetUpdateRequestBuilder extends BaseActionRequestBuilder impl
      * @param deletedPolicySetItems the deletedPolicySetItems
      * @param assignments the assignments
      */
-    public PolicySetUpdateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<PolicySetItem> addedPolicySetItems, final java.util.List<PolicySetItem> updatedPolicySetItems, final java.util.List<String> deletedPolicySetItems, final java.util.List<PolicySetAssignment> assignments) {
+    public PolicySetUpdateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<PolicySetItem> addedPolicySetItems, final java.util.List<PolicySetItem> updatedPolicySetItems, final java.util.List<String> deletedPolicySetItems, final java.util.List<PolicySetAssignment> assignments) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("addedPolicySetItems", addedPolicySetItems);
         bodyParams.put("updatedPolicySetItems", updatedPolicySetItems);
@@ -58,7 +53,7 @@ public class PolicySetUpdateRequestBuilder extends BaseActionRequestBuilder impl
      * @param requestOptions the options for the request
      * @return the IPolicySetUpdateRequest instance
      */
-    public IPolicySetUpdateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPolicySetUpdateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PolicySetUpdateRequest request = new PolicySetUpdateRequest(
                 getRequestUrl(),
                 getClient(),

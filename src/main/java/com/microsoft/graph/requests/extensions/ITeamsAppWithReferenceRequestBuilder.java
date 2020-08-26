@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TeamsApp;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +36,7 @@ public interface ITeamsAppWithReferenceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamsAppWithReferenceRequest instance
      */
-    ITeamsAppWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamsAppWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ITeamsAppReferenceRequestBuilder reference();
 

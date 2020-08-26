@@ -3,14 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequest;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleSelfActivateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleSelfDeactivateRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedRole;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleSummaryRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +38,7 @@ public interface IPrivilegedRoleRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPrivilegedRoleRequest instance
      */
-    IPrivilegedRoleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

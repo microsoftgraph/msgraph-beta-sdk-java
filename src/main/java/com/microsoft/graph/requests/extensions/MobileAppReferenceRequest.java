@@ -5,7 +5,34 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MobileApp;
+import com.microsoft.graph.models.extensions.MobileAppAssignment;
+import com.microsoft.graph.models.extensions.MobileAppRelationship;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppRelationshipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +59,7 @@ public class MobileAppReferenceRequest extends BaseRequest implements IMobileApp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public MobileAppReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileApp.class);
     }
 
@@ -51,7 +78,7 @@ public class MobileAppReferenceRequest extends BaseRequest implements IMobileApp
      * @return the updated request
      */
     public IMobileAppReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileAppReferenceRequest)this;
     }
 
@@ -62,7 +89,7 @@ public class MobileAppReferenceRequest extends BaseRequest implements IMobileApp
      * @return the updated request
      */
     public IMobileAppReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppReferenceRequest)this;
     }
     /**

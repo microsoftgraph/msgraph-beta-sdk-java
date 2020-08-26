@@ -6,13 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationUpdateDefinitionValuesRequest;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationUpdateDefinitionValuesRequest;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +29,7 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder extend
      * @param updated the updated
      * @param deletedIds the deletedIds
      */
-    public GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<GroupPolicyDefinitionValue> added, final java.util.List<GroupPolicyDefinitionValue> updated, final java.util.List<String> deletedIds) {
+    public GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<GroupPolicyDefinitionValue> added, final java.util.List<GroupPolicyDefinitionValue> updated, final java.util.List<String> deletedIds) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("added", added);
         bodyParams.put("updated", updated);
@@ -55,7 +51,7 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IGroupPolicyConfigurationUpdateDefinitionValuesRequest instance
      */
-    public IGroupPolicyConfigurationUpdateDefinitionValuesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyConfigurationUpdateDefinitionValuesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupPolicyConfigurationUpdateDefinitionValuesRequest request = new GroupPolicyConfigurationUpdateDefinitionValuesRequest(
                 getRequestUrl(),
                 getClient(),

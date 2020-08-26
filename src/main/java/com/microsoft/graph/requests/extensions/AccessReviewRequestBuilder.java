@@ -3,32 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessReviewRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReview;
 import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewDecisionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewStopRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewStopRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewSendReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewSendReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewResetDecisionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewResetDecisionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewApplyDecisionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewApplyDecisionsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -48,7 +42,7 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessReviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

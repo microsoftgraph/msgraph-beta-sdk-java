@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest;
 import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -30,9 +27,9 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
      * @param requestOptions the options for this request
      * @param summarizeBy the summarizeBy
      */
-    public UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final UserExperienceAnalyticsSummarizedBy summarizeBy) {
+    public UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final UserExperienceAnalyticsSummarizedBy summarizeBy) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("summarizeBy", summarizeBy));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("summarizeBy", summarizeBy));
     }
 
     /**
@@ -50,14 +47,14 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
      * @param requestOptions the options for the request
      * @return the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest instance
      */
-    public IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest request = new UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

@@ -3,27 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceHealthScript;
+import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptRunSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptUpdateGlobalScriptRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptUpdateGlobalScriptRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptGetRemediationHistoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceHealthScriptGetRemediationHistoryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -43,7 +41,7 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceHealthScriptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceHealthScriptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

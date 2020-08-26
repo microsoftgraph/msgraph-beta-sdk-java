@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +35,7 @@ public class RoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param roleScopeTagIds the roleScopeTagIds
      */
-    public RoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> roleScopeTagIds) {
+    public RoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> roleScopeTagIds) {
         super(requestUrl, client, requestOptions);
   	 if(roleScopeTagIds!=null){
 			bodyParams.put("roleScopeTagIds", roleScopeTagIds);
@@ -44,7 +46,7 @@ public class RoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder extends Ba
         return buildRequest(getOptions());
     }
 
-    public IRoleScopeTagGetRoleScopeTagsByIdCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRoleScopeTagGetRoleScopeTagsByIdCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         RoleScopeTagGetRoleScopeTagsByIdCollectionRequest request = new RoleScopeTagGetRoleScopeTagsByIdCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.ItemReference;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +38,7 @@ public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +46,7 @@ public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder implem
         return buildRequest(getOptions());
     }
 
-    public IDriveItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

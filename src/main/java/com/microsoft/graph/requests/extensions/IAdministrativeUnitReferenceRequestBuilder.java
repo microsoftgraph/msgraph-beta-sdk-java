@@ -5,7 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +41,5 @@ public interface IAdministrativeUnitReferenceRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IAdministrativeUnitReferenceRequest instance
      */
-    IAdministrativeUnitReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAdministrativeUnitReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.ItemReference;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 

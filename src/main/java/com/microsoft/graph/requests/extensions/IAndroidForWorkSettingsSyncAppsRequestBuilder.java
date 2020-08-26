@@ -28,5 +28,5 @@ public interface IAndroidForWorkSettingsSyncAppsRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsSyncAppsRequest instance
      */
-    IAndroidForWorkSettingsSyncAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidForWorkSettingsSyncAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,8 +17,6 @@ import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssi
 import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignCollectionResponse;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignBody;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
-import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -42,7 +43,7 @@ public class EmbeddedSIMActivationCodePoolAssignCollectionRequest extends BaseCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmbeddedSIMActivationCodePoolAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EmbeddedSIMActivationCodePoolAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmbeddedSIMActivationCodePoolAssignCollectionResponse.class, IEmbeddedSIMActivationCodePoolAssignCollectionPage.class);
         body = new EmbeddedSIMActivationCodePoolAssignBody();
     }
@@ -87,7 +88,7 @@ public class EmbeddedSIMActivationCodePoolAssignCollectionRequest extends BaseCo
      * @return the updated request
      */
     public IEmbeddedSIMActivationCodePoolAssignCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IEmbeddedSIMActivationCodePoolAssignCollectionRequest)this;
     }
 
@@ -98,7 +99,7 @@ public class EmbeddedSIMActivationCodePoolAssignCollectionRequest extends BaseCo
      * @return the updated request
      */
     public IEmbeddedSIMActivationCodePoolAssignCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IEmbeddedSIMActivationCodePoolAssignCollectionRequest)this;
     }
 
@@ -109,7 +110,7 @@ public class EmbeddedSIMActivationCodePoolAssignCollectionRequest extends BaseCo
      * @return the updated request
      */
     public IEmbeddedSIMActivationCodePoolAssignCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IEmbeddedSIMActivationCodePoolAssignCollectionRequest)this;
     }
 

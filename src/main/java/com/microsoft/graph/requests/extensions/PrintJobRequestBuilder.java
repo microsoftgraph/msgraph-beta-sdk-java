@@ -3,22 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrintJobRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintDocumentRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintDocumentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobCancelPrintJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintJobCancelPrintJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobStartPrintJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintJobStartPrintJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobRedirectRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintJobRedirectRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,7 +38,7 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder implements IPrint
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintJobRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrintJobRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

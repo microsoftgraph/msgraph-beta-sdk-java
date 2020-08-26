@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileRe
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class EducationSynchronizationProfileResumeRequestBuilder extends BaseAct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSynchronizationProfileResumeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationSynchronizationProfileResumeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +45,7 @@ public class EducationSynchronizationProfileResumeRequestBuilder extends BaseAct
      * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileResumeRequest instance
      */
-    public IEducationSynchronizationProfileResumeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEducationSynchronizationProfileResumeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EducationSynchronizationProfileResumeRequest request = new EducationSynchronizationProfileResumeRequest(
                 getRequestUrl(),
                 getClient(),

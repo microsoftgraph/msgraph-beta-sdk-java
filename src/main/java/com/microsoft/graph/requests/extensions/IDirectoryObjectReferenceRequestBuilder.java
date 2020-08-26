@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +35,5 @@ public interface IDirectoryObjectReferenceRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IDirectoryObjectReferenceRequest instance
      */
-    IDirectoryObjectReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryObjectReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

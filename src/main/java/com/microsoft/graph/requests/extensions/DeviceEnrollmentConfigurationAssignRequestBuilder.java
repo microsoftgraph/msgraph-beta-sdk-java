@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationAssignRequest;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @param enrollmentConfigurationAssignments the enrollmentConfigurationAssignments
      */
-    public DeviceEnrollmentConfigurationAssignRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
+    public DeviceEnrollmentConfigurationAssignRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("enrollmentConfigurationAssignments", enrollmentConfigurationAssignments);
     }
@@ -50,7 +47,7 @@ public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActio
      * @param requestOptions the options for the request
      * @return the IDeviceEnrollmentConfigurationAssignRequest instance
      */
-    public IDeviceEnrollmentConfigurationAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceEnrollmentConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceEnrollmentConfigurationAssignRequest request = new DeviceEnrollmentConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),

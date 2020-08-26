@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2OctRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsHex2OctRequestBuilder extends BaseActionRequestBui
      * @param number the number
      * @param places the places
      */
-    public WorkbookFunctionsHex2OctRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+    public WorkbookFunctionsHex2OctRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("places", places);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsHex2OctRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHex2OctRequest instance
      */
-    public IWorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsHex2OctRequest request = new WorkbookFunctionsHex2OctRequest(
                 getRequestUrl(),
                 getClient(),

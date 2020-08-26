@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.SiteGetByPathRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -29,9 +27,9 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
      * @param requestOptions the options for this request
      * @param path the path
      */
-    public SiteGetByPathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String path) {
+    public SiteGetByPathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String path) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("path", path));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("path", path));
     }
 
     /**
@@ -49,14 +47,14 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
      * @param requestOptions the options for the request
      * @return the ISiteGetByPathRequest instance
      */
-    public ISiteGetByPathRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISiteGetByPathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteGetByPathRequest request = new SiteGetByPathRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

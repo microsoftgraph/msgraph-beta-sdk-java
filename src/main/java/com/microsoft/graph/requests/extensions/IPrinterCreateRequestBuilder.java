@@ -28,5 +28,5 @@ public interface IPrinterCreateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IPrinterCreateRequest instance
      */
-    IPrinterCreateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrinterCreateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

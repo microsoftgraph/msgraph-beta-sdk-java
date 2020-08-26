@@ -5,7 +5,26 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.generated.ScheduledRetireState;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +51,5 @@ public interface IDeviceCompliancePolicyReferenceRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyReferenceRequest instance
      */
-    IDeviceCompliancePolicyReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

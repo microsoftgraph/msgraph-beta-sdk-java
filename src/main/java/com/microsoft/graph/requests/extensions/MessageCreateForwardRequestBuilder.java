@@ -5,14 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageCreateForwardRequest;
 import com.microsoft.graph.requests.extensions.MessageCreateForwardRequest;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Message;
-
+import com.microsoft.graph.models.extensions.Recipient;import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +29,7 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
      * @param message the message
      * @param comment the comment
      */
-    public MessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
+    public MessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("toRecipients", toRecipients);
         bodyParams.put("message", message);
@@ -55,7 +51,7 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for the request
      * @return the IMessageCreateForwardRequest instance
      */
-    public IMessageCreateForwardRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMessageCreateForwardRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageCreateForwardRequest request = new MessageCreateForwardRequest(
                 getRequestUrl(),
                 getClient(),

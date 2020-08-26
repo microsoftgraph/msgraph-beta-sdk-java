@@ -5,7 +5,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementConditionStatement;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+import com.microsoft.graph.requests.extensions.IManagementConditionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +35,7 @@ public class ManagementConditionStatementWithReferenceRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionStatementWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionStatementWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +54,7 @@ public class ManagementConditionStatementWithReferenceRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IManagementConditionStatementWithReferenceRequest instance
      */
-    public IManagementConditionStatementWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionStatementWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionStatementWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

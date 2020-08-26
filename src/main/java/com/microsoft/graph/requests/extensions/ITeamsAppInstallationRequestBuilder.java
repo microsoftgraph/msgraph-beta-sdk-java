@@ -3,11 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequest;
-import com.microsoft.graph.requests.extensions.ITeamsAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationUpgradeRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TeamsAppInstallation;
+import com.microsoft.graph.requests.extensions.ITeamsAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +36,7 @@ public interface ITeamsAppInstallationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamsAppInstallationRequest instance
      */
-    ITeamsAppInstallationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamsAppInstallationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

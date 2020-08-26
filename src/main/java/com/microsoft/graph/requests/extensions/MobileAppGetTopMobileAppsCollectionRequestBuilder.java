@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -34,13 +36,13 @@ public class MobileAppGetTopMobileAppsCollectionRequestBuilder extends BaseFunct
      * @param status the status
      * @param count the count
      */
-    public MobileAppGetTopMobileAppsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String status, final Long count) {
+    public MobileAppGetTopMobileAppsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String status, final Long count) {
         super(requestUrl, client, requestOptions);
      	 if(status!=null){
-			functionOptions.add(new FunctionOption("status", status));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("status", status));
 		}
        	 if(count!=null){
-			functionOptions.add(new FunctionOption("count", count));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("count", count));
 		}
       }
 
@@ -48,14 +50,14 @@ public class MobileAppGetTopMobileAppsCollectionRequestBuilder extends BaseFunct
         return buildRequest(getOptions());
     }
 
-    public IMobileAppGetTopMobileAppsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMobileAppGetTopMobileAppsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MobileAppGetTopMobileAppsCollectionRequest request = new MobileAppGetTopMobileAppsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

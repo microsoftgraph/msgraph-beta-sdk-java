@@ -3,14 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosManagedAppRegistrationRequest;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosManagedAppRegistration;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +34,7 @@ public interface IIosManagedAppRegistrationRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IIosManagedAppRegistrationRequest instance
      */
-    IIosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedAppPolicyCollectionRequestBuilder appliedPolicies();

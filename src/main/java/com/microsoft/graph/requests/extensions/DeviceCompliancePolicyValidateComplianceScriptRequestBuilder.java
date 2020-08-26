@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyValidateComplianceScriptRequest;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyValidateComplianceScriptRequest;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class DeviceCompliancePolicyValidateComplianceScriptRequestBuilder extend
      * @param requestOptions the options for this request
      * @param deviceCompliancePolicyScript the deviceCompliancePolicyScript
      */
-    public DeviceCompliancePolicyValidateComplianceScriptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DeviceCompliancePolicyScript deviceCompliancePolicyScript) {
+    public DeviceCompliancePolicyValidateComplianceScriptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final DeviceCompliancePolicyScript deviceCompliancePolicyScript) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("deviceCompliancePolicyScript", deviceCompliancePolicyScript);
     }
@@ -50,7 +47,7 @@ public class DeviceCompliancePolicyValidateComplianceScriptRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyValidateComplianceScriptRequest instance
      */
-    public IDeviceCompliancePolicyValidateComplianceScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceCompliancePolicyValidateComplianceScriptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceCompliancePolicyValidateComplianceScriptRequest request = new DeviceCompliancePolicyValidateComplianceScriptRequest(
                 getRequestUrl(),
                 getClient(),

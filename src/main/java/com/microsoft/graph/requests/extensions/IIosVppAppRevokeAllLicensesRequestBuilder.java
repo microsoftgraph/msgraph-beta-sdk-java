@@ -28,5 +28,5 @@ public interface IIosVppAppRevokeAllLicensesRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IIosVppAppRevokeAllLicensesRequest instance
      */
-    IIosVppAppRevokeAllLicensesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosVppAppRevokeAllLicensesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

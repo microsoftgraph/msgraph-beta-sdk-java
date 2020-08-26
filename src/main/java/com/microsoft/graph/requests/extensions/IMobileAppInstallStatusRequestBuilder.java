@@ -3,9 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequest;
-import com.microsoft.graph.requests.extensions.IMobileAppWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MobileAppInstallStatus;
+import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +35,7 @@ public interface IMobileAppInstallStatusRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMobileAppInstallStatusRequest instance
      */
-    IMobileAppInstallStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileAppInstallStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

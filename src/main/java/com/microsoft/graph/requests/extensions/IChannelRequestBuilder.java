@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IChannelRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
@@ -12,6 +16,8 @@ import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequ
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +41,7 @@ public interface IChannelRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IChannelRequest instance
      */
-    IChannelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IChatMessageCollectionRequestBuilder messages();

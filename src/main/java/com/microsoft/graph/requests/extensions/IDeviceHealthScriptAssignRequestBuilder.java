@@ -28,5 +28,5 @@ public interface IDeviceHealthScriptAssignRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptAssignRequest instance
      */
-    IDeviceHealthScriptAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceHealthScriptAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

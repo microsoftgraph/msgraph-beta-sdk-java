@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.DriveItemPreviewRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +31,7 @@ public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder imp
      * @param page the page
      * @param zoom the zoom
      */
-    public DriveItemPreviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String viewer, final Boolean chromeless, final Boolean allowEdit, final String page, final Double zoom) {
+    public DriveItemPreviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String viewer, final Boolean chromeless, final Boolean allowEdit, final String page, final Double zoom) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("viewer", viewer);
         bodyParams.put("chromeless", chromeless);
@@ -57,7 +55,7 @@ public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder imp
      * @param requestOptions the options for the request
      * @return the IDriveItemPreviewRequest instance
      */
-    public IDriveItemPreviewRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemPreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemPreviewRequest request = new DriveItemPreviewRequest(
                 getRequestUrl(),
                 getClient(),

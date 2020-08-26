@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.AttendeeBase;
+import com.microsoft.graph.models.extensions.LocationConstraint;
+import com.microsoft.graph.models.extensions.TimeConstraint;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.generated.MailTipsType;
+import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 

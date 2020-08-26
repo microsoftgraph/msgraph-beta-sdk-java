@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectedOrganization;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class ConnectedOrganizationWithReferenceRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectedOrganizationWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConnectedOrganizationWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class ConnectedOrganizationWithReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IConnectedOrganizationWithReferenceRequest instance
      */
-    public IConnectedOrganizationWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IConnectedOrganizationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConnectedOrganizationWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

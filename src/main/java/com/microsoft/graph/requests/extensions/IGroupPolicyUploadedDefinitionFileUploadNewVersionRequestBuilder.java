@@ -28,5 +28,5 @@ public interface IGroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

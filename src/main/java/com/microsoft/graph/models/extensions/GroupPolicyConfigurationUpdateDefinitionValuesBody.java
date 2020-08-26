@@ -5,8 +5,6 @@
 package com.microsoft.graph.models.extensions;
 
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

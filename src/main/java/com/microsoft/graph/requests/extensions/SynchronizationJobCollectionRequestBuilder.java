@@ -5,15 +5,20 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Synchronization;
+import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
+import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
+import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
+import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ISynchronizationJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobCollectionRequest;
-import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
-
 import com.microsoft.graph.requests.extensions.ISynchronizationJobValidateCredentialsRequestBuilder;
 import com.microsoft.graph.models.extensions.SynchronizationJob;
 import com.microsoft.graph.options.Option;
@@ -34,7 +39,7 @@ public class SynchronizationJobCollectionRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SynchronizationJobCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SynchronizationJobCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +47,7 @@ public class SynchronizationJobCollectionRequestBuilder extends BaseRequestBuild
         return buildRequest(getOptions());
     }
 
-    public ISynchronizationJobCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISynchronizationJobCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SynchronizationJobCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

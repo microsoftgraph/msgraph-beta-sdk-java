@@ -28,5 +28,5 @@ public interface IDepOnboardingSettingUploadDepTokenRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingUploadDepTokenRequest instance
      */
-    IDepOnboardingSettingUploadDepTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingUploadDepTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

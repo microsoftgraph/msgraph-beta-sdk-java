@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
@@ -14,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificate
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
@@ -25,7 +28,6 @@ import com.microsoft.graph.requests.extensions.ISideLoadingKeyCollectionRequestB
 import com.microsoft.graph.requests.extensions.ISideLoadingKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
@@ -52,8 +54,11 @@ import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskCollectio
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsManagementAppRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -77,7 +82,7 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceAppManagementRequest instance
      */
-    IDeviceAppManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceAppManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedEBookCollectionRequestBuilder managedEBooks();

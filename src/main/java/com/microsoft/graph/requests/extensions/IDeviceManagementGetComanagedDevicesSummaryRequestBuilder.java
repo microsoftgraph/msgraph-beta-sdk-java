@@ -28,5 +28,5 @@ public interface IDeviceManagementGetComanagedDevicesSummaryRequestBuilder exten
      * @param requestOptions the options for the request
      * @return the IDeviceManagementGetComanagedDevicesSummaryRequest instance
      */
-    IDeviceManagementGetComanagedDevicesSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementGetComanagedDevicesSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -5,18 +5,19 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Security;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequest;
-import com.microsoft.graph.models.extensions.TiIndicator;
-
 import com.microsoft.graph.requests.extensions.ITiIndicatorSubmitTiIndicatorsCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.TiIndicator;
-
 import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder;
@@ -39,7 +40,7 @@ public class TiIndicatorCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TiIndicatorCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TiIndicatorCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +48,7 @@ public class TiIndicatorCollectionRequestBuilder extends BaseRequestBuilder impl
         return buildRequest(getOptions());
     }
 
-    public ITiIndicatorCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITiIndicatorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TiIndicatorCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

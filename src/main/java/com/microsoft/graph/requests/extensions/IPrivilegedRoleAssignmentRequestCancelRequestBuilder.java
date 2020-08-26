@@ -28,5 +28,5 @@ public interface IPrivilegedRoleAssignmentRequestCancelRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentRequestCancelRequest instance
      */
-    IPrivilegedRoleAssignmentRequestCancelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleAssignmentRequestCancelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

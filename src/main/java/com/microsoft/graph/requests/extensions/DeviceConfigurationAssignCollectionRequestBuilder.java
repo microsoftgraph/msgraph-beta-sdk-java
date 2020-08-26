@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,9 +17,6 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignCollect
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequest;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
-import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,7 +38,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param deviceConfigurationGroupAssignments the deviceConfigurationGroupAssignments
      * @param assignments the assignments
      */
-    public DeviceConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DeviceConfigurationGroupAssignment> deviceConfigurationGroupAssignments, final java.util.List<DeviceConfigurationAssignment> assignments) {
+    public DeviceConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceConfigurationGroupAssignment> deviceConfigurationGroupAssignments, final java.util.List<DeviceConfigurationAssignment> assignments) {
         super(requestUrl, client, requestOptions);
   	 if(deviceConfigurationGroupAssignments!=null){
 			bodyParams.put("deviceConfigurationGroupAssignments", deviceConfigurationGroupAssignments);
@@ -51,7 +52,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
         return buildRequest(getOptions());
     }
 
-    public IDeviceConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceConfigurationAssignCollectionRequest request = new DeviceConfigurationAssignCollectionRequest(
                 getRequestUrl(),
                 getClient(),

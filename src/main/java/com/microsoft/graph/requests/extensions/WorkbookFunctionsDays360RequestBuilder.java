@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDays360Request;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsDays360RequestBuilder extends BaseActionRequestBui
      * @param endDate the endDate
      * @param method the method
      */
-    public WorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
+    public WorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startDate", startDate);
         bodyParams.put("endDate", endDate);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsDays360RequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDays360Request instance
      */
-    public IWorkbookFunctionsDays360Request buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsDays360Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDays360Request request = new WorkbookFunctionsDays360Request(
                 getRequestUrl(),
                 getClient(),

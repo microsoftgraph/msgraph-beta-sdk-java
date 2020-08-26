@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectValidateProperties
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
      * @param mailNickname the mailNickname
      * @param onBehalfOfUserId the onBehalfOfUserId
      */
-    public DirectoryObjectValidatePropertiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
+    public DirectoryObjectValidatePropertiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("entityType", entityType);
         bodyParams.put("displayName", displayName);
@@ -55,7 +53,7 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return the IDirectoryObjectValidatePropertiesRequest instance
      */
-    public IDirectoryObjectValidatePropertiesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryObjectValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectValidatePropertiesRequest request = new DirectoryObjectValidatePropertiesRequest(
                 getRequestUrl(),
                 getClient(),

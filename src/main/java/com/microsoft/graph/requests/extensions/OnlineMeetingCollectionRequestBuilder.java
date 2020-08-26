@@ -5,16 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CommsApplication;
+import com.microsoft.graph.models.extensions.ChatInfo;
+import com.microsoft.graph.models.extensions.MeetingParticipants;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequest;
-import com.microsoft.graph.models.extensions.ChatInfo;
-import com.microsoft.graph.models.extensions.MeetingParticipants;
-
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCreateOrGetRequestBuilder;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.options.Option;
@@ -35,7 +37,7 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnlineMeetingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnlineMeetingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,7 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder im
         return buildRequest(getOptions());
     }
 
-    public IOnlineMeetingCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOnlineMeetingCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnlineMeetingCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleDefinition;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public RoleDefinitionWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IRoleDefinitionWithReferenceRequest instance
      */
-    public IRoleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRoleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleDefinitionWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

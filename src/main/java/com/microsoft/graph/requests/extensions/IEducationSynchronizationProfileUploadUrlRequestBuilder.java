@@ -28,5 +28,5 @@ public interface IEducationSynchronizationProfileUploadUrlRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileUploadUrlRequest instance
      */
-    IEducationSynchronizationProfileUploadUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSynchronizationProfileUploadUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

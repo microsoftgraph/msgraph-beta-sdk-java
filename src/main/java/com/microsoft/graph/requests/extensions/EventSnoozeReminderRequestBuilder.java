@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventSnoozeReminderRequest;
 import com.microsoft.graph.requests.extensions.EventSnoozeReminderRequest;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder 
      * @param requestOptions the options for this request
      * @param newReminderTime the newReminderTime
      */
-    public EventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DateTimeTimeZone newReminderTime) {
+    public EventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final DateTimeTimeZone newReminderTime) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("newReminderTime", newReminderTime);
     }
@@ -50,7 +47,7 @@ public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IEventSnoozeReminderRequest instance
      */
-    public IEventSnoozeReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEventSnoozeReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
                 getRequestUrl(),
                 getClient(),

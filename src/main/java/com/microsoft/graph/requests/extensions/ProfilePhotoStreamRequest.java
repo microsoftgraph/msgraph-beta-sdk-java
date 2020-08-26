@@ -3,18 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequest;
-import com.microsoft.graph.requests.extensions.IProfilePhotoStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoStreamRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.concurrency.ICallback;
-import java.util.EnumSet;
-import com.microsoft.graph.http.BaseStreamRequest;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
+
+import java.util.Arrays;
+import java.util.EnumSet;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseStreamRequest;
 
 import java.io.InputStream;
 
@@ -32,7 +30,7 @@ public class ProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhoto> i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfilePhotoStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ProfilePhotoStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProfilePhoto.class);
     }
 

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AndroidManagedStoreAccountEnterpr
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuild
      * @param packageIds the packageIds
      * @param approveAllPermissions the approveAllPermissions
      */
-    public AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> packageIds, final Boolean approveAllPermissions) {
+    public AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> packageIds, final Boolean approveAllPermissions) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("packageIds", packageIds);
         bodyParams.put("approveAllPermissions", approveAllPermissions);
@@ -51,7 +49,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuild
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest request = new AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest(
                 getRequestUrl(),
                 getClient(),

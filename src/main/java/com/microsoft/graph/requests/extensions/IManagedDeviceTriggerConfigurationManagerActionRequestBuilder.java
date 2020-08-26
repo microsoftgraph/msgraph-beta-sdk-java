@@ -28,5 +28,5 @@ public interface IManagedDeviceTriggerConfigurationManagerActionRequestBuilder e
      * @param requestOptions the options for the request
      * @return the IManagedDeviceTriggerConfigurationManagerActionRequest instance
      */
-    IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

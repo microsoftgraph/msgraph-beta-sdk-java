@@ -3,15 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ICallRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPresenceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,12 +42,16 @@ public interface ICloudCommunicationsRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICloudCommunicationsRequest instance
      */
-    ICloudCommunicationsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICloudCommunicationsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ICallCollectionRequestBuilder calls();
 
     ICallRequestBuilder calls(final String id);
+
+    ICallRecordCollectionRequestBuilder callRecords();
+
+    ICallRecordRequestBuilder callRecords(final String id);
 
     IOnlineMeetingCollectionRequestBuilder onlineMeetings();
 

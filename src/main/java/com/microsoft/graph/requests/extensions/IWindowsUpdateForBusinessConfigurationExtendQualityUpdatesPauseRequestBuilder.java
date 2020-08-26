@@ -28,5 +28,5 @@ public interface IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPause
      * @param requestOptions the options for the request
      * @return the IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest instance
      */
-    IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

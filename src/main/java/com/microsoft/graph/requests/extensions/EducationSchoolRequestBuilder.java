@@ -3,18 +3,24 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequest;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationClassCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationClassWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AdministrativeUnitWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -34,7 +40,7 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationSchoolRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

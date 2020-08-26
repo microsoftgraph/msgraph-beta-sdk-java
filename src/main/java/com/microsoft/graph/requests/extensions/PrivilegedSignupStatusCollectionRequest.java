@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TenantSetupInfo;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.PrivilegedSignupStatus;
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCollectionPage;
@@ -37,7 +38,7 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedSignupStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrivilegedSignupStatusCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedSignupStatusCollectionResponse.class, IPrivilegedSignupStatusCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public IPrivilegedSignupStatusCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PrivilegedSignupStatusCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public IPrivilegedSignupStatusCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PrivilegedSignupStatusCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public IPrivilegedSignupStatusCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (PrivilegedSignupStatusCollectionRequest)this;
     }
 

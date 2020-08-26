@@ -28,5 +28,5 @@ public interface ISynchronizationJobProvisionOnDemandRequestBuilder extends IReq
      * @param requestOptions the options for the request
      * @return the ISynchronizationJobProvisionOnDemandRequest instance
      */
-    ISynchronizationJobProvisionOnDemandRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationJobProvisionOnDemandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

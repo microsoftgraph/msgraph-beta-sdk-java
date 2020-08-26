@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDollarRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsDollarRequestBuilder extends BaseActionRequestBuil
      * @param number the number
      * @param decimals the decimals
      */
-    public WorkbookFunctionsDollarRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
+    public WorkbookFunctionsDollarRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("decimals", decimals);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsDollarRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDollarRequest instance
      */
-    public IWorkbookFunctionsDollarRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsDollarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDollarRequest request = new WorkbookFunctionsDollarRequest(
                 getRequestUrl(),
                 getClient(),

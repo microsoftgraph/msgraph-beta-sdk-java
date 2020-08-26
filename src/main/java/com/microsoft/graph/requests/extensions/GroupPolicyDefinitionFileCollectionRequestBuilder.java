@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class GroupPolicyDefinitionFileCollectionRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionFileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyDefinitionFileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class GroupPolicyDefinitionFileCollectionRequestBuilder extends BaseReque
         return buildRequest(getOptions());
     }
 
-    public IGroupPolicyDefinitionFileCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyDefinitionFileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyDefinitionFileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

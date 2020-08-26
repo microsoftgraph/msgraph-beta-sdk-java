@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_DistRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestB
      * @param standardDev the standardDev
      * @param cumulative the cumulative
      */
-    public WorkbookFunctionsNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("mean", mean);
@@ -55,7 +53,7 @@ public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNorm_DistRequest instance
      */
-    public IWorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNorm_DistRequest request = new WorkbookFunctionsNorm_DistRequest(
                 getRequestUrl(),
                 getClient(),

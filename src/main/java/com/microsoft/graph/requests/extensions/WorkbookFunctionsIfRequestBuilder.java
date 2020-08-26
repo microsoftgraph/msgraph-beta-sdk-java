@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsIfRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuilder 
      * @param valueIfTrue the valueIfTrue
      * @param valueIfFalse the valueIfFalse
      */
-    public WorkbookFunctionsIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement logicalTest, final com.google.gson.JsonElement valueIfTrue, final com.google.gson.JsonElement valueIfFalse) {
+    public WorkbookFunctionsIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement logicalTest, final com.google.gson.JsonElement valueIfTrue, final com.google.gson.JsonElement valueIfFalse) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("logicalTest", logicalTest);
         bodyParams.put("valueIfTrue", valueIfTrue);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIfRequest instance
      */
-    public IWorkbookFunctionsIfRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsIfRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIfRequest request = new WorkbookFunctionsIfRequest(
                 getRequestUrl(),
                 getClient(),

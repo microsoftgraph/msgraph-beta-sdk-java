@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptRunSummary;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public interface IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder ex
      * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptRunSummaryWithReferenceRequest instance
      */
-    IDeviceManagementScriptRunSummaryWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementScriptRunSummaryWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDeviceManagementScriptRunSummaryReferenceRequestBuilder reference();
 

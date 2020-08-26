@@ -6,7 +6,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementConditionStatement;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+import com.microsoft.graph.requests.extensions.IManagementConditionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +36,7 @@ public class ManagementConditionStatementReferenceRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionStatementReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionStatementReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +55,7 @@ public class ManagementConditionStatementReferenceRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IManagementConditionStatementReferenceRequest instance
      */
-    public IManagementConditionStatementReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionStatementReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionStatementReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

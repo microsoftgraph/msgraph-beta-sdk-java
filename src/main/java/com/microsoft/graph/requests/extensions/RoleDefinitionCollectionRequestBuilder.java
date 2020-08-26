@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public RoleDefinitionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder i
         return buildRequest(getOptions());
     }
 
-    public IRoleDefinitionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRoleDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

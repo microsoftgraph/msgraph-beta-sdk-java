@@ -28,5 +28,5 @@ public interface IDeviceManagementReportsGetReportFiltersRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetReportFiltersRequest instance
      */
-    IDeviceManagementReportsGetReportFiltersRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementReportsGetReportFiltersRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

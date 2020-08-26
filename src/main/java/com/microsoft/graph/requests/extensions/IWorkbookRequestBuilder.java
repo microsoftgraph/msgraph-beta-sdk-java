@@ -3,8 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
@@ -13,14 +16,13 @@ import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionReque
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookSessionInfoResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -44,7 +46,7 @@ public interface IWorkbookRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookRequest instance
      */
-    IWorkbookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

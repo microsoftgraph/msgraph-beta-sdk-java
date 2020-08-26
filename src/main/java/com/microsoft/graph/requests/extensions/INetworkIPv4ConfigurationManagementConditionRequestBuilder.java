@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INetworkIPv4ConfigurationManagementConditionRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.NetworkIPv4ConfigurationManagementCondition;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface INetworkIPv4ConfigurationManagementConditionRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the INetworkIPv4ConfigurationManagementConditionRequest instance
      */
-    INetworkIPv4ConfigurationManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INetworkIPv4ConfigurationManagementConditionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

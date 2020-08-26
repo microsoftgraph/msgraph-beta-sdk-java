@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAttributeMappingFunctionSchemaRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IAttributeMappingFunctionSchemaRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IAttributeMappingFunctionSchemaRequest instance
      */
-    IAttributeMappingFunctionSchemaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAttributeMappingFunctionSchemaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

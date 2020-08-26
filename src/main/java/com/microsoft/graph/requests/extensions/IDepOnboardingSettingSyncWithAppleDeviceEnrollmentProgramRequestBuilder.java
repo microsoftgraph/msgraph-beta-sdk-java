@@ -28,5 +28,5 @@ public interface IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramReques
      * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest instance
      */
-    IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

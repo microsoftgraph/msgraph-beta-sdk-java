@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMacOSEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOSEnterpriseWiFiConfiguration;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface IMacOSEnterpriseWiFiConfigurationRequestBuilder extends IReques
      * @param requestOptions the options for this request
      * @return the IMacOSEnterpriseWiFiConfigurationRequest instance
      */
-    IMacOSEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOSEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

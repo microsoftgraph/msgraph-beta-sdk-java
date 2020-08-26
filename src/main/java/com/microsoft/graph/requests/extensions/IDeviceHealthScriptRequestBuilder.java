@@ -3,18 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceHealthScript;
+import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptUpdateGlobalScriptRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptGetRemediationHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRunSummaryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -38,7 +40,7 @@ public interface IDeviceHealthScriptRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceHealthScriptRequest instance
      */
-    IDeviceHealthScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceHealthScriptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceHealthScriptAssignmentCollectionRequestBuilder assignments();

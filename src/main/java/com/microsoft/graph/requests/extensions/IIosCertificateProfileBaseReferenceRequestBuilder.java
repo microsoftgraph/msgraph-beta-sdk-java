@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +35,5 @@ public interface IIosCertificateProfileBaseReferenceRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IIosCertificateProfileBaseReferenceRequest instance
      */
-    IIosCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

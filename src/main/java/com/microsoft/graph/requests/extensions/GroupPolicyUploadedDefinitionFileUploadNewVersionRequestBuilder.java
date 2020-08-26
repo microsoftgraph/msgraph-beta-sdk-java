@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileUploadNewVersionRequest;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder ext
      * @param content the content
      * @param groupPolicyUploadedLanguageFiles the groupPolicyUploadedLanguageFiles
      */
-    public GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final byte[] content, final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
+    public GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final byte[] content, final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("content", content);
         bodyParams.put("groupPolicyUploadedLanguageFiles", groupPolicyUploadedLanguageFiles);
@@ -52,7 +49,7 @@ public class GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder ext
      * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupPolicyUploadedDefinitionFileUploadNewVersionRequest request = new GroupPolicyUploadedDefinitionFileUploadNewVersionRequest(
                 getRequestUrl(),
                 getClient(),

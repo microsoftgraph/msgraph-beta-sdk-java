@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataClassificationServiceClassifyExactMatchesRequest;
 import com.microsoft.graph.requests.extensions.DataClassificationServiceClassifyExactMatchesRequest;
 import com.microsoft.graph.models.extensions.ContentClassification;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +30,7 @@ public class DataClassificationServiceClassifyExactMatchesRequestBuilder extends
      * @param sensitiveTypeIds the sensitiveTypeIds
      * @param contentClassifications the contentClassifications
      */
-    public DataClassificationServiceClassifyExactMatchesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String text, final String timeoutInMs, final java.util.List<String> sensitiveTypeIds, final java.util.List<ContentClassification> contentClassifications) {
+    public DataClassificationServiceClassifyExactMatchesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String text, final String timeoutInMs, final java.util.List<String> sensitiveTypeIds, final java.util.List<ContentClassification> contentClassifications) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
         bodyParams.put("timeoutInMs", timeoutInMs);
@@ -56,7 +53,7 @@ public class DataClassificationServiceClassifyExactMatchesRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IDataClassificationServiceClassifyExactMatchesRequest instance
      */
-    public IDataClassificationServiceClassifyExactMatchesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDataClassificationServiceClassifyExactMatchesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DataClassificationServiceClassifyExactMatchesRequest request = new DataClassificationServiceClassifyExactMatchesRequest(
                 getRequestUrl(),
                 getClient(),

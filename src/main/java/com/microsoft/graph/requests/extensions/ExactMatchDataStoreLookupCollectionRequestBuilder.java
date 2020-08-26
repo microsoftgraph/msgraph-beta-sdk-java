@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -34,7 +36,7 @@ public class ExactMatchDataStoreLookupCollectionRequestBuilder extends BaseActio
      * @param values the values
      * @param resultColumnNames the resultColumnNames
      */
-    public ExactMatchDataStoreLookupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String key, final java.util.List<String> values, final java.util.List<String> resultColumnNames) {
+    public ExactMatchDataStoreLookupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String key, final java.util.List<String> values, final java.util.List<String> resultColumnNames) {
         super(requestUrl, client, requestOptions);
   	 if(key!=null){
 			bodyParams.put("key", key);
@@ -51,7 +53,7 @@ public class ExactMatchDataStoreLookupCollectionRequestBuilder extends BaseActio
         return buildRequest(getOptions());
     }
 
-    public IExactMatchDataStoreLookupCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IExactMatchDataStoreLookupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ExactMatchDataStoreLookupCollectionRequest request = new ExactMatchDataStoreLookupCollectionRequest(
                 getRequestUrl(),
                 getClient(),

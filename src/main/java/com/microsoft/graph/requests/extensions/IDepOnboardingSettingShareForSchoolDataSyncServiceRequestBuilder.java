@@ -28,5 +28,5 @@ public interface IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilde
      * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingShareForSchoolDataSyncServiceRequest instance
      */
-    IDepOnboardingSettingShareForSchoolDataSyncServiceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingShareForSchoolDataSyncServiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

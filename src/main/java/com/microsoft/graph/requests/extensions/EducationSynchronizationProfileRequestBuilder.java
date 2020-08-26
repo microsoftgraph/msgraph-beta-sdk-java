@@ -3,24 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSynchronizationProfile;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationErrorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSynchronizationErrorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationErrorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileResumeRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileResumeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfilePauseRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfilePauseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileResetRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileResetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStartCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileStartCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileUploadUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileUploadUrlRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -40,7 +36,7 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSynchronizationProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationSynchronizationProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

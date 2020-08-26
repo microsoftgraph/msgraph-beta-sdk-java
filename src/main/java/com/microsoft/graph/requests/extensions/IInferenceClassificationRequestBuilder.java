@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InferenceClassification;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IInferenceClassificationRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IInferenceClassificationRequest instance
      */
-    IInferenceClassificationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInferenceClassificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IInferenceClassificationOverrideCollectionRequestBuilder overrides();

@@ -3,36 +3,32 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCellRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetCellRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetUsedRangeRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -52,7 +48,7 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookWorksheetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

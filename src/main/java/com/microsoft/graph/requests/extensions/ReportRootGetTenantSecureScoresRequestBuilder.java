@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ReportRootGetTenantSecureScoresRe
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -29,9 +27,9 @@ public class ReportRootGetTenantSecureScoresRequestBuilder extends BaseFunctionR
      * @param requestOptions the options for this request
      * @param period the period
      */
-    public ReportRootGetTenantSecureScoresRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer period) {
+    public ReportRootGetTenantSecureScoresRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer period) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("period", period));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
     }
 
     /**
@@ -49,14 +47,14 @@ public class ReportRootGetTenantSecureScoresRequestBuilder extends BaseFunctionR
      * @param requestOptions the options for the request
      * @return the IReportRootGetTenantSecureScoresRequest instance
      */
-    public IReportRootGetTenantSecureScoresRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetTenantSecureScoresRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetTenantSecureScoresRequest request = new ReportRootGetTenantSecureScoresRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

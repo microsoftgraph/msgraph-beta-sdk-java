@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -34,7 +36,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionR
      * @param ids the ids
      * @param types the types
      */
-    public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
+    public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
         super(requestUrl, client, requestOptions);
   	 if(ids!=null){
 			bodyParams.put("ids", ids);
@@ -48,7 +50,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionR
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetByIdsCollectionRequest request = new DirectoryObjectGetByIdsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

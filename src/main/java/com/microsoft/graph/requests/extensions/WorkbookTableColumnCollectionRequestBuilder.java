@@ -5,15 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookTable;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCollectionRequest;
-import com.google.gson.JsonElement;
-
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnAddRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCountRequestBuilder;
@@ -36,7 +37,7 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookTableColumnCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +45,7 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseRequestBuil
         return buildRequest(getOptions());
     }
 
-    public IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookTableColumnCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IPrintJobStartPrintJobRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IPrintJobStartPrintJobRequest instance
      */
-    IPrintJobStartPrintJobRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrintJobStartPrintJobRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

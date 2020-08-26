@@ -5,27 +5,26 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.LabelingOptions;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.ClassificationResult;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequest;
-import com.microsoft.graph.models.extensions.ContentInfo;
-
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelExtractLabelRequestBuilder;
-import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.LabelingOptions;
-
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.DowngradeJustification;
-
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.ClassificationResult;
-
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.options.Option;
@@ -46,7 +45,7 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionLabelCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public InformationProtectionLabelCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -54,7 +53,7 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseRequ
         return buildRequest(getOptions());
     }
 
-    public IInformationProtectionLabelCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IInformationProtectionLabelCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new InformationProtectionLabelCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

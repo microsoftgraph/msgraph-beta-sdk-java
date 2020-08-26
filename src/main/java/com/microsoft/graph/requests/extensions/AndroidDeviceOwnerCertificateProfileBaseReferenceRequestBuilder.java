@@ -6,7 +6,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerCertificateProfileBase;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerTrustedRootCertificateRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +33,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseReferenceRequestBuilder ext
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceOwnerCertificateProfileBaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidDeviceOwnerCertificateProfileBaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +52,7 @@ public class AndroidDeviceOwnerCertificateProfileBaseReferenceRequestBuilder ext
      * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerCertificateProfileBaseReferenceRequest instance
      */
-    public IAndroidDeviceOwnerCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidDeviceOwnerCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidDeviceOwnerCertificateProfileBaseReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

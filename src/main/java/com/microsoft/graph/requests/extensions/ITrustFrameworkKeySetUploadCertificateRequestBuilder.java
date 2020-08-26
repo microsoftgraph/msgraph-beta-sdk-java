@@ -28,5 +28,5 @@ public interface ITrustFrameworkKeySetUploadCertificateRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadCertificateRequest instance
      */
-    ITrustFrameworkKeySetUploadCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITrustFrameworkKeySetUploadCertificateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

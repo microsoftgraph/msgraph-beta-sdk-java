@@ -3,11 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequest;
-import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionProtectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionUnprotectRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +35,7 @@ public interface IWorkbookWorksheetProtectionRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetProtectionRequest instance
      */
-    IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options);
     IWorkbookWorksheetProtectionUnprotectRequestBuilder unprotect();

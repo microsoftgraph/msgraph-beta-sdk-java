@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.WindowsFeatureUpdateProfileAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +35,7 @@ public class WindowsFeatureUpdateProfileCollectionRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsFeatureUpdateProfileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsFeatureUpdateProfileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +43,7 @@ public class WindowsFeatureUpdateProfileCollectionRequestBuilder extends BaseReq
         return buildRequest(getOptions());
     }
 
-    public IWindowsFeatureUpdateProfileCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsFeatureUpdateProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsFeatureUpdateProfileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

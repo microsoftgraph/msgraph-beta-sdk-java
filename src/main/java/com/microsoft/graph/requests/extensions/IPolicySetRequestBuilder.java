@@ -3,16 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPolicySetRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PolicySet;
+import com.microsoft.graph.models.extensions.PolicySetItem;
+import com.microsoft.graph.models.extensions.PolicySetAssignment;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetItemRequestBuilder;
-import com.microsoft.graph.models.extensions.PolicySetItem;
-import com.microsoft.graph.models.extensions.PolicySetItem;
-import com.microsoft.graph.models.extensions.PolicySetAssignment;
-import com.microsoft.graph.requests.extensions.IPolicySetUpdateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -36,7 +40,7 @@ public interface IPolicySetRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPolicySetRequest instance
      */
-    IPolicySetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPolicySetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPolicySetAssignmentCollectionRequestBuilder assignments();

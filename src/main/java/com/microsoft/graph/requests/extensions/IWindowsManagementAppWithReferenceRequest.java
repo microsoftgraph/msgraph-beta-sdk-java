@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsManagementApp;
+import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequestBuilder extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequestBuilder extends 
      * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequest instance
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserExperienceAnalyticsCategoryWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserExperienceAnalyticsCategoryWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

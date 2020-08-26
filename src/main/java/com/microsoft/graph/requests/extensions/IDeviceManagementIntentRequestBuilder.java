@@ -3,7 +3,13 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementIntent;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
@@ -18,14 +24,9 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateC
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateSummaryRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUpdateSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentMigrateToTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentCreateCopyRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentCompareCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -49,7 +50,7 @@ public interface IDeviceManagementIntentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceManagementIntentRequest instance
      */
-    IDeviceManagementIntentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementIntentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceManagementSettingInstanceCollectionRequestBuilder settings();

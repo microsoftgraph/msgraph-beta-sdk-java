@@ -3,12 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EdiscoveryCase;
 import com.microsoft.graph.requests.extensions.IReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseCloseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEdiscoveryCaseReopenRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +36,7 @@ public interface IEdiscoveryCaseRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEdiscoveryCaseRequest instance
      */
-    IEdiscoveryCaseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEdiscoveryCaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IReviewSetCollectionRequestBuilder reviewSets();

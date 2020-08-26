@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationAssignment;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionRequestBuilder;
@@ -11,9 +15,9 @@ import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilde
 import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentPublishRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentGetResourcesFolderUrlRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +41,7 @@ public interface IEducationAssignmentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationAssignmentRequest instance
      */
-    IEducationAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationAssignmentResourceCollectionRequestBuilder resources();

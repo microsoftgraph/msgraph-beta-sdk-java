@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AppleUserInitiatedEnrollmentProfi
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class AppleUserInitiatedEnrollmentProfileSetPriorityRequestBuilder extend
      * @param requestOptions the options for this request
      * @param priority the priority
      */
-    public AppleUserInitiatedEnrollmentProfileSetPriorityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer priority) {
+    public AppleUserInitiatedEnrollmentProfileSetPriorityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer priority) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("priority", priority);
     }
@@ -49,7 +47,7 @@ public class AppleUserInitiatedEnrollmentProfileSetPriorityRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IAppleUserInitiatedEnrollmentProfileSetPriorityRequest instance
      */
-    public IAppleUserInitiatedEnrollmentProfileSetPriorityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAppleUserInitiatedEnrollmentProfileSetPriorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AppleUserInitiatedEnrollmentProfileSetPriorityRequest request = new AppleUserInitiatedEnrollmentProfileSetPriorityRequest(
                 getRequestUrl(),
                 getClient(),

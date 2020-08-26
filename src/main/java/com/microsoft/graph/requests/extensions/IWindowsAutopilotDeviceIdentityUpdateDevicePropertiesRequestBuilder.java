@@ -28,5 +28,5 @@ public interface IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBui
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest instance
      */
-    IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

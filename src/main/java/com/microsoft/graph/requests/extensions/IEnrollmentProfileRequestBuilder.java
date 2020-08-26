@@ -3,11 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.IEnrollmentProfileSetDefaultProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentProfileUpdateDeviceProfileAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentProfileExportMobileConfigRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EnrollmentProfile;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +34,7 @@ public interface IEnrollmentProfileRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEnrollmentProfileRequest instance
      */
-    IEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IEnrollmentProfileSetDefaultProfileRequestBuilder setDefaultProfile();
     IEnrollmentProfileUpdateDeviceProfileAssignmentRequestBuilder updateDeviceProfileAssignment(final java.util.List<String> deviceIds);

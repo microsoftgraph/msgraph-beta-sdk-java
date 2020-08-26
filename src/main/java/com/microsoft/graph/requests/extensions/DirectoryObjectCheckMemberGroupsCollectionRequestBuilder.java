@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +34,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param groupIds the groupIds
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> groupIds) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> groupIds) {
         super(requestUrl, client, requestOptions);
   	 if(groupIds!=null){
 			bodyParams.put("groupIds", groupIds);
@@ -43,7 +45,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectCheckMemberGroupsCollectionRequest request = new DirectoryObjectCheckMemberGroupsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

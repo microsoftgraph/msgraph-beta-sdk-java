@@ -3,7 +3,12 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookUserRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookUser;
+import com.microsoft.graph.models.generated.TimeZoneStandard;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
@@ -12,11 +17,9 @@ import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionReque
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequestBuilder;
-import com.microsoft.graph.models.generated.TimeZoneStandard;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +43,7 @@ public interface IOutlookUserRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOutlookUserRequest instance
      */
-    IOutlookUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOutlookUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOutlookCategoryCollectionRequestBuilder masterCategories();

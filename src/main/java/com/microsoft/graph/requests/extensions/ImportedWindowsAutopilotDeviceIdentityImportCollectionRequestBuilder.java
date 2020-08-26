@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentity;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceId
 import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityImportCollectionRequest;
 import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentity;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +36,7 @@ public class ImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilde
      * @param requestOptions the options for this request
      * @param importedWindowsAutopilotDeviceIdentities the importedWindowsAutopilotDeviceIdentities
      */
-    public ImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities) {
+    public ImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities) {
         super(requestUrl, client, requestOptions);
   	 if(importedWindowsAutopilotDeviceIdentities!=null){
 			bodyParams.put("importedWindowsAutopilotDeviceIdentities", importedWindowsAutopilotDeviceIdentities);
@@ -46,7 +47,7 @@ public class ImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilde
         return buildRequest(getOptions());
     }
 
-    public IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ImportedWindowsAutopilotDeviceIdentityImportCollectionRequest request = new ImportedWindowsAutopilotDeviceIdentityImportCollectionRequest(
                 getRequestUrl(),
                 getClient(),

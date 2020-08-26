@@ -5,15 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceCollectionRequest;
-import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
-
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.options.Option;
@@ -34,7 +36,7 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder ex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,7 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder ex
         return buildRequest(getOptions());
     }
 
-    public IUserExperienceAnalyticsDevicePerformanceCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserExperienceAnalyticsDevicePerformanceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserExperienceAnalyticsDevicePerformanceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

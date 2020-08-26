@@ -6,7 +6,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +31,7 @@ public class IosCertificateProfileBaseReferenceRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosCertificateProfileBaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosCertificateProfileBaseReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +50,7 @@ public class IosCertificateProfileBaseReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IIosCertificateProfileBaseReferenceRequest instance
      */
-    public IIosCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIosCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosCertificateProfileBaseReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

@@ -28,5 +28,5 @@ public interface IWindowsFeatureUpdateProfileAssignRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IWindowsFeatureUpdateProfileAssignRequest instance
      */
-    IWindowsFeatureUpdateProfileAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsFeatureUpdateProfileAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

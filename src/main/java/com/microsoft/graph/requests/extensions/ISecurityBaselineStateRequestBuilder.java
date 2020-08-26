@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SecurityBaselineState;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineSettingStateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface ISecurityBaselineStateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISecurityBaselineStateRequest instance
      */
-    ISecurityBaselineStateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecurityBaselineStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISecurityBaselineSettingStateCollectionRequestBuilder settingStates();

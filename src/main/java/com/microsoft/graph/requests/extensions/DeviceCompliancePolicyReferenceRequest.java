@@ -5,7 +5,38 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.generated.ScheduledRetireState;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserOverviewRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +63,7 @@ public class DeviceCompliancePolicyReferenceRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public DeviceCompliancePolicyReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicy.class);
     }
 
@@ -51,7 +82,7 @@ public class DeviceCompliancePolicyReferenceRequest extends BaseRequest implemen
      * @return the updated request
      */
     public IDeviceCompliancePolicyReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCompliancePolicyReferenceRequest)this;
     }
 
@@ -62,7 +93,7 @@ public class DeviceCompliancePolicyReferenceRequest extends BaseRequest implemen
      * @return the updated request
      */
     public IDeviceCompliancePolicyReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCompliancePolicyReferenceRequest)this;
     }
     /**

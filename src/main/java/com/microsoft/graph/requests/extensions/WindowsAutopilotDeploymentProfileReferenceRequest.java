@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfile;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +43,7 @@ public class WindowsAutopilotDeploymentProfileReferenceRequest extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotDeploymentProfileReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public WindowsAutopilotDeploymentProfileReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfile.class);
     }
 
@@ -51,7 +62,7 @@ public class WindowsAutopilotDeploymentProfileReferenceRequest extends BaseReque
      * @return the updated request
      */
     public IWindowsAutopilotDeploymentProfileReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WindowsAutopilotDeploymentProfileReferenceRequest)this;
     }
 
@@ -62,7 +73,7 @@ public class WindowsAutopilotDeploymentProfileReferenceRequest extends BaseReque
      * @return the updated request
      */
     public IWindowsAutopilotDeploymentProfileReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WindowsAutopilotDeploymentProfileReferenceRequest)this;
     }
     /**

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDgetRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsDgetRequestBuilder extends BaseActionRequestBuilde
      * @param field the field
      * @param criteria the criteria
      */
-    public WorkbookFunctionsDgetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public WorkbookFunctionsDgetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("database", database);
         bodyParams.put("field", field);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsDgetRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDgetRequest instance
      */
-    public IWorkbookFunctionsDgetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsDgetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDgetRequest request = new WorkbookFunctionsDgetRequest(
                 getRequestUrl(),
                 getClient(),

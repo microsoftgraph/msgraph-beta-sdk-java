@@ -3,10 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestRequest;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestCancelRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedRoleAssignmentRequest;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +35,7 @@ public interface IPrivilegedRoleAssignmentRequestRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IPrivilegedRoleAssignmentRequestRequest instance
      */
-    IPrivilegedRoleAssignmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleAssignmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

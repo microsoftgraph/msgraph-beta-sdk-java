@@ -3,32 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingRequest;
-import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepIOSEnrollmentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DepOnboardingSetting;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.EnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingGenerateEncryptionPublicKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingGenerateEncryptionPublicKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingUploadDepTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingUploadDepTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepOnboardingSettingGetEncryptionPublicKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DepOnboardingSettingGetEncryptionPublicKeyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.DepIOSEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -48,7 +42,7 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepOnboardingSettingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DepOnboardingSettingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IDepOnboardingSettingGenerateEncryptionPublicKeyRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingGenerateEncryptionPublicKeyRequest instance
      */
-    IDepOnboardingSettingGenerateEncryptionPublicKeyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingGenerateEncryptionPublicKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

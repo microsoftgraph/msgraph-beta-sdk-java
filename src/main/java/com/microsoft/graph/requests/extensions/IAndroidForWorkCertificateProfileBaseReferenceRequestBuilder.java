@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidForWorkCertificateProfileBase;
+import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +36,5 @@ public interface IAndroidForWorkCertificateProfileBaseReferenceRequestBuilder ex
      * @param requestOptions the options for this request
      * @return the IAndroidForWorkCertificateProfileBaseReferenceRequest instance
      */
-    IAndroidForWorkCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidForWorkCertificateProfileBaseReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

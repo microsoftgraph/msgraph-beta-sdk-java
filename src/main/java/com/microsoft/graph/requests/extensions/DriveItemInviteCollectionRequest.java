@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,8 +17,6 @@ import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionResponse;
 import com.microsoft.graph.models.extensions.DriveItemInviteBody;
 import com.microsoft.graph.models.extensions.Permission;
-import com.microsoft.graph.models.extensions.DriveRecipient;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -42,7 +43,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemInviteCollectionResponse.class, IDriveItemInviteCollectionPage.class);
         body = new DriveItemInviteBody();
     }
@@ -87,7 +88,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @return the updated request
      */
     public IDriveItemInviteCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IDriveItemInviteCollectionRequest)this;
     }
 
@@ -98,7 +99,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @return the updated request
      */
     public IDriveItemInviteCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IDriveItemInviteCollectionRequest)this;
     }
 
@@ -109,7 +110,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
      * @return the updated request
      */
     public IDriveItemInviteCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IDriveItemInviteCollectionRequest)this;
     }
 

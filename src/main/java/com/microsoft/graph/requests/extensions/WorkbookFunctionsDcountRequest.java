@@ -14,8 +14,6 @@ import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -34,7 +32,7 @@ public class WorkbookFunctionsDcountRequest extends BaseRequest implements IWork
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsDcountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsDcountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsDcountBody();
     }
@@ -54,7 +52,7 @@ public class WorkbookFunctionsDcountRequest extends BaseRequest implements IWork
      * @return the updated request
      */
     public IWorkbookFunctionsDcountRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsDcountRequest)this;
     }
 
@@ -65,7 +63,7 @@ public class WorkbookFunctionsDcountRequest extends BaseRequest implements IWork
      * @return the updated request
      */
     public IWorkbookFunctionsDcountRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsDcountRequest)this;
     }
 
@@ -76,7 +74,7 @@ public class WorkbookFunctionsDcountRequest extends BaseRequest implements IWork
      * @return the updated request
      */
     public IWorkbookFunctionsDcountRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsDcountRequest)this;
     }
 

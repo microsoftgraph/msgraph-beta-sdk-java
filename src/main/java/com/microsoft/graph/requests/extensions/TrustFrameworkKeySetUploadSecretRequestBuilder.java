@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetUploadSecretR
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class TrustFrameworkKeySetUploadSecretRequestBuilder extends BaseActionRe
      * @param nbf the nbf
      * @param exp the exp
      */
-    public TrustFrameworkKeySetUploadSecretRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String use, final String k, final Long nbf, final Long exp) {
+    public TrustFrameworkKeySetUploadSecretRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String use, final String k, final Long nbf, final Long exp) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("use", use);
         bodyParams.put("k", k);
@@ -55,7 +53,7 @@ public class TrustFrameworkKeySetUploadSecretRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadSecretRequest instance
      */
-    public ITrustFrameworkKeySetUploadSecretRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITrustFrameworkKeySetUploadSecretRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TrustFrameworkKeySetUploadSecretRequest request = new TrustFrameworkKeySetUploadSecretRequest(
                 getRequestUrl(),
                 getClient(),

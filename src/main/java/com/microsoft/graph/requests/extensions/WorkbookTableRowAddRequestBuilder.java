@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookTableRowAddRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookTableRowAddRequestBuilder extends BaseActionRequestBuilder 
      * @param index the index
      * @param values the values
      */
-    public WorkbookTableRowAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index, final com.google.gson.JsonElement values) {
+    public WorkbookTableRowAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer index, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("index", index);
         bodyParams.put("values", values);
@@ -51,7 +49,7 @@ public class WorkbookTableRowAddRequestBuilder extends BaseActionRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWorkbookTableRowAddRequest instance
      */
-    public IWorkbookTableRowAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookTableRowAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableRowAddRequest request = new WorkbookTableRowAddRequest(
                 getRequestUrl(),
                 getClient(),

@@ -14,8 +14,6 @@ import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -34,7 +32,7 @@ public class GroupEvaluateDynamicMembershipRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupEvaluateDynamicMembershipRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupEvaluateDynamicMembershipRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EvaluateDynamicMembershipResult.class);
         body = new GroupEvaluateDynamicMembershipBody();
     }
@@ -54,7 +52,7 @@ public class GroupEvaluateDynamicMembershipRequest extends BaseRequest implement
      * @return the updated request
      */
     public IGroupEvaluateDynamicMembershipRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupEvaluateDynamicMembershipRequest)this;
     }
 
@@ -65,7 +63,7 @@ public class GroupEvaluateDynamicMembershipRequest extends BaseRequest implement
      * @return the updated request
      */
     public IGroupEvaluateDynamicMembershipRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (GroupEvaluateDynamicMembershipRequest)this;
     }
 
@@ -76,7 +74,7 @@ public class GroupEvaluateDynamicMembershipRequest extends BaseRequest implement
      * @return the updated request
      */
     public IGroupEvaluateDynamicMembershipRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupEvaluateDynamicMembershipRequest)this;
     }
 

@@ -3,9 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowRangeRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookTableRow;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +34,7 @@ public interface IWorkbookTableRowRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookTableRowRequest instance
      */
-    IWorkbookTableRowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookTableRowRangeRequestBuilder range();
 

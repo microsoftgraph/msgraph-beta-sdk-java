@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAuditLogRootRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
@@ -12,9 +16,9 @@ import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionReques
 import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -38,7 +42,7 @@ public interface IAuditLogRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAuditLogRootRequest instance
      */
-    IAuditLogRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAuditLogRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISignInCollectionRequestBuilder signIns();

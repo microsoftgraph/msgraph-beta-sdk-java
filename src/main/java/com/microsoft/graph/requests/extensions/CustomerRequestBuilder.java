@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICustomerRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
+import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
@@ -17,6 +21,8 @@ import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,7 +42,7 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustomerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CustomerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

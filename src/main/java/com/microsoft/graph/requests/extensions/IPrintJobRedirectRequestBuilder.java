@@ -28,5 +28,5 @@ public interface IPrintJobRedirectRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IPrintJobRedirectRequest instance
      */
-    IPrintJobRedirectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrintJobRedirectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

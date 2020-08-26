@@ -28,5 +28,5 @@ public interface IWindowsAutopilotSettingsSyncRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotSettingsSyncRequest instance
      */
-    IWindowsAutopilotSettingsSyncRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotSettingsSyncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

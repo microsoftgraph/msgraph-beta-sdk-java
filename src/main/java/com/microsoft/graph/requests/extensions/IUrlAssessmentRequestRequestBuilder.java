@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUrlAssessmentRequestRequest;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentResultCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentResultRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UrlAssessmentRequest;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IUrlAssessmentRequestRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUrlAssessmentRequestRequest instance
      */
-    IUrlAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUrlAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IThreatAssessmentResultCollectionRequestBuilder results();

@@ -28,5 +28,5 @@ public interface IDeviceManagementEnableLegacyPcManagementRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableLegacyPcManagementRequest instance
      */
-    IDeviceManagementEnableLegacyPcManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementEnableLegacyPcManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IInformationProtectionPolicyRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IInformationProtectionPolicyRequest instance
      */
-    IInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IInformationProtectionLabelCollectionRequestBuilder labels();

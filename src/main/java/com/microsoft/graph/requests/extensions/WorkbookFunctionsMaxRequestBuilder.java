@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsMaxRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param values the values
      */
-    public WorkbookFunctionsMaxRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
+    public WorkbookFunctionsMaxRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMaxRequest instance
      */
-    public IWorkbookFunctionsMaxRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsMaxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMaxRequest request = new WorkbookFunctionsMaxRequest(
                 getRequestUrl(),
                 getClient(),

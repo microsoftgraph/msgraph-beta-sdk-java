@@ -3,21 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -41,7 +40,7 @@ public interface IGroupPolicyUploadedDefinitionFileRequestBuilder extends IReque
      * @param requestOptions the options for this request
      * @return the IGroupPolicyUploadedDefinitionFileRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyUploadedDefinitionFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IGroupPolicyOperationCollectionRequestBuilder groupPolicyOperations();

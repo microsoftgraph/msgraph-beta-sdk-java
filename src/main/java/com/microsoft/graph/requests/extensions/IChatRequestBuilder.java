@@ -3,19 +3,24 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IChatRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Chat;
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.KeyValuePair;
+import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-import com.microsoft.graph.requests.extensions.IChatSendActivityNotificationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -39,7 +44,7 @@ public interface IChatRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IChatRequest instance
      */
-    IChatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IChatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IConversationMemberCollectionRequestBuilder members();

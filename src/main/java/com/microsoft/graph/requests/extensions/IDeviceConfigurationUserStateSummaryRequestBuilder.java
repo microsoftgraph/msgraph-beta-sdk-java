@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStateSummaryRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserStateSummary;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IDeviceConfigurationUserStateSummaryRequestBuilder extends IReq
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationUserStateSummaryRequest instance
      */
-    IDeviceConfigurationUserStateSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationUserStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

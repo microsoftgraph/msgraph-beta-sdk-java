@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +40,7 @@ public class UnifiedRoleDefinitionWithReferenceRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRoleDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public UnifiedRoleDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnifiedRoleDefinition.class);
     }
 
@@ -81,7 +88,7 @@ public class UnifiedRoleDefinitionWithReferenceRequest extends BaseRequest imple
      * @return the updated request
      */
     public IUnifiedRoleDefinitionWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IUnifiedRoleDefinitionWithReferenceRequest)this;
     }
 
@@ -92,7 +99,7 @@ public class UnifiedRoleDefinitionWithReferenceRequest extends BaseRequest imple
      * @return the updated request
      */
     public IUnifiedRoleDefinitionWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UnifiedRoleDefinitionWithReferenceRequest)this;
     }
 }

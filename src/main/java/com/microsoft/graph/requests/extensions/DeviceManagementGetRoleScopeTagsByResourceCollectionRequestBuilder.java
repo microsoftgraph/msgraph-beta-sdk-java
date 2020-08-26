@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class DeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder 
      * @param requestOptions the options for this request
      * @param resource the resource
      */
-    public DeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String resource) {
+    public DeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String resource) {
         super(requestUrl, client, requestOptions);
      	 if(resource!=null){
-			functionOptions.add(new FunctionOption("resource", resource));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("resource", resource));
 		}
       }
 
@@ -44,14 +46,14 @@ public class DeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder 
         return buildRequest(getOptions());
     }
 
-    public IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementGetRoleScopeTagsByResourceCollectionRequest request = new DeviceManagementGetRoleScopeTagsByResourceCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

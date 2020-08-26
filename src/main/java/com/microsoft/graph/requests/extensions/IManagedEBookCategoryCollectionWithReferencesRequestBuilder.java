@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedEBook;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,7 +24,7 @@ public interface IManagedEBookCategoryCollectionWithReferencesRequestBuilder ext
 
     IManagedEBookCategoryCollectionWithReferencesRequest buildRequest();
 
-    IManagedEBookCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedEBookCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedEBookCategoryWithReferenceRequestBuilder byId(final String id);
 

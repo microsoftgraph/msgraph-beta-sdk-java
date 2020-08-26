@@ -28,5 +28,5 @@ public interface IBookingAppointmentCancelRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IBookingAppointmentCancelRequest instance
      */
-    IBookingAppointmentCancelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IBookingAppointmentCancelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

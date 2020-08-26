@@ -5,15 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DepOnboardingSetting;
+import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequest;
-import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
-
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
 import com.microsoft.graph.options.Option;
@@ -34,7 +36,7 @@ public class ImportedAppleDeviceIdentityCollectionRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedAppleDeviceIdentityCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ImportedAppleDeviceIdentityCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,7 @@ public class ImportedAppleDeviceIdentityCollectionRequestBuilder extends BaseReq
         return buildRequest(getOptions());
     }
 
-    public IImportedAppleDeviceIdentityCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IImportedAppleDeviceIdentityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ImportedAppleDeviceIdentityCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

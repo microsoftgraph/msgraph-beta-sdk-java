@@ -6,7 +6,20 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackage;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +41,7 @@ public class AccessPackageReferenceRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessPackageReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +60,7 @@ public class AccessPackageReferenceRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IAccessPackageReferenceRequest instance
      */
-    public IAccessPackageReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAccessPackageReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessPackageReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

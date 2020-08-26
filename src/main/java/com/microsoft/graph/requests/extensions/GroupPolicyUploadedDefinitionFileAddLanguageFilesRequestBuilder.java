@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileAddLanguageFilesRequest;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder ext
      * @param requestOptions the options for this request
      * @param groupPolicyUploadedLanguageFiles the groupPolicyUploadedLanguageFiles
      */
-    public GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
+    public GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("groupPolicyUploadedLanguageFiles", groupPolicyUploadedLanguageFiles);
     }
@@ -50,7 +47,7 @@ public class GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder ext
      * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupPolicyUploadedDefinitionFileAddLanguageFilesRequest request = new GroupPolicyUploadedDefinitionFileAddLanguageFilesRequest(
                 getRequestUrl(),
                 getClient(),

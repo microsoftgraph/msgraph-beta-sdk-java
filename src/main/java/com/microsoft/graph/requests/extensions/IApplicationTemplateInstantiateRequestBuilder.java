@@ -28,5 +28,5 @@ public interface IApplicationTemplateInstantiateRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IApplicationTemplateInstantiateRequest instance
      */
-    IApplicationTemplateInstantiateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApplicationTemplateInstantiateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

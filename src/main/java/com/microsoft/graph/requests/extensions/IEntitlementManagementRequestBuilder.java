@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EntitlementManagement;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
@@ -22,10 +26,12 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCo
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -49,7 +55,7 @@ public interface IEntitlementManagementRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEntitlementManagementRequest instance
      */
-    IEntitlementManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEntitlementManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs();

@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceAppManagement;
+import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +37,7 @@ public class IosLobAppProvisioningConfigurationCollectionRequestBuilder extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosLobAppProvisioningConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosLobAppProvisioningConfigurationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +45,7 @@ public class IosLobAppProvisioningConfigurationCollectionRequestBuilder extends 
         return buildRequest(getOptions());
     }
 
-    public IIosLobAppProvisioningConfigurationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIosLobAppProvisioningConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosLobAppProvisioningConfigurationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

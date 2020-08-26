@@ -28,5 +28,5 @@ public interface ISynchronizationJobRestartRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the ISynchronizationJobRestartRequest instance
      */
-    ISynchronizationJobRestartRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationJobRestartRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

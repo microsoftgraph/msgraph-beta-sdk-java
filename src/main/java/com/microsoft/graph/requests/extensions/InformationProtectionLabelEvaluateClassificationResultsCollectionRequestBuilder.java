@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.ClassificationResult;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,9 +17,6 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvalua
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateClassificationResultsCollectionRequest;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.ClassificationResult;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,7 +38,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsCollectionRe
      * @param contentInfo the contentInfo
      * @param classificationResults the classificationResults
      */
-    public InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final ContentInfo contentInfo, final java.util.List<ClassificationResult> classificationResults) {
+    public InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final ContentInfo contentInfo, final java.util.List<ClassificationResult> classificationResults) {
         super(requestUrl, client, requestOptions);
   	 if(contentInfo!=null){
 			bodyParams.put("contentInfo", contentInfo);
@@ -51,7 +52,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsCollectionRe
         return buildRequest(getOptions());
     }
 
-    public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         InformationProtectionLabelEvaluateClassificationResultsCollectionRequest request = new InformationProtectionLabelEvaluateClassificationResultsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

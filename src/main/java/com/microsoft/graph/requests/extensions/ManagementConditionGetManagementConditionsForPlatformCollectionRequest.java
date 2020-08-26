@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IManagementConditionGetManagement
 import com.microsoft.graph.requests.extensions.ManagementConditionGetManagementConditionsForPlatformCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagementConditionGetManagementConditionsForPlatformCollectionResponse;
 import com.microsoft.graph.models.extensions.ManagementCondition;
-import com.microsoft.graph.models.generated.DevicePlatformType;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -38,7 +39,7 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionGetManagementConditionsForPlatformCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionGetManagementConditionsForPlatformCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagementConditionGetManagementConditionsForPlatformCollectionResponse.class, IManagementConditionGetManagementConditionsForPlatformCollectionPage.class);
     }
 
@@ -82,7 +83,7 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
      * @return the updated request
      */
     public IManagementConditionGetManagementConditionsForPlatformCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IManagementConditionGetManagementConditionsForPlatformCollectionRequest)this;
     }
 
@@ -93,7 +94,7 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
      * @return the updated request
      */
     public IManagementConditionGetManagementConditionsForPlatformCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IManagementConditionGetManagementConditionsForPlatformCollectionRequest)this;
     }
 
@@ -104,7 +105,7 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
      * @return the updated request
      */
     public IManagementConditionGetManagementConditionsForPlatformCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IManagementConditionGetManagementConditionsForPlatformCollectionRequest)this;
     }
 

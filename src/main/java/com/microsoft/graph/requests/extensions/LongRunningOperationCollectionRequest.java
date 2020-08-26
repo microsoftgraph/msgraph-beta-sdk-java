@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Authentication;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.LongRunningOperation;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionPage;
@@ -37,7 +38,7 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LongRunningOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public LongRunningOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LongRunningOperationCollectionResponse.class, ILongRunningOperationCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public ILongRunningOperationCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (LongRunningOperationCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public ILongRunningOperationCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (LongRunningOperationCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public ILongRunningOperationCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (LongRunningOperationCollectionRequest)this;
     }
 

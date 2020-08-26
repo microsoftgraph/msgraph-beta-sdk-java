@@ -3,20 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidCompliancePolicyRequest;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidCompliancePolicy;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +34,7 @@ public interface IAndroidCompliancePolicyRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IAndroidCompliancePolicyRequest instance
      */
-    IAndroidCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule();

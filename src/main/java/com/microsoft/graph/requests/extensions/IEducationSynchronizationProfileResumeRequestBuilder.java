@@ -28,5 +28,5 @@ public interface IEducationSynchronizationProfileResumeRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileResumeRequest instance
      */
-    IEducationSynchronizationProfileResumeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSynchronizationProfileResumeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

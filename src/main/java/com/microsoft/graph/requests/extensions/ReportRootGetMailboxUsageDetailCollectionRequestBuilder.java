@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class ReportRootGetMailboxUsageDetailCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param period the period
      */
-    public ReportRootGetMailboxUsageDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String period) {
+    public ReportRootGetMailboxUsageDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String period) {
         super(requestUrl, client, requestOptions);
      	 if(period!=null){
-			functionOptions.add(new FunctionOption("period", period));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
 
@@ -44,14 +46,14 @@ public class ReportRootGetMailboxUsageDetailCollectionRequestBuilder extends Bas
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetMailboxUsageDetailCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetMailboxUsageDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetMailboxUsageDetailCollectionRequest request = new ReportRootGetMailboxUsageDetailCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,10 +34,10 @@ public class ResourceOperationGetScopesForUserCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @param userid the userid
      */
-    public ResourceOperationGetScopesForUserCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String userid) {
+    public ResourceOperationGetScopesForUserCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String userid) {
         super(requestUrl, client, requestOptions);
      	 if(userid!=null){
-			functionOptions.add(new FunctionOption("userid", userid));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("userid", userid));
 		}
       }
 
@@ -43,14 +45,14 @@ public class ResourceOperationGetScopesForUserCollectionRequestBuilder extends B
         return buildRequest(getOptions());
     }
 
-    public IResourceOperationGetScopesForUserCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IResourceOperationGetScopesForUserCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ResourceOperationGetScopesForUserCollectionRequest request = new ResourceOperationGetScopesForUserCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

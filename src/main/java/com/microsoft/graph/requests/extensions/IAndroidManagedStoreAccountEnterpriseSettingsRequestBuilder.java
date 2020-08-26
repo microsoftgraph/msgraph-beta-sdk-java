@@ -3,15 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsRequest;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidManagedStoreAccountEnterpriseSettings;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +34,7 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequestBuilder ext
      * @param requestOptions the options for this request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedStoreAccountEnterpriseSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder approveApps(final java.util.List<String> packageIds, final Boolean approveAllPermissions);
     IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName);

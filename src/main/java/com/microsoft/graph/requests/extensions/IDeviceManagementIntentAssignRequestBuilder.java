@@ -28,5 +28,5 @@ public interface IDeviceManagementIntentAssignRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentAssignRequest instance
      */
-    IDeviceManagementIntentAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementIntentAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

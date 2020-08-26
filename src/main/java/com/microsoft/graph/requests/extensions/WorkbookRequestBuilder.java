@@ -3,40 +3,38 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookApplicationRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCommentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookCreateSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRefreshSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookSessionInfoResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -56,7 +54,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

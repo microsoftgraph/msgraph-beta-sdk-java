@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TiIndicator;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCol
 import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCollectionRequest;
 import com.microsoft.graph.requests.extensions.TiIndicatorUpdateTiIndicatorsCollectionRequest;
 import com.microsoft.graph.models.extensions.TiIndicator;
-import com.microsoft.graph.models.extensions.TiIndicator;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +36,7 @@ public class TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder extends BaseA
      * @param requestOptions the options for this request
      * @param value the value
      */
-    public TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<TiIndicator> value) {
+    public TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<TiIndicator> value) {
         super(requestUrl, client, requestOptions);
   	 if(value!=null){
 			bodyParams.put("value", value);
@@ -46,7 +47,7 @@ public class TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder extends BaseA
         return buildRequest(getOptions());
     }
 
-    public ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TiIndicatorUpdateTiIndicatorsCollectionRequest request = new TiIndicatorUpdateTiIndicatorsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

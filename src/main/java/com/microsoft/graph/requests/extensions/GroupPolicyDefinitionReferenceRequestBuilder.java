@@ -6,7 +6,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyPresentationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +39,7 @@ public class GroupPolicyDefinitionReferenceRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyDefinitionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +58,7 @@ public class GroupPolicyDefinitionReferenceRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IGroupPolicyDefinitionReferenceRequest instance
      */
-    public IGroupPolicyDefinitionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyDefinitionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyDefinitionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,8 +17,6 @@ import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCo
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCollectionResponse;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignBody;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -42,7 +43,7 @@ public class OfficeClientConfigurationAssignCollectionRequest extends BaseCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeClientConfigurationAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OfficeClientConfigurationAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OfficeClientConfigurationAssignCollectionResponse.class, IOfficeClientConfigurationAssignCollectionPage.class);
         body = new OfficeClientConfigurationAssignBody();
     }
@@ -87,7 +88,7 @@ public class OfficeClientConfigurationAssignCollectionRequest extends BaseCollec
      * @return the updated request
      */
     public IOfficeClientConfigurationAssignCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IOfficeClientConfigurationAssignCollectionRequest)this;
     }
 
@@ -98,7 +99,7 @@ public class OfficeClientConfigurationAssignCollectionRequest extends BaseCollec
      * @return the updated request
      */
     public IOfficeClientConfigurationAssignCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IOfficeClientConfigurationAssignCollectionRequest)this;
     }
 
@@ -109,7 +110,7 @@ public class OfficeClientConfigurationAssignCollectionRequest extends BaseCollec
      * @return the updated request
      */
     public IOfficeClientConfigurationAssignCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IOfficeClientConfigurationAssignCollectionRequest)this;
     }
 

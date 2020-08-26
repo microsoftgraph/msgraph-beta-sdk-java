@@ -3,11 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkScepCertificateProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidForWorkScepCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +36,7 @@ public interface IAndroidForWorkScepCertificateProfileRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IAndroidForWorkScepCertificateProfileRequest instance
      */
-    IAndroidForWorkScepCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidForWorkScepCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates();

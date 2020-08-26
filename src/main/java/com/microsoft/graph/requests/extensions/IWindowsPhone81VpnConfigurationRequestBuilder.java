@@ -3,9 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsPhone81VpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IWindowsPhone81CertificateProfileBaseWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsPhone81VpnConfiguration;
+import com.microsoft.graph.requests.extensions.IWindowsPhone81CertificateProfileBaseRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +35,7 @@ public interface IWindowsPhone81VpnConfigurationRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IWindowsPhone81VpnConfigurationRequest instance
      */
-    IWindowsPhone81VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsPhone81VpnConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

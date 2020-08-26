@@ -28,5 +28,5 @@ public interface IPrivilegedRoleAssignmentMakeEligibleRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentMakeEligibleRequest instance
      */
-    IPrivilegedRoleAssignmentMakeEligibleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleAssignmentMakeEligibleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IAccessReviewInstanceSendReminderRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceSendReminderRequest instance
      */
-    IAccessReviewInstanceSendReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessReviewInstanceSendReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

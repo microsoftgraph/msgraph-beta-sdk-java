@@ -3,11 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequest;
-import com.microsoft.graph.requests.extensions.IChatWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
+import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +35,7 @@ public interface IUserScopeTeamsAppInstallationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IUserScopeTeamsAppInstallationRequest instance
      */
-    IUserScopeTeamsAppInstallationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserScopeTeamsAppInstallationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

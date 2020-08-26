@@ -3,17 +3,21 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCreateInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCompareCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +41,7 @@ public interface IDeviceManagementTemplateRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IDeviceManagementTemplateRequest instance
      */
-    IDeviceManagementTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceManagementSettingInstanceCollectionRequestBuilder settings();

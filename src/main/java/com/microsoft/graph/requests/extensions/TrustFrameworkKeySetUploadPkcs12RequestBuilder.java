@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetUploadPkcs12R
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class TrustFrameworkKeySetUploadPkcs12RequestBuilder extends BaseActionRe
      * @param key the key
      * @param password the password
      */
-    public TrustFrameworkKeySetUploadPkcs12RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String key, final String password) {
+    public TrustFrameworkKeySetUploadPkcs12RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String key, final String password) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("key", key);
         bodyParams.put("password", password);
@@ -51,7 +49,7 @@ public class TrustFrameworkKeySetUploadPkcs12RequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadPkcs12Request instance
      */
-    public ITrustFrameworkKeySetUploadPkcs12Request buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITrustFrameworkKeySetUploadPkcs12Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TrustFrameworkKeySetUploadPkcs12Request request = new TrustFrameworkKeySetUploadPkcs12Request(
                 getRequestUrl(),
                 getClient(),

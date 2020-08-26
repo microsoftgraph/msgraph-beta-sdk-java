@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyIconFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyIconFilterRequest;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param icon the icon
      */
-    public WorkbookFilterApplyIconFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final WorkbookIcon icon) {
+    public WorkbookFilterApplyIconFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final WorkbookIcon icon) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("icon", icon);
     }
@@ -50,7 +47,7 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyIconFilterRequest instance
      */
-    public IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyIconFilterRequest request = new WorkbookFilterApplyIconFilterRequest(
                 getRequestUrl(),
                 getClient(),

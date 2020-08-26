@@ -3,14 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerEnterpriseWiFiConfiguration;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,7 +36,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

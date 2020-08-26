@@ -4,9 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
-import com.microsoft.graph.models.extensions.CurrentLabel;
-
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;import com.microsoft.graph.models.extensions.CurrentLabel;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

@@ -3,16 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TrustFramework;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +38,7 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TrustFrameworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

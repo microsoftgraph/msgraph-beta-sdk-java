@@ -3,32 +3,38 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenoteRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -48,7 +54,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder implements IOnenot
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnenoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

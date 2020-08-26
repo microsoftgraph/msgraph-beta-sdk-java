@@ -3,25 +3,27 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCreateInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCreateInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCompareCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCompareCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -41,7 +43,7 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IIntuneBrandingProfileAssignRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IIntuneBrandingProfileAssignRequest instance
      */
-    IIntuneBrandingProfileAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIntuneBrandingProfileAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

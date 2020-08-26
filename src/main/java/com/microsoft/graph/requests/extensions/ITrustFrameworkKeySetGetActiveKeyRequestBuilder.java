@@ -28,5 +28,5 @@ public interface ITrustFrameworkKeySetGetActiveKeyRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetGetActiveKeyRequest instance
      */
-    ITrustFrameworkKeySetGetActiveKeyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITrustFrameworkKeySetGetActiveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

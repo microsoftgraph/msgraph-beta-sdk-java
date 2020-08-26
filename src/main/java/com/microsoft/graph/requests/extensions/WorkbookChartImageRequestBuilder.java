@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookChartImageRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -39,9 +37,9 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param requestOptions the options for this request
      * @param width the width
      */
-    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer width) {
+    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer width) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("width", width));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("width", width));
     }
     /**
      * The request builder for this WorkbookChartImage
@@ -52,10 +50,10 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param width the width
      * @param height the height
      */
-    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer width, final Integer height) {
+    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer width, final Integer height) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("width", width));
-        functionOptions.add(new FunctionOption("height", height));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("width", width));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("height", height));
     }
     /**
      * The request builder for this WorkbookChartImage
@@ -67,11 +65,11 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param height the height
      * @param fittingMode the fittingMode
      */
-    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer width, final Integer height, final String fittingMode) {
+    public WorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer width, final Integer height, final String fittingMode) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("width", width));
-        functionOptions.add(new FunctionOption("height", height));
-        functionOptions.add(new FunctionOption("fittingMode", fittingMode));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("width", width));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("height", height));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("fittingMode", fittingMode));
     }
 
     /**
@@ -89,14 +87,14 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookChartImageRequest instance
      */
-    public IWorkbookChartImageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartImageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartImageRequest request = new WorkbookChartImageRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

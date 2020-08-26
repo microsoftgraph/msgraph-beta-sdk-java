@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +38,7 @@ public class GovernanceRoleAssignmentWithReferenceRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GovernanceRoleAssignmentWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GovernanceRoleAssignmentWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +57,7 @@ public class GovernanceRoleAssignmentWithReferenceRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IGovernanceRoleAssignmentWithReferenceRequest instance
      */
-    public IGovernanceRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGovernanceRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GovernanceRoleAssignmentWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

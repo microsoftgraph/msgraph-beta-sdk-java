@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignC
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCollectionRequest;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +36,7 @@ public class OfficeClientConfigurationAssignCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param officeConfigurationAssignments the officeConfigurationAssignments
      */
-    public OfficeClientConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<OfficeClientConfigurationAssignment> officeConfigurationAssignments) {
+    public OfficeClientConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<OfficeClientConfigurationAssignment> officeConfigurationAssignments) {
         super(requestUrl, client, requestOptions);
   	 if(officeConfigurationAssignments!=null){
 			bodyParams.put("officeConfigurationAssignments", officeConfigurationAssignments);
@@ -46,7 +47,7 @@ public class OfficeClientConfigurationAssignCollectionRequestBuilder extends Bas
         return buildRequest(getOptions());
     }
 
-    public IOfficeClientConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOfficeClientConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OfficeClientConfigurationAssignCollectionRequest request = new OfficeClientConfigurationAssignCollectionRequest(
                 getRequestUrl(),
                 getClient(),

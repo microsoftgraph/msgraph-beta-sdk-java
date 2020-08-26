@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IScheduleRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
@@ -22,8 +26,9 @@ import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionReque
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScheduleShareRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -47,7 +52,7 @@ public interface IScheduleRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IScheduleRequest instance
      */
-    IScheduleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IScheduleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IShiftCollectionRequestBuilder shifts();

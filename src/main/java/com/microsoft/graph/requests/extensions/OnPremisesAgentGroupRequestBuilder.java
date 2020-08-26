@@ -3,16 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnPremisesAgentGroup;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +38,7 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesAgentGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnPremisesAgentGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

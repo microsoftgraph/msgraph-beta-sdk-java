@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCumIPmtRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -34,7 +32,7 @@ public class WorkbookFunctionsCumIPmtRequestBuilder extends BaseActionRequestBui
      * @param endPeriod the endPeriod
      * @param type the type
      */
-    public WorkbookFunctionsCumIPmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
+    public WorkbookFunctionsCumIPmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("rate", rate);
         bodyParams.put("nper", nper);
@@ -59,7 +57,7 @@ public class WorkbookFunctionsCumIPmtRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCumIPmtRequest instance
      */
-    public IWorkbookFunctionsCumIPmtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsCumIPmtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCumIPmtRequest request = new WorkbookFunctionsCumIPmtRequest(
                 getRequestUrl(),
                 getClient(),

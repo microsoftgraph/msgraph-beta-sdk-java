@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsFloor_MathReques
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsFloor_MathRequestBuilder extends BaseActionRequest
      * @param significance the significance
      * @param mode the mode
      */
-    public WorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
+    public WorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("significance", significance);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsFloor_MathRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFloor_MathRequest instance
      */
-    public IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFloor_MathRequest request = new WorkbookFunctionsFloor_MathRequest(
                 getRequestUrl(),
                 getClient(),

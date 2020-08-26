@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindows10CertificateProfileBaseRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Windows10CertificateProfileBase;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IWindows10CertificateProfileBaseRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IWindows10CertificateProfileBaseRequest instance
      */
-    IWindows10CertificateProfileBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows10CertificateProfileBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

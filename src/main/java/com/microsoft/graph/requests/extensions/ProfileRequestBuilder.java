@@ -3,84 +3,90 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Profile;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserAccountInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAccountInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAccountInformationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemAddressCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemAddressCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAddressRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAnniversaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAnniversaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAnniversaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonAnniversaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAwardCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAwardCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonAwardRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCertificationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonCertificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCertificationRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonCertificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonCertificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationalActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationalActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationalActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationalActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationalActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemEmailCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemEmailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemEmailRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemEmailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemEmailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonInterestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonInterestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonInterestRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonInterestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonInterestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILanguageProficiencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.LanguageProficiencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILanguageProficiencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.LanguageProficiencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LanguageProficiencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonNameCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonNameCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonNameRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonNameCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonNameRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAnnotationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAnnotationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAnnotationRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAnnotationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonAnnotationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemPatentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemPatentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemPatentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemPatentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemPatentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemPhoneCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemPhoneCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemPhoneRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemPhoneCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemPhoneRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkPositionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkPositionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkPositionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkPositionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkPositionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProjectParticipationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProjectParticipationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProjectParticipationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProjectParticipationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProjectParticipationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemPublicationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemPublicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemPublicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemPublicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemPublicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISkillProficiencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SkillProficiencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISkillProficiencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SkillProficiencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SkillProficiencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWebAccountCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WebAccountCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWebAccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WebAccountCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WebAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonWebsiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonWebsiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonWebsiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonWebsiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonWebsiteRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -100,7 +106,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder implements IProfil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWin32LobAppRequest;
-import com.microsoft.graph.requests.extensions.IMobileAppContentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Win32LobApp;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IWin32LobAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWin32LobAppRequest instance
      */
-    IWin32LobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWin32LobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IMobileAppContentCollectionRequestBuilder contentVersions();

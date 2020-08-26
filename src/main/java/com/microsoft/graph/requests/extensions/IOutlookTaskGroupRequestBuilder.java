@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookTaskGroup;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IOutlookTaskGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOutlookTaskGroupRequest instance
      */
-    IOutlookTaskGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOutlookTaskGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOutlookTaskFolderCollectionRequestBuilder taskFolders();

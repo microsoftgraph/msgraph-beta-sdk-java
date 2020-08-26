@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,7 +38,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsCollectionRequest extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootGetEmailAppUsageAppsUserCountsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReportRootGetEmailAppUsageAppsUserCountsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ReportRootGetEmailAppUsageAppsUserCountsCollectionResponse.class, IReportRootGetEmailAppUsageAppsUserCountsCollectionPage.class);
     }
 
@@ -80,7 +82,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsCollectionRequest extends B
      * @return the updated request
      */
     public IReportRootGetEmailAppUsageAppsUserCountsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IReportRootGetEmailAppUsageAppsUserCountsCollectionRequest)this;
     }
 
@@ -91,7 +93,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsCollectionRequest extends B
      * @return the updated request
      */
     public IReportRootGetEmailAppUsageAppsUserCountsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IReportRootGetEmailAppUsageAppsUserCountsCollectionRequest)this;
     }
 
@@ -102,7 +104,7 @@ public class ReportRootGetEmailAppUsageAppsUserCountsCollectionRequest extends B
      * @return the updated request
      */
     public IReportRootGetEmailAppUsageAppsUserCountsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IReportRootGetEmailAppUsageAppsUserCountsCollectionRequest)this;
     }
 

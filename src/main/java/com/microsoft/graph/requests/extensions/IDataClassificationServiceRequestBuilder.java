@@ -3,21 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DataClassificationService;
+import com.microsoft.graph.models.extensions.ContentClassification;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestCollectionRequestBuilder;
@@ -28,9 +23,9 @@ import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionReques
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
-import com.microsoft.graph.models.extensions.ContentClassification;
-import com.microsoft.graph.requests.extensions.IDataClassificationServiceClassifyExactMatchesRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -54,7 +49,7 @@ public interface IDataClassificationServiceRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IDataClassificationServiceRequest instance
      */
-    IDataClassificationServiceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDataClassificationServiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IExactMatchDataStoreCollectionRequestBuilder exactMatchDataStores();

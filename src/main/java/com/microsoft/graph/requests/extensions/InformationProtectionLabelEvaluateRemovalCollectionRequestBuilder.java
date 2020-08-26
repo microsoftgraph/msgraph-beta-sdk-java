@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.DowngradeJustification;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,9 +17,6 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvalua
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateRemovalCollectionRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateRemovalCollectionRequest;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.DowngradeJustification;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -37,7 +38,7 @@ public class InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder e
      * @param contentInfo the contentInfo
      * @param downgradeJustification the downgradeJustification
      */
-    public InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final ContentInfo contentInfo, final DowngradeJustification downgradeJustification) {
+    public InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final ContentInfo contentInfo, final DowngradeJustification downgradeJustification) {
         super(requestUrl, client, requestOptions);
   	 if(contentInfo!=null){
 			bodyParams.put("contentInfo", contentInfo);
@@ -51,7 +52,7 @@ public class InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder e
         return buildRequest(getOptions());
     }
 
-    public IInformationProtectionLabelEvaluateRemovalCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IInformationProtectionLabelEvaluateRemovalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         InformationProtectionLabelEvaluateRemovalCollectionRequest request = new InformationProtectionLabelEvaluateRemovalCollectionRequest(
                 getRequestUrl(),
                 getClient(),

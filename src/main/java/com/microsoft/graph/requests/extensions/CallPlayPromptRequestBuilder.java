@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICallPlayPromptRequest;
 import com.microsoft.graph.requests.extensions.CallPlayPromptRequest;
 import com.microsoft.graph.models.extensions.Prompt;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +29,7 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder imple
      * @param loop the loop
      * @param clientContext the clientContext
      */
-    public CallPlayPromptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<Prompt> prompts, final Boolean loop, final String clientContext) {
+    public CallPlayPromptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<Prompt> prompts, final Boolean loop, final String clientContext) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("prompts", prompts);
         bodyParams.put("loop", loop);
@@ -54,7 +51,7 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder imple
      * @param requestOptions the options for the request
      * @return the ICallPlayPromptRequest instance
      */
-    public ICallPlayPromptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICallPlayPromptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallPlayPromptRequest request = new CallPlayPromptRequest(
                 getRequestUrl(),
                 getClient(),

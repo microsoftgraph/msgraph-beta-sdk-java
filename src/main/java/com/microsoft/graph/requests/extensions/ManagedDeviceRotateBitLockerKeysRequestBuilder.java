@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceRotateBitLockerKeysR
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class ManagedDeviceRotateBitLockerKeysRequestBuilder extends BaseActionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceRotateBitLockerKeysRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceRotateBitLockerKeysRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +45,7 @@ public class ManagedDeviceRotateBitLockerKeysRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the IManagedDeviceRotateBitLockerKeysRequest instance
      */
-    public IManagedDeviceRotateBitLockerKeysRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceRotateBitLockerKeysRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceRotateBitLockerKeysRequest request = new ManagedDeviceRotateBitLockerKeysRequest(
                 getRequestUrl(),
                 getClient(),

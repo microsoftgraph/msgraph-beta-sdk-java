@@ -28,5 +28,5 @@ public interface IGroupPolicyMigrationReportCreateMigrationReportRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IGroupPolicyMigrationReportCreateMigrationReportRequest instance
      */
-    IGroupPolicyMigrationReportCreateMigrationReportRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyMigrationReportCreateMigrationReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IAccessReviewApplyDecisionsRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IAccessReviewApplyDecisionsRequest instance
      */
-    IAccessReviewApplyDecisionsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessReviewApplyDecisionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

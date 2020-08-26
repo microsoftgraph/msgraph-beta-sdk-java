@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.EventMessageRequestAcceptRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class EventMessageRequestAcceptRequestBuilder extends BaseActionRequestBu
      * @param sendResponse the sendResponse
      * @param comment the comment
      */
-    public EventMessageRequestAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean sendResponse, final String comment) {
+    public EventMessageRequestAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean sendResponse, final String comment) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("sendResponse", sendResponse);
         bodyParams.put("comment", comment);
@@ -51,7 +49,7 @@ public class EventMessageRequestAcceptRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return the IEventMessageRequestAcceptRequest instance
      */
-    public IEventMessageRequestAcceptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEventMessageRequestAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventMessageRequestAcceptRequest request = new EventMessageRequestAcceptRequest(
                 getRequestUrl(),
                 getClient(),

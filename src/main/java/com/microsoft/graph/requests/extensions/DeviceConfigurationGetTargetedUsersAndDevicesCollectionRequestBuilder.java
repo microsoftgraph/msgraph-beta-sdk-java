@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +35,7 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuild
      * @param requestOptions the options for this request
      * @param deviceConfigurationIds the deviceConfigurationIds
      */
-    public DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> deviceConfigurationIds) {
+    public DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> deviceConfigurationIds) {
         super(requestUrl, client, requestOptions);
   	 if(deviceConfigurationIds!=null){
 			bodyParams.put("deviceConfigurationIds", deviceConfigurationIds);
@@ -44,7 +46,7 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuild
         return buildRequest(getOptions());
     }
 
-    public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest request = new DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

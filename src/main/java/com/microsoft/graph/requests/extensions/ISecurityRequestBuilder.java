@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISecurityRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudAppSecurityProfileCollectionRequestBuilder;
@@ -29,6 +33,8 @@ import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilde
 import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -52,7 +58,7 @@ public interface ISecurityRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISecurityRequest instance
      */
-    ISecurityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecurityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAlertCollectionRequestBuilder alerts();

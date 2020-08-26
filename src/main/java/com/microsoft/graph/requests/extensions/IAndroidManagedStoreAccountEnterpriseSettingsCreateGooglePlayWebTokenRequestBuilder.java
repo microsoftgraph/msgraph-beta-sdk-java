@@ -28,5 +28,5 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWe
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyCustomFilterRe
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
      * @param criteria2 the criteria2
      * @param oper the oper
      */
-    public WorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
+    public WorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("criteria1", criteria1);
         bodyParams.put("criteria2", criteria2);
@@ -53,7 +51,7 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyCustomFilterRequest instance
      */
-    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(
                 getRequestUrl(),
                 getClient(),

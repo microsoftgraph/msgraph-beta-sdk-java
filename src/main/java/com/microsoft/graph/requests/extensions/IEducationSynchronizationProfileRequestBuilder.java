@@ -3,16 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSynchronizationProfile;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileResumeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfilePauseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileResetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStartCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileUploadUrlRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -36,7 +37,7 @@ public interface IEducationSynchronizationProfileRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IEducationSynchronizationProfileRequest instance
      */
-    IEducationSynchronizationProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSynchronizationProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationSynchronizationErrorCollectionRequestBuilder errors();

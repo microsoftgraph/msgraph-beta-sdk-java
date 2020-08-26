@@ -3,15 +3,21 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExternalConnectionRequest;
-import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExternalConnection;
 import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +41,7 @@ public interface IExternalConnectionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IExternalConnectionRequest instance
      */
-    IExternalConnectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IExternalConnectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

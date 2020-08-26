@@ -3,10 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedAppProtectionRequest;
-import com.microsoft.graph.models.extensions.ManagedMobileApp;
-import com.microsoft.graph.requests.extensions.IManagedAppProtectionTargetAppsRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedAppProtection;
+import com.microsoft.graph.models.extensions.ManagedMobileApp;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +35,7 @@ public interface IManagedAppProtectionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedAppProtectionRequest instance
      */
-    IManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps);
 

@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessReviewSetRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReviewSet;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IAccessReviewSetRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAccessReviewSetRequest instance
      */
-    IAccessReviewSetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessReviewSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAccessReviewScheduleDefinitionCollectionRequestBuilder definitions();

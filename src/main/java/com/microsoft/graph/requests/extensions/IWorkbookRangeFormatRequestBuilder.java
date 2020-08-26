@@ -3,15 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatAutofitColumnsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatAutofitRowsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +39,7 @@ public interface IWorkbookRangeFormatRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeFormatRequest instance
      */
-    IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWorkbookRangeBorderCollectionRequestBuilder borders();

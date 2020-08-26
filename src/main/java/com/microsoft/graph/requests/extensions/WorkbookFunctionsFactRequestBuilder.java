@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsFactRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsFactRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param number the number
      */
-    public WorkbookFunctionsFactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
+    public WorkbookFunctionsFactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsFactRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFactRequest instance
      */
-    public IWorkbookFunctionsFactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsFactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFactRequest request = new WorkbookFunctionsFactRequest(
                 getRequestUrl(),
                 getClient(),

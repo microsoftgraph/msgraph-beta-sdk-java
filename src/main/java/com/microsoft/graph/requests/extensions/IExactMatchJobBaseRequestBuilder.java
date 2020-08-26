@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExactMatchJobBaseRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExactMatchJobBase;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IExactMatchJobBaseRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IExactMatchJobBaseRequest instance
      */
-    IExactMatchJobBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IExactMatchJobBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

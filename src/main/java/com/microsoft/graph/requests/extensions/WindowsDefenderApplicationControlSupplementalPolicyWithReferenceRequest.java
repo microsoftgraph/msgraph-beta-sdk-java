@@ -5,7 +5,21 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicy;
+import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +47,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicy.class);
     }
 
@@ -81,7 +95,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
      * @return the updated request
      */
     public IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest)this;
     }
 
@@ -92,7 +106,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyWithReferenceReq
      * @return the updated request
      */
     public IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest)this;
     }
 }

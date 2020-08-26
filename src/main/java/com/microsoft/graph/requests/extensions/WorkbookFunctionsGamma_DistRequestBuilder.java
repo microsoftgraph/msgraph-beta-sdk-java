@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsGamma_DistReques
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class WorkbookFunctionsGamma_DistRequestBuilder extends BaseActionRequest
      * @param beta the beta
      * @param cumulative the cumulative
      */
-    public WorkbookFunctionsGamma_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsGamma_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("alpha", alpha);
@@ -55,7 +53,7 @@ public class WorkbookFunctionsGamma_DistRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGamma_DistRequest instance
      */
-    public IWorkbookFunctionsGamma_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsGamma_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGamma_DistRequest request = new WorkbookFunctionsGamma_DistRequest(
                 getRequestUrl(),
                 getClient(),

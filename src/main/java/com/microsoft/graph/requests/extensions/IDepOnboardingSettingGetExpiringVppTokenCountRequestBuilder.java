@@ -28,5 +28,5 @@ public interface IDepOnboardingSettingGetExpiringVppTokenCountRequestBuilder ext
      * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingGetExpiringVppTokenCountRequest instance
      */
-    IDepOnboardingSettingGetExpiringVppTokenCountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDepOnboardingSettingGetExpiringVppTokenCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

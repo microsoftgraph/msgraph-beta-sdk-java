@@ -5,7 +5,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleScopeTag;
+import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +35,7 @@ public class RoleScopeTagWithReferenceRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleScopeTagWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public RoleScopeTagWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +54,7 @@ public class RoleScopeTagWithReferenceRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IRoleScopeTagWithReferenceRequest instance
      */
-    public IRoleScopeTagWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRoleScopeTagWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleScopeTagWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

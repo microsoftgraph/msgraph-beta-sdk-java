@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceEnableLostModeReques
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class ManagedDeviceEnableLostModeRequestBuilder extends BaseActionRequest
      * @param phoneNumber the phoneNumber
      * @param footer the footer
      */
-    public ManagedDeviceEnableLostModeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String message, final String phoneNumber, final String footer) {
+    public ManagedDeviceEnableLostModeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String message, final String phoneNumber, final String footer) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("message", message);
         bodyParams.put("phoneNumber", phoneNumber);
@@ -53,7 +51,7 @@ public class ManagedDeviceEnableLostModeRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return the IManagedDeviceEnableLostModeRequest instance
      */
-    public IManagedDeviceEnableLostModeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceEnableLostModeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceEnableLostModeRequest request = new ManagedDeviceEnableLostModeRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,19 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SalesInvoice;
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceCancelAndSendRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceCancelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoicePostAndSendRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoicePostRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceSendRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -39,7 +40,7 @@ public interface ISalesInvoiceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISalesInvoiceRequest instance
      */
-    ISalesInvoiceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISalesInvoiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines();

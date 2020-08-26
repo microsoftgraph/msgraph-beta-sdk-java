@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +30,7 @@ public class TokenLifetimePolicyWithReferenceRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenLifetimePolicyWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TokenLifetimePolicyWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +49,7 @@ public class TokenLifetimePolicyWithReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the ITokenLifetimePolicyWithReferenceRequest instance
      */
-    public ITokenLifetimePolicyWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITokenLifetimePolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenLifetimePolicyWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

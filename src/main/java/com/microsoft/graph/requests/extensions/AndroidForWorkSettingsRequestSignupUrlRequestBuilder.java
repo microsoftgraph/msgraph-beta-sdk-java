@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AndroidForWorkSettingsRequestSign
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class AndroidForWorkSettingsRequestSignupUrlRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @param hostName the hostName
      */
-    public AndroidForWorkSettingsRequestSignupUrlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String hostName) {
+    public AndroidForWorkSettingsRequestSignupUrlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String hostName) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("hostName", hostName);
     }
@@ -49,7 +47,7 @@ public class AndroidForWorkSettingsRequestSignupUrlRequestBuilder extends BaseAc
      * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsRequestSignupUrlRequest instance
      */
-    public IAndroidForWorkSettingsRequestSignupUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidForWorkSettingsRequestSignupUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AndroidForWorkSettingsRequestSignupUrlRequest request = new AndroidForWorkSettingsRequestSignupUrlRequest(
                 getRequestUrl(),
                 getClient(),

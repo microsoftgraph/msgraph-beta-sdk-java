@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DetectedApp;
+import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +36,7 @@ public interface IDetectedAppWithReferenceRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IDetectedAppWithReferenceRequest instance
      */
-    IDetectedAppWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDetectedAppWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDetectedAppReferenceRequestBuilder reference();
 

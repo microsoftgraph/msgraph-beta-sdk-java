@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,9 +17,6 @@ import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectio
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
 import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.models.generated.ExchangeIdFormat;
-import com.microsoft.graph.models.generated.ExchangeIdFormat;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -43,7 +43,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserTranslateExchangeIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserTranslateExchangeIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, IUserTranslateExchangeIdsCollectionPage.class);
         body = new UserTranslateExchangeIdsBody();
     }
@@ -88,7 +88,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @return the updated request
      */
     public IUserTranslateExchangeIdsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IUserTranslateExchangeIdsCollectionRequest)this;
     }
 
@@ -99,7 +99,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @return the updated request
      */
     public IUserTranslateExchangeIdsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IUserTranslateExchangeIdsCollectionRequest)this;
     }
 
@@ -110,7 +110,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @return the updated request
      */
     public IUserTranslateExchangeIdsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IUserTranslateExchangeIdsCollectionRequest)this;
     }
 

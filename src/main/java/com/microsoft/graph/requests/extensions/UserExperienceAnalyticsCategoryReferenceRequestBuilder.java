@@ -6,7 +6,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +35,7 @@ public class UserExperienceAnalyticsCategoryReferenceRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsCategoryReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserExperienceAnalyticsCategoryReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +54,7 @@ public class UserExperienceAnalyticsCategoryReferenceRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsCategoryReferenceRequest instance
      */
-    public IUserExperienceAnalyticsCategoryReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserExperienceAnalyticsCategoryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserExperienceAnalyticsCategoryReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

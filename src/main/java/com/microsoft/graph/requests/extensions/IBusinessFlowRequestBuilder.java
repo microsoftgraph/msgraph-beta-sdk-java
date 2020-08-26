@@ -3,9 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IBusinessFlowRequest;
-import com.microsoft.graph.requests.extensions.IBusinessFlowRecordDecisionsRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.BusinessFlow;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +34,7 @@ public interface IBusinessFlowRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IBusinessFlowRequest instance
      */
-    IBusinessFlowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IBusinessFlowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IBusinessFlowRecordDecisionsRequestBuilder recordDecisions(final String reviewResult, final String justification);
 

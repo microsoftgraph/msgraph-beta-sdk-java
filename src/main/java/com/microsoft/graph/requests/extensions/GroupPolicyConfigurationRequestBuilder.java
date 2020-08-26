@@ -3,23 +3,24 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
+import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -39,7 +40,7 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

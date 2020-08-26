@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.IosVppAppRevokeUserLicenseRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class IosVppAppRevokeUserLicenseRequestBuilder extends BaseActionRequestB
      * @param userId the userId
      * @param notifyManagedDevices the notifyManagedDevices
      */
-    public IosVppAppRevokeUserLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String userId, final Boolean notifyManagedDevices) {
+    public IosVppAppRevokeUserLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String userId, final Boolean notifyManagedDevices) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("userId", userId);
         bodyParams.put("notifyManagedDevices", notifyManagedDevices);
@@ -51,7 +49,7 @@ public class IosVppAppRevokeUserLicenseRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IIosVppAppRevokeUserLicenseRequest instance
      */
-    public IIosVppAppRevokeUserLicenseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIosVppAppRevokeUserLicenseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         IosVppAppRevokeUserLicenseRequest request = new IosVppAppRevokeUserLicenseRequest(
                 getRequestUrl(),
                 getClient(),

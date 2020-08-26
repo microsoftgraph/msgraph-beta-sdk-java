@@ -28,5 +28,5 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequ
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuild
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

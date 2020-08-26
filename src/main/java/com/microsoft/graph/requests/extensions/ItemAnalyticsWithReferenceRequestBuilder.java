@@ -5,7 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
+import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +36,7 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemAnalyticsWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ItemAnalyticsWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +55,7 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IItemAnalyticsWithReferenceRequest instance
      */
-    public IItemAnalyticsWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IItemAnalyticsWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemAnalyticsWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

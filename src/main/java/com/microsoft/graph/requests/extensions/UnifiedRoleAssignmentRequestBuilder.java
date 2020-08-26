@@ -3,16 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +36,7 @@ public class UnifiedRoleAssignmentRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UnifiedRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

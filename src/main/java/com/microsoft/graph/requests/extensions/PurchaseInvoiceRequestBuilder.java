@@ -3,18 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PurchaseInvoice;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
+import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.VendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoicePostRequestBuilder;
-import com.microsoft.graph.requests.extensions.PurchaseInvoicePostRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -34,7 +38,7 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PurchaseInvoiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PurchaseInvoiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

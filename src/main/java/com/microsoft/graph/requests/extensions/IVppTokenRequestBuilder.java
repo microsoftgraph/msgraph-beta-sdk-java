@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IVppTokenRequest;
-import com.microsoft.graph.requests.extensions.IVppTokenSyncLicensesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVppTokenRevokeLicensesRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.VppToken;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IVppTokenRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IVppTokenRequest instance
      */
-    IVppTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IVppTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IVppTokenSyncLicensesRequestBuilder syncLicenses();
     IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices);

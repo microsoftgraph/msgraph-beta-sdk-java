@@ -5,14 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyEvaluateRequest;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyEvaluateRequest;
-import com.microsoft.graph.models.extensions.DlpEvaluationInput;
-import com.microsoft.graph.models.extensions.DlpNotification;
-
+import com.microsoft.graph.models.extensions.DlpEvaluationInput;import com.microsoft.graph.models.extensions.DlpNotification;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +29,7 @@ public class DataLossPreventionPolicyEvaluateRequestBuilder extends BaseActionRe
      * @param evaluationInput the evaluationInput
      * @param notificationInfo the notificationInfo
      */
-    public DataLossPreventionPolicyEvaluateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String target, final DlpEvaluationInput evaluationInput, final DlpNotification notificationInfo) {
+    public DataLossPreventionPolicyEvaluateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String target, final DlpEvaluationInput evaluationInput, final DlpNotification notificationInfo) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("target", target);
         bodyParams.put("evaluationInput", evaluationInput);
@@ -55,7 +51,7 @@ public class DataLossPreventionPolicyEvaluateRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the IDataLossPreventionPolicyEvaluateRequest instance
      */
-    public IDataLossPreventionPolicyEvaluateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDataLossPreventionPolicyEvaluateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DataLossPreventionPolicyEvaluateRequest request = new DataLossPreventionPolicyEvaluateRequest(
                 getRequestUrl(),
                 getClient(),

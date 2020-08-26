@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptAssignRequest;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptAssignRequest;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class DeviceComplianceScriptAssignRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param deviceHealthScriptAssignments the deviceHealthScriptAssignments
      */
-    public DeviceComplianceScriptAssignRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DeviceHealthScriptAssignment> deviceHealthScriptAssignments) {
+    public DeviceComplianceScriptAssignRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<DeviceHealthScriptAssignment> deviceHealthScriptAssignments) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("deviceHealthScriptAssignments", deviceHealthScriptAssignments);
     }
@@ -50,7 +47,7 @@ public class DeviceComplianceScriptAssignRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IDeviceComplianceScriptAssignRequest instance
      */
-    public IDeviceComplianceScriptAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceComplianceScriptAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceComplianceScriptAssignRequest request = new DeviceComplianceScriptAssignRequest(
                 getRequestUrl(),
                 getClient(),

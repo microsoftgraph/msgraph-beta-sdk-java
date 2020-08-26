@@ -5,15 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequest;
-import com.google.gson.JsonElement;
-
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemAddRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemAddFormulaLocalRequestBuilder;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
@@ -35,7 +36,7 @@ public class WorkbookNamedItemCollectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookNamedItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookNamedItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +44,7 @@ public class WorkbookNamedItemCollectionRequestBuilder extends BaseRequestBuilde
         return buildRequest(getOptions());
     }
 
-    public IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookNamedItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

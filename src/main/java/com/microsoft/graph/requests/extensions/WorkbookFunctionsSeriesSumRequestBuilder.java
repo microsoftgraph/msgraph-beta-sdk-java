@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsSeriesSumRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequestB
      * @param m the m
      * @param coefficients the coefficients
      */
-    public WorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
+    public WorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("n", n);
@@ -55,7 +53,7 @@ public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSeriesSumRequest instance
      */
-    public IWorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSeriesSumRequest request = new WorkbookFunctionsSeriesSumRequest(
                 getRequestUrl(),
                 getClient(),

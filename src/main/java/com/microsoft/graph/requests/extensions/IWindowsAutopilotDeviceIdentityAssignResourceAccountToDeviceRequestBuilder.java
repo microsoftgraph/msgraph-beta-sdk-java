@@ -28,5 +28,5 @@ public interface IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceReq
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest instance
      */
-    IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

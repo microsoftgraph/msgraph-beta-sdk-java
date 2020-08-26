@@ -3,16 +3,21 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOrganizationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -36,7 +41,7 @@ public interface IOrganizationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOrganizationRequest instance
      */
-    IOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOrganizationalBrandingCollectionRequestBuilder brandings();

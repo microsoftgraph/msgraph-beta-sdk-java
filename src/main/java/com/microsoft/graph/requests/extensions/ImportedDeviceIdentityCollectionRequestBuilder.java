@@ -5,18 +5,19 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityCollectionRequest;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
-
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityImportDeviceIdentityListCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
-
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 import com.microsoft.graph.options.Option;
@@ -37,7 +38,7 @@ public class ImportedDeviceIdentityCollectionRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedDeviceIdentityCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ImportedDeviceIdentityCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +46,7 @@ public class ImportedDeviceIdentityCollectionRequestBuilder extends BaseRequestB
         return buildRequest(getOptions());
     }
 
-    public IImportedDeviceIdentityCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IImportedDeviceIdentityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ImportedDeviceIdentityCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

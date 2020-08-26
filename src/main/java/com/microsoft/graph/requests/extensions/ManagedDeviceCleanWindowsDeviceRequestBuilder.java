@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceCleanWindowsDeviceRe
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionReq
      * @param requestOptions the options for this request
      * @param keepUserData the keepUserData
      */
-    public ManagedDeviceCleanWindowsDeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean keepUserData) {
+    public ManagedDeviceCleanWindowsDeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean keepUserData) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("keepUserData", keepUserData);
     }
@@ -49,7 +47,7 @@ public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return the IManagedDeviceCleanWindowsDeviceRequest instance
      */
-    public IManagedDeviceCleanWindowsDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceCleanWindowsDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceCleanWindowsDeviceRequest request = new ManagedDeviceCleanWindowsDeviceRequest(
                 getRequestUrl(),
                 getClient(),

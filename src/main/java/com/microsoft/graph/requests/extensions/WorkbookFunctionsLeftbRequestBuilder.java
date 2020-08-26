@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsLeftbRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestBuild
      * @param text the text
      * @param numBytes the numBytes
      */
-    public WorkbookFunctionsLeftbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
+    public WorkbookFunctionsLeftbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
         bodyParams.put("numBytes", numBytes);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLeftbRequest instance
      */
-    public IWorkbookFunctionsLeftbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsLeftbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLeftbRequest request = new WorkbookFunctionsLeftbRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,16 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExactMatchSession;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionCancelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionCancelRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionCommitRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionCommitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionRenewRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionRenewRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +32,7 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ExactMatchSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

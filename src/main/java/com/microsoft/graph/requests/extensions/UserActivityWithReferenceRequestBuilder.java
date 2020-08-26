@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserActivity;
+import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class UserActivityWithReferenceRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserActivityWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class UserActivityWithReferenceRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserActivityWithReferenceRequest instance
      */
-    public IUserActivityWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserActivityWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserActivityWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

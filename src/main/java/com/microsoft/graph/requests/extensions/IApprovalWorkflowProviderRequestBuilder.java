@@ -3,14 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApprovalWorkflowProviderRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ApprovalWorkflowProvider;
 import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +38,7 @@ public interface IApprovalWorkflowProviderRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IApprovalWorkflowProviderRequest instance
      */
-    IApprovalWorkflowProviderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApprovalWorkflowProviderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IBusinessFlowCollectionRequestBuilder businessFlows();

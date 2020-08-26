@@ -28,5 +28,5 @@ public interface IAccessReviewScheduleDefinitionStopRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return the IAccessReviewScheduleDefinitionStopRequest instance
      */
-    IAccessReviewScheduleDefinitionStopRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessReviewScheduleDefinitionStopRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

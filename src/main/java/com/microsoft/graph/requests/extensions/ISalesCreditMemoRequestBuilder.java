@@ -3,13 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SalesCreditMemo;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -33,7 +39,7 @@ public interface ISalesCreditMemoRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISalesCreditMemoRequest instance
      */
-    ISalesCreditMemoRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISalesCreditMemoRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines();

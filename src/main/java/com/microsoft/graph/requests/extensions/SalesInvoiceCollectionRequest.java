@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Company;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.SalesInvoice;
 import com.microsoft.graph.requests.extensions.ISalesInvoiceCollectionPage;
@@ -37,7 +38,7 @@ public class SalesInvoiceCollectionRequest extends BaseCollectionRequest<SalesIn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesInvoiceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SalesInvoiceCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SalesInvoiceCollectionResponse.class, ISalesInvoiceCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class SalesInvoiceCollectionRequest extends BaseCollectionRequest<SalesIn
      * @return the updated request
      */
     public ISalesInvoiceCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SalesInvoiceCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class SalesInvoiceCollectionRequest extends BaseCollectionRequest<SalesIn
      * @return the updated request
      */
     public ISalesInvoiceCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SalesInvoiceCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class SalesInvoiceCollectionRequest extends BaseCollectionRequest<SalesIn
      * @return the updated request
      */
     public ISalesInvoiceCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SalesInvoiceCollectionRequest)this;
     }
 

@@ -3,12 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementIntentSettingCategory;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +36,7 @@ public interface IDeviceManagementIntentSettingCategoryRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IDeviceManagementIntentSettingCategoryRequest instance
      */
-    IDeviceManagementIntentSettingCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementIntentSettingCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceManagementSettingInstanceCollectionRequestBuilder settings();

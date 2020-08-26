@@ -3,24 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
+import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
+import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationAssignRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationAssignRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedMobileApp;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationTargetAppsRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationTargetAppsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -40,7 +42,7 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TargetedManagedAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface ISynchronizationAcquireAccessTokenRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the ISynchronizationAcquireAccessTokenRequest instance
      */
-    ISynchronizationAcquireAccessTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationAcquireAccessTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

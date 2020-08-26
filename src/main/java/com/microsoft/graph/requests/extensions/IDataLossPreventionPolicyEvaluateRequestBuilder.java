@@ -28,5 +28,5 @@ public interface IDataLossPreventionPolicyEvaluateRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the IDataLossPreventionPolicyEvaluateRequest instance
      */
-    IDataLossPreventionPolicyEvaluateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDataLossPreventionPolicyEvaluateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

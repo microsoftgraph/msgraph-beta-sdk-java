@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
+import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewInstanceRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +39,7 @@ public class AccessReviewScheduleDefinitionReferenceRequest extends BaseRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewScheduleDefinitionReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public AccessReviewScheduleDefinitionReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessReviewScheduleDefinition.class);
     }
 
@@ -51,7 +58,7 @@ public class AccessReviewScheduleDefinitionReferenceRequest extends BaseRequest 
      * @return the updated request
      */
     public IAccessReviewScheduleDefinitionReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AccessReviewScheduleDefinitionReferenceRequest)this;
     }
 
@@ -62,7 +69,7 @@ public class AccessReviewScheduleDefinitionReferenceRequest extends BaseRequest 
      * @return the updated request
      */
     public IAccessReviewScheduleDefinitionReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AccessReviewScheduleDefinitionReferenceRequest)this;
     }
     /**

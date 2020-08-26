@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +37,5 @@ public interface IUnifiedRoleDefinitionReferenceRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IUnifiedRoleDefinitionReferenceRequest instance
      */
-    IUnifiedRoleDefinitionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUnifiedRoleDefinitionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

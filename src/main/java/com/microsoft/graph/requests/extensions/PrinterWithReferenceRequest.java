@@ -5,7 +5,29 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Printer;
+import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +55,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public PrinterWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Printer.class);
     }
 
@@ -81,7 +103,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
      * @return the updated request
      */
     public IPrinterWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IPrinterWithReferenceRequest)this;
     }
 
@@ -92,7 +114,7 @@ public class PrinterWithReferenceRequest extends BaseRequest implements IPrinter
      * @return the updated request
      */
     public IPrinterWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PrinterWithReferenceRequest)this;
     }
 }

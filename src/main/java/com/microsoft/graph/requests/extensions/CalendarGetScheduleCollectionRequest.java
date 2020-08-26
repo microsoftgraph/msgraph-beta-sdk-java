@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,9 +17,6 @@ import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionPage
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
 import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -43,7 +43,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarGetScheduleCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CalendarGetScheduleCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionResponse.class, ICalendarGetScheduleCollectionPage.class);
         body = new CalendarGetScheduleBody();
     }
@@ -88,7 +88,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ICalendarGetScheduleCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ICalendarGetScheduleCollectionRequest)this;
     }
 
@@ -99,7 +99,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ICalendarGetScheduleCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (ICalendarGetScheduleCollectionRequest)this;
     }
 
@@ -110,7 +110,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      * @return the updated request
      */
     public ICalendarGetScheduleCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ICalendarGetScheduleCollectionRequest)this;
     }
 

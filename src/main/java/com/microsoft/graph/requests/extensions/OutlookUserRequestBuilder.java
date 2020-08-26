@@ -3,31 +3,31 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookUserRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookUser;
+import com.microsoft.graph.models.generated.TimeZoneStandard;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequestBuilder;
-import com.microsoft.graph.models.generated.TimeZoneStandard;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -47,7 +47,7 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookUserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OutlookUserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

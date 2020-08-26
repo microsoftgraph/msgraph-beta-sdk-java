@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.MessageCopyRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder implemen
      * @param requestOptions the options for this request
      * @param destinationId the destinationId
      */
-    public MessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
+    public MessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("destinationId", destinationId);
     }
@@ -49,7 +47,7 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder implemen
      * @param requestOptions the options for the request
      * @return the IMessageCopyRequest instance
      */
-    public IMessageCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMessageCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageCopyRequest request = new MessageCopyRequest(
                 getRequestUrl(),
                 getClient(),

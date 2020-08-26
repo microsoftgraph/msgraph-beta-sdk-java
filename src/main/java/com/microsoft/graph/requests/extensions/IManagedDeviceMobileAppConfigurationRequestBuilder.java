@@ -3,7 +3,12 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
@@ -12,9 +17,9 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -38,7 +43,7 @@ public interface IManagedDeviceMobileAppConfigurationRequestBuilder extends IReq
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationRequest instance
      */
-    IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments();

@@ -5,7 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyCategory;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +41,5 @@ public interface IGroupPolicyCategoryReferenceRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IGroupPolicyCategoryReferenceRequest instance
      */
-    IGroupPolicyCategoryReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyCategoryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

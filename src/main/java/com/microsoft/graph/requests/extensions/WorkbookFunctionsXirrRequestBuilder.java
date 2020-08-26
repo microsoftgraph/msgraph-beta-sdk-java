@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsXirrRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBuilde
      * @param dates the dates
      * @param guess the guess
      */
-    public WorkbookFunctionsXirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
+    public WorkbookFunctionsXirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
         bodyParams.put("dates", dates);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsXirrRequest instance
      */
-    public IWorkbookFunctionsXirrRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsXirrRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsXirrRequest request = new WorkbookFunctionsXirrRequest(
                 getRequestUrl(),
                 getClient(),

@@ -6,7 +6,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +31,7 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CertificateBasedAuthConfigurationReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CertificateBasedAuthConfigurationReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +50,7 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the ICertificateBasedAuthConfigurationReferenceRequest instance
      */
-    public ICertificateBasedAuthConfigurationReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICertificateBasedAuthConfigurationReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

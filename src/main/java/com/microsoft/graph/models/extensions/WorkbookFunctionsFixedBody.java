@@ -4,9 +4,6 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonElement;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

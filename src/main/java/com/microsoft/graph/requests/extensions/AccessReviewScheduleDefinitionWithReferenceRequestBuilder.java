@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
+import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewInstanceRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class AccessReviewScheduleDefinitionWithReferenceRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewScheduleDefinitionWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessReviewScheduleDefinitionWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class AccessReviewScheduleDefinitionWithReferenceRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IAccessReviewScheduleDefinitionWithReferenceRequest instance
      */
-    public IAccessReviewScheduleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAccessReviewScheduleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessReviewScheduleDefinitionWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

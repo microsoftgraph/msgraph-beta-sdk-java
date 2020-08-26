@@ -3,11 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IdentityGovernance;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +37,7 @@ public interface IIdentityGovernanceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIdentityGovernanceRequest instance
      */
-    IIdentityGovernanceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIdentityGovernanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

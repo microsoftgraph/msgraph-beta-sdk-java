@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationUser;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationSchoolCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, IEducationSchoolCollectionPage.class);
     }
 
@@ -55,17 +58,17 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
     }
 
     public IEducationSchoolCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationSchoolCollectionWithReferencesRequest)this;
     }
 
     public IEducationSchoolCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationSchoolCollectionWithReferencesRequest)this;
     }
 
     public IEducationSchoolCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EducationSchoolCollectionWithReferencesRequest)this;
     }
 

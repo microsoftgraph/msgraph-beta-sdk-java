@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +35,7 @@ public class TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder e
      * @param requestOptions the options for this request
      * @param value the value
      */
-    public TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> value) {
+    public TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> value) {
         super(requestUrl, client, requestOptions);
   	 if(value!=null){
 			bodyParams.put("value", value);
@@ -44,7 +46,7 @@ public class TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder e
         return buildRequest(getOptions());
     }
 
-    public ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequest request = new TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequest(
                 getRequestUrl(),
                 getClient(),

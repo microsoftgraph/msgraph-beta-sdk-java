@@ -28,5 +28,5 @@ public interface IReportRootGetM365AppUserCountsRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IReportRootGetM365AppUserCountsRequest instance
      */
-    IReportRootGetM365AppUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetM365AppUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -3,10 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SensitivityLabel;
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
+import com.microsoft.graph.models.extensions.CurrentLabel;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +38,7 @@ public interface ISensitivityLabelRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISensitivityLabelRequest instance
      */
-    ISensitivityLabelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISensitivityLabelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISensitivityLabelCollectionRequestBuilder sublabels();

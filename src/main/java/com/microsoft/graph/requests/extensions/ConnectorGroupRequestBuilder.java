@@ -3,16 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequest;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +38,7 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConnectorGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

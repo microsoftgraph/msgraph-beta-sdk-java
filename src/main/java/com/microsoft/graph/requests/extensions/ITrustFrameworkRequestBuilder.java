@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TrustFramework;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface ITrustFrameworkRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITrustFrameworkRequest instance
      */
-    ITrustFrameworkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITrustFrameworkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ITrustFrameworkPolicyCollectionRequestBuilder policies();

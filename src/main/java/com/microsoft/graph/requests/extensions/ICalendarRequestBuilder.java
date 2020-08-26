@@ -3,7 +3,12 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICalendarRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -12,13 +17,9 @@ import com.microsoft.graph.requests.extensions.ICalendarPermissionCollectionRequ
 import com.microsoft.graph.requests.extensions.ICalendarPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -42,7 +43,7 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICalendarRequest instance
      */
-    ICalendarRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICalendarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

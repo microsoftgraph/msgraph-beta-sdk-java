@@ -3,14 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventMessageRequestRequest;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventMessageRequestAcceptRequestBuilder;
-import com.microsoft.graph.models.extensions.TimeSlot;
-import com.microsoft.graph.requests.extensions.IEventMessageRequestDeclineRequestBuilder;
-import com.microsoft.graph.models.extensions.TimeSlot;
-import com.microsoft.graph.requests.extensions.IEventMessageRequestTentativelyAcceptRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EventMessageRequest;
+import com.microsoft.graph.models.extensions.TimeSlot;
+import com.microsoft.graph.models.extensions.TimeSlot;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +36,7 @@ public interface IEventMessageRequestRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEventMessageRequestRequest instance
      */
-    IEventMessageRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEventMessageRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

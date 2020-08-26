@@ -28,5 +28,5 @@ public interface IGovernanceResourceRegisterRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IGovernanceResourceRegisterRequest instance
      */
-    IGovernanceResourceRegisterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGovernanceResourceRegisterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

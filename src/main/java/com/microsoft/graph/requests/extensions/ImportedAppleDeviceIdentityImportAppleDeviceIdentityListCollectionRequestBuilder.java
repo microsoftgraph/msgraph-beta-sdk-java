@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityImpor
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest;
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest;
 import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentityResult;
-import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -36,7 +37,7 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionR
      * @param importedAppleDeviceIdentities the importedAppleDeviceIdentities
      * @param overwriteImportedDeviceIdentities the overwriteImportedDeviceIdentities
      */
-    public ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<ImportedAppleDeviceIdentity> importedAppleDeviceIdentities, final Boolean overwriteImportedDeviceIdentities) {
+    public ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<ImportedAppleDeviceIdentity> importedAppleDeviceIdentities, final Boolean overwriteImportedDeviceIdentities) {
         super(requestUrl, client, requestOptions);
   	 if(importedAppleDeviceIdentities!=null){
 			bodyParams.put("importedAppleDeviceIdentities", importedAppleDeviceIdentities);
@@ -50,7 +51,7 @@ public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionR
         return buildRequest(getOptions());
     }
 
-    public IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest request = new ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequest(
                 getRequestUrl(),
                 getClient(),

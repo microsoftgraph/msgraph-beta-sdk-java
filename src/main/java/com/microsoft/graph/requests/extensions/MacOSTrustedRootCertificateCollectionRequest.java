@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOSEnterpriseWiFiConfiguration;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateCollectionPage;
@@ -37,7 +38,7 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSTrustedRootCertificateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MacOSTrustedRootCertificateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSTrustedRootCertificateCollectionResponse.class, IMacOSTrustedRootCertificateCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public IMacOSTrustedRootCertificateCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MacOSTrustedRootCertificateCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public IMacOSTrustedRootCertificateCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MacOSTrustedRootCertificateCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
      * @return the updated request
      */
     public IMacOSTrustedRootCertificateCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MacOSTrustedRootCertificateCollectionRequest)this;
     }
 

@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateLinkRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCreateLinkRequest;
 import com.microsoft.graph.models.extensions.DriveRecipient;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -35,7 +32,7 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder 
      * @param message the message
      * @param recipients the recipients
      */
-    public DriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message, final java.util.List<DriveRecipient> recipients) {
+    public DriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("type", type);
         bodyParams.put("scope", scope);
@@ -60,7 +57,7 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IDriveItemCreateLinkRequest instance
      */
-    public IDriveItemCreateLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemCreateLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
                 getRequestUrl(),
                 getClient(),

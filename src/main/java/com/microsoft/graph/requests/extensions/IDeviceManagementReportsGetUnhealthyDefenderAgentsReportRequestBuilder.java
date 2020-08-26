@@ -28,5 +28,5 @@ public interface IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest instance
      */
-    IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -3,10 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRefreshRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookPivotTable;
+import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +35,7 @@ public interface IWorkbookPivotTableRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookPivotTableRequest instance
      */
-    IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

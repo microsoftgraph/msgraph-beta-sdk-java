@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConversationThread;
+import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.Recipient;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +36,7 @@ public class PostCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +44,7 @@ public class PostCollectionRequestBuilder extends BaseRequestBuilder implements 
         return buildRequest(getOptions());
     }
 
-    public IPostCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPostCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PostCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

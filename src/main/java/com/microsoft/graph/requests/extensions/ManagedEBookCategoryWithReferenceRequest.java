@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagedEBookCategory;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +36,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookCategoryWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public ManagedEBookCategoryWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedEBookCategory.class);
     }
 
@@ -81,7 +84,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
      * @return the updated request
      */
     public IManagedEBookCategoryWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IManagedEBookCategoryWithReferenceRequest)this;
     }
 
@@ -92,7 +95,7 @@ public class ManagedEBookCategoryWithReferenceRequest extends BaseRequest implem
      * @return the updated request
      */
     public IManagedEBookCategoryWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedEBookCategoryWithReferenceRequest)this;
     }
 }

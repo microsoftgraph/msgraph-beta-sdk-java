@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequest;
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityProviderCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityProviderWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
+import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public B2xIdentityUserFlowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public B2xIdentityUserFlowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -5,7 +5,13 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.models.extensions.KeyCredential;
+import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.models.extensions.PasswordCredential;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +37,7 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ApplicationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, IApplicationCollectionPage.class);
     }
 
@@ -55,17 +61,17 @@ public class ApplicationCollectionWithReferencesRequest extends BaseCollectionRe
     }
 
     public IApplicationCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ApplicationCollectionWithReferencesRequest)this;
     }
 
     public IApplicationCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ApplicationCollectionWithReferencesRequest)this;
     }
 
     public IApplicationCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ApplicationCollectionWithReferencesRequest)this;
     }
 

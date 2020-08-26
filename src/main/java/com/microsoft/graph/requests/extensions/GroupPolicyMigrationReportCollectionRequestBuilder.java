@@ -5,15 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.GroupPolicyObjectFile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IGroupPolicyMigrationReportCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyMigrationReportRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyMigrationReportCollectionRequest;
-import com.microsoft.graph.models.extensions.GroupPolicyObjectFile;
-
 import com.microsoft.graph.requests.extensions.IGroupPolicyMigrationReportCreateMigrationReportRequestBuilder;
 import com.microsoft.graph.models.extensions.GroupPolicyMigrationReport;
 import com.microsoft.graph.options.Option;
@@ -34,7 +36,7 @@ public class GroupPolicyMigrationReportCollectionRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyMigrationReportCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyMigrationReportCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,7 @@ public class GroupPolicyMigrationReportCollectionRequestBuilder extends BaseRequ
         return buildRequest(getOptions());
     }
 
-    public IGroupPolicyMigrationReportCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyMigrationReportCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyMigrationReportCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

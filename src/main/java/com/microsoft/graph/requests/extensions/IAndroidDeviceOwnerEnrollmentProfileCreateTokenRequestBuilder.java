@@ -28,5 +28,5 @@ public interface IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder e
      * @param requestOptions the options for the request
      * @return the IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest instance
      */
-    IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

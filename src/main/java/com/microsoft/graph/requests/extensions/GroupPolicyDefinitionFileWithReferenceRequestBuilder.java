@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class GroupPolicyDefinitionFileWithReferenceRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionFileWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyDefinitionFileWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +53,7 @@ public class GroupPolicyDefinitionFileWithReferenceRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IGroupPolicyDefinitionFileWithReferenceRequest instance
      */
-    public IGroupPolicyDefinitionFileWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupPolicyDefinitionFileWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyDefinitionFileWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceOverrideComplianceStateRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceOverrideComplianceStateRequest;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class ManagedDeviceOverrideComplianceStateRequestBuilder extends BaseActi
      * @param complianceState the complianceState
      * @param remediationUrl the remediationUrl
      */
-    public ManagedDeviceOverrideComplianceStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final AdministratorConfiguredDeviceComplianceState complianceState, final String remediationUrl) {
+    public ManagedDeviceOverrideComplianceStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final AdministratorConfiguredDeviceComplianceState complianceState, final String remediationUrl) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("complianceState", complianceState);
         bodyParams.put("remediationUrl", remediationUrl);
@@ -52,7 +49,7 @@ public class ManagedDeviceOverrideComplianceStateRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return the IManagedDeviceOverrideComplianceStateRequest instance
      */
-    public IManagedDeviceOverrideComplianceStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceOverrideComplianceStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceOverrideComplianceStateRequest request = new ManagedDeviceOverrideComplianceStateRequest(
                 getRequestUrl(),
                 getClient(),

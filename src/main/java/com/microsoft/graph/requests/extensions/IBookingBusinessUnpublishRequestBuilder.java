@@ -28,5 +28,5 @@ public interface IBookingBusinessUnpublishRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IBookingBusinessUnpublishRequest instance
      */
-    IBookingBusinessUnpublishRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IBookingBusinessUnpublishRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

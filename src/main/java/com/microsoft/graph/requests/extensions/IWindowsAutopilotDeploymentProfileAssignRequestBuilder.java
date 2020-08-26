@@ -28,5 +28,5 @@ public interface IWindowsAutopilotDeploymentProfileAssignRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeploymentProfileAssignRequest instance
      */
-    IWindowsAutopilotDeploymentProfileAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotDeploymentProfileAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

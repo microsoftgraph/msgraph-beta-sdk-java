@@ -5,7 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +41,7 @@ public class GroupPolicyDefinitionValueReferenceRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionValueReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyDefinitionValueReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionValue.class);
     }
 
@@ -51,7 +60,7 @@ public class GroupPolicyDefinitionValueReferenceRequest extends BaseRequest impl
      * @return the updated request
      */
     public IGroupPolicyDefinitionValueReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupPolicyDefinitionValueReferenceRequest)this;
     }
 
@@ -62,7 +71,7 @@ public class GroupPolicyDefinitionValueReferenceRequest extends BaseRequest impl
      * @return the updated request
      */
     public IGroupPolicyDefinitionValueReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupPolicyDefinitionValueReferenceRequest)this;
     }
     /**

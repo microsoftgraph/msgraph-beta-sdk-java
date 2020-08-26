@@ -28,5 +28,5 @@ public interface IDeviceHealthScriptAreGlobalScriptsAvailableRequestBuilder exte
      * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptAreGlobalScriptsAvailableRequest instance
      */
-    IDeviceHealthScriptAreGlobalScriptsAvailableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceHealthScriptAreGlobalScriptsAvailableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

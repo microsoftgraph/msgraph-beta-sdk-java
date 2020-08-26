@@ -3,24 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsManagedDeviceRequest;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsProtectionStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsManagedDevice;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -44,7 +34,7 @@ public interface IWindowsManagedDeviceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWindowsManagedDeviceRequest instance
      */
-    IWindowsManagedDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsManagedDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates();

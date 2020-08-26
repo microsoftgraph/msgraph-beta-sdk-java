@@ -28,5 +28,5 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequestBui
      * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

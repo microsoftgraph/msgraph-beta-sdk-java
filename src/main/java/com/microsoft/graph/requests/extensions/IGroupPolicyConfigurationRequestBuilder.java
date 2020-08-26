@@ -3,17 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
+import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +40,7 @@ public interface IGroupPolicyConfigurationRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IGroupPolicyConfigurationRequest instance
      */
-    IGroupPolicyConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IGroupPolicyDefinitionValueCollectionRequestBuilder definitionValues();

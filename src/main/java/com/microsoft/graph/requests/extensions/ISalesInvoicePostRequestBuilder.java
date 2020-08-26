@@ -28,5 +28,5 @@ public interface ISalesInvoicePostRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ISalesInvoicePostRequest instance
      */
-    ISalesInvoicePostRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISalesInvoicePostRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

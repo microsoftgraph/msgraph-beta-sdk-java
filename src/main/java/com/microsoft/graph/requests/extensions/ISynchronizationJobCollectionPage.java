@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Synchronization;
+import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
+import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
+import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
+import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 

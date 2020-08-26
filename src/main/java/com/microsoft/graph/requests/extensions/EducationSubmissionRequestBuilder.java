@@ -3,26 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSubmission;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionReturnRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionReturnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionSubmitRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionSubmitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionUnsubmitRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionUnsubmitRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -42,7 +38,7 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSubmissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationSubmissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

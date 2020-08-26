@@ -3,19 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineTemplateRequest;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SecurityBaselineTemplate;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -39,7 +39,7 @@ public interface ISecurityBaselineTemplateRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the ISecurityBaselineTemplateRequest instance
      */
-    ISecurityBaselineTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecurityBaselineTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

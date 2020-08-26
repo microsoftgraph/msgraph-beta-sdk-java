@@ -28,5 +28,5 @@ public interface IUserIsManagedAppUserBlockedRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IUserIsManagedAppUserBlockedRequest instance
      */
-    IUserIsManagedAppUserBlockedRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserIsManagedAppUserBlockedRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

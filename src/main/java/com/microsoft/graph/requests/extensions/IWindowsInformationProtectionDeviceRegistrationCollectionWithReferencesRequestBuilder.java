@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.User;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,7 +24,7 @@ public interface IWindowsInformationProtectionDeviceRegistrationCollectionWithRe
 
     IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest buildRequest();
 
-    IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder byId(final String id);
 

@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationRootRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationRoot;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
@@ -14,6 +18,8 @@ import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +43,7 @@ public interface IEducationRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationRootRequest instance
      */
-    IEducationRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationSynchronizationProfileCollectionRequestBuilder synchronizationProfiles();

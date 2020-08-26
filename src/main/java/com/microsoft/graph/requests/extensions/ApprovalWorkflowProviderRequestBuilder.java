@@ -3,20 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApprovalWorkflowProviderRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ApprovalWorkflowProvider;
 import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.BusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.BusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.BusinessFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.BusinessFlowRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,7 +38,7 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApprovalWorkflowProviderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ApprovalWorkflowProviderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

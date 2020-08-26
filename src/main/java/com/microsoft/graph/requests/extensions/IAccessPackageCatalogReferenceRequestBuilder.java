@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageCatalog;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,5 +43,5 @@ public interface IAccessPackageCatalogReferenceRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IAccessPackageCatalogReferenceRequest instance
      */
-    IAccessPackageCatalogReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessPackageCatalogReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

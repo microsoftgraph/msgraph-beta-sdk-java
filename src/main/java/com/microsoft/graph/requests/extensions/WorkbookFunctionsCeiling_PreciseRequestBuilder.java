@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCeiling_PreciseR
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRe
      * @param number the number
      * @param significance the significance
      */
-    public WorkbookFunctionsCeiling_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+    public WorkbookFunctionsCeiling_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("significance", significance);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
      */
-    public IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCeiling_PreciseRequest request = new WorkbookFunctionsCeiling_PreciseRequest(
                 getRequestUrl(),
                 getClient(),

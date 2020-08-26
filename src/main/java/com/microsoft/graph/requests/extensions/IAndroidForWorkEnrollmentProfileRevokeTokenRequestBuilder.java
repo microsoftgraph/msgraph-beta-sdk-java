@@ -28,5 +28,5 @@ public interface IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder exten
      * @param requestOptions the options for the request
      * @return the IAndroidForWorkEnrollmentProfileRevokeTokenRequest instance
      */
-    IAndroidForWorkEnrollmentProfileRevokeTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidForWorkEnrollmentProfileRevokeTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

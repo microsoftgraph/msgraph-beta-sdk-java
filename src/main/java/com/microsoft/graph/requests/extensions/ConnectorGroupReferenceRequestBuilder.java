@@ -6,7 +6,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +39,7 @@ public class ConnectorGroupReferenceRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorGroupReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConnectorGroupReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +58,7 @@ public class ConnectorGroupReferenceRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IConnectorGroupReferenceRequest instance
      */
-    public IConnectorGroupReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IConnectorGroupReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConnectorGroupReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

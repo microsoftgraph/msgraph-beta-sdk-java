@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequest;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface IConnectorGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IConnectorGroupRequest instance
      */
-    IConnectorGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConnectorGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IConnectorCollectionWithReferencesRequestBuilder members();

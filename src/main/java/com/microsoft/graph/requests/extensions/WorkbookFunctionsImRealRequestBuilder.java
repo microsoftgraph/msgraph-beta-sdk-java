@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsImRealRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for this request
      * @param inumber the inumber
      */
-    public WorkbookFunctionsImRealRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
+    public WorkbookFunctionsImRealRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("inumber", inumber);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImRealRequest instance
      */
-    public IWorkbookFunctionsImRealRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsImRealRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImRealRequest request = new WorkbookFunctionsImRealRequest(
                 getRequestUrl(),
                 getClient(),

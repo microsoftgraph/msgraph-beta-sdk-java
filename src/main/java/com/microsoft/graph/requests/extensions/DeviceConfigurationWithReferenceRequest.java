@@ -5,7 +5,38 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
+import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserOverviewRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +64,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public DeviceConfigurationWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfiguration.class);
     }
 
@@ -81,7 +112,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
      * @return the updated request
      */
     public IDeviceConfigurationWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IDeviceConfigurationWithReferenceRequest)this;
     }
 
@@ -92,7 +123,7 @@ public class DeviceConfigurationWithReferenceRequest extends BaseRequest impleme
      * @return the updated request
      */
     public IDeviceConfigurationWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceConfigurationWithReferenceRequest)this;
     }
 }

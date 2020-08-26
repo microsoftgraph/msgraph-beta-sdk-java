@@ -28,5 +28,5 @@ public interface IDeviceManagementIntentMigrateToTemplateRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentMigrateToTemplateRequest instance
      */
-    IDeviceManagementIntentMigrateToTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementIntentMigrateToTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

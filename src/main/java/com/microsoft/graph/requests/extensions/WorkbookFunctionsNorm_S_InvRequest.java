@@ -14,8 +14,6 @@ import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -34,7 +32,7 @@ public class WorkbookFunctionsNorm_S_InvRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsNorm_S_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsNorm_S_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsNorm_S_InvBody();
     }
@@ -54,7 +52,7 @@ public class WorkbookFunctionsNorm_S_InvRequest extends BaseRequest implements I
      * @return the updated request
      */
     public IWorkbookFunctionsNorm_S_InvRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsNorm_S_InvRequest)this;
     }
 
@@ -65,7 +63,7 @@ public class WorkbookFunctionsNorm_S_InvRequest extends BaseRequest implements I
      * @return the updated request
      */
     public IWorkbookFunctionsNorm_S_InvRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsNorm_S_InvRequest)this;
     }
 
@@ -76,7 +74,7 @@ public class WorkbookFunctionsNorm_S_InvRequest extends BaseRequest implements I
      * @return the updated request
      */
     public IWorkbookFunctionsNorm_S_InvRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsNorm_S_InvRequest)this;
     }
 

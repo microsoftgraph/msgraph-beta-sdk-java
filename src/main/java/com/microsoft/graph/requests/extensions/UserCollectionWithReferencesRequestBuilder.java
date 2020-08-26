@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.AttendeeBase;
+import com.microsoft.graph.models.extensions.LocationConstraint;
+import com.microsoft.graph.models.extensions.TimeConstraint;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.generated.MailTipsType;
+import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +38,7 @@ public class UserCollectionWithReferencesRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -35,7 +46,7 @@ public class UserCollectionWithReferencesRequestBuilder extends BaseRequestBuild
         return buildRequest(getOptions());
     }
 
-    public IUserCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
+import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCancelRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +37,7 @@ public interface IAccessPackageAssignmentRequestRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IAccessPackageAssignmentRequestRequest instance
      */
-    IAccessPackageAssignmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessPackageAssignmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

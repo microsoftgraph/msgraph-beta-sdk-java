@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceReques
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -29,9 +27,9 @@ public class WorkbookSessionInfoResourceRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @param key the key
      */
-    public WorkbookSessionInfoResourceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String key) {
+    public WorkbookSessionInfoResourceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String key) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("key", key));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("key", key));
     }
 
     /**
@@ -49,14 +47,14 @@ public class WorkbookSessionInfoResourceRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for the request
      * @return the IWorkbookSessionInfoResourceRequest instance
      */
-    public IWorkbookSessionInfoResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookSessionInfoResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookSessionInfoResourceRequest request = new WorkbookSessionInfoResourceRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

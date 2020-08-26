@@ -28,5 +28,5 @@ public interface IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegress
      * @param requestOptions the options for the request
      * @return the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest instance
      */
-    IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

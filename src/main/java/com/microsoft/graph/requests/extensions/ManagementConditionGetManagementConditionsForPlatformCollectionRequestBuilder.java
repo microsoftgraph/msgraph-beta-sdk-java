@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IManagementConditionGetManagement
 import com.microsoft.graph.requests.extensions.IManagementConditionGetManagementConditionsForPlatformCollectionRequest;
 import com.microsoft.graph.requests.extensions.ManagementConditionGetManagementConditionsForPlatformCollectionRequest;
 import com.microsoft.graph.models.extensions.ManagementCondition;
-import com.microsoft.graph.models.generated.DevicePlatformType;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,10 +36,10 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
      * @param requestOptions the options for this request
      * @param platform the platform
      */
-    public ManagementConditionGetManagementConditionsForPlatformCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DevicePlatformType platform) {
+    public ManagementConditionGetManagementConditionsForPlatformCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final DevicePlatformType platform) {
         super(requestUrl, client, requestOptions);
      	 if(platform!=null){
-			functionOptions.add(new FunctionOption("platform", platform));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("platform", platform));
 		}
       }
 
@@ -46,14 +47,14 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
         return buildRequest(getOptions());
     }
 
-    public IManagementConditionGetManagementConditionsForPlatformCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionGetManagementConditionsForPlatformCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagementConditionGetManagementConditionsForPlatformCollectionRequest request = new ManagementConditionGetManagementConditionsForPlatformCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

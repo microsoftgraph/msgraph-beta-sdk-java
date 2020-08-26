@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceExecuteActionRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceExecuteActionRequest;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -36,7 +33,7 @@ public class ManagedDeviceExecuteActionRequestBuilder extends BaseActionRequestB
      * @param notificationBody the notificationBody
      * @param deviceName the deviceName
      */
-    public ManagedDeviceExecuteActionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final ManagedDeviceRemoteAction actionName, final Boolean keepEnrollmentData, final Boolean keepUserData, final java.util.List<String> deviceIds, final String notificationTitle, final String notificationBody, final String deviceName) {
+    public ManagedDeviceExecuteActionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final ManagedDeviceRemoteAction actionName, final Boolean keepEnrollmentData, final Boolean keepUserData, final java.util.List<String> deviceIds, final String notificationTitle, final String notificationBody, final String deviceName) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("actionName", actionName);
         bodyParams.put("keepEnrollmentData", keepEnrollmentData);
@@ -62,7 +59,7 @@ public class ManagedDeviceExecuteActionRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IManagedDeviceExecuteActionRequest instance
      */
-    public IManagedDeviceExecuteActionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceExecuteActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceExecuteActionRequest request = new ManagedDeviceExecuteActionRequest(
                 getRequestUrl(),
                 getClient(),

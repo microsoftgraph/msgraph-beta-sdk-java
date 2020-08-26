@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsManagementApp;
+import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +39,7 @@ public class WindowsManagementAppReferenceRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagementAppReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public WindowsManagementAppReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsManagementApp.class);
     }
 
@@ -51,7 +58,7 @@ public class WindowsManagementAppReferenceRequest extends BaseRequest implements
      * @return the updated request
      */
     public IWindowsManagementAppReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WindowsManagementAppReferenceRequest)this;
     }
 
@@ -62,7 +69,7 @@ public class WindowsManagementAppReferenceRequest extends BaseRequest implements
      * @return the updated request
      */
     public IWindowsManagementAppReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WindowsManagementAppReferenceRequest)this;
     }
     /**

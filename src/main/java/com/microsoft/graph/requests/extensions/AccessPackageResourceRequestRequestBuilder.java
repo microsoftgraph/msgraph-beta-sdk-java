@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageResourceRequest;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessPackageResourceRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

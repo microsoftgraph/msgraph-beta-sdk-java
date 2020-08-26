@@ -3,21 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnenotePage;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageContentStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePageContentStreamRequestBuilder;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
-import com.microsoft.graph.requests.extensions.IOnenotePageOnenotePatchContentRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePageOnenotePatchContentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageCopyToSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePageCopyToSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePagePreviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenotePagePreviewRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -37,7 +35,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenotePageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnenotePageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

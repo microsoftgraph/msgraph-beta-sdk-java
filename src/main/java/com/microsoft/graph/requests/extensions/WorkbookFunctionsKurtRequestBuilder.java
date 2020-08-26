@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsKurtRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param values the values
      */
-    public WorkbookFunctionsKurtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
+    public WorkbookFunctionsKurtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsKurtRequest instance
      */
-    public IWorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsKurtRequest request = new WorkbookFunctionsKurtRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,13 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequest;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetGenerateKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadSecretRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadPkcs12RequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetGetActiveKeyRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TrustFrameworkKeySet;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -33,7 +34,7 @@ public interface ITrustFrameworkKeySetRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITrustFrameworkKeySetRequest instance
      */
-    ITrustFrameworkKeySetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITrustFrameworkKeySetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ITrustFrameworkKeySetGenerateKeyRequestBuilder generateKey(final String use, final String kty, final Long nbf, final Long exp);
     ITrustFrameworkKeySetUploadSecretRequestBuilder uploadSecret(final String use, final String k, final Long nbf, final Long exp);

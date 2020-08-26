@@ -3,13 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequest;
-import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionProtectRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionProtectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionUnprotectRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionUnprotectRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -29,7 +31,7 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookWorksheetProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

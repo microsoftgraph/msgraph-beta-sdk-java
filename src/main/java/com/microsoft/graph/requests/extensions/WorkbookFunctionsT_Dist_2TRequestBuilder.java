@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Dist_2TRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsT_Dist_2TRequestBuilder extends BaseActionRequestB
      * @param x the x
      * @param degFreedom the degFreedom
      */
-    public WorkbookFunctionsT_Dist_2TRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+    public WorkbookFunctionsT_Dist_2TRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("degFreedom", degFreedom);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsT_Dist_2TRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsT_Dist_2TRequest instance
      */
-    public IWorkbookFunctionsT_Dist_2TRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsT_Dist_2TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsT_Dist_2TRequest request = new WorkbookFunctionsT_Dist_2TRequest(
                 getRequestUrl(),
                 getClient(),

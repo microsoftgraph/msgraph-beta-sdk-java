@@ -5,15 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IManagementConditionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionCollectionRequest;
-import com.microsoft.graph.models.generated.DevicePlatformType;
-
 import com.microsoft.graph.requests.extensions.IManagementConditionGetManagementConditionsForPlatformCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.ManagementCondition;
 import com.microsoft.graph.options.Option;
@@ -34,7 +36,7 @@ public class ManagementConditionCollectionRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,7 @@ public class ManagementConditionCollectionRequestBuilder extends BaseRequestBuil
         return buildRequest(getOptions());
     }
 
-    public IManagementConditionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,8 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITiIndicatorRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +36,7 @@ public interface ITiIndicatorRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITiIndicatorRequest instance
      */
-    ITiIndicatorRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITiIndicatorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

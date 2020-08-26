@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementReports;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.DeviceManagementReportSchedule;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionPage;
@@ -37,7 +38,7 @@ public class DeviceManagementReportScheduleCollectionRequest extends BaseCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementReportScheduleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementReportScheduleCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementReportScheduleCollectionResponse.class, IDeviceManagementReportScheduleCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class DeviceManagementReportScheduleCollectionRequest extends BaseCollect
      * @return the updated request
      */
     public IDeviceManagementReportScheduleCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceManagementReportScheduleCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class DeviceManagementReportScheduleCollectionRequest extends BaseCollect
      * @return the updated request
      */
     public IDeviceManagementReportScheduleCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceManagementReportScheduleCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class DeviceManagementReportScheduleCollectionRequest extends BaseCollect
      * @return the updated request
      */
     public IDeviceManagementReportScheduleCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceManagementReportScheduleCollectionRequest)this;
     }
 

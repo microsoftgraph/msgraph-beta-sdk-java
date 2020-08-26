@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBesselKRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsBesselKRequestBuilder extends BaseActionRequestBui
      * @param x the x
      * @param n the n
      */
-    public WorkbookFunctionsBesselKRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
+    public WorkbookFunctionsBesselKRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("n", n);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsBesselKRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBesselKRequest instance
      */
-    public IWorkbookFunctionsBesselKRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsBesselKRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBesselKRequest request = new WorkbookFunctionsBesselKRequest(
                 getRequestUrl(),
                 getClient(),

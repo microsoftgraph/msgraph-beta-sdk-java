@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrimMeanRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBu
      * @param array the array
      * @param percent the percent
      */
-    public WorkbookFunctionsTrimMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement percent) {
+    public WorkbookFunctionsTrimMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement percent) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("percent", percent);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTrimMeanRequest instance
      */
-    public IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTrimMeanRequest request = new WorkbookFunctionsTrimMeanRequest(
                 getRequestUrl(),
                 getClient(),

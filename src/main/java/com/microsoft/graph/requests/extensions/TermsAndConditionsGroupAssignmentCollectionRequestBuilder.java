@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TermsAndConditions;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class TermsAndConditionsGroupAssignmentCollectionRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsGroupAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TermsAndConditionsGroupAssignmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +42,7 @@ public class TermsAndConditionsGroupAssignmentCollectionRequestBuilder extends B
         return buildRequest(getOptions());
     }
 
-    public ITermsAndConditionsGroupAssignmentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITermsAndConditionsGroupAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TermsAndConditionsGroupAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

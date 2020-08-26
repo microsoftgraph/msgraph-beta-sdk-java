@@ -3,21 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMacOsVppAppRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOsVppApp;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -41,7 +36,7 @@ public interface IMacOsVppAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMacOsVppAppRequest instance
      */
-    IMacOsVppAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOsVppAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IMacOsVppAppAssignedLicenseCollectionRequestBuilder assignedLicenses();

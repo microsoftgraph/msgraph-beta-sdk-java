@@ -3,18 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPlannerUserRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -38,7 +40,7 @@ public interface IPlannerUserRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPlannerUserRequest instance
      */
-    IPlannerUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPlannerUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPlannerTaskCollectionRequestBuilder tasks();

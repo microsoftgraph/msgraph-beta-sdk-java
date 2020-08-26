@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.DeviceManagementIntentMigrateToTe
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class DeviceManagementIntentMigrateToTemplateRequestBuilder extends BaseA
      * @param newTemplateId the newTemplateId
      * @param preserveCustomValues the preserveCustomValues
      */
-    public DeviceManagementIntentMigrateToTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String newTemplateId, final Boolean preserveCustomValues) {
+    public DeviceManagementIntentMigrateToTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String newTemplateId, final Boolean preserveCustomValues) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("newTemplateId", newTemplateId);
         bodyParams.put("preserveCustomValues", preserveCustomValues);
@@ -51,7 +49,7 @@ public class DeviceManagementIntentMigrateToTemplateRequestBuilder extends BaseA
      * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentMigrateToTemplateRequest instance
      */
-    public IDeviceManagementIntentMigrateToTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementIntentMigrateToTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementIntentMigrateToTemplateRequest request = new DeviceManagementIntentMigrateToTemplateRequest(
                 getRequestUrl(),
                 getClient(),

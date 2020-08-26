@@ -28,5 +28,5 @@ public interface IEducationAssignmentGetResourcesFolderUrlRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IEducationAssignmentGetResourcesFolderUrlRequest instance
      */
-    IEducationAssignmentGetResourcesFolderUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationAssignmentGetResourcesFolderUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

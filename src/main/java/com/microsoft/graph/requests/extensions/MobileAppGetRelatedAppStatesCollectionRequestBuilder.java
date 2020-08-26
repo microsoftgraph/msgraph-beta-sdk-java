@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -34,13 +36,13 @@ public class MobileAppGetRelatedAppStatesCollectionRequestBuilder extends BaseFu
      * @param userPrincipalName the userPrincipalName
      * @param deviceId the deviceId
      */
-    public MobileAppGetRelatedAppStatesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String userPrincipalName, final String deviceId) {
+    public MobileAppGetRelatedAppStatesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String userPrincipalName, final String deviceId) {
         super(requestUrl, client, requestOptions);
      	 if(userPrincipalName!=null){
-			functionOptions.add(new FunctionOption("userPrincipalName", userPrincipalName));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("userPrincipalName", userPrincipalName));
 		}
        	 if(deviceId!=null){
-			functionOptions.add(new FunctionOption("deviceId", deviceId));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("deviceId", deviceId));
 		}
       }
 
@@ -48,14 +50,14 @@ public class MobileAppGetRelatedAppStatesCollectionRequestBuilder extends BaseFu
         return buildRequest(getOptions());
     }
 
-    public IMobileAppGetRelatedAppStatesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMobileAppGetRelatedAppStatesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MobileAppGetRelatedAppStatesCollectionRequest request = new MobileAppGetRelatedAppStatesCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

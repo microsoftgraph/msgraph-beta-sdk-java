@@ -3,12 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequest;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsRequestSignupUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsCompleteSignupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsSyncAppsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkSettingsUnbindRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidForWorkSettings;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +34,7 @@ public interface IAndroidForWorkSettingsRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAndroidForWorkSettingsRequest instance
      */
-    IAndroidForWorkSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidForWorkSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAndroidForWorkSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName);
     IAndroidForWorkSettingsCompleteSignupRequestBuilder completeSignup(final String enterpriseToken);

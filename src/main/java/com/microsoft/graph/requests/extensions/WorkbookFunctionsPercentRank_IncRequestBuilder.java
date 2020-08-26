@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_IncR
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
      * @param x the x
      * @param significance the significance
      */
-    public WorkbookFunctionsPercentRank_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
+    public WorkbookFunctionsPercentRank_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("x", x);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPercentRank_IncRequest instance
      */
-    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(
                 getRequestUrl(),
                 getClient(),

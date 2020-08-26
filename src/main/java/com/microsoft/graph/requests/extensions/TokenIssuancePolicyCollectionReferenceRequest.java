@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ServicePrincipal;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TokenIssuancePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
     }
 
@@ -58,7 +61,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @return the updated request
      */
     public ITokenIssuancePolicyCollectionReferenceRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
 
@@ -69,7 +72,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @return the updated request
      */
     public ITokenIssuancePolicyCollectionReferenceRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
 
@@ -80,7 +83,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @return the updated request
      */
     public ITokenIssuancePolicyCollectionReferenceRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
 }

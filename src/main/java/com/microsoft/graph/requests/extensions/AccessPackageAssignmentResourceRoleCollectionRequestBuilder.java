@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class AccessPackageAssignmentResourceRoleCollectionRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageAssignmentResourceRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessPackageAssignmentResourceRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +43,7 @@ public class AccessPackageAssignmentResourceRoleCollectionRequestBuilder extends
         return buildRequest(getOptions());
     }
 
-    public IAccessPackageAssignmentResourceRoleCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAccessPackageAssignmentResourceRoleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessPackageAssignmentResourceRoleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

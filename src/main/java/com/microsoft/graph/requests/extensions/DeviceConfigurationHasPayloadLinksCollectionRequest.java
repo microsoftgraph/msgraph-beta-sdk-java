@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -40,7 +42,7 @@ public class DeviceConfigurationHasPayloadLinksCollectionRequest extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationHasPayloadLinksCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceConfigurationHasPayloadLinksCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationHasPayloadLinksCollectionResponse.class, IDeviceConfigurationHasPayloadLinksCollectionPage.class);
         body = new DeviceConfigurationHasPayloadLinksBody();
     }
@@ -85,7 +87,7 @@ public class DeviceConfigurationHasPayloadLinksCollectionRequest extends BaseCol
      * @return the updated request
      */
     public IDeviceConfigurationHasPayloadLinksCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IDeviceConfigurationHasPayloadLinksCollectionRequest)this;
     }
 
@@ -96,7 +98,7 @@ public class DeviceConfigurationHasPayloadLinksCollectionRequest extends BaseCol
      * @return the updated request
      */
     public IDeviceConfigurationHasPayloadLinksCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IDeviceConfigurationHasPayloadLinksCollectionRequest)this;
     }
 
@@ -107,7 +109,7 @@ public class DeviceConfigurationHasPayloadLinksCollectionRequest extends BaseCol
      * @return the updated request
      */
     public IDeviceConfigurationHasPayloadLinksCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IDeviceConfigurationHasPayloadLinksCollectionRequest)this;
     }
 

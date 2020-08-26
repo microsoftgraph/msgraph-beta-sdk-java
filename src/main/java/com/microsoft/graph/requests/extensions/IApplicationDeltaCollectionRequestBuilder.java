@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,6 +23,6 @@ public interface IApplicationDeltaCollectionRequestBuilder extends IRequestBuild
 
     IApplicationDeltaCollectionRequest buildRequest();
 
-    IApplicationDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApplicationDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

@@ -3,14 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentJournalRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CustomerPaymentJournal;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,7 +36,7 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustomerPaymentJournalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CustomerPaymentJournalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

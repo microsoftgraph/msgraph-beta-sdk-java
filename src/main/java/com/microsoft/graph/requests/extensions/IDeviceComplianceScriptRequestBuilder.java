@@ -3,15 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceComplianceScript;
+import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptAssignRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRunSummaryRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +40,7 @@ public interface IDeviceComplianceScriptRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceComplianceScriptRequest instance
      */
-    IDeviceComplianceScriptRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceComplianceScriptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceHealthScriptAssignmentCollectionRequestBuilder assignments();

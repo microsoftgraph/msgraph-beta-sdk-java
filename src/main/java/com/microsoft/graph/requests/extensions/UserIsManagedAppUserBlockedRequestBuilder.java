@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.UserIsManagedAppUserBlockedReques
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class UserIsManagedAppUserBlockedRequestBuilder extends BaseFunctionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserIsManagedAppUserBlockedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserIsManagedAppUserBlockedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,14 +45,14 @@ public class UserIsManagedAppUserBlockedRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for the request
      * @return the IUserIsManagedAppUserBlockedRequest instance
      */
-    public IUserIsManagedAppUserBlockedRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserIsManagedAppUserBlockedRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserIsManagedAppUserBlockedRequest request = new UserIsManagedAppUserBlockedRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

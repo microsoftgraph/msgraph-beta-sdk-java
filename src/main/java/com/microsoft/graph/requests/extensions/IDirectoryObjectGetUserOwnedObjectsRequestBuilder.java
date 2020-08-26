@@ -28,5 +28,5 @@ public interface IDirectoryObjectGetUserOwnedObjectsRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return the IDirectoryObjectGetUserOwnedObjectsRequest instance
      */
-    IDirectoryObjectGetUserOwnedObjectsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryObjectGetUserOwnedObjectsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

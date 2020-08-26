@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageReplyAllRequest;
 import com.microsoft.graph.requests.extensions.MessageReplyAllRequest;
 import com.microsoft.graph.models.extensions.Message;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class MessageReplyAllRequestBuilder extends BaseActionRequestBuilder impl
      * @param message the message
      * @param comment the comment
      */
-    public MessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Message message, final String comment) {
+    public MessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Message message, final String comment) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("message", message);
         bodyParams.put("comment", comment);
@@ -52,7 +49,7 @@ public class MessageReplyAllRequestBuilder extends BaseActionRequestBuilder impl
      * @param requestOptions the options for the request
      * @return the IMessageReplyAllRequest instance
      */
-    public IMessageReplyAllRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMessageReplyAllRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageReplyAllRequest request = new MessageReplyAllRequest(
                 getRequestUrl(),
                 getClient(),

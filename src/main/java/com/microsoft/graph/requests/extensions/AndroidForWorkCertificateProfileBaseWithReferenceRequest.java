@@ -5,7 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidForWorkCertificateProfileBase;
+import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidForWorkTrustedRootCertificateRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +38,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkCertificateProfileBaseWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public AndroidForWorkCertificateProfileBaseWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkCertificateProfileBase.class);
     }
 
@@ -81,7 +86,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      * @return the updated request
      */
     public IAndroidForWorkCertificateProfileBaseWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IAndroidForWorkCertificateProfileBaseWithReferenceRequest)this;
     }
 
@@ -92,7 +97,7 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      * @return the updated request
      */
     public IAndroidForWorkCertificateProfileBaseWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AndroidForWorkCertificateProfileBaseWithReferenceRequest)this;
     }
 }

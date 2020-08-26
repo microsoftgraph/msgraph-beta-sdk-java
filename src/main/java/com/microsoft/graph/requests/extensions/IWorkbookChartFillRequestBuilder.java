@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillClearRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillSetSolidColorRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookChartFill;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IWorkbookChartFillRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookChartFillRequest instance
      */
-    IWorkbookChartFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookChartFillClearRequestBuilder clear();
     IWorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color);

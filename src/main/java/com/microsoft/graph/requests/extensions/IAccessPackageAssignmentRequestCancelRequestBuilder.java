@@ -28,5 +28,5 @@ public interface IAccessPackageAssignmentRequestCancelRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IAccessPackageAssignmentRequestCancelRequest instance
      */
-    IAccessPackageAssignmentRequestCancelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessPackageAssignmentRequestCancelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

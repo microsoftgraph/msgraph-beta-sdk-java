@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,6 +24,6 @@ public interface IPermissionGrantCollectionRequestBuilder extends IRequestBuilde
 
     IPermissionGrantCollectionRequest buildRequest();
 
-    IPermissionGrantCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

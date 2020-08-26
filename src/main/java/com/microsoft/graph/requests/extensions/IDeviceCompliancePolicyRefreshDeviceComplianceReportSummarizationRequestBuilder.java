@@ -28,5 +28,5 @@ public interface IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizati
      * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest instance
      */
-    IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

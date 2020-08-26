@@ -3,14 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationPolicyPayloadStreamRequestBuilder;
-import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +37,7 @@ public interface IOfficeClientConfigurationRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IOfficeClientConfigurationRequest instance
      */
-    IOfficeClientConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOfficeClientConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOfficeClientConfigurationAssignmentCollectionRequestBuilder assignments();

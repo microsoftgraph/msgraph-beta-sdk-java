@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuild
      * @param number the number
      * @param numDigits the numDigits
      */
-    public WorkbookFunctionsRoundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
+    public WorkbookFunctionsRoundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("numDigits", numDigits);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRoundRequest instance
      */
-    public IWorkbookFunctionsRoundRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsRoundRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRoundRequest request = new WorkbookFunctionsRoundRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,8 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequest;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GovernanceResource;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
@@ -13,7 +16,10 @@ import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestC
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +43,7 @@ public interface IGovernanceResourceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGovernanceResourceRequest instance
      */
-    IGovernanceResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGovernanceResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

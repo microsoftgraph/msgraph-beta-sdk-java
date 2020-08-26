@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrivilegedAccessRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedAccess;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
@@ -15,6 +19,8 @@ import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestR
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -38,7 +44,7 @@ public interface IPrivilegedAccessRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPrivilegedAccessRequest instance
      */
-    IPrivilegedAccessRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedAccessRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IGovernanceResourceCollectionRequestBuilder resources();

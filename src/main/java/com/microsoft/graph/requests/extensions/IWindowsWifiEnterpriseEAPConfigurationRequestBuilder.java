@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsWifiEnterpriseEAPConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsWifiEnterpriseEAPConfiguration;
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface IWindowsWifiEnterpriseEAPConfigurationRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IWindowsWifiEnterpriseEAPConfigurationRequest instance
      */
-    IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWindows81TrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation();

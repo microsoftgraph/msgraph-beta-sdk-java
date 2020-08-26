@@ -3,11 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerPkcsCertificateProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerPkcsCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +36,7 @@ public interface IAndroidDeviceOwnerPkcsCertificateProfileRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerPkcsCertificateProfileRequest instance
      */
-    IAndroidDeviceOwnerPkcsCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidDeviceOwnerPkcsCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates();

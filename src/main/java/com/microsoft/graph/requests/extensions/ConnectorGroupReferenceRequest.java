@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +43,7 @@ public class ConnectorGroupReferenceRequest extends BaseRequest implements IConn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorGroupReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public ConnectorGroupReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConnectorGroup.class);
     }
 
@@ -51,7 +62,7 @@ public class ConnectorGroupReferenceRequest extends BaseRequest implements IConn
      * @return the updated request
      */
     public IConnectorGroupReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ConnectorGroupReferenceRequest)this;
     }
 
@@ -62,7 +73,7 @@ public class ConnectorGroupReferenceRequest extends BaseRequest implements IConn
      * @return the updated request
      */
     public IConnectorGroupReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ConnectorGroupReferenceRequest)this;
     }
     /**

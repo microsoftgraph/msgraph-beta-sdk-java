@@ -6,7 +6,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementCondition;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionStatementRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +36,7 @@ public class ManagementConditionReferenceRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagementConditionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +55,7 @@ public class ManagementConditionReferenceRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IManagementConditionReferenceRequest instance
      */
-    public IManagementConditionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagementConditionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

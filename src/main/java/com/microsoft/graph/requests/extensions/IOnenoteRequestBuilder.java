@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenoteRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
@@ -17,6 +21,8 @@ import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -40,7 +46,7 @@ public interface IOnenoteRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenoteRequest instance
      */
-    IOnenoteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     INotebookCollectionRequestBuilder notebooks();

@@ -3,19 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationPolicyPayloadStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationPolicyPayloadStreamRequestBuilder;
-import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCollectionRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
+import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -35,7 +35,7 @@ public class OfficeClientConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeClientConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OfficeClientConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

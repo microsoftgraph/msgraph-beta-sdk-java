@@ -28,5 +28,5 @@ public interface ITrustFrameworkKeySetUploadPkcs12RequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadPkcs12Request instance
      */
-    ITrustFrameworkKeySetUploadPkcs12Request buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITrustFrameworkKeySetUploadPkcs12Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

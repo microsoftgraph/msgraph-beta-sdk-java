@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityAss
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder exte
      * @param userPrincipalName the userPrincipalName
      * @param addressableUserName the addressableUserName
      */
-    public WindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String userPrincipalName, final String addressableUserName) {
+    public WindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String userPrincipalName, final String addressableUserName) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("userPrincipalName", userPrincipalName);
         bodyParams.put("addressableUserName", addressableUserName);
@@ -51,7 +49,7 @@ public class WindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder exte
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WindowsAutopilotDeviceIdentityAssignUserToDeviceRequest request = new WindowsAutopilotDeviceIdentityAssignUserToDeviceRequest(
                 getRequestUrl(),
                 getClient(),

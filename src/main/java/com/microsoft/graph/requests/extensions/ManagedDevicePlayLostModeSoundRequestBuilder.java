@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ManagedDevicePlayLostModeSoundReq
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class ManagedDevicePlayLostModeSoundRequestBuilder extends BaseActionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDevicePlayLostModeSoundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDevicePlayLostModeSoundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +45,7 @@ public class ManagedDevicePlayLostModeSoundRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return the IManagedDevicePlayLostModeSoundRequest instance
      */
-    public IManagedDevicePlayLostModeSoundRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDevicePlayLostModeSoundRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDevicePlayLostModeSoundRequest request = new ManagedDevicePlayLostModeSoundRequest(
                 getRequestUrl(),
                 getClient(),

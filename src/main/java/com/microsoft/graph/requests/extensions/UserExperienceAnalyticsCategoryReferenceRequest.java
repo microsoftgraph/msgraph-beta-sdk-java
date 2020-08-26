@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +39,7 @@ public class UserExperienceAnalyticsCategoryReferenceRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsCategoryReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public UserExperienceAnalyticsCategoryReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsCategory.class);
     }
 
@@ -51,7 +58,7 @@ public class UserExperienceAnalyticsCategoryReferenceRequest extends BaseRequest
      * @return the updated request
      */
     public IUserExperienceAnalyticsCategoryReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserExperienceAnalyticsCategoryReferenceRequest)this;
     }
 
@@ -62,7 +69,7 @@ public class UserExperienceAnalyticsCategoryReferenceRequest extends BaseRequest
      * @return the updated request
      */
     public IUserExperienceAnalyticsCategoryReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserExperienceAnalyticsCategoryReferenceRequest)this;
     }
     /**

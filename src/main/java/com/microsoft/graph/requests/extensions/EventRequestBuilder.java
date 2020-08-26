@@ -3,50 +3,38 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventDismissReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventDismissReminderRequestBuilder;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.requests.extensions.IEventSnoozeReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventSnoozeReminderRequestBuilder;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.IEventForwardRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventForwardRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventAcceptRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventAcceptRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventDeclineRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventDeclineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventTentativelyAcceptRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventTentativelyAcceptRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCancelRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventCancelRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -66,7 +54,7 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

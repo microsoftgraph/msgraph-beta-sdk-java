@@ -6,7 +6,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +31,7 @@ public class MacOSTrustedRootCertificateReferenceRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSTrustedRootCertificateReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MacOSTrustedRootCertificateReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +50,7 @@ public class MacOSTrustedRootCertificateReferenceRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IMacOSTrustedRootCertificateReferenceRequest instance
      */
-    public IMacOSTrustedRootCertificateReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMacOSTrustedRootCertificateReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MacOSTrustedRootCertificateReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

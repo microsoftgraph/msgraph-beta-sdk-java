@@ -3,11 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindows81SCEPCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Windows81SCEPCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +37,7 @@ public interface IWindows81SCEPCertificateProfileRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IWindows81SCEPCertificateProfileRequest instance
      */
-    IWindows81SCEPCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows81SCEPCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

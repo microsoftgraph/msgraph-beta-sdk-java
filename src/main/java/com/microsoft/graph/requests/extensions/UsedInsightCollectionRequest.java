@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeGraphInsights;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionPage;
@@ -37,7 +38,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UsedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UsedInsightCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class, IUsedInsightCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @return the updated request
      */
     public IUsedInsightCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UsedInsightCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @return the updated request
      */
     public IUsedInsightCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UsedInsightCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      * @return the updated request
      */
     public IUsedInsightCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (UsedInsightCollectionRequest)this;
     }
 

@@ -28,5 +28,5 @@ public interface IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBui
      * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

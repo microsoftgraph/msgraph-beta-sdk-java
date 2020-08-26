@@ -28,5 +28,5 @@ public interface ISalesQuoteSendRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ISalesQuoteSendRequest instance
      */
-    ISalesQuoteSendRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISalesQuoteSendRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

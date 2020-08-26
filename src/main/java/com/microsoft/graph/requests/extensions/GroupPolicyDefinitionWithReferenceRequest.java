@@ -5,7 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyPresentationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +44,7 @@ public class GroupPolicyDefinitionWithReferenceRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyDefinition.class);
     }
 
@@ -81,7 +92,7 @@ public class GroupPolicyDefinitionWithReferenceRequest extends BaseRequest imple
      * @return the updated request
      */
     public IGroupPolicyDefinitionWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IGroupPolicyDefinitionWithReferenceRequest)this;
     }
 
@@ -92,7 +103,7 @@ public class GroupPolicyDefinitionWithReferenceRequest extends BaseRequest imple
      * @return the updated request
      */
     public IGroupPolicyDefinitionWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupPolicyDefinitionWithReferenceRequest)this;
     }
 }

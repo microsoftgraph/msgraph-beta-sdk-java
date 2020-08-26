@@ -5,7 +5,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DetectedApp;
+import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
+import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -21,7 +29,7 @@ public interface IManagedDeviceCollectionWithReferencesRequestBuilder extends IR
 
     IManagedDeviceCollectionWithReferencesRequest buildRequest();
 
-    IManagedDeviceCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedDeviceWithReferenceRequestBuilder byId(final String id);
 

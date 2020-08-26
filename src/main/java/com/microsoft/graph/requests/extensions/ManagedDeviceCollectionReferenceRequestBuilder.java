@@ -5,7 +5,15 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DetectedApp;
+import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
+import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +35,7 @@ public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -35,7 +43,7 @@ public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseRequestB
         return buildRequest(getOptions());
     }
 
-    public IManagedDeviceCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

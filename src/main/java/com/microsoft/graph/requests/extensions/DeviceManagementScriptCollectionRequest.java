@@ -5,16 +5,19 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptCollectionPage;
@@ -37,7 +40,7 @@ public class DeviceManagementScriptCollectionRequest extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementScriptCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementScriptCollectionResponse.class, IDeviceManagementScriptCollectionPage.class);
     }
 
@@ -81,7 +84,7 @@ public class DeviceManagementScriptCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public IDeviceManagementScriptCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceManagementScriptCollectionRequest)this;
     }
 
@@ -92,7 +95,7 @@ public class DeviceManagementScriptCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public IDeviceManagementScriptCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceManagementScriptCollectionRequest)this;
     }
 
@@ -103,7 +106,7 @@ public class DeviceManagementScriptCollectionRequest extends BaseCollectionReque
      * @return the updated request
      */
     public IDeviceManagementScriptCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceManagementScriptCollectionRequest)this;
     }
 

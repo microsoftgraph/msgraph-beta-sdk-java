@@ -6,7 +6,22 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +43,7 @@ public class AdministrativeUnitReferenceRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AdministrativeUnitReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +62,7 @@ public class AdministrativeUnitReferenceRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IAdministrativeUnitReferenceRequest instance
      */
-    public IAdministrativeUnitReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAdministrativeUnitReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AdministrativeUnitReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

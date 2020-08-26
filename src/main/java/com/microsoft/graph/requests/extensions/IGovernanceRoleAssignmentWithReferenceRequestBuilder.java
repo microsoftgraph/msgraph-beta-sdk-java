@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +38,7 @@ public interface IGovernanceRoleAssignmentWithReferenceRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IGovernanceRoleAssignmentWithReferenceRequest instance
      */
-    IGovernanceRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGovernanceRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IGovernanceRoleAssignmentReferenceRequestBuilder reference();
 

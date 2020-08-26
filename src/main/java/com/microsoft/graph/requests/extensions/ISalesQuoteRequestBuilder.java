@@ -3,16 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISalesQuoteRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SalesQuote;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteMakeInvoiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteSendRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -36,7 +40,7 @@ public interface ISalesQuoteRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISalesQuoteRequest instance
      */
-    ISalesQuoteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISalesQuoteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISalesQuoteLineCollectionRequestBuilder salesQuoteLines();

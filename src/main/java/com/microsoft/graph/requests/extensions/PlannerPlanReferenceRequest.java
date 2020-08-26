@@ -5,7 +5,20 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PlannerPlan;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +45,7 @@ public class PlannerPlanReferenceRequest extends BaseRequest implements IPlanner
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public PlannerPlanReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerPlan.class);
     }
 
@@ -51,7 +64,7 @@ public class PlannerPlanReferenceRequest extends BaseRequest implements IPlanner
      * @return the updated request
      */
     public IPlannerPlanReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PlannerPlanReferenceRequest)this;
     }
 
@@ -62,7 +75,7 @@ public class PlannerPlanReferenceRequest extends BaseRequest implements IPlanner
      * @return the updated request
      */
     public IPlannerPlanReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PlannerPlanReferenceRequest)this;
     }
     /**

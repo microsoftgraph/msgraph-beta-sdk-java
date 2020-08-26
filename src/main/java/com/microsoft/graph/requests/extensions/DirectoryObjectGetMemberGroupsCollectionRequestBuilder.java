@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +34,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param securityEnabledOnly the securityEnabledOnly
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean securityEnabledOnly) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions);
   	 if(securityEnabledOnly!=null){
 			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
@@ -43,7 +45,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetMemberGroupsCollectionRequest request = new DirectoryObjectGetMemberGroupsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

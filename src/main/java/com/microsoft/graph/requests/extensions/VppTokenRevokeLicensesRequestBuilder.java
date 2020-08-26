@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.VppTokenRevokeLicensesRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class VppTokenRevokeLicensesRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param notifyManagedDevices the notifyManagedDevices
      */
-    public VppTokenRevokeLicensesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean notifyManagedDevices) {
+    public VppTokenRevokeLicensesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean notifyManagedDevices) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("notifyManagedDevices", notifyManagedDevices);
     }
@@ -49,7 +47,7 @@ public class VppTokenRevokeLicensesRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for the request
      * @return the IVppTokenRevokeLicensesRequest instance
      */
-    public IVppTokenRevokeLicensesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IVppTokenRevokeLicensesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         VppTokenRevokeLicensesRequest request = new VppTokenRevokeLicensesRequest(
                 getRequestUrl(),
                 getClient(),

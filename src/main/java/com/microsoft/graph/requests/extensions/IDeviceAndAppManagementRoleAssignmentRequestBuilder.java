@@ -3,11 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -31,7 +36,7 @@ public interface IDeviceAndAppManagementRoleAssignmentRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IDeviceAndAppManagementRoleAssignmentRequest instance
      */
-    IDeviceAndAppManagementRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceAndAppManagementRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IRoleScopeTagCollectionWithReferencesRequestBuilder roleScopeTags();

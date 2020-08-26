@@ -3,14 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserTeamworkRequest;
-import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.requests.extensions.IUserTeamworkSendActivityNotificationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -34,7 +39,7 @@ public interface IUserTeamworkRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserTeamworkRequest instance
      */
-    IUserTeamworkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserTeamworkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IUserScopeTeamsAppInstallationCollectionRequestBuilder installedApps();

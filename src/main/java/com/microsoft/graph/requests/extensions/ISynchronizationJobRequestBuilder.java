@@ -3,18 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobRequest;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobPauseRequestBuilder;
-import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobProvisionOnDemandRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobStartRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobStopRequestBuilder;
-import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobRestartRequestBuilder;
-import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobValidateCredentialsRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SynchronizationJob;
+import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
+import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
+import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
+import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
+import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -38,7 +39,7 @@ public interface ISynchronizationJobRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISynchronizationJobRequest instance
      */
-    ISynchronizationJobRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationJobRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

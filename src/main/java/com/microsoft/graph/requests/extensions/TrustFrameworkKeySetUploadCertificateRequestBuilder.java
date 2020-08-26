@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetUploadCertifi
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class TrustFrameworkKeySetUploadCertificateRequestBuilder extends BaseAct
      * @param requestOptions the options for this request
      * @param key the key
      */
-    public TrustFrameworkKeySetUploadCertificateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String key) {
+    public TrustFrameworkKeySetUploadCertificateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String key) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("key", key);
     }
@@ -49,7 +47,7 @@ public class TrustFrameworkKeySetUploadCertificateRequestBuilder extends BaseAct
      * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadCertificateRequest instance
      */
-    public ITrustFrameworkKeySetUploadCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITrustFrameworkKeySetUploadCertificateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TrustFrameworkKeySetUploadCertificateRequest request = new TrustFrameworkKeySetUploadCertificateRequest(
                 getRequestUrl(),
                 getClient(),

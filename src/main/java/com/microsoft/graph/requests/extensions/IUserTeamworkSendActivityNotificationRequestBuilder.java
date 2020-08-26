@@ -28,5 +28,5 @@ public interface IUserTeamworkSendActivityNotificationRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IUserTeamworkSendActivityNotificationRequest instance
      */
-    IUserTeamworkSendActivityNotificationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserTeamworkSendActivityNotificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

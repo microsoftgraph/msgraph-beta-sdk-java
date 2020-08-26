@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.PrivilegedRoleSelfActivateRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class PrivilegedRoleSelfActivateRequestBuilder extends BaseActionRequestB
      * @param ticketNumber the ticketNumber
      * @param ticketSystem the ticketSystem
      */
-    public PrivilegedRoleSelfActivateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String reason, final String duration, final String ticketNumber, final String ticketSystem) {
+    public PrivilegedRoleSelfActivateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String reason, final String duration, final String ticketNumber, final String ticketSystem) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("reason", reason);
         bodyParams.put("duration", duration);
@@ -55,7 +53,7 @@ public class PrivilegedRoleSelfActivateRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IPrivilegedRoleSelfActivateRequest instance
      */
-    public IPrivilegedRoleSelfActivateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPrivilegedRoleSelfActivateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PrivilegedRoleSelfActivateRequest request = new PrivilegedRoleSelfActivateRequest(
                 getRequestUrl(),
                 getClient(),

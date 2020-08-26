@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeRowsAboveRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class WorkbookRangeRowsAboveRequestBuilder extends BaseFunctionRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeRowsAboveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookRangeRowsAboveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -39,9 +37,9 @@ public class WorkbookRangeRowsAboveRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for this request
      * @param count the count
      */
-    public WorkbookRangeRowsAboveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
+    public WorkbookRangeRowsAboveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("count", count));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("count", count));
     }
 
     /**
@@ -59,14 +57,14 @@ public class WorkbookRangeRowsAboveRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeRowsAboveRequest instance
      */
-    public IWorkbookRangeRowsAboveRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookRangeRowsAboveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeRowsAboveRequest request = new WorkbookRangeRowsAboveRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

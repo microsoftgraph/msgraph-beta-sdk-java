@@ -5,7 +5,13 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ManagementCondition;
+import com.microsoft.graph.models.generated.DevicePlatformType;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +37,7 @@ public interface IManagementConditionWithReferenceRequestBuilder extends IReques
      * @param requestOptions the options for this request
      * @return the IManagementConditionWithReferenceRequest instance
      */
-    IManagementConditionWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagementConditionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagementConditionReferenceRequestBuilder reference();
 

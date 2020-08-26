@@ -3,18 +3,24 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageCatalogWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackage;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -34,7 +40,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AccessPackageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

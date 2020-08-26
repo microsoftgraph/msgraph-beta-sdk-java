@@ -28,5 +28,5 @@ public interface IEducationSubmissionUnsubmitRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IEducationSubmissionUnsubmitRequest instance
      */
-    IEducationSubmissionUnsubmitRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSubmissionUnsubmitRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

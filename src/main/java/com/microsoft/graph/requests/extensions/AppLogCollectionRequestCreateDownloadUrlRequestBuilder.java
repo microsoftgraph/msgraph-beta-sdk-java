@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCreateDown
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class AppLogCollectionRequestCreateDownloadUrlRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppLogCollectionRequestCreateDownloadUrlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AppLogCollectionRequestCreateDownloadUrlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +45,7 @@ public class AppLogCollectionRequestCreateDownloadUrlRequestBuilder extends Base
      * @param requestOptions the options for the request
      * @return the IAppLogCollectionRequestCreateDownloadUrlRequest instance
      */
-    public IAppLogCollectionRequestCreateDownloadUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAppLogCollectionRequestCreateDownloadUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AppLogCollectionRequestCreateDownloadUrlRequest request = new AppLogCollectionRequestCreateDownloadUrlRequest(
                 getRequestUrl(),
                 getClient(),

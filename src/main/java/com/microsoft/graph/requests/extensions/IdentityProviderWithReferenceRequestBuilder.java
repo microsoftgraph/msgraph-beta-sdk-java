@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IdentityProvider;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +30,7 @@ public class IdentityProviderWithReferenceRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IdentityProviderWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +49,7 @@ public class IdentityProviderWithReferenceRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IIdentityProviderWithReferenceRequest instance
      */
-    public IIdentityProviderWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIdentityProviderWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IdentityProviderWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

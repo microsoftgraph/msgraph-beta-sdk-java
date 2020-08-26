@@ -28,5 +28,5 @@ public interface IUserWipeAndBlockManagedAppsRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IUserWipeAndBlockManagedAppsRequest instance
      */
-    IUserWipeAndBlockManagedAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserWipeAndBlockManagedAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

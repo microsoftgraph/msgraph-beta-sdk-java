@@ -3,24 +3,30 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IContactFolderRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -40,7 +46,7 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ContactFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

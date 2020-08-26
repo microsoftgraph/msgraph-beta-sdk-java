@@ -3,76 +3,54 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IServicePrincipalRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.models.extensions.Credential;
+import com.microsoft.graph.models.extensions.Credential;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
-import com.microsoft.graph.models.extensions.Credential;
-import com.microsoft.graph.requests.extensions.IServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.models.extensions.Credential;
-import com.microsoft.graph.requests.extensions.IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -92,7 +70,7 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ServicePrincipalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

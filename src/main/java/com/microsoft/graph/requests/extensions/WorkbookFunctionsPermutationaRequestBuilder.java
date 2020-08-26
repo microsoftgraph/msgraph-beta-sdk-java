@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPermutationaRequ
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionReque
      * @param number the number
      * @param numberChosen the numberChosen
      */
-    public WorkbookFunctionsPermutationaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+    public WorkbookFunctionsPermutationaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("numberChosen", numberChosen);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPermutationaRequest instance
      */
-    public IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPermutationaRequest request = new WorkbookFunctionsPermutationaRequest(
                 getRequestUrl(),
                 getClient(),

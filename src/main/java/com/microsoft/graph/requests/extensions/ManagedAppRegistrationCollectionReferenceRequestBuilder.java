@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.User;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +30,7 @@ public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedAppRegistrationCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -35,7 +38,7 @@ public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends Bas
         return buildRequest(getOptions());
     }
 
-    public IManagedAppRegistrationCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedAppRegistrationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

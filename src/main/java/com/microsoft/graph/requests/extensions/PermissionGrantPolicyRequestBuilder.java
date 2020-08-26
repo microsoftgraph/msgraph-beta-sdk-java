@@ -3,16 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -32,7 +34,7 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PermissionGrantPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

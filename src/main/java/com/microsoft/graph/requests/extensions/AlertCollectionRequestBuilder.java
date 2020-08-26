@@ -5,15 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Security;
+import com.microsoft.graph.models.extensions.Alert;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAlertCollectionRequest;
-import com.microsoft.graph.models.extensions.Alert;
-
 import com.microsoft.graph.requests.extensions.IAlertUpdateAlertsCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.Alert;
 import com.microsoft.graph.options.Option;
@@ -34,7 +36,7 @@ public class AlertCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AlertCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AlertCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +44,7 @@ public class AlertCollectionRequestBuilder extends BaseRequestBuilder implements
         return buildRequest(getOptions());
     }
 
-    public IAlertCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAlertCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AlertCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

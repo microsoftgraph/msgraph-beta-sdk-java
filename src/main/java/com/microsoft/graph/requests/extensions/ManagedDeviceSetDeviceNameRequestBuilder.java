@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceSetDeviceNameRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class ManagedDeviceSetDeviceNameRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param deviceName the deviceName
      */
-    public ManagedDeviceSetDeviceNameRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String deviceName) {
+    public ManagedDeviceSetDeviceNameRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String deviceName) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("deviceName", deviceName);
     }
@@ -49,7 +47,7 @@ public class ManagedDeviceSetDeviceNameRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IManagedDeviceSetDeviceNameRequest instance
      */
-    public IManagedDeviceSetDeviceNameRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceSetDeviceNameRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceSetDeviceNameRequest request = new ManagedDeviceSetDeviceNameRequest(
                 getRequestUrl(),
                 getClient(),

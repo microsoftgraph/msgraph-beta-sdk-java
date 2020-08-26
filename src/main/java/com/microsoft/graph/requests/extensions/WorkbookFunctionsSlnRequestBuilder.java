@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsSlnRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder
      * @param salvage the salvage
      * @param life the life
      */
-    public WorkbookFunctionsSlnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life) {
+    public WorkbookFunctionsSlnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("cost", cost);
         bodyParams.put("salvage", salvage);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSlnRequest instance
      */
-    public IWorkbookFunctionsSlnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsSlnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSlnRequest request = new WorkbookFunctionsSlnRequest(
                 getRequestUrl(),
                 getClient(),

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.GovernanceResourceRegisterRequest
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class GovernanceResourceRegisterRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param externalId the externalId
      */
-    public GovernanceResourceRegisterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String externalId) {
+    public GovernanceResourceRegisterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String externalId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("externalId", externalId);
     }
@@ -49,7 +47,7 @@ public class GovernanceResourceRegisterRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return the IGovernanceResourceRegisterRequest instance
      */
-    public IGovernanceResourceRegisterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGovernanceResourceRegisterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GovernanceResourceRegisterRequest request = new GovernanceResourceRegisterRequest(
                 getRequestUrl(),
                 getClient(),

@@ -28,5 +28,5 @@ public interface IOfficeClientConfigurationUpdatePrioritiesRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IOfficeClientConfigurationUpdatePrioritiesRequest instance
      */
-    IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -3,9 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryDefinitionDiscoverRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DirectoryDefinition;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +34,7 @@ public interface IDirectoryDefinitionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryDefinitionRequest instance
      */
-    IDirectoryDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDirectoryDefinitionDiscoverRequestBuilder discover();
 

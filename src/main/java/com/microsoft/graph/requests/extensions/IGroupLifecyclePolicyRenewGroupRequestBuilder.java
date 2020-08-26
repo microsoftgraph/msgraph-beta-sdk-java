@@ -28,5 +28,5 @@ public interface IGroupLifecyclePolicyRenewGroupRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyRenewGroupRequest instance
      */
-    IGroupLifecyclePolicyRenewGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupLifecyclePolicyRenewGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

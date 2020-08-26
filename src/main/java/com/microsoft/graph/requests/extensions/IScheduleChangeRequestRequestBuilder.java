@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IScheduleChangeRequestRequest;
-import com.microsoft.graph.requests.extensions.IScheduleChangeRequestApproveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScheduleChangeRequestDeclineRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ScheduleChangeRequest;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IScheduleChangeRequestRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IScheduleChangeRequestRequest instance
      */
-    IScheduleChangeRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IScheduleChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IScheduleChangeRequestApproveRequestBuilder approve(final String message);
     IScheduleChangeRequestDeclineRequestBuilder decline(final String message);

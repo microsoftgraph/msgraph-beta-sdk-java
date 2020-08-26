@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookNamedItemAddFormulaLocalR
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRe
      * @param formula the formula
      * @param comment the comment
      */
-    public WorkbookNamedItemAddFormulaLocalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final String formula, final String comment) {
+    public WorkbookNamedItemAddFormulaLocalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String name, final String formula, final String comment) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("name", name);
         bodyParams.put("formula", formula);
@@ -53,7 +51,7 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
-    public IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookNamedItemAddFormulaLocalRequest request = new WorkbookNamedItemAddFormulaLocalRequest(
                 getRequestUrl(),
                 getClient(),

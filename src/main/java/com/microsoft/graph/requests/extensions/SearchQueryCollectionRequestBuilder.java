@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SearchRequest;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.ISearchQueryCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.ISearchQueryCollectionRequest;
 import com.microsoft.graph.requests.extensions.SearchQueryCollectionRequest;
 import com.microsoft.graph.models.extensions.SearchResponse;
-import com.microsoft.graph.models.extensions.SearchRequest;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,7 +36,7 @@ public class SearchQueryCollectionRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param requests the requests
      */
-    public SearchQueryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<SearchRequest> requests) {
+    public SearchQueryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<SearchRequest> requests) {
         super(requestUrl, client, requestOptions);
   	 if(requests!=null){
 			bodyParams.put("requests", requests);
@@ -46,7 +47,7 @@ public class SearchQueryCollectionRequestBuilder extends BaseActionRequestBuilde
         return buildRequest(getOptions());
     }
 
-    public ISearchQueryCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISearchQueryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SearchQueryCollectionRequest request = new SearchQueryCollectionRequest(
                 getRequestUrl(),
                 getClient(),

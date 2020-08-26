@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,7 +38,7 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolderDeltaCollectionResponse.class, IMailFolderDeltaCollectionPage.class);
     }
 
@@ -80,7 +82,7 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public IMailFolderDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IMailFolderDeltaCollectionRequest)this;
     }
 
@@ -91,7 +93,7 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public IMailFolderDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IMailFolderDeltaCollectionRequest)this;
     }
 
@@ -102,7 +104,7 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @return the updated request
      */
     public IMailFolderDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IMailFolderDeltaCollectionRequest)this;
     }
 

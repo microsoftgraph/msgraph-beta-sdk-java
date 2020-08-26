@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsProtectionStateRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsProtectionState;
 import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IWindowsProtectionStateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWindowsProtectionStateRequest instance
      */
-    IWindowsProtectionStateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsProtectionStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWindowsDeviceMalwareStateCollectionRequestBuilder detectedMalwareState();

@@ -3,8 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindows81VpnConfigurationRequest;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Windows81VpnConfiguration;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -28,7 +34,7 @@ public interface IWindows81VpnConfigurationRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IWindows81VpnConfigurationRequest instance
      */
-    IWindows81VpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows81VpnConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

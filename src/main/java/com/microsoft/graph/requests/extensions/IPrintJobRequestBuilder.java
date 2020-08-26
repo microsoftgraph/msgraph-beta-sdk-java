@@ -3,15 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrintJobRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintDocumentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobCancelPrintJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobStartPrintJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobRedirectRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +38,7 @@ public interface IPrintJobRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPrintJobRequest instance
      */
-    IPrintJobRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrintJobRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPrintDocumentCollectionRequestBuilder documents();

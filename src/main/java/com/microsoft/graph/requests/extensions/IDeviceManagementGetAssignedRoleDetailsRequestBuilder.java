@@ -28,5 +28,5 @@ public interface IDeviceManagementGetAssignedRoleDetailsRequestBuilder extends I
      * @param requestOptions the options for the request
      * @return the IDeviceManagementGetAssignedRoleDetailsRequest instance
      */
-    IDeviceManagementGetAssignedRoleDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementGetAssignedRoleDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

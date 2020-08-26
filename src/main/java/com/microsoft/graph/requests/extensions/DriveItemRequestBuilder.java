@@ -3,75 +3,49 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemContentStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemContentStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCheckinRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequestBuilder;
-import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.requests.extensions.IDriveItemCopyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCopyRequestBuilder;
-import com.microsoft.graph.models.extensions.DriveRecipient;
-import com.microsoft.graph.requests.extensions.IDriveItemCreateLinkRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCreateLinkRequestBuilder;
-import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
-import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemCreateUploadSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemFollowRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemFollowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemUnfollowRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemUnfollowRequestBuilder;
-import com.microsoft.graph.models.extensions.DriveRecipient;
-import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemPreviewRequestBuilder;
-import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.requests.extensions.IDriveItemRestoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemRestoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemValidatePermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemValidatePermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -91,7 +65,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

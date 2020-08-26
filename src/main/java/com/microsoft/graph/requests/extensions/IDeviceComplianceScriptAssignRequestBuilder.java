@@ -28,5 +28,5 @@ public interface IDeviceComplianceScriptAssignRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IDeviceComplianceScriptAssignRequest instance
      */
-    IDeviceComplianceScriptAssignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceComplianceScriptAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -3,17 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionRequest;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationSubmission;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionReturnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionSubmitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionUnsubmitRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -37,7 +38,7 @@ public interface IEducationSubmissionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationSubmissionRequest instance
      */
-    IEducationSubmissionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSubmissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationSubmissionResourceCollectionRequestBuilder resources();

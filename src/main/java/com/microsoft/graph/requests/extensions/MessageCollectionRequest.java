@@ -5,16 +5,25 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MailFolder;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Message;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
@@ -37,7 +46,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageCollectionResponse.class, IMessageCollectionPage.class);
     }
 
@@ -81,7 +90,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @return the updated request
      */
     public IMessageCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MessageCollectionRequest)this;
     }
 
@@ -92,7 +101,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @return the updated request
      */
     public IMessageCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MessageCollectionRequest)this;
     }
 
@@ -103,7 +112,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
      * @return the updated request
      */
     public IMessageCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MessageCollectionRequest)this;
     }
 

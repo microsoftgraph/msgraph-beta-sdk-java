@@ -28,5 +28,5 @@ public interface IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBu
      * @param requestOptions the options for the request
      * @return the IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequest instance
      */
-    IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

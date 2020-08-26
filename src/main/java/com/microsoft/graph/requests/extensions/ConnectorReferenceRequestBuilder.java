@@ -6,7 +6,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Connector;
+import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +35,7 @@ public class ConnectorReferenceRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConnectorReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +54,7 @@ public class ConnectorReferenceRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IConnectorReferenceRequest instance
      */
-    public IConnectorReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IConnectorReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConnectorReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

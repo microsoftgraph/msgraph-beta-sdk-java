@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IdentityProtectionRoot;
 import com.microsoft.graph.requests.extensions.IRiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskDetectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +38,7 @@ public interface IIdentityProtectionRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIdentityProtectionRootRequest instance
      */
-    IIdentityProtectionRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIdentityProtectionRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IRiskDetectionCollectionRequestBuilder riskDetections();

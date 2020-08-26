@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,9 +16,6 @@ import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionReq
 import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequest;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequest;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -39,7 +39,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionReque
      * @param startTime the startTime
      * @param availabilityViewInterval the availabilityViewInterval
      */
-    public CalendarGetScheduleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
+    public CalendarGetScheduleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
         super(requestUrl, client, requestOptions);
   	 if(schedules!=null){
 			bodyParams.put("schedules", schedules);
@@ -59,7 +59,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionReque
         return buildRequest(getOptions());
     }
 
-    public ICalendarGetScheduleCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICalendarGetScheduleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarGetScheduleCollectionRequest request = new CalendarGetScheduleCollectionRequest(
                 getRequestUrl(),
                 getClient(),

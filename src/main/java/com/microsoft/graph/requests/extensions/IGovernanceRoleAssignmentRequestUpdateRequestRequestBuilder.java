@@ -28,5 +28,5 @@ public interface IGovernanceRoleAssignmentRequestUpdateRequestRequestBuilder ext
      * @param requestOptions the options for the request
      * @return the IGovernanceRoleAssignmentRequestUpdateRequestRequest instance
      */
-    IGovernanceRoleAssignmentRequestUpdateRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGovernanceRoleAssignmentRequestUpdateRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -3,15 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleRequest;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentMultiple;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +39,7 @@ public interface IUnifiedRoleAssignmentMultipleRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IUnifiedRoleAssignmentMultipleRequest instance
      */
-    IUnifiedRoleAssignmentMultipleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUnifiedRoleAssignmentMultipleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

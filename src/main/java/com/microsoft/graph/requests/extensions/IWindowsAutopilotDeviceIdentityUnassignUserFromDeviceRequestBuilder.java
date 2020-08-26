@@ -28,5 +28,5 @@ public interface IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequestBui
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest instance
      */
-    IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

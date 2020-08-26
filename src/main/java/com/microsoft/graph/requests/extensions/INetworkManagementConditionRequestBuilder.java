@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INetworkManagementConditionRequest;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.NetworkManagementCondition;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface INetworkManagementConditionRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the INetworkManagementConditionRequest instance
      */
-    INetworkManagementConditionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INetworkManagementConditionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements();

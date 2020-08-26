@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExternalGroupRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExternalGroup;
 import com.microsoft.graph.requests.extensions.IExternalGroupMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupMemberRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IExternalGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IExternalGroupRequest instance
      */
-    IExternalGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IExternalGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IExternalGroupMemberCollectionRequestBuilder members();

@@ -28,5 +28,5 @@ public interface ISitePagePublishRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ISitePagePublishRequest instance
      */
-    ISitePagePublishRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISitePagePublishRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

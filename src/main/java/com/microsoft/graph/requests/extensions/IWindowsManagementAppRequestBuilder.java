@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsManagementApp;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IWindowsManagementAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWindowsManagementAppRequest instance
      */
-    IWindowsManagementAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsManagementAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWindowsManagementAppHealthStateCollectionRequestBuilder healthStates();

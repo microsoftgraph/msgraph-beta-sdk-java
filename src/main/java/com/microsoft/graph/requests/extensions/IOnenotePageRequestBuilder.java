@@ -3,15 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnenotePage;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageContentStreamRequestBuilder;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
-import com.microsoft.graph.requests.extensions.IOnenotePageOnenotePatchContentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageCopyToSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePagePreviewRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +37,7 @@ public interface IOnenotePageRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenotePageRequest instance
      */
-    IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenotePageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

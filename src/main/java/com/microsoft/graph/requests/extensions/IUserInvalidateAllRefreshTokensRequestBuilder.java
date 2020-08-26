@@ -28,5 +28,5 @@ public interface IUserInvalidateAllRefreshTokensRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IUserInvalidateAllRefreshTokensRequest instance
      */
-    IUserInvalidateAllRefreshTokensRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserInvalidateAllRefreshTokensRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

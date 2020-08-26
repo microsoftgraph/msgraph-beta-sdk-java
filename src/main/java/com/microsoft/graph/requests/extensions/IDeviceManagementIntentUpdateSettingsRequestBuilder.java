@@ -28,5 +28,5 @@ public interface IDeviceManagementIntentUpdateSettingsRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentUpdateSettingsRequest instance
      */
-    IDeviceManagementIntentUpdateSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementIntentUpdateSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

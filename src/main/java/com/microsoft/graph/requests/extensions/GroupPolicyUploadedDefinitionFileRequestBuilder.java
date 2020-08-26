@@ -3,26 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequest;
-import com.microsoft.graph.requests.extensions.IGroupPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyOperationRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileRemoveRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.requests.extensions.IGroupPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyOperationRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -42,7 +38,7 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyUploadedDefinitionFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupPolicyUploadedDefinitionFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

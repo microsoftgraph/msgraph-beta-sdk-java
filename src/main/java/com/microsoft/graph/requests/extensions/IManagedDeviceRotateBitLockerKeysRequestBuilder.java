@@ -28,5 +28,5 @@ public interface IManagedDeviceRotateBitLockerKeysRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the IManagedDeviceRotateBitLockerKeysRequest instance
      */
-    IManagedDeviceRotateBitLockerKeysRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceRotateBitLockerKeysRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

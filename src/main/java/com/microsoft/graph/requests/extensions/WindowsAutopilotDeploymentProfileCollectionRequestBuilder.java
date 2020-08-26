@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class WindowsAutopilotDeploymentProfileCollectionRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotDeploymentProfileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsAutopilotDeploymentProfileCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,7 +43,7 @@ public class WindowsAutopilotDeploymentProfileCollectionRequestBuilder extends B
         return buildRequest(getOptions());
     }
 
-    public IWindowsAutopilotDeploymentProfileCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsAutopilotDeploymentProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsAutopilotDeploymentProfileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

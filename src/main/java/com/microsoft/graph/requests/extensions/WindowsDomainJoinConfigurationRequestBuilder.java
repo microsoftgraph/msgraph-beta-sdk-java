@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsDomainJoinConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsDomainJoinConfiguration;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class WindowsDomainJoinConfigurationRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDomainJoinConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsDomainJoinConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

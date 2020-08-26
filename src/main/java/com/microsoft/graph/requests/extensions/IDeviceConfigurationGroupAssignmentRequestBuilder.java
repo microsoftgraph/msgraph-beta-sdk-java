@@ -3,9 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -29,7 +35,7 @@ public interface IDeviceConfigurationGroupAssignmentRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationGroupAssignmentRequest instance
      */
-    IDeviceConfigurationGroupAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationGroupAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

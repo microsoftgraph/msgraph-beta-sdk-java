@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestUpdateRequestRequest;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestUpdateRequestRequest;
 import com.microsoft.graph.models.extensions.GovernanceSchedule;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +30,7 @@ public class GovernanceRoleAssignmentRequestUpdateRequestRequestBuilder extends 
      * @param schedule the schedule
      * @param reason the reason
      */
-    public GovernanceRoleAssignmentRequestUpdateRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String decision, final String assignmentState, final GovernanceSchedule schedule, final String reason) {
+    public GovernanceRoleAssignmentRequestUpdateRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String decision, final String assignmentState, final GovernanceSchedule schedule, final String reason) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("decision", decision);
         bodyParams.put("assignmentState", assignmentState);
@@ -56,7 +53,7 @@ public class GovernanceRoleAssignmentRequestUpdateRequestRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return the IGovernanceRoleAssignmentRequestUpdateRequestRequest instance
      */
-    public IGovernanceRoleAssignmentRequestUpdateRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGovernanceRoleAssignmentRequestUpdateRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GovernanceRoleAssignmentRequestUpdateRequestRequest request = new GovernanceRoleAssignmentRequestUpdateRequestRequest(
                 getRequestUrl(),
                 getClient(),

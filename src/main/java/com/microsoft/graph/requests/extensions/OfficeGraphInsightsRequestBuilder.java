@@ -3,20 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,7 +42,7 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeGraphInsightsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OfficeGraphInsightsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

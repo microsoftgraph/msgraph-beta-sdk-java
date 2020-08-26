@@ -28,5 +28,5 @@ public interface IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequestBuil
      * @param requestOptions the options for the request
      * @return the IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest instance
      */
-    IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

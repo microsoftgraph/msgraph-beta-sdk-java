@@ -3,13 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberGroupsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberObjectsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRestoreRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -33,7 +34,7 @@ public interface IDirectoryObjectRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryObjectRequest instance
      */
-    IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryObjectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds);

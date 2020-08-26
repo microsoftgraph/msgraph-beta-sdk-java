@@ -28,5 +28,5 @@ public interface IReportRootGetTenantSecureScoresRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return the IReportRootGetTenantSecureScoresRequest instance
      */
-    IReportRootGetTenantSecureScoresRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetTenantSecureScoresRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

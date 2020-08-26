@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsDomainJoinConfiguration;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
+import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +34,7 @@ public class DeviceConfigurationCollectionWithReferencesRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceConfigurationCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -35,7 +42,7 @@ public class DeviceConfigurationCollectionWithReferencesRequestBuilder extends B
         return buildRequest(getOptions());
     }
 
-    public IDeviceConfigurationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceConfigurationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,13 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
+import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
@@ -12,10 +18,9 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
-import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -39,7 +44,7 @@ public interface IIosLobAppProvisioningConfigurationRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IIosLobAppProvisioningConfigurationRequest instance
      */
-    IIosLobAppProvisioningConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosLobAppProvisioningConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments();

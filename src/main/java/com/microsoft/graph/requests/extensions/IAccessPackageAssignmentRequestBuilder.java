@@ -3,15 +3,21 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AccessPackageAssignment;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +41,7 @@ public interface IAccessPackageAssignmentRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IAccessPackageAssignmentRequest instance
      */
-    IAccessPackageAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAccessPackageAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

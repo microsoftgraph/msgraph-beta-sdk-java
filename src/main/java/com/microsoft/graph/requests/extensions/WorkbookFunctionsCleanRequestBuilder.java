@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCleanRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsCleanRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param text the text
      */
-    public WorkbookFunctionsCleanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
+    public WorkbookFunctionsCleanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsCleanRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCleanRequest instance
      */
-    public IWorkbookFunctionsCleanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsCleanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCleanRequest request = new WorkbookFunctionsCleanRequest(
                 getRequestUrl(),
                 getClient(),

@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBeta_InvRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -33,7 +31,7 @@ public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBu
      * @param a the a
      * @param b the b
      */
-    public WorkbookFunctionsBeta_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
+    public WorkbookFunctionsBeta_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("probability", probability);
         bodyParams.put("alpha", alpha);
@@ -57,7 +55,7 @@ public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBeta_InvRequest instance
      */
-    public IWorkbookFunctionsBeta_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsBeta_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBeta_InvRequest request = new WorkbookFunctionsBeta_InvRequest(
                 getRequestUrl(),
                 getClient(),

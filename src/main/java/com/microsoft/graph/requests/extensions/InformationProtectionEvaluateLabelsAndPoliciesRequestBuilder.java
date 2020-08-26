@@ -5,15 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInformationProtectionEvaluateLabelsAndPoliciesRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionEvaluateLabelsAndPoliciesRequest;
-import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
-import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
-import com.microsoft.graph.models.extensions.TextClassificationRequest;
-
+import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;import com.microsoft.graph.models.extensions.TextClassificationRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -34,7 +29,7 @@ public class InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder extend
      * @param evaluateDataLossPreventionPolicies the evaluateDataLossPreventionPolicies
      * @param classifyText the classifyText
      */
-    public InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final EvaluateSensitivityLabelsRequest evaluateSensitivityLabels, final DlpEvaluatePoliciesRequest evaluateDataLossPreventionPolicies, final TextClassificationRequest classifyText) {
+    public InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final EvaluateSensitivityLabelsRequest evaluateSensitivityLabels, final DlpEvaluatePoliciesRequest evaluateDataLossPreventionPolicies, final TextClassificationRequest classifyText) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("evaluateSensitivityLabels", evaluateSensitivityLabels);
         bodyParams.put("evaluateDataLossPreventionPolicies", evaluateDataLossPreventionPolicies);
@@ -56,7 +51,7 @@ public class InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IInformationProtectionEvaluateLabelsAndPoliciesRequest instance
      */
-    public IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         InformationProtectionEvaluateLabelsAndPoliciesRequest request = new InformationProtectionEvaluateLabelsAndPoliciesRequest(
                 getRequestUrl(),
                 getClient(),

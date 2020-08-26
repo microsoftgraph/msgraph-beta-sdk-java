@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +34,7 @@ public class IdentityProviderCollectionWithReferencesRequest extends BaseCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IdentityProviderCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IIdentityProviderCollectionPage.class);
     }
 
@@ -55,17 +58,17 @@ public class IdentityProviderCollectionWithReferencesRequest extends BaseCollect
     }
 
     public IIdentityProviderCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IdentityProviderCollectionWithReferencesRequest)this;
     }
 
     public IIdentityProviderCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IdentityProviderCollectionWithReferencesRequest)this;
     }
 
     public IIdentityProviderCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (IdentityProviderCollectionWithReferencesRequest)this;
     }
 

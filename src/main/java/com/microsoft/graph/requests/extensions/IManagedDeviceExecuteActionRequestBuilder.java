@@ -28,5 +28,5 @@ public interface IManagedDeviceExecuteActionRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IManagedDeviceExecuteActionRequest instance
      */
-    IManagedDeviceExecuteActionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceExecuteActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

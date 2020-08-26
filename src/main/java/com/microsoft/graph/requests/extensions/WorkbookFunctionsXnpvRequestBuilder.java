@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsXnpvRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBuilde
      * @param values the values
      * @param dates the dates
      */
-    public WorkbookFunctionsXnpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates) {
+    public WorkbookFunctionsXnpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("rate", rate);
         bodyParams.put("values", values);
@@ -53,7 +51,7 @@ public class WorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsXnpvRequest instance
      */
-    public IWorkbookFunctionsXnpvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsXnpvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsXnpvRequest request = new WorkbookFunctionsXnpvRequest(
                 getRequestUrl(),
                 getClient(),

@@ -5,16 +5,18 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SensitivityLabel;
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
+import com.microsoft.graph.models.extensions.CurrentLabel;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequest;
-import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
-import com.microsoft.graph.models.extensions.CurrentLabel;
-
 import com.microsoft.graph.requests.extensions.ISensitivityLabelEvaluateRequestBuilder;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.options.Option;
@@ -35,7 +37,7 @@ public class SensitivityLabelCollectionRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SensitivityLabelCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SensitivityLabelCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -43,7 +45,7 @@ public class SensitivityLabelCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public ISensitivityLabelCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISensitivityLabelCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SensitivityLabelCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,18 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosVppAppRequest;
-import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosVppAppRevokeAllLicensesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosVppAppRevokeAllLicensesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosVppAppRevokeUserLicenseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosVppAppRevokeUserLicenseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosVppAppRevokeDeviceLicenseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosVppAppRevokeDeviceLicenseRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosVppApp;
+import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -34,7 +34,7 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder implements IIosV
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosVppAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosVppAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

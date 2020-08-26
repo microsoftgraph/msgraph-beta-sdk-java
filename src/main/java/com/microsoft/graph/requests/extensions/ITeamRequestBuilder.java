@@ -3,33 +3,36 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamRequest;
-import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.KeyValuePair;
+import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
+import com.microsoft.graph.models.generated.TeamVisibilityType;
+import com.microsoft.graph.models.generated.ClonableTeamParts;
+import java.util.EnumSet;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-import com.microsoft.graph.requests.extensions.ITeamSendActivityNotificationRequestBuilder;
-import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.generated.ClonableTeamParts;
-import com.microsoft.graph.requests.extensions.ITeamCloneRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamArchiveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamUnarchiveRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -53,7 +56,7 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamRequest instance
      */
-    ITeamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

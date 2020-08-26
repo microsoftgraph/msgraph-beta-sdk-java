@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.UserExportDeviceAndAppManagementD
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -28,7 +26,7 @@ public class UserExportDeviceAndAppManagementDataRequestBuilder extends BaseFunc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExportDeviceAndAppManagementDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserExportDeviceAndAppManagementDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -40,10 +38,10 @@ public class UserExportDeviceAndAppManagementDataRequestBuilder extends BaseFunc
      * @param skip the skip
      * @param top the top
      */
-    public UserExportDeviceAndAppManagementDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer skip, final Integer top) {
+    public UserExportDeviceAndAppManagementDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Integer skip, final Integer top) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("skip", skip));
-        functionOptions.add(new FunctionOption("top", top));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("skip", skip));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("top", top));
     }
 
     /**
@@ -61,14 +59,14 @@ public class UserExportDeviceAndAppManagementDataRequestBuilder extends BaseFunc
      * @param requestOptions the options for the request
      * @return the IUserExportDeviceAndAppManagementDataRequest instance
      */
-    public IUserExportDeviceAndAppManagementDataRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserExportDeviceAndAppManagementDataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserExportDeviceAndAppManagementDataRequest request = new UserExportDeviceAndAppManagementDataRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

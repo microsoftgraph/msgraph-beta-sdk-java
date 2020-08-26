@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityUpd
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -32,7 +30,7 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder 
      * @param groupTag the groupTag
      * @param displayName the displayName
      */
-    public WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String userPrincipalName, final String addressableUserName, final String groupTag, final String displayName) {
+    public WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String userPrincipalName, final String addressableUserName, final String groupTag, final String displayName) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("userPrincipalName", userPrincipalName);
         bodyParams.put("addressableUserName", addressableUserName);
@@ -55,7 +53,7 @@ public class WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest request = new WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest(
                 getRequestUrl(),
                 getClient(),

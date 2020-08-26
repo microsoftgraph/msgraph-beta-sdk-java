@@ -3,20 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryDefinitionRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SynchronizationSchema;
 import com.microsoft.graph.models.extensions.ExpressionInputObject;
 import com.microsoft.graph.models.extensions.AttributeDefinition;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaParseExpressionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SynchronizationSchemaParseExpressionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaFunctionsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SynchronizationSchemaFunctionsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaFilterOperatorsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SynchronizationSchemaFilterOperatorsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryDefinitionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,7 +36,7 @@ public class SynchronizationSchemaRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SynchronizationSchemaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SynchronizationSchemaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

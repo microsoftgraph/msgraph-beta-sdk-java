@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamworkRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Teamwork;
 import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkforceIntegrationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder implements ITeamw
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TeamworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

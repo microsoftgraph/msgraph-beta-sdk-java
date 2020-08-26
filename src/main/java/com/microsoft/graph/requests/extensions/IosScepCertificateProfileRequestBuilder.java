@@ -3,14 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IIosScepCertificateProfileRequest;
-import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IosScepCertificateProfile;
+import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,7 +36,7 @@ public class IosScepCertificateProfileRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosScepCertificateProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosScepCertificateProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

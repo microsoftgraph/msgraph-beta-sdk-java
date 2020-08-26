@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsDomainJoinConfiguration;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
+import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +38,7 @@ public class DeviceConfigurationCollectionWithReferencesRequest extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationCollectionResponse.class, IDeviceConfigurationCollectionPage.class);
     }
 
@@ -55,17 +62,17 @@ public class DeviceConfigurationCollectionWithReferencesRequest extends BaseColl
     }
 
     public IDeviceConfigurationCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceConfigurationCollectionWithReferencesRequest)this;
     }
 
     public IDeviceConfigurationCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceConfigurationCollectionWithReferencesRequest)this;
     }
 
     public IDeviceConfigurationCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceConfigurationCollectionWithReferencesRequest)this;
     }
 

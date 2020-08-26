@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsDomainJoinConfiguration;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
+import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -20,5 +27,5 @@ public interface IDeviceConfigurationCollectionReferenceRequestBuilder extends I
 
     IDeviceConfigurationCollectionReferenceRequest buildRequest();
 
-    IDeviceConfigurationCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @param date the date
      */
-    public ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.microsoft.graph.models.extensions.DateOnly date) {
         super(requestUrl, client, requestOptions);
      	 if(date!=null){
-			functionOptions.add(new FunctionOption("date", date));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("date", date));
 		}
       }
     /**
@@ -47,10 +49,10 @@ public class ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @param period the period
      */
-    public ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String period) {
+    public ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String period) {
         super(requestUrl, client, requestOptions);
      	 if(period!=null){
-			functionOptions.add(new FunctionOption("period", period));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
 
@@ -58,14 +60,14 @@ public class ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder ext
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetOneDriveActivityUserDetailCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetOneDriveActivityUserDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOneDriveActivityUserDetailCollectionRequest request = new ReportRootGetOneDriveActivityUserDetailCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

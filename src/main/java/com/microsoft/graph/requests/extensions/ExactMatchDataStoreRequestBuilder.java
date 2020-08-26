@@ -3,14 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequest;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchDataStoreLookupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExactMatchDataStoreLookupCollectionRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExactMatchDataStore;
+import com.microsoft.graph.requests.extensions.IExactMatchSessionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExactMatchSessionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExactMatchSessionRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,7 +34,7 @@ public class ExactMatchDataStoreRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchDataStoreRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ExactMatchDataStoreRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

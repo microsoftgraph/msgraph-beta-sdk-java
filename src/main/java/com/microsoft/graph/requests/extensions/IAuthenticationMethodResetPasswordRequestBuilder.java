@@ -28,5 +28,5 @@ public interface IAuthenticationMethodResetPasswordRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IAuthenticationMethodResetPasswordRequest instance
      */
-    IAuthenticationMethodResetPasswordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAuthenticationMethodResetPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

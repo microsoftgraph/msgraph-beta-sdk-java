@@ -4,11 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;import com.microsoft.graph.models.extensions.ItemBody;import com.microsoft.graph.models.extensions.KeyValuePair;import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

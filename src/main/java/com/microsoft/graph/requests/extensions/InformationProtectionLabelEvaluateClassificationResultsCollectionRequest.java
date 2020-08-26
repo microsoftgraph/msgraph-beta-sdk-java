@@ -5,7 +5,11 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.ClassificationResult;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -14,9 +18,6 @@ import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluat
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateClassificationResultsCollectionResponse;
 import com.microsoft.graph.models.extensions.InformationProtectionLabelEvaluateClassificationResultsBody;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.ClassificationResult;
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
@@ -43,7 +44,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionLabelEvaluateClassificationResultsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public InformationProtectionLabelEvaluateClassificationResultsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InformationProtectionLabelEvaluateClassificationResultsCollectionResponse.class, IInformationProtectionLabelEvaluateClassificationResultsCollectionPage.class);
         body = new InformationProtectionLabelEvaluateClassificationResultsBody();
     }
@@ -88,7 +89,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsCollectionRe
      * @return the updated request
      */
     public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest)this;
     }
 
@@ -99,7 +100,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsCollectionRe
      * @return the updated request
      */
     public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest)this;
     }
 
@@ -110,7 +111,7 @@ public class InformationProtectionLabelEvaluateClassificationResultsCollectionRe
      * @return the updated request
      */
     public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IInformationProtectionLabelEvaluateClassificationResultsCollectionRequest)this;
     }
 

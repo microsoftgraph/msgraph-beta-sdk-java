@@ -28,5 +28,5 @@ public interface ISynchronizationJobValidateCredentialsRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the ISynchronizationJobValidateCredentialsRequest instance
      */
-    ISynchronizationJobValidateCredentialsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISynchronizationJobValidateCredentialsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

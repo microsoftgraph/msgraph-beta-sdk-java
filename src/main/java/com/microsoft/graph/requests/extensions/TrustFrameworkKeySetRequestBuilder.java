@@ -3,18 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequest;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetGenerateKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetGenerateKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadSecretRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetUploadSecretRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetUploadCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetUploadPkcs12RequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetUploadPkcs12RequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetGetActiveKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetGetActiveKeyRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TrustFrameworkKeySet;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -34,7 +30,7 @@ public class TrustFrameworkKeySetRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkKeySetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TrustFrameworkKeySetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

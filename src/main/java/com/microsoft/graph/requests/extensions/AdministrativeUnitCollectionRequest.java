@@ -5,16 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionPage;
@@ -37,7 +37,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AdministrativeUnitCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdministrativeUnitCollectionResponse.class, IAdministrativeUnitCollectionPage.class);
     }
 
@@ -81,7 +81,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @return the updated request
      */
     public IAdministrativeUnitCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
 
@@ -92,7 +92,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @return the updated request
      */
     public IAdministrativeUnitCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AdministrativeUnitCollectionRequest)this;
     }
 
@@ -103,7 +103,7 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
      * @return the updated request
      */
     public IAdministrativeUnitCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (AdministrativeUnitCollectionRequest)this;
     }
 

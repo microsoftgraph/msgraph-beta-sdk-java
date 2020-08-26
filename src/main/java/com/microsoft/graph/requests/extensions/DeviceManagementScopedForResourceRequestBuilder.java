@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.DeviceManagementScopedForResource
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 
@@ -29,9 +27,9 @@ public class DeviceManagementScopedForResourceRequestBuilder extends BaseFunctio
      * @param requestOptions the options for this request
      * @param resource the resource
      */
-    public DeviceManagementScopedForResourceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String resource) {
+    public DeviceManagementScopedForResourceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String resource) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("resource", resource));
+        functionOptions.add(new com.microsoft.graph.options.FunctionOption("resource", resource));
     }
 
     /**
@@ -49,14 +47,14 @@ public class DeviceManagementScopedForResourceRequestBuilder extends BaseFunctio
      * @param requestOptions the options for the request
      * @return the IDeviceManagementScopedForResourceRequest instance
      */
-    public IDeviceManagementScopedForResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementScopedForResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementScopedForResourceRequest request = new DeviceManagementScopedForResourceRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

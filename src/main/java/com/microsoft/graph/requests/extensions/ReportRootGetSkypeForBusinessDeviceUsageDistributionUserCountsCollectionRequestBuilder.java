@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsColle
      * @param requestOptions the options for this request
      * @param period the period
      */
-    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String period) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String period) {
         super(requestUrl, client, requestOptions);
      	 if(period!=null){
-			functionOptions.add(new FunctionOption("period", period));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
 
@@ -44,14 +46,14 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsColle
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequest request = new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class DeviceManagementTemplateCompareCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param templateId the templateId
      */
-    public DeviceManagementTemplateCompareCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String templateId) {
+    public DeviceManagementTemplateCompareCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String templateId) {
         super(requestUrl, client, requestOptions);
      	 if(templateId!=null){
-			functionOptions.add(new FunctionOption("templateId", templateId));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("templateId", templateId));
 		}
       }
 
@@ -44,14 +46,14 @@ public class DeviceManagementTemplateCompareCollectionRequestBuilder extends Bas
         return buildRequest(getOptions());
     }
 
-    public IDeviceManagementTemplateCompareCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementTemplateCompareCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementTemplateCompareCollectionRequest request = new DeviceManagementTemplateCompareCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

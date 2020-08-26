@@ -3,15 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookTaskRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookTask;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskCompleteCollectionRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -35,7 +40,7 @@ public interface IOutlookTaskRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOutlookTaskRequest instance
      */
-    IOutlookTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOutlookTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

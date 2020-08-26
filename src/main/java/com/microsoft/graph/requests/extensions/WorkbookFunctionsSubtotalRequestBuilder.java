@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsSubtotalRequest;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +28,7 @@ public class WorkbookFunctionsSubtotalRequestBuilder extends BaseActionRequestBu
      * @param functionNum the functionNum
      * @param values the values
      */
-    public WorkbookFunctionsSubtotalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement functionNum, final com.google.gson.JsonElement values) {
+    public WorkbookFunctionsSubtotalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement functionNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("functionNum", functionNum);
         bodyParams.put("values", values);
@@ -51,7 +49,7 @@ public class WorkbookFunctionsSubtotalRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSubtotalRequest instance
      */
-    public IWorkbookFunctionsSubtotalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsSubtotalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSubtotalRequest request = new WorkbookFunctionsSubtotalRequest(
                 getRequestUrl(),
                 getClient(),

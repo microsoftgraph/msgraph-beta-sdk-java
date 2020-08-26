@@ -3,12 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionRequest;
-import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionCancelRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionCommitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionRenewRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExactMatchSession;
+import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +35,7 @@ public interface IExactMatchSessionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IExactMatchSessionRequest instance
      */
-    IExactMatchSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IExactMatchSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

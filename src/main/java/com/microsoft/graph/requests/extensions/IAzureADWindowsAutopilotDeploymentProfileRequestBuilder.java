@@ -3,12 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAzureADWindowsAutopilotDeploymentProfileRequest;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AzureADWindowsAutopilotDeploymentProfile;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -32,7 +34,7 @@ public interface IAzureADWindowsAutopilotDeploymentProfileRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IAzureADWindowsAutopilotDeploymentProfileRequest instance
      */
-    IAzureADWindowsAutopilotDeploymentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAzureADWindowsAutopilotDeploymentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices();

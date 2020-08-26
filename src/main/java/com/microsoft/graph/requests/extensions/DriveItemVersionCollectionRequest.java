@@ -5,16 +5,17 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DriveItem;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionPage;
@@ -37,7 +38,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemVersionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class, IDriveItemVersionCollectionPage.class);
     }
 
@@ -81,7 +82,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @return the updated request
      */
     public IDriveItemVersionCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemVersionCollectionRequest)this;
     }
 
@@ -92,7 +93,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @return the updated request
      */
     public IDriveItemVersionCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemVersionCollectionRequest)this;
     }
 
@@ -103,7 +104,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      * @return the updated request
      */
     public IDriveItemVersionCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DriveItemVersionCollectionRequest)this;
     }
 

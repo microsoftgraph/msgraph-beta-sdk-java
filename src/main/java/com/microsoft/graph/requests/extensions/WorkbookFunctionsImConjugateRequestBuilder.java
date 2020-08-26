@@ -9,8 +9,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsImConjugateReque
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -29,7 +27,7 @@ public class WorkbookFunctionsImConjugateRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param inumber the inumber
      */
-    public WorkbookFunctionsImConjugateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
+    public WorkbookFunctionsImConjugateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("inumber", inumber);
     }
@@ -49,7 +47,7 @@ public class WorkbookFunctionsImConjugateRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImConjugateRequest instance
      */
-    public IWorkbookFunctionsImConjugateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionsImConjugateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImConjugateRequest request = new WorkbookFunctionsImConjugateRequest(
                 getRequestUrl(),
                 getClient(),

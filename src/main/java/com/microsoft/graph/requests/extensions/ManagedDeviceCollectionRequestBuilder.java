@@ -5,15 +5,21 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
+import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequest;
-import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
-
 import com.microsoft.graph.requests.extensions.IManagedDeviceExecuteActionRequestBuilder;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.options.Option;
@@ -34,7 +40,7 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +48,7 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder im
         return buildRequest(getOptions());
     }
 
-    public IManagedDeviceCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

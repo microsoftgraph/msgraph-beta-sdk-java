@@ -28,5 +28,5 @@ public interface IParticipantMuteAllRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IParticipantMuteAllRequest instance
      */
-    IParticipantMuteAllRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IParticipantMuteAllRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

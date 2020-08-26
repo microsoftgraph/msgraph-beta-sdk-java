@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobRestartRequest;
 import com.microsoft.graph.requests.extensions.SynchronizationJobRestartRequest;
 import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -30,7 +27,7 @@ public class SynchronizationJobRestartRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param criteria the criteria
      */
-    public SynchronizationJobRestartRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final SynchronizationJobRestartCriteria criteria) {
+    public SynchronizationJobRestartRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final SynchronizationJobRestartCriteria criteria) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("criteria", criteria);
     }
@@ -50,7 +47,7 @@ public class SynchronizationJobRestartRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return the ISynchronizationJobRestartRequest instance
      */
-    public ISynchronizationJobRestartRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISynchronizationJobRestartRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SynchronizationJobRestartRequest request = new SynchronizationJobRestartRequest(
                 getRequestUrl(),
                 getClient(),

@@ -13,8 +13,6 @@ import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -33,7 +31,7 @@ public class PrinterCreateRequest extends BaseRequest implements IPrinterCreateR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterCreateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrinterCreateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new PrinterCreateBody();
     }
@@ -53,7 +51,7 @@ public class PrinterCreateRequest extends BaseRequest implements IPrinterCreateR
      * @return the updated request
      */
     public IPrinterCreateRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PrinterCreateRequest)this;
     }
 
@@ -64,7 +62,7 @@ public class PrinterCreateRequest extends BaseRequest implements IPrinterCreateR
      * @return the updated request
      */
     public IPrinterCreateRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (PrinterCreateRequest)this;
     }
 
@@ -75,7 +73,7 @@ public class PrinterCreateRequest extends BaseRequest implements IPrinterCreateR
      * @return the updated request
      */
     public IPrinterCreateRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (PrinterCreateRequest)this;
     }
 

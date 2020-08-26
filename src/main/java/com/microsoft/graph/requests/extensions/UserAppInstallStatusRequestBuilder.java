@@ -3,14 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequest;
-import com.microsoft.graph.requests.extensions.IMobileAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UserAppInstallStatus;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,7 +36,7 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserAppInstallStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserAppInstallStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -3,22 +3,28 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IExternalConnectionRequest;
-import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
-import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ExternalConnection;
 import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,7 +44,7 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalConnectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ExternalConnectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

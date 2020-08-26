@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemCopyRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCopyRequest;
 import com.microsoft.graph.models.extensions.ItemReference;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder implem
      * @param name the name
      * @param parentReference the parentReference
      */
-    public DriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final ItemReference parentReference) {
+    public DriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String name, final ItemReference parentReference) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("name", name);
         bodyParams.put("parentReference", parentReference);
@@ -52,7 +49,7 @@ public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder implem
      * @param requestOptions the options for the request
      * @return the IDriveItemCopyRequest instance
      */
-    public IDriveItemCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemCopyRequest request = new DriveItemCopyRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileRequest;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkEnrollmentProfileCreateTokenRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidForWorkEnrollmentProfile;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +34,7 @@ public interface IAndroidForWorkEnrollmentProfileRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IAndroidForWorkEnrollmentProfileRequest instance
      */
-    IAndroidForWorkEnrollmentProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidForWorkEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder revokeToken();
     IAndroidForWorkEnrollmentProfileCreateTokenRequestBuilder createToken(final Integer tokenValidityInSeconds);

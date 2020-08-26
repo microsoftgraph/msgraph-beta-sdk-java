@@ -28,5 +28,5 @@ public interface IDeviceManagementReportsGetHistoricalReportRequestBuilder exten
      * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetHistoricalReportRequest instance
      */
-    IDeviceManagementReportsGetHistoricalReportRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementReportsGetHistoricalReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

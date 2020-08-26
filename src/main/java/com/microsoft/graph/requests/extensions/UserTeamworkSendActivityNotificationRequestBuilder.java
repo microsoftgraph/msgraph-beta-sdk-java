@@ -5,15 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserTeamworkSendActivityNotificationRequest;
 import com.microsoft.graph.requests.extensions.UserTeamworkSendActivityNotificationRequest;
-import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.extensions.KeyValuePair;
-
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;import com.microsoft.graph.models.extensions.ItemBody;import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -36,7 +31,7 @@ public class UserTeamworkSendActivityNotificationRequestBuilder extends BaseActi
      * @param previewText the previewText
      * @param templateParameters the templateParameters
      */
-    public UserTeamworkSendActivityNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters) {
+    public UserTeamworkSendActivityNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("topic", topic);
         bodyParams.put("activityType", activityType);
@@ -60,7 +55,7 @@ public class UserTeamworkSendActivityNotificationRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return the IUserTeamworkSendActivityNotificationRequest instance
      */
-    public IUserTeamworkSendActivityNotificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserTeamworkSendActivityNotificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserTeamworkSendActivityNotificationRequest request = new UserTeamworkSendActivityNotificationRequest(
                 getRequestUrl(),
                 getClient(),

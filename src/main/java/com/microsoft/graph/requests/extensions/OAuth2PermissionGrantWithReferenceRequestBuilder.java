@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -27,7 +30,7 @@ public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OAuth2PermissionGrantWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +49,7 @@ public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IOAuth2PermissionGrantWithReferenceRequest instance
      */
-    public IOAuth2PermissionGrantWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOAuth2PermissionGrantWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

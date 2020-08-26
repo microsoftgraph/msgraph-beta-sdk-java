@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,16 +37,16 @@ public class ReportRootGetOverallPrintUsageSummaryCollectionRequestBuilder exten
      * @param periodEnd the periodEnd
      * @param topListsSize the topListsSize
      */
-    public ReportRootGetOverallPrintUsageSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.Calendar periodStart, final java.util.Calendar periodEnd, final Integer topListsSize) {
+    public ReportRootGetOverallPrintUsageSummaryCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.Calendar periodStart, final java.util.Calendar periodEnd, final Integer topListsSize) {
         super(requestUrl, client, requestOptions);
      	 if(periodStart!=null){
-			functionOptions.add(new FunctionOption("periodStart", periodStart));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodStart", periodStart));
 		}
        	 if(periodEnd!=null){
-			functionOptions.add(new FunctionOption("periodEnd", periodEnd));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodEnd", periodEnd));
 		}
        	 if(topListsSize!=null){
-			functionOptions.add(new FunctionOption("topListsSize", topListsSize));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("topListsSize", topListsSize));
 		}
       }
 
@@ -52,14 +54,14 @@ public class ReportRootGetOverallPrintUsageSummaryCollectionRequestBuilder exten
         return buildRequest(getOptions());
     }
 
-    public IReportRootGetOverallPrintUsageSummaryCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportRootGetOverallPrintUsageSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOverallPrintUsageSummaryCollectionRequest request = new ReportRootGetOverallPrintUsageSummaryCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

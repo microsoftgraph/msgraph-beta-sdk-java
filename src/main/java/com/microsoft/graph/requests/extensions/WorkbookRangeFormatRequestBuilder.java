@@ -3,10 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillRequestBuilder;
@@ -14,11 +18,9 @@ import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFormatProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatAutofitColumnsRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeFormatAutofitColumnsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatAutofitRowsRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeFormatAutofitRowsRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,7 +40,7 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookRangeFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

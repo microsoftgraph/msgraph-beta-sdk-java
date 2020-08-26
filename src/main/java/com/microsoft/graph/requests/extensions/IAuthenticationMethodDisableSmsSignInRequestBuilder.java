@@ -28,5 +28,5 @@ public interface IAuthenticationMethodDisableSmsSignInRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IAuthenticationMethodDisableSmsSignInRequest instance
      */
-    IAuthenticationMethodDisableSmsSignInRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAuthenticationMethodDisableSmsSignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

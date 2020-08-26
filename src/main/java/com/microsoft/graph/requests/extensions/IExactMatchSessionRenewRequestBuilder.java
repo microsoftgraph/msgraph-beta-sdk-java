@@ -28,5 +28,5 @@ public interface IExactMatchSessionRenewRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IExactMatchSessionRenewRequest instance
      */
-    IExactMatchSessionRenewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IExactMatchSessionRenewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

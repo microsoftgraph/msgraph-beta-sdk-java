@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEdiscoveryRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Ediscovery;
 import com.microsoft.graph.requests.extensions.IEdiscoveryCaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EdiscoveryCaseRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EdiscoveryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EdiscoveryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

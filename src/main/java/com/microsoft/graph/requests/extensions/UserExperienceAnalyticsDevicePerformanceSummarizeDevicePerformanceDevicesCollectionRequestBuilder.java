@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -13,8 +16,6 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePer
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
-import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
-
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,10 +36,10 @@ public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceD
      * @param requestOptions the options for this request
      * @param summarizeBy the summarizeBy
      */
-    public UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final UserExperienceAnalyticsSummarizedBy summarizeBy) {
+    public UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final UserExperienceAnalyticsSummarizedBy summarizeBy) {
         super(requestUrl, client, requestOptions);
      	 if(summarizeBy!=null){
-			functionOptions.add(new FunctionOption("summarizeBy", summarizeBy));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("summarizeBy", summarizeBy));
 		}
       }
 
@@ -46,14 +47,14 @@ public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceD
         return buildRequest(getOptions());
     }
 
-    public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest request = new UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

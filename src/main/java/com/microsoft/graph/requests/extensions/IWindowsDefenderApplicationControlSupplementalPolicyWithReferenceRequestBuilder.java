@@ -5,7 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicy;
+import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +40,7 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyWithReferen
      * @param requestOptions the options for this request
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest instance
      */
-    IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsDefenderApplicationControlSupplementalPolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsDefenderApplicationControlSupplementalPolicyReferenceRequestBuilder reference();
 

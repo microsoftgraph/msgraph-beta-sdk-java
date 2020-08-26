@@ -6,12 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest;
 import com.microsoft.graph.models.extensions.Credential;
-
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.FunctionOption;
 import com.google.gson.JsonElement;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 
@@ -31,7 +28,7 @@ public class ServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder
      * @param id the id
      * @param credentials the credentials
      */
-    public ServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final java.util.List<Credential> credentials) {
+    public ServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String id, final java.util.List<Credential> credentials) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("id", id);
         bodyParams.put("credentials", credentials);
@@ -52,7 +49,7 @@ public class ServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder
      * @param requestOptions the options for the request
      * @return the IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest instance
      */
-    public IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest request = new ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest(
                 getRequestUrl(),
                 getClient(),

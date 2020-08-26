@@ -3,47 +3,43 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApplicationRequest;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorGroupWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationLogoStreamRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationLogoStreamRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.requests.extensions.IApplicationAddKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationAddKeyRequestBuilder;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.requests.extensions.IApplicationAddPasswordRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationAddPasswordRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationRemoveKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationRemoveKeyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationRemovePasswordRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApplicationRemovePasswordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -63,7 +59,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ApplicationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

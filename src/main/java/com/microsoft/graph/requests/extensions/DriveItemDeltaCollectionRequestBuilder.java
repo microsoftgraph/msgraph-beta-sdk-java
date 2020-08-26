@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,10 +35,10 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param requestOptions the options for this request
      * @param token the token
      */
-    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String token) {
+    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String token) {
         super(requestUrl, client, requestOptions);
      	 if(token!=null){
-			functionOptions.add(new FunctionOption("token", token));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("token", token));
 		}
       }
     /**
@@ -46,7 +48,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -54,14 +56,14 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
         return buildRequest(getOptions());
     }
 
-    public IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemDeltaCollectionRequest request = new DriveItemDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

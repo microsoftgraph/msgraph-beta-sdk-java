@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +34,7 @@ public class UserFindRoomsCollectionRequestBuilder extends BaseFunctionRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserFindRoomsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserFindRoomsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -43,10 +45,10 @@ public class UserFindRoomsCollectionRequestBuilder extends BaseFunctionRequestBu
      * @param requestOptions the options for this request
      * @param roomList the roomList
      */
-    public UserFindRoomsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String roomList) {
+    public UserFindRoomsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String roomList) {
         super(requestUrl, client, requestOptions);
      	 if(roomList!=null){
-			functionOptions.add(new FunctionOption("roomList", roomList));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("roomList", roomList));
 		}
       }
 
@@ -54,14 +56,14 @@ public class UserFindRoomsCollectionRequestBuilder extends BaseFunctionRequestBu
         return buildRequest(getOptions());
     }
 
-    public IUserFindRoomsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserFindRoomsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserFindRoomsCollectionRequest request = new UserFindRoomsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

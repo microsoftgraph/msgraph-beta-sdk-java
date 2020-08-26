@@ -28,5 +28,5 @@ public interface IChangeTrackedEntityStageForDeletionRequestBuilder extends IReq
      * @param requestOptions the options for the request
      * @return the IChangeTrackedEntityStageForDeletionRequest instance
      */
-    IChangeTrackedEntityStageForDeletionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IChangeTrackedEntityStageForDeletionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

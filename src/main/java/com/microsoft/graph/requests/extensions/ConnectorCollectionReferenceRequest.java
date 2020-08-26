@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConnectorGroup;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +35,7 @@ public class ConnectorCollectionReferenceRequest extends BaseCollectionRequest<C
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConnectorCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConnectorCollectionResponse.class, IConnectorCollectionPage.class);
     }
 
@@ -58,7 +61,7 @@ public class ConnectorCollectionReferenceRequest extends BaseCollectionRequest<C
      * @return the updated request
      */
     public IConnectorCollectionReferenceRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ConnectorCollectionReferenceRequest)this;
     }
 
@@ -69,7 +72,7 @@ public class ConnectorCollectionReferenceRequest extends BaseCollectionRequest<C
      * @return the updated request
      */
     public IConnectorCollectionReferenceRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ConnectorCollectionReferenceRequest)this;
     }
 
@@ -80,7 +83,7 @@ public class ConnectorCollectionReferenceRequest extends BaseCollectionRequest<C
      * @return the updated request
      */
     public IConnectorCollectionReferenceRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ConnectorCollectionReferenceRequest)this;
     }
 }

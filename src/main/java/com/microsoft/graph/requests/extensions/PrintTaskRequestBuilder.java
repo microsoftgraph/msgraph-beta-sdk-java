@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPrintTaskRequest;
-import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintTaskDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskTriggerWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintTaskTriggerWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrintTask;
+import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -28,7 +34,7 @@ public class PrintTaskRequestBuilder extends BaseRequestBuilder implements IPrin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintTaskRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PrintTaskRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

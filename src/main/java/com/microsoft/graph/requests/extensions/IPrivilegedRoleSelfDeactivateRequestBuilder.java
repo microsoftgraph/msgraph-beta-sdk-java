@@ -28,5 +28,5 @@ public interface IPrivilegedRoleSelfDeactivateRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IPrivilegedRoleSelfDeactivateRequest instance
      */
-    IPrivilegedRoleSelfDeactivateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPrivilegedRoleSelfDeactivateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

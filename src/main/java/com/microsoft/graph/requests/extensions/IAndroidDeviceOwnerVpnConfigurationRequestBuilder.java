@@ -3,10 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerVpnConfigurationRequest;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerVpnConfiguration;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -30,7 +36,7 @@ public interface IAndroidDeviceOwnerVpnConfigurationRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerVpnConfigurationRequest instance
      */
-    IAndroidDeviceOwnerVpnConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidDeviceOwnerVpnConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

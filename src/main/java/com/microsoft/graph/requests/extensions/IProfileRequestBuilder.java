@@ -3,7 +3,11 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IProfileRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Profile;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserAccountInformationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequestBuilder;
@@ -43,6 +47,8 @@ import com.microsoft.graph.requests.extensions.IWebAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonWebsiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonWebsiteRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -66,7 +72,7 @@ public interface IProfileRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IProfileRequest instance
      */
-    IProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IUserAccountInformationCollectionRequestBuilder account();

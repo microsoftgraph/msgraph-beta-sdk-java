@@ -3,21 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IListRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -41,7 +45,7 @@ public interface IListRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IListRequest instance
      */
-    IListRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IItemActivityOLDCollectionRequestBuilder activities();

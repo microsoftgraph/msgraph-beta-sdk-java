@@ -5,7 +5,14 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleDefinition;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -32,7 +39,7 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public RoleDefinitionReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
@@ -51,7 +58,7 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @return the updated request
      */
     public IRoleDefinitionReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RoleDefinitionReferenceRequest)this;
     }
 
@@ -62,7 +69,7 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @return the updated request
      */
     public IRoleDefinitionReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleDefinitionReferenceRequest)this;
     }
     /**

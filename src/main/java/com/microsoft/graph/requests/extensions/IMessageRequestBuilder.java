@@ -3,7 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -14,25 +26,9 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageCreateReplyRequestBuilder;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageCreateReplyAllRequestBuilder;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageCreateForwardRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageSendRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCopyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageMoveRequestBuilder;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageReplyRequestBuilder;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageReplyAllRequestBuilder;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageForwardRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageUnsubscribeRequestBuilder;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
@@ -56,7 +52,7 @@ public interface IMessageRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMessageRequest instance
      */
-    IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
