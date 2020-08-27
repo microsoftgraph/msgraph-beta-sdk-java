@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.ClassificationResult;
 
@@ -17,9 +18,6 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvalua
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateClassificationResultsCollectionPage;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateClassificationResultsCollectionResponse;
 import com.microsoft.graph.models.extensions.InformationProtectionLabelEvaluateClassificationResultsBody;
-import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

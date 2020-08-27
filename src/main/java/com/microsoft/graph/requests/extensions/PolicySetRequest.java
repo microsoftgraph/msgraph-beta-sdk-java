@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicySet;
 import com.microsoft.graph.models.extensions.PolicySetItem;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
+import com.microsoft.graph.models.extensions.PolicySet;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetAssignmentCollectionRequestBuilder;

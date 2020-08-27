@@ -8,7 +8,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Call;
+import com.microsoft.graph.models.extensions.Participant;
+import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.extensions.MuteParticipantsOperation;
+import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +21,6 @@ import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IParticipantCollectionRequest;
 import com.microsoft.graph.requests.extensions.IParticipantInviteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IParticipantMuteAllRequestBuilder;
-import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

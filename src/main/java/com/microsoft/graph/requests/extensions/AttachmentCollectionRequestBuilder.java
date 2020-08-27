@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.Attachment;
+import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 
 import java.util.Arrays;
@@ -17,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAttachmentCreateUploadSessionRequestBuilder;
-import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

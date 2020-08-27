@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
+import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequest;
-import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

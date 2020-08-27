@@ -9,13 +9,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 
 import com.microsoft.graph.models.extensions.TimeOffRequest;import com.microsoft.graph.models.extensions.Schedule;
+import com.microsoft.graph.models.extensions.TimeOffRequest;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequest;
-import com.microsoft.graph.models.extensions.TimeOffRequest;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

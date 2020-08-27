@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.DataSharingConsent;
+import com.microsoft.graph.models.extensions.DataSharingConsent;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +19,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.DataSharingConsent;
 import com.microsoft.graph.requests.extensions.IDataSharingConsentCollectionPage;
 import com.microsoft.graph.requests.extensions.DataSharingConsentCollectionResponse;
 import com.microsoft.graph.requests.extensions.IDataSharingConsentCollectionRequestBuilder;

@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DocumentComment;
+import com.microsoft.graph.models.extensions.DocumentCommentReply;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IDocumentCommentReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDocumentCommentReplyCollectionRequest;
-import com.microsoft.graph.models.extensions.DocumentCommentReply;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

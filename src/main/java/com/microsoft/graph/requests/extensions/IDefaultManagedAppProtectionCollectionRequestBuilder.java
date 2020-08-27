@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
+import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionCollectionRequest;
-import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

@@ -10,6 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.ResultInfo;
+import com.microsoft.graph.models.extensions.ResultInfo;
 
 import java.util.Arrays;
 import java.util.EnumSet;

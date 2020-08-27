@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ReportRoot;
+import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +18,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionResponse;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollectionRequestBuilder;

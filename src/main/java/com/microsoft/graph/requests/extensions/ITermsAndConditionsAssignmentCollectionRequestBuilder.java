@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
+import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequest;
-import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

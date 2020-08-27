@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BookingBusiness;
+import com.microsoft.graph.models.extensions.BookingAppointment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequest;
-import com.microsoft.graph.models.extensions.BookingAppointment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

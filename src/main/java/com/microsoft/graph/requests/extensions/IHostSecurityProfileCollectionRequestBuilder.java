@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Security;
+import com.microsoft.graph.models.extensions.HostSecurityProfile;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IHostSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHostSecurityProfileCollectionRequest;
-import com.microsoft.graph.models.extensions.HostSecurityProfile;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

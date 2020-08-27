@@ -8,6 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.ManagementConditionStatement;
+import com.microsoft.graph.models.extensions.ManagementConditionExpressionString;
+import com.microsoft.graph.models.extensions.ManagementConditionStatement;
 import com.microsoft.graph.models.generated.DevicePlatformType;
 
 import java.util.Arrays;
@@ -17,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IManagementConditionStatementColl
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequest;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagementConditionStatement;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

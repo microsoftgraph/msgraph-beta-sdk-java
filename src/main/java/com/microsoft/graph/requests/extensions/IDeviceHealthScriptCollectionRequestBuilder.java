@@ -8,7 +8,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.DeviceHealthScript;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
+import com.microsoft.graph.models.extensions.DeviceHealthScriptRemediationHistory;
+import com.microsoft.graph.models.generated.GlobalDeviceHealthScriptState;
+import com.microsoft.graph.models.extensions.DeviceHealthScriptRemediationSummary;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -18,7 +22,6 @@ import com.microsoft.graph.requests.extensions.IDeviceHealthScriptCollectionRequ
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptEnableGlobalScriptsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAreGlobalScriptsAvailableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptGetRemediationSummaryRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceHealthScript;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

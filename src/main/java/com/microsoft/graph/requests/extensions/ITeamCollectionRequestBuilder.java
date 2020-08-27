@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
@@ -14,6 +15,7 @@ import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +23,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequest;
 import com.microsoft.graph.requests.extensions.ITeamAllMessagesCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

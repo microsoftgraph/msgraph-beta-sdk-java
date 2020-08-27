@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCollectionPage;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignCollectionResponse;
-import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;

@@ -8,11 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +25,6 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceExecuteActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

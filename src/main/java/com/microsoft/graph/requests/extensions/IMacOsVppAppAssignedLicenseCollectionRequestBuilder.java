@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOsVppApp;
+import com.microsoft.graph.models.extensions.MacOsVppAppAssignedLicense;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseCollectionRequest;
-import com.microsoft.graph.models.extensions.MacOsVppAppAssignedLicense;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

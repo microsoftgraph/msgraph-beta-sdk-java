@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
 
 import java.util.Arrays;
@@ -19,7 +20,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.requests.extensions.IPostCollectionPage;
 import com.microsoft.graph.requests.extensions.PostCollectionResponse;
 import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;

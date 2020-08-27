@@ -10,6 +10,9 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
+import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
+import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
+import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
@@ -26,8 +29,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.MobileApp;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 

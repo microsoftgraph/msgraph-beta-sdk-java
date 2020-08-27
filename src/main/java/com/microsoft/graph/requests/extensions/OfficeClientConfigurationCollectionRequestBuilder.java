@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeConfiguration;
+import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 
 import java.util.Arrays;
@@ -17,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationCollect
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationUpdatePrioritiesRequestBuilder;
-import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

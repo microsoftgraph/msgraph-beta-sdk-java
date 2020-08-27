@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
+import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.models.extensions.EducationAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +17,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequest;
-import com.microsoft.graph.models.extensions.EducationAssignment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

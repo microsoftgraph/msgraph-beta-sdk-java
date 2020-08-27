@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RiskyUser;
+import com.microsoft.graph.models.extensions.RiskyUserHistoryItem;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +18,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.RiskyUserHistoryItem;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionPage;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequestBuilder;

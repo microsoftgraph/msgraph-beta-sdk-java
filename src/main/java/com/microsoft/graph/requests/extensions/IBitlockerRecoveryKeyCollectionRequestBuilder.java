@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Bitlocker;
+import com.microsoft.graph.models.extensions.BitlockerRecoveryKey;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyCollectionRequest;
-import com.microsoft.graph.models.extensions.BitlockerRecoveryKey;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

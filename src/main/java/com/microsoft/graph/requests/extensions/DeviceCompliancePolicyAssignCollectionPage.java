@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionResponse;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;

@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteSection;
+import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;

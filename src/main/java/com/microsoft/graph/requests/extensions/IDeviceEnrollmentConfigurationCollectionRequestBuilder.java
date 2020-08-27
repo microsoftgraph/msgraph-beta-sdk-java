@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 
 import java.util.Arrays;
@@ -16,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

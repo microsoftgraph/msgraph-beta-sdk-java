@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementAutopilotEvent;
+import com.microsoft.graph.models.extensions.DeviceManagementAutopilotPolicyStatusDetail;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest;
-import com.microsoft.graph.models.extensions.DeviceManagementAutopilotPolicyStatusDetail;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

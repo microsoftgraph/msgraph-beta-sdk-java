@@ -10,6 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
@@ -32,8 +36,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 

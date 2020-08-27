@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
+import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
 import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
 import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;

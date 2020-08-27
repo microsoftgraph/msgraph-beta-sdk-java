@@ -7,13 +7,13 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PayloadResponse;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IPayloadResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPayloadResponseCollectionRequest;
-import com.microsoft.graph.models.extensions.PayloadResponse;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

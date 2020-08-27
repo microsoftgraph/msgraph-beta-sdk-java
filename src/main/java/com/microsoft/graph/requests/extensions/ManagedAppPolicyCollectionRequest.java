@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
+import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 
 import java.util.Arrays;
@@ -18,7 +19,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;

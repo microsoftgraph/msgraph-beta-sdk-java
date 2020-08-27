@@ -15,8 +15,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberObject
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberObjectsBody;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

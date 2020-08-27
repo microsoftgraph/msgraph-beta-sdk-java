@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataClassificationService;
+import com.microsoft.graph.models.extensions.FileClassificationRequest;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequest;
-import com.microsoft.graph.models.extensions.FileClassificationRequest;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
@@ -18,7 +19,6 @@ import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileCollectionRequest;
-import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

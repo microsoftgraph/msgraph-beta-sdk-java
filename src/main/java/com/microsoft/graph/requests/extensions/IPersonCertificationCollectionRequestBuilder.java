@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Profile;
+import com.microsoft.graph.models.extensions.PersonCertification;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IPersonCertificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCertificationCollectionRequest;
-import com.microsoft.graph.models.extensions.PersonCertification;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

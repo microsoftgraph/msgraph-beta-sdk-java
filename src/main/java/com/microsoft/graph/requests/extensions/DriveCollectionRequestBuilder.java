@@ -7,6 +7,10 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.DriveItem;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequest;
-import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

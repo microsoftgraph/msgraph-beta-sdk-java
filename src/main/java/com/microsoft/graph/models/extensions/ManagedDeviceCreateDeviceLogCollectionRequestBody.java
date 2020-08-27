@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

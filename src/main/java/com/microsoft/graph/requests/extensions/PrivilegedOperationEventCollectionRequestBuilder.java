@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedOperationEvent;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventCollectionRequest;
-import com.microsoft.graph.models.extensions.PrivilegedOperationEvent;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

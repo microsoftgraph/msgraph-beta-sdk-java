@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.AttachmentItem;
+import com.microsoft.graph.models.extensions.UploadSession;import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

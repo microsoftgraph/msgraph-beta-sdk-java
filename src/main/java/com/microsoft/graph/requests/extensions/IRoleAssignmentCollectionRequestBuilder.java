@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
+import com.microsoft.graph.models.extensions.RoleAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequest;
-import com.microsoft.graph.models.extensions.RoleAssignment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.IdentityProvider;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionReques
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequest;
 import com.microsoft.graph.requests.extensions.IIdentityProviderAvailableProviderTypesCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.IdentityProvider;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

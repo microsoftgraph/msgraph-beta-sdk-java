@@ -14,8 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IResourceOperationGetScopesForUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceOperationGetScopesForUserCollectionPage;
 import com.microsoft.graph.requests.extensions.ResourceOperationGetScopesForUserCollectionResponse;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

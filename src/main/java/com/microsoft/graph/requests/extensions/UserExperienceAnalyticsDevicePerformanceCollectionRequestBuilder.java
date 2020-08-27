@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
 
 import java.util.Arrays;
@@ -17,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePer
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceCollectionRequest;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

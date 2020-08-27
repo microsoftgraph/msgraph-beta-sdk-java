@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
+import com.microsoft.graph.models.extensions.DeviceAppManagementTask;
 import com.microsoft.graph.models.generated.DeviceAppManagementTaskStatus;
 
 import java.util.Arrays;
@@ -18,7 +19,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.DeviceAppManagementTask;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementTaskCollectionRequestBuilder;

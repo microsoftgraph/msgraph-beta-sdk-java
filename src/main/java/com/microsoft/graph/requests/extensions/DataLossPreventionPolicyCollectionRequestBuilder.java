@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
+import com.microsoft.graph.models.extensions.DataLossPreventionPolicy;
+import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesJobResponse;
 import com.microsoft.graph.models.extensions.DlpEvaluationInput;
 import com.microsoft.graph.models.extensions.DlpNotification;
 
@@ -18,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollecti
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyEvaluateRequestBuilder;
-import com.microsoft.graph.models.extensions.DataLossPreventionPolicy;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

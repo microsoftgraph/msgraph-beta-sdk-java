@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.models.extensions.Endpoint;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequest;
-import com.microsoft.graph.models.extensions.Endpoint;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

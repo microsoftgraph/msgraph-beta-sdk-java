@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentMyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentMyCollectionRequest;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentMyCollectionRequest;
-import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;

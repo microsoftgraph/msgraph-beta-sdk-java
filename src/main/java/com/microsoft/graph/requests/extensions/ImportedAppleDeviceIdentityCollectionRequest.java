@@ -9,6 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepOnboardingSetting;
 import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
+import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentityResult;
+import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -18,7 +20,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequestBuilder;

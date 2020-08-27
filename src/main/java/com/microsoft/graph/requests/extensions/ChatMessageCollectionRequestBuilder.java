@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.models.extensions.ChatMessage;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequest;
 import com.microsoft.graph.requests.extensions.IChatMessageDeltaCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

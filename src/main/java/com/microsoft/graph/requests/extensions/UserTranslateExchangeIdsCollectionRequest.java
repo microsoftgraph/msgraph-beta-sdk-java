@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ConvertIdResult;
 import com.microsoft.graph.models.generated.ExchangeIdFormat;
 
 import java.util.Arrays;
@@ -16,9 +17,6 @@ import com.microsoft.graph.requests.extensions.IUserTranslateExchangeIdsCollecti
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
 import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
-import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

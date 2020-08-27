@@ -10,6 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.models.extensions.Site;
 
 import java.util.Arrays;
 import java.util.EnumSet;

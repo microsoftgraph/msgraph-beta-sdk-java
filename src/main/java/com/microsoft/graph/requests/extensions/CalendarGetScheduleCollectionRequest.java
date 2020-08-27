@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 
 import java.util.Arrays;
@@ -16,9 +17,6 @@ import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionReq
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
 import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
-import com.microsoft.graph.models.extensions.ScheduleInformation;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

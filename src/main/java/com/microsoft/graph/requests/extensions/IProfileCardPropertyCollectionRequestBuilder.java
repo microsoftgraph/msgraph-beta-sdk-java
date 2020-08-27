@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationSettings;
+import com.microsoft.graph.models.extensions.ProfileCardProperty;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequest;
-import com.microsoft.graph.models.extensions.ProfileCardProperty;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

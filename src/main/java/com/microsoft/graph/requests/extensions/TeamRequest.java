@@ -15,6 +15,7 @@ import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;

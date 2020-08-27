@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
+import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;

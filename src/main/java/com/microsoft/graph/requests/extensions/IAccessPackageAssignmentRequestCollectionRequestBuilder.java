@@ -9,6 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;import com.microsoft.graph.models.extensions.AccessPackageAssignment;
+import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
+import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestMyCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

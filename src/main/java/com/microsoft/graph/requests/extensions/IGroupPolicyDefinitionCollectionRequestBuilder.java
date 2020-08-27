@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequest;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

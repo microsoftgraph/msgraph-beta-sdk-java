@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DirectoryObject;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,9 +16,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectGetByIdsCollectio
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObjectGetByIdsBody;
-import com.microsoft.graph.models.extensions.DirectoryObject;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

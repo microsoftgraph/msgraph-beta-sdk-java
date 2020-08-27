@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChart;
+import com.microsoft.graph.models.extensions.WorkbookChartSeries;
+import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +19,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionResponse;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequestBuilder;

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SynchronizationJob;
+import com.microsoft.graph.models.extensions.StringKeyStringValuePair;
 import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
 import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
 import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;

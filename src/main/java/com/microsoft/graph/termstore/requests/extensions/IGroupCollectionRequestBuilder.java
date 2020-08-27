@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Store;
+import com.microsoft.graph.termstore.models.extensions.Group;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IGroupCollectionRequest;
-import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

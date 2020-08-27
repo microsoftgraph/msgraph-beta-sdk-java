@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MailTips;
 import com.microsoft.graph.models.generated.MailTipsType;
 import java.util.EnumSet;
 
@@ -17,9 +18,6 @@ import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequest
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
 import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
-import com.microsoft.graph.models.extensions.MailTips;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

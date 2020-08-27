@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ApprovalWorkflowProvider;
+import com.microsoft.graph.models.extensions.GovernancePolicyTemplate;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +18,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.GovernancePolicyTemplate;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionRequestBuilder;

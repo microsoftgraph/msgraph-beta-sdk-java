@@ -363,7 +363,6 @@ import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.authentication.*;
 import com.microsoft.graph.logger.*;
 import com.google.gson.JsonObject;

@@ -8,13 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.List;
+import com.microsoft.graph.models.extensions.ListItem;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemCollectionRequest;
-import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

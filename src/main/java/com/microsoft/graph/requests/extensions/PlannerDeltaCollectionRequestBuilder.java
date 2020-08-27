@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
+import com.microsoft.graph.models.extensions.PlannerDelta;
+import com.microsoft.graph.models.extensions.PlannerDelta;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaDeltaCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.PlannerDelta;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

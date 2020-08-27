@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RiskyUser;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IRiskyUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequest;
 import com.microsoft.graph.requests.extensions.IRiskyUserDismissRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserConfirmCompromisedRequestBuilder;
-import com.microsoft.graph.models.extensions.RiskyUser;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

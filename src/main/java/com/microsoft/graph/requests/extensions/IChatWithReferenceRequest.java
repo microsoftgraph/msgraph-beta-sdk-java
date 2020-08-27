@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
@@ -23,8 +24,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Chat;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 

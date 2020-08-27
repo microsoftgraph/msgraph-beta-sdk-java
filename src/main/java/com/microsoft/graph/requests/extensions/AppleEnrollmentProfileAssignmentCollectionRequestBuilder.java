@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppleUserInitiatedEnrollmentProfile;
+import com.microsoft.graph.models.extensions.AppleEnrollmentProfileAssignment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentCollectionRequest;
-import com.microsoft.graph.models.extensions.AppleEnrollmentProfileAssignment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

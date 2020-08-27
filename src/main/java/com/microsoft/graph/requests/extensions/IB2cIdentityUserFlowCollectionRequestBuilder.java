@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
+import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequest;
-import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

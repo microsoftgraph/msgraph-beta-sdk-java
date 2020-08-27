@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,9 +17,6 @@ import com.microsoft.graph.requests.extensions.IImportedDeviceIdentitySearchExis
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentitySearchExistingIdentitiesCollectionPage;
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentitySearchExistingIdentitiesCollectionResponse;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentitySearchExistingIdentitiesBody;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

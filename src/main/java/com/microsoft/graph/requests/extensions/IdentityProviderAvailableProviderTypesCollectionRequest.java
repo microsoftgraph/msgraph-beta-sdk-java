@@ -14,8 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IIdentityProviderAvailableProviderTypesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderAvailableProviderTypesCollectionPage;
 import com.microsoft.graph.requests.extensions.IdentityProviderAvailableProviderTypesCollectionResponse;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

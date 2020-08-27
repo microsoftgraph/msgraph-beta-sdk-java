@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 
 import java.util.Arrays;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityImportDeviceIdentityListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityImportDeviceIdentityListCollectionPage;
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityImportDeviceIdentityListCollectionResponse;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResource;
+import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequest;
-import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

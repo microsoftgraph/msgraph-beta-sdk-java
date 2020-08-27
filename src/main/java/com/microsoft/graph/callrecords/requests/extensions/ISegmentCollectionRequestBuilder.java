@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.Session;
+import com.microsoft.graph.callrecords.models.extensions.Segment;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.callrecords.requests.extensions.ISegmentRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionRequest;
-import com.microsoft.graph.callrecords.models.extensions.Segment;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

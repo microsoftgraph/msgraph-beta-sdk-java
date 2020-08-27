@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.AuditEvent;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditCategoriesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditActivityTypesCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.AuditEvent;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

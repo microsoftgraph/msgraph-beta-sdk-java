@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Alert;
 import com.microsoft.graph.models.extensions.Alert;
+import com.microsoft.graph.models.extensions.Alert;
 
 import java.util.Arrays;
 import java.util.EnumSet;

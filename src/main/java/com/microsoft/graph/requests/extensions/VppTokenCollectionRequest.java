@@ -8,6 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
+import com.microsoft.graph.models.extensions.VppToken;
+import com.microsoft.graph.models.extensions.VppToken;
+import com.microsoft.graph.models.extensions.VppTokenLicenseSummary;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +20,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.VppToken;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionPage;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;

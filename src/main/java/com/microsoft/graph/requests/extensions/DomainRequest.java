@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
+import com.microsoft.graph.models.extensions.Domain;
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;

@@ -7,6 +7,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SharePointSiteUsageDetail;
+import com.microsoft.graph.models.extensions.SharePointSiteUsageDetail;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,9 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageDetailCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageDetailCollectionResponse;
-import com.microsoft.graph.models.extensions.SharePointSiteUsageDetail;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRole;
+import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
+import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionRequestBuilder;

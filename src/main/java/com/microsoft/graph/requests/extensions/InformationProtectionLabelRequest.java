@@ -8,11 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.LabelingOptions;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.ClassificationResult;
 

@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
+import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;

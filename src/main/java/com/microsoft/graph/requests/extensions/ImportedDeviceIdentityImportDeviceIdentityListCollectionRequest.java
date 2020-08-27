@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 
 import java.util.Arrays;
@@ -16,9 +17,6 @@ import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityImportDevi
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityImportDeviceIdentityListCollectionPage;
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityImportDeviceIdentityListCollectionResponse;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityImportDeviceIdentityListBody;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

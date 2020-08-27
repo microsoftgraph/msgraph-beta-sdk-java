@@ -7,9 +7,13 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Application;
+import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.models.extensions.Application;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -18,7 +22,6 @@ import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IApplicationDeltaCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

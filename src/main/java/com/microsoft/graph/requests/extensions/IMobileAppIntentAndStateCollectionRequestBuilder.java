@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.MobileAppIntentAndState;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateCollectionRequest;
-import com.microsoft.graph.models.extensions.MobileAppIntentAndState;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

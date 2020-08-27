@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Print;
+import com.microsoft.graph.models.extensions.PrintConnector;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequest;
-import com.microsoft.graph.models.extensions.PrintConnector;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

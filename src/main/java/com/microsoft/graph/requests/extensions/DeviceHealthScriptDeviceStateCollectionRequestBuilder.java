@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceHealthScript;
+import com.microsoft.graph.models.extensions.DeviceHealthScriptDeviceState;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateCollectionRequest;
-import com.microsoft.graph.models.extensions.DeviceHealthScriptDeviceState;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

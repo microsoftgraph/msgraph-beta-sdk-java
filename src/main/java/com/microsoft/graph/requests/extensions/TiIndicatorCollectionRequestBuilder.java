@@ -10,6 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.TiIndicator;
+import com.microsoft.graph.models.extensions.ResultInfo;
+import com.microsoft.graph.models.extensions.ResultInfo;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +26,6 @@ import com.microsoft.graph.requests.extensions.ITiIndicatorSubmitTiIndicatorsCol
 import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

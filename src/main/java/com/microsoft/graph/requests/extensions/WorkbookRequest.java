@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Workbook;
+import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
+import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;

@@ -8,7 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
+import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
+import com.microsoft.graph.models.extensions.RoleScopeTag;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -18,7 +21,6 @@ import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequest;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagHasCustomRoleScopeTagRequestBuilder;
-import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

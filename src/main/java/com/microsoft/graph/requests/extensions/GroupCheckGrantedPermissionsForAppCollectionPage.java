@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IGroupCheckGrantedPermissionsForAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupCheckGrantedPermissionsForAppCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupCheckGrantedPermissionsForAppCollectionResponse;
-import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;

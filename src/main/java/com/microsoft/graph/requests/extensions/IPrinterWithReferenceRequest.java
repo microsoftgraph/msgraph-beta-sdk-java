@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
+import com.microsoft.graph.models.extensions.PrinterCapabilities;
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
@@ -23,8 +24,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.models.extensions.Printer;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 

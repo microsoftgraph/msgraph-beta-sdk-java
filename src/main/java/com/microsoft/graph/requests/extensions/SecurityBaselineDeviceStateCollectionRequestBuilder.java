@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineTemplate;
+import com.microsoft.graph.models.extensions.SecurityBaselineDeviceState;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequest;
-import com.microsoft.graph.models.extensions.SecurityBaselineDeviceState;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -7,12 +7,12 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.YammerGroupsActivityCounts;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityCountsCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.YammerGroupsActivityCounts;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

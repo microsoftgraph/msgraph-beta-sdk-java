@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Office365GroupsActivityStorage;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -14,9 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityStorageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityStorageCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityStorageCollectionResponse;
-import com.microsoft.graph.models.extensions.Office365GroupsActivityStorage;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

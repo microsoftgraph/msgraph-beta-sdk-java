@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.RoleDefinition;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -15,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequest;
-import com.microsoft.graph.models.extensions.RoleDefinition;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

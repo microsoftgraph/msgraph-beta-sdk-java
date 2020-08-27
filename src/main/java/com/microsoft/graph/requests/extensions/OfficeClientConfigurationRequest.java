@@ -9,6 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
+import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentCollectionRequestBuilder;

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosManagedAppProtection;
+import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;

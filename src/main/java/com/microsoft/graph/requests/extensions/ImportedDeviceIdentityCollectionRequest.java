@@ -9,6 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
+import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 
 import java.util.Arrays;
@@ -19,7 +22,6 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.ImportedDeviceIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityCollectionRequestBuilder;

@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
+import com.microsoft.graph.models.extensions.ContactFolder;
+import com.microsoft.graph.models.extensions.ContactFolder;
 
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequest;
 import com.microsoft.graph.requests.extensions.IContactFolderDeltaCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

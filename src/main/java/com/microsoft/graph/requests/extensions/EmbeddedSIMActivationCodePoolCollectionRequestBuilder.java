@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePool;
+import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
 
 import java.util.Arrays;
@@ -16,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolCollectionRequest;
-import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePool;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

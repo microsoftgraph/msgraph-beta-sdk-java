@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Company;
+import com.microsoft.graph.models.extensions.TaxArea;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ITaxAreaRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITaxAreaCollectionRequest;
-import com.microsoft.graph.models.extensions.TaxArea;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

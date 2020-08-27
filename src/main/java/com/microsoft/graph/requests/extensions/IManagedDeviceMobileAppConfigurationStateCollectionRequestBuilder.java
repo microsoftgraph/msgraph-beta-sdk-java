@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationState;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateCollectionRequest;
-import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationState;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

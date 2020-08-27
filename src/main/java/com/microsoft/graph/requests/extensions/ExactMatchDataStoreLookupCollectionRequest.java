@@ -15,8 +15,6 @@ import com.microsoft.graph.requests.extensions.IExactMatchDataStoreLookupCollect
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreLookupCollectionPage;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreLookupCollectionResponse;
 import com.microsoft.graph.models.extensions.ExactMatchDataStoreLookupBody;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;

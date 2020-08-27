@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.RecordOperation;import com.microsoft.graph.models.extensions.Prompt;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

@@ -8,11 +8,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.InformationProtectionLabel;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.LabelingOptions;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.ClassificationResult;
 
@@ -26,7 +31,6 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionLabelExtrac
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

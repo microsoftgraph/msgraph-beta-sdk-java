@@ -8,13 +8,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
+import com.microsoft.graph.models.extensions.OnenoteSection;
+import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenoteOperation;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequest;
-import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IBaseCollectionPage;
 

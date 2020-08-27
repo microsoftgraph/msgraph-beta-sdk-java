@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CommsApplication;
+import com.microsoft.graph.models.extensions.OnlineMeeting;
+import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 
@@ -18,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequest;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCreateOrGetRequestBuilder;
-import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.extensions.ContentInfo;
 import com.microsoft.graph.models.extensions.LabelingOptions;
 
@@ -16,7 +17,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateApplicationCollectionRequest;
-import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
