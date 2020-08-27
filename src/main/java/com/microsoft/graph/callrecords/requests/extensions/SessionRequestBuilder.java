@@ -12,7 +12,6 @@ import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionReq
 import com.microsoft.graph.callrecords.requests.extensions.ISegmentRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

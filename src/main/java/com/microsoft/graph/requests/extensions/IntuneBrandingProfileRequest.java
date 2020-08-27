@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentC
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

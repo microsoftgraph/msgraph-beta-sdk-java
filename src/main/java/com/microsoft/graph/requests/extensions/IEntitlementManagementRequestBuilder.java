@@ -29,7 +29,6 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceR
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

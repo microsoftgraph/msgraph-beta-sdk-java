@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

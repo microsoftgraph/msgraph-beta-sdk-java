@@ -9,11 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.RetireScheduledManagedDevice;
 import com.microsoft.graph.models.generated.ScheduledRetireState;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
@@ -40,7 +39,6 @@ import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRe
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceUserOverviewRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

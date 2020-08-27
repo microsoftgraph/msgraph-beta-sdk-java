@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
-import com.microsoft.graph.models.extensions.AccessPackageCatalog;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
@@ -26,7 +25,6 @@ import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

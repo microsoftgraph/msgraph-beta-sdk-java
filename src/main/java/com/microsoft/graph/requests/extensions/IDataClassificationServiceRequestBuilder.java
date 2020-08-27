@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataClassificationService;
-import com.microsoft.graph.models.extensions.ExactMatchClassificationResult;
 import com.microsoft.graph.models.extensions.ContentClassification;
+import com.microsoft.graph.models.extensions.ExactMatchClassificationResult;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
@@ -24,7 +24,6 @@ import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionReques
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

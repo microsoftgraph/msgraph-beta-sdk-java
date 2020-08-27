@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

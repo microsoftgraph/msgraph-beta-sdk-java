@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestB
 import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

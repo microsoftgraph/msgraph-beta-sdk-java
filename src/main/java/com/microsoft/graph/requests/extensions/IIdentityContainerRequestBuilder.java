@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilde
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

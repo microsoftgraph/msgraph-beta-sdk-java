@@ -28,7 +28,6 @@ import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionR
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

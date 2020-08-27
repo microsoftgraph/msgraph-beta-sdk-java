@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IThreatAssessmentResultCollection
 import com.microsoft.graph.requests.extensions.IThreatAssessmentResultRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

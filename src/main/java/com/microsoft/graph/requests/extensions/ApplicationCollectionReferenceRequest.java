@@ -10,12 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
-import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.Application;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,7 +31,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionRequest
     /**
      * The request builder for this collection of Application
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

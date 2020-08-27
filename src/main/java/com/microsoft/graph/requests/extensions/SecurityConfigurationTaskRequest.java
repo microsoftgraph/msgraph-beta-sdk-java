@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceCollectio
 import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

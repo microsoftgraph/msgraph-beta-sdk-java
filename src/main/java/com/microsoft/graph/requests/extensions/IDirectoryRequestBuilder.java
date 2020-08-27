@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

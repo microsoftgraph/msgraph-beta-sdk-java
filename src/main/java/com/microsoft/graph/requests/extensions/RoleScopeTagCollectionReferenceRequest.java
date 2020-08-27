@@ -10,9 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.models.extensions.RoleScopeTag;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -33,7 +30,7 @@ public class RoleScopeTagCollectionReferenceRequest extends BaseCollectionReques
     /**
      * The request builder for this collection of RoleScopeTag
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSWiredNetworkConfiguration;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityColle
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

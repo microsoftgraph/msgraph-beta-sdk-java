@@ -8,9 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -23,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConfigurationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

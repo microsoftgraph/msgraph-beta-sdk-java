@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IPrintJobCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IPrintJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintJobRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateCollect
 import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

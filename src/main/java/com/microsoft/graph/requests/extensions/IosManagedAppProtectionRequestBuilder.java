@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequest
 import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -11,13 +11,11 @@ import com.microsoft.graph.models.extensions.WindowsDomainJoinConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceConfigurationTargetedUserAndDevice;
-import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
 import com.microsoft.graph.models.extensions.IosAvailableUpdateVersion;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,7 +36,7 @@ public class DeviceConfigurationCollectionReferenceRequest extends BaseCollectio
     /**
      * The request builder for this collection of DeviceConfiguration
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

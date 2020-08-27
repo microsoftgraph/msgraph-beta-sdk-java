@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignmentRequest;
-import com.microsoft.graph.models.extensions.GovernanceRoleAssignmentRequest;
 import com.microsoft.graph.models.extensions.GovernanceSchedule;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
@@ -16,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestB
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -10,9 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.models.extensions.RoleScopeTag;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

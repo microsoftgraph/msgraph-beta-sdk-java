@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserSettings;
 import com.microsoft.graph.requests.extensions.IRegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

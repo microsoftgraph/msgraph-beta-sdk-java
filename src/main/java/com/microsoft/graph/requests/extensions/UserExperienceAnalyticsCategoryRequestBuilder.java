@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCol
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

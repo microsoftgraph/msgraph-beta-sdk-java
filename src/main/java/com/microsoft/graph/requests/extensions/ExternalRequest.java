@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IExternalConnectionCollectionRequ
 import com.microsoft.graph.requests.extensions.IExternalConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

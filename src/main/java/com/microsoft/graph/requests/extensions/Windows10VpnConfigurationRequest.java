@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10VpnConfiguration;
 import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsCertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

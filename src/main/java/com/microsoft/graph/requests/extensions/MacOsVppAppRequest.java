@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseCollec
 import com.microsoft.graph.requests.extensions.IMacOsVppAppAssignedLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOsVppAppAssignedLicenseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOsVppAppAssignedLicenseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

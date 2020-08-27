@@ -46,7 +46,6 @@ import com.microsoft.graph.requests.extensions.IWebAccountCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IWebAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonWebsiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonWebsiteRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionReques
 import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

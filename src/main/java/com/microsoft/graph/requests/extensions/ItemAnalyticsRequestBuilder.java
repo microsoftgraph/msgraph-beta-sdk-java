@@ -12,9 +12,6 @@ import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionReques
 import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

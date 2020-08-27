@@ -10,11 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
-import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
@@ -35,13 +31,10 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionReq
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

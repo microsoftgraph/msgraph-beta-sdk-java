@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRe
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

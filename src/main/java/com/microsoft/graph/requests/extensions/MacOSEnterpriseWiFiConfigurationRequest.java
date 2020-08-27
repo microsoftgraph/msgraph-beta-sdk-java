@@ -12,11 +12,8 @@ import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateColle
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

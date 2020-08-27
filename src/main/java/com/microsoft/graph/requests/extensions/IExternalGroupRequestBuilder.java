@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalGroup;
 import com.microsoft.graph.requests.extensions.IExternalGroupMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupMemberRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

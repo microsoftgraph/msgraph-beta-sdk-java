@@ -19,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

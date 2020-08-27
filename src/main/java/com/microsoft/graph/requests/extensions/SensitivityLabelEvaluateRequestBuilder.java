@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelEvaluateRequest;
 import com.microsoft.graph.requests.extensions.SensitivityLabelEvaluateRequest;
-import com.microsoft.graph.models.extensions.EvaluateLabelJobResponse;import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;import com.microsoft.graph.models.extensions.CurrentLabel;
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
+import com.microsoft.graph.models.extensions.CurrentLabel;
+import com.microsoft.graph.models.extensions.EvaluateLabelJobResponse;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

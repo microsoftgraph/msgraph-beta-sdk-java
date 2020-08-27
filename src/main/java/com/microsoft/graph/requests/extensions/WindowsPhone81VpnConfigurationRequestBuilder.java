@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81VpnConfiguration;
 import com.microsoft.graph.requests.extensions.IWindowsPhone81CertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPhone81CertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

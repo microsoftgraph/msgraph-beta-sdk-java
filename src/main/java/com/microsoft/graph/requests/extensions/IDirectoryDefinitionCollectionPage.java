@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SynchronizationSchema;
 import com.microsoft.graph.models.extensions.DirectoryDefinition;
-import com.microsoft.graph.models.extensions.DirectoryDefinition;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

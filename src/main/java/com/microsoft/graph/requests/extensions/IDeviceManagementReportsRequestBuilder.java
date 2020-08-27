@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobCollect
 import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

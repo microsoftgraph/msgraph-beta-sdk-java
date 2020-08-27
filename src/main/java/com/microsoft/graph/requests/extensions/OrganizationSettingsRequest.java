@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionRequ
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemInsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemInsightsSettingsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

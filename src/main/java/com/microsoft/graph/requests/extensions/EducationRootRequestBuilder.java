@@ -24,9 +24,6 @@ import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingCollect
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

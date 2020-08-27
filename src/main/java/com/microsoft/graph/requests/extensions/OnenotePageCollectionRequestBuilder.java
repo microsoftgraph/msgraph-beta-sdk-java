@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

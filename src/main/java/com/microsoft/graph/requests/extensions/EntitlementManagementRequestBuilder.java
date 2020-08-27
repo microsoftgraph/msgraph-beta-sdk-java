@@ -50,7 +50,6 @@ import com.microsoft.graph.requests.extensions.ConnectedOrganizationCollectionRe
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntitlementManagementSettingsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

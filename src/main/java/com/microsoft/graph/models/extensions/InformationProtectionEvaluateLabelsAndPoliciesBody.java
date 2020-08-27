@@ -4,7 +4,10 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;import com.microsoft.graph.models.extensions.TextClassificationRequest;
+import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
+import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
+import com.microsoft.graph.models.extensions.TextClassificationRequest;
+import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCategoryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

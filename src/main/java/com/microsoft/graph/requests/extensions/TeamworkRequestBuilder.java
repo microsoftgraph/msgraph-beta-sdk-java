@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRe
 import com.microsoft.graph.requests.extensions.IWorkforceIntegrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

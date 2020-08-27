@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

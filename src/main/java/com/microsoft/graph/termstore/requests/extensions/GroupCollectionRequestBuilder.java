@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Store;
 import com.microsoft.graph.termstore.models.extensions.Group;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

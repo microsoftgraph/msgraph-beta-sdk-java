@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationSchemaParseExpressionRequest;
 import com.microsoft.graph.requests.extensions.SynchronizationSchemaParseExpressionRequest;
-import com.microsoft.graph.models.extensions.ParseExpressionResponse;import com.microsoft.graph.models.extensions.ExpressionInputObject;import com.microsoft.graph.models.extensions.AttributeDefinition;
+import com.microsoft.graph.models.extensions.ExpressionInputObject;
+import com.microsoft.graph.models.extensions.AttributeDefinition;
+import com.microsoft.graph.models.extensions.ParseExpressionResponse;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

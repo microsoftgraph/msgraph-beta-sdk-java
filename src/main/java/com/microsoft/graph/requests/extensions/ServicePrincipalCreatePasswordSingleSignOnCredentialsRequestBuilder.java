@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCreatePasswordSingleSignOnCredentialsRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCreatePasswordSingleSignOnCredentialsRequest;
-import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;import com.microsoft.graph.models.extensions.Credential;
+import com.microsoft.graph.models.extensions.Credential;
+import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

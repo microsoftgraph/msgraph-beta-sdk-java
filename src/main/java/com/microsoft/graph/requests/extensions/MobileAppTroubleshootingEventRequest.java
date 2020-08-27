@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestCollectio
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

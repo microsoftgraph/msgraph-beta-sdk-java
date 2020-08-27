@@ -104,7 +104,6 @@ import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRe
 import com.microsoft.graph.requests.extensions.SymantecCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

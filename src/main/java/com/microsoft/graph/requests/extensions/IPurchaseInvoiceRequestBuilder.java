@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionReq
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

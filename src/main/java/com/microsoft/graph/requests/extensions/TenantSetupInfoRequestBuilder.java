@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TenantSetupInfo;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleSettingsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

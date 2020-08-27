@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOsVppApp;
 import com.microsoft.graph.models.extensions.MacOsVppAppAssignedLicense;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

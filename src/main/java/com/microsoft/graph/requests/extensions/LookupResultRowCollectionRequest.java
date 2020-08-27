@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchLookupJob;
 import com.microsoft.graph.models.extensions.LookupResultRow;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

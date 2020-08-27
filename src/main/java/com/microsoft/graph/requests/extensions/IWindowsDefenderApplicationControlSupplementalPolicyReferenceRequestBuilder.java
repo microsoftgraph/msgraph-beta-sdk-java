@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationContro
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

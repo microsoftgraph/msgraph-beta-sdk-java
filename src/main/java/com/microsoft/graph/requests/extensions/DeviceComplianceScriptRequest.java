@@ -19,7 +19,6 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceScriptDeviceState
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptRunSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Approval;
 import com.microsoft.graph.requests.extensions.IApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApprovalStepRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

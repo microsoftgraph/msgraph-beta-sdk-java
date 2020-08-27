@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCreateInstanceRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCreateInstanceRequest;
-import com.microsoft.graph.models.extensions.DeviceManagementIntent;import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequest
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

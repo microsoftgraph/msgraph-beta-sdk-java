@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSumm
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineStateSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

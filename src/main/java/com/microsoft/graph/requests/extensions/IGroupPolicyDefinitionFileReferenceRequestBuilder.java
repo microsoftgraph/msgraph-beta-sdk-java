@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

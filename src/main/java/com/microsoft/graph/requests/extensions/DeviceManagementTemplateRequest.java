@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
-import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
@@ -24,7 +23,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollecti
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseCollecti
 import com.microsoft.graph.requests.extensions.IIosVppAppAssignedLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

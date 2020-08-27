@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IRiskDetectionCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IRiskDetectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

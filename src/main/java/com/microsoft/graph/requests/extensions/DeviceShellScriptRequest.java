@@ -28,7 +28,6 @@ import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCo
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptRunSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignRequest;
-import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
+import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

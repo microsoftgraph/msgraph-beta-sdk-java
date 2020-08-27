@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.requests.extensions.ISetCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

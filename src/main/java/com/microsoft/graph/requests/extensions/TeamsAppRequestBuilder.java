@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequ
 import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

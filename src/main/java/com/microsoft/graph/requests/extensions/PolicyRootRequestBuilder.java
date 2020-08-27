@@ -50,7 +50,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyR
 import com.microsoft.graph.requests.extensions.DirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

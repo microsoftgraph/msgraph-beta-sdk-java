@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.EducationSynchronizationErrorColl
 import com.microsoft.graph.requests.extensions.EducationSynchronizationErrorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileStatusRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

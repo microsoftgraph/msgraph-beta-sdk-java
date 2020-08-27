@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -30,7 +30,6 @@ import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
-import com.microsoft.graph.models.extensions.AccessPackageCatalog;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

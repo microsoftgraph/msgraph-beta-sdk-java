@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelExtractLabelRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelExtractLabelRequest;
-import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.ContentInfo;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

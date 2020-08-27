@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.AppScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

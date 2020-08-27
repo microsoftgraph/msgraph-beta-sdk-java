@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilde
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

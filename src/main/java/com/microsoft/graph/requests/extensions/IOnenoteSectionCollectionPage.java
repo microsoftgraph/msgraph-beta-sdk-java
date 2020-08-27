@@ -10,8 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.models.extensions.OnenoteOperation;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -16,7 +16,6 @@ import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

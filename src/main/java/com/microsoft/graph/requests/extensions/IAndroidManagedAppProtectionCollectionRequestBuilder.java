@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

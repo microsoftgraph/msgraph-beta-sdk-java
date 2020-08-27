@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollec
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

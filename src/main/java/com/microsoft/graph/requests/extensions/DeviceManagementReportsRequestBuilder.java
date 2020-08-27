@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCo
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

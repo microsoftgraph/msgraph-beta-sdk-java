@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetColle
 import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.requests.extensions.IOutlookItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookItemRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

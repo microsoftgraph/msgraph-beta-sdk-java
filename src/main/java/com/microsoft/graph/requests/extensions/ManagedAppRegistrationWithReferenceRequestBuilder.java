@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionReq
 import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

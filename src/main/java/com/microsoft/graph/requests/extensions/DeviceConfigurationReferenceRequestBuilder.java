@@ -11,7 +11,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceConfigurationTargetedUserAndDevice;
-import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
@@ -41,7 +40,6 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOvervie
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserOverviewRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

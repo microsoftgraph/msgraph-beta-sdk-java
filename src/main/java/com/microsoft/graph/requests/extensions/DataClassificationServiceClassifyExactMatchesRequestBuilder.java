@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataClassificationServiceClassifyExactMatchesRequest;
 import com.microsoft.graph.requests.extensions.DataClassificationServiceClassifyExactMatchesRequest;
-import com.microsoft.graph.models.extensions.ExactMatchClassificationResult;import com.microsoft.graph.models.extensions.ContentClassification;
+import com.microsoft.graph.models.extensions.ContentClassification;
+import com.microsoft.graph.models.extensions.ExactMatchClassificationResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

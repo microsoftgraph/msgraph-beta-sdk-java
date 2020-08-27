@@ -32,7 +32,6 @@ import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionReques
 import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

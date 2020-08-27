@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintTaskDefinition;
 import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

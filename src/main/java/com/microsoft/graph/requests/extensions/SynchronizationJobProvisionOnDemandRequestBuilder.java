@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobProvisionOnDemandRequest;
 import com.microsoft.graph.requests.extensions.SynchronizationJobProvisionOnDemandRequest;
-import com.microsoft.graph.models.extensions.StringKeyStringValuePair;import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
+import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParameters;
+import com.microsoft.graph.models.extensions.StringKeyStringValuePair;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

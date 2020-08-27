@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import com.microsoft.graph.models.extensions.TimeOffRequest;import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.TimeOffRequest;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

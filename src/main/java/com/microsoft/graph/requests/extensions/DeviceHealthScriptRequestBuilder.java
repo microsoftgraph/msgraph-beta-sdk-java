@@ -22,7 +22,6 @@ import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateColl
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptRunSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

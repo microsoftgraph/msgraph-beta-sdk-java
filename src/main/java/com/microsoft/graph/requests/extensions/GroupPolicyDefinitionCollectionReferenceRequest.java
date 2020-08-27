@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -30,7 +29,7 @@ public class GroupPolicyDefinitionCollectionReferenceRequest extends BaseCollect
     /**
      * The request builder for this collection of GroupPolicyDefinition
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

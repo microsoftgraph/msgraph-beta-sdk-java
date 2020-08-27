@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

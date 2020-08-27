@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.Journal;
 import com.microsoft.graph.requests.extensions.IJournalLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJournalLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

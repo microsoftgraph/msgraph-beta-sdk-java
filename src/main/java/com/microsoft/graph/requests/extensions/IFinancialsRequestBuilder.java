@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Financials;
 import com.microsoft.graph.requests.extensions.ICompanyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICompanyRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

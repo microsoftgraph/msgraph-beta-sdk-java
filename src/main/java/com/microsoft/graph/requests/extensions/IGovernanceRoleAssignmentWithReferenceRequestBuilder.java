@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

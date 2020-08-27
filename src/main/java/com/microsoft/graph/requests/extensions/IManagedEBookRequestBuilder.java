@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

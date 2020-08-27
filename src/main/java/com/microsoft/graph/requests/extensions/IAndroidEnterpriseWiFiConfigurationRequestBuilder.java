@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidEnterpriseWiFiConfiguration;
 import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

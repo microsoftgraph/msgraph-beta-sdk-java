@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilde
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationRoot;
 import com.microsoft.graph.models.extensions.EducationSynchronizationProfile;
 import com.microsoft.graph.models.extensions.EducationFileSynchronizationVerificationMessage;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

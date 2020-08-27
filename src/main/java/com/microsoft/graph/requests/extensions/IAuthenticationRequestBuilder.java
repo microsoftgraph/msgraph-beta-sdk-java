@@ -30,7 +30,6 @@ import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodCollect
 import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

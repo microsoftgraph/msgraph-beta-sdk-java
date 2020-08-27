@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBui
 import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

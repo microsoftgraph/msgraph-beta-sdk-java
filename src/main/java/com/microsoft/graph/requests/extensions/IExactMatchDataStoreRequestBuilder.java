@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchDataStore;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchSessionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

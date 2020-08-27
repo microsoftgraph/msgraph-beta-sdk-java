@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleManagement;
 import com.microsoft.graph.requests.extensions.IRbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRbacApplicationMultipleRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

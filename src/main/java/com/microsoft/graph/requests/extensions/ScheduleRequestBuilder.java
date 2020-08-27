@@ -44,7 +44,6 @@ import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestB
 import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

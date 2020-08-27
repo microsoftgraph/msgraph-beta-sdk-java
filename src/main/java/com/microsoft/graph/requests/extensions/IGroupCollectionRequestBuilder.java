@@ -9,12 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
-import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
-import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
-import com.microsoft.graph.models.extensions.Group;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

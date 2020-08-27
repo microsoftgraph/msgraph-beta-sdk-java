@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IUserConsentRequestCollectionRequ
 import com.microsoft.graph.requests.extensions.IUserConsentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserConsentRequestRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

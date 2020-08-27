@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmen
 import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

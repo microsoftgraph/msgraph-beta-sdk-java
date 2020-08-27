@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionR
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

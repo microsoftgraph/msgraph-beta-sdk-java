@@ -27,7 +27,6 @@ import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollection
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

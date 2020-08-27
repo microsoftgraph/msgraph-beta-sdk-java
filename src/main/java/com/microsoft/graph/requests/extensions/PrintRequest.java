@@ -36,7 +36,6 @@ import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionCollectionReq
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

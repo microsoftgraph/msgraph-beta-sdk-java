@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosDeviceFeaturesConfiguration;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

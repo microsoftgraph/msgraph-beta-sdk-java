@@ -4,7 +4,8 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
+import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

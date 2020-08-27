@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.MacOSScepCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

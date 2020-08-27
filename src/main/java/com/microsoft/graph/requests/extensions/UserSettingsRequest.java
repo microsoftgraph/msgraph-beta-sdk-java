@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IRegionalAndLanguageSettingsReque
 import com.microsoft.graph.requests.extensions.RegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftPreferencesRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateColl
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

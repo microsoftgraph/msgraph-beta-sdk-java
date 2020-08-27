@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestB
 import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

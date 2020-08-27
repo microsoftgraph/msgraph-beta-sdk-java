@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.ComanagedDevicesSummary;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevicesSummary;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
-import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
@@ -181,7 +180,6 @@ import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyDeviceStat
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeOnPremisesPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceOverviewRequestBuilder;
@@ -189,7 +187,6 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsOverviewR
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

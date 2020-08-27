@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCo
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

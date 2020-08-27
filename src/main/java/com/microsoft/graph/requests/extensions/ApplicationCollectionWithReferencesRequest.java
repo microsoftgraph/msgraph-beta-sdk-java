@@ -10,12 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
-import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.Application;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

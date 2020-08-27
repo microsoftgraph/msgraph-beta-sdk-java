@@ -13,8 +13,6 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
-import com.microsoft.graph.models.extensions.MobileApp;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

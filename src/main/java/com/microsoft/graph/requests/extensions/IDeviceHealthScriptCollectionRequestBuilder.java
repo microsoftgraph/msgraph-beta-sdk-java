@@ -13,7 +13,6 @@ import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRemediationHistory;
 import com.microsoft.graph.models.generated.GlobalDeviceHealthScriptState;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRemediationSummary;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

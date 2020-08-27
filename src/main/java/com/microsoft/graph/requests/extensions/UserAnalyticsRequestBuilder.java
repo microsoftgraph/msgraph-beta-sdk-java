@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IActivityStatisticsCollectionRequ
 import com.microsoft.graph.requests.extensions.IActivityStatisticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

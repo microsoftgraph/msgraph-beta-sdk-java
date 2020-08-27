@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

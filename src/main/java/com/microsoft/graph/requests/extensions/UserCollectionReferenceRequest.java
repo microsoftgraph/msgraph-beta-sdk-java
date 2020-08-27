@@ -9,32 +9,25 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.AssignedLicense;
-import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
+import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.models.extensions.MailTips;
 import com.microsoft.graph.models.generated.MailTipsType;
+import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ConvertIdResult;
 import com.microsoft.graph.models.generated.ExchangeIdFormat;
-import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.ConvertIdResult;
 import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.EmailAddress;
-import com.microsoft.graph.models.extensions.EmailAddress;
-import com.microsoft.graph.models.extensions.EmailAddress;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementData;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementData;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedDeviceSummarizedAppState;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -55,7 +48,7 @@ public class UserCollectionReferenceRequest extends BaseCollectionRequest<UserCo
     /**
      * The request builder for this collection of User
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

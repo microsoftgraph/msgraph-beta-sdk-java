@@ -317,16 +317,12 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuil
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicyRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IStoreRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.StoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
@@ -359,7 +355,6 @@ import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

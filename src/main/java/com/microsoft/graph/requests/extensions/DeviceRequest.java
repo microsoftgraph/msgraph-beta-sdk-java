@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.ICommandCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICommandRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommandCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommandRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

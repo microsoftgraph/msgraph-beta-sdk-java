@@ -10,8 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeConfiguration;
 import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

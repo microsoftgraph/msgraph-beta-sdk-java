@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.DeviceAppManagementTask;
 import com.microsoft.graph.models.generated.DeviceAppManagementTaskStatus;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

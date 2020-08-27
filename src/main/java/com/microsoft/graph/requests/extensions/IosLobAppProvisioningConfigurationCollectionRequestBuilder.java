@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

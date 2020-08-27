@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

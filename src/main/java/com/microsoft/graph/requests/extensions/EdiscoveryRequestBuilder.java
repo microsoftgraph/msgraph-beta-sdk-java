@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IEdiscoveryCaseCollectionRequestB
 import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.EdiscoveryCaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EdiscoveryCaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

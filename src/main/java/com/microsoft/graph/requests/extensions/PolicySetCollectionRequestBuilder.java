@@ -11,8 +11,6 @@ import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.PolicySet;
 import com.microsoft.graph.models.extensions.PolicySetItem;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
-import com.microsoft.graph.models.extensions.PolicySet;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

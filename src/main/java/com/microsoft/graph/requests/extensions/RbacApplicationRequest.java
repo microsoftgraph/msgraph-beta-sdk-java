@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentCollectionR
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

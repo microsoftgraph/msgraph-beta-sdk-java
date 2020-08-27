@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.models.extensions.EducationUser;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +29,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
     /**
      * The request builder for this collection of EducationUser
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IInformationProtectionEvaluateLabelsAndPoliciesRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionEvaluateLabelsAndPoliciesRequest;
-import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;import com.microsoft.graph.models.extensions.TextClassificationRequest;
+import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
+import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
+import com.microsoft.graph.models.extensions.TextClassificationRequest;
+import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

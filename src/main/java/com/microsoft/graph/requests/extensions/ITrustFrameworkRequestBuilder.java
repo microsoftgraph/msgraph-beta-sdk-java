@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRe
 import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

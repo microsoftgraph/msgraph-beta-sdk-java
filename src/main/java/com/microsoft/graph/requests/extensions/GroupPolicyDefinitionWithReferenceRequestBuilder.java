@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequest
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

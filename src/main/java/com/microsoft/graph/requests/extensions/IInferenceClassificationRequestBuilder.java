@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InferenceClassification;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

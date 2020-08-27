@@ -84,7 +84,6 @@ import com.microsoft.graph.requests.extensions.IPersonWebsiteCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IPersonWebsiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonWebsiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonWebsiteRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

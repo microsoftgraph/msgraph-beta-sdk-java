@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

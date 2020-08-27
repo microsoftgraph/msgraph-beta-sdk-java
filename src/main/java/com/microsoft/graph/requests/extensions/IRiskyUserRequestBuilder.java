@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RiskyUser;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

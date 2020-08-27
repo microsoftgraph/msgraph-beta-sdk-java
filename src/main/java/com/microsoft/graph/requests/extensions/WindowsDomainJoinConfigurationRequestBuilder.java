@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionReq
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

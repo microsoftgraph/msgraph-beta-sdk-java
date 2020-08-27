@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideC
 import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

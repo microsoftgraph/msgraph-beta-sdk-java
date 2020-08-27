@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.IdentityGovernance;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

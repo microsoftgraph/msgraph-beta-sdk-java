@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetricHistory;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.EducationFileSynchronizationVerific
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationErrorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileStatusRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

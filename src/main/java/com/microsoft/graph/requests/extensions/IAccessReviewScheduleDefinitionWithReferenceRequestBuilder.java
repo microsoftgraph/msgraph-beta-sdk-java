@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

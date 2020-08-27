@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesInvoice;
 import com.microsoft.graph.models.extensions.SalesInvoiceLine;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

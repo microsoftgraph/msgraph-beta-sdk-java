@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

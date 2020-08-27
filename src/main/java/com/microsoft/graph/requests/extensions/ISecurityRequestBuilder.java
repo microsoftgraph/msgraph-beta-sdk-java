@@ -32,7 +32,6 @@ import com.microsoft.graph.requests.extensions.IUserSecurityProfileCollectionReq
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

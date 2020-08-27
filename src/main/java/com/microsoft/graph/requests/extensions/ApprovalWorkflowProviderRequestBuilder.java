@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollecti
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -56,7 +56,6 @@ import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationContro
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

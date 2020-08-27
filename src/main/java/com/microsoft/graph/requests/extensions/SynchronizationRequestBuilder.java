@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.ISynchronizationTemplateCollectio
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationTemplateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

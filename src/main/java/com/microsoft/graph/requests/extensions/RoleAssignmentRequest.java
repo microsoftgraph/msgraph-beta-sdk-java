@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleAssignment;
 import com.microsoft.graph.requests.extensions.IRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

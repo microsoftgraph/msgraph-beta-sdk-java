@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.ISynchronizationJobCollectionRequ
 import com.microsoft.graph.requests.extensions.ISynchronizationJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.Print;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

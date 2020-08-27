@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequest
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

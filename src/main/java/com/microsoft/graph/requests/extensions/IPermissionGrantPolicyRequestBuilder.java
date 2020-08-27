@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

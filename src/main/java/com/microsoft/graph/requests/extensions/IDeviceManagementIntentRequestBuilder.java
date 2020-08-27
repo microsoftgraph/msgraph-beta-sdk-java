@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
@@ -26,7 +25,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateC
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

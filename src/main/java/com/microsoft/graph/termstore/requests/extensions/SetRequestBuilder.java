@@ -18,7 +18,6 @@ import com.microsoft.graph.termstore.requests.extensions.RelationCollectionReque
 import com.microsoft.graph.termstore.requests.extensions.RelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.GroupRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

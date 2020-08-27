@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.IntuneBrandingProfile;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfileAssignment;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

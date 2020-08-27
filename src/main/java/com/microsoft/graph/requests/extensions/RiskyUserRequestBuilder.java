@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRe
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

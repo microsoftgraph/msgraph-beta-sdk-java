@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IApprovalStepCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IApprovalStepRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalStepRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRe
 import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

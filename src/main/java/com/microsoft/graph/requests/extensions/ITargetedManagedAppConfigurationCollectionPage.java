@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

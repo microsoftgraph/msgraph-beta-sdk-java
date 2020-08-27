@@ -25,7 +25,6 @@ import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRe
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

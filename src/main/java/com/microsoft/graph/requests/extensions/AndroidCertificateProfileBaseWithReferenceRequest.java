@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
 import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

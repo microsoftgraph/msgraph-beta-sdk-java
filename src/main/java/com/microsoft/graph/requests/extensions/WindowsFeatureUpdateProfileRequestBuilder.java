@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IWindowsUpdateStateCollectionRequ
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsUpdateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsUpdateStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

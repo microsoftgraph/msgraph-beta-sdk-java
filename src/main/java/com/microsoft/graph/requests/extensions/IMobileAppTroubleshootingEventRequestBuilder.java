@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppTroubleshootingEvent;
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

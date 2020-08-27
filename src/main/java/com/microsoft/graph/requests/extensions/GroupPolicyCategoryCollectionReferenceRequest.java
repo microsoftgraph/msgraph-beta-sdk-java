@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyCategory;
-import com.microsoft.graph.models.extensions.GroupPolicyCategory;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -30,7 +28,7 @@ public class GroupPolicyCategoryCollectionReferenceRequest extends BaseCollectio
     /**
      * The request builder for this collection of GroupPolicyCategory
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

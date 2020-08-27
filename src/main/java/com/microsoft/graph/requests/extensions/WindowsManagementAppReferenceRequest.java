@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateC
 import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

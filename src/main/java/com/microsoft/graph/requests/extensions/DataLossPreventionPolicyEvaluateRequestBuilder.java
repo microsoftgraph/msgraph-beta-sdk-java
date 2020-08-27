@@ -5,7 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyEvaluateRequest;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyEvaluateRequest;
-import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesJobResponse;import com.microsoft.graph.models.extensions.DlpEvaluationInput;import com.microsoft.graph.models.extensions.DlpNotification;
+import com.microsoft.graph.models.extensions.DlpEvaluationInput;
+import com.microsoft.graph.models.extensions.DlpNotification;
+import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesJobResponse;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

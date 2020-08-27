@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequest
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

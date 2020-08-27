@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IApplicationAddKeyRequest;
 import com.microsoft.graph.requests.extensions.ApplicationAddKeyRequest;
-import com.microsoft.graph.models.extensions.KeyCredential;import com.microsoft.graph.models.extensions.KeyCredential;import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.models.extensions.KeyCredential;
+import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

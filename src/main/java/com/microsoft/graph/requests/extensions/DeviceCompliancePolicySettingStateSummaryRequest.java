@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateColl
 import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

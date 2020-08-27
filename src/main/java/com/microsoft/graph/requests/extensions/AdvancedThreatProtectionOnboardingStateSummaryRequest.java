@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardi
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

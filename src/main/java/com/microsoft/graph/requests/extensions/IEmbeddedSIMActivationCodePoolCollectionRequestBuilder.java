@@ -10,8 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePool;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
-import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

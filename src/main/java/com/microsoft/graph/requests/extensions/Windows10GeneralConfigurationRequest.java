@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IWindowsPrivacyDataAccessControlI
 import com.microsoft.graph.requests.extensions.IWindowsPrivacyDataAccessControlItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

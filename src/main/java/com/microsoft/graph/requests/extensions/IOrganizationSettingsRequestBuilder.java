@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.OrganizationSettings;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemInsightsSettingsRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

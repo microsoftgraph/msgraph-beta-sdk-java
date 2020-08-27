@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.models.extensions.PlannerDelta;
-import com.microsoft.graph.models.extensions.PlannerDelta;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

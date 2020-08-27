@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollect
 import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

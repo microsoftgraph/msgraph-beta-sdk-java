@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.WorkbookChartAxis;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxisFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartGridlinesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxisTitleRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

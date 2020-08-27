@@ -4,7 +4,8 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

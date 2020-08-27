@@ -7,9 +7,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentityResult;
 import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentity;
-
+import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentityResult;
 import java.util.Arrays;
 import java.util.EnumSet;
 

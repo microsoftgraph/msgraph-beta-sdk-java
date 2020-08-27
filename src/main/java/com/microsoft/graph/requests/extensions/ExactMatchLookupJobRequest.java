@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.ILookupResultRowCollectionRequest
 import com.microsoft.graph.requests.extensions.ILookupResultRowRequestBuilder;
 import com.microsoft.graph.requests.extensions.LookupResultRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LookupResultRowRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

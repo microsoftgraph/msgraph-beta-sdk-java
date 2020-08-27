@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicySet;
 import com.microsoft.graph.models.extensions.PolicySetItem;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
-import com.microsoft.graph.models.extensions.PolicySet;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetAssignmentCollectionRequestBuilder;
@@ -19,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IPolicySetItemCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IPolicySetItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetItemRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

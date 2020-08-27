@@ -22,7 +22,6 @@ import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBui
 import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

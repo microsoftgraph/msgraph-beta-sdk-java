@@ -13,7 +13,6 @@ import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssig
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

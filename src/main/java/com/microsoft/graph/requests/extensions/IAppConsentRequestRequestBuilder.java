@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppConsentRequest;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConsentRequestRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

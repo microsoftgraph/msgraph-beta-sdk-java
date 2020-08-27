@@ -12,7 +12,6 @@ import com.microsoft.graph.callrecords.requests.extensions.ISessionCollectionReq
 import com.microsoft.graph.callrecords.requests.extensions.ISessionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

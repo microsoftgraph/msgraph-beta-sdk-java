@@ -8,11 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
-import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.extensions.Credential;
 import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
-import com.microsoft.graph.models.extensions.Credential;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
@@ -51,7 +48,6 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

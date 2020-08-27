@@ -12,7 +12,6 @@ import com.microsoft.graph.termstore.requests.extensions.ISetCollectionRequestBu
 import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

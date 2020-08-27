@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
 import com.microsoft.graph.models.extensions.Connector;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -30,7 +29,7 @@ public class ConnectorCollectionReferenceRequest extends BaseCollectionRequest<C
     /**
      * The request builder for this collection of Connector
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

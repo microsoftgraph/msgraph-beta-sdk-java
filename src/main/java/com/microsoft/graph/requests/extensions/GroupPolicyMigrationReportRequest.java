@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionC
 import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

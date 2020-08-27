@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ActiveDirectoryWindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.requests.extensions.IWindowsDomainJoinConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDomainJoinConfigurationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

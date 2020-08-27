@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignRequest;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

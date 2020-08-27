@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPresenceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

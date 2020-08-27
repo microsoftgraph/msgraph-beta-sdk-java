@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
 import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

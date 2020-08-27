@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPolicySetUpdateRequest;
 import com.microsoft.graph.requests.extensions.PolicySetUpdateRequest;
-import com.microsoft.graph.models.extensions.PolicySetItem;import com.microsoft.graph.models.extensions.PolicySetAssignment;
+import com.microsoft.graph.models.extensions.PolicySetItem;
+import com.microsoft.graph.models.extensions.PolicySetAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

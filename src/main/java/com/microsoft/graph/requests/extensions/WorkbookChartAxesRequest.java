@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxes;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAxisRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

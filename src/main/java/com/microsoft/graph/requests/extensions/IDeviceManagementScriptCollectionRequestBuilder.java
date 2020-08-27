@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

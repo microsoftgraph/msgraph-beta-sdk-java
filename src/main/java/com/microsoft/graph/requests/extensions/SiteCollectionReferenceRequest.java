@@ -9,13 +9,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.models.extensions.Site;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,7 +30,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
     /**
      * The request builder for this collection of Site
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

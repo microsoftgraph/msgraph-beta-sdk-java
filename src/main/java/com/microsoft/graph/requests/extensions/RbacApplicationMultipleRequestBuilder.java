@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleCol
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

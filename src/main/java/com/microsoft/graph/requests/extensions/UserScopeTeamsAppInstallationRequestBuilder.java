@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -9,9 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.AttachmentItem;
-
+import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
 

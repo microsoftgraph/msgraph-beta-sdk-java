@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookTaskFolder;
 import com.microsoft.graph.models.extensions.OutlookTask;
-import com.microsoft.graph.models.extensions.OutlookTask;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

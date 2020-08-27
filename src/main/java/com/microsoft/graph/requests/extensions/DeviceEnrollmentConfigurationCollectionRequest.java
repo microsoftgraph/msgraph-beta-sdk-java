@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -56,7 +56,6 @@ import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestB
 import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

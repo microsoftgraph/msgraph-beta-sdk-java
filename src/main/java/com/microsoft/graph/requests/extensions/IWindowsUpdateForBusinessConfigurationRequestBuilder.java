@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUpdateForBusinessConfiguration;
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsUpdateStateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

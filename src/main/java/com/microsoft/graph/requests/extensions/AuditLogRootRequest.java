@@ -24,7 +24,6 @@ import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollect
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

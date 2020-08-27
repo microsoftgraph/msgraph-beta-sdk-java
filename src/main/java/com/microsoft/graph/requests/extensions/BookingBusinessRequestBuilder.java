@@ -24,7 +24,6 @@ import com.microsoft.graph.requests.extensions.IBookingStaffMemberCollectionRequ
 import com.microsoft.graph.requests.extensions.IBookingStaffMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingStaffMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingStaffMemberRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

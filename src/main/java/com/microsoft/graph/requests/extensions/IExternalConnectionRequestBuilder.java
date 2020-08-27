@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilde
 import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

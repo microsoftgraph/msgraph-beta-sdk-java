@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionReque
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

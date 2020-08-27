@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.CustomerPaymentJournal;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

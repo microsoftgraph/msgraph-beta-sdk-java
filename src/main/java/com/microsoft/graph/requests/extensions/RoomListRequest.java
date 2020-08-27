@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfil
 import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

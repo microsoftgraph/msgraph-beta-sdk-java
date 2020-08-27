@@ -10,14 +10,13 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DetectedApp;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
-import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
-import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
+import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,7 +37,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
     /**
      * The request builder for this collection of ManagedDevice
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -13,7 +13,6 @@ import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

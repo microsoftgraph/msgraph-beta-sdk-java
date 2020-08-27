@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCo
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

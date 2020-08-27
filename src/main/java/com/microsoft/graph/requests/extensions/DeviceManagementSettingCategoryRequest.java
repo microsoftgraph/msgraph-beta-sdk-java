@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitio
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

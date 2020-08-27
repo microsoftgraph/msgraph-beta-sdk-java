@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationCollect
 import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

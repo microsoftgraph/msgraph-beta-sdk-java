@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
-import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
@@ -24,7 +23,6 @@ import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuild
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

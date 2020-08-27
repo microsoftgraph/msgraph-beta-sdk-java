@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyCollectionRe
 import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

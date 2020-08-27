@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
-import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -31,7 +29,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
     /**
      * The request builder for this collection of OAuth2PermissionGrant
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

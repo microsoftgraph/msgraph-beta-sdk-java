@@ -9,10 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.generated.CalendarRoleType;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

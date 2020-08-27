@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileRequestBu
 import com.microsoft.graph.requests.extensions.DepIOSEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRole;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
-import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionRequestBuilder;
@@ -18,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IPrivilegedRoleSettingsRequestBui
 import com.microsoft.graph.requests.extensions.PrivilegedRoleSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleSummaryRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IPrintServiceEndpointCollectionRe
 import com.microsoft.graph.requests.extensions.IPrintServiceEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

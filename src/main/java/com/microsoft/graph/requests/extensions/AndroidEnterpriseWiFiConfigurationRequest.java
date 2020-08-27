@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateReq
 import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidCertificateProfileBaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

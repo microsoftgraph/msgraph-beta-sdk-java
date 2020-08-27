@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBu
 import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

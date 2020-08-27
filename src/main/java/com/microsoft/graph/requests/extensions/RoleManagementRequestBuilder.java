@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IRbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRbacApplicationMultipleRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationMultipleRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

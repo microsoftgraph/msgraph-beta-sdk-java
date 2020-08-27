@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFormatProtectionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

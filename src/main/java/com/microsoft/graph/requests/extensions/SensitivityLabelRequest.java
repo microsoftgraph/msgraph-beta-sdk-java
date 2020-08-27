@@ -8,14 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
-import com.microsoft.graph.models.extensions.EvaluateLabelJobResponse;
 import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
 import com.microsoft.graph.models.extensions.CurrentLabel;
+import com.microsoft.graph.models.extensions.EvaluateLabelJobResponse;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

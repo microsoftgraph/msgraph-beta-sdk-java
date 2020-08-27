@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCreateDeviceLogCollectionRequestRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCreateDeviceLogCollectionRequestRequest;
-import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
+import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

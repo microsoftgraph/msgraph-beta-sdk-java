@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

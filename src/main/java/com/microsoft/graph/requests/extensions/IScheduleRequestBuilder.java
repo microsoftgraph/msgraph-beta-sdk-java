@@ -26,7 +26,6 @@ import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionReque
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

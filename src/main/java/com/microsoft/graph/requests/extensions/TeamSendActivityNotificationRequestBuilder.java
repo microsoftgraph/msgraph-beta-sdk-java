@@ -5,7 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamSendActivityNotificationRequest;
 import com.microsoft.graph.requests.extensions.TeamSendActivityNotificationRequest;
-import com.microsoft.graph.models.extensions.TeamworkActivityTopic;import com.microsoft.graph.models.extensions.ItemBody;import com.microsoft.graph.models.extensions.KeyValuePair;import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
+import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.KeyValuePair;
+import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

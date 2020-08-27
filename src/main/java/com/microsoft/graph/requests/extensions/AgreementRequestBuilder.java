@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequ
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

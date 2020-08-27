@@ -11,8 +11,6 @@ import com.microsoft.graph.models.extensions.WindowsWifiEnterpriseEAPConfigurati
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

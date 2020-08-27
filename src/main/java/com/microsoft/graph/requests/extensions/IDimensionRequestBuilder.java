@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Dimension;
 import com.microsoft.graph.requests.extensions.IDimensionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDimensionValueRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

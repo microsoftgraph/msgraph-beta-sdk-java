@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageColl
 import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

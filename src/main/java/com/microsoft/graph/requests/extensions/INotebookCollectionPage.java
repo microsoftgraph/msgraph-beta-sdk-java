@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.models.extensions.RecentNotebook;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

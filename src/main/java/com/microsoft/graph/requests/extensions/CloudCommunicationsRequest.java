@@ -25,7 +25,6 @@ import com.microsoft.graph.requests.extensions.IPresenceCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PresenceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PresenceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

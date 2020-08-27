@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionReque
 import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

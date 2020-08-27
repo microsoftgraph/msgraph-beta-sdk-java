@@ -22,7 +22,6 @@ import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestB
 import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

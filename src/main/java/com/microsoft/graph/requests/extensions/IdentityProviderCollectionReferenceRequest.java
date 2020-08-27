@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
 import com.microsoft.graph.models.extensions.IdentityProvider;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -30,7 +29,7 @@ public class IdentityProviderCollectionReferenceRequest extends BaseCollectionRe
     /**
      * The request builder for this collection of IdentityProvider
      *
-     * @param requestUrl     the request URLBui
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

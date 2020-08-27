@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.TimeZoneInformation;
-import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
@@ -28,7 +27,6 @@ import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

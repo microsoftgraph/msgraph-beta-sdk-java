@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

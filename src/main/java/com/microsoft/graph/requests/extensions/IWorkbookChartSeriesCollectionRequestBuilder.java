@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
-import com.microsoft.graph.models.extensions.WorkbookChartSeries;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 

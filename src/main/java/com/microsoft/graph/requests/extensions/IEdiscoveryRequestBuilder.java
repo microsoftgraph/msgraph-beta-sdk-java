@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Ediscovery;
 import com.microsoft.graph.requests.extensions.IEdiscoveryCaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEdiscoveryCaseRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.options.Option;

@@ -12,7 +12,6 @@ import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemCollec
 import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemRequestBuilder;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

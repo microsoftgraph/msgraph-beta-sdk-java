@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationAssignment;
-import com.microsoft.graph.models.extensions.EducationAssignment;
-
 import java.util.Arrays;
 import java.util.EnumSet;
 
