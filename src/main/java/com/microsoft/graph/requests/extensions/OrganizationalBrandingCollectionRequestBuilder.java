@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

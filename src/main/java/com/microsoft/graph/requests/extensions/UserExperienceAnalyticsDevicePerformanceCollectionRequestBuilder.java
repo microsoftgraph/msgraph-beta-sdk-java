@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePer
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceCollectionRequest;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

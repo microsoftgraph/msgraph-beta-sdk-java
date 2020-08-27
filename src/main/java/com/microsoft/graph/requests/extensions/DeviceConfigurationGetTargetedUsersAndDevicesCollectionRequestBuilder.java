@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

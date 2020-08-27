@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

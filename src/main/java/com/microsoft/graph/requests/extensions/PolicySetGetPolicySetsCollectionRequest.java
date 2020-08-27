@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.PolicySetGetPolicySetsCollectionP
 import com.microsoft.graph.requests.extensions.PolicySetGetPolicySetsCollectionResponse;
 import com.microsoft.graph.models.extensions.PolicySetGetPolicySetsBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

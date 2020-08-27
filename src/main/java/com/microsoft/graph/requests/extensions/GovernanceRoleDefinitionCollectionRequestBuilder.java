@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

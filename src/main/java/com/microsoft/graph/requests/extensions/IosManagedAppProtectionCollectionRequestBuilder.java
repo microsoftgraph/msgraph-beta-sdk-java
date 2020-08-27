@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectio
 import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequest;
 import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

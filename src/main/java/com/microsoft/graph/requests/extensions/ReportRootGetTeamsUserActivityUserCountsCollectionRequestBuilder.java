@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserCountsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserCountsCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserCountsCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

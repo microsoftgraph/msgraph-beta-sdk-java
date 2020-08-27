@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

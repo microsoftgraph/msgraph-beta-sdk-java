@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageStorageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageStorageCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageStorageCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

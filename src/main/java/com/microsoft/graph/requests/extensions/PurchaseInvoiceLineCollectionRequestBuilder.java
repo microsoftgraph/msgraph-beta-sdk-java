@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

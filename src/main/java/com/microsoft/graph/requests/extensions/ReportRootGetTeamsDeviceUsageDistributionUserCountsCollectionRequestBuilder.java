@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageDistributionUserCountsCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

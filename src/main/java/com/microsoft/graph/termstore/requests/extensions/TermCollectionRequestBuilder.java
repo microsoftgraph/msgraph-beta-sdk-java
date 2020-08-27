@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -19,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupCollectionRequest;
 import com.microsoft.graph.requests.extensions.IGroupEvaluateDynamicMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserDetailCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

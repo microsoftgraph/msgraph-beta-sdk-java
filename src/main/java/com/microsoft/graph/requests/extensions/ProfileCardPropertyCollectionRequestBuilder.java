@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

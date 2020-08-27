@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

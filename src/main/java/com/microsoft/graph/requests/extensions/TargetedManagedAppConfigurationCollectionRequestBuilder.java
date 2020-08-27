@@ -19,7 +19,6 @@ import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationC
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequest;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

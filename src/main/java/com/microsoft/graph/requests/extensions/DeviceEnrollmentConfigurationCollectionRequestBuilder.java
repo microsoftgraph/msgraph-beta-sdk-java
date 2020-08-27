@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCol
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

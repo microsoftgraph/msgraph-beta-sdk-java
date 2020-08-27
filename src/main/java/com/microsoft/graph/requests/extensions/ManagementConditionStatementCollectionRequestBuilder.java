@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IManagementConditionStatementColl
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequest;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

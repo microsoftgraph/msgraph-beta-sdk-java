@@ -25,7 +25,6 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionReq
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationHasPayloadLinksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

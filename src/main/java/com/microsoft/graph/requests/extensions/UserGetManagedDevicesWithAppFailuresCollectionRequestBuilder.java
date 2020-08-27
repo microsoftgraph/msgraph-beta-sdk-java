@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IUserGetManagedDevicesWithAppFailuresCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserGetManagedDevicesWithAppFailuresCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserGetManagedDevicesWithAppFailuresCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

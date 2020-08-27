@@ -103,7 +103,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetPrintUsageSummaries
 import com.microsoft.graph.requests.extensions.IReportRootGetPrintUsageSummariesByPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOverallPrintUsageSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetPrintUsageSummariesByTimeSpanCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

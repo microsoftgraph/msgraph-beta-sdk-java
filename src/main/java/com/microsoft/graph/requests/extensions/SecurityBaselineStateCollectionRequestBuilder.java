@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

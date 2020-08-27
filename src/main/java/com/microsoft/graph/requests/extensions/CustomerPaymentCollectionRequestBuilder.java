@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

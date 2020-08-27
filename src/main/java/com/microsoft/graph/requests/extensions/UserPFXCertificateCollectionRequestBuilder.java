@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserPFXCertificateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

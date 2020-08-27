@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionReques
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequest;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelEvaluateRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

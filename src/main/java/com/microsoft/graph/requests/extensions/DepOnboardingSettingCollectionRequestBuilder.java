@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IDepOnboardingSettingCollectionRe
 import com.microsoft.graph.requests.extensions.IDepOnboardingSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDepOnboardingSettingCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDepOnboardingSettingGetExpiringVppTokenCountRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

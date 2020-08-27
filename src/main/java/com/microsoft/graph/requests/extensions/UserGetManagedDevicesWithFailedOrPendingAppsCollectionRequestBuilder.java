@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IUserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserGetManagedDevicesWithFailedOrPendingAppsCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

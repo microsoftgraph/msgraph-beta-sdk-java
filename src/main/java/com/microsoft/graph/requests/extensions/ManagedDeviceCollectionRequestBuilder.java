@@ -24,7 +24,6 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequest;
 import com.microsoft.graph.requests.extensions.IManagedDeviceExecuteActionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterCollectionRequest;
 import com.microsoft.graph.requests.extensions.IPrinterCreateRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

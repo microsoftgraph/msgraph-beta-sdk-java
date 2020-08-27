@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequest;
 import com.microsoft.graph.requests.extensions.ManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

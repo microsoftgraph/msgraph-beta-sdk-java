@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequest;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelEvaluateApplicationCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

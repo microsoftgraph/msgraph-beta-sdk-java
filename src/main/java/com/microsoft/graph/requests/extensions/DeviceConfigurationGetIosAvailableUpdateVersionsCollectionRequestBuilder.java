@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

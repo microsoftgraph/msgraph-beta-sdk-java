@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IPolicySetCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IPolicySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetCollectionRequest;
 import com.microsoft.graph.requests.extensions.IPolicySetGetPolicySetsCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

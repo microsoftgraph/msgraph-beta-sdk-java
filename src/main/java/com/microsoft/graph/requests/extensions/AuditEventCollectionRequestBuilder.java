@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditCategoriesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditActivityTypesCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

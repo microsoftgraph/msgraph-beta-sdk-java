@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountCountsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountCountsCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageAccountCountsCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

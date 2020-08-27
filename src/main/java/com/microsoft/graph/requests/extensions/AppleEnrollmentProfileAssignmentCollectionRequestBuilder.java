@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityImportCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityImportCollectionRequest;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityImportCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

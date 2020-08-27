@@ -27,7 +27,6 @@ import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyValidateCo
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySetScheduledRetireStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

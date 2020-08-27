@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequ
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

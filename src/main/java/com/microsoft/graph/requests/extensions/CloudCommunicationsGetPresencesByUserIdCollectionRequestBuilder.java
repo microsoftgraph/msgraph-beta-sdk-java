@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsGetPresencesByUserIdCollectionRequest;
 import com.microsoft.graph.requests.extensions.CloudCommunicationsGetPresencesByUserIdCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

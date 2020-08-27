@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

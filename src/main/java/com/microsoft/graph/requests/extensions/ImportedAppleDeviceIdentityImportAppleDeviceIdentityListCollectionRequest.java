@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityImport
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionResponse;
 import com.microsoft.graph.models.extensions.ImportedAppleDeviceIdentityImportAppleDeviceIdentityListBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAgedAccountsReceivableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgedAccountsReceivableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgedAccountsReceivableCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

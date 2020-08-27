@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IExternalConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalConnectionCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

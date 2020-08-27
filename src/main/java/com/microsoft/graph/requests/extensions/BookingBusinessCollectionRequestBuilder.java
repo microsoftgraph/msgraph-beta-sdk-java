@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IBookingBusinessCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingBusinessRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingBusinessCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

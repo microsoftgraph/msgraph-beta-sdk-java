@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetRoleScopeTagsByResourceCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

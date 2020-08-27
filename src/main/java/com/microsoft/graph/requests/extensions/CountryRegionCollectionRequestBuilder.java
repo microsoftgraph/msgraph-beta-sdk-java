@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ICountryRegionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICountryRegionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICountryRegionCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

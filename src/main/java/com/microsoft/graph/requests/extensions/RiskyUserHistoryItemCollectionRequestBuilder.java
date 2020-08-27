@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

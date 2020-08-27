@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityColle
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequest;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

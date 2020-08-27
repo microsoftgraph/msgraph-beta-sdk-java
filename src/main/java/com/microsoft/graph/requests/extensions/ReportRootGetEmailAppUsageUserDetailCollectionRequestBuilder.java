@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageUserDetailCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserScopeTeamsAppInstallationCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

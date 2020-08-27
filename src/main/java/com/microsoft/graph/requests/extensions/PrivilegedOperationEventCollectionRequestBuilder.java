@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

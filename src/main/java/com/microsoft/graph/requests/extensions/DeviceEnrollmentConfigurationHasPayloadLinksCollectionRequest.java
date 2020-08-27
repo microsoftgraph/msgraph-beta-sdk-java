@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationHasP
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationHasPayloadLinksCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfigurationHasPayloadLinksBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

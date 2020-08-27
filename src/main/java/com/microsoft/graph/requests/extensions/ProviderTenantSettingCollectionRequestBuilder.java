@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IProviderTenantSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProviderTenantSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProviderTenantSettingCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

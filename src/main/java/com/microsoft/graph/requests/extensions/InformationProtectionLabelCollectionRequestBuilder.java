@@ -25,7 +25,6 @@ import com.microsoft.graph.requests.extensions.IInformationProtectionLabelExtrac
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

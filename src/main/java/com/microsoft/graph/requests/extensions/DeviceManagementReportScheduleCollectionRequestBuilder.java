@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

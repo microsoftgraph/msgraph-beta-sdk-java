@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintDocumentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

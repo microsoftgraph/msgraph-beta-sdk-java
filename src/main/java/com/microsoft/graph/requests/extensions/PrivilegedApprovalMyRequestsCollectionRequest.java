@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IPrivilegedApprovalMyRequestsColl
 import com.microsoft.graph.requests.extensions.PrivilegedApprovalMyRequestsCollectionPage;
 import com.microsoft.graph.requests.extensions.PrivilegedApprovalMyRequestsCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetPrintUsageSummariesByPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetPrintUsageSummariesByPrinterCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetPrintUsageSummariesByPrinterCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

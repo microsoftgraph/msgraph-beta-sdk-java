@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsage
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageStorageCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageStorageCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

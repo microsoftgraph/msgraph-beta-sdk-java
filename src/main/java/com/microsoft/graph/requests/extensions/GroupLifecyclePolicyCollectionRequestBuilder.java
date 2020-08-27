@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRe
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequest;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRenewGroupRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

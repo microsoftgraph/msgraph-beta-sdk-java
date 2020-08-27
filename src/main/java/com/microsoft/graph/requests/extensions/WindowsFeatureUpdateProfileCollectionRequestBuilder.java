@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -14,7 +14,6 @@ import com.microsoft.graph.models.generated.DevicePlatformType;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.models.extensions.ManagementConditionStatement;
 

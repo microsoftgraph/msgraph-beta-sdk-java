@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

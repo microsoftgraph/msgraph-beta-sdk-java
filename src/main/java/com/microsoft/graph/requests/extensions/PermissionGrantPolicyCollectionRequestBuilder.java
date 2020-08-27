@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

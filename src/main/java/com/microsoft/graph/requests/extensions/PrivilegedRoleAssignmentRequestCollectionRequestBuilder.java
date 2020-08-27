@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestC
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestCollectionRequest;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestMyCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

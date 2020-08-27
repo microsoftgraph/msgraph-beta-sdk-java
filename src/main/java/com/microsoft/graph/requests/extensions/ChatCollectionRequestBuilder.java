@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatCollectionRequest;
 import com.microsoft.graph.requests.extensions.IChatAllMessagesCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPersonCertificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCertificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCertificationCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

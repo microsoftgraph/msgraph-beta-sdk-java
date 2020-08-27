@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

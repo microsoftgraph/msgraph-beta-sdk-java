@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IRemoteActionAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteActionAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteActionAuditCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

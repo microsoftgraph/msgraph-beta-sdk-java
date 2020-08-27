@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.ISynchronizationJobCollectionRequ
 import com.microsoft.graph.requests.extensions.ISynchronizationJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobCollectionRequest;
 import com.microsoft.graph.requests.extensions.ISynchronizationJobValidateCredentialsRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

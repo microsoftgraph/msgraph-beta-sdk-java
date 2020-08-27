@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

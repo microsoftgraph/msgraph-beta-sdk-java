@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

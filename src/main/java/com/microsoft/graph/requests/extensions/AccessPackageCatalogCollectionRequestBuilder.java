@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRe
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogSearchCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

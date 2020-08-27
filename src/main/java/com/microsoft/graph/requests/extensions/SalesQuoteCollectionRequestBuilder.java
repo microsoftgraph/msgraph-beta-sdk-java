@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISalesQuoteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesQuoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesQuoteCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

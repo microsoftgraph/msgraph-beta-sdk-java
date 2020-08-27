@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationHasPayloadLinksCollectionRequest;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationHasPayloadLinksCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

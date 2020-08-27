@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityDetailCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityDetailCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

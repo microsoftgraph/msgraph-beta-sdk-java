@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetUserOwnedObjectsRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

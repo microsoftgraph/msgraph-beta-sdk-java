@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityStorageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityStorageCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityStorageCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

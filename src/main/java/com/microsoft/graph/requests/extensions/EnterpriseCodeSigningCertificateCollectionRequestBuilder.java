@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

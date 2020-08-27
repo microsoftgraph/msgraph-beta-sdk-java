@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAccessPackageSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageSearchCollectionRequest;
 import com.microsoft.graph.requests.extensions.AccessPackageSearchCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

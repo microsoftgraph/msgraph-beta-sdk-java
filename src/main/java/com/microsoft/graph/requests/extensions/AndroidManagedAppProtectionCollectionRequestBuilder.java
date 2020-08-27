@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionColle
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

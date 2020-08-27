@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

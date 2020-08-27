@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollecti
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequest;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentExportCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

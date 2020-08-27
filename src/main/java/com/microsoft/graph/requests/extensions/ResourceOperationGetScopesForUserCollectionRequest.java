@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IResourceOperationGetScopesForUse
 import com.microsoft.graph.requests.extensions.ResourceOperationGetScopesForUserCollectionPage;
 import com.microsoft.graph.requests.extensions.ResourceOperationGetScopesForUserCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

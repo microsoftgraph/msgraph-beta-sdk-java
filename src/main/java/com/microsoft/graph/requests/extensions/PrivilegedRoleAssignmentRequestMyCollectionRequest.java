@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestM
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestMyCollectionPage;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestMyCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

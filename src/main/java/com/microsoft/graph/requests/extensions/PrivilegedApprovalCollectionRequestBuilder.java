@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IPrivilegedApprovalCollectionRequ
 import com.microsoft.graph.requests.extensions.IPrivilegedApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedApprovalCollectionRequest;
 import com.microsoft.graph.requests.extensions.IPrivilegedApprovalMyRequestsCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

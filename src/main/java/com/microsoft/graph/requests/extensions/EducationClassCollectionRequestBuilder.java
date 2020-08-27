@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestB
 import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequest;
 import com.microsoft.graph.requests.extensions.IEducationClassDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

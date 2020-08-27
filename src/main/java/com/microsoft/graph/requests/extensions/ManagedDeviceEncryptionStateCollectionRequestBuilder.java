@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceEncryptionStateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IAuditEventGetAuditCategoriesColl
 import com.microsoft.graph.requests.extensions.AuditEventGetAuditCategoriesCollectionPage;
 import com.microsoft.graph.requests.extensions.AuditEventGetAuditCategoriesCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

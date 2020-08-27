@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

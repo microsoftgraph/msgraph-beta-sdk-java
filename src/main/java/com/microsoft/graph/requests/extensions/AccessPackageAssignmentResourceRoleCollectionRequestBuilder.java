@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceR
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleMyCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

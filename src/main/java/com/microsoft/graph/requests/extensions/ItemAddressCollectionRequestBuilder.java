@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

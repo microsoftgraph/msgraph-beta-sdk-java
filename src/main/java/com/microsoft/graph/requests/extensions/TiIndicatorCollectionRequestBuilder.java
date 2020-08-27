@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.ITiIndicatorSubmitTiIndicatorsCol
 import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

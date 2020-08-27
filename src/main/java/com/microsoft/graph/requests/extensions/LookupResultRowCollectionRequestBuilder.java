@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ILookupResultRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILookupResultRowRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILookupResultRowCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditActivityTypesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditActivityTypesCollectionRequest;
 import com.microsoft.graph.requests.extensions.AuditEventGetAuditActivityTypesCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

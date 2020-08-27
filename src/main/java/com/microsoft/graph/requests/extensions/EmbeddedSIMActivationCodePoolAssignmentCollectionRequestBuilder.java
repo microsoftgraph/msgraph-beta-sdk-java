@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

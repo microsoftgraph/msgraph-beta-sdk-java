@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISynchronizationTemplateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

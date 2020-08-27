@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserD
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityUserDetailCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityUserDetailCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

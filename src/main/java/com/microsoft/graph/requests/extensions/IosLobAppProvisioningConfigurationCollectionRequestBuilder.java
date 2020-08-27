@@ -19,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurati
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityRequestBui
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityCollectionRequest;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentityImportDeviceIdentityListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

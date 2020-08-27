@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

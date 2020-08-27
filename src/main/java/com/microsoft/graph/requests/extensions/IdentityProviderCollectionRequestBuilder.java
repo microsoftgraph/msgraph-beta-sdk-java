@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionReques
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequest;
 import com.microsoft.graph.requests.extensions.IIdentityProviderAvailableProviderTypesCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

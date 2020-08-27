@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessAct
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserCountsCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserCountsCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

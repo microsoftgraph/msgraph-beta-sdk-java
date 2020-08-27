@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionHasPayloadLinksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionHasPayloadLinksCollectionRequest;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionHasPayloadLinksCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

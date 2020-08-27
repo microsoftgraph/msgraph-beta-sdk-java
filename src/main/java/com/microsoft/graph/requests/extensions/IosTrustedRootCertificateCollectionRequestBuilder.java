@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

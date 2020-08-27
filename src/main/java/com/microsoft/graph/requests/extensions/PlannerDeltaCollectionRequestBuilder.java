@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

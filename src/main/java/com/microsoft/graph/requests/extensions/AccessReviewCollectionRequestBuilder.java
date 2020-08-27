@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

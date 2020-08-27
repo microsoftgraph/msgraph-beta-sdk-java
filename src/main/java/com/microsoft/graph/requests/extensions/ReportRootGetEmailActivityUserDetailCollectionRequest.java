@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserDe
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityUserDetailCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityUserDetailCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfile
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileHasPayloadLinksCollectionResponse;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfileHasPayloadLinksBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

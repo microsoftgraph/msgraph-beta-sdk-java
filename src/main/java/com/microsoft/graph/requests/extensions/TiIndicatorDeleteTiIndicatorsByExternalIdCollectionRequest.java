@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.TiIndicatorDeleteTiIndicatorsByEx
 import com.microsoft.graph.requests.extensions.TiIndicatorDeleteTiIndicatorsByExternalIdCollectionResponse;
 import com.microsoft.graph.models.extensions.TiIndicatorDeleteTiIndicatorsByExternalIdBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

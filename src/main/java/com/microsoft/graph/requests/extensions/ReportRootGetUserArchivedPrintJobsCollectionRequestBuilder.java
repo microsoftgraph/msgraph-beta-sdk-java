@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IReportRootGetUserArchivedPrintJobsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetUserArchivedPrintJobsCollectionRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetUserArchivedPrintJobsCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

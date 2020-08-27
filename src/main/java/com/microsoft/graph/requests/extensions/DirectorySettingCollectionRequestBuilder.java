@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

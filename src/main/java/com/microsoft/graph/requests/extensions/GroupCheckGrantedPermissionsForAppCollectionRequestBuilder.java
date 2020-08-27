@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IGroupCheckGrantedPermissionsForAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupCheckGrantedPermissionsForAppCollectionRequest;
 import com.microsoft.graph.requests.extensions.GroupCheckGrantedPermissionsForAppCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequest;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagGetRoleScopeTagsByIdCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagHasCustomRoleScopeTagRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

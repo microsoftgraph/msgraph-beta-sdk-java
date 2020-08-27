@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUse
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserDetailCollectionPage;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserDetailCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

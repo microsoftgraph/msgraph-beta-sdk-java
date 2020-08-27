@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

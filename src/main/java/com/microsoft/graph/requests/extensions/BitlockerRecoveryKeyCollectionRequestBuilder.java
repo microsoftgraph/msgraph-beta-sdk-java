@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollecti
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

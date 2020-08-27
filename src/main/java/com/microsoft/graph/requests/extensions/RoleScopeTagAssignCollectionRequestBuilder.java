@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleScopeTagAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.RoleScopeTagAssignCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

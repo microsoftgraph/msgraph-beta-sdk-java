@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
