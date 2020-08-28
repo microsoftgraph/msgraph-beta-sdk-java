@@ -14,6 +14,9 @@ Add the repository and a compile dependency for `microsoft-graph-beta` to your p
 ```gradle
 repository {
     jcenter()
+    	jcenter{
+        	url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
+	}
 }
 
 dependency {
