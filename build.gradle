@@ -30,14 +30,14 @@ dependencies {
     implementation 'com.google.guava:guava:20.0'
 
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     
-    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.code.gson:gson:2.8.6'
     
     compile 'com.sun.jersey:jersey-server:1.19.4'
     
     // Core Http library 
-    compile('com.microsoft.graph:microsoft-graph-core:1.0.0')
+    compile('com.microsoft.graph:microsoft-graph-core:1.0.1')
 }
 
 def pomConfig = {
@@ -64,7 +64,7 @@ publishing {
 
             groupId 'com.microsoft.graph'
 
-            artifactId 'microsoft-graph'
+            artifactId 'microsoft-graph-beta'
 
             version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
 
@@ -73,10 +73,10 @@ publishing {
             artifact sourceJar
             pom.withXml {
                 def root = asNode()
-                root.appendNode('name', 'Microsoft Graph SDK for Java')
-                root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-sdk-java')
+                root.appendNode('name', 'Microsoft Graph Beta SDK for Java')
+                root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-beta-sdk-java')
                 root.children().last() + pomConfig
-                def pomFile = file("${project.buildDir}/libs/microsoft-graph.pom")
+                def pomFile = file("${project.buildDir}/libs/microsoft-graph-beta.pom")
                 writeTo(pomFile)
             }
 
@@ -84,7 +84,7 @@ publishing {
         Snapshot(MavenPublication) {
         	customizePom(pom)
         	groupId 'com.microsoft.graph'
-        	artifactId 'microsoft-graph'
+        	artifactId 'microsoft-graph-beta'
         	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
         	from components.java
         	pom.withXml {
@@ -102,7 +102,7 @@ publishing {
 		mavenCentralRelease(MavenPublication) {
         	customizePom(pom)
         	groupId 'com.microsoft.graph'
-        	artifactId 'microsoft-graph'
+        	artifactId 'microsoft-graph-beta'
         	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
         	from components.java
         	pom.withXml {
@@ -198,8 +198,8 @@ task sourceJar(type: Jar) {
 }
 
 compileJava {
-  sourceCompatibility = 1.7
-  targetCompatibility = 1.7
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
 }
 
 def getVersionCode() {
@@ -289,16 +289,16 @@ def customizePom(pom) {
         root.children().last() + {
             resolveStrategy = Closure.DELEGATE_FIRST
 
-            description 'Microsoft Graph SDK'
-            name 'Microsoft Graph Java SDK'
-            url 'https://github.com/microsoftgraph/msgraph-sdk-java'
+            description 'Microsoft Graph Beta SDK'
+            name 'Microsoft Graph Beta Java SDK'
+            url 'https://github.com/microsoftgraph/msgraph-beta-sdk-java'
             organization {
                 name 'Microsoft'
-                url 'https://github.com/microsoftgraph/msgraph-sdk-java'
+                url 'https://github.com/microsoftgraph/msgraph-beta-sdk-java'
             }
             issueManagement {
                 system 'GitHub'
-                url 'https://github.com/microsoftgraph/msgraph-sdk-java/issues'
+                url 'https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues'
             }
             licenses {
                 license {
@@ -308,9 +308,9 @@ def customizePom(pom) {
                 }
             }
             scm {
-                url 'https://github.com/microsoftgraph/msgraph-sdk-java'
-            	connection 'scm:git:git://github.com/microsoftgraph/msgraph-sdk-java.git'
-            	developerConnection 'scm:git:ssh://git@github.com:microsoftgraph/msgraph-sdk-java.git'
+                url 'https://github.com/microsoftgraph/msgraph-beta-sdk-java'
+            	connection 'scm:git:git://github.com/microsoftgraph/msgraph-beta-sdk-java.git'
+            	developerConnection 'scm:git:ssh://git@github.com:microsoftgraph/msgraph-beta-sdk-java.git'
             }
             developers {
                 developer {

@@ -1,0 +1,16 @@
+page_type: sample
+products:
+  - office-365
+  - ms-graph
+languages:
+  - java
+extensions:
+  contentType: sdks
+  technologies:
+    - Microsoft Graph
+    - Microsoft identity platform
+  platforms:
+    - Android
+  createdDate: '8/19/2020 10:20:15 AM'
+title: Microsoft Graph Beta SDK for Java
+description: Microsoft Graph Beta SDK for Java and Android
