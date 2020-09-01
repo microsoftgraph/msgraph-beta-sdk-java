@@ -5,6 +5,8 @@
 
 Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
 
+> **Note:** this SDK allows you to build applications using the [beta](https://docs.microsoft.com/en-us/graph/use-the-api#version) of Microsoft Graph. If you want to use the production supported Microsoft Graph APIs under v1.0, use our [v1.0 SDK](https://github.com/microsoftgraph/msgraph-sdk-java) instead.
+
 ## 1. Installation
 
 ### 1.1 Install via Gradle
@@ -12,22 +14,24 @@ Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft 
 Add the repository and a compile dependency for `microsoft-graph-beta` to your project's `build.gradle`:
 
 ```gradle
-repository {
+repositories {
     jcenter()
     	jcenter{
         	url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
 	}
 }
 
-dependency {
+dependencies {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:microsoft-graph-beta:0.1.0-SNAPSHOT')
+    implementation 'com.microsoft.graph:microsoft-graph-beta:0.1.0-SNAPSHOT'
 }
 ```
 
 ### 1.2 Install via Maven
+
 Add the dependency in `dependencies` in pom.xml
-```dependency
+
+```xml
 <dependency>
 	<groupId>com.microsoft.graph</groupId>
 	<artifactId>microsoft-graph-beta</artifactId>
@@ -36,6 +40,7 @@ Add the dependency in `dependencies` in pom.xml
 ```
 
 ### 1.3 Enable ProGuard (Android)
+
 The nature of the Graph API is such that the SDK needs quite a large set of classes to describe its functionality. You need to ensure that [ProGuard](https://developer.android.com/studio/build/shrink-code.html) is enabled on your project. Otherwise, you will incur long build times for functionality that is not necessarily relevant to your particular application. If you are still hitting the 64K method limit, you can also enable [multidexing](https://developer.android.com/studio/build/multidex.html).
 
 ## 2. Getting started
@@ -51,6 +56,7 @@ An instance of the **GraphServiceClient** class handles building requests, sendi
 For an example of authentication in a Java desktop client application, see the [Preview msgraph-sdk-java-auth](https://github.com/microsoftgraph/msgraph-sdk-android-msa-auth-for-android-adapter) and for an Android application see [Preview msgraph-sdk-android-auth](https://github.com/microsoftgraph/msgraph-sdk-android-auth).
 
 ### 2.3 Get a GraphServiceClient object
+
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
@@ -118,7 +124,7 @@ Thanks to everyone who has already devoted time to improving the library:
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!
 
 ## 7. Supported Java versions
-The Microsoft Graph Beta SDK for Java library is supported at runtime for Java 8+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph beta SDK for Java library is supported at runtime for Java 8+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater through [desugaring](https://developer.android.com/studio/write/java8-support.html#library-desugaring).
 
 ## 8. License
 
