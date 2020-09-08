@@ -80,6 +80,23 @@ public interface IBookingCustomerRequest extends IHttpRequest {
     BookingCustomer post(final BookingCustomer newBookingCustomer) throws ClientException;
 
     /**
+     * Posts a BookingCustomer with a new object
+     *
+     * @param newBookingCustomer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final BookingCustomer newBookingCustomer, final ICallback<BookingCustomer> callback);
+
+    /**
+     * Posts a BookingCustomer with a new object
+     *
+     * @param newBookingCustomer the object to create/update
+     * @return the created BookingCustomer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    BookingCustomer put(final BookingCustomer newBookingCustomer) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

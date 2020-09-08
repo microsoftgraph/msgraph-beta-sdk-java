@@ -43,16 +43,16 @@ public interface IDeviceComplianceScriptRequestBuilder extends IRequestBuilder {
 
     IDeviceHealthScriptAssignmentRequestBuilder assignments(final String id);
 
+    IDeviceComplianceScriptDeviceStateCollectionRequestBuilder deviceRunStates();
+
+    IDeviceComplianceScriptDeviceStateRequestBuilder deviceRunStates(final String id);
+
     /**
      * Gets the request builder for DeviceComplianceScriptRunSummary
      *
      * @return the IDeviceComplianceScriptRunSummaryRequestBuilder instance
      */
     IDeviceComplianceScriptRunSummaryRequestBuilder runSummary();
-
-    IDeviceComplianceScriptDeviceStateCollectionRequestBuilder deviceRunStates();
-
-    IDeviceComplianceScriptDeviceStateRequestBuilder deviceRunStates(final String id);
     IDeviceComplianceScriptAssignRequestBuilder assign(final java.util.List<DeviceHealthScriptAssignment> deviceHealthScriptAssignments);
 
 }

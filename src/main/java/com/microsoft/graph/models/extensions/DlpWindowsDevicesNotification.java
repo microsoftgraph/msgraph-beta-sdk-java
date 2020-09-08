@@ -27,20 +27,20 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements IJ
 
 
     /**
-     * The Last Modfied By.
-     * 
-     */
-    @SerializedName("lastModfiedBy")
-    @Expose
-    public String lastModfiedBy;
-
-    /**
      * The Content Name.
      * 
      */
     @SerializedName("contentName")
     @Expose
     public String contentName;
+
+    /**
+     * The Last Modfied By.
+     * 
+     */
+    @SerializedName("lastModfiedBy")
+    @Expose
+    public String lastModfiedBy;
 
 
     /**

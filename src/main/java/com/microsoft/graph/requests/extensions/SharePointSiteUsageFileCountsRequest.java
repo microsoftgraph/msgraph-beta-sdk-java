@@ -112,6 +112,27 @@ public class SharePointSiteUsageFileCountsRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a SharePointSiteUsageFileCounts with a new object
+     *
+     * @param newSharePointSiteUsageFileCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts, final ICallback<SharePointSiteUsageFileCounts> callback) {
+        send(HttpMethod.PUT, callback, newSharePointSiteUsageFileCounts);
+    }
+
+    /**
+     * Creates a SharePointSiteUsageFileCounts with a new object
+     *
+     * @param newSharePointSiteUsageFileCounts the object to create/update
+     * @return the created SharePointSiteUsageFileCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharePointSiteUsageFileCounts put(final SharePointSiteUsageFileCounts newSharePointSiteUsageFileCounts) throws ClientException {
+        return send(HttpMethod.PUT, newSharePointSiteUsageFileCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

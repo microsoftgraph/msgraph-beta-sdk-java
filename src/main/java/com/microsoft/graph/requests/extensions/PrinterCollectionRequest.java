@@ -64,14 +64,14 @@ public class PrinterCollectionRequest extends BaseCollectionRequest<PrinterColle
     public void post(final Printer newPrinter, final ICallback<Printer> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrinterRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrinter, callback);
     }
 
     public Printer post(final Printer newPrinter) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrinterRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrinter);
     }
 
@@ -108,6 +108,27 @@ public class PrinterCollectionRequest extends BaseCollectionRequest<PrinterColle
         return (PrinterCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrinterCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrinterCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrinterCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrinterCollectionRequest)this;
+    }
     public IPrinterCollectionPage buildFromResponse(final PrinterCollectionResponse response) {
         final IPrinterCollectionRequestBuilder builder;
         if (response.nextLink != null) {

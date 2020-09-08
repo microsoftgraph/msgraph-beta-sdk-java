@@ -8,10 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionRequestBuilder;
@@ -20,8 +16,14 @@ import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionReq
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContinuousAccessEvaluationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -74,13 +76,6 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
     public IConditionalAccessRootRequestBuilder conditionalAccess() {
         return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
     }
-    public IIdentityUserFlowCollectionRequestBuilder userFlows() {
-        return new IdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows"), getClient(), null);
-    }
-
-    public IIdentityUserFlowRequestBuilder userFlows(final String id) {
-        return new IdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows") + "/" + id, getClient(), null);
-    }
     public IB2cIdentityUserFlowCollectionRequestBuilder b2cUserFlows() {
         return new B2cIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2cUserFlows"), getClient(), null);
     }
@@ -94,5 +89,21 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
 
     public IB2xIdentityUserFlowRequestBuilder b2xUserFlows(final String id) {
         return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
+    }
+    public IIdentityUserFlowCollectionRequestBuilder userFlows() {
+        return new IdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows"), getClient(), null);
+    }
+
+    public IIdentityUserFlowRequestBuilder userFlows(final String id) {
+        return new IdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ContinuousAccessEvaluationPolicy
+     *
+     * @return the IContinuousAccessEvaluationPolicyRequestBuilder instance
+     */
+    public IContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy() {
+        return new ContinuousAccessEvaluationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("continuousAccessEvaluationPolicy"), getClient(), null);
     }
 }

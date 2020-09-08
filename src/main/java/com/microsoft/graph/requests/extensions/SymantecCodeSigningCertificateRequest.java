@@ -112,6 +112,27 @@ public class SymantecCodeSigningCertificateRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a SymantecCodeSigningCertificate with a new object
+     *
+     * @param newSymantecCodeSigningCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback) {
+        send(HttpMethod.PUT, callback, newSymantecCodeSigningCertificate);
+    }
+
+    /**
+     * Creates a SymantecCodeSigningCertificate with a new object
+     *
+     * @param newSymantecCodeSigningCertificate the object to create/update
+     * @return the created SymantecCodeSigningCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SymantecCodeSigningCertificate put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newSymantecCodeSigningCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

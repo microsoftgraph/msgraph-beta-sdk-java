@@ -36,6 +36,14 @@ public class Settings implements IJsonBackedObject {
     }
 
     /**
+     * The Has Graph Mailbox.
+     * 
+     */
+    @SerializedName("hasGraphMailbox")
+    @Expose
+    public Boolean hasGraphMailbox;
+
+    /**
      * The Has License.
      * 
      */
@@ -50,14 +58,6 @@ public class Settings implements IJsonBackedObject {
     @SerializedName("hasOptedOut")
     @Expose
     public Boolean hasOptedOut;
-
-    /**
-     * The Has Graph Mailbox.
-     * 
-     */
-    @SerializedName("hasGraphMailbox")
-    @Expose
-    public Boolean hasGraphMailbox;
 
 
     /**

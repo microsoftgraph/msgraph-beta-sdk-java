@@ -116,6 +116,27 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a Windows10PkcsCertificateProfile with a new object
+     *
+     * @param newWindows10PkcsCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile, final ICallback<Windows10PkcsCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newWindows10PkcsCertificateProfile);
+    }
+
+    /**
+     * Creates a Windows10PkcsCertificateProfile with a new object
+     *
+     * @param newWindows10PkcsCertificateProfile the object to create/update
+     * @return the created Windows10PkcsCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10PkcsCertificateProfile put(final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10PkcsCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

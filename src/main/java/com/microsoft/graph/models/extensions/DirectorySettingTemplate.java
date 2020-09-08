@@ -28,20 +28,20 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * 
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Values.

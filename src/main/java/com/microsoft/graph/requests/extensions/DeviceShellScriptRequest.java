@@ -10,10 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceShellScript;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionRequestBuilder;
@@ -22,6 +18,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
@@ -129,6 +129,27 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      */
     public DeviceShellScript post(final DeviceShellScript newDeviceShellScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceShellScript);
+    }
+
+    /**
+     * Creates a DeviceShellScript with a new object
+     *
+     * @param newDeviceShellScript the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback) {
+        send(HttpMethod.PUT, callback, newDeviceShellScript);
+    }
+
+    /**
+     * Creates a DeviceShellScript with a new object
+     *
+     * @param newDeviceShellScript the object to create/update
+     * @return the created DeviceShellScript
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceShellScript put(final DeviceShellScript newDeviceShellScript) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceShellScript);
     }
 
     /**

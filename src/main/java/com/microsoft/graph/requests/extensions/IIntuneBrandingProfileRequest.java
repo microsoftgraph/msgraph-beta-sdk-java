@@ -80,6 +80,23 @@ public interface IIntuneBrandingProfileRequest extends IHttpRequest {
     IntuneBrandingProfile post(final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException;
 
     /**
+     * Posts a IntuneBrandingProfile with a new object
+     *
+     * @param newIntuneBrandingProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback);
+
+    /**
+     * Posts a IntuneBrandingProfile with a new object
+     *
+     * @param newIntuneBrandingProfile the object to create/update
+     * @return the created IntuneBrandingProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IntuneBrandingProfile put(final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

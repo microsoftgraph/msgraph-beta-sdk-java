@@ -37,20 +37,20 @@ public class WebPart implements IJsonBackedObject {
     }
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Data.
      * 
      */
     @SerializedName("data")
     @Expose
     public SitePageData data;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

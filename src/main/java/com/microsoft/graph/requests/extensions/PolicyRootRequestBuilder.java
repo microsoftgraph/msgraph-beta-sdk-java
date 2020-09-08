@@ -178,6 +178,13 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
     public IDirectoryRoleAccessReviewPolicyRequestBuilder directoryRoleAccessReviewPolicy() {
         return new DirectoryRoleAccessReviewPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("directoryRoleAccessReviewPolicy"), getClient(), null);
     }
+    public IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
+        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
+    }
+
+    public IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id) {
+        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for IdentitySecurityDefaultsEnforcementPolicy
@@ -186,12 +193,5 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      */
     public IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
-    }
-    public IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
-        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
-    }
-
-    public IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id) {
-        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
     }
 }

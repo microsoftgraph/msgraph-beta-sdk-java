@@ -62,14 +62,14 @@ public class PurchaseInvoiceCollectionRequest extends BaseCollectionRequest<Purc
     public void post(final PurchaseInvoice newPurchaseInvoice, final ICallback<PurchaseInvoice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PurchaseInvoiceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPurchaseInvoice, callback);
     }
 
     public PurchaseInvoice post(final PurchaseInvoice newPurchaseInvoice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PurchaseInvoiceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPurchaseInvoice);
     }
 
@@ -106,6 +106,27 @@ public class PurchaseInvoiceCollectionRequest extends BaseCollectionRequest<Purc
         return (PurchaseInvoiceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPurchaseInvoiceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PurchaseInvoiceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPurchaseInvoiceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPurchaseInvoiceCollectionRequest)this;
+    }
     public IPurchaseInvoiceCollectionPage buildFromResponse(final PurchaseInvoiceCollectionResponse response) {
         final IPurchaseInvoiceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

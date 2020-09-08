@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      */
     public ConditionalAccessRoot post(final ConditionalAccessRoot newConditionalAccessRoot) throws ClientException {
         return send(HttpMethod.POST, newConditionalAccessRoot);
+    }
+
+    /**
+     * Creates a ConditionalAccessRoot with a new object
+     *
+     * @param newConditionalAccessRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<ConditionalAccessRoot> callback) {
+        send(HttpMethod.PUT, callback, newConditionalAccessRoot);
+    }
+
+    /**
+     * Creates a ConditionalAccessRoot with a new object
+     *
+     * @param newConditionalAccessRoot the object to create/update
+     * @return the created ConditionalAccessRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ConditionalAccessRoot put(final ConditionalAccessRoot newConditionalAccessRoot) throws ClientException {
+        return send(HttpMethod.PUT, newConditionalAccessRoot);
     }
 
     /**

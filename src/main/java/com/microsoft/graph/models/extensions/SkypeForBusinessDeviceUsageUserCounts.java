@@ -27,6 +27,46 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
 
 
     /**
+     * The Android Phone.
+     * 
+     */
+    @SerializedName("androidPhone")
+    @Expose
+    public Integer androidPhone;
+
+    /**
+     * The IPad.
+     * 
+     */
+    @SerializedName("iPad")
+    @Expose
+    public Integer iPad;
+
+    /**
+     * The IPhone.
+     * 
+     */
+    @SerializedName("iPhone")
+    @Expose
+    public Integer iPhone;
+
+    /**
+     * The Report Date.
+     * 
+     */
+    @SerializedName("reportDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportDate;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
      * The Report Refresh Date.
      * 
      */
@@ -49,46 +89,6 @@ public class SkypeForBusinessDeviceUsageUserCounts extends Entity implements IJs
     @SerializedName("windowsPhone")
     @Expose
     public Integer windowsPhone;
-
-    /**
-     * The Android Phone.
-     * 
-     */
-    @SerializedName("androidPhone")
-    @Expose
-    public Integer androidPhone;
-
-    /**
-     * The IPhone.
-     * 
-     */
-    @SerializedName("iPhone")
-    @Expose
-    public Integer iPhone;
-
-    /**
-     * The IPad.
-     * 
-     */
-    @SerializedName("iPad")
-    @Expose
-    public Integer iPad;
-
-    /**
-     * The Report Date.
-     * 
-     */
-    @SerializedName("reportDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportDate;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
 
 
     /**

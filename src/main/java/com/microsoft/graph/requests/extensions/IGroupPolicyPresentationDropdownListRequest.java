@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationDropdownListRequest extends IHttpReques
     GroupPolicyPresentationDropdownList post(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationDropdownList with a new object
+     *
+     * @param newGroupPolicyPresentationDropdownList the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList, final ICallback<GroupPolicyPresentationDropdownList> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationDropdownList with a new object
+     *
+     * @param newGroupPolicyPresentationDropdownList the object to create/update
+     * @return the created GroupPolicyPresentationDropdownList
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationDropdownList put(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

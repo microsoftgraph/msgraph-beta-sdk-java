@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class EducationCategoryCollectionRequest extends BaseCollectionRequest<Ed
     public void post(final EducationCategory newEducationCategory, final ICallback<EducationCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationCategory, callback);
     }
 
     public EducationCategory post(final EducationCategory newEducationCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationCategory);
     }
 
@@ -106,6 +106,27 @@ public class EducationCategoryCollectionRequest extends BaseCollectionRequest<Ed
         return (EducationCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationCategoryCollectionRequest)this;
+    }
     public IEducationCategoryCollectionPage buildFromResponse(final EducationCategoryCollectionResponse response) {
         final IEducationCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

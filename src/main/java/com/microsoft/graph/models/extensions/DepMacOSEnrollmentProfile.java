@@ -27,12 +27,12 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
 
 
     /**
-     * The Registration Disabled.
-     * Indicates if registration is disabled
+     * The Choose Your Lock Screen Disabled.
+     * Indicates if iCloud Documents and Desktop screen is disabled
      */
-    @SerializedName("registrationDisabled")
+    @SerializedName("chooseYourLockScreenDisabled")
     @Expose
-    public Boolean registrationDisabled;
+    public Boolean chooseYourLockScreenDisabled;
 
     /**
      * The File Vault Disabled.
@@ -59,12 +59,12 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public Boolean iCloudStorageDisabled;
 
     /**
-     * The Choose Your Lock Screen Disabled.
-     * Indicates if iCloud Documents and Desktop screen is disabled
+     * The Registration Disabled.
+     * Indicates if registration is disabled
      */
-    @SerializedName("chooseYourLockScreenDisabled")
+    @SerializedName("registrationDisabled")
     @Expose
-    public Boolean chooseYourLockScreenDisabled;
+    public Boolean registrationDisabled;
 
 
     /**

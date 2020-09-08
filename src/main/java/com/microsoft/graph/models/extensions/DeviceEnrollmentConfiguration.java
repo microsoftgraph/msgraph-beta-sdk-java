@@ -30,12 +30,12 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
 
     /**
-     * The Display Name.
+     * The Created Date Time.
      * Not yet documented
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -46,20 +46,12 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
     public String description;
 
     /**
-     * The Priority.
+     * The Display Name.
      * Not yet documented
      */
-    @SerializedName("priority")
+    @SerializedName("displayName")
     @Expose
-    public Integer priority;
-
-    /**
-     * The Created Date Time.
-     * Not yet documented
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
+    public String displayName;
 
     /**
      * The Last Modified Date Time.
@@ -70,12 +62,12 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Version.
+     * The Priority.
      * Not yet documented
      */
-    @SerializedName("version")
+    @SerializedName("priority")
     @Expose
-    public Integer version;
+    public Integer priority;
 
     /**
      * The Role Scope Tag Ids.
@@ -84,6 +76,14 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
     @SerializedName("roleScopeTagIds")
     @Expose
     public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The Version.
+     * Not yet documented
+     */
+    @SerializedName("version")
+    @Expose
+    public Integer version;
 
     /**
      * The Assignments.

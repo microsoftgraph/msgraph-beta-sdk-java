@@ -27,22 +27,6 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
 
 
     /**
-     * The Profile Name.
-     * This is a friendly name??used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-     */
-    @SerializedName("profileName")
-    @Expose
-    public String profileName;
-
-    /**
-     * The Show Task Bar.
-     * This setting allows the admin to specify whether the Task Bar is shown or not.
-     */
-    @SerializedName("showTaskBar")
-    @Expose
-    public Boolean showTaskBar;
-
-    /**
      * The App User Model Ids.
      * These are the only Windows Store Apps that will be available to launch from the Start menu.
      */
@@ -59,20 +43,36 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
     public java.util.List<String> desktopAppPaths;
 
     /**
+     * The Profile Name.
+     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     */
+    @SerializedName("profileName")
+    @Expose
+    public String profileName;
+
+    /**
+     * The Show Task Bar.
+     * This setting allows the admin to specify whether the Task Bar is shown or not.
+     */
+    @SerializedName("showTaskBar")
+    @Expose
+    public Boolean showTaskBar;
+
+    /**
+     * The Start Menu Layout Xml.
+     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     */
+    @SerializedName("startMenuLayoutXml")
+    @Expose
+    public byte[] startMenuLayoutXml;
+
+    /**
      * The User Accounts.
      * The user accounts that will be locked to this kiosk configuration.
      */
     @SerializedName("userAccounts")
     @Expose
     public java.util.List<String> userAccounts;
-
-    /**
-     * The Start Menu Layout Xml.
-     * Allows admins to override the default Start layout and prevents the user from changing it.??The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
-     */
-    @SerializedName("startMenuLayoutXml")
-    @Expose
-    public byte[] startMenuLayoutXml;
 
 
     /**

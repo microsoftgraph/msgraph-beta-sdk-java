@@ -118,6 +118,27 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a AccessPackageAssignmentRequest with a new object
+     *
+     * @param newAccessPackageAssignmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<AccessPackageAssignmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageAssignmentRequest);
+    }
+
+    /**
+     * Creates a AccessPackageAssignmentRequest with a new object
+     *
+     * @param newAccessPackageAssignmentRequest the object to create/update
+     * @return the created AccessPackageAssignmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageAssignmentRequest put(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageAssignmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

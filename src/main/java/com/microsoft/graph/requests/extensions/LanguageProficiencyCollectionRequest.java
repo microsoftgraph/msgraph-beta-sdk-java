@@ -62,14 +62,14 @@ public class LanguageProficiencyCollectionRequest extends BaseCollectionRequest<
     public void post(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LanguageProficiencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLanguageProficiency, callback);
     }
 
     public LanguageProficiency post(final LanguageProficiency newLanguageProficiency) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LanguageProficiencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLanguageProficiency);
     }
 
@@ -106,6 +106,27 @@ public class LanguageProficiencyCollectionRequest extends BaseCollectionRequest<
         return (LanguageProficiencyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ILanguageProficiencyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (LanguageProficiencyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ILanguageProficiencyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ILanguageProficiencyCollectionRequest)this;
+    }
     public ILanguageProficiencyCollectionPage buildFromResponse(final LanguageProficiencyCollectionResponse response) {
         final ILanguageProficiencyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

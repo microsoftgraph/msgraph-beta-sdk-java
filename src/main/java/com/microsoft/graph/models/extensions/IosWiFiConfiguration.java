@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WiFiSecurityType;
 import com.microsoft.graph.models.generated.WiFiProxySetting;
+import com.microsoft.graph.models.generated.WiFiSecurityType;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -29,22 +29,6 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements IJsonBa
 
 
     /**
-     * The Network Name.
-     * Network Name
-     */
-    @SerializedName("networkName")
-    @Expose
-    public String networkName;
-
-    /**
-     * The Ssid.
-     * This is the name of the Wi-Fi network that is broadcast to all devices.
-     */
-    @SerializedName("ssid")
-    @Expose
-    public String ssid;
-
-    /**
      * The Connect Automatically.
      * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
      */
@@ -61,20 +45,28 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements IJsonBa
     public Boolean connectWhenNetworkNameIsHidden;
 
     /**
-     * The Wi Fi Security Type.
-     * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+     * The Network Name.
+     * Network Name
      */
-    @SerializedName("wiFiSecurityType")
+    @SerializedName("networkName")
     @Expose
-    public WiFiSecurityType wiFiSecurityType;
+    public String networkName;
 
     /**
-     * The Proxy Settings.
-     * Proxy Type for this Wi-Fi connection
+     * The Pre Shared Key.
+     * This is the pre-shared key for WPA Personal Wi-Fi network.
      */
-    @SerializedName("proxySettings")
+    @SerializedName("preSharedKey")
     @Expose
-    public WiFiProxySetting proxySettings;
+    public String preSharedKey;
+
+    /**
+     * The Proxy Automatic Configuration Url.
+     * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+     */
+    @SerializedName("proxyAutomaticConfigurationUrl")
+    @Expose
+    public String proxyAutomaticConfigurationUrl;
 
     /**
      * The Proxy Manual Address.
@@ -93,20 +85,28 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements IJsonBa
     public Integer proxyManualPort;
 
     /**
-     * The Proxy Automatic Configuration Url.
-     * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+     * The Proxy Settings.
+     * Proxy Type for this Wi-Fi connection
      */
-    @SerializedName("proxyAutomaticConfigurationUrl")
+    @SerializedName("proxySettings")
     @Expose
-    public String proxyAutomaticConfigurationUrl;
+    public WiFiProxySetting proxySettings;
 
     /**
-     * The Pre Shared Key.
-     * This is the pre-shared key for WPA Personal Wi-Fi network.
+     * The Ssid.
+     * This is the name of the Wi-Fi network that is broadcast to all devices.
      */
-    @SerializedName("preSharedKey")
+    @SerializedName("ssid")
     @Expose
-    public String preSharedKey;
+    public String ssid;
+
+    /**
+     * The Wi Fi Security Type.
+     * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+     */
+    @SerializedName("wiFiSecurityType")
+    @Expose
+    public WiFiSecurityType wiFiSecurityType;
 
 
     /**

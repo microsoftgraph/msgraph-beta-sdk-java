@@ -36,20 +36,20 @@ public class MacOSSystemExtension implements IJsonBackedObject {
     }
 
     /**
-     * The Team Identifier.
-     * Gets or sets the team identifier that was used to sign the system extension.
-     */
-    @SerializedName("teamIdentifier")
-    @Expose
-    public String teamIdentifier;
-
-    /**
      * The Bundle Id.
      * Gets or sets the bundle identifier of the system extension.
      */
     @SerializedName("bundleId")
     @Expose
     public String bundleId;
+
+    /**
+     * The Team Identifier.
+     * Gets or sets the team identifier that was used to sign the system extension.
+     */
+    @SerializedName("teamIdentifier")
+    @Expose
+    public String teamIdentifier;
 
 
     /**

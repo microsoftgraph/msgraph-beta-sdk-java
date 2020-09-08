@@ -112,6 +112,27 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
     }
 
     /**
+     * Creates a Office365ActivationCounts with a new object
+     *
+     * @param newOffice365ActivationCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365ActivationCounts newOffice365ActivationCounts, final ICallback<Office365ActivationCounts> callback) {
+        send(HttpMethod.PUT, callback, newOffice365ActivationCounts);
+    }
+
+    /**
+     * Creates a Office365ActivationCounts with a new object
+     *
+     * @param newOffice365ActivationCounts the object to create/update
+     * @return the created Office365ActivationCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365ActivationCounts put(final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365ActivationCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

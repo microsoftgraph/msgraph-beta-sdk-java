@@ -112,6 +112,27 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
     }
 
     /**
+     * Creates a AccessReviewReviewer with a new object
+     *
+     * @param newAccessReviewReviewer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback) {
+        send(HttpMethod.PUT, callback, newAccessReviewReviewer);
+    }
+
+    /**
+     * Creates a AccessReviewReviewer with a new object
+     *
+     * @param newAccessReviewReviewer the object to create/update
+     * @return the created AccessReviewReviewer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReviewReviewer put(final AccessReviewReviewer newAccessReviewReviewer) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReviewReviewer);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

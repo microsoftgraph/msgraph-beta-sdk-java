@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.VppLicensingType;
 import com.microsoft.graph.models.extensions.IosDeviceType;
-import com.microsoft.graph.models.generated.VppTokenAccountType;
+import com.microsoft.graph.models.extensions.VppLicensingType;
 import com.microsoft.graph.models.extensions.IosVppAppRevokeLicensesActionResult;
+import com.microsoft.graph.models.generated.VppTokenAccountType;
 import com.microsoft.graph.models.extensions.IosVppAppAssignedLicense;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.requests.extensions.IosVppAppAssignedLicenseCollectionResponse;
@@ -34,28 +34,12 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
 
 
     /**
-     * The Used License Count.
-     * The number of VPP licenses in use.
+     * The Applicable Device Type.
+     * The applicable iOS Device Type.
      */
-    @SerializedName("usedLicenseCount")
+    @SerializedName("applicableDeviceType")
     @Expose
-    public Integer usedLicenseCount;
-
-    /**
-     * The Total License Count.
-     * The total number of VPP licenses.
-     */
-    @SerializedName("totalLicenseCount")
-    @Expose
-    public Integer totalLicenseCount;
-
-    /**
-     * The Release Date Time.
-     * The VPP application release date and time.
-     */
-    @SerializedName("releaseDateTime")
-    @Expose
-    public java.util.Calendar releaseDateTime;
+    public IosDeviceType applicableDeviceType;
 
     /**
      * The App Store Url.
@@ -66,6 +50,14 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
     public String appStoreUrl;
 
     /**
+     * The Bundle Id.
+     * The Identity Name.
+     */
+    @SerializedName("bundleId")
+    @Expose
+    public String bundleId;
+
+    /**
      * The Licensing Type.
      * The supported License Type.
      */
@@ -74,20 +66,36 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
     public VppLicensingType licensingType;
 
     /**
-     * The Applicable Device Type.
-     * The applicable iOS Device Type.
+     * The Release Date Time.
+     * The VPP application release date and time.
      */
-    @SerializedName("applicableDeviceType")
+    @SerializedName("releaseDateTime")
     @Expose
-    public IosDeviceType applicableDeviceType;
+    public java.util.Calendar releaseDateTime;
 
     /**
-     * The Vpp Token Organization Name.
-     * The organization associated with the Apple Volume Purchase Program Token
+     * The Revoke License Action Results.
+     * Results of revoke license actions on this app.
      */
-    @SerializedName("vppTokenOrganizationName")
+    @SerializedName("revokeLicenseActionResults")
     @Expose
-    public String vppTokenOrganizationName;
+    public java.util.List<IosVppAppRevokeLicensesActionResult> revokeLicenseActionResults;
+
+    /**
+     * The Total License Count.
+     * The total number of VPP licenses.
+     */
+    @SerializedName("totalLicenseCount")
+    @Expose
+    public Integer totalLicenseCount;
+
+    /**
+     * The Used License Count.
+     * The number of VPP licenses in use.
+     */
+    @SerializedName("usedLicenseCount")
+    @Expose
+    public Integer usedLicenseCount;
 
     /**
      * The Vpp Token Account Type.
@@ -106,14 +114,6 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
     public String vppTokenAppleId;
 
     /**
-     * The Bundle Id.
-     * The Identity Name.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
      * The Vpp Token Id.
      * Identifier of the VPP token associated with this app.
      */
@@ -122,12 +122,12 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
     public String vppTokenId;
 
     /**
-     * The Revoke License Action Results.
-     * Results of revoke license actions on this app.
+     * The Vpp Token Organization Name.
+     * The organization associated with the Apple Volume Purchase Program Token
      */
-    @SerializedName("revokeLicenseActionResults")
+    @SerializedName("vppTokenOrganizationName")
     @Expose
-    public java.util.List<IosVppAppRevokeLicensesActionResult> revokeLicenseActionResults;
+    public String vppTokenOrganizationName;
 
     /**
      * The Assigned Licenses.

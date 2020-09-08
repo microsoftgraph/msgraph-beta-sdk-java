@@ -62,14 +62,14 @@ public class AuthorizationPolicyCollectionRequest extends BaseCollectionRequest<
     public void post(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AuthorizationPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAuthorizationPolicy, callback);
     }
 
     public AuthorizationPolicy post(final AuthorizationPolicy newAuthorizationPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AuthorizationPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAuthorizationPolicy);
     }
 
@@ -106,6 +106,27 @@ public class AuthorizationPolicyCollectionRequest extends BaseCollectionRequest<
         return (AuthorizationPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAuthorizationPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AuthorizationPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAuthorizationPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAuthorizationPolicyCollectionRequest)this;
+    }
     public IAuthorizationPolicyCollectionPage buildFromResponse(final AuthorizationPolicyCollectionResponse response) {
         final IAuthorizationPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

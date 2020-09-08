@@ -80,6 +80,23 @@ public interface IAccessPackageAssignmentPolicyRequest extends IHttpRequest {
     AccessPackageAssignmentPolicy post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException;
 
     /**
+     * Posts a AccessPackageAssignmentPolicy with a new object
+     *
+     * @param newAccessPackageAssignmentPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback);
+
+    /**
+     * Posts a AccessPackageAssignmentPolicy with a new object
+     *
+     * @param newAccessPackageAssignmentPolicy the object to create/update
+     * @return the created AccessPackageAssignmentPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessPackageAssignmentPolicy put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.termstore.models.extensions.LocalizedName;
 import com.microsoft.graph.models.extensions.KeyValue;
-import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.models.extensions.Term;
+import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.models.extensions.Relation;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.termstore.requests.extensions.TermCollectionResponse;
@@ -36,12 +36,12 @@ public class Set extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Localized Names.
+     * The Created Date Time.
      * 
      */
-    @SerializedName("localizedNames")
+    @SerializedName("createdDateTime")
     @Expose
-    public java.util.List<LocalizedName> localizedNames;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -52,12 +52,12 @@ public class Set extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Created Date Time.
+     * The Localized Names.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("localizedNames")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public java.util.List<LocalizedName> localizedNames;
 
     /**
      * The Properties.
@@ -68,6 +68,12 @@ public class Set extends Entity implements IJsonBackedObject {
     public java.util.List<KeyValue> properties;
 
     /**
+     * The Children.
+     * 
+     */
+    public TermCollectionPage children;
+
+    /**
      * The Parent Group.
      * 
      */
@@ -76,22 +82,16 @@ public class Set extends Entity implements IJsonBackedObject {
     public Group parentGroup;
 
     /**
-     * The Terms.
-     * 
-     */
-    public TermCollectionPage terms;
-
-    /**
      * The Relations.
      * 
      */
     public RelationCollectionPage relations;
 
     /**
-     * The Children.
+     * The Terms.
      * 
      */
-    public TermCollectionPage children;
+    public TermCollectionPage terms;
 
 
     /**
@@ -133,20 +133,20 @@ public class Set extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("terms")) {
+        if (json.has("children")) {
             final TermCollectionResponse response = new TermCollectionResponse();
-            if (json.has("terms@odata.nextLink")) {
-                response.nextLink = json.get("terms@odata.nextLink").getAsString();
+            if (json.has("children@odata.nextLink")) {
+                response.nextLink = json.get("children@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("terms").toString(), JsonObject[].class);
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("children").toString(), JsonObject[].class);
             final Term[] array = new Term[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
                 array[i] = serializer.deserializeObject(sourceArray[i].toString(), Term.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            terms = new TermCollectionPage(response, null);
+            children = new TermCollectionPage(response, null);
         }
 
         if (json.has("relations")) {
@@ -165,20 +165,20 @@ public class Set extends Entity implements IJsonBackedObject {
             relations = new RelationCollectionPage(response, null);
         }
 
-        if (json.has("children")) {
+        if (json.has("terms")) {
             final TermCollectionResponse response = new TermCollectionResponse();
-            if (json.has("children@odata.nextLink")) {
-                response.nextLink = json.get("children@odata.nextLink").getAsString();
+            if (json.has("terms@odata.nextLink")) {
+                response.nextLink = json.get("terms@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("children").toString(), JsonObject[].class);
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("terms").toString(), JsonObject[].class);
             final Term[] array = new Term[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
                 array[i] = serializer.deserializeObject(sourceArray[i].toString(), Term.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            children = new TermCollectionPage(response, null);
+            terms = new TermCollectionPage(response, null);
         }
     }
 }

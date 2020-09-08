@@ -15,14 +15,14 @@ import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequest
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
@@ -77,19 +77,19 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
     public IOutlookCategoryRequestBuilder masterCategories(final String id) {
         return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
     }
-    public IOutlookTaskGroupCollectionRequestBuilder taskGroups() {
-        return new OutlookTaskGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups"), getClient(), null);
-    }
-
-    public IOutlookTaskGroupRequestBuilder taskGroups(final String id) {
-        return new OutlookTaskGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups") + "/" + id, getClient(), null);
-    }
     public IOutlookTaskFolderCollectionRequestBuilder taskFolders() {
         return new OutlookTaskFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders"), getClient(), null);
     }
 
     public IOutlookTaskFolderRequestBuilder taskFolders(final String id) {
         return new OutlookTaskFolderRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders") + "/" + id, getClient(), null);
+    }
+    public IOutlookTaskGroupCollectionRequestBuilder taskGroups() {
+        return new OutlookTaskGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups"), getClient(), null);
+    }
+
+    public IOutlookTaskGroupRequestBuilder taskGroups(final String id) {
+        return new OutlookTaskGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups") + "/" + id, getClient(), null);
     }
     public IOutlookTaskCollectionRequestBuilder tasks() {
         return new OutlookTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);

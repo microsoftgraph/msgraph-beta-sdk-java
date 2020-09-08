@@ -62,14 +62,14 @@ public class PublishedResourceCollectionRequest extends BaseCollectionRequest<Pu
     public void post(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PublishedResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPublishedResource, callback);
     }
 
     public PublishedResource post(final PublishedResource newPublishedResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PublishedResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPublishedResource);
     }
 
@@ -106,6 +106,27 @@ public class PublishedResourceCollectionRequest extends BaseCollectionRequest<Pu
         return (PublishedResourceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPublishedResourceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PublishedResourceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPublishedResourceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPublishedResourceCollectionRequest)this;
+    }
     public IPublishedResourceCollectionPage buildFromResponse(final PublishedResourceCollectionResponse response) {
         final IPublishedResourceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

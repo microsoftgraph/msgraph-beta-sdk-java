@@ -112,6 +112,27 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a ManagedAllDeviceCertificateState with a new object
+     *
+     * @param newManagedAllDeviceCertificateState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState, final ICallback<ManagedAllDeviceCertificateState> callback) {
+        send(HttpMethod.PUT, callback, newManagedAllDeviceCertificateState);
+    }
+
+    /**
+     * Creates a ManagedAllDeviceCertificateState with a new object
+     *
+     * @param newManagedAllDeviceCertificateState the object to create/update
+     * @return the created ManagedAllDeviceCertificateState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAllDeviceCertificateState put(final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAllDeviceCertificateState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

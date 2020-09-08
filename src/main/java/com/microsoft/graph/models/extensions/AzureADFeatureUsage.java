@@ -27,20 +27,20 @@ public class AzureADFeatureUsage extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Snapshot Date Time.
-     * 
-     */
-    @SerializedName("snapshotDateTime")
-    @Expose
-    public java.util.Calendar snapshotDateTime;
-
-    /**
      * The Feature Name.
      * 
      */
     @SerializedName("featureName")
     @Expose
     public String featureName;
+
+    /**
+     * The Snapshot Date Time.
+     * 
+     */
+    @SerializedName("snapshotDateTime")
+    @Expose
+    public java.util.Calendar snapshotDateTime;
 
     /**
      * The Usage.

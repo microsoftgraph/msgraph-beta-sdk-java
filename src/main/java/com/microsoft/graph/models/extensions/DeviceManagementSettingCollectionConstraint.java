@@ -27,20 +27,20 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
 
 
     /**
-     * The Minimum Length.
-     * The minimum number of elements in the collection
-     */
-    @SerializedName("minimumLength")
-    @Expose
-    public Integer minimumLength;
-
-    /**
      * The Maximum Length.
      * The maximum number of elements in the collection
      */
     @SerializedName("maximumLength")
     @Expose
     public Integer maximumLength;
+
+    /**
+     * The Minimum Length.
+     * The minimum number of elements in the collection
+     */
+    @SerializedName("minimumLength")
+    @Expose
+    public Integer minimumLength;
 
 
     /**

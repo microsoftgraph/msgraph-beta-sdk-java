@@ -62,14 +62,14 @@ public class RiskyUserHistoryItemCollectionRequest extends BaseCollectionRequest
     public void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RiskyUserHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRiskyUserHistoryItem, callback);
     }
 
     public RiskyUserHistoryItem post(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RiskyUserHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRiskyUserHistoryItem);
     }
 
@@ -106,6 +106,27 @@ public class RiskyUserHistoryItemCollectionRequest extends BaseCollectionRequest
         return (RiskyUserHistoryItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRiskyUserHistoryItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RiskyUserHistoryItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRiskyUserHistoryItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRiskyUserHistoryItemCollectionRequest)this;
+    }
     public IRiskyUserHistoryItemCollectionPage buildFromResponse(final RiskyUserHistoryItemCollectionResponse response) {
         final IRiskyUserHistoryItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

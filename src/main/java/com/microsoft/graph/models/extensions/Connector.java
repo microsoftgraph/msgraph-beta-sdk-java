@@ -31,20 +31,20 @@ public class Connector extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Machine Name.
-     * 
-     */
-    @SerializedName("machineName")
-    @Expose
-    public String machineName;
-
-    /**
      * The External Ip.
      * 
      */
     @SerializedName("externalIp")
     @Expose
     public String externalIp;
+
+    /**
+     * The Machine Name.
+     * 
+     */
+    @SerializedName("machineName")
+    @Expose
+    public String machineName;
 
     /**
      * The Status.

@@ -80,6 +80,23 @@ public interface ISharePointActivityUserCountsRequest extends IHttpRequest {
     SharePointActivityUserCounts post(final SharePointActivityUserCounts newSharePointActivityUserCounts) throws ClientException;
 
     /**
+     * Posts a SharePointActivityUserCounts with a new object
+     *
+     * @param newSharePointActivityUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback);
+
+    /**
+     * Posts a SharePointActivityUserCounts with a new object
+     *
+     * @param newSharePointActivityUserCounts the object to create/update
+     * @return the created SharePointActivityUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharePointActivityUserCounts put(final SharePointActivityUserCounts newSharePointActivityUserCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,12 +28,12 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
 
     /**
-     * The Recording Location.
-     * The location where the recording is located.
+     * The Completion Reason.
+     * 
      */
-    @SerializedName("recordingLocation")
+    @SerializedName("completionReason")
     @Expose
-    public String recordingLocation;
+    public RecordCompletionReason completionReason;
 
     /**
      * The Recording Access Token.
@@ -44,12 +44,12 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
     public String recordingAccessToken;
 
     /**
-     * The Completion Reason.
-     * 
+     * The Recording Location.
+     * The location where the recording is located.
      */
-    @SerializedName("completionReason")
+    @SerializedName("recordingLocation")
     @Expose
-    public RecordCompletionReason completionReason;
+    public String recordingLocation;
 
 
     /**

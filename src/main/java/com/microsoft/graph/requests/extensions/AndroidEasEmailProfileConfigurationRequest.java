@@ -114,6 +114,27 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a AndroidEasEmailProfileConfiguration with a new object
+     *
+     * @param newAndroidEasEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<AndroidEasEmailProfileConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidEasEmailProfileConfiguration);
+    }
+
+    /**
+     * Creates a AndroidEasEmailProfileConfiguration with a new object
+     *
+     * @param newAndroidEasEmailProfileConfiguration the object to create/update
+     * @return the created AndroidEasEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidEasEmailProfileConfiguration put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidEasEmailProfileConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -12,8 +12,8 @@ import com.microsoft.graph.models.generated.EasAuthenticationMethod;
 import com.microsoft.graph.models.generated.EmailSyncDuration;
 import com.microsoft.graph.models.generated.UserEmailSource;
 import com.microsoft.graph.models.generated.EmailSyncSchedule;
-import com.microsoft.graph.models.generated.AndroidUsernameSource;
 import com.microsoft.graph.models.generated.DomainNameSource;
+import com.microsoft.graph.models.generated.AndroidUsernameSource;
 import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
@@ -50,36 +50,12 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
     public EasAuthenticationMethod authenticationMethod;
 
     /**
-     * The Sync Calendar.
-     * Toggles syncing the calendar. If set to false calendar is turned off on the device.
+     * The Custom Domain Name.
+     * Custom domain name value used while generating an email profile before installing on the device.
      */
-    @SerializedName("syncCalendar")
+    @SerializedName("customDomainName")
     @Expose
-    public Boolean syncCalendar;
-
-    /**
-     * The Sync Contacts.
-     * Toggles syncing contacts. If set to false contacts are turned off on the device.
-     */
-    @SerializedName("syncContacts")
-    @Expose
-    public Boolean syncContacts;
-
-    /**
-     * The Sync Tasks.
-     * Toggles syncing tasks. If set to false tasks are turned off on the device.
-     */
-    @SerializedName("syncTasks")
-    @Expose
-    public Boolean syncTasks;
-
-    /**
-     * The Sync Notes.
-     * Toggles syncing notes. If set to false notes are turned off on the device.
-     */
-    @SerializedName("syncNotes")
-    @Expose
-    public Boolean syncNotes;
+    public String customDomainName;
 
     /**
      * The Duration Of Email To Sync.
@@ -130,12 +106,36 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
     public Boolean requireSsl;
 
     /**
-     * The Username Source.
-     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+     * The Sync Calendar.
+     * Toggles syncing the calendar. If set to false calendar is turned off on the device.
      */
-    @SerializedName("usernameSource")
+    @SerializedName("syncCalendar")
     @Expose
-    public AndroidUsernameSource usernameSource;
+    public Boolean syncCalendar;
+
+    /**
+     * The Sync Contacts.
+     * Toggles syncing contacts. If set to false contacts are turned off on the device.
+     */
+    @SerializedName("syncContacts")
+    @Expose
+    public Boolean syncContacts;
+
+    /**
+     * The Sync Notes.
+     * Toggles syncing notes. If set to false notes are turned off on the device.
+     */
+    @SerializedName("syncNotes")
+    @Expose
+    public Boolean syncNotes;
+
+    /**
+     * The Sync Tasks.
+     * Toggles syncing tasks. If set to false tasks are turned off on the device.
+     */
+    @SerializedName("syncTasks")
+    @Expose
+    public Boolean syncTasks;
 
     /**
      * The User Domain Name Source.
@@ -146,12 +146,12 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
     public DomainNameSource userDomainNameSource;
 
     /**
-     * The Custom Domain Name.
-     * Custom domain name value used while generating an email profile before installing on the device.
+     * The Username Source.
+     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
      */
-    @SerializedName("customDomainName")
+    @SerializedName("usernameSource")
     @Expose
-    public String customDomainName;
+    public AndroidUsernameSource usernameSource;
 
     /**
      * The Identity Certificate.

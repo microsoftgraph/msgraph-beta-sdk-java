@@ -62,14 +62,14 @@ public class GroupPolicyOperationCollectionRequest extends BaseCollectionRequest
     public void post(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyOperation, callback);
     }
 
     public GroupPolicyOperation post(final GroupPolicyOperation newGroupPolicyOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyOperation);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyOperationCollectionRequest extends BaseCollectionRequest
         return (GroupPolicyOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyOperationCollectionRequest)this;
+    }
     public IGroupPolicyOperationCollectionPage buildFromResponse(final GroupPolicyOperationCollectionResponse response) {
         final IGroupPolicyOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UserPrintUsageSummary;
 import com.microsoft.graph.models.extensions.PrinterUsageSummary;
+import com.microsoft.graph.models.extensions.UserPrintUsageSummary;
 
 
 import com.google.gson.JsonObject;
@@ -38,28 +38,12 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
     }
 
     /**
-     * The Top Users.
+     * The Active Printers Count.
      * 
      */
-    @SerializedName("topUsers")
+    @SerializedName("activePrintersCount")
     @Expose
-    public java.util.List<UserPrintUsageSummary> topUsers;
-
-    /**
-     * The Top Printers.
-     * 
-     */
-    @SerializedName("topPrinters")
-    @Expose
-    public java.util.List<PrinterUsageSummary> topPrinters;
-
-    /**
-     * The Days In Period.
-     * 
-     */
-    @SerializedName("daysInPeriod")
-    @Expose
-    public Integer daysInPeriod;
+    public Integer activePrintersCount;
 
     /**
      * The Active Users Count.
@@ -70,20 +54,28 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
     public Integer activeUsersCount;
 
     /**
-     * The Active Printers Count.
+     * The Days In Period.
      * 
      */
-    @SerializedName("activePrintersCount")
+    @SerializedName("daysInPeriod")
     @Expose
-    public Integer activePrintersCount;
+    public Integer daysInPeriod;
 
     /**
-     * The Total Jobs Processed.
+     * The Top Printers.
      * 
      */
-    @SerializedName("totalJobsProcessed")
+    @SerializedName("topPrinters")
     @Expose
-    public Integer totalJobsProcessed;
+    public java.util.List<PrinterUsageSummary> topPrinters;
+
+    /**
+     * The Top Users.
+     * 
+     */
+    @SerializedName("topUsers")
+    @Expose
+    public java.util.List<UserPrintUsageSummary> topUsers;
 
     /**
      * The Total Incomplete Jobs.
@@ -92,6 +84,14 @@ public class OverallPrintUsageSummary implements IJsonBackedObject {
     @SerializedName("totalIncompleteJobs")
     @Expose
     public Integer totalIncompleteJobs;
+
+    /**
+     * The Total Jobs Processed.
+     * 
+     */
+    @SerializedName("totalJobsProcessed")
+    @Expose
+    public Integer totalJobsProcessed;
 
 
     /**

@@ -14,14 +14,14 @@ import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionReque
 import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -77,13 +77,6 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
     }
 
 
-    public IExtensionPropertyCollectionRequestBuilder extensionProperties() {
-        return new ExtensionPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties"), getClient(), null);
-    }
-
-    public IExtensionPropertyRequestBuilder extensionProperties(final String id) {
-        return new ExtensionPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for DirectoryObject
@@ -93,12 +86,12 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
     public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
+    public IExtensionPropertyCollectionRequestBuilder extensionProperties() {
+        return new ExtensionPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
+    public IExtensionPropertyRequestBuilder extensionProperties(final String id) {
+        return new ExtensionPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties") + "/" + id, getClient(), null);
     }
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
@@ -106,6 +99,13 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
 
     public IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id) {
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
     public ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);

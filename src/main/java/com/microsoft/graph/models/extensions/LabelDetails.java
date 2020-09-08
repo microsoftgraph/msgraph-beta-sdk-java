@@ -36,20 +36,12 @@ public class LabelDetails implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Color.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("color")
     @Expose
-    public String id;
-
-    /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
+    public String color;
 
     /**
      * The Description.
@@ -60,12 +52,28 @@ public class LabelDetails implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Color.
+     * The Id.
      * 
      */
-    @SerializedName("color")
+    @SerializedName("id")
     @Expose
-    public String color;
+    public String id;
+
+    /**
+     * The Is Active.
+     * 
+     */
+    @SerializedName("isActive")
+    @Expose
+    public Boolean isActive;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
     /**
      * The Sensitivity.
@@ -82,14 +90,6 @@ public class LabelDetails implements IJsonBackedObject {
     @SerializedName("tooltip")
     @Expose
     public String tooltip;
-
-    /**
-     * The Is Active.
-     * 
-     */
-    @SerializedName("isActive")
-    @Expose
-    public Boolean isActive;
 
 
     /**

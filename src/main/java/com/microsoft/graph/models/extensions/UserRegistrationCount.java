@@ -37,20 +37,20 @@ public class UserRegistrationCount implements IJsonBackedObject {
     }
 
     /**
-     * The Registration Status.
-     * 
-     */
-    @SerializedName("registrationStatus")
-    @Expose
-    public RegistrationStatusType registrationStatus;
-
-    /**
      * The Registration Count.
      * 
      */
     @SerializedName("registrationCount")
     @Expose
     public Long registrationCount;
+
+    /**
+     * The Registration Status.
+     * 
+     */
+    @SerializedName("registrationStatus")
+    @Expose
+    public RegistrationStatusType registrationStatus;
 
 
     /**

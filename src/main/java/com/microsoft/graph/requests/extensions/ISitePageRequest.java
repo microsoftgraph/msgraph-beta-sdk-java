@@ -80,6 +80,23 @@ public interface ISitePageRequest extends IHttpRequest {
     SitePage post(final SitePage newSitePage) throws ClientException;
 
     /**
+     * Posts a SitePage with a new object
+     *
+     * @param newSitePage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SitePage newSitePage, final ICallback<SitePage> callback);
+
+    /**
+     * Posts a SitePage with a new object
+     *
+     * @param newSitePage the object to create/update
+     * @return the created SitePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SitePage put(final SitePage newSitePage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

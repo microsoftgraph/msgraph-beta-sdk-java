@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalConnection;
+import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -40,12 +40,9 @@ public interface IExternalConnectionRequestBuilder extends IRequestBuilder {
     IExternalConnectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    /**
-     * Gets the request builder for Schema
-     *
-     * @return the ISchemaRequestBuilder instance
-     */
-    ISchemaRequestBuilder schema();
+    IExternalGroupCollectionRequestBuilder groups();
+
+    IExternalGroupRequestBuilder groups(final String id);
 
     IExternalItemCollectionRequestBuilder items();
 
@@ -55,8 +52,11 @@ public interface IExternalConnectionRequestBuilder extends IRequestBuilder {
 
     IConnectionOperationRequestBuilder operations(final String id);
 
-    IExternalGroupCollectionRequestBuilder groups();
-
-    IExternalGroupRequestBuilder groups(final String id);
+    /**
+     * Gets the request builder for Schema
+     *
+     * @return the ISchemaRequestBuilder instance
+     */
+    ISchemaRequestBuilder schema();
 
 }

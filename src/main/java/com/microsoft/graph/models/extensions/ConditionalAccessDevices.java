@@ -36,20 +36,20 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
     }
 
     /**
-     * The Include Device States.
-     * 
-     */
-    @SerializedName("includeDeviceStates")
-    @Expose
-    public java.util.List<String> includeDeviceStates;
-
-    /**
      * The Exclude Device States.
      * 
      */
     @SerializedName("excludeDeviceStates")
     @Expose
     public java.util.List<String> excludeDeviceStates;
+
+    /**
+     * The Include Device States.
+     * 
+     */
+    @SerializedName("includeDeviceStates")
+    @Expose
+    public java.util.List<String> includeDeviceStates;
 
 
     /**

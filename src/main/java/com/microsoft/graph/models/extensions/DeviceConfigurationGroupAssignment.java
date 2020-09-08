@@ -28,20 +28,20 @@ public class DeviceConfigurationGroupAssignment extends Entity implements IJsonB
 
 
     /**
-     * The Target Group Id.
-     * The Id of the AAD group we are targeting the device configuration to.
-     */
-    @SerializedName("targetGroupId")
-    @Expose
-    public String targetGroupId;
-
-    /**
      * The Exclude Group.
      * Indicates if this group is should be excluded. Defaults that the group should be included
      */
     @SerializedName("excludeGroup")
     @Expose
     public Boolean excludeGroup;
+
+    /**
+     * The Target Group Id.
+     * The Id of the AAD group we are targeting the device configuration to.
+     */
+    @SerializedName("targetGroupId")
+    @Expose
+    public String targetGroupId;
 
     /**
      * The Device Configuration.

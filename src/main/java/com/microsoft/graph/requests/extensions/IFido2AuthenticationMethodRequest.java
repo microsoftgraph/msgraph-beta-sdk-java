@@ -80,6 +80,23 @@ public interface IFido2AuthenticationMethodRequest extends IHttpRequest {
     Fido2AuthenticationMethod post(final Fido2AuthenticationMethod newFido2AuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a Fido2AuthenticationMethod with a new object
+     *
+     * @param newFido2AuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback);
+
+    /**
+     * Posts a Fido2AuthenticationMethod with a new object
+     *
+     * @param newFido2AuthenticationMethod the object to create/update
+     * @return the created Fido2AuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Fido2AuthenticationMethod put(final Fido2AuthenticationMethod newFido2AuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

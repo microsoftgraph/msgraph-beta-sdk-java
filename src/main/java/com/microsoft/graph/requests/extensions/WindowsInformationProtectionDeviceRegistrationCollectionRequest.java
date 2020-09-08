@@ -62,14 +62,14 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionRequest ext
     public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionDeviceRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionDeviceRegistration, callback);
     }
 
     public WindowsInformationProtectionDeviceRegistration post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionDeviceRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -106,6 +106,27 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionRequest ext
         return (WindowsInformationProtectionDeviceRegistrationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionDeviceRegistrationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsInformationProtectionDeviceRegistrationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionDeviceRegistrationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsInformationProtectionDeviceRegistrationCollectionRequest)this;
+    }
     public IWindowsInformationProtectionDeviceRegistrationCollectionPage buildFromResponse(final WindowsInformationProtectionDeviceRegistrationCollectionResponse response) {
         final IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

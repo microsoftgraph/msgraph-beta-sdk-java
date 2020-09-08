@@ -80,6 +80,23 @@ public interface ISharePointSiteUsageSiteCountsRequest extends IHttpRequest {
     SharePointSiteUsageSiteCounts post(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts) throws ClientException;
 
     /**
+     * Posts a SharePointSiteUsageSiteCounts with a new object
+     *
+     * @param newSharePointSiteUsageSiteCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<SharePointSiteUsageSiteCounts> callback);
+
+    /**
+     * Posts a SharePointSiteUsageSiteCounts with a new object
+     *
+     * @param newSharePointSiteUsageSiteCounts the object to create/update
+     * @return the created SharePointSiteUsageSiteCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharePointSiteUsageSiteCounts put(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

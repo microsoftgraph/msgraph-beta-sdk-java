@@ -80,6 +80,23 @@ public interface IOffice365ActivationsUserDetailRequest extends IHttpRequest {
     Office365ActivationsUserDetail post(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail) throws ClientException;
 
     /**
+     * Posts a Office365ActivationsUserDetail with a new object
+     *
+     * @param newOffice365ActivationsUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail, final ICallback<Office365ActivationsUserDetail> callback);
+
+    /**
+     * Posts a Office365ActivationsUserDetail with a new object
+     *
+     * @param newOffice365ActivationsUserDetail the object to create/update
+     * @return the created Office365ActivationsUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Office365ActivationsUserDetail put(final Office365ActivationsUserDetail newOffice365ActivationsUserDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

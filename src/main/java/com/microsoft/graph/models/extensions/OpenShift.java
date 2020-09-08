@@ -28,20 +28,20 @@ public class OpenShift extends ChangeTrackedEntity implements IJsonBackedObject 
 
 
     /**
-     * The Shared Open Shift.
-     * A published open shift.
-     */
-    @SerializedName("sharedOpenShift")
-    @Expose
-    public OpenShiftItem sharedOpenShift;
-
-    /**
      * The Draft Open Shift.
      * An unpublished open shift.
      */
     @SerializedName("draftOpenShift")
     @Expose
     public OpenShiftItem draftOpenShift;
+
+    /**
+     * The Is Staged For Deletion.
+     * 
+     */
+    @SerializedName("isStagedForDeletion")
+    @Expose
+    public Boolean isStagedForDeletion;
 
     /**
      * The Scheduling Group Id.
@@ -52,12 +52,12 @@ public class OpenShift extends ChangeTrackedEntity implements IJsonBackedObject 
     public String schedulingGroupId;
 
     /**
-     * The Is Staged For Deletion.
-     * 
+     * The Shared Open Shift.
+     * A published open shift.
      */
-    @SerializedName("isStagedForDeletion")
+    @SerializedName("sharedOpenShift")
     @Expose
-    public Boolean isStagedForDeletion;
+    public OpenShiftItem sharedOpenShift;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IMobileContainedAppRequest extends IHttpRequest {
     MobileContainedApp post(final MobileContainedApp newMobileContainedApp) throws ClientException;
 
     /**
+     * Posts a MobileContainedApp with a new object
+     *
+     * @param newMobileContainedApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileContainedApp newMobileContainedApp, final ICallback<MobileContainedApp> callback);
+
+    /**
+     * Posts a MobileContainedApp with a new object
+     *
+     * @param newMobileContainedApp the object to create/update
+     * @return the created MobileContainedApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileContainedApp put(final MobileContainedApp newMobileContainedApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

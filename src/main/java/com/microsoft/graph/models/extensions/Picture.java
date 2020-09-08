@@ -27,12 +27,12 @@ public class Picture extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Width.
+     * The Content Type.
      * 
      */
-    @SerializedName("width")
+    @SerializedName("contentType")
     @Expose
-    public Integer width;
+    public String contentType;
 
     /**
      * The Height.
@@ -43,12 +43,12 @@ public class Picture extends Entity implements IJsonBackedObject {
     public Integer height;
 
     /**
-     * The Content Type.
+     * The Width.
      * 
      */
-    @SerializedName("contentType")
+    @SerializedName("width")
     @Expose
-    public String contentType;
+    public Integer width;
 
 
     /**

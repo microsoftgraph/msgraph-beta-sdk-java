@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollect
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class IosEnterpriseWiFiConfigurationRequest extends BaseRequest implement
      */
     public IosEnterpriseWiFiConfiguration post(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosEnterpriseWiFiConfiguration);
+    }
+
+    /**
+     * Creates a IosEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newIosEnterpriseWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosEnterpriseWiFiConfiguration);
+    }
+
+    /**
+     * Creates a IosEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newIosEnterpriseWiFiConfiguration the object to create/update
+     * @return the created IosEnterpriseWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosEnterpriseWiFiConfiguration put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosEnterpriseWiFiConfiguration);
     }
 
     /**

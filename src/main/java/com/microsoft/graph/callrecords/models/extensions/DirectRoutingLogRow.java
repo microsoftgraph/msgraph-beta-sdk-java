@@ -36,100 +36,20 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Callee Number.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("calleeNumber")
     @Expose
-    public String id;
+    public String calleeNumber;
 
     /**
-     * The Correlation Id.
+     * The Call End Sub Reason.
      * 
      */
-    @SerializedName("correlationId")
+    @SerializedName("callEndSubReason")
     @Expose
-    public String correlationId;
-
-    /**
-     * The User Id.
-     * 
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * 
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Invite Date Time.
-     * 
-     */
-    @SerializedName("inviteDateTime")
-    @Expose
-    public java.util.Calendar inviteDateTime;
-
-    /**
-     * The Failure Date Time.
-     * 
-     */
-    @SerializedName("failureDateTime")
-    @Expose
-    public java.util.Calendar failureDateTime;
-
-    /**
-     * The Duration.
-     * 
-     */
-    @SerializedName("duration")
-    @Expose
-    public Integer duration;
-
-    /**
-     * The Call Type.
-     * 
-     */
-    @SerializedName("callType")
-    @Expose
-    public String callType;
-
-    /**
-     * The Successful Call.
-     * 
-     */
-    @SerializedName("successfulCall")
-    @Expose
-    public Boolean successfulCall;
+    public Integer callEndSubReason;
 
     /**
      * The Caller Number.
@@ -140,12 +60,84 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
     public String callerNumber;
 
     /**
-     * The Callee Number.
+     * The Call Type.
      * 
      */
-    @SerializedName("calleeNumber")
+    @SerializedName("callType")
     @Expose
-    public String calleeNumber;
+    public String callType;
+
+    /**
+     * The Correlation Id.
+     * 
+     */
+    @SerializedName("correlationId")
+    @Expose
+    public String correlationId;
+
+    /**
+     * The Duration.
+     * 
+     */
+    @SerializedName("duration")
+    @Expose
+    public Integer duration;
+
+    /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The Failure Date Time.
+     * 
+     */
+    @SerializedName("failureDateTime")
+    @Expose
+    public java.util.Calendar failureDateTime;
+
+    /**
+     * The Final Sip Code.
+     * 
+     */
+    @SerializedName("finalSipCode")
+    @Expose
+    public Integer finalSipCode;
+
+    /**
+     * The Final Sip Code Phrase.
+     * 
+     */
+    @SerializedName("finalSipCodePhrase")
+    @Expose
+    public String finalSipCodePhrase;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
+
+    /**
+     * The Invite Date Time.
+     * 
+     */
+    @SerializedName("inviteDateTime")
+    @Expose
+    public java.util.Calendar inviteDateTime;
+
+    /**
+     * The Media Bypass Enabled.
+     * 
+     */
+    @SerializedName("mediaBypassEnabled")
+    @Expose
+    public Boolean mediaBypassEnabled;
 
     /**
      * The Media Path Location.
@@ -164,28 +156,20 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
     public String signalingLocation;
 
     /**
-     * The Final Sip Code.
+     * The Start Date Time.
      * 
      */
-    @SerializedName("finalSipCode")
+    @SerializedName("startDateTime")
     @Expose
-    public Integer finalSipCode;
+    public java.util.Calendar startDateTime;
 
     /**
-     * The Call End Sub Reason.
+     * The Successful Call.
      * 
      */
-    @SerializedName("callEndSubReason")
+    @SerializedName("successfulCall")
     @Expose
-    public Integer callEndSubReason;
-
-    /**
-     * The Final Sip Code Phrase.
-     * 
-     */
-    @SerializedName("finalSipCodePhrase")
-    @Expose
-    public String finalSipCodePhrase;
+    public Boolean successfulCall;
 
     /**
      * The Trunk Fully Qualified Domain Name.
@@ -196,12 +180,28 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
     public String trunkFullyQualifiedDomainName;
 
     /**
-     * The Media Bypass Enabled.
+     * The User Display Name.
      * 
      */
-    @SerializedName("mediaBypassEnabled")
+    @SerializedName("userDisplayName")
     @Expose
-    public Boolean mediaBypassEnabled;
+    public String userDisplayName;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

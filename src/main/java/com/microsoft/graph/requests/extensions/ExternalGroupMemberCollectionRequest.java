@@ -62,14 +62,14 @@ public class ExternalGroupMemberCollectionRequest extends BaseCollectionRequest<
     public void post(final ExternalGroupMember newExternalGroupMember, final ICallback<ExternalGroupMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExternalGroupMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExternalGroupMember, callback);
     }
 
     public ExternalGroupMember post(final ExternalGroupMember newExternalGroupMember) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExternalGroupMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExternalGroupMember);
     }
 
@@ -106,6 +106,27 @@ public class ExternalGroupMemberCollectionRequest extends BaseCollectionRequest<
         return (ExternalGroupMemberCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IExternalGroupMemberCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ExternalGroupMemberCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IExternalGroupMemberCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IExternalGroupMemberCollectionRequest)this;
+    }
     public IExternalGroupMemberCollectionPage buildFromResponse(final ExternalGroupMemberCollectionResponse response) {
         final IExternalGroupMemberCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -12,26 +12,26 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequestBuilder;
 import java.util.Arrays;
@@ -77,6 +77,13 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
     }
 
 
+    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
     public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
@@ -84,12 +91,12 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
     public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
-        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
-        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
+        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -100,12 +107,12 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
     public IMobileAppInstallSummaryRequestBuilder installSummary() {
         return new MobileAppInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
-    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
-        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public IMobileAppRelationshipCollectionRequestBuilder relationships() {
+        return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
     }
 
-    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
-        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public IMobileAppRelationshipRequestBuilder relationships(final String id) {
+        return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
     public IUserAppInstallStatusCollectionRequestBuilder userStatuses() {
         return new UserAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
@@ -113,13 +120,6 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
 
     public IUserAppInstallStatusRequestBuilder userStatuses(final String id) {
         return new UserAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
-    }
-    public IMobileAppRelationshipCollectionRequestBuilder relationships() {
-        return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
-    }
-
-    public IMobileAppRelationshipRequestBuilder relationships(final String id) {
-        return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
 
     public IMobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments) {

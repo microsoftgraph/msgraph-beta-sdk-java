@@ -52,12 +52,12 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder imp
 
 
 
-    public IAndroidForWorkSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName) {
-        return new AndroidForWorkSettingsRequestSignupUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.requestSignupUrl"), getClient(), null, hostName);
-    }
-
     public IAndroidForWorkSettingsCompleteSignupRequestBuilder completeSignup(final String enterpriseToken) {
         return new AndroidForWorkSettingsCompleteSignupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeSignup"), getClient(), null, enterpriseToken);
+    }
+
+    public IAndroidForWorkSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName) {
+        return new AndroidForWorkSettingsRequestSignupUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.requestSignupUrl"), getClient(), null, hostName);
     }
 
     public IAndroidForWorkSettingsSyncAppsRequestBuilder syncApps() {

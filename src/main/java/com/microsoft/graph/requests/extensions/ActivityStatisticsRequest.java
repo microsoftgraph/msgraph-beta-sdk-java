@@ -127,6 +127,27 @@ public class ActivityStatisticsRequest extends BaseRequest implements IActivityS
     }
 
     /**
+     * Creates a ActivityStatistics with a new object
+     *
+     * @param newActivityStatistics the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ActivityStatistics newActivityStatistics, final ICallback<ActivityStatistics> callback) {
+        send(HttpMethod.PUT, callback, newActivityStatistics);
+    }
+
+    /**
+     * Creates a ActivityStatistics with a new object
+     *
+     * @param newActivityStatistics the object to create/update
+     * @return the created ActivityStatistics
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ActivityStatistics put(final ActivityStatistics newActivityStatistics) throws ClientException {
+        return send(HttpMethod.PUT, newActivityStatistics);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

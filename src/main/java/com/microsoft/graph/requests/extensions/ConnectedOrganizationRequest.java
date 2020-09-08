@@ -116,6 +116,27 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
     }
 
     /**
+     * Creates a ConnectedOrganization with a new object
+     *
+     * @param newConnectedOrganization the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
+        send(HttpMethod.PUT, callback, newConnectedOrganization);
+    }
+
+    /**
+     * Creates a ConnectedOrganization with a new object
+     *
+     * @param newConnectedOrganization the object to create/update
+     * @return the created ConnectedOrganization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ConnectedOrganization put(final ConnectedOrganization newConnectedOrganization) throws ClientException {
+        return send(HttpMethod.PUT, newConnectedOrganization);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

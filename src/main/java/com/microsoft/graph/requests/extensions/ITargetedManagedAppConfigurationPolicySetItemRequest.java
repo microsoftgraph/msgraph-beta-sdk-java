@@ -80,6 +80,23 @@ public interface ITargetedManagedAppConfigurationPolicySetItemRequest extends IH
     TargetedManagedAppConfigurationPolicySetItem post(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem) throws ClientException;
 
     /**
+     * Posts a TargetedManagedAppConfigurationPolicySetItem with a new object
+     *
+     * @param newTargetedManagedAppConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem, final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback);
+
+    /**
+     * Posts a TargetedManagedAppConfigurationPolicySetItem with a new object
+     *
+     * @param newTargetedManagedAppConfigurationPolicySetItem the object to create/update
+     * @return the created TargetedManagedAppConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TargetedManagedAppConfigurationPolicySetItem put(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

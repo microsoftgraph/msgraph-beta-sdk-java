@@ -127,6 +127,27 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
     }
 
     /**
+     * Creates a NetworkManagementCondition with a new object
+     *
+     * @param newNetworkManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<NetworkManagementCondition> callback) {
+        send(HttpMethod.PUT, callback, newNetworkManagementCondition);
+    }
+
+    /**
+     * Creates a NetworkManagementCondition with a new object
+     *
+     * @param newNetworkManagementCondition the object to create/update
+     * @return the created NetworkManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public NetworkManagementCondition put(final NetworkManagementCondition newNetworkManagementCondition) throws ClientException {
+        return send(HttpMethod.PUT, newNetworkManagementCondition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

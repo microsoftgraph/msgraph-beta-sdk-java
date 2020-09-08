@@ -36,20 +36,20 @@ public class VisualProperties implements IJsonBackedObject {
     }
 
     /**
-     * The Title.
-     * 
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
      * The Body.
      * 
      */
     @SerializedName("body")
     @Expose
     public String body;
+
+    /**
+     * The Title.
+     * 
+     */
+    @SerializedName("title")
+    @Expose
+    public String title;
 
 
     /**

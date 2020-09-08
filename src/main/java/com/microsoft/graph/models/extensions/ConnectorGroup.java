@@ -10,13 +10,13 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ConnectorGroupType;
 import com.microsoft.graph.models.generated.ConnectorGroupRegion;
-import com.microsoft.graph.models.extensions.Connector;
 import com.microsoft.graph.models.extensions.Application;
+import com.microsoft.graph.models.extensions.Connector;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionResponse;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionPage;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,14 +35,6 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Connector Group Type.
      * 
      */
@@ -59,6 +51,14 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
     public Boolean isDefault;
 
     /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
      * The Region.
      * 
      */
@@ -67,16 +67,16 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
     public ConnectorGroupRegion region;
 
     /**
-     * The Members.
-     * 
-     */
-    public ConnectorCollectionPage members;
-
-    /**
      * The Applications.
      * 
      */
     public ApplicationCollectionPage applications;
+
+    /**
+     * The Members.
+     * 
+     */
+    public ConnectorCollectionPage members;
 
 
     /**
@@ -118,22 +118,6 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("members")) {
-            final ConnectorCollectionResponse response = new ConnectorCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final Connector[] array = new Connector[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Connector.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new ConnectorCollectionPage(response, null);
-        }
-
         if (json.has("applications")) {
             final ApplicationCollectionResponse response = new ApplicationCollectionResponse();
             if (json.has("applications@odata.nextLink")) {
@@ -148,6 +132,22 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             applications = new ApplicationCollectionPage(response, null);
+        }
+
+        if (json.has("members")) {
+            final ConnectorCollectionResponse response = new ConnectorCollectionResponse();
+            if (json.has("members@odata.nextLink")) {
+                response.nextLink = json.get("members@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
+            final Connector[] array = new Connector[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Connector.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            members = new ConnectorCollectionPage(response, null);
         }
     }
 }

@@ -59,8 +59,8 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceBootPerformanceMetrics"), getClient(), null);
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }
 
     /**
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
-        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceBootPerformanceMetrics"), getClient(), null);
     }
 }

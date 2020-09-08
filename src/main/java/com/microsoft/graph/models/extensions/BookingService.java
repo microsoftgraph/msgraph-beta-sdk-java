@@ -95,20 +95,20 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
     public String notes;
 
     /**
-     * The Pre Buffer.
-     * 
-     */
-    @SerializedName("preBuffer")
-    @Expose
-    public javax.xml.datatype.Duration preBuffer;
-
-    /**
      * The Post Buffer.
      * 
      */
     @SerializedName("postBuffer")
     @Expose
     public javax.xml.datatype.Duration postBuffer;
+
+    /**
+     * The Pre Buffer.
+     * 
+     */
+    @SerializedName("preBuffer")
+    @Expose
+    public javax.xml.datatype.Duration preBuffer;
 
     /**
      * The Scheduling Policy.

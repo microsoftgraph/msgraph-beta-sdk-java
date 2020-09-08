@@ -10,12 +10,12 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedAccess;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import java.util.Arrays;
@@ -47,17 +47,17 @@ public interface IPrivilegedAccessRequestBuilder extends IRequestBuilder {
 
     IGovernanceResourceRequestBuilder resources(final String id);
 
-    IGovernanceRoleDefinitionCollectionRequestBuilder roleDefinitions();
+    IGovernanceRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests();
 
-    IGovernanceRoleDefinitionRequestBuilder roleDefinitions(final String id);
+    IGovernanceRoleAssignmentRequestRequestBuilder roleAssignmentRequests(final String id);
 
     IGovernanceRoleAssignmentCollectionRequestBuilder roleAssignments();
 
     IGovernanceRoleAssignmentRequestBuilder roleAssignments(final String id);
 
-    IGovernanceRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests();
+    IGovernanceRoleDefinitionCollectionRequestBuilder roleDefinitions();
 
-    IGovernanceRoleAssignmentRequestRequestBuilder roleAssignmentRequests(final String id);
+    IGovernanceRoleDefinitionRequestBuilder roleDefinitions(final String id);
 
     IGovernanceRoleSettingCollectionRequestBuilder roleSettings();
 

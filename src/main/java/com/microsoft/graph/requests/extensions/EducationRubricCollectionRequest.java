@@ -62,14 +62,14 @@ public class EducationRubricCollectionRequest extends BaseCollectionRequest<Educ
     public void post(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationRubricRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationRubric, callback);
     }
 
     public EducationRubric post(final EducationRubric newEducationRubric) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationRubricRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationRubric);
     }
 
@@ -106,6 +106,27 @@ public class EducationRubricCollectionRequest extends BaseCollectionRequest<Educ
         return (EducationRubricCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationRubricCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationRubricCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationRubricCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationRubricCollectionRequest)this;
+    }
     public IEducationRubricCollectionPage buildFromResponse(final EducationRubricCollectionResponse response) {
         final IEducationRubricCollectionRequestBuilder builder;
         if (response.nextLink != null) {

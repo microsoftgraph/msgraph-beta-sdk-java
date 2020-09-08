@@ -80,6 +80,23 @@ public interface IEmailAppUsageVersionsUserCountsRequest extends IHttpRequest {
     EmailAppUsageVersionsUserCounts post(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts) throws ClientException;
 
     /**
+     * Posts a EmailAppUsageVersionsUserCounts with a new object
+     *
+     * @param newEmailAppUsageVersionsUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts, final ICallback<EmailAppUsageVersionsUserCounts> callback);
+
+    /**
+     * Posts a EmailAppUsageVersionsUserCounts with a new object
+     *
+     * @param newEmailAppUsageVersionsUserCounts the object to create/update
+     * @return the created EmailAppUsageVersionsUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmailAppUsageVersionsUserCounts put(final EmailAppUsageVersionsUserCounts newEmailAppUsageVersionsUserCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -114,6 +114,27 @@ public class UserExperienceAnalyticsBaselineRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a UserExperienceAnalyticsBaseline with a new object
+     *
+     * @param newUserExperienceAnalyticsBaseline the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsBaseline);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsBaseline with a new object
+     *
+     * @param newUserExperienceAnalyticsBaseline the object to create/update
+     * @return the created UserExperienceAnalyticsBaseline
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsBaseline put(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsBaseline);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

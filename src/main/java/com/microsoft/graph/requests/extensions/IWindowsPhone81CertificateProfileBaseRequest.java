@@ -80,6 +80,23 @@ public interface IWindowsPhone81CertificateProfileBaseRequest extends IHttpReque
     WindowsPhone81CertificateProfileBase post(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81CertificateProfileBase with a new object
+     *
+     * @param newWindowsPhone81CertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback);
+
+    /**
+     * Posts a WindowsPhone81CertificateProfileBase with a new object
+     *
+     * @param newWindowsPhone81CertificateProfileBase the object to create/update
+     * @return the created WindowsPhone81CertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81CertificateProfileBase put(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

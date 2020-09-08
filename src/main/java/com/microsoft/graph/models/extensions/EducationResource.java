@@ -37,12 +37,12 @@ public class EducationResource implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
+     * The Created By.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("createdBy")
     @Expose
-    public String displayName;
+    public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
@@ -53,20 +53,12 @@ public class EducationResource implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Created By.
+     * The Display Name.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName("displayName")
     @Expose
-    public IdentitySet createdBy;
-
-    /**
-     * The Last Modified Date Time.
-     * 
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String displayName;
 
     /**
      * The Last Modified By.
@@ -75,6 +67,14 @@ public class EducationResource implements IJsonBackedObject {
     @SerializedName("lastModifiedBy")
     @Expose
     public IdentitySet lastModifiedBy;
+
+    /**
+     * The Last Modified Date Time.
+     * 
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
 
     /**

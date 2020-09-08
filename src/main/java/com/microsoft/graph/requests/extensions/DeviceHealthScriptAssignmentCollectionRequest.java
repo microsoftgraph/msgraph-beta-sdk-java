@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DeviceComplianceScript;
+import com.microsoft.graph.models.extensions.DeviceHealthScript;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class DeviceHealthScriptAssignmentCollectionRequest extends BaseCollectio
     public void post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceHealthScriptAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceHealthScriptAssignment, callback);
     }
 
     public DeviceHealthScriptAssignment post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceHealthScriptAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceHealthScriptAssignment);
     }
 
@@ -106,6 +106,27 @@ public class DeviceHealthScriptAssignmentCollectionRequest extends BaseCollectio
         return (DeviceHealthScriptAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceHealthScriptAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceHealthScriptAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceHealthScriptAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceHealthScriptAssignmentCollectionRequest)this;
+    }
     public IDeviceHealthScriptAssignmentCollectionPage buildFromResponse(final DeviceHealthScriptAssignmentCollectionResponse response) {
         final IDeviceHealthScriptAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

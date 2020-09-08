@@ -62,14 +62,14 @@ public class SecurityBaselineDeviceStateCollectionRequest extends BaseCollection
     public void post(final SecurityBaselineDeviceState newSecurityBaselineDeviceState, final ICallback<SecurityBaselineDeviceState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityBaselineDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityBaselineDeviceState, callback);
     }
 
     public SecurityBaselineDeviceState post(final SecurityBaselineDeviceState newSecurityBaselineDeviceState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecurityBaselineDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityBaselineDeviceState);
     }
 
@@ -106,6 +106,27 @@ public class SecurityBaselineDeviceStateCollectionRequest extends BaseCollection
         return (SecurityBaselineDeviceStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecurityBaselineDeviceStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecurityBaselineDeviceStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecurityBaselineDeviceStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecurityBaselineDeviceStateCollectionRequest)this;
+    }
     public ISecurityBaselineDeviceStateCollectionPage buildFromResponse(final SecurityBaselineDeviceStateCollectionResponse response) {
         final ISecurityBaselineDeviceStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

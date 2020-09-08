@@ -80,6 +80,23 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignmentR
     WindowsDefenderApplicationControlSupplementalPolicyAssignment post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException;
 
     /**
+     * Posts a WindowsDefenderApplicationControlSupplementalPolicyAssignment with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback);
+
+    /**
+     * Posts a WindowsDefenderApplicationControlSupplementalPolicyAssignment with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
+     * @return the created WindowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsDefenderApplicationControlSupplementalPolicyAssignment put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

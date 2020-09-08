@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSubmission;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      */
     public EducationSubmission post(final EducationSubmission newEducationSubmission) throws ClientException {
         return send(HttpMethod.POST, newEducationSubmission);
+    }
+
+    /**
+     * Creates a EducationSubmission with a new object
+     *
+     * @param newEducationSubmission the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationSubmission newEducationSubmission, final ICallback<EducationSubmission> callback) {
+        send(HttpMethod.PUT, callback, newEducationSubmission);
+    }
+
+    /**
+     * Creates a EducationSubmission with a new object
+     *
+     * @param newEducationSubmission the object to create/update
+     * @return the created EducationSubmission
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationSubmission put(final EducationSubmission newEducationSubmission) throws ClientException {
+        return send(HttpMethod.PUT, newEducationSubmission);
     }
 
     /**

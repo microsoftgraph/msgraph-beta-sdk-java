@@ -27,30 +27,6 @@ public class YammerDeviceUsageUserCounts extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Web.
-     * 
-     */
-    @SerializedName("web")
-    @Expose
-    public Integer web;
-
-    /**
-     * The Windows Phone.
-     * 
-     */
-    @SerializedName("windowsPhone")
-    @Expose
-    public Integer windowsPhone;
-
-    /**
      * The Android Phone.
      * 
      */
@@ -59,20 +35,20 @@ public class YammerDeviceUsageUserCounts extends Entity implements IJsonBackedOb
     public Integer androidPhone;
 
     /**
-     * The IPhone.
-     * 
-     */
-    @SerializedName("iPhone")
-    @Expose
-    public Integer iPhone;
-
-    /**
      * The IPad.
      * 
      */
     @SerializedName("iPad")
     @Expose
     public Integer iPad;
+
+    /**
+     * The IPhone.
+     * 
+     */
+    @SerializedName("iPhone")
+    @Expose
+    public Integer iPhone;
 
     /**
      * The Other.
@@ -97,6 +73,30 @@ public class YammerDeviceUsageUserCounts extends Entity implements IJsonBackedOb
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Web.
+     * 
+     */
+    @SerializedName("web")
+    @Expose
+    public Integer web;
+
+    /**
+     * The Windows Phone.
+     * 
+     */
+    @SerializedName("windowsPhone")
+    @Expose
+    public Integer windowsPhone;
 
 
     /**

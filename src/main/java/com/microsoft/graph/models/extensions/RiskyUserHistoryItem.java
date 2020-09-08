@@ -28,12 +28,12 @@ public class RiskyUserHistoryItem extends RiskyUser implements IJsonBackedObject
 
 
     /**
-     * The User Id.
-     * The id of the user.
+     * The Activity.
+     * The activity related to user risk level change.
      */
-    @SerializedName("userId")
+    @SerializedName("activity")
     @Expose
-    public String userId;
+    public RiskUserActivity activity;
 
     /**
      * The Initiated By.
@@ -44,12 +44,12 @@ public class RiskyUserHistoryItem extends RiskyUser implements IJsonBackedObject
     public String initiatedBy;
 
     /**
-     * The Activity.
-     * The activity related to user risk level change.
+     * The User Id.
+     * The id of the user.
      */
-    @SerializedName("activity")
+    @SerializedName("userId")
     @Expose
-    public RiskUserActivity activity;
+    public String userId;
 
 
     /**

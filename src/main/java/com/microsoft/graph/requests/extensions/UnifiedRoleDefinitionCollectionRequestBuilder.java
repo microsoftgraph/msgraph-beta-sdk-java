@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RbacApplicationMultiple;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class UnifiedRoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder implements IUnifiedRoleDefinitionCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of UnifiedRoleDefinition
+     * The request builder for this collection of RbacApplicationMultiple
      *
      * @param requestUrl     the request URL
      * @param client         the service client

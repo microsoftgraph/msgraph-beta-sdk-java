@@ -28,22 +28,6 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
 
 
     /**
-     * The User Principal Name.
-     * The user principal name that is being reported on a device
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Name.
-     * The user name that is being reported on a device
-     */
-    @SerializedName("userName")
-    @Expose
-    public String userName;
-
-    /**
      * The Device Count.
      * Count of Devices that belongs to a user for an intent
      */
@@ -66,6 +50,22 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
     @SerializedName("state")
     @Expose
     public ComplianceStatus state;
+
+    /**
+     * The User Name.
+     * The user name that is being reported on a device
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
+
+    /**
+     * The User Principal Name.
+     * The user principal name that is being reported on a device
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

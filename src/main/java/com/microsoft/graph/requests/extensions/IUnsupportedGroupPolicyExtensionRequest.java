@@ -80,6 +80,23 @@ public interface IUnsupportedGroupPolicyExtensionRequest extends IHttpRequest {
     UnsupportedGroupPolicyExtension post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException;
 
     /**
+     * Posts a UnsupportedGroupPolicyExtension with a new object
+     *
+     * @param newUnsupportedGroupPolicyExtension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback);
+
+    /**
+     * Posts a UnsupportedGroupPolicyExtension with a new object
+     *
+     * @param newUnsupportedGroupPolicyExtension the object to create/update
+     * @return the created UnsupportedGroupPolicyExtension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UnsupportedGroupPolicyExtension put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AndroidEapType;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.AndroidEapType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForPeap;
 import com.microsoft.graph.models.generated.WiFiProxySetting;
-import com.microsoft.graph.models.extensions.AndroidWorkProfileTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileCertificateProfileBase;
+import com.microsoft.graph.models.extensions.AndroidWorkProfileTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileWiFiConfiguration;
 
 
@@ -34,20 +34,20 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
 
 
     /**
-     * The Eap Type.
-     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-     */
-    @SerializedName("eapType")
-    @Expose
-    public AndroidEapType eapType;
-
-    /**
      * The Authentication Method.
      * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
      */
     @SerializedName("authenticationMethod")
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
+
+    /**
+     * The Eap Type.
+     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+     */
+    @SerializedName("eapType")
+    @Expose
+    public AndroidEapType eapType;
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
@@ -74,14 +74,6 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
     public String outerIdentityPrivacyTemporaryValue;
 
     /**
-     * The Proxy Settings.
-     * Proxy Type for this Wi-Fi connection
-     */
-    @SerializedName("proxySettings")
-    @Expose
-    public WiFiProxySetting proxySettings;
-
-    /**
      * The Proxy Automatic Configuration Url.
      * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
      */
@@ -90,12 +82,12 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
     public String proxyAutomaticConfigurationUrl;
 
     /**
-     * The Root Certificate For Server Validation.
-     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
+     * The Proxy Settings.
+     * Proxy Type for this Wi-Fi connection
      */
-    @SerializedName("rootCertificateForServerValidation")
+    @SerializedName("proxySettings")
     @Expose
-    public AndroidWorkProfileTrustedRootCertificate rootCertificateForServerValidation;
+    public WiFiProxySetting proxySettings;
 
     /**
      * The Identity Certificate For Client Authentication.
@@ -104,6 +96,14 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
     @SerializedName("identityCertificateForClientAuthentication")
     @Expose
     public AndroidWorkProfileCertificateProfileBase identityCertificateForClientAuthentication;
+
+    /**
+     * The Root Certificate For Server Validation.
+     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
+     */
+    @SerializedName("rootCertificateForServerValidation")
+    @Expose
+    public AndroidWorkProfileTrustedRootCertificate rootCertificateForServerValidation;
 
 
     /**

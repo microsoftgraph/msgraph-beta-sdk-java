@@ -64,14 +64,14 @@ public class PolicySetCollectionRequest extends BaseCollectionRequest<PolicySetC
     public void post(final PolicySet newPolicySet, final ICallback<PolicySet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PolicySetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPolicySet, callback);
     }
 
     public PolicySet post(final PolicySet newPolicySet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PolicySetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPolicySet);
     }
 
@@ -108,6 +108,27 @@ public class PolicySetCollectionRequest extends BaseCollectionRequest<PolicySetC
         return (PolicySetCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPolicySetCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PolicySetCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPolicySetCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPolicySetCollectionRequest)this;
+    }
     public IPolicySetCollectionPage buildFromResponse(final PolicySetCollectionResponse response) {
         final IPolicySetCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -63,14 +63,14 @@ public class ImportedDeviceIdentityCollectionRequest extends BaseCollectionReque
     public void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ImportedDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newImportedDeviceIdentity, callback);
     }
 
     public ImportedDeviceIdentity post(final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ImportedDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newImportedDeviceIdentity);
     }
 
@@ -107,6 +107,27 @@ public class ImportedDeviceIdentityCollectionRequest extends BaseCollectionReque
         return (ImportedDeviceIdentityCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IImportedDeviceIdentityCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ImportedDeviceIdentityCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IImportedDeviceIdentityCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IImportedDeviceIdentityCollectionRequest)this;
+    }
     public IImportedDeviceIdentityCollectionPage buildFromResponse(final ImportedDeviceIdentityCollectionResponse response) {
         final IImportedDeviceIdentityCollectionRequestBuilder builder;
         if (response.nextLink != null) {

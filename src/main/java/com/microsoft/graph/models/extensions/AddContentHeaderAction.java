@@ -28,20 +28,20 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
 
 
     /**
-     * The Ui Element Name.
+     * The Alignment.
      * 
      */
-    @SerializedName("uiElementName")
+    @SerializedName("alignment")
     @Expose
-    public String uiElementName;
+    public ContentAlignment alignment;
 
     /**
-     * The Text.
+     * The Font Color.
      * 
      */
-    @SerializedName("text")
+    @SerializedName("fontColor")
     @Expose
-    public String text;
+    public String fontColor;
 
     /**
      * The Font Name.
@@ -60,28 +60,28 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     public Integer fontSize;
 
     /**
-     * The Font Color.
-     * 
-     */
-    @SerializedName("fontColor")
-    @Expose
-    public String fontColor;
-
-    /**
-     * The Alignment.
-     * 
-     */
-    @SerializedName("alignment")
-    @Expose
-    public ContentAlignment alignment;
-
-    /**
      * The Margin.
      * 
      */
     @SerializedName("margin")
     @Expose
     public Integer margin;
+
+    /**
+     * The Text.
+     * 
+     */
+    @SerializedName("text")
+    @Expose
+    public String text;
+
+    /**
+     * The Ui Element Name.
+     * 
+     */
+    @SerializedName("uiElementName")
+    @Expose
+    public String uiElementName;
 
 
     /**

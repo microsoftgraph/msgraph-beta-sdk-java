@@ -37,20 +37,12 @@ public class AuditActor implements IJsonBackedObject {
     }
 
     /**
-     * The Type.
-     * Actor Type.
+     * The Application Display Name.
+     * Name of the Application.
      */
-    @SerializedName("type")
+    @SerializedName("applicationDisplayName")
     @Expose
-    public String type;
-
-    /**
-     * The User Permissions.
-     * List of user permissions when the audit was performed.
-     */
-    @SerializedName("userPermissions")
-    @Expose
-    public java.util.List<String> userPermissions;
+    public String applicationDisplayName;
 
     /**
      * The Application Id.
@@ -61,52 +53,12 @@ public class AuditActor implements IJsonBackedObject {
     public String applicationId;
 
     /**
-     * The Application Display Name.
-     * Name of the Application.
-     */
-    @SerializedName("applicationDisplayName")
-    @Expose
-    public String applicationDisplayName;
-
-    /**
-     * The User Principal Name.
-     * User Principal Name (UPN).
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Service Principal Name.
-     * Service Principal Name (SPN).
-     */
-    @SerializedName("servicePrincipalName")
-    @Expose
-    public String servicePrincipalName;
-
-    /**
      * The Ip Address.
      * IPAddress.
      */
     @SerializedName("ipAddress")
     @Expose
     public String ipAddress;
-
-    /**
-     * The User Id.
-     * User Id.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The User Role Scope Tags.
-     * List of user scope tags when the audit was performed.
-     */
-    @SerializedName("userRoleScopeTags")
-    @Expose
-    public java.util.List<RoleScopeTagInfo> userRoleScopeTags;
 
     /**
      * The Remote Tenant Id.
@@ -123,6 +75,54 @@ public class AuditActor implements IJsonBackedObject {
     @SerializedName("remoteUserId")
     @Expose
     public String remoteUserId;
+
+    /**
+     * The Service Principal Name.
+     * Service Principal Name (SPN).
+     */
+    @SerializedName("servicePrincipalName")
+    @Expose
+    public String servicePrincipalName;
+
+    /**
+     * The Type.
+     * Actor Type.
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
+
+    /**
+     * The User Id.
+     * User Id.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Permissions.
+     * List of user permissions when the audit was performed.
+     */
+    @SerializedName("userPermissions")
+    @Expose
+    public java.util.List<String> userPermissions;
+
+    /**
+     * The User Principal Name.
+     * User Principal Name (UPN).
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
+
+    /**
+     * The User Role Scope Tags.
+     * List of user scope tags when the audit was performed.
+     */
+    @SerializedName("userRoleScopeTags")
+    @Expose
+    public java.util.List<RoleScopeTagInfo> userRoleScopeTags;
 
 
     /**

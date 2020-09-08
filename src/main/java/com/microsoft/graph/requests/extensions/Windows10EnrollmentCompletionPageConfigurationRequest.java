@@ -112,6 +112,27 @@ public class Windows10EnrollmentCompletionPageConfigurationRequest extends BaseR
     }
 
     /**
+     * Creates a Windows10EnrollmentCompletionPageConfiguration with a new object
+     *
+     * @param newWindows10EnrollmentCompletionPageConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10EnrollmentCompletionPageConfiguration newWindows10EnrollmentCompletionPageConfiguration, final ICallback<Windows10EnrollmentCompletionPageConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10EnrollmentCompletionPageConfiguration);
+    }
+
+    /**
+     * Creates a Windows10EnrollmentCompletionPageConfiguration with a new object
+     *
+     * @param newWindows10EnrollmentCompletionPageConfiguration the object to create/update
+     * @return the created Windows10EnrollmentCompletionPageConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10EnrollmentCompletionPageConfiguration put(final Windows10EnrollmentCompletionPageConfiguration newWindows10EnrollmentCompletionPageConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10EnrollmentCompletionPageConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.EndpointType;
+import com.microsoft.graph.models.extensions.IdentitySet;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Identity.
-     * The identitySet associated with this invitation.
-     */
-    @SerializedName("identity")
-    @Expose
-    public IdentitySet identity;
-
-    /**
      * The Endpoint Type.
      * 
      */
     @SerializedName("endpointType")
     @Expose
     public EndpointType endpointType;
+
+    /**
+     * The Identity.
+     * The identitySet associated with this invitation.
+     */
+    @SerializedName("identity")
+    @Expose
+    public IdentitySet identity;
 
     /**
      * The Replaces Call Id.

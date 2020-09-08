@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

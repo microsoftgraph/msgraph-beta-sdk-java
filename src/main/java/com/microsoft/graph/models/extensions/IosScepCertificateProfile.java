@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.KeyUsages;
-import com.microsoft.graph.models.generated.KeySize;
-import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
 import com.microsoft.graph.models.generated.CertificateStore;
 import com.microsoft.graph.models.extensions.CustomSubjectAlternativeName;
-import com.microsoft.graph.models.extensions.IosTrustedRootCertificate;
+import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
+import com.microsoft.graph.models.generated.KeySize;
+import com.microsoft.graph.models.generated.KeyUsages;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
+import com.microsoft.graph.models.extensions.IosTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionPage;
@@ -36,54 +36,6 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
 
 
     /**
-     * The Scep Server Urls.
-     * SCEP Server Url(s).
-     */
-    @SerializedName("scepServerUrls")
-    @Expose
-    public java.util.List<String> scepServerUrls;
-
-    /**
-     * The Subject Name Format String.
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    @SerializedName("subjectNameFormatString")
-    @Expose
-    public String subjectNameFormatString;
-
-    /**
-     * The Key Usage.
-     * SCEP Key Usage.
-     */
-    @SerializedName("keyUsage")
-    @Expose
-    public EnumSet<KeyUsages> keyUsage;
-
-    /**
-     * The Key Size.
-     * SCEP Key Size.
-     */
-    @SerializedName("keySize")
-    @Expose
-    public KeySize keySize;
-
-    /**
-     * The Extended Key Usages.
-     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("extendedKeyUsages")
-    @Expose
-    public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
-
-    /**
-     * The Subject Alternative Name Format String.
-     * Custom String that defines the AAD Attribute.
-     */
-    @SerializedName("subjectAlternativeNameFormatString")
-    @Expose
-    public String subjectAlternativeNameFormatString;
-
-    /**
      * The Certificate Store.
      * Target store certificate
      */
@@ -100,18 +52,66 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
-     * The Root Certificate.
-     * Trusted Root Certificate.
+     * The Extended Key Usages.
+     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("rootCertificate")
+    @SerializedName("extendedKeyUsages")
     @Expose
-    public IosTrustedRootCertificate rootCertificate;
+    public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
+
+    /**
+     * The Key Size.
+     * SCEP Key Size.
+     */
+    @SerializedName("keySize")
+    @Expose
+    public KeySize keySize;
+
+    /**
+     * The Key Usage.
+     * SCEP Key Usage.
+     */
+    @SerializedName("keyUsage")
+    @Expose
+    public EnumSet<KeyUsages> keyUsage;
+
+    /**
+     * The Scep Server Urls.
+     * SCEP Server Url(s).
+     */
+    @SerializedName("scepServerUrls")
+    @Expose
+    public java.util.List<String> scepServerUrls;
+
+    /**
+     * The Subject Alternative Name Format String.
+     * Custom String that defines the AAD Attribute.
+     */
+    @SerializedName("subjectAlternativeNameFormatString")
+    @Expose
+    public String subjectAlternativeNameFormatString;
+
+    /**
+     * The Subject Name Format String.
+     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     */
+    @SerializedName("subjectNameFormatString")
+    @Expose
+    public String subjectNameFormatString;
 
     /**
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+
+    /**
+     * The Root Certificate.
+     * Trusted Root Certificate.
+     */
+    @SerializedName("rootCertificate")
+    @Expose
+    public IosTrustedRootCertificate rootCertificate;
 
 
     /**

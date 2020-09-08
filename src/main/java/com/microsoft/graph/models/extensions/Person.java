@@ -11,8 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RankedEmailAddress;
 import com.microsoft.graph.models.extensions.Phone;
 import com.microsoft.graph.models.extensions.Location;
-import com.microsoft.graph.models.extensions.Website;
 import com.microsoft.graph.models.extensions.PersonDataSource;
+import com.microsoft.graph.models.extensions.Website;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -32,12 +32,44 @@ public class Person extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Birthday.
+     * The person's birthday.
+     */
+    @SerializedName("birthday")
+    @Expose
+    public String birthday;
+
+    /**
+     * The Company Name.
+     * The name of the person's company.
+     */
+    @SerializedName("companyName")
+    @Expose
+    public String companyName;
+
+    /**
+     * The Department.
+     * The person's department.
+     */
+    @SerializedName("department")
+    @Expose
+    public String department;
+
+    /**
      * The Display Name.
      * The person's display name.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Email Addresses.
+     * 
+     */
+    @SerializedName("emailAddresses")
+    @Expose
+    public java.util.List<RankedEmailAddress> emailAddresses;
 
     /**
      * The Given Name.
@@ -48,20 +80,28 @@ public class Person extends Entity implements IJsonBackedObject {
     public String givenName;
 
     /**
-     * The Surname.
-     * The person's surname.
+     * The Is Favorite.
+     * true if the user has flagged this person as a favorite.
      */
-    @SerializedName("surname")
+    @SerializedName("isFavorite")
     @Expose
-    public String surname;
+    public Boolean isFavorite;
 
     /**
-     * The Birthday.
-     * The person's birthday.
+     * The Mailbox Type.
+     * 
      */
-    @SerializedName("birthday")
+    @SerializedName("mailboxType")
     @Expose
-    public String birthday;
+    public String mailboxType;
+
+    /**
+     * The Office Location.
+     * The location of the person's office.
+     */
+    @SerializedName("officeLocation")
+    @Expose
+    public String officeLocation;
 
     /**
      * The Person Notes.
@@ -72,20 +112,12 @@ public class Person extends Entity implements IJsonBackedObject {
     public String personNotes;
 
     /**
-     * The Is Favorite.
-     * true if the user has flagged this person as a favorite.
+     * The Person Type.
+     * The type of person.
      */
-    @SerializedName("isFavorite")
+    @SerializedName("personType")
     @Expose
-    public Boolean isFavorite;
-
-    /**
-     * The Email Addresses.
-     * 
-     */
-    @SerializedName("emailAddresses")
-    @Expose
-    public java.util.List<RankedEmailAddress> emailAddresses;
+    public String personType;
 
     /**
      * The Phones.
@@ -104,54 +136,6 @@ public class Person extends Entity implements IJsonBackedObject {
     public java.util.List<Location> postalAddresses;
 
     /**
-     * The Websites.
-     * The person's websites.
-     */
-    @SerializedName("websites")
-    @Expose
-    public java.util.List<Website> websites;
-
-    /**
-     * The Title.
-     * 
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
-     * The Company Name.
-     * The name of the person's company.
-     */
-    @SerializedName("companyName")
-    @Expose
-    public String companyName;
-
-    /**
-     * The Yomi Company.
-     * The phonetic Japanese name of the person's company.
-     */
-    @SerializedName("yomiCompany")
-    @Expose
-    public String yomiCompany;
-
-    /**
-     * The Department.
-     * The person's department.
-     */
-    @SerializedName("department")
-    @Expose
-    public String department;
-
-    /**
-     * The Office Location.
-     * The location of the person's office.
-     */
-    @SerializedName("officeLocation")
-    @Expose
-    public String officeLocation;
-
-    /**
      * The Profession.
      * The person's profession.
      */
@@ -168,20 +152,20 @@ public class Person extends Entity implements IJsonBackedObject {
     public java.util.List<PersonDataSource> sources;
 
     /**
-     * The Mailbox Type.
-     * 
+     * The Surname.
+     * The person's surname.
      */
-    @SerializedName("mailboxType")
+    @SerializedName("surname")
     @Expose
-    public String mailboxType;
+    public String surname;
 
     /**
-     * The Person Type.
-     * The type of person.
+     * The Title.
+     * 
      */
-    @SerializedName("personType")
+    @SerializedName("title")
     @Expose
-    public String personType;
+    public String title;
 
     /**
      * The User Principal Name.
@@ -190,6 +174,22 @@ public class Person extends Entity implements IJsonBackedObject {
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
+
+    /**
+     * The Websites.
+     * The person's websites.
+     */
+    @SerializedName("websites")
+    @Expose
+    public java.util.List<Website> websites;
+
+    /**
+     * The Yomi Company.
+     * The phonetic Japanese name of the person's company.
+     */
+    @SerializedName("yomiCompany")
+    @Expose
+    public String yomiCompany;
 
 
     /**

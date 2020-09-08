@@ -8,13 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -47,10 +48,6 @@ public interface IIdentityContainerRequestBuilder extends IRequestBuilder {
      */
     IConditionalAccessRootRequestBuilder conditionalAccess();
 
-    IIdentityUserFlowCollectionRequestBuilder userFlows();
-
-    IIdentityUserFlowRequestBuilder userFlows(final String id);
-
     IB2cIdentityUserFlowCollectionRequestBuilder b2cUserFlows();
 
     IB2cIdentityUserFlowRequestBuilder b2cUserFlows(final String id);
@@ -58,5 +55,16 @@ public interface IIdentityContainerRequestBuilder extends IRequestBuilder {
     IB2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows();
 
     IB2xIdentityUserFlowRequestBuilder b2xUserFlows(final String id);
+
+    IIdentityUserFlowCollectionRequestBuilder userFlows();
+
+    IIdentityUserFlowRequestBuilder userFlows(final String id);
+
+    /**
+     * Gets the request builder for ContinuousAccessEvaluationPolicy
+     *
+     * @return the IContinuousAccessEvaluationPolicyRequestBuilder instance
+     */
+    IContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy();
 
 }

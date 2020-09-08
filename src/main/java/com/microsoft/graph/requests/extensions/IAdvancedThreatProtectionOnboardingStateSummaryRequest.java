@@ -80,6 +80,23 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequest extends 
     AdvancedThreatProtectionOnboardingStateSummary post(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary) throws ClientException;
 
     /**
+     * Posts a AdvancedThreatProtectionOnboardingStateSummary with a new object
+     *
+     * @param newAdvancedThreatProtectionOnboardingStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback);
+
+    /**
+     * Posts a AdvancedThreatProtectionOnboardingStateSummary with a new object
+     *
+     * @param newAdvancedThreatProtectionOnboardingStateSummary the object to create/update
+     * @return the created AdvancedThreatProtectionOnboardingStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AdvancedThreatProtectionOnboardingStateSummary put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,22 +28,6 @@ public class Office365ActivationsUserDetail extends Entity implements IJsonBacke
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
      * The Display Name.
      * 
      */
@@ -52,12 +36,28 @@ public class Office365ActivationsUserDetail extends Entity implements IJsonBacke
     public String displayName;
 
     /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
      * The User Activation Counts.
      * 
      */
     @SerializedName("userActivationCounts")
     @Expose
     public java.util.List<UserActivationCounts> userActivationCounts;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

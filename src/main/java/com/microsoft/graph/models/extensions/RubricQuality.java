@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EducationItemBody;
 import com.microsoft.graph.models.extensions.RubricCriterion;
+import com.microsoft.graph.models.extensions.EducationItemBody;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,12 @@ public class RubricQuality implements IJsonBackedObject {
     }
 
     /**
-     * The Quality Id.
+     * The Criteria.
      * 
      */
-    @SerializedName("qualityId")
+    @SerializedName("criteria")
     @Expose
-    public String qualityId;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
+    public java.util.List<RubricCriterion> criteria;
 
     /**
      * The Description.
@@ -62,20 +54,28 @@ public class RubricQuality implements IJsonBackedObject {
     public EducationItemBody description;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Quality Id.
+     * 
+     */
+    @SerializedName("qualityId")
+    @Expose
+    public String qualityId;
+
+    /**
      * The Weight.
      * 
      */
     @SerializedName("weight")
     @Expose
     public float weight;
-
-    /**
-     * The Criteria.
-     * 
-     */
-    @SerializedName("criteria")
-    @Expose
-    public java.util.List<RubricCriterion> criteria;
 
 
     /**

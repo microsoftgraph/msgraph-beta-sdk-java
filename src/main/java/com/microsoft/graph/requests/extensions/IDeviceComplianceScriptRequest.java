@@ -80,6 +80,23 @@ public interface IDeviceComplianceScriptRequest extends IHttpRequest {
     DeviceComplianceScript post(final DeviceComplianceScript newDeviceComplianceScript) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceScript with a new object
+     *
+     * @param newDeviceComplianceScript the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback);
+
+    /**
+     * Posts a DeviceComplianceScript with a new object
+     *
+     * @param newDeviceComplianceScript the object to create/update
+     * @return the created DeviceComplianceScript
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceScript put(final DeviceComplianceScript newDeviceComplianceScript) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

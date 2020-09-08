@@ -30,28 +30,12 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The User Id.
+     * The Approval Duration.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName("approvalDuration")
     @Expose
-    public String userId;
-
-    /**
-     * The Role Id.
-     * 
-     */
-    @SerializedName("roleId")
-    @Expose
-    public String roleId;
-
-    /**
-     * The Approval Type.
-     * 
-     */
-    @SerializedName("approvalType")
-    @Expose
-    public String approvalType;
+    public javax.xml.datatype.Duration approvalDuration;
 
     /**
      * The Approval State.
@@ -62,20 +46,12 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
     public ApprovalState approvalState;
 
     /**
-     * The Approval Duration.
+     * The Approval Type.
      * 
      */
-    @SerializedName("approvalDuration")
+    @SerializedName("approvalType")
     @Expose
-    public javax.xml.datatype.Duration approvalDuration;
-
-    /**
-     * The Requestor Reason.
-     * 
-     */
-    @SerializedName("requestorReason")
-    @Expose
-    public String requestorReason;
+    public String approvalType;
 
     /**
      * The Approver Reason.
@@ -86,6 +62,30 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
     public String approverReason;
 
     /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The Requestor Reason.
+     * 
+     */
+    @SerializedName("requestorReason")
+    @Expose
+    public String requestorReason;
+
+    /**
+     * The Role Id.
+     * 
+     */
+    @SerializedName("roleId")
+    @Expose
+    public String roleId;
+
+    /**
      * The Start Date Time.
      * 
      */
@@ -94,12 +94,12 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
     public java.util.Calendar startDateTime;
 
     /**
-     * The End Date Time.
+     * The User Id.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName("userId")
     @Expose
-    public java.util.Calendar endDateTime;
+    public String userId;
 
     /**
      * The Request.

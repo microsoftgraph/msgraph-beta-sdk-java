@@ -80,6 +80,23 @@ public interface IMacOSExtensionsConfigurationRequest extends IHttpRequest {
     MacOSExtensionsConfiguration post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException;
 
     /**
+     * Posts a MacOSExtensionsConfiguration with a new object
+     *
+     * @param newMacOSExtensionsConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback);
+
+    /**
+     * Posts a MacOSExtensionsConfiguration with a new object
+     *
+     * @param newMacOSExtensionsConfiguration the object to create/update
+     * @return the created MacOSExtensionsConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSExtensionsConfiguration put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.AdvancedBitLockerState;
 import com.microsoft.graph.models.generated.DeviceTypes;
+import com.microsoft.graph.models.generated.ComplianceStatus;
 import com.microsoft.graph.models.generated.EncryptionReadinessState;
 import com.microsoft.graph.models.generated.EncryptionState;
-import com.microsoft.graph.models.generated.ComplianceStatus;
-import com.microsoft.graph.models.generated.AdvancedBitLockerState;
 import com.microsoft.graph.models.generated.FileVaultState;
 import com.microsoft.graph.models.extensions.EncryptionReportPolicyDetails;
 import com.microsoft.graph.models.extensions.Entity;
@@ -34,12 +34,20 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
 
     /**
-     * The User Principal Name.
-     * User name
+     * The Advanced Bit Locker States.
+     * Advanced BitLocker State
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("advancedBitLockerStates")
     @Expose
-    public String userPrincipalName;
+    public EnumSet<AdvancedBitLockerState> advancedBitLockerStates;
+
+    /**
+     * The Device Name.
+     * Device name
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
 
     /**
      * The Device Type.
@@ -50,28 +58,12 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
     public DeviceTypes deviceType;
 
     /**
-     * The Os Version.
-     * Operating system version of the device
+     * The Encryption Policy Setting State.
+     * Encryption policy setting state
      */
-    @SerializedName("osVersion")
+    @SerializedName("encryptionPolicySettingState")
     @Expose
-    public String osVersion;
-
-    /**
-     * The Tpm Specification Version.
-     * Device TPM Version
-     */
-    @SerializedName("tpmSpecificationVersion")
-    @Expose
-    public String tpmSpecificationVersion;
-
-    /**
-     * The Device Name.
-     * Device name
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
+    public ComplianceStatus encryptionPolicySettingState;
 
     /**
      * The Encryption Readiness State.
@@ -90,22 +82,6 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
     public EncryptionState encryptionState;
 
     /**
-     * The Encryption Policy Setting State.
-     * Encryption policy setting state
-     */
-    @SerializedName("encryptionPolicySettingState")
-    @Expose
-    public ComplianceStatus encryptionPolicySettingState;
-
-    /**
-     * The Advanced Bit Locker States.
-     * Advanced BitLocker State
-     */
-    @SerializedName("advancedBitLockerStates")
-    @Expose
-    public EnumSet<AdvancedBitLockerState> advancedBitLockerStates;
-
-    /**
      * The File Vault States.
      * FileVault State
      */
@@ -114,12 +90,36 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
     public EnumSet<FileVaultState> fileVaultStates;
 
     /**
+     * The Os Version.
+     * Operating system version of the device
+     */
+    @SerializedName("osVersion")
+    @Expose
+    public String osVersion;
+
+    /**
      * The Policy Details.
      * Policy Details
      */
     @SerializedName("policyDetails")
     @Expose
     public java.util.List<EncryptionReportPolicyDetails> policyDetails;
+
+    /**
+     * The Tpm Specification Version.
+     * Device TPM Version
+     */
+    @SerializedName("tpmSpecificationVersion")
+    @Expose
+    public String tpmSpecificationVersion;
+
+    /**
+     * The User Principal Name.
+     * User name
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

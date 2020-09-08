@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -121,6 +121,27 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      */
     public TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException {
         return send(HttpMethod.POST, newTermsAndConditions);
+    }
+
+    /**
+     * Creates a TermsAndConditions with a new object
+     *
+     * @param newTermsAndConditions the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+        send(HttpMethod.PUT, callback, newTermsAndConditions);
+    }
+
+    /**
+     * Creates a TermsAndConditions with a new object
+     *
+     * @param newTermsAndConditions the object to create/update
+     * @return the created TermsAndConditions
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TermsAndConditions put(final TermsAndConditions newTermsAndConditions) throws ClientException {
+        return send(HttpMethod.PUT, newTermsAndConditions);
     }
 
     /**

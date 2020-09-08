@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidForWorkCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,21 +35,17 @@ public interface IAndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extend
     IAndroidForWorkEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -58,6 +54,14 @@ public interface IAndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extend
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -65,9 +69,12 @@ public interface IAndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extend
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+    /**
+     * Gets the request builder for AndroidForWorkCertificateProfileBase
+     *
+     * @return the IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
     /**
      * Gets the request builder for AndroidForWorkTrustedRootCertificate
@@ -75,12 +82,5 @@ public interface IAndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extend
      * @return the IAndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder instance
      */
     IAndroidForWorkTrustedRootCertificateWithReferenceRequestBuilder rootCertificateForServerValidation();
-
-    /**
-     * Gets the request builder for AndroidForWorkCertificateProfileBase
-     *
-     * @return the IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder instance
-     */
-    IAndroidForWorkCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
 }

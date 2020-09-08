@@ -80,6 +80,23 @@ public interface IPrinterRequest extends IHttpRequest {
     Printer post(final Printer newPrinter) throws ClientException;
 
     /**
+     * Posts a Printer with a new object
+     *
+     * @param newPrinter the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Printer newPrinter, final ICallback<Printer> callback);
+
+    /**
+     * Posts a Printer with a new object
+     *
+     * @param newPrinter the object to create/update
+     * @return the created Printer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Printer put(final Printer newPrinter) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

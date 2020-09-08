@@ -114,6 +114,27 @@ public class TenantSetupInfoRequest extends BaseRequest implements ITenantSetupI
     }
 
     /**
+     * Creates a TenantSetupInfo with a new object
+     *
+     * @param newTenantSetupInfo the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TenantSetupInfo newTenantSetupInfo, final ICallback<TenantSetupInfo> callback) {
+        send(HttpMethod.PUT, callback, newTenantSetupInfo);
+    }
+
+    /**
+     * Creates a TenantSetupInfo with a new object
+     *
+     * @param newTenantSetupInfo the object to create/update
+     * @return the created TenantSetupInfo
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TenantSetupInfo put(final TenantSetupInfo newTenantSetupInfo) throws ClientException {
+        return send(HttpMethod.PUT, newTenantSetupInfo);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

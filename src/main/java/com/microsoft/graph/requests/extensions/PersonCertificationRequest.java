@@ -112,6 +112,27 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
     }
 
     /**
+     * Creates a PersonCertification with a new object
+     *
+     * @param newPersonCertification the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback) {
+        send(HttpMethod.PUT, callback, newPersonCertification);
+    }
+
+    /**
+     * Creates a PersonCertification with a new object
+     *
+     * @param newPersonCertification the object to create/update
+     * @return the created PersonCertification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PersonCertification put(final PersonCertification newPersonCertification) throws ClientException {
+        return send(HttpMethod.PUT, newPersonCertification);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

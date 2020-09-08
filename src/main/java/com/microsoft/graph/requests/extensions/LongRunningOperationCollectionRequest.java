@@ -62,14 +62,14 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
     public void post(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LongRunningOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLongRunningOperation, callback);
     }
 
     public LongRunningOperation post(final LongRunningOperation newLongRunningOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LongRunningOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLongRunningOperation);
     }
 
@@ -106,6 +106,27 @@ public class LongRunningOperationCollectionRequest extends BaseCollectionRequest
         return (LongRunningOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ILongRunningOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (LongRunningOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ILongRunningOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ILongRunningOperationCollectionRequest)this;
+    }
     public ILongRunningOperationCollectionPage buildFromResponse(final LongRunningOperationCollectionResponse response) {
         final ILongRunningOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

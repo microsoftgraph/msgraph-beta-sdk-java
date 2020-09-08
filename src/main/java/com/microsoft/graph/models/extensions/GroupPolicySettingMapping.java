@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.GroupPolicySettingType;
 import com.microsoft.graph.models.generated.MdmSupportedState;
 import com.microsoft.graph.models.generated.GroupPolicySettingScope;
+import com.microsoft.graph.models.generated.GroupPolicySettingType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,14 +30,6 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Parent Id.
-     * Parent Id of the group policy setting.
-     */
-    @SerializedName("parentId")
-    @Expose
-    public String parentId;
-
-    /**
      * The Child Id List.
      * List of Child Ids of the group policy setting.
      */
@@ -46,28 +38,76 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
     public java.util.List<String> childIdList;
 
     /**
-     * The Setting Name.
-     * The name of this group policy setting.
+     * The Intune Setting Definition Id.
+     * The Intune Setting Definition Id
      */
-    @SerializedName("settingName")
+    @SerializedName("intuneSettingDefinitionId")
     @Expose
-    public String settingName;
+    public String intuneSettingDefinitionId;
 
     /**
-     * The Setting Value.
-     * The value of this group policy setting.
+     * The Intune Setting Uri List.
+     * The list of Intune Setting URIs this group policy setting maps to
      */
-    @SerializedName("settingValue")
+    @SerializedName("intuneSettingUriList")
     @Expose
-    public String settingValue;
+    public java.util.List<String> intuneSettingUriList;
 
     /**
-     * The Setting Value Type.
-     * The value type of this group policy setting.
+     * The Is Mdm Supported.
+     * Indicates if the setting is supported by Intune or not
      */
-    @SerializedName("settingValueType")
+    @SerializedName("isMdmSupported")
     @Expose
-    public String settingValueType;
+    public Boolean isMdmSupported;
+
+    /**
+     * The Mdm Csp Name.
+     * The CSP name this group policy setting maps to.
+     */
+    @SerializedName("mdmCspName")
+    @Expose
+    public String mdmCspName;
+
+    /**
+     * The Mdm Minimum OSVersion.
+     * The minimum OS version this mdm setting supports.
+     */
+    @SerializedName("mdmMinimumOSVersion")
+    @Expose
+    public Integer mdmMinimumOSVersion;
+
+    /**
+     * The Mdm Setting Uri.
+     * The MDM CSP URI this group policy setting maps to.
+     */
+    @SerializedName("mdmSettingUri")
+    @Expose
+    public String mdmSettingUri;
+
+    /**
+     * The Mdm Supported State.
+     * Indicates if the setting is supported in Mdm or not
+     */
+    @SerializedName("mdmSupportedState")
+    @Expose
+    public MdmSupportedState mdmSupportedState;
+
+    /**
+     * The Parent Id.
+     * Parent Id of the group policy setting.
+     */
+    @SerializedName("parentId")
+    @Expose
+    public String parentId;
+
+    /**
+     * The Setting Category.
+     * The category the group policy setting is in.
+     */
+    @SerializedName("settingCategory")
+    @Expose
+    public String settingCategory;
 
     /**
      * The Setting Display Name.
@@ -94,68 +134,12 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
     public String settingDisplayValueType;
 
     /**
-     * The Setting Value Display Units.
-     * The display units of this group policy setting value
+     * The Setting Name.
+     * The name of this group policy setting.
      */
-    @SerializedName("settingValueDisplayUnits")
+    @SerializedName("settingName")
     @Expose
-    public String settingValueDisplayUnits;
-
-    /**
-     * The Setting Category.
-     * The category the group policy setting is in.
-     */
-    @SerializedName("settingCategory")
-    @Expose
-    public String settingCategory;
-
-    /**
-     * The Mdm Csp Name.
-     * The CSP name this group policy setting maps to.
-     */
-    @SerializedName("mdmCspName")
-    @Expose
-    public String mdmCspName;
-
-    /**
-     * The Mdm Setting Uri.
-     * The MDM CSP URI this group policy setting maps to.
-     */
-    @SerializedName("mdmSettingUri")
-    @Expose
-    public String mdmSettingUri;
-
-    /**
-     * The Mdm Minimum OSVersion.
-     * The minimum OS version this mdm setting supports.
-     */
-    @SerializedName("mdmMinimumOSVersion")
-    @Expose
-    public Integer mdmMinimumOSVersion;
-
-    /**
-     * The Setting Type.
-     * The setting type (security or admx) of the Group Policy.
-     */
-    @SerializedName("settingType")
-    @Expose
-    public GroupPolicySettingType settingType;
-
-    /**
-     * The Is Mdm Supported.
-     * Indicates if the setting is supported by Intune or not
-     */
-    @SerializedName("isMdmSupported")
-    @Expose
-    public Boolean isMdmSupported;
-
-    /**
-     * The Mdm Supported State.
-     * Indicates if the setting is supported in Mdm or not
-     */
-    @SerializedName("mdmSupportedState")
-    @Expose
-    public MdmSupportedState mdmSupportedState;
+    public String settingName;
 
     /**
      * The Setting Scope.
@@ -166,20 +150,36 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
     public GroupPolicySettingScope settingScope;
 
     /**
-     * The Intune Setting Uri List.
-     * The list of Intune Setting URIs this group policy setting maps to
+     * The Setting Type.
+     * The setting type (security or admx) of the Group Policy.
      */
-    @SerializedName("intuneSettingUriList")
+    @SerializedName("settingType")
     @Expose
-    public java.util.List<String> intuneSettingUriList;
+    public GroupPolicySettingType settingType;
 
     /**
-     * The Intune Setting Definition Id.
-     * The Intune Setting Definition Id
+     * The Setting Value.
+     * The value of this group policy setting.
      */
-    @SerializedName("intuneSettingDefinitionId")
+    @SerializedName("settingValue")
     @Expose
-    public String intuneSettingDefinitionId;
+    public String settingValue;
+
+    /**
+     * The Setting Value Display Units.
+     * The display units of this group policy setting value
+     */
+    @SerializedName("settingValueDisplayUnits")
+    @Expose
+    public String settingValueDisplayUnits;
+
+    /**
+     * The Setting Value Type.
+     * The value type of this group policy setting.
+     */
+    @SerializedName("settingValueType")
+    @Expose
+    public String settingValueType;
 
 
     /**

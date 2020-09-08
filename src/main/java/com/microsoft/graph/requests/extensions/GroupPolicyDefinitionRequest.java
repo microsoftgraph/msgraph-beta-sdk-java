@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationCollectio
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class GroupPolicyDefinitionRequest extends BaseRequest implements IGroupP
      */
     public GroupPolicyDefinition post(final GroupPolicyDefinition newGroupPolicyDefinition) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyDefinition);
+    }
+
+    /**
+     * Creates a GroupPolicyDefinition with a new object
+     *
+     * @param newGroupPolicyDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyDefinition);
+    }
+
+    /**
+     * Creates a GroupPolicyDefinition with a new object
+     *
+     * @param newGroupPolicyDefinition the object to create/update
+     * @return the created GroupPolicyDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyDefinition put(final GroupPolicyDefinition newGroupPolicyDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyDefinition);
     }
 
     /**

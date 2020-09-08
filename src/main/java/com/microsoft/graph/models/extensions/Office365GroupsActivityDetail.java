@@ -27,76 +27,20 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
 
 
     /**
-     * The Report Refresh Date.
+     * The Exchange Mailbox Storage Used In Bytes.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("exchangeMailboxStorageUsedInBytes")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long exchangeMailboxStorageUsedInBytes;
 
     /**
-     * The Group Id.
+     * The Exchange Mailbox Total Item Count.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName("exchangeMailboxTotalItemCount")
     @Expose
-    public String groupId;
-
-    /**
-     * The Group Display Name.
-     * 
-     */
-    @SerializedName("groupDisplayName")
-    @Expose
-    public String groupDisplayName;
-
-    /**
-     * The Is Deleted.
-     * 
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
-
-    /**
-     * The Owner Principal Name.
-     * 
-     */
-    @SerializedName("ownerPrincipalName")
-    @Expose
-    public String ownerPrincipalName;
-
-    /**
-     * The Last Activity Date.
-     * 
-     */
-    @SerializedName("lastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
-
-    /**
-     * The Group Type.
-     * 
-     */
-    @SerializedName("groupType")
-    @Expose
-    public String groupType;
-
-    /**
-     * The Member Count.
-     * 
-     */
-    @SerializedName("memberCount")
-    @Expose
-    public Long memberCount;
-
-    /**
-     * The External Member Count.
-     * 
-     */
-    @SerializedName("externalMemberCount")
-    @Expose
-    public Long externalMemberCount;
+    public Long exchangeMailboxTotalItemCount;
 
     /**
      * The Exchange Received Email Count.
@@ -107,12 +51,116 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
     public Long exchangeReceivedEmailCount;
 
     /**
+     * The External Member Count.
+     * 
+     */
+    @SerializedName("externalMemberCount")
+    @Expose
+    public Long externalMemberCount;
+
+    /**
+     * The Group Display Name.
+     * 
+     */
+    @SerializedName("groupDisplayName")
+    @Expose
+    public String groupDisplayName;
+
+    /**
+     * The Group Id.
+     * 
+     */
+    @SerializedName("groupId")
+    @Expose
+    public String groupId;
+
+    /**
+     * The Group Type.
+     * 
+     */
+    @SerializedName("groupType")
+    @Expose
+    public String groupType;
+
+    /**
+     * The Is Deleted.
+     * 
+     */
+    @SerializedName("isDeleted")
+    @Expose
+    public Boolean isDeleted;
+
+    /**
+     * The Last Activity Date.
+     * 
+     */
+    @SerializedName("lastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+
+    /**
+     * The Member Count.
+     * 
+     */
+    @SerializedName("memberCount")
+    @Expose
+    public Long memberCount;
+
+    /**
+     * The Owner Principal Name.
+     * 
+     */
+    @SerializedName("ownerPrincipalName")
+    @Expose
+    public String ownerPrincipalName;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
      * The Share Point Active File Count.
      * 
      */
     @SerializedName("sharePointActiveFileCount")
     @Expose
     public Long sharePointActiveFileCount;
+
+    /**
+     * The Share Point Site Storage Used In Bytes.
+     * 
+     */
+    @SerializedName("sharePointSiteStorageUsedInBytes")
+    @Expose
+    public Long sharePointSiteStorageUsedInBytes;
+
+    /**
+     * The Share Point Total File Count.
+     * 
+     */
+    @SerializedName("sharePointTotalFileCount")
+    @Expose
+    public Long sharePointTotalFileCount;
+
+    /**
+     * The Yammer Liked Message Count.
+     * 
+     */
+    @SerializedName("yammerLikedMessageCount")
+    @Expose
+    public Long yammerLikedMessageCount;
 
     /**
      * The Yammer Posted Message Count.
@@ -129,54 +177,6 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
     @SerializedName("yammerReadMessageCount")
     @Expose
     public Long yammerReadMessageCount;
-
-    /**
-     * The Yammer Liked Message Count.
-     * 
-     */
-    @SerializedName("yammerLikedMessageCount")
-    @Expose
-    public Long yammerLikedMessageCount;
-
-    /**
-     * The Exchange Mailbox Total Item Count.
-     * 
-     */
-    @SerializedName("exchangeMailboxTotalItemCount")
-    @Expose
-    public Long exchangeMailboxTotalItemCount;
-
-    /**
-     * The Exchange Mailbox Storage Used In Bytes.
-     * 
-     */
-    @SerializedName("exchangeMailboxStorageUsedInBytes")
-    @Expose
-    public Long exchangeMailboxStorageUsedInBytes;
-
-    /**
-     * The Share Point Total File Count.
-     * 
-     */
-    @SerializedName("sharePointTotalFileCount")
-    @Expose
-    public Long sharePointTotalFileCount;
-
-    /**
-     * The Share Point Site Storage Used In Bytes.
-     * 
-     */
-    @SerializedName("sharePointSiteStorageUsedInBytes")
-    @Expose
-    public Long sharePointSiteStorageUsedInBytes;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
 
 
     /**

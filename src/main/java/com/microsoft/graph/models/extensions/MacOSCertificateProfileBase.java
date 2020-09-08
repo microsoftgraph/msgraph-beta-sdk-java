@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AppleSubjectNameFormat;
-import com.microsoft.graph.models.generated.SubjectAlternativeNameType;
 import com.microsoft.graph.models.generated.CertificateValidityPeriodScale;
+import com.microsoft.graph.models.generated.SubjectAlternativeNameType;
+import com.microsoft.graph.models.generated.AppleSubjectNameFormat;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -30,28 +30,12 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
 
 
     /**
-     * The Renewal Threshold Percentage.
-     * Certificate renewal threshold percentage.
+     * The Certificate Validity Period Scale.
+     * Scale for the Certificate Validity Period.
      */
-    @SerializedName("renewalThresholdPercentage")
+    @SerializedName("certificateValidityPeriodScale")
     @Expose
-    public Integer renewalThresholdPercentage;
-
-    /**
-     * The Subject Name Format.
-     * Certificate Subject Name Format.
-     */
-    @SerializedName("subjectNameFormat")
-    @Expose
-    public AppleSubjectNameFormat subjectNameFormat;
-
-    /**
-     * The Subject Alternative Name Type.
-     * Certificate Subject Alternative Name Type.
-     */
-    @SerializedName("subjectAlternativeNameType")
-    @Expose
-    public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
+    public CertificateValidityPeriodScale certificateValidityPeriodScale;
 
     /**
      * The Certificate Validity Period Value.
@@ -62,12 +46,28 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     public Integer certificateValidityPeriodValue;
 
     /**
-     * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period.
+     * The Renewal Threshold Percentage.
+     * Certificate renewal threshold percentage.
      */
-    @SerializedName("certificateValidityPeriodScale")
+    @SerializedName("renewalThresholdPercentage")
     @Expose
-    public CertificateValidityPeriodScale certificateValidityPeriodScale;
+    public Integer renewalThresholdPercentage;
+
+    /**
+     * The Subject Alternative Name Type.
+     * Certificate Subject Alternative Name Type.
+     */
+    @SerializedName("subjectAlternativeNameType")
+    @Expose
+    public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
+
+    /**
+     * The Subject Name Format.
+     * Certificate Subject Name Format.
+     */
+    @SerializedName("subjectNameFormat")
+    @Expose
+    public AppleSubjectNameFormat subjectNameFormat;
 
 
     /**

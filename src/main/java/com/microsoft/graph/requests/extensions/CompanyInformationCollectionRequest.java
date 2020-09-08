@@ -62,14 +62,14 @@ public class CompanyInformationCollectionRequest extends BaseCollectionRequest<C
     public void post(final CompanyInformation newCompanyInformation, final ICallback<CompanyInformation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CompanyInformationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCompanyInformation, callback);
     }
 
     public CompanyInformation post(final CompanyInformation newCompanyInformation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CompanyInformationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCompanyInformation);
     }
 
@@ -106,6 +106,27 @@ public class CompanyInformationCollectionRequest extends BaseCollectionRequest<C
         return (CompanyInformationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICompanyInformationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CompanyInformationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICompanyInformationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICompanyInformationCollectionRequest)this;
+    }
     public ICompanyInformationCollectionPage buildFromResponse(final CompanyInformationCollectionResponse response) {
         final ICompanyInformationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

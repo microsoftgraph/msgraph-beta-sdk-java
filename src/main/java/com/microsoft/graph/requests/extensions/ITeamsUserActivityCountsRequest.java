@@ -80,6 +80,23 @@ public interface ITeamsUserActivityCountsRequest extends IHttpRequest {
     TeamsUserActivityCounts post(final TeamsUserActivityCounts newTeamsUserActivityCounts) throws ClientException;
 
     /**
+     * Posts a TeamsUserActivityCounts with a new object
+     *
+     * @param newTeamsUserActivityCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<TeamsUserActivityCounts> callback);
+
+    /**
+     * Posts a TeamsUserActivityCounts with a new object
+     *
+     * @param newTeamsUserActivityCounts the object to create/update
+     * @return the created TeamsUserActivityCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsUserActivityCounts put(final TeamsUserActivityCounts newTeamsUserActivityCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

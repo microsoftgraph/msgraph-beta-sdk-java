@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.FeatureType;
 import com.microsoft.graph.models.generated.UsageAuthMethod;
+import com.microsoft.graph.models.generated.FeatureType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,44 +29,20 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Feature.
-     * 
-     */
-    @SerializedName("feature")
-    @Expose
-    public FeatureType feature;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The Is Success.
-     * 
-     */
-    @SerializedName("isSuccess")
-    @Expose
-    public Boolean isSuccess;
-
-    /**
      * The Auth Method.
      * 
      */
     @SerializedName("authMethod")
     @Expose
     public UsageAuthMethod authMethod;
+
+    /**
+     * The Event Date Time.
+     * 
+     */
+    @SerializedName("eventDateTime")
+    @Expose
+    public java.util.Calendar eventDateTime;
 
     /**
      * The Failure Reason.
@@ -77,12 +53,36 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
     public String failureReason;
 
     /**
-     * The Event Date Time.
+     * The Feature.
      * 
      */
-    @SerializedName("eventDateTime")
+    @SerializedName("feature")
     @Expose
-    public java.util.Calendar eventDateTime;
+    public FeatureType feature;
+
+    /**
+     * The Is Success.
+     * 
+     */
+    @SerializedName("isSuccess")
+    @Expose
+    public Boolean isSuccess;
+
+    /**
+     * The User Display Name.
+     * 
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

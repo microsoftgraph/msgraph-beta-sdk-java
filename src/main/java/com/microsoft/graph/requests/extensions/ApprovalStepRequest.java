@@ -112,6 +112,27 @@ public class ApprovalStepRequest extends BaseRequest implements IApprovalStepReq
     }
 
     /**
+     * Creates a ApprovalStep with a new object
+     *
+     * @param newApprovalStep the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ApprovalStep newApprovalStep, final ICallback<ApprovalStep> callback) {
+        send(HttpMethod.PUT, callback, newApprovalStep);
+    }
+
+    /**
+     * Creates a ApprovalStep with a new object
+     *
+     * @param newApprovalStep the object to create/update
+     * @return the created ApprovalStep
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ApprovalStep put(final ApprovalStep newApprovalStep) throws ClientException {
+        return send(HttpMethod.PUT, newApprovalStep);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -9,26 +9,26 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
@@ -132,6 +132,27 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      */
     public Post post(final Post newPost) throws ClientException {
         return send(HttpMethod.POST, newPost);
+    }
+
+    /**
+     * Creates a Post with a new object
+     *
+     * @param newPost the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Post newPost, final ICallback<Post> callback) {
+        send(HttpMethod.PUT, callback, newPost);
+    }
+
+    /**
+     * Creates a Post with a new object
+     *
+     * @param newPost the object to create/update
+     * @return the created Post
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Post put(final Post newPost) throws ClientException {
+        return send(HttpMethod.PUT, newPost);
     }
 
     /**

@@ -80,6 +80,23 @@ public interface IWindowsPhone81SCEPCertificateProfileRequest extends IHttpReque
     WindowsPhone81SCEPCertificateProfile post(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81SCEPCertificateProfile with a new object
+     *
+     * @param newWindowsPhone81SCEPCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile, final ICallback<WindowsPhone81SCEPCertificateProfile> callback);
+
+    /**
+     * Posts a WindowsPhone81SCEPCertificateProfile with a new object
+     *
+     * @param newWindowsPhone81SCEPCertificateProfile the object to create/update
+     * @return the created WindowsPhone81SCEPCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81SCEPCertificateProfile put(final WindowsPhone81SCEPCertificateProfile newWindowsPhone81SCEPCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

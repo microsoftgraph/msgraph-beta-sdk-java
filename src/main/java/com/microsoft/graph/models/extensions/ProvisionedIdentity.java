@@ -37,12 +37,12 @@ public class ProvisionedIdentity implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Details.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("details")
     @Expose
-    public String id;
+    public DetailsInfo details;
 
     /**
      * The Display Name.
@@ -53,20 +53,20 @@ public class ProvisionedIdentity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
+
+    /**
      * The Identity Type.
      * 
      */
     @SerializedName("identityType")
     @Expose
     public String identityType;
-
-    /**
-     * The Details.
-     * 
-     */
-    @SerializedName("details")
-    @Expose
-    public DetailsInfo details;
 
 
     /**

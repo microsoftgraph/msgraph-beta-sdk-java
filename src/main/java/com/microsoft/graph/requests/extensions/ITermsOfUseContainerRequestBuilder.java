@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
-import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,12 +37,12 @@ public interface ITermsOfUseContainerRequestBuilder extends IRequestBuilder {
     ITermsOfUseContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IAgreementCollectionRequestBuilder agreements();
-
-    IAgreementRequestBuilder agreements(final String id);
-
     IAgreementAcceptanceCollectionRequestBuilder agreementAcceptances();
 
     IAgreementAcceptanceRequestBuilder agreementAcceptances(final String id);
+
+    IAgreementCollectionRequestBuilder agreements();
+
+    IAgreementRequestBuilder agreements(final String id);
 
 }

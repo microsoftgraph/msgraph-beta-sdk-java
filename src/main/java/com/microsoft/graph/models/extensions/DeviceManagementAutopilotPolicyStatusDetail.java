@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementAutopilotPolicyType;
 import com.microsoft.graph.models.generated.DeviceManagementAutopilotPolicyComplianceStatus;
+import com.microsoft.graph.models.generated.DeviceManagementAutopilotPolicyType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,12 +29,28 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
 
 
     /**
+     * The Compliance Status.
+     * The policy compliance status.
+     */
+    @SerializedName("complianceStatus")
+    @Expose
+    public DeviceManagementAutopilotPolicyComplianceStatus complianceStatus;
+
+    /**
      * The Display Name.
      * The friendly name of the policy.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Last Reported Date Time.
+     * Timestamp of the reported policy status
+     */
+    @SerializedName("lastReportedDateTime")
+    @Expose
+    public java.util.Calendar lastReportedDateTime;
 
     /**
      * The Policy Type.
@@ -45,28 +61,12 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     public DeviceManagementAutopilotPolicyType policyType;
 
     /**
-     * The Compliance Status.
-     * The policy compliance status.
-     */
-    @SerializedName("complianceStatus")
-    @Expose
-    public DeviceManagementAutopilotPolicyComplianceStatus complianceStatus;
-
-    /**
      * The Tracked On Enrollment Status.
      * Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
      */
     @SerializedName("trackedOnEnrollmentStatus")
     @Expose
     public Boolean trackedOnEnrollmentStatus;
-
-    /**
-     * The Last Reported Date Time.
-     * Timestamp of the reported policy status
-     */
-    @SerializedName("lastReportedDateTime")
-    @Expose
-    public java.util.Calendar lastReportedDateTime;
 
 
     /**

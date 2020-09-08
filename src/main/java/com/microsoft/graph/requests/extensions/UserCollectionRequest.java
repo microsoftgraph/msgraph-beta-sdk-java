@@ -13,14 +13,14 @@ import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
-import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementData;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDevice;
@@ -80,14 +80,14 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
     public void post(final User newUser, final ICallback<User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUser, callback);
     }
 
     public User post(final User newUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUser);
     }
 
@@ -124,6 +124,27 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
         return (UserCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserCollectionRequest)this;
+    }
     public IUserCollectionPage buildFromResponse(final UserCollectionResponse response) {
         final IUserCollectionRequestBuilder builder;
         if (response.nextLink != null) {

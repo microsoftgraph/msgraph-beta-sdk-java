@@ -112,6 +112,27 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a DeviceManagementDomainJoinConnector with a new object
+     *
+     * @param newDeviceManagementDomainJoinConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementDomainJoinConnector);
+    }
+
+    /**
+     * Creates a DeviceManagementDomainJoinConnector with a new object
+     *
+     * @param newDeviceManagementDomainJoinConnector the object to create/update
+     * @return the created DeviceManagementDomainJoinConnector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementDomainJoinConnector put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementDomainJoinConnector);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

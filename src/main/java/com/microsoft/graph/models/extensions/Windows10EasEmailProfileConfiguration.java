@@ -38,30 +38,6 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
     public String accountName;
 
     /**
-     * The Sync Calendar.
-     * Whether or not to sync the calendar.
-     */
-    @SerializedName("syncCalendar")
-    @Expose
-    public Boolean syncCalendar;
-
-    /**
-     * The Sync Contacts.
-     * Whether or not to sync contacts.
-     */
-    @SerializedName("syncContacts")
-    @Expose
-    public Boolean syncContacts;
-
-    /**
-     * The Sync Tasks.
-     * Whether or not to sync tasks.
-     */
-    @SerializedName("syncTasks")
-    @Expose
-    public Boolean syncTasks;
-
-    /**
      * The Duration Of Email To Sync.
      * Duration of email to sync.
      */
@@ -100,6 +76,30 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
     @SerializedName("requireSsl")
     @Expose
     public Boolean requireSsl;
+
+    /**
+     * The Sync Calendar.
+     * Whether or not to sync the calendar.
+     */
+    @SerializedName("syncCalendar")
+    @Expose
+    public Boolean syncCalendar;
+
+    /**
+     * The Sync Contacts.
+     * Whether or not to sync contacts.
+     */
+    @SerializedName("syncContacts")
+    @Expose
+    public Boolean syncContacts;
+
+    /**
+     * The Sync Tasks.
+     * Whether or not to sync tasks.
+     */
+    @SerializedName("syncTasks")
+    @Expose
+    public Boolean syncTasks;
 
 
     /**

@@ -57,13 +57,6 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
     }
 
 
-    public IGroupPolicyPresentationValueCollectionRequestBuilder presentationValues() {
-        return new GroupPolicyPresentationValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues"), getClient(), null);
-    }
-
-    public IGroupPolicyPresentationValueRequestBuilder presentationValues(final String id) {
-        return new GroupPolicyPresentationValueRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for GroupPolicyDefinition
@@ -72,5 +65,12 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
      */
     public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
         return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    }
+    public IGroupPolicyPresentationValueCollectionRequestBuilder presentationValues() {
+        return new GroupPolicyPresentationValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues"), getClient(), null);
+    }
+
+    public IGroupPolicyPresentationValueRequestBuilder presentationValues(final String id) {
+        return new GroupPolicyPresentationValueRequestBuilder(getRequestUrlWithAdditionalSegment("presentationValues") + "/" + id, getClient(), null);
     }
 }

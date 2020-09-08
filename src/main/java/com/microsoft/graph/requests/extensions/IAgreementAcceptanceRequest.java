@@ -80,6 +80,23 @@ public interface IAgreementAcceptanceRequest extends IHttpRequest {
     AgreementAcceptance post(final AgreementAcceptance newAgreementAcceptance) throws ClientException;
 
     /**
+     * Posts a AgreementAcceptance with a new object
+     *
+     * @param newAgreementAcceptance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback);
+
+    /**
+     * Posts a AgreementAcceptance with a new object
+     *
+     * @param newAgreementAcceptance the object to create/update
+     * @return the created AgreementAcceptance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AgreementAcceptance put(final AgreementAcceptance newAgreementAcceptance) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

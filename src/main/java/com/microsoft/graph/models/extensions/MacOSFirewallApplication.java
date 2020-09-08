@@ -36,20 +36,20 @@ public class MacOSFirewallApplication implements IJsonBackedObject {
     }
 
     /**
-     * The Bundle Id.
-     * BundleId of the application.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
      * The Allows Incoming Connections.
      * Whether or not incoming connections are allowed.
      */
     @SerializedName("allowsIncomingConnections")
     @Expose
     public Boolean allowsIncomingConnections;
+
+    /**
+     * The Bundle Id.
+     * BundleId of the application.
+     */
+    @SerializedName("bundleId")
+    @Expose
+    public String bundleId;
 
 
     /**

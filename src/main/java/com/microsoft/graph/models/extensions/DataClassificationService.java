@@ -9,23 +9,23 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ExactMatchDataStore;
-import com.microsoft.graph.models.extensions.SensitiveType;
+import com.microsoft.graph.models.extensions.FileClassificationRequest;
 import com.microsoft.graph.models.extensions.JobResponseBase;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;
-import com.microsoft.graph.models.extensions.FileClassificationRequest;
+import com.microsoft.graph.models.extensions.SensitiveType;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.ExactMatchUploadAgent;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionPage;
-import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionResponse;
-import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionPage;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionResponse;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionResponse;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionPage;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionResponse;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionResponse;
+import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionPage;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionResponse;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionPage;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentCollectionResponse;
@@ -54,16 +54,10 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     public ExactMatchDataStoreCollectionPage exactMatchDataStores;
 
     /**
-     * The Sensitive Types.
+     * The Classify File.
      * 
      */
-    public SensitiveTypeCollectionPage sensitiveTypes;
-
-    /**
-     * The Jobs.
-     * 
-     */
-    public JobResponseBaseCollectionPage jobs;
+    public FileClassificationRequestCollectionPage classifyFile;
 
     /**
      * The Classify File Jobs.
@@ -72,16 +66,16 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     public JobResponseBaseCollectionPage classifyFileJobs;
 
     /**
+     * The Classify Text.
+     * 
+     */
+    public TextClassificationRequestCollectionPage classifyText;
+
+    /**
      * The Classify Text Jobs.
      * 
      */
     public JobResponseBaseCollectionPage classifyTextJobs;
-
-    /**
-     * The Evaluate Label Jobs.
-     * 
-     */
-    public JobResponseBaseCollectionPage evaluateLabelJobs;
 
     /**
      * The Evaluate Dlp Policies Jobs.
@@ -90,22 +84,28 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     public JobResponseBaseCollectionPage evaluateDlpPoliciesJobs;
 
     /**
+     * The Evaluate Label Jobs.
+     * 
+     */
+    public JobResponseBaseCollectionPage evaluateLabelJobs;
+
+    /**
+     * The Jobs.
+     * 
+     */
+    public JobResponseBaseCollectionPage jobs;
+
+    /**
      * The Labels And Policies Evaluation Jobs.
      * 
      */
     public JobResponseBaseCollectionPage labelsAndPoliciesEvaluationJobs;
 
     /**
-     * The Classify Text.
+     * The Sensitive Types.
      * 
      */
-    public TextClassificationRequestCollectionPage classifyText;
-
-    /**
-     * The Classify File.
-     * 
-     */
-    public FileClassificationRequestCollectionPage classifyFile;
+    public SensitiveTypeCollectionPage sensitiveTypes;
 
     /**
      * The Sensitivity Labels.
@@ -175,36 +175,20 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
             exactMatchDataStores = new ExactMatchDataStoreCollectionPage(response, null);
         }
 
-        if (json.has("sensitiveTypes")) {
-            final SensitiveTypeCollectionResponse response = new SensitiveTypeCollectionResponse();
-            if (json.has("sensitiveTypes@odata.nextLink")) {
-                response.nextLink = json.get("sensitiveTypes@odata.nextLink").getAsString();
+        if (json.has("classifyFile")) {
+            final FileClassificationRequestCollectionResponse response = new FileClassificationRequestCollectionResponse();
+            if (json.has("classifyFile@odata.nextLink")) {
+                response.nextLink = json.get("classifyFile@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sensitiveTypes").toString(), JsonObject[].class);
-            final SensitiveType[] array = new SensitiveType[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyFile").toString(), JsonObject[].class);
+            final FileClassificationRequest[] array = new FileClassificationRequest[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitiveType.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), FileClassificationRequest.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            sensitiveTypes = new SensitiveTypeCollectionPage(response, null);
-        }
-
-        if (json.has("jobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("jobs@odata.nextLink")) {
-                response.nextLink = json.get("jobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("jobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            jobs = new JobResponseBaseCollectionPage(response, null);
+            classifyFile = new FileClassificationRequestCollectionPage(response, null);
         }
 
         if (json.has("classifyFileJobs")) {
@@ -223,6 +207,22 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
             classifyFileJobs = new JobResponseBaseCollectionPage(response, null);
         }
 
+        if (json.has("classifyText")) {
+            final TextClassificationRequestCollectionResponse response = new TextClassificationRequestCollectionResponse();
+            if (json.has("classifyText@odata.nextLink")) {
+                response.nextLink = json.get("classifyText@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyText").toString(), JsonObject[].class);
+            final TextClassificationRequest[] array = new TextClassificationRequest[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TextClassificationRequest.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            classifyText = new TextClassificationRequestCollectionPage(response, null);
+        }
+
         if (json.has("classifyTextJobs")) {
             final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
             if (json.has("classifyTextJobs@odata.nextLink")) {
@@ -237,22 +237,6 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
             }
             response.value = Arrays.asList(array);
             classifyTextJobs = new JobResponseBaseCollectionPage(response, null);
-        }
-
-        if (json.has("evaluateLabelJobs")) {
-            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
-            if (json.has("evaluateLabelJobs@odata.nextLink")) {
-                response.nextLink = json.get("evaluateLabelJobs@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("evaluateLabelJobs").toString(), JsonObject[].class);
-            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            evaluateLabelJobs = new JobResponseBaseCollectionPage(response, null);
         }
 
         if (json.has("evaluateDlpPoliciesJobs")) {
@@ -271,6 +255,38 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
             evaluateDlpPoliciesJobs = new JobResponseBaseCollectionPage(response, null);
         }
 
+        if (json.has("evaluateLabelJobs")) {
+            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
+            if (json.has("evaluateLabelJobs@odata.nextLink")) {
+                response.nextLink = json.get("evaluateLabelJobs@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("evaluateLabelJobs").toString(), JsonObject[].class);
+            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            evaluateLabelJobs = new JobResponseBaseCollectionPage(response, null);
+        }
+
+        if (json.has("jobs")) {
+            final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
+            if (json.has("jobs@odata.nextLink")) {
+                response.nextLink = json.get("jobs@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("jobs").toString(), JsonObject[].class);
+            final JobResponseBase[] array = new JobResponseBase[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), JobResponseBase.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            jobs = new JobResponseBaseCollectionPage(response, null);
+        }
+
         if (json.has("labelsAndPoliciesEvaluationJobs")) {
             final JobResponseBaseCollectionResponse response = new JobResponseBaseCollectionResponse();
             if (json.has("labelsAndPoliciesEvaluationJobs@odata.nextLink")) {
@@ -287,36 +303,20 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
             labelsAndPoliciesEvaluationJobs = new JobResponseBaseCollectionPage(response, null);
         }
 
-        if (json.has("classifyText")) {
-            final TextClassificationRequestCollectionResponse response = new TextClassificationRequestCollectionResponse();
-            if (json.has("classifyText@odata.nextLink")) {
-                response.nextLink = json.get("classifyText@odata.nextLink").getAsString();
+        if (json.has("sensitiveTypes")) {
+            final SensitiveTypeCollectionResponse response = new SensitiveTypeCollectionResponse();
+            if (json.has("sensitiveTypes@odata.nextLink")) {
+                response.nextLink = json.get("sensitiveTypes@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyText").toString(), JsonObject[].class);
-            final TextClassificationRequest[] array = new TextClassificationRequest[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sensitiveTypes").toString(), JsonObject[].class);
+            final SensitiveType[] array = new SensitiveType[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TextClassificationRequest.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitiveType.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            classifyText = new TextClassificationRequestCollectionPage(response, null);
-        }
-
-        if (json.has("classifyFile")) {
-            final FileClassificationRequestCollectionResponse response = new FileClassificationRequestCollectionResponse();
-            if (json.has("classifyFile@odata.nextLink")) {
-                response.nextLink = json.get("classifyFile@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classifyFile").toString(), JsonObject[].class);
-            final FileClassificationRequest[] array = new FileClassificationRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), FileClassificationRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            classifyFile = new FileClassificationRequestCollectionPage(response, null);
+            sensitiveTypes = new SensitiveTypeCollectionPage(response, null);
         }
 
         if (json.has("sensitivityLabels")) {

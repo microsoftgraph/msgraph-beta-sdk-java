@@ -80,6 +80,23 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequest extends IH
     AndroidDeviceComplianceLocalActionLockDevice post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceComplianceLocalActionLockDevice with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback);
+
+    /**
+     * Posts a AndroidDeviceComplianceLocalActionLockDevice with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
+     * @return the created AndroidDeviceComplianceLocalActionLockDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceComplianceLocalActionLockDevice put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

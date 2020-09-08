@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.generated.DeviceThreatProtectionLevel;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.extensions.OperatingSystemVersionRange;
-import com.microsoft.graph.models.generated.DeviceThreatProtectionLevel;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 
 
@@ -31,124 +31,28 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
 
 
     /**
-     * The Password Required.
-     * Require a password to unlock Windows device.
+     * The Active Firewall Required.
+     * Require active firewall on Windows devices.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("activeFirewallRequired")
     @Expose
-    public Boolean passwordRequired;
+    public Boolean activeFirewallRequired;
 
     /**
-     * The Password Block Simple.
-     * Indicates whether or not to block simple password.
+     * The Anti Spyware Required.
+     * Require any AntiSpyware solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName("antiSpywareRequired")
     @Expose
-    public Boolean passwordBlockSimple;
+    public Boolean antiSpywareRequired;
 
     /**
-     * The Password Required To Unlock From Idle.
-     * Require a password to unlock an idle device.
+     * The Antivirus Required.
+     * Require any Antivirus solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
      */
-    @SerializedName("passwordRequiredToUnlockFromIdle")
+    @SerializedName("antivirusRequired")
     @Expose
-    public Boolean passwordRequiredToUnlockFromIdle;
-
-    /**
-     * The Password Minutes Of Inactivity Before Lock.
-     * Minutes of inactivity before a password is required.
-     */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
-    @Expose
-    public Integer passwordMinutesOfInactivityBeforeLock;
-
-    /**
-     * The Password Expiration Days.
-     * The password expiration in days.
-     */
-    @SerializedName("passwordExpirationDays")
-    @Expose
-    public Integer passwordExpirationDays;
-
-    /**
-     * The Password Minimum Length.
-     * The minimum password length.
-     */
-    @SerializedName("passwordMinimumLength")
-    @Expose
-    public Integer passwordMinimumLength;
-
-    /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
-
-    /**
-     * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public RequiredPasswordType passwordRequiredType;
-
-    /**
-     * The Password Previous Password Block Count.
-     * The number of previous passwords to prevent re-use of.
-     */
-    @SerializedName("passwordPreviousPasswordBlockCount")
-    @Expose
-    public Integer passwordPreviousPasswordBlockCount;
-
-    /**
-     * The Require Healthy Device Report.
-     * Require devices to be reported as healthy by Windows Device Health Attestation.
-     */
-    @SerializedName("requireHealthyDeviceReport")
-    @Expose
-    public Boolean requireHealthyDeviceReport;
-
-    /**
-     * The Os Minimum Version.
-     * Minimum Windows 10 version.
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
-
-    /**
-     * The Os Maximum Version.
-     * Maximum Windows 10 version.
-     */
-    @SerializedName("osMaximumVersion")
-    @Expose
-    public String osMaximumVersion;
-
-    /**
-     * The Mobile Os Minimum Version.
-     * Minimum Windows Phone version.
-     */
-    @SerializedName("mobileOsMinimumVersion")
-    @Expose
-    public String mobileOsMinimumVersion;
-
-    /**
-     * The Mobile Os Maximum Version.
-     * Maximum Windows Phone version.
-     */
-    @SerializedName("mobileOsMaximumVersion")
-    @Expose
-    public String mobileOsMaximumVersion;
-
-    /**
-     * The Early Launch Anti Malware Driver Enabled.
-     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-     */
-    @SerializedName("earlyLaunchAntiMalwareDriverEnabled")
-    @Expose
-    public Boolean earlyLaunchAntiMalwareDriverEnabled;
+    public Boolean antivirusRequired;
 
     /**
      * The Bit Locker Enabled.
@@ -159,14 +63,6 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public Boolean bitLockerEnabled;
 
     /**
-     * The Secure Boot Enabled.
-     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-     */
-    @SerializedName("secureBootEnabled")
-    @Expose
-    public Boolean secureBootEnabled;
-
-    /**
      * The Code Integrity Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation.
      */
@@ -175,20 +71,12 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public Boolean codeIntegrityEnabled;
 
     /**
-     * The Storage Require Encryption.
-     * Require encryption on windows devices.
+     * The Configuration Manager Compliance Required.
+     * Require to consider SCCM Compliance state into consideration for Intune Compliance State.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName("configurationManagerComplianceRequired")
     @Expose
-    public Boolean storageRequireEncryption;
-
-    /**
-     * The Active Firewall Required.
-     * Require active firewall on Windows devices.
-     */
-    @SerializedName("activeFirewallRequired")
-    @Expose
-    public Boolean activeFirewallRequired;
+    public Boolean configurationManagerComplianceRequired;
 
     /**
      * The Defender Enabled.
@@ -207,44 +95,12 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public String defenderVersion;
 
     /**
-     * The Signature Out Of Date.
-     * Require Windows Defender Antimalware Signature to be up to date on Windows devices.
+     * The Device Compliance Policy Script.
+     * 
      */
-    @SerializedName("signatureOutOfDate")
+    @SerializedName("deviceCompliancePolicyScript")
     @Expose
-    public Boolean signatureOutOfDate;
-
-    /**
-     * The Rtp Enabled.
-     * Require Windows Defender Antimalware Real-Time Protection on Windows devices.
-     */
-    @SerializedName("rtpEnabled")
-    @Expose
-    public Boolean rtpEnabled;
-
-    /**
-     * The Antivirus Required.
-     * Require any Antivirus solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
-     */
-    @SerializedName("antivirusRequired")
-    @Expose
-    public Boolean antivirusRequired;
-
-    /**
-     * The Anti Spyware Required.
-     * Require any AntiSpyware solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
-     */
-    @SerializedName("antiSpywareRequired")
-    @Expose
-    public Boolean antiSpywareRequired;
-
-    /**
-     * The Valid Operating System Build Ranges.
-     * The valid operating system build ranges on Windows devices. This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("validOperatingSystemBuildRanges")
-    @Expose
-    public java.util.List<OperatingSystemVersionRange> validOperatingSystemBuildRanges;
+    public DeviceCompliancePolicyScript deviceCompliancePolicyScript;
 
     /**
      * The Device Threat Protection Enabled.
@@ -263,12 +119,156 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
     /**
-     * The Configuration Manager Compliance Required.
-     * Require to consider SCCM Compliance state into consideration for Intune Compliance State.
+     * The Early Launch Anti Malware Driver Enabled.
+     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      */
-    @SerializedName("configurationManagerComplianceRequired")
+    @SerializedName("earlyLaunchAntiMalwareDriverEnabled")
     @Expose
-    public Boolean configurationManagerComplianceRequired;
+    public Boolean earlyLaunchAntiMalwareDriverEnabled;
+
+    /**
+     * The Mobile Os Maximum Version.
+     * Maximum Windows Phone version.
+     */
+    @SerializedName("mobileOsMaximumVersion")
+    @Expose
+    public String mobileOsMaximumVersion;
+
+    /**
+     * The Mobile Os Minimum Version.
+     * Minimum Windows Phone version.
+     */
+    @SerializedName("mobileOsMinimumVersion")
+    @Expose
+    public String mobileOsMinimumVersion;
+
+    /**
+     * The Os Maximum Version.
+     * Maximum Windows 10 version.
+     */
+    @SerializedName("osMaximumVersion")
+    @Expose
+    public String osMaximumVersion;
+
+    /**
+     * The Os Minimum Version.
+     * Minimum Windows 10 version.
+     */
+    @SerializedName("osMinimumVersion")
+    @Expose
+    public String osMinimumVersion;
+
+    /**
+     * The Password Block Simple.
+     * Indicates whether or not to block simple password.
+     */
+    @SerializedName("passwordBlockSimple")
+    @Expose
+    public Boolean passwordBlockSimple;
+
+    /**
+     * The Password Expiration Days.
+     * The password expiration in days.
+     */
+    @SerializedName("passwordExpirationDays")
+    @Expose
+    public Integer passwordExpirationDays;
+
+    /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
+
+    /**
+     * The Password Minimum Length.
+     * The minimum password length.
+     */
+    @SerializedName("passwordMinimumLength")
+    @Expose
+    public Integer passwordMinimumLength;
+
+    /**
+     * The Password Minutes Of Inactivity Before Lock.
+     * Minutes of inactivity before a password is required.
+     */
+    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @Expose
+    public Integer passwordMinutesOfInactivityBeforeLock;
+
+    /**
+     * The Password Previous Password Block Count.
+     * The number of previous passwords to prevent re-use of.
+     */
+    @SerializedName("passwordPreviousPasswordBlockCount")
+    @Expose
+    public Integer passwordPreviousPasswordBlockCount;
+
+    /**
+     * The Password Required.
+     * Require a password to unlock Windows device.
+     */
+    @SerializedName("passwordRequired")
+    @Expose
+    public Boolean passwordRequired;
+
+    /**
+     * The Password Required To Unlock From Idle.
+     * Require a password to unlock an idle device.
+     */
+    @SerializedName("passwordRequiredToUnlockFromIdle")
+    @Expose
+    public Boolean passwordRequiredToUnlockFromIdle;
+
+    /**
+     * The Password Required Type.
+     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     */
+    @SerializedName("passwordRequiredType")
+    @Expose
+    public RequiredPasswordType passwordRequiredType;
+
+    /**
+     * The Require Healthy Device Report.
+     * Require devices to be reported as healthy by Windows Device Health Attestation.
+     */
+    @SerializedName("requireHealthyDeviceReport")
+    @Expose
+    public Boolean requireHealthyDeviceReport;
+
+    /**
+     * The Rtp Enabled.
+     * Require Windows Defender Antimalware Real-Time Protection on Windows devices.
+     */
+    @SerializedName("rtpEnabled")
+    @Expose
+    public Boolean rtpEnabled;
+
+    /**
+     * The Secure Boot Enabled.
+     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
+     */
+    @SerializedName("secureBootEnabled")
+    @Expose
+    public Boolean secureBootEnabled;
+
+    /**
+     * The Signature Out Of Date.
+     * Require Windows Defender Antimalware Signature to be up to date on Windows devices.
+     */
+    @SerializedName("signatureOutOfDate")
+    @Expose
+    public Boolean signatureOutOfDate;
+
+    /**
+     * The Storage Require Encryption.
+     * Require encryption on windows devices.
+     */
+    @SerializedName("storageRequireEncryption")
+    @Expose
+    public Boolean storageRequireEncryption;
 
     /**
      * The Tpm Required.
@@ -279,12 +279,12 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public Boolean tpmRequired;
 
     /**
-     * The Device Compliance Policy Script.
-     * 
+     * The Valid Operating System Build Ranges.
+     * The valid operating system build ranges on Windows devices. This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("deviceCompliancePolicyScript")
+    @SerializedName("validOperatingSystemBuildRanges")
     @Expose
-    public DeviceCompliancePolicyScript deviceCompliancePolicyScript;
+    public java.util.List<OperatingSystemVersionRange> validOperatingSystemBuildRanges;
 
 
     /**

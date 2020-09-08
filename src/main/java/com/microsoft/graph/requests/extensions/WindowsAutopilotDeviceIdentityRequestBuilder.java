@@ -72,8 +72,16 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
         return new WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("intendedDeploymentProfile"), getClient(), null);
     }
 
+    public IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder assignResourceAccountToDevice(final String userPrincipalName, final String addressableUserName, final String resourceAccountName) {
+        return new WindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignResourceAccountToDevice"), getClient(), null, userPrincipalName, addressableUserName, resourceAccountName);
+    }
+
     public IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder assignUserToDevice(final String userPrincipalName, final String addressableUserName) {
         return new WindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignUserToDevice"), getClient(), null, userPrincipalName, addressableUserName);
+    }
+
+    public IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder unassignResourceAccountFromDevice() {
+        return new WindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unassignResourceAccountFromDevice"), getClient(), null);
     }
 
     public IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequestBuilder unassignUserFromDevice() {
@@ -82,13 +90,5 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
 
     public IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder updateDeviceProperties(final String userPrincipalName, final String addressableUserName, final String groupTag, final String displayName) {
         return new WindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateDeviceProperties"), getClient(), null, userPrincipalName, addressableUserName, groupTag, displayName);
-    }
-
-    public IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder assignResourceAccountToDevice(final String userPrincipalName, final String addressableUserName, final String resourceAccountName) {
-        return new WindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignResourceAccountToDevice"), getClient(), null, userPrincipalName, addressableUserName, resourceAccountName);
-    }
-
-    public IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder unassignResourceAccountFromDevice() {
-        return new WindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unassignResourceAccountFromDevice"), getClient(), null);
     }
 }

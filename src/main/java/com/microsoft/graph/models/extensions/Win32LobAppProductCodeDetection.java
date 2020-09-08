@@ -36,20 +36,20 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
     public String productCode;
 
     /**
-     * The Product Version Operator.
-     * The operator to detect product version.
-     */
-    @SerializedName("productVersionOperator")
-    @Expose
-    public EnumSet<Win32LobAppDetectionOperator> productVersionOperator;
-
-    /**
      * The Product Version.
      * The product version of Win32 Line of Business (LoB) app.
      */
     @SerializedName("productVersion")
     @Expose
     public String productVersion;
+
+    /**
+     * The Product Version Operator.
+     * The operator to detect product version.
+     */
+    @SerializedName("productVersionOperator")
+    @Expose
+    public EnumSet<Win32LobAppDetectionOperator> productVersionOperator;
 
 
     /**

@@ -62,14 +62,14 @@ public class IosVppAppAssignedLicenseCollectionRequest extends BaseCollectionReq
     public void post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosVppAppAssignedLicenseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosVppAppAssignedLicense, callback);
     }
 
     public IosVppAppAssignedLicense post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosVppAppAssignedLicenseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosVppAppAssignedLicense);
     }
 
@@ -106,6 +106,27 @@ public class IosVppAppAssignedLicenseCollectionRequest extends BaseCollectionReq
         return (IosVppAppAssignedLicenseCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIosVppAppAssignedLicenseCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IosVppAppAssignedLicenseCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIosVppAppAssignedLicenseCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIosVppAppAssignedLicenseCollectionRequest)this;
+    }
     public IIosVppAppAssignedLicenseCollectionPage buildFromResponse(final IosVppAppAssignedLicenseCollectionResponse response) {
         final IIosVppAppAssignedLicenseCollectionRequestBuilder builder;
         if (response.nextLink != null) {

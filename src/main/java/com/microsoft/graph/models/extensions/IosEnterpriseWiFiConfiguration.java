@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.EapType;
-import com.microsoft.graph.models.generated.EapFastConfiguration;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.EapFastConfiguration;
+import com.microsoft.graph.models.generated.EapType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
-import com.microsoft.graph.models.extensions.IosTrustedRootCertificate;
-import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
+import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
+import com.microsoft.graph.models.extensions.IosTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.IosWiFiConfiguration;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionPage;
@@ -36,12 +36,12 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
 
     /**
-     * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+     * The Authentication Method.
+     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
-    @SerializedName("eapType")
+    @SerializedName("authenticationMethod")
     @Expose
-    public EapType eapType;
+    public WiFiAuthenticationMethod authenticationMethod;
 
     /**
      * The Eap Fast Configuration.
@@ -52,20 +52,12 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     public EapFastConfiguration eapFastConfiguration;
 
     /**
-     * The Trusted Server Certificate Names.
-     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+     * The Eap Type.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
-    @SerializedName("trustedServerCertificateNames")
+    @SerializedName("eapType")
     @Expose
-    public java.util.List<String> trustedServerCertificateNames;
-
-    /**
-     * The Authentication Method.
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
-     */
-    @SerializedName("authenticationMethod")
-    @Expose
-    public WiFiAuthenticationMethod authenticationMethod;
+    public EapType eapType;
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
@@ -84,14 +76,6 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     public String outerIdentityPrivacyTemporaryValue;
 
     /**
-     * The Username Format String.
-     * Username format string used to build the username to connect to wifi
-     */
-    @SerializedName("usernameFormatString")
-    @Expose
-    public String usernameFormatString;
-
-    /**
      * The Password Format String.
      * Password format string used to build the password to connect to wifi
      */
@@ -100,10 +84,28 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     public String passwordFormatString;
 
     /**
-     * The Root Certificates For Server Validation.
-     * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
+     * The Trusted Server Certificate Names.
+     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
      */
-    public IosTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    @SerializedName("trustedServerCertificateNames")
+    @Expose
+    public java.util.List<String> trustedServerCertificateNames;
+
+    /**
+     * The Username Format String.
+     * Username format string used to build the username to connect to wifi
+     */
+    @SerializedName("usernameFormatString")
+    @Expose
+    public String usernameFormatString;
+
+    /**
+     * The Derived Credential Settings.
+     * Tenant level settings for the Derived Credentials to be used for authentication.
+     */
+    @SerializedName("derivedCredentialSettings")
+    @Expose
+    public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
     /**
      * The Identity Certificate For Client Authentication.
@@ -114,12 +116,10 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     public IosCertificateProfileBase identityCertificateForClientAuthentication;
 
     /**
-     * The Derived Credential Settings.
-     * Tenant level settings for the Derived Credentials to be used for authentication.
+     * The Root Certificates For Server Validation.
+     * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
      */
-    @SerializedName("derivedCredentialSettings")
-    @Expose
-    public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
+    public IosTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 
     /**

@@ -112,6 +112,27 @@ public class AndroidForWorkSettingsRequest extends BaseRequest implements IAndro
     }
 
     /**
+     * Creates a AndroidForWorkSettings with a new object
+     *
+     * @param newAndroidForWorkSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkSettings newAndroidForWorkSettings, final ICallback<AndroidForWorkSettings> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkSettings);
+    }
+
+    /**
+     * Creates a AndroidForWorkSettings with a new object
+     *
+     * @param newAndroidForWorkSettings the object to create/update
+     * @return the created AndroidForWorkSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkSettings put(final AndroidForWorkSettings newAndroidForWorkSettings) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -9,8 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -56,4 +56,20 @@ public interface IDeviceManagementIntentCollectionRequest {
      */
     IDeviceManagementIntentCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IDeviceManagementIntentCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IDeviceManagementIntentCollectionRequest skipToken(String skipToken);
 }

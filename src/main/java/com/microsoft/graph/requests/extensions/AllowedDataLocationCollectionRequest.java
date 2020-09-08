@@ -61,14 +61,14 @@ public class AllowedDataLocationCollectionRequest extends BaseCollectionRequest<
     public void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AllowedDataLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAllowedDataLocation, callback);
     }
 
     public AllowedDataLocation post(final AllowedDataLocation newAllowedDataLocation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AllowedDataLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAllowedDataLocation);
     }
 
@@ -105,6 +105,27 @@ public class AllowedDataLocationCollectionRequest extends BaseCollectionRequest<
         return (AllowedDataLocationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAllowedDataLocationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AllowedDataLocationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAllowedDataLocationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAllowedDataLocationCollectionRequest)this;
+    }
     public IAllowedDataLocationCollectionPage buildFromResponse(final AllowedDataLocationCollectionResponse response) {
         final IAllowedDataLocationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

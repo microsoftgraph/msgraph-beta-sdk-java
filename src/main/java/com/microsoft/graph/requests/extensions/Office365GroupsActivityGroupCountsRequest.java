@@ -112,6 +112,27 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a Office365GroupsActivityGroupCounts with a new object
+     *
+     * @param newOffice365GroupsActivityGroupCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<Office365GroupsActivityGroupCounts> callback) {
+        send(HttpMethod.PUT, callback, newOffice365GroupsActivityGroupCounts);
+    }
+
+    /**
+     * Creates a Office365GroupsActivityGroupCounts with a new object
+     *
+     * @param newOffice365GroupsActivityGroupCounts the object to create/update
+     * @return the created Office365GroupsActivityGroupCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365GroupsActivityGroupCounts put(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365GroupsActivityGroupCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

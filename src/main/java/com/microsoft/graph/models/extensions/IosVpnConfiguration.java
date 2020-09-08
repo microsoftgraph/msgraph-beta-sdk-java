@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppListItem;
-import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
+import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.models.extensions.AppleVpnConfiguration;
 
 
@@ -30,22 +30,6 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
 
 
     /**
-     * The User Domain.
-     * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
-     */
-    @SerializedName("userDomain")
-    @Expose
-    public String userDomain;
-
-    /**
-     * The Strict Enforcement.
-     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
-     */
-    @SerializedName("strictEnforcement")
-    @Expose
-    public Boolean strictEnforcement;
-
-    /**
      * The Cloud Name.
      * Zscaler only. Zscaler cloud which the user is assigned to.
      */
@@ -62,6 +46,14 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
     public java.util.List<String> excludeList;
 
     /**
+     * The Strict Enforcement.
+     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
+     */
+    @SerializedName("strictEnforcement")
+    @Expose
+    public Boolean strictEnforcement;
+
+    /**
      * The Targeted Mobile Apps.
      * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      */
@@ -70,12 +62,12 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
     public java.util.List<AppListItem> targetedMobileApps;
 
     /**
-     * The Identity Certificate.
-     * Identity certificate for client authentication when authentication method is certificate.
+     * The User Domain.
+     * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
      */
-    @SerializedName("identityCertificate")
+    @SerializedName("userDomain")
     @Expose
-    public IosCertificateProfileBase identityCertificate;
+    public String userDomain;
 
     /**
      * The Derived Credential Settings.
@@ -84,6 +76,14 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
     @SerializedName("derivedCredentialSettings")
     @Expose
     public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
+
+    /**
+     * The Identity Certificate.
+     * Identity certificate for client authentication when authentication method is certificate.
+     */
+    @SerializedName("identityCertificate")
+    @Expose
+    public IosCertificateProfileBase identityCertificate;
 
 
     /**

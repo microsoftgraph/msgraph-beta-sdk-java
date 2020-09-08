@@ -131,6 +131,27 @@ public class DeviceManagementSettingCategoryRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a DeviceManagementSettingCategory with a new object
+     *
+     * @param newDeviceManagementSettingCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementSettingCategory newDeviceManagementSettingCategory, final ICallback<DeviceManagementSettingCategory> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementSettingCategory);
+    }
+
+    /**
+     * Creates a DeviceManagementSettingCategory with a new object
+     *
+     * @param newDeviceManagementSettingCategory the object to create/update
+     * @return the created DeviceManagementSettingCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementSettingCategory put(final DeviceManagementSettingCategory newDeviceManagementSettingCategory) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementSettingCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

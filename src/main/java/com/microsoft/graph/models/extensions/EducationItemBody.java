@@ -37,20 +37,20 @@ public class EducationItemBody implements IJsonBackedObject {
     }
 
     /**
-     * The Content Type.
-     * 
-     */
-    @SerializedName("contentType")
-    @Expose
-    public BodyType contentType;
-
-    /**
      * The Content.
      * 
      */
     @SerializedName("content")
     @Expose
     public String content;
+
+    /**
+     * The Content Type.
+     * 
+     */
+    @SerializedName("contentType")
+    @Expose
+    public BodyType contentType;
 
 
     /**

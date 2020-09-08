@@ -62,14 +62,14 @@ public class HostSecurityProfileCollectionRequest extends BaseCollectionRequest<
     public void post(final HostSecurityProfile newHostSecurityProfile, final ICallback<HostSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new HostSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newHostSecurityProfile, callback);
     }
 
     public HostSecurityProfile post(final HostSecurityProfile newHostSecurityProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new HostSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newHostSecurityProfile);
     }
 
@@ -106,6 +106,27 @@ public class HostSecurityProfileCollectionRequest extends BaseCollectionRequest<
         return (HostSecurityProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IHostSecurityProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (HostSecurityProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IHostSecurityProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IHostSecurityProfileCollectionRequest)this;
+    }
     public IHostSecurityProfileCollectionPage buildFromResponse(final HostSecurityProfileCollectionResponse response) {
         final IHostSecurityProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

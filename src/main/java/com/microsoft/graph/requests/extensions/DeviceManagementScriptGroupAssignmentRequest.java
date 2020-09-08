@@ -112,6 +112,27 @@ public class DeviceManagementScriptGroupAssignmentRequest extends BaseRequest im
     }
 
     /**
+     * Creates a DeviceManagementScriptGroupAssignment with a new object
+     *
+     * @param newDeviceManagementScriptGroupAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment, final ICallback<DeviceManagementScriptGroupAssignment> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementScriptGroupAssignment);
+    }
+
+    /**
+     * Creates a DeviceManagementScriptGroupAssignment with a new object
+     *
+     * @param newDeviceManagementScriptGroupAssignment the object to create/update
+     * @return the created DeviceManagementScriptGroupAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementScriptGroupAssignment put(final DeviceManagementScriptGroupAssignment newDeviceManagementScriptGroupAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementScriptGroupAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

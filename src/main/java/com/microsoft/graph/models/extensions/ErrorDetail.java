@@ -37,6 +37,14 @@ public class ErrorDetail implements IJsonBackedObject {
     }
 
     /**
+     * The Details.
+     * 
+     */
+    @SerializedName("details")
+    @Expose
+    public java.util.List<InnerErrorDetail> details;
+
+    /**
      * The Error Code.
      * 
      */
@@ -51,14 +59,6 @@ public class ErrorDetail implements IJsonBackedObject {
     @SerializedName("message")
     @Expose
     public String message;
-
-    /**
-     * The Details.
-     * 
-     */
-    @SerializedName("details")
-    @Expose
-    public java.util.List<InnerErrorDetail> details;
 
 
     /**

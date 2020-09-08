@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.MobileAppIntent;
 import com.microsoft.graph.models.generated.ResultantAppState;
+import com.microsoft.graph.models.generated.MobileAppIntent;
 import com.microsoft.graph.models.extensions.MobileAppSupportedDeviceType;
 
 
@@ -55,14 +55,6 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Mobile App Intent.
-     * Mobile App Intent.
-     */
-    @SerializedName("mobileAppIntent")
-    @Expose
-    public MobileAppIntent mobileAppIntent;
-
-    /**
      * The Display Version.
      * Human readable version of the application
      */
@@ -77,6 +69,14 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
     @SerializedName("installState")
     @Expose
     public ResultantAppState installState;
+
+    /**
+     * The Mobile App Intent.
+     * Mobile App Intent.
+     */
+    @SerializedName("mobileAppIntent")
+    @Expose
+    public MobileAppIntent mobileAppIntent;
 
     /**
      * The Supported Device Types.

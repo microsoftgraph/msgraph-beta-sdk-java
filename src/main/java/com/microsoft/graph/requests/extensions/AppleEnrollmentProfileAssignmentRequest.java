@@ -112,6 +112,27 @@ public class AppleEnrollmentProfileAssignmentRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a AppleEnrollmentProfileAssignment with a new object
+     *
+     * @param newAppleEnrollmentProfileAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback) {
+        send(HttpMethod.PUT, callback, newAppleEnrollmentProfileAssignment);
+    }
+
+    /**
+     * Creates a AppleEnrollmentProfileAssignment with a new object
+     *
+     * @param newAppleEnrollmentProfileAssignment the object to create/update
+     * @return the created AppleEnrollmentProfileAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AppleEnrollmentProfileAssignment put(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newAppleEnrollmentProfileAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

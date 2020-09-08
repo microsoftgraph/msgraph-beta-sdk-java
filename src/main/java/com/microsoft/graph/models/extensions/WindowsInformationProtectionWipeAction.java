@@ -28,36 +28,20 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
 
 
     /**
+     * The Last Check In Date Time.
+     * Last checkin time of the device that was targeted by this wipe action.
+     */
+    @SerializedName("lastCheckInDateTime")
+    @Expose
+    public java.util.Calendar lastCheckInDateTime;
+
+    /**
      * The Status.
      * Wipe action status.
      */
     @SerializedName("status")
     @Expose
     public ActionState status;
-
-    /**
-     * The Targeted User Id.
-     * The UserId being targeted by this wipe action.
-     */
-    @SerializedName("targetedUserId")
-    @Expose
-    public String targetedUserId;
-
-    /**
-     * The Targeted Device Registration Id.
-     * The DeviceRegistrationId being targeted by this wipe action.
-     */
-    @SerializedName("targetedDeviceRegistrationId")
-    @Expose
-    public String targetedDeviceRegistrationId;
-
-    /**
-     * The Targeted Device Name.
-     * Targeted device name.
-     */
-    @SerializedName("targetedDeviceName")
-    @Expose
-    public String targetedDeviceName;
 
     /**
      * The Targeted Device Mac Address.
@@ -68,12 +52,28 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
     public String targetedDeviceMacAddress;
 
     /**
-     * The Last Check In Date Time.
-     * Last checkin time of the device that was targeted by this wipe action.
+     * The Targeted Device Name.
+     * Targeted device name.
      */
-    @SerializedName("lastCheckInDateTime")
+    @SerializedName("targetedDeviceName")
     @Expose
-    public java.util.Calendar lastCheckInDateTime;
+    public String targetedDeviceName;
+
+    /**
+     * The Targeted Device Registration Id.
+     * The DeviceRegistrationId being targeted by this wipe action.
+     */
+    @SerializedName("targetedDeviceRegistrationId")
+    @Expose
+    public String targetedDeviceRegistrationId;
+
+    /**
+     * The Targeted User Id.
+     * The UserId being targeted by this wipe action.
+     */
+    @SerializedName("targetedUserId")
+    @Expose
+    public String targetedUserId;
 
 
     /**

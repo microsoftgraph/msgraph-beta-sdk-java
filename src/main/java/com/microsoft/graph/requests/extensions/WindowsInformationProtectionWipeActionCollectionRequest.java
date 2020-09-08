@@ -62,14 +62,14 @@ public class WindowsInformationProtectionWipeActionCollectionRequest extends Bas
     public void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionWipeActionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionWipeAction, callback);
     }
 
     public WindowsInformationProtectionWipeAction post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionWipeActionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionWipeAction);
     }
 
@@ -106,6 +106,27 @@ public class WindowsInformationProtectionWipeActionCollectionRequest extends Bas
         return (WindowsInformationProtectionWipeActionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionWipeActionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsInformationProtectionWipeActionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionWipeActionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsInformationProtectionWipeActionCollectionRequest)this;
+    }
     public IWindowsInformationProtectionWipeActionCollectionPage buildFromResponse(final WindowsInformationProtectionWipeActionCollectionResponse response) {
         final IWindowsInformationProtectionWipeActionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

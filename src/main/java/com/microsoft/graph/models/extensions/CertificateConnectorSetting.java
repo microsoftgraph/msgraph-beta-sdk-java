@@ -36,20 +36,20 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
     }
 
     /**
-     * The Status.
-     * Certificate connector status
-     */
-    @SerializedName("status")
-    @Expose
-    public Integer status;
-
-    /**
      * The Cert Expiry Time.
      * Certificate expire time
      */
     @SerializedName("certExpiryTime")
     @Expose
     public java.util.Calendar certExpiryTime;
+
+    /**
+     * The Connector Version.
+     * Version of certificate connector
+     */
+    @SerializedName("connectorVersion")
+    @Expose
+    public String connectorVersion;
 
     /**
      * The Enrollment Error.
@@ -68,20 +68,20 @@ public class CertificateConnectorSetting implements IJsonBackedObject {
     public java.util.Calendar lastConnectorConnectionTime;
 
     /**
-     * The Connector Version.
-     * Version of certificate connector
-     */
-    @SerializedName("connectorVersion")
-    @Expose
-    public String connectorVersion;
-
-    /**
      * The Last Upload Version.
      * Version of last uploaded certificate connector
      */
     @SerializedName("lastUploadVersion")
     @Expose
     public Long lastUploadVersion;
+
+    /**
+     * The Status.
+     * Certificate connector status
+     */
+    @SerializedName("status")
+    @Expose
+    public Integer status;
 
 
     /**

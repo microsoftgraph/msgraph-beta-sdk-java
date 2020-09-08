@@ -112,6 +112,27 @@ public class WindowsHealthMonitoringConfigurationRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a WindowsHealthMonitoringConfiguration with a new object
+     *
+     * @param newWindowsHealthMonitoringConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration, final ICallback<WindowsHealthMonitoringConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsHealthMonitoringConfiguration);
+    }
+
+    /**
+     * Creates a WindowsHealthMonitoringConfiguration with a new object
+     *
+     * @param newWindowsHealthMonitoringConfiguration the object to create/update
+     * @return the created WindowsHealthMonitoringConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsHealthMonitoringConfiguration put(final WindowsHealthMonitoringConfiguration newWindowsHealthMonitoringConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsHealthMonitoringConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class MobileAppTroubleshootingEventCollectionRequest extends BaseCollecti
     public void post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent, final ICallback<MobileAppTroubleshootingEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppTroubleshootingEvent, callback);
     }
 
     public MobileAppTroubleshootingEvent post(final MobileAppTroubleshootingEvent newMobileAppTroubleshootingEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppTroubleshootingEvent);
     }
 
@@ -106,6 +106,27 @@ public class MobileAppTroubleshootingEventCollectionRequest extends BaseCollecti
         return (MobileAppTroubleshootingEventCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppTroubleshootingEventCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppTroubleshootingEventCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppTroubleshootingEventCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppTroubleshootingEventCollectionRequest)this;
+    }
     public IMobileAppTroubleshootingEventCollectionPage buildFromResponse(final MobileAppTroubleshootingEventCollectionResponse response) {
         final IMobileAppTroubleshootingEventCollectionRequestBuilder builder;
         if (response.nextLink != null) {

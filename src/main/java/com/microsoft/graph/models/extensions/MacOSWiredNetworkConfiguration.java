@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WiredNetworkInterface;
-import com.microsoft.graph.models.generated.EapType;
-import com.microsoft.graph.models.generated.EapFastConfiguration;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.EapFastConfiguration;
+import com.microsoft.graph.models.generated.EapType;
+import com.microsoft.graph.models.generated.WiredNetworkInterface;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
-import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.MacOSCertificateProfileBase;
+import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -34,28 +34,12 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
 
     /**
-     * The Network Name.
-     * Network Name
+     * The Authentication Method.
+     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
-    @SerializedName("networkName")
+    @SerializedName("authenticationMethod")
     @Expose
-    public String networkName;
-
-    /**
-     * The Network Interface.
-     * Network interface.
-     */
-    @SerializedName("networkInterface")
-    @Expose
-    public WiredNetworkInterface networkInterface;
-
-    /**
-     * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
-     */
-    @SerializedName("eapType")
-    @Expose
-    public EapType eapType;
+    public WiFiAuthenticationMethod authenticationMethod;
 
     /**
      * The Eap Fast Configuration.
@@ -66,28 +50,12 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     public EapFastConfiguration eapFastConfiguration;
 
     /**
-     * The Trusted Server Certificate Names.
-     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
+     * The Eap Type.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
      */
-    @SerializedName("trustedServerCertificateNames")
+    @SerializedName("eapType")
     @Expose
-    public java.util.List<String> trustedServerCertificateNames;
-
-    /**
-     * The Authentication Method.
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
-     */
-    @SerializedName("authenticationMethod")
-    @Expose
-    public WiFiAuthenticationMethod authenticationMethod;
-
-    /**
-     * The Non Eap Authentication Method For Eap Ttls.
-     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
-     */
-    @SerializedName("nonEapAuthenticationMethodForEapTtls")
-    @Expose
-    public NonEapAuthenticationMethodForEapTtlsType nonEapAuthenticationMethodForEapTtls;
+    public EapType eapType;
 
     /**
      * The Enable Outer Identity Privacy.
@@ -98,12 +66,36 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     public String enableOuterIdentityPrivacy;
 
     /**
-     * The Root Certificate For Server Validation.
-     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
+     * The Network Interface.
+     * Network interface.
      */
-    @SerializedName("rootCertificateForServerValidation")
+    @SerializedName("networkInterface")
     @Expose
-    public MacOSTrustedRootCertificate rootCertificateForServerValidation;
+    public WiredNetworkInterface networkInterface;
+
+    /**
+     * The Network Name.
+     * Network Name
+     */
+    @SerializedName("networkName")
+    @Expose
+    public String networkName;
+
+    /**
+     * The Non Eap Authentication Method For Eap Ttls.
+     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
+     */
+    @SerializedName("nonEapAuthenticationMethodForEapTtls")
+    @Expose
+    public NonEapAuthenticationMethodForEapTtlsType nonEapAuthenticationMethodForEapTtls;
+
+    /**
+     * The Trusted Server Certificate Names.
+     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
+     */
+    @SerializedName("trustedServerCertificateNames")
+    @Expose
+    public java.util.List<String> trustedServerCertificateNames;
 
     /**
      * The Identity Certificate For Client Authentication.
@@ -112,6 +104,14 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     @SerializedName("identityCertificateForClientAuthentication")
     @Expose
     public MacOSCertificateProfileBase identityCertificateForClientAuthentication;
+
+    /**
+     * The Root Certificate For Server Validation.
+     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
+     */
+    @SerializedName("rootCertificateForServerValidation")
+    @Expose
+    public MacOSTrustedRootCertificate rootCertificateForServerValidation;
 
 
     /**

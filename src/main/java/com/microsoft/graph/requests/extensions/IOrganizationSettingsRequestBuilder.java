@@ -36,15 +36,15 @@ public interface IOrganizationSettingsRequestBuilder extends IRequestBuilder {
     IOrganizationSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IProfileCardPropertyCollectionRequestBuilder profileCardProperties();
-
-    IProfileCardPropertyRequestBuilder profileCardProperties(final String id);
-
     /**
      * Gets the request builder for ItemInsightsSettings
      *
      * @return the IItemInsightsSettingsRequestBuilder instance
      */
     IItemInsightsSettingsRequestBuilder itemInsights();
+
+    IProfileCardPropertyCollectionRequestBuilder profileCardProperties();
+
+    IProfileCardPropertyRequestBuilder profileCardProperties(final String id);
 
 }

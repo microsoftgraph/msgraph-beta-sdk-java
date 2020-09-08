@@ -8,12 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AppleVpnAlwaysOnConfiguration;
 import com.microsoft.graph.models.extensions.IosVpnSecurityAssociationParameters;
 import com.microsoft.graph.models.generated.VpnClientAuthenticationType;
 import com.microsoft.graph.models.generated.VpnDeadPeerDetectionRate;
 import com.microsoft.graph.models.generated.VpnLocalIdentifier;
 import com.microsoft.graph.models.generated.VpnServerCertificateType;
-import com.microsoft.graph.models.extensions.AppleVpnAlwaysOnConfiguration;
 import com.microsoft.graph.models.extensions.IosVpnConfiguration;
 
 
@@ -31,6 +31,30 @@ import java.util.Map;
  */
 public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Allow Default Child Security Association Parameters.
+     * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
+     */
+    @SerializedName("allowDefaultChildSecurityAssociationParameters")
+    @Expose
+    public Boolean allowDefaultChildSecurityAssociationParameters;
+
+    /**
+     * The Allow Default Security Association Parameters.
+     * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
+     */
+    @SerializedName("allowDefaultSecurityAssociationParameters")
+    @Expose
+    public Boolean allowDefaultSecurityAssociationParameters;
+
+    /**
+     * The Always On Configuration.
+     * AlwaysOn Configuration
+     */
+    @SerializedName("alwaysOnConfiguration")
+    @Expose
+    public AppleVpnAlwaysOnConfiguration alwaysOnConfiguration;
 
     /**
      * The Child Security Association Parameters.
@@ -71,6 +95,14 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
     @SerializedName("disableRedirect")
     @Expose
     public Boolean disableRedirect;
+
+    /**
+     * The Enable Always On Configuration.
+     * Determines if Always on VPN is enabled
+     */
+    @SerializedName("enableAlwaysOnConfiguration")
+    @Expose
+    public Boolean enableAlwaysOnConfiguration;
 
     /**
      * The Enable Certificate Revocation Check.
@@ -175,38 +207,6 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
     @SerializedName("tlsMinimumVersion")
     @Expose
     public String tlsMinimumVersion;
-
-    /**
-     * The Allow Default Security Association Parameters.
-     * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
-     */
-    @SerializedName("allowDefaultSecurityAssociationParameters")
-    @Expose
-    public Boolean allowDefaultSecurityAssociationParameters;
-
-    /**
-     * The Allow Default Child Security Association Parameters.
-     * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
-     */
-    @SerializedName("allowDefaultChildSecurityAssociationParameters")
-    @Expose
-    public Boolean allowDefaultChildSecurityAssociationParameters;
-
-    /**
-     * The Always On Configuration.
-     * AlwaysOn Configuration
-     */
-    @SerializedName("alwaysOnConfiguration")
-    @Expose
-    public AppleVpnAlwaysOnConfiguration alwaysOnConfiguration;
-
-    /**
-     * The Enable Always On Configuration.
-     * Determines if Always on VPN is enabled
-     */
-    @SerializedName("enableAlwaysOnConfiguration")
-    @Expose
-    public Boolean enableAlwaysOnConfiguration;
 
 
     /**

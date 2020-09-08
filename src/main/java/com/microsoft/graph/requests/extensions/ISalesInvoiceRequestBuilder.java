@@ -10,8 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesInvoice;
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import java.util.Arrays;
@@ -39,9 +39,12 @@ public interface ISalesInvoiceRequestBuilder extends IRequestBuilder {
     ISalesInvoiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines();
-
-    ISalesInvoiceLineRequestBuilder salesInvoiceLines(final String id);
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    ICurrencyRequestBuilder currency();
 
     /**
      * Gets the request builder for Customer
@@ -51,18 +54,15 @@ public interface ISalesInvoiceRequestBuilder extends IRequestBuilder {
     ICustomerRequestBuilder customer();
 
     /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    ICurrencyRequestBuilder currency();
-
-    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     IPaymentTermRequestBuilder paymentTerm();
+
+    ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines();
+
+    ISalesInvoiceLineRequestBuilder salesInvoiceLines(final String id);
 
     /**
      * Gets the request builder for ShipmentMethod
@@ -70,10 +70,10 @@ public interface ISalesInvoiceRequestBuilder extends IRequestBuilder {
      * @return the IShipmentMethodRequestBuilder instance
      */
     IShipmentMethodRequestBuilder shipmentMethod();
-    ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend();
     ISalesInvoiceCancelRequestBuilder cancel();
-    ISalesInvoicePostAndSendRequestBuilder postAndSend();
+    ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend();
     ISalesInvoicePostRequestBuilder post();
+    ISalesInvoicePostAndSendRequestBuilder postAndSend();
     ISalesInvoiceSendRequestBuilder send();
 
 }

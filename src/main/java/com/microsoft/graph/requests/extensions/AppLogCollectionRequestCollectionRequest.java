@@ -63,14 +63,14 @@ public class AppLogCollectionRequestCollectionRequest extends BaseCollectionRequ
     public void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppLogCollectionRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppLogCollectionRequest, callback);
     }
 
     public AppLogCollectionRequest post(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppLogCollectionRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppLogCollectionRequest);
     }
 
@@ -107,6 +107,27 @@ public class AppLogCollectionRequestCollectionRequest extends BaseCollectionRequ
         return (AppLogCollectionRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAppLogCollectionRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AppLogCollectionRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAppLogCollectionRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAppLogCollectionRequestCollectionRequest)this;
+    }
     public IAppLogCollectionRequestCollectionPage buildFromResponse(final AppLogCollectionRequestCollectionResponse response) {
         final IAppLogCollectionRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

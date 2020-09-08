@@ -40,7 +40,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionReq
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/directoryObjects/" + newDirectoryObject.id);
         new DirectoryObjectWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryObject, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionReq
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/directoryObjects/" + newDirectoryObject.id);
         return new DirectoryObjectWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newDirectoryObject, body);
     }
     /**

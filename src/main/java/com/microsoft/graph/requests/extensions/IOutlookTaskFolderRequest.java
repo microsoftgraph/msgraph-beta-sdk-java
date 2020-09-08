@@ -80,6 +80,23 @@ public interface IOutlookTaskFolderRequest extends IHttpRequest {
     OutlookTaskFolder post(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException;
 
     /**
+     * Posts a OutlookTaskFolder with a new object
+     *
+     * @param newOutlookTaskFolder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback);
+
+    /**
+     * Posts a OutlookTaskFolder with a new object
+     *
+     * @param newOutlookTaskFolder the object to create/update
+     * @return the created OutlookTaskFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OutlookTaskFolder put(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

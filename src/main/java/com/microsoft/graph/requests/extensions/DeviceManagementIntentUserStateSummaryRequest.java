@@ -112,6 +112,27 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
     }
 
     /**
+     * Creates a DeviceManagementIntentUserStateSummary with a new object
+     *
+     * @param newDeviceManagementIntentUserStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<DeviceManagementIntentUserStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementIntentUserStateSummary);
+    }
+
+    /**
+     * Creates a DeviceManagementIntentUserStateSummary with a new object
+     *
+     * @param newDeviceManagementIntentUserStateSummary the object to create/update
+     * @return the created DeviceManagementIntentUserStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementIntentUserStateSummary put(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementIntentUserStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -36,20 +36,20 @@ public class MacOSLaunchItem implements IJsonBackedObject {
     }
 
     /**
-     * The Path.
-     * Path to the launch item.
-     */
-    @SerializedName("path")
-    @Expose
-    public String path;
-
-    /**
      * The Hide.
      * Whether or not to hide the item from the Users and Groups List.
      */
     @SerializedName("hide")
     @Expose
     public Boolean hide;
+
+    /**
+     * The Path.
+     * Path to the launch item.
+     */
+    @SerializedName("path")
+    @Expose
+    public String path;
 
 
     /**

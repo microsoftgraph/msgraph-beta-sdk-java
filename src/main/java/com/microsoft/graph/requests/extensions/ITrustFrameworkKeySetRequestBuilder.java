@@ -34,9 +34,9 @@ public interface ITrustFrameworkKeySetRequestBuilder extends IRequestBuilder {
     ITrustFrameworkKeySetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ITrustFrameworkKeySetGenerateKeyRequestBuilder generateKey(final String use, final String kty, final Long nbf, final Long exp);
-    ITrustFrameworkKeySetUploadSecretRequestBuilder uploadSecret(final String use, final String k, final Long nbf, final Long exp);
     ITrustFrameworkKeySetUploadCertificateRequestBuilder uploadCertificate(final String key);
     ITrustFrameworkKeySetUploadPkcs12RequestBuilder uploadPkcs12(final String key, final String password);
+    ITrustFrameworkKeySetUploadSecretRequestBuilder uploadSecret(final String use, final String k, final Long nbf, final Long exp);
     ITrustFrameworkKeySetGetActiveKeyRequestBuilder getActiveKey();
 
 }

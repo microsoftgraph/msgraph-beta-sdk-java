@@ -8,9 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosEasEmailProfileConfiguration;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,21 +36,17 @@ public interface IIosEasEmailProfileConfigurationRequestBuilder extends IRequest
     IIosEasEmailProfileConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -59,6 +55,14 @@ public interface IIosEasEmailProfileConfigurationRequestBuilder extends IRequest
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -66,9 +70,12 @@ public interface IIosEasEmailProfileConfigurationRequestBuilder extends IRequest
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+    /**
+     * Gets the request builder for DeviceManagementDerivedCredentialSettings
+     *
+     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
+     */
+    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
 
     /**
      * Gets the request builder for IosCertificateProfileBase
@@ -82,20 +89,13 @@ public interface IIosEasEmailProfileConfigurationRequestBuilder extends IRequest
      *
      * @return the IIosCertificateProfileWithReferenceRequestBuilder instance
      */
-    IIosCertificateProfileWithReferenceRequestBuilder smimeSigningCertificate();
+    IIosCertificateProfileWithReferenceRequestBuilder smimeEncryptionCertificate();
 
     /**
      * Gets the request builder for IosCertificateProfile
      *
      * @return the IIosCertificateProfileWithReferenceRequestBuilder instance
      */
-    IIosCertificateProfileWithReferenceRequestBuilder smimeEncryptionCertificate();
-
-    /**
-     * Gets the request builder for DeviceManagementDerivedCredentialSettings
-     *
-     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
-     */
-    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
+    IIosCertificateProfileWithReferenceRequestBuilder smimeSigningCertificate();
 
 }

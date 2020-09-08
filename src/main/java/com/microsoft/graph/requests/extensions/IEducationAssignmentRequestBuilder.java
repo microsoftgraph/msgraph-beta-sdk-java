@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -40,17 +40,13 @@ public interface IEducationAssignmentRequestBuilder extends IRequestBuilder {
     IEducationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IEducationAssignmentResourceCollectionRequestBuilder resources();
-
-    IEducationAssignmentResourceRequestBuilder resources(final String id);
-
-    IEducationSubmissionCollectionRequestBuilder submissions();
-
-    IEducationSubmissionRequestBuilder submissions(final String id);
-
     IEducationCategoryCollectionRequestBuilder categories();
 
     IEducationCategoryRequestBuilder categories(final String id);
+
+    IEducationAssignmentResourceCollectionRequestBuilder resources();
+
+    IEducationAssignmentResourceRequestBuilder resources(final String id);
 
     /**
      * Gets the request builder for EducationRubric
@@ -58,6 +54,10 @@ public interface IEducationAssignmentRequestBuilder extends IRequestBuilder {
      * @return the IEducationRubricRequestBuilder instance
      */
     IEducationRubricRequestBuilder rubric();
+
+    IEducationSubmissionCollectionRequestBuilder submissions();
+
+    IEducationSubmissionRequestBuilder submissions(final String id);
     IEducationAssignmentPublishRequestBuilder publish();
     IEducationAssignmentGetResourcesFolderUrlRequestBuilder getResourcesFolderUrl();
 

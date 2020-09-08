@@ -112,6 +112,27 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
     }
 
     /**
+     * Creates a IosikEv2VpnConfiguration with a new object
+     *
+     * @param newIosikEv2VpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<IosikEv2VpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosikEv2VpnConfiguration);
+    }
+
+    /**
+     * Creates a IosikEv2VpnConfiguration with a new object
+     *
+     * @param newIosikEv2VpnConfiguration the object to create/update
+     * @return the created IosikEv2VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosikEv2VpnConfiguration put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosikEv2VpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

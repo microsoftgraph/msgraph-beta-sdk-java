@@ -112,6 +112,27 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a IosVppAppAssignedUserLicense with a new object
+     *
+     * @param newIosVppAppAssignedUserLicense the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<IosVppAppAssignedUserLicense> callback) {
+        send(HttpMethod.PUT, callback, newIosVppAppAssignedUserLicense);
+    }
+
+    /**
+     * Creates a IosVppAppAssignedUserLicense with a new object
+     *
+     * @param newIosVppAppAssignedUserLicense the object to create/update
+     * @return the created IosVppAppAssignedUserLicense
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosVppAppAssignedUserLicense put(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense) throws ClientException {
+        return send(HttpMethod.PUT, newIosVppAppAssignedUserLicense);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

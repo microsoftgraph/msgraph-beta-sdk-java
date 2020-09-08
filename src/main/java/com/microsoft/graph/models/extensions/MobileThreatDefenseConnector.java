@@ -28,68 +28,12 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
 
 
     /**
-     * The Last Heartbeat Date Time.
-     * DateTime of last Heartbeat recieved from the Data Sync Partner
+     * The Allow Partner To Collect IOSApplication Metadata.
+     * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
      */
-    @SerializedName("lastHeartbeatDateTime")
+    @SerializedName("allowPartnerToCollectIOSApplicationMetadata")
     @Expose
-    public java.util.Calendar lastHeartbeatDateTime;
-
-    /**
-     * The Partner State.
-     * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
-     */
-    @SerializedName("partnerState")
-    @Expose
-    public MobileThreatPartnerTenantState partnerState;
-
-    /**
-     * The Android Mobile Application Management Enabled.
-     * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
-     */
-    @SerializedName("androidMobileApplicationManagementEnabled")
-    @Expose
-    public Boolean androidMobileApplicationManagementEnabled;
-
-    /**
-     * The Ios Mobile Application Management Enabled.
-     * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
-     */
-    @SerializedName("iosMobileApplicationManagementEnabled")
-    @Expose
-    public Boolean iosMobileApplicationManagementEnabled;
-
-    /**
-     * The Android Enabled.
-     * For Android, set whether data from the data sync partner should be used during compliance evaluations
-     */
-    @SerializedName("androidEnabled")
-    @Expose
-    public Boolean androidEnabled;
-
-    /**
-     * The Ios Enabled.
-     * For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
-     */
-    @SerializedName("iosEnabled")
-    @Expose
-    public Boolean iosEnabled;
-
-    /**
-     * The Windows Enabled.
-     * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
-     */
-    @SerializedName("windowsEnabled")
-    @Expose
-    public Boolean windowsEnabled;
-
-    /**
-     * The Mac Enabled.
-     * For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
-     */
-    @SerializedName("macEnabled")
-    @Expose
-    public Boolean macEnabled;
+    public Boolean allowPartnerToCollectIOSApplicationMetadata;
 
     /**
      * The Android Device Blocked On Missing Partner Data.
@@ -100,6 +44,22 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Boolean androidDeviceBlockedOnMissingPartnerData;
 
     /**
+     * The Android Enabled.
+     * For Android, set whether data from the data sync partner should be used during compliance evaluations
+     */
+    @SerializedName("androidEnabled")
+    @Expose
+    public Boolean androidEnabled;
+
+    /**
+     * The Android Mobile Application Management Enabled.
+     * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+     */
+    @SerializedName("androidMobileApplicationManagementEnabled")
+    @Expose
+    public Boolean androidMobileApplicationManagementEnabled;
+
+    /**
      * The Ios Device Blocked On Missing Partner Data.
      * For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      */
@@ -108,12 +68,28 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Boolean iosDeviceBlockedOnMissingPartnerData;
 
     /**
-     * The Windows Device Blocked On Missing Partner Data.
-     * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * The Ios Enabled.
+     * For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
      */
-    @SerializedName("windowsDeviceBlockedOnMissingPartnerData")
+    @SerializedName("iosEnabled")
     @Expose
-    public Boolean windowsDeviceBlockedOnMissingPartnerData;
+    public Boolean iosEnabled;
+
+    /**
+     * The Ios Mobile Application Management Enabled.
+     * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+     */
+    @SerializedName("iosMobileApplicationManagementEnabled")
+    @Expose
+    public Boolean iosMobileApplicationManagementEnabled;
+
+    /**
+     * The Last Heartbeat Date Time.
+     * DateTime of last Heartbeat recieved from the Data Sync Partner
+     */
+    @SerializedName("lastHeartbeatDateTime")
+    @Expose
+    public java.util.Calendar lastHeartbeatDateTime;
 
     /**
      * The Mac Device Blocked On Missing Partner Data.
@@ -124,12 +100,20 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Boolean macDeviceBlockedOnMissingPartnerData;
 
     /**
-     * The Partner Unsupported Os Version Blocked.
-     * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
+     * The Mac Enabled.
+     * For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
      */
-    @SerializedName("partnerUnsupportedOsVersionBlocked")
+    @SerializedName("macEnabled")
     @Expose
-    public Boolean partnerUnsupportedOsVersionBlocked;
+    public Boolean macEnabled;
+
+    /**
+     * The Partner State.
+     * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+     */
+    @SerializedName("partnerState")
+    @Expose
+    public MobileThreatPartnerTenantState partnerState;
 
     /**
      * The Partner Unresponsiveness Threshold In Days.
@@ -140,12 +124,28 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Integer partnerUnresponsivenessThresholdInDays;
 
     /**
-     * The Allow Partner To Collect IOSApplication Metadata.
-     * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
+     * The Partner Unsupported Os Version Blocked.
+     * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
      */
-    @SerializedName("allowPartnerToCollectIOSApplicationMetadata")
+    @SerializedName("partnerUnsupportedOsVersionBlocked")
     @Expose
-    public Boolean allowPartnerToCollectIOSApplicationMetadata;
+    public Boolean partnerUnsupportedOsVersionBlocked;
+
+    /**
+     * The Windows Device Blocked On Missing Partner Data.
+     * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     */
+    @SerializedName("windowsDeviceBlockedOnMissingPartnerData")
+    @Expose
+    public Boolean windowsDeviceBlockedOnMissingPartnerData;
+
+    /**
+     * The Windows Enabled.
+     * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
+     */
+    @SerializedName("windowsEnabled")
+    @Expose
+    public Boolean windowsEnabled;
 
 
     /**

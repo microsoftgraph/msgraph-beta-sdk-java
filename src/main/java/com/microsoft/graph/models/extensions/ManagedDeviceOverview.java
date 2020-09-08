@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceOperatingSystemSummary;
 import com.microsoft.graph.models.extensions.DeviceExchangeAccessStateSummary;
+import com.microsoft.graph.models.extensions.DeviceOperatingSystemSummary;
 import com.microsoft.graph.models.extensions.ManagedDeviceModelsAndManufacturers;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -30,28 +30,12 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Enrolled Device Count.
-     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+     * The Device Exchange Access State Summary.
+     * Distribution of Exchange Access State in Intune
      */
-    @SerializedName("enrolledDeviceCount")
+    @SerializedName("deviceExchangeAccessStateSummary")
     @Expose
-    public Integer enrolledDeviceCount;
-
-    /**
-     * The Mdm Enrolled Count.
-     * The number of devices enrolled in MDM
-     */
-    @SerializedName("mdmEnrolledCount")
-    @Expose
-    public Integer mdmEnrolledCount;
-
-    /**
-     * The Dual Enrolled Device Count.
-     * The number of devices enrolled in both MDM and EAS
-     */
-    @SerializedName("dualEnrolledDeviceCount")
-    @Expose
-    public Integer dualEnrolledDeviceCount;
+    public DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
 
     /**
      * The Device Operating System Summary.
@@ -62,12 +46,28 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
     public DeviceOperatingSystemSummary deviceOperatingSystemSummary;
 
     /**
-     * The Device Exchange Access State Summary.
-     * Distribution of Exchange Access State in Intune
+     * The Dual Enrolled Device Count.
+     * The number of devices enrolled in both MDM and EAS
      */
-    @SerializedName("deviceExchangeAccessStateSummary")
+    @SerializedName("dualEnrolledDeviceCount")
     @Expose
-    public DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
+    public Integer dualEnrolledDeviceCount;
+
+    /**
+     * The Enrolled Device Count.
+     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+     */
+    @SerializedName("enrolledDeviceCount")
+    @Expose
+    public Integer enrolledDeviceCount;
+
+    /**
+     * The Last Modified Date Time.
+     * Last modified date time of device overview
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Managed Device Models And Manufacturers.
@@ -78,12 +78,12 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
     public ManagedDeviceModelsAndManufacturers managedDeviceModelsAndManufacturers;
 
     /**
-     * The Last Modified Date Time.
-     * Last modified date time of device overview
+     * The Mdm Enrolled Count.
+     * The number of devices enrolled in MDM
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("mdmEnrolledCount")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public Integer mdmEnrolledCount;
 
 
     /**

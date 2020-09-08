@@ -27,20 +27,12 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
 
 
     /**
-     * The User Id.
-     * UserId associated with this device registration record.
+     * The Device Mac Address.
+     * Device Mac address.
      */
-    @SerializedName("userId")
+    @SerializedName("deviceMacAddress")
     @Expose
-    public String userId;
-
-    /**
-     * The Device Registration Id.
-     * Device identifier for this device registration record.
-     */
-    @SerializedName("deviceRegistrationId")
-    @Expose
-    public String deviceRegistrationId;
+    public String deviceMacAddress;
 
     /**
      * The Device Name.
@@ -51,6 +43,14 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     public String deviceName;
 
     /**
+     * The Device Registration Id.
+     * Device identifier for this device registration record.
+     */
+    @SerializedName("deviceRegistrationId")
+    @Expose
+    public String deviceRegistrationId;
+
+    /**
      * The Device Type.
      * Device type, for example, Windows laptop VS Windows phone.
      */
@@ -59,20 +59,20 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     public String deviceType;
 
     /**
-     * The Device Mac Address.
-     * Device Mac address.
-     */
-    @SerializedName("deviceMacAddress")
-    @Expose
-    public String deviceMacAddress;
-
-    /**
      * The Last Check In Date Time.
      * Last checkin time of the device.
      */
     @SerializedName("lastCheckInDateTime")
     @Expose
     public java.util.Calendar lastCheckInDateTime;
+
+    /**
+     * The User Id.
+     * UserId associated with this device registration record.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

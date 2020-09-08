@@ -80,6 +80,23 @@ public interface IAndroidManagedStoreAppConfigurationSchemaRequest extends IHttp
     AndroidManagedStoreAppConfigurationSchema post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema) throws ClientException;
 
     /**
+     * Posts a AndroidManagedStoreAppConfigurationSchema with a new object
+     *
+     * @param newAndroidManagedStoreAppConfigurationSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<AndroidManagedStoreAppConfigurationSchema> callback);
+
+    /**
+     * Posts a AndroidManagedStoreAppConfigurationSchema with a new object
+     *
+     * @param newAndroidManagedStoreAppConfigurationSchema the object to create/update
+     * @return the created AndroidManagedStoreAppConfigurationSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidManagedStoreAppConfigurationSchema put(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

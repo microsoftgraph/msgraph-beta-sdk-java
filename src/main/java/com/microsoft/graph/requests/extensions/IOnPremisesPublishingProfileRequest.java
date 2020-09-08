@@ -80,6 +80,23 @@ public interface IOnPremisesPublishingProfileRequest extends IHttpRequest {
     OnPremisesPublishingProfile post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException;
 
     /**
+     * Posts a OnPremisesPublishingProfile with a new object
+     *
+     * @param newOnPremisesPublishingProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback);
+
+    /**
+     * Posts a OnPremisesPublishingProfile with a new object
+     *
+     * @param newOnPremisesPublishingProfile the object to create/update
+     * @return the created OnPremisesPublishingProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnPremisesPublishingProfile put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

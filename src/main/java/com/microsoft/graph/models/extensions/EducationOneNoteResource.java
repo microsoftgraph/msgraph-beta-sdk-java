@@ -27,20 +27,20 @@ public class EducationOneNoteResource extends EducationResource implements IJson
 
 
     /**
-     * The Section Name.
-     * 
-     */
-    @SerializedName("sectionName")
-    @Expose
-    public String sectionName;
-
-    /**
      * The Page Url.
      * 
      */
     @SerializedName("pageUrl")
     @Expose
     public String pageUrl;
+
+    /**
+     * The Section Name.
+     * 
+     */
+    @SerializedName("sectionName")
+    @Expose
+    public String sectionName;
 
 
     /**

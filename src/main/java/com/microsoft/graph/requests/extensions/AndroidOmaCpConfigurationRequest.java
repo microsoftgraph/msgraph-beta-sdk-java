@@ -112,6 +112,27 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
     }
 
     /**
+     * Creates a AndroidOmaCpConfiguration with a new object
+     *
+     * @param newAndroidOmaCpConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<AndroidOmaCpConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidOmaCpConfiguration);
+    }
+
+    /**
+     * Creates a AndroidOmaCpConfiguration with a new object
+     *
+     * @param newAndroidOmaCpConfiguration the object to create/update
+     * @return the created AndroidOmaCpConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidOmaCpConfiguration put(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidOmaCpConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

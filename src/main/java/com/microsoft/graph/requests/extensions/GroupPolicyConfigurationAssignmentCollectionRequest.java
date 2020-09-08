@@ -62,14 +62,14 @@ public class GroupPolicyConfigurationAssignmentCollectionRequest extends BaseCol
     public void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyConfigurationAssignment, callback);
     }
 
     public GroupPolicyConfigurationAssignment post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyConfigurationAssignment);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyConfigurationAssignmentCollectionRequest extends BaseCol
         return (GroupPolicyConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyConfigurationAssignmentCollectionRequest)this;
+    }
     public IGroupPolicyConfigurationAssignmentCollectionPage buildFromResponse(final GroupPolicyConfigurationAssignmentCollectionResponse response) {
         final IGroupPolicyConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

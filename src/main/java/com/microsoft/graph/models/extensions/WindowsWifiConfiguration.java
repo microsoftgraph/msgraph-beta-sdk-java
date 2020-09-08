@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WiFiSecurityType;
 import com.microsoft.graph.models.generated.MeteredConnectionLimitType;
 import com.microsoft.graph.models.generated.WiFiProxySetting;
+import com.microsoft.graph.models.generated.WiFiSecurityType;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -28,46 +28,6 @@ import java.util.Map;
  */
 public class WindowsWifiConfiguration extends DeviceConfiguration implements IJsonBackedObject {
 
-
-    /**
-     * The Pre Shared Key.
-     * This is the pre-shared key for WPA Personal Wi-Fi network.
-     */
-    @SerializedName("preSharedKey")
-    @Expose
-    public String preSharedKey;
-
-    /**
-     * The Wifi Security Type.
-     * Specify the Wifi Security Type.
-     */
-    @SerializedName("wifiSecurityType")
-    @Expose
-    public WiFiSecurityType wifiSecurityType;
-
-    /**
-     * The Metered Connection Limit.
-     * Specify the metered connection limit type for the wifi connection.
-     */
-    @SerializedName("meteredConnectionLimit")
-    @Expose
-    public MeteredConnectionLimitType meteredConnectionLimit;
-
-    /**
-     * The Ssid.
-     * Specify the SSID of the wifi connection.
-     */
-    @SerializedName("ssid")
-    @Expose
-    public String ssid;
-
-    /**
-     * The Network Name.
-     * Specify the network configuration name.
-     */
-    @SerializedName("networkName")
-    @Expose
-    public String networkName;
 
     /**
      * The Connect Automatically.
@@ -94,12 +54,44 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
     public Boolean connectWhenNetworkNameIsHidden;
 
     /**
-     * The Proxy Setting.
-     * Specify the proxy setting for Wi-Fi configuration
+     * The Force FIPSCompliance.
+     * Specify whether to force FIPS compliance.
      */
-    @SerializedName("proxySetting")
+    @SerializedName("forceFIPSCompliance")
     @Expose
-    public WiFiProxySetting proxySetting;
+    public Boolean forceFIPSCompliance;
+
+    /**
+     * The Metered Connection Limit.
+     * Specify the metered connection limit type for the wifi connection.
+     */
+    @SerializedName("meteredConnectionLimit")
+    @Expose
+    public MeteredConnectionLimitType meteredConnectionLimit;
+
+    /**
+     * The Network Name.
+     * Specify the network configuration name.
+     */
+    @SerializedName("networkName")
+    @Expose
+    public String networkName;
+
+    /**
+     * The Pre Shared Key.
+     * This is the pre-shared key for WPA Personal Wi-Fi network.
+     */
+    @SerializedName("preSharedKey")
+    @Expose
+    public String preSharedKey;
+
+    /**
+     * The Proxy Automatic Configuration Url.
+     * Specify the URL for the proxy server configuration script.
+     */
+    @SerializedName("proxyAutomaticConfigurationUrl")
+    @Expose
+    public String proxyAutomaticConfigurationUrl;
 
     /**
      * The Proxy Manual Address.
@@ -118,20 +110,28 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
     public Integer proxyManualPort;
 
     /**
-     * The Proxy Automatic Configuration Url.
-     * Specify the URL for the proxy server configuration script.
+     * The Proxy Setting.
+     * Specify the proxy setting for Wi-Fi configuration
      */
-    @SerializedName("proxyAutomaticConfigurationUrl")
+    @SerializedName("proxySetting")
     @Expose
-    public String proxyAutomaticConfigurationUrl;
+    public WiFiProxySetting proxySetting;
 
     /**
-     * The Force FIPSCompliance.
-     * Specify whether to force FIPS compliance.
+     * The Ssid.
+     * Specify the SSID of the wifi connection.
      */
-    @SerializedName("forceFIPSCompliance")
+    @SerializedName("ssid")
     @Expose
-    public Boolean forceFIPSCompliance;
+    public String ssid;
+
+    /**
+     * The Wifi Security Type.
+     * Specify the Wifi Security Type.
+     */
+    @SerializedName("wifiSecurityType")
+    @Expose
+    public WiFiSecurityType wifiSecurityType;
 
 
     /**

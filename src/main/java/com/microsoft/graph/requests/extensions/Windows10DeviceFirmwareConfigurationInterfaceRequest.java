@@ -112,6 +112,27 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
     }
 
     /**
+     * Creates a Windows10DeviceFirmwareConfigurationInterface with a new object
+     *
+     * @param newWindows10DeviceFirmwareConfigurationInterface the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback) {
+        send(HttpMethod.PUT, callback, newWindows10DeviceFirmwareConfigurationInterface);
+    }
+
+    /**
+     * Creates a Windows10DeviceFirmwareConfigurationInterface with a new object
+     *
+     * @param newWindows10DeviceFirmwareConfigurationInterface the object to create/update
+     * @return the created Windows10DeviceFirmwareConfigurationInterface
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10DeviceFirmwareConfigurationInterface put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10DeviceFirmwareConfigurationInterface);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

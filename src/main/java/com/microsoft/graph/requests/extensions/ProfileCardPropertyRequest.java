@@ -112,6 +112,27 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
     }
 
     /**
+     * Creates a ProfileCardProperty with a new object
+     *
+     * @param newProfileCardProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback) {
+        send(HttpMethod.PUT, callback, newProfileCardProperty);
+    }
+
+    /**
+     * Creates a ProfileCardProperty with a new object
+     *
+     * @param newProfileCardProperty the object to create/update
+     * @return the created ProfileCardProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ProfileCardProperty put(final ProfileCardProperty newProfileCardProperty) throws ClientException {
+        return send(HttpMethod.PUT, newProfileCardProperty);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

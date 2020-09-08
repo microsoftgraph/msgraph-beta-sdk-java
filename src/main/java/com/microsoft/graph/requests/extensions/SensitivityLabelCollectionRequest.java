@@ -64,14 +64,14 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
     public void post(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SensitivityLabelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSensitivityLabel, callback);
     }
 
     public SensitivityLabel post(final SensitivityLabel newSensitivityLabel) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SensitivityLabelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSensitivityLabel);
     }
 
@@ -108,6 +108,27 @@ public class SensitivityLabelCollectionRequest extends BaseCollectionRequest<Sen
         return (SensitivityLabelCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISensitivityLabelCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SensitivityLabelCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISensitivityLabelCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISensitivityLabelCollectionRequest)this;
+    }
     public ISensitivityLabelCollectionPage buildFromResponse(final SensitivityLabelCollectionResponse response) {
         final ISensitivityLabelCollectionRequestBuilder builder;
         if (response.nextLink != null) {

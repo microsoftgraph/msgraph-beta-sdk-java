@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PositionDetail;
 import com.microsoft.graph.models.extensions.RelatedPerson;
+import com.microsoft.graph.models.extensions.PositionDetail;
 import com.microsoft.graph.models.extensions.ItemFacet;
 
 
@@ -37,22 +37,6 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
     public java.util.List<String> categories;
 
     /**
-     * The Detail.
-     * 
-     */
-    @SerializedName("detail")
-    @Expose
-    public PositionDetail detail;
-
-    /**
-     * The Manager.
-     * 
-     */
-    @SerializedName("manager")
-    @Expose
-    public RelatedPerson manager;
-
-    /**
      * The Colleagues.
      * 
      */
@@ -61,12 +45,28 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
     public java.util.List<RelatedPerson> colleagues;
 
     /**
+     * The Detail.
+     * 
+     */
+    @SerializedName("detail")
+    @Expose
+    public PositionDetail detail;
+
+    /**
      * The Is Current.
      * 
      */
     @SerializedName("isCurrent")
     @Expose
     public Boolean isCurrent;
+
+    /**
+     * The Manager.
+     * 
+     */
+    @SerializedName("manager")
+    @Expose
+    public RelatedPerson manager;
 
 
     /**

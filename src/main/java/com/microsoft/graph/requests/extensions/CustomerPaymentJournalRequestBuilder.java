@@ -57,13 +57,6 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
     }
 
 
-    public ICustomerPaymentCollectionRequestBuilder customerPayments() {
-        return new CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
-    }
-
-    public ICustomerPaymentRequestBuilder customerPayments(final String id) {
-        return new CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for Account
@@ -72,5 +65,12 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
      */
     public IAccountRequestBuilder account() {
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    }
+    public ICustomerPaymentCollectionRequestBuilder customerPayments() {
+        return new CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
+    }
+
+    public ICustomerPaymentRequestBuilder customerPayments(final String id) {
+        return new CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
     }
 }

@@ -80,6 +80,23 @@ public interface IAndroidEasEmailProfileConfigurationRequest extends IHttpReques
     AndroidEasEmailProfileConfiguration post(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidEasEmailProfileConfiguration with a new object
+     *
+     * @param newAndroidEasEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<AndroidEasEmailProfileConfiguration> callback);
+
+    /**
+     * Posts a AndroidEasEmailProfileConfiguration with a new object
+     *
+     * @param newAndroidEasEmailProfileConfiguration the object to create/update
+     * @return the created AndroidEasEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidEasEmailProfileConfiguration put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

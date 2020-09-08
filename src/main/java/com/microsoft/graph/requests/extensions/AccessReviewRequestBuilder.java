@@ -8,10 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReview;
-import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionRequestBuilder;
@@ -20,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -63,26 +63,12 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
     }
 
 
-    public IAccessReviewReviewerCollectionRequestBuilder reviewers() {
-        return new AccessReviewReviewerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers"), getClient(), null);
-    }
-
-    public IAccessReviewReviewerRequestBuilder reviewers(final String id) {
-        return new AccessReviewReviewerRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers") + "/" + id, getClient(), null);
-    }
     public IAccessReviewDecisionCollectionRequestBuilder decisions() {
         return new AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
     }
 
     public IAccessReviewDecisionRequestBuilder decisions(final String id) {
         return new AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
-    }
-    public IAccessReviewDecisionCollectionRequestBuilder myDecisions() {
-        return new AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions"), getClient(), null);
-    }
-
-    public IAccessReviewDecisionRequestBuilder myDecisions(final String id) {
-        return new AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions") + "/" + id, getClient(), null);
     }
     public IAccessReviewCollectionRequestBuilder instances() {
         return new AccessReviewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
@@ -91,20 +77,34 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
     public IAccessReviewRequestBuilder instances(final String id) {
         return new AccessReviewRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
-
-    public IAccessReviewStopRequestBuilder stop() {
-        return new AccessReviewStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
+    public IAccessReviewDecisionCollectionRequestBuilder myDecisions() {
+        return new AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions"), getClient(), null);
     }
 
-    public IAccessReviewSendReminderRequestBuilder sendReminder() {
-        return new AccessReviewSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
+    public IAccessReviewDecisionRequestBuilder myDecisions(final String id) {
+        return new AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions") + "/" + id, getClient(), null);
+    }
+    public IAccessReviewReviewerCollectionRequestBuilder reviewers() {
+        return new AccessReviewReviewerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers"), getClient(), null);
+    }
+
+    public IAccessReviewReviewerRequestBuilder reviewers(final String id) {
+        return new AccessReviewReviewerRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers") + "/" + id, getClient(), null);
+    }
+
+    public IAccessReviewApplyDecisionsRequestBuilder applyDecisions() {
+        return new AccessReviewApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDecisions"), getClient(), null);
     }
 
     public IAccessReviewResetDecisionsRequestBuilder resetDecisions() {
         return new AccessReviewResetDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDecisions"), getClient(), null);
     }
 
-    public IAccessReviewApplyDecisionsRequestBuilder applyDecisions() {
-        return new AccessReviewApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDecisions"), getClient(), null);
+    public IAccessReviewSendReminderRequestBuilder sendReminder() {
+        return new AccessReviewSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
+    }
+
+    public IAccessReviewStopRequestBuilder stop() {
+        return new AccessReviewStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }

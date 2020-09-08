@@ -114,6 +114,27 @@ public class Windows10VpnConfigurationRequest extends BaseRequest implements IWi
     }
 
     /**
+     * Creates a Windows10VpnConfiguration with a new object
+     *
+     * @param newWindows10VpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10VpnConfiguration newWindows10VpnConfiguration, final ICallback<Windows10VpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10VpnConfiguration);
+    }
+
+    /**
+     * Creates a Windows10VpnConfiguration with a new object
+     *
+     * @param newWindows10VpnConfiguration the object to create/update
+     * @return the created Windows10VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10VpnConfiguration put(final Windows10VpnConfiguration newWindows10VpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10VpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

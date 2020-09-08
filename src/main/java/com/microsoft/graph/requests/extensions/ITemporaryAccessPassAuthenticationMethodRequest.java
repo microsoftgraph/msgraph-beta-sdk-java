@@ -80,6 +80,23 @@ public interface ITemporaryAccessPassAuthenticationMethodRequest extends IHttpRe
     TemporaryAccessPassAuthenticationMethod post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a TemporaryAccessPassAuthenticationMethod with a new object
+     *
+     * @param newTemporaryAccessPassAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback);
+
+    /**
+     * Posts a TemporaryAccessPassAuthenticationMethod with a new object
+     *
+     * @param newTemporaryAccessPassAuthenticationMethod the object to create/update
+     * @return the created TemporaryAccessPassAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TemporaryAccessPassAuthenticationMethod put(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

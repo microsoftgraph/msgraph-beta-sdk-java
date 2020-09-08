@@ -37,20 +37,20 @@ public class PasswordSingleSignOnCredentialSet implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * 
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Credentials.
      * 
      */
     @SerializedName("credentials")
     @Expose
     public java.util.List<Credential> credentials;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
 
     /**

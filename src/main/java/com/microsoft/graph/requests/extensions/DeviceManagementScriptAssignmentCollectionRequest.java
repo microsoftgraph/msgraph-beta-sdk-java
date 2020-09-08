@@ -62,14 +62,14 @@ public class DeviceManagementScriptAssignmentCollectionRequest extends BaseColle
     public void post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<DeviceManagementScriptAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementScriptAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementScriptAssignment, callback);
     }
 
     public DeviceManagementScriptAssignment post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementScriptAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementScriptAssignment);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementScriptAssignmentCollectionRequest extends BaseColle
         return (DeviceManagementScriptAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementScriptAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementScriptAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementScriptAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementScriptAssignmentCollectionRequest)this;
+    }
     public IDeviceManagementScriptAssignmentCollectionPage buildFromResponse(final DeviceManagementScriptAssignmentCollectionResponse response) {
         final IDeviceManagementScriptAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

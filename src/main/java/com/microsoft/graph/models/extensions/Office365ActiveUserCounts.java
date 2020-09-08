@@ -27,12 +27,12 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Report Refresh Date.
+     * The Exchange.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("exchange")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long exchange;
 
     /**
      * The Office365.
@@ -43,20 +43,36 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
     public Long office365;
 
     /**
-     * The Exchange.
-     * 
-     */
-    @SerializedName("exchange")
-    @Expose
-    public Long exchange;
-
-    /**
      * The One Drive.
      * 
      */
     @SerializedName("oneDrive")
     @Expose
     public Long oneDrive;
+
+    /**
+     * The Report Date.
+     * 
+     */
+    @SerializedName("reportDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportDate;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The Share Point.
@@ -75,14 +91,6 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
     public Long skypeForBusiness;
 
     /**
-     * The Yammer.
-     * 
-     */
-    @SerializedName("yammer")
-    @Expose
-    public Long yammer;
-
-    /**
      * The Teams.
      * 
      */
@@ -91,20 +99,12 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
     public Long teams;
 
     /**
-     * The Report Date.
+     * The Yammer.
      * 
      */
-    @SerializedName("reportDate")
+    @SerializedName("yammer")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportDate;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
+    public Long yammer;
 
 
     /**

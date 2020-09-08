@@ -11,12 +11,12 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IosWebContentFilterBase;
 import com.microsoft.graph.models.extensions.IosHomeScreenItem;
 import com.microsoft.graph.models.extensions.IosHomeScreenPage;
+import com.microsoft.graph.models.extensions.IosSingleSignOnExtension;
 import com.microsoft.graph.models.extensions.IosNotificationSettings;
+import com.microsoft.graph.models.extensions.SingleSignOnExtension;
 import com.microsoft.graph.models.extensions.IosSingleSignOnSettings;
 import com.microsoft.graph.models.generated.IosWallpaperDisplayLocation;
 import com.microsoft.graph.models.extensions.MimeContent;
-import com.microsoft.graph.models.extensions.SingleSignOnExtension;
-import com.microsoft.graph.models.extensions.IosSingleSignOnExtension;
 import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.models.extensions.AppleDeviceFeaturesConfigurationBase;
 
@@ -53,14 +53,6 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     public IosWebContentFilterBase contentFilterSettings;
 
     /**
-     * The Lock Screen Footnote.
-     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     */
-    @SerializedName("lockScreenFootnote")
-    @Expose
-    public String lockScreenFootnote;
-
-    /**
      * The Home Screen Dock Icons.
      * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      */
@@ -77,12 +69,36 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     public java.util.List<IosHomeScreenPage> homeScreenPages;
 
     /**
+     * The Ios Single Sign On Extension.
+     * Gets or sets a single sign-on extension profile.
+     */
+    @SerializedName("iosSingleSignOnExtension")
+    @Expose
+    public IosSingleSignOnExtension iosSingleSignOnExtension;
+
+    /**
+     * The Lock Screen Footnote.
+     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+     */
+    @SerializedName("lockScreenFootnote")
+    @Expose
+    public String lockScreenFootnote;
+
+    /**
      * The Notification Settings.
      * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      */
     @SerializedName("notificationSettings")
     @Expose
     public java.util.List<IosNotificationSettings> notificationSettings;
+
+    /**
+     * The Single Sign On Extension.
+     * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
+     */
+    @SerializedName("singleSignOnExtension")
+    @Expose
+    public SingleSignOnExtension singleSignOnExtension;
 
     /**
      * The Single Sign On Settings.
@@ -107,22 +123,6 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     @SerializedName("wallpaperImage")
     @Expose
     public MimeContent wallpaperImage;
-
-    /**
-     * The Single Sign On Extension.
-     * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
-     */
-    @SerializedName("singleSignOnExtension")
-    @Expose
-    public SingleSignOnExtension singleSignOnExtension;
-
-    /**
-     * The Ios Single Sign On Extension.
-     * Gets or sets a single sign-on extension profile.
-     */
-    @SerializedName("iosSingleSignOnExtension")
-    @Expose
-    public IosSingleSignOnExtension iosSingleSignOnExtension;
 
     /**
      * The Identity Certificate For Client Authentication.

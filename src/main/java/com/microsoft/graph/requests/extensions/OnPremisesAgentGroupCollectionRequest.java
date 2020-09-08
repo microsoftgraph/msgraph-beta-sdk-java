@@ -62,14 +62,14 @@ public class OnPremisesAgentGroupCollectionRequest extends BaseCollectionRequest
     public void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnPremisesAgentGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnPremisesAgentGroup, callback);
     }
 
     public OnPremisesAgentGroup post(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnPremisesAgentGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnPremisesAgentGroup);
     }
 
@@ -106,6 +106,27 @@ public class OnPremisesAgentGroupCollectionRequest extends BaseCollectionRequest
         return (OnPremisesAgentGroupCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnPremisesAgentGroupCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnPremisesAgentGroupCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnPremisesAgentGroupCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnPremisesAgentGroupCollectionRequest)this;
+    }
     public IOnPremisesAgentGroupCollectionPage buildFromResponse(final OnPremisesAgentGroupCollectionResponse response) {
         final IOnPremisesAgentGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {

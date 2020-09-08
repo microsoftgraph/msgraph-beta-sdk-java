@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentMultiple;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      */
     public UnifiedRoleAssignmentMultiple post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
         return send(HttpMethod.POST, newUnifiedRoleAssignmentMultiple);
+    }
+
+    /**
+     * Creates a UnifiedRoleAssignmentMultiple with a new object
+     *
+     * @param newUnifiedRoleAssignmentMultiple the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback) {
+        send(HttpMethod.PUT, callback, newUnifiedRoleAssignmentMultiple);
+    }
+
+    /**
+     * Creates a UnifiedRoleAssignmentMultiple with a new object
+     *
+     * @param newUnifiedRoleAssignmentMultiple the object to create/update
+     * @return the created UnifiedRoleAssignmentMultiple
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnifiedRoleAssignmentMultiple put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
+        return send(HttpMethod.PUT, newUnifiedRoleAssignmentMultiple);
     }
 
     /**

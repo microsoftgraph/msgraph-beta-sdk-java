@@ -62,14 +62,14 @@ public class DirectoryDefinitionCollectionRequest extends BaseCollectionRequest<
     public void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryDefinition, callback);
     }
 
     public DirectoryDefinition post(final DirectoryDefinition newDirectoryDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryDefinition);
     }
 
@@ -106,6 +106,27 @@ public class DirectoryDefinitionCollectionRequest extends BaseCollectionRequest<
         return (DirectoryDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDirectoryDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DirectoryDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDirectoryDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDirectoryDefinitionCollectionRequest)this;
+    }
     public IDirectoryDefinitionCollectionPage buildFromResponse(final DirectoryDefinitionCollectionResponse response) {
         final IDirectoryDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

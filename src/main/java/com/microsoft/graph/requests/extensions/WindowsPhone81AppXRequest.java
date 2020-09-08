@@ -127,6 +127,27 @@ public class WindowsPhone81AppXRequest extends BaseRequest implements IWindowsPh
     }
 
     /**
+     * Creates a WindowsPhone81AppX with a new object
+     *
+     * @param newWindowsPhone81AppX the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhone81AppX newWindowsPhone81AppX, final ICallback<WindowsPhone81AppX> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhone81AppX);
+    }
+
+    /**
+     * Creates a WindowsPhone81AppX with a new object
+     *
+     * @param newWindowsPhone81AppX the object to create/update
+     * @return the created WindowsPhone81AppX
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhone81AppX put(final WindowsPhone81AppX newWindowsPhone81AppX) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhone81AppX);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

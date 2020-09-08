@@ -62,14 +62,14 @@ public class ExactMatchUploadAgentCollectionRequest extends BaseCollectionReques
     public void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<ExactMatchUploadAgent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExactMatchUploadAgentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExactMatchUploadAgent, callback);
     }
 
     public ExactMatchUploadAgent post(final ExactMatchUploadAgent newExactMatchUploadAgent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExactMatchUploadAgentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExactMatchUploadAgent);
     }
 
@@ -106,6 +106,27 @@ public class ExactMatchUploadAgentCollectionRequest extends BaseCollectionReques
         return (ExactMatchUploadAgentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IExactMatchUploadAgentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ExactMatchUploadAgentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IExactMatchUploadAgentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IExactMatchUploadAgentCollectionRequest)this;
+    }
     public IExactMatchUploadAgentCollectionPage buildFromResponse(final ExactMatchUploadAgentCollectionResponse response) {
         final IExactMatchUploadAgentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

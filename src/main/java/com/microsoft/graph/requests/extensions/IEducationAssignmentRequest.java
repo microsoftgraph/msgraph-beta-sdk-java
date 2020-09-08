@@ -80,6 +80,23 @@ public interface IEducationAssignmentRequest extends IHttpRequest {
     EducationAssignment post(final EducationAssignment newEducationAssignment) throws ClientException;
 
     /**
+     * Posts a EducationAssignment with a new object
+     *
+     * @param newEducationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationAssignment newEducationAssignment, final ICallback<EducationAssignment> callback);
+
+    /**
+     * Posts a EducationAssignment with a new object
+     *
+     * @param newEducationAssignment the object to create/update
+     * @return the created EducationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationAssignment put(final EducationAssignment newEducationAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

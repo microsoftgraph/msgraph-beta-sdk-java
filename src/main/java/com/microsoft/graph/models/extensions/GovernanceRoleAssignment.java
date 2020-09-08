@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
 import com.microsoft.graph.models.extensions.GovernanceResource;
 import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
 import com.microsoft.graph.models.extensions.GovernanceSubject;
-import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -31,6 +31,46 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
 
     /**
+     * The Assignment State.
+     * 
+     */
+    @SerializedName("assignmentState")
+    @Expose
+    public String assignmentState;
+
+    /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The External Id.
+     * 
+     */
+    @SerializedName("externalId")
+    @Expose
+    public String externalId;
+
+    /**
+     * The Linked Eligible Role Assignment Id.
+     * 
+     */
+    @SerializedName("linkedEligibleRoleAssignmentId")
+    @Expose
+    public String linkedEligibleRoleAssignmentId;
+
+    /**
+     * The Member Type.
+     * 
+     */
+    @SerializedName("memberType")
+    @Expose
+    public String memberType;
+
+    /**
      * The Resource Id.
      * 
      */
@@ -47,30 +87,6 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
     public String roleDefinitionId;
 
     /**
-     * The Subject Id.
-     * 
-     */
-    @SerializedName("subjectId")
-    @Expose
-    public String subjectId;
-
-    /**
-     * The Linked Eligible Role Assignment Id.
-     * 
-     */
-    @SerializedName("linkedEligibleRoleAssignmentId")
-    @Expose
-    public String linkedEligibleRoleAssignmentId;
-
-    /**
-     * The External Id.
-     * 
-     */
-    @SerializedName("externalId")
-    @Expose
-    public String externalId;
-
-    /**
      * The Start Date Time.
      * 
      */
@@ -79,36 +95,28 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
     public java.util.Calendar startDateTime;
 
     /**
-     * The End Date Time.
-     * 
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Member Type.
-     * 
-     */
-    @SerializedName("memberType")
-    @Expose
-    public String memberType;
-
-    /**
-     * The Assignment State.
-     * 
-     */
-    @SerializedName("assignmentState")
-    @Expose
-    public String assignmentState;
-
-    /**
      * The Status.
      * 
      */
     @SerializedName("status")
     @Expose
     public String status;
+
+    /**
+     * The Subject Id.
+     * 
+     */
+    @SerializedName("subjectId")
+    @Expose
+    public String subjectId;
+
+    /**
+     * The Linked Eligible Role Assignment.
+     * 
+     */
+    @SerializedName("linkedEligibleRoleAssignment")
+    @Expose
+    public GovernanceRoleAssignment linkedEligibleRoleAssignment;
 
     /**
      * The Resource.
@@ -133,14 +141,6 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
     @SerializedName("subject")
     @Expose
     public GovernanceSubject subject;
-
-    /**
-     * The Linked Eligible Role Assignment.
-     * 
-     */
-    @SerializedName("linkedEligibleRoleAssignment")
-    @Expose
-    public GovernanceRoleAssignment linkedEligibleRoleAssignment;
 
 
     /**

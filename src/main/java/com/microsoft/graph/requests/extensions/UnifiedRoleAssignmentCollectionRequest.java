@@ -62,14 +62,14 @@ public class UnifiedRoleAssignmentCollectionRequest extends BaseCollectionReques
     public void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnifiedRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUnifiedRoleAssignment, callback);
     }
 
     public UnifiedRoleAssignment post(final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UnifiedRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUnifiedRoleAssignment);
     }
 
@@ -106,6 +106,27 @@ public class UnifiedRoleAssignmentCollectionRequest extends BaseCollectionReques
         return (UnifiedRoleAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUnifiedRoleAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UnifiedRoleAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUnifiedRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUnifiedRoleAssignmentCollectionRequest)this;
+    }
     public IUnifiedRoleAssignmentCollectionPage buildFromResponse(final UnifiedRoleAssignmentCollectionResponse response) {
         final IUnifiedRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

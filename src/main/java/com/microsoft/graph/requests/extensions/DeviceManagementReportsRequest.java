@@ -124,6 +124,27 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
     }
 
     /**
+     * Creates a DeviceManagementReports with a new object
+     *
+     * @param newDeviceManagementReports the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementReports newDeviceManagementReports, final ICallback<DeviceManagementReports> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementReports);
+    }
+
+    /**
+     * Creates a DeviceManagementReports with a new object
+     *
+     * @param newDeviceManagementReports the object to create/update
+     * @return the created DeviceManagementReports
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementReports put(final DeviceManagementReports newDeviceManagementReports) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementReports);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

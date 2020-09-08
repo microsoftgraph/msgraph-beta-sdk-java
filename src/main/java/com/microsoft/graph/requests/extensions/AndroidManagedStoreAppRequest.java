@@ -127,6 +127,27 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
     }
 
     /**
+     * Creates a AndroidManagedStoreApp with a new object
+     *
+     * @param newAndroidManagedStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidManagedStoreApp newAndroidManagedStoreApp, final ICallback<AndroidManagedStoreApp> callback) {
+        send(HttpMethod.PUT, callback, newAndroidManagedStoreApp);
+    }
+
+    /**
+     * Creates a AndroidManagedStoreApp with a new object
+     *
+     * @param newAndroidManagedStoreApp the object to create/update
+     * @return the created AndroidManagedStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidManagedStoreApp put(final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidManagedStoreApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

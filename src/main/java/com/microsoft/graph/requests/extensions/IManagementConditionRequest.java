@@ -80,6 +80,23 @@ public interface IManagementConditionRequest extends IHttpRequest {
     ManagementCondition post(final ManagementCondition newManagementCondition) throws ClientException;
 
     /**
+     * Posts a ManagementCondition with a new object
+     *
+     * @param newManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback);
+
+    /**
+     * Posts a ManagementCondition with a new object
+     *
+     * @param newManagementCondition the object to create/update
+     * @return the created ManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagementCondition put(final ManagementCondition newManagementCondition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Agreement;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
+import com.microsoft.graph.models.extensions.Agreement;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AgreementCollectionResponse;
-import com.microsoft.graph.requests.extensions.AgreementCollectionPage;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionPage;
+import com.microsoft.graph.requests.extensions.AgreementCollectionResponse;
+import com.microsoft.graph.requests.extensions.AgreementCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -33,16 +33,16 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Agreements.
-     * 
-     */
-    public AgreementCollectionPage agreements;
-
-    /**
      * The Agreement Acceptances.
      * 
      */
     public AgreementAcceptanceCollectionPage agreementAcceptances;
+
+    /**
+     * The Agreements.
+     * 
+     */
+    public AgreementCollectionPage agreements;
 
 
     /**
@@ -84,22 +84,6 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("agreements")) {
-            final AgreementCollectionResponse response = new AgreementCollectionResponse();
-            if (json.has("agreements@odata.nextLink")) {
-                response.nextLink = json.get("agreements@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("agreements").toString(), JsonObject[].class);
-            final Agreement[] array = new Agreement[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Agreement.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            agreements = new AgreementCollectionPage(response, null);
-        }
-
         if (json.has("agreementAcceptances")) {
             final AgreementAcceptanceCollectionResponse response = new AgreementAcceptanceCollectionResponse();
             if (json.has("agreementAcceptances@odata.nextLink")) {
@@ -114,6 +98,22 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             agreementAcceptances = new AgreementAcceptanceCollectionPage(response, null);
+        }
+
+        if (json.has("agreements")) {
+            final AgreementCollectionResponse response = new AgreementCollectionResponse();
+            if (json.has("agreements@odata.nextLink")) {
+                response.nextLink = json.get("agreements@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("agreements").toString(), JsonObject[].class);
+            final Agreement[] array = new Agreement[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Agreement.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            agreements = new AgreementCollectionPage(response, null);
         }
     }
 }

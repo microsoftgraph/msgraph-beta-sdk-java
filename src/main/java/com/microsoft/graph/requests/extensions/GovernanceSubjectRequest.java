@@ -112,6 +112,27 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
     }
 
     /**
+     * Creates a GovernanceSubject with a new object
+     *
+     * @param newGovernanceSubject the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GovernanceSubject newGovernanceSubject, final ICallback<GovernanceSubject> callback) {
+        send(HttpMethod.PUT, callback, newGovernanceSubject);
+    }
+
+    /**
+     * Creates a GovernanceSubject with a new object
+     *
+     * @param newGovernanceSubject the object to create/update
+     * @return the created GovernanceSubject
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GovernanceSubject put(final GovernanceSubject newGovernanceSubject) throws ClientException {
+        return send(HttpMethod.PUT, newGovernanceSubject);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

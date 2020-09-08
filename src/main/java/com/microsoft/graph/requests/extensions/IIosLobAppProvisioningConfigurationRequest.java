@@ -80,6 +80,23 @@ public interface IIosLobAppProvisioningConfigurationRequest extends IHttpRequest
     IosLobAppProvisioningConfiguration post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException;
 
     /**
+     * Posts a IosLobAppProvisioningConfiguration with a new object
+     *
+     * @param newIosLobAppProvisioningConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback);
+
+    /**
+     * Posts a IosLobAppProvisioningConfiguration with a new object
+     *
+     * @param newIosLobAppProvisioningConfiguration the object to create/update
+     * @return the created IosLobAppProvisioningConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosLobAppProvisioningConfiguration put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

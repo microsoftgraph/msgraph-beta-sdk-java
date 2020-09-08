@@ -114,6 +114,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     }
 
     /**
+     * Creates a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
+        send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
+    }
+
+    /**
+     * Creates a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the object to create/update
+     * @return the created WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

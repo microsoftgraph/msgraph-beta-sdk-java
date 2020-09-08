@@ -62,14 +62,14 @@ public class DeviceAndAppManagementAssignmentFilterCollectionRequest extends Bas
     public void post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementAssignmentFilterRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAndAppManagementAssignmentFilter, callback);
     }
 
     public DeviceAndAppManagementAssignmentFilter post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceAndAppManagementAssignmentFilterRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -106,6 +106,27 @@ public class DeviceAndAppManagementAssignmentFilterCollectionRequest extends Bas
         return (DeviceAndAppManagementAssignmentFilterCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceAndAppManagementAssignmentFilterCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceAndAppManagementAssignmentFilterCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceAndAppManagementAssignmentFilterCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceAndAppManagementAssignmentFilterCollectionRequest)this;
+    }
     public IDeviceAndAppManagementAssignmentFilterCollectionPage buildFromResponse(final DeviceAndAppManagementAssignmentFilterCollectionResponse response) {
         final IDeviceAndAppManagementAssignmentFilterCollectionRequestBuilder builder;
         if (response.nextLink != null) {

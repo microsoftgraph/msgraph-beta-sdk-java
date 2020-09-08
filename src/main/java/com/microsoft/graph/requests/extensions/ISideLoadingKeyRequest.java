@@ -80,6 +80,23 @@ public interface ISideLoadingKeyRequest extends IHttpRequest {
     SideLoadingKey post(final SideLoadingKey newSideLoadingKey) throws ClientException;
 
     /**
+     * Posts a SideLoadingKey with a new object
+     *
+     * @param newSideLoadingKey the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback);
+
+    /**
+     * Posts a SideLoadingKey with a new object
+     *
+     * @param newSideLoadingKey the object to create/update
+     * @return the created SideLoadingKey
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SideLoadingKey put(final SideLoadingKey newSideLoadingKey) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

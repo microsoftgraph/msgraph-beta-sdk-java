@@ -112,6 +112,27 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
     }
 
     /**
+     * Creates a SensitiveType with a new object
+     *
+     * @param newSensitiveType the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback) {
+        send(HttpMethod.PUT, callback, newSensitiveType);
+    }
+
+    /**
+     * Creates a SensitiveType with a new object
+     *
+     * @param newSensitiveType the object to create/update
+     * @return the created SensitiveType
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SensitiveType put(final SensitiveType newSensitiveType) throws ClientException {
+        return send(HttpMethod.PUT, newSensitiveType);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -13,10 +13,10 @@ import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import java.util.Arrays;
@@ -48,13 +48,13 @@ public interface IOutlookUserRequestBuilder extends IRequestBuilder {
 
     IOutlookCategoryRequestBuilder masterCategories(final String id);
 
-    IOutlookTaskGroupCollectionRequestBuilder taskGroups();
-
-    IOutlookTaskGroupRequestBuilder taskGroups(final String id);
-
     IOutlookTaskFolderCollectionRequestBuilder taskFolders();
 
     IOutlookTaskFolderRequestBuilder taskFolders(final String id);
+
+    IOutlookTaskGroupCollectionRequestBuilder taskGroups();
+
+    IOutlookTaskGroupRequestBuilder taskGroups(final String id);
 
     IOutlookTaskCollectionRequestBuilder tasks();
 

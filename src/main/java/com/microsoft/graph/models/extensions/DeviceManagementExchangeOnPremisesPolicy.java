@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessLevel;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeAccessRule;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessLevel;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeDeviceClass;
 import com.microsoft.graph.models.extensions.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.extensions.Entity;
@@ -31,12 +31,12 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
 
 
     /**
-     * The Notification Content.
-     * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
+     * The Access Rules.
+     * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
      */
-    @SerializedName("notificationContent")
+    @SerializedName("accessRules")
     @Expose
-    public byte[] notificationContent;
+    public java.util.List<DeviceManagementExchangeAccessRule> accessRules;
 
     /**
      * The Default Access Level.
@@ -47,20 +47,20 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     public DeviceManagementExchangeAccessLevel defaultAccessLevel;
 
     /**
-     * The Access Rules.
-     * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
-     */
-    @SerializedName("accessRules")
-    @Expose
-    public java.util.List<DeviceManagementExchangeAccessRule> accessRules;
-
-    /**
      * The Known Device Classes.
      * The list of device classes known to Exchange
      */
     @SerializedName("knownDeviceClasses")
     @Expose
     public java.util.List<DeviceManagementExchangeDeviceClass> knownDeviceClasses;
+
+    /**
+     * The Notification Content.
+     * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
+     */
+    @SerializedName("notificationContent")
+    @Expose
+    public byte[] notificationContent;
 
     /**
      * The Conditional Access Settings.

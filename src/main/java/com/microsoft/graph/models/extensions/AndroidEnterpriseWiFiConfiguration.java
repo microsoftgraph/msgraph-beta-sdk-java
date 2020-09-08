@@ -8,12 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AndroidEapType;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.AndroidEapType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForPeap;
-import com.microsoft.graph.models.extensions.AndroidTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
+import com.microsoft.graph.models.extensions.AndroidTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.AndroidWiFiConfiguration;
 
 
@@ -33,20 +33,20 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
 
 
     /**
-     * The Eap Type.
-     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-     */
-    @SerializedName("eapType")
-    @Expose
-    public AndroidEapType eapType;
-
-    /**
      * The Authentication Method.
      * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
      */
     @SerializedName("authenticationMethod")
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
+
+    /**
+     * The Eap Type.
+     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+     */
+    @SerializedName("eapType")
+    @Expose
+    public AndroidEapType eapType;
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
@@ -73,14 +73,6 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     public String outerIdentityPrivacyTemporaryValue;
 
     /**
-     * The Username Format String.
-     * Username format string used to build the username to connect to wifi
-     */
-    @SerializedName("usernameFormatString")
-    @Expose
-    public String usernameFormatString;
-
-    /**
      * The Password Format String.
      * Password format string used to build the password to connect to wifi
      */
@@ -97,12 +89,12 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     public String preSharedKey;
 
     /**
-     * The Root Certificate For Server Validation.
-     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
+     * The Username Format String.
+     * Username format string used to build the username to connect to wifi
      */
-    @SerializedName("rootCertificateForServerValidation")
+    @SerializedName("usernameFormatString")
     @Expose
-    public AndroidTrustedRootCertificate rootCertificateForServerValidation;
+    public String usernameFormatString;
 
     /**
      * The Identity Certificate For Client Authentication.
@@ -111,6 +103,14 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     @SerializedName("identityCertificateForClientAuthentication")
     @Expose
     public AndroidCertificateProfileBase identityCertificateForClientAuthentication;
+
+    /**
+     * The Root Certificate For Server Validation.
+     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
+     */
+    @SerializedName("rootCertificateForServerValidation")
+    @Expose
+    public AndroidTrustedRootCertificate rootCertificateForServerValidation;
 
 
     /**

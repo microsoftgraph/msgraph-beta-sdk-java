@@ -38,6 +38,13 @@ public interface IEducationSchoolRequestBuilder extends IRequestBuilder {
     IEducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for AdministrativeUnit
+     *
+     * @return the IAdministrativeUnitWithReferenceRequestBuilder instance
+     */
+    IAdministrativeUnitWithReferenceRequestBuilder administrativeUnit();
+
     IEducationClassCollectionWithReferencesRequestBuilder classes();
 
     IEducationClassWithReferenceRequestBuilder classes(final String id);
@@ -45,12 +52,5 @@ public interface IEducationSchoolRequestBuilder extends IRequestBuilder {
     IEducationUserCollectionWithReferencesRequestBuilder users();
 
     IEducationUserWithReferenceRequestBuilder users(final String id);
-
-    /**
-     * Gets the request builder for AdministrativeUnit
-     *
-     * @return the IAdministrativeUnitWithReferenceRequestBuilder instance
-     */
-    IAdministrativeUnitWithReferenceRequestBuilder administrativeUnit();
 
 }

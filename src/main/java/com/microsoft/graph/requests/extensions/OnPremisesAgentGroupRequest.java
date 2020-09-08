@@ -120,6 +120,27 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
     }
 
     /**
+     * Creates a OnPremisesAgentGroup with a new object
+     *
+     * @param newOnPremisesAgentGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback) {
+        send(HttpMethod.PUT, callback, newOnPremisesAgentGroup);
+    }
+
+    /**
+     * Creates a OnPremisesAgentGroup with a new object
+     *
+     * @param newOnPremisesAgentGroup the object to create/update
+     * @return the created OnPremisesAgentGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnPremisesAgentGroup put(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException {
+        return send(HttpMethod.PUT, newOnPremisesAgentGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

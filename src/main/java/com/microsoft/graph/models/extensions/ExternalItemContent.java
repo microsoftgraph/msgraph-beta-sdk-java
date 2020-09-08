@@ -37,20 +37,20 @@ public class ExternalItemContent implements IJsonBackedObject {
     }
 
     /**
-     * The Value.
-     * 
-     */
-    @SerializedName("value")
-    @Expose
-    public String value;
-
-    /**
      * The Type.
      * 
      */
     @SerializedName("type")
     @Expose
     public ExternalItemContentType type;
+
+    /**
+     * The Value.
+     * 
+     */
+    @SerializedName("value")
+    @Expose
+    public String value;
 
 
     /**

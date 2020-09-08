@@ -80,6 +80,23 @@ public interface ILongRunningOperationRequest extends IHttpRequest {
     LongRunningOperation post(final LongRunningOperation newLongRunningOperation) throws ClientException;
 
     /**
+     * Posts a LongRunningOperation with a new object
+     *
+     * @param newLongRunningOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback);
+
+    /**
+     * Posts a LongRunningOperation with a new object
+     *
+     * @param newLongRunningOperation the object to create/update
+     * @return the created LongRunningOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    LongRunningOperation put(final LongRunningOperation newLongRunningOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

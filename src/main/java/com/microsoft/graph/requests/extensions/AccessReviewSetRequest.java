@@ -116,6 +116,27 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
     }
 
     /**
+     * Creates a AccessReviewSet with a new object
+     *
+     * @param newAccessReviewSet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReviewSet newAccessReviewSet, final ICallback<AccessReviewSet> callback) {
+        send(HttpMethod.PUT, callback, newAccessReviewSet);
+    }
+
+    /**
+     * Creates a AccessReviewSet with a new object
+     *
+     * @param newAccessReviewSet the object to create/update
+     * @return the created AccessReviewSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReviewSet put(final AccessReviewSet newAccessReviewSet) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReviewSet);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

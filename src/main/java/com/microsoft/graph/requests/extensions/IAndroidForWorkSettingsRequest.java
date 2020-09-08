@@ -80,6 +80,23 @@ public interface IAndroidForWorkSettingsRequest extends IHttpRequest {
     AndroidForWorkSettings post(final AndroidForWorkSettings newAndroidForWorkSettings) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkSettings with a new object
+     *
+     * @param newAndroidForWorkSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkSettings newAndroidForWorkSettings, final ICallback<AndroidForWorkSettings> callback);
+
+    /**
+     * Posts a AndroidForWorkSettings with a new object
+     *
+     * @param newAndroidForWorkSettings the object to create/update
+     * @return the created AndroidForWorkSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkSettings put(final AndroidForWorkSettings newAndroidForWorkSettings) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

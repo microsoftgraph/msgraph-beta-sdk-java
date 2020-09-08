@@ -37,12 +37,12 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     public String accountId;
 
     /**
-     * The Display Name.
-     * Display name for the enrollment profile.
+     * The Created Date Time.
+     * Date time the enrollment profile was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -53,52 +53,12 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     public String description;
 
     /**
-     * The Enrollment Mode.
-     * The enrollment mode of devices that use this enrollment profile.
+     * The Display Name.
+     * Display name for the enrollment profile.
      */
-    @SerializedName("enrollmentMode")
+    @SerializedName("displayName")
     @Expose
-    public AndroidDeviceOwnerEnrollmentMode enrollmentMode;
-
-    /**
-     * The Created Date Time.
-     * Date time the enrollment profile was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * Date time the enrollment profile was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Token Value.
-     * Value of the most recently created token for this enrollment profile.
-     */
-    @SerializedName("tokenValue")
-    @Expose
-    public String tokenValue;
-
-    /**
-     * The Token Creation Date Time.
-     * Date time the most recently created token was created.
-     */
-    @SerializedName("tokenCreationDateTime")
-    @Expose
-    public java.util.Calendar tokenCreationDateTime;
-
-    /**
-     * The Token Expiration Date Time.
-     * Date time the most recently created token will expire.
-     */
-    @SerializedName("tokenExpirationDateTime")
-    @Expose
-    public java.util.Calendar tokenExpirationDateTime;
+    public String displayName;
 
     /**
      * The Enrolled Device Count.
@@ -107,6 +67,22 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     @SerializedName("enrolledDeviceCount")
     @Expose
     public Integer enrolledDeviceCount;
+
+    /**
+     * The Enrollment Mode.
+     * The enrollment mode of devices that use this enrollment profile.
+     */
+    @SerializedName("enrollmentMode")
+    @Expose
+    public AndroidDeviceOwnerEnrollmentMode enrollmentMode;
+
+    /**
+     * The Last Modified Date Time.
+     * Date time the enrollment profile was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Qr Code Content.
@@ -131,6 +107,30 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     @SerializedName("roleScopeTagIds")
     @Expose
     public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The Token Creation Date Time.
+     * Date time the most recently created token was created.
+     */
+    @SerializedName("tokenCreationDateTime")
+    @Expose
+    public java.util.Calendar tokenCreationDateTime;
+
+    /**
+     * The Token Expiration Date Time.
+     * Date time the most recently created token will expire.
+     */
+    @SerializedName("tokenExpirationDateTime")
+    @Expose
+    public java.util.Calendar tokenExpirationDateTime;
+
+    /**
+     * The Token Value.
+     * Value of the most recently created token for this enrollment profile.
+     */
+    @SerializedName("tokenValue")
+    @Expose
+    public String tokenValue;
 
 
     /**

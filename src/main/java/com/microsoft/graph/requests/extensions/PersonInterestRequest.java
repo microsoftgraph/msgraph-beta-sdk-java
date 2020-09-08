@@ -112,6 +112,27 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
     }
 
     /**
+     * Creates a PersonInterest with a new object
+     *
+     * @param newPersonInterest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback) {
+        send(HttpMethod.PUT, callback, newPersonInterest);
+    }
+
+    /**
+     * Creates a PersonInterest with a new object
+     *
+     * @param newPersonInterest the object to create/update
+     * @return the created PersonInterest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PersonInterest put(final PersonInterest newPersonInterest) throws ClientException {
+        return send(HttpMethod.PUT, newPersonInterest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

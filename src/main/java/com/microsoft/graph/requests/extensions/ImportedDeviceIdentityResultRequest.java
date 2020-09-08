@@ -112,6 +112,27 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a ImportedDeviceIdentityResult with a new object
+     *
+     * @param newImportedDeviceIdentityResult the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<ImportedDeviceIdentityResult> callback) {
+        send(HttpMethod.PUT, callback, newImportedDeviceIdentityResult);
+    }
+
+    /**
+     * Creates a ImportedDeviceIdentityResult with a new object
+     *
+     * @param newImportedDeviceIdentityResult the object to create/update
+     * @return the created ImportedDeviceIdentityResult
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ImportedDeviceIdentityResult put(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult) throws ClientException {
+        return send(HttpMethod.PUT, newImportedDeviceIdentityResult);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

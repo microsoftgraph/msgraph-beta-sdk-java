@@ -80,6 +80,23 @@ public interface IWindowsDeliveryOptimizationConfigurationRequest extends IHttpR
     WindowsDeliveryOptimizationConfiguration post(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsDeliveryOptimizationConfiguration with a new object
+     *
+     * @param newWindowsDeliveryOptimizationConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback);
+
+    /**
+     * Posts a WindowsDeliveryOptimizationConfiguration with a new object
+     *
+     * @param newWindowsDeliveryOptimizationConfiguration the object to create/update
+     * @return the created WindowsDeliveryOptimizationConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsDeliveryOptimizationConfiguration put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -75,6 +75,10 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
         return new GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addLanguageFiles"), getClient(), null, groupPolicyUploadedLanguageFiles);
     }
 
+    public IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder remove() {
+        return new GroupPolicyUploadedDefinitionFileRemoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null);
+    }
+
     public IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder removeLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
         return new GroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeLanguageFiles"), getClient(), null, groupPolicyUploadedLanguageFiles);
     }
@@ -85,9 +89,5 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
 
     public IGroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder uploadNewVersion(final byte[] content, final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
         return new GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadNewVersion"), getClient(), null, content, groupPolicyUploadedLanguageFiles);
-    }
-
-    public IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder remove() {
-        return new GroupPolicyUploadedDefinitionFileRemoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null);
     }
 }

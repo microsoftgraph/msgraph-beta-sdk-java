@@ -27,6 +27,14 @@ public class MarkContent extends LabelActionBase implements IJsonBackedObject {
 
 
     /**
+     * The Font Color.
+     * 
+     */
+    @SerializedName("fontColor")
+    @Expose
+    public String fontColor;
+
+    /**
      * The Font Size.
      * 
      */
@@ -41,14 +49,6 @@ public class MarkContent extends LabelActionBase implements IJsonBackedObject {
     @SerializedName("text")
     @Expose
     public String text;
-
-    /**
-     * The Font Color.
-     * 
-     */
-    @SerializedName("fontColor")
-    @Expose
-    public String fontColor;
 
 
     /**

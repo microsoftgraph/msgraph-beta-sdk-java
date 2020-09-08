@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.InternetSiteSecurityLevel;
 import com.microsoft.graph.models.generated.SiteSecurityLevel;
-import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.UpdateClassification;
+import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.WindowsUserAccountControlSettings;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
@@ -112,14 +112,6 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     public Boolean browserBlockSingleWordEntryOnIntranetSites;
 
     /**
-     * The Browser Require Smart Screen.
-     * Indicates whether or not to require the user to use the smart screen filter.
-     */
-    @SerializedName("browserRequireSmartScreen")
-    @Expose
-    public Boolean browserRequireSmartScreen;
-
-    /**
      * The Browser Enterprise Mode Site List Location.
      * The enterprise mode site list location. Could be a local file, local network or http location.
      */
@@ -152,14 +144,6 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     public String browserLoggingReportLocation;
 
     /**
-     * The Browser Require High Security For Restricted Sites.
-     * Indicates whether or not to require high security for restricted sites.
-     */
-    @SerializedName("browserRequireHighSecurityForRestrictedSites")
-    @Expose
-    public Boolean browserRequireHighSecurityForRestrictedSites;
-
-    /**
      * The Browser Require Firewall.
      * Indicates whether or not to require a firewall.
      */
@@ -174,6 +158,22 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName("browserRequireFraudWarning")
     @Expose
     public Boolean browserRequireFraudWarning;
+
+    /**
+     * The Browser Require High Security For Restricted Sites.
+     * Indicates whether or not to require high security for restricted sites.
+     */
+    @SerializedName("browserRequireHighSecurityForRestrictedSites")
+    @Expose
+    public Boolean browserRequireHighSecurityForRestrictedSites;
+
+    /**
+     * The Browser Require Smart Screen.
+     * Indicates whether or not to require the user to use the smart screen filter.
+     */
+    @SerializedName("browserRequireSmartScreen")
+    @Expose
+    public Boolean browserRequireSmartScreen;
 
     /**
      * The Browser Trusted Sites Security Level.
@@ -200,6 +200,14 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     public Boolean diagnosticsBlockDataSubmission;
 
     /**
+     * The Minimum Auto Install Classification.
+     * The minimum update classification to install automatically.
+     */
+    @SerializedName("minimumAutoInstallClassification")
+    @Expose
+    public UpdateClassification minimumAutoInstallClassification;
+
+    /**
      * The Password Block Picture Password And Pin.
      * Indicates whether or not to Block the user from using a pictures password and pin.
      */
@@ -216,6 +224,14 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     public Integer passwordExpirationDays;
 
     /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
+
+    /**
      * The Password Minimum Length.
      * The minimum password length.
      */
@@ -230,14 +246,6 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-
-    /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
 
     /**
      * The Password Previous Password Block Count.
@@ -270,14 +278,6 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName("storageRequireDeviceEncryption")
     @Expose
     public Boolean storageRequireDeviceEncryption;
-
-    /**
-     * The Minimum Auto Install Classification.
-     * The minimum update classification to install automatically.
-     */
-    @SerializedName("minimumAutoInstallClassification")
-    @Expose
-    public UpdateClassification minimumAutoInstallClassification;
 
     /**
      * The Updates Minimum Auto Install Classification.

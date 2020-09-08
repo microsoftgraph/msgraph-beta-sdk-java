@@ -80,6 +80,23 @@ public interface IExactMatchSessionRequest extends IHttpRequest {
     ExactMatchSession post(final ExactMatchSession newExactMatchSession) throws ClientException;
 
     /**
+     * Posts a ExactMatchSession with a new object
+     *
+     * @param newExactMatchSession the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback);
+
+    /**
+     * Posts a ExactMatchSession with a new object
+     *
+     * @param newExactMatchSession the object to create/update
+     * @return the created ExactMatchSession
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ExactMatchSession put(final ExactMatchSession newExactMatchSession) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

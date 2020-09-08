@@ -112,6 +112,27 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
     }
 
     /**
+     * Creates a DirectoryDefinition with a new object
+     *
+     * @param newDirectoryDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback) {
+        send(HttpMethod.PUT, callback, newDirectoryDefinition);
+    }
+
+    /**
+     * Creates a DirectoryDefinition with a new object
+     *
+     * @param newDirectoryDefinition the object to create/update
+     * @return the created DirectoryDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DirectoryDefinition put(final DirectoryDefinition newDirectoryDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newDirectoryDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

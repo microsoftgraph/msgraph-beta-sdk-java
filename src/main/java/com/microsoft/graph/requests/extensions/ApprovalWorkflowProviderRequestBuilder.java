@@ -66,18 +66,18 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
     public IBusinessFlowRequestBuilder businessFlows(final String id) {
         return new BusinessFlowRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlows") + "/" + id, getClient(), null);
     }
-    public IGovernancePolicyTemplateCollectionRequestBuilder policyTemplates() {
-        return new GovernancePolicyTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policyTemplates"), getClient(), null);
-    }
-
-    public IGovernancePolicyTemplateRequestBuilder policyTemplates(final String id) {
-        return new GovernancePolicyTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("policyTemplates") + "/" + id, getClient(), null);
-    }
     public IBusinessFlowCollectionRequestBuilder businessFlowsWithRequestsAwaitingMyDecision() {
         return new BusinessFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlowsWithRequestsAwaitingMyDecision"), getClient(), null);
     }
 
     public IBusinessFlowRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(final String id) {
         return new BusinessFlowRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlowsWithRequestsAwaitingMyDecision") + "/" + id, getClient(), null);
+    }
+    public IGovernancePolicyTemplateCollectionRequestBuilder policyTemplates() {
+        return new GovernancePolicyTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policyTemplates"), getClient(), null);
+    }
+
+    public IGovernancePolicyTemplateRequestBuilder policyTemplates(final String id) {
+        return new GovernancePolicyTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("policyTemplates") + "/" + id, getClient(), null);
     }
 }

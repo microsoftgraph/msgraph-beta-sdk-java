@@ -80,6 +80,23 @@ public interface IWindowsCertificateProfileBaseRequest extends IHttpRequest {
     WindowsCertificateProfileBase post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException;
 
     /**
+     * Posts a WindowsCertificateProfileBase with a new object
+     *
+     * @param newWindowsCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback);
+
+    /**
+     * Posts a WindowsCertificateProfileBase with a new object
+     *
+     * @param newWindowsCertificateProfileBase the object to create/update
+     * @return the created WindowsCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsCertificateProfileBase put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

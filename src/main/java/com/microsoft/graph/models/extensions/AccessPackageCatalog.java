@@ -8,15 +8,15 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AccessPackageResource;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
+import com.microsoft.graph.models.extensions.AccessPackageResource;
 import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
 import com.microsoft.graph.models.extensions.AccessPackage;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionResponse;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionPage;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionResponse;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageCollectionResponse;
@@ -39,30 +39,6 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Catalog Type.
-     * 
-     */
-    @SerializedName("catalogType")
-    @Expose
-    public String catalogType;
-
-    /**
      * The Catalog Status.
      * 
      */
@@ -71,12 +47,12 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     public String catalogStatus;
 
     /**
-     * The Is Externally Visible.
+     * The Catalog Type.
      * 
      */
-    @SerializedName("isExternallyVisible")
+    @SerializedName("catalogType")
     @Expose
-    public Boolean isExternallyVisible;
+    public String catalogType;
 
     /**
      * The Created By.
@@ -95,6 +71,30 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Is Externally Visible.
+     * 
+     */
+    @SerializedName("isExternallyVisible")
+    @Expose
+    public Boolean isExternallyVisible;
+
+    /**
      * The Modified By.
      * 
      */
@@ -111,16 +111,16 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     public java.util.Calendar modifiedDateTime;
 
     /**
-     * The Access Package Resources.
-     * 
-     */
-    public AccessPackageResourceCollectionPage accessPackageResources;
-
-    /**
      * The Access Package Resource Roles.
      * 
      */
     public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
+
+    /**
+     * The Access Package Resources.
+     * 
+     */
+    public AccessPackageResourceCollectionPage accessPackageResources;
 
     /**
      * The Access Package Resource Scopes.
@@ -174,22 +174,6 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("accessPackageResources")) {
-            final AccessPackageResourceCollectionResponse response = new AccessPackageResourceCollectionResponse();
-            if (json.has("accessPackageResources@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResources@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResources").toString(), JsonObject[].class);
-            final AccessPackageResource[] array = new AccessPackageResource[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResource.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResources = new AccessPackageResourceCollectionPage(response, null);
-        }
-
         if (json.has("accessPackageResourceRoles")) {
             final AccessPackageResourceRoleCollectionResponse response = new AccessPackageResourceRoleCollectionResponse();
             if (json.has("accessPackageResourceRoles@odata.nextLink")) {
@@ -204,6 +188,22 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             accessPackageResourceRoles = new AccessPackageResourceRoleCollectionPage(response, null);
+        }
+
+        if (json.has("accessPackageResources")) {
+            final AccessPackageResourceCollectionResponse response = new AccessPackageResourceCollectionResponse();
+            if (json.has("accessPackageResources@odata.nextLink")) {
+                response.nextLink = json.get("accessPackageResources@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResources").toString(), JsonObject[].class);
+            final AccessPackageResource[] array = new AccessPackageResource[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResource.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            accessPackageResources = new AccessPackageResourceCollectionPage(response, null);
         }
 
         if (json.has("accessPackageResourceScopes")) {

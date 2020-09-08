@@ -62,14 +62,14 @@ public class DeviceManagementIntentUserStateCollectionRequest extends BaseCollec
     public void post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState, final ICallback<DeviceManagementIntentUserState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentUserStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentUserState, callback);
     }
 
     public DeviceManagementIntentUserState post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementIntentUserStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentUserState);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementIntentUserStateCollectionRequest extends BaseCollec
         return (DeviceManagementIntentUserStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementIntentUserStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementIntentUserStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementIntentUserStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementIntentUserStateCollectionRequest)this;
+    }
     public IDeviceManagementIntentUserStateCollectionPage buildFromResponse(final DeviceManagementIntentUserStateCollectionResponse response) {
         final IDeviceManagementIntentUserStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ParticipantInfo;
-import com.microsoft.graph.models.extensions.RecordingInfo;
 import com.microsoft.graph.models.extensions.MediaStream;
+import com.microsoft.graph.models.extensions.RecordingInfo;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -38,12 +38,20 @@ public class Participant extends Entity implements IJsonBackedObject {
     public ParticipantInfo info;
 
     /**
-     * The Recording Info.
-     * Information about whether the participant has recording capability.
+     * The Is In Lobby.
+     * true if the participant is in lobby.
      */
-    @SerializedName("recordingInfo")
+    @SerializedName("isInLobby")
     @Expose
-    public RecordingInfo recordingInfo;
+    public Boolean isInLobby;
+
+    /**
+     * The Is Muted.
+     * true if the participant is muted (client or server muted).
+     */
+    @SerializedName("isMuted")
+    @Expose
+    public Boolean isMuted;
 
     /**
      * The Media Streams.
@@ -62,20 +70,12 @@ public class Participant extends Entity implements IJsonBackedObject {
     public String metadata;
 
     /**
-     * The Is Muted.
-     * true if the participant is muted (client or server muted).
+     * The Recording Info.
+     * Information about whether the participant has recording capability.
      */
-    @SerializedName("isMuted")
+    @SerializedName("recordingInfo")
     @Expose
-    public Boolean isMuted;
-
-    /**
-     * The Is In Lobby.
-     * true if the participant is in lobby.
-     */
-    @SerializedName("isInLobby")
-    @Expose
-    public Boolean isInLobby;
+    public RecordingInfo recordingInfo;
 
 
     /**

@@ -116,6 +116,27 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a AndroidScepCertificateProfile with a new object
+     *
+     * @param newAndroidScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<AndroidScepCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidScepCertificateProfile);
+    }
+
+    /**
+     * Creates a AndroidScepCertificateProfile with a new object
+     *
+     * @param newAndroidScepCertificateProfile the object to create/update
+     * @return the created AndroidScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidScepCertificateProfile put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidScepCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

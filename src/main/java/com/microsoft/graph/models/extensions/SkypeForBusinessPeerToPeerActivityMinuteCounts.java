@@ -35,22 +35,6 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
     public Long audio;
 
     /**
-     * The Video.
-     * 
-     */
-    @SerializedName("video")
-    @Expose
-    public Long video;
-
-    /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
      * The Report Date.
      * 
      */
@@ -65,6 +49,22 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCounts extends Entity imple
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Video.
+     * 
+     */
+    @SerializedName("video")
+    @Expose
+    public Long video;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationValueTextRequest extends IHttpRequest {
     GroupPolicyPresentationValueText post(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationValueText with a new object
+     *
+     * @param newGroupPolicyPresentationValueText the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText, final ICallback<GroupPolicyPresentationValueText> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationValueText with a new object
+     *
+     * @param newGroupPolicyPresentationValueText the object to create/update
+     * @return the created GroupPolicyPresentationValueText
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationValueText put(final GroupPolicyPresentationValueText newGroupPolicyPresentationValueText) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

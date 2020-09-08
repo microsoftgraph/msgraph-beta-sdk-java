@@ -62,14 +62,14 @@ public class Windows81TrustedRootCertificateCollectionRequest extends BaseCollec
     public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new Windows81TrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindows81TrustedRootCertificate, callback);
     }
 
     public Windows81TrustedRootCertificate post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new Windows81TrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindows81TrustedRootCertificate);
     }
 
@@ -106,6 +106,27 @@ public class Windows81TrustedRootCertificateCollectionRequest extends BaseCollec
         return (Windows81TrustedRootCertificateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindows81TrustedRootCertificateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (Windows81TrustedRootCertificateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindows81TrustedRootCertificateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindows81TrustedRootCertificateCollectionRequest)this;
+    }
     public IWindows81TrustedRootCertificateCollectionPage buildFromResponse(final Windows81TrustedRootCertificateCollectionResponse response) {
         final IWindows81TrustedRootCertificateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

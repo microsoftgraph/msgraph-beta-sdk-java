@@ -14,10 +14,10 @@ import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionReq
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitiveTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
@@ -26,10 +26,10 @@ import com.microsoft.graph.requests.extensions.ITextClassificationRequestCollect
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitiveTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
@@ -139,6 +139,27 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      */
     public DataClassificationService post(final DataClassificationService newDataClassificationService) throws ClientException {
         return send(HttpMethod.POST, newDataClassificationService);
+    }
+
+    /**
+     * Creates a DataClassificationService with a new object
+     *
+     * @param newDataClassificationService the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DataClassificationService newDataClassificationService, final ICallback<DataClassificationService> callback) {
+        send(HttpMethod.PUT, callback, newDataClassificationService);
+    }
+
+    /**
+     * Creates a DataClassificationService with a new object
+     *
+     * @param newDataClassificationService the object to create/update
+     * @return the created DataClassificationService
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DataClassificationService put(final DataClassificationService newDataClassificationService) throws ClientException {
+        return send(HttpMethod.PUT, newDataClassificationService);
     }
 
     /**

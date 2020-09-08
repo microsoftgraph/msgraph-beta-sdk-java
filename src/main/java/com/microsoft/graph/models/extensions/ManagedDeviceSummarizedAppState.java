@@ -37,20 +37,20 @@ public class ManagedDeviceSummarizedAppState implements IJsonBackedObject {
     }
 
     /**
-     * The Summarized App State.
-     * runState for the object
-     */
-    @SerializedName("summarizedAppState")
-    @Expose
-    public RunState summarizedAppState;
-
-    /**
      * The Device Id.
      * DeviceId of device represented by this object
      */
     @SerializedName("deviceId")
     @Expose
     public String deviceId;
+
+    /**
+     * The Summarized App State.
+     * runState for the object
+     */
+    @SerializedName("summarizedAppState")
+    @Expose
+    public RunState summarizedAppState;
 
 
     /**

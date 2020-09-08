@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
@@ -128,6 +128,27 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      */
     public IosLobAppProvisioningConfiguration post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosLobAppProvisioningConfiguration);
+    }
+
+    /**
+     * Creates a IosLobAppProvisioningConfiguration with a new object
+     *
+     * @param newIosLobAppProvisioningConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<IosLobAppProvisioningConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosLobAppProvisioningConfiguration);
+    }
+
+    /**
+     * Creates a IosLobAppProvisioningConfiguration with a new object
+     *
+     * @param newIosLobAppProvisioningConfiguration the object to create/update
+     * @return the created IosLobAppProvisioningConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosLobAppProvisioningConfiguration put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosLobAppProvisioningConfiguration);
     }
 
     /**

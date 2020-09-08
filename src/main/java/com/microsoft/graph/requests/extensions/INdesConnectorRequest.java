@@ -80,6 +80,23 @@ public interface INdesConnectorRequest extends IHttpRequest {
     NdesConnector post(final NdesConnector newNdesConnector) throws ClientException;
 
     /**
+     * Posts a NdesConnector with a new object
+     *
+     * @param newNdesConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final NdesConnector newNdesConnector, final ICallback<NdesConnector> callback);
+
+    /**
+     * Posts a NdesConnector with a new object
+     *
+     * @param newNdesConnector the object to create/update
+     * @return the created NdesConnector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    NdesConnector put(final NdesConnector newNdesConnector) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

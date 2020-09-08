@@ -80,6 +80,23 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequest exten
     SkypeForBusinessDeviceUsageDistributionUserCounts post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException;
 
     /**
+     * Posts a SkypeForBusinessDeviceUsageDistributionUserCounts with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback);
+
+    /**
+     * Posts a SkypeForBusinessDeviceUsageDistributionUserCounts with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
+     * @return the created SkypeForBusinessDeviceUsageDistributionUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SkypeForBusinessDeviceUsageDistributionUserCounts put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

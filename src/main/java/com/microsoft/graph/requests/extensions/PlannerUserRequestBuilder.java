@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -63,19 +63,12 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
     }
 
 
-    public IPlannerTaskCollectionRequestBuilder tasks() {
-        return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public IPlannerDeltaCollectionRequestBuilder all() {
+        return new PlannerDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("all"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder tasks(final String id) {
-        return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
-    }
-    public IPlannerPlanCollectionRequestBuilder plans() {
-        return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
-    }
-
-    public IPlannerPlanRequestBuilder plans(final String id) {
-        return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    public IPlannerDeltaRequestBuilder all(final String id) {
+        return new PlannerDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("all") + "/" + id, getClient(), null);
     }
     public IPlannerPlanCollectionWithReferencesRequestBuilder favoritePlans() {
         return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("favoritePlans"), getClient(), null);
@@ -84,6 +77,13 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
     public IPlannerPlanWithReferenceRequestBuilder favoritePlans(final String id) {
         return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("favoritePlans") + "/" + id, getClient(), null);
     }
+    public IPlannerPlanCollectionRequestBuilder plans() {
+        return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
+    }
+
+    public IPlannerPlanRequestBuilder plans(final String id) {
+        return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    }
     public IPlannerPlanCollectionWithReferencesRequestBuilder recentPlans() {
         return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("recentPlans"), getClient(), null);
     }
@@ -91,11 +91,11 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
     public IPlannerPlanWithReferenceRequestBuilder recentPlans(final String id) {
         return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("recentPlans") + "/" + id, getClient(), null);
     }
-    public IPlannerDeltaCollectionRequestBuilder all() {
-        return new PlannerDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("all"), getClient(), null);
+    public IPlannerTaskCollectionRequestBuilder tasks() {
+        return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerDeltaRequestBuilder all(final String id) {
-        return new PlannerDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("all") + "/" + id, getClient(), null);
+    public IPlannerTaskRequestBuilder tasks(final String id) {
+        return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

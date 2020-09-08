@@ -27,20 +27,12 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Service Display Name.
-     * The display name of the service work flow
+     * The Grant Date Time.
+     * The time consent was granted for this account
      */
-    @SerializedName("serviceDisplayName")
+    @SerializedName("grantDateTime")
     @Expose
-    public String serviceDisplayName;
-
-    /**
-     * The Terms Url.
-     * The TermsUrl for the data sharing consent
-     */
-    @SerializedName("termsUrl")
-    @Expose
-    public String termsUrl;
+    public java.util.Calendar grantDateTime;
 
     /**
      * The Granted.
@@ -49,14 +41,6 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
     @SerializedName("granted")
     @Expose
     public Boolean granted;
-
-    /**
-     * The Grant Date Time.
-     * The time consent was granted for this account
-     */
-    @SerializedName("grantDateTime")
-    @Expose
-    public java.util.Calendar grantDateTime;
 
     /**
      * The Granted By Upn.
@@ -73,6 +57,22 @@ public class DataSharingConsent extends Entity implements IJsonBackedObject {
     @SerializedName("grantedByUserId")
     @Expose
     public String grantedByUserId;
+
+    /**
+     * The Service Display Name.
+     * The display name of the service work flow
+     */
+    @SerializedName("serviceDisplayName")
+    @Expose
+    public String serviceDisplayName;
+
+    /**
+     * The Terms Url.
+     * The TermsUrl for the data sharing consent
+     */
+    @SerializedName("termsUrl")
+    @Expose
+    public String termsUrl;
 
 
     /**

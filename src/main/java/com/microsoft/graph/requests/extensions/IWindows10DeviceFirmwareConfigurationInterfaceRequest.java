@@ -80,6 +80,23 @@ public interface IWindows10DeviceFirmwareConfigurationInterfaceRequest extends I
     Windows10DeviceFirmwareConfigurationInterface post(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException;
 
     /**
+     * Posts a Windows10DeviceFirmwareConfigurationInterface with a new object
+     *
+     * @param newWindows10DeviceFirmwareConfigurationInterface the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<Windows10DeviceFirmwareConfigurationInterface> callback);
+
+    /**
+     * Posts a Windows10DeviceFirmwareConfigurationInterface with a new object
+     *
+     * @param newWindows10DeviceFirmwareConfigurationInterface the object to create/update
+     * @return the created Windows10DeviceFirmwareConfigurationInterface
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10DeviceFirmwareConfigurationInterface put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

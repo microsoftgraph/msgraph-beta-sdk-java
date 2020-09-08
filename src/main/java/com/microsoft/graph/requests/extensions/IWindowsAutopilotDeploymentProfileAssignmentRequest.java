@@ -80,6 +80,23 @@ public interface IWindowsAutopilotDeploymentProfileAssignmentRequest extends IHt
     WindowsAutopilotDeploymentProfileAssignment post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment) throws ClientException;
 
     /**
+     * Posts a WindowsAutopilotDeploymentProfileAssignment with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfileAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback);
+
+    /**
+     * Posts a WindowsAutopilotDeploymentProfileAssignment with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfileAssignment the object to create/update
+     * @return the created WindowsAutopilotDeploymentProfileAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsAutopilotDeploymentProfileAssignment put(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      */
     public ChatMessage post(final ChatMessage newChatMessage) throws ClientException {
         return send(HttpMethod.POST, newChatMessage);
+    }
+
+    /**
+     * Creates a ChatMessage with a new object
+     *
+     * @param newChatMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
+        send(HttpMethod.PUT, callback, newChatMessage);
+    }
+
+    /**
+     * Creates a ChatMessage with a new object
+     *
+     * @param newChatMessage the object to create/update
+     * @return the created ChatMessage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ChatMessage put(final ChatMessage newChatMessage) throws ClientException {
+        return send(HttpMethod.PUT, newChatMessage);
     }
 
     /**

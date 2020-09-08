@@ -116,6 +116,27 @@ public class AndroidImportedPFXCertificateProfileRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a AndroidImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidImportedPFXCertificateProfile newAndroidImportedPFXCertificateProfile, final ICallback<AndroidImportedPFXCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidImportedPFXCertificateProfile);
+    }
+
+    /**
+     * Creates a AndroidImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidImportedPFXCertificateProfile the object to create/update
+     * @return the created AndroidImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidImportedPFXCertificateProfile put(final AndroidImportedPFXCertificateProfile newAndroidImportedPFXCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidImportedPFXCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -38,38 +38,6 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
     }
 
     /**
-     * The User Id.
-     * UserId associated with the action.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The Managed Device Id.
-     * DeviceId associated with the action.
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
-     * The Total Licenses Count.
-     * A count of the number of licenses for which revoke was attempted.
-     */
-    @SerializedName("totalLicensesCount")
-    @Expose
-    public Integer totalLicensesCount;
-
-    /**
-     * The Failed Licenses Count.
-     * A count of the number of licenses for which revoke failed.
-     */
-    @SerializedName("failedLicensesCount")
-    @Expose
-    public Integer failedLicensesCount;
-
-    /**
      * The Action Failure Reason.
      * The reason for the revoke licenses action failure.
      */
@@ -94,12 +62,12 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
     public ActionState actionState;
 
     /**
-     * The Start Date Time.
-     * Time the action was initiated
+     * The Failed Licenses Count.
+     * A count of the number of licenses for which revoke failed.
      */
-    @SerializedName("startDateTime")
+    @SerializedName("failedLicensesCount")
     @Expose
-    public java.util.Calendar startDateTime;
+    public Integer failedLicensesCount;
 
     /**
      * The Last Updated Date Time.
@@ -108,6 +76,38 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
     @SerializedName("lastUpdatedDateTime")
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
+
+    /**
+     * The Managed Device Id.
+     * DeviceId associated with the action.
+     */
+    @SerializedName("managedDeviceId")
+    @Expose
+    public String managedDeviceId;
+
+    /**
+     * The Start Date Time.
+     * Time the action was initiated
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Total Licenses Count.
+     * A count of the number of licenses for which revoke was attempted.
+     */
+    @SerializedName("totalLicensesCount")
+    @Expose
+    public Integer totalLicensesCount;
+
+    /**
+     * The User Id.
+     * UserId associated with the action.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

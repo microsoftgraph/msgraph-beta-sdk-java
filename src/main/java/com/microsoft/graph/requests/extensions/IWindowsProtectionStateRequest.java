@@ -80,6 +80,23 @@ public interface IWindowsProtectionStateRequest extends IHttpRequest {
     WindowsProtectionState post(final WindowsProtectionState newWindowsProtectionState) throws ClientException;
 
     /**
+     * Posts a WindowsProtectionState with a new object
+     *
+     * @param newWindowsProtectionState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsProtectionState newWindowsProtectionState, final ICallback<WindowsProtectionState> callback);
+
+    /**
+     * Posts a WindowsProtectionState with a new object
+     *
+     * @param newWindowsProtectionState the object to create/update
+     * @return the created WindowsProtectionState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsProtectionState put(final WindowsProtectionState newWindowsProtectionState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

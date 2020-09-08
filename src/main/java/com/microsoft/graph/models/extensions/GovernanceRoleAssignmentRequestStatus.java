@@ -45,20 +45,20 @@ public class GovernanceRoleAssignmentRequestStatus implements IJsonBackedObject 
     public String status;
 
     /**
-     * The Sub Status.
-     * 
-     */
-    @SerializedName("subStatus")
-    @Expose
-    public String subStatus;
-
-    /**
      * The Status Details.
      * 
      */
     @SerializedName("statusDetails")
     @Expose
     public java.util.List<KeyValue> statusDetails;
+
+    /**
+     * The Sub Status.
+     * 
+     */
+    @SerializedName("subStatus")
+    @Expose
+    public String subStatus;
 
 
     /**

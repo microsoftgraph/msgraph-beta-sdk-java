@@ -80,6 +80,23 @@ public interface IDirectoryDefinitionRequest extends IHttpRequest {
     DirectoryDefinition post(final DirectoryDefinition newDirectoryDefinition) throws ClientException;
 
     /**
+     * Posts a DirectoryDefinition with a new object
+     *
+     * @param newDirectoryDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<DirectoryDefinition> callback);
+
+    /**
+     * Posts a DirectoryDefinition with a new object
+     *
+     * @param newDirectoryDefinition the object to create/update
+     * @return the created DirectoryDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DirectoryDefinition put(final DirectoryDefinition newDirectoryDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

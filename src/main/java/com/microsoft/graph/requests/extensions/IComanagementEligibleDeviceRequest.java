@@ -80,6 +80,23 @@ public interface IComanagementEligibleDeviceRequest extends IHttpRequest {
     ComanagementEligibleDevice post(final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException;
 
     /**
+     * Posts a ComanagementEligibleDevice with a new object
+     *
+     * @param newComanagementEligibleDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback);
+
+    /**
+     * Posts a ComanagementEligibleDevice with a new object
+     *
+     * @param newComanagementEligibleDevice the object to create/update
+     * @return the created ComanagementEligibleDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ComanagementEligibleDevice put(final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

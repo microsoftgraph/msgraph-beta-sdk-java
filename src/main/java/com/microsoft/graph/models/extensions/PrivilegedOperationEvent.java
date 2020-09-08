@@ -27,44 +27,20 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The User Id.
+     * The Additional Information.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName("additionalInformation")
     @Expose
-    public String userId;
+    public String additionalInformation;
 
     /**
-     * The User Name.
+     * The Creation Date Time.
      * 
      */
-    @SerializedName("userName")
+    @SerializedName("creationDateTime")
     @Expose
-    public String userName;
-
-    /**
-     * The User Mail.
-     * 
-     */
-    @SerializedName("userMail")
-    @Expose
-    public String userMail;
-
-    /**
-     * The Role Id.
-     * 
-     */
-    @SerializedName("roleId")
-    @Expose
-    public String roleId;
-
-    /**
-     * The Role Name.
-     * 
-     */
-    @SerializedName("roleName")
-    @Expose
-    public String roleName;
+    public java.util.Calendar creationDateTime;
 
     /**
      * The Expiration Date Time.
@@ -75,12 +51,20 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
     public java.util.Calendar expirationDateTime;
 
     /**
-     * The Creation Date Time.
+     * The Reference Key.
      * 
      */
-    @SerializedName("creationDateTime")
+    @SerializedName("referenceKey")
     @Expose
-    public java.util.Calendar creationDateTime;
+    public String referenceKey;
+
+    /**
+     * The Reference System.
+     * 
+     */
+    @SerializedName("referenceSystem")
+    @Expose
+    public String referenceSystem;
 
     /**
      * The Requestor Id.
@@ -99,14 +83,6 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
     public String requestorName;
 
     /**
-     * The Tenant Id.
-     * 
-     */
-    @SerializedName("tenantId")
-    @Expose
-    public String tenantId;
-
-    /**
      * The Request Type.
      * 
      */
@@ -115,28 +91,52 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
     public String requestType;
 
     /**
-     * The Additional Information.
+     * The Role Id.
      * 
      */
-    @SerializedName("additionalInformation")
+    @SerializedName("roleId")
     @Expose
-    public String additionalInformation;
+    public String roleId;
 
     /**
-     * The Reference Key.
+     * The Role Name.
      * 
      */
-    @SerializedName("referenceKey")
+    @SerializedName("roleName")
     @Expose
-    public String referenceKey;
+    public String roleName;
 
     /**
-     * The Reference System.
+     * The Tenant Id.
      * 
      */
-    @SerializedName("referenceSystem")
+    @SerializedName("tenantId")
     @Expose
-    public String referenceSystem;
+    public String tenantId;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Mail.
+     * 
+     */
+    @SerializedName("userMail")
+    @Expose
+    public String userMail;
+
+    /**
+     * The User Name.
+     * 
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
 
 
     /**

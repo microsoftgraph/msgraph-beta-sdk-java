@@ -38,12 +38,12 @@ public class VpnOnDemandRule implements IJsonBackedObject {
     }
 
     /**
-     * The Ssids.
-     * Network Service Set Identifiers (SSIDs).
+     * The Action.
+     * Action.
      */
-    @SerializedName("ssids")
+    @SerializedName("action")
     @Expose
-    public java.util.List<String> ssids;
+    public VpnOnDemandRuleConnectionAction action;
 
     /**
      * The Dns Search Domains.
@@ -52,22 +52,6 @@ public class VpnOnDemandRule implements IJsonBackedObject {
     @SerializedName("dnsSearchDomains")
     @Expose
     public java.util.List<String> dnsSearchDomains;
-
-    /**
-     * The Probe Url.
-     * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
-     */
-    @SerializedName("probeUrl")
-    @Expose
-    public String probeUrl;
-
-    /**
-     * The Action.
-     * Action.
-     */
-    @SerializedName("action")
-    @Expose
-    public VpnOnDemandRuleConnectionAction action;
 
     /**
      * The Domain Action.
@@ -92,6 +76,22 @@ public class VpnOnDemandRule implements IJsonBackedObject {
     @SerializedName("probeRequiredUrl")
     @Expose
     public String probeRequiredUrl;
+
+    /**
+     * The Probe Url.
+     * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
+     */
+    @SerializedName("probeUrl")
+    @Expose
+    public String probeUrl;
+
+    /**
+     * The Ssids.
+     * Network Service Set Identifiers (SSIDs).
+     */
+    @SerializedName("ssids")
+    @Expose
+    public java.util.List<String> ssids;
 
 
     /**

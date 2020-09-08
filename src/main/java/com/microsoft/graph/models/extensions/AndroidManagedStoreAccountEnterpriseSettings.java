@@ -9,9 +9,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AndroidManagedStoreAccountBindStatus;
-import com.microsoft.graph.models.generated.AndroidManagedStoreAccountAppSyncStatus;
-import com.microsoft.graph.models.generated.AndroidManagedStoreAccountEnrollmentTarget;
 import com.microsoft.graph.models.extensions.AndroidEnrollmentCompanyCode;
+import com.microsoft.graph.models.generated.AndroidManagedStoreAccountEnrollmentTarget;
+import com.microsoft.graph.models.generated.AndroidManagedStoreAccountAppSyncStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -31,12 +31,44 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
 
 
     /**
+     * The Android Device Owner Fully Managed Enrollment Enabled.
+     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
+     */
+    @SerializedName("androidDeviceOwnerFullyManagedEnrollmentEnabled")
+    @Expose
+    public Boolean androidDeviceOwnerFullyManagedEnrollmentEnabled;
+
+    /**
      * The Bind Status.
      * Bind status of the tenant with the Google EMM API
      */
     @SerializedName("bindStatus")
     @Expose
     public AndroidManagedStoreAccountBindStatus bindStatus;
+
+    /**
+     * The Company Codes.
+     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
+     */
+    @SerializedName("companyCodes")
+    @Expose
+    public java.util.List<AndroidEnrollmentCompanyCode> companyCodes;
+
+    /**
+     * The Device Owner Management Enabled.
+     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
+     */
+    @SerializedName("deviceOwnerManagementEnabled")
+    @Expose
+    public Boolean deviceOwnerManagementEnabled;
+
+    /**
+     * The Enrollment Target.
+     * Indicates which users can enroll devices in Android Enterprise device management
+     */
+    @SerializedName("enrollmentTarget")
+    @Expose
+    public AndroidManagedStoreAccountEnrollmentTarget enrollmentTarget;
 
     /**
      * The Last App Sync Date Time.
@@ -55,12 +87,12 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     public AndroidManagedStoreAccountAppSyncStatus lastAppSyncStatus;
 
     /**
-     * The Owner User Principal Name.
-     * Owner UPN that created the enterprise
+     * The Last Modified Date Time.
+     * Last modification time for Android enterprise settings
      */
-    @SerializedName("ownerUserPrincipalName")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public String ownerUserPrincipalName;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Owner Organization Name.
@@ -71,20 +103,12 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     public String ownerOrganizationName;
 
     /**
-     * The Last Modified Date Time.
-     * Last modification time for Android enterprise settings
+     * The Owner User Principal Name.
+     * Owner UPN that created the enterprise
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("ownerUserPrincipalName")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Enrollment Target.
-     * Indicates which users can enroll devices in Android Enterprise device management
-     */
-    @SerializedName("enrollmentTarget")
-    @Expose
-    public AndroidManagedStoreAccountEnrollmentTarget enrollmentTarget;
+    public String ownerUserPrincipalName;
 
     /**
      * The Target Group Ids.
@@ -93,30 +117,6 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     @SerializedName("targetGroupIds")
     @Expose
     public java.util.List<String> targetGroupIds;
-
-    /**
-     * The Device Owner Management Enabled.
-     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-     */
-    @SerializedName("deviceOwnerManagementEnabled")
-    @Expose
-    public Boolean deviceOwnerManagementEnabled;
-
-    /**
-     * The Company Codes.
-     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     */
-    @SerializedName("companyCodes")
-    @Expose
-    public java.util.List<AndroidEnrollmentCompanyCode> companyCodes;
-
-    /**
-     * The Android Device Owner Fully Managed Enrollment Enabled.
-     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
-     */
-    @SerializedName("androidDeviceOwnerFullyManagedEnrollmentEnabled")
-    @Expose
-    public Boolean androidDeviceOwnerFullyManagedEnrollmentEnabled;
 
 
     /**

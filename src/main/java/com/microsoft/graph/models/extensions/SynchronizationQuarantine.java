@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.QuarantineReason;
 import com.microsoft.graph.models.extensions.SynchronizationError;
+import com.microsoft.graph.models.generated.QuarantineReason;
 
 
 import com.google.gson.JsonObject;
@@ -46,6 +46,14 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
     public java.util.Calendar currentBegan;
 
     /**
+     * The Error.
+     * 
+     */
+    @SerializedName("error")
+    @Expose
+    public SynchronizationError error;
+
+    /**
      * The Next Attempt.
      * 
      */
@@ -60,14 +68,6 @@ public class SynchronizationQuarantine implements IJsonBackedObject {
     @SerializedName("reason")
     @Expose
     public QuarantineReason reason;
-
-    /**
-     * The Error.
-     * 
-     */
-    @SerializedName("error")
-    @Expose
-    public SynchronizationError error;
 
     /**
      * The Series Began.

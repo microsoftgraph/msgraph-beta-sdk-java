@@ -10,8 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesQuote;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import java.util.Arrays;
@@ -39,9 +39,12 @@ public interface ISalesQuoteRequestBuilder extends IRequestBuilder {
     ISalesQuoteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISalesQuoteLineCollectionRequestBuilder salesQuoteLines();
-
-    ISalesQuoteLineRequestBuilder salesQuoteLines(final String id);
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    ICurrencyRequestBuilder currency();
 
     /**
      * Gets the request builder for Customer
@@ -51,18 +54,15 @@ public interface ISalesQuoteRequestBuilder extends IRequestBuilder {
     ICustomerRequestBuilder customer();
 
     /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    ICurrencyRequestBuilder currency();
-
-    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     IPaymentTermRequestBuilder paymentTerm();
+
+    ISalesQuoteLineCollectionRequestBuilder salesQuoteLines();
+
+    ISalesQuoteLineRequestBuilder salesQuoteLines(final String id);
 
     /**
      * Gets the request builder for ShipmentMethod

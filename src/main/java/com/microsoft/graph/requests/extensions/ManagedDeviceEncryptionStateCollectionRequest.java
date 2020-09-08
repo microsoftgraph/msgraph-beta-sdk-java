@@ -62,14 +62,14 @@ public class ManagedDeviceEncryptionStateCollectionRequest extends BaseCollectio
     public void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceEncryptionStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceEncryptionState, callback);
     }
 
     public ManagedDeviceEncryptionState post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceEncryptionStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceEncryptionState);
     }
 
@@ -106,6 +106,27 @@ public class ManagedDeviceEncryptionStateCollectionRequest extends BaseCollectio
         return (ManagedDeviceEncryptionStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceEncryptionStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceEncryptionStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceEncryptionStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceEncryptionStateCollectionRequest)this;
+    }
     public IManagedDeviceEncryptionStateCollectionPage buildFromResponse(final ManagedDeviceEncryptionStateCollectionResponse response) {
         final IManagedDeviceEncryptionStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

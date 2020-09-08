@@ -27,30 +27,6 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Web.
-     * 
-     */
-    @SerializedName("web")
-    @Expose
-    public Long web;
-
-    /**
-     * The Windows Phone.
-     * 
-     */
-    @SerializedName("windowsPhone")
-    @Expose
-    public Long windowsPhone;
-
-    /**
      * The Android Phone.
      * 
      */
@@ -75,14 +51,6 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
     public Long mac;
 
     /**
-     * The Windows.
-     * 
-     */
-    @SerializedName("windows")
-    @Expose
-    public Long windows;
-
-    /**
      * The Report Date.
      * 
      */
@@ -97,6 +65,38 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Web.
+     * 
+     */
+    @SerializedName("web")
+    @Expose
+    public Long web;
+
+    /**
+     * The Windows.
+     * 
+     */
+    @SerializedName("windows")
+    @Expose
+    public Long windows;
+
+    /**
+     * The Windows Phone.
+     * 
+     */
+    @SerializedName("windowsPhone")
+    @Expose
+    public Long windowsPhone;
 
 
     /**

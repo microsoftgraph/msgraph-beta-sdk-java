@@ -10,11 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.models.extensions.LabelingOptions;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.ClassificationResult;
+import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -59,4 +59,20 @@ public interface IInformationProtectionLabelCollectionRequest {
      */
     IInformationProtectionLabelCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IInformationProtectionLabelCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IInformationProtectionLabelCollectionRequest skipToken(String skipToken);
 }

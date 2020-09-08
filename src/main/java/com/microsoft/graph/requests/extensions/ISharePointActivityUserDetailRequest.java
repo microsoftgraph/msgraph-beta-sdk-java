@@ -80,6 +80,23 @@ public interface ISharePointActivityUserDetailRequest extends IHttpRequest {
     SharePointActivityUserDetail post(final SharePointActivityUserDetail newSharePointActivityUserDetail) throws ClientException;
 
     /**
+     * Posts a SharePointActivityUserDetail with a new object
+     *
+     * @param newSharePointActivityUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback);
+
+    /**
+     * Posts a SharePointActivityUserDetail with a new object
+     *
+     * @param newSharePointActivityUserDetail the object to create/update
+     * @return the created SharePointActivityUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharePointActivityUserDetail put(final SharePointActivityUserDetail newSharePointActivityUserDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

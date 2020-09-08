@@ -27,54 +27,6 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Visited Page.
-     * 
-     */
-    @SerializedName("visitedPage")
-    @Expose
-    public Long visitedPage;
-
-    /**
-     * The Viewed Or Edited.
-     * 
-     */
-    @SerializedName("viewedOrEdited")
-    @Expose
-    public Long viewedOrEdited;
-
-    /**
-     * The Synced.
-     * 
-     */
-    @SerializedName("synced")
-    @Expose
-    public Long synced;
-
-    /**
-     * The Shared Internally.
-     * 
-     */
-    @SerializedName("sharedInternally")
-    @Expose
-    public Long sharedInternally;
-
-    /**
-     * The Shared Externally.
-     * 
-     */
-    @SerializedName("sharedExternally")
-    @Expose
-    public Long sharedExternally;
-
-    /**
      * The Report Date.
      * 
      */
@@ -89,6 +41,54 @@ public class SharePointActivityUserCounts extends Entity implements IJsonBackedO
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Shared Externally.
+     * 
+     */
+    @SerializedName("sharedExternally")
+    @Expose
+    public Long sharedExternally;
+
+    /**
+     * The Shared Internally.
+     * 
+     */
+    @SerializedName("sharedInternally")
+    @Expose
+    public Long sharedInternally;
+
+    /**
+     * The Synced.
+     * 
+     */
+    @SerializedName("synced")
+    @Expose
+    public Long synced;
+
+    /**
+     * The Viewed Or Edited.
+     * 
+     */
+    @SerializedName("viewedOrEdited")
+    @Expose
+    public Long viewedOrEdited;
+
+    /**
+     * The Visited Page.
+     * 
+     */
+    @SerializedName("visitedPage")
+    @Expose
+    public Long visitedPage;
 
 
     /**

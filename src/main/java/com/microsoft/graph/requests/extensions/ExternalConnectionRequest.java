@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalConnection;
+import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemCollectionRequestBuilder;
@@ -16,10 +20,6 @@ import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionReq
 import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
 import java.util.Arrays;
@@ -123,6 +123,27 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      */
     public ExternalConnection post(final ExternalConnection newExternalConnection) throws ClientException {
         return send(HttpMethod.POST, newExternalConnection);
+    }
+
+    /**
+     * Creates a ExternalConnection with a new object
+     *
+     * @param newExternalConnection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback) {
+        send(HttpMethod.PUT, callback, newExternalConnection);
+    }
+
+    /**
+     * Creates a ExternalConnection with a new object
+     *
+     * @param newExternalConnection the object to create/update
+     * @return the created ExternalConnection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ExternalConnection put(final ExternalConnection newExternalConnection) throws ClientException {
+        return send(HttpMethod.PUT, newExternalConnection);
     }
 
     /**

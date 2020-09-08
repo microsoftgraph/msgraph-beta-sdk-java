@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ItemActivityOLD;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ItemActivityOLDCollectionRequestBuilder extends BaseRequestBuilder implements IItemActivityOLDCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of DriveItem
+     * The request builder for this collection of ListItem
      *
      * @param requestUrl     the request URL
      * @param client         the service client

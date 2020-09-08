@@ -38,6 +38,14 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
     public String changeKey;
 
     /**
+     * The Group Key.
+     * 
+     */
+    @SerializedName("groupKey")
+    @Expose
+    public java.util.UUID groupKey;
+
+    /**
      * The Is Default Group.
      * 
      */
@@ -52,14 +60,6 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
     @SerializedName("name")
     @Expose
     public String name;
-
-    /**
-     * The Group Key.
-     * 
-     */
-    @SerializedName("groupKey")
-    @Expose
-    public java.util.UUID groupKey;
 
     /**
      * The Task Folders.

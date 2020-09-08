@@ -33,8 +33,8 @@ public interface IAuthenticationMethodRequestBuilder extends IRequestBuilder {
      */
     IAuthenticationMethodRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IAuthenticationMethodEnableSmsSignInRequestBuilder enableSmsSignIn();
     IAuthenticationMethodDisableSmsSignInRequestBuilder disableSmsSignIn();
+    IAuthenticationMethodEnableSmsSignInRequestBuilder enableSmsSignIn();
     IAuthenticationMethodResetPasswordRequestBuilder resetPassword(final String newPassword, final Boolean requireChangeOnNextSignIn);
 
 }

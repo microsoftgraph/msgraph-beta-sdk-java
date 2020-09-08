@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceType;
 import com.microsoft.graph.models.generated.ComplianceStatus;
+import com.microsoft.graph.models.generated.DeviceType;
 import com.microsoft.graph.models.generated.ManagementAgentType;
 import com.microsoft.graph.models.generated.ManagedDeviceOwnerType;
 
@@ -40,6 +40,38 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
     }
 
     /**
+     * The Compliance State.
+     * Managed Device ComplianceStatus
+     */
+    @SerializedName("complianceState")
+    @Expose
+    public ComplianceStatus complianceState;
+
+    /**
+     * The Device Compliance Policy Id.
+     * Device Compliance PolicyId
+     */
+    @SerializedName("deviceCompliancePolicyId")
+    @Expose
+    public String deviceCompliancePolicyId;
+
+    /**
+     * The Device Compliance Policy Name.
+     * Device Compliance Policy Name
+     */
+    @SerializedName("deviceCompliancePolicyName")
+    @Expose
+    public String deviceCompliancePolicyName;
+
+    /**
+     * The Device Type.
+     * Managed Device Device Type
+     */
+    @SerializedName("deviceType")
+    @Expose
+    public DeviceType deviceType;
+
+    /**
      * The Id.
      * Key of the entity.
      */
@@ -64,30 +96,6 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
     public String managedDeviceName;
 
     /**
-     * The Device Type.
-     * Managed Device Device Type
-     */
-    @SerializedName("deviceType")
-    @Expose
-    public DeviceType deviceType;
-
-    /**
-     * The Compliance State.
-     * Managed Device ComplianceStatus
-     */
-    @SerializedName("complianceState")
-    @Expose
-    public ComplianceStatus complianceState;
-
-    /**
-     * The Retire After Date Time.
-     * Managed Device Retire After DateTime
-     */
-    @SerializedName("retireAfterDateTime")
-    @Expose
-    public java.util.Calendar retireAfterDateTime;
-
-    /**
      * The Management Agent.
      * Managed Device ManagementAgentType
      */
@@ -104,20 +112,12 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
     public ManagedDeviceOwnerType ownerType;
 
     /**
-     * The Device Compliance Policy Name.
-     * Device Compliance Policy Name
+     * The Retire After Date Time.
+     * Managed Device Retire After DateTime
      */
-    @SerializedName("deviceCompliancePolicyName")
+    @SerializedName("retireAfterDateTime")
     @Expose
-    public String deviceCompliancePolicyName;
-
-    /**
-     * The Device Compliance Policy Id.
-     * Device Compliance PolicyId
-     */
-    @SerializedName("deviceCompliancePolicyId")
-    @Expose
-    public String deviceCompliancePolicyId;
+    public java.util.Calendar retireAfterDateTime;
 
     /**
      * The Role Scope Tag Ids.

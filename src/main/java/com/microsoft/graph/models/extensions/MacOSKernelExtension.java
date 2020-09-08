@@ -36,20 +36,20 @@ public class MacOSKernelExtension implements IJsonBackedObject {
     }
 
     /**
-     * The Team Identifier.
-     * The team identifier that was used to sign the kernel extension.
-     */
-    @SerializedName("teamIdentifier")
-    @Expose
-    public String teamIdentifier;
-
-    /**
      * The Bundle Id.
      * Bundle ID of the kernel extension.
      */
     @SerializedName("bundleId")
     @Expose
     public String bundleId;
+
+    /**
+     * The Team Identifier.
+     * The team identifier that was used to sign the kernel extension.
+     */
+    @SerializedName("teamIdentifier")
+    @Expose
+    public String teamIdentifier;
 
 
     /**

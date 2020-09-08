@@ -112,6 +112,27 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a Office365ServicesUserCounts with a new object
+     *
+     * @param newOffice365ServicesUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<Office365ServicesUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newOffice365ServicesUserCounts);
+    }
+
+    /**
+     * Creates a Office365ServicesUserCounts with a new object
+     *
+     * @param newOffice365ServicesUserCounts the object to create/update
+     * @return the created Office365ServicesUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365ServicesUserCounts put(final Office365ServicesUserCounts newOffice365ServicesUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365ServicesUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

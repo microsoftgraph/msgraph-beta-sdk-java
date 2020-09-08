@@ -9,17 +9,17 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Configuration;
-import com.microsoft.graph.models.extensions.Schema;
+import com.microsoft.graph.models.extensions.ExternalGroup;
 import com.microsoft.graph.models.extensions.ExternalItem;
 import com.microsoft.graph.models.extensions.ConnectionOperation;
-import com.microsoft.graph.models.extensions.ExternalGroup;
+import com.microsoft.graph.models.extensions.Schema;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ExternalGroupCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExternalGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.ExternalItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExternalItemCollectionPage;
 import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.ExternalGroupCollectionResponse;
-import com.microsoft.graph.requests.extensions.ExternalGroupCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,12 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
+     * The Configuration.
      * 
      */
-    @SerializedName("name")
+    @SerializedName("configuration")
     @Expose
-    public String name;
+    public Configuration configuration;
 
     /**
      * The Description.
@@ -54,20 +54,18 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Configuration.
+     * The Name.
      * 
      */
-    @SerializedName("configuration")
+    @SerializedName("name")
     @Expose
-    public Configuration configuration;
+    public String name;
 
     /**
-     * The Schema.
+     * The Groups.
      * 
      */
-    @SerializedName("schema")
-    @Expose
-    public Schema schema;
+    public ExternalGroupCollectionPage groups;
 
     /**
      * The Items.
@@ -82,10 +80,12 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     public ConnectionOperationCollectionPage operations;
 
     /**
-     * The Groups.
+     * The Schema.
      * 
      */
-    public ExternalGroupCollectionPage groups;
+    @SerializedName("schema")
+    @Expose
+    public Schema schema;
 
 
     /**
@@ -127,6 +127,22 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("groups")) {
+            final ExternalGroupCollectionResponse response = new ExternalGroupCollectionResponse();
+            if (json.has("groups@odata.nextLink")) {
+                response.nextLink = json.get("groups@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groups").toString(), JsonObject[].class);
+            final ExternalGroup[] array = new ExternalGroup[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExternalGroup.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            groups = new ExternalGroupCollectionPage(response, null);
+        }
+
         if (json.has("items")) {
             final ExternalItemCollectionResponse response = new ExternalItemCollectionResponse();
             if (json.has("items@odata.nextLink")) {
@@ -157,22 +173,6 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             operations = new ConnectionOperationCollectionPage(response, null);
-        }
-
-        if (json.has("groups")) {
-            final ExternalGroupCollectionResponse response = new ExternalGroupCollectionResponse();
-            if (json.has("groups@odata.nextLink")) {
-                response.nextLink = json.get("groups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groups").toString(), JsonObject[].class);
-            final ExternalGroup[] array = new ExternalGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExternalGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groups = new ExternalGroupCollectionPage(response, null);
         }
     }
 }

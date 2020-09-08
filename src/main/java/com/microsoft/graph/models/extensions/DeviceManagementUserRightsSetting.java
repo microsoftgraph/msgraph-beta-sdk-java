@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.StateManagementSetting;
 import com.microsoft.graph.models.extensions.DeviceManagementUserRightsLocalUserOrGroup;
+import com.microsoft.graph.models.generated.StateManagementSetting;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class DeviceManagementUserRightsSetting implements IJsonBackedObject {
     }
 
     /**
-     * The State.
-     * Representing the current state of this user rights setting
-     */
-    @SerializedName("state")
-    @Expose
-    public StateManagementSetting state;
-
-    /**
      * The Local Users Or Groups.
      * Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
      */
     @SerializedName("localUsersOrGroups")
     @Expose
     public java.util.List<DeviceManagementUserRightsLocalUserOrGroup> localUsersOrGroups;
+
+    /**
+     * The State.
+     * Representing the current state of this user rights setting
+     */
+    @SerializedName("state")
+    @Expose
+    public StateManagementSetting state;
 
 
     /**

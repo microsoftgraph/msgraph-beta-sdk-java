@@ -127,6 +127,27 @@ public class WindowsWifiConfigurationRequest extends BaseRequest implements IWin
     }
 
     /**
+     * Creates a WindowsWifiConfiguration with a new object
+     *
+     * @param newWindowsWifiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsWifiConfiguration newWindowsWifiConfiguration, final ICallback<WindowsWifiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsWifiConfiguration);
+    }
+
+    /**
+     * Creates a WindowsWifiConfiguration with a new object
+     *
+     * @param newWindowsWifiConfiguration the object to create/update
+     * @return the created WindowsWifiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsWifiConfiguration put(final WindowsWifiConfiguration newWindowsWifiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsWifiConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

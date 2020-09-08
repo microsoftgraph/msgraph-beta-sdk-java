@@ -118,6 +118,27 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
     }
 
     /**
+     * Creates a WindowsWifiEnterpriseEAPConfiguration with a new object
+     *
+     * @param newWindowsWifiEnterpriseEAPConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<WindowsWifiEnterpriseEAPConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsWifiEnterpriseEAPConfiguration);
+    }
+
+    /**
+     * Creates a WindowsWifiEnterpriseEAPConfiguration with a new object
+     *
+     * @param newWindowsWifiEnterpriseEAPConfiguration the object to create/update
+     * @return the created WindowsWifiEnterpriseEAPConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsWifiEnterpriseEAPConfiguration put(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsWifiEnterpriseEAPConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

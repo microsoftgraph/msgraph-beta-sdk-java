@@ -30,16 +30,16 @@ public class Approval extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Pending Steps.
-     * 
-     */
-    public ApprovalStepCollectionPage pendingSteps;
-
-    /**
      * The Completed Steps.
      * 
      */
     public ApprovalStepCollectionPage completedSteps;
+
+    /**
+     * The Pending Steps.
+     * 
+     */
+    public ApprovalStepCollectionPage pendingSteps;
 
 
     /**
@@ -81,22 +81,6 @@ public class Approval extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("pendingSteps")) {
-            final ApprovalStepCollectionResponse response = new ApprovalStepCollectionResponse();
-            if (json.has("pendingSteps@odata.nextLink")) {
-                response.nextLink = json.get("pendingSteps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("pendingSteps").toString(), JsonObject[].class);
-            final ApprovalStep[] array = new ApprovalStep[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ApprovalStep.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            pendingSteps = new ApprovalStepCollectionPage(response, null);
-        }
-
         if (json.has("completedSteps")) {
             final ApprovalStepCollectionResponse response = new ApprovalStepCollectionResponse();
             if (json.has("completedSteps@odata.nextLink")) {
@@ -111,6 +95,22 @@ public class Approval extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             completedSteps = new ApprovalStepCollectionPage(response, null);
+        }
+
+        if (json.has("pendingSteps")) {
+            final ApprovalStepCollectionResponse response = new ApprovalStepCollectionResponse();
+            if (json.has("pendingSteps@odata.nextLink")) {
+                response.nextLink = json.get("pendingSteps@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("pendingSteps").toString(), JsonObject[].class);
+            final ApprovalStep[] array = new ApprovalStep[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ApprovalStep.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            pendingSteps = new ApprovalStepCollectionPage(response, null);
         }
     }
 }

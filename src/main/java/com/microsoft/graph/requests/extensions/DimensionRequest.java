@@ -116,6 +116,27 @@ public class DimensionRequest extends BaseRequest implements IDimensionRequest {
     }
 
     /**
+     * Creates a Dimension with a new object
+     *
+     * @param newDimension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Dimension newDimension, final ICallback<Dimension> callback) {
+        send(HttpMethod.PUT, callback, newDimension);
+    }
+
+    /**
+     * Creates a Dimension with a new object
+     *
+     * @param newDimension the object to create/update
+     * @return the created Dimension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Dimension put(final Dimension newDimension) throws ClientException {
+        return send(HttpMethod.PUT, newDimension);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

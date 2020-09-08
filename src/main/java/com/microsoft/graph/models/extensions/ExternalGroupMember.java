@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ExternalGroupMemberType;
 import com.microsoft.graph.models.generated.IdentitySourceType;
+import com.microsoft.graph.models.generated.ExternalGroupMemberType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,20 @@ public class ExternalGroupMember extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public ExternalGroupMemberType type;
-
-    /**
      * The Identity Source.
      * 
      */
     @SerializedName("identitySource")
     @Expose
     public IdentitySourceType identitySource;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public ExternalGroupMemberType type;
 
 
     /**

@@ -8,34 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionRequestBuilder;
@@ -44,6 +20,30 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceR
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationCollectionRequestBuilder;
@@ -151,6 +151,27 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      */
     public EntitlementManagement post(final EntitlementManagement newEntitlementManagement) throws ClientException {
         return send(HttpMethod.POST, newEntitlementManagement);
+    }
+
+    /**
+     * Creates a EntitlementManagement with a new object
+     *
+     * @param newEntitlementManagement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EntitlementManagement newEntitlementManagement, final ICallback<EntitlementManagement> callback) {
+        send(HttpMethod.PUT, callback, newEntitlementManagement);
+    }
+
+    /**
+     * Creates a EntitlementManagement with a new object
+     *
+     * @param newEntitlementManagement the object to create/update
+     * @return the created EntitlementManagement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EntitlementManagement put(final EntitlementManagement newEntitlementManagement) throws ClientException {
+        return send(HttpMethod.PUT, newEntitlementManagement);
     }
 
     /**

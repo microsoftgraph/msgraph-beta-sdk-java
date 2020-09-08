@@ -38,28 +38,12 @@ public class MatchingLabel implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Application Mode.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("applicationMode")
     @Expose
-    public String id;
-
-    /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
+    public ApplicationMode applicationMode;
 
     /**
      * The Description.
@@ -70,20 +54,20 @@ public class MatchingLabel implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Tool Tip.
+     * The Display Name.
      * 
      */
-    @SerializedName("toolTip")
+    @SerializedName("displayName")
     @Expose
-    public String toolTip;
+    public String displayName;
 
     /**
-     * The Policy Tip.
+     * The Id.
      * 
      */
-    @SerializedName("policyTip")
+    @SerializedName("id")
     @Expose
-    public String policyTip;
+    public String id;
 
     /**
      * The Is Endpoint Protection Enabled.
@@ -94,14 +78,6 @@ public class MatchingLabel implements IJsonBackedObject {
     public Boolean isEndpointProtectionEnabled;
 
     /**
-     * The Application Mode.
-     * 
-     */
-    @SerializedName("applicationMode")
-    @Expose
-    public ApplicationMode applicationMode;
-
-    /**
      * The Label Actions.
      * 
      */
@@ -110,12 +86,36 @@ public class MatchingLabel implements IJsonBackedObject {
     public java.util.List<LabelActionBase> labelActions;
 
     /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Policy Tip.
+     * 
+     */
+    @SerializedName("policyTip")
+    @Expose
+    public String policyTip;
+
+    /**
      * The Priority.
      * 
      */
     @SerializedName("priority")
     @Expose
     public Integer priority;
+
+    /**
+     * The Tool Tip.
+     * 
+     */
+    @SerializedName("toolTip")
+    @Expose
+    public String toolTip;
 
 
     /**

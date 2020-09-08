@@ -8,16 +8,16 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -36,14 +36,6 @@ public class Chat extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Topic.
-     * 
-     */
-    @SerializedName("topic")
-    @Expose
-    public String topic;
-
-    /**
      * The Created Date Time.
      * 
      */
@@ -60,6 +52,20 @@ public class Chat extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastUpdatedDateTime;
 
     /**
+     * The Topic.
+     * 
+     */
+    @SerializedName("topic")
+    @Expose
+    public String topic;
+
+    /**
+     * The Installed Apps.
+     * 
+     */
+    public TeamsAppInstallationCollectionPage installedApps;
+
+    /**
      * The Members.
      * 
      */
@@ -70,12 +76,6 @@ public class Chat extends Entity implements IJsonBackedObject {
      * 
      */
     public ChatMessageCollectionPage messages;
-
-    /**
-     * The Installed Apps.
-     * 
-     */
-    public TeamsAppInstallationCollectionPage installedApps;
 
 
     /**
@@ -117,6 +117,22 @@ public class Chat extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("installedApps")) {
+            final TeamsAppInstallationCollectionResponse response = new TeamsAppInstallationCollectionResponse();
+            if (json.has("installedApps@odata.nextLink")) {
+                response.nextLink = json.get("installedApps@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("installedApps").toString(), JsonObject[].class);
+            final TeamsAppInstallation[] array = new TeamsAppInstallation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TeamsAppInstallation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            installedApps = new TeamsAppInstallationCollectionPage(response, null);
+        }
+
         if (json.has("members")) {
             final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
             if (json.has("members@odata.nextLink")) {
@@ -147,22 +163,6 @@ public class Chat extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             messages = new ChatMessageCollectionPage(response, null);
-        }
-
-        if (json.has("installedApps")) {
-            final TeamsAppInstallationCollectionResponse response = new TeamsAppInstallationCollectionResponse();
-            if (json.has("installedApps@odata.nextLink")) {
-                response.nextLink = json.get("installedApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("installedApps").toString(), JsonObject[].class);
-            final TeamsAppInstallation[] array = new TeamsAppInstallation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TeamsAppInstallation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            installedApps = new TeamsAppInstallationCollectionPage(response, null);
         }
     }
 }

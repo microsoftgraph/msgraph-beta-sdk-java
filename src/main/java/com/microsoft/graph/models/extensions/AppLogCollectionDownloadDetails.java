@@ -37,12 +37,12 @@ public class AppLogCollectionDownloadDetails implements IJsonBackedObject {
     }
 
     /**
-     * The Download Url.
-     * Download SAS Url for completed AppLogUploadRequest
+     * The App Log Decryption Algorithm.
+     * DecryptionAlgorithm for Content
      */
-    @SerializedName("downloadUrl")
+    @SerializedName("appLogDecryptionAlgorithm")
     @Expose
-    public String downloadUrl;
+    public AppLogDecryptionAlgorithm appLogDecryptionAlgorithm;
 
     /**
      * The Decryption Key.
@@ -53,12 +53,12 @@ public class AppLogCollectionDownloadDetails implements IJsonBackedObject {
     public String decryptionKey;
 
     /**
-     * The App Log Decryption Algorithm.
-     * DecryptionAlgorithm for Content
+     * The Download Url.
+     * Download SAS Url for completed AppLogUploadRequest
      */
-    @SerializedName("appLogDecryptionAlgorithm")
+    @SerializedName("downloadUrl")
     @Expose
-    public AppLogDecryptionAlgorithm appLogDecryptionAlgorithm;
+    public String downloadUrl;
 
 
     /**

@@ -44,20 +44,20 @@ public class Credential implements IJsonBackedObject {
     public String fieldId;
 
     /**
-     * The Value.
-     * 
-     */
-    @SerializedName("value")
-    @Expose
-    public String value;
-
-    /**
      * The Type.
      * 
      */
     @SerializedName("type")
     @Expose
     public String type;
+
+    /**
+     * The Value.
+     * 
+     */
+    @SerializedName("value")
+    @Expose
+    public String value;
 
 
     /**

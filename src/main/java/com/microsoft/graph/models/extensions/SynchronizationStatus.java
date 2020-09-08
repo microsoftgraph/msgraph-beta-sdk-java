@@ -41,6 +41,14 @@ public class SynchronizationStatus implements IJsonBackedObject {
     }
 
     /**
+     * The Code.
+     * 
+     */
+    @SerializedName("code")
+    @Expose
+    public SynchronizationStatusCode code;
+
+    /**
      * The Count Successive Complete Failures.
      * 
      */
@@ -55,14 +63,6 @@ public class SynchronizationStatus implements IJsonBackedObject {
     @SerializedName("escrowsPruned")
     @Expose
     public Boolean escrowsPruned;
-
-    /**
-     * The Code.
-     * 
-     */
-    @SerializedName("code")
-    @Expose
-    public SynchronizationStatusCode code;
 
     /**
      * The Last Execution.

@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.GroupPolicyCategory;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionPage;
@@ -58,24 +58,10 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Parent.
-     * The parent category
-     */
-    @SerializedName("parent")
-    @Expose
-    public GroupPolicyCategory parent;
-
-    /**
      * The Children.
      * The children categories
      */
     public GroupPolicyCategoryCollectionPage children;
-
-    /**
-     * The Definitions.
-     * The immediate GroupPolicyDefinition children of the category
-     */
-    public GroupPolicyDefinitionCollectionPage definitions;
 
     /**
      * The Definition File.
@@ -84,6 +70,20 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
     @SerializedName("definitionFile")
     @Expose
     public GroupPolicyDefinitionFile definitionFile;
+
+    /**
+     * The Definitions.
+     * The immediate GroupPolicyDefinition children of the category
+     */
+    public GroupPolicyDefinitionCollectionPage definitions;
+
+    /**
+     * The Parent.
+     * The parent category
+     */
+    @SerializedName("parent")
+    @Expose
+    public GroupPolicyCategory parent;
 
 
     /**

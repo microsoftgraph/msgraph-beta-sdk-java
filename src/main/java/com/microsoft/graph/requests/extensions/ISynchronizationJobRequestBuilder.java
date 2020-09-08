@@ -46,9 +46,9 @@ public interface ISynchronizationJobRequestBuilder extends IRequestBuilder {
     ISynchronizationSchemaRequestBuilder schema();
     ISynchronizationJobPauseRequestBuilder pause();
     ISynchronizationJobProvisionOnDemandRequestBuilder provisionOnDemand(final java.util.List<SynchronizationJobApplicationParameters> parameters);
+    ISynchronizationJobRestartRequestBuilder restart(final SynchronizationJobRestartCriteria criteria);
     ISynchronizationJobStartRequestBuilder start();
     ISynchronizationJobStopRequestBuilder stop();
-    ISynchronizationJobRestartRequestBuilder restart(final SynchronizationJobRestartCriteria criteria);
     ISynchronizationJobValidateCredentialsRequestBuilder validateCredentials(final String applicationIdentifier, final String templateId, final Boolean useSavedCredentials, final java.util.List<SynchronizationSecretKeyStringValuePair> credentials);
 
 }

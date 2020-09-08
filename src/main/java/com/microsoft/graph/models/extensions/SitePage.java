@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ContentTypeInfo;
-import com.microsoft.graph.models.extensions.WebPart;
 import com.microsoft.graph.models.extensions.PublicationFacet;
+import com.microsoft.graph.models.extensions.WebPart;
 import com.microsoft.graph.models.extensions.BaseItem;
 
 
@@ -30,14 +30,6 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
 
 
     /**
-     * The Title.
-     * 
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
      * The Content Type.
      * 
      */
@@ -54,20 +46,28 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
     public String pageLayoutType;
 
     /**
-     * The Web Parts.
-     * 
-     */
-    @SerializedName("webParts")
-    @Expose
-    public java.util.List<WebPart> webParts;
-
-    /**
      * The Publishing State.
      * 
      */
     @SerializedName("publishingState")
     @Expose
     public PublicationFacet publishingState;
+
+    /**
+     * The Title.
+     * 
+     */
+    @SerializedName("title")
+    @Expose
+    public String title;
+
+    /**
+     * The Web Parts.
+     * 
+     */
+    @SerializedName("webParts")
+    @Expose
+    public java.util.List<WebPart> webParts;
 
 
     /**

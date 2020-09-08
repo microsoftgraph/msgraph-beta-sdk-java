@@ -14,6 +14,10 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
@@ -22,10 +26,6 @@ import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -80,6 +80,23 @@ public interface IAppleEnrollmentProfileAssignmentRequest extends IHttpRequest {
     AppleEnrollmentProfileAssignment post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment) throws ClientException;
 
     /**
+     * Posts a AppleEnrollmentProfileAssignment with a new object
+     *
+     * @param newAppleEnrollmentProfileAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback);
+
+    /**
+     * Posts a AppleEnrollmentProfileAssignment with a new object
+     *
+     * @param newAppleEnrollmentProfileAssignment the object to create/update
+     * @return the created AppleEnrollmentProfileAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppleEnrollmentProfileAssignment put(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

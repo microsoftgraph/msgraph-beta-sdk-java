@@ -28,6 +28,14 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
 
 
     /**
+     * The Setting Category Id.
+     * The setting category id which this setting belongs to
+     */
+    @SerializedName("settingCategoryId")
+    @Expose
+    public String settingCategoryId;
+
+    /**
      * The Setting Name.
      * The setting name that is being reported
      */
@@ -42,14 +50,6 @@ public class SecurityBaselineSettingState extends Entity implements IJsonBackedO
     @SerializedName("state")
     @Expose
     public SecurityBaselineComplianceState state;
-
-    /**
-     * The Setting Category Id.
-     * The setting category id which this setting belongs to
-     */
-    @SerializedName("settingCategoryId")
-    @Expose
-    public String settingCategoryId;
 
 
     /**

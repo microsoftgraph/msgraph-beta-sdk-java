@@ -30,36 +30,12 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Display Name.
-     * The name.
+     * The Assigned To.
+     * The name or email of the admin this task is assigned to.
      */
-    @SerializedName("displayName")
+    @SerializedName("assignedTo")
     @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * The description.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Created Date Time.
-     * The created date.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Due Date Time.
-     * The due date.
-     */
-    @SerializedName("dueDateTime")
-    @Expose
-    public java.util.Calendar dueDateTime;
+    public String assignedTo;
 
     /**
      * The Category.
@@ -70,12 +46,12 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
     public DeviceAppManagementTaskCategory category;
 
     /**
-     * The Priority.
-     * The priority.
+     * The Created Date Time.
+     * The created date.
      */
-    @SerializedName("priority")
+    @SerializedName("createdDateTime")
     @Expose
-    public DeviceAppManagementTaskPriority priority;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Creator.
@@ -94,12 +70,36 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
     public String creatorNotes;
 
     /**
-     * The Assigned To.
-     * The name or email of the admin this task is assigned to.
+     * The Description.
+     * The description.
      */
-    @SerializedName("assignedTo")
+    @SerializedName("description")
     @Expose
-    public String assignedTo;
+    public String description;
+
+    /**
+     * The Display Name.
+     * The name.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Due Date Time.
+     * The due date.
+     */
+    @SerializedName("dueDateTime")
+    @Expose
+    public java.util.Calendar dueDateTime;
+
+    /**
+     * The Priority.
+     * The priority.
+     */
+    @SerializedName("priority")
+    @Expose
+    public DeviceAppManagementTaskPriority priority;
 
     /**
      * The Status.

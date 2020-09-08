@@ -80,6 +80,23 @@ public interface IPhoneAuthenticationMethodRequest extends IHttpRequest {
     PhoneAuthenticationMethod post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a PhoneAuthenticationMethod with a new object
+     *
+     * @param newPhoneAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<PhoneAuthenticationMethod> callback);
+
+    /**
+     * Posts a PhoneAuthenticationMethod with a new object
+     *
+     * @param newPhoneAuthenticationMethod the object to create/update
+     * @return the created PhoneAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PhoneAuthenticationMethod put(final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

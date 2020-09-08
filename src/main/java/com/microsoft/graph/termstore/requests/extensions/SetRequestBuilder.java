@@ -61,6 +61,13 @@ public class SetRequestBuilder extends BaseRequestBuilder implements ISetRequest
     }
 
 
+    public ITermCollectionRequestBuilder children() {
+        return new TermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
+    }
+
+    public ITermRequestBuilder children(final String id) {
+        return new TermRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Group
@@ -70,13 +77,6 @@ public class SetRequestBuilder extends BaseRequestBuilder implements ISetRequest
     public IGroupRequestBuilder parentGroup() {
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentGroup"), getClient(), null);
     }
-    public ITermCollectionRequestBuilder terms() {
-        return new TermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("terms"), getClient(), null);
-    }
-
-    public ITermRequestBuilder terms(final String id) {
-        return new TermRequestBuilder(getRequestUrlWithAdditionalSegment("terms") + "/" + id, getClient(), null);
-    }
     public IRelationCollectionRequestBuilder relations() {
         return new RelationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relations"), getClient(), null);
     }
@@ -84,11 +84,11 @@ public class SetRequestBuilder extends BaseRequestBuilder implements ISetRequest
     public IRelationRequestBuilder relations(final String id) {
         return new RelationRequestBuilder(getRequestUrlWithAdditionalSegment("relations") + "/" + id, getClient(), null);
     }
-    public ITermCollectionRequestBuilder children() {
-        return new TermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
+    public ITermCollectionRequestBuilder terms() {
+        return new TermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("terms"), getClient(), null);
     }
 
-    public ITermRequestBuilder children(final String id) {
-        return new TermRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
+    public ITermRequestBuilder terms(final String id) {
+        return new TermRequestBuilder(getRequestUrlWithAdditionalSegment("terms") + "/" + id, getClient(), null);
     }
 }

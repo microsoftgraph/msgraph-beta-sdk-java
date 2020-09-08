@@ -80,6 +80,23 @@ public interface IDeviceManagementComplexSettingDefinitionRequest extends IHttpR
     DeviceManagementComplexSettingDefinition post(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition) throws ClientException;
 
     /**
+     * Posts a DeviceManagementComplexSettingDefinition with a new object
+     *
+     * @param newDeviceManagementComplexSettingDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition, final ICallback<DeviceManagementComplexSettingDefinition> callback);
+
+    /**
+     * Posts a DeviceManagementComplexSettingDefinition with a new object
+     *
+     * @param newDeviceManagementComplexSettingDefinition the object to create/update
+     * @return the created DeviceManagementComplexSettingDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementComplexSettingDefinition put(final DeviceManagementComplexSettingDefinition newDeviceManagementComplexSettingDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

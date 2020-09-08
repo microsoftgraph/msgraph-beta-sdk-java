@@ -80,6 +80,23 @@ public interface IItemEmailRequest extends IHttpRequest {
     ItemEmail post(final ItemEmail newItemEmail) throws ClientException;
 
     /**
+     * Posts a ItemEmail with a new object
+     *
+     * @param newItemEmail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ItemEmail newItemEmail, final ICallback<ItemEmail> callback);
+
+    /**
+     * Posts a ItemEmail with a new object
+     *
+     * @param newItemEmail the object to create/update
+     * @return the created ItemEmail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ItemEmail put(final ItemEmail newItemEmail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

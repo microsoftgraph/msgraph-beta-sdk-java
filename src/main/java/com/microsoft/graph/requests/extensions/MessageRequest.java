@@ -9,14 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
@@ -29,6 +21,14 @@ import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -145,6 +145,27 @@ public class MessageRequest extends BaseRequest implements IMessageRequest {
      */
     public Message post(final Message newMessage) throws ClientException {
         return send(HttpMethod.POST, newMessage);
+    }
+
+    /**
+     * Creates a Message with a new object
+     *
+     * @param newMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Message newMessage, final ICallback<Message> callback) {
+        send(HttpMethod.PUT, callback, newMessage);
+    }
+
+    /**
+     * Creates a Message with a new object
+     *
+     * @param newMessage the object to create/update
+     * @return the created Message
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Message put(final Message newMessage) throws ClientException {
+        return send(HttpMethod.PUT, newMessage);
     }
 
     /**

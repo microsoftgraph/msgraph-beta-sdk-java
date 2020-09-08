@@ -28,22 +28,6 @@ public class JournalLine extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Journal Display Name.
-     * 
-     */
-    @SerializedName("journalDisplayName")
-    @Expose
-    public String journalDisplayName;
-
-    /**
-     * The Line Number.
-     * 
-     */
-    @SerializedName("lineNumber")
-    @Expose
-    public Integer lineNumber;
-
-    /**
      * The Account Id.
      * 
      */
@@ -60,12 +44,28 @@ public class JournalLine extends Entity implements IJsonBackedObject {
     public String accountNumber;
 
     /**
-     * The Posting Date.
+     * The Amount.
      * 
      */
-    @SerializedName("postingDate")
+    @SerializedName("amount")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly postingDate;
+    public java.math.BigDecimal amount;
+
+    /**
+     * The Comment.
+     * 
+     */
+    @SerializedName("comment")
+    @Expose
+    public String comment;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
 
     /**
      * The Document Number.
@@ -84,28 +84,12 @@ public class JournalLine extends Entity implements IJsonBackedObject {
     public String externalDocumentNumber;
 
     /**
-     * The Amount.
+     * The Journal Display Name.
      * 
      */
-    @SerializedName("amount")
+    @SerializedName("journalDisplayName")
     @Expose
-    public java.math.BigDecimal amount;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Comment.
-     * 
-     */
-    @SerializedName("comment")
-    @Expose
-    public String comment;
+    public String journalDisplayName;
 
     /**
      * The Last Modified Date Time.
@@ -114,6 +98,22 @@ public class JournalLine extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Line Number.
+     * 
+     */
+    @SerializedName("lineNumber")
+    @Expose
+    public Integer lineNumber;
+
+    /**
+     * The Posting Date.
+     * 
+     */
+    @SerializedName("postingDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly postingDate;
 
     /**
      * The Account.

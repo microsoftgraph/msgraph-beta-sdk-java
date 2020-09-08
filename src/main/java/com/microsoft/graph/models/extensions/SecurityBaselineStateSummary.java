@@ -27,28 +27,12 @@ public class SecurityBaselineStateSummary extends Entity implements IJsonBackedO
 
 
     /**
-     * The Secure Count.
-     * Number of secure devices
+     * The Conflict Count.
+     * Number of conflict devices
      */
-    @SerializedName("secureCount")
+    @SerializedName("conflictCount")
     @Expose
-    public Integer secureCount;
-
-    /**
-     * The Not Secure Count.
-     * Number of not secure devices
-     */
-    @SerializedName("notSecureCount")
-    @Expose
-    public Integer notSecureCount;
-
-    /**
-     * The Unknown Count.
-     * Number of unknown devices
-     */
-    @SerializedName("unknownCount")
-    @Expose
-    public Integer unknownCount;
+    public Integer conflictCount;
 
     /**
      * The Error Count.
@@ -59,20 +43,36 @@ public class SecurityBaselineStateSummary extends Entity implements IJsonBackedO
     public Integer errorCount;
 
     /**
-     * The Conflict Count.
-     * Number of conflict devices
-     */
-    @SerializedName("conflictCount")
-    @Expose
-    public Integer conflictCount;
-
-    /**
      * The Not Applicable Count.
      * Number of not applicable devices
      */
     @SerializedName("notApplicableCount")
     @Expose
     public Integer notApplicableCount;
+
+    /**
+     * The Not Secure Count.
+     * Number of not secure devices
+     */
+    @SerializedName("notSecureCount")
+    @Expose
+    public Integer notSecureCount;
+
+    /**
+     * The Secure Count.
+     * Number of secure devices
+     */
+    @SerializedName("secureCount")
+    @Expose
+    public Integer secureCount;
+
+    /**
+     * The Unknown Count.
+     * Number of unknown devices
+     */
+    @SerializedName("unknownCount")
+    @Expose
+    public Integer unknownCount;
 
 
     /**

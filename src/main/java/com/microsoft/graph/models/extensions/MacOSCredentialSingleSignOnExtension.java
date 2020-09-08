@@ -28,20 +28,12 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
 
 
     /**
-     * The Extension Identifier.
-     * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
+     * The Configurations.
+     * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("extensionIdentifier")
+    @SerializedName("configurations")
     @Expose
-    public String extensionIdentifier;
-
-    /**
-     * The Team Identifier.
-     * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     */
-    @SerializedName("teamIdentifier")
-    @Expose
-    public String teamIdentifier;
+    public java.util.List<KeyTypedValuePair> configurations;
 
     /**
      * The Domains.
@@ -52,6 +44,14 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     public java.util.List<String> domains;
 
     /**
+     * The Extension Identifier.
+     * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
+     */
+    @SerializedName("extensionIdentifier")
+    @Expose
+    public String extensionIdentifier;
+
+    /**
      * The Realm.
      * Gets or sets the case-sensitive realm name for this profile.
      */
@@ -60,12 +60,12 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     public String realm;
 
     /**
-     * The Configurations.
-     * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
+     * The Team Identifier.
+     * Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      */
-    @SerializedName("configurations")
+    @SerializedName("teamIdentifier")
     @Expose
-    public java.util.List<KeyTypedValuePair> configurations;
+    public String teamIdentifier;
 
 
     /**

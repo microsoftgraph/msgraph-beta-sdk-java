@@ -13,12 +13,12 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -80,6 +80,23 @@ public interface IExactMatchJobBaseRequest extends IHttpRequest {
     ExactMatchJobBase post(final ExactMatchJobBase newExactMatchJobBase) throws ClientException;
 
     /**
+     * Posts a ExactMatchJobBase with a new object
+     *
+     * @param newExactMatchJobBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ExactMatchJobBase newExactMatchJobBase, final ICallback<ExactMatchJobBase> callback);
+
+    /**
+     * Posts a ExactMatchJobBase with a new object
+     *
+     * @param newExactMatchJobBase the object to create/update
+     * @return the created ExactMatchJobBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ExactMatchJobBase put(final ExactMatchJobBase newExactMatchJobBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

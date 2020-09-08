@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Print;
-import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -47,21 +47,17 @@ public interface IPrintRequestBuilder extends IRequestBuilder {
     IPrintRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPrintServiceCollectionRequestBuilder services();
-
-    IPrintServiceRequestBuilder services(final String id);
-
-    IPrinterCollectionRequestBuilder printers();
-
-    IPrinterRequestBuilder printers(final String id);
-
     IPrintConnectorCollectionRequestBuilder connectors();
 
     IPrintConnectorRequestBuilder connectors(final String id);
 
-    IPrinterShareCollectionRequestBuilder shares();
+    IPrintOperationCollectionRequestBuilder operations();
 
-    IPrinterShareRequestBuilder shares(final String id);
+    IPrintOperationRequestBuilder operations(final String id);
+
+    IPrinterCollectionRequestBuilder printers();
+
+    IPrinterRequestBuilder printers(final String id);
 
     IPrinterShareCollectionRequestBuilder printerShares();
 
@@ -71,9 +67,13 @@ public interface IPrintRequestBuilder extends IRequestBuilder {
 
     IReportRootRequestBuilder reports(final String id);
 
-    IPrintOperationCollectionRequestBuilder operations();
+    IPrintServiceCollectionRequestBuilder services();
 
-    IPrintOperationRequestBuilder operations(final String id);
+    IPrintServiceRequestBuilder services(final String id);
+
+    IPrinterShareCollectionRequestBuilder shares();
+
+    IPrinterShareRequestBuilder shares(final String id);
 
     IPrintTaskDefinitionCollectionRequestBuilder taskDefinitions();
 

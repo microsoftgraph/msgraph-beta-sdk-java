@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PatternedRecurrence;
 import com.microsoft.graph.models.extensions.AccessReviewApplyAction;
+import com.microsoft.graph.models.extensions.PatternedRecurrence;
 
 
 import com.google.gson.JsonObject;
@@ -38,60 +38,12 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Mail Notifications Enabled.
+     * The Apply Actions.
      * 
      */
-    @SerializedName("mailNotificationsEnabled")
+    @SerializedName("applyActions")
     @Expose
-    public Boolean mailNotificationsEnabled;
-
-    /**
-     * The Reminder Notifications Enabled.
-     * 
-     */
-    @SerializedName("reminderNotificationsEnabled")
-    @Expose
-    public Boolean reminderNotificationsEnabled;
-
-    /**
-     * The Justification Required On Approval.
-     * 
-     */
-    @SerializedName("justificationRequiredOnApproval")
-    @Expose
-    public Boolean justificationRequiredOnApproval;
-
-    /**
-     * The Default Decision Enabled.
-     * 
-     */
-    @SerializedName("defaultDecisionEnabled")
-    @Expose
-    public Boolean defaultDecisionEnabled;
-
-    /**
-     * The Default Decision.
-     * 
-     */
-    @SerializedName("defaultDecision")
-    @Expose
-    public String defaultDecision;
-
-    /**
-     * The Instance Duration In Days.
-     * 
-     */
-    @SerializedName("instanceDurationInDays")
-    @Expose
-    public Integer instanceDurationInDays;
-
-    /**
-     * The Recurrence.
-     * 
-     */
-    @SerializedName("recurrence")
-    @Expose
-    public PatternedRecurrence recurrence;
+    public java.util.List<AccessReviewApplyAction> applyActions;
 
     /**
      * The Auto Apply Decisions Enabled.
@@ -102,12 +54,44 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     public Boolean autoApplyDecisionsEnabled;
 
     /**
-     * The Apply Actions.
+     * The Default Decision.
      * 
      */
-    @SerializedName("applyActions")
+    @SerializedName("defaultDecision")
     @Expose
-    public java.util.List<AccessReviewApplyAction> applyActions;
+    public String defaultDecision;
+
+    /**
+     * The Default Decision Enabled.
+     * 
+     */
+    @SerializedName("defaultDecisionEnabled")
+    @Expose
+    public Boolean defaultDecisionEnabled;
+
+    /**
+     * The Instance Duration In Days.
+     * 
+     */
+    @SerializedName("instanceDurationInDays")
+    @Expose
+    public Integer instanceDurationInDays;
+
+    /**
+     * The Justification Required On Approval.
+     * 
+     */
+    @SerializedName("justificationRequiredOnApproval")
+    @Expose
+    public Boolean justificationRequiredOnApproval;
+
+    /**
+     * The Mail Notifications Enabled.
+     * 
+     */
+    @SerializedName("mailNotificationsEnabled")
+    @Expose
+    public Boolean mailNotificationsEnabled;
 
     /**
      * The Recommendations Enabled.
@@ -116,6 +100,22 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     @SerializedName("recommendationsEnabled")
     @Expose
     public Boolean recommendationsEnabled;
+
+    /**
+     * The Recurrence.
+     * 
+     */
+    @SerializedName("recurrence")
+    @Expose
+    public PatternedRecurrence recurrence;
+
+    /**
+     * The Reminder Notifications Enabled.
+     * 
+     */
+    @SerializedName("reminderNotificationsEnabled")
+    @Expose
+    public Boolean reminderNotificationsEnabled;
 
 
     /**

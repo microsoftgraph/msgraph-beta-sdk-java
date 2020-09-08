@@ -10,14 +10,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -61,19 +61,19 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder i
     }
 
 
-    public IGroupPolicyDefinitionValueCollectionRequestBuilder definitionValues() {
-        return new GroupPolicyDefinitionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues"), getClient(), null);
-    }
-
-    public IGroupPolicyDefinitionValueRequestBuilder definitionValues(final String id) {
-        return new GroupPolicyDefinitionValueRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues") + "/" + id, getClient(), null);
-    }
     public IGroupPolicyConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new GroupPolicyConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     public IGroupPolicyConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new GroupPolicyConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+    public IGroupPolicyDefinitionValueCollectionRequestBuilder definitionValues() {
+        return new GroupPolicyDefinitionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues"), getClient(), null);
+    }
+
+    public IGroupPolicyDefinitionValueRequestBuilder definitionValues(final String id) {
+        return new GroupPolicyDefinitionValueRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues") + "/" + id, getClient(), null);
     }
 
     public IGroupPolicyConfigurationAssignCollectionRequestBuilder assign(final java.util.List<GroupPolicyConfigurationAssignment> assignments) {

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRunSchedule;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,14 +29,6 @@ public class DeviceHealthScriptAssignment extends Entity implements IJsonBackedO
 
 
     /**
-     * The Target.
-     * The Azure Active Directory group we are targeting the script to
-     */
-    @SerializedName("target")
-    @Expose
-    public DeviceAndAppManagementAssignmentTarget target;
-
-    /**
      * The Run Remediation Script.
      * Determine whether we want to run detection script only or run both detection script and remediation script
      */
@@ -51,6 +43,14 @@ public class DeviceHealthScriptAssignment extends Entity implements IJsonBackedO
     @SerializedName("runSchedule")
     @Expose
     public DeviceHealthScriptRunSchedule runSchedule;
+
+    /**
+     * The Target.
+     * The Azure Active Directory group we are targeting the script to
+     */
+    @SerializedName("target")
+    @Expose
+    public DeviceAndAppManagementAssignmentTarget target;
 
 
     /**

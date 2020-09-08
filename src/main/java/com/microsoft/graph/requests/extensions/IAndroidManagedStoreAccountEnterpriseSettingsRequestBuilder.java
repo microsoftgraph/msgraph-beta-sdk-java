@@ -33,11 +33,11 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequestBuilder ext
     IAndroidManagedStoreAccountEnterpriseSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder approveApps(final java.util.List<String> packageIds, final Boolean approveAllPermissions);
-    IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName);
     IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBuilder completeSignup(final String enterpriseToken);
+    IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder createGooglePlayWebToken(final String parentUri);
+    IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName);
+    IAndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder setAndroidDeviceOwnerFullyManagedEnrollmentState(final Boolean enabled);
     IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequestBuilder syncApps();
     IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder unbind();
-    IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder createGooglePlayWebToken(final String parentUri);
-    IAndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder setAndroidDeviceOwnerFullyManagedEnrollmentState(final Boolean enabled);
 
 }

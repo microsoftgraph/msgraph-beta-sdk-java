@@ -112,6 +112,27 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
     }
 
     /**
+     * Creates a DeviceManagementDerivedCredentialSettings with a new object
+     *
+     * @param newDeviceManagementDerivedCredentialSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementDerivedCredentialSettings);
+    }
+
+    /**
+     * Creates a DeviceManagementDerivedCredentialSettings with a new object
+     *
+     * @param newDeviceManagementDerivedCredentialSettings the object to create/update
+     * @return the created DeviceManagementDerivedCredentialSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementDerivedCredentialSettings put(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementDerivedCredentialSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

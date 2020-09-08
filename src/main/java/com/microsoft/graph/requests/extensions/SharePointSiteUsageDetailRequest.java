@@ -112,6 +112,27 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
     }
 
     /**
+     * Creates a SharePointSiteUsageDetail with a new object
+     *
+     * @param newSharePointSiteUsageDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback) {
+        send(HttpMethod.PUT, callback, newSharePointSiteUsageDetail);
+    }
+
+    /**
+     * Creates a SharePointSiteUsageDetail with a new object
+     *
+     * @param newSharePointSiteUsageDetail the object to create/update
+     * @return the created SharePointSiteUsageDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharePointSiteUsageDetail put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException {
+        return send(HttpMethod.PUT, newSharePointSiteUsageDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

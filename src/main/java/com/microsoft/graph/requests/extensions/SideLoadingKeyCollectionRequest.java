@@ -62,14 +62,14 @@ public class SideLoadingKeyCollectionRequest extends BaseCollectionRequest<SideL
     public void post(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SideLoadingKeyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSideLoadingKey, callback);
     }
 
     public SideLoadingKey post(final SideLoadingKey newSideLoadingKey) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SideLoadingKeyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSideLoadingKey);
     }
 
@@ -106,6 +106,27 @@ public class SideLoadingKeyCollectionRequest extends BaseCollectionRequest<SideL
         return (SideLoadingKeyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISideLoadingKeyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SideLoadingKeyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISideLoadingKeyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISideLoadingKeyCollectionRequest)this;
+    }
     public ISideLoadingKeyCollectionPage buildFromResponse(final SideLoadingKeyCollectionResponse response) {
         final ISideLoadingKeyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

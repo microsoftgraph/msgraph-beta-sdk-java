@@ -116,6 +116,27 @@ public class DeviceManagementScriptUserStateRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a DeviceManagementScriptUserState with a new object
+     *
+     * @param newDeviceManagementScriptUserState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementScriptUserState newDeviceManagementScriptUserState, final ICallback<DeviceManagementScriptUserState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementScriptUserState);
+    }
+
+    /**
+     * Creates a DeviceManagementScriptUserState with a new object
+     *
+     * @param newDeviceManagementScriptUserState the object to create/update
+     * @return the created DeviceManagementScriptUserState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementScriptUserState put(final DeviceManagementScriptUserState newDeviceManagementScriptUserState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementScriptUserState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

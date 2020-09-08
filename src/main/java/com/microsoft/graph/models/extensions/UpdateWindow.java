@@ -36,20 +36,20 @@ public class UpdateWindow implements IJsonBackedObject {
     }
 
     /**
-     * The Update Window Start Time.
-     * 
-     */
-    @SerializedName("updateWindowStartTime")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay updateWindowStartTime;
-
-    /**
      * The Update Window End Time.
      * 
      */
     @SerializedName("updateWindowEndTime")
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay updateWindowEndTime;
+
+    /**
+     * The Update Window Start Time.
+     * 
+     */
+    @SerializedName("updateWindowStartTime")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay updateWindowStartTime;
 
 
     /**

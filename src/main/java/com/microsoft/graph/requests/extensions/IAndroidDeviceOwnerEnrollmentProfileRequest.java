@@ -80,6 +80,23 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequest extends IHttpReques
     AndroidDeviceOwnerEnrollmentProfile post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceOwnerEnrollmentProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback);
+
+    /**
+     * Posts a AndroidDeviceOwnerEnrollmentProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerEnrollmentProfile the object to create/update
+     * @return the created AndroidDeviceOwnerEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceOwnerEnrollmentProfile put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

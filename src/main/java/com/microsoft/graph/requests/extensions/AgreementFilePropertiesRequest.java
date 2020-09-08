@@ -127,6 +127,27 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
     }
 
     /**
+     * Creates a AgreementFileProperties with a new object
+     *
+     * @param newAgreementFileProperties the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AgreementFileProperties newAgreementFileProperties, final ICallback<AgreementFileProperties> callback) {
+        send(HttpMethod.PUT, callback, newAgreementFileProperties);
+    }
+
+    /**
+     * Creates a AgreementFileProperties with a new object
+     *
+     * @param newAgreementFileProperties the object to create/update
+     * @return the created AgreementFileProperties
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AgreementFileProperties put(final AgreementFileProperties newAgreementFileProperties) throws ClientException {
+        return send(HttpMethod.PUT, newAgreementFileProperties);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

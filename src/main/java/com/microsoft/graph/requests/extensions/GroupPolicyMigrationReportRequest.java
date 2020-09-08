@@ -121,6 +121,27 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
     }
 
     /**
+     * Creates a GroupPolicyMigrationReport with a new object
+     *
+     * @param newGroupPolicyMigrationReport the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyMigrationReport);
+    }
+
+    /**
+     * Creates a GroupPolicyMigrationReport with a new object
+     *
+     * @param newGroupPolicyMigrationReport the object to create/update
+     * @return the created GroupPolicyMigrationReport
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyMigrationReport put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyMigrationReport);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

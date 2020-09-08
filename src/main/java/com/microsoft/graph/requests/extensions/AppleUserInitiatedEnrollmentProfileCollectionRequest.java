@@ -62,14 +62,14 @@ public class AppleUserInitiatedEnrollmentProfileCollectionRequest extends BaseCo
     public void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppleUserInitiatedEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppleUserInitiatedEnrollmentProfile, callback);
     }
 
     public AppleUserInitiatedEnrollmentProfile post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppleUserInitiatedEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -106,6 +106,27 @@ public class AppleUserInitiatedEnrollmentProfileCollectionRequest extends BaseCo
         return (AppleUserInitiatedEnrollmentProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAppleUserInitiatedEnrollmentProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AppleUserInitiatedEnrollmentProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAppleUserInitiatedEnrollmentProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAppleUserInitiatedEnrollmentProfileCollectionRequest)this;
+    }
     public IAppleUserInitiatedEnrollmentProfileCollectionPage buildFromResponse(final AppleUserInitiatedEnrollmentProfileCollectionResponse response) {
         final IAppleUserInitiatedEnrollmentProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookTaskFolder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,16 +39,16 @@ public interface IOutlookTaskFolderRequestBuilder extends IRequestBuilder {
     IOutlookTaskFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IOutlookTaskCollectionRequestBuilder tasks();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IOutlookTaskRequestBuilder tasks(final String id);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+    IOutlookTaskCollectionRequestBuilder tasks();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+    IOutlookTaskRequestBuilder tasks(final String id);
 
 }

@@ -27,12 +27,12 @@ public class EducationFormResource extends EducationResource implements IJsonBac
 
 
     /**
-     * The Original Form Id.
+     * The Edit Url.
      * 
      */
-    @SerializedName("originalFormId")
+    @SerializedName("editUrl")
     @Expose
-    public String originalFormId;
+    public String editUrl;
 
     /**
      * The Form Id.
@@ -51,20 +51,20 @@ public class EducationFormResource extends EducationResource implements IJsonBac
     public Boolean isGroupForm;
 
     /**
+     * The Original Form Id.
+     * 
+     */
+    @SerializedName("originalFormId")
+    @Expose
+    public String originalFormId;
+
+    /**
      * The View Url.
      * 
      */
     @SerializedName("viewUrl")
     @Expose
     public String viewUrl;
-
-    /**
-     * The Edit Url.
-     * 
-     */
-    @SerializedName("editUrl")
-    @Expose
-    public String editUrl;
 
 
     /**

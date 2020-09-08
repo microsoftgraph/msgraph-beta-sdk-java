@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.OutOfBoxExperienceSettings;
-import com.microsoft.graph.models.extensions.WindowsEnrollmentStatusScreenSettings;
 import com.microsoft.graph.models.generated.WindowsAutopilotDeviceType;
+import com.microsoft.graph.models.extensions.WindowsEnrollmentStatusScreenSettings;
+import com.microsoft.graph.models.extensions.OutOfBoxExperienceSettings;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfileAssignment;
 import com.microsoft.graph.models.extensions.Entity;
@@ -36,30 +36,6 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
 
 
     /**
-     * The Display Name.
-     * Name of the profile
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * Description of the profile
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Language.
-     * Language configured on the device
-     */
-    @SerializedName("language")
-    @Expose
-    public String language;
-
-    /**
      * The Created Date Time.
      * Profile creation time
      */
@@ -68,36 +44,12 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * Profile last modified time
+     * The Description.
+     * Description of the profile
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("description")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Out Of Box Experience Settings.
-     * Out of box experience setting
-     */
-    @SerializedName("outOfBoxExperienceSettings")
-    @Expose
-    public OutOfBoxExperienceSettings outOfBoxExperienceSettings;
-
-    /**
-     * The Enrollment Status Screen Settings.
-     * Enrollment status screen setting
-     */
-    @SerializedName("enrollmentStatusScreenSettings")
-    @Expose
-    public WindowsEnrollmentStatusScreenSettings enrollmentStatusScreenSettings;
-
-    /**
-     * The Extract Hardware Hash.
-     * HardwareHash Extraction for the profile
-     */
-    @SerializedName("extractHardwareHash")
-    @Expose
-    public Boolean extractHardwareHash;
+    public String description;
 
     /**
      * The Device Name Template.
@@ -116,12 +68,60 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
     public WindowsAutopilotDeviceType deviceType;
 
     /**
+     * The Display Name.
+     * Name of the profile
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Enable White Glove.
      * Enable Autopilot White Glove for the profile.
      */
     @SerializedName("enableWhiteGlove")
     @Expose
     public Boolean enableWhiteGlove;
+
+    /**
+     * The Enrollment Status Screen Settings.
+     * Enrollment status screen setting
+     */
+    @SerializedName("enrollmentStatusScreenSettings")
+    @Expose
+    public WindowsEnrollmentStatusScreenSettings enrollmentStatusScreenSettings;
+
+    /**
+     * The Extract Hardware Hash.
+     * HardwareHash Extraction for the profile
+     */
+    @SerializedName("extractHardwareHash")
+    @Expose
+    public Boolean extractHardwareHash;
+
+    /**
+     * The Language.
+     * Language configured on the device
+     */
+    @SerializedName("language")
+    @Expose
+    public String language;
+
+    /**
+     * The Last Modified Date Time.
+     * Profile last modified time
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Out Of Box Experience Settings.
+     * Out of box experience setting
+     */
+    @SerializedName("outOfBoxExperienceSettings")
+    @Expose
+    public OutOfBoxExperienceSettings outOfBoxExperienceSettings;
 
     /**
      * The Role Scope Tag Ids.

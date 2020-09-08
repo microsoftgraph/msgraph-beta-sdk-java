@@ -62,14 +62,14 @@ public class UserConsentRequestCollectionRequest extends BaseCollectionRequest<U
     public void post(final UserConsentRequest newUserConsentRequest, final ICallback<UserConsentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserConsentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserConsentRequest, callback);
     }
 
     public UserConsentRequest post(final UserConsentRequest newUserConsentRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserConsentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserConsentRequest);
     }
 
@@ -106,6 +106,27 @@ public class UserConsentRequestCollectionRequest extends BaseCollectionRequest<U
         return (UserConsentRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserConsentRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserConsentRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserConsentRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserConsentRequestCollectionRequest)this;
+    }
     public IUserConsentRequestCollectionPage buildFromResponse(final UserConsentRequestCollectionResponse response) {
         final IUserConsentRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

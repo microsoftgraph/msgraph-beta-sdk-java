@@ -28,14 +28,6 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
 
 
     /**
-     * The Package Id.
-     * The package identifier.
-     */
-    @SerializedName("packageId")
-    @Expose
-    public String packageId;
-
-    /**
      * The App Identifier.
      * The Identity Name.
      */
@@ -44,28 +36,20 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
     public String appIdentifier;
 
     /**
-     * The Used License Count.
-     * The number of VPP licenses in use.
-     */
-    @SerializedName("usedLicenseCount")
-    @Expose
-    public Integer usedLicenseCount;
-
-    /**
-     * The Total License Count.
-     * The total number of VPP licenses.
-     */
-    @SerializedName("totalLicenseCount")
-    @Expose
-    public Integer totalLicenseCount;
-
-    /**
      * The App Store Url.
      * The Play for Work Store app URL.
      */
     @SerializedName("appStoreUrl")
     @Expose
     public String appStoreUrl;
+
+    /**
+     * The App Tracks.
+     * The tracks that are visible to this enterprise.
+     */
+    @SerializedName("appTracks")
+    @Expose
+    public java.util.List<AndroidManagedStoreAppTrack> appTracks;
 
     /**
      * The Is Private.
@@ -84,12 +68,12 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
     public Boolean isSystemApp;
 
     /**
-     * The App Tracks.
-     * The tracks that are visible to this enterprise.
+     * The Package Id.
+     * The package identifier.
      */
-    @SerializedName("appTracks")
+    @SerializedName("packageId")
     @Expose
-    public java.util.List<AndroidManagedStoreAppTrack> appTracks;
+    public String packageId;
 
     /**
      * The Supports Oem Config.
@@ -98,6 +82,22 @@ public class AndroidManagedStoreApp extends MobileApp implements IJsonBackedObje
     @SerializedName("supportsOemConfig")
     @Expose
     public Boolean supportsOemConfig;
+
+    /**
+     * The Total License Count.
+     * The total number of VPP licenses.
+     */
+    @SerializedName("totalLicenseCount")
+    @Expose
+    public Integer totalLicenseCount;
+
+    /**
+     * The Used License Count.
+     * The number of VPP licenses in use.
+     */
+    @SerializedName("usedLicenseCount")
+    @Expose
+    public Integer usedLicenseCount;
 
 
     /**

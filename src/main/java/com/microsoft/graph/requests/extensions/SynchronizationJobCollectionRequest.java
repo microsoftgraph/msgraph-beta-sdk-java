@@ -66,14 +66,14 @@ public class SynchronizationJobCollectionRequest extends BaseCollectionRequest<S
     public void post(final SynchronizationJob newSynchronizationJob, final ICallback<SynchronizationJob> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SynchronizationJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSynchronizationJob, callback);
     }
 
     public SynchronizationJob post(final SynchronizationJob newSynchronizationJob) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SynchronizationJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSynchronizationJob);
     }
 
@@ -110,6 +110,27 @@ public class SynchronizationJobCollectionRequest extends BaseCollectionRequest<S
         return (SynchronizationJobCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISynchronizationJobCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SynchronizationJobCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISynchronizationJobCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISynchronizationJobCollectionRequest)this;
+    }
     public ISynchronizationJobCollectionPage buildFromResponse(final SynchronizationJobCollectionResponse response) {
         final ISynchronizationJobCollectionRequestBuilder builder;
         if (response.nextLink != null) {

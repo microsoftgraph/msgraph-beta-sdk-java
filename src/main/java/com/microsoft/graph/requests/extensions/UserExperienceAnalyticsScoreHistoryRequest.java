@@ -112,6 +112,27 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a UserExperienceAnalyticsScoreHistory with a new object
+     *
+     * @param newUserExperienceAnalyticsScoreHistory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsScoreHistory);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsScoreHistory with a new object
+     *
+     * @param newUserExperienceAnalyticsScoreHistory the object to create/update
+     * @return the created UserExperienceAnalyticsScoreHistory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsScoreHistory put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsScoreHistory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

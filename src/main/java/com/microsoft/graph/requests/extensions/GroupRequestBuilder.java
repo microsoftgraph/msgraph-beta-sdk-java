@@ -8,29 +8,33 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
-import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectorySettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectorySettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectorySettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
@@ -43,10 +47,6 @@ import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequ
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
@@ -121,6 +121,29 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id) {
         return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for DirectoryObject
+     *
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
+     */
+    public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
+    }
+    public IEndpointCollectionRequestBuilder endpoints() {
+        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);
+    }
+
+    public IEndpointRequestBuilder endpoints(final String id) {
+        return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
+    }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder members() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
@@ -135,56 +158,12 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IDirectoryObjectWithReferenceRequestBuilder membersWithLicenseErrors(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("membersWithLicenseErrors") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMembers() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMembers"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder transitiveMembers(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMembers") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for DirectoryObject
-     *
-     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
-     */
-    public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
-    }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
     }
 
     public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
-    }
-    public IDirectorySettingCollectionRequestBuilder settings() {
-        return new DirectorySettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
-    }
-
-    public IDirectorySettingRequestBuilder settings(final String id) {
-        return new DirectorySettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
-    }
-    public IEndpointCollectionRequestBuilder endpoints() {
-        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);
-    }
-
-    public IEndpointRequestBuilder endpoints(final String id) {
-        return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
     }
     public IResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
         return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
@@ -193,19 +172,26 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IResourceSpecificPermissionGrantRequestBuilder permissionGrants(final String id) {
         return new ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
     }
-    public IConversationCollectionRequestBuilder conversations() {
-        return new ConversationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conversations"), getClient(), null);
+    public IDirectorySettingCollectionRequestBuilder settings() {
+        return new DirectorySettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
-    public IConversationRequestBuilder conversations(final String id) {
-        return new ConversationRequestBuilder(getRequestUrlWithAdditionalSegment("conversations") + "/" + id, getClient(), null);
+    public IDirectorySettingRequestBuilder settings(final String id) {
+        return new DirectorySettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
-    public IProfilePhotoCollectionRequestBuilder photos() {
-        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
     }
 
-    public IProfilePhotoRequestBuilder photos(final String id) {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMembers() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMembers"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder transitiveMembers(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMembers") + "/" + id, getClient(), null);
     }
     public IDirectoryObjectCollectionRequestBuilder acceptedSenders() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
@@ -213,20 +199,6 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
 
     public IDirectoryObjectRequestBuilder acceptedSenders(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
-    }
-
-    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
-    }
-    public IConversationThreadCollectionRequestBuilder threads() {
-        return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
-    }
-
-    public IConversationThreadRequestBuilder threads(final String id) {
-        return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }
 
     /**
@@ -244,6 +216,13 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IEventRequestBuilder calendarView(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
+    public IConversationCollectionRequestBuilder conversations() {
+        return new ConversationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conversations"), getClient(), null);
+    }
+
+    public IConversationRequestBuilder conversations(final String id) {
+        return new ConversationRequestBuilder(getRequestUrlWithAdditionalSegment("conversations") + "/" + id, getClient(), null);
+    }
     public IEventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
@@ -259,6 +238,27 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
+    }
+    public IProfilePhotoCollectionRequestBuilder photos() {
+        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
+    }
+
+    public IProfilePhotoRequestBuilder photos(final String id) {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
+        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
+    }
+
+    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
+        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
+    }
+    public IConversationThreadCollectionRequestBuilder threads() {
+        return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
+    }
+
+    public IConversationThreadRequestBuilder threads(final String id) {
+        return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }
 
     /**
@@ -325,28 +325,16 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
     }
 
-    public IGroupEvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership(final String memberId) {
-        return new GroupEvaluateDynamicMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateDynamicMembership"), getClient(), null, memberId);
-    }
-
-    public IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
-        return new GroupValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, displayName, mailNickname, onBehalfOfUserId);
+    public IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
+        return new GroupAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
 
     public IGroupCheckGrantedPermissionsForAppCollectionRequestBuilder checkGrantedPermissionsForApp() {
         return new GroupCheckGrantedPermissionsForAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkGrantedPermissionsForApp"), getClient(), null);
     }
 
-    public IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
-        return new GroupAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
-    }
-
-    public IGroupSubscribeByMailRequestBuilder subscribeByMail() {
-        return new GroupSubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subscribeByMail"), getClient(), null);
-    }
-
-    public IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail() {
-        return new GroupUnsubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubscribeByMail"), getClient(), null);
+    public IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
+        return new GroupValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, displayName, mailNickname, onBehalfOfUserId);
     }
 
     public IGroupAddFavoriteRequestBuilder addFavorite() {
@@ -359,6 +347,18 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
 
     public IGroupResetUnseenCountRequestBuilder resetUnseenCount() {
         return new GroupResetUnseenCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetUnseenCount"), getClient(), null);
+    }
+
+    public IGroupSubscribeByMailRequestBuilder subscribeByMail() {
+        return new GroupSubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subscribeByMail"), getClient(), null);
+    }
+
+    public IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail() {
+        return new GroupUnsubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubscribeByMail"), getClient(), null);
+    }
+
+    public IGroupEvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership(final String memberId) {
+        return new GroupEvaluateDynamicMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateDynamicMembership"), getClient(), null, memberId);
     }
 
     public IGroupRenewRequestBuilder renew() {

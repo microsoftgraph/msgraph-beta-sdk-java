@@ -62,14 +62,14 @@ public class DeviceManagementTemplateSettingCategoryCollectionRequest extends Ba
     public void post(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<DeviceManagementTemplateSettingCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementTemplateSettingCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementTemplateSettingCategory, callback);
     }
 
     public DeviceManagementTemplateSettingCategory post(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementTemplateSettingCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementTemplateSettingCategory);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementTemplateSettingCategoryCollectionRequest extends Ba
         return (DeviceManagementTemplateSettingCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateSettingCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementTemplateSettingCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateSettingCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementTemplateSettingCategoryCollectionRequest)this;
+    }
     public IDeviceManagementTemplateSettingCategoryCollectionPage buildFromResponse(final DeviceManagementTemplateSettingCategoryCollectionResponse response) {
         final IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

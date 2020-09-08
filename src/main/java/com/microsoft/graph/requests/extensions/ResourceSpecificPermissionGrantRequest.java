@@ -112,6 +112,27 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a ResourceSpecificPermissionGrant with a new object
+     *
+     * @param newResourceSpecificPermissionGrant the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback) {
+        send(HttpMethod.PUT, callback, newResourceSpecificPermissionGrant);
+    }
+
+    /**
+     * Creates a ResourceSpecificPermissionGrant with a new object
+     *
+     * @param newResourceSpecificPermissionGrant the object to create/update
+     * @return the created ResourceSpecificPermissionGrant
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ResourceSpecificPermissionGrant put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException {
+        return send(HttpMethod.PUT, newResourceSpecificPermissionGrant);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

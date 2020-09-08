@@ -37,20 +37,20 @@ public class PrintTaskStatus implements IJsonBackedObject {
     }
 
     /**
-     * The State.
-     * 
-     */
-    @SerializedName("state")
-    @Expose
-    public PrintTaskProcessingState state;
-
-    /**
      * The Description.
      * 
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName("state")
+    @Expose
+    public PrintTaskProcessingState state;
 
 
     /**

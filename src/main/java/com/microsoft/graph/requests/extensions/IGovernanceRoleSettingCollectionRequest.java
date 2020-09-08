@@ -52,4 +52,20 @@ public interface IGovernanceRoleSettingCollectionRequest {
      */
     IGovernanceRoleSettingCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IGovernanceRoleSettingCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IGovernanceRoleSettingCollectionRequest skipToken(String skipToken);
 }

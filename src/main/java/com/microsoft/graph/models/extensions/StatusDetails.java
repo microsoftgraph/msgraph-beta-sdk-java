@@ -27,22 +27,6 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
 
     /**
-     * The Error Code.
-     * 
-     */
-    @SerializedName("errorCode")
-    @Expose
-    public String errorCode;
-
-    /**
-     * The Reason.
-     * 
-     */
-    @SerializedName("reason")
-    @Expose
-    public String reason;
-
-    /**
      * The Additional Details.
      * 
      */
@@ -57,6 +41,22 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
     @SerializedName("errorCategory")
     @Expose
     public String errorCategory;
+
+    /**
+     * The Error Code.
+     * 
+     */
+    @SerializedName("errorCode")
+    @Expose
+    public String errorCode;
+
+    /**
+     * The Reason.
+     * 
+     */
+    @SerializedName("reason")
+    @Expose
+    public String reason;
 
     /**
      * The Recommended Action.

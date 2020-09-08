@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,21 +35,17 @@ public interface IAndroidDeviceOwnerVpnConfigurationRequestBuilder extends IRequ
     IAndroidDeviceOwnerVpnConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -58,6 +54,14 @@ public interface IAndroidDeviceOwnerVpnConfigurationRequestBuilder extends IRequ
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -65,9 +69,12 @@ public interface IAndroidDeviceOwnerVpnConfigurationRequestBuilder extends IRequ
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+    /**
+     * Gets the request builder for DeviceManagementDerivedCredentialSettings
+     *
+     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
+     */
+    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
 
     /**
      * Gets the request builder for AndroidDeviceOwnerCertificateProfileBase
@@ -75,12 +82,5 @@ public interface IAndroidDeviceOwnerVpnConfigurationRequestBuilder extends IRequ
      * @return the IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder instance
      */
     IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder identityCertificate();
-
-    /**
-     * Gets the request builder for DeviceManagementDerivedCredentialSettings
-     *
-     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
-     */
-    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
 
 }

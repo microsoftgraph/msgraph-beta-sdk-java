@@ -112,6 +112,27 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
     }
 
     /**
+     * Creates a WindowsAppX with a new object
+     *
+     * @param newWindowsAppX the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsAppX newWindowsAppX, final ICallback<WindowsAppX> callback) {
+        send(HttpMethod.PUT, callback, newWindowsAppX);
+    }
+
+    /**
+     * Creates a WindowsAppX with a new object
+     *
+     * @param newWindowsAppX the object to create/update
+     * @return the created WindowsAppX
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsAppX put(final WindowsAppX newWindowsAppX) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsAppX);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

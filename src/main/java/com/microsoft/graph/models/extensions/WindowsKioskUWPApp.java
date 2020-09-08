@@ -27,20 +27,20 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements IJsonBack
 
 
     /**
-     * The App User Model Id.
-     * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
-     */
-    @SerializedName("appUserModelId")
-    @Expose
-    public String appUserModelId;
-
-    /**
      * The App Id.
      * This references an Intune App that will be target to the same assignments as Kiosk configuration
      */
     @SerializedName("appId")
     @Expose
     public String appId;
+
+    /**
+     * The App User Model Id.
+     * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
+     */
+    @SerializedName("appUserModelId")
+    @Expose
+    public String appUserModelId;
 
     /**
      * The Contained App Id.

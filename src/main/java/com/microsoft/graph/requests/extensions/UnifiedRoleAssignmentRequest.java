@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -115,6 +115,27 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      */
     public UnifiedRoleAssignment post(final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newUnifiedRoleAssignment);
+    }
+
+    /**
+     * Creates a UnifiedRoleAssignment with a new object
+     *
+     * @param newUnifiedRoleAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<UnifiedRoleAssignment> callback) {
+        send(HttpMethod.PUT, callback, newUnifiedRoleAssignment);
+    }
+
+    /**
+     * Creates a UnifiedRoleAssignment with a new object
+     *
+     * @param newUnifiedRoleAssignment the object to create/update
+     * @return the created UnifiedRoleAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnifiedRoleAssignment put(final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newUnifiedRoleAssignment);
     }
 
     /**

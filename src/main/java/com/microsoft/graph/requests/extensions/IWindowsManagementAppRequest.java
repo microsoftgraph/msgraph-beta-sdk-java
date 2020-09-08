@@ -80,6 +80,23 @@ public interface IWindowsManagementAppRequest extends IHttpRequest {
     WindowsManagementApp post(final WindowsManagementApp newWindowsManagementApp) throws ClientException;
 
     /**
+     * Posts a WindowsManagementApp with a new object
+     *
+     * @param newWindowsManagementApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsManagementApp newWindowsManagementApp, final ICallback<WindowsManagementApp> callback);
+
+    /**
+     * Posts a WindowsManagementApp with a new object
+     *
+     * @param newWindowsManagementApp the object to create/update
+     * @return the created WindowsManagementApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsManagementApp put(final WindowsManagementApp newWindowsManagementApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

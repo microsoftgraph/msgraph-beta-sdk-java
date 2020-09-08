@@ -112,6 +112,27 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a EntitlementManagementSettings with a new object
+     *
+     * @param newEntitlementManagementSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<EntitlementManagementSettings> callback) {
+        send(HttpMethod.PUT, callback, newEntitlementManagementSettings);
+    }
+
+    /**
+     * Creates a EntitlementManagementSettings with a new object
+     *
+     * @param newEntitlementManagementSettings the object to create/update
+     * @return the created EntitlementManagementSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EntitlementManagementSettings put(final EntitlementManagementSettings newEntitlementManagementSettings) throws ClientException {
+        return send(HttpMethod.PUT, newEntitlementManagementSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

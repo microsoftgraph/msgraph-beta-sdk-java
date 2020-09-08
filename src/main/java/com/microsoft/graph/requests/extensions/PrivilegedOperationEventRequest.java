@@ -112,6 +112,27 @@ public class PrivilegedOperationEventRequest extends BaseRequest implements IPri
     }
 
     /**
+     * Creates a PrivilegedOperationEvent with a new object
+     *
+     * @param newPrivilegedOperationEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedOperationEvent);
+    }
+
+    /**
+     * Creates a PrivilegedOperationEvent with a new object
+     *
+     * @param newPrivilegedOperationEvent the object to create/update
+     * @return the created PrivilegedOperationEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedOperationEvent put(final PrivilegedOperationEvent newPrivilegedOperationEvent) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedOperationEvent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

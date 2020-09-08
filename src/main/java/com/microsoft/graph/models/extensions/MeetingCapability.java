@@ -45,20 +45,20 @@ public class MeetingCapability implements IJsonBackedObject {
     public Boolean allowAnonymousUsersToDialOut;
 
     /**
-     * The Auto Admitted Users.
-     * 
-     */
-    @SerializedName("autoAdmittedUsers")
-    @Expose
-    public AutoAdmittedUsersType autoAdmittedUsers;
-
-    /**
      * The Allow Anonymous Users To Start Meeting.
      * 
      */
     @SerializedName("allowAnonymousUsersToStartMeeting")
     @Expose
     public Boolean allowAnonymousUsersToStartMeeting;
+
+    /**
+     * The Auto Admitted Users.
+     * 
+     */
+    @SerializedName("autoAdmittedUsers")
+    @Expose
+    public AutoAdmittedUsersType autoAdmittedUsers;
 
 
     /**

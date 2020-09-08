@@ -27,22 +27,6 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Total.
-     * 
-     */
-    @SerializedName("total")
-    @Expose
-    public Long total;
-
-    /**
      * The Active.
      * 
      */
@@ -65,6 +49,22 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Total.
+     * 
+     */
+    @SerializedName("total")
+    @Expose
+    public Long total;
 
 
     /**

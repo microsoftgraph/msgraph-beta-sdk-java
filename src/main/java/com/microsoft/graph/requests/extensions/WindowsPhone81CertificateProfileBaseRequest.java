@@ -127,6 +127,27 @@ public class WindowsPhone81CertificateProfileBaseRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a WindowsPhone81CertificateProfileBase with a new object
+     *
+     * @param newWindowsPhone81CertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase, final ICallback<WindowsPhone81CertificateProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhone81CertificateProfileBase);
+    }
+
+    /**
+     * Creates a WindowsPhone81CertificateProfileBase with a new object
+     *
+     * @param newWindowsPhone81CertificateProfileBase the object to create/update
+     * @return the created WindowsPhone81CertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhone81CertificateProfileBase put(final WindowsPhone81CertificateProfileBase newWindowsPhone81CertificateProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhone81CertificateProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class TeamsUserActivityUserCountsRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a TeamsUserActivityUserCounts with a new object
+     *
+     * @param newTeamsUserActivityUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TeamsUserActivityUserCounts newTeamsUserActivityUserCounts, final ICallback<TeamsUserActivityUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newTeamsUserActivityUserCounts);
+    }
+
+    /**
+     * Creates a TeamsUserActivityUserCounts with a new object
+     *
+     * @param newTeamsUserActivityUserCounts the object to create/update
+     * @return the created TeamsUserActivityUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TeamsUserActivityUserCounts put(final TeamsUserActivityUserCounts newTeamsUserActivityUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newTeamsUserActivityUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

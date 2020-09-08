@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      */
     public SectionGroup post(final SectionGroup newSectionGroup) throws ClientException {
         return send(HttpMethod.POST, newSectionGroup);
+    }
+
+    /**
+     * Creates a SectionGroup with a new object
+     *
+     * @param newSectionGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback) {
+        send(HttpMethod.PUT, callback, newSectionGroup);
+    }
+
+    /**
+     * Creates a SectionGroup with a new object
+     *
+     * @param newSectionGroup the object to create/update
+     * @return the created SectionGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SectionGroup put(final SectionGroup newSectionGroup) throws ClientException {
+        return send(HttpMethod.PUT, newSectionGroup);
     }
 
     /**

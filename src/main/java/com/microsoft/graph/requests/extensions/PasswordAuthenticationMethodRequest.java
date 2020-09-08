@@ -112,6 +112,27 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a PasswordAuthenticationMethod with a new object
+     *
+     * @param newPasswordAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback) {
+        send(HttpMethod.PUT, callback, newPasswordAuthenticationMethod);
+    }
+
+    /**
+     * Creates a PasswordAuthenticationMethod with a new object
+     *
+     * @param newPasswordAuthenticationMethod the object to create/update
+     * @return the created PasswordAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PasswordAuthenticationMethod put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException {
+        return send(HttpMethod.PUT, newPasswordAuthenticationMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

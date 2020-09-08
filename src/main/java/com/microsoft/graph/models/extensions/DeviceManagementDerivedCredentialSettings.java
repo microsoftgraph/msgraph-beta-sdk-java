@@ -29,20 +29,20 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
 
 
     /**
-     * The Help Url.
-     * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
-     */
-    @SerializedName("helpUrl")
-    @Expose
-    public String helpUrl;
-
-    /**
      * The Display Name.
      * The display name for the profile.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Help Url.
+     * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
+     */
+    @SerializedName("helpUrl")
+    @Expose
+    public String helpUrl;
 
     /**
      * The Issuer.

@@ -27,30 +27,6 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Web.
-     * 
-     */
-    @SerializedName("web")
-    @Expose
-    public Long web;
-
-    /**
-     * The Windows Phone.
-     * 
-     */
-    @SerializedName("windowsPhone")
-    @Expose
-    public Long windowsPhone;
-
-    /**
      * The Android Phone.
      * 
      */
@@ -75,6 +51,30 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
     public Long mac;
 
     /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Web.
+     * 
+     */
+    @SerializedName("web")
+    @Expose
+    public Long web;
+
+    /**
      * The Windows.
      * 
      */
@@ -83,12 +83,12 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
     public Long windows;
 
     /**
-     * The Report Period.
+     * The Windows Phone.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName("windowsPhone")
     @Expose
-    public String reportPeriod;
+    public Long windowsPhone;
 
 
     /**

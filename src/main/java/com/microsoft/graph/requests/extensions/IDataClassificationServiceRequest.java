@@ -80,6 +80,23 @@ public interface IDataClassificationServiceRequest extends IHttpRequest {
     DataClassificationService post(final DataClassificationService newDataClassificationService) throws ClientException;
 
     /**
+     * Posts a DataClassificationService with a new object
+     *
+     * @param newDataClassificationService the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DataClassificationService newDataClassificationService, final ICallback<DataClassificationService> callback);
+
+    /**
+     * Posts a DataClassificationService with a new object
+     *
+     * @param newDataClassificationService the object to create/update
+     * @return the created DataClassificationService
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DataClassificationService put(final DataClassificationService newDataClassificationService) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

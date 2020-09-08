@@ -30,16 +30,16 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
 
 
     /**
-     * The Model Regression.
-     * The metric values for the user experience analytics model regression.
-     */
-    public UserExperienceAnalyticsMetricCollectionPage modelRegression;
-
-    /**
      * The Manufacturer Regression.
      * The metric values for the user experience analytics Manufacturer regression.
      */
     public UserExperienceAnalyticsMetricCollectionPage manufacturerRegression;
+
+    /**
+     * The Model Regression.
+     * The metric values for the user experience analytics model regression.
+     */
+    public UserExperienceAnalyticsMetricCollectionPage modelRegression;
 
     /**
      * The Operating System Regression.
@@ -87,22 +87,6 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
         rawObject = json;
 
 
-        if (json.has("modelRegression")) {
-            final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
-            if (json.has("modelRegression@odata.nextLink")) {
-                response.nextLink = json.get("modelRegression@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("modelRegression").toString(), JsonObject[].class);
-            final UserExperienceAnalyticsMetric[] array = new UserExperienceAnalyticsMetric[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsMetric.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            modelRegression = new UserExperienceAnalyticsMetricCollectionPage(response, null);
-        }
-
         if (json.has("manufacturerRegression")) {
             final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
             if (json.has("manufacturerRegression@odata.nextLink")) {
@@ -117,6 +101,22 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
             }
             response.value = Arrays.asList(array);
             manufacturerRegression = new UserExperienceAnalyticsMetricCollectionPage(response, null);
+        }
+
+        if (json.has("modelRegression")) {
+            final UserExperienceAnalyticsMetricCollectionResponse response = new UserExperienceAnalyticsMetricCollectionResponse();
+            if (json.has("modelRegression@odata.nextLink")) {
+                response.nextLink = json.get("modelRegression@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("modelRegression").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsMetric[] array = new UserExperienceAnalyticsMetric[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsMetric.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            modelRegression = new UserExperienceAnalyticsMetricCollectionPage(response, null);
         }
 
         if (json.has("operatingSystemRegression")) {

@@ -29,6 +29,14 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
 
     /**
+     * The Connection Settings.
+     * 
+     */
+    @SerializedName("connectionSettings")
+    @Expose
+    public EducationSynchronizationConnectionSettings connectionSettings;
+
+    /**
      * The Connection Url.
      * 
      */
@@ -37,12 +45,20 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     public String connectionUrl;
 
     /**
-     * The Connection Settings.
+     * The Customizations.
      * 
      */
-    @SerializedName("connectionSettings")
+    @SerializedName("customizations")
     @Expose
-    public EducationSynchronizationConnectionSettings connectionSettings;
+    public EducationSynchronizationCustomizations customizations;
+
+    /**
+     * The Provider Name.
+     * 
+     */
+    @SerializedName("providerName")
+    @Expose
+    public String providerName;
 
     /**
      * The Schools Ids.
@@ -59,22 +75,6 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     @SerializedName("termIds")
     @Expose
     public java.util.List<String> termIds;
-
-    /**
-     * The Provider Name.
-     * 
-     */
-    @SerializedName("providerName")
-    @Expose
-    public String providerName;
-
-    /**
-     * The Customizations.
-     * 
-     */
-    @SerializedName("customizations")
-    @Expose
-    public EducationSynchronizationCustomizations customizations;
 
 
     /**

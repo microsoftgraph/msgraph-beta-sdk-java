@@ -8,24 +8,24 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
@@ -54,33 +54,9 @@ public interface IEntitlementManagementRequestBuilder extends IRequestBuilder {
     IEntitlementManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IAccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs();
-
-    IAccessPackageCatalogRequestBuilder accessPackageCatalogs(final String id);
-
-    IAccessPackageResourceCollectionRequestBuilder accessPackageResources();
-
-    IAccessPackageResourceRequestBuilder accessPackageResources(final String id);
-
-    IAccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests();
-
-    IAccessPackageResourceRequestRequestBuilder accessPackageResourceRequests(final String id);
-
-    IAccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes();
-
-    IAccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(final String id);
-
-    IAccessPackageCollectionRequestBuilder accessPackages();
-
-    IAccessPackageRequestBuilder accessPackages(final String id);
-
     IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies();
 
     IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(final String id);
-
-    IAccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments();
-
-    IAccessPackageAssignmentRequestBuilder accessPackageAssignments(final String id);
 
     IAccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests();
 
@@ -90,15 +66,39 @@ public interface IEntitlementManagementRequestBuilder extends IRequestBuilder {
 
     IAccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(final String id);
 
+    IAccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments();
+
+    IAccessPackageAssignmentRequestBuilder accessPackageAssignments(final String id);
+
+    IAccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs();
+
+    IAccessPackageCatalogRequestBuilder accessPackageCatalogs(final String id);
+
+    IAccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests();
+
+    IAccessPackageResourceRequestRequestBuilder accessPackageResourceRequests(final String id);
+
+    IAccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes();
+
+    IAccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(final String id);
+
+    IAccessPackageResourceCollectionRequestBuilder accessPackageResources();
+
+    IAccessPackageResourceRequestBuilder accessPackageResources(final String id);
+
+    IAccessPackageCollectionRequestBuilder accessPackages();
+
+    IAccessPackageRequestBuilder accessPackages(final String id);
+
+    IConnectedOrganizationCollectionRequestBuilder connectedOrganizations();
+
+    IConnectedOrganizationRequestBuilder connectedOrganizations(final String id);
+
     /**
      * Gets the request builder for EntitlementManagementSettings
      *
      * @return the IEntitlementManagementSettingsRequestBuilder instance
      */
     IEntitlementManagementSettingsRequestBuilder settings();
-
-    IConnectedOrganizationCollectionRequestBuilder connectedOrganizations();
-
-    IConnectedOrganizationRequestBuilder connectedOrganizations(final String id);
 
 }

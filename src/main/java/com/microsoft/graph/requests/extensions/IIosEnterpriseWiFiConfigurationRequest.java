@@ -80,6 +80,23 @@ public interface IIosEnterpriseWiFiConfigurationRequest extends IHttpRequest {
     IosEnterpriseWiFiConfiguration post(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration) throws ClientException;
 
     /**
+     * Posts a IosEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newIosEnterpriseWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration, final ICallback<IosEnterpriseWiFiConfiguration> callback);
+
+    /**
+     * Posts a IosEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newIosEnterpriseWiFiConfiguration the object to create/update
+     * @return the created IosEnterpriseWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosEnterpriseWiFiConfiguration put(final IosEnterpriseWiFiConfiguration newIosEnterpriseWiFiConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class FileClassificationRequestCollectionRequest extends BaseCollectionRe
     public void post(final FileClassificationRequest newFileClassificationRequest, final ICallback<FileClassificationRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new FileClassificationRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFileClassificationRequest, callback);
     }
 
     public FileClassificationRequest post(final FileClassificationRequest newFileClassificationRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new FileClassificationRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFileClassificationRequest);
     }
 
@@ -106,6 +106,27 @@ public class FileClassificationRequestCollectionRequest extends BaseCollectionRe
         return (FileClassificationRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IFileClassificationRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (FileClassificationRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IFileClassificationRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IFileClassificationRequestCollectionRequest)this;
+    }
     public IFileClassificationRequestCollectionPage buildFromResponse(final FileClassificationRequestCollectionResponse response) {
         final IFileClassificationRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

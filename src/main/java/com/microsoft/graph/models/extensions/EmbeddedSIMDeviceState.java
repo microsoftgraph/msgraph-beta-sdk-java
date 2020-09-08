@@ -36,12 +36,12 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Modified Date Time.
-     * The time the embedded SIM device status was last modified. Updated service side.
+     * The Device Name.
+     * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName("deviceName")
     @Expose
-    public java.util.Calendar modifiedDateTime;
+    public String deviceName;
 
     /**
      * The Last Sync Date Time.
@@ -52,28 +52,12 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
     public java.util.Calendar lastSyncDateTime;
 
     /**
-     * The Universal Integrated Circuit Card Identifier.
-     * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+     * The Modified Date Time.
+     * The time the embedded SIM device status was last modified. Updated service side.
      */
-    @SerializedName("universalIntegratedCircuitCardIdentifier")
+    @SerializedName("modifiedDateTime")
     @Expose
-    public String universalIntegratedCircuitCardIdentifier;
-
-    /**
-     * The Device Name.
-     * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
-     * The User Name.
-     * Username which the subscription was provisioned to e.g. joe@contoso.com
-     */
-    @SerializedName("userName")
-    @Expose
-    public String userName;
+    public java.util.Calendar modifiedDateTime;
 
     /**
      * The State.
@@ -90,6 +74,22 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
     @SerializedName("stateDetails")
     @Expose
     public String stateDetails;
+
+    /**
+     * The Universal Integrated Circuit Card Identifier.
+     * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+     */
+    @SerializedName("universalIntegratedCircuitCardIdentifier")
+    @Expose
+    public String universalIntegratedCircuitCardIdentifier;
+
+    /**
+     * The User Name.
+     * Username which the subscription was provisioned to e.g. joe@contoso.com
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
 
 
     /**

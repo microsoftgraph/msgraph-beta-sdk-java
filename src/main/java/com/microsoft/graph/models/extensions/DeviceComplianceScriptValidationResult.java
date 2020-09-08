@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DeviceComplianceScriptRuleError;
 import com.microsoft.graph.models.extensions.DeviceComplianceScriptRule;
 import com.microsoft.graph.models.extensions.DeviceComplianceScriptError;
-import com.microsoft.graph.models.extensions.DeviceComplianceScriptRuleError;
 
 
 import com.google.gson.JsonObject;
@@ -39,6 +39,14 @@ public class DeviceComplianceScriptValidationResult implements IJsonBackedObject
     }
 
     /**
+     * The Rule Errors.
+     * Errors in json for the script for rules.
+     */
+    @SerializedName("ruleErrors")
+    @Expose
+    public java.util.List<DeviceComplianceScriptRuleError> ruleErrors;
+
+    /**
      * The Rules.
      * Parsed rules from json.
      */
@@ -53,14 +61,6 @@ public class DeviceComplianceScriptValidationResult implements IJsonBackedObject
     @SerializedName("scriptErrors")
     @Expose
     public java.util.List<DeviceComplianceScriptError> scriptErrors;
-
-    /**
-     * The Rule Errors.
-     * Errors in json for the script for rules.
-     */
-    @SerializedName("ruleErrors")
-    @Expose
-    public java.util.List<DeviceComplianceScriptRuleError> ruleErrors;
 
 
     /**

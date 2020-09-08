@@ -112,6 +112,27 @@ public class AndroidForWorkMobileAppConfigurationRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a AndroidForWorkMobileAppConfiguration with a new object
+     *
+     * @param newAndroidForWorkMobileAppConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkMobileAppConfiguration newAndroidForWorkMobileAppConfiguration, final ICallback<AndroidForWorkMobileAppConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkMobileAppConfiguration);
+    }
+
+    /**
+     * Creates a AndroidForWorkMobileAppConfiguration with a new object
+     *
+     * @param newAndroidForWorkMobileAppConfiguration the object to create/update
+     * @return the created AndroidForWorkMobileAppConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkMobileAppConfiguration put(final AndroidForWorkMobileAppConfiguration newAndroidForWorkMobileAppConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkMobileAppConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

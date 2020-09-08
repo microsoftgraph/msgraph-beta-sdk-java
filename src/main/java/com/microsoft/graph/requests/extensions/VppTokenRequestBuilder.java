@@ -53,11 +53,11 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder implements IVppTo
 
 
 
-    public IVppTokenSyncLicensesRequestBuilder syncLicenses() {
-        return new VppTokenSyncLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncLicenses"), getClient(), null);
-    }
-
     public IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices) {
         return new VppTokenRevokeLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeLicenses"), getClient(), null, notifyManagedDevices);
+    }
+
+    public IVppTokenSyncLicensesRequestBuilder syncLicenses() {
+        return new VppTokenSyncLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncLicenses"), getClient(), null);
     }
 }

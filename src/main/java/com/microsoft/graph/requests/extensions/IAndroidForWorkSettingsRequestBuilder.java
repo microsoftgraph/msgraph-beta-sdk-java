@@ -32,8 +32,8 @@ public interface IAndroidForWorkSettingsRequestBuilder extends IRequestBuilder {
      */
     IAndroidForWorkSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IAndroidForWorkSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName);
     IAndroidForWorkSettingsCompleteSignupRequestBuilder completeSignup(final String enterpriseToken);
+    IAndroidForWorkSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName);
     IAndroidForWorkSettingsSyncAppsRequestBuilder syncApps();
     IAndroidForWorkSettingsUnbindRequestBuilder unbind();
 

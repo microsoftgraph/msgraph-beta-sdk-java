@@ -12,18 +12,18 @@ import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequ
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionRequestBuilder;
@@ -129,6 +129,27 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      */
     public PrivilegedAccess post(final PrivilegedAccess newPrivilegedAccess) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedAccess);
+    }
+
+    /**
+     * Creates a PrivilegedAccess with a new object
+     *
+     * @param newPrivilegedAccess the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedAccess);
+    }
+
+    /**
+     * Creates a PrivilegedAccess with a new object
+     *
+     * @param newPrivilegedAccess the object to create/update
+     * @return the created PrivilegedAccess
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedAccess put(final PrivilegedAccess newPrivilegedAccess) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedAccess);
     }
 
     /**

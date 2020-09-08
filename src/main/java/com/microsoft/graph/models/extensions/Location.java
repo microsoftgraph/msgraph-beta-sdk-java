@@ -40,22 +40,6 @@ public class Location implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
-     * The name associated with the location.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Location Email Address.
-     * Optional email address of the location.
-     */
-    @SerializedName("locationEmailAddress")
-    @Expose
-    public String locationEmailAddress;
-
-    /**
      * The Address.
      * The street address of the location.
      */
@@ -72,12 +56,20 @@ public class Location implements IJsonBackedObject {
     public OutlookGeoCoordinates coordinates;
 
     /**
-     * The Location Uri.
-     * Optional URI representing the location.
+     * The Display Name.
+     * The name associated with the location.
      */
-    @SerializedName("locationUri")
+    @SerializedName("displayName")
     @Expose
-    public String locationUri;
+    public String displayName;
+
+    /**
+     * The Location Email Address.
+     * Optional email address of the location.
+     */
+    @SerializedName("locationEmailAddress")
+    @Expose
+    public String locationEmailAddress;
 
     /**
      * The Location Type.
@@ -86,6 +78,14 @@ public class Location implements IJsonBackedObject {
     @SerializedName("locationType")
     @Expose
     public LocationType locationType;
+
+    /**
+     * The Location Uri.
+     * Optional URI representing the location.
+     */
+    @SerializedName("locationUri")
+    @Expose
+    public String locationUri;
 
     /**
      * The Unique Id.

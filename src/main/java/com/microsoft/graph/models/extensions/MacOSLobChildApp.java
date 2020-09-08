@@ -36,20 +36,20 @@ public class MacOSLobChildApp implements IJsonBackedObject {
     }
 
     /**
-     * The Bundle Id.
-     * The Identity Name.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
      * The Build Number.
      * The build number of MacOS Line of Business (LoB) app.
      */
     @SerializedName("buildNumber")
     @Expose
     public String buildNumber;
+
+    /**
+     * The Bundle Id.
+     * The Identity Name.
+     */
+    @SerializedName("bundleId")
+    @Expose
+    public String bundleId;
 
     /**
      * The Version Number.

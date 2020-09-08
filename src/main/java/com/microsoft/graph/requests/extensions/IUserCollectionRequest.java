@@ -13,14 +13,14 @@ import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
-import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementData;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDevice;
@@ -71,4 +71,20 @@ public interface IUserCollectionRequest {
      */
     IUserCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IUserCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IUserCollectionRequest skipToken(String skipToken);
 }

@@ -112,6 +112,27 @@ public class PrintUserIdentityRequest extends BaseRequest implements IPrintUserI
     }
 
     /**
+     * Creates a PrintUserIdentity with a new object
+     *
+     * @param newPrintUserIdentity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback) {
+        send(HttpMethod.PUT, callback, newPrintUserIdentity);
+    }
+
+    /**
+     * Creates a PrintUserIdentity with a new object
+     *
+     * @param newPrintUserIdentity the object to create/update
+     * @return the created PrintUserIdentity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintUserIdentity put(final PrintUserIdentity newPrintUserIdentity) throws ClientException {
+        return send(HttpMethod.PUT, newPrintUserIdentity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

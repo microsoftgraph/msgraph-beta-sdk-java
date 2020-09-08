@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.SharedAppleDeviceUser;
+import com.microsoft.graph.models.generated.DeviceGuardLocalSystemAuthorityCredentialGuardState;
 import com.microsoft.graph.models.generated.DeviceGuardVirtualizationBasedSecurityHardwareRequirementState;
 import com.microsoft.graph.models.generated.DeviceGuardVirtualizationBasedSecurityState;
-import com.microsoft.graph.models.generated.DeviceGuardLocalSystemAuthorityCredentialGuardState;
+import com.microsoft.graph.models.extensions.SharedAppleDeviceUser;
 
 
 import com.google.gson.JsonObject;
@@ -40,124 +40,12 @@ public class HardwareInformation implements IJsonBackedObject {
     }
 
     /**
-     * The Serial Number.
-     * Serial number.
+     * The Battery Charge Cycles.
+     * The number of charge cycles the device???s current battery has gone through. Valid values 0 to 2147483647
      */
-    @SerializedName("serialNumber")
+    @SerializedName("batteryChargeCycles")
     @Expose
-    public String serialNumber;
-
-    /**
-     * The Total Storage Space.
-     * Total storage space of the device.
-     */
-    @SerializedName("totalStorageSpace")
-    @Expose
-    public Long totalStorageSpace;
-
-    /**
-     * The Free Storage Space.
-     * Free storage space of the device.
-     */
-    @SerializedName("freeStorageSpace")
-    @Expose
-    public Long freeStorageSpace;
-
-    /**
-     * The Imei.
-     * IMEI
-     */
-    @SerializedName("imei")
-    @Expose
-    public String imei;
-
-    /**
-     * The Meid.
-     * MEID
-     */
-    @SerializedName("meid")
-    @Expose
-    public String meid;
-
-    /**
-     * The Manufacturer.
-     * Manufacturer of the device
-     */
-    @SerializedName("manufacturer")
-    @Expose
-    public String manufacturer;
-
-    /**
-     * The Model.
-     * Model of the device
-     */
-    @SerializedName("model")
-    @Expose
-    public String model;
-
-    /**
-     * The Phone Number.
-     * Phone number of the device
-     */
-    @SerializedName("phoneNumber")
-    @Expose
-    public String phoneNumber;
-
-    /**
-     * The Subscriber Carrier.
-     * Subscriber carrier of the device
-     */
-    @SerializedName("subscriberCarrier")
-    @Expose
-    public String subscriberCarrier;
-
-    /**
-     * The Cellular Technology.
-     * Cellular technology of the device
-     */
-    @SerializedName("cellularTechnology")
-    @Expose
-    public String cellularTechnology;
-
-    /**
-     * The Wifi Mac.
-     * WiFi MAC address of the device
-     */
-    @SerializedName("wifiMac")
-    @Expose
-    public String wifiMac;
-
-    /**
-     * The Operating System Language.
-     * Operating system language of the device
-     */
-    @SerializedName("operatingSystemLanguage")
-    @Expose
-    public String operatingSystemLanguage;
-
-    /**
-     * The Is Supervised.
-     * Supervised mode of the device
-     */
-    @SerializedName("isSupervised")
-    @Expose
-    public Boolean isSupervised;
-
-    /**
-     * The Is Encrypted.
-     * Encryption status of the device
-     */
-    @SerializedName("isEncrypted")
-    @Expose
-    public Boolean isEncrypted;
-
-    /**
-     * The Battery Serial Number.
-     * The serial number of the device???s current battery
-     */
-    @SerializedName("batterySerialNumber")
-    @Expose
-    public String batterySerialNumber;
+    public Integer batteryChargeCycles;
 
     /**
      * The Battery Health Percentage.
@@ -168,44 +56,20 @@ public class HardwareInformation implements IJsonBackedObject {
     public Integer batteryHealthPercentage;
 
     /**
-     * The Battery Charge Cycles.
-     * The number of charge cycles the device???s current battery has gone through. Valid values 0 to 2147483647
+     * The Battery Serial Number.
+     * The serial number of the device???s current battery
      */
-    @SerializedName("batteryChargeCycles")
+    @SerializedName("batterySerialNumber")
     @Expose
-    public Integer batteryChargeCycles;
+    public String batterySerialNumber;
 
     /**
-     * The Is Shared Device.
-     * Shared iPad
+     * The Cellular Technology.
+     * Cellular technology of the device
      */
-    @SerializedName("isSharedDevice")
+    @SerializedName("cellularTechnology")
     @Expose
-    public Boolean isSharedDevice;
-
-    /**
-     * The Shared Device Cached Users.
-     * All users on the shared Apple device
-     */
-    @SerializedName("sharedDeviceCachedUsers")
-    @Expose
-    public java.util.List<SharedAppleDeviceUser> sharedDeviceCachedUsers;
-
-    /**
-     * The Tpm Specification Version.
-     * String that specifies the specification version.
-     */
-    @SerializedName("tpmSpecificationVersion")
-    @Expose
-    public String tpmSpecificationVersion;
-
-    /**
-     * The Operating System Edition.
-     * String that specifies the OS edition.
-     */
-    @SerializedName("operatingSystemEdition")
-    @Expose
-    public String operatingSystemEdition;
+    public String cellularTechnology;
 
     /**
      * The Device Full Qualified Domain Name.
@@ -214,6 +78,14 @@ public class HardwareInformation implements IJsonBackedObject {
     @SerializedName("deviceFullQualifiedDomainName")
     @Expose
     public String deviceFullQualifiedDomainName;
+
+    /**
+     * The Device Guard Local System Authority Credential Guard State.
+     * Local System Authority (LSA) credential guard status. 
+     */
+    @SerializedName("deviceGuardLocalSystemAuthorityCredentialGuardState")
+    @Expose
+    public DeviceGuardLocalSystemAuthorityCredentialGuardState deviceGuardLocalSystemAuthorityCredentialGuardState;
 
     /**
      * The Device Guard Virtualization Based Security Hardware Requirement State.
@@ -232,12 +104,92 @@ public class HardwareInformation implements IJsonBackedObject {
     public DeviceGuardVirtualizationBasedSecurityState deviceGuardVirtualizationBasedSecurityState;
 
     /**
-     * The Device Guard Local System Authority Credential Guard State.
-     * Local System Authority (LSA) credential guard status. 
+     * The Free Storage Space.
+     * Free storage space of the device.
      */
-    @SerializedName("deviceGuardLocalSystemAuthorityCredentialGuardState")
+    @SerializedName("freeStorageSpace")
     @Expose
-    public DeviceGuardLocalSystemAuthorityCredentialGuardState deviceGuardLocalSystemAuthorityCredentialGuardState;
+    public Long freeStorageSpace;
+
+    /**
+     * The Imei.
+     * IMEI
+     */
+    @SerializedName("imei")
+    @Expose
+    public String imei;
+
+    /**
+     * The Is Encrypted.
+     * Encryption status of the device
+     */
+    @SerializedName("isEncrypted")
+    @Expose
+    public Boolean isEncrypted;
+
+    /**
+     * The Is Shared Device.
+     * Shared iPad
+     */
+    @SerializedName("isSharedDevice")
+    @Expose
+    public Boolean isSharedDevice;
+
+    /**
+     * The Is Supervised.
+     * Supervised mode of the device
+     */
+    @SerializedName("isSupervised")
+    @Expose
+    public Boolean isSupervised;
+
+    /**
+     * The Manufacturer.
+     * Manufacturer of the device
+     */
+    @SerializedName("manufacturer")
+    @Expose
+    public String manufacturer;
+
+    /**
+     * The Meid.
+     * MEID
+     */
+    @SerializedName("meid")
+    @Expose
+    public String meid;
+
+    /**
+     * The Model.
+     * Model of the device
+     */
+    @SerializedName("model")
+    @Expose
+    public String model;
+
+    /**
+     * The Operating System Edition.
+     * String that specifies the OS edition.
+     */
+    @SerializedName("operatingSystemEdition")
+    @Expose
+    public String operatingSystemEdition;
+
+    /**
+     * The Operating System Language.
+     * Operating system language of the device
+     */
+    @SerializedName("operatingSystemLanguage")
+    @Expose
+    public String operatingSystemLanguage;
+
+    /**
+     * The Operating System Product Type.
+     * Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
+     */
+    @SerializedName("operatingSystemProductType")
+    @Expose
+    public Integer operatingSystemProductType;
 
     /**
      * The Os Build Number.
@@ -248,12 +200,60 @@ public class HardwareInformation implements IJsonBackedObject {
     public String osBuildNumber;
 
     /**
-     * The Operating System Product Type.
-     * Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
+     * The Phone Number.
+     * Phone number of the device
      */
-    @SerializedName("operatingSystemProductType")
+    @SerializedName("phoneNumber")
     @Expose
-    public Integer operatingSystemProductType;
+    public String phoneNumber;
+
+    /**
+     * The Serial Number.
+     * Serial number.
+     */
+    @SerializedName("serialNumber")
+    @Expose
+    public String serialNumber;
+
+    /**
+     * The Shared Device Cached Users.
+     * All users on the shared Apple device
+     */
+    @SerializedName("sharedDeviceCachedUsers")
+    @Expose
+    public java.util.List<SharedAppleDeviceUser> sharedDeviceCachedUsers;
+
+    /**
+     * The Subscriber Carrier.
+     * Subscriber carrier of the device
+     */
+    @SerializedName("subscriberCarrier")
+    @Expose
+    public String subscriberCarrier;
+
+    /**
+     * The Total Storage Space.
+     * Total storage space of the device.
+     */
+    @SerializedName("totalStorageSpace")
+    @Expose
+    public Long totalStorageSpace;
+
+    /**
+     * The Tpm Specification Version.
+     * String that specifies the specification version.
+     */
+    @SerializedName("tpmSpecificationVersion")
+    @Expose
+    public String tpmSpecificationVersion;
+
+    /**
+     * The Wifi Mac.
+     * WiFi MAC address of the device
+     */
+    @SerializedName("wifiMac")
+    @Expose
+    public String wifiMac;
 
 
     /**

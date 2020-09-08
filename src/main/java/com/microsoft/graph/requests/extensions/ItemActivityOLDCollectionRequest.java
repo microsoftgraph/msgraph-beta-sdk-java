@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ItemActivityOLD;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class ItemActivityOLDCollectionRequest extends BaseCollectionRequest<Item
     public void post(final ItemActivityOLD newItemActivityOLD, final ICallback<ItemActivityOLD> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityOLDRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityOLD, callback);
     }
 
     public ItemActivityOLD post(final ItemActivityOLD newItemActivityOLD) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityOLDRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityOLD);
     }
 
@@ -106,6 +106,27 @@ public class ItemActivityOLDCollectionRequest extends BaseCollectionRequest<Item
         return (ItemActivityOLDCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IItemActivityOLDCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ItemActivityOLDCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IItemActivityOLDCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IItemActivityOLDCollectionRequest)this;
+    }
     public IItemActivityOLDCollectionPage buildFromResponse(final ItemActivityOLDCollectionResponse response) {
         final IItemActivityOLDCollectionRequestBuilder builder;
         if (response.nextLink != null) {

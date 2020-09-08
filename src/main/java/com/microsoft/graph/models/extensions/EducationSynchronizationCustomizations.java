@@ -52,20 +52,20 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     public EducationSynchronizationCustomization student;
 
     /**
-     * The Teacher.
-     * 
-     */
-    @SerializedName("teacher")
-    @Expose
-    public EducationSynchronizationCustomization teacher;
-
-    /**
      * The Student Enrollment.
      * 
      */
     @SerializedName("studentEnrollment")
     @Expose
     public EducationSynchronizationCustomization studentEnrollment;
+
+    /**
+     * The Teacher.
+     * 
+     */
+    @SerializedName("teacher")
+    @Expose
+    public EducationSynchronizationCustomization teacher;
 
     /**
      * The Teacher Roster.

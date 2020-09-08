@@ -127,6 +127,27 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
     }
 
     /**
+     * Creates a Windows81VpnConfiguration with a new object
+     *
+     * @param newWindows81VpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<Windows81VpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows81VpnConfiguration);
+    }
+
+    /**
+     * Creates a Windows81VpnConfiguration with a new object
+     *
+     * @param newWindows81VpnConfiguration the object to create/update
+     * @return the created Windows81VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows81VpnConfiguration put(final Windows81VpnConfiguration newWindows81VpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows81VpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

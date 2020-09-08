@@ -39,14 +39,6 @@ public class LabelingOptions implements IJsonBackedObject {
     }
 
     /**
-     * The Label Id.
-     * 
-     */
-    @SerializedName("labelId")
-    @Expose
-    public java.util.UUID labelId;
-
-    /**
      * The Assignment Method.
      * 
      */
@@ -69,6 +61,14 @@ public class LabelingOptions implements IJsonBackedObject {
     @SerializedName("extendedProperties")
     @Expose
     public java.util.List<KeyValuePair> extendedProperties;
+
+    /**
+     * The Label Id.
+     * 
+     */
+    @SerializedName("labelId")
+    @Expose
+    public java.util.UUID labelId;
 
 
     /**

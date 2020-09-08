@@ -80,6 +80,23 @@ public interface IWindows81SCEPCertificateProfileRequest extends IHttpRequest {
     Windows81SCEPCertificateProfile post(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException;
 
     /**
+     * Posts a Windows81SCEPCertificateProfile with a new object
+     *
+     * @param newWindows81SCEPCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<Windows81SCEPCertificateProfile> callback);
+
+    /**
+     * Posts a Windows81SCEPCertificateProfile with a new object
+     *
+     * @param newWindows81SCEPCertificateProfile the object to create/update
+     * @return the created Windows81SCEPCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows81SCEPCertificateProfile put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

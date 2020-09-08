@@ -41,7 +41,7 @@ public class RoleScopeTagCollectionReferenceRequest extends BaseCollectionReques
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/roleScopeTags/" + newRoleScopeTag.id);
         new RoleScopeTagWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleScopeTag, body, callback);
     }
 
@@ -49,7 +49,7 @@ public class RoleScopeTagCollectionReferenceRequest extends BaseCollectionReques
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/roleScopeTags/" + newRoleScopeTag.id);
         return new RoleScopeTagWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newRoleScopeTag, body);
     }
     /**

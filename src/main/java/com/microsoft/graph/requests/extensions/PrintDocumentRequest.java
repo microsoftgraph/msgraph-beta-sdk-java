@@ -112,6 +112,27 @@ public class PrintDocumentRequest extends BaseRequest implements IPrintDocumentR
     }
 
     /**
+     * Creates a PrintDocument with a new object
+     *
+     * @param newPrintDocument the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintDocument newPrintDocument, final ICallback<PrintDocument> callback) {
+        send(HttpMethod.PUT, callback, newPrintDocument);
+    }
+
+    /**
+     * Creates a PrintDocument with a new object
+     *
+     * @param newPrintDocument the object to create/update
+     * @return the created PrintDocument
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintDocument put(final PrintDocument newPrintDocument) throws ClientException {
+        return send(HttpMethod.PUT, newPrintDocument);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

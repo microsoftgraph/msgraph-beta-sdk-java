@@ -31,22 +31,6 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
 
 
     /**
-     * The Managed Device Identifier.
-     * Device identifier created or collected by Intune.
-     */
-    @SerializedName("managedDeviceIdentifier")
-    @Expose
-    public String managedDeviceIdentifier;
-
-    /**
-     * The User Id.
-     * Identifier for the user that tried to enroll the device.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Application Id.
      * Intune application identifier.
      */
@@ -61,6 +45,22 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     @SerializedName("history")
     @Expose
     public java.util.List<MobileAppTroubleshootingHistoryItem> history;
+
+    /**
+     * The Managed Device Identifier.
+     * Device identifier created or collected by Intune.
+     */
+    @SerializedName("managedDeviceIdentifier")
+    @Expose
+    public String managedDeviceIdentifier;
+
+    /**
+     * The User Id.
+     * Identifier for the user that tried to enroll the device.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The App Log Collection Requests.

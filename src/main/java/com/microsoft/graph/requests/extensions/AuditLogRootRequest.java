@@ -8,22 +8,22 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditLogRoot;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -125,6 +125,27 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      */
     public AuditLogRoot post(final AuditLogRoot newAuditLogRoot) throws ClientException {
         return send(HttpMethod.POST, newAuditLogRoot);
+    }
+
+    /**
+     * Creates a AuditLogRoot with a new object
+     *
+     * @param newAuditLogRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AuditLogRoot newAuditLogRoot, final ICallback<AuditLogRoot> callback) {
+        send(HttpMethod.PUT, callback, newAuditLogRoot);
+    }
+
+    /**
+     * Creates a AuditLogRoot with a new object
+     *
+     * @param newAuditLogRoot the object to create/update
+     * @return the created AuditLogRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AuditLogRoot put(final AuditLogRoot newAuditLogRoot) throws ClientException {
+        return send(HttpMethod.PUT, newAuditLogRoot);
     }
 
     /**

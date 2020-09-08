@@ -80,6 +80,23 @@ public interface IAppleVppTokenTroubleshootingEventRequest extends IHttpRequest 
     AppleVppTokenTroubleshootingEvent post(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent) throws ClientException;
 
     /**
+     * Posts a AppleVppTokenTroubleshootingEvent with a new object
+     *
+     * @param newAppleVppTokenTroubleshootingEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback);
+
+    /**
+     * Posts a AppleVppTokenTroubleshootingEvent with a new object
+     *
+     * @param newAppleVppTokenTroubleshootingEvent the object to create/update
+     * @return the created AppleVppTokenTroubleshootingEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppleVppTokenTroubleshootingEvent put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

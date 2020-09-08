@@ -45,6 +45,14 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
     public Boolean executeImmediately;
 
     /**
+     * The Expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Is Validation Only.
      * 
      */
@@ -53,12 +61,12 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
     public Boolean isValidationOnly;
 
     /**
-     * The Request Type.
+     * The Justification.
      * 
      */
-    @SerializedName("requestType")
+    @SerializedName("justification")
     @Expose
-    public String requestType;
+    public String justification;
 
     /**
      * The Request State.
@@ -77,20 +85,12 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
     public String requestStatus;
 
     /**
-     * The Expiration Date Time.
+     * The Request Type.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName("requestType")
     @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Justification.
-     * 
-     */
-    @SerializedName("justification")
-    @Expose
-    public String justification;
+    public String requestType;
 
     /**
      * The Access Package Resource.

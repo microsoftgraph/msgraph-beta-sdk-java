@@ -112,6 +112,27 @@ public class RoleScopeTagAutoAssignmentRequest extends BaseRequest implements IR
     }
 
     /**
+     * Creates a RoleScopeTagAutoAssignment with a new object
+     *
+     * @param newRoleScopeTagAutoAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback) {
+        send(HttpMethod.PUT, callback, newRoleScopeTagAutoAssignment);
+    }
+
+    /**
+     * Creates a RoleScopeTagAutoAssignment with a new object
+     *
+     * @param newRoleScopeTagAutoAssignment the object to create/update
+     * @return the created RoleScopeTagAutoAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RoleScopeTagAutoAssignment put(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newRoleScopeTagAutoAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

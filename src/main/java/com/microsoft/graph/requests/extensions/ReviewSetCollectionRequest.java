@@ -62,14 +62,14 @@ public class ReviewSetCollectionRequest extends BaseCollectionRequest<ReviewSetC
     public void post(final ReviewSet newReviewSet, final ICallback<ReviewSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ReviewSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newReviewSet, callback);
     }
 
     public ReviewSet post(final ReviewSet newReviewSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ReviewSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newReviewSet);
     }
 
@@ -106,6 +106,27 @@ public class ReviewSetCollectionRequest extends BaseCollectionRequest<ReviewSetC
         return (ReviewSetCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IReviewSetCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ReviewSetCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IReviewSetCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IReviewSetCollectionRequest)this;
+    }
     public IReviewSetCollectionPage buildFromResponse(final ReviewSetCollectionResponse response) {
         final IReviewSetCollectionRequestBuilder builder;
         if (response.nextLink != null) {

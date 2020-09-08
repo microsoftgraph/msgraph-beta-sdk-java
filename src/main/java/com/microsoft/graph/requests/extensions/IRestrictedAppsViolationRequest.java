@@ -80,6 +80,23 @@ public interface IRestrictedAppsViolationRequest extends IHttpRequest {
     RestrictedAppsViolation post(final RestrictedAppsViolation newRestrictedAppsViolation) throws ClientException;
 
     /**
+     * Posts a RestrictedAppsViolation with a new object
+     *
+     * @param newRestrictedAppsViolation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback);
+
+    /**
+     * Posts a RestrictedAppsViolation with a new object
+     *
+     * @param newRestrictedAppsViolation the object to create/update
+     * @return the created RestrictedAppsViolation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RestrictedAppsViolation put(final RestrictedAppsViolation newRestrictedAppsViolation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

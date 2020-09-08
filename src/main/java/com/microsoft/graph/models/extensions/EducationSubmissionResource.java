@@ -28,20 +28,20 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Resource.
-     * 
-     */
-    @SerializedName("resource")
-    @Expose
-    public EducationResource resource;
-
-    /**
      * The Assignment Resource Url.
      * 
      */
     @SerializedName("assignmentResourceUrl")
     @Expose
     public String assignmentResourceUrl;
+
+    /**
+     * The Resource.
+     * 
+     */
+    @SerializedName("resource")
+    @Expose
+    public EducationResource resource;
 
 
     /**

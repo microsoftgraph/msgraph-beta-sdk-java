@@ -8,9 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,13 +37,6 @@ public interface IIdentityGovernanceRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for EntitlementManagement
-     *
-     * @return the IEntitlementManagementRequestBuilder instance
-     */
-    IEntitlementManagementRequestBuilder entitlementManagement();
-
-    /**
      * Gets the request builder for AccessReviewSet
      *
      * @return the IAccessReviewSetRequestBuilder instance
@@ -56,5 +49,12 @@ public interface IIdentityGovernanceRequestBuilder extends IRequestBuilder {
      * @return the ITermsOfUseContainerRequestBuilder instance
      */
     ITermsOfUseContainerRequestBuilder termsOfUse();
+
+    /**
+     * Gets the request builder for EntitlementManagement
+     *
+     * @return the IEntitlementManagementRequestBuilder instance
+     */
+    IEntitlementManagementRequestBuilder entitlementManagement();
 
 }

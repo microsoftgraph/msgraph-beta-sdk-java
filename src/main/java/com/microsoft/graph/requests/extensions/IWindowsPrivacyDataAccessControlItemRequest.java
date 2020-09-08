@@ -80,6 +80,23 @@ public interface IWindowsPrivacyDataAccessControlItemRequest extends IHttpReques
     WindowsPrivacyDataAccessControlItem post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem) throws ClientException;
 
     /**
+     * Posts a WindowsPrivacyDataAccessControlItem with a new object
+     *
+     * @param newWindowsPrivacyDataAccessControlItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback);
+
+    /**
+     * Posts a WindowsPrivacyDataAccessControlItem with a new object
+     *
+     * @param newWindowsPrivacyDataAccessControlItem the object to create/update
+     * @return the created WindowsPrivacyDataAccessControlItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPrivacyDataAccessControlItem put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

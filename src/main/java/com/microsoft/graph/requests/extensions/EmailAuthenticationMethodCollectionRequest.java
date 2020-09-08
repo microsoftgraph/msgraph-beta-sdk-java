@@ -62,14 +62,14 @@ public class EmailAuthenticationMethodCollectionRequest extends BaseCollectionRe
     public void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EmailAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmailAuthenticationMethod, callback);
     }
 
     public EmailAuthenticationMethod post(final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EmailAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmailAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class EmailAuthenticationMethodCollectionRequest extends BaseCollectionRe
         return (EmailAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEmailAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EmailAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEmailAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEmailAuthenticationMethodCollectionRequest)this;
+    }
     public IEmailAuthenticationMethodCollectionPage buildFromResponse(final EmailAuthenticationMethodCollectionResponse response) {
         final IEmailAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

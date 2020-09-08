@@ -80,6 +80,23 @@ public interface IAppleUserInitiatedEnrollmentProfileRequest extends IHttpReques
     AppleUserInitiatedEnrollmentProfile post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a AppleUserInitiatedEnrollmentProfile with a new object
+     *
+     * @param newAppleUserInitiatedEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<AppleUserInitiatedEnrollmentProfile> callback);
+
+    /**
+     * Posts a AppleUserInitiatedEnrollmentProfile with a new object
+     *
+     * @param newAppleUserInitiatedEnrollmentProfile the object to create/update
+     * @return the created AppleUserInitiatedEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppleUserInitiatedEnrollmentProfile put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

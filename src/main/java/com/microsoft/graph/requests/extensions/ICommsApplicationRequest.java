@@ -80,6 +80,23 @@ public interface ICommsApplicationRequest extends IHttpRequest {
     CommsApplication post(final CommsApplication newCommsApplication) throws ClientException;
 
     /**
+     * Posts a CommsApplication with a new object
+     *
+     * @param newCommsApplication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CommsApplication newCommsApplication, final ICallback<CommsApplication> callback);
+
+    /**
+     * Posts a CommsApplication with a new object
+     *
+     * @param newCommsApplication the object to create/update
+     * @return the created CommsApplication
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CommsApplication put(final CommsApplication newCommsApplication) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

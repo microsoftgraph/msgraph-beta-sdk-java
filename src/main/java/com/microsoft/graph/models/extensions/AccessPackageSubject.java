@@ -28,20 +28,20 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Object Id.
-     * 
-     */
-    @SerializedName("objectId")
-    @Expose
-    public String objectId;
-
-    /**
      * The Alt Sec Id.
      * 
      */
     @SerializedName("altSecId")
     @Expose
     public String altSecId;
+
+    /**
+     * The Connected Organization Id.
+     * 
+     */
+    @SerializedName("connectedOrganizationId")
+    @Expose
+    public String connectedOrganizationId;
 
     /**
      * The Display Name.
@@ -52,20 +52,20 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Principal Name.
-     * 
-     */
-    @SerializedName("principalName")
-    @Expose
-    public String principalName;
-
-    /**
      * The Email.
      * 
      */
     @SerializedName("email")
     @Expose
     public String email;
+
+    /**
+     * The Object Id.
+     * 
+     */
+    @SerializedName("objectId")
+    @Expose
+    public String objectId;
 
     /**
      * The On Premises Security Identifier.
@@ -76,20 +76,20 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
     public String onPremisesSecurityIdentifier;
 
     /**
+     * The Principal Name.
+     * 
+     */
+    @SerializedName("principalName")
+    @Expose
+    public String principalName;
+
+    /**
      * The Type.
      * 
      */
     @SerializedName("type")
     @Expose
     public String type;
-
-    /**
-     * The Connected Organization Id.
-     * 
-     */
-    @SerializedName("connectedOrganizationId")
-    @Expose
-    public String connectedOrganizationId;
 
     /**
      * The Connected Organization.

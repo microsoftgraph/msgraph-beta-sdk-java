@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesCreditMemoLine;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      */
     public SalesCreditMemoLine post(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
         return send(HttpMethod.POST, newSalesCreditMemoLine);
+    }
+
+    /**
+     * Creates a SalesCreditMemoLine with a new object
+     *
+     * @param newSalesCreditMemoLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<SalesCreditMemoLine> callback) {
+        send(HttpMethod.PUT, callback, newSalesCreditMemoLine);
+    }
+
+    /**
+     * Creates a SalesCreditMemoLine with a new object
+     *
+     * @param newSalesCreditMemoLine the object to create/update
+     * @return the created SalesCreditMemoLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesCreditMemoLine put(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
+        return send(HttpMethod.PUT, newSalesCreditMemoLine);
     }
 
     /**

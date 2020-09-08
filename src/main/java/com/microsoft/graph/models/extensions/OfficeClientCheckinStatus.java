@@ -36,12 +36,20 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
     }
 
     /**
-     * The User Principal Name.
+     * The Applied Policies.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("appliedPolicies")
     @Expose
-    public String userPrincipalName;
+    public java.util.List<String> appliedPolicies;
+
+    /**
+     * The Checkin Date Time.
+     * 
+     */
+    @SerializedName("checkinDateTime")
+    @Expose
+    public java.util.Calendar checkinDateTime;
 
     /**
      * The Device Name.
@@ -68,12 +76,12 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
     public String devicePlatformVersion;
 
     /**
-     * The Was Successful.
+     * The Error Message.
      * 
      */
-    @SerializedName("wasSuccessful")
+    @SerializedName("errorMessage")
     @Expose
-    public Boolean wasSuccessful;
+    public String errorMessage;
 
     /**
      * The User Id.
@@ -84,28 +92,20 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
     public String userId;
 
     /**
-     * The Checkin Date Time.
+     * The User Principal Name.
      * 
      */
-    @SerializedName("checkinDateTime")
+    @SerializedName("userPrincipalName")
     @Expose
-    public java.util.Calendar checkinDateTime;
+    public String userPrincipalName;
 
     /**
-     * The Error Message.
+     * The Was Successful.
      * 
      */
-    @SerializedName("errorMessage")
+    @SerializedName("wasSuccessful")
     @Expose
-    public String errorMessage;
-
-    /**
-     * The Applied Policies.
-     * 
-     */
-    @SerializedName("appliedPolicies")
-    @Expose
-    public java.util.List<String> appliedPolicies;
+    public Boolean wasSuccessful;
 
 
     /**

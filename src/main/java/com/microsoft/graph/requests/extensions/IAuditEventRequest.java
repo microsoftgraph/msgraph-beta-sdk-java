@@ -80,6 +80,23 @@ public interface IAuditEventRequest extends IHttpRequest {
     AuditEvent post(final AuditEvent newAuditEvent) throws ClientException;
 
     /**
+     * Posts a AuditEvent with a new object
+     *
+     * @param newAuditEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AuditEvent newAuditEvent, final ICallback<AuditEvent> callback);
+
+    /**
+     * Posts a AuditEvent with a new object
+     *
+     * @param newAuditEvent the object to create/update
+     * @return the created AuditEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AuditEvent put(final AuditEvent newAuditEvent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

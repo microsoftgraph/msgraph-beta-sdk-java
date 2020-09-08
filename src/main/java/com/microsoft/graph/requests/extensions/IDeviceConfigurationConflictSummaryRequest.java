@@ -80,6 +80,23 @@ public interface IDeviceConfigurationConflictSummaryRequest extends IHttpRequest
     DeviceConfigurationConflictSummary post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary) throws ClientException;
 
     /**
+     * Posts a DeviceConfigurationConflictSummary with a new object
+     *
+     * @param newDeviceConfigurationConflictSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback);
+
+    /**
+     * Posts a DeviceConfigurationConflictSummary with a new object
+     *
+     * @param newDeviceConfigurationConflictSummary the object to create/update
+     * @return the created DeviceConfigurationConflictSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceConfigurationConflictSummary put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

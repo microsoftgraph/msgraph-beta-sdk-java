@@ -62,14 +62,14 @@ public class DeviceManagementExchangeOnPremisesPolicyCollectionRequest extends B
     public void post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeOnPremisesPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExchangeOnPremisesPolicy, callback);
     }
 
     public DeviceManagementExchangeOnPremisesPolicy post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExchangeOnPremisesPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementExchangeOnPremisesPolicyCollectionRequest extends B
         return (DeviceManagementExchangeOnPremisesPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementExchangeOnPremisesPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementExchangeOnPremisesPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementExchangeOnPremisesPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementExchangeOnPremisesPolicyCollectionRequest)this;
+    }
     public IDeviceManagementExchangeOnPremisesPolicyCollectionPage buildFromResponse(final DeviceManagementExchangeOnPremisesPolicyCollectionResponse response) {
         final IDeviceManagementExchangeOnPremisesPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

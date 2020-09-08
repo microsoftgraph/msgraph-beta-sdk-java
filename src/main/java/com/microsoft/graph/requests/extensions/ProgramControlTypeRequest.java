@@ -112,6 +112,27 @@ public class ProgramControlTypeRequest extends BaseRequest implements IProgramCo
     }
 
     /**
+     * Creates a ProgramControlType with a new object
+     *
+     * @param newProgramControlType the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback) {
+        send(HttpMethod.PUT, callback, newProgramControlType);
+    }
+
+    /**
+     * Creates a ProgramControlType with a new object
+     *
+     * @param newProgramControlType the object to create/update
+     * @return the created ProgramControlType
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ProgramControlType put(final ProgramControlType newProgramControlType) throws ClientException {
+        return send(HttpMethod.PUT, newProgramControlType);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

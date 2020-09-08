@@ -27,20 +27,20 @@ public class ExactMatchUploadAgent extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
      * The Creation Date Time.
      * 
      */
     @SerializedName("creationDateTime")
     @Expose
     public java.util.Calendar creationDateTime;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
 
 
     /**

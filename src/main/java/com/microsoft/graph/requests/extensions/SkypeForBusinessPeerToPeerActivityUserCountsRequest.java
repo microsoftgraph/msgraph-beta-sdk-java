@@ -112,6 +112,27 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
     }
 
     /**
+     * Creates a SkypeForBusinessPeerToPeerActivityUserCounts with a new object
+     *
+     * @param newSkypeForBusinessPeerToPeerActivityUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts, final ICallback<SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newSkypeForBusinessPeerToPeerActivityUserCounts);
+    }
+
+    /**
+     * Creates a SkypeForBusinessPeerToPeerActivityUserCounts with a new object
+     *
+     * @param newSkypeForBusinessPeerToPeerActivityUserCounts the object to create/update
+     * @return the created SkypeForBusinessPeerToPeerActivityUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SkypeForBusinessPeerToPeerActivityUserCounts put(final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newSkypeForBusinessPeerToPeerActivityUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

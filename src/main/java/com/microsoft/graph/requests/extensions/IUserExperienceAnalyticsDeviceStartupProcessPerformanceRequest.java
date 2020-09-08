@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest 
     UserExperienceAnalyticsDeviceStartupProcessPerformance post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsDeviceStartupProcessPerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsDeviceStartupProcessPerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the object to create/update
+     * @return the created UserExperienceAnalyticsDeviceStartupProcessPerformance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsDeviceStartupProcessPerformance put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

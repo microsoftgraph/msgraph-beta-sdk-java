@@ -112,6 +112,27 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
     }
 
     /**
+     * Creates a PersonAnniversary with a new object
+     *
+     * @param newPersonAnniversary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback) {
+        send(HttpMethod.PUT, callback, newPersonAnniversary);
+    }
+
+    /**
+     * Creates a PersonAnniversary with a new object
+     *
+     * @param newPersonAnniversary the object to create/update
+     * @return the created PersonAnniversary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PersonAnniversary put(final PersonAnniversary newPersonAnniversary) throws ClientException {
+        return send(HttpMethod.PUT, newPersonAnniversary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

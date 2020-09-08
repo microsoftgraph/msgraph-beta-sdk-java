@@ -116,6 +116,27 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequest extends BaseR
     }
 
     /**
+     * Creates a AdvancedThreatProtectionOnboardingStateSummary with a new object
+     *
+     * @param newAdvancedThreatProtectionOnboardingStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary, final ICallback<AdvancedThreatProtectionOnboardingStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newAdvancedThreatProtectionOnboardingStateSummary);
+    }
+
+    /**
+     * Creates a AdvancedThreatProtectionOnboardingStateSummary with a new object
+     *
+     * @param newAdvancedThreatProtectionOnboardingStateSummary the object to create/update
+     * @return the created AdvancedThreatProtectionOnboardingStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AdvancedThreatProtectionOnboardingStateSummary put(final AdvancedThreatProtectionOnboardingStateSummary newAdvancedThreatProtectionOnboardingStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newAdvancedThreatProtectionOnboardingStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

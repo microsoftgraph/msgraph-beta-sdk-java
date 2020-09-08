@@ -80,6 +80,23 @@ public interface IIosTrustedRootCertificateRequest extends IHttpRequest {
     IosTrustedRootCertificate post(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException;
 
     /**
+     * Posts a IosTrustedRootCertificate with a new object
+     *
+     * @param newIosTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback);
+
+    /**
+     * Posts a IosTrustedRootCertificate with a new object
+     *
+     * @param newIosTrustedRootCertificate the object to create/update
+     * @return the created IosTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosTrustedRootCertificate put(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

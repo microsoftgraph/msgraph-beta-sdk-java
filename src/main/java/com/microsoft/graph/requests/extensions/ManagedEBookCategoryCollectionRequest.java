@@ -62,14 +62,14 @@ public class ManagedEBookCategoryCollectionRequest extends BaseCollectionRequest
     public void post(final ManagedEBookCategory newManagedEBookCategory, final ICallback<ManagedEBookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBookCategory, callback);
     }
 
     public ManagedEBookCategory post(final ManagedEBookCategory newManagedEBookCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBookCategory);
     }
 
@@ -106,6 +106,27 @@ public class ManagedEBookCategoryCollectionRequest extends BaseCollectionRequest
         return (ManagedEBookCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedEBookCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedEBookCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedEBookCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedEBookCategoryCollectionRequest)this;
+    }
     public IManagedEBookCategoryCollectionPage buildFromResponse(final ManagedEBookCategoryCollectionResponse response) {
         final IManagedEBookCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

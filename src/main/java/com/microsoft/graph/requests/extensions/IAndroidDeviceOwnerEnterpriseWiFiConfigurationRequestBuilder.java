@@ -8,9 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,21 +36,17 @@ public interface IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder ex
     IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -59,6 +55,14 @@ public interface IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder ex
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -66,16 +70,12 @@ public interface IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder ex
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
-
     /**
-     * Gets the request builder for AndroidDeviceOwnerTrustedRootCertificate
+     * Gets the request builder for DeviceManagementDerivedCredentialSettings
      *
-     * @return the IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder instance
+     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
      */
-    IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder rootCertificateForServerValidation();
+    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
 
     /**
      * Gets the request builder for AndroidDeviceOwnerCertificateProfileBase
@@ -85,10 +85,10 @@ public interface IAndroidDeviceOwnerEnterpriseWiFiConfigurationRequestBuilder ex
     IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
     /**
-     * Gets the request builder for DeviceManagementDerivedCredentialSettings
+     * Gets the request builder for AndroidDeviceOwnerTrustedRootCertificate
      *
-     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
+     * @return the IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder instance
      */
-    IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings();
+    IAndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder rootCertificateForServerValidation();
 
 }

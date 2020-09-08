@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesOrderLineCollectionRequestB
 import com.microsoft.graph.requests.extensions.ISalesOrderLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class SalesOrderRequest extends BaseRequest implements ISalesOrderRequest
      */
     public SalesOrder post(final SalesOrder newSalesOrder) throws ClientException {
         return send(HttpMethod.POST, newSalesOrder);
+    }
+
+    /**
+     * Creates a SalesOrder with a new object
+     *
+     * @param newSalesOrder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesOrder newSalesOrder, final ICallback<SalesOrder> callback) {
+        send(HttpMethod.PUT, callback, newSalesOrder);
+    }
+
+    /**
+     * Creates a SalesOrder with a new object
+     *
+     * @param newSalesOrder the object to create/update
+     * @return the created SalesOrder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesOrder put(final SalesOrder newSalesOrder) throws ClientException {
+        return send(HttpMethod.PUT, newSalesOrder);
     }
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RiskEventType;
 import com.microsoft.graph.models.generated.RiskDetail;
+import com.microsoft.graph.models.generated.RiskEventType;
 
 
 import com.google.gson.JsonObject;
@@ -38,6 +38,14 @@ public class RiskUserActivity implements IJsonBackedObject {
     }
 
     /**
+     * The Detail.
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     */
+    @SerializedName("detail")
+    @Expose
+    public RiskDetail detail;
+
+    /**
      * The Event Types.
      * 
      */
@@ -52,14 +60,6 @@ public class RiskUserActivity implements IJsonBackedObject {
     @SerializedName("riskEventTypes")
     @Expose
     public java.util.List<String> riskEventTypes;
-
-    /**
-     * The Detail.
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     */
-    @SerializedName("detail")
-    @Expose
-    public RiskDetail detail;
 
 
     /**

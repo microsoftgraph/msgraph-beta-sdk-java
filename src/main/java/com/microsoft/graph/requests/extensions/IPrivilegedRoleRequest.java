@@ -80,6 +80,23 @@ public interface IPrivilegedRoleRequest extends IHttpRequest {
     PrivilegedRole post(final PrivilegedRole newPrivilegedRole) throws ClientException;
 
     /**
+     * Posts a PrivilegedRole with a new object
+     *
+     * @param newPrivilegedRole the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback);
+
+    /**
+     * Posts a PrivilegedRole with a new object
+     *
+     * @param newPrivilegedRole the object to create/update
+     * @return the created PrivilegedRole
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrivilegedRole put(final PrivilegedRole newPrivilegedRole) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

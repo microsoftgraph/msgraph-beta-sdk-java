@@ -62,14 +62,14 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionReq
     public void post(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance, final ICallback<UserExperienceAnalyticsAppHealthApplicationPerformance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsAppHealthApplicationPerformance, callback);
     }
 
     public UserExperienceAnalyticsAppHealthApplicationPerformance post(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsAppHealthApplicationPerformance);
     }
 
@@ -106,6 +106,27 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionReq
         return (UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage buildFromResponse(final UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse response) {
         final IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

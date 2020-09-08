@@ -80,6 +80,23 @@ public interface IMacOSVpnConfigurationRequest extends IHttpRequest {
     MacOSVpnConfiguration post(final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException;
 
     /**
+     * Posts a MacOSVpnConfiguration with a new object
+     *
+     * @param newMacOSVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<MacOSVpnConfiguration> callback);
+
+    /**
+     * Posts a MacOSVpnConfiguration with a new object
+     *
+     * @param newMacOSVpnConfiguration the object to create/update
+     * @return the created MacOSVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSVpnConfiguration put(final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

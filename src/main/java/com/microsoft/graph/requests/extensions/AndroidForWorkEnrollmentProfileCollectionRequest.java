@@ -62,14 +62,14 @@ public class AndroidForWorkEnrollmentProfileCollectionRequest extends BaseCollec
     public void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidForWorkEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidForWorkEnrollmentProfile, callback);
     }
 
     public AndroidForWorkEnrollmentProfile post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidForWorkEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidForWorkEnrollmentProfile);
     }
 
@@ -106,6 +106,27 @@ public class AndroidForWorkEnrollmentProfileCollectionRequest extends BaseCollec
         return (AndroidForWorkEnrollmentProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAndroidForWorkEnrollmentProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AndroidForWorkEnrollmentProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAndroidForWorkEnrollmentProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAndroidForWorkEnrollmentProfileCollectionRequest)this;
+    }
     public IAndroidForWorkEnrollmentProfileCollectionPage buildFromResponse(final AndroidForWorkEnrollmentProfileCollectionResponse response) {
         final IAndroidForWorkEnrollmentProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

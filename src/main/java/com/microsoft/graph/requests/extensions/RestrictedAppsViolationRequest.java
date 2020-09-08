@@ -112,6 +112,27 @@ public class RestrictedAppsViolationRequest extends BaseRequest implements IRest
     }
 
     /**
+     * Creates a RestrictedAppsViolation with a new object
+     *
+     * @param newRestrictedAppsViolation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback) {
+        send(HttpMethod.PUT, callback, newRestrictedAppsViolation);
+    }
+
+    /**
+     * Creates a RestrictedAppsViolation with a new object
+     *
+     * @param newRestrictedAppsViolation the object to create/update
+     * @return the created RestrictedAppsViolation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RestrictedAppsViolation put(final RestrictedAppsViolation newRestrictedAppsViolation) throws ClientException {
+        return send(HttpMethod.PUT, newRestrictedAppsViolation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

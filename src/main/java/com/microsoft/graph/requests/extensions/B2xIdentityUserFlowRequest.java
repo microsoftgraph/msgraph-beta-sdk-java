@@ -116,6 +116,27 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
     }
 
     /**
+     * Creates a B2xIdentityUserFlow with a new object
+     *
+     * @param newB2xIdentityUserFlow the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<B2xIdentityUserFlow> callback) {
+        send(HttpMethod.PUT, callback, newB2xIdentityUserFlow);
+    }
+
+    /**
+     * Creates a B2xIdentityUserFlow with a new object
+     *
+     * @param newB2xIdentityUserFlow the object to create/update
+     * @return the created B2xIdentityUserFlow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public B2xIdentityUserFlow put(final B2xIdentityUserFlow newB2xIdentityUserFlow) throws ClientException {
+        return send(HttpMethod.PUT, newB2xIdentityUserFlow);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

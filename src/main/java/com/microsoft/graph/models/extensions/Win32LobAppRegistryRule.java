@@ -37,20 +37,20 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements IJsonBac
     public Boolean check32BitOn64System;
 
     /**
+     * The Comparison Value.
+     * The registry comparison value.
+     */
+    @SerializedName("comparisonValue")
+    @Expose
+    public String comparisonValue;
+
+    /**
      * The Key Path.
      * The full path of the registry entry containing the value to detect.
      */
     @SerializedName("keyPath")
     @Expose
     public String keyPath;
-
-    /**
-     * The Value Name.
-     * The name of the registry value to detect.
-     */
-    @SerializedName("valueName")
-    @Expose
-    public String valueName;
 
     /**
      * The Operation Type.
@@ -69,12 +69,12 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements IJsonBac
     public Win32LobAppRuleOperator operator;
 
     /**
-     * The Comparison Value.
-     * The registry comparison value.
+     * The Value Name.
+     * The name of the registry value to detect.
      */
-    @SerializedName("comparisonValue")
+    @SerializedName("valueName")
     @Expose
-    public String comparisonValue;
+    public String valueName;
 
 
     /**

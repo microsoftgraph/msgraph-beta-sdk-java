@@ -80,6 +80,23 @@ public interface IDeviceHealthScriptRunSummaryRequest extends IHttpRequest {
     DeviceHealthScriptRunSummary post(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary) throws ClientException;
 
     /**
+     * Posts a DeviceHealthScriptRunSummary with a new object
+     *
+     * @param newDeviceHealthScriptRunSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback);
+
+    /**
+     * Posts a DeviceHealthScriptRunSummary with a new object
+     *
+     * @param newDeviceHealthScriptRunSummary the object to create/update
+     * @return the created DeviceHealthScriptRunSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceHealthScriptRunSummary put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.generated.TeamVisibilityType;
+import com.microsoft.graph.models.generated.ClonableTeamParts;
+import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.generated.ClonableTeamParts;
-import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -69,14 +69,14 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
     public void post(final Team newTeam, final ICallback<Team> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeam, callback);
     }
 
     public Team post(final Team newTeam) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeam);
     }
 
@@ -113,6 +113,27 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
         return (TeamCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamCollectionRequest)this;
+    }
     public ITeamCollectionPage buildFromResponse(final TeamCollectionResponse response) {
         final ITeamCollectionRequestBuilder builder;
         if (response.nextLink != null) {

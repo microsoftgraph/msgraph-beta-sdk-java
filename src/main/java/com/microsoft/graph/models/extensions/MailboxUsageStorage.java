@@ -27,22 +27,6 @@ public class MailboxUsageStorage extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Storage Used In Bytes.
-     * 
-     */
-    @SerializedName("storageUsedInBytes")
-    @Expose
-    public Long storageUsedInBytes;
-
-    /**
      * The Report Date.
      * 
      */
@@ -57,6 +41,22 @@ public class MailboxUsageStorage extends Entity implements IJsonBackedObject {
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Storage Used In Bytes.
+     * 
+     */
+    @SerializedName("storageUsedInBytes")
+    @Expose
+    public Long storageUsedInBytes;
 
 
     /**

@@ -80,6 +80,23 @@ public interface INotificationRequest extends IHttpRequest {
     Notification post(final Notification newNotification) throws ClientException;
 
     /**
+     * Posts a Notification with a new object
+     *
+     * @param newNotification the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Notification newNotification, final ICallback<Notification> callback);
+
+    /**
+     * Posts a Notification with a new object
+     *
+     * @param newNotification the object to create/update
+     * @return the created Notification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Notification put(final Notification newNotification) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

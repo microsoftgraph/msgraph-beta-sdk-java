@@ -63,14 +63,14 @@ public class TrustFrameworkKeySetCollectionRequest extends BaseCollectionRequest
     public void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrustFrameworkKeySetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrustFrameworkKeySet, callback);
     }
 
     public TrustFrameworkKeySet post(final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrustFrameworkKeySetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrustFrameworkKeySet);
     }
 
@@ -107,6 +107,27 @@ public class TrustFrameworkKeySetCollectionRequest extends BaseCollectionRequest
         return (TrustFrameworkKeySetCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITrustFrameworkKeySetCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TrustFrameworkKeySetCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITrustFrameworkKeySetCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITrustFrameworkKeySetCollectionRequest)this;
+    }
     public ITrustFrameworkKeySetCollectionPage buildFromResponse(final TrustFrameworkKeySetCollectionResponse response) {
         final ITrustFrameworkKeySetCollectionRequestBuilder builder;
         if (response.nextLink != null) {

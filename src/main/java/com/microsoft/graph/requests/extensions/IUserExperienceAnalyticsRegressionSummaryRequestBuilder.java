@@ -36,13 +36,13 @@ public interface IUserExperienceAnalyticsRegressionSummaryRequestBuilder extends
     IUserExperienceAnalyticsRegressionSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression();
-
-    IUserExperienceAnalyticsMetricRequestBuilder modelRegression(final String id);
-
     IUserExperienceAnalyticsMetricCollectionRequestBuilder manufacturerRegression();
 
     IUserExperienceAnalyticsMetricRequestBuilder manufacturerRegression(final String id);
+
+    IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression();
+
+    IUserExperienceAnalyticsMetricRequestBuilder modelRegression(final String id);
 
     IUserExperienceAnalyticsMetricCollectionRequestBuilder operatingSystemRegression();
 

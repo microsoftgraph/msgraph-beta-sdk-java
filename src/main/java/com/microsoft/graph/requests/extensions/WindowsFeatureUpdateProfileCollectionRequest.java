@@ -63,14 +63,14 @@ public class WindowsFeatureUpdateProfileCollectionRequest extends BaseCollection
     public void post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsFeatureUpdateProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsFeatureUpdateProfile, callback);
     }
 
     public WindowsFeatureUpdateProfile post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsFeatureUpdateProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsFeatureUpdateProfile);
     }
 
@@ -107,6 +107,27 @@ public class WindowsFeatureUpdateProfileCollectionRequest extends BaseCollection
         return (WindowsFeatureUpdateProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsFeatureUpdateProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsFeatureUpdateProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsFeatureUpdateProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsFeatureUpdateProfileCollectionRequest)this;
+    }
     public IWindowsFeatureUpdateProfileCollectionPage buildFromResponse(final WindowsFeatureUpdateProfileCollectionResponse response) {
         final IWindowsFeatureUpdateProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

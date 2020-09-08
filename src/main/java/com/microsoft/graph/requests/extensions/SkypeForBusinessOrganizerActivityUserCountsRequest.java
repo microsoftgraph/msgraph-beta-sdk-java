@@ -112,6 +112,27 @@ public class SkypeForBusinessOrganizerActivityUserCountsRequest extends BaseRequ
     }
 
     /**
+     * Creates a SkypeForBusinessOrganizerActivityUserCounts with a new object
+     *
+     * @param newSkypeForBusinessOrganizerActivityUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SkypeForBusinessOrganizerActivityUserCounts newSkypeForBusinessOrganizerActivityUserCounts, final ICallback<SkypeForBusinessOrganizerActivityUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newSkypeForBusinessOrganizerActivityUserCounts);
+    }
+
+    /**
+     * Creates a SkypeForBusinessOrganizerActivityUserCounts with a new object
+     *
+     * @param newSkypeForBusinessOrganizerActivityUserCounts the object to create/update
+     * @return the created SkypeForBusinessOrganizerActivityUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SkypeForBusinessOrganizerActivityUserCounts put(final SkypeForBusinessOrganizerActivityUserCounts newSkypeForBusinessOrganizerActivityUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newSkypeForBusinessOrganizerActivityUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

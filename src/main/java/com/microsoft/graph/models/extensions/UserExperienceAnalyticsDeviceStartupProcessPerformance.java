@@ -27,6 +27,22 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
 
     /**
+     * The Device Count.
+     * User experience analytics device startup process summarized count.
+     */
+    @SerializedName("deviceCount")
+    @Expose
+    public Long deviceCount;
+
+    /**
+     * The Median Impact In Ms.
+     * User experience analytics device startup process median impact in milliseconds.
+     */
+    @SerializedName("medianImpactInMs")
+    @Expose
+    public Integer medianImpactInMs;
+
+    /**
      * The Process Name.
      * User experience analytics device startup process name.
      */
@@ -49,22 +65,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @SerializedName("publisher")
     @Expose
     public String publisher;
-
-    /**
-     * The Device Count.
-     * User experience analytics device startup process summarized count.
-     */
-    @SerializedName("deviceCount")
-    @Expose
-    public Long deviceCount;
-
-    /**
-     * The Median Impact In Ms.
-     * User experience analytics device startup process median impact in milliseconds.
-     */
-    @SerializedName("medianImpactInMs")
-    @Expose
-    public Integer medianImpactInMs;
 
     /**
      * The Total Impact In Ms.

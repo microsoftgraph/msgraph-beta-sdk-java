@@ -27,20 +27,20 @@ public class UserExperienceAnalyticsMetric extends Entity implements IJsonBacked
 
 
     /**
-     * The Value.
-     * The value of the user experience analytics metric.
-     */
-    @SerializedName("value")
-    @Expose
-    public Double value;
-
-    /**
      * The Unit.
      * The unit of the user experience analytics metric.
      */
     @SerializedName("unit")
     @Expose
     public String unit;
+
+    /**
+     * The Value.
+     * The value of the user experience analytics metric.
+     */
+    @SerializedName("value")
+    @Expose
+    public Double value;
 
 
     /**

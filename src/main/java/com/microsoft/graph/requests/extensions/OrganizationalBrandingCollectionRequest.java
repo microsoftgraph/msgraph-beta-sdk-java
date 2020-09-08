@@ -62,14 +62,14 @@ public class OrganizationalBrandingCollectionRequest extends BaseCollectionReque
     public void post(final OrganizationalBranding newOrganizationalBranding, final ICallback<OrganizationalBranding> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrganizationalBrandingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrganizationalBranding, callback);
     }
 
     public OrganizationalBranding post(final OrganizationalBranding newOrganizationalBranding) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrganizationalBrandingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrganizationalBranding);
     }
 
@@ -106,6 +106,27 @@ public class OrganizationalBrandingCollectionRequest extends BaseCollectionReque
         return (OrganizationalBrandingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOrganizationalBrandingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OrganizationalBrandingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOrganizationalBrandingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOrganizationalBrandingCollectionRequest)this;
+    }
     public IOrganizationalBrandingCollectionPage buildFromResponse(final OrganizationalBrandingCollectionResponse response) {
         final IOrganizationalBrandingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

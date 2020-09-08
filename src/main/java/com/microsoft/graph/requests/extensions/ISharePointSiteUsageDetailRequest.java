@@ -80,6 +80,23 @@ public interface ISharePointSiteUsageDetailRequest extends IHttpRequest {
     SharePointSiteUsageDetail post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException;
 
     /**
+     * Posts a SharePointSiteUsageDetail with a new object
+     *
+     * @param newSharePointSiteUsageDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<SharePointSiteUsageDetail> callback);
+
+    /**
+     * Posts a SharePointSiteUsageDetail with a new object
+     *
+     * @param newSharePointSiteUsageDetail the object to create/update
+     * @return the created SharePointSiteUsageDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharePointSiteUsageDetail put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

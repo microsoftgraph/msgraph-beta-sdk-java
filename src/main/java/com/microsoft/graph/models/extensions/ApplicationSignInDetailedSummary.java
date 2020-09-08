@@ -28,12 +28,12 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
 
 
     /**
-     * The App Id.
+     * The Aggregated Event Date Time.
      * 
      */
-    @SerializedName("appId")
+    @SerializedName("aggregatedEventDateTime")
     @Expose
-    public String appId;
+    public java.util.Calendar aggregatedEventDateTime;
 
     /**
      * The App Display Name.
@@ -44,12 +44,12 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
     public String appDisplayName;
 
     /**
-     * The Status.
+     * The App Id.
      * 
      */
-    @SerializedName("status")
+    @SerializedName("appId")
     @Expose
-    public SignInStatus status;
+    public String appId;
 
     /**
      * The Sign In Count.
@@ -60,12 +60,12 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
     public Long signInCount;
 
     /**
-     * The Aggregated Event Date Time.
+     * The Status.
      * 
      */
-    @SerializedName("aggregatedEventDateTime")
+    @SerializedName("status")
     @Expose
-    public java.util.Calendar aggregatedEventDateTime;
+    public SignInStatus status;
 
 
     /**

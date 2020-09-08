@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ContentFormat;
-import com.microsoft.graph.models.generated.ContentState;
 import com.microsoft.graph.models.extensions.KeyValuePair;
+import com.microsoft.graph.models.generated.ContentState;
 
 
 import com.google.gson.JsonObject;
@@ -47,14 +47,6 @@ public class ContentInfo implements IJsonBackedObject {
     public ContentFormat format;
 
     /**
-     * The State.
-     * 
-     */
-    @SerializedName("state")
-    @Expose
-    public ContentState state;
-
-    /**
      * The Identifier.
      * 
      */
@@ -69,6 +61,14 @@ public class ContentInfo implements IJsonBackedObject {
     @SerializedName("metadata")
     @Expose
     public java.util.List<KeyValuePair> metadata;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName("state")
+    @Expose
+    public ContentState state;
 
 
     /**

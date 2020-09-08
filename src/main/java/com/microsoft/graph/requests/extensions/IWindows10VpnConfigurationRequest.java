@@ -80,6 +80,23 @@ public interface IWindows10VpnConfigurationRequest extends IHttpRequest {
     Windows10VpnConfiguration post(final Windows10VpnConfiguration newWindows10VpnConfiguration) throws ClientException;
 
     /**
+     * Posts a Windows10VpnConfiguration with a new object
+     *
+     * @param newWindows10VpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10VpnConfiguration newWindows10VpnConfiguration, final ICallback<Windows10VpnConfiguration> callback);
+
+    /**
+     * Posts a Windows10VpnConfiguration with a new object
+     *
+     * @param newWindows10VpnConfiguration the object to create/update
+     * @return the created Windows10VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10VpnConfiguration put(final Windows10VpnConfiguration newWindows10VpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

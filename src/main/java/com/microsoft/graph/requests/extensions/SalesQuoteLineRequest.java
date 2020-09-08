@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesQuoteLine;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class SalesQuoteLineRequest extends BaseRequest implements ISalesQuoteLin
      */
     public SalesQuoteLine post(final SalesQuoteLine newSalesQuoteLine) throws ClientException {
         return send(HttpMethod.POST, newSalesQuoteLine);
+    }
+
+    /**
+     * Creates a SalesQuoteLine with a new object
+     *
+     * @param newSalesQuoteLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesQuoteLine newSalesQuoteLine, final ICallback<SalesQuoteLine> callback) {
+        send(HttpMethod.PUT, callback, newSalesQuoteLine);
+    }
+
+    /**
+     * Creates a SalesQuoteLine with a new object
+     *
+     * @param newSalesQuoteLine the object to create/update
+     * @return the created SalesQuoteLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesQuoteLine put(final SalesQuoteLine newSalesQuoteLine) throws ClientException {
+        return send(HttpMethod.PUT, newSalesQuoteLine);
     }
 
     /**

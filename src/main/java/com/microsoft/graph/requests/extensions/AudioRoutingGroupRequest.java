@@ -112,6 +112,27 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
     }
 
     /**
+     * Creates a AudioRoutingGroup with a new object
+     *
+     * @param newAudioRoutingGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<AudioRoutingGroup> callback) {
+        send(HttpMethod.PUT, callback, newAudioRoutingGroup);
+    }
+
+    /**
+     * Creates a AudioRoutingGroup with a new object
+     *
+     * @param newAudioRoutingGroup the object to create/update
+     * @return the created AudioRoutingGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AudioRoutingGroup put(final AudioRoutingGroup newAudioRoutingGroup) throws ClientException {
+        return send(HttpMethod.PUT, newAudioRoutingGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

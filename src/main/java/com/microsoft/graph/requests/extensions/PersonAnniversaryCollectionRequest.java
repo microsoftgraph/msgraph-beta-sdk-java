@@ -62,14 +62,14 @@ public class PersonAnniversaryCollectionRequest extends BaseCollectionRequest<Pe
     public void post(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonAnniversaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPersonAnniversary, callback);
     }
 
     public PersonAnniversary post(final PersonAnniversary newPersonAnniversary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PersonAnniversaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPersonAnniversary);
     }
 
@@ -106,6 +106,27 @@ public class PersonAnniversaryCollectionRequest extends BaseCollectionRequest<Pe
         return (PersonAnniversaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPersonAnniversaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PersonAnniversaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPersonAnniversaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPersonAnniversaryCollectionRequest)this;
+    }
     public IPersonAnniversaryCollectionPage buildFromResponse(final PersonAnniversaryCollectionResponse response) {
         final IPersonAnniversaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -16,10 +16,10 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCollectionRequest;
-import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusSignUpRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCompleteSetupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusIsSignedUpRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusSignUpRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCanSignUpRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusIsSignedUpRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -55,19 +55,19 @@ public class PrivilegedSignupStatusCollectionRequestBuilder extends BaseRequestB
 
 
 
-    public IPrivilegedSignupStatusSignUpRequestBuilder signUp() {
-        return new PrivilegedSignupStatusSignUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.signUp"), getClient(), null);
-    }
-
     public IPrivilegedSignupStatusCompleteSetupCollectionRequestBuilder completeSetup(final TenantSetupInfo tenantSetupInfo) {
         return new PrivilegedSignupStatusCompleteSetupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeSetup"), getClient(), null, tenantSetupInfo);
     }
 
-    public IPrivilegedSignupStatusIsSignedUpRequestBuilder isSignedUp() {
-        return new PrivilegedSignupStatusIsSignedUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isSignedUp"), getClient(), null);
+    public IPrivilegedSignupStatusSignUpRequestBuilder signUp() {
+        return new PrivilegedSignupStatusSignUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.signUp"), getClient(), null);
     }
 
     public IPrivilegedSignupStatusCanSignUpRequestBuilder canSignUp() {
         return new PrivilegedSignupStatusCanSignUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.canSignUp"), getClient(), null);
+    }
+
+    public IPrivilegedSignupStatusIsSignedUpRequestBuilder isSignedUp() {
+        return new PrivilegedSignupStatusIsSignedUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isSignedUp"), getClient(), null);
     }
 }

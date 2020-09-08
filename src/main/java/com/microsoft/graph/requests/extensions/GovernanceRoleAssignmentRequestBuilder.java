@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -61,6 +61,15 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
 
 
     /**
+     * Gets the request builder for GovernanceRoleAssignment
+     *
+     * @return the IGovernanceRoleAssignmentWithReferenceRequestBuilder instance
+     */
+    public IGovernanceRoleAssignmentWithReferenceRequestBuilder linkedEligibleRoleAssignment() {
+        return new GovernanceRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedEligibleRoleAssignment"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for GovernanceResource
      *
      * @return the IGovernanceResourceRequestBuilder instance
@@ -85,14 +94,5 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
      */
     public IGovernanceSubjectRequestBuilder subject() {
         return new GovernanceSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subject"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for GovernanceRoleAssignment
-     *
-     * @return the IGovernanceRoleAssignmentWithReferenceRequestBuilder instance
-     */
-    public IGovernanceRoleAssignmentWithReferenceRequestBuilder linkedEligibleRoleAssignment() {
-        return new GovernanceRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedEligibleRoleAssignment"), getClient(), null);
     }
 }

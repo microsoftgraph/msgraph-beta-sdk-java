@@ -80,6 +80,23 @@ public interface IAzureADLicenseUsageRequest extends IHttpRequest {
     AzureADLicenseUsage post(final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException;
 
     /**
+     * Posts a AzureADLicenseUsage with a new object
+     *
+     * @param newAzureADLicenseUsage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<AzureADLicenseUsage> callback);
+
+    /**
+     * Posts a AzureADLicenseUsage with a new object
+     *
+     * @param newAzureADLicenseUsage the object to create/update
+     * @return the created AzureADLicenseUsage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AzureADLicenseUsage put(final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

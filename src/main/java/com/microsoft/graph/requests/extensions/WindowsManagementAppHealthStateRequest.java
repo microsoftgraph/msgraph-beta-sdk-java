@@ -112,6 +112,27 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a WindowsManagementAppHealthState with a new object
+     *
+     * @param newWindowsManagementAppHealthState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback) {
+        send(HttpMethod.PUT, callback, newWindowsManagementAppHealthState);
+    }
+
+    /**
+     * Creates a WindowsManagementAppHealthState with a new object
+     *
+     * @param newWindowsManagementAppHealthState the object to create/update
+     * @return the created WindowsManagementAppHealthState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsManagementAppHealthState put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsManagementAppHealthState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,12 +28,36 @@ public class JobResponseBase extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Type.
+     * The Creation Date Time.
      * 
      */
-    @SerializedName("type")
+    @SerializedName("creationDateTime")
     @Expose
-    public String type;
+    public java.util.Calendar creationDateTime;
+
+    /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The Error.
+     * 
+     */
+    @SerializedName("error")
+    @Expose
+    public ClassificationError error;
+
+    /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
     /**
      * The Status.
@@ -52,36 +76,12 @@ public class JobResponseBase extends Entity implements IJsonBackedObject {
     public String tenantId;
 
     /**
-     * The Creation Date Time.
+     * The Type.
      * 
      */
-    @SerializedName("creationDateTime")
+    @SerializedName("type")
     @Expose
-    public java.util.Calendar creationDateTime;
-
-    /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * 
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Error.
-     * 
-     */
-    @SerializedName("error")
-    @Expose
-    public ClassificationError error;
+    public String type;
 
 
     /**

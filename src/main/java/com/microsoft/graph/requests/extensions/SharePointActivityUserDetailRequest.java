@@ -112,6 +112,27 @@ public class SharePointActivityUserDetailRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a SharePointActivityUserDetail with a new object
+     *
+     * @param newSharePointActivityUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharePointActivityUserDetail newSharePointActivityUserDetail, final ICallback<SharePointActivityUserDetail> callback) {
+        send(HttpMethod.PUT, callback, newSharePointActivityUserDetail);
+    }
+
+    /**
+     * Creates a SharePointActivityUserDetail with a new object
+     *
+     * @param newSharePointActivityUserDetail the object to create/update
+     * @return the created SharePointActivityUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharePointActivityUserDetail put(final SharePointActivityUserDetail newSharePointActivityUserDetail) throws ClientException {
+        return send(HttpMethod.PUT, newSharePointActivityUserDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

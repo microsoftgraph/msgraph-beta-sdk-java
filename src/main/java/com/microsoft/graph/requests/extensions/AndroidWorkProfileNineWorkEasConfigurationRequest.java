@@ -112,6 +112,27 @@ public class AndroidWorkProfileNineWorkEasConfigurationRequest extends BaseReque
     }
 
     /**
+     * Creates a AndroidWorkProfileNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileNineWorkEasConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration, final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileNineWorkEasConfiguration);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileNineWorkEasConfiguration the object to create/update
+     * @return the created AndroidWorkProfileNineWorkEasConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileNineWorkEasConfiguration put(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileNineWorkEasConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

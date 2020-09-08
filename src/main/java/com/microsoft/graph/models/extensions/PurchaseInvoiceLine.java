@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Item;
 import com.microsoft.graph.models.extensions.Account;
+import com.microsoft.graph.models.extensions.Item;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,30 +29,6 @@ public class PurchaseInvoiceLine extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Document Id.
-     * 
-     */
-    @SerializedName("documentId")
-    @Expose
-    public java.util.UUID documentId;
-
-    /**
-     * The Sequence.
-     * 
-     */
-    @SerializedName("sequence")
-    @Expose
-    public Integer sequence;
-
-    /**
-     * The Item Id.
-     * 
-     */
-    @SerializedName("itemId")
-    @Expose
-    public java.util.UUID itemId;
-
-    /**
      * The Account Id.
      * 
      */
@@ -61,12 +37,20 @@ public class PurchaseInvoiceLine extends Entity implements IJsonBackedObject {
     public java.util.UUID accountId;
 
     /**
-     * The Line Type.
+     * The Amount Excluding Tax.
      * 
      */
-    @SerializedName("lineType")
+    @SerializedName("amountExcludingTax")
     @Expose
-    public String lineType;
+    public java.math.BigDecimal amountExcludingTax;
+
+    /**
+     * The Amount Including Tax.
+     * 
+     */
+    @SerializedName("amountIncludingTax")
+    @Expose
+    public java.math.BigDecimal amountIncludingTax;
 
     /**
      * The Description.
@@ -77,36 +61,12 @@ public class PurchaseInvoiceLine extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Unit Cost.
-     * 
-     */
-    @SerializedName("unitCost")
-    @Expose
-    public java.math.BigDecimal unitCost;
-
-    /**
-     * The Quantity.
-     * 
-     */
-    @SerializedName("quantity")
-    @Expose
-    public java.math.BigDecimal quantity;
-
-    /**
      * The Discount Amount.
      * 
      */
     @SerializedName("discountAmount")
     @Expose
     public java.math.BigDecimal discountAmount;
-
-    /**
-     * The Discount Percent.
-     * 
-     */
-    @SerializedName("discountPercent")
-    @Expose
-    public java.math.BigDecimal discountPercent;
 
     /**
      * The Discount Applied Before Tax.
@@ -117,12 +77,92 @@ public class PurchaseInvoiceLine extends Entity implements IJsonBackedObject {
     public Boolean discountAppliedBeforeTax;
 
     /**
-     * The Amount Excluding Tax.
+     * The Discount Percent.
      * 
      */
-    @SerializedName("amountExcludingTax")
+    @SerializedName("discountPercent")
     @Expose
-    public java.math.BigDecimal amountExcludingTax;
+    public java.math.BigDecimal discountPercent;
+
+    /**
+     * The Document Id.
+     * 
+     */
+    @SerializedName("documentId")
+    @Expose
+    public java.util.UUID documentId;
+
+    /**
+     * The Expected Receipt Date.
+     * 
+     */
+    @SerializedName("expectedReceiptDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly expectedReceiptDate;
+
+    /**
+     * The Invoice Discount Allocation.
+     * 
+     */
+    @SerializedName("invoiceDiscountAllocation")
+    @Expose
+    public java.math.BigDecimal invoiceDiscountAllocation;
+
+    /**
+     * The Item Id.
+     * 
+     */
+    @SerializedName("itemId")
+    @Expose
+    public java.util.UUID itemId;
+
+    /**
+     * The Line Type.
+     * 
+     */
+    @SerializedName("lineType")
+    @Expose
+    public String lineType;
+
+    /**
+     * The Net Amount.
+     * 
+     */
+    @SerializedName("netAmount")
+    @Expose
+    public java.math.BigDecimal netAmount;
+
+    /**
+     * The Net Amount Including Tax.
+     * 
+     */
+    @SerializedName("netAmountIncludingTax")
+    @Expose
+    public java.math.BigDecimal netAmountIncludingTax;
+
+    /**
+     * The Net Tax Amount.
+     * 
+     */
+    @SerializedName("netTaxAmount")
+    @Expose
+    public java.math.BigDecimal netTaxAmount;
+
+    /**
+     * The Quantity.
+     * 
+     */
+    @SerializedName("quantity")
+    @Expose
+    public java.math.BigDecimal quantity;
+
+    /**
+     * The Sequence.
+     * 
+     */
+    @SerializedName("sequence")
+    @Expose
+    public Integer sequence;
 
     /**
      * The Tax Code.
@@ -149,60 +189,12 @@ public class PurchaseInvoiceLine extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal totalTaxAmount;
 
     /**
-     * The Amount Including Tax.
+     * The Unit Cost.
      * 
      */
-    @SerializedName("amountIncludingTax")
+    @SerializedName("unitCost")
     @Expose
-    public java.math.BigDecimal amountIncludingTax;
-
-    /**
-     * The Invoice Discount Allocation.
-     * 
-     */
-    @SerializedName("invoiceDiscountAllocation")
-    @Expose
-    public java.math.BigDecimal invoiceDiscountAllocation;
-
-    /**
-     * The Net Amount.
-     * 
-     */
-    @SerializedName("netAmount")
-    @Expose
-    public java.math.BigDecimal netAmount;
-
-    /**
-     * The Net Tax Amount.
-     * 
-     */
-    @SerializedName("netTaxAmount")
-    @Expose
-    public java.math.BigDecimal netTaxAmount;
-
-    /**
-     * The Net Amount Including Tax.
-     * 
-     */
-    @SerializedName("netAmountIncludingTax")
-    @Expose
-    public java.math.BigDecimal netAmountIncludingTax;
-
-    /**
-     * The Expected Receipt Date.
-     * 
-     */
-    @SerializedName("expectedReceiptDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly expectedReceiptDate;
-
-    /**
-     * The Item.
-     * 
-     */
-    @SerializedName("item")
-    @Expose
-    public Item item;
+    public java.math.BigDecimal unitCost;
 
     /**
      * The Account.
@@ -211,6 +203,14 @@ public class PurchaseInvoiceLine extends Entity implements IJsonBackedObject {
     @SerializedName("account")
     @Expose
     public Account account;
+
+    /**
+     * The Item.
+     * 
+     */
+    @SerializedName("item")
+    @Expose
+    public Item item;
 
 
     /**

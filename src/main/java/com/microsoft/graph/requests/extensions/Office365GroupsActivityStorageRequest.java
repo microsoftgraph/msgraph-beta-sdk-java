@@ -112,6 +112,27 @@ public class Office365GroupsActivityStorageRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a Office365GroupsActivityStorage with a new object
+     *
+     * @param newOffice365GroupsActivityStorage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365GroupsActivityStorage newOffice365GroupsActivityStorage, final ICallback<Office365GroupsActivityStorage> callback) {
+        send(HttpMethod.PUT, callback, newOffice365GroupsActivityStorage);
+    }
+
+    /**
+     * Creates a Office365GroupsActivityStorage with a new object
+     *
+     * @param newOffice365GroupsActivityStorage the object to create/update
+     * @return the created Office365GroupsActivityStorage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365GroupsActivityStorage put(final Office365GroupsActivityStorage newOffice365GroupsActivityStorage) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365GroupsActivityStorage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

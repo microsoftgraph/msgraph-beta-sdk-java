@@ -80,6 +80,23 @@ public interface IJournalLineRequest extends IHttpRequest {
     JournalLine post(final JournalLine newJournalLine) throws ClientException;
 
     /**
+     * Posts a JournalLine with a new object
+     *
+     * @param newJournalLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final JournalLine newJournalLine, final ICallback<JournalLine> callback);
+
+    /**
+     * Posts a JournalLine with a new object
+     *
+     * @param newJournalLine the object to create/update
+     * @return the created JournalLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    JournalLine put(final JournalLine newJournalLine) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWindowsPhone81AppXBundleRequest extends IHttpRequest {
     WindowsPhone81AppXBundle post(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81AppXBundle with a new object
+     *
+     * @param newWindowsPhone81AppXBundle the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle, final ICallback<WindowsPhone81AppXBundle> callback);
+
+    /**
+     * Posts a WindowsPhone81AppXBundle with a new object
+     *
+     * @param newWindowsPhone81AppXBundle the object to create/update
+     * @return the created WindowsPhone81AppXBundle
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81AppXBundle put(final WindowsPhone81AppXBundle newWindowsPhone81AppXBundle) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

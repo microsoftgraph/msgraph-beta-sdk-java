@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.KeyUsages;
-import com.microsoft.graph.models.generated.KeySize;
 import com.microsoft.graph.models.generated.HashAlgorithms;
+import com.microsoft.graph.models.generated.KeySize;
+import com.microsoft.graph.models.generated.KeyUsages;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionResponse;
@@ -33,28 +33,12 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 
 
     /**
-     * The Scep Server Urls.
-     * SCEP Server Url(s)
+     * The Hash Algorithm.
+     * SCEP Hash Algorithm
      */
-    @SerializedName("scepServerUrls")
+    @SerializedName("hashAlgorithm")
     @Expose
-    public java.util.List<String> scepServerUrls;
-
-    /**
-     * The Subject Name Format String.
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    @SerializedName("subjectNameFormatString")
-    @Expose
-    public String subjectNameFormatString;
-
-    /**
-     * The Key Usage.
-     * SCEP Key Usage
-     */
-    @SerializedName("keyUsage")
-    @Expose
-    public EnumSet<KeyUsages> keyUsage;
+    public EnumSet<HashAlgorithms> hashAlgorithm;
 
     /**
      * The Key Size.
@@ -65,12 +49,20 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     public KeySize keySize;
 
     /**
-     * The Hash Algorithm.
-     * SCEP Hash Algorithm
+     * The Key Usage.
+     * SCEP Key Usage
      */
-    @SerializedName("hashAlgorithm")
+    @SerializedName("keyUsage")
     @Expose
-    public EnumSet<HashAlgorithms> hashAlgorithm;
+    public EnumSet<KeyUsages> keyUsage;
+
+    /**
+     * The Scep Server Urls.
+     * SCEP Server Url(s)
+     */
+    @SerializedName("scepServerUrls")
+    @Expose
+    public java.util.List<String> scepServerUrls;
 
     /**
      * The Subject Alternative Name Format String.
@@ -79,6 +71,14 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     @SerializedName("subjectAlternativeNameFormatString")
     @Expose
     public String subjectAlternativeNameFormatString;
+
+    /**
+     * The Subject Name Format String.
+     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     */
+    @SerializedName("subjectNameFormatString")
+    @Expose
+    public String subjectNameFormatString;
 
     /**
      * The Managed Device Certificate States.

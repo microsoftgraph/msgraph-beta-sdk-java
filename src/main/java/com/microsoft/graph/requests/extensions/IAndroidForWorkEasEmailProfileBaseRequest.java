@@ -80,6 +80,23 @@ public interface IAndroidForWorkEasEmailProfileBaseRequest extends IHttpRequest 
     AndroidForWorkEasEmailProfileBase post(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkEasEmailProfileBase with a new object
+     *
+     * @param newAndroidForWorkEasEmailProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase, final ICallback<AndroidForWorkEasEmailProfileBase> callback);
+
+    /**
+     * Posts a AndroidForWorkEasEmailProfileBase with a new object
+     *
+     * @param newAndroidForWorkEasEmailProfileBase the object to create/update
+     * @return the created AndroidForWorkEasEmailProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkEasEmailProfileBase put(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

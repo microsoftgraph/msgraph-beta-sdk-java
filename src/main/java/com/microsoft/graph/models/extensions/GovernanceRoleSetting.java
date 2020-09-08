@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.GovernanceRuleSetting;
-import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
 import com.microsoft.graph.models.extensions.GovernanceResource;
+import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,46 +30,6 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Resource Id.
-     * 
-     */
-    @SerializedName("resourceId")
-    @Expose
-    public String resourceId;
-
-    /**
-     * The Role Definition Id.
-     * 
-     */
-    @SerializedName("roleDefinitionId")
-    @Expose
-    public String roleDefinitionId;
-
-    /**
-     * The Is Default.
-     * 
-     */
-    @SerializedName("isDefault")
-    @Expose
-    public Boolean isDefault;
-
-    /**
-     * The Last Updated Date Time.
-     * 
-     */
-    @SerializedName("lastUpdatedDateTime")
-    @Expose
-    public java.util.Calendar lastUpdatedDateTime;
-
-    /**
-     * The Last Updated By.
-     * 
-     */
-    @SerializedName("lastUpdatedBy")
-    @Expose
-    public String lastUpdatedBy;
-
-    /**
      * The Admin Eligible Settings.
      * 
      */
@@ -84,6 +44,46 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
     @SerializedName("adminMemberSettings")
     @Expose
     public java.util.List<GovernanceRuleSetting> adminMemberSettings;
+
+    /**
+     * The Is Default.
+     * 
+     */
+    @SerializedName("isDefault")
+    @Expose
+    public Boolean isDefault;
+
+    /**
+     * The Last Updated By.
+     * 
+     */
+    @SerializedName("lastUpdatedBy")
+    @Expose
+    public String lastUpdatedBy;
+
+    /**
+     * The Last Updated Date Time.
+     * 
+     */
+    @SerializedName("lastUpdatedDateTime")
+    @Expose
+    public java.util.Calendar lastUpdatedDateTime;
+
+    /**
+     * The Resource Id.
+     * 
+     */
+    @SerializedName("resourceId")
+    @Expose
+    public String resourceId;
+
+    /**
+     * The Role Definition Id.
+     * 
+     */
+    @SerializedName("roleDefinitionId")
+    @Expose
+    public String roleDefinitionId;
 
     /**
      * The User Eligible Settings.
@@ -102,20 +102,20 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
     public java.util.List<GovernanceRuleSetting> userMemberSettings;
 
     /**
-     * The Role Definition.
-     * 
-     */
-    @SerializedName("roleDefinition")
-    @Expose
-    public GovernanceRoleDefinition roleDefinition;
-
-    /**
      * The Resource.
      * 
      */
     @SerializedName("resource")
     @Expose
     public GovernanceResource resource;
+
+    /**
+     * The Role Definition.
+     * 
+     */
+    @SerializedName("roleDefinition")
+    @Expose
+    public GovernanceRoleDefinition roleDefinition;
 
 
     /**

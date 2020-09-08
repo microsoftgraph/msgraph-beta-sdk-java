@@ -80,6 +80,23 @@ public interface IIosEducationDeviceConfigurationRequest extends IHttpRequest {
     IosEducationDeviceConfiguration post(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration) throws ClientException;
 
     /**
+     * Posts a IosEducationDeviceConfiguration with a new object
+     *
+     * @param newIosEducationDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration, final ICallback<IosEducationDeviceConfiguration> callback);
+
+    /**
+     * Posts a IosEducationDeviceConfiguration with a new object
+     *
+     * @param newIosEducationDeviceConfiguration the object to create/update
+     * @return the created IosEducationDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosEducationDeviceConfiguration put(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

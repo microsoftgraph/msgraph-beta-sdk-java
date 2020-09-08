@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosEasEmailProfileConfiguration;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosCertificateProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -115,6 +115,27 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      */
     public IosEasEmailProfileConfiguration post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosEasEmailProfileConfiguration);
+    }
+
+    /**
+     * Creates a IosEasEmailProfileConfiguration with a new object
+     *
+     * @param newIosEasEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosEasEmailProfileConfiguration);
+    }
+
+    /**
+     * Creates a IosEasEmailProfileConfiguration with a new object
+     *
+     * @param newIosEasEmailProfileConfiguration the object to create/update
+     * @return the created IosEasEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosEasEmailProfileConfiguration put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosEasEmailProfileConfiguration);
     }
 
     /**

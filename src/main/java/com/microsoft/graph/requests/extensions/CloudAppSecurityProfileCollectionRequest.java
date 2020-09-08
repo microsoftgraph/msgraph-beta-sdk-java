@@ -62,14 +62,14 @@ public class CloudAppSecurityProfileCollectionRequest extends BaseCollectionRequ
     public void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<CloudAppSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CloudAppSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCloudAppSecurityProfile, callback);
     }
 
     public CloudAppSecurityProfile post(final CloudAppSecurityProfile newCloudAppSecurityProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CloudAppSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCloudAppSecurityProfile);
     }
 
@@ -106,6 +106,27 @@ public class CloudAppSecurityProfileCollectionRequest extends BaseCollectionRequ
         return (CloudAppSecurityProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICloudAppSecurityProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CloudAppSecurityProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICloudAppSecurityProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICloudAppSecurityProfileCollectionRequest)this;
+    }
     public ICloudAppSecurityProfileCollectionPage buildFromResponse(final CloudAppSecurityProfileCollectionResponse response) {
         final ICloudAppSecurityProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -116,6 +116,27 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
     }
 
     /**
+     * Creates a Connector with a new object
+     *
+     * @param newConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Connector newConnector, final ICallback<Connector> callback) {
+        send(HttpMethod.PUT, callback, newConnector);
+    }
+
+    /**
+     * Creates a Connector with a new object
+     *
+     * @param newConnector the object to create/update
+     * @return the created Connector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Connector put(final Connector newConnector) throws ClientException {
+        return send(HttpMethod.PUT, newConnector);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -15,8 +15,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventCollectionRequest;
-import com.microsoft.graph.requests.extensions.IAuditEventGetAuditCategoriesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditEventGetAuditActivityTypesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditEventGetAuditCategoriesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -52,11 +52,11 @@ public class AuditEventCollectionRequestBuilder extends BaseRequestBuilder imple
 
 
 
-    public IAuditEventGetAuditCategoriesCollectionRequestBuilder getAuditCategories() {
-        return new AuditEventGetAuditCategoriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAuditCategories"), getClient(), null);
-    }
-
     public IAuditEventGetAuditActivityTypesCollectionRequestBuilder getAuditActivityTypes(final String category) {
         return new AuditEventGetAuditActivityTypesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAuditActivityTypes"), getClient(), null, category);
+    }
+
+    public IAuditEventGetAuditCategoriesCollectionRequestBuilder getAuditCategories() {
+        return new AuditEventGetAuditCategoriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAuditCategories"), getClient(), null);
     }
 }

@@ -112,6 +112,27 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
     }
 
     /**
+     * Creates a DeviceManagementExportJob with a new object
+     *
+     * @param newDeviceManagementExportJob the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementExportJob);
+    }
+
+    /**
+     * Creates a DeviceManagementExportJob with a new object
+     *
+     * @param newDeviceManagementExportJob the object to create/update
+     * @return the created DeviceManagementExportJob
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementExportJob put(final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementExportJob);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -36,22 +36,6 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Recurrence Type.
-     * 
-     */
-    @SerializedName("recurrenceType")
-    @Expose
-    public String recurrenceType;
-
-    /**
-     * The Recurrence End Type.
-     * 
-     */
-    @SerializedName("recurrenceEndType")
-    @Expose
-    public String recurrenceEndType;
-
-    /**
      * The Duration In Days.
      * 
      */
@@ -66,6 +50,22 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
     @SerializedName("recurrenceCount")
     @Expose
     public Integer recurrenceCount;
+
+    /**
+     * The Recurrence End Type.
+     * 
+     */
+    @SerializedName("recurrenceEndType")
+    @Expose
+    public String recurrenceEndType;
+
+    /**
+     * The Recurrence Type.
+     * 
+     */
+    @SerializedName("recurrenceType")
+    @Expose
+    public String recurrenceType;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ConfigurationUsage;
 import com.microsoft.graph.models.generated.BitLockerRecoveryInformationType;
+import com.microsoft.graph.models.generated.ConfigurationUsage;
 
 
 import com.google.gson.JsonObject;
@@ -46,28 +46,12 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
     public Boolean blockDataRecoveryAgent;
 
     /**
-     * The Recovery Password Usage.
-     * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
+     * The Enable Bit Locker After Recovery Information To Store.
+     * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
      */
-    @SerializedName("recoveryPasswordUsage")
+    @SerializedName("enableBitLockerAfterRecoveryInformationToStore")
     @Expose
-    public ConfigurationUsage recoveryPasswordUsage;
-
-    /**
-     * The Recovery Key Usage.
-     * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
-     */
-    @SerializedName("recoveryKeyUsage")
-    @Expose
-    public ConfigurationUsage recoveryKeyUsage;
-
-    /**
-     * The Hide Recovery Options.
-     * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
-     */
-    @SerializedName("hideRecoveryOptions")
-    @Expose
-    public Boolean hideRecoveryOptions;
+    public Boolean enableBitLockerAfterRecoveryInformationToStore;
 
     /**
      * The Enable Recovery Information Save To Store.
@@ -78,6 +62,14 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
     public Boolean enableRecoveryInformationSaveToStore;
 
     /**
+     * The Hide Recovery Options.
+     * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
+     */
+    @SerializedName("hideRecoveryOptions")
+    @Expose
+    public Boolean hideRecoveryOptions;
+
+    /**
      * The Recovery Information To Store.
      * Configure what pieces of BitLocker recovery information are stored to AD DS.
      */
@@ -86,12 +78,20 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
     public BitLockerRecoveryInformationType recoveryInformationToStore;
 
     /**
-     * The Enable Bit Locker After Recovery Information To Store.
-     * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
+     * The Recovery Key Usage.
+     * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
      */
-    @SerializedName("enableBitLockerAfterRecoveryInformationToStore")
+    @SerializedName("recoveryKeyUsage")
     @Expose
-    public Boolean enableBitLockerAfterRecoveryInformationToStore;
+    public ConfigurationUsage recoveryKeyUsage;
+
+    /**
+     * The Recovery Password Usage.
+     * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
+     */
+    @SerializedName("recoveryPasswordUsage")
+    @Expose
+    public ConfigurationUsage recoveryPasswordUsage;
 
 
     /**

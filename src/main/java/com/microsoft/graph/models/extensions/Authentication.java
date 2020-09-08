@@ -8,38 +8,38 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AuthenticationMethod;
-import com.microsoft.graph.models.extensions.SecurityQuestionAuthenticationMethod;
-import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
-import com.microsoft.graph.models.extensions.PasswordAuthenticationMethod;
-import com.microsoft.graph.models.extensions.LongRunningOperation;
 import com.microsoft.graph.models.extensions.EmailAuthenticationMethod;
-import com.microsoft.graph.models.extensions.SoftwareOathAuthenticationMethod;
-import com.microsoft.graph.models.extensions.MicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Fido2AuthenticationMethod;
+import com.microsoft.graph.models.extensions.AuthenticationMethod;
+import com.microsoft.graph.models.extensions.MicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.extensions.SoftwareOathAuthenticationMethod;
+import com.microsoft.graph.models.extensions.LongRunningOperation;
+import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.extensions.PasswordAuthenticationMethod;
+import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.extensions.SecurityQuestionAuthenticationMethod;
 import com.microsoft.graph.models.extensions.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionResponse;
-import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
-import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
-import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionResponse;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionResponse;
+import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionPage;
+import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionPage;
 
@@ -60,46 +60,22 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Methods.
-     * 
-     */
-    public AuthenticationMethodCollectionPage methods;
-
-    /**
-     * The Security Question Methods.
-     * 
-     */
-    public SecurityQuestionAuthenticationMethodCollectionPage securityQuestionMethods;
-
-    /**
-     * The Phone Methods.
-     * 
-     */
-    public PhoneAuthenticationMethodCollectionPage phoneMethods;
-
-    /**
-     * The Password Methods.
-     * 
-     */
-    public PasswordAuthenticationMethodCollectionPage passwordMethods;
-
-    /**
-     * The Operations.
-     * 
-     */
-    public LongRunningOperationCollectionPage operations;
-
-    /**
      * The Email Methods.
      * 
      */
     public EmailAuthenticationMethodCollectionPage emailMethods;
 
     /**
-     * The Oath Methods.
+     * The Fido2Methods.
      * 
      */
-    public SoftwareOathAuthenticationMethodCollectionPage oathMethods;
+    public Fido2AuthenticationMethodCollectionPage fido2Methods;
+
+    /**
+     * The Methods.
+     * 
+     */
+    public AuthenticationMethodCollectionPage methods;
 
     /**
      * The Microsoft Authenticator Methods.
@@ -108,16 +84,40 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
 
     /**
+     * The Oath Methods.
+     * 
+     */
+    public SoftwareOathAuthenticationMethodCollectionPage oathMethods;
+
+    /**
+     * The Operations.
+     * 
+     */
+    public LongRunningOperationCollectionPage operations;
+
+    /**
      * The Passwordless Microsoft Authenticator Methods.
      * 
      */
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage passwordlessMicrosoftAuthenticatorMethods;
 
     /**
-     * The Fido2Methods.
+     * The Password Methods.
      * 
      */
-    public Fido2AuthenticationMethodCollectionPage fido2Methods;
+    public PasswordAuthenticationMethodCollectionPage passwordMethods;
+
+    /**
+     * The Phone Methods.
+     * 
+     */
+    public PhoneAuthenticationMethodCollectionPage phoneMethods;
+
+    /**
+     * The Security Question Methods.
+     * 
+     */
+    public SecurityQuestionAuthenticationMethodCollectionPage securityQuestionMethods;
 
     /**
      * The Temporary Access Pass Methods.
@@ -165,86 +165,6 @@ public class Authentication extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("methods")) {
-            final AuthenticationMethodCollectionResponse response = new AuthenticationMethodCollectionResponse();
-            if (json.has("methods@odata.nextLink")) {
-                response.nextLink = json.get("methods@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("methods").toString(), JsonObject[].class);
-            final AuthenticationMethod[] array = new AuthenticationMethod[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AuthenticationMethod.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            methods = new AuthenticationMethodCollectionPage(response, null);
-        }
-
-        if (json.has("securityQuestionMethods")) {
-            final SecurityQuestionAuthenticationMethodCollectionResponse response = new SecurityQuestionAuthenticationMethodCollectionResponse();
-            if (json.has("securityQuestionMethods@odata.nextLink")) {
-                response.nextLink = json.get("securityQuestionMethods@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("securityQuestionMethods").toString(), JsonObject[].class);
-            final SecurityQuestionAuthenticationMethod[] array = new SecurityQuestionAuthenticationMethod[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityQuestionAuthenticationMethod.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            securityQuestionMethods = new SecurityQuestionAuthenticationMethodCollectionPage(response, null);
-        }
-
-        if (json.has("phoneMethods")) {
-            final PhoneAuthenticationMethodCollectionResponse response = new PhoneAuthenticationMethodCollectionResponse();
-            if (json.has("phoneMethods@odata.nextLink")) {
-                response.nextLink = json.get("phoneMethods@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("phoneMethods").toString(), JsonObject[].class);
-            final PhoneAuthenticationMethod[] array = new PhoneAuthenticationMethod[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PhoneAuthenticationMethod.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            phoneMethods = new PhoneAuthenticationMethodCollectionPage(response, null);
-        }
-
-        if (json.has("passwordMethods")) {
-            final PasswordAuthenticationMethodCollectionResponse response = new PasswordAuthenticationMethodCollectionResponse();
-            if (json.has("passwordMethods@odata.nextLink")) {
-                response.nextLink = json.get("passwordMethods@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("passwordMethods").toString(), JsonObject[].class);
-            final PasswordAuthenticationMethod[] array = new PasswordAuthenticationMethod[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PasswordAuthenticationMethod.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            passwordMethods = new PasswordAuthenticationMethodCollectionPage(response, null);
-        }
-
-        if (json.has("operations")) {
-            final LongRunningOperationCollectionResponse response = new LongRunningOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final LongRunningOperation[] array = new LongRunningOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LongRunningOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new LongRunningOperationCollectionPage(response, null);
-        }
-
         if (json.has("emailMethods")) {
             final EmailAuthenticationMethodCollectionResponse response = new EmailAuthenticationMethodCollectionResponse();
             if (json.has("emailMethods@odata.nextLink")) {
@@ -261,20 +181,36 @@ public class Authentication extends Entity implements IJsonBackedObject {
             emailMethods = new EmailAuthenticationMethodCollectionPage(response, null);
         }
 
-        if (json.has("oathMethods")) {
-            final SoftwareOathAuthenticationMethodCollectionResponse response = new SoftwareOathAuthenticationMethodCollectionResponse();
-            if (json.has("oathMethods@odata.nextLink")) {
-                response.nextLink = json.get("oathMethods@odata.nextLink").getAsString();
+        if (json.has("fido2Methods")) {
+            final Fido2AuthenticationMethodCollectionResponse response = new Fido2AuthenticationMethodCollectionResponse();
+            if (json.has("fido2Methods@odata.nextLink")) {
+                response.nextLink = json.get("fido2Methods@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("oathMethods").toString(), JsonObject[].class);
-            final SoftwareOathAuthenticationMethod[] array = new SoftwareOathAuthenticationMethod[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("fido2Methods").toString(), JsonObject[].class);
+            final Fido2AuthenticationMethod[] array = new Fido2AuthenticationMethod[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SoftwareOathAuthenticationMethod.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Fido2AuthenticationMethod.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            oathMethods = new SoftwareOathAuthenticationMethodCollectionPage(response, null);
+            fido2Methods = new Fido2AuthenticationMethodCollectionPage(response, null);
+        }
+
+        if (json.has("methods")) {
+            final AuthenticationMethodCollectionResponse response = new AuthenticationMethodCollectionResponse();
+            if (json.has("methods@odata.nextLink")) {
+                response.nextLink = json.get("methods@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("methods").toString(), JsonObject[].class);
+            final AuthenticationMethod[] array = new AuthenticationMethod[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AuthenticationMethod.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            methods = new AuthenticationMethodCollectionPage(response, null);
         }
 
         if (json.has("microsoftAuthenticatorMethods")) {
@@ -293,6 +229,38 @@ public class Authentication extends Entity implements IJsonBackedObject {
             microsoftAuthenticatorMethods = new MicrosoftAuthenticatorAuthenticationMethodCollectionPage(response, null);
         }
 
+        if (json.has("oathMethods")) {
+            final SoftwareOathAuthenticationMethodCollectionResponse response = new SoftwareOathAuthenticationMethodCollectionResponse();
+            if (json.has("oathMethods@odata.nextLink")) {
+                response.nextLink = json.get("oathMethods@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("oathMethods").toString(), JsonObject[].class);
+            final SoftwareOathAuthenticationMethod[] array = new SoftwareOathAuthenticationMethod[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SoftwareOathAuthenticationMethod.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            oathMethods = new SoftwareOathAuthenticationMethodCollectionPage(response, null);
+        }
+
+        if (json.has("operations")) {
+            final LongRunningOperationCollectionResponse response = new LongRunningOperationCollectionResponse();
+            if (json.has("operations@odata.nextLink")) {
+                response.nextLink = json.get("operations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
+            final LongRunningOperation[] array = new LongRunningOperation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LongRunningOperation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            operations = new LongRunningOperationCollectionPage(response, null);
+        }
+
         if (json.has("passwordlessMicrosoftAuthenticatorMethods")) {
             final PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse response = new PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse();
             if (json.has("passwordlessMicrosoftAuthenticatorMethods@odata.nextLink")) {
@@ -309,20 +277,52 @@ public class Authentication extends Entity implements IJsonBackedObject {
             passwordlessMicrosoftAuthenticatorMethods = new PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage(response, null);
         }
 
-        if (json.has("fido2Methods")) {
-            final Fido2AuthenticationMethodCollectionResponse response = new Fido2AuthenticationMethodCollectionResponse();
-            if (json.has("fido2Methods@odata.nextLink")) {
-                response.nextLink = json.get("fido2Methods@odata.nextLink").getAsString();
+        if (json.has("passwordMethods")) {
+            final PasswordAuthenticationMethodCollectionResponse response = new PasswordAuthenticationMethodCollectionResponse();
+            if (json.has("passwordMethods@odata.nextLink")) {
+                response.nextLink = json.get("passwordMethods@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("fido2Methods").toString(), JsonObject[].class);
-            final Fido2AuthenticationMethod[] array = new Fido2AuthenticationMethod[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("passwordMethods").toString(), JsonObject[].class);
+            final PasswordAuthenticationMethod[] array = new PasswordAuthenticationMethod[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Fido2AuthenticationMethod.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PasswordAuthenticationMethod.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            fido2Methods = new Fido2AuthenticationMethodCollectionPage(response, null);
+            passwordMethods = new PasswordAuthenticationMethodCollectionPage(response, null);
+        }
+
+        if (json.has("phoneMethods")) {
+            final PhoneAuthenticationMethodCollectionResponse response = new PhoneAuthenticationMethodCollectionResponse();
+            if (json.has("phoneMethods@odata.nextLink")) {
+                response.nextLink = json.get("phoneMethods@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("phoneMethods").toString(), JsonObject[].class);
+            final PhoneAuthenticationMethod[] array = new PhoneAuthenticationMethod[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PhoneAuthenticationMethod.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            phoneMethods = new PhoneAuthenticationMethodCollectionPage(response, null);
+        }
+
+        if (json.has("securityQuestionMethods")) {
+            final SecurityQuestionAuthenticationMethodCollectionResponse response = new SecurityQuestionAuthenticationMethodCollectionResponse();
+            if (json.has("securityQuestionMethods@odata.nextLink")) {
+                response.nextLink = json.get("securityQuestionMethods@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("securityQuestionMethods").toString(), JsonObject[].class);
+            final SecurityQuestionAuthenticationMethod[] array = new SecurityQuestionAuthenticationMethod[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityQuestionAuthenticationMethod.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            securityQuestionMethods = new SecurityQuestionAuthenticationMethodCollectionPage(response, null);
         }
 
         if (json.has("temporaryAccessPassMethods")) {

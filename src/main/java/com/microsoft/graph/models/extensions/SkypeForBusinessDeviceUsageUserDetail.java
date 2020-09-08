@@ -27,6 +27,22 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
 
 
     /**
+     * The Last Activity Date.
+     * 
+     */
+    @SerializedName("lastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
      * The Report Refresh Date.
      * 
      */
@@ -35,20 +51,28 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
-     * The User Principal Name.
+     * The Used Android Phone.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("usedAndroidPhone")
     @Expose
-    public String userPrincipalName;
+    public Boolean usedAndroidPhone;
 
     /**
-     * The Last Activity Date.
+     * The Usedi Pad.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName("usediPad")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+    public Boolean usediPad;
+
+    /**
+     * The Usedi Phone.
+     * 
+     */
+    @SerializedName("usediPhone")
+    @Expose
+    public Boolean usediPhone;
 
     /**
      * The Used Windows.
@@ -67,36 +91,12 @@ public class SkypeForBusinessDeviceUsageUserDetail extends Entity implements IJs
     public Boolean usedWindowsPhone;
 
     /**
-     * The Used Android Phone.
+     * The User Principal Name.
      * 
      */
-    @SerializedName("usedAndroidPhone")
+    @SerializedName("userPrincipalName")
     @Expose
-    public Boolean usedAndroidPhone;
-
-    /**
-     * The Usedi Phone.
-     * 
-     */
-    @SerializedName("usediPhone")
-    @Expose
-    public Boolean usediPhone;
-
-    /**
-     * The Usedi Pad.
-     * 
-     */
-    @SerializedName("usediPad")
-    @Expose
-    public Boolean usediPad;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
+    public String userPrincipalName;
 
 
     /**

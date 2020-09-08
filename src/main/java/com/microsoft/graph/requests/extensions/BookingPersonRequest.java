@@ -127,6 +127,27 @@ public class BookingPersonRequest extends BaseRequest implements IBookingPersonR
     }
 
     /**
+     * Creates a BookingPerson with a new object
+     *
+     * @param newBookingPerson the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BookingPerson newBookingPerson, final ICallback<BookingPerson> callback) {
+        send(HttpMethod.PUT, callback, newBookingPerson);
+    }
+
+    /**
+     * Creates a BookingPerson with a new object
+     *
+     * @param newBookingPerson the object to create/update
+     * @return the created BookingPerson
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BookingPerson put(final BookingPerson newBookingPerson) throws ClientException {
+        return send(HttpMethod.PUT, newBookingPerson);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

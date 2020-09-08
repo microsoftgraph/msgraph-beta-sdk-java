@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.VpnTunnelConfigurationType;
 import com.microsoft.graph.models.generated.VpnServiceExceptionAction;
 import com.microsoft.graph.models.extensions.SpecifiedCaptiveNetworkPlugins;
+import com.microsoft.graph.models.generated.VpnTunnelConfigurationType;
 
 
 import com.google.gson.JsonObject;
@@ -39,6 +39,62 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
     }
 
     /**
+     * The Air Print Exception Action.
+     * Determine whether AirPrint service will be exempt from the always-on VPN connection
+     */
+    @SerializedName("airPrintExceptionAction")
+    @Expose
+    public VpnServiceExceptionAction airPrintExceptionAction;
+
+    /**
+     * The Allow All Captive Network Plugins.
+     * Specifies whether traffic from all captive network plugins should be allowed outside the vpn
+     */
+    @SerializedName("allowAllCaptiveNetworkPlugins")
+    @Expose
+    public Boolean allowAllCaptiveNetworkPlugins;
+
+    /**
+     * The Allow Captive Web Sheet.
+     * Determines whether traffic from the Websheet app is allowed outside of the VPN
+     */
+    @SerializedName("allowCaptiveWebSheet")
+    @Expose
+    public Boolean allowCaptiveWebSheet;
+
+    /**
+     * The Allowed Captive Network Plugins.
+     * Determines whether all, some, or no non-native captive networking apps are allowed
+     */
+    @SerializedName("allowedCaptiveNetworkPlugins")
+    @Expose
+    public SpecifiedCaptiveNetworkPlugins allowedCaptiveNetworkPlugins;
+
+    /**
+     * The Cellular Exception Action.
+     * Determine whether Cellular service will be exempt from the always-on VPN connection
+     */
+    @SerializedName("cellularExceptionAction")
+    @Expose
+    public VpnServiceExceptionAction cellularExceptionAction;
+
+    /**
+     * The Nat Keep Alive Interval In Seconds.
+     * Specifies how often in seconds to send a network address translation keepalive package through the VPN
+     */
+    @SerializedName("natKeepAliveIntervalInSeconds")
+    @Expose
+    public Integer natKeepAliveIntervalInSeconds;
+
+    /**
+     * The Nat Keep Alive Offload Enable.
+     * Enable hardware offloading of NAT keepalive signals when the device is asleep
+     */
+    @SerializedName("natKeepAliveOffloadEnable")
+    @Expose
+    public Boolean natKeepAliveOffloadEnable;
+
+    /**
      * The Tunnel Configuration.
      * Determines what connections the specific tunnel configuration applies to
      */
@@ -61,62 +117,6 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
     @SerializedName("voicemailExceptionAction")
     @Expose
     public VpnServiceExceptionAction voicemailExceptionAction;
-
-    /**
-     * The Air Print Exception Action.
-     * Determine whether AirPrint service will be exempt from the always-on VPN connection
-     */
-    @SerializedName("airPrintExceptionAction")
-    @Expose
-    public VpnServiceExceptionAction airPrintExceptionAction;
-
-    /**
-     * The Cellular Exception Action.
-     * Determine whether Cellular service will be exempt from the always-on VPN connection
-     */
-    @SerializedName("cellularExceptionAction")
-    @Expose
-    public VpnServiceExceptionAction cellularExceptionAction;
-
-    /**
-     * The Allow All Captive Network Plugins.
-     * Specifies whether traffic from all captive network plugins should be allowed outside the vpn
-     */
-    @SerializedName("allowAllCaptiveNetworkPlugins")
-    @Expose
-    public Boolean allowAllCaptiveNetworkPlugins;
-
-    /**
-     * The Allowed Captive Network Plugins.
-     * Determines whether all, some, or no non-native captive networking apps are allowed
-     */
-    @SerializedName("allowedCaptiveNetworkPlugins")
-    @Expose
-    public SpecifiedCaptiveNetworkPlugins allowedCaptiveNetworkPlugins;
-
-    /**
-     * The Allow Captive Web Sheet.
-     * Determines whether traffic from the Websheet app is allowed outside of the VPN
-     */
-    @SerializedName("allowCaptiveWebSheet")
-    @Expose
-    public Boolean allowCaptiveWebSheet;
-
-    /**
-     * The Nat Keep Alive Interval In Seconds.
-     * Specifies how often in seconds to send a network address translation keepalive package through the VPN
-     */
-    @SerializedName("natKeepAliveIntervalInSeconds")
-    @Expose
-    public Integer natKeepAliveIntervalInSeconds;
-
-    /**
-     * The Nat Keep Alive Offload Enable.
-     * Enable hardware offloading of NAT keepalive signals when the device is asleep
-     */
-    @SerializedName("natKeepAliveOffloadEnable")
-    @Expose
-    public Boolean natKeepAliveOffloadEnable;
 
 
     /**

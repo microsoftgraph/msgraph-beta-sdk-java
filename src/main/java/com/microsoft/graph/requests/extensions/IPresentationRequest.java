@@ -80,6 +80,23 @@ public interface IPresentationRequest extends IHttpRequest {
     Presentation post(final Presentation newPresentation) throws ClientException;
 
     /**
+     * Posts a Presentation with a new object
+     *
+     * @param newPresentation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Presentation newPresentation, final ICallback<Presentation> callback);
+
+    /**
+     * Posts a Presentation with a new object
+     *
+     * @param newPresentation the object to create/update
+     * @return the created Presentation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Presentation put(final Presentation newPresentation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

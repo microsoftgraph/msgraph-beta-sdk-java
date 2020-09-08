@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WindowsAppStartLayoutTileSize;
 import com.microsoft.graph.models.generated.WindowsKioskAppType;
+import com.microsoft.graph.models.generated.WindowsAppStartLayoutTileSize;
 
 
 import com.google.gson.JsonObject;
@@ -38,22 +38,6 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
     }
 
     /**
-     * The Start Layout Tile Size.
-     * The app tile size for the start layout
-     */
-    @SerializedName("startLayoutTileSize")
-    @Expose
-    public WindowsAppStartLayoutTileSize startLayoutTileSize;
-
-    /**
-     * The Name.
-     * Represents the friendly name of an app
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The App Type.
      * The app type
      */
@@ -68,6 +52,22 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
     @SerializedName("autoLaunch")
     @Expose
     public Boolean autoLaunch;
+
+    /**
+     * The Name.
+     * Represents the friendly name of an app
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Start Layout Tile Size.
+     * The app tile size for the start layout
+     */
+    @SerializedName("startLayoutTileSize")
+    @Expose
+    public WindowsAppStartLayoutTileSize startLayoutTileSize;
 
 
     /**

@@ -112,6 +112,27 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a TeamsUserActivityUserDetail with a new object
+     *
+     * @param newTeamsUserActivityUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback) {
+        send(HttpMethod.PUT, callback, newTeamsUserActivityUserDetail);
+    }
+
+    /**
+     * Creates a TeamsUserActivityUserDetail with a new object
+     *
+     * @param newTeamsUserActivityUserDetail the object to create/update
+     * @return the created TeamsUserActivityUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TeamsUserActivityUserDetail put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException {
+        return send(HttpMethod.PUT, newTeamsUserActivityUserDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

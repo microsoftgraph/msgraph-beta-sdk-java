@@ -80,6 +80,23 @@ public interface IOfficeClientConfigurationRequest extends IHttpRequest {
     OfficeClientConfiguration post(final OfficeClientConfiguration newOfficeClientConfiguration) throws ClientException;
 
     /**
+     * Posts a OfficeClientConfiguration with a new object
+     *
+     * @param newOfficeClientConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback);
+
+    /**
+     * Posts a OfficeClientConfiguration with a new object
+     *
+     * @param newOfficeClientConfiguration the object to create/update
+     * @return the created OfficeClientConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OfficeClientConfiguration put(final OfficeClientConfiguration newOfficeClientConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

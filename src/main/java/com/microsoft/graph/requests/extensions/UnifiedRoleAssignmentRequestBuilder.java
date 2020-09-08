@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,21 +59,12 @@ public class UnifiedRoleAssignmentRequestBuilder extends BaseRequestBuilder impl
 
 
     /**
-     * Gets the request builder for UnifiedRoleDefinition
+     * Gets the request builder for AppScope
      *
-     * @return the IUnifiedRoleDefinitionWithReferenceRequestBuilder instance
+     * @return the IAppScopeRequestBuilder instance
      */
-    public IUnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for DirectoryObject
-     *
-     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
-     */
-    public IDirectoryObjectWithReferenceRequestBuilder principal() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
+    public IAppScopeRequestBuilder appScope() {
+        return new AppScopeRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
     }
 
     /**
@@ -86,11 +77,20 @@ public class UnifiedRoleAssignmentRequestBuilder extends BaseRequestBuilder impl
     }
 
     /**
-     * Gets the request builder for AppScope
+     * Gets the request builder for DirectoryObject
      *
-     * @return the IAppScopeRequestBuilder instance
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
-    public IAppScopeRequestBuilder appScope() {
-        return new AppScopeRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder principal() {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UnifiedRoleDefinition
+     *
+     * @return the IUnifiedRoleDefinitionWithReferenceRequestBuilder instance
+     */
+    public IUnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

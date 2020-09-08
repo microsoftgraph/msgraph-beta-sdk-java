@@ -80,6 +80,23 @@ public interface IDeviceManagementScriptAssignmentRequest extends IHttpRequest {
     DeviceManagementScriptAssignment post(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment) throws ClientException;
 
     /**
+     * Posts a DeviceManagementScriptAssignment with a new object
+     *
+     * @param newDeviceManagementScriptAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment, final ICallback<DeviceManagementScriptAssignment> callback);
+
+    /**
+     * Posts a DeviceManagementScriptAssignment with a new object
+     *
+     * @param newDeviceManagementScriptAssignment the object to create/update
+     * @return the created DeviceManagementScriptAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementScriptAssignment put(final DeviceManagementScriptAssignment newDeviceManagementScriptAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

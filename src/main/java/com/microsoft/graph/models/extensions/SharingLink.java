@@ -45,20 +45,20 @@ public class SharingLink implements IJsonBackedObject {
     public Identity application;
 
     /**
-     * The Prevents Download.
-     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
-     */
-    @SerializedName("preventsDownload")
-    @Expose
-    public Boolean preventsDownload;
-
-    /**
      * The Configurator Url.
      * 
      */
     @SerializedName("configuratorUrl")
     @Expose
     public String configuratorUrl;
+
+    /**
+     * The Prevents Download.
+     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
+     */
+    @SerializedName("preventsDownload")
+    @Expose
+    public Boolean preventsDownload;
 
     /**
      * The Scope.

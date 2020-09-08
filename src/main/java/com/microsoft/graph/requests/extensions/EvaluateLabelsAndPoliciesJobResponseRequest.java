@@ -112,6 +112,27 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a EvaluateLabelsAndPoliciesJobResponse with a new object
+     *
+     * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback) {
+        send(HttpMethod.PUT, callback, newEvaluateLabelsAndPoliciesJobResponse);
+    }
+
+    /**
+     * Creates a EvaluateLabelsAndPoliciesJobResponse with a new object
+     *
+     * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
+     * @return the created EvaluateLabelsAndPoliciesJobResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EvaluateLabelsAndPoliciesJobResponse put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
+        return send(HttpMethod.PUT, newEvaluateLabelsAndPoliciesJobResponse);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -12,14 +12,14 @@ import com.microsoft.graph.models.extensions.ContentClassification;
 import com.microsoft.graph.models.extensions.ExactMatchClassificationResult;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentCollectionRequestBuilder;
@@ -53,41 +53,41 @@ public interface IDataClassificationServiceRequestBuilder extends IRequestBuilde
 
     IExactMatchDataStoreRequestBuilder exactMatchDataStores(final String id);
 
-    ISensitiveTypeCollectionRequestBuilder sensitiveTypes();
+    IFileClassificationRequestCollectionRequestBuilder classifyFile();
 
-    ISensitiveTypeRequestBuilder sensitiveTypes(final String id);
-
-    IJobResponseBaseCollectionRequestBuilder jobs();
-
-    IJobResponseBaseRequestBuilder jobs(final String id);
+    IFileClassificationRequestRequestBuilder classifyFile(final String id);
 
     IJobResponseBaseCollectionRequestBuilder classifyFileJobs();
 
     IJobResponseBaseRequestBuilder classifyFileJobs(final String id);
 
+    ITextClassificationRequestCollectionRequestBuilder classifyText();
+
+    ITextClassificationRequestRequestBuilder classifyText(final String id);
+
     IJobResponseBaseCollectionRequestBuilder classifyTextJobs();
 
     IJobResponseBaseRequestBuilder classifyTextJobs(final String id);
-
-    IJobResponseBaseCollectionRequestBuilder evaluateLabelJobs();
-
-    IJobResponseBaseRequestBuilder evaluateLabelJobs(final String id);
 
     IJobResponseBaseCollectionRequestBuilder evaluateDlpPoliciesJobs();
 
     IJobResponseBaseRequestBuilder evaluateDlpPoliciesJobs(final String id);
 
+    IJobResponseBaseCollectionRequestBuilder evaluateLabelJobs();
+
+    IJobResponseBaseRequestBuilder evaluateLabelJobs(final String id);
+
+    IJobResponseBaseCollectionRequestBuilder jobs();
+
+    IJobResponseBaseRequestBuilder jobs(final String id);
+
     IJobResponseBaseCollectionRequestBuilder labelsAndPoliciesEvaluationJobs();
 
     IJobResponseBaseRequestBuilder labelsAndPoliciesEvaluationJobs(final String id);
 
-    ITextClassificationRequestCollectionRequestBuilder classifyText();
+    ISensitiveTypeCollectionRequestBuilder sensitiveTypes();
 
-    ITextClassificationRequestRequestBuilder classifyText(final String id);
-
-    IFileClassificationRequestCollectionRequestBuilder classifyFile();
-
-    IFileClassificationRequestRequestBuilder classifyFile(final String id);
+    ISensitiveTypeRequestBuilder sensitiveTypes(final String id);
 
     ISensitivityLabelCollectionRequestBuilder sensitivityLabels();
 

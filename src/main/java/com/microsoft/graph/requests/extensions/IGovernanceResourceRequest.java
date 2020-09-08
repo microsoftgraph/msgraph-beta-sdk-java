@@ -80,6 +80,23 @@ public interface IGovernanceResourceRequest extends IHttpRequest {
     GovernanceResource post(final GovernanceResource newGovernanceResource) throws ClientException;
 
     /**
+     * Posts a GovernanceResource with a new object
+     *
+     * @param newGovernanceResource the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback);
+
+    /**
+     * Posts a GovernanceResource with a new object
+     *
+     * @param newGovernanceResource the object to create/update
+     * @return the created GovernanceResource
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GovernanceResource put(final GovernanceResource newGovernanceResource) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

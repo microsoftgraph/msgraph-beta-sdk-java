@@ -80,6 +80,23 @@ public interface IUnifiedRoleDefinitionRequest extends IHttpRequest {
     UnifiedRoleDefinition post(final UnifiedRoleDefinition newUnifiedRoleDefinition) throws ClientException;
 
     /**
+     * Posts a UnifiedRoleDefinition with a new object
+     *
+     * @param newUnifiedRoleDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback);
+
+    /**
+     * Posts a UnifiedRoleDefinition with a new object
+     *
+     * @param newUnifiedRoleDefinition the object to create/update
+     * @return the created UnifiedRoleDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UnifiedRoleDefinition put(final UnifiedRoleDefinition newUnifiedRoleDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

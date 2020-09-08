@@ -80,6 +80,23 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
     WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException;
 
     /**
+     * Posts a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback);
+
+    /**
+     * Posts a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the object to create/update
+     * @return the created WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

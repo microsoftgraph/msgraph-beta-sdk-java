@@ -80,6 +80,23 @@ public interface IDeviceShellScriptRequest extends IHttpRequest {
     DeviceShellScript post(final DeviceShellScript newDeviceShellScript) throws ClientException;
 
     /**
+     * Posts a DeviceShellScript with a new object
+     *
+     * @param newDeviceShellScript the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback);
+
+    /**
+     * Posts a DeviceShellScript with a new object
+     *
+     * @param newDeviceShellScript the object to create/update
+     * @return the created DeviceShellScript
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceShellScript put(final DeviceShellScript newDeviceShellScript) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

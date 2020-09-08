@@ -112,6 +112,27 @@ public class IosVppAppAssignedDeviceLicenseRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a IosVppAppAssignedDeviceLicense with a new object
+     *
+     * @param newIosVppAppAssignedDeviceLicense the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosVppAppAssignedDeviceLicense newIosVppAppAssignedDeviceLicense, final ICallback<IosVppAppAssignedDeviceLicense> callback) {
+        send(HttpMethod.PUT, callback, newIosVppAppAssignedDeviceLicense);
+    }
+
+    /**
+     * Creates a IosVppAppAssignedDeviceLicense with a new object
+     *
+     * @param newIosVppAppAssignedDeviceLicense the object to create/update
+     * @return the created IosVppAppAssignedDeviceLicense
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosVppAppAssignedDeviceLicense put(final IosVppAppAssignedDeviceLicense newIosVppAppAssignedDeviceLicense) throws ClientException {
+        return send(HttpMethod.PUT, newIosVppAppAssignedDeviceLicense);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

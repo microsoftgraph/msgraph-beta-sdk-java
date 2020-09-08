@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TrustFramework;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
-    public ITrustFrameworkPolicyCollectionRequestBuilder policies() {
-        return new TrustFrameworkPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
-    }
-
-    public ITrustFrameworkPolicyRequestBuilder policies(final String id) {
-        return new TrustFrameworkPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
-    }
     public ITrustFrameworkKeySetCollectionRequestBuilder keySets() {
         return new TrustFrameworkKeySetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("keySets"), getClient(), null);
     }
 
     public ITrustFrameworkKeySetRequestBuilder keySets(final String id) {
         return new TrustFrameworkKeySetRequestBuilder(getRequestUrlWithAdditionalSegment("keySets") + "/" + id, getClient(), null);
+    }
+    public ITrustFrameworkPolicyCollectionRequestBuilder policies() {
+        return new TrustFrameworkPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
+    }
+
+    public ITrustFrameworkPolicyRequestBuilder policies(final String id) {
+        return new TrustFrameworkPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

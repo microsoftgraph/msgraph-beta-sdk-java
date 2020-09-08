@@ -29,12 +29,28 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
 
 
     /**
-     * The Kiosk Profiles.
-     * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
+     * The Edge Kiosk Enable Public Browsing.
+     * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
      */
-    @SerializedName("kioskProfiles")
+    @SerializedName("edgeKioskEnablePublicBrowsing")
     @Expose
-    public java.util.List<WindowsKioskProfile> kioskProfiles;
+    public Boolean edgeKioskEnablePublicBrowsing;
+
+    /**
+     * The Kiosk Browser Blocked Url Exceptions.
+     * Specify URLs that the kiosk browser is allowed to navigate to
+     */
+    @SerializedName("kioskBrowserBlockedUrlExceptions")
+    @Expose
+    public java.util.List<String> kioskBrowserBlockedUrlExceptions;
+
+    /**
+     * The Kiosk Browser Blocked URLs.
+     * Specify URLs that the kiosk browsers should not navigate to
+     */
+    @SerializedName("kioskBrowserBlockedURLs")
+    @Expose
+    public java.util.List<String> kioskBrowserBlockedURLs;
 
     /**
      * The Kiosk Browser Default Url.
@@ -43,6 +59,14 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
     @SerializedName("kioskBrowserDefaultUrl")
     @Expose
     public String kioskBrowserDefaultUrl;
+
+    /**
+     * The Kiosk Browser Enable End Session Button.
+     * Enable the kiosk browser's end session button. By default, the end session button is disabled.
+     */
+    @SerializedName("kioskBrowserEnableEndSessionButton")
+    @Expose
+    public Boolean kioskBrowserEnableEndSessionButton;
 
     /**
      * The Kiosk Browser Enable Home Button.
@@ -61,14 +85,6 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
     public Boolean kioskBrowserEnableNavigationButtons;
 
     /**
-     * The Kiosk Browser Enable End Session Button.
-     * Enable the kiosk browser's end session button. By default, the end session button is disabled.
-     */
-    @SerializedName("kioskBrowserEnableEndSessionButton")
-    @Expose
-    public Boolean kioskBrowserEnableEndSessionButton;
-
-    /**
      * The Kiosk Browser Restart On Idle Time In Minutes.
      * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
      */
@@ -77,28 +93,12 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements IJ
     public Integer kioskBrowserRestartOnIdleTimeInMinutes;
 
     /**
-     * The Kiosk Browser Blocked URLs.
-     * Specify URLs that the kiosk browsers should not navigate to
+     * The Kiosk Profiles.
+     * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      */
-    @SerializedName("kioskBrowserBlockedURLs")
+    @SerializedName("kioskProfiles")
     @Expose
-    public java.util.List<String> kioskBrowserBlockedURLs;
-
-    /**
-     * The Kiosk Browser Blocked Url Exceptions.
-     * Specify URLs that the kiosk browser is allowed to navigate to
-     */
-    @SerializedName("kioskBrowserBlockedUrlExceptions")
-    @Expose
-    public java.util.List<String> kioskBrowserBlockedUrlExceptions;
-
-    /**
-     * The Edge Kiosk Enable Public Browsing.
-     * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
-     */
-    @SerializedName("edgeKioskEnablePublicBrowsing")
-    @Expose
-    public Boolean edgeKioskEnablePublicBrowsing;
+    public java.util.List<WindowsKioskProfile> kioskProfiles;
 
     /**
      * The Windows Kiosk Force Update Schedule.

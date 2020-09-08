@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollecti
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -66,13 +66,6 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder i
     }
 
 
-    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
-        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
-    }
-
-    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
-        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
-    }
     public IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories() {
         return new DeviceManagementTemplateSettingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
@@ -86,6 +79,13 @@ public class DeviceManagementTemplateRequestBuilder extends BaseRequestBuilder i
 
     public IDeviceManagementTemplateRequestBuilder migratableTo(final String id) {
         return new DeviceManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
+        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+
+    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
+        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
 
     public IDeviceManagementTemplateCreateInstanceRequestBuilder createInstance(final String displayName, final String description, final java.util.List<DeviceManagementSettingInstance> settingsDelta, final java.util.List<String> roleScopeTagIds) {

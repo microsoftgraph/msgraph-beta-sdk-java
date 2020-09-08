@@ -112,6 +112,27 @@ public class MailboxUsageDetailRequest extends BaseRequest implements IMailboxUs
     }
 
     /**
+     * Creates a MailboxUsageDetail with a new object
+     *
+     * @param newMailboxUsageDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailboxUsageDetail newMailboxUsageDetail, final ICallback<MailboxUsageDetail> callback) {
+        send(HttpMethod.PUT, callback, newMailboxUsageDetail);
+    }
+
+    /**
+     * Creates a MailboxUsageDetail with a new object
+     *
+     * @param newMailboxUsageDetail the object to create/update
+     * @return the created MailboxUsageDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailboxUsageDetail put(final MailboxUsageDetail newMailboxUsageDetail) throws ClientException {
+        return send(HttpMethod.PUT, newMailboxUsageDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -36,20 +36,20 @@ public class DowngradeJustification implements IJsonBackedObject {
     }
 
     /**
-     * The Justification Message.
-     * 
-     */
-    @SerializedName("justificationMessage")
-    @Expose
-    public String justificationMessage;
-
-    /**
      * The Is Downgrade Justified.
      * 
      */
     @SerializedName("isDowngradeJustified")
     @Expose
     public Boolean isDowngradeJustified;
+
+    /**
+     * The Justification Message.
+     * 
+     */
+    @SerializedName("justificationMessage")
+    @Expose
+    public String justificationMessage;
 
 
     /**

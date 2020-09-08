@@ -62,14 +62,14 @@ public class SecurityBaselineStateCollectionRequest extends BaseCollectionReques
     public void post(final SecurityBaselineState newSecurityBaselineState, final ICallback<SecurityBaselineState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityBaselineStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityBaselineState, callback);
     }
 
     public SecurityBaselineState post(final SecurityBaselineState newSecurityBaselineState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecurityBaselineStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityBaselineState);
     }
 
@@ -106,6 +106,27 @@ public class SecurityBaselineStateCollectionRequest extends BaseCollectionReques
         return (SecurityBaselineStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecurityBaselineStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecurityBaselineStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecurityBaselineStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecurityBaselineStateCollectionRequest)this;
+    }
     public ISecurityBaselineStateCollectionPage buildFromResponse(final SecurityBaselineStateCollectionResponse response) {
         final ISecurityBaselineStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

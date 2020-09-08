@@ -11,25 +11,25 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
-import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsProtectionStateRequestBuilder;
 import java.util.Arrays;
@@ -61,13 +61,13 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
 
     ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id);
 
-    IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
-
-    IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
-
     IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
 
     IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
+
+    IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
+
+    IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
 
     IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates();
 
@@ -84,48 +84,48 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
      */
     IDeviceCategoryRequestBuilder deviceCategory();
 
+    IDeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests();
+
+    IDeviceLogCollectionResponseRequestBuilder logCollectionRequests(final String id);
+
+    IUserCollectionRequestBuilder users();
+
+    IUserRequestBuilder users(final String id);
+
     /**
      * Gets the request builder for WindowsProtectionState
      *
      * @return the IWindowsProtectionStateRequestBuilder instance
      */
     IWindowsProtectionStateRequestBuilder windowsProtectionState();
-
-    IUserCollectionRequestBuilder users();
-
-    IUserRequestBuilder users(final String id);
-
-    IDeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests();
-
-    IDeviceLogCollectionResponseRequestBuilder logCollectionRequests(final String id);
     IManagedDeviceOverrideComplianceStateRequestBuilder overrideComplianceState(final AdministratorConfiguredDeviceComplianceState complianceState, final String remediationUrl);
-    IManagedDeviceEnableLostModeRequestBuilder enableLostMode(final String message, final String phoneNumber, final String footer);
-    IManagedDevicePlayLostModeSoundRequestBuilder playLostModeSound();
-    IManagedDeviceSetDeviceNameRequestBuilder setDeviceName(final String deviceName);
-    IManagedDeviceRotateFileVaultKeyRequestBuilder rotateFileVaultKey();
+    IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock();
+    IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData);
     IManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder createDeviceLogCollectionRequest(final DeviceLogCollectionRequest templateType);
-    IManagedDeviceRetireRequestBuilder retire();
-    IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode, final Boolean useProtectedWipe);
-    IManagedDeviceResetPasscodeRequestBuilder resetPasscode();
+    IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice(final String userPrincipalName);
+    IManagedDeviceDisableLostModeRequestBuilder disableLostMode();
+    IManagedDeviceEnableLostModeRequestBuilder enableLostMode(final String message, final String phoneNumber, final String footer);
+    IManagedDeviceLocateDeviceRequestBuilder locateDevice();
+    IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser();
+    IManagedDevicePlayLostModeSoundRequestBuilder playLostModeSound();
+    IManagedDeviceRebootNowRequestBuilder rebootNow();
+    IManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode();
     IManagedDeviceRemoteLockRequestBuilder remoteLock();
     IManagedDeviceRequestRemoteAssistanceRequestBuilder requestRemoteAssistance();
-    IManagedDeviceDisableLostModeRequestBuilder disableLostMode();
-    IManagedDeviceLocateDeviceRequestBuilder locateDevice();
-    IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock();
-    IManagedDeviceRebootNowRequestBuilder rebootNow();
-    IManagedDeviceShutDownRequestBuilder shutDown();
-    IManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode();
-    IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData);
-    IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser();
-    IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice(final String userPrincipalName);
-    IManagedDeviceSyncDeviceRequestBuilder syncDevice();
-    IManagedDeviceWindowsDefenderScanRequestBuilder windowsDefenderScan(final Boolean quickScan);
-    IManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures();
-    IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount(final UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter);
+    IManagedDeviceResetPasscodeRequestBuilder resetPasscode();
+    IManagedDeviceRetireRequestBuilder retire();
     IManagedDeviceRevokeAppleVppLicensesRequestBuilder revokeAppleVppLicenses();
     IManagedDeviceRotateBitLockerKeysRequestBuilder rotateBitLockerKeys();
+    IManagedDeviceRotateFileVaultKeyRequestBuilder rotateFileVaultKey();
     IManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(final String notificationTitle, final String notificationBody);
+    IManagedDeviceSetDeviceNameRequestBuilder setDeviceName(final String deviceName);
+    IManagedDeviceShutDownRequestBuilder shutDown();
+    IManagedDeviceSyncDeviceRequestBuilder syncDevice();
     IManagedDeviceTriggerConfigurationManagerActionRequestBuilder triggerConfigurationManagerAction(final ConfigurationManagerAction configurationManagerAction);
+    IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount(final UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter);
+    IManagedDeviceWindowsDefenderScanRequestBuilder windowsDefenderScan(final Boolean quickScan);
+    IManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures();
+    IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode, final Boolean useProtectedWipe);
 
     IManagedDeviceGetNonCompliantSettingsCollectionRequestBuilder getNonCompliantSettings();
     IManagedDeviceGetFileVaultKeyRequestBuilder getFileVaultKey();

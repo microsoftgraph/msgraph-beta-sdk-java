@@ -29,6 +29,14 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
 
 
     /**
+     * The Advanced Threat Protection Required Security Level.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+     */
+    @SerializedName("advancedThreatProtectionRequiredSecurityLevel")
+    @Expose
+    public DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
+
+    /**
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */
@@ -45,36 +53,12 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
     /**
-     * The Advanced Threat Protection Required Security Level.
-     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+     * The Min Android Security Patch Level.
+     * Minimum Android security patch level.
      */
-    @SerializedName("advancedThreatProtectionRequiredSecurityLevel")
+    @SerializedName("minAndroidSecurityPatchLevel")
     @Expose
-    public DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
-
-    /**
-     * The Security Require Safety Net Attestation Basic Integrity.
-     * Require the device to pass the SafetyNet basic integrity check.
-     */
-    @SerializedName("securityRequireSafetyNetAttestationBasicIntegrity")
-    @Expose
-    public Boolean securityRequireSafetyNetAttestationBasicIntegrity;
-
-    /**
-     * The Security Require Safety Net Attestation Certified Device.
-     * Require the device to pass the SafetyNet certified device check.
-     */
-    @SerializedName("securityRequireSafetyNetAttestationCertifiedDevice")
-    @Expose
-    public Boolean securityRequireSafetyNetAttestationCertifiedDevice;
-
-    /**
-     * The Os Minimum Version.
-     * Minimum Android version.
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
+    public String minAndroidSecurityPatchLevel;
 
     /**
      * The Os Maximum Version.
@@ -85,20 +69,20 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     public String osMaximumVersion;
 
     /**
-     * The Min Android Security Patch Level.
-     * Minimum Android security patch level.
+     * The Os Minimum Version.
+     * Minimum Android version.
      */
-    @SerializedName("minAndroidSecurityPatchLevel")
+    @SerializedName("osMinimumVersion")
     @Expose
-    public String minAndroidSecurityPatchLevel;
+    public String osMinimumVersion;
 
     /**
-     * The Password Required.
-     * Require a password to unlock device.
+     * The Password Expiration Days.
+     * Number of days before the password expires. Valid values 1 to 365
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("passwordExpirationDays")
     @Expose
-    public Boolean passwordRequired;
+    public Integer passwordExpirationDays;
 
     /**
      * The Password Minimum Length.
@@ -157,14 +141,6 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     public Integer passwordMinimumUpperCaseCharacters;
 
     /**
-     * The Password Required Type.
-     * Type of characters in password
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
-
-    /**
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
@@ -173,20 +149,44 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     public Integer passwordMinutesOfInactivityBeforeLock;
 
     /**
-     * The Password Expiration Days.
-     * Number of days before the password expires. Valid values 1 to 365
-     */
-    @SerializedName("passwordExpirationDays")
-    @Expose
-    public Integer passwordExpirationDays;
-
-    /**
      * The Password Previous Password Count To Block.
      * Number of previous passwords to block. Valid values 1 to 24
      */
     @SerializedName("passwordPreviousPasswordCountToBlock")
     @Expose
     public Integer passwordPreviousPasswordCountToBlock;
+
+    /**
+     * The Password Required.
+     * Require a password to unlock device.
+     */
+    @SerializedName("passwordRequired")
+    @Expose
+    public Boolean passwordRequired;
+
+    /**
+     * The Password Required Type.
+     * Type of characters in password
+     */
+    @SerializedName("passwordRequiredType")
+    @Expose
+    public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
+
+    /**
+     * The Security Require Safety Net Attestation Basic Integrity.
+     * Require the device to pass the SafetyNet basic integrity check.
+     */
+    @SerializedName("securityRequireSafetyNetAttestationBasicIntegrity")
+    @Expose
+    public Boolean securityRequireSafetyNetAttestationBasicIntegrity;
+
+    /**
+     * The Security Require Safety Net Attestation Certified Device.
+     * Require the device to pass the SafetyNet certified device check.
+     */
+    @SerializedName("securityRequireSafetyNetAttestationCertifiedDevice")
+    @Expose
+    public Boolean securityRequireSafetyNetAttestationCertifiedDevice;
 
     /**
      * The Storage Require Encryption.

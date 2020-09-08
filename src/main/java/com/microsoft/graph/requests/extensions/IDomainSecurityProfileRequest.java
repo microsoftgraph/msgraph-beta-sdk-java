@@ -80,6 +80,23 @@ public interface IDomainSecurityProfileRequest extends IHttpRequest {
     DomainSecurityProfile post(final DomainSecurityProfile newDomainSecurityProfile) throws ClientException;
 
     /**
+     * Posts a DomainSecurityProfile with a new object
+     *
+     * @param newDomainSecurityProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback);
+
+    /**
+     * Posts a DomainSecurityProfile with a new object
+     *
+     * @param newDomainSecurityProfile the object to create/update
+     * @return the created DomainSecurityProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DomainSecurityProfile put(final DomainSecurityProfile newDomainSecurityProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

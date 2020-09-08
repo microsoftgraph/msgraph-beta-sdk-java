@@ -80,6 +80,23 @@ public interface IItemActivityOLDRequest extends IHttpRequest {
     ItemActivityOLD post(final ItemActivityOLD newItemActivityOLD) throws ClientException;
 
     /**
+     * Posts a ItemActivityOLD with a new object
+     *
+     * @param newItemActivityOLD the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ItemActivityOLD newItemActivityOLD, final ICallback<ItemActivityOLD> callback);
+
+    /**
+     * Posts a ItemActivityOLD with a new object
+     *
+     * @param newItemActivityOLD the object to create/update
+     * @return the created ItemActivityOLD
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ItemActivityOLD put(final ItemActivityOLD newItemActivityOLD) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

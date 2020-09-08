@@ -27,20 +27,12 @@ public class Account extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
+     * The Blocked.
      * 
      */
-    @SerializedName("number")
+    @SerializedName("blocked")
     @Expose
-    public String number;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
+    public Boolean blocked;
 
     /**
      * The Category.
@@ -51,20 +43,12 @@ public class Account extends Entity implements IJsonBackedObject {
     public String category;
 
     /**
-     * The Sub Category.
+     * The Display Name.
      * 
      */
-    @SerializedName("subCategory")
+    @SerializedName("displayName")
     @Expose
-    public String subCategory;
-
-    /**
-     * The Blocked.
-     * 
-     */
-    @SerializedName("blocked")
-    @Expose
-    public Boolean blocked;
+    public String displayName;
 
     /**
      * The Last Modified Date Time.
@@ -73,6 +57,22 @@ public class Account extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Number.
+     * 
+     */
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Sub Category.
+     * 
+     */
+    @SerializedName("subCategory")
+    @Expose
+    public String subCategory;
 
 
     /**

@@ -42,7 +42,7 @@ public class ManagementConditionStatementCollectionReferenceRequest extends Base
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managementConditionStatements/" + newManagementConditionStatement.id);
         new ManagementConditionStatementWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagementConditionStatement, body, callback);
     }
 
@@ -50,7 +50,7 @@ public class ManagementConditionStatementCollectionReferenceRequest extends Base
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managementConditionStatements/" + newManagementConditionStatement.id);
         return new ManagementConditionStatementWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newManagementConditionStatement, body);
     }
     /**

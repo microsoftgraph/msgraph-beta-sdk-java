@@ -127,6 +127,27 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a DeviceManagementSettingDefinition with a new object
+     *
+     * @param newDeviceManagementSettingDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementSettingDefinition);
+    }
+
+    /**
+     * Creates a DeviceManagementSettingDefinition with a new object
+     *
+     * @param newDeviceManagementSettingDefinition the object to create/update
+     * @return the created DeviceManagementSettingDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementSettingDefinition put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementSettingDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

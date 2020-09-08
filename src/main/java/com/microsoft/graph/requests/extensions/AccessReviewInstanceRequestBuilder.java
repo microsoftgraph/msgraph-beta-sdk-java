@@ -74,23 +74,23 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
         return new AccessReviewScheduleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 
-    public IAccessReviewInstanceStopRequestBuilder stop() {
-        return new AccessReviewInstanceStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
-    }
-
-    public IAccessReviewInstanceSendReminderRequestBuilder sendReminder() {
-        return new AccessReviewInstanceSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
-    }
-
-    public IAccessReviewInstanceResetDecisionsRequestBuilder resetDecisions() {
-        return new AccessReviewInstanceResetDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDecisions"), getClient(), null);
+    public IAccessReviewInstanceAcceptRecommendationsRequestBuilder acceptRecommendations() {
+        return new AccessReviewInstanceAcceptRecommendationsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acceptRecommendations"), getClient(), null);
     }
 
     public IAccessReviewInstanceApplyDecisionsRequestBuilder applyDecisions() {
         return new AccessReviewInstanceApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDecisions"), getClient(), null);
     }
 
-    public IAccessReviewInstanceAcceptRecommendationsRequestBuilder acceptRecommendations() {
-        return new AccessReviewInstanceAcceptRecommendationsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acceptRecommendations"), getClient(), null);
+    public IAccessReviewInstanceResetDecisionsRequestBuilder resetDecisions() {
+        return new AccessReviewInstanceResetDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDecisions"), getClient(), null);
+    }
+
+    public IAccessReviewInstanceSendReminderRequestBuilder sendReminder() {
+        return new AccessReviewInstanceSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
+    }
+
+    public IAccessReviewInstanceStopRequestBuilder stop() {
+        return new AccessReviewInstanceStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }

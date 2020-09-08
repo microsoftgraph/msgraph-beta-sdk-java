@@ -8,12 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.EapType;
-import com.microsoft.graph.models.generated.EapFastConfiguration;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.EapFastConfiguration;
+import com.microsoft.graph.models.generated.EapType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
-import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.MacOSCertificateProfileBase;
+import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.MacOSWiFiConfiguration;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionPage;
@@ -35,12 +35,12 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
 
     /**
-     * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+     * The Authentication Method.
+     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
-    @SerializedName("eapType")
+    @SerializedName("authenticationMethod")
     @Expose
-    public EapType eapType;
+    public WiFiAuthenticationMethod authenticationMethod;
 
     /**
      * The Eap Fast Configuration.
@@ -51,20 +51,12 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     public EapFastConfiguration eapFastConfiguration;
 
     /**
-     * The Trusted Server Certificate Names.
-     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+     * The Eap Type.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
-    @SerializedName("trustedServerCertificateNames")
+    @SerializedName("eapType")
     @Expose
-    public java.util.List<String> trustedServerCertificateNames;
-
-    /**
-     * The Authentication Method.
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
-     */
-    @SerializedName("authenticationMethod")
-    @Expose
-    public WiFiAuthenticationMethod authenticationMethod;
+    public EapType eapType;
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
@@ -83,6 +75,22 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     public String outerIdentityPrivacyTemporaryValue;
 
     /**
+     * The Trusted Server Certificate Names.
+     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
+     */
+    @SerializedName("trustedServerCertificateNames")
+    @Expose
+    public java.util.List<String> trustedServerCertificateNames;
+
+    /**
+     * The Identity Certificate For Client Authentication.
+     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
+     */
+    @SerializedName("identityCertificateForClientAuthentication")
+    @Expose
+    public MacOSCertificateProfileBase identityCertificateForClientAuthentication;
+
+    /**
      * The Root Certificate For Server Validation.
      * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
      */
@@ -95,14 +103,6 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
      */
     public MacOSTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
-
-    /**
-     * The Identity Certificate For Client Authentication.
-     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
-     */
-    @SerializedName("identityCertificateForClientAuthentication")
-    @Expose
-    public MacOSCertificateProfileBase identityCertificateForClientAuthentication;
 
 
     /**

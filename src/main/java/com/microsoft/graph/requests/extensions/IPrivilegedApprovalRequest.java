@@ -80,6 +80,23 @@ public interface IPrivilegedApprovalRequest extends IHttpRequest {
     PrivilegedApproval post(final PrivilegedApproval newPrivilegedApproval) throws ClientException;
 
     /**
+     * Posts a PrivilegedApproval with a new object
+     *
+     * @param newPrivilegedApproval the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback);
+
+    /**
+     * Posts a PrivilegedApproval with a new object
+     *
+     * @param newPrivilegedApproval the object to create/update
+     * @return the created PrivilegedApproval
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrivilegedApproval put(final PrivilegedApproval newPrivilegedApproval) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

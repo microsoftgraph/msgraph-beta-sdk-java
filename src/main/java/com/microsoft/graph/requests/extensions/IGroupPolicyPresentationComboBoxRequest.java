@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationComboBoxRequest extends IHttpRequest {
     GroupPolicyPresentationComboBox post(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationComboBox with a new object
+     *
+     * @param newGroupPolicyPresentationComboBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<GroupPolicyPresentationComboBox> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationComboBox with a new object
+     *
+     * @param newGroupPolicyPresentationComboBox the object to create/update
+     * @return the created GroupPolicyPresentationComboBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationComboBox put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

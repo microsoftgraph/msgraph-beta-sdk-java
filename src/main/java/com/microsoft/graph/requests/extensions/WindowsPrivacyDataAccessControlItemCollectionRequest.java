@@ -62,14 +62,14 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequest extends BaseCo
     public void post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsPrivacyDataAccessControlItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsPrivacyDataAccessControlItem, callback);
     }
 
     public WindowsPrivacyDataAccessControlItem post(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsPrivacyDataAccessControlItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsPrivacyDataAccessControlItem);
     }
 
@@ -106,6 +106,27 @@ public class WindowsPrivacyDataAccessControlItemCollectionRequest extends BaseCo
         return (WindowsPrivacyDataAccessControlItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsPrivacyDataAccessControlItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsPrivacyDataAccessControlItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsPrivacyDataAccessControlItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsPrivacyDataAccessControlItemCollectionRequest)this;
+    }
     public IWindowsPrivacyDataAccessControlItemCollectionPage buildFromResponse(final WindowsPrivacyDataAccessControlItemCollectionResponse response) {
         final IWindowsPrivacyDataAccessControlItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

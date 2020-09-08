@@ -112,6 +112,27 @@ public class SiteActivitySummaryRequest extends BaseRequest implements ISiteActi
     }
 
     /**
+     * Creates a SiteActivitySummary with a new object
+     *
+     * @param newSiteActivitySummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SiteActivitySummary newSiteActivitySummary, final ICallback<SiteActivitySummary> callback) {
+        send(HttpMethod.PUT, callback, newSiteActivitySummary);
+    }
+
+    /**
+     * Creates a SiteActivitySummary with a new object
+     *
+     * @param newSiteActivitySummary the object to create/update
+     * @return the created SiteActivitySummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SiteActivitySummary put(final SiteActivitySummary newSiteActivitySummary) throws ClientException {
+        return send(HttpMethod.PUT, newSiteActivitySummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

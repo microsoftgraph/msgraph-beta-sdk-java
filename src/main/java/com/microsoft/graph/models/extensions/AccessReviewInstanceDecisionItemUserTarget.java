@@ -27,20 +27,20 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
 
 
     /**
-     * The User Id.
-     * 
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The User Display Name.
      * 
      */
     @SerializedName("userDisplayName")
     @Expose
     public String userDisplayName;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The User Principal Name.

@@ -62,14 +62,14 @@ public class LookupResultRowCollectionRequest extends BaseCollectionRequest<Look
     public void post(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LookupResultRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLookupResultRow, callback);
     }
 
     public LookupResultRow post(final LookupResultRow newLookupResultRow) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LookupResultRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLookupResultRow);
     }
 
@@ -106,6 +106,27 @@ public class LookupResultRowCollectionRequest extends BaseCollectionRequest<Look
         return (LookupResultRowCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ILookupResultRowCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (LookupResultRowCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ILookupResultRowCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ILookupResultRowCollectionRequest)this;
+    }
     public ILookupResultRowCollectionPage buildFromResponse(final LookupResultRowCollectionResponse response) {
         final ILookupResultRowCollectionRequestBuilder builder;
         if (response.nextLink != null) {

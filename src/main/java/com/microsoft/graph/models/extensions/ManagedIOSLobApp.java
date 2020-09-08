@@ -29,44 +29,12 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements IJsonBacked
 
 
     /**
-     * The Bundle Id.
-     * The Identity Name.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
      * The Applicable Device Type.
      * The iOS architecture for which this app can run on.
      */
     @SerializedName("applicableDeviceType")
     @Expose
     public IosDeviceType applicableDeviceType;
-
-    /**
-     * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
-     */
-    @SerializedName("minimumSupportedOperatingSystem")
-    @Expose
-    public IosMinimumOperatingSystem minimumSupportedOperatingSystem;
-
-    /**
-     * The Expiration Date Time.
-     * The expiration time.
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Version Number.
-     * The version number of managed iOS Line of Business (LoB) app.
-     */
-    @SerializedName("versionNumber")
-    @Expose
-    public String versionNumber;
 
     /**
      * The Build Number.
@@ -77,12 +45,44 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements IJsonBacked
     public String buildNumber;
 
     /**
+     * The Bundle Id.
+     * The Identity Name.
+     */
+    @SerializedName("bundleId")
+    @Expose
+    public String bundleId;
+
+    /**
+     * The Expiration Date Time.
+     * The expiration time.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Identity Version.
      * The identity version.
      */
     @SerializedName("identityVersion")
     @Expose
     public String identityVersion;
+
+    /**
+     * The Minimum Supported Operating System.
+     * The value for the minimum applicable operating system.
+     */
+    @SerializedName("minimumSupportedOperatingSystem")
+    @Expose
+    public IosMinimumOperatingSystem minimumSupportedOperatingSystem;
+
+    /**
+     * The Version Number.
+     * The version number of managed iOS Line of Business (LoB) app.
+     */
+    @SerializedName("versionNumber")
+    @Expose
+    public String versionNumber;
 
 
     /**

@@ -62,14 +62,14 @@ public class AccessReviewScheduleDefinitionCollectionRequest extends BaseCollect
     public void post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessReviewScheduleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessReviewScheduleDefinition, callback);
     }
 
     public AccessReviewScheduleDefinition post(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessReviewScheduleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessReviewScheduleDefinition);
     }
 
@@ -106,6 +106,27 @@ public class AccessReviewScheduleDefinitionCollectionRequest extends BaseCollect
         return (AccessReviewScheduleDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessReviewScheduleDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessReviewScheduleDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessReviewScheduleDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessReviewScheduleDefinitionCollectionRequest)this;
+    }
     public IAccessReviewScheduleDefinitionCollectionPage buildFromResponse(final AccessReviewScheduleDefinitionCollectionResponse response) {
         final IAccessReviewScheduleDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -9,11 +9,11 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.models.extensions.LabelingOptions;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.ClassificationResult;
+import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -115,6 +115,27 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      */
     public InformationProtectionLabel post(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
         return send(HttpMethod.POST, newInformationProtectionLabel);
+    }
+
+    /**
+     * Creates a InformationProtectionLabel with a new object
+     *
+     * @param newInformationProtectionLabel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback) {
+        send(HttpMethod.PUT, callback, newInformationProtectionLabel);
+    }
+
+    /**
+     * Creates a InformationProtectionLabel with a new object
+     *
+     * @param newInformationProtectionLabel the object to create/update
+     * @return the created InformationProtectionLabel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public InformationProtectionLabel put(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
+        return send(HttpMethod.PUT, newInformationProtectionLabel);
     }
 
     /**

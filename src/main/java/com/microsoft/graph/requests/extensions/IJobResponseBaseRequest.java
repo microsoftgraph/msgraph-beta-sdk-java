@@ -80,6 +80,23 @@ public interface IJobResponseBaseRequest extends IHttpRequest {
     JobResponseBase post(final JobResponseBase newJobResponseBase) throws ClientException;
 
     /**
+     * Posts a JobResponseBase with a new object
+     *
+     * @param newJobResponseBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final JobResponseBase newJobResponseBase, final ICallback<JobResponseBase> callback);
+
+    /**
+     * Posts a JobResponseBase with a new object
+     *
+     * @param newJobResponseBase the object to create/update
+     * @return the created JobResponseBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    JobResponseBase put(final JobResponseBase newJobResponseBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

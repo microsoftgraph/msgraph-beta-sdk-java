@@ -14,10 +14,10 @@ import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionReq
 import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitiveTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
@@ -26,10 +26,10 @@ import com.microsoft.graph.requests.extensions.ITextClassificationRequestCollect
 import com.microsoft.graph.requests.extensions.ITextClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.FileClassificationRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitiveTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
@@ -88,19 +88,12 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
     public IExactMatchDataStoreRequestBuilder exactMatchDataStores(final String id) {
         return new ExactMatchDataStoreRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchDataStores") + "/" + id, getClient(), null);
     }
-    public ISensitiveTypeCollectionRequestBuilder sensitiveTypes() {
-        return new SensitiveTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes"), getClient(), null);
+    public IFileClassificationRequestCollectionRequestBuilder classifyFile() {
+        return new FileClassificationRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFile"), getClient(), null);
     }
 
-    public ISensitiveTypeRequestBuilder sensitiveTypes(final String id) {
-        return new SensitiveTypeRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes") + "/" + id, getClient(), null);
-    }
-    public IJobResponseBaseCollectionRequestBuilder jobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
-    }
-
-    public IJobResponseBaseRequestBuilder jobs(final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    public IFileClassificationRequestRequestBuilder classifyFile(final String id) {
+        return new FileClassificationRequestRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFile") + "/" + id, getClient(), null);
     }
     public IJobResponseBaseCollectionRequestBuilder classifyFileJobs() {
         return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFileJobs"), getClient(), null);
@@ -109,19 +102,19 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
     public IJobResponseBaseRequestBuilder classifyFileJobs(final String id) {
         return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFileJobs") + "/" + id, getClient(), null);
     }
+    public ITextClassificationRequestCollectionRequestBuilder classifyText() {
+        return new TextClassificationRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyText"), getClient(), null);
+    }
+
+    public ITextClassificationRequestRequestBuilder classifyText(final String id) {
+        return new TextClassificationRequestRequestBuilder(getRequestUrlWithAdditionalSegment("classifyText") + "/" + id, getClient(), null);
+    }
     public IJobResponseBaseCollectionRequestBuilder classifyTextJobs() {
         return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyTextJobs"), getClient(), null);
     }
 
     public IJobResponseBaseRequestBuilder classifyTextJobs(final String id) {
         return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("classifyTextJobs") + "/" + id, getClient(), null);
-    }
-    public IJobResponseBaseCollectionRequestBuilder evaluateLabelJobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs"), getClient(), null);
-    }
-
-    public IJobResponseBaseRequestBuilder evaluateLabelJobs(final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs") + "/" + id, getClient(), null);
     }
     public IJobResponseBaseCollectionRequestBuilder evaluateDlpPoliciesJobs() {
         return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateDlpPoliciesJobs"), getClient(), null);
@@ -130,6 +123,20 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
     public IJobResponseBaseRequestBuilder evaluateDlpPoliciesJobs(final String id) {
         return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateDlpPoliciesJobs") + "/" + id, getClient(), null);
     }
+    public IJobResponseBaseCollectionRequestBuilder evaluateLabelJobs() {
+        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs"), getClient(), null);
+    }
+
+    public IJobResponseBaseRequestBuilder evaluateLabelJobs(final String id) {
+        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs") + "/" + id, getClient(), null);
+    }
+    public IJobResponseBaseCollectionRequestBuilder jobs() {
+        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    }
+
+    public IJobResponseBaseRequestBuilder jobs(final String id) {
+        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    }
     public IJobResponseBaseCollectionRequestBuilder labelsAndPoliciesEvaluationJobs() {
         return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("labelsAndPoliciesEvaluationJobs"), getClient(), null);
     }
@@ -137,19 +144,12 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
     public IJobResponseBaseRequestBuilder labelsAndPoliciesEvaluationJobs(final String id) {
         return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("labelsAndPoliciesEvaluationJobs") + "/" + id, getClient(), null);
     }
-    public ITextClassificationRequestCollectionRequestBuilder classifyText() {
-        return new TextClassificationRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyText"), getClient(), null);
+    public ISensitiveTypeCollectionRequestBuilder sensitiveTypes() {
+        return new SensitiveTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes"), getClient(), null);
     }
 
-    public ITextClassificationRequestRequestBuilder classifyText(final String id) {
-        return new TextClassificationRequestRequestBuilder(getRequestUrlWithAdditionalSegment("classifyText") + "/" + id, getClient(), null);
-    }
-    public IFileClassificationRequestCollectionRequestBuilder classifyFile() {
-        return new FileClassificationRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFile"), getClient(), null);
-    }
-
-    public IFileClassificationRequestRequestBuilder classifyFile(final String id) {
-        return new FileClassificationRequestRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFile") + "/" + id, getClient(), null);
+    public ISensitiveTypeRequestBuilder sensitiveTypes(final String id) {
+        return new SensitiveTypeRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes") + "/" + id, getClient(), null);
     }
     public ISensitivityLabelCollectionRequestBuilder sensitivityLabels() {
         return new SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);

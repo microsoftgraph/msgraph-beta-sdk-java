@@ -8,19 +8,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementTemplateType;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
 import com.microsoft.graph.models.generated.DeviceManagementTemplateSubtype;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.generated.DeviceManagementTemplateType;
 import com.microsoft.graph.models.extensions.DeviceManagementTemplateSettingCategory;
 import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,14 +39,6 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Display Name.
-     * The template's display name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * The template's description
      */
@@ -55,20 +47,12 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     public String description;
 
     /**
-     * The Version Info.
-     * The template's version information
+     * The Display Name.
+     * The template's display name
      */
-    @SerializedName("versionInfo")
+    @SerializedName("displayName")
     @Expose
-    public String versionInfo;
-
-    /**
-     * The Is Deprecated.
-     * The template is deprecated or not. Intents cannot be created from a deprecated template.
-     */
-    @SerializedName("isDeprecated")
-    @Expose
-    public Boolean isDeprecated;
+    public String displayName;
 
     /**
      * The Intent Count.
@@ -79,12 +63,12 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     public Integer intentCount;
 
     /**
-     * The Template Type.
-     * The template's type.
+     * The Is Deprecated.
+     * The template is deprecated or not. Intents cannot be created from a deprecated template.
      */
-    @SerializedName("templateType")
+    @SerializedName("isDeprecated")
     @Expose
-    public DeviceManagementTemplateType templateType;
+    public Boolean isDeprecated;
 
     /**
      * The Platform Type.
@@ -95,14 +79,6 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     public PolicyPlatformType platformType;
 
     /**
-     * The Template Subtype.
-     * The template's subtype.
-     */
-    @SerializedName("templateSubtype")
-    @Expose
-    public DeviceManagementTemplateSubtype templateSubtype;
-
-    /**
      * The Published Date Time.
      * When the template was published
      */
@@ -111,10 +87,28 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
     public java.util.Calendar publishedDateTime;
 
     /**
-     * The Settings.
-     * Collection of all settings this template has
+     * The Template Subtype.
+     * The template's subtype.
      */
-    public DeviceManagementSettingInstanceCollectionPage settings;
+    @SerializedName("templateSubtype")
+    @Expose
+    public DeviceManagementTemplateSubtype templateSubtype;
+
+    /**
+     * The Template Type.
+     * The template's type.
+     */
+    @SerializedName("templateType")
+    @Expose
+    public DeviceManagementTemplateType templateType;
+
+    /**
+     * The Version Info.
+     * The template's version information
+     */
+    @SerializedName("versionInfo")
+    @Expose
+    public String versionInfo;
 
     /**
      * The Categories.
@@ -127,6 +121,12 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * Collection of templates this template can migrate to
      */
     public DeviceManagementTemplateCollectionPage migratableTo;
+
+    /**
+     * The Settings.
+     * Collection of all settings this template has
+     */
+    public DeviceManagementSettingInstanceCollectionPage settings;
 
 
     /**
@@ -168,22 +168,6 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
         rawObject = json;
 
 
-        if (json.has("settings")) {
-            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
-            if (json.has("settings@odata.nextLink")) {
-                response.nextLink = json.get("settings@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settings").toString(), JsonObject[].class);
-            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            settings = new DeviceManagementSettingInstanceCollectionPage(response, null);
-        }
-
         if (json.has("categories")) {
             final DeviceManagementTemplateSettingCategoryCollectionResponse response = new DeviceManagementTemplateSettingCategoryCollectionResponse();
             if (json.has("categories@odata.nextLink")) {
@@ -214,6 +198,22 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
             }
             response.value = Arrays.asList(array);
             migratableTo = new DeviceManagementTemplateCollectionPage(response, null);
+        }
+
+        if (json.has("settings")) {
+            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
+            if (json.has("settings@odata.nextLink")) {
+                response.nextLink = json.get("settings@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settings").toString(), JsonObject[].class);
+            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            settings = new DeviceManagementSettingInstanceCollectionPage(response, null);
         }
     }
 }

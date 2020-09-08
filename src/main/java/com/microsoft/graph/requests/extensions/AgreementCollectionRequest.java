@@ -61,14 +61,14 @@ public class AgreementCollectionRequest extends BaseCollectionRequest<AgreementC
     public void post(final Agreement newAgreement, final ICallback<Agreement> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AgreementRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreement, callback);
     }
 
     public Agreement post(final Agreement newAgreement) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AgreementRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreement);
     }
 
@@ -105,6 +105,27 @@ public class AgreementCollectionRequest extends BaseCollectionRequest<AgreementC
         return (AgreementCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAgreementCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AgreementCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAgreementCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAgreementCollectionRequest)this;
+    }
     public IAgreementCollectionPage buildFromResponse(final AgreementCollectionResponse response) {
         final IAgreementCollectionRequestBuilder builder;
         if (response.nextLink != null) {

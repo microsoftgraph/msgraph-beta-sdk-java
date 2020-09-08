@@ -28,20 +28,20 @@ public class WindowsAutopilotSettings extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Last Sync Date Time.
-     * Last data sync date time with DDS service.
-     */
-    @SerializedName("lastSyncDateTime")
-    @Expose
-    public java.util.Calendar lastSyncDateTime;
-
-    /**
      * The Last Manual Sync Trigger Date Time.
      * Last data sync date time with DDS service.
      */
     @SerializedName("lastManualSyncTriggerDateTime")
     @Expose
     public java.util.Calendar lastManualSyncTriggerDateTime;
+
+    /**
+     * The Last Sync Date Time.
+     * Last data sync date time with DDS service.
+     */
+    @SerializedName("lastSyncDateTime")
+    @Expose
+    public java.util.Calendar lastSyncDateTime;
 
     /**
      * The Sync Status.

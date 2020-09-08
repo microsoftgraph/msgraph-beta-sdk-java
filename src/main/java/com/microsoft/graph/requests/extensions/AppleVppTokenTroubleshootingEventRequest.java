@@ -112,6 +112,27 @@ public class AppleVppTokenTroubleshootingEventRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a AppleVppTokenTroubleshootingEvent with a new object
+     *
+     * @param newAppleVppTokenTroubleshootingEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent, final ICallback<AppleVppTokenTroubleshootingEvent> callback) {
+        send(HttpMethod.PUT, callback, newAppleVppTokenTroubleshootingEvent);
+    }
+
+    /**
+     * Creates a AppleVppTokenTroubleshootingEvent with a new object
+     *
+     * @param newAppleVppTokenTroubleshootingEvent the object to create/update
+     * @return the created AppleVppTokenTroubleshootingEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AppleVppTokenTroubleshootingEvent put(final AppleVppTokenTroubleshootingEvent newAppleVppTokenTroubleshootingEvent) throws ClientException {
+        return send(HttpMethod.PUT, newAppleVppTokenTroubleshootingEvent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -42,20 +42,20 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Publishing Type.
-     * 
-     */
-    @SerializedName("publishingType")
-    @Expose
-    public OnPremisesPublishingType publishingType;
-
-    /**
      * The Is Default.
      * 
      */
     @SerializedName("isDefault")
     @Expose
     public Boolean isDefault;
+
+    /**
+     * The Publishing Type.
+     * 
+     */
+    @SerializedName("publishingType")
+    @Expose
+    public OnPremisesPublishingType publishingType;
 
     /**
      * The Agents.

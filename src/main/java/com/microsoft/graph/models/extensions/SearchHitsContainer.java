@@ -45,20 +45,20 @@ public class SearchHitsContainer implements IJsonBackedObject {
     public java.util.List<SearchHit> hits;
 
     /**
-     * The Total.
-     * 
-     */
-    @SerializedName("total")
-    @Expose
-    public Integer total;
-
-    /**
      * The More Results Available.
      * 
      */
     @SerializedName("moreResultsAvailable")
     @Expose
     public Boolean moreResultsAvailable;
+
+    /**
+     * The Total.
+     * 
+     */
+    @SerializedName("total")
+    @Expose
+    public Integer total;
 
 
     /**

@@ -112,6 +112,27 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
     }
 
     /**
+     * Creates a MeetingActivityStatistics with a new object
+     *
+     * @param newMeetingActivityStatistics the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<MeetingActivityStatistics> callback) {
+        send(HttpMethod.PUT, callback, newMeetingActivityStatistics);
+    }
+
+    /**
+     * Creates a MeetingActivityStatistics with a new object
+     *
+     * @param newMeetingActivityStatistics the object to create/update
+     * @return the created MeetingActivityStatistics
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MeetingActivityStatistics put(final MeetingActivityStatistics newMeetingActivityStatistics) throws ClientException {
+        return send(HttpMethod.PUT, newMeetingActivityStatistics);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

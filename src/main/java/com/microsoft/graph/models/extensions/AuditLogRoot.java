@@ -8,19 +8,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.SignIn;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
-import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import com.microsoft.graph.models.extensions.ProvisioningObjectSummary;
+import com.microsoft.graph.models.extensions.RestrictedSignIn;
+import com.microsoft.graph.models.extensions.SignIn;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SignInCollectionResponse;
-import com.microsoft.graph.requests.extensions.SignInCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionPage;
-import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionResponse;
-import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionPage;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionResponse;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionPage;
+import com.microsoft.graph.requests.extensions.SignInCollectionResponse;
+import com.microsoft.graph.requests.extensions.SignInCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,22 +39,10 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Sign Ins.
-     * Read-only. Nullable.
-     */
-    public SignInCollectionPage signIns;
-
-    /**
      * The Directory Audits.
      * Read-only. Nullable.
      */
     public DirectoryAuditCollectionPage directoryAudits;
-
-    /**
-     * The Restricted Sign Ins.
-     * 
-     */
-    public RestrictedSignInCollectionPage restrictedSignIns;
 
     /**
      * The Directory Provisioning.
@@ -67,6 +55,18 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * 
      */
     public ProvisioningObjectSummaryCollectionPage provisioning;
+
+    /**
+     * The Restricted Sign Ins.
+     * 
+     */
+    public RestrictedSignInCollectionPage restrictedSignIns;
+
+    /**
+     * The Sign Ins.
+     * Read-only. Nullable.
+     */
+    public SignInCollectionPage signIns;
 
 
     /**
@@ -108,22 +108,6 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("signIns")) {
-            final SignInCollectionResponse response = new SignInCollectionResponse();
-            if (json.has("signIns@odata.nextLink")) {
-                response.nextLink = json.get("signIns@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("signIns").toString(), JsonObject[].class);
-            final SignIn[] array = new SignIn[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SignIn.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            signIns = new SignInCollectionPage(response, null);
-        }
-
         if (json.has("directoryAudits")) {
             final DirectoryAuditCollectionResponse response = new DirectoryAuditCollectionResponse();
             if (json.has("directoryAudits@odata.nextLink")) {
@@ -138,22 +122,6 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             directoryAudits = new DirectoryAuditCollectionPage(response, null);
-        }
-
-        if (json.has("restrictedSignIns")) {
-            final RestrictedSignInCollectionResponse response = new RestrictedSignInCollectionResponse();
-            if (json.has("restrictedSignIns@odata.nextLink")) {
-                response.nextLink = json.get("restrictedSignIns@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("restrictedSignIns").toString(), JsonObject[].class);
-            final RestrictedSignIn[] array = new RestrictedSignIn[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RestrictedSignIn.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            restrictedSignIns = new RestrictedSignInCollectionPage(response, null);
         }
 
         if (json.has("directoryProvisioning")) {
@@ -186,6 +154,38 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             provisioning = new ProvisioningObjectSummaryCollectionPage(response, null);
+        }
+
+        if (json.has("restrictedSignIns")) {
+            final RestrictedSignInCollectionResponse response = new RestrictedSignInCollectionResponse();
+            if (json.has("restrictedSignIns@odata.nextLink")) {
+                response.nextLink = json.get("restrictedSignIns@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("restrictedSignIns").toString(), JsonObject[].class);
+            final RestrictedSignIn[] array = new RestrictedSignIn[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RestrictedSignIn.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            restrictedSignIns = new RestrictedSignInCollectionPage(response, null);
+        }
+
+        if (json.has("signIns")) {
+            final SignInCollectionResponse response = new SignInCollectionResponse();
+            if (json.has("signIns@odata.nextLink")) {
+                response.nextLink = json.get("signIns@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("signIns").toString(), JsonObject[].class);
+            final SignIn[] array = new SignIn[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SignIn.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            signIns = new SignInCollectionPage(response, null);
         }
     }
 }

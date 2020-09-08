@@ -80,6 +80,23 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequest extends IH
     AndroidManagedStoreAccountEnterpriseSettings post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException;
 
     /**
+     * Posts a AndroidManagedStoreAccountEnterpriseSettings with a new object
+     *
+     * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback);
+
+    /**
+     * Posts a AndroidManagedStoreAccountEnterpriseSettings with a new object
+     *
+     * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
+     * @return the created AndroidManagedStoreAccountEnterpriseSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidManagedStoreAccountEnterpriseSettings put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

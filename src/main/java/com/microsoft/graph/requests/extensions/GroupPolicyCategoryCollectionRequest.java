@@ -62,14 +62,14 @@ public class GroupPolicyCategoryCollectionRequest extends BaseCollectionRequest<
     public void post(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyCategory, callback);
     }
 
     public GroupPolicyCategory post(final GroupPolicyCategory newGroupPolicyCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyCategory);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyCategoryCollectionRequest extends BaseCollectionRequest<
         return (GroupPolicyCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyCategoryCollectionRequest)this;
+    }
     public IGroupPolicyCategoryCollectionPage buildFromResponse(final GroupPolicyCategoryCollectionResponse response) {
         final IGroupPolicyCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

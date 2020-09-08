@@ -62,14 +62,14 @@ public class WindowsManagementAppHealthStateCollectionRequest extends BaseCollec
     public void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<WindowsManagementAppHealthState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsManagementAppHealthStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsManagementAppHealthState, callback);
     }
 
     public WindowsManagementAppHealthState post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsManagementAppHealthStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsManagementAppHealthState);
     }
 
@@ -106,6 +106,27 @@ public class WindowsManagementAppHealthStateCollectionRequest extends BaseCollec
         return (WindowsManagementAppHealthStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsManagementAppHealthStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsManagementAppHealthStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsManagementAppHealthStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsManagementAppHealthStateCollectionRequest)this;
+    }
     public IWindowsManagementAppHealthStateCollectionPage buildFromResponse(final WindowsManagementAppHealthStateCollectionResponse response) {
         final IWindowsManagementAppHealthStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

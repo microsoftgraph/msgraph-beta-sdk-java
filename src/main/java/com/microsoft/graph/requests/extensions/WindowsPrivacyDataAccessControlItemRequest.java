@@ -112,6 +112,27 @@ public class WindowsPrivacyDataAccessControlItemRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a WindowsPrivacyDataAccessControlItem with a new object
+     *
+     * @param newWindowsPrivacyDataAccessControlItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem, final ICallback<WindowsPrivacyDataAccessControlItem> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPrivacyDataAccessControlItem);
+    }
+
+    /**
+     * Creates a WindowsPrivacyDataAccessControlItem with a new object
+     *
+     * @param newWindowsPrivacyDataAccessControlItem the object to create/update
+     * @return the created WindowsPrivacyDataAccessControlItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPrivacyDataAccessControlItem put(final WindowsPrivacyDataAccessControlItem newWindowsPrivacyDataAccessControlItem) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPrivacyDataAccessControlItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

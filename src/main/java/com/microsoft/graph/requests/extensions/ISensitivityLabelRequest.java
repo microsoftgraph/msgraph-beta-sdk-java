@@ -80,6 +80,23 @@ public interface ISensitivityLabelRequest extends IHttpRequest {
     SensitivityLabel post(final SensitivityLabel newSensitivityLabel) throws ClientException;
 
     /**
+     * Posts a SensitivityLabel with a new object
+     *
+     * @param newSensitivityLabel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback);
+
+    /**
+     * Posts a SensitivityLabel with a new object
+     *
+     * @param newSensitivityLabel the object to create/update
+     * @return the created SensitivityLabel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SensitivityLabel put(final SensitivityLabel newSensitivityLabel) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

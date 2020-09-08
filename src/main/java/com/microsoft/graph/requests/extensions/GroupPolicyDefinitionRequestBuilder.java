@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationCollectio
 import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -61,21 +61,21 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder impl
 
 
     /**
-     * Gets the request builder for GroupPolicyDefinitionFile
-     *
-     * @return the IGroupPolicyDefinitionFileWithReferenceRequestBuilder instance
-     */
-    public IGroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
-        return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for GroupPolicyCategory
      *
      * @return the IGroupPolicyCategoryWithReferenceRequestBuilder instance
      */
     public IGroupPolicyCategoryWithReferenceRequestBuilder category() {
         return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("category"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for GroupPolicyDefinitionFile
+     *
+     * @return the IGroupPolicyDefinitionFileWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
+        return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
     }
     public IGroupPolicyPresentationCollectionRequestBuilder presentations() {
         return new GroupPolicyPresentationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presentations"), getClient(), null);

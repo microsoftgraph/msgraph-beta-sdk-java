@@ -112,6 +112,27 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
     }
 
     /**
+     * Creates a BookingAppointment with a new object
+     *
+     * @param newBookingAppointment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback) {
+        send(HttpMethod.PUT, callback, newBookingAppointment);
+    }
+
+    /**
+     * Creates a BookingAppointment with a new object
+     *
+     * @param newBookingAppointment the object to create/update
+     * @return the created BookingAppointment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BookingAppointment put(final BookingAppointment newBookingAppointment) throws ClientException {
+        return send(HttpMethod.PUT, newBookingAppointment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -118,6 +118,27 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a Windows81SCEPCertificateProfile with a new object
+     *
+     * @param newWindows81SCEPCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<Windows81SCEPCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newWindows81SCEPCertificateProfile);
+    }
+
+    /**
+     * Creates a Windows81SCEPCertificateProfile with a new object
+     *
+     * @param newWindows81SCEPCertificateProfile the object to create/update
+     * @return the created Windows81SCEPCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows81SCEPCertificateProfile put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newWindows81SCEPCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

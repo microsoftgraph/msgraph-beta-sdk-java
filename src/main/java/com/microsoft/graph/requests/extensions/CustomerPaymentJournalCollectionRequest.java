@@ -62,14 +62,14 @@ public class CustomerPaymentJournalCollectionRequest extends BaseCollectionReque
     public void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CustomerPaymentJournalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCustomerPaymentJournal, callback);
     }
 
     public CustomerPaymentJournal post(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CustomerPaymentJournalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCustomerPaymentJournal);
     }
 
@@ -106,6 +106,27 @@ public class CustomerPaymentJournalCollectionRequest extends BaseCollectionReque
         return (CustomerPaymentJournalCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICustomerPaymentJournalCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CustomerPaymentJournalCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICustomerPaymentJournalCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICustomerPaymentJournalCollectionRequest)this;
+    }
     public ICustomerPaymentJournalCollectionPage buildFromResponse(final CustomerPaymentJournalCollectionResponse response) {
         final ICustomerPaymentJournalCollectionRequestBuilder builder;
         if (response.nextLink != null) {

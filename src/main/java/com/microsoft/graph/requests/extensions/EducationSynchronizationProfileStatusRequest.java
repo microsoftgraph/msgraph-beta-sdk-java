@@ -112,6 +112,27 @@ public class EducationSynchronizationProfileStatusRequest extends BaseRequest im
     }
 
     /**
+     * Creates a EducationSynchronizationProfileStatus with a new object
+     *
+     * @param newEducationSynchronizationProfileStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus, final ICallback<EducationSynchronizationProfileStatus> callback) {
+        send(HttpMethod.PUT, callback, newEducationSynchronizationProfileStatus);
+    }
+
+    /**
+     * Creates a EducationSynchronizationProfileStatus with a new object
+     *
+     * @param newEducationSynchronizationProfileStatus the object to create/update
+     * @return the created EducationSynchronizationProfileStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationSynchronizationProfileStatus put(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus) throws ClientException {
+        return send(HttpMethod.PUT, newEducationSynchronizationProfileStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

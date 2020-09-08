@@ -29,14 +29,6 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Default Display Language.
-     * 
-     */
-    @SerializedName("defaultDisplayLanguage")
-    @Expose
-    public LocaleInfo defaultDisplayLanguage;
-
-    /**
      * The Authoring Languages.
      * 
      */
@@ -45,12 +37,20 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
     public java.util.List<LocaleInfo> authoringLanguages;
 
     /**
-     * The Default Translation Language.
+     * The Default Display Language.
      * 
      */
-    @SerializedName("defaultTranslationLanguage")
+    @SerializedName("defaultDisplayLanguage")
     @Expose
-    public LocaleInfo defaultTranslationLanguage;
+    public LocaleInfo defaultDisplayLanguage;
+
+    /**
+     * The Default Regional Format.
+     * 
+     */
+    @SerializedName("defaultRegionalFormat")
+    @Expose
+    public LocaleInfo defaultRegionalFormat;
 
     /**
      * The Default Speech Input Language.
@@ -61,12 +61,12 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
     public LocaleInfo defaultSpeechInputLanguage;
 
     /**
-     * The Default Regional Format.
+     * The Default Translation Language.
      * 
      */
-    @SerializedName("defaultRegionalFormat")
+    @SerializedName("defaultTranslationLanguage")
     @Expose
-    public LocaleInfo defaultRegionalFormat;
+    public LocaleInfo defaultTranslationLanguage;
 
     /**
      * The Regional Format Overrides.

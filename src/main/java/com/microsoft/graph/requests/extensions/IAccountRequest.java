@@ -80,6 +80,23 @@ public interface IAccountRequest extends IHttpRequest {
     Account post(final Account newAccount) throws ClientException;
 
     /**
+     * Posts a Account with a new object
+     *
+     * @param newAccount the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Account newAccount, final ICallback<Account> callback);
+
+    /**
+     * Posts a Account with a new object
+     *
+     * @param newAccount the object to create/update
+     * @return the created Account
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Account put(final Account newAccount) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

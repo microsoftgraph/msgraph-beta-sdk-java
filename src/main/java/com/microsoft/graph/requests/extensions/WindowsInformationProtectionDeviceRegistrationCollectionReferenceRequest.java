@@ -40,7 +40,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionReferenceRe
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/windowsInformationProtectionDeviceRegistrations/" + newWindowsInformationProtectionDeviceRegistration.id);
         new WindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionDeviceRegistration, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionReferenceRe
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/windowsInformationProtectionDeviceRegistrations/" + newWindowsInformationProtectionDeviceRegistration.id);
         return new WindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newWindowsInformationProtectionDeviceRegistration, body);
     }
     /**

@@ -29,30 +29,6 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
 
 
     /**
-     * The Run State.
-     * State of latest run of the device management script.
-     */
-    @SerializedName("runState")
-    @Expose
-    public RunState runState;
-
-    /**
-     * The Result Message.
-     * Details of execution output.
-     */
-    @SerializedName("resultMessage")
-    @Expose
-    public String resultMessage;
-
-    /**
-     * The Last State Update Date Time.
-     * Latest time the device management script executes.
-     */
-    @SerializedName("lastStateUpdateDateTime")
-    @Expose
-    public java.util.Calendar lastStateUpdateDateTime;
-
-    /**
      * The Error Code.
      * Error code corresponding to erroneous execution of the device management script.
      */
@@ -67,6 +43,30 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
     @SerializedName("errorDescription")
     @Expose
     public String errorDescription;
+
+    /**
+     * The Last State Update Date Time.
+     * Latest time the device management script executes.
+     */
+    @SerializedName("lastStateUpdateDateTime")
+    @Expose
+    public java.util.Calendar lastStateUpdateDateTime;
+
+    /**
+     * The Result Message.
+     * Details of execution output.
+     */
+    @SerializedName("resultMessage")
+    @Expose
+    public String resultMessage;
+
+    /**
+     * The Run State.
+     * State of latest run of the device management script.
+     */
+    @SerializedName("runState")
+    @Expose
+    public RunState runState;
 
     /**
      * The Managed Device.

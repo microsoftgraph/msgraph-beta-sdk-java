@@ -9,22 +9,22 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.HybridAgentUpdaterConfiguration;
-import com.microsoft.graph.models.extensions.OnPremisesAgent;
 import com.microsoft.graph.models.extensions.OnPremisesAgentGroup;
-import com.microsoft.graph.models.extensions.PublishedResource;
-import com.microsoft.graph.models.extensions.Connector;
+import com.microsoft.graph.models.extensions.OnPremisesAgent;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
+import com.microsoft.graph.models.extensions.Connector;
+import com.microsoft.graph.models.extensions.PublishedResource;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionResponse;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionPage;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.PublishedResourceCollectionResponse;
-import com.microsoft.graph.requests.extensions.PublishedResourceCollectionPage;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionResponse;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionResponse;
+import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionPage;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.PublishedResourceCollectionResponse;
+import com.microsoft.graph.requests.extensions.PublishedResourceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -43,14 +43,6 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Is Enabled.
-     * 
-     */
-    @SerializedName("isEnabled")
-    @Expose
-    public Boolean isEnabled;
-
-    /**
      * The Hybrid Agent Updater Configuration.
      * 
      */
@@ -59,10 +51,12 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     public HybridAgentUpdaterConfiguration hybridAgentUpdaterConfiguration;
 
     /**
-     * The Agents.
+     * The Is Enabled.
      * 
      */
-    public OnPremisesAgentCollectionPage agents;
+    @SerializedName("isEnabled")
+    @Expose
+    public Boolean isEnabled;
 
     /**
      * The Agent Groups.
@@ -71,10 +65,16 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     public OnPremisesAgentGroupCollectionPage agentGroups;
 
     /**
-     * The Published Resources.
+     * The Agents.
      * 
      */
-    public PublishedResourceCollectionPage publishedResources;
+    public OnPremisesAgentCollectionPage agents;
+
+    /**
+     * The Connector Groups.
+     * 
+     */
+    public ConnectorGroupCollectionPage connectorGroups;
 
     /**
      * The Connectors.
@@ -83,10 +83,10 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     public ConnectorCollectionPage connectors;
 
     /**
-     * The Connector Groups.
+     * The Published Resources.
      * 
      */
-    public ConnectorGroupCollectionPage connectorGroups;
+    public PublishedResourceCollectionPage publishedResources;
 
 
     /**
@@ -128,22 +128,6 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
         rawObject = json;
 
 
-        if (json.has("agents")) {
-            final OnPremisesAgentCollectionResponse response = new OnPremisesAgentCollectionResponse();
-            if (json.has("agents@odata.nextLink")) {
-                response.nextLink = json.get("agents@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("agents").toString(), JsonObject[].class);
-            final OnPremisesAgent[] array = new OnPremisesAgent[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnPremisesAgent.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            agents = new OnPremisesAgentCollectionPage(response, null);
-        }
-
         if (json.has("agentGroups")) {
             final OnPremisesAgentGroupCollectionResponse response = new OnPremisesAgentGroupCollectionResponse();
             if (json.has("agentGroups@odata.nextLink")) {
@@ -160,20 +144,36 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
             agentGroups = new OnPremisesAgentGroupCollectionPage(response, null);
         }
 
-        if (json.has("publishedResources")) {
-            final PublishedResourceCollectionResponse response = new PublishedResourceCollectionResponse();
-            if (json.has("publishedResources@odata.nextLink")) {
-                response.nextLink = json.get("publishedResources@odata.nextLink").getAsString();
+        if (json.has("agents")) {
+            final OnPremisesAgentCollectionResponse response = new OnPremisesAgentCollectionResponse();
+            if (json.has("agents@odata.nextLink")) {
+                response.nextLink = json.get("agents@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("publishedResources").toString(), JsonObject[].class);
-            final PublishedResource[] array = new PublishedResource[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("agents").toString(), JsonObject[].class);
+            final OnPremisesAgent[] array = new OnPremisesAgent[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PublishedResource.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnPremisesAgent.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            publishedResources = new PublishedResourceCollectionPage(response, null);
+            agents = new OnPremisesAgentCollectionPage(response, null);
+        }
+
+        if (json.has("connectorGroups")) {
+            final ConnectorGroupCollectionResponse response = new ConnectorGroupCollectionResponse();
+            if (json.has("connectorGroups@odata.nextLink")) {
+                response.nextLink = json.get("connectorGroups@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectorGroups").toString(), JsonObject[].class);
+            final ConnectorGroup[] array = new ConnectorGroup[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConnectorGroup.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            connectorGroups = new ConnectorGroupCollectionPage(response, null);
         }
 
         if (json.has("connectors")) {
@@ -192,20 +192,20 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
             connectors = new ConnectorCollectionPage(response, null);
         }
 
-        if (json.has("connectorGroups")) {
-            final ConnectorGroupCollectionResponse response = new ConnectorGroupCollectionResponse();
-            if (json.has("connectorGroups@odata.nextLink")) {
-                response.nextLink = json.get("connectorGroups@odata.nextLink").getAsString();
+        if (json.has("publishedResources")) {
+            final PublishedResourceCollectionResponse response = new PublishedResourceCollectionResponse();
+            if (json.has("publishedResources@odata.nextLink")) {
+                response.nextLink = json.get("publishedResources@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("connectorGroups").toString(), JsonObject[].class);
-            final ConnectorGroup[] array = new ConnectorGroup[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("publishedResources").toString(), JsonObject[].class);
+            final PublishedResource[] array = new PublishedResource[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConnectorGroup.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PublishedResource.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            connectorGroups = new ConnectorGroupCollectionPage(response, null);
+            publishedResources = new PublishedResourceCollectionPage(response, null);
         }
     }
 }

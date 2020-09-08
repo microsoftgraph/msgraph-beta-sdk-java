@@ -9,16 +9,16 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.OutlookCategory;
-import com.microsoft.graph.models.extensions.OutlookTaskGroup;
 import com.microsoft.graph.models.extensions.OutlookTaskFolder;
+import com.microsoft.graph.models.extensions.OutlookTaskGroup;
 import com.microsoft.graph.models.extensions.OutlookTask;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionPage;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionResponse;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionResponse;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionPage;
 
@@ -45,16 +45,16 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     public OutlookCategoryCollectionPage masterCategories;
 
     /**
-     * The Task Groups.
-     * 
-     */
-    public OutlookTaskGroupCollectionPage taskGroups;
-
-    /**
      * The Task Folders.
      * 
      */
     public OutlookTaskFolderCollectionPage taskFolders;
+
+    /**
+     * The Task Groups.
+     * 
+     */
+    public OutlookTaskGroupCollectionPage taskGroups;
 
     /**
      * The Tasks.
@@ -118,22 +118,6 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
             masterCategories = new OutlookCategoryCollectionPage(response, null);
         }
 
-        if (json.has("taskGroups")) {
-            final OutlookTaskGroupCollectionResponse response = new OutlookTaskGroupCollectionResponse();
-            if (json.has("taskGroups@odata.nextLink")) {
-                response.nextLink = json.get("taskGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("taskGroups").toString(), JsonObject[].class);
-            final OutlookTaskGroup[] array = new OutlookTaskGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OutlookTaskGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            taskGroups = new OutlookTaskGroupCollectionPage(response, null);
-        }
-
         if (json.has("taskFolders")) {
             final OutlookTaskFolderCollectionResponse response = new OutlookTaskFolderCollectionResponse();
             if (json.has("taskFolders@odata.nextLink")) {
@@ -148,6 +132,22 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             taskFolders = new OutlookTaskFolderCollectionPage(response, null);
+        }
+
+        if (json.has("taskGroups")) {
+            final OutlookTaskGroupCollectionResponse response = new OutlookTaskGroupCollectionResponse();
+            if (json.has("taskGroups@odata.nextLink")) {
+                response.nextLink = json.get("taskGroups@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("taskGroups").toString(), JsonObject[].class);
+            final OutlookTaskGroup[] array = new OutlookTaskGroup[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OutlookTaskGroup.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            taskGroups = new OutlookTaskGroupCollectionPage(response, null);
         }
 
         if (json.has("tasks")) {

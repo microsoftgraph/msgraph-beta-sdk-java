@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
-    public IConnectorCollectionWithReferencesRequestBuilder members() {
-        return new ConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
-    }
-
-    public IConnectorWithReferenceRequestBuilder members(final String id) {
-        return new ConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
-    }
     public IApplicationCollectionWithReferencesRequestBuilder applications() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("applications"), getClient(), null);
     }
 
     public IApplicationWithReferenceRequestBuilder applications(final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("applications") + "/" + id, getClient(), null);
+    }
+    public IConnectorCollectionWithReferencesRequestBuilder members() {
+        return new ConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    }
+
+    public IConnectorWithReferenceRequestBuilder members(final String id) {
+        return new ConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

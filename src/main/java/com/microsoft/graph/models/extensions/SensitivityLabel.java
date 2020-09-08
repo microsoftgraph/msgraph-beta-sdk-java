@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.SensitivityLabelTarget;
 import com.microsoft.graph.models.generated.ApplicationMode;
-import com.microsoft.graph.models.extensions.LabelActionBase;
 import com.microsoft.graph.models.extensions.LabelPolicy;
 import com.microsoft.graph.models.extensions.AutoLabeling;
-import com.microsoft.graph.models.generated.SensitivityLabelTarget;
+import com.microsoft.graph.models.extensions.LabelActionBase;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionResponse;
@@ -35,52 +35,12 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
+     * The Applicable To.
      * 
      */
-    @SerializedName("name")
+    @SerializedName("applicableTo")
     @Expose
-    public String name;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Tool Tip.
-     * 
-     */
-    @SerializedName("toolTip")
-    @Expose
-    public String toolTip;
-
-    /**
-     * The Is Endpoint Protection Enabled.
-     * 
-     */
-    @SerializedName("isEndpointProtectionEnabled")
-    @Expose
-    public Boolean isEndpointProtectionEnabled;
-
-    /**
-     * The Is Default.
-     * 
-     */
-    @SerializedName("isDefault")
-    @Expose
-    public Boolean isDefault;
+    public EnumSet<SensitivityLabelTarget> applicableTo;
 
     /**
      * The Application Mode.
@@ -91,28 +51,12 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
     public ApplicationMode applicationMode;
 
     /**
-     * The Label Actions.
-     * 
-     */
-    @SerializedName("labelActions")
-    @Expose
-    public java.util.List<LabelActionBase> labelActions;
-
-    /**
      * The Assigned Policies.
      * 
      */
     @SerializedName("assignedPolicies")
     @Expose
     public java.util.List<LabelPolicy> assignedPolicies;
-
-    /**
-     * The Priority.
-     * 
-     */
-    @SerializedName("priority")
-    @Expose
-    public Integer priority;
 
     /**
      * The Auto Labeling.
@@ -123,12 +67,68 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
     public AutoLabeling autoLabeling;
 
     /**
-     * The Applicable To.
+     * The Description.
      * 
      */
-    @SerializedName("applicableTo")
+    @SerializedName("description")
     @Expose
-    public EnumSet<SensitivityLabelTarget> applicableTo;
+    public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Is Default.
+     * 
+     */
+    @SerializedName("isDefault")
+    @Expose
+    public Boolean isDefault;
+
+    /**
+     * The Is Endpoint Protection Enabled.
+     * 
+     */
+    @SerializedName("isEndpointProtectionEnabled")
+    @Expose
+    public Boolean isEndpointProtectionEnabled;
+
+    /**
+     * The Label Actions.
+     * 
+     */
+    @SerializedName("labelActions")
+    @Expose
+    public java.util.List<LabelActionBase> labelActions;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Priority.
+     * 
+     */
+    @SerializedName("priority")
+    @Expose
+    public Integer priority;
+
+    /**
+     * The Tool Tip.
+     * 
+     */
+    @SerializedName("toolTip")
+    @Expose
+    public String toolTip;
 
     /**
      * The Sublabels.

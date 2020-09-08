@@ -27,22 +27,6 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
 
 
     /**
-     * The No Issue Detected Device Count.
-     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName("noIssueDetectedDeviceCount")
-    @Expose
-    public Integer noIssueDetectedDeviceCount;
-
-    /**
-     * The Issue Detected Device Count.
-     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName("issueDetectedDeviceCount")
-    @Expose
-    public Integer issueDetectedDeviceCount;
-
-    /**
      * The Detection Script Error Device Count.
      * Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
      */
@@ -59,12 +43,28 @@ public class DeviceComplianceScriptRunSummary extends Entity implements IJsonBac
     public Integer detectionScriptPendingDeviceCount;
 
     /**
+     * The Issue Detected Device Count.
+     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName("issueDetectedDeviceCount")
+    @Expose
+    public Integer issueDetectedDeviceCount;
+
+    /**
      * The Last Script Run Date Time.
      * Last run time for the script across all devices
      */
     @SerializedName("lastScriptRunDateTime")
     @Expose
     public java.util.Calendar lastScriptRunDateTime;
+
+    /**
+     * The No Issue Detected Device Count.
+     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName("noIssueDetectedDeviceCount")
+    @Expose
+    public Integer noIssueDetectedDeviceCount;
 
 
     /**

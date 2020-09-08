@@ -112,6 +112,27 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
     }
 
     /**
+     * Creates a AzureADUserFeatureUsage with a new object
+     *
+     * @param newAzureADUserFeatureUsage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback) {
+        send(HttpMethod.PUT, callback, newAzureADUserFeatureUsage);
+    }
+
+    /**
+     * Creates a AzureADUserFeatureUsage with a new object
+     *
+     * @param newAzureADUserFeatureUsage the object to create/update
+     * @return the created AzureADUserFeatureUsage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AzureADUserFeatureUsage put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException {
+        return send(HttpMethod.PUT, newAzureADUserFeatureUsage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

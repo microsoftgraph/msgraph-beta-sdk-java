@@ -45,20 +45,20 @@ public class LicenseInfoDetail implements IJsonBackedObject {
     public AzureADLicenseType licenseType;
 
     /**
-     * The Total License Count.
-     * 
-     */
-    @SerializedName("totalLicenseCount")
-    @Expose
-    public Integer totalLicenseCount;
-
-    /**
      * The Total Assigned Count.
      * 
      */
     @SerializedName("totalAssignedCount")
     @Expose
     public Integer totalAssignedCount;
+
+    /**
+     * The Total License Count.
+     * 
+     */
+    @SerializedName("totalLicenseCount")
+    @Expose
+    public Integer totalLicenseCount;
 
     /**
      * The Total Usage Count.

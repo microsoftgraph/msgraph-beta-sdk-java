@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PolicySetStatus;
 import com.microsoft.graph.models.generated.ErrorCode;
+import com.microsoft.graph.models.generated.PolicySetStatus;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
 import com.microsoft.graph.models.extensions.PolicySetItem;
 import com.microsoft.graph.models.extensions.Entity;
@@ -43,22 +43,6 @@ public class PolicySet extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * Last modified time of the PolicySet.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Display Name.
-     * DisplayName of the PolicySet.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Description of the PolicySet.
      */
@@ -67,12 +51,12 @@ public class PolicySet extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Status.
-     * Validation/assignment status of the PolicySet.
+     * The Display Name.
+     * DisplayName of the PolicySet.
      */
-    @SerializedName("status")
+    @SerializedName("displayName")
     @Expose
-    public PolicySetStatus status;
+    public String displayName;
 
     /**
      * The Error Code.
@@ -91,12 +75,28 @@ public class PolicySet extends Entity implements IJsonBackedObject {
     public java.util.List<String> guidedDeploymentTags;
 
     /**
+     * The Last Modified Date Time.
+     * Last modified time of the PolicySet.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
      * The Role Scope Tags.
      * RoleScopeTags of the PolicySet
      */
     @SerializedName("roleScopeTags")
     @Expose
     public java.util.List<String> roleScopeTags;
+
+    /**
+     * The Status.
+     * Validation/assignment status of the PolicySet.
+     */
+    @SerializedName("status")
+    @Expose
+    public PolicySetStatus status;
 
     /**
      * The Assignments.

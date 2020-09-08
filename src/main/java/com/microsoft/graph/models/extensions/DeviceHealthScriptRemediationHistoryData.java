@@ -44,20 +44,20 @@ public class DeviceHealthScriptRemediationHistoryData implements IJsonBackedObje
     public com.microsoft.graph.models.extensions.DateOnly date;
 
     /**
-     * The Remediated Device Count.
-     * The number of devices remediated by the device health script.
-     */
-    @SerializedName("remediatedDeviceCount")
-    @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
      * The No Issue Device Count.
      * The number of devices that were found to have no issue by the device health script.
      */
     @SerializedName("noIssueDeviceCount")
     @Expose
     public Integer noIssueDeviceCount;
+
+    /**
+     * The Remediated Device Count.
+     * The number of devices remediated by the device health script.
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IB2cIdentityUserFlowRequest extends IHttpRequest {
     B2cIdentityUserFlow post(final B2cIdentityUserFlow newB2cIdentityUserFlow) throws ClientException;
 
     /**
+     * Posts a B2cIdentityUserFlow with a new object
+     *
+     * @param newB2cIdentityUserFlow the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final B2cIdentityUserFlow newB2cIdentityUserFlow, final ICallback<B2cIdentityUserFlow> callback);
+
+    /**
+     * Posts a B2cIdentityUserFlow with a new object
+     *
+     * @param newB2cIdentityUserFlow the object to create/update
+     * @return the created B2cIdentityUserFlow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    B2cIdentityUserFlow put(final B2cIdentityUserFlow newB2cIdentityUserFlow) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

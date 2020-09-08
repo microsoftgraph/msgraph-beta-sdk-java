@@ -11,12 +11,12 @@ import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -42,10 +42,6 @@ public interface IDeviceManagementTemplateRequestBuilder extends IRequestBuilder
     IDeviceManagementTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
-
-    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
-
     IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories();
 
     IDeviceManagementTemplateSettingCategoryRequestBuilder categories(final String id);
@@ -53,6 +49,10 @@ public interface IDeviceManagementTemplateRequestBuilder extends IRequestBuilder
     IDeviceManagementTemplateCollectionRequestBuilder migratableTo();
 
     IDeviceManagementTemplateRequestBuilder migratableTo(final String id);
+
+    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
+
+    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
     IDeviceManagementTemplateCreateInstanceRequestBuilder createInstance(final String displayName, final String description, final java.util.List<DeviceManagementSettingInstance> settingsDelta, final java.util.List<String> roleScopeTagIds);
 
     IDeviceManagementTemplateCompareCollectionRequestBuilder compare(final String templateId);

@@ -112,6 +112,27 @@ public class AndroidDeviceOwnerTrustedRootCertificateRequest extends BaseRequest
     }
 
     /**
+     * Creates a AndroidDeviceOwnerTrustedRootCertificate with a new object
+     *
+     * @param newAndroidDeviceOwnerTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate, final ICallback<AndroidDeviceOwnerTrustedRootCertificate> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerTrustedRootCertificate);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerTrustedRootCertificate with a new object
+     *
+     * @param newAndroidDeviceOwnerTrustedRootCertificate the object to create/update
+     * @return the created AndroidDeviceOwnerTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerTrustedRootCertificate put(final AndroidDeviceOwnerTrustedRootCertificate newAndroidDeviceOwnerTrustedRootCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerTrustedRootCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

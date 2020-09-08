@@ -114,6 +114,27 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
     }
 
     /**
+     * Creates a ActiveDirectoryWindowsAutopilotDeploymentProfile with a new object
+     *
+     * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+        send(HttpMethod.PUT, callback, newActiveDirectoryWindowsAutopilotDeploymentProfile);
+    }
+
+    /**
+     * Creates a ActiveDirectoryWindowsAutopilotDeploymentProfile with a new object
+     *
+     * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
+     * @return the created ActiveDirectoryWindowsAutopilotDeploymentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ActiveDirectoryWindowsAutopilotDeploymentProfile put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
+        return send(HttpMethod.PUT, newActiveDirectoryWindowsAutopilotDeploymentProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

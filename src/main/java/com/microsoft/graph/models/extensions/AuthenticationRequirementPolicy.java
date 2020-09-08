@@ -37,20 +37,20 @@ public class AuthenticationRequirementPolicy implements IJsonBackedObject {
     }
 
     /**
-     * The Requirement Provider.
-     * 
-     */
-    @SerializedName("requirementProvider")
-    @Expose
-    public RequirementProvider requirementProvider;
-
-    /**
      * The Detail.
      * 
      */
     @SerializedName("detail")
     @Expose
     public String detail;
+
+    /**
+     * The Requirement Provider.
+     * 
+     */
+    @SerializedName("requirementProvider")
+    @Expose
+    public RequirementProvider requirementProvider;
 
 
     /**

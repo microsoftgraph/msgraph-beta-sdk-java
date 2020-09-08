@@ -112,6 +112,27 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
     }
 
     /**
+     * Creates a ItemEmail with a new object
+     *
+     * @param newItemEmail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemEmail newItemEmail, final ICallback<ItemEmail> callback) {
+        send(HttpMethod.PUT, callback, newItemEmail);
+    }
+
+    /**
+     * Creates a ItemEmail with a new object
+     *
+     * @param newItemEmail the object to create/update
+     * @return the created ItemEmail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemEmail put(final ItemEmail newItemEmail) throws ClientException {
+        return send(HttpMethod.PUT, newItemEmail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

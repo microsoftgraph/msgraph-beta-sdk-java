@@ -62,14 +62,14 @@ public class GeneralLedgerEntryCollectionRequest extends BaseCollectionRequest<G
     public void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GeneralLedgerEntryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGeneralLedgerEntry, callback);
     }
 
     public GeneralLedgerEntry post(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GeneralLedgerEntryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGeneralLedgerEntry);
     }
 
@@ -106,6 +106,27 @@ public class GeneralLedgerEntryCollectionRequest extends BaseCollectionRequest<G
         return (GeneralLedgerEntryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGeneralLedgerEntryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GeneralLedgerEntryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGeneralLedgerEntryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGeneralLedgerEntryCollectionRequest)this;
+    }
     public IGeneralLedgerEntryCollectionPage buildFromResponse(final GeneralLedgerEntryCollectionResponse response) {
         final IGeneralLedgerEntryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -37,20 +37,20 @@ public class DeviceManagementApplicabilityRuleOsVersion implements IJsonBackedOb
     }
 
     /**
-     * The Min OSVersion.
-     * Min OS version for Applicability Rule.
-     */
-    @SerializedName("minOSVersion")
-    @Expose
-    public String minOSVersion;
-
-    /**
      * The Max OSVersion.
      * Max OS version for Applicability Rule.
      */
     @SerializedName("maxOSVersion")
     @Expose
     public String maxOSVersion;
+
+    /**
+     * The Min OSVersion.
+     * Min OS version for Applicability Rule.
+     */
+    @SerializedName("minOSVersion")
+    @Expose
+    public String minOSVersion;
 
     /**
      * The Name.

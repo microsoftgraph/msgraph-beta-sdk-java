@@ -80,6 +80,23 @@ public interface ISchemaRequest extends IHttpRequest {
     Schema post(final Schema newSchema) throws ClientException;
 
     /**
+     * Posts a Schema with a new object
+     *
+     * @param newSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Schema newSchema, final ICallback<Schema> callback);
+
+    /**
+     * Posts a Schema with a new object
+     *
+     * @param newSchema the object to create/update
+     * @return the created Schema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Schema put(final Schema newSchema) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -79,11 +79,11 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder implements IPrint
         return new PrintJobCancelPrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelPrintJob"), getClient(), null);
     }
 
-    public IPrintJobStartPrintJobRequestBuilder startPrintJob() {
-        return new PrintJobStartPrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.startPrintJob"), getClient(), null);
-    }
-
     public IPrintJobRedirectRequestBuilder redirect(final String destinationPrinterId) {
         return new PrintJobRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, destinationPrinterId);
+    }
+
+    public IPrintJobStartPrintJobRequestBuilder startPrintJob() {
+        return new PrintJobStartPrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.startPrintJob"), getClient(), null);
     }
 }

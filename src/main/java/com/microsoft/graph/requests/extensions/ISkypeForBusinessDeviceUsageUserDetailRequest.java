@@ -80,6 +80,23 @@ public interface ISkypeForBusinessDeviceUsageUserDetailRequest extends IHttpRequ
     SkypeForBusinessDeviceUsageUserDetail post(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail) throws ClientException;
 
     /**
+     * Posts a SkypeForBusinessDeviceUsageUserDetail with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback);
+
+    /**
+     * Posts a SkypeForBusinessDeviceUsageUserDetail with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageUserDetail the object to create/update
+     * @return the created SkypeForBusinessDeviceUsageUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SkypeForBusinessDeviceUsageUserDetail put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

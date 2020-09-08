@@ -31,12 +31,52 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Closed By.
+     * 
+     */
+    @SerializedName("closedBy")
+    @Expose
+    public String closedBy;
+
+    /**
+     * The Closed Date Time.
+     * 
+     */
+    @SerializedName("closedDateTime")
+    @Expose
+    public java.util.Calendar closedDateTime;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The Description.
      * 
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The External Id.
+     * 
+     */
+    @SerializedName("externalId")
+    @Expose
+    public String externalId;
 
     /**
      * The Last Modified By.
@@ -61,46 +101,6 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
     @SerializedName("status")
     @Expose
     public CaseStatus status;
-
-    /**
-     * The Closed By.
-     * 
-     */
-    @SerializedName("closedBy")
-    @Expose
-    public String closedBy;
-
-    /**
-     * The Closed Date Time.
-     * 
-     */
-    @SerializedName("closedDateTime")
-    @Expose
-    public java.util.Calendar closedDateTime;
-
-    /**
-     * The External Id.
-     * 
-     */
-    @SerializedName("externalId")
-    @Expose
-    public String externalId;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Created Date Time.
-     * 
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
 
     /**
      * The Review Sets.

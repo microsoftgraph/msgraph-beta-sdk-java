@@ -112,6 +112,27 @@ public class SecurityBaselineCategoryStateSummaryRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a SecurityBaselineCategoryStateSummary with a new object
+     *
+     * @param newSecurityBaselineCategoryStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<SecurityBaselineCategoryStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newSecurityBaselineCategoryStateSummary);
+    }
+
+    /**
+     * Creates a SecurityBaselineCategoryStateSummary with a new object
+     *
+     * @param newSecurityBaselineCategoryStateSummary the object to create/update
+     * @return the created SecurityBaselineCategoryStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityBaselineCategoryStateSummary put(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityBaselineCategoryStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

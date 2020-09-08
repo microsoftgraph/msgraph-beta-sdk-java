@@ -112,6 +112,27 @@ public class ImportedAppleDeviceIdentityResultRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a ImportedAppleDeviceIdentityResult with a new object
+     *
+     * @param newImportedAppleDeviceIdentityResult the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ImportedAppleDeviceIdentityResult newImportedAppleDeviceIdentityResult, final ICallback<ImportedAppleDeviceIdentityResult> callback) {
+        send(HttpMethod.PUT, callback, newImportedAppleDeviceIdentityResult);
+    }
+
+    /**
+     * Creates a ImportedAppleDeviceIdentityResult with a new object
+     *
+     * @param newImportedAppleDeviceIdentityResult the object to create/update
+     * @return the created ImportedAppleDeviceIdentityResult
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ImportedAppleDeviceIdentityResult put(final ImportedAppleDeviceIdentityResult newImportedAppleDeviceIdentityResult) throws ClientException {
+        return send(HttpMethod.PUT, newImportedAppleDeviceIdentityResult);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

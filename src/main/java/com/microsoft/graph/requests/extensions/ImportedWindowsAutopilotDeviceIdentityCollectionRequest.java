@@ -62,14 +62,14 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionRequest extends Bas
     public void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<ImportedWindowsAutopilotDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newImportedWindowsAutopilotDeviceIdentity, callback);
     }
 
     public ImportedWindowsAutopilotDeviceIdentity post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -106,6 +106,27 @@ public class ImportedWindowsAutopilotDeviceIdentityCollectionRequest extends Bas
         return (ImportedWindowsAutopilotDeviceIdentityCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IImportedWindowsAutopilotDeviceIdentityCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ImportedWindowsAutopilotDeviceIdentityCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IImportedWindowsAutopilotDeviceIdentityCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IImportedWindowsAutopilotDeviceIdentityCollectionRequest)this;
+    }
     public IImportedWindowsAutopilotDeviceIdentityCollectionPage buildFromResponse(final ImportedWindowsAutopilotDeviceIdentityCollectionResponse response) {
         final IImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder builder;
         if (response.nextLink != null) {

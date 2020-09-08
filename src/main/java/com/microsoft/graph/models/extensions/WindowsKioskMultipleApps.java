@@ -28,28 +28,20 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
 
 
     /**
-     * The Apps.
-     * These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
-     */
-    @SerializedName("apps")
-    @Expose
-    public java.util.List<WindowsKioskAppBase> apps;
-
-    /**
-     * The Show Task Bar.
-     * This setting allows the admin to specify whether the Task Bar is shown or not.
-     */
-    @SerializedName("showTaskBar")
-    @Expose
-    public Boolean showTaskBar;
-
-    /**
      * The Allow Access To Downloads Folder.
      * This setting allows access to Downloads folder in file explorer.
      */
     @SerializedName("allowAccessToDownloadsFolder")
     @Expose
     public Boolean allowAccessToDownloadsFolder;
+
+    /**
+     * The Apps.
+     * These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
+     */
+    @SerializedName("apps")
+    @Expose
+    public java.util.List<WindowsKioskAppBase> apps;
 
     /**
      * The Disallow Desktop Apps.
@@ -60,8 +52,16 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     public Boolean disallowDesktopApps;
 
     /**
+     * The Show Task Bar.
+     * This setting allows the admin to specify whether the Task Bar is shown or not.
+     */
+    @SerializedName("showTaskBar")
+    @Expose
+    public Boolean showTaskBar;
+
+    /**
      * The Start Menu Layout Xml.
-     * Allows admins to override the default Start layout and prevents the user from changing it.??The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      */
     @SerializedName("startMenuLayoutXml")
     @Expose

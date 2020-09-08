@@ -112,6 +112,27 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequest extends Base
     }
 
     /**
+     * Creates a IosLobAppProvisioningConfigurationPolicySetItem with a new object
+     *
+     * @param newIosLobAppProvisioningConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem, final ICallback<IosLobAppProvisioningConfigurationPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newIosLobAppProvisioningConfigurationPolicySetItem);
+    }
+
+    /**
+     * Creates a IosLobAppProvisioningConfigurationPolicySetItem with a new object
+     *
+     * @param newIosLobAppProvisioningConfigurationPolicySetItem the object to create/update
+     * @return the created IosLobAppProvisioningConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosLobAppProvisioningConfigurationPolicySetItem put(final IosLobAppProvisioningConfigurationPolicySetItem newIosLobAppProvisioningConfigurationPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newIosLobAppProvisioningConfigurationPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

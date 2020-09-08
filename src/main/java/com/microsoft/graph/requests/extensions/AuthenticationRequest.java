@@ -8,46 +8,46 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Authentication;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.LongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SoftwareOathAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.LongRunningOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityQuestionAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
@@ -153,6 +153,27 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      */
     public Authentication post(final Authentication newAuthentication) throws ClientException {
         return send(HttpMethod.POST, newAuthentication);
+    }
+
+    /**
+     * Creates a Authentication with a new object
+     *
+     * @param newAuthentication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Authentication newAuthentication, final ICallback<Authentication> callback) {
+        send(HttpMethod.PUT, callback, newAuthentication);
+    }
+
+    /**
+     * Creates a Authentication with a new object
+     *
+     * @param newAuthentication the object to create/update
+     * @return the created Authentication
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Authentication put(final Authentication newAuthentication) throws ClientException {
+        return send(HttpMethod.PUT, newAuthentication);
     }
 
     /**

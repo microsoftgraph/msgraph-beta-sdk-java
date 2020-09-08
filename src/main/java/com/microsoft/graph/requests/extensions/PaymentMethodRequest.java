@@ -112,6 +112,27 @@ public class PaymentMethodRequest extends BaseRequest implements IPaymentMethodR
     }
 
     /**
+     * Creates a PaymentMethod with a new object
+     *
+     * @param newPaymentMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PaymentMethod newPaymentMethod, final ICallback<PaymentMethod> callback) {
+        send(HttpMethod.PUT, callback, newPaymentMethod);
+    }
+
+    /**
+     * Creates a PaymentMethod with a new object
+     *
+     * @param newPaymentMethod the object to create/update
+     * @return the created PaymentMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PaymentMethod put(final PaymentMethod newPaymentMethod) throws ClientException {
+        return send(HttpMethod.PUT, newPaymentMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

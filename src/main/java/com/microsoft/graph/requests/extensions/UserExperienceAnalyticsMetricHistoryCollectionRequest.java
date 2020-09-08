@@ -62,14 +62,14 @@ public class UserExperienceAnalyticsMetricHistoryCollectionRequest extends BaseC
     public void post(final UserExperienceAnalyticsMetricHistory newUserExperienceAnalyticsMetricHistory, final ICallback<UserExperienceAnalyticsMetricHistory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsMetricHistoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsMetricHistory, callback);
     }
 
     public UserExperienceAnalyticsMetricHistory post(final UserExperienceAnalyticsMetricHistory newUserExperienceAnalyticsMetricHistory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsMetricHistoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsMetricHistory);
     }
 
@@ -106,6 +106,27 @@ public class UserExperienceAnalyticsMetricHistoryCollectionRequest extends BaseC
         return (UserExperienceAnalyticsMetricHistoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsMetricHistoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsMetricHistoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsMetricHistoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsMetricHistoryCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsMetricHistoryCollectionPage buildFromResponse(final UserExperienceAnalyticsMetricHistoryCollectionResponse response) {
         final IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

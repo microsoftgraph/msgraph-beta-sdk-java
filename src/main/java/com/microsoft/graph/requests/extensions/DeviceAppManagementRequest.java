@@ -8,18 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
-import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnterpriseCodeSigningCertificateCollectionRequestBuilder;
@@ -28,14 +20,22 @@ import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurati
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetCollectionRequestBuilder;
@@ -48,14 +48,6 @@ import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
@@ -64,18 +56,14 @@ import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionColle
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
@@ -84,10 +72,22 @@ import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionReques
 import com.microsoft.graph.requests.extensions.IManagedAppStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionCollectionRequestBuilder;
@@ -205,6 +205,27 @@ public class DeviceAppManagementRequest extends BaseRequest implements IDeviceAp
      */
     public DeviceAppManagement post(final DeviceAppManagement newDeviceAppManagement) throws ClientException {
         return send(HttpMethod.POST, newDeviceAppManagement);
+    }
+
+    /**
+     * Creates a DeviceAppManagement with a new object
+     *
+     * @param newDeviceAppManagement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceAppManagement newDeviceAppManagement, final ICallback<DeviceAppManagement> callback) {
+        send(HttpMethod.PUT, callback, newDeviceAppManagement);
+    }
+
+    /**
+     * Creates a DeviceAppManagement with a new object
+     *
+     * @param newDeviceAppManagement the object to create/update
+     * @return the created DeviceAppManagement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceAppManagement put(final DeviceAppManagement newDeviceAppManagement) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceAppManagement);
     }
 
     /**

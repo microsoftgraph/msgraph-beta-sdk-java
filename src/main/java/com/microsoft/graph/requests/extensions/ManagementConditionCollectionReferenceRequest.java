@@ -41,7 +41,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managementConditions/" + newManagementCondition.id);
         new ManagementConditionWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagementCondition, body, callback);
     }
 
@@ -49,7 +49,7 @@ public class ManagementConditionCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/managementConditions/" + newManagementCondition.id);
         return new ManagementConditionWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newManagementCondition, body);
     }
     /**

@@ -46,20 +46,20 @@ public class BitLockerFixedDrivePolicy implements IJsonBackedObject {
     public BitLockerEncryptionMethod encryptionMethod;
 
     /**
-     * The Require Encryption For Write Access.
-     * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
-     */
-    @SerializedName("requireEncryptionForWriteAccess")
-    @Expose
-    public Boolean requireEncryptionForWriteAccess;
-
-    /**
      * The Recovery Options.
      * This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.
      */
     @SerializedName("recoveryOptions")
     @Expose
     public BitLockerRecoveryOptions recoveryOptions;
+
+    /**
+     * The Require Encryption For Write Access.
+     * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
+     */
+    @SerializedName("requireEncryptionForWriteAccess")
+    @Expose
+    public Boolean requireEncryptionForWriteAccess;
 
 
     /**

@@ -62,14 +62,14 @@ public class EducationAssignmentResourceCollectionRequest extends BaseCollection
     public void post(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<EducationAssignmentResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationAssignmentResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationAssignmentResource, callback);
     }
 
     public EducationAssignmentResource post(final EducationAssignmentResource newEducationAssignmentResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationAssignmentResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationAssignmentResource);
     }
 
@@ -106,6 +106,27 @@ public class EducationAssignmentResourceCollectionRequest extends BaseCollection
         return (EducationAssignmentResourceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationAssignmentResourceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationAssignmentResourceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationAssignmentResourceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationAssignmentResourceCollectionRequest)this;
+    }
     public IEducationAssignmentResourceCollectionPage buildFromResponse(final EducationAssignmentResourceCollectionResponse response) {
         final IEducationAssignmentResourceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

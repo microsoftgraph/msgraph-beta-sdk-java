@@ -10,10 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
@@ -48,13 +48,17 @@ public interface IPrinterRequestBuilder extends IRequestBuilder {
 
     IPrintJobRequestBuilder jobs(final String id);
 
+    IPrintIdentityCollectionRequestBuilder allowedGroups();
+
+    IPrintIdentityRequestBuilder allowedGroups(final String id);
+
     IPrintUserIdentityCollectionRequestBuilder allowedUsers();
 
     IPrintUserIdentityRequestBuilder allowedUsers(final String id);
 
-    IPrintIdentityCollectionRequestBuilder allowedGroups();
+    IPrintConnectorCollectionWithReferencesRequestBuilder connectors();
 
-    IPrintIdentityRequestBuilder allowedGroups(final String id);
+    IPrintConnectorWithReferenceRequestBuilder connectors(final String id);
 
     /**
      * Gets the request builder for PrinterShare
@@ -62,10 +66,6 @@ public interface IPrinterRequestBuilder extends IRequestBuilder {
      * @return the IPrinterShareWithReferenceRequestBuilder instance
      */
     IPrinterShareWithReferenceRequestBuilder share();
-
-    IPrintConnectorCollectionWithReferencesRequestBuilder connectors();
-
-    IPrintConnectorWithReferenceRequestBuilder connectors(final String id);
 
     IPrintTaskTriggerCollectionRequestBuilder taskTriggers();
 

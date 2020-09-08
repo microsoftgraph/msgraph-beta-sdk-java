@@ -9,16 +9,17 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
+import com.microsoft.graph.models.extensions.IdentityUserFlow;
+import com.microsoft.graph.models.extensions.ContinuousAccessEvaluationPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionResponse;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionPage;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionResponse;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -45,12 +46,6 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
     public ConditionalAccessRoot conditionalAccess;
 
     /**
-     * The User Flows.
-     * 
-     */
-    public IdentityUserFlowCollectionPage userFlows;
-
-    /**
      * The B2c User Flows.
      * 
      */
@@ -61,6 +56,20 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
      * 
      */
     public B2xIdentityUserFlowCollectionPage b2xUserFlows;
+
+    /**
+     * The User Flows.
+     * 
+     */
+    public IdentityUserFlowCollectionPage userFlows;
+
+    /**
+     * The Continuous Access Evaluation Policy.
+     * 
+     */
+    @SerializedName("continuousAccessEvaluationPolicy")
+    @Expose
+    public ContinuousAccessEvaluationPolicy continuousAccessEvaluationPolicy;
 
 
     /**
@@ -102,22 +111,6 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("userFlows")) {
-            final IdentityUserFlowCollectionResponse response = new IdentityUserFlowCollectionResponse();
-            if (json.has("userFlows@odata.nextLink")) {
-                response.nextLink = json.get("userFlows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userFlows").toString(), JsonObject[].class);
-            final IdentityUserFlow[] array = new IdentityUserFlow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IdentityUserFlow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userFlows = new IdentityUserFlowCollectionPage(response, null);
-        }
-
         if (json.has("b2cUserFlows")) {
             final B2cIdentityUserFlowCollectionResponse response = new B2cIdentityUserFlowCollectionResponse();
             if (json.has("b2cUserFlows@odata.nextLink")) {
@@ -148,6 +141,22 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             b2xUserFlows = new B2xIdentityUserFlowCollectionPage(response, null);
+        }
+
+        if (json.has("userFlows")) {
+            final IdentityUserFlowCollectionResponse response = new IdentityUserFlowCollectionResponse();
+            if (json.has("userFlows@odata.nextLink")) {
+                response.nextLink = json.get("userFlows@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userFlows").toString(), JsonObject[].class);
+            final IdentityUserFlow[] array = new IdentityUserFlow[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IdentityUserFlow.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userFlows = new IdentityUserFlowCollectionPage(response, null);
         }
     }
 }

@@ -62,14 +62,14 @@ public class DeviceManagementIntentDeviceSettingStateSummaryCollectionRequest ex
     public void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<DeviceManagementIntentDeviceSettingStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentDeviceSettingStateSummary, callback);
     }
 
     public DeviceManagementIntentDeviceSettingStateSummary post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementIntentDeviceSettingStateSummaryCollectionRequest ex
         return (DeviceManagementIntentDeviceSettingStateSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementIntentDeviceSettingStateSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest)this;
+    }
     public IDeviceManagementIntentDeviceSettingStateSummaryCollectionPage buildFromResponse(final DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse response) {
         final IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

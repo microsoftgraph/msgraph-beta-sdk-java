@@ -80,6 +80,23 @@ public interface IIosVpnConfigurationRequest extends IHttpRequest {
     IosVpnConfiguration post(final IosVpnConfiguration newIosVpnConfiguration) throws ClientException;
 
     /**
+     * Posts a IosVpnConfiguration with a new object
+     *
+     * @param newIosVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback);
+
+    /**
+     * Posts a IosVpnConfiguration with a new object
+     *
+     * @param newIosVpnConfiguration the object to create/update
+     * @return the created IosVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosVpnConfiguration put(final IosVpnConfiguration newIosVpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -32,6 +32,22 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
 
 
     /**
+     * The Certificate Store.
+     * Target store certificate
+     */
+    @SerializedName("certificateStore")
+    @Expose
+    public CertificateStore certificateStore;
+
+    /**
+     * The Certificate Template Name.
+     * PKCS Certificate Template Name.
+     */
+    @SerializedName("certificateTemplateName")
+    @Expose
+    public String certificateTemplateName;
+
+    /**
      * The Certification Authority.
      * PKCS Certification Authority.
      */
@@ -48,12 +64,12 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     public String certificationAuthorityName;
 
     /**
-     * The Certificate Template Name.
-     * PKCS Certificate Template Name.
+     * The Custom Subject Alternative Names.
+     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName("customSubjectAlternativeNames")
     @Expose
-    public String certificateTemplateName;
+    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Subject Alternative Name Format String.
@@ -70,22 +86,6 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     @SerializedName("subjectNameFormatString")
     @Expose
     public String subjectNameFormatString;
-
-    /**
-     * The Certificate Store.
-     * Target store certificate
-     */
-    @SerializedName("certificateStore")
-    @Expose
-    public CertificateStore certificateStore;
-
-    /**
-     * The Custom Subject Alternative Names.
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("customSubjectAlternativeNames")
-    @Expose
-    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Managed Device Certificate States.

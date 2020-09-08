@@ -53,20 +53,20 @@ public class AuditResource implements IJsonBackedObject {
     public java.util.List<AuditProperty> modifiedProperties;
 
     /**
-     * The Type.
-     * Audit resource's type.
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Resource Id.
      * Audit resource's Id.
      */
     @SerializedName("resourceId")
     @Expose
     public String resourceId;
+
+    /**
+     * The Type.
+     * Audit resource's type.
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

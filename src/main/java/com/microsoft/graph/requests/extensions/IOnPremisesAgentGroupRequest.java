@@ -80,6 +80,23 @@ public interface IOnPremisesAgentGroupRequest extends IHttpRequest {
     OnPremisesAgentGroup post(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException;
 
     /**
+     * Posts a OnPremisesAgentGroup with a new object
+     *
+     * @param newOnPremisesAgentGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<OnPremisesAgentGroup> callback);
+
+    /**
+     * Posts a OnPremisesAgentGroup with a new object
+     *
+     * @param newOnPremisesAgentGroup the object to create/update
+     * @return the created OnPremisesAgentGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnPremisesAgentGroup put(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

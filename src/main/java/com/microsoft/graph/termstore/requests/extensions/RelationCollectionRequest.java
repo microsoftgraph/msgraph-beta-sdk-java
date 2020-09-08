@@ -62,14 +62,14 @@ public class RelationCollectionRequest extends BaseCollectionRequest<RelationCol
     public void post(final Relation newRelation, final ICallback<Relation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RelationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRelation, callback);
     }
 
     public Relation post(final Relation newRelation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RelationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRelation);
     }
 
@@ -106,6 +106,27 @@ public class RelationCollectionRequest extends BaseCollectionRequest<RelationCol
         return (RelationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRelationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RelationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRelationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRelationCollectionRequest)this;
+    }
     public IRelationCollectionPage buildFromResponse(final RelationCollectionResponse response) {
         final IRelationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -112,6 +112,27 @@ public class WindowsUpdateStateRequest extends BaseRequest implements IWindowsUp
     }
 
     /**
+     * Creates a WindowsUpdateState with a new object
+     *
+     * @param newWindowsUpdateState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsUpdateState newWindowsUpdateState, final ICallback<WindowsUpdateState> callback) {
+        send(HttpMethod.PUT, callback, newWindowsUpdateState);
+    }
+
+    /**
+     * Creates a WindowsUpdateState with a new object
+     *
+     * @param newWindowsUpdateState the object to create/update
+     * @return the created WindowsUpdateState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsUpdateState put(final WindowsUpdateState newWindowsUpdateState) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsUpdateState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

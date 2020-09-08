@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplicationMultiple;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentMultipleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class RbacApplicationMultipleRequest extends BaseRequest implements IRbac
      */
     public RbacApplicationMultiple post(final RbacApplicationMultiple newRbacApplicationMultiple) throws ClientException {
         return send(HttpMethod.POST, newRbacApplicationMultiple);
+    }
+
+    /**
+     * Creates a RbacApplicationMultiple with a new object
+     *
+     * @param newRbacApplicationMultiple the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RbacApplicationMultiple newRbacApplicationMultiple, final ICallback<RbacApplicationMultiple> callback) {
+        send(HttpMethod.PUT, callback, newRbacApplicationMultiple);
+    }
+
+    /**
+     * Creates a RbacApplicationMultiple with a new object
+     *
+     * @param newRbacApplicationMultiple the object to create/update
+     * @return the created RbacApplicationMultiple
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RbacApplicationMultiple put(final RbacApplicationMultiple newRbacApplicationMultiple) throws ClientException {
+        return send(HttpMethod.PUT, newRbacApplicationMultiple);
     }
 
     /**

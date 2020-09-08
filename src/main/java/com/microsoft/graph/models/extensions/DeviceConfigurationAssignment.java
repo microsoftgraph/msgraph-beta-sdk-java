@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.generated.DeviceAndAppManagementAssignmentSource;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,14 +29,6 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
 
 
     /**
-     * The Target.
-     * The assignment target for the device configuration.
-     */
-    @SerializedName("target")
-    @Expose
-    public DeviceAndAppManagementAssignmentTarget target;
-
-    /**
      * The Source.
      * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only.
      */
@@ -51,6 +43,14 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
     @SerializedName("sourceId")
     @Expose
     public String sourceId;
+
+    /**
+     * The Target.
+     * The assignment target for the device configuration.
+     */
+    @SerializedName("target")
+    @Expose
+    public DeviceAndAppManagementAssignmentTarget target;
 
 
     /**

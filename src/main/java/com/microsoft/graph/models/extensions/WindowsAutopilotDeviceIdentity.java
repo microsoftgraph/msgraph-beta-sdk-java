@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WindowsAutopilotProfileAssignmentStatus;
 import com.microsoft.graph.models.generated.WindowsAutopilotProfileAssignmentDetailedStatus;
+import com.microsoft.graph.models.generated.WindowsAutopilotProfileAssignmentStatus;
 import com.microsoft.graph.models.generated.EnrollmentState;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.extensions.Entity;
@@ -31,20 +31,20 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
 
     /**
-     * The Deployment Profile Assignment Status.
-     * Profile assignment status of the Windows autopilot device.
+     * The Addressable User Name.
+     * Addressable user name.
      */
-    @SerializedName("deploymentProfileAssignmentStatus")
+    @SerializedName("addressableUserName")
     @Expose
-    public WindowsAutopilotProfileAssignmentStatus deploymentProfileAssignmentStatus;
+    public String addressableUserName;
 
     /**
-     * The Deployment Profile Assignment Detailed Status.
-     * Profile assignment detailed status of the Windows autopilot device.
+     * The Azure Active Directory Device Id.
+     * AAD Device ID
      */
-    @SerializedName("deploymentProfileAssignmentDetailedStatus")
+    @SerializedName("azureActiveDirectoryDeviceId")
     @Expose
-    public WindowsAutopilotProfileAssignmentDetailedStatus deploymentProfileAssignmentDetailedStatus;
+    public String azureActiveDirectoryDeviceId;
 
     /**
      * The Deployment Profile Assigned Date Time.
@@ -55,12 +55,36 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     public java.util.Calendar deploymentProfileAssignedDateTime;
 
     /**
-     * The Order Identifier.
-     * Order Identifier of the Windows autopilot device - Deprecated
+     * The Deployment Profile Assignment Detailed Status.
+     * Profile assignment detailed status of the Windows autopilot device.
      */
-    @SerializedName("orderIdentifier")
+    @SerializedName("deploymentProfileAssignmentDetailedStatus")
     @Expose
-    public String orderIdentifier;
+    public WindowsAutopilotProfileAssignmentDetailedStatus deploymentProfileAssignmentDetailedStatus;
+
+    /**
+     * The Deployment Profile Assignment Status.
+     * Profile assignment status of the Windows autopilot device.
+     */
+    @SerializedName("deploymentProfileAssignmentStatus")
+    @Expose
+    public WindowsAutopilotProfileAssignmentStatus deploymentProfileAssignmentStatus;
+
+    /**
+     * The Display Name.
+     * Display Name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Enrollment State.
+     * Intune enrollment state of the Windows autopilot device.
+     */
+    @SerializedName("enrollmentState")
+    @Expose
+    public EnrollmentState enrollmentState;
 
     /**
      * The Group Tag.
@@ -71,28 +95,20 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     public String groupTag;
 
     /**
-     * The Purchase Order Identifier.
-     * Purchase Order Identifier of the Windows autopilot device.
+     * The Last Contacted Date Time.
+     * Intune Last Contacted Date Time of the Windows autopilot device.
      */
-    @SerializedName("purchaseOrderIdentifier")
+    @SerializedName("lastContactedDateTime")
     @Expose
-    public String purchaseOrderIdentifier;
+    public java.util.Calendar lastContactedDateTime;
 
     /**
-     * The Serial Number.
-     * Serial number of the Windows autopilot device.
+     * The Managed Device Id.
+     * Managed Device ID
      */
-    @SerializedName("serialNumber")
+    @SerializedName("managedDeviceId")
     @Expose
-    public String serialNumber;
-
-    /**
-     * The Product Key.
-     * Product Key of the Windows autopilot device.
-     */
-    @SerializedName("productKey")
-    @Expose
-    public String productKey;
+    public String managedDeviceId;
 
     /**
      * The Manufacturer.
@@ -111,36 +127,28 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     public String model;
 
     /**
-     * The Enrollment State.
-     * Intune enrollment state of the Windows autopilot device.
+     * The Order Identifier.
+     * Order Identifier of the Windows autopilot device - Deprecated
      */
-    @SerializedName("enrollmentState")
+    @SerializedName("orderIdentifier")
     @Expose
-    public EnrollmentState enrollmentState;
+    public String orderIdentifier;
 
     /**
-     * The Last Contacted Date Time.
-     * Intune Last Contacted Date Time of the Windows autopilot device.
+     * The Product Key.
+     * Product Key of the Windows autopilot device.
      */
-    @SerializedName("lastContactedDateTime")
+    @SerializedName("productKey")
     @Expose
-    public java.util.Calendar lastContactedDateTime;
+    public String productKey;
 
     /**
-     * The Addressable User Name.
-     * Addressable user name.
+     * The Purchase Order Identifier.
+     * Purchase Order Identifier of the Windows autopilot device.
      */
-    @SerializedName("addressableUserName")
+    @SerializedName("purchaseOrderIdentifier")
     @Expose
-    public String addressableUserName;
-
-    /**
-     * The User Principal Name.
-     * User Principal Name.
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
+    public String purchaseOrderIdentifier;
 
     /**
      * The Resource Name.
@@ -149,6 +157,14 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     @SerializedName("resourceName")
     @Expose
     public String resourceName;
+
+    /**
+     * The Serial Number.
+     * Serial number of the Windows autopilot device.
+     */
+    @SerializedName("serialNumber")
+    @Expose
+    public String serialNumber;
 
     /**
      * The Sku Number.
@@ -167,28 +183,12 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     public String systemFamily;
 
     /**
-     * The Azure Active Directory Device Id.
-     * AAD Device ID
+     * The User Principal Name.
+     * User Principal Name.
      */
-    @SerializedName("azureActiveDirectoryDeviceId")
+    @SerializedName("userPrincipalName")
     @Expose
-    public String azureActiveDirectoryDeviceId;
-
-    /**
-     * The Managed Device Id.
-     * Managed Device ID
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
-     * The Display Name.
-     * Display Name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
+    public String userPrincipalName;
 
     /**
      * The Deployment Profile.

@@ -62,14 +62,14 @@ public class AccessPackageAssignmentResourceRoleCollectionRequest extends BaseCo
     public void post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<AccessPackageAssignmentResourceRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentResourceRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignmentResourceRole, callback);
     }
 
     public AccessPackageAssignmentResourceRole post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageAssignmentResourceRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignmentResourceRole);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageAssignmentResourceRoleCollectionRequest extends BaseCo
         return (AccessPackageAssignmentResourceRoleCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentResourceRoleCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageAssignmentResourceRoleCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentResourceRoleCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageAssignmentResourceRoleCollectionRequest)this;
+    }
     public IAccessPackageAssignmentResourceRoleCollectionPage buildFromResponse(final AccessPackageAssignmentResourceRoleCollectionResponse response) {
         final IAccessPackageAssignmentResourceRoleCollectionRequestBuilder builder;
         if (response.nextLink != null) {

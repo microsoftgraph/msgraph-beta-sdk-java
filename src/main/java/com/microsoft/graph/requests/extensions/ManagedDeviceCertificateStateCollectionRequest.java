@@ -62,14 +62,14 @@ public class ManagedDeviceCertificateStateCollectionRequest extends BaseCollecti
     public void post(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceCertificateStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceCertificateState, callback);
     }
 
     public ManagedDeviceCertificateState post(final ManagedDeviceCertificateState newManagedDeviceCertificateState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceCertificateStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceCertificateState);
     }
 
@@ -106,6 +106,27 @@ public class ManagedDeviceCertificateStateCollectionRequest extends BaseCollecti
         return (ManagedDeviceCertificateStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceCertificateStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceCertificateStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceCertificateStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceCertificateStateCollectionRequest)this;
+    }
     public IManagedDeviceCertificateStateCollectionPage buildFromResponse(final ManagedDeviceCertificateStateCollectionResponse response) {
         final IManagedDeviceCertificateStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

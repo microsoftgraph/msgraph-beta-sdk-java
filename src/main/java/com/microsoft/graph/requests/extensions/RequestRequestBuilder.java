@@ -63,11 +63,11 @@ public class RequestRequestBuilder extends BaseRequestBuilder implements IReques
         return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approval"), getClient(), null);
     }
 
-    public IRequestStopRequestBuilder stop() {
-        return new RequestStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
-    }
-
     public IRequestRecordDecisionsRequestBuilder recordDecisions(final String reviewResult, final String justification) {
         return new RequestRecordDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordDecisions"), getClient(), null, reviewResult, justification);
+    }
+
+    public IRequestStopRequestBuilder stop() {
+        return new RequestStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }

@@ -27,28 +27,12 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Report Refresh Date.
+     * The Assigned Products.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("assignedProducts")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Is Deleted.
-     * 
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
+    public java.util.List<String> assignedProducts;
 
     /**
      * The Deleted Date.
@@ -59,6 +43,14 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
     public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
+     * The Is Deleted.
+     * 
+     */
+    @SerializedName("isDeleted")
+    @Expose
+    public Boolean isDeleted;
+
+    /**
      * The Last Activity Date.
      * 
      */
@@ -67,28 +59,20 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
     /**
-     * The Viewed Or Edited File Count.
+     * The Report Period.
      * 
      */
-    @SerializedName("viewedOrEditedFileCount")
+    @SerializedName("reportPeriod")
     @Expose
-    public Long viewedOrEditedFileCount;
+    public String reportPeriod;
 
     /**
-     * The Synced File Count.
+     * The Report Refresh Date.
      * 
      */
-    @SerializedName("syncedFileCount")
+    @SerializedName("reportRefreshDate")
     @Expose
-    public Long syncedFileCount;
-
-    /**
-     * The Shared Internally File Count.
-     * 
-     */
-    @SerializedName("sharedInternallyFileCount")
-    @Expose
-    public Long sharedInternallyFileCount;
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The Shared Externally File Count.
@@ -99,20 +83,36 @@ public class OneDriveActivityUserDetail extends Entity implements IJsonBackedObj
     public Long sharedExternallyFileCount;
 
     /**
-     * The Assigned Products.
+     * The Shared Internally File Count.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName("sharedInternallyFileCount")
     @Expose
-    public java.util.List<String> assignedProducts;
+    public Long sharedInternallyFileCount;
 
     /**
-     * The Report Period.
+     * The Synced File Count.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName("syncedFileCount")
     @Expose
-    public String reportPeriod;
+    public Long syncedFileCount;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
+
+    /**
+     * The Viewed Or Edited File Count.
+     * 
+     */
+    @SerializedName("viewedOrEditedFileCount")
+    @Expose
+    public Long viewedOrEditedFileCount;
 
 
     /**

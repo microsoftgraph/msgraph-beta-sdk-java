@@ -31,6 +31,30 @@ public class UserAppInstallStatus extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Failed Device Count.
+     * Failed Device Count.
+     */
+    @SerializedName("failedDeviceCount")
+    @Expose
+    public Integer failedDeviceCount;
+
+    /**
+     * The Installed Device Count.
+     * Installed Device Count.
+     */
+    @SerializedName("installedDeviceCount")
+    @Expose
+    public Integer installedDeviceCount;
+
+    /**
+     * The Not Installed Device Count.
+     * Not installed device count.
+     */
+    @SerializedName("notInstalledDeviceCount")
+    @Expose
+    public Integer notInstalledDeviceCount;
+
+    /**
      * The User Name.
      * User name.
      */
@@ -45,30 +69,6 @@ public class UserAppInstallStatus extends Entity implements IJsonBackedObject {
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Installed Device Count.
-     * Installed Device Count.
-     */
-    @SerializedName("installedDeviceCount")
-    @Expose
-    public Integer installedDeviceCount;
-
-    /**
-     * The Failed Device Count.
-     * Failed Device Count.
-     */
-    @SerializedName("failedDeviceCount")
-    @Expose
-    public Integer failedDeviceCount;
-
-    /**
-     * The Not Installed Device Count.
-     * Not installed device count.
-     */
-    @SerializedName("notInstalledDeviceCount")
-    @Expose
-    public Integer notInstalledDeviceCount;
 
     /**
      * The App.

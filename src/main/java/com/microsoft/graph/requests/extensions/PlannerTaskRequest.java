@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      */
     public PlannerTask post(final PlannerTask newPlannerTask) throws ClientException {
         return send(HttpMethod.POST, newPlannerTask);
+    }
+
+    /**
+     * Creates a PlannerTask with a new object
+     *
+     * @param newPlannerTask the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback) {
+        send(HttpMethod.PUT, callback, newPlannerTask);
+    }
+
+    /**
+     * Creates a PlannerTask with a new object
+     *
+     * @param newPlannerTask the object to create/update
+     * @return the created PlannerTask
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerTask put(final PlannerTask newPlannerTask) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerTask);
     }
 
     /**

@@ -36,20 +36,20 @@ public class DeviceHealthScriptRemediationSummary implements IJsonBackedObject {
     }
 
     /**
-     * The Script Count.
-     * The number of device health scripts deployed.
-     */
-    @SerializedName("scriptCount")
-    @Expose
-    public Integer scriptCount;
-
-    /**
      * The Remediated Device Count.
      * The number of devices remediated by device health scripts.
      */
     @SerializedName("remediatedDeviceCount")
     @Expose
     public Integer remediatedDeviceCount;
+
+    /**
+     * The Script Count.
+     * The number of device health scripts deployed.
+     */
+    @SerializedName("scriptCount")
+    @Expose
+    public Integer scriptCount;
 
 
     /**

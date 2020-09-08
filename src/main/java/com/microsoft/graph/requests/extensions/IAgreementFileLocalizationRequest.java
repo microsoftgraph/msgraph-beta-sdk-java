@@ -80,6 +80,23 @@ public interface IAgreementFileLocalizationRequest extends IHttpRequest {
     AgreementFileLocalization post(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException;
 
     /**
+     * Posts a AgreementFileLocalization with a new object
+     *
+     * @param newAgreementFileLocalization the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback);
+
+    /**
+     * Posts a AgreementFileLocalization with a new object
+     *
+     * @param newAgreementFileLocalization the object to create/update
+     * @return the created AgreementFileLocalization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AgreementFileLocalization put(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

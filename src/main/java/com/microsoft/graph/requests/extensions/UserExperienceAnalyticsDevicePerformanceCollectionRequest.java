@@ -63,14 +63,14 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionRequest extends B
     public void post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<UserExperienceAnalyticsDevicePerformance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsDevicePerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsDevicePerformance, callback);
     }
 
     public UserExperienceAnalyticsDevicePerformance post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsDevicePerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -107,6 +107,27 @@ public class UserExperienceAnalyticsDevicePerformanceCollectionRequest extends B
         return (UserExperienceAnalyticsDevicePerformanceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDevicePerformanceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsDevicePerformanceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDevicePerformanceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsDevicePerformanceCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsDevicePerformanceCollectionPage buildFromResponse(final UserExperienceAnalyticsDevicePerformanceCollectionResponse response) {
         final IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

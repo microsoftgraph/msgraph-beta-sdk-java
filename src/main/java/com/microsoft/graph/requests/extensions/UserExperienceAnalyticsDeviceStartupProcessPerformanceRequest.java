@@ -112,6 +112,27 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequest exten
     }
 
     /**
+     * Creates a UserExperienceAnalyticsDeviceStartupProcessPerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsDeviceStartupProcessPerformance);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsDeviceStartupProcessPerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupProcessPerformance the object to create/update
+     * @return the created UserExperienceAnalyticsDeviceStartupProcessPerformance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsDeviceStartupProcessPerformance put(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsDeviceStartupProcessPerformance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

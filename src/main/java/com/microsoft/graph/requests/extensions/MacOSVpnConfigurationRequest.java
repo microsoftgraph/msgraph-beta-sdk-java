@@ -114,6 +114,27 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
     }
 
     /**
+     * Creates a MacOSVpnConfiguration with a new object
+     *
+     * @param newMacOSVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<MacOSVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newMacOSVpnConfiguration);
+    }
+
+    /**
+     * Creates a MacOSVpnConfiguration with a new object
+     *
+     * @param newMacOSVpnConfiguration the object to create/update
+     * @return the created MacOSVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSVpnConfiguration put(final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSVpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

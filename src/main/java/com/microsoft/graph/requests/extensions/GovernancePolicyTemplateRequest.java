@@ -112,6 +112,27 @@ public class GovernancePolicyTemplateRequest extends BaseRequest implements IGov
     }
 
     /**
+     * Creates a GovernancePolicyTemplate with a new object
+     *
+     * @param newGovernancePolicyTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback) {
+        send(HttpMethod.PUT, callback, newGovernancePolicyTemplate);
+    }
+
+    /**
+     * Creates a GovernancePolicyTemplate with a new object
+     *
+     * @param newGovernancePolicyTemplate the object to create/update
+     * @return the created GovernancePolicyTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GovernancePolicyTemplate put(final GovernancePolicyTemplate newGovernancePolicyTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newGovernancePolicyTemplate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

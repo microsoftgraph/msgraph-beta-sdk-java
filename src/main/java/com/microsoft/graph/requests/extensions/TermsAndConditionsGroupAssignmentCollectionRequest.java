@@ -62,14 +62,14 @@ public class TermsAndConditionsGroupAssignmentCollectionRequest extends BaseColl
     public void post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditionsGroupAssignment, callback);
     }
 
     public TermsAndConditionsGroupAssignment post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditionsGroupAssignment);
     }
 
@@ -106,6 +106,27 @@ public class TermsAndConditionsGroupAssignmentCollectionRequest extends BaseColl
         return (TermsAndConditionsGroupAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITermsAndConditionsGroupAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TermsAndConditionsGroupAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITermsAndConditionsGroupAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITermsAndConditionsGroupAssignmentCollectionRequest)this;
+    }
     public ITermsAndConditionsGroupAssignmentCollectionPage buildFromResponse(final TermsAndConditionsGroupAssignmentCollectionResponse response) {
         final ITermsAndConditionsGroupAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

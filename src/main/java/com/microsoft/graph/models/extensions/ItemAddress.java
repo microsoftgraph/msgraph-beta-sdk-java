@@ -29,20 +29,20 @@ public class ItemAddress extends ItemFacet implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Detail.
      * 
      */
     @SerializedName("detail")
     @Expose
     public PhysicalAddress detail;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Geo Coordinates.

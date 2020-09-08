@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,10 +39,6 @@ public interface ICustomerRequestBuilder extends IRequestBuilder {
     ICustomerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPictureCollectionRequestBuilder picture();
-
-    IPictureRequestBuilder picture(final String id);
-
     /**
      * Gets the request builder for Currency
      *
@@ -51,11 +47,22 @@ public interface ICustomerRequestBuilder extends IRequestBuilder {
     ICurrencyRequestBuilder currency();
 
     /**
+     * Gets the request builder for PaymentMethod
+     *
+     * @return the IPaymentMethodRequestBuilder instance
+     */
+    IPaymentMethodRequestBuilder paymentMethod();
+
+    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     IPaymentTermRequestBuilder paymentTerm();
+
+    IPictureCollectionRequestBuilder picture();
+
+    IPictureRequestBuilder picture(final String id);
 
     /**
      * Gets the request builder for ShipmentMethod
@@ -63,12 +70,5 @@ public interface ICustomerRequestBuilder extends IRequestBuilder {
      * @return the IShipmentMethodRequestBuilder instance
      */
     IShipmentMethodRequestBuilder shipmentMethod();
-
-    /**
-     * Gets the request builder for PaymentMethod
-     *
-     * @return the IPaymentMethodRequestBuilder instance
-     */
-    IPaymentMethodRequestBuilder paymentMethod();
 
 }

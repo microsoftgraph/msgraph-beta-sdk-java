@@ -80,6 +80,23 @@ public interface IIosImportedPFXCertificateProfileRequest extends IHttpRequest {
     IosImportedPFXCertificateProfile post(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile) throws ClientException;
 
     /**
+     * Posts a IosImportedPFXCertificateProfile with a new object
+     *
+     * @param newIosImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback);
+
+    /**
+     * Posts a IosImportedPFXCertificateProfile with a new object
+     *
+     * @param newIosImportedPFXCertificateProfile the object to create/update
+     * @return the created IosImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosImportedPFXCertificateProfile put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

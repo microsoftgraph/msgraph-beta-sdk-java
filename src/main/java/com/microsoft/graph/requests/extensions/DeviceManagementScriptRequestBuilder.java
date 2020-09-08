@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
@@ -72,19 +72,26 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder imp
     }
 
 
-    public IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceManagementScriptGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
-    }
-
-    public IDeviceManagementScriptGroupAssignmentRequestBuilder groupAssignments(final String id) {
-        return new DeviceManagementScriptGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
-    }
     public IDeviceManagementScriptAssignmentCollectionRequestBuilder assignments() {
         return new DeviceManagementScriptAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     public IDeviceManagementScriptAssignmentRequestBuilder assignments(final String id) {
         return new DeviceManagementScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+        return new DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
+    }
+
+    public IDeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
+        return new DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new DeviceManagementScriptGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IDeviceManagementScriptGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new DeviceManagementScriptGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -94,13 +101,6 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder imp
      */
     public IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder runSummary() {
         return new DeviceManagementScriptRunSummaryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
-    }
-    public IDeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
-        return new DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
-    }
-
-    public IDeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
-        return new DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
     public IDeviceManagementScriptUserStateCollectionRequestBuilder userRunStates() {
         return new DeviceManagementScriptUserStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userRunStates"), getClient(), null);

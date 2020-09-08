@@ -38,14 +38,6 @@ public class ExpressionEvaluationDetails implements IJsonBackedObject {
     }
 
     /**
-     * The Expression Result.
-     * 
-     */
-    @SerializedName("expressionResult")
-    @Expose
-    public Boolean expressionResult;
-
-    /**
      * The Expression.
      * 
      */
@@ -60,6 +52,14 @@ public class ExpressionEvaluationDetails implements IJsonBackedObject {
     @SerializedName("expressionEvaluationDetails")
     @Expose
     public java.util.List<ExpressionEvaluationDetails> expressionEvaluationDetails;
+
+    /**
+     * The Expression Result.
+     * 
+     */
+    @SerializedName("expressionResult")
+    @Expose
+    public Boolean expressionResult;
 
     /**
      * The Property To Evaluate.

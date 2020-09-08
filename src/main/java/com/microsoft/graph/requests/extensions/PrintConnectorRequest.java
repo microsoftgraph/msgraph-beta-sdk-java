@@ -112,6 +112,27 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
     }
 
     /**
+     * Creates a PrintConnector with a new object
+     *
+     * @param newPrintConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback) {
+        send(HttpMethod.PUT, callback, newPrintConnector);
+    }
+
+    /**
+     * Creates a PrintConnector with a new object
+     *
+     * @param newPrintConnector the object to create/update
+     * @return the created PrintConnector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintConnector put(final PrintConnector newPrintConnector) throws ClientException {
+        return send(HttpMethod.PUT, newPrintConnector);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

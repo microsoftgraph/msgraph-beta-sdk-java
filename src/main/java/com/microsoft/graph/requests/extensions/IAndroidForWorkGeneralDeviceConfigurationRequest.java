@@ -80,6 +80,23 @@ public interface IAndroidForWorkGeneralDeviceConfigurationRequest extends IHttpR
     AndroidForWorkGeneralDeviceConfiguration post(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidForWorkGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback);
+
+    /**
+     * Posts a AndroidForWorkGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidForWorkGeneralDeviceConfiguration the object to create/update
+     * @return the created AndroidForWorkGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkGeneralDeviceConfiguration put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

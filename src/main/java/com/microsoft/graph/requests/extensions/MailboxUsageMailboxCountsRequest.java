@@ -112,6 +112,27 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
     }
 
     /**
+     * Creates a MailboxUsageMailboxCounts with a new object
+     *
+     * @param newMailboxUsageMailboxCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<MailboxUsageMailboxCounts> callback) {
+        send(HttpMethod.PUT, callback, newMailboxUsageMailboxCounts);
+    }
+
+    /**
+     * Creates a MailboxUsageMailboxCounts with a new object
+     *
+     * @param newMailboxUsageMailboxCounts the object to create/update
+     * @return the created MailboxUsageMailboxCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailboxUsageMailboxCounts put(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts) throws ClientException {
+        return send(HttpMethod.PUT, newMailboxUsageMailboxCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

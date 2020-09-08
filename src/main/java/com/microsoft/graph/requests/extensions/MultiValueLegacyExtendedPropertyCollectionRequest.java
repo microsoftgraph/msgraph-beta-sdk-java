@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.OutlookTaskFolder;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
     public void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MultiValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMultiValueLegacyExtendedProperty, callback);
     }
 
     public MultiValueLegacyExtendedProperty post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MultiValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMultiValueLegacyExtendedProperty);
     }
 
@@ -106,6 +106,27 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
         return (MultiValueLegacyExtendedPropertyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMultiValueLegacyExtendedPropertyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MultiValueLegacyExtendedPropertyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMultiValueLegacyExtendedPropertyCollectionRequest)this;
+    }
     public IMultiValueLegacyExtendedPropertyCollectionPage buildFromResponse(final MultiValueLegacyExtendedPropertyCollectionResponse response) {
         final IMultiValueLegacyExtendedPropertyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

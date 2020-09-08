@@ -80,6 +80,23 @@ public interface IEducationSynchronizationProfileStatusRequest extends IHttpRequ
     EducationSynchronizationProfileStatus post(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus) throws ClientException;
 
     /**
+     * Posts a EducationSynchronizationProfileStatus with a new object
+     *
+     * @param newEducationSynchronizationProfileStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus, final ICallback<EducationSynchronizationProfileStatus> callback);
+
+    /**
+     * Posts a EducationSynchronizationProfileStatus with a new object
+     *
+     * @param newEducationSynchronizationProfileStatus the object to create/update
+     * @return the created EducationSynchronizationProfileStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationSynchronizationProfileStatus put(final EducationSynchronizationProfileStatus newEducationSynchronizationProfileStatus) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -61,14 +61,14 @@ public class GovernanceRoleAssignmentCollectionRequest extends BaseCollectionReq
     public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceRoleAssignment, callback);
     }
 
     public GovernanceRoleAssignment post(final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GovernanceRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceRoleAssignment);
     }
 
@@ -105,6 +105,27 @@ public class GovernanceRoleAssignmentCollectionRequest extends BaseCollectionReq
         return (GovernanceRoleAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGovernanceRoleAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GovernanceRoleAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGovernanceRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGovernanceRoleAssignmentCollectionRequest)this;
+    }
     public IGovernanceRoleAssignmentCollectionPage buildFromResponse(final GovernanceRoleAssignmentCollectionResponse response) {
         final IGovernanceRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

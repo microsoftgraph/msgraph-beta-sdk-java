@@ -37,12 +37,12 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
     }
 
     /**
-     * The Is Enforced.
+     * The Aa Guids.
      * 
      */
-    @SerializedName("isEnforced")
+    @SerializedName("aaGuids")
     @Expose
-    public Boolean isEnforced;
+    public java.util.List<String> aaGuids;
 
     /**
      * The Enforcement Type.
@@ -53,12 +53,12 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
     public Fido2RestrictionEnforcementType enforcementType;
 
     /**
-     * The Aa Guids.
+     * The Is Enforced.
      * 
      */
-    @SerializedName("aaGuids")
+    @SerializedName("isEnforced")
     @Expose
-    public java.util.List<String> aaGuids;
+    public Boolean isEnforced;
 
 
     /**

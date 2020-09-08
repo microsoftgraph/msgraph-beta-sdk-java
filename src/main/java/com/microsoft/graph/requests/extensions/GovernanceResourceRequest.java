@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceResource;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionRequestBuilder;
@@ -127,6 +127,27 @@ public class GovernanceResourceRequest extends BaseRequest implements IGovernanc
      */
     public GovernanceResource post(final GovernanceResource newGovernanceResource) throws ClientException {
         return send(HttpMethod.POST, newGovernanceResource);
+    }
+
+    /**
+     * Creates a GovernanceResource with a new object
+     *
+     * @param newGovernanceResource the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback) {
+        send(HttpMethod.PUT, callback, newGovernanceResource);
+    }
+
+    /**
+     * Creates a GovernanceResource with a new object
+     *
+     * @param newGovernanceResource the object to create/update
+     * @return the created GovernanceResource
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GovernanceResource put(final GovernanceResource newGovernanceResource) throws ClientException {
+        return send(HttpMethod.PUT, newGovernanceResource);
     }
 
     /**

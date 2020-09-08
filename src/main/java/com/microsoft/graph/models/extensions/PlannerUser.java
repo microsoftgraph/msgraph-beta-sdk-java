@@ -10,15 +10,15 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PlannerFavoritePlanReferenceCollection;
 import com.microsoft.graph.models.extensions.PlannerRecentPlanReferenceCollection;
-import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.PlannerDelta;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
+import com.microsoft.graph.models.extensions.PlannerPlan;
+import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionPage;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -53,16 +53,10 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
     public PlannerRecentPlanReferenceCollection recentPlanReferences;
 
     /**
-     * The Tasks.
-     * Read-only. Nullable. Returns the plannerPlans shared with the user.
+     * The All.
+     * 
      */
-    public PlannerTaskCollectionPage tasks;
-
-    /**
-     * The Plans.
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
-     */
-    public PlannerPlanCollectionPage plans;
+    public PlannerDeltaCollectionPage all;
 
     /**
      * The Favorite Plans.
@@ -71,16 +65,22 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
     public PlannerPlanCollectionPage favoritePlans;
 
     /**
+     * The Plans.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     */
+    public PlannerPlanCollectionPage plans;
+
+    /**
      * The Recent Plans.
      * 
      */
     public PlannerPlanCollectionPage recentPlans;
 
     /**
-     * The All.
-     * 
+     * The Tasks.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
-    public PlannerDeltaCollectionPage all;
+    public PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -122,36 +122,20 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("tasks")) {
-            final PlannerTaskCollectionResponse response = new PlannerTaskCollectionResponse();
-            if (json.has("tasks@odata.nextLink")) {
-                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
+        if (json.has("all")) {
+            final PlannerDeltaCollectionResponse response = new PlannerDeltaCollectionResponse();
+            if (json.has("all@odata.nextLink")) {
+                response.nextLink = json.get("all@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
-            final PlannerTask[] array = new PlannerTask[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("all").toString(), JsonObject[].class);
+            final PlannerDelta[] array = new PlannerDelta[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerTask.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerDelta.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            tasks = new PlannerTaskCollectionPage(response, null);
-        }
-
-        if (json.has("plans")) {
-            final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
-            if (json.has("plans@odata.nextLink")) {
-                response.nextLink = json.get("plans@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("plans").toString(), JsonObject[].class);
-            final PlannerPlan[] array = new PlannerPlan[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerPlan.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            plans = new PlannerPlanCollectionPage(response, null);
+            all = new PlannerDeltaCollectionPage(response, null);
         }
 
         if (json.has("favoritePlans")) {
@@ -170,6 +154,22 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
             favoritePlans = new PlannerPlanCollectionPage(response, null);
         }
 
+        if (json.has("plans")) {
+            final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
+            if (json.has("plans@odata.nextLink")) {
+                response.nextLink = json.get("plans@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("plans").toString(), JsonObject[].class);
+            final PlannerPlan[] array = new PlannerPlan[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerPlan.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            plans = new PlannerPlanCollectionPage(response, null);
+        }
+
         if (json.has("recentPlans")) {
             final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
             if (json.has("recentPlans@odata.nextLink")) {
@@ -186,20 +186,20 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
             recentPlans = new PlannerPlanCollectionPage(response, null);
         }
 
-        if (json.has("all")) {
-            final PlannerDeltaCollectionResponse response = new PlannerDeltaCollectionResponse();
-            if (json.has("all@odata.nextLink")) {
-                response.nextLink = json.get("all@odata.nextLink").getAsString();
+        if (json.has("tasks")) {
+            final PlannerTaskCollectionResponse response = new PlannerTaskCollectionResponse();
+            if (json.has("tasks@odata.nextLink")) {
+                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("all").toString(), JsonObject[].class);
-            final PlannerDelta[] array = new PlannerDelta[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
+            final PlannerTask[] array = new PlannerTask[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerDelta.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerTask.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            all = new PlannerDeltaCollectionPage(response, null);
+            tasks = new PlannerTaskCollectionPage(response, null);
         }
     }
 }

@@ -116,6 +116,27 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
     }
 
     /**
+     * Creates a OfficeConfiguration with a new object
+     *
+     * @param newOfficeConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OfficeConfiguration newOfficeConfiguration, final ICallback<OfficeConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newOfficeConfiguration);
+    }
+
+    /**
+     * Creates a OfficeConfiguration with a new object
+     *
+     * @param newOfficeConfiguration the object to create/update
+     * @return the created OfficeConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OfficeConfiguration put(final OfficeConfiguration newOfficeConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newOfficeConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

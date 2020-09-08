@@ -62,14 +62,14 @@ public class TrustFrameworkPolicyCollectionRequest extends BaseCollectionRequest
     public void post(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<TrustFrameworkPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrustFrameworkPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrustFrameworkPolicy, callback);
     }
 
     public TrustFrameworkPolicy post(final TrustFrameworkPolicy newTrustFrameworkPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrustFrameworkPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrustFrameworkPolicy);
     }
 
@@ -106,6 +106,27 @@ public class TrustFrameworkPolicyCollectionRequest extends BaseCollectionRequest
         return (TrustFrameworkPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITrustFrameworkPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TrustFrameworkPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITrustFrameworkPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITrustFrameworkPolicyCollectionRequest)this;
+    }
     public ITrustFrameworkPolicyCollectionPage buildFromResponse(final TrustFrameworkPolicyCollectionResponse response) {
         final ITrustFrameworkPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

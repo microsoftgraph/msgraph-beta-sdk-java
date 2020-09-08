@@ -80,6 +80,23 @@ public interface IEducationPointsOutcomeRequest extends IHttpRequest {
     EducationPointsOutcome post(final EducationPointsOutcome newEducationPointsOutcome) throws ClientException;
 
     /**
+     * Posts a EducationPointsOutcome with a new object
+     *
+     * @param newEducationPointsOutcome the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<EducationPointsOutcome> callback);
+
+    /**
+     * Posts a EducationPointsOutcome with a new object
+     *
+     * @param newEducationPointsOutcome the object to create/update
+     * @return the created EducationPointsOutcome
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationPointsOutcome put(final EducationPointsOutcome newEducationPointsOutcome) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

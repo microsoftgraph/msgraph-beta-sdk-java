@@ -127,6 +127,27 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a SecurityBaselineStateSummary with a new object
+     *
+     * @param newSecurityBaselineStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<SecurityBaselineStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newSecurityBaselineStateSummary);
+    }
+
+    /**
+     * Creates a SecurityBaselineStateSummary with a new object
+     *
+     * @param newSecurityBaselineStateSummary the object to create/update
+     * @return the created SecurityBaselineStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityBaselineStateSummary put(final SecurityBaselineStateSummary newSecurityBaselineStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityBaselineStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

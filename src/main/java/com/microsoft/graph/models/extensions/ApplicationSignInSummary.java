@@ -35,20 +35,20 @@ public class ApplicationSignInSummary extends Entity implements IJsonBackedObjec
     public String appDisplayName;
 
     /**
-     * The Successful Sign In Count.
-     * 
-     */
-    @SerializedName("successfulSignInCount")
-    @Expose
-    public Long successfulSignInCount;
-
-    /**
      * The Failed Sign In Count.
      * 
      */
     @SerializedName("failedSignInCount")
     @Expose
     public Long failedSignInCount;
+
+    /**
+     * The Successful Sign In Count.
+     * 
+     */
+    @SerializedName("successfulSignInCount")
+    @Expose
+    public Long successfulSignInCount;
 
     /**
      * The Success Percentage.

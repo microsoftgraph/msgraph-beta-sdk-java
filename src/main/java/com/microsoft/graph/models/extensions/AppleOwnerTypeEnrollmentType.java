@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ManagedDeviceOwnerType;
 import com.microsoft.graph.models.generated.AppleUserInitiatedEnrollmentType;
+import com.microsoft.graph.models.generated.ManagedDeviceOwnerType;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class AppleOwnerTypeEnrollmentType implements IJsonBackedObject {
     }
 
     /**
-     * The Owner Type.
-     * The owner type.
-     */
-    @SerializedName("ownerType")
-    @Expose
-    public ManagedDeviceOwnerType ownerType;
-
-    /**
      * The Enrollment Type.
      * The enrollment type.
      */
     @SerializedName("enrollmentType")
     @Expose
     public AppleUserInitiatedEnrollmentType enrollmentType;
+
+    /**
+     * The Owner Type.
+     * The owner type.
+     */
+    @SerializedName("ownerType")
+    @Expose
+    public ManagedDeviceOwnerType ownerType;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ChangeUefiSettingsPermission;
 import com.microsoft.graph.models.generated.Enablement;
+import com.microsoft.graph.models.generated.ChangeUefiSettingsPermission;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -29,20 +29,20 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
 
     /**
-     * The Change Uefi Settings Permission.
-     * Defines the permission level granted to users to change UEFI settings.
+     * The Boot From Built In Network Adapters.
+     * Defines whether a user is allowed to boot from built-in network adapters.
      */
-    @SerializedName("changeUefiSettingsPermission")
+    @SerializedName("bootFromBuiltInNetworkAdapters")
     @Expose
-    public ChangeUefiSettingsPermission changeUefiSettingsPermission;
+    public Enablement bootFromBuiltInNetworkAdapters;
 
     /**
-     * The Virtualization Of Cpu And IO.
-     * Defines whether CPU and IO virtualization is enabled.
+     * The Boot From External Media.
+     * Defines whether a user is allowed to boot from external media.
      */
-    @SerializedName("virtualizationOfCpuAndIO")
+    @SerializedName("bootFromExternalMedia")
     @Expose
-    public Enablement virtualizationOfCpuAndIO;
+    public Enablement bootFromExternalMedia;
 
     /**
      * The Cameras.
@@ -51,6 +51,14 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     @SerializedName("cameras")
     @Expose
     public Enablement cameras;
+
+    /**
+     * The Change Uefi Settings Permission.
+     * Defines the permission level granted to users to change UEFI settings.
+     */
+    @SerializedName("changeUefiSettingsPermission")
+    @Expose
+    public ChangeUefiSettingsPermission changeUefiSettingsPermission;
 
     /**
      * The Microphones And Speakers.
@@ -69,20 +77,12 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     public Enablement radios;
 
     /**
-     * The Boot From External Media.
-     * Defines whether a user is allowed to boot from external media.
+     * The Virtualization Of Cpu And IO.
+     * Defines whether CPU and IO virtualization is enabled.
      */
-    @SerializedName("bootFromExternalMedia")
+    @SerializedName("virtualizationOfCpuAndIO")
     @Expose
-    public Enablement bootFromExternalMedia;
-
-    /**
-     * The Boot From Built In Network Adapters.
-     * Defines whether a user is allowed to boot from built-in network adapters.
-     */
-    @SerializedName("bootFromBuiltInNetworkAdapters")
-    @Expose
-    public Enablement bootFromBuiltInNetworkAdapters;
+    public Enablement virtualizationOfCpuAndIO;
 
 
     /**

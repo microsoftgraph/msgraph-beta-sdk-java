@@ -112,6 +112,27 @@ public class WindowsStoreAppRequest extends BaseRequest implements IWindowsStore
     }
 
     /**
+     * Creates a WindowsStoreApp with a new object
+     *
+     * @param newWindowsStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsStoreApp newWindowsStoreApp, final ICallback<WindowsStoreApp> callback) {
+        send(HttpMethod.PUT, callback, newWindowsStoreApp);
+    }
+
+    /**
+     * Creates a WindowsStoreApp with a new object
+     *
+     * @param newWindowsStoreApp the object to create/update
+     * @return the created WindowsStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsStoreApp put(final WindowsStoreApp newWindowsStoreApp) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsStoreApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

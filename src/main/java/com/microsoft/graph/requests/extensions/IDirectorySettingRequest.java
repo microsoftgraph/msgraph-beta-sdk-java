@@ -80,6 +80,23 @@ public interface IDirectorySettingRequest extends IHttpRequest {
     DirectorySetting post(final DirectorySetting newDirectorySetting) throws ClientException;
 
     /**
+     * Posts a DirectorySetting with a new object
+     *
+     * @param newDirectorySetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback);
+
+    /**
+     * Posts a DirectorySetting with a new object
+     *
+     * @param newDirectorySetting the object to create/update
+     * @return the created DirectorySetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DirectorySetting put(final DirectorySetting newDirectorySetting) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
 import com.microsoft.graph.models.generated.CertificateStore;
 import com.microsoft.graph.models.extensions.CustomSubjectAlternativeName;
+import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.extensions.Windows10CertificateProfileBase;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionResponse;
@@ -33,6 +33,22 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
 
 
     /**
+     * The Certificate Store.
+     * Target store certificate
+     */
+    @SerializedName("certificateStore")
+    @Expose
+    public CertificateStore certificateStore;
+
+    /**
+     * The Certificate Template Name.
+     * PKCS Certificate Template Name
+     */
+    @SerializedName("certificateTemplateName")
+    @Expose
+    public String certificateTemplateName;
+
+    /**
      * The Certification Authority.
      * PKCS Certification Authority
      */
@@ -49,20 +65,12 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     public String certificationAuthorityName;
 
     /**
-     * The Certificate Template Name.
-     * PKCS Certificate Template Name
+     * The Custom Subject Alternative Names.
+     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName("customSubjectAlternativeNames")
     @Expose
-    public String certificateTemplateName;
-
-    /**
-     * The Subject Alternative Name Format String.
-     * Custom String that defines the AAD Attribute.
-     */
-    @SerializedName("subjectAlternativeNameFormatString")
-    @Expose
-    public String subjectAlternativeNameFormatString;
+    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Extended Key Usages.
@@ -73,28 +81,20 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
 
     /**
+     * The Subject Alternative Name Format String.
+     * Custom String that defines the AAD Attribute.
+     */
+    @SerializedName("subjectAlternativeNameFormatString")
+    @Expose
+    public String subjectAlternativeNameFormatString;
+
+    /**
      * The Subject Name Format String.
      * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
     @SerializedName("subjectNameFormatString")
     @Expose
     public String subjectNameFormatString;
-
-    /**
-     * The Certificate Store.
-     * Target store certificate
-     */
-    @SerializedName("certificateStore")
-    @Expose
-    public CertificateStore certificateStore;
-
-    /**
-     * The Custom Subject Alternative Names.
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("customSubjectAlternativeNames")
-    @Expose
-    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Managed Device Certificate States.

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceManagementExchangeDeviceClass;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessLevel;
+import com.microsoft.graph.models.extensions.DeviceManagementExchangeDeviceClass;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class DeviceManagementExchangeAccessRule implements IJsonBackedObject {
     }
 
     /**
-     * The Device Class.
-     * Device Class which will be impacted by this rule.
-     */
-    @SerializedName("deviceClass")
-    @Expose
-    public DeviceManagementExchangeDeviceClass deviceClass;
-
-    /**
      * The Access Level.
      * Access Level for Exchange granted by this rule.
      */
     @SerializedName("accessLevel")
     @Expose
     public DeviceManagementExchangeAccessLevel accessLevel;
+
+    /**
+     * The Device Class.
+     * Device Class which will be impacted by this rule.
+     */
+    @SerializedName("deviceClass")
+    @Expose
+    public DeviceManagementExchangeDeviceClass deviceClass;
 
 
     /**

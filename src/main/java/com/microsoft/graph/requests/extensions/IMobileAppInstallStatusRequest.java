@@ -80,6 +80,23 @@ public interface IMobileAppInstallStatusRequest extends IHttpRequest {
     MobileAppInstallStatus post(final MobileAppInstallStatus newMobileAppInstallStatus) throws ClientException;
 
     /**
+     * Posts a MobileAppInstallStatus with a new object
+     *
+     * @param newMobileAppInstallStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback);
+
+    /**
+     * Posts a MobileAppInstallStatus with a new object
+     *
+     * @param newMobileAppInstallStatus the object to create/update
+     * @return the created MobileAppInstallStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileAppInstallStatus put(final MobileAppInstallStatus newMobileAppInstallStatus) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

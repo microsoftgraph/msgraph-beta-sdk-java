@@ -34,30 +34,6 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Group Policy Object Id.
-     * The Group Policy Object GUID from GPO Xml content
-     */
-    @SerializedName("groupPolicyObjectId")
-    @Expose
-    public java.util.UUID groupPolicyObjectId;
-
-    /**
-     * The Display Name.
-     * The name of Group Policy Object from the GPO Xml Content
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Ou Distinguished Name.
-     * The distinguished name of the OU.
-     */
-    @SerializedName("ouDistinguishedName")
-    @Expose
-    public String ouDistinguishedName;
-
-    /**
      * The Created Date Time.
      * The date and time at which the GroupPolicyMigrationReport was created.
      */
@@ -66,12 +42,12 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * The date and time at which the GroupPolicyMigrationReport was last modified.
+     * The Display Name.
+     * The name of Group Policy Object from the GPO Xml Content
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("displayName")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String displayName;
 
     /**
      * The Group Policy Created Date Time.
@@ -90,6 +66,22 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     public java.util.Calendar groupPolicyLastModifiedDateTime;
 
     /**
+     * The Group Policy Object Id.
+     * The Group Policy Object GUID from GPO Xml content
+     */
+    @SerializedName("groupPolicyObjectId")
+    @Expose
+    public java.util.UUID groupPolicyObjectId;
+
+    /**
+     * The Last Modified Date Time.
+     * The date and time at which the GroupPolicyMigrationReport was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
      * The Migration Readiness.
      * The Intune coverage for the associated Group Policy Object file.
      */
@@ -98,20 +90,12 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     public GroupPolicyMigrationReadiness migrationReadiness;
 
     /**
-     * The Targeted In Active Directory.
-     * The Targeted in AD property from GPO Xml Content
+     * The Ou Distinguished Name.
+     * The distinguished name of the OU.
      */
-    @SerializedName("targetedInActiveDirectory")
+    @SerializedName("ouDistinguishedName")
     @Expose
-    public Boolean targetedInActiveDirectory;
-
-    /**
-     * The Total Settings Count.
-     * The total number of Group Policy Settings from GPO file.
-     */
-    @SerializedName("totalSettingsCount")
-    @Expose
-    public Integer totalSettingsCount;
+    public String ouDistinguishedName;
 
     /**
      * The Supported Settings Count.
@@ -128,6 +112,22 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     @SerializedName("supportedSettingsPercent")
     @Expose
     public Integer supportedSettingsPercent;
+
+    /**
+     * The Targeted In Active Directory.
+     * The Targeted in AD property from GPO Xml Content
+     */
+    @SerializedName("targetedInActiveDirectory")
+    @Expose
+    public Boolean targetedInActiveDirectory;
+
+    /**
+     * The Total Settings Count.
+     * The total number of Group Policy Settings from GPO file.
+     */
+    @SerializedName("totalSettingsCount")
+    @Expose
+    public Integer totalSettingsCount;
 
     /**
      * The Group Policy Setting Mappings.

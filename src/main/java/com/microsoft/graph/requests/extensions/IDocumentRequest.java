@@ -80,6 +80,23 @@ public interface IDocumentRequest extends IHttpRequest {
     Document post(final Document newDocument) throws ClientException;
 
     /**
+     * Posts a Document with a new object
+     *
+     * @param newDocument the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Document newDocument, final ICallback<Document> callback);
+
+    /**
+     * Posts a Document with a new object
+     *
+     * @param newDocument the object to create/update
+     * @return the created Document
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Document put(final Document newDocument) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IDimensionRequest extends IHttpRequest {
     Dimension post(final Dimension newDimension) throws ClientException;
 
     /**
+     * Posts a Dimension with a new object
+     *
+     * @param newDimension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Dimension newDimension, final ICallback<Dimension> callback);
+
+    /**
+     * Posts a Dimension with a new object
+     *
+     * @param newDimension the object to create/update
+     * @return the created Dimension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Dimension put(final Dimension newDimension) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IImportedDeviceIdentityRequest extends IHttpRequest {
     ImportedDeviceIdentity post(final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException;
 
     /**
+     * Posts a ImportedDeviceIdentity with a new object
+     *
+     * @param newImportedDeviceIdentity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<ImportedDeviceIdentity> callback);
+
+    /**
+     * Posts a ImportedDeviceIdentity with a new object
+     *
+     * @param newImportedDeviceIdentity the object to create/update
+     * @return the created ImportedDeviceIdentity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ImportedDeviceIdentity put(final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

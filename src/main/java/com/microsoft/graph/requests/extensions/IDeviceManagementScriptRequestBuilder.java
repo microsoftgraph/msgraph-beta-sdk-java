@@ -11,12 +11,12 @@ import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
@@ -45,13 +45,17 @@ public interface IDeviceManagementScriptRequestBuilder extends IRequestBuilder {
     IDeviceManagementScriptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceManagementScriptGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceManagementScriptAssignmentCollectionRequestBuilder assignments();
 
     IDeviceManagementScriptAssignmentRequestBuilder assignments(final String id);
+
+    IDeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates();
+
+    IDeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(final String id);
+
+    IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceManagementScriptGroupAssignmentRequestBuilder groupAssignments(final String id);
 
     /**
      * Gets the request builder for DeviceManagementScriptRunSummary
@@ -59,10 +63,6 @@ public interface IDeviceManagementScriptRequestBuilder extends IRequestBuilder {
      * @return the IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder instance
      */
     IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder runSummary();
-
-    IDeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates();
-
-    IDeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(final String id);
 
     IDeviceManagementScriptUserStateCollectionRequestBuilder userRunStates();
 

@@ -112,6 +112,27 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
     }
 
     /**
+     * Creates a AndroidDeviceComplianceLocalActionLockDevice with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<AndroidDeviceComplianceLocalActionLockDevice> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionLockDevice);
+    }
+
+    /**
+     * Creates a AndroidDeviceComplianceLocalActionLockDevice with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
+     * @return the created AndroidDeviceComplianceLocalActionLockDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceComplianceLocalActionLockDevice put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceComplianceLocalActionLockDevice);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

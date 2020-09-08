@@ -80,6 +80,23 @@ public interface IWindowsAssignedAccessProfileRequest extends IHttpRequest {
     WindowsAssignedAccessProfile post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException;
 
     /**
+     * Posts a WindowsAssignedAccessProfile with a new object
+     *
+     * @param newWindowsAssignedAccessProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback);
+
+    /**
+     * Posts a WindowsAssignedAccessProfile with a new object
+     *
+     * @param newWindowsAssignedAccessProfile the object to create/update
+     * @return the created WindowsAssignedAccessProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsAssignedAccessProfile put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

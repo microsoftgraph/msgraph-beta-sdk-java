@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplication;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
     }
 
 
-    public IUnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions() {
-        return new UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
-    }
-
-    public IUnifiedRoleDefinitionRequestBuilder roleDefinitions(final String id) {
-        return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
-    }
     public IUnifiedRoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new UnifiedRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
     public IUnifiedRoleAssignmentRequestBuilder roleAssignments(final String id) {
         return new UnifiedRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions() {
+        return new UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
+    }
+
+    public IUnifiedRoleDefinitionRequestBuilder roleDefinitions(final String id) {
+        return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
 }

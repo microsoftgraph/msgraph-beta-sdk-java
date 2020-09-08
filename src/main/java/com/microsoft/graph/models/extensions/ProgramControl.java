@@ -38,20 +38,20 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
     public String controlId;
 
     /**
-     * The Program Id.
-     * 
-     */
-    @SerializedName("programId")
-    @Expose
-    public String programId;
-
-    /**
      * The Control Type Id.
      * 
      */
     @SerializedName("controlTypeId")
     @Expose
     public String controlTypeId;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Display Name.
@@ -62,20 +62,20 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
-
-    /**
      * The Owner.
      * 
      */
     @SerializedName("owner")
     @Expose
     public UserIdentity owner;
+
+    /**
+     * The Program Id.
+     * 
+     */
+    @SerializedName("programId")
+    @Expose
+    public String programId;
 
     /**
      * The Resource.
@@ -86,12 +86,12 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
     public ProgramResource resource;
 
     /**
-     * The Created Date Time.
+     * The Status.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("status")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public String status;
 
     /**
      * The Program.

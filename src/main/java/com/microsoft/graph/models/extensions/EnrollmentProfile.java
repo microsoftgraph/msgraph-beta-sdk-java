@@ -27,12 +27,12 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Name of the profile
+     * The Configuration Endpoint Url.
+     * Configuration endpoint url to use for Enrollment
      */
-    @SerializedName("displayName")
+    @SerializedName("configurationEndpointUrl")
     @Expose
-    public String displayName;
+    public String configurationEndpointUrl;
 
     /**
      * The Description.
@@ -43,20 +43,12 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Requires User Authentication.
-     * Indicates if the profile requires user authentication
+     * The Display Name.
+     * Name of the profile
      */
-    @SerializedName("requiresUserAuthentication")
+    @SerializedName("displayName")
     @Expose
-    public Boolean requiresUserAuthentication;
-
-    /**
-     * The Configuration Endpoint Url.
-     * Configuration endpoint url to use for Enrollment
-     */
-    @SerializedName("configurationEndpointUrl")
-    @Expose
-    public String configurationEndpointUrl;
+    public String displayName;
 
     /**
      * The Enable Authentication Via Company Portal.
@@ -73,6 +65,14 @@ public class EnrollmentProfile extends Entity implements IJsonBackedObject {
     @SerializedName("requireCompanyPortalOnSetupAssistantEnrolledDevices")
     @Expose
     public Boolean requireCompanyPortalOnSetupAssistantEnrolledDevices;
+
+    /**
+     * The Requires User Authentication.
+     * Indicates if the profile requires user authentication
+     */
+    @SerializedName("requiresUserAuthentication")
+    @Expose
+    public Boolean requiresUserAuthentication;
 
 
     /**

@@ -61,14 +61,14 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseCollec
     public void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceSpecificPermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newResourceSpecificPermissionGrant, callback);
     }
 
     public ResourceSpecificPermissionGrant post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceSpecificPermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newResourceSpecificPermissionGrant);
     }
 
@@ -105,6 +105,27 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseCollec
         return (ResourceSpecificPermissionGrantCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IResourceSpecificPermissionGrantCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ResourceSpecificPermissionGrantCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IResourceSpecificPermissionGrantCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IResourceSpecificPermissionGrantCollectionRequest)this;
+    }
     public IResourceSpecificPermissionGrantCollectionPage buildFromResponse(final ResourceSpecificPermissionGrantCollectionResponse response) {
         final IResourceSpecificPermissionGrantCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -112,6 +112,27 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
     }
 
     /**
+     * Creates a GroupPolicyObjectFile with a new object
+     *
+     * @param newGroupPolicyObjectFile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<GroupPolicyObjectFile> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyObjectFile);
+    }
+
+    /**
+     * Creates a GroupPolicyObjectFile with a new object
+     *
+     * @param newGroupPolicyObjectFile the object to create/update
+     * @return the created GroupPolicyObjectFile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyObjectFile put(final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyObjectFile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

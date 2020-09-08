@@ -28,12 +28,12 @@ public class AuthenticationFlowsPolicy extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Self Service Sign Up.
+     * The Description.
      * 
      */
-    @SerializedName("selfServiceSignUp")
+    @SerializedName("description")
     @Expose
-    public SelfServiceSignUpAuthenticationFlowConfiguration selfServiceSignUp;
+    public String description;
 
     /**
      * The Display Name.
@@ -44,12 +44,12 @@ public class AuthenticationFlowsPolicy extends Entity implements IJsonBackedObje
     public String displayName;
 
     /**
-     * The Description.
+     * The Self Service Sign Up.
      * 
      */
-    @SerializedName("description")
+    @SerializedName("selfServiceSignUp")
     @Expose
-    public String description;
+    public SelfServiceSignUpAuthenticationFlowConfiguration selfServiceSignUp;
 
 
     /**

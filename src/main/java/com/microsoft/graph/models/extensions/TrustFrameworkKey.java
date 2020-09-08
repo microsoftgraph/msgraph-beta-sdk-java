@@ -36,108 +36,12 @@ public class TrustFrameworkKey implements IJsonBackedObject {
     }
 
     /**
-     * The K.
-     * 
-     */
-    @SerializedName("k")
-    @Expose
-    public String k;
-
-    /**
-     * The X5c.
-     * 
-     */
-    @SerializedName("x5c")
-    @Expose
-    public java.util.List<String> x5c;
-
-    /**
-     * The X5t.
-     * 
-     */
-    @SerializedName("x5t")
-    @Expose
-    public String x5t;
-
-    /**
-     * The Kty.
-     * 
-     */
-    @SerializedName("kty")
-    @Expose
-    public String kty;
-
-    /**
-     * The Use.
-     * 
-     */
-    @SerializedName("use")
-    @Expose
-    public String use;
-
-    /**
-     * The Exp.
-     * 
-     */
-    @SerializedName("exp")
-    @Expose
-    public Long exp;
-
-    /**
-     * The Nbf.
-     * 
-     */
-    @SerializedName("nbf")
-    @Expose
-    public Long nbf;
-
-    /**
-     * The Kid.
-     * 
-     */
-    @SerializedName("kid")
-    @Expose
-    public String kid;
-
-    /**
-     * The E.
-     * 
-     */
-    @SerializedName("e")
-    @Expose
-    public String e;
-
-    /**
-     * The N.
-     * 
-     */
-    @SerializedName("n")
-    @Expose
-    public String n;
-
-    /**
      * The D.
      * 
      */
     @SerializedName("d")
     @Expose
     public String d;
-
-    /**
-     * The P.
-     * 
-     */
-    @SerializedName("p")
-    @Expose
-    public String p;
-
-    /**
-     * The Q.
-     * 
-     */
-    @SerializedName("q")
-    @Expose
-    public String q;
 
     /**
      * The Dp.
@@ -156,12 +60,108 @@ public class TrustFrameworkKey implements IJsonBackedObject {
     public String dq;
 
     /**
+     * The E.
+     * 
+     */
+    @SerializedName("e")
+    @Expose
+    public String e;
+
+    /**
+     * The Exp.
+     * 
+     */
+    @SerializedName("exp")
+    @Expose
+    public Long exp;
+
+    /**
+     * The K.
+     * 
+     */
+    @SerializedName("k")
+    @Expose
+    public String k;
+
+    /**
+     * The Kid.
+     * 
+     */
+    @SerializedName("kid")
+    @Expose
+    public String kid;
+
+    /**
+     * The Kty.
+     * 
+     */
+    @SerializedName("kty")
+    @Expose
+    public String kty;
+
+    /**
+     * The N.
+     * 
+     */
+    @SerializedName("n")
+    @Expose
+    public String n;
+
+    /**
+     * The Nbf.
+     * 
+     */
+    @SerializedName("nbf")
+    @Expose
+    public Long nbf;
+
+    /**
+     * The P.
+     * 
+     */
+    @SerializedName("p")
+    @Expose
+    public String p;
+
+    /**
+     * The Q.
+     * 
+     */
+    @SerializedName("q")
+    @Expose
+    public String q;
+
+    /**
      * The Qi.
      * 
      */
     @SerializedName("qi")
     @Expose
     public String qi;
+
+    /**
+     * The Use.
+     * 
+     */
+    @SerializedName("use")
+    @Expose
+    public String use;
+
+    /**
+     * The X5c.
+     * 
+     */
+    @SerializedName("x5c")
+    @Expose
+    public java.util.List<String> x5c;
+
+    /**
+     * The X5t.
+     * 
+     */
+    @SerializedName("x5t")
+    @Expose
+    public String x5t;
 
 
     /**

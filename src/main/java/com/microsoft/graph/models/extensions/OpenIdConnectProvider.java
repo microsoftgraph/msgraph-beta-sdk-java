@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.OpenIdConnectResponseTypes;
-import com.microsoft.graph.models.generated.OpenIdConnectResponseMode;
 import com.microsoft.graph.models.extensions.ClaimsMapping;
+import com.microsoft.graph.models.generated.OpenIdConnectResponseMode;
+import com.microsoft.graph.models.generated.OpenIdConnectResponseTypes;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 
 
@@ -30,20 +30,12 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
 
 
     /**
-     * The Scope.
+     * The Claims Mapping.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName("claimsMapping")
     @Expose
-    public String scope;
-
-    /**
-     * The Metadata Url.
-     * 
-     */
-    @SerializedName("metadataUrl")
-    @Expose
-    public String metadataUrl;
+    public ClaimsMapping claimsMapping;
 
     /**
      * The Domain Hint.
@@ -54,12 +46,12 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
     public String domainHint;
 
     /**
-     * The Response Type.
+     * The Metadata Url.
      * 
      */
-    @SerializedName("responseType")
+    @SerializedName("metadataUrl")
     @Expose
-    public EnumSet<OpenIdConnectResponseTypes> responseType;
+    public String metadataUrl;
 
     /**
      * The Response Mode.
@@ -70,12 +62,20 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
     public OpenIdConnectResponseMode responseMode;
 
     /**
-     * The Claims Mapping.
+     * The Response Type.
      * 
      */
-    @SerializedName("claimsMapping")
+    @SerializedName("responseType")
     @Expose
-    public ClaimsMapping claimsMapping;
+    public EnumSet<OpenIdConnectResponseTypes> responseType;
+
+    /**
+     * The Scope.
+     * 
+     */
+    @SerializedName("scope")
+    @Expose
+    public String scope;
 
 
     /**

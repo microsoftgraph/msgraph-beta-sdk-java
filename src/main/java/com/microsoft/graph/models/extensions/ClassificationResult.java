@@ -36,12 +36,12 @@ public class ClassificationResult implements IJsonBackedObject {
     }
 
     /**
-     * The Sensitive Type Id.
+     * The Confidence Level.
      * 
      */
-    @SerializedName("sensitiveTypeId")
+    @SerializedName("confidenceLevel")
     @Expose
-    public java.util.UUID sensitiveTypeId;
+    public Integer confidenceLevel;
 
     /**
      * The Count.
@@ -52,12 +52,12 @@ public class ClassificationResult implements IJsonBackedObject {
     public Integer count;
 
     /**
-     * The Confidence Level.
+     * The Sensitive Type Id.
      * 
      */
-    @SerializedName("confidenceLevel")
+    @SerializedName("sensitiveTypeId")
     @Expose
-    public Integer confidenceLevel;
+    public java.util.UUID sensitiveTypeId;
 
 
     /**

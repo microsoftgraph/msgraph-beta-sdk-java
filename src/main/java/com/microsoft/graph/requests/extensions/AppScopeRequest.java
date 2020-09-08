@@ -112,6 +112,27 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
     }
 
     /**
+     * Creates a AppScope with a new object
+     *
+     * @param newAppScope the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AppScope newAppScope, final ICallback<AppScope> callback) {
+        send(HttpMethod.PUT, callback, newAppScope);
+    }
+
+    /**
+     * Creates a AppScope with a new object
+     *
+     * @param newAppScope the object to create/update
+     * @return the created AppScope
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AppScope put(final AppScope newAppScope) throws ClientException {
+        return send(HttpMethod.PUT, newAppScope);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

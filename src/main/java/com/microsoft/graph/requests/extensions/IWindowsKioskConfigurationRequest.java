@@ -80,6 +80,23 @@ public interface IWindowsKioskConfigurationRequest extends IHttpRequest {
     WindowsKioskConfiguration post(final WindowsKioskConfiguration newWindowsKioskConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsKioskConfiguration with a new object
+     *
+     * @param newWindowsKioskConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsKioskConfiguration newWindowsKioskConfiguration, final ICallback<WindowsKioskConfiguration> callback);
+
+    /**
+     * Posts a WindowsKioskConfiguration with a new object
+     *
+     * @param newWindowsKioskConfiguration the object to create/update
+     * @return the created WindowsKioskConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsKioskConfiguration put(final WindowsKioskConfiguration newWindowsKioskConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

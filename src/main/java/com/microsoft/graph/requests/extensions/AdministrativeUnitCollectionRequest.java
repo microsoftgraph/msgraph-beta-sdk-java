@@ -61,14 +61,14 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
     public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAdministrativeUnit, callback);
     }
 
     public AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAdministrativeUnit);
     }
 
@@ -105,6 +105,27 @@ public class AdministrativeUnitCollectionRequest extends BaseCollectionRequest<A
         return (AdministrativeUnitCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAdministrativeUnitCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AdministrativeUnitCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAdministrativeUnitCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAdministrativeUnitCollectionRequest)this;
+    }
     public IAdministrativeUnitCollectionPage buildFromResponse(final AdministrativeUnitCollectionResponse response) {
         final IAdministrativeUnitCollectionRequestBuilder builder;
         if (response.nextLink != null) {

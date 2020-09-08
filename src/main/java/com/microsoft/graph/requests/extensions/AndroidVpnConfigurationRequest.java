@@ -114,6 +114,27 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
     }
 
     /**
+     * Creates a AndroidVpnConfiguration with a new object
+     *
+     * @param newAndroidVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<AndroidVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidVpnConfiguration);
+    }
+
+    /**
+     * Creates a AndroidVpnConfiguration with a new object
+     *
+     * @param newAndroidVpnConfiguration the object to create/update
+     * @return the created AndroidVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidVpnConfiguration put(final AndroidVpnConfiguration newAndroidVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidVpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

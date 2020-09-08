@@ -36,12 +36,12 @@ public class TeamMemberSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Allow Create Update Channels.
-     * If set to true, members can add and update channels.
+     * The Allow Add Remove Apps.
+     * If set to true, members can add and remove apps.
      */
-    @SerializedName("allowCreateUpdateChannels")
+    @SerializedName("allowAddRemoveApps")
     @Expose
-    public Boolean allowCreateUpdateChannels;
+    public Boolean allowAddRemoveApps;
 
     /**
      * The Allow Create Private Channels.
@@ -52,20 +52,20 @@ public class TeamMemberSettings implements IJsonBackedObject {
     public Boolean allowCreatePrivateChannels;
 
     /**
-     * The Allow Delete Channels.
-     * If set to true, members can delete channels.
+     * The Allow Create Update Channels.
+     * If set to true, members can add and update channels.
      */
-    @SerializedName("allowDeleteChannels")
+    @SerializedName("allowCreateUpdateChannels")
     @Expose
-    public Boolean allowDeleteChannels;
+    public Boolean allowCreateUpdateChannels;
 
     /**
-     * The Allow Add Remove Apps.
-     * If set to true, members can add and remove apps.
+     * The Allow Create Update Remove Connectors.
+     * If set to true, members can add, update, and remove connectors.
      */
-    @SerializedName("allowAddRemoveApps")
+    @SerializedName("allowCreateUpdateRemoveConnectors")
     @Expose
-    public Boolean allowAddRemoveApps;
+    public Boolean allowCreateUpdateRemoveConnectors;
 
     /**
      * The Allow Create Update Remove Tabs.
@@ -76,12 +76,12 @@ public class TeamMemberSettings implements IJsonBackedObject {
     public Boolean allowCreateUpdateRemoveTabs;
 
     /**
-     * The Allow Create Update Remove Connectors.
-     * If set to true, members can add, update, and remove connectors.
+     * The Allow Delete Channels.
+     * If set to true, members can delete channels.
      */
-    @SerializedName("allowCreateUpdateRemoveConnectors")
+    @SerializedName("allowDeleteChannels")
     @Expose
-    public Boolean allowCreateUpdateRemoveConnectors;
+    public Boolean allowDeleteChannels;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IPictureRequest extends IHttpRequest {
     Picture post(final Picture newPicture) throws ClientException;
 
     /**
+     * Posts a Picture with a new object
+     *
+     * @param newPicture the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Picture newPicture, final ICallback<Picture> callback);
+
+    /**
+     * Posts a Picture with a new object
+     *
+     * @param newPicture the object to create/update
+     * @return the created Picture
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Picture put(final Picture newPicture) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

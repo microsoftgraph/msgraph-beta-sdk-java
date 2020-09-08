@@ -62,14 +62,14 @@ public class AccessPackageAssignmentPolicyCollectionRequest extends BaseCollecti
     public void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignmentPolicy, callback);
     }
 
     public AccessPackageAssignmentPolicy post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageAssignmentPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignmentPolicy);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageAssignmentPolicyCollectionRequest extends BaseCollecti
         return (AccessPackageAssignmentPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageAssignmentPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageAssignmentPolicyCollectionRequest)this;
+    }
     public IAccessPackageAssignmentPolicyCollectionPage buildFromResponse(final AccessPackageAssignmentPolicyCollectionResponse response) {
         final IAccessPackageAssignmentPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

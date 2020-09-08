@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AclType;
 import com.microsoft.graph.models.generated.AccessType;
+import com.microsoft.graph.models.generated.AclType;
 
 
 import com.google.gson.JsonObject;
@@ -38,22 +38,6 @@ public class Acl implements IJsonBackedObject {
     }
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public AclType type;
-
-    /**
-     * The Value.
-     * 
-     */
-    @SerializedName("value")
-    @Expose
-    public String value;
-
-    /**
      * The Access Type.
      * 
      */
@@ -68,6 +52,22 @@ public class Acl implements IJsonBackedObject {
     @SerializedName("identitySource")
     @Expose
     public String identitySource;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public AclType type;
+
+    /**
+     * The Value.
+     * 
+     */
+    @SerializedName("value")
+    @Expose
+    public String value;
 
 
     /**

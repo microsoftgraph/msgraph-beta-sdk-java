@@ -28,20 +28,20 @@ public class MetadataAction extends InformationProtectionAction implements IJson
 
 
     /**
-     * The Metadata To Remove.
-     * 
-     */
-    @SerializedName("metadataToRemove")
-    @Expose
-    public java.util.List<String> metadataToRemove;
-
-    /**
      * The Metadata To Add.
      * 
      */
     @SerializedName("metadataToAdd")
     @Expose
     public java.util.List<KeyValuePair> metadataToAdd;
+
+    /**
+     * The Metadata To Remove.
+     * 
+     */
+    @SerializedName("metadataToRemove")
+    @Expose
+    public java.util.List<String> metadataToRemove;
 
 
     /**

@@ -62,14 +62,14 @@ public class ShipmentMethodCollectionRequest extends BaseCollectionRequest<Shipm
     public void post(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ShipmentMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newShipmentMethod, callback);
     }
 
     public ShipmentMethod post(final ShipmentMethod newShipmentMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ShipmentMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newShipmentMethod);
     }
 
@@ -106,6 +106,27 @@ public class ShipmentMethodCollectionRequest extends BaseCollectionRequest<Shipm
         return (ShipmentMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IShipmentMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ShipmentMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IShipmentMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IShipmentMethodCollectionRequest)this;
+    }
     public IShipmentMethodCollectionPage buildFromResponse(final ShipmentMethodCollectionResponse response) {
         final IShipmentMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

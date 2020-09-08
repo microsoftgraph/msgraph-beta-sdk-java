@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionResponse;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionResponse;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -41,14 +41,6 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Display Name.
-     * User provided name for the resource object.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * User provided description for the resource object.
      */
@@ -57,12 +49,12 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
     public String description;
 
     /**
-     * The Role Scope Tag Ids.
-     * The list of scope tags for the configuration.
+     * The Display Name.
+     * User provided name for the resource object.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName("displayName")
     @Expose
-    public java.util.List<String> roleScopeTagIds;
+    public String displayName;
 
     /**
      * The Last Modified Date Time.
@@ -73,16 +65,24 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Definition Values.
-     * The list of enabled or disabled group policy definition values for the configuration.
+     * The Role Scope Tag Ids.
+     * The list of scope tags for the configuration.
      */
-    public GroupPolicyDefinitionValueCollectionPage definitionValues;
+    @SerializedName("roleScopeTagIds")
+    @Expose
+    public java.util.List<String> roleScopeTagIds;
 
     /**
      * The Assignments.
      * The list of group assignments for the configuration.
      */
     public GroupPolicyConfigurationAssignmentCollectionPage assignments;
+
+    /**
+     * The Definition Values.
+     * The list of enabled or disabled group policy definition values for the configuration.
+     */
+    public GroupPolicyDefinitionValueCollectionPage definitionValues;
 
 
     /**
@@ -124,22 +124,6 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
         rawObject = json;
 
 
-        if (json.has("definitionValues")) {
-            final GroupPolicyDefinitionValueCollectionResponse response = new GroupPolicyDefinitionValueCollectionResponse();
-            if (json.has("definitionValues@odata.nextLink")) {
-                response.nextLink = json.get("definitionValues@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("definitionValues").toString(), JsonObject[].class);
-            final GroupPolicyDefinitionValue[] array = new GroupPolicyDefinitionValue[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicyDefinitionValue.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            definitionValues = new GroupPolicyDefinitionValueCollectionPage(response, null);
-        }
-
         if (json.has("assignments")) {
             final GroupPolicyConfigurationAssignmentCollectionResponse response = new GroupPolicyConfigurationAssignmentCollectionResponse();
             if (json.has("assignments@odata.nextLink")) {
@@ -154,6 +138,22 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
             }
             response.value = Arrays.asList(array);
             assignments = new GroupPolicyConfigurationAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("definitionValues")) {
+            final GroupPolicyDefinitionValueCollectionResponse response = new GroupPolicyDefinitionValueCollectionResponse();
+            if (json.has("definitionValues@odata.nextLink")) {
+                response.nextLink = json.get("definitionValues@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("definitionValues").toString(), JsonObject[].class);
+            final GroupPolicyDefinitionValue[] array = new GroupPolicyDefinitionValue[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupPolicyDefinitionValue.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            definitionValues = new GroupPolicyDefinitionValueCollectionPage(response, null);
         }
     }
 }

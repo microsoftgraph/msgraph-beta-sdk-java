@@ -35,13 +35,17 @@ public interface IWindowsUniversalAppXRequestBuilder extends IRequestBuilder {
     IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IMobileAppAssignmentCollectionRequestBuilder assignments();
+
+    IMobileAppAssignmentRequestBuilder assignments(final String id);
+
     IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
 
     IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
 
-    IMobileAppAssignmentCollectionRequestBuilder assignments();
+    IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses();
 
-    IMobileAppAssignmentRequestBuilder assignments(final String id);
+    IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id);
 
     /**
      * Gets the request builder for MobileAppInstallSummary
@@ -50,17 +54,13 @@ public interface IWindowsUniversalAppXRequestBuilder extends IRequestBuilder {
      */
     IMobileAppInstallSummaryRequestBuilder installSummary();
 
-    IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses();
+    IMobileAppRelationshipCollectionRequestBuilder relationships();
 
-    IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id);
+    IMobileAppRelationshipRequestBuilder relationships(final String id);
 
     IUserAppInstallStatusCollectionRequestBuilder userStatuses();
 
     IUserAppInstallStatusRequestBuilder userStatuses(final String id);
-
-    IMobileAppRelationshipCollectionRequestBuilder relationships();
-
-    IMobileAppRelationshipRequestBuilder relationships(final String id);
 
     IMobileAppContentCollectionRequestBuilder contentVersions();
 

@@ -44,6 +44,14 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastActionDateTime;
 
     /**
+     * The Resource Location.
+     * 
+     */
+    @SerializedName("resourceLocation")
+    @Expose
+    public String resourceLocation;
+
+    /**
      * The Status.
      * 
      */
@@ -58,14 +66,6 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
     @SerializedName("statusDetail")
     @Expose
     public String statusDetail;
-
-    /**
-     * The Resource Location.
-     * 
-     */
-    @SerializedName("resourceLocation")
-    @Expose
-    public String resourceLocation;
 
 
     /**

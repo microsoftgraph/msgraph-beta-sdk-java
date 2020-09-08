@@ -80,6 +80,23 @@ public interface ISecurityBaselineSettingStateRequest extends IHttpRequest {
     SecurityBaselineSettingState post(final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException;
 
     /**
+     * Posts a SecurityBaselineSettingState with a new object
+     *
+     * @param newSecurityBaselineSettingState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback);
+
+    /**
+     * Posts a SecurityBaselineSettingState with a new object
+     *
+     * @param newSecurityBaselineSettingState the object to create/update
+     * @return the created SecurityBaselineSettingState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SecurityBaselineSettingState put(final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

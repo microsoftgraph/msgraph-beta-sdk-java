@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ClassificationMethod;
 import com.microsoft.graph.models.generated.SensitiveTypeScope;
 import com.microsoft.graph.models.generated.SensitiveTypeSource;
-import com.microsoft.graph.models.generated.ClassificationMethod;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,12 +30,12 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
+     * The Classification Method.
      * 
      */
-    @SerializedName("name")
+    @SerializedName("classificationMethod")
     @Expose
-    public String name;
+    public ClassificationMethod classificationMethod;
 
     /**
      * The Description.
@@ -44,6 +44,22 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Publisher Name.
+     * 
+     */
+    @SerializedName("publisherName")
+    @Expose
+    public String publisherName;
 
     /**
      * The Rule Package Id.
@@ -62,22 +78,6 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
     public String rulePackageType;
 
     /**
-     * The Publisher Name.
-     * 
-     */
-    @SerializedName("publisherName")
-    @Expose
-    public String publisherName;
-
-    /**
-     * The State.
-     * 
-     */
-    @SerializedName("state")
-    @Expose
-    public String state;
-
-    /**
      * The Scope.
      * 
      */
@@ -94,12 +94,12 @@ public class SensitiveType extends Entity implements IJsonBackedObject {
     public SensitiveTypeSource sensitiveTypeSource;
 
     /**
-     * The Classification Method.
+     * The State.
      * 
      */
-    @SerializedName("classificationMethod")
+    @SerializedName("state")
     @Expose
-    public ClassificationMethod classificationMethod;
+    public String state;
 
 
     /**

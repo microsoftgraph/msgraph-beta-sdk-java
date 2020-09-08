@@ -112,6 +112,27 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
     }
 
     /**
+     * Creates a ItemPublication with a new object
+     *
+     * @param newItemPublication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback) {
+        send(HttpMethod.PUT, callback, newItemPublication);
+    }
+
+    /**
+     * Creates a ItemPublication with a new object
+     *
+     * @param newItemPublication the object to create/update
+     * @return the created ItemPublication
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemPublication put(final ItemPublication newItemPublication) throws ClientException {
+        return send(HttpMethod.PUT, newItemPublication);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
     }
 
     /**
+     * Creates a AgreementFileLocalization with a new object
+     *
+     * @param newAgreementFileLocalization the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback) {
+        send(HttpMethod.PUT, callback, newAgreementFileLocalization);
+    }
+
+    /**
+     * Creates a AgreementFileLocalization with a new object
+     *
+     * @param newAgreementFileLocalization the object to create/update
+     * @return the created AgreementFileLocalization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AgreementFileLocalization put(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException {
+        return send(HttpMethod.PUT, newAgreementFileLocalization);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

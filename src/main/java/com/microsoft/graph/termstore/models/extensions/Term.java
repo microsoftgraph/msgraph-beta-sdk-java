@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.termstore.models.extensions.LocalizedLabel;
 import com.microsoft.graph.termstore.models.extensions.LocalizedDescription;
+import com.microsoft.graph.termstore.models.extensions.LocalizedLabel;
 import com.microsoft.graph.models.extensions.KeyValue;
 import com.microsoft.graph.termstore.models.extensions.Term;
 import com.microsoft.graph.termstore.models.extensions.Relation;
@@ -37,14 +37,6 @@ public class Term extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Labels.
-     * 
-     */
-    @SerializedName("labels")
-    @Expose
-    public java.util.List<LocalizedLabel> labels;
-
-    /**
      * The Created Date Time.
      * 
      */
@@ -53,20 +45,28 @@ public class Term extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * 
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Descriptions.
      * 
      */
     @SerializedName("descriptions")
     @Expose
     public java.util.List<LocalizedDescription> descriptions;
+
+    /**
+     * The Labels.
+     * 
+     */
+    @SerializedName("labels")
+    @Expose
+    public java.util.List<LocalizedLabel> labels;
+
+    /**
+     * The Last Modified Date Time.
+     * 
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Properties.

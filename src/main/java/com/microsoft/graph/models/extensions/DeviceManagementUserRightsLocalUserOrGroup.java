@@ -36,20 +36,20 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements IJsonBackedOb
     }
 
     /**
-     * The Name.
-     * The name of this local user or group.
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Description.
      * Admin???s description of this local user or group.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Name.
+     * The name of this local user or group.
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
     /**
      * The Security Identifier.

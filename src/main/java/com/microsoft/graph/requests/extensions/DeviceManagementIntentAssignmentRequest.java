@@ -112,6 +112,27 @@ public class DeviceManagementIntentAssignmentRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a DeviceManagementIntentAssignment with a new object
+     *
+     * @param newDeviceManagementIntentAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<DeviceManagementIntentAssignment> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementIntentAssignment);
+    }
+
+    /**
+     * Creates a DeviceManagementIntentAssignment with a new object
+     *
+     * @param newDeviceManagementIntentAssignment the object to create/update
+     * @return the created DeviceManagementIntentAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementIntentAssignment put(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementIntentAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

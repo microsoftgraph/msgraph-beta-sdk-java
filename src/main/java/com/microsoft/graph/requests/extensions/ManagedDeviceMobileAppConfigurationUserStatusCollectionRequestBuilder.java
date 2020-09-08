@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
+import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of ManagedDeviceMobileAppConfiguration
+     * The request builder for this collection of IosLobAppProvisioningConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

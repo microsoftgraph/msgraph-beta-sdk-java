@@ -61,6 +61,15 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements
     }
 
 
+
+    /**
+     * Gets the request builder for AdministrativeUnit
+     *
+     * @return the IAdministrativeUnitWithReferenceRequestBuilder instance
+     */
+    public IAdministrativeUnitWithReferenceRequestBuilder administrativeUnit() {
+        return new AdministrativeUnitWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnit"), getClient(), null);
+    }
     public IEducationClassCollectionWithReferencesRequestBuilder classes() {
         return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
@@ -74,14 +83,5 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements
 
     public IEducationUserWithReferenceRequestBuilder users(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for AdministrativeUnit
-     *
-     * @return the IAdministrativeUnitWithReferenceRequestBuilder instance
-     */
-    public IAdministrativeUnitWithReferenceRequestBuilder administrativeUnit() {
-        return new AdministrativeUnitWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnit"), getClient(), null);
     }
 }

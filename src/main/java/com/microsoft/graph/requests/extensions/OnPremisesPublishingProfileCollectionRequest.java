@@ -61,14 +61,14 @@ public class OnPremisesPublishingProfileCollectionRequest extends BaseCollection
     public void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnPremisesPublishingProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnPremisesPublishingProfile, callback);
     }
 
     public OnPremisesPublishingProfile post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnPremisesPublishingProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnPremisesPublishingProfile);
     }
 
@@ -105,6 +105,27 @@ public class OnPremisesPublishingProfileCollectionRequest extends BaseCollection
         return (OnPremisesPublishingProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnPremisesPublishingProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnPremisesPublishingProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnPremisesPublishingProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnPremisesPublishingProfileCollectionRequest)this;
+    }
     public IOnPremisesPublishingProfileCollectionPage buildFromResponse(final OnPremisesPublishingProfileCollectionResponse response) {
         final IOnPremisesPublishingProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

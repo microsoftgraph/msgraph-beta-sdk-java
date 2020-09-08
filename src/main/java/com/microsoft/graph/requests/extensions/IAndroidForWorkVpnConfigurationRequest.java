@@ -80,6 +80,23 @@ public interface IAndroidForWorkVpnConfigurationRequest extends IHttpRequest {
     AndroidForWorkVpnConfiguration post(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkVpnConfiguration with a new object
+     *
+     * @param newAndroidForWorkVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<AndroidForWorkVpnConfiguration> callback);
+
+    /**
+     * Posts a AndroidForWorkVpnConfiguration with a new object
+     *
+     * @param newAndroidForWorkVpnConfiguration the object to create/update
+     * @return the created AndroidForWorkVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkVpnConfiguration put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

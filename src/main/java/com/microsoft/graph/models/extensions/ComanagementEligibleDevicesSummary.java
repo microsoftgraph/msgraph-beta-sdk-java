@@ -44,14 +44,6 @@ public class ComanagementEligibleDevicesSummary implements IJsonBackedObject {
     public Integer comanagedCount;
 
     /**
-     * The Eligible Count.
-     * Count of devices fully eligible for Co-Management
-     */
-    @SerializedName("eligibleCount")
-    @Expose
-    public Integer eligibleCount;
-
-    /**
      * The Eligible But Not Azure Ad Joined Count.
      * Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
      */
@@ -60,12 +52,12 @@ public class ComanagementEligibleDevicesSummary implements IJsonBackedObject {
     public Integer eligibleButNotAzureAdJoinedCount;
 
     /**
-     * The Needs Os Update Count.
-     * Count of devices that will be eligible for Co-Management after an OS update
+     * The Eligible Count.
+     * Count of devices fully eligible for Co-Management
      */
-    @SerializedName("needsOsUpdateCount")
+    @SerializedName("eligibleCount")
     @Expose
-    public Integer needsOsUpdateCount;
+    public Integer eligibleCount;
 
     /**
      * The Ineligible Count.
@@ -74,6 +66,14 @@ public class ComanagementEligibleDevicesSummary implements IJsonBackedObject {
     @SerializedName("ineligibleCount")
     @Expose
     public Integer ineligibleCount;
+
+    /**
+     * The Needs Os Update Count.
+     * Count of devices that will be eligible for Co-Management after an OS update
+     */
+    @SerializedName("needsOsUpdateCount")
+    @Expose
+    public Integer needsOsUpdateCount;
 
 
     /**

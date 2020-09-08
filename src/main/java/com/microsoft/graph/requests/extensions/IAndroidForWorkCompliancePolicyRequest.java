@@ -80,6 +80,23 @@ public interface IAndroidForWorkCompliancePolicyRequest extends IHttpRequest {
     AndroidForWorkCompliancePolicy post(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkCompliancePolicy with a new object
+     *
+     * @param newAndroidForWorkCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback);
+
+    /**
+     * Posts a AndroidForWorkCompliancePolicy with a new object
+     *
+     * @param newAndroidForWorkCompliancePolicy the object to create/update
+     * @return the created AndroidForWorkCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkCompliancePolicy put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

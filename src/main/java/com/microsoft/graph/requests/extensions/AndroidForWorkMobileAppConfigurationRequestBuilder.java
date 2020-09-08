@@ -65,13 +65,6 @@ public class AndroidForWorkMobileAppConfigurationRequestBuilder extends BaseRequ
     public IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
-        return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationDeviceSummary
@@ -80,6 +73,13 @@ public class AndroidForWorkMobileAppConfigurationRequestBuilder extends BaseRequ
      */
     public IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
+    }
+    public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+        return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**

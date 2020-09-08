@@ -10,8 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesOrder;
 import com.microsoft.graph.requests.extensions.ISalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISalesOrderLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,9 +38,12 @@ public interface ISalesOrderRequestBuilder extends IRequestBuilder {
     ISalesOrderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISalesOrderLineCollectionRequestBuilder salesOrderLines();
-
-    ISalesOrderLineRequestBuilder salesOrderLines(final String id);
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    ICurrencyRequestBuilder currency();
 
     /**
      * Gets the request builder for Customer
@@ -50,17 +53,14 @@ public interface ISalesOrderRequestBuilder extends IRequestBuilder {
     ICustomerRequestBuilder customer();
 
     /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    ICurrencyRequestBuilder currency();
-
-    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     IPaymentTermRequestBuilder paymentTerm();
+
+    ISalesOrderLineCollectionRequestBuilder salesOrderLines();
+
+    ISalesOrderLineRequestBuilder salesOrderLines(final String id);
 
 }

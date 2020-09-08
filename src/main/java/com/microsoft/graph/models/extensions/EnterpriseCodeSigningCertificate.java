@@ -36,36 +36,12 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
     public byte[] content;
 
     /**
-     * The Status.
-     * The Certificate Status Provisioned or not Provisioned.
+     * The Expiration Date Time.
+     * The Cert Expiration Date.
      */
-    @SerializedName("status")
+    @SerializedName("expirationDateTime")
     @Expose
-    public CertificateStatus status;
-
-    /**
-     * The Subject Name.
-     * The Subject Name for the cert.
-     */
-    @SerializedName("subjectName")
-    @Expose
-    public String subjectName;
-
-    /**
-     * The Subject.
-     * The Subject Value for the cert.
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
-
-    /**
-     * The Issuer Name.
-     * The Issuer Name for the cert.
-     */
-    @SerializedName("issuerName")
-    @Expose
-    public String issuerName;
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Issuer.
@@ -76,12 +52,36 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
     public String issuer;
 
     /**
-     * The Expiration Date Time.
-     * The Cert Expiration Date.
+     * The Issuer Name.
+     * The Issuer Name for the cert.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName("issuerName")
     @Expose
-    public java.util.Calendar expirationDateTime;
+    public String issuerName;
+
+    /**
+     * The Status.
+     * The Certificate Status Provisioned or not Provisioned.
+     */
+    @SerializedName("status")
+    @Expose
+    public CertificateStatus status;
+
+    /**
+     * The Subject.
+     * The Subject Value for the cert.
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
+
+    /**
+     * The Subject Name.
+     * The Subject Name for the cert.
+     */
+    @SerializedName("subjectName")
+    @Expose
+    public String subjectName;
 
     /**
      * The Upload Date Time.

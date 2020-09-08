@@ -112,6 +112,27 @@ public class FileSecurityProfileRequest extends BaseRequest implements IFileSecu
     }
 
     /**
+     * Creates a FileSecurityProfile with a new object
+     *
+     * @param newFileSecurityProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final FileSecurityProfile newFileSecurityProfile, final ICallback<FileSecurityProfile> callback) {
+        send(HttpMethod.PUT, callback, newFileSecurityProfile);
+    }
+
+    /**
+     * Creates a FileSecurityProfile with a new object
+     *
+     * @param newFileSecurityProfile the object to create/update
+     * @return the created FileSecurityProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public FileSecurityProfile put(final FileSecurityProfile newFileSecurityProfile) throws ClientException {
+        return send(HttpMethod.PUT, newFileSecurityProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

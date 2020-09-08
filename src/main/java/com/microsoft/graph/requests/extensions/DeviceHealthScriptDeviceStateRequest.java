@@ -114,6 +114,27 @@ public class DeviceHealthScriptDeviceStateRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a DeviceHealthScriptDeviceState with a new object
+     *
+     * @param newDeviceHealthScriptDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceHealthScriptDeviceState);
+    }
+
+    /**
+     * Creates a DeviceHealthScriptDeviceState with a new object
+     *
+     * @param newDeviceHealthScriptDeviceState the object to create/update
+     * @return the created DeviceHealthScriptDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceHealthScriptDeviceState put(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceHealthScriptDeviceState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

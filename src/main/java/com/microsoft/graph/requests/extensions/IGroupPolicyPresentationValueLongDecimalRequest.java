@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationValueLongDecimalRequest extends IHttpRe
     GroupPolicyPresentationValueLongDecimal post(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationValueLongDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueLongDecimal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<GroupPolicyPresentationValueLongDecimal> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationValueLongDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueLongDecimal the object to create/update
+     * @return the created GroupPolicyPresentationValueLongDecimal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationValueLongDecimal put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

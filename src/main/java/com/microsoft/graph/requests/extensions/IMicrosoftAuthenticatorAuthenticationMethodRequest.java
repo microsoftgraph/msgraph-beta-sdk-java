@@ -80,6 +80,23 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodRequest extends IHtt
     MicrosoftAuthenticatorAuthenticationMethod post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a MicrosoftAuthenticatorAuthenticationMethod with a new object
+     *
+     * @param newMicrosoftAuthenticatorAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback);
+
+    /**
+     * Posts a MicrosoftAuthenticatorAuthenticationMethod with a new object
+     *
+     * @param newMicrosoftAuthenticatorAuthenticationMethod the object to create/update
+     * @return the created MicrosoftAuthenticatorAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MicrosoftAuthenticatorAuthenticationMethod put(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

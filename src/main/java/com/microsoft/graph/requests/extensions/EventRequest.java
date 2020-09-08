@@ -8,28 +8,28 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventRequestBuilder;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import java.util.Arrays;
@@ -133,6 +133,27 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      */
     public Event post(final Event newEvent) throws ClientException {
         return send(HttpMethod.POST, newEvent);
+    }
+
+    /**
+     * Creates a Event with a new object
+     *
+     * @param newEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Event newEvent, final ICallback<Event> callback) {
+        send(HttpMethod.PUT, callback, newEvent);
+    }
+
+    /**
+     * Creates a Event with a new object
+     *
+     * @param newEvent the object to create/update
+     * @return the created Event
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Event put(final Event newEvent) throws ClientException {
+        return send(HttpMethod.PUT, newEvent);
     }
 
     /**

@@ -80,6 +80,23 @@ public interface IDeviceAndAppManagementAssignmentFilterRequest extends IHttpReq
     DeviceAndAppManagementAssignmentFilter post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException;
 
     /**
+     * Posts a DeviceAndAppManagementAssignmentFilter with a new object
+     *
+     * @param newDeviceAndAppManagementAssignmentFilter the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback);
+
+    /**
+     * Posts a DeviceAndAppManagementAssignmentFilter with a new object
+     *
+     * @param newDeviceAndAppManagementAssignmentFilter the object to create/update
+     * @return the created DeviceAndAppManagementAssignmentFilter
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceAndAppManagementAssignmentFilter put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ISalesQuoteLineRequest extends IHttpRequest {
     SalesQuoteLine post(final SalesQuoteLine newSalesQuoteLine) throws ClientException;
 
     /**
+     * Posts a SalesQuoteLine with a new object
+     *
+     * @param newSalesQuoteLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SalesQuoteLine newSalesQuoteLine, final ICallback<SalesQuoteLine> callback);
+
+    /**
+     * Posts a SalesQuoteLine with a new object
+     *
+     * @param newSalesQuoteLine the object to create/update
+     * @return the created SalesQuoteLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SalesQuoteLine put(final SalesQuoteLine newSalesQuoteLine) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

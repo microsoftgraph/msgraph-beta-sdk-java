@@ -36,14 +36,6 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
     public String description;
 
     /**
-     * The User Id.
-     * 
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Service.
      * 
      */
@@ -58,6 +50,14 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
     @SerializedName("statusMessage")
     @Expose
     public String statusMessage;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The Web Url.

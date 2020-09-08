@@ -36,20 +36,20 @@ public class AutoLabeling implements IJsonBackedObject {
     }
 
     /**
-     * The Sensitive Type Ids.
-     * 
-     */
-    @SerializedName("sensitiveTypeIds")
-    @Expose
-    public java.util.List<String> sensitiveTypeIds;
-
-    /**
      * The Message.
      * 
      */
     @SerializedName("message")
     @Expose
     public String message;
+
+    /**
+     * The Sensitive Type Ids.
+     * 
+     */
+    @SerializedName("sensitiveTypeIds")
+    @Expose
+    public java.util.List<String> sensitiveTypeIds;
 
 
     /**

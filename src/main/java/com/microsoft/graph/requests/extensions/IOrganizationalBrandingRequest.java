@@ -80,6 +80,23 @@ public interface IOrganizationalBrandingRequest extends IHttpRequest {
     OrganizationalBranding post(final OrganizationalBranding newOrganizationalBranding) throws ClientException;
 
     /**
+     * Posts a OrganizationalBranding with a new object
+     *
+     * @param newOrganizationalBranding the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OrganizationalBranding newOrganizationalBranding, final ICallback<OrganizationalBranding> callback);
+
+    /**
+     * Posts a OrganizationalBranding with a new object
+     *
+     * @param newOrganizationalBranding the object to create/update
+     * @return the created OrganizationalBranding
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OrganizationalBranding put(final OrganizationalBranding newOrganizationalBranding) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

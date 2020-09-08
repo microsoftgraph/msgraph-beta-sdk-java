@@ -114,6 +114,27 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
     }
 
     /**
+     * Creates a PrinterCreateOperation with a new object
+     *
+     * @param newPrinterCreateOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<PrinterCreateOperation> callback) {
+        send(HttpMethod.PUT, callback, newPrinterCreateOperation);
+    }
+
+    /**
+     * Creates a PrinterCreateOperation with a new object
+     *
+     * @param newPrinterCreateOperation the object to create/update
+     * @return the created PrinterCreateOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrinterCreateOperation put(final PrinterCreateOperation newPrinterCreateOperation) throws ClientException {
+        return send(HttpMethod.PUT, newPrinterCreateOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

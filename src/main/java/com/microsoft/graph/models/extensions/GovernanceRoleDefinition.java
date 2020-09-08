@@ -29,12 +29,12 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Resource Id.
+     * The Display Name.
      * 
      */
-    @SerializedName("resourceId")
+    @SerializedName("displayName")
     @Expose
-    public String resourceId;
+    public String displayName;
 
     /**
      * The External Id.
@@ -45,20 +45,20 @@ public class GovernanceRoleDefinition extends Entity implements IJsonBackedObjec
     public String externalId;
 
     /**
+     * The Resource Id.
+     * 
+     */
+    @SerializedName("resourceId")
+    @Expose
+    public String resourceId;
+
+    /**
      * The Template Id.
      * 
      */
     @SerializedName("templateId")
     @Expose
     public String templateId;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
 
     /**
      * The Resource.

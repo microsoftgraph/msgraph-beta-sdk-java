@@ -62,14 +62,14 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionReq
     public void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, callback);
     }
 
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionReq
         return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
     public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage buildFromResponse(final PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse response) {
         final IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IEnterpriseCodeSigningCertificateRequest extends IHttpRequest {
     EnterpriseCodeSigningCertificate post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException;
 
     /**
+     * Posts a EnterpriseCodeSigningCertificate with a new object
+     *
+     * @param newEnterpriseCodeSigningCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback);
+
+    /**
+     * Posts a EnterpriseCodeSigningCertificate with a new object
+     *
+     * @param newEnterpriseCodeSigningCertificate the object to create/update
+     * @return the created EnterpriseCodeSigningCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EnterpriseCodeSigningCertificate put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

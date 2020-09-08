@@ -27,28 +27,12 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
      * The Mailbox Storage Used In Bytes.
      * 
      */
     @SerializedName("mailboxStorageUsedInBytes")
     @Expose
     public Long mailboxStorageUsedInBytes;
-
-    /**
-     * The Site Storage Used In Bytes.
-     * 
-     */
-    @SerializedName("siteStorageUsedInBytes")
-    @Expose
-    public Long siteStorageUsedInBytes;
 
     /**
      * The Report Date.
@@ -65,6 +49,22 @@ public class Office365GroupsActivityStorage extends Entity implements IJsonBacke
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Site Storage Used In Bytes.
+     * 
+     */
+    @SerializedName("siteStorageUsedInBytes")
+    @Expose
+    public Long siteStorageUsedInBytes;
 
 
     /**

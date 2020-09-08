@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Location;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.Location;
 import com.microsoft.graph.models.extensions.EventMessage;
 
 
@@ -29,6 +29,22 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
 
 
     /**
+     * The Allow New Time Proposals.
+     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
+     */
+    @SerializedName("allowNewTimeProposals")
+    @Expose
+    public Boolean allowNewTimeProposals;
+
+    /**
+     * The Previous End Date Time.
+     * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
+     */
+    @SerializedName("previousEndDateTime")
+    @Expose
+    public DateTimeTimeZone previousEndDateTime;
+
+    /**
      * The Previous Location.
      * If the meeting update changes the meeting location, this property specifies the previous meeting location.
      */
@@ -45,28 +61,12 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
     public DateTimeTimeZone previousStartDateTime;
 
     /**
-     * The Previous End Date Time.
-     * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
-     */
-    @SerializedName("previousEndDateTime")
-    @Expose
-    public DateTimeTimeZone previousEndDateTime;
-
-    /**
      * The Response Requested.
      * Set to true if the sender would like the invitee to send a response to the requested meeting.
      */
     @SerializedName("responseRequested")
     @Expose
     public Boolean responseRequested;
-
-    /**
-     * The Allow New Time Proposals.
-     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
-     */
-    @SerializedName("allowNewTimeProposals")
-    @Expose
-    public Boolean allowNewTimeProposals;
 
 
     /**

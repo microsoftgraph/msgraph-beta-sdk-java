@@ -62,14 +62,14 @@ public class AccessPackageResourceRoleScopeCollectionRequest extends BaseCollect
     public void post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageResourceRoleScopeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageResourceRoleScope, callback);
     }
 
     public AccessPackageResourceRoleScope post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageResourceRoleScopeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageResourceRoleScope);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageResourceRoleScopeCollectionRequest extends BaseCollect
         return (AccessPackageResourceRoleScopeCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageResourceRoleScopeCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageResourceRoleScopeCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageResourceRoleScopeCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageResourceRoleScopeCollectionRequest)this;
+    }
     public IAccessPackageResourceRoleScopeCollectionPage buildFromResponse(final AccessPackageResourceRoleScopeCollectionResponse response) {
         final IAccessPackageResourceRoleScopeCollectionRequestBuilder builder;
         if (response.nextLink != null) {

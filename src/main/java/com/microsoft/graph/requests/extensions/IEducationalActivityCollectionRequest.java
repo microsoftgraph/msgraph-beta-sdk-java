@@ -53,4 +53,20 @@ public interface IEducationalActivityCollectionRequest {
      */
     IEducationalActivityCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IEducationalActivityCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IEducationalActivityCollectionRequest skipToken(String skipToken);
 }

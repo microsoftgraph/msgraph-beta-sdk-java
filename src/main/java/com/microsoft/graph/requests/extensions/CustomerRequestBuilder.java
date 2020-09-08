@@ -14,12 +14,12 @@ import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -63,13 +63,6 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
     }
 
 
-    public IPictureCollectionRequestBuilder picture() {
-        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
-    }
-
-    public IPictureRequestBuilder picture(final String id) {
-        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for Currency
@@ -81,12 +74,28 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
     }
 
     /**
+     * Gets the request builder for PaymentMethod
+     *
+     * @return the IPaymentMethodRequestBuilder instance
+     */
+    public IPaymentMethodRequestBuilder paymentMethod() {
+        return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     public IPaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    }
+    public IPictureCollectionRequestBuilder picture() {
+        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    }
+
+    public IPictureRequestBuilder picture(final String id) {
+        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 
     /**
@@ -96,14 +105,5 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
      */
     public IShipmentMethodRequestBuilder shipmentMethod() {
         return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for PaymentMethod
-     *
-     * @return the IPaymentMethodRequestBuilder instance
-     */
-    public IPaymentMethodRequestBuilder paymentMethod() {
-        return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
     }
 }

@@ -80,6 +80,23 @@ public interface IProjectParticipationRequest extends IHttpRequest {
     ProjectParticipation post(final ProjectParticipation newProjectParticipation) throws ClientException;
 
     /**
+     * Posts a ProjectParticipation with a new object
+     *
+     * @param newProjectParticipation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback);
+
+    /**
+     * Posts a ProjectParticipation with a new object
+     *
+     * @param newProjectParticipation the object to create/update
+     * @return the created ProjectParticipation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ProjectParticipation put(final ProjectParticipation newProjectParticipation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

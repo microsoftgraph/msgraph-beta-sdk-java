@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
@@ -70,13 +70,6 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
     }
 
 
-    public IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
-    }
-
-    public IMobileAppProvisioningConfigGroupAssignmentRequestBuilder groupAssignments(final String id) {
-        return new MobileAppProvisioningConfigGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
-    }
     public IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -90,6 +83,13 @@ public class IosLobAppProvisioningConfigurationRequestBuilder extends BaseReques
 
     public IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    }
+    public IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IMobileAppProvisioningConfigGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new MobileAppProvisioningConfigGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
     public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);

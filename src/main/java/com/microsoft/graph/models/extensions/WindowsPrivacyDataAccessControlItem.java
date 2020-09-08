@@ -37,12 +37,12 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements IJson
     public WindowsPrivacyDataAccessLevel accessLevel;
 
     /**
-     * The Data Category.
-     * This indicates a privacy data category to which the specific access control will apply.
+     * The App Display Name.
+     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
      */
-    @SerializedName("dataCategory")
+    @SerializedName("appDisplayName")
     @Expose
-    public WindowsPrivacyDataCategory dataCategory;
+    public String appDisplayName;
 
     /**
      * The App Package Family Name.
@@ -53,12 +53,12 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements IJson
     public String appPackageFamilyName;
 
     /**
-     * The App Display Name.
-     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
+     * The Data Category.
+     * This indicates a privacy data category to which the specific access control will apply.
      */
-    @SerializedName("appDisplayName")
+    @SerializedName("dataCategory")
     @Expose
-    public String appDisplayName;
+    public WindowsPrivacyDataCategory dataCategory;
 
 
     /**

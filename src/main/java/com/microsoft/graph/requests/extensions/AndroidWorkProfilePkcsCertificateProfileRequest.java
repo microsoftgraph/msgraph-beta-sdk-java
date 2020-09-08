@@ -116,6 +116,27 @@ public class AndroidWorkProfilePkcsCertificateProfileRequest extends BaseRequest
     }
 
     /**
+     * Creates a AndroidWorkProfilePkcsCertificateProfile with a new object
+     *
+     * @param newAndroidWorkProfilePkcsCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfilePkcsCertificateProfile newAndroidWorkProfilePkcsCertificateProfile, final ICallback<AndroidWorkProfilePkcsCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfilePkcsCertificateProfile);
+    }
+
+    /**
+     * Creates a AndroidWorkProfilePkcsCertificateProfile with a new object
+     *
+     * @param newAndroidWorkProfilePkcsCertificateProfile the object to create/update
+     * @return the created AndroidWorkProfilePkcsCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfilePkcsCertificateProfile put(final AndroidWorkProfilePkcsCertificateProfile newAndroidWorkProfilePkcsCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfilePkcsCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

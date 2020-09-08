@@ -62,14 +62,14 @@ public class TemporaryAccessPassAuthenticationMethodCollectionRequest extends Ba
     public void post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TemporaryAccessPassAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTemporaryAccessPassAuthenticationMethod, callback);
     }
 
     public TemporaryAccessPassAuthenticationMethod post(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TemporaryAccessPassAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTemporaryAccessPassAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class TemporaryAccessPassAuthenticationMethodCollectionRequest extends Ba
         return (TemporaryAccessPassAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITemporaryAccessPassAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TemporaryAccessPassAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITemporaryAccessPassAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITemporaryAccessPassAuthenticationMethodCollectionRequest)this;
+    }
     public ITemporaryAccessPassAuthenticationMethodCollectionPage buildFromResponse(final TemporaryAccessPassAuthenticationMethodCollectionResponse response) {
         final ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

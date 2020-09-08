@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestB
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
@@ -121,6 +121,27 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      */
     public SalesQuote post(final SalesQuote newSalesQuote) throws ClientException {
         return send(HttpMethod.POST, newSalesQuote);
+    }
+
+    /**
+     * Creates a SalesQuote with a new object
+     *
+     * @param newSalesQuote the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesQuote newSalesQuote, final ICallback<SalesQuote> callback) {
+        send(HttpMethod.PUT, callback, newSalesQuote);
+    }
+
+    /**
+     * Creates a SalesQuote with a new object
+     *
+     * @param newSalesQuote the object to create/update
+     * @return the created SalesQuote
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesQuote put(final SalesQuote newSalesQuote) throws ClientException {
+        return send(HttpMethod.PUT, newSalesQuote);
     }
 
     /**

@@ -29,30 +29,6 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Event display name.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Component Name.
-     * Component name.
-     */
-    @SerializedName("componentName")
-    @Expose
-    public String componentName;
-
-    /**
-     * The Actor.
-     * AAD user and application that are associated with the audit event.
-     */
-    @SerializedName("actor")
-    @Expose
-    public AuditActor actor;
-
-    /**
      * The Activity.
      * Friendly name of the activity.
      */
@@ -67,14 +43,6 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
     @SerializedName("activityDateTime")
     @Expose
     public java.util.Calendar activityDateTime;
-
-    /**
-     * The Activity Type.
-     * The type of activity that was being performed.
-     */
-    @SerializedName("activityType")
-    @Expose
-    public String activityType;
 
     /**
      * The Activity Operation Type.
@@ -93,20 +61,20 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
     public String activityResult;
 
     /**
-     * The Correlation Id.
-     * The client request Id that is used to correlate activity within the system.
+     * The Activity Type.
+     * The type of activity that was being performed.
      */
-    @SerializedName("correlationId")
+    @SerializedName("activityType")
     @Expose
-    public java.util.UUID correlationId;
+    public String activityType;
 
     /**
-     * The Resources.
-     * Resources being modified.
+     * The Actor.
+     * AAD user and application that are associated with the audit event.
      */
-    @SerializedName("resources")
+    @SerializedName("actor")
     @Expose
-    public java.util.List<AuditResource> resources;
+    public AuditActor actor;
 
     /**
      * The Category.
@@ -115,6 +83,38 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
     @SerializedName("category")
     @Expose
     public String category;
+
+    /**
+     * The Component Name.
+     * Component name.
+     */
+    @SerializedName("componentName")
+    @Expose
+    public String componentName;
+
+    /**
+     * The Correlation Id.
+     * The client request Id that is used to correlate activity within the system.
+     */
+    @SerializedName("correlationId")
+    @Expose
+    public java.util.UUID correlationId;
+
+    /**
+     * The Display Name.
+     * Event display name.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Resources.
+     * Resources being modified.
+     */
+    @SerializedName("resources")
+    @Expose
+    public java.util.List<AuditResource> resources;
 
 
     /**

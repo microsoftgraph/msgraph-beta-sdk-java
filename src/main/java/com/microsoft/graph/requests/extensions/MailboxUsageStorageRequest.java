@@ -112,6 +112,27 @@ public class MailboxUsageStorageRequest extends BaseRequest implements IMailboxU
     }
 
     /**
+     * Creates a MailboxUsageStorage with a new object
+     *
+     * @param newMailboxUsageStorage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailboxUsageStorage newMailboxUsageStorage, final ICallback<MailboxUsageStorage> callback) {
+        send(HttpMethod.PUT, callback, newMailboxUsageStorage);
+    }
+
+    /**
+     * Creates a MailboxUsageStorage with a new object
+     *
+     * @param newMailboxUsageStorage the object to create/update
+     * @return the created MailboxUsageStorage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailboxUsageStorage put(final MailboxUsageStorage newMailboxUsageStorage) throws ClientException {
+        return send(HttpMethod.PUT, newMailboxUsageStorage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

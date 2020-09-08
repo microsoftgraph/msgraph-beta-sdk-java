@@ -62,14 +62,14 @@ public class UnifiedRoleAssignmentMultipleCollectionRequest extends BaseCollecti
     public void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnifiedRoleAssignmentMultipleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUnifiedRoleAssignmentMultiple, callback);
     }
 
     public UnifiedRoleAssignmentMultiple post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UnifiedRoleAssignmentMultipleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUnifiedRoleAssignmentMultiple);
     }
 
@@ -106,6 +106,27 @@ public class UnifiedRoleAssignmentMultipleCollectionRequest extends BaseCollecti
         return (UnifiedRoleAssignmentMultipleCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUnifiedRoleAssignmentMultipleCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UnifiedRoleAssignmentMultipleCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUnifiedRoleAssignmentMultipleCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUnifiedRoleAssignmentMultipleCollectionRequest)this;
+    }
     public IUnifiedRoleAssignmentMultipleCollectionPage buildFromResponse(final UnifiedRoleAssignmentMultipleCollectionResponse response) {
         final IUnifiedRoleAssignmentMultipleCollectionRequestBuilder builder;
         if (response.nextLink != null) {

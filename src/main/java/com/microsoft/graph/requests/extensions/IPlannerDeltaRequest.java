@@ -80,6 +80,23 @@ public interface IPlannerDeltaRequest extends IHttpRequest {
     PlannerDelta post(final PlannerDelta newPlannerDelta) throws ClientException;
 
     /**
+     * Posts a PlannerDelta with a new object
+     *
+     * @param newPlannerDelta the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback);
+
+    /**
+     * Posts a PlannerDelta with a new object
+     *
+     * @param newPlannerDelta the object to create/update
+     * @return the created PlannerDelta
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PlannerDelta put(final PlannerDelta newPlannerDelta) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

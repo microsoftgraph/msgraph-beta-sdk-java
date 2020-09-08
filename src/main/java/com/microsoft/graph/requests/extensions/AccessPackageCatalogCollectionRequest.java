@@ -62,14 +62,14 @@ public class AccessPackageCatalogCollectionRequest extends BaseCollectionRequest
     public void post(final AccessPackageCatalog newAccessPackageCatalog, final ICallback<AccessPackageCatalog> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageCatalogRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageCatalog, callback);
     }
 
     public AccessPackageCatalog post(final AccessPackageCatalog newAccessPackageCatalog) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageCatalogRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageCatalog);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageCatalogCollectionRequest extends BaseCollectionRequest
         return (AccessPackageCatalogCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageCatalogCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageCatalogCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageCatalogCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageCatalogCollectionRequest)this;
+    }
     public IAccessPackageCatalogCollectionPage buildFromResponse(final AccessPackageCatalogCollectionResponse response) {
         final IAccessPackageCatalogCollectionRequestBuilder builder;
         if (response.nextLink != null) {

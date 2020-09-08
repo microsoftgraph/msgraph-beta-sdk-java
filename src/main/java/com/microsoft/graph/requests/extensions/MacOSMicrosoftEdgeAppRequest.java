@@ -112,6 +112,27 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
     }
 
     /**
+     * Creates a MacOSMicrosoftEdgeApp with a new object
+     *
+     * @param newMacOSMicrosoftEdgeApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp, final ICallback<MacOSMicrosoftEdgeApp> callback) {
+        send(HttpMethod.PUT, callback, newMacOSMicrosoftEdgeApp);
+    }
+
+    /**
+     * Creates a MacOSMicrosoftEdgeApp with a new object
+     *
+     * @param newMacOSMicrosoftEdgeApp the object to create/update
+     * @return the created MacOSMicrosoftEdgeApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSMicrosoftEdgeApp put(final MacOSMicrosoftEdgeApp newMacOSMicrosoftEdgeApp) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSMicrosoftEdgeApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

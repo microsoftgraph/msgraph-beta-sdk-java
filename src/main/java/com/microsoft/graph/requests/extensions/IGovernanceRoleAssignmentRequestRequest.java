@@ -80,6 +80,23 @@ public interface IGovernanceRoleAssignmentRequestRequest extends IHttpRequest {
     GovernanceRoleAssignmentRequest post(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest) throws ClientException;
 
     /**
+     * Posts a GovernanceRoleAssignmentRequest with a new object
+     *
+     * @param newGovernanceRoleAssignmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest, final ICallback<GovernanceRoleAssignmentRequest> callback);
+
+    /**
+     * Posts a GovernanceRoleAssignmentRequest with a new object
+     *
+     * @param newGovernanceRoleAssignmentRequest the object to create/update
+     * @return the created GovernanceRoleAssignmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GovernanceRoleAssignmentRequest put(final GovernanceRoleAssignmentRequest newGovernanceRoleAssignmentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

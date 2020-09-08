@@ -62,14 +62,14 @@ public class SecurityActionCollectionRequest extends BaseCollectionRequest<Secur
     public void post(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityActionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityAction, callback);
     }
 
     public SecurityAction post(final SecurityAction newSecurityAction) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecurityActionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityAction);
     }
 
@@ -106,6 +106,27 @@ public class SecurityActionCollectionRequest extends BaseCollectionRequest<Secur
         return (SecurityActionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecurityActionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecurityActionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecurityActionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecurityActionCollectionRequest)this;
+    }
     public ISecurityActionCollectionPage buildFromResponse(final SecurityActionCollectionResponse response) {
         final ISecurityActionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

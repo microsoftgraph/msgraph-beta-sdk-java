@@ -12,18 +12,18 @@ import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequ
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionRequestBuilder;
@@ -78,12 +78,12 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder implement
     public IGovernanceResourceRequestBuilder resources(final String id) {
         return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
-    public IGovernanceRoleDefinitionCollectionRequestBuilder roleDefinitions() {
-        return new GovernanceRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
+    public IGovernanceRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests() {
+        return new GovernanceRoleAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests"), getClient(), null);
     }
 
-    public IGovernanceRoleDefinitionRequestBuilder roleDefinitions(final String id) {
-        return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
+    public IGovernanceRoleAssignmentRequestRequestBuilder roleAssignmentRequests(final String id) {
+        return new GovernanceRoleAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests") + "/" + id, getClient(), null);
     }
     public IGovernanceRoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new GovernanceRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
@@ -92,12 +92,12 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder implement
     public IGovernanceRoleAssignmentRequestBuilder roleAssignments(final String id) {
         return new GovernanceRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
-    public IGovernanceRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests() {
-        return new GovernanceRoleAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests"), getClient(), null);
+    public IGovernanceRoleDefinitionCollectionRequestBuilder roleDefinitions() {
+        return new GovernanceRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
     }
 
-    public IGovernanceRoleAssignmentRequestRequestBuilder roleAssignmentRequests(final String id) {
-        return new GovernanceRoleAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests") + "/" + id, getClient(), null);
+    public IGovernanceRoleDefinitionRequestBuilder roleDefinitions(final String id) {
+        return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
     public IGovernanceRoleSettingCollectionRequestBuilder roleSettings() {
         return new GovernanceRoleSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleSettings"), getClient(), null);

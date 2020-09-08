@@ -28,6 +28,14 @@ public class WindowsPhoneXAP extends MobileLobApp implements IJsonBackedObject {
 
 
     /**
+     * The Identity Version.
+     * The identity version.
+     */
+    @SerializedName("identityVersion")
+    @Expose
+    public String identityVersion;
+
+    /**
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
@@ -42,14 +50,6 @@ public class WindowsPhoneXAP extends MobileLobApp implements IJsonBackedObject {
     @SerializedName("productIdentifier")
     @Expose
     public String productIdentifier;
-
-    /**
-     * The Identity Version.
-     * The identity version.
-     */
-    @SerializedName("identityVersion")
-    @Expose
-    public String identityVersion;
 
 
     /**

@@ -36,20 +36,20 @@ public class VpnProxyServer implements IJsonBackedObject {
     }
 
     /**
-     * The Automatic Configuration Script Url.
-     * Proxy's automatic configuration script url.
-     */
-    @SerializedName("automaticConfigurationScriptUrl")
-    @Expose
-    public String automaticConfigurationScriptUrl;
-
-    /**
      * The Address.
      * Address.
      */
     @SerializedName("address")
     @Expose
     public String address;
+
+    /**
+     * The Automatic Configuration Script Url.
+     * Proxy's automatic configuration script url.
+     */
+    @SerializedName("automaticConfigurationScriptUrl")
+    @Expose
+    public String automaticConfigurationScriptUrl;
 
     /**
      * The Port.

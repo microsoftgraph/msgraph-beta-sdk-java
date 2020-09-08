@@ -8,11 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.RequestSchedule;
 import com.microsoft.graph.models.extensions.AccessPackage;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.models.extensions.AccessPackageSubject;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentResourceRole;
+import com.microsoft.graph.models.extensions.AccessPackageSubject;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionPage;
@@ -36,14 +37,6 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Catalog Id.
-     * 
-     */
-    @SerializedName("catalogId")
-    @Expose
-    public String catalogId;
-
-    /**
      * The Access Package Id.
      * 
      */
@@ -60,12 +53,12 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     public String assignmentPolicyId;
 
     /**
-     * The Target Id.
+     * The Assignment State.
      * 
      */
-    @SerializedName("targetId")
+    @SerializedName("assignmentState")
     @Expose
-    public String targetId;
+    public String assignmentState;
 
     /**
      * The Assignment Status.
@@ -76,12 +69,20 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     public String assignmentStatus;
 
     /**
-     * The Assignment State.
+     * The Catalog Id.
      * 
      */
-    @SerializedName("assignmentState")
+    @SerializedName("catalogId")
     @Expose
-    public String assignmentState;
+    public String catalogId;
+
+    /**
+     * The Expired Date Time.
+     * 
+     */
+    @SerializedName("expiredDateTime")
+    @Expose
+    public java.util.Calendar expiredDateTime;
 
     /**
      * The Is Extended.
@@ -92,12 +93,20 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     public Boolean isExtended;
 
     /**
-     * The Expired Date Time.
+     * The Schedule.
      * 
      */
-    @SerializedName("expiredDateTime")
+    @SerializedName("schedule")
     @Expose
-    public java.util.Calendar expiredDateTime;
+    public RequestSchedule schedule;
+
+    /**
+     * The Target Id.
+     * 
+     */
+    @SerializedName("targetId")
+    @Expose
+    public String targetId;
 
     /**
      * The Access Package.
@@ -116,14 +125,6 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     public AccessPackageAssignmentPolicy accessPackageAssignmentPolicy;
 
     /**
-     * The Target.
-     * 
-     */
-    @SerializedName("target")
-    @Expose
-    public AccessPackageSubject target;
-
-    /**
      * The Access Package Assignment Requests.
      * 
      */
@@ -134,6 +135,14 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * 
      */
     public AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
+
+    /**
+     * The Target.
+     * 
+     */
+    @SerializedName("target")
+    @Expose
+    public AccessPackageSubject target;
 
 
     /**

@@ -112,6 +112,27 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
     }
 
     /**
+     * Creates a RiskyUserHistoryItem with a new object
+     *
+     * @param newRiskyUserHistoryItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback) {
+        send(HttpMethod.PUT, callback, newRiskyUserHistoryItem);
+    }
+
+    /**
+     * Creates a RiskyUserHistoryItem with a new object
+     *
+     * @param newRiskyUserHistoryItem the object to create/update
+     * @return the created RiskyUserHistoryItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RiskyUserHistoryItem put(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException {
+        return send(HttpMethod.PUT, newRiskyUserHistoryItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -27,20 +27,20 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
 
 
     /**
-     * The Managed Device Id.
-     * The managed device ID.
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
      * The Device Name.
      * The device name.
      */
     @SerializedName("deviceName")
     @Expose
     public String deviceName;
+
+    /**
+     * The Managed Device Id.
+     * The managed device ID.
+     */
+    @SerializedName("managedDeviceId")
+    @Expose
+    public String managedDeviceId;
 
 
     /**

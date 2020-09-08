@@ -27,14 +27,6 @@ public class DeviceManagementScriptRunSummary extends Entity implements IJsonBac
 
 
     /**
-     * The Success Device Count.
-     * Success device count.
-     */
-    @SerializedName("successDeviceCount")
-    @Expose
-    public Integer successDeviceCount;
-
-    /**
      * The Error Device Count.
      * Error device count.
      */
@@ -43,20 +35,28 @@ public class DeviceManagementScriptRunSummary extends Entity implements IJsonBac
     public Integer errorDeviceCount;
 
     /**
-     * The Success User Count.
-     * Success user count.
-     */
-    @SerializedName("successUserCount")
-    @Expose
-    public Integer successUserCount;
-
-    /**
      * The Error User Count.
      * Error user count.
      */
     @SerializedName("errorUserCount")
     @Expose
     public Integer errorUserCount;
+
+    /**
+     * The Success Device Count.
+     * Success device count.
+     */
+    @SerializedName("successDeviceCount")
+    @Expose
+    public Integer successDeviceCount;
+
+    /**
+     * The Success User Count.
+     * Success user count.
+     */
+    @SerializedName("successUserCount")
+    @Expose
+    public Integer successUserCount;
 
 
     /**

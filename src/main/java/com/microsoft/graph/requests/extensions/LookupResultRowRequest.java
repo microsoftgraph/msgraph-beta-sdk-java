@@ -112,6 +112,27 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
     }
 
     /**
+     * Creates a LookupResultRow with a new object
+     *
+     * @param newLookupResultRow the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback) {
+        send(HttpMethod.PUT, callback, newLookupResultRow);
+    }
+
+    /**
+     * Creates a LookupResultRow with a new object
+     *
+     * @param newLookupResultRow the object to create/update
+     * @return the created LookupResultRow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public LookupResultRow put(final LookupResultRow newLookupResultRow) throws ClientException {
+        return send(HttpMethod.PUT, newLookupResultRow);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

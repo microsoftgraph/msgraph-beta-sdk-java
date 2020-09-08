@@ -112,6 +112,27 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a WindowsOfficeClientConfiguration with a new object
+     *
+     * @param newWindowsOfficeClientConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<WindowsOfficeClientConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsOfficeClientConfiguration);
+    }
+
+    /**
+     * Creates a WindowsOfficeClientConfiguration with a new object
+     *
+     * @param newWindowsOfficeClientConfiguration the object to create/update
+     * @return the created WindowsOfficeClientConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsOfficeClientConfiguration put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsOfficeClientConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

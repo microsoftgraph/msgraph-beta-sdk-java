@@ -29,6 +29,38 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
 
 
     /**
+     * The Compliance Grace Period Expiration Date Time.
+     * The DateTime when device compliance grace period expires
+     */
+    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @Expose
+    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+
+    /**
+     * The Device Id.
+     * The Device Id that is being reported
+     */
+    @SerializedName("deviceId")
+    @Expose
+    public String deviceId;
+
+    /**
+     * The Device Model.
+     * The device model that is being reported
+     */
+    @SerializedName("deviceModel")
+    @Expose
+    public String deviceModel;
+
+    /**
+     * The Device Name.
+     * The Device Name that is being reported
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
      * The Platform Type.
      * Device platform type
      */
@@ -53,28 +85,12 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     public String settingName;
 
     /**
-     * The Device Id.
-     * The Device Id that is being reported
+     * The State.
+     * The compliance state of the setting
      */
-    @SerializedName("deviceId")
+    @SerializedName("state")
     @Expose
-    public String deviceId;
-
-    /**
-     * The Device Name.
-     * The Device Name that is being reported
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
-     * The User Id.
-     * The user Id that is being reported
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
+    public ComplianceStatus state;
 
     /**
      * The User Email.
@@ -83,6 +99,14 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     @SerializedName("userEmail")
     @Expose
     public String userEmail;
+
+    /**
+     * The User Id.
+     * The user Id that is being reported
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The User Name.
@@ -99,30 +123,6 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Device Model.
-     * The device model that is being reported
-     */
-    @SerializedName("deviceModel")
-    @Expose
-    public String deviceModel;
-
-    /**
-     * The State.
-     * The compliance state of the setting
-     */
-    @SerializedName("state")
-    @Expose
-    public ComplianceStatus state;
-
-    /**
-     * The Compliance Grace Period Expiration Date Time.
-     * The DateTime when device compliance grace period expires
-     */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
-    @Expose
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
 
     /**

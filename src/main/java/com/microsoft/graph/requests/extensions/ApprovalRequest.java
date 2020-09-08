@@ -116,6 +116,27 @@ public class ApprovalRequest extends BaseRequest implements IApprovalRequest {
     }
 
     /**
+     * Creates a Approval with a new object
+     *
+     * @param newApproval the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Approval newApproval, final ICallback<Approval> callback) {
+        send(HttpMethod.PUT, callback, newApproval);
+    }
+
+    /**
+     * Creates a Approval with a new object
+     *
+     * @param newApproval the object to create/update
+     * @return the created Approval
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Approval put(final Approval newApproval) throws ClientException {
+        return send(HttpMethod.PUT, newApproval);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

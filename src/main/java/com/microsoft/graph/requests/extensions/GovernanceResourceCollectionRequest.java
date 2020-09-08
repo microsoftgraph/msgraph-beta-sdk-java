@@ -61,14 +61,14 @@ public class GovernanceResourceCollectionRequest extends BaseCollectionRequest<G
     public void post(final GovernanceResource newGovernanceResource, final ICallback<GovernanceResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceResource, callback);
     }
 
     public GovernanceResource post(final GovernanceResource newGovernanceResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GovernanceResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceResource);
     }
 
@@ -105,6 +105,27 @@ public class GovernanceResourceCollectionRequest extends BaseCollectionRequest<G
         return (GovernanceResourceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGovernanceResourceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GovernanceResourceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGovernanceResourceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGovernanceResourceCollectionRequest)this;
+    }
     public IGovernanceResourceCollectionPage buildFromResponse(final GovernanceResourceCollectionResponse response) {
         final IGovernanceResourceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

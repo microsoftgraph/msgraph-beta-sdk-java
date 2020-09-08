@@ -112,6 +112,27 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a UnsupportedDeviceConfiguration with a new object
+     *
+     * @param newUnsupportedDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<UnsupportedDeviceConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newUnsupportedDeviceConfiguration);
+    }
+
+    /**
+     * Creates a UnsupportedDeviceConfiguration with a new object
+     *
+     * @param newUnsupportedDeviceConfiguration the object to create/update
+     * @return the created UnsupportedDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnsupportedDeviceConfiguration put(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newUnsupportedDeviceConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

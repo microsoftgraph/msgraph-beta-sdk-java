@@ -27,20 +27,20 @@ public class EntitlementManagementSettings extends Entity implements IJsonBacked
 
 
     /**
-     * The External User Lifecycle Action.
-     * 
-     */
-    @SerializedName("externalUserLifecycleAction")
-    @Expose
-    public String externalUserLifecycleAction;
-
-    /**
      * The Days Until External User Deleted After Blocked.
      * 
      */
     @SerializedName("daysUntilExternalUserDeletedAfterBlocked")
     @Expose
     public Integer daysUntilExternalUserDeletedAfterBlocked;
+
+    /**
+     * The External User Lifecycle Action.
+     * 
+     */
+    @SerializedName("externalUserLifecycleAction")
+    @Expose
+    public String externalUserLifecycleAction;
 
 
     /**

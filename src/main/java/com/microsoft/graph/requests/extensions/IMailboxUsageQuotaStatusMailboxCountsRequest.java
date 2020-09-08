@@ -80,6 +80,23 @@ public interface IMailboxUsageQuotaStatusMailboxCountsRequest extends IHttpReque
     MailboxUsageQuotaStatusMailboxCounts post(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts) throws ClientException;
 
     /**
+     * Posts a MailboxUsageQuotaStatusMailboxCounts with a new object
+     *
+     * @param newMailboxUsageQuotaStatusMailboxCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback);
+
+    /**
+     * Posts a MailboxUsageQuotaStatusMailboxCounts with a new object
+     *
+     * @param newMailboxUsageQuotaStatusMailboxCounts the object to create/update
+     * @return the created MailboxUsageQuotaStatusMailboxCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MailboxUsageQuotaStatusMailboxCounts put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

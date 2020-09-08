@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationValueDecimalRequest extends IHttpReques
     GroupPolicyPresentationValueDecimal post(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationValueDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueDecimal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal, final ICallback<GroupPolicyPresentationValueDecimal> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationValueDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueDecimal the object to create/update
+     * @return the created GroupPolicyPresentationValueDecimal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationValueDecimal put(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IRelationRequest extends IHttpRequest {
     Relation post(final Relation newRelation) throws ClientException;
 
     /**
+     * Posts a Relation with a new object
+     *
+     * @param newRelation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Relation newRelation, final ICallback<Relation> callback);
+
+    /**
+     * Posts a Relation with a new object
+     *
+     * @param newRelation the object to create/update
+     * @return the created Relation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Relation put(final Relation newRelation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

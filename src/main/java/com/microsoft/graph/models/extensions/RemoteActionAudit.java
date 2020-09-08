@@ -29,60 +29,12 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Device Display Name.
-     * Intune device name.
-     */
-    @SerializedName("deviceDisplayName")
-    @Expose
-    public String deviceDisplayName;
-
-    /**
-     * The User Name.
-     * [deprecated] Please use InitiatedByUserPrincipalName instead.
-     */
-    @SerializedName("userName")
-    @Expose
-    public String userName;
-
-    /**
-     * The Initiated By User Principal Name.
-     * User who initiated the device action, format is UPN.
-     */
-    @SerializedName("initiatedByUserPrincipalName")
-    @Expose
-    public String initiatedByUserPrincipalName;
-
-    /**
      * The Action.
      * The action name.
      */
     @SerializedName("action")
     @Expose
     public RemoteAction action;
-
-    /**
-     * The Request Date Time.
-     * Time when the action was issued, given in UTC.
-     */
-    @SerializedName("requestDateTime")
-    @Expose
-    public java.util.Calendar requestDateTime;
-
-    /**
-     * The Device Owner User Principal Name.
-     * Upn of the device owner.
-     */
-    @SerializedName("deviceOwnerUserPrincipalName")
-    @Expose
-    public String deviceOwnerUserPrincipalName;
-
-    /**
-     * The Device IMEI.
-     * IMEI of the device.
-     */
-    @SerializedName("deviceIMEI")
-    @Expose
-    public String deviceIMEI;
 
     /**
      * The Action State.
@@ -93,12 +45,60 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
     public ActionState actionState;
 
     /**
+     * The Device Display Name.
+     * Intune device name.
+     */
+    @SerializedName("deviceDisplayName")
+    @Expose
+    public String deviceDisplayName;
+
+    /**
+     * The Device IMEI.
+     * IMEI of the device.
+     */
+    @SerializedName("deviceIMEI")
+    @Expose
+    public String deviceIMEI;
+
+    /**
+     * The Device Owner User Principal Name.
+     * Upn of the device owner.
+     */
+    @SerializedName("deviceOwnerUserPrincipalName")
+    @Expose
+    public String deviceOwnerUserPrincipalName;
+
+    /**
+     * The Initiated By User Principal Name.
+     * User who initiated the device action, format is UPN.
+     */
+    @SerializedName("initiatedByUserPrincipalName")
+    @Expose
+    public String initiatedByUserPrincipalName;
+
+    /**
      * The Managed Device Id.
      * Action target.
      */
     @SerializedName("managedDeviceId")
     @Expose
     public String managedDeviceId;
+
+    /**
+     * The Request Date Time.
+     * Time when the action was issued, given in UTC.
+     */
+    @SerializedName("requestDateTime")
+    @Expose
+    public java.util.Calendar requestDateTime;
+
+    /**
+     * The User Name.
+     * [deprecated] Please use InitiatedByUserPrincipalName instead.
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
 
 
     /**

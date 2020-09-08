@@ -27,22 +27,6 @@ public class MailboxUsageMailboxCounts extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Total.
-     * 
-     */
-    @SerializedName("total")
-    @Expose
-    public Long total;
-
-    /**
      * The Active.
      * 
      */
@@ -65,6 +49,22 @@ public class MailboxUsageMailboxCounts extends Entity implements IJsonBackedObje
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Total.
+     * 
+     */
+    @SerializedName("total")
+    @Expose
+    public Long total;
 
 
     /**

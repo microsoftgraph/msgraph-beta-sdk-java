@@ -112,6 +112,27 @@ public class ClassificationJobResponseRequest extends BaseRequest implements ICl
     }
 
     /**
+     * Creates a ClassificationJobResponse with a new object
+     *
+     * @param newClassificationJobResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ClassificationJobResponse newClassificationJobResponse, final ICallback<ClassificationJobResponse> callback) {
+        send(HttpMethod.PUT, callback, newClassificationJobResponse);
+    }
+
+    /**
+     * Creates a ClassificationJobResponse with a new object
+     *
+     * @param newClassificationJobResponse the object to create/update
+     * @return the created ClassificationJobResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ClassificationJobResponse put(final ClassificationJobResponse newClassificationJobResponse) throws ClientException {
+        return send(HttpMethod.PUT, newClassificationJobResponse);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

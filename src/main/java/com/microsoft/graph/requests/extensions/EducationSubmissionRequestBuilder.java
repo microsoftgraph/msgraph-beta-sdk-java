@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSubmission;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,6 +59,13 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder implem
     }
 
 
+    public IEducationOutcomeCollectionRequestBuilder outcomes() {
+        return new EducationOutcomeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes"), getClient(), null);
+    }
+
+    public IEducationOutcomeRequestBuilder outcomes(final String id) {
+        return new EducationOutcomeRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes") + "/" + id, getClient(), null);
+    }
     public IEducationSubmissionResourceCollectionRequestBuilder resources() {
         return new EducationSubmissionResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
@@ -72,13 +79,6 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder implem
 
     public IEducationSubmissionResourceRequestBuilder submittedResources(final String id) {
         return new EducationSubmissionResourceRequestBuilder(getRequestUrlWithAdditionalSegment("submittedResources") + "/" + id, getClient(), null);
-    }
-    public IEducationOutcomeCollectionRequestBuilder outcomes() {
-        return new EducationOutcomeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes"), getClient(), null);
-    }
-
-    public IEducationOutcomeRequestBuilder outcomes(final String id) {
-        return new EducationOutcomeRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes") + "/" + id, getClient(), null);
     }
 
     public IEducationSubmissionReturnRequestBuilder msgraphReturn() {

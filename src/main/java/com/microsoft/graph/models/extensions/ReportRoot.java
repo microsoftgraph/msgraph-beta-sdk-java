@@ -11,8 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ApplicationSignInDetailedSummary;
 import com.microsoft.graph.models.extensions.CredentialUserRegistrationDetails;
 import com.microsoft.graph.models.extensions.UserCredentialUsageDetails;
-import com.microsoft.graph.models.extensions.PrintUsageSummaryByUser;
 import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
+import com.microsoft.graph.models.extensions.PrintUsageSummaryByUser;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionPage;
@@ -20,10 +20,10 @@ import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetails
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionResponse;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionPage;
+import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionResponse;
+import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -60,28 +60,28 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     public UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
 
     /**
-     * The Daily Print Usage Summaries By User.
-     * 
-     */
-    public PrintUsageSummaryByUserCollectionPage dailyPrintUsageSummariesByUser;
-
-    /**
-     * The Monthly Print Usage Summaries By User.
-     * 
-     */
-    public PrintUsageSummaryByUserCollectionPage monthlyPrintUsageSummariesByUser;
-
-    /**
      * The Daily Print Usage Summaries By Printer.
      * 
      */
     public PrintUsageSummaryByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
 
     /**
+     * The Daily Print Usage Summaries By User.
+     * 
+     */
+    public PrintUsageSummaryByUserCollectionPage dailyPrintUsageSummariesByUser;
+
+    /**
      * The Monthly Print Usage Summaries By Printer.
      * 
      */
     public PrintUsageSummaryByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
+
+    /**
+     * The Monthly Print Usage Summaries By User.
+     * 
+     */
+    public PrintUsageSummaryByUserCollectionPage monthlyPrintUsageSummariesByUser;
 
 
     /**
@@ -171,38 +171,6 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
             userCredentialUsageDetails = new UserCredentialUsageDetailsCollectionPage(response, null);
         }
 
-        if (json.has("dailyPrintUsageSummariesByUser")) {
-            final PrintUsageSummaryByUserCollectionResponse response = new PrintUsageSummaryByUserCollectionResponse();
-            if (json.has("dailyPrintUsageSummariesByUser@odata.nextLink")) {
-                response.nextLink = json.get("dailyPrintUsageSummariesByUser@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser").toString(), JsonObject[].class);
-            final PrintUsageSummaryByUser[] array = new PrintUsageSummaryByUser[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByUser.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            dailyPrintUsageSummariesByUser = new PrintUsageSummaryByUserCollectionPage(response, null);
-        }
-
-        if (json.has("monthlyPrintUsageSummariesByUser")) {
-            final PrintUsageSummaryByUserCollectionResponse response = new PrintUsageSummaryByUserCollectionResponse();
-            if (json.has("monthlyPrintUsageSummariesByUser@odata.nextLink")) {
-                response.nextLink = json.get("monthlyPrintUsageSummariesByUser@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser").toString(), JsonObject[].class);
-            final PrintUsageSummaryByUser[] array = new PrintUsageSummaryByUser[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByUser.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            monthlyPrintUsageSummariesByUser = new PrintUsageSummaryByUserCollectionPage(response, null);
-        }
-
         if (json.has("dailyPrintUsageSummariesByPrinter")) {
             final PrintUsageSummaryByPrinterCollectionResponse response = new PrintUsageSummaryByPrinterCollectionResponse();
             if (json.has("dailyPrintUsageSummariesByPrinter@odata.nextLink")) {
@@ -219,6 +187,22 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
             dailyPrintUsageSummariesByPrinter = new PrintUsageSummaryByPrinterCollectionPage(response, null);
         }
 
+        if (json.has("dailyPrintUsageSummariesByUser")) {
+            final PrintUsageSummaryByUserCollectionResponse response = new PrintUsageSummaryByUserCollectionResponse();
+            if (json.has("dailyPrintUsageSummariesByUser@odata.nextLink")) {
+                response.nextLink = json.get("dailyPrintUsageSummariesByUser@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser").toString(), JsonObject[].class);
+            final PrintUsageSummaryByUser[] array = new PrintUsageSummaryByUser[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByUser.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            dailyPrintUsageSummariesByUser = new PrintUsageSummaryByUserCollectionPage(response, null);
+        }
+
         if (json.has("monthlyPrintUsageSummariesByPrinter")) {
             final PrintUsageSummaryByPrinterCollectionResponse response = new PrintUsageSummaryByPrinterCollectionResponse();
             if (json.has("monthlyPrintUsageSummariesByPrinter@odata.nextLink")) {
@@ -233,6 +217,22 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             monthlyPrintUsageSummariesByPrinter = new PrintUsageSummaryByPrinterCollectionPage(response, null);
+        }
+
+        if (json.has("monthlyPrintUsageSummariesByUser")) {
+            final PrintUsageSummaryByUserCollectionResponse response = new PrintUsageSummaryByUserCollectionResponse();
+            if (json.has("monthlyPrintUsageSummariesByUser@odata.nextLink")) {
+                response.nextLink = json.get("monthlyPrintUsageSummariesByUser@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser").toString(), JsonObject[].class);
+            final PrintUsageSummaryByUser[] array = new PrintUsageSummaryByUser[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUsageSummaryByUser.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            monthlyPrintUsageSummariesByUser = new PrintUsageSummaryByUserCollectionPage(response, null);
         }
     }
 }

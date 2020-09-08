@@ -80,6 +80,23 @@ public interface IPermissionGrantConditionSetRequest extends IHttpRequest {
     PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException;
 
     /**
+     * Posts a PermissionGrantConditionSet with a new object
+     *
+     * @param newPermissionGrantConditionSet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback);
+
+    /**
+     * Posts a PermissionGrantConditionSet with a new object
+     *
+     * @param newPermissionGrantConditionSet the object to create/update
+     * @return the created PermissionGrantConditionSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PermissionGrantConditionSet put(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

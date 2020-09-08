@@ -9,18 +9,18 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserIdentity;
-import com.microsoft.graph.models.extensions.AccessReviewSettings;
 import com.microsoft.graph.models.extensions.Identity;
-import com.microsoft.graph.models.extensions.AccessReviewReviewer;
+import com.microsoft.graph.models.extensions.AccessReviewSettings;
 import com.microsoft.graph.models.extensions.AccessReviewDecision;
 import com.microsoft.graph.models.extensions.AccessReview;
+import com.microsoft.graph.models.extensions.AccessReviewReviewer;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionResponse;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionPage;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionResponse;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,36 +39,12 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
+     * The Business Flow Template Id.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("businessFlowTemplateId")
     @Expose
-    public String displayName;
-
-    /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * 
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
+    public String businessFlowTemplateId;
 
     /**
      * The Created By.
@@ -79,22 +55,6 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     public UserIdentity createdBy;
 
     /**
-     * The Business Flow Template Id.
-     * 
-     */
-    @SerializedName("businessFlowTemplateId")
-    @Expose
-    public String businessFlowTemplateId;
-
-    /**
-     * The Reviewer Type.
-     * 
-     */
-    @SerializedName("reviewerType")
-    @Expose
-    public String reviewerType;
-
-    /**
      * The Description.
      * 
      */
@@ -103,12 +63,20 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Settings.
+     * The Display Name.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName("displayName")
     @Expose
-    public AccessReviewSettings settings;
+    public String displayName;
+
+    /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
 
     /**
      * The Reviewed Entity.
@@ -119,10 +87,36 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     public Identity reviewedEntity;
 
     /**
-     * The Reviewers.
+     * The Reviewer Type.
      * 
      */
-    public AccessReviewReviewerCollectionPage reviewers;
+    @SerializedName("reviewerType")
+    @Expose
+    public String reviewerType;
+
+    /**
+     * The Settings.
+     * 
+     */
+    @SerializedName("settings")
+    @Expose
+    public AccessReviewSettings settings;
+
+    /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
 
     /**
      * The Decisions.
@@ -131,16 +125,22 @@ public class AccessReview extends Entity implements IJsonBackedObject {
     public AccessReviewDecisionCollectionPage decisions;
 
     /**
+     * The Instances.
+     * 
+     */
+    public AccessReviewCollectionPage instances;
+
+    /**
      * The My Decisions.
      * 
      */
     public AccessReviewDecisionCollectionPage myDecisions;
 
     /**
-     * The Instances.
+     * The Reviewers.
      * 
      */
-    public AccessReviewCollectionPage instances;
+    public AccessReviewReviewerCollectionPage reviewers;
 
 
     /**
@@ -182,22 +182,6 @@ public class AccessReview extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("reviewers")) {
-            final AccessReviewReviewerCollectionResponse response = new AccessReviewReviewerCollectionResponse();
-            if (json.has("reviewers@odata.nextLink")) {
-                response.nextLink = json.get("reviewers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("reviewers").toString(), JsonObject[].class);
-            final AccessReviewReviewer[] array = new AccessReviewReviewer[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewReviewer.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            reviewers = new AccessReviewReviewerCollectionPage(response, null);
-        }
-
         if (json.has("decisions")) {
             final AccessReviewDecisionCollectionResponse response = new AccessReviewDecisionCollectionResponse();
             if (json.has("decisions@odata.nextLink")) {
@@ -212,6 +196,22 @@ public class AccessReview extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             decisions = new AccessReviewDecisionCollectionPage(response, null);
+        }
+
+        if (json.has("instances")) {
+            final AccessReviewCollectionResponse response = new AccessReviewCollectionResponse();
+            if (json.has("instances@odata.nextLink")) {
+                response.nextLink = json.get("instances@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("instances").toString(), JsonObject[].class);
+            final AccessReview[] array = new AccessReview[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReview.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            instances = new AccessReviewCollectionPage(response, null);
         }
 
         if (json.has("myDecisions")) {
@@ -230,20 +230,20 @@ public class AccessReview extends Entity implements IJsonBackedObject {
             myDecisions = new AccessReviewDecisionCollectionPage(response, null);
         }
 
-        if (json.has("instances")) {
-            final AccessReviewCollectionResponse response = new AccessReviewCollectionResponse();
-            if (json.has("instances@odata.nextLink")) {
-                response.nextLink = json.get("instances@odata.nextLink").getAsString();
+        if (json.has("reviewers")) {
+            final AccessReviewReviewerCollectionResponse response = new AccessReviewReviewerCollectionResponse();
+            if (json.has("reviewers@odata.nextLink")) {
+                response.nextLink = json.get("reviewers@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("instances").toString(), JsonObject[].class);
-            final AccessReview[] array = new AccessReview[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("reviewers").toString(), JsonObject[].class);
+            final AccessReviewReviewer[] array = new AccessReviewReviewer[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReview.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessReviewReviewer.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            instances = new AccessReviewCollectionPage(response, null);
+            reviewers = new AccessReviewReviewerCollectionPage(response, null);
         }
     }
 }

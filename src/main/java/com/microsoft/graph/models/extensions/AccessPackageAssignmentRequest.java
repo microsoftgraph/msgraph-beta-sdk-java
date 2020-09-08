@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.RequestSchedule;
 import com.microsoft.graph.models.extensions.AccessPackage;
 import com.microsoft.graph.models.extensions.AccessPackageAssignment;
 import com.microsoft.graph.models.extensions.AccessPackageSubject;
@@ -30,12 +31,44 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
 
     /**
-     * The Request Type.
+     * The Completed Date.
      * 
      */
-    @SerializedName("requestType")
+    @SerializedName("completedDate")
     @Expose
-    public String requestType;
+    public java.util.Calendar completedDate;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
+     * The Expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The Is Validation Only.
+     * 
+     */
+    @SerializedName("isValidationOnly")
+    @Expose
+    public Boolean isValidationOnly;
+
+    /**
+     * The Justification.
+     * 
+     */
+    @SerializedName("justification")
+    @Expose
+    public String justification;
 
     /**
      * The Request State.
@@ -54,44 +87,20 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
     public String requestStatus;
 
     /**
-     * The Is Validation Only.
+     * The Request Type.
      * 
      */
-    @SerializedName("isValidationOnly")
+    @SerializedName("requestType")
     @Expose
-    public Boolean isValidationOnly;
+    public String requestType;
 
     /**
-     * The Created Date Time.
+     * The Schedule.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("schedule")
     @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Completed Date.
-     * 
-     */
-    @SerializedName("completedDate")
-    @Expose
-    public java.util.Calendar completedDate;
-
-    /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Justification.
-     * 
-     */
-    @SerializedName("justification")
-    @Expose
-    public String justification;
+    public RequestSchedule schedule;
 
     /**
      * The Access Package.

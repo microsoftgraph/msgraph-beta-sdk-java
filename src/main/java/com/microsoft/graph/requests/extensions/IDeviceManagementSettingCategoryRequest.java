@@ -80,6 +80,23 @@ public interface IDeviceManagementSettingCategoryRequest extends IHttpRequest {
     DeviceManagementSettingCategory post(final DeviceManagementSettingCategory newDeviceManagementSettingCategory) throws ClientException;
 
     /**
+     * Posts a DeviceManagementSettingCategory with a new object
+     *
+     * @param newDeviceManagementSettingCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementSettingCategory newDeviceManagementSettingCategory, final ICallback<DeviceManagementSettingCategory> callback);
+
+    /**
+     * Posts a DeviceManagementSettingCategory with a new object
+     *
+     * @param newDeviceManagementSettingCategory the object to create/update
+     * @return the created DeviceManagementSettingCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementSettingCategory put(final DeviceManagementSettingCategory newDeviceManagementSettingCategory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

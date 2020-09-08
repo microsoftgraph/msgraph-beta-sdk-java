@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.CustomUpdateTimeWindow;
 import com.microsoft.graph.models.generated.DayOfWeek;
 import com.microsoft.graph.models.generated.IosSoftwareUpdateScheduleType;
-import com.microsoft.graph.models.extensions.CustomUpdateTimeWindow;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -30,12 +30,12 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
 
 
     /**
-     * The Is Enabled.
-     * Is setting enabled in UI
+     * The Active Hours End.
+     * Active Hours End (active hours mean the time window when updates install should not happen)
      */
-    @SerializedName("isEnabled")
+    @SerializedName("activeHoursEnd")
     @Expose
-    public Boolean isEnabled;
+    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
 
     /**
      * The Active Hours Start.
@@ -46,12 +46,12 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
 
     /**
-     * The Active Hours End.
-     * Active Hours End (active hours mean the time window when updates install should not happen)
+     * The Custom Update Time Windows.
+     * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
      */
-    @SerializedName("activeHoursEnd")
+    @SerializedName("customUpdateTimeWindows")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
+    public java.util.List<CustomUpdateTimeWindow> customUpdateTimeWindows;
 
     /**
      * The Desired Os Version.
@@ -62,28 +62,28 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
     public String desiredOsVersion;
 
     /**
-     * The Scheduled Install Days.
-     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     */
-    @SerializedName("scheduledInstallDays")
-    @Expose
-    public java.util.List<DayOfWeek> scheduledInstallDays;
-
-    /**
-     * The Utc Time Offset In Minutes.
-     * UTC Time Offset indicated in minutes
-     */
-    @SerializedName("utcTimeOffsetInMinutes")
-    @Expose
-    public Integer utcTimeOffsetInMinutes;
-
-    /**
      * The Enforced Software Update Delay In Days.
      * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
      */
     @SerializedName("enforcedSoftwareUpdateDelayInDays")
     @Expose
     public Integer enforcedSoftwareUpdateDelayInDays;
+
+    /**
+     * The Is Enabled.
+     * Is setting enabled in UI
+     */
+    @SerializedName("isEnabled")
+    @Expose
+    public Boolean isEnabled;
+
+    /**
+     * The Scheduled Install Days.
+     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
+     */
+    @SerializedName("scheduledInstallDays")
+    @Expose
+    public java.util.List<DayOfWeek> scheduledInstallDays;
 
     /**
      * The Update Schedule Type.
@@ -94,12 +94,12 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
     public IosSoftwareUpdateScheduleType updateScheduleType;
 
     /**
-     * The Custom Update Time Windows.
-     * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
+     * The Utc Time Offset In Minutes.
+     * UTC Time Offset indicated in minutes
      */
-    @SerializedName("customUpdateTimeWindows")
+    @SerializedName("utcTimeOffsetInMinutes")
     @Expose
-    public java.util.List<CustomUpdateTimeWindow> customUpdateTimeWindows;
+    public Integer utcTimeOffsetInMinutes;
 
 
     /**

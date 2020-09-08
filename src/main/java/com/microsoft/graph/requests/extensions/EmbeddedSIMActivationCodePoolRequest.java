@@ -121,6 +121,27 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a EmbeddedSIMActivationCodePool with a new object
+     *
+     * @param newEmbeddedSIMActivationCodePool the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback) {
+        send(HttpMethod.PUT, callback, newEmbeddedSIMActivationCodePool);
+    }
+
+    /**
+     * Creates a EmbeddedSIMActivationCodePool with a new object
+     *
+     * @param newEmbeddedSIMActivationCodePool the object to create/update
+     * @return the created EmbeddedSIMActivationCodePool
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmbeddedSIMActivationCodePool put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException {
+        return send(HttpMethod.PUT, newEmbeddedSIMActivationCodePool);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

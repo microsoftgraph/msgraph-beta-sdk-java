@@ -80,6 +80,23 @@ public interface IShipmentMethodRequest extends IHttpRequest {
     ShipmentMethod post(final ShipmentMethod newShipmentMethod) throws ClientException;
 
     /**
+     * Posts a ShipmentMethod with a new object
+     *
+     * @param newShipmentMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback);
+
+    /**
+     * Posts a ShipmentMethod with a new object
+     *
+     * @param newShipmentMethod the object to create/update
+     * @return the created ShipmentMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ShipmentMethod put(final ShipmentMethod newShipmentMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

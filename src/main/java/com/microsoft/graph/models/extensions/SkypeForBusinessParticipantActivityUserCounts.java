@@ -27,12 +27,12 @@ public class SkypeForBusinessParticipantActivityUserCounts extends Entity implem
 
 
     /**
-     * The Im.
+     * The App Sharing.
      * 
      */
-    @SerializedName("im")
+    @SerializedName("appSharing")
     @Expose
-    public Long im;
+    public Long appSharing;
 
     /**
      * The Audio Video.
@@ -43,22 +43,6 @@ public class SkypeForBusinessParticipantActivityUserCounts extends Entity implem
     public Long audioVideo;
 
     /**
-     * The App Sharing.
-     * 
-     */
-    @SerializedName("appSharing")
-    @Expose
-    public Long appSharing;
-
-    /**
-     * The Web.
-     * 
-     */
-    @SerializedName("web")
-    @Expose
-    public Long web;
-
-    /**
      * The Dial In Out3rd Party.
      * 
      */
@@ -67,12 +51,12 @@ public class SkypeForBusinessParticipantActivityUserCounts extends Entity implem
     public Long dialInOut3rdParty;
 
     /**
-     * The Report Refresh Date.
+     * The Im.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("im")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long im;
 
     /**
      * The Report Date.
@@ -89,6 +73,22 @@ public class SkypeForBusinessParticipantActivityUserCounts extends Entity implem
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Web.
+     * 
+     */
+    @SerializedName("web")
+    @Expose
+    public Long web;
 
 
     /**

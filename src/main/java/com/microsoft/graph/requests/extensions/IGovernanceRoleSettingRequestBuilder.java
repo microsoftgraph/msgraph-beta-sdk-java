@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleSetting;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,17 +36,17 @@ public interface IGovernanceRoleSettingRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for GovernanceRoleDefinition
-     *
-     * @return the IGovernanceRoleDefinitionRequestBuilder instance
-     */
-    IGovernanceRoleDefinitionRequestBuilder roleDefinition();
-
-    /**
      * Gets the request builder for GovernanceResource
      *
      * @return the IGovernanceResourceRequestBuilder instance
      */
     IGovernanceResourceRequestBuilder resource();
+
+    /**
+     * Gets the request builder for GovernanceRoleDefinition
+     *
+     * @return the IGovernanceRoleDefinitionRequestBuilder instance
+     */
+    IGovernanceRoleDefinitionRequestBuilder roleDefinition();
 
 }

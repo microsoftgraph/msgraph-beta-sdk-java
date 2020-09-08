@@ -62,14 +62,14 @@ public class IdentityUserFlowCollectionRequest extends BaseCollectionRequest<Ide
     public void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityUserFlowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityUserFlow, callback);
     }
 
     public IdentityUserFlow post(final IdentityUserFlow newIdentityUserFlow) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityUserFlowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityUserFlow);
     }
 
@@ -106,6 +106,27 @@ public class IdentityUserFlowCollectionRequest extends BaseCollectionRequest<Ide
         return (IdentityUserFlowCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIdentityUserFlowCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IdentityUserFlowCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIdentityUserFlowCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIdentityUserFlowCollectionRequest)this;
+    }
     public IIdentityUserFlowCollectionPage buildFromResponse(final IdentityUserFlowCollectionResponse response) {
         final IIdentityUserFlowCollectionRequestBuilder builder;
         if (response.nextLink != null) {

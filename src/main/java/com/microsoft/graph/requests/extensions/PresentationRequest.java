@@ -116,6 +116,27 @@ public class PresentationRequest extends BaseRequest implements IPresentationReq
     }
 
     /**
+     * Creates a Presentation with a new object
+     *
+     * @param newPresentation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Presentation newPresentation, final ICallback<Presentation> callback) {
+        send(HttpMethod.PUT, callback, newPresentation);
+    }
+
+    /**
+     * Creates a Presentation with a new object
+     *
+     * @param newPresentation the object to create/update
+     * @return the created Presentation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Presentation put(final Presentation newPresentation) throws ClientException {
+        return send(HttpMethod.PUT, newPresentation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IEvaluateLabelJobResponseRequest extends IHttpRequest {
     EvaluateLabelJobResponse post(final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException;
 
     /**
+     * Posts a EvaluateLabelJobResponse with a new object
+     *
+     * @param newEvaluateLabelJobResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<EvaluateLabelJobResponse> callback);
+
+    /**
+     * Posts a EvaluateLabelJobResponse with a new object
+     *
+     * @param newEvaluateLabelJobResponse the object to create/update
+     * @return the created EvaluateLabelJobResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EvaluateLabelJobResponse put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -36,28 +36,12 @@ public class VppTokenLicenseSummary implements IJsonBackedObject {
     }
 
     /**
-     * The Vpp Token Id.
-     * Identifier of the VPP token.
-     */
-    @SerializedName("vppTokenId")
-    @Expose
-    public String vppTokenId;
-
-    /**
      * The Apple Id.
      * The Apple Id associated with the given Apple Volume Purchase Program Token.
      */
     @SerializedName("appleId")
     @Expose
     public String appleId;
-
-    /**
-     * The Organization Name.
-     * The organization associated with the Apple Volume Purchase Program Token.
-     */
-    @SerializedName("organizationName")
-    @Expose
-    public String organizationName;
 
     /**
      * The Available License Count.
@@ -68,12 +52,28 @@ public class VppTokenLicenseSummary implements IJsonBackedObject {
     public Integer availableLicenseCount;
 
     /**
+     * The Organization Name.
+     * The organization associated with the Apple Volume Purchase Program Token.
+     */
+    @SerializedName("organizationName")
+    @Expose
+    public String organizationName;
+
+    /**
      * The Used License Count.
      * The number of VPP licenses in use.
      */
     @SerializedName("usedLicenseCount")
     @Expose
     public Integer usedLicenseCount;
+
+    /**
+     * The Vpp Token Id.
+     * Identifier of the VPP token.
+     */
+    @SerializedName("vppTokenId")
+    @Expose
+    public String vppTokenId;
 
 
     /**

@@ -9,6 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
@@ -17,10 +21,6 @@ import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
@@ -124,6 +124,27 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      */
     public Channel post(final Channel newChannel) throws ClientException {
         return send(HttpMethod.POST, newChannel);
+    }
+
+    /**
+     * Creates a Channel with a new object
+     *
+     * @param newChannel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Channel newChannel, final ICallback<Channel> callback) {
+        send(HttpMethod.PUT, callback, newChannel);
+    }
+
+    /**
+     * Creates a Channel with a new object
+     *
+     * @param newChannel the object to create/update
+     * @return the created Channel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Channel put(final Channel newChannel) throws ClientException {
+        return send(HttpMethod.PUT, newChannel);
     }
 
     /**

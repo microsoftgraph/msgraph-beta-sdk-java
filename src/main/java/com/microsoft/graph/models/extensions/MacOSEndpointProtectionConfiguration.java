@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.MacOSGatekeeperAppSources;
-import com.microsoft.graph.models.extensions.MacOSFirewallApplication;
-import com.microsoft.graph.models.generated.MacOSFileVaultRecoveryKeyTypes;
 import com.microsoft.graph.models.generated.Enablement;
+import com.microsoft.graph.models.generated.MacOSFileVaultRecoveryKeyTypes;
+import com.microsoft.graph.models.extensions.MacOSFirewallApplication;
+import com.microsoft.graph.models.generated.MacOSGatekeeperAppSources;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -31,52 +31,84 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
 
     /**
-     * The Gatekeeper Allowed App Source.
-     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+     * The Advanced Threat Protection Automatic Sample Submission.
+     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("gatekeeperAllowedAppSource")
+    @SerializedName("advancedThreatProtectionAutomaticSampleSubmission")
     @Expose
-    public MacOSGatekeeperAppSources gatekeeperAllowedAppSource;
+    public Enablement advancedThreatProtectionAutomaticSampleSubmission;
 
     /**
-     * The Gatekeeper Block Override.
-     * If set to true, the user override for Gatekeeper will be disabled.
+     * The Advanced Threat Protection Cloud Delivered.
+     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("gatekeeperBlockOverride")
+    @SerializedName("advancedThreatProtectionCloudDelivered")
     @Expose
-    public Boolean gatekeeperBlockOverride;
+    public Enablement advancedThreatProtectionCloudDelivered;
 
     /**
-     * The Firewall Enabled.
-     * Whether the firewall should be enabled or not.
+     * The Advanced Threat Protection Diagnostic Data Collection.
+     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("firewallEnabled")
+    @SerializedName("advancedThreatProtectionDiagnosticDataCollection")
     @Expose
-    public Boolean firewallEnabled;
+    public Enablement advancedThreatProtectionDiagnosticDataCollection;
 
     /**
-     * The Firewall Block All Incoming.
-     * Corresponds to the ???Block all incoming connections??? option.
+     * The Advanced Threat Protection Excluded Extensions.
+     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("firewallBlockAllIncoming")
+    @SerializedName("advancedThreatProtectionExcludedExtensions")
     @Expose
-    public Boolean firewallBlockAllIncoming;
+    public java.util.List<String> advancedThreatProtectionExcludedExtensions;
 
     /**
-     * The Firewall Enable Stealth Mode.
-     * Corresponds to ???Enable stealth mode.???
+     * The Advanced Threat Protection Excluded Files.
+     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("firewallEnableStealthMode")
+    @SerializedName("advancedThreatProtectionExcludedFiles")
     @Expose
-    public Boolean firewallEnableStealthMode;
+    public java.util.List<String> advancedThreatProtectionExcludedFiles;
 
     /**
-     * The Firewall Applications.
-     * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
+     * The Advanced Threat Protection Excluded Folders.
+     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      */
-    @SerializedName("firewallApplications")
+    @SerializedName("advancedThreatProtectionExcludedFolders")
     @Expose
-    public java.util.List<MacOSFirewallApplication> firewallApplications;
+    public java.util.List<String> advancedThreatProtectionExcludedFolders;
+
+    /**
+     * The Advanced Threat Protection Excluded Processes.
+     * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     */
+    @SerializedName("advancedThreatProtectionExcludedProcesses")
+    @Expose
+    public java.util.List<String> advancedThreatProtectionExcludedProcesses;
+
+    /**
+     * The Advanced Threat Protection Real Time.
+     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS.
+     */
+    @SerializedName("advancedThreatProtectionRealTime")
+    @Expose
+    public Enablement advancedThreatProtectionRealTime;
+
+    /**
+     * The File Vault Allow Deferral Until Sign Out.
+     * Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
+     */
+    @SerializedName("fileVaultAllowDeferralUntilSignOut")
+    @Expose
+    public Boolean fileVaultAllowDeferralUntilSignOut;
+
+    /**
+     * The File Vault Disable Prompt At Sign Out.
+     * Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
+     */
+    @SerializedName("fileVaultDisablePromptAtSignOut")
+    @Expose
+    public Boolean fileVaultDisablePromptAtSignOut;
 
     /**
      * The File Vault Enabled.
@@ -87,12 +119,12 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     public Boolean fileVaultEnabled;
 
     /**
-     * The File Vault Selected Recovery Key Types.
-     * Required if FileVault is enabled, determines the type(s) of recovery key to use. 
+     * The File Vault Hide Personal Recovery Key.
+     * Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
      */
-    @SerializedName("fileVaultSelectedRecoveryKeyTypes")
+    @SerializedName("fileVaultHidePersonalRecoveryKey")
     @Expose
-    public EnumSet<MacOSFileVaultRecoveryKeyTypes> fileVaultSelectedRecoveryKeyTypes;
+    public Boolean fileVaultHidePersonalRecoveryKey;
 
     /**
      * The File Vault Institutional Recovery Key Certificate.
@@ -111,22 +143,6 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     public String fileVaultInstitutionalRecoveryKeyCertificateFileName;
 
     /**
-     * The File Vault Personal Recovery Key Help Message.
-     * Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
-     */
-    @SerializedName("fileVaultPersonalRecoveryKeyHelpMessage")
-    @Expose
-    public String fileVaultPersonalRecoveryKeyHelpMessage;
-
-    /**
-     * The File Vault Allow Deferral Until Sign Out.
-     * Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
-     */
-    @SerializedName("fileVaultAllowDeferralUntilSignOut")
-    @Expose
-    public Boolean fileVaultAllowDeferralUntilSignOut;
-
-    /**
      * The File Vault Number Of Times User Can Ignore.
      * Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
      */
@@ -135,12 +151,12 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     public Integer fileVaultNumberOfTimesUserCanIgnore;
 
     /**
-     * The File Vault Disable Prompt At Sign Out.
-     * Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
+     * The File Vault Personal Recovery Key Help Message.
+     * Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
      */
-    @SerializedName("fileVaultDisablePromptAtSignOut")
+    @SerializedName("fileVaultPersonalRecoveryKeyHelpMessage")
     @Expose
-    public Boolean fileVaultDisablePromptAtSignOut;
+    public String fileVaultPersonalRecoveryKeyHelpMessage;
 
     /**
      * The File Vault Personal Recovery Key Rotation In Months.
@@ -151,76 +167,60 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     public Integer fileVaultPersonalRecoveryKeyRotationInMonths;
 
     /**
-     * The File Vault Hide Personal Recovery Key.
-     * Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
+     * The File Vault Selected Recovery Key Types.
+     * Required if FileVault is enabled, determines the type(s) of recovery key to use. 
      */
-    @SerializedName("fileVaultHidePersonalRecoveryKey")
+    @SerializedName("fileVaultSelectedRecoveryKeyTypes")
     @Expose
-    public Boolean fileVaultHidePersonalRecoveryKey;
+    public EnumSet<MacOSFileVaultRecoveryKeyTypes> fileVaultSelectedRecoveryKeyTypes;
 
     /**
-     * The Advanced Threat Protection Real Time.
-     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS.
+     * The Firewall Applications.
+     * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("advancedThreatProtectionRealTime")
+    @SerializedName("firewallApplications")
     @Expose
-    public Enablement advancedThreatProtectionRealTime;
+    public java.util.List<MacOSFirewallApplication> firewallApplications;
 
     /**
-     * The Advanced Threat Protection Cloud Delivered.
-     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS.
+     * The Firewall Block All Incoming.
+     * Corresponds to the ???Block all incoming connections??? option.
      */
-    @SerializedName("advancedThreatProtectionCloudDelivered")
+    @SerializedName("firewallBlockAllIncoming")
     @Expose
-    public Enablement advancedThreatProtectionCloudDelivered;
+    public Boolean firewallBlockAllIncoming;
 
     /**
-     * The Advanced Threat Protection Automatic Sample Submission.
-     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS.
+     * The Firewall Enabled.
+     * Whether the firewall should be enabled or not.
      */
-    @SerializedName("advancedThreatProtectionAutomaticSampleSubmission")
+    @SerializedName("firewallEnabled")
     @Expose
-    public Enablement advancedThreatProtectionAutomaticSampleSubmission;
+    public Boolean firewallEnabled;
 
     /**
-     * The Advanced Threat Protection Diagnostic Data Collection.
-     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS.
+     * The Firewall Enable Stealth Mode.
+     * Corresponds to ???Enable stealth mode.???
      */
-    @SerializedName("advancedThreatProtectionDiagnosticDataCollection")
+    @SerializedName("firewallEnableStealthMode")
     @Expose
-    public Enablement advancedThreatProtectionDiagnosticDataCollection;
+    public Boolean firewallEnableStealthMode;
 
     /**
-     * The Advanced Threat Protection Excluded Folders.
-     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     * The Gatekeeper Allowed App Source.
+     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
      */
-    @SerializedName("advancedThreatProtectionExcludedFolders")
+    @SerializedName("gatekeeperAllowedAppSource")
     @Expose
-    public java.util.List<String> advancedThreatProtectionExcludedFolders;
+    public MacOSGatekeeperAppSources gatekeeperAllowedAppSource;
 
     /**
-     * The Advanced Threat Protection Excluded Files.
-     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+     * The Gatekeeper Block Override.
+     * If set to true, the user override for Gatekeeper will be disabled.
      */
-    @SerializedName("advancedThreatProtectionExcludedFiles")
+    @SerializedName("gatekeeperBlockOverride")
     @Expose
-    public java.util.List<String> advancedThreatProtectionExcludedFiles;
-
-    /**
-     * The Advanced Threat Protection Excluded Extensions.
-     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
-     */
-    @SerializedName("advancedThreatProtectionExcludedExtensions")
-    @Expose
-    public java.util.List<String> advancedThreatProtectionExcludedExtensions;
-
-    /**
-     * The Advanced Threat Protection Excluded Processes.
-     * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
-     */
-    @SerializedName("advancedThreatProtectionExcludedProcesses")
-    @Expose
-    public java.util.List<String> advancedThreatProtectionExcludedProcesses;
+    public Boolean gatekeeperBlockOverride;
 
 
     /**

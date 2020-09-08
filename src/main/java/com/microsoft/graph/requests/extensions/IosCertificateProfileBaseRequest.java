@@ -127,6 +127,27 @@ public class IosCertificateProfileBaseRequest extends BaseRequest implements IIo
     }
 
     /**
+     * Creates a IosCertificateProfileBase with a new object
+     *
+     * @param newIosCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosCertificateProfileBase newIosCertificateProfileBase, final ICallback<IosCertificateProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newIosCertificateProfileBase);
+    }
+
+    /**
+     * Creates a IosCertificateProfileBase with a new object
+     *
+     * @param newIosCertificateProfileBase the object to create/update
+     * @return the created IosCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosCertificateProfileBase put(final IosCertificateProfileBase newIosCertificateProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newIosCertificateProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

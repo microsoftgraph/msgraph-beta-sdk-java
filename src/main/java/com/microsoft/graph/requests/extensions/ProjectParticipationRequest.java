@@ -112,6 +112,27 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
     }
 
     /**
+     * Creates a ProjectParticipation with a new object
+     *
+     * @param newProjectParticipation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback) {
+        send(HttpMethod.PUT, callback, newProjectParticipation);
+    }
+
+    /**
+     * Creates a ProjectParticipation with a new object
+     *
+     * @param newProjectParticipation the object to create/update
+     * @return the created ProjectParticipation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ProjectParticipation put(final ProjectParticipation newProjectParticipation) throws ClientException {
+        return send(HttpMethod.PUT, newProjectParticipation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IGroupPolicyConfigurationAssignmentRequest extends IHttpRequest
     GroupPolicyConfigurationAssignment post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException;
 
     /**
+     * Posts a GroupPolicyConfigurationAssignment with a new object
+     *
+     * @param newGroupPolicyConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback);
+
+    /**
+     * Posts a GroupPolicyConfigurationAssignment with a new object
+     *
+     * @param newGroupPolicyConfigurationAssignment the object to create/update
+     * @return the created GroupPolicyConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyConfigurationAssignment put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class UserExperienceAnalyticsCategoryCollectionRequest extends BaseCollec
     public void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsCategory, callback);
     }
 
     public UserExperienceAnalyticsCategory post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsCategory);
     }
 
@@ -106,6 +106,27 @@ public class UserExperienceAnalyticsCategoryCollectionRequest extends BaseCollec
         return (UserExperienceAnalyticsCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsCategoryCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsCategoryCollectionPage buildFromResponse(final UserExperienceAnalyticsCategoryCollectionResponse response) {
         final IUserExperienceAnalyticsCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

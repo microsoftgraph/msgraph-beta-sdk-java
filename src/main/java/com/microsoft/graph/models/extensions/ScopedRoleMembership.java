@@ -28,20 +28,20 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Role Id.
-     * 
-     */
-    @SerializedName("roleId")
-    @Expose
-    public String roleId;
-
-    /**
      * The Administrative Unit Id.
      * 
      */
     @SerializedName("administrativeUnitId")
     @Expose
     public String administrativeUnitId;
+
+    /**
+     * The Role Id.
+     * 
+     */
+    @SerializedName("roleId")
+    @Expose
+    public String roleId;
 
     /**
      * The Role Member Info.

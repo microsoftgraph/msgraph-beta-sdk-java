@@ -80,6 +80,23 @@ public interface ISkypeForBusinessActivityCountsRequest extends IHttpRequest {
     SkypeForBusinessActivityCounts post(final SkypeForBusinessActivityCounts newSkypeForBusinessActivityCounts) throws ClientException;
 
     /**
+     * Posts a SkypeForBusinessActivityCounts with a new object
+     *
+     * @param newSkypeForBusinessActivityCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SkypeForBusinessActivityCounts newSkypeForBusinessActivityCounts, final ICallback<SkypeForBusinessActivityCounts> callback);
+
+    /**
+     * Posts a SkypeForBusinessActivityCounts with a new object
+     *
+     * @param newSkypeForBusinessActivityCounts the object to create/update
+     * @return the created SkypeForBusinessActivityCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SkypeForBusinessActivityCounts put(final SkypeForBusinessActivityCounts newSkypeForBusinessActivityCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

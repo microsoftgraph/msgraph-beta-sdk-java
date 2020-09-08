@@ -112,6 +112,27 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
     }
 
     /**
+     * Creates a MacOSLobApp with a new object
+     *
+     * @param newMacOSLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSLobApp newMacOSLobApp, final ICallback<MacOSLobApp> callback) {
+        send(HttpMethod.PUT, callback, newMacOSLobApp);
+    }
+
+    /**
+     * Creates a MacOSLobApp with a new object
+     *
+     * @param newMacOSLobApp the object to create/update
+     * @return the created MacOSLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSLobApp put(final MacOSLobApp newMacOSLobApp) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSLobApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

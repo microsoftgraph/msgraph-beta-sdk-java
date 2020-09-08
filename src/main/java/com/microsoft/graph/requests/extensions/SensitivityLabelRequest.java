@@ -119,6 +119,27 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
     }
 
     /**
+     * Creates a SensitivityLabel with a new object
+     *
+     * @param newSensitivityLabel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SensitivityLabel newSensitivityLabel, final ICallback<SensitivityLabel> callback) {
+        send(HttpMethod.PUT, callback, newSensitivityLabel);
+    }
+
+    /**
+     * Creates a SensitivityLabel with a new object
+     *
+     * @param newSensitivityLabel the object to create/update
+     * @return the created SensitivityLabel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SensitivityLabel put(final SensitivityLabel newSensitivityLabel) throws ClientException {
+        return send(HttpMethod.PUT, newSensitivityLabel);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

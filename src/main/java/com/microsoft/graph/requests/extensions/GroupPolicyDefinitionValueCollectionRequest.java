@@ -62,14 +62,14 @@ public class GroupPolicyDefinitionValueCollectionRequest extends BaseCollectionR
     public void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<GroupPolicyDefinitionValue> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyDefinitionValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyDefinitionValue, callback);
     }
 
     public GroupPolicyDefinitionValue post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyDefinitionValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyDefinitionValue);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyDefinitionValueCollectionRequest extends BaseCollectionR
         return (GroupPolicyDefinitionValueCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionValueCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyDefinitionValueCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionValueCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyDefinitionValueCollectionRequest)this;
+    }
     public IGroupPolicyDefinitionValueCollectionPage buildFromResponse(final GroupPolicyDefinitionValueCollectionResponse response) {
         final IGroupPolicyDefinitionValueCollectionRequestBuilder builder;
         if (response.nextLink != null) {

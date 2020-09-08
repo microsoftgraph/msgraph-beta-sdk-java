@@ -34,28 +34,12 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
 
 
     /**
-     * The Display Name.
-     * The admin defined name of the embedded SIM activation code pool.
+     * The Activation Code Count.
+     * The total count of activation codes which belong to this pool.
      */
-    @SerializedName("displayName")
+    @SerializedName("activationCodeCount")
     @Expose
-    public String displayName;
-
-    /**
-     * The Created Date Time.
-     * The time the embedded SIM activation code pool was created. Generated service side.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Modified Date Time.
-     * The time the embedded SIM activation code pool was last modified. Updated service side.
-     */
-    @SerializedName("modifiedDateTime")
-    @Expose
-    public java.util.Calendar modifiedDateTime;
+    public Integer activationCodeCount;
 
     /**
      * The Activation Codes.
@@ -66,12 +50,28 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
     public java.util.List<EmbeddedSIMActivationCode> activationCodes;
 
     /**
-     * The Activation Code Count.
-     * The total count of activation codes which belong to this pool.
+     * The Created Date Time.
+     * The time the embedded SIM activation code pool was created. Generated service side.
      */
-    @SerializedName("activationCodeCount")
+    @SerializedName("createdDateTime")
     @Expose
-    public Integer activationCodeCount;
+    public java.util.Calendar createdDateTime;
+
+    /**
+     * The Display Name.
+     * The admin defined name of the embedded SIM activation code pool.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Modified Date Time.
+     * The time the embedded SIM activation code pool was last modified. Updated service side.
+     */
+    @SerializedName("modifiedDateTime")
+    @Expose
+    public java.util.Calendar modifiedDateTime;
 
     /**
      * The Assignments.

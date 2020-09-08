@@ -26,12 +26,12 @@ import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollect
 import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -93,6 +93,10 @@ public interface ISecurityRequestBuilder extends IRequestBuilder {
 
     ISecureScoreRequestBuilder secureScores(final String id);
 
+    ISecurityActionCollectionRequestBuilder securityActions();
+
+    ISecurityActionRequestBuilder securityActions(final String id);
+
     ITiIndicatorCollectionRequestBuilder tiIndicators();
 
     ITiIndicatorRequestBuilder tiIndicators(final String id);
@@ -100,9 +104,5 @@ public interface ISecurityRequestBuilder extends IRequestBuilder {
     IUserSecurityProfileCollectionRequestBuilder userSecurityProfiles();
 
     IUserSecurityProfileRequestBuilder userSecurityProfiles(final String id);
-
-    ISecurityActionCollectionRequestBuilder securityActions();
-
-    ISecurityActionRequestBuilder securityActions(final String id);
 
 }

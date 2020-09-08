@@ -80,6 +80,23 @@ public interface IOfficeSuiteAppRequest extends IHttpRequest {
     OfficeSuiteApp post(final OfficeSuiteApp newOfficeSuiteApp) throws ClientException;
 
     /**
+     * Posts a OfficeSuiteApp with a new object
+     *
+     * @param newOfficeSuiteApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<OfficeSuiteApp> callback);
+
+    /**
+     * Posts a OfficeSuiteApp with a new object
+     *
+     * @param newOfficeSuiteApp the object to create/update
+     * @return the created OfficeSuiteApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OfficeSuiteApp put(final OfficeSuiteApp newOfficeSuiteApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

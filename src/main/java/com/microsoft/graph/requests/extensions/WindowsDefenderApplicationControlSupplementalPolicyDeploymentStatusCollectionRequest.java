@@ -62,14 +62,14 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     public void post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, callback);
     }
 
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -106,6 +106,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
         return (WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest)this;
+    }
     public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage buildFromResponse(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse response) {
         final IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -62,14 +62,14 @@ public class TaxAreaCollectionRequest extends BaseCollectionRequest<TaxAreaColle
     public void post(final TaxArea newTaxArea, final ICallback<TaxArea> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TaxAreaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTaxArea, callback);
     }
 
     public TaxArea post(final TaxArea newTaxArea) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TaxAreaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTaxArea);
     }
 
@@ -106,6 +106,27 @@ public class TaxAreaCollectionRequest extends BaseCollectionRequest<TaxAreaColle
         return (TaxAreaCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITaxAreaCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TaxAreaCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITaxAreaCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITaxAreaCollectionRequest)this;
+    }
     public ITaxAreaCollectionPage buildFromResponse(final TaxAreaCollectionResponse response) {
         final ITaxAreaCollectionRequestBuilder builder;
         if (response.nextLink != null) {

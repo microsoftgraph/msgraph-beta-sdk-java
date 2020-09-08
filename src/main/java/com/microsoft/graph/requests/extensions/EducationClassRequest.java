@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
@@ -127,6 +127,27 @@ public class EducationClassRequest extends BaseRequest implements IEducationClas
      */
     public EducationClass post(final EducationClass newEducationClass) throws ClientException {
         return send(HttpMethod.POST, newEducationClass);
+    }
+
+    /**
+     * Creates a EducationClass with a new object
+     *
+     * @param newEducationClass the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationClass newEducationClass, final ICallback<EducationClass> callback) {
+        send(HttpMethod.PUT, callback, newEducationClass);
+    }
+
+    /**
+     * Creates a EducationClass with a new object
+     *
+     * @param newEducationClass the object to create/update
+     * @return the created EducationClass
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationClass put(final EducationClass newEducationClass) throws ClientException {
+        return send(HttpMethod.PUT, newEducationClass);
     }
 
     /**

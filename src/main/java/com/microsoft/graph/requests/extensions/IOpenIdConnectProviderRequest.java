@@ -80,6 +80,23 @@ public interface IOpenIdConnectProviderRequest extends IHttpRequest {
     OpenIdConnectProvider post(final OpenIdConnectProvider newOpenIdConnectProvider) throws ClientException;
 
     /**
+     * Posts a OpenIdConnectProvider with a new object
+     *
+     * @param newOpenIdConnectProvider the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback);
+
+    /**
+     * Posts a OpenIdConnectProvider with a new object
+     *
+     * @param newOpenIdConnectProvider the object to create/update
+     * @return the created OpenIdConnectProvider
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OpenIdConnectProvider put(final OpenIdConnectProvider newOpenIdConnectProvider) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

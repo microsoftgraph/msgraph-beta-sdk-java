@@ -36,6 +36,54 @@ public class PrinterLocation implements IJsonBackedObject {
     }
 
     /**
+     * The Altitude In Meters.
+     * 
+     */
+    @SerializedName("altitudeInMeters")
+    @Expose
+    public Integer altitudeInMeters;
+
+    /**
+     * The Building.
+     * 
+     */
+    @SerializedName("building")
+    @Expose
+    public String building;
+
+    /**
+     * The City.
+     * 
+     */
+    @SerializedName("city")
+    @Expose
+    public String city;
+
+    /**
+     * The Country Or Region.
+     * 
+     */
+    @SerializedName("countryOrRegion")
+    @Expose
+    public String countryOrRegion;
+
+    /**
+     * The Floor Description.
+     * 
+     */
+    @SerializedName("floorDescription")
+    @Expose
+    public String floorDescription;
+
+    /**
+     * The Floor Number.
+     * 
+     */
+    @SerializedName("floorNumber")
+    @Expose
+    public Integer floorNumber;
+
+    /**
      * The Latitude.
      * 
      */
@@ -52,36 +100,12 @@ public class PrinterLocation implements IJsonBackedObject {
     public float longitude;
 
     /**
-     * The Altitude In Meters.
+     * The Organization.
      * 
      */
-    @SerializedName("altitudeInMeters")
+    @SerializedName("organization")
     @Expose
-    public Integer altitudeInMeters;
-
-    /**
-     * The Street Address.
-     * 
-     */
-    @SerializedName("streetAddress")
-    @Expose
-    public String streetAddress;
-
-    /**
-     * The Subunit.
-     * 
-     */
-    @SerializedName("subunit")
-    @Expose
-    public java.util.List<String> subunit;
-
-    /**
-     * The City.
-     * 
-     */
-    @SerializedName("city")
-    @Expose
-    public String city;
+    public java.util.List<String> organization;
 
     /**
      * The Postal Code.
@@ -92,44 +116,12 @@ public class PrinterLocation implements IJsonBackedObject {
     public String postalCode;
 
     /**
-     * The Country Or Region.
+     * The Room Description.
      * 
      */
-    @SerializedName("countryOrRegion")
+    @SerializedName("roomDescription")
     @Expose
-    public String countryOrRegion;
-
-    /**
-     * The Site.
-     * 
-     */
-    @SerializedName("site")
-    @Expose
-    public String site;
-
-    /**
-     * The Building.
-     * 
-     */
-    @SerializedName("building")
-    @Expose
-    public String building;
-
-    /**
-     * The Floor Number.
-     * 
-     */
-    @SerializedName("floorNumber")
-    @Expose
-    public Integer floorNumber;
-
-    /**
-     * The Floor Description.
-     * 
-     */
-    @SerializedName("floorDescription")
-    @Expose
-    public String floorDescription;
+    public String roomDescription;
 
     /**
      * The Room Number.
@@ -140,20 +132,28 @@ public class PrinterLocation implements IJsonBackedObject {
     public Integer roomNumber;
 
     /**
-     * The Room Description.
+     * The Site.
      * 
      */
-    @SerializedName("roomDescription")
+    @SerializedName("site")
     @Expose
-    public String roomDescription;
+    public String site;
 
     /**
-     * The Organization.
+     * The State Or Province.
      * 
      */
-    @SerializedName("organization")
+    @SerializedName("stateOrProvince")
     @Expose
-    public java.util.List<String> organization;
+    public String stateOrProvince;
+
+    /**
+     * The Street Address.
+     * 
+     */
+    @SerializedName("streetAddress")
+    @Expose
+    public String streetAddress;
 
     /**
      * The Subdivision.
@@ -164,12 +164,12 @@ public class PrinterLocation implements IJsonBackedObject {
     public java.util.List<String> subdivision;
 
     /**
-     * The State Or Province.
+     * The Subunit.
      * 
      */
-    @SerializedName("stateOrProvince")
+    @SerializedName("subunit")
     @Expose
-    public String stateOrProvince;
+    public java.util.List<String> subunit;
 
 
     /**

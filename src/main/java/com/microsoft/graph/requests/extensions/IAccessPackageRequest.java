@@ -80,6 +80,23 @@ public interface IAccessPackageRequest extends IHttpRequest {
     AccessPackage post(final AccessPackage newAccessPackage) throws ClientException;
 
     /**
+     * Posts a AccessPackage with a new object
+     *
+     * @param newAccessPackage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessPackage newAccessPackage, final ICallback<AccessPackage> callback);
+
+    /**
+     * Posts a AccessPackage with a new object
+     *
+     * @param newAccessPackage the object to create/update
+     * @return the created AccessPackage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessPackage put(final AccessPackage newAccessPackage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

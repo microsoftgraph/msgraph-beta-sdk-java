@@ -8,12 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.generated.AccessLevel;
-import com.microsoft.graph.models.generated.MeetingCapabilities;
 import com.microsoft.graph.models.extensions.AudioConferencing;
+import com.microsoft.graph.models.generated.MeetingCapabilities;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.LobbyBypassSettings;
+import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -33,108 +34,12 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Creation Date Time.
-     * The meeting creation time in UTC. Read-only.
-     */
-    @SerializedName("creationDateTime")
-    @Expose
-    public java.util.Calendar creationDateTime;
-
-    /**
-     * The Start Date Time.
-     * The meeting start time in UTC.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * The meeting end time in UTC.
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Canceled Date Time.
-     * 
-     */
-    @SerializedName("canceledDateTime")
-    @Expose
-    public java.util.Calendar canceledDateTime;
-
-    /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Entry Exit Announcement.
-     * 
-     */
-    @SerializedName("entryExitAnnouncement")
-    @Expose
-    public Boolean entryExitAnnouncement;
-
-    /**
-     * The Join Url.
-     * 
-     */
-    @SerializedName("joinUrl")
-    @Expose
-    public String joinUrl;
-
-    /**
-     * The Subject.
-     * The subject of the online meeting.
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
-
-    /**
-     * The Is Cancelled.
-     * 
-     */
-    @SerializedName("isCancelled")
-    @Expose
-    public Boolean isCancelled;
-
-    /**
-     * The Participants.
-     * The participants associated with the online meeting.  This includes the organizer and the attendees.
-     */
-    @SerializedName("participants")
-    @Expose
-    public MeetingParticipants participants;
-
-    /**
-     * The Is Broadcast.
-     * 
-     */
-    @SerializedName("isBroadcast")
-    @Expose
-    public Boolean isBroadcast;
-
-    /**
      * The Access Level.
      * 
      */
     @SerializedName("accessLevel")
     @Expose
     public AccessLevel accessLevel;
-
-    /**
-     * The Capabilities.
-     * 
-     */
-    @SerializedName("capabilities")
-    @Expose
-    public java.util.List<MeetingCapabilities> capabilities;
 
     /**
      * The Audio Conferencing.
@@ -145,6 +50,22 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public AudioConferencing audioConferencing;
 
     /**
+     * The Canceled Date Time.
+     * 
+     */
+    @SerializedName("canceledDateTime")
+    @Expose
+    public java.util.Calendar canceledDateTime;
+
+    /**
+     * The Capabilities.
+     * 
+     */
+    @SerializedName("capabilities")
+    @Expose
+    public java.util.List<MeetingCapabilities> capabilities;
+
+    /**
      * The Chat Info.
      * The chat information associated with this online meeting.
      */
@@ -153,12 +74,36 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public ChatInfo chatInfo;
 
     /**
-     * The Video Teleconference Id.
-     * The video teleconferencing ID. Read-only.
+     * The Creation Date Time.
+     * The meeting creation time in UTC. Read-only.
      */
-    @SerializedName("videoTeleconferenceId")
+    @SerializedName("creationDateTime")
     @Expose
-    public String videoTeleconferenceId;
+    public java.util.Calendar creationDateTime;
+
+    /**
+     * The End Date Time.
+     * The meeting end time in UTC.
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The Entry Exit Announcement.
+     * 
+     */
+    @SerializedName("entryExitAnnouncement")
+    @Expose
+    public Boolean entryExitAnnouncement;
+
+    /**
+     * The Expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The External Id.
@@ -169,12 +114,84 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public String externalId;
 
     /**
+     * The Is Broadcast.
+     * 
+     */
+    @SerializedName("isBroadcast")
+    @Expose
+    public Boolean isBroadcast;
+
+    /**
+     * The Is Cancelled.
+     * 
+     */
+    @SerializedName("isCancelled")
+    @Expose
+    public Boolean isCancelled;
+
+    /**
+     * The Is Entry Exit Announced.
+     * 
+     */
+    @SerializedName("isEntryExitAnnounced")
+    @Expose
+    public Boolean isEntryExitAnnounced;
+
+    /**
      * The Join Information.
      * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
     @SerializedName("joinInformation")
     @Expose
     public ItemBody joinInformation;
+
+    /**
+     * The Join Url.
+     * 
+     */
+    @SerializedName("joinUrl")
+    @Expose
+    public String joinUrl;
+
+    /**
+     * The Lobby Bypass Settings.
+     * 
+     */
+    @SerializedName("lobbyBypassSettings")
+    @Expose
+    public LobbyBypassSettings lobbyBypassSettings;
+
+    /**
+     * The Participants.
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
+     */
+    @SerializedName("participants")
+    @Expose
+    public MeetingParticipants participants;
+
+    /**
+     * The Start Date Time.
+     * The meeting start time in UTC.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Subject.
+     * The subject of the online meeting.
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
+
+    /**
+     * The Video Teleconference Id.
+     * The video teleconferencing ID. Read-only.
+     */
+    @SerializedName("videoTeleconferenceId")
+    @Expose
+    public String videoTeleconferenceId;
 
 
     /**

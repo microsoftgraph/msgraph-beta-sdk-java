@@ -112,6 +112,27 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
     }
 
     /**
+     * Creates a MobileAppProvisioningConfigGroupAssignment with a new object
+     *
+     * @param newMobileAppProvisioningConfigGroupAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppProvisioningConfigGroupAssignment);
+    }
+
+    /**
+     * Creates a MobileAppProvisioningConfigGroupAssignment with a new object
+     *
+     * @param newMobileAppProvisioningConfigGroupAssignment the object to create/update
+     * @return the created MobileAppProvisioningConfigGroupAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppProvisioningConfigGroupAssignment put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppProvisioningConfigGroupAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

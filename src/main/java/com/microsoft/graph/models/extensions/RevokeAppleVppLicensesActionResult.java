@@ -27,20 +27,20 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
 
 
     /**
-     * The Total Licenses Count.
-     * Total number of Apple Vpp licenses associated
-     */
-    @SerializedName("totalLicensesCount")
-    @Expose
-    public Integer totalLicensesCount;
-
-    /**
      * The Failed Licenses Count.
      * Total number of Apple Vpp licenses that failed to revoke
      */
     @SerializedName("failedLicensesCount")
     @Expose
     public Integer failedLicensesCount;
+
+    /**
+     * The Total Licenses Count.
+     * Total number of Apple Vpp licenses associated
+     */
+    @SerializedName("totalLicensesCount")
+    @Expose
+    public Integer totalLicensesCount;
 
 
     /**

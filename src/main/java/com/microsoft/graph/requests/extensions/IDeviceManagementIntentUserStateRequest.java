@@ -80,6 +80,23 @@ public interface IDeviceManagementIntentUserStateRequest extends IHttpRequest {
     DeviceManagementIntentUserState post(final DeviceManagementIntentUserState newDeviceManagementIntentUserState) throws ClientException;
 
     /**
+     * Posts a DeviceManagementIntentUserState with a new object
+     *
+     * @param newDeviceManagementIntentUserState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementIntentUserState newDeviceManagementIntentUserState, final ICallback<DeviceManagementIntentUserState> callback);
+
+    /**
+     * Posts a DeviceManagementIntentUserState with a new object
+     *
+     * @param newDeviceManagementIntentUserState the object to create/update
+     * @return the created DeviceManagementIntentUserState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementIntentUserState put(final DeviceManagementIntentUserState newDeviceManagementIntentUserState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

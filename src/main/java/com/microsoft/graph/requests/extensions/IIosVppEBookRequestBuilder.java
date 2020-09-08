@@ -33,13 +33,17 @@ public interface IIosVppEBookRequestBuilder extends IRequestBuilder {
     IIosVppEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IManagedEBookAssignmentCollectionRequestBuilder assignments();
+
+    IManagedEBookAssignmentRequestBuilder assignments(final String id);
+
     IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories();
 
     IManagedEBookCategoryWithReferenceRequestBuilder categories(final String id);
 
-    IManagedEBookAssignmentCollectionRequestBuilder assignments();
+    IDeviceInstallStateCollectionRequestBuilder deviceStates();
 
-    IManagedEBookAssignmentRequestBuilder assignments(final String id);
+    IDeviceInstallStateRequestBuilder deviceStates(final String id);
 
     /**
      * Gets the request builder for EBookInstallSummary
@@ -47,10 +51,6 @@ public interface IIosVppEBookRequestBuilder extends IRequestBuilder {
      * @return the IEBookInstallSummaryRequestBuilder instance
      */
     IEBookInstallSummaryRequestBuilder installSummary();
-
-    IDeviceInstallStateCollectionRequestBuilder deviceStates();
-
-    IDeviceInstallStateRequestBuilder deviceStates(final String id);
 
     IUserInstallStateSummaryCollectionRequestBuilder userStateSummary();
 

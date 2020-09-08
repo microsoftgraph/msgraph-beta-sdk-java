@@ -27,20 +27,12 @@ public class EmailActivitySummary extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Report Refresh Date.
+     * The Read.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("read")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Send.
-     * 
-     */
-    @SerializedName("send")
-    @Expose
-    public Long send;
+    public Long read;
 
     /**
      * The Receive.
@@ -49,14 +41,6 @@ public class EmailActivitySummary extends Entity implements IJsonBackedObject {
     @SerializedName("receive")
     @Expose
     public Long receive;
-
-    /**
-     * The Read.
-     * 
-     */
-    @SerializedName("read")
-    @Expose
-    public Long read;
 
     /**
      * The Report Date.
@@ -73,6 +57,22 @@ public class EmailActivitySummary extends Entity implements IJsonBackedObject {
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Send.
+     * 
+     */
+    @SerializedName("send")
+    @Expose
+    public Long send;
 
 
     /**

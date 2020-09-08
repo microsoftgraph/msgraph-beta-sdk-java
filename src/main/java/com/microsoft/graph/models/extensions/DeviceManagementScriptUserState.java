@@ -30,20 +30,20 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
 
 
     /**
-     * The Success Device Count.
-     * Success device count for specific user.
-     */
-    @SerializedName("successDeviceCount")
-    @Expose
-    public Integer successDeviceCount;
-
-    /**
      * The Error Device Count.
      * Error device count for specific user.
      */
     @SerializedName("errorDeviceCount")
     @Expose
     public Integer errorDeviceCount;
+
+    /**
+     * The Success Device Count.
+     * Success device count for specific user.
+     */
+    @SerializedName("successDeviceCount")
+    @Expose
+    public Integer successDeviceCount;
 
     /**
      * The User Principal Name.

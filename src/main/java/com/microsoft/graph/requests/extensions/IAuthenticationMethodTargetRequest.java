@@ -80,6 +80,23 @@ public interface IAuthenticationMethodTargetRequest extends IHttpRequest {
     AuthenticationMethodTarget post(final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException;
 
     /**
+     * Posts a AuthenticationMethodTarget with a new object
+     *
+     * @param newAuthenticationMethodTarget the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<AuthenticationMethodTarget> callback);
+
+    /**
+     * Posts a AuthenticationMethodTarget with a new object
+     *
+     * @param newAuthenticationMethodTarget the object to create/update
+     * @return the created AuthenticationMethodTarget
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AuthenticationMethodTarget put(final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

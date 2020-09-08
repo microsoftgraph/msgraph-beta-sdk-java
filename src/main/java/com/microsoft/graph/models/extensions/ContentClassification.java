@@ -37,22 +37,6 @@ public class ContentClassification implements IJsonBackedObject {
     }
 
     /**
-     * The Sensitive Type Id.
-     * 
-     */
-    @SerializedName("sensitiveTypeId")
-    @Expose
-    public String sensitiveTypeId;
-
-    /**
-     * The Unique Count.
-     * 
-     */
-    @SerializedName("uniqueCount")
-    @Expose
-    public Integer uniqueCount;
-
-    /**
      * The Confidence.
      * 
      */
@@ -67,6 +51,22 @@ public class ContentClassification implements IJsonBackedObject {
     @SerializedName("matches")
     @Expose
     public java.util.List<MatchLocation> matches;
+
+    /**
+     * The Sensitive Type Id.
+     * 
+     */
+    @SerializedName("sensitiveTypeId")
+    @Expose
+    public String sensitiveTypeId;
+
+    /**
+     * The Unique Count.
+     * 
+     */
+    @SerializedName("uniqueCount")
+    @Expose
+    public Integer uniqueCount;
 
 
     /**

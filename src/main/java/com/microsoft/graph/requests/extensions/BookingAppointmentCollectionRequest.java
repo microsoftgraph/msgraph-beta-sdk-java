@@ -62,14 +62,14 @@ public class BookingAppointmentCollectionRequest extends BaseCollectionRequest<B
     public void post(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingAppointmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingAppointment, callback);
     }
 
     public BookingAppointment post(final BookingAppointment newBookingAppointment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BookingAppointmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingAppointment);
     }
 
@@ -106,6 +106,27 @@ public class BookingAppointmentCollectionRequest extends BaseCollectionRequest<B
         return (BookingAppointmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBookingAppointmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BookingAppointmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBookingAppointmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBookingAppointmentCollectionRequest)this;
+    }
     public IBookingAppointmentCollectionPage buildFromResponse(final BookingAppointmentCollectionResponse response) {
         final IBookingAppointmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

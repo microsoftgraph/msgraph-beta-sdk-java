@@ -27,20 +27,20 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
 
 
     /**
-     * The Use Utc.
-     * Indicate if the time is Utc or client local time.
-     */
-    @SerializedName("useUtc")
-    @Expose
-    public Boolean useUtc;
-
-    /**
      * The Time.
      * At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
      */
     @SerializedName("time")
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay time;
+
+    /**
+     * The Use Utc.
+     * Indicate if the time is Utc or client local time.
+     */
+    @SerializedName("useUtc")
+    @Expose
+    public Boolean useUtc;
 
 
     /**

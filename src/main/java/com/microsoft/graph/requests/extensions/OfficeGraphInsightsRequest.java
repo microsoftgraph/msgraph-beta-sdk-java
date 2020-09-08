@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
@@ -136,6 +136,27 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      */
     public OfficeGraphInsights post(final OfficeGraphInsights newOfficeGraphInsights) throws ClientException {
         return send(HttpMethod.POST, newOfficeGraphInsights);
+    }
+
+    /**
+     * Creates a OfficeGraphInsights with a new object
+     *
+     * @param newOfficeGraphInsights the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback) {
+        send(HttpMethod.PUT, callback, newOfficeGraphInsights);
+    }
+
+    /**
+     * Creates a OfficeGraphInsights with a new object
+     *
+     * @param newOfficeGraphInsights the object to create/update
+     * @return the created OfficeGraphInsights
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OfficeGraphInsights put(final OfficeGraphInsights newOfficeGraphInsights) throws ClientException {
+        return send(HttpMethod.PUT, newOfficeGraphInsights);
     }
 
     /**

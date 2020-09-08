@@ -114,6 +114,27 @@ public class MobileAppInstallStatusRequest extends BaseRequest implements IMobil
     }
 
     /**
+     * Creates a MobileAppInstallStatus with a new object
+     *
+     * @param newMobileAppInstallStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppInstallStatus);
+    }
+
+    /**
+     * Creates a MobileAppInstallStatus with a new object
+     *
+     * @param newMobileAppInstallStatus the object to create/update
+     * @return the created MobileAppInstallStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppInstallStatus put(final MobileAppInstallStatus newMobileAppInstallStatus) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppInstallStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

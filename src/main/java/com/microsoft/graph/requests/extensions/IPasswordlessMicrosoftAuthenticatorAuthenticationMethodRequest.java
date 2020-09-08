@@ -80,6 +80,23 @@ public interface IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest 
     PasswordlessMicrosoftAuthenticatorAuthenticationMethod post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a PasswordlessMicrosoftAuthenticatorAuthenticationMethod with a new object
+     *
+     * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback);
+
+    /**
+     * Posts a PasswordlessMicrosoftAuthenticatorAuthenticationMethod with a new object
+     *
+     * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the object to create/update
+     * @return the created PasswordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PasswordlessMicrosoftAuthenticatorAuthenticationMethod put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

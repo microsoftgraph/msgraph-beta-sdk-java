@@ -27,20 +27,20 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
 
 
     /**
-     * The Token Url.
-     * 
-     */
-    @SerializedName("tokenUrl")
-    @Expose
-    public String tokenUrl;
-
-    /**
      * The Scope.
      * 
      */
     @SerializedName("scope")
     @Expose
     public String scope;
+
+    /**
+     * The Token Url.
+     * 
+     */
+    @SerializedName("tokenUrl")
+    @Expose
+    public String tokenUrl;
 
 
     /**

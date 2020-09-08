@@ -62,14 +62,14 @@ public class DeviceManagementAutopilotEventCollectionRequest extends BaseCollect
     public void post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementAutopilotEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementAutopilotEvent, callback);
     }
 
     public DeviceManagementAutopilotEvent post(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementAutopilotEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementAutopilotEvent);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementAutopilotEventCollectionRequest extends BaseCollect
         return (DeviceManagementAutopilotEventCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementAutopilotEventCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementAutopilotEventCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementAutopilotEventCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementAutopilotEventCollectionRequest)this;
+    }
     public IDeviceManagementAutopilotEventCollectionPage buildFromResponse(final DeviceManagementAutopilotEventCollectionResponse response) {
         final IDeviceManagementAutopilotEventCollectionRequestBuilder builder;
         if (response.nextLink != null) {

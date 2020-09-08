@@ -112,6 +112,27 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a Windows81WifiImportConfiguration with a new object
+     *
+     * @param newWindows81WifiImportConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<Windows81WifiImportConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows81WifiImportConfiguration);
+    }
+
+    /**
+     * Creates a Windows81WifiImportConfiguration with a new object
+     *
+     * @param newWindows81WifiImportConfiguration the object to create/update
+     * @return the created Windows81WifiImportConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows81WifiImportConfiguration put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows81WifiImportConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

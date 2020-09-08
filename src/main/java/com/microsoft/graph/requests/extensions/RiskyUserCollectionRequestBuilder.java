@@ -14,8 +14,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequest;
-import com.microsoft.graph.requests.extensions.IRiskyUserDismissRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRiskyUserConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRiskyUserDismissRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -51,11 +51,11 @@ public class RiskyUserCollectionRequestBuilder extends BaseRequestBuilder implem
 
 
 
-    public IRiskyUserDismissRequestBuilder dismiss(final java.util.List<String> userIds) {
-        return new RiskyUserDismissRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismiss"), getClient(), null, userIds);
-    }
-
     public IRiskyUserConfirmCompromisedRequestBuilder confirmCompromised(final java.util.List<String> userIds) {
         return new RiskyUserConfirmCompromisedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confirmCompromised"), getClient(), null, userIds);
+    }
+
+    public IRiskyUserDismissRequestBuilder dismiss(final java.util.List<String> userIds) {
+        return new RiskyUserDismissRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismiss"), getClient(), null, userIds);
     }
 }

@@ -80,6 +80,23 @@ public interface IExternalGroupMemberRequest extends IHttpRequest {
     ExternalGroupMember post(final ExternalGroupMember newExternalGroupMember) throws ClientException;
 
     /**
+     * Posts a ExternalGroupMember with a new object
+     *
+     * @param newExternalGroupMember the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ExternalGroupMember newExternalGroupMember, final ICallback<ExternalGroupMember> callback);
+
+    /**
+     * Posts a ExternalGroupMember with a new object
+     *
+     * @param newExternalGroupMember the object to create/update
+     * @return the created ExternalGroupMember
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ExternalGroupMember put(final ExternalGroupMember newExternalGroupMember) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

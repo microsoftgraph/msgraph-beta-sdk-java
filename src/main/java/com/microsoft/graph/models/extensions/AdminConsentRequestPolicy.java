@@ -36,14 +36,6 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
     public Boolean isEnabled;
 
     /**
-     * The Version.
-     * 
-     */
-    @SerializedName("version")
-    @Expose
-    public Integer version;
-
-    /**
      * The Notify Reviewers.
      * 
      */
@@ -74,6 +66,14 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
     @SerializedName("reviewers")
     @Expose
     public java.util.List<AccessReviewScope> reviewers;
+
+    /**
+     * The Version.
+     * 
+     */
+    @SerializedName("version")
+    @Expose
+    public Integer version;
 
 
     /**

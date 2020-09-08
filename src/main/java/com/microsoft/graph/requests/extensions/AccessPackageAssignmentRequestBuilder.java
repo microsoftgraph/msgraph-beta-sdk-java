@@ -83,15 +83,6 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder im
     public IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicy() {
         return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicy"), getClient(), null);
     }
-
-    /**
-     * Gets the request builder for AccessPackageSubject
-     *
-     * @return the IAccessPackageSubjectRequestBuilder instance
-     */
-    public IAccessPackageSubjectRequestBuilder target() {
-        return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("target"), getClient(), null);
-    }
     public IAccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
         return new AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests"), getClient(), null);
     }
@@ -105,5 +96,14 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder im
 
     public IAccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(final String id) {
         return new AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AccessPackageSubject
+     *
+     * @return the IAccessPackageSubjectRequestBuilder instance
+     */
+    public IAccessPackageSubjectRequestBuilder target() {
+        return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("target"), getClient(), null);
     }
 }

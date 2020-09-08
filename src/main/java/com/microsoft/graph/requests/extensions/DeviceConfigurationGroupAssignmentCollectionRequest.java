@@ -62,14 +62,14 @@ public class DeviceConfigurationGroupAssignmentCollectionRequest extends BaseCol
     public void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationGroupAssignment, callback);
     }
 
     public DeviceConfigurationGroupAssignment post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationGroupAssignment);
     }
 
@@ -106,6 +106,27 @@ public class DeviceConfigurationGroupAssignmentCollectionRequest extends BaseCol
         return (DeviceConfigurationGroupAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceConfigurationGroupAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceConfigurationGroupAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceConfigurationGroupAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceConfigurationGroupAssignmentCollectionRequest)this;
+    }
     public IDeviceConfigurationGroupAssignmentCollectionPage buildFromResponse(final DeviceConfigurationGroupAssignmentCollectionResponse response) {
         final IDeviceConfigurationGroupAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

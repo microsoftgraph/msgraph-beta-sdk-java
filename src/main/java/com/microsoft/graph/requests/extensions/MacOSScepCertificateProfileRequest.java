@@ -118,6 +118,27 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a MacOSScepCertificateProfile with a new object
+     *
+     * @param newMacOSScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newMacOSScepCertificateProfile);
+    }
+
+    /**
+     * Creates a MacOSScepCertificateProfile with a new object
+     *
+     * @param newMacOSScepCertificateProfile the object to create/update
+     * @return the created MacOSScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSScepCertificateProfile put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSScepCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

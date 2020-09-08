@@ -36,20 +36,20 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements IJson
     public String productCode;
 
     /**
-     * The Product Version Operator.
-     * The product version comparison operator.
-     */
-    @SerializedName("productVersionOperator")
-    @Expose
-    public Win32LobAppRuleOperator productVersionOperator;
-
-    /**
      * The Product Version.
      * The product version comparison value.
      */
     @SerializedName("productVersion")
     @Expose
     public String productVersion;
+
+    /**
+     * The Product Version Operator.
+     * The product version comparison operator.
+     */
+    @SerializedName("productVersionOperator")
+    @Expose
+    public Win32LobAppRuleOperator productVersionOperator;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IInformationProtectionLabelRequest extends IHttpRequest {
     InformationProtectionLabel post(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException;
 
     /**
+     * Posts a InformationProtectionLabel with a new object
+     *
+     * @param newInformationProtectionLabel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback);
+
+    /**
+     * Posts a InformationProtectionLabel with a new object
+     *
+     * @param newInformationProtectionLabel the object to create/update
+     * @return the created InformationProtectionLabel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    InformationProtectionLabel put(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

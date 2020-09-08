@@ -37,14 +37,6 @@ public class RegistrationAndResetTarget implements IJsonBackedObject {
     }
 
     /**
-     * The Target Type.
-     * 
-     */
-    @SerializedName("targetType")
-    @Expose
-    public AuthenticationMethodTargetType targetType;
-
-    /**
      * The Id.
      * 
      */
@@ -67,6 +59,14 @@ public class RegistrationAndResetTarget implements IJsonBackedObject {
     @SerializedName("minAuthMethodsToReset")
     @Expose
     public Integer minAuthMethodsToReset;
+
+    /**
+     * The Target Type.
+     * 
+     */
+    @SerializedName("targetType")
+    @Expose
+    public AuthenticationMethodTargetType targetType;
 
 
     /**

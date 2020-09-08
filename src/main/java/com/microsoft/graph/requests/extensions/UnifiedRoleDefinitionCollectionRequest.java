@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RbacApplicationMultiple;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -61,14 +62,14 @@ public class UnifiedRoleDefinitionCollectionRequest extends BaseCollectionReques
     public void post(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UnifiedRoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUnifiedRoleDefinition, callback);
     }
 
     public UnifiedRoleDefinition post(final UnifiedRoleDefinition newUnifiedRoleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UnifiedRoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUnifiedRoleDefinition);
     }
 
@@ -105,6 +106,27 @@ public class UnifiedRoleDefinitionCollectionRequest extends BaseCollectionReques
         return (UnifiedRoleDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUnifiedRoleDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UnifiedRoleDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUnifiedRoleDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUnifiedRoleDefinitionCollectionRequest)this;
+    }
     public IUnifiedRoleDefinitionCollectionPage buildFromResponse(final UnifiedRoleDefinitionCollectionResponse response) {
         final IUnifiedRoleDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

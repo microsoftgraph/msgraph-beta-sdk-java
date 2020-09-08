@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionRequestBuilder;
@@ -16,10 +20,6 @@ import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionReq
 import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
 import java.util.Arrays;
@@ -123,6 +123,27 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      */
     public EducationAssignment post(final EducationAssignment newEducationAssignment) throws ClientException {
         return send(HttpMethod.POST, newEducationAssignment);
+    }
+
+    /**
+     * Creates a EducationAssignment with a new object
+     *
+     * @param newEducationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationAssignment newEducationAssignment, final ICallback<EducationAssignment> callback) {
+        send(HttpMethod.PUT, callback, newEducationAssignment);
+    }
+
+    /**
+     * Creates a EducationAssignment with a new object
+     *
+     * @param newEducationAssignment the object to create/update
+     * @return the created EducationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationAssignment put(final EducationAssignment newEducationAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newEducationAssignment);
     }
 
     /**

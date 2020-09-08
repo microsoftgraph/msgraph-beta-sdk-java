@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Employee;
+import com.microsoft.graph.models.extensions.Vendor;
 import com.microsoft.graph.models.extensions.Picture;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class PictureCollectionRequest extends BaseCollectionRequest<PictureColle
     public void post(final Picture newPicture, final ICallback<Picture> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PictureRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPicture, callback);
     }
 
     public Picture post(final Picture newPicture) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PictureRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPicture);
     }
 
@@ -106,6 +106,27 @@ public class PictureCollectionRequest extends BaseCollectionRequest<PictureColle
         return (PictureCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPictureCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PictureCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPictureCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPictureCollectionRequest)this;
+    }
     public IPictureCollectionPage buildFromResponse(final PictureCollectionResponse response) {
         final IPictureCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -114,6 +114,27 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
     }
 
     /**
+     * Creates a AccessPackageSubject with a new object
+     *
+     * @param newAccessPackageSubject the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageSubject newAccessPackageSubject, final ICallback<AccessPackageSubject> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageSubject);
+    }
+
+    /**
+     * Creates a AccessPackageSubject with a new object
+     *
+     * @param newAccessPackageSubject the object to create/update
+     * @return the created AccessPackageSubject
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageSubject put(final AccessPackageSubject newAccessPackageSubject) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageSubject);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

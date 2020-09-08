@@ -62,14 +62,14 @@ public class GroupPolicyPresentationValueCollectionRequest extends BaseCollectio
     public void post(final GroupPolicyPresentationValue newGroupPolicyPresentationValue, final ICallback<GroupPolicyPresentationValue> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyPresentationValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyPresentationValue, callback);
     }
 
     public GroupPolicyPresentationValue post(final GroupPolicyPresentationValue newGroupPolicyPresentationValue) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyPresentationValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyPresentationValue);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyPresentationValueCollectionRequest extends BaseCollectio
         return (GroupPolicyPresentationValueCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyPresentationValueCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyPresentationValueCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyPresentationValueCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyPresentationValueCollectionRequest)this;
+    }
     public IGroupPolicyPresentationValueCollectionPage buildFromResponse(final GroupPolicyPresentationValueCollectionResponse response) {
         final IGroupPolicyPresentationValueCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -61,14 +61,14 @@ public class FilterOperatorSchemaCollectionRequest extends BaseCollectionRequest
     public void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new FilterOperatorSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFilterOperatorSchema, callback);
     }
 
     public FilterOperatorSchema post(final FilterOperatorSchema newFilterOperatorSchema) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new FilterOperatorSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFilterOperatorSchema);
     }
 
@@ -105,6 +105,27 @@ public class FilterOperatorSchemaCollectionRequest extends BaseCollectionRequest
         return (FilterOperatorSchemaCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IFilterOperatorSchemaCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (FilterOperatorSchemaCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IFilterOperatorSchemaCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IFilterOperatorSchemaCollectionRequest)this;
+    }
     public IFilterOperatorSchemaCollectionPage buildFromResponse(final FilterOperatorSchemaCollectionResponse response) {
         final IFilterOperatorSchemaCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -27,20 +27,20 @@ public class MobileAppRelationship extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Target Id.
-     * The target mobile app's app id.
-     */
-    @SerializedName("targetId")
-    @Expose
-    public String targetId;
-
-    /**
      * The Target Display Name.
      * The target mobile app's display name.
      */
     @SerializedName("targetDisplayName")
     @Expose
     public String targetDisplayName;
+
+    /**
+     * The Target Id.
+     * The target mobile app's app id.
+     */
+    @SerializedName("targetId")
+    @Expose
+    public String targetId;
 
 
     /**

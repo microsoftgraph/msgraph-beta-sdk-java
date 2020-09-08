@@ -62,14 +62,14 @@ public class SecurityQuestionAuthenticationMethodCollectionRequest extends BaseC
     public void post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityQuestionAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityQuestionAuthenticationMethod, callback);
     }
 
     public SecurityQuestionAuthenticationMethod post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecurityQuestionAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityQuestionAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class SecurityQuestionAuthenticationMethodCollectionRequest extends BaseC
         return (SecurityQuestionAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecurityQuestionAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecurityQuestionAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecurityQuestionAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecurityQuestionAuthenticationMethodCollectionRequest)this;
+    }
     public ISecurityQuestionAuthenticationMethodCollectionPage buildFromResponse(final SecurityQuestionAuthenticationMethodCollectionResponse response) {
         final ISecurityQuestionAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

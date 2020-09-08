@@ -29,20 +29,20 @@ public class GroupPolicyPresentationValue extends Entity implements IJsonBackedO
 
 
     /**
-     * The Last Modified Date Time.
-     * The date and time the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Created Date Time.
      * The date and time the object was created.
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Last Modified Date Time.
+     * The date and time the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Definition Value.

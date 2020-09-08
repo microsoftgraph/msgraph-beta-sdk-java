@@ -112,6 +112,27 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
     }
 
     /**
+     * Creates a AzureADLicenseUsage with a new object
+     *
+     * @param newAzureADLicenseUsage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<AzureADLicenseUsage> callback) {
+        send(HttpMethod.PUT, callback, newAzureADLicenseUsage);
+    }
+
+    /**
+     * Creates a AzureADLicenseUsage with a new object
+     *
+     * @param newAzureADLicenseUsage the object to create/update
+     * @return the created AzureADLicenseUsage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AzureADLicenseUsage put(final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException {
+        return send(HttpMethod.PUT, newAzureADLicenseUsage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

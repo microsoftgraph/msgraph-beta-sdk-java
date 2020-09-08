@@ -62,14 +62,14 @@ public class VendorCollectionRequest extends BaseCollectionRequest<VendorCollect
     public void post(final Vendor newVendor, final ICallback<Vendor> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VendorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newVendor, callback);
     }
 
     public Vendor post(final Vendor newVendor) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new VendorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newVendor);
     }
 
@@ -106,6 +106,27 @@ public class VendorCollectionRequest extends BaseCollectionRequest<VendorCollect
         return (VendorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IVendorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (VendorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IVendorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IVendorCollectionRequest)this;
+    }
     public IVendorCollectionPage buildFromResponse(final VendorCollectionResponse response) {
         final IVendorCollectionRequestBuilder builder;
         if (response.nextLink != null) {

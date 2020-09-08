@@ -8,20 +8,20 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.EducationCourse;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.EducationExternalSource;
 import com.microsoft.graph.models.extensions.EducationTerm;
-import com.microsoft.graph.models.extensions.EducationCourse;
-import com.microsoft.graph.models.extensions.EducationAssignment;
 import com.microsoft.graph.models.extensions.EducationCategory;
+import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
-import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationCategoryCollectionPage;
+import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse;
@@ -44,28 +44,20 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Name of the class.
+     * The Class Code.
+     * Class code used by the school to identify the class.
      */
-    @SerializedName("displayName")
+    @SerializedName("classCode")
     @Expose
-    public String displayName;
+    public String classCode;
 
     /**
-     * The Mail Nickname.
-     * Mail name for sending email to all members, if this is enabled.
+     * The Course.
+     * 
      */
-    @SerializedName("mailNickname")
+    @SerializedName("course")
     @Expose
-    public String mailNickname;
-
-    /**
-     * The Description.
-     * Description of the class.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
+    public EducationCourse course;
 
     /**
      * The Created By.
@@ -76,20 +68,20 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public IdentitySet createdBy;
 
     /**
-     * The Class Code.
-     * Class code used by the school to identify the class.
+     * The Description.
+     * Description of the class.
      */
-    @SerializedName("classCode")
+    @SerializedName("description")
     @Expose
-    public String classCode;
+    public String description;
 
     /**
-     * The External Name.
-     * Name of the class in the syncing system.
+     * The Display Name.
+     * Name of the class.
      */
-    @SerializedName("externalName")
+    @SerializedName("displayName")
     @Expose
-    public String externalName;
+    public String displayName;
 
     /**
      * The External Id.
@@ -98,6 +90,14 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     @SerializedName("externalId")
     @Expose
     public String externalId;
+
+    /**
+     * The External Name.
+     * Name of the class in the syncing system.
+     */
+    @SerializedName("externalName")
+    @Expose
+    public String externalName;
 
     /**
      * The External Source.
@@ -124,6 +124,14 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public String grade;
 
     /**
+     * The Mail Nickname.
+     * Mail name for sending email to all members, if this is enabled.
+     */
+    @SerializedName("mailNickname")
+    @Expose
+    public String mailNickname;
+
+    /**
      * The Term.
      * Term for this class.
      */
@@ -132,12 +140,10 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public EducationTerm term;
 
     /**
-     * The Course.
+     * The Assignment Categories.
      * 
      */
-    @SerializedName("course")
-    @Expose
-    public EducationCourse course;
+    public EducationCategoryCollectionPage assignmentCategories;
 
     /**
      * The Assignments.
@@ -146,10 +152,12 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public EducationAssignmentCollectionPage assignments;
 
     /**
-     * The Assignment Categories.
-     * 
+     * The Group.
+     * The directory group corresponding to this class.
      */
-    public EducationCategoryCollectionPage assignmentCategories;
+    @SerializedName("group")
+    @Expose
+    public Group group;
 
     /**
      * The Members.
@@ -158,24 +166,16 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public EducationUserCollectionPage members;
 
     /**
-     * The Teachers.
-     * All teachers in the class. Nullable.
-     */
-    public EducationUserCollectionPage teachers;
-
-    /**
      * The Schools.
      * All schools that this class is associated with. Nullable.
      */
     public EducationSchoolCollectionPage schools;
 
     /**
-     * The Group.
-     * The directory group corresponding to this class.
+     * The Teachers.
+     * All teachers in the class. Nullable.
      */
-    @SerializedName("group")
-    @Expose
-    public Group group;
+    public EducationUserCollectionPage teachers;
 
 
     /**
@@ -217,22 +217,6 @@ public class EducationClass extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("assignments")) {
-            final EducationAssignmentCollectionResponse response = new EducationAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final EducationAssignment[] array = new EducationAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new EducationAssignmentCollectionPage(response, null);
-        }
-
         if (json.has("assignmentCategories")) {
             final EducationCategoryCollectionResponse response = new EducationCategoryCollectionResponse();
             if (json.has("assignmentCategories@odata.nextLink")) {
@@ -247,6 +231,22 @@ public class EducationClass extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             assignmentCategories = new EducationCategoryCollectionPage(response, null);
+        }
+
+        if (json.has("assignments")) {
+            final EducationAssignmentCollectionResponse response = new EducationAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final EducationAssignment[] array = new EducationAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            assignments = new EducationAssignmentCollectionPage(response, null);
         }
 
         if (json.has("members")) {
@@ -265,22 +265,6 @@ public class EducationClass extends Entity implements IJsonBackedObject {
             members = new EducationUserCollectionPage(response, null);
         }
 
-        if (json.has("teachers")) {
-            final EducationUserCollectionResponse response = new EducationUserCollectionResponse();
-            if (json.has("teachers@odata.nextLink")) {
-                response.nextLink = json.get("teachers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("teachers").toString(), JsonObject[].class);
-            final EducationUser[] array = new EducationUser[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationUser.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            teachers = new EducationUserCollectionPage(response, null);
-        }
-
         if (json.has("schools")) {
             final EducationSchoolCollectionResponse response = new EducationSchoolCollectionResponse();
             if (json.has("schools@odata.nextLink")) {
@@ -295,6 +279,22 @@ public class EducationClass extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             schools = new EducationSchoolCollectionPage(response, null);
+        }
+
+        if (json.has("teachers")) {
+            final EducationUserCollectionResponse response = new EducationUserCollectionResponse();
+            if (json.has("teachers@odata.nextLink")) {
+                response.nextLink = json.get("teachers@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("teachers").toString(), JsonObject[].class);
+            final EducationUser[] array = new EducationUser[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationUser.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            teachers = new EducationUserCollectionPage(response, null);
         }
     }
 }

@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RunAsAccountType;
 import com.microsoft.graph.models.generated.Win32LobAppPowerShellScriptRuleOperationType;
 import com.microsoft.graph.models.generated.Win32LobAppRuleOperator;
+import com.microsoft.graph.models.generated.RunAsAccountType;
 import com.microsoft.graph.models.extensions.Win32LobAppRule;
 
 
@@ -30,6 +30,14 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
 
 
     /**
+     * The Comparison Value.
+     * The script output comparison value. Do not specify a value if the rule is used for detection.
+     */
+    @SerializedName("comparisonValue")
+    @Expose
+    public String comparisonValue;
+
+    /**
      * The Display Name.
      * The display name for the rule. Do not specify this value if the rule is used for detection.
      */
@@ -44,6 +52,22 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     @SerializedName("enforceSignatureCheck")
     @Expose
     public Boolean enforceSignatureCheck;
+
+    /**
+     * The Operation Type.
+     * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
+     */
+    @SerializedName("operationType")
+    @Expose
+    public Win32LobAppPowerShellScriptRuleOperationType operationType;
+
+    /**
+     * The Operator.
+     * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
+     */
+    @SerializedName("operator")
+    @Expose
+    public Win32LobAppRuleOperator operator;
 
     /**
      * The Run As32Bit.
@@ -68,30 +92,6 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     @SerializedName("scriptContent")
     @Expose
     public String scriptContent;
-
-    /**
-     * The Operation Type.
-     * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
-     */
-    @SerializedName("operationType")
-    @Expose
-    public Win32LobAppPowerShellScriptRuleOperationType operationType;
-
-    /**
-     * The Operator.
-     * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
-     */
-    @SerializedName("operator")
-    @Expose
-    public Win32LobAppRuleOperator operator;
-
-    /**
-     * The Comparison Value.
-     * The script output comparison value. Do not specify a value if the rule is used for detection.
-     */
-    @SerializedName("comparisonValue")
-    @Expose
-    public String comparisonValue;
 
 
     /**

@@ -64,12 +64,12 @@ public class OfficeClientConfigurationRequestBuilder extends BaseRequestBuilder 
         return new OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
-    public IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder userPreferencePayload() {
-        return new OfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder(getRequestUrlWithAdditionalSegment("userPreferencePayload"), getClient(), null);
-    }
-
     public IOfficeClientConfigurationPolicyPayloadStreamRequestBuilder policyPayload() {
         return new OfficeClientConfigurationPolicyPayloadStreamRequestBuilder(getRequestUrlWithAdditionalSegment("policyPayload"), getClient(), null);
+    }
+
+    public IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder userPreferencePayload() {
+        return new OfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder(getRequestUrlWithAdditionalSegment("userPreferencePayload"), getClient(), null);
     }
 
     public IOfficeClientConfigurationAssignCollectionRequestBuilder assign(final java.util.List<OfficeClientConfigurationAssignment> officeConfigurationAssignments) {

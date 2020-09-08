@@ -113,20 +113,20 @@ public class AttributeDefinition implements IJsonBackedObject {
     public String name;
 
     /**
-     * The Required.
-     * 
-     */
-    @SerializedName("required")
-    @Expose
-    public Boolean required;
-
-    /**
      * The Referenced Objects.
      * 
      */
     @SerializedName("referencedObjects")
     @Expose
     public java.util.List<ReferencedObject> referencedObjects;
+
+    /**
+     * The Required.
+     * 
+     */
+    @SerializedName("required")
+    @Expose
+    public Boolean required;
 
     /**
      * The Type.

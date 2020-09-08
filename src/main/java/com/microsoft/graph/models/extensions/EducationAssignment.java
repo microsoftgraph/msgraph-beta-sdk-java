@@ -8,22 +8,22 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EducationItemBody;
-import com.microsoft.graph.models.extensions.EducationAssignmentGradeType;
 import com.microsoft.graph.models.extensions.EducationAssignmentRecipient;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.EducationAssignmentGradeType;
+import com.microsoft.graph.models.extensions.EducationItemBody;
 import com.microsoft.graph.models.generated.EducationAssignmentStatus;
-import com.microsoft.graph.models.extensions.EducationAssignmentResource;
-import com.microsoft.graph.models.extensions.EducationSubmission;
 import com.microsoft.graph.models.extensions.EducationCategory;
+import com.microsoft.graph.models.extensions.EducationAssignmentResource;
 import com.microsoft.graph.models.extensions.EducationRubric;
+import com.microsoft.graph.models.extensions.EducationSubmission;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.EducationCategoryCollectionResponse;
+import com.microsoft.graph.requests.extensions.EducationCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionPage;
-import com.microsoft.graph.requests.extensions.EducationCategoryCollectionResponse;
-import com.microsoft.graph.requests.extensions.EducationCategoryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,44 +42,20 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Class Id.
+     * The Allow Late Submissions.
      * 
      */
-    @SerializedName("classId")
+    @SerializedName("allowLateSubmissions")
     @Expose
-    public String classId;
+    public Boolean allowLateSubmissions;
 
     /**
-     * The Display Name.
+     * The Allow Students To Add Resources To Submission.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("allowStudentsToAddResourcesToSubmission")
     @Expose
-    public String displayName;
-
-    /**
-     * The Instructions.
-     * 
-     */
-    @SerializedName("instructions")
-    @Expose
-    public EducationItemBody instructions;
-
-    /**
-     * The Close Date Time.
-     * 
-     */
-    @SerializedName("closeDateTime")
-    @Expose
-    public java.util.Calendar closeDateTime;
-
-    /**
-     * The Due Date Time.
-     * 
-     */
-    @SerializedName("dueDateTime")
-    @Expose
-    public java.util.Calendar dueDateTime;
+    public Boolean allowStudentsToAddResourcesToSubmission;
 
     /**
      * The Assign Date Time.
@@ -98,14 +74,6 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public java.util.Calendar assignedDateTime;
 
     /**
-     * The Grading.
-     * 
-     */
-    @SerializedName("grading")
-    @Expose
-    public EducationAssignmentGradeType grading;
-
-    /**
      * The Assign To.
      * 
      */
@@ -114,20 +82,20 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public EducationAssignmentRecipient assignTo;
 
     /**
-     * The Allow Late Submissions.
+     * The Class Id.
      * 
      */
-    @SerializedName("allowLateSubmissions")
+    @SerializedName("classId")
     @Expose
-    public Boolean allowLateSubmissions;
+    public String classId;
 
     /**
-     * The Created Date Time.
+     * The Close Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("closeDateTime")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public java.util.Calendar closeDateTime;
 
     /**
      * The Created By.
@@ -138,12 +106,44 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public IdentitySet createdBy;
 
     /**
-     * The Last Modified Date Time.
+     * The Created Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("createdDateTime")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public java.util.Calendar createdDateTime;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Due Date Time.
+     * 
+     */
+    @SerializedName("dueDateTime")
+    @Expose
+    public java.util.Calendar dueDateTime;
+
+    /**
+     * The Grading.
+     * 
+     */
+    @SerializedName("grading")
+    @Expose
+    public EducationAssignmentGradeType grading;
+
+    /**
+     * The Instructions.
+     * 
+     */
+    @SerializedName("instructions")
+    @Expose
+    public EducationItemBody instructions;
 
     /**
      * The Last Modified By.
@@ -154,12 +154,12 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public IdentitySet lastModifiedBy;
 
     /**
-     * The Allow Students To Add Resources To Submission.
+     * The Last Modified Date Time.
      * 
      */
-    @SerializedName("allowStudentsToAddResourcesToSubmission")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public Boolean allowStudentsToAddResourcesToSubmission;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Status.
@@ -170,22 +170,16 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public EducationAssignmentStatus status;
 
     /**
-     * The Resources.
-     * 
-     */
-    public EducationAssignmentResourceCollectionPage resources;
-
-    /**
-     * The Submissions.
-     * 
-     */
-    public EducationSubmissionCollectionPage submissions;
-
-    /**
      * The Categories.
      * 
      */
     public EducationCategoryCollectionPage categories;
+
+    /**
+     * The Resources.
+     * 
+     */
+    public EducationAssignmentResourceCollectionPage resources;
 
     /**
      * The Rubric.
@@ -194,6 +188,12 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName("rubric")
     @Expose
     public EducationRubric rubric;
+
+    /**
+     * The Submissions.
+     * 
+     */
+    public EducationSubmissionCollectionPage submissions;
 
 
     /**
@@ -235,6 +235,22 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("categories")) {
+            final EducationCategoryCollectionResponse response = new EducationCategoryCollectionResponse();
+            if (json.has("categories@odata.nextLink")) {
+                response.nextLink = json.get("categories@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
+            final EducationCategory[] array = new EducationCategory[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationCategory.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            categories = new EducationCategoryCollectionPage(response, null);
+        }
+
         if (json.has("resources")) {
             final EducationAssignmentResourceCollectionResponse response = new EducationAssignmentResourceCollectionResponse();
             if (json.has("resources@odata.nextLink")) {
@@ -265,22 +281,6 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             submissions = new EducationSubmissionCollectionPage(response, null);
-        }
-
-        if (json.has("categories")) {
-            final EducationCategoryCollectionResponse response = new EducationCategoryCollectionResponse();
-            if (json.has("categories@odata.nextLink")) {
-                response.nextLink = json.get("categories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
-            final EducationCategory[] array = new EducationCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categories = new EducationCategoryCollectionPage(response, null);
         }
     }
 }

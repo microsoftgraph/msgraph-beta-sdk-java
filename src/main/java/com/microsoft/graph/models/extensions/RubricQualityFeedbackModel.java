@@ -37,20 +37,20 @@ public class RubricQualityFeedbackModel implements IJsonBackedObject {
     }
 
     /**
-     * The Quality Id.
-     * 
-     */
-    @SerializedName("qualityId")
-    @Expose
-    public String qualityId;
-
-    /**
      * The Feedback.
      * 
      */
     @SerializedName("feedback")
     @Expose
     public EducationItemBody feedback;
+
+    /**
+     * The Quality Id.
+     * 
+     */
+    @SerializedName("qualityId")
+    @Expose
+    public String qualityId;
 
 
     /**

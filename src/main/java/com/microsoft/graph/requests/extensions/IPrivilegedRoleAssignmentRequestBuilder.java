@@ -40,7 +40,7 @@ public interface IPrivilegedRoleAssignmentRequestBuilder extends IRequestBuilder
      * @return the IPrivilegedRoleRequestBuilder instance
      */
     IPrivilegedRoleRequestBuilder roleInfo();
-    IPrivilegedRoleAssignmentMakePermanentRequestBuilder makePermanent(final String reason, final String ticketNumber, final String ticketSystem);
     IPrivilegedRoleAssignmentMakeEligibleRequestBuilder makeEligible();
+    IPrivilegedRoleAssignmentMakePermanentRequestBuilder makePermanent(final String reason, final String ticketNumber, final String ticketSystem);
 
 }

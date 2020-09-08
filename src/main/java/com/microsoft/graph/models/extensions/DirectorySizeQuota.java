@@ -36,20 +36,20 @@ public class DirectorySizeQuota implements IJsonBackedObject {
     }
 
     /**
-     * The Used.
-     * 
-     */
-    @SerializedName("used")
-    @Expose
-    public Integer used;
-
-    /**
      * The Total.
      * 
      */
     @SerializedName("total")
     @Expose
     public Integer total;
+
+    /**
+     * The Used.
+     * 
+     */
+    @SerializedName("used")
+    @Expose
+    public Integer used;
 
 
     /**

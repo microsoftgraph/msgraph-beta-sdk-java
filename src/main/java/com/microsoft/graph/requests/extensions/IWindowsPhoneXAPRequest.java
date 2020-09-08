@@ -80,6 +80,23 @@ public interface IWindowsPhoneXAPRequest extends IHttpRequest {
     WindowsPhoneXAP post(final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException;
 
     /**
+     * Posts a WindowsPhoneXAP with a new object
+     *
+     * @param newWindowsPhoneXAP the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback);
+
+    /**
+     * Posts a WindowsPhoneXAP with a new object
+     *
+     * @param newWindowsPhoneXAP the object to create/update
+     * @return the created WindowsPhoneXAP
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhoneXAP put(final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

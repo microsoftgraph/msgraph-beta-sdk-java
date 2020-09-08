@@ -80,6 +80,23 @@ public interface IPrintRequest extends IHttpRequest {
     Print post(final Print newPrint) throws ClientException;
 
     /**
+     * Posts a Print with a new object
+     *
+     * @param newPrint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Print newPrint, final ICallback<Print> callback);
+
+    /**
+     * Posts a Print with a new object
+     *
+     * @param newPrint the object to create/update
+     * @return the created Print
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Print put(final Print newPrint) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

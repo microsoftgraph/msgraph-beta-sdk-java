@@ -120,6 +120,27 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
     }
 
     /**
+     * Creates a Store with a new object
+     *
+     * @param newStore the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Store newStore, final ICallback<Store> callback) {
+        send(HttpMethod.PUT, callback, newStore);
+    }
+
+    /**
+     * Creates a Store with a new object
+     *
+     * @param newStore the object to create/update
+     * @return the created Store
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Store put(final Store newStore) throws ClientException {
+        return send(HttpMethod.PUT, newStore);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

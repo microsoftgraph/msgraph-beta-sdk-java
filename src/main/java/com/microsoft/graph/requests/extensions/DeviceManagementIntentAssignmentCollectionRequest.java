@@ -62,14 +62,14 @@ public class DeviceManagementIntentAssignmentCollectionRequest extends BaseColle
     public void post(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment, final ICallback<DeviceManagementIntentAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentAssignment, callback);
     }
 
     public DeviceManagementIntentAssignment post(final DeviceManagementIntentAssignment newDeviceManagementIntentAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementIntentAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentAssignment);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementIntentAssignmentCollectionRequest extends BaseColle
         return (DeviceManagementIntentAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementIntentAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementIntentAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementIntentAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementIntentAssignmentCollectionRequest)this;
+    }
     public IDeviceManagementIntentAssignmentCollectionPage buildFromResponse(final DeviceManagementIntentAssignmentCollectionResponse response) {
         final IDeviceManagementIntentAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

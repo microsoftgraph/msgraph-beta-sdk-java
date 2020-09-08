@@ -57,13 +57,6 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
     }
 
 
-    public IProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
-        return new ProfileCardPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties"), getClient(), null);
-    }
-
-    public IProfileCardPropertyRequestBuilder profileCardProperties(final String id) {
-        return new ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for ItemInsightsSettings
@@ -72,5 +65,12 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
      */
     public IItemInsightsSettingsRequestBuilder itemInsights() {
         return new ItemInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    }
+    public IProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
+        return new ProfileCardPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties"), getClient(), null);
+    }
+
+    public IProfileCardPropertyRequestBuilder profileCardProperties(final String id) {
+        return new ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
     }
 }

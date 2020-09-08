@@ -62,14 +62,14 @@ public class VulnerableManagedDeviceCollectionRequest extends BaseCollectionRequ
     public void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VulnerableManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newVulnerableManagedDevice, callback);
     }
 
     public VulnerableManagedDevice post(final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new VulnerableManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newVulnerableManagedDevice);
     }
 
@@ -106,6 +106,27 @@ public class VulnerableManagedDeviceCollectionRequest extends BaseCollectionRequ
         return (VulnerableManagedDeviceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IVulnerableManagedDeviceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (VulnerableManagedDeviceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IVulnerableManagedDeviceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IVulnerableManagedDeviceCollectionRequest)this;
+    }
     public IVulnerableManagedDeviceCollectionPage buildFromResponse(final VulnerableManagedDeviceCollectionResponse response) {
         final IVulnerableManagedDeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

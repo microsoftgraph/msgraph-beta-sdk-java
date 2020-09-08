@@ -116,6 +116,27 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
     }
 
     /**
+     * Creates a FeatureRolloutPolicy with a new object
+     *
+     * @param newFeatureRolloutPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback) {
+        send(HttpMethod.PUT, callback, newFeatureRolloutPolicy);
+    }
+
+    /**
+     * Creates a FeatureRolloutPolicy with a new object
+     *
+     * @param newFeatureRolloutPolicy the object to create/update
+     * @return the created FeatureRolloutPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public FeatureRolloutPolicy put(final FeatureRolloutPolicy newFeatureRolloutPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newFeatureRolloutPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IMacOSTrustedRootCertificateRequest extends IHttpRequest {
     MacOSTrustedRootCertificate post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException;
 
     /**
+     * Posts a MacOSTrustedRootCertificate with a new object
+     *
+     * @param newMacOSTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback);
+
+    /**
+     * Posts a MacOSTrustedRootCertificate with a new object
+     *
+     * @param newMacOSTrustedRootCertificate the object to create/update
+     * @return the created MacOSTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSTrustedRootCertificate put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

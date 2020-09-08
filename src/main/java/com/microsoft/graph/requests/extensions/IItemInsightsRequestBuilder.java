@@ -33,13 +33,13 @@ public interface IItemInsightsRequestBuilder extends IRequestBuilder {
     IItemInsightsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ITrendingCollectionRequestBuilder trending();
-
-    ITrendingRequestBuilder trending(final String id);
-
     ISharedInsightCollectionRequestBuilder shared();
 
     ISharedInsightRequestBuilder shared(final String id);
+
+    ITrendingCollectionRequestBuilder trending();
+
+    ITrendingRequestBuilder trending(final String id);
 
     IUsedInsightCollectionRequestBuilder used();
 

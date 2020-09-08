@@ -9,14 +9,14 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TermsExpiration;
+import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import com.microsoft.graph.models.extensions.AgreementFile;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
-import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionResponse;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionPage;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionPage;
+import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionResponse;
+import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -43,6 +43,22 @@ public class Agreement extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Is Per Device Acceptance Required.
+     * 
+     */
+    @SerializedName("isPerDeviceAcceptanceRequired")
+    @Expose
+    public Boolean isPerDeviceAcceptanceRequired;
+
+    /**
+     * The Is Viewing Before Acceptance Required.
+     * 
+     */
+    @SerializedName("isViewingBeforeAcceptanceRequired")
+    @Expose
+    public Boolean isViewingBeforeAcceptanceRequired;
+
+    /**
      * The Terms Expiration.
      * 
      */
@@ -59,20 +75,10 @@ public class Agreement extends Entity implements IJsonBackedObject {
     public javax.xml.datatype.Duration userReacceptRequiredFrequency;
 
     /**
-     * The Is Viewing Before Acceptance Required.
+     * The Acceptances.
      * 
      */
-    @SerializedName("isViewingBeforeAcceptanceRequired")
-    @Expose
-    public Boolean isViewingBeforeAcceptanceRequired;
-
-    /**
-     * The Is Per Device Acceptance Required.
-     * 
-     */
-    @SerializedName("isPerDeviceAcceptanceRequired")
-    @Expose
-    public Boolean isPerDeviceAcceptanceRequired;
+    public AgreementAcceptanceCollectionPage acceptances;
 
     /**
      * The File.
@@ -87,12 +93,6 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * 
      */
     public AgreementFileLocalizationCollectionPage files;
-
-    /**
-     * The Acceptances.
-     * 
-     */
-    public AgreementAcceptanceCollectionPage acceptances;
 
 
     /**
@@ -134,22 +134,6 @@ public class Agreement extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("files")) {
-            final AgreementFileLocalizationCollectionResponse response = new AgreementFileLocalizationCollectionResponse();
-            if (json.has("files@odata.nextLink")) {
-                response.nextLink = json.get("files@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("files").toString(), JsonObject[].class);
-            final AgreementFileLocalization[] array = new AgreementFileLocalization[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AgreementFileLocalization.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            files = new AgreementFileLocalizationCollectionPage(response, null);
-        }
-
         if (json.has("acceptances")) {
             final AgreementAcceptanceCollectionResponse response = new AgreementAcceptanceCollectionResponse();
             if (json.has("acceptances@odata.nextLink")) {
@@ -164,6 +148,22 @@ public class Agreement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             acceptances = new AgreementAcceptanceCollectionPage(response, null);
+        }
+
+        if (json.has("files")) {
+            final AgreementFileLocalizationCollectionResponse response = new AgreementFileLocalizationCollectionResponse();
+            if (json.has("files@odata.nextLink")) {
+                response.nextLink = json.get("files@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("files").toString(), JsonObject[].class);
+            final AgreementFileLocalization[] array = new AgreementFileLocalization[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AgreementFileLocalization.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            files = new AgreementFileLocalizationCollectionPage(response, null);
         }
     }
 }

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
 import com.microsoft.graph.models.extensions.CurrentLabel;
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class EvaluateSensitivityLabelsRequest implements IJsonBackedObject {
     }
 
     /**
-     * The Discovered Sensitive Types.
-     * 
-     */
-    @SerializedName("discoveredSensitiveTypes")
-    @Expose
-    public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
-
-    /**
      * The Current Label.
      * 
      */
     @SerializedName("currentLabel")
     @Expose
     public CurrentLabel currentLabel;
+
+    /**
+     * The Discovered Sensitive Types.
+     * 
+     */
+    @SerializedName("discoveredSensitiveTypes")
+    @Expose
+    public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
 
 
     /**

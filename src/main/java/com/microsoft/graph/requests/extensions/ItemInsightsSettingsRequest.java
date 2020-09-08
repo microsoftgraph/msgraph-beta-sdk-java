@@ -112,6 +112,27 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
     }
 
     /**
+     * Creates a ItemInsightsSettings with a new object
+     *
+     * @param newItemInsightsSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemInsightsSettings newItemInsightsSettings, final ICallback<ItemInsightsSettings> callback) {
+        send(HttpMethod.PUT, callback, newItemInsightsSettings);
+    }
+
+    /**
+     * Creates a ItemInsightsSettings with a new object
+     *
+     * @param newItemInsightsSettings the object to create/update
+     * @return the created ItemInsightsSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemInsightsSettings put(final ItemInsightsSettings newItemInsightsSettings) throws ClientException {
+        return send(HttpMethod.PUT, newItemInsightsSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

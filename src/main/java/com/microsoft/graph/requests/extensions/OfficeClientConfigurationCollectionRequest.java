@@ -63,14 +63,14 @@ public class OfficeClientConfigurationCollectionRequest extends BaseCollectionRe
     public void post(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfficeClientConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfficeClientConfiguration, callback);
     }
 
     public OfficeClientConfiguration post(final OfficeClientConfiguration newOfficeClientConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OfficeClientConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfficeClientConfiguration);
     }
 
@@ -107,6 +107,27 @@ public class OfficeClientConfigurationCollectionRequest extends BaseCollectionRe
         return (OfficeClientConfigurationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOfficeClientConfigurationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OfficeClientConfigurationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOfficeClientConfigurationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOfficeClientConfigurationCollectionRequest)this;
+    }
     public IOfficeClientConfigurationCollectionPage buildFromResponse(final OfficeClientConfigurationCollectionResponse response) {
         final IOfficeClientConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

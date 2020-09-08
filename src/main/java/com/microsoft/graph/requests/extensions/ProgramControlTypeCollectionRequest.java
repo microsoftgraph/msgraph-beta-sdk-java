@@ -61,14 +61,14 @@ public class ProgramControlTypeCollectionRequest extends BaseCollectionRequest<P
     public void post(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProgramControlTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProgramControlType, callback);
     }
 
     public ProgramControlType post(final ProgramControlType newProgramControlType) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProgramControlTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProgramControlType);
     }
 
@@ -105,6 +105,27 @@ public class ProgramControlTypeCollectionRequest extends BaseCollectionRequest<P
         return (ProgramControlTypeCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProgramControlTypeCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProgramControlTypeCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProgramControlTypeCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProgramControlTypeCollectionRequest)this;
+    }
     public IProgramControlTypeCollectionPage buildFromResponse(final ProgramControlTypeCollectionResponse response) {
         final IProgramControlTypeCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -154,20 +154,20 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public DeviceDetail deviceDetail;
 
     /**
-     * The Is Interactive.
-     * Indicates if a sign-in is interactive or not.
-     */
-    @SerializedName("isInteractive")
-    @Expose
-    public Boolean isInteractive;
-
-    /**
      * The Ip Address.
      * IP address of the client used to sign in.
      */
     @SerializedName("ipAddress")
     @Expose
     public String ipAddress;
+
+    /**
+     * The Is Interactive.
+     * Indicates if a sign-in is interactive or not.
+     */
+    @SerializedName("isInteractive")
+    @Expose
+    public Boolean isInteractive;
 
     /**
      * The Location.
@@ -208,6 +208,30 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @SerializedName("processingTimeInMilliseconds")
     @Expose
     public Integer processingTimeInMilliseconds;
+
+    /**
+     * The Resource Display Name.
+     * Name of the resource the user signed into.
+     */
+    @SerializedName("resourceDisplayName")
+    @Expose
+    public String resourceDisplayName;
+
+    /**
+     * The Resource Id.
+     * ID of the resource that the user signed into.
+     */
+    @SerializedName("resourceId")
+    @Expose
+    public String resourceId;
+
+    /**
+     * The Resource Tenant Id.
+     * 
+     */
+    @SerializedName("resourceTenantId")
+    @Expose
+    public String resourceTenantId;
 
     /**
      * The Risk Detail.
@@ -256,30 +280,6 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @SerializedName("riskState")
     @Expose
     public RiskState riskState;
-
-    /**
-     * The Resource Display Name.
-     * Name of the resource the user signed into.
-     */
-    @SerializedName("resourceDisplayName")
-    @Expose
-    public String resourceDisplayName;
-
-    /**
-     * The Resource Id.
-     * ID of the resource that the user signed into.
-     */
-    @SerializedName("resourceId")
-    @Expose
-    public String resourceId;
-
-    /**
-     * The Resource Tenant Id.
-     * 
-     */
-    @SerializedName("resourceTenantId")
-    @Expose
-    public String resourceTenantId;
 
     /**
      * The Service Principal Id.

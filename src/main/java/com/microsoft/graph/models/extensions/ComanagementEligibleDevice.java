@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceType;
 import com.microsoft.graph.models.generated.DeviceRegistrationState;
-import com.microsoft.graph.models.generated.OwnerType;
+import com.microsoft.graph.models.generated.DeviceType;
 import com.microsoft.graph.models.generated.ManagementAgentType;
 import com.microsoft.graph.models.generated.ManagementState;
+import com.microsoft.graph.models.generated.OwnerType;
 import com.microsoft.graph.models.generated.ComanagementEligibleType;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -33,6 +33,14 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
 
     /**
+     * The Client Registration Status.
+     * ClientRegistrationStatus
+     */
+    @SerializedName("clientRegistrationStatus")
+    @Expose
+    public DeviceRegistrationState clientRegistrationStatus;
+
+    /**
      * The Device Name.
      * DeviceName
      */
@@ -49,20 +57,12 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
     public DeviceType deviceType;
 
     /**
-     * The Client Registration Status.
-     * ClientRegistrationStatus
+     * The Entity Source.
+     * EntitySource
      */
-    @SerializedName("clientRegistrationStatus")
+    @SerializedName("entitySource")
     @Expose
-    public DeviceRegistrationState clientRegistrationStatus;
-
-    /**
-     * The Owner Type.
-     * OwnerType
-     */
-    @SerializedName("ownerType")
-    @Expose
-    public OwnerType ownerType;
+    public Integer entitySource;
 
     /**
      * The Management Agents.
@@ -81,12 +81,12 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
     public ManagementState managementState;
 
     /**
-     * The Reference Id.
-     * ReferenceId
+     * The Manufacturer.
+     * Manufacturer
      */
-    @SerializedName("referenceId")
+    @SerializedName("manufacturer")
     @Expose
-    public String referenceId;
+    public String manufacturer;
 
     /**
      * The Mdm Status.
@@ -95,30 +95,6 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
     @SerializedName("mdmStatus")
     @Expose
     public String mdmStatus;
-
-    /**
-     * The Os Version.
-     * OSVersion
-     */
-    @SerializedName("osVersion")
-    @Expose
-    public String osVersion;
-
-    /**
-     * The Serial Number.
-     * SerialNumber
-     */
-    @SerializedName("serialNumber")
-    @Expose
-    public String serialNumber;
-
-    /**
-     * The Manufacturer.
-     * Manufacturer
-     */
-    @SerializedName("manufacturer")
-    @Expose
-    public String manufacturer;
 
     /**
      * The Model.
@@ -137,20 +113,44 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
     public String osDescription;
 
     /**
-     * The Entity Source.
-     * EntitySource
+     * The Os Version.
+     * OSVersion
      */
-    @SerializedName("entitySource")
+    @SerializedName("osVersion")
     @Expose
-    public Integer entitySource;
+    public String osVersion;
 
     /**
-     * The User Id.
-     * UserId
+     * The Owner Type.
+     * OwnerType
      */
-    @SerializedName("userId")
+    @SerializedName("ownerType")
     @Expose
-    public String userId;
+    public OwnerType ownerType;
+
+    /**
+     * The Reference Id.
+     * ReferenceId
+     */
+    @SerializedName("referenceId")
+    @Expose
+    public String referenceId;
+
+    /**
+     * The Serial Number.
+     * SerialNumber
+     */
+    @SerializedName("serialNumber")
+    @Expose
+    public String serialNumber;
+
+    /**
+     * The Status.
+     * ComanagementEligibleStatus
+     */
+    @SerializedName("status")
+    @Expose
+    public ComanagementEligibleType status;
 
     /**
      * The Upn.
@@ -169,20 +169,20 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
     public String userEmail;
 
     /**
+     * The User Id.
+     * UserId
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
      * The User Name.
      * UserName
      */
     @SerializedName("userName")
     @Expose
     public String userName;
-
-    /**
-     * The Status.
-     * ComanagementEligibleStatus
-     */
-    @SerializedName("status")
-    @Expose
-    public ComanagementEligibleType status;
 
 
     /**

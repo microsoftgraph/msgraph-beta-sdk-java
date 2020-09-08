@@ -38,20 +38,20 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
     public String createdBy;
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Created Date Time.
      * 
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Queries.

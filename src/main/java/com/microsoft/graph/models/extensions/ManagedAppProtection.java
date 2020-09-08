@@ -8,16 +8,16 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ManagedAppDataIngestionLocation;
+import com.microsoft.graph.models.generated.ManagedAppDataStorageLocation;
 import com.microsoft.graph.models.generated.ManagedAppDataTransferLevel;
 import com.microsoft.graph.models.generated.ManagedAppClipboardSharingLevel;
-import com.microsoft.graph.models.generated.ManagedAppPinCharacterSet;
-import com.microsoft.graph.models.generated.ManagedAppDataStorageLocation;
 import com.microsoft.graph.models.generated.ManagedAppRemediationAction;
-import com.microsoft.graph.models.generated.ManagedAppNotificationRestriction;
+import com.microsoft.graph.models.generated.ManagedAppPhoneNumberRedirectLevel;
 import com.microsoft.graph.models.generated.ManagedBrowserType;
 import com.microsoft.graph.models.generated.ManagedAppDeviceThreatLevel;
-import com.microsoft.graph.models.generated.ManagedAppDataIngestionLocation;
-import com.microsoft.graph.models.generated.ManagedAppPhoneNumberRedirectLevel;
+import com.microsoft.graph.models.generated.ManagedAppNotificationRestriction;
+import com.microsoft.graph.models.generated.ManagedAppPinCharacterSet;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 
 
@@ -37,140 +37,12 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
 
     /**
-     * The Period Offline Before Access Check.
-     * The period after which access is checked when the device is not connected to the internet.
+     * The Allowed Data Ingestion Locations.
+     * Data storage locations where a user may store managed data.
      */
-    @SerializedName("periodOfflineBeforeAccessCheck")
+    @SerializedName("allowedDataIngestionLocations")
     @Expose
-    public javax.xml.datatype.Duration periodOfflineBeforeAccessCheck;
-
-    /**
-     * The Period Online Before Access Check.
-     * The period after which access is checked when the device is connected to the internet.
-     */
-    @SerializedName("periodOnlineBeforeAccessCheck")
-    @Expose
-    public javax.xml.datatype.Duration periodOnlineBeforeAccessCheck;
-
-    /**
-     * The Allowed Inbound Data Transfer Sources.
-     * Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
-     */
-    @SerializedName("allowedInboundDataTransferSources")
-    @Expose
-    public ManagedAppDataTransferLevel allowedInboundDataTransferSources;
-
-    /**
-     * The Allowed Outbound Data Transfer Destinations.
-     * Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
-     */
-    @SerializedName("allowedOutboundDataTransferDestinations")
-    @Expose
-    public ManagedAppDataTransferLevel allowedOutboundDataTransferDestinations;
-
-    /**
-     * The Organizational Credentials Required.
-     * Indicates whether organizational credentials are required for app use.
-     */
-    @SerializedName("organizationalCredentialsRequired")
-    @Expose
-    public Boolean organizationalCredentialsRequired;
-
-    /**
-     * The Allowed Outbound Clipboard Sharing Level.
-     * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
-     */
-    @SerializedName("allowedOutboundClipboardSharingLevel")
-    @Expose
-    public ManagedAppClipboardSharingLevel allowedOutboundClipboardSharingLevel;
-
-    /**
-     * The Data Backup Blocked.
-     * Indicates whether the backup of a managed app's data is blocked.
-     */
-    @SerializedName("dataBackupBlocked")
-    @Expose
-    public Boolean dataBackupBlocked;
-
-    /**
-     * The Device Compliance Required.
-     * Indicates whether device compliance is required.
-     */
-    @SerializedName("deviceComplianceRequired")
-    @Expose
-    public Boolean deviceComplianceRequired;
-
-    /**
-     * The Managed Browser To Open Links Required.
-     * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
-     */
-    @SerializedName("managedBrowserToOpenLinksRequired")
-    @Expose
-    public Boolean managedBrowserToOpenLinksRequired;
-
-    /**
-     * The Save As Blocked.
-     * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
-     */
-    @SerializedName("saveAsBlocked")
-    @Expose
-    public Boolean saveAsBlocked;
-
-    /**
-     * The Period Offline Before Wipe Is Enforced.
-     * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
-     */
-    @SerializedName("periodOfflineBeforeWipeIsEnforced")
-    @Expose
-    public javax.xml.datatype.Duration periodOfflineBeforeWipeIsEnforced;
-
-    /**
-     * The Pin Required.
-     * Indicates whether an app-level pin is required.
-     */
-    @SerializedName("pinRequired")
-    @Expose
-    public Boolean pinRequired;
-
-    /**
-     * The Maximum Pin Retries.
-     * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
-     */
-    @SerializedName("maximumPinRetries")
-    @Expose
-    public Integer maximumPinRetries;
-
-    /**
-     * The Simple Pin Blocked.
-     * Indicates whether simplePin is blocked.
-     */
-    @SerializedName("simplePinBlocked")
-    @Expose
-    public Boolean simplePinBlocked;
-
-    /**
-     * The Minimum Pin Length.
-     * Minimum pin length required for an app-level pin if PinRequired is set to True
-     */
-    @SerializedName("minimumPinLength")
-    @Expose
-    public Integer minimumPinLength;
-
-    /**
-     * The Pin Character Set.
-     * Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
-     */
-    @SerializedName("pinCharacterSet")
-    @Expose
-    public ManagedAppPinCharacterSet pinCharacterSet;
-
-    /**
-     * The Period Before Pin Reset.
-     * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
-     */
-    @SerializedName("periodBeforePinReset")
-    @Expose
-    public javax.xml.datatype.Duration periodBeforePinReset;
+    public java.util.List<ManagedAppDataIngestionLocation> allowedDataIngestionLocations;
 
     /**
      * The Allowed Data Storage Locations.
@@ -181,84 +53,36 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     public java.util.List<ManagedAppDataStorageLocation> allowedDataStorageLocations;
 
     /**
-     * The Contact Sync Blocked.
-     * Indicates whether contacts can be synced to the user's device.
+     * The Allowed Inbound Data Transfer Sources.
+     * Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
      */
-    @SerializedName("contactSyncBlocked")
+    @SerializedName("allowedInboundDataTransferSources")
     @Expose
-    public Boolean contactSyncBlocked;
+    public ManagedAppDataTransferLevel allowedInboundDataTransferSources;
 
     /**
-     * The Print Blocked.
-     * Indicates whether printing is allowed from managed apps.
+     * The Allowed Outbound Clipboard Sharing Exception Length.
+     * Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed.
      */
-    @SerializedName("printBlocked")
+    @SerializedName("allowedOutboundClipboardSharingExceptionLength")
     @Expose
-    public Boolean printBlocked;
+    public Integer allowedOutboundClipboardSharingExceptionLength;
 
     /**
-     * The Fingerprint Blocked.
-     * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
+     * The Allowed Outbound Clipboard Sharing Level.
+     * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
      */
-    @SerializedName("fingerprintBlocked")
+    @SerializedName("allowedOutboundClipboardSharingLevel")
     @Expose
-    public Boolean fingerprintBlocked;
+    public ManagedAppClipboardSharingLevel allowedOutboundClipboardSharingLevel;
 
     /**
-     * The Disable App Pin If Device Pin Is Set.
-     * Indicates whether use of the app pin is required if the device pin is set.
+     * The Allowed Outbound Data Transfer Destinations.
+     * Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
      */
-    @SerializedName("disableAppPinIfDevicePinIsSet")
+    @SerializedName("allowedOutboundDataTransferDestinations")
     @Expose
-    public Boolean disableAppPinIfDevicePinIsSet;
-
-    /**
-     * The Minimum Required Os Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
-     */
-    @SerializedName("minimumRequiredOsVersion")
-    @Expose
-    public String minimumRequiredOsVersion;
-
-    /**
-     * The Minimum Warning Os Version.
-     * Versions less than the specified version will result in warning message on the managed app from accessing company data.
-     */
-    @SerializedName("minimumWarningOsVersion")
-    @Expose
-    public String minimumWarningOsVersion;
-
-    /**
-     * The Minimum Required App Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
-     */
-    @SerializedName("minimumRequiredAppVersion")
-    @Expose
-    public String minimumRequiredAppVersion;
-
-    /**
-     * The Minimum Warning App Version.
-     * Versions less than the specified version will result in warning message on the managed app.
-     */
-    @SerializedName("minimumWarningAppVersion")
-    @Expose
-    public String minimumWarningAppVersion;
-
-    /**
-     * The Minimum Wipe Os Version.
-     * Versions less than or equal to the specified version will wipe the managed app and the associated company data.
-     */
-    @SerializedName("minimumWipeOsVersion")
-    @Expose
-    public String minimumWipeOsVersion;
-
-    /**
-     * The Minimum Wipe App Version.
-     * Versions less than or equal to the specified version will wipe the managed app and the associated company data.
-     */
-    @SerializedName("minimumWipeAppVersion")
-    @Expose
-    public String minimumWipeAppVersion;
+    public ManagedAppDataTransferLevel allowedOutboundDataTransferDestinations;
 
     /**
      * The App Action If Device Compliance Required.
@@ -277,60 +101,12 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     public ManagedAppRemediationAction appActionIfMaximumPinRetriesExceeded;
 
     /**
-     * The Pin Required Instead Of Biometric Timeout.
-     * Timeout in minutes for an app pin instead of non biometrics passcode
+     * The App Action If Unable To Authenticate User.
+     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD.
      */
-    @SerializedName("pinRequiredInsteadOfBiometricTimeout")
+    @SerializedName("appActionIfUnableToAuthenticateUser")
     @Expose
-    public javax.xml.datatype.Duration pinRequiredInsteadOfBiometricTimeout;
-
-    /**
-     * The Allowed Outbound Clipboard Sharing Exception Length.
-     * Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed.
-     */
-    @SerializedName("allowedOutboundClipboardSharingExceptionLength")
-    @Expose
-    public Integer allowedOutboundClipboardSharingExceptionLength;
-
-    /**
-     * The Notification Restriction.
-     * Specify app notification restriction
-     */
-    @SerializedName("notificationRestriction")
-    @Expose
-    public ManagedAppNotificationRestriction notificationRestriction;
-
-    /**
-     * The Previous Pin Block Count.
-     * Requires a pin to be unique from the number specified in this property.
-     */
-    @SerializedName("previousPinBlockCount")
-    @Expose
-    public Integer previousPinBlockCount;
-
-    /**
-     * The Managed Browser.
-     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
-     */
-    @SerializedName("managedBrowser")
-    @Expose
-    public EnumSet<ManagedBrowserType> managedBrowser;
-
-    /**
-     * The Maximum Allowed Device Threat Level.
-     * Maximum allowed device threat level, as reported by the MTD app
-     */
-    @SerializedName("maximumAllowedDeviceThreatLevel")
-    @Expose
-    public ManagedAppDeviceThreatLevel maximumAllowedDeviceThreatLevel;
-
-    /**
-     * The Mobile Threat Defense Remediation Action.
-     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property
-     */
-    @SerializedName("mobileThreatDefenseRemediationAction")
-    @Expose
-    public ManagedAppRemediationAction mobileThreatDefenseRemediationAction;
+    public ManagedAppRemediationAction appActionIfUnableToAuthenticateUser;
 
     /**
      * The Block Data Ingestion Into Organization Documents.
@@ -341,20 +117,28 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     public Boolean blockDataIngestionIntoOrganizationDocuments;
 
     /**
-     * The Allowed Data Ingestion Locations.
-     * Data storage locations where a user may store managed data.
+     * The Contact Sync Blocked.
+     * Indicates whether contacts can be synced to the user's device.
      */
-    @SerializedName("allowedDataIngestionLocations")
+    @SerializedName("contactSyncBlocked")
     @Expose
-    public java.util.List<ManagedAppDataIngestionLocation> allowedDataIngestionLocations;
+    public Boolean contactSyncBlocked;
 
     /**
-     * The App Action If Unable To Authenticate User.
-     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD.
+     * The Data Backup Blocked.
+     * Indicates whether the backup of a managed app's data is blocked.
      */
-    @SerializedName("appActionIfUnableToAuthenticateUser")
+    @SerializedName("dataBackupBlocked")
     @Expose
-    public ManagedAppRemediationAction appActionIfUnableToAuthenticateUser;
+    public Boolean dataBackupBlocked;
+
+    /**
+     * The Device Compliance Required.
+     * Indicates whether device compliance is required.
+     */
+    @SerializedName("deviceComplianceRequired")
+    @Expose
+    public Boolean deviceComplianceRequired;
 
     /**
      * The Dialer Restriction Level.
@@ -363,6 +147,222 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     @SerializedName("dialerRestrictionLevel")
     @Expose
     public ManagedAppPhoneNumberRedirectLevel dialerRestrictionLevel;
+
+    /**
+     * The Disable App Pin If Device Pin Is Set.
+     * Indicates whether use of the app pin is required if the device pin is set.
+     */
+    @SerializedName("disableAppPinIfDevicePinIsSet")
+    @Expose
+    public Boolean disableAppPinIfDevicePinIsSet;
+
+    /**
+     * The Fingerprint Blocked.
+     * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
+     */
+    @SerializedName("fingerprintBlocked")
+    @Expose
+    public Boolean fingerprintBlocked;
+
+    /**
+     * The Managed Browser.
+     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     */
+    @SerializedName("managedBrowser")
+    @Expose
+    public EnumSet<ManagedBrowserType> managedBrowser;
+
+    /**
+     * The Managed Browser To Open Links Required.
+     * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
+     */
+    @SerializedName("managedBrowserToOpenLinksRequired")
+    @Expose
+    public Boolean managedBrowserToOpenLinksRequired;
+
+    /**
+     * The Maximum Allowed Device Threat Level.
+     * Maximum allowed device threat level, as reported by the MTD app
+     */
+    @SerializedName("maximumAllowedDeviceThreatLevel")
+    @Expose
+    public ManagedAppDeviceThreatLevel maximumAllowedDeviceThreatLevel;
+
+    /**
+     * The Maximum Pin Retries.
+     * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     */
+    @SerializedName("maximumPinRetries")
+    @Expose
+    public Integer maximumPinRetries;
+
+    /**
+     * The Minimum Pin Length.
+     * Minimum pin length required for an app-level pin if PinRequired is set to True
+     */
+    @SerializedName("minimumPinLength")
+    @Expose
+    public Integer minimumPinLength;
+
+    /**
+     * The Minimum Required App Version.
+     * Versions less than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName("minimumRequiredAppVersion")
+    @Expose
+    public String minimumRequiredAppVersion;
+
+    /**
+     * The Minimum Required Os Version.
+     * Versions less than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName("minimumRequiredOsVersion")
+    @Expose
+    public String minimumRequiredOsVersion;
+
+    /**
+     * The Minimum Warning App Version.
+     * Versions less than the specified version will result in warning message on the managed app.
+     */
+    @SerializedName("minimumWarningAppVersion")
+    @Expose
+    public String minimumWarningAppVersion;
+
+    /**
+     * The Minimum Warning Os Version.
+     * Versions less than the specified version will result in warning message on the managed app from accessing company data.
+     */
+    @SerializedName("minimumWarningOsVersion")
+    @Expose
+    public String minimumWarningOsVersion;
+
+    /**
+     * The Minimum Wipe App Version.
+     * Versions less than or equal to the specified version will wipe the managed app and the associated company data.
+     */
+    @SerializedName("minimumWipeAppVersion")
+    @Expose
+    public String minimumWipeAppVersion;
+
+    /**
+     * The Minimum Wipe Os Version.
+     * Versions less than or equal to the specified version will wipe the managed app and the associated company data.
+     */
+    @SerializedName("minimumWipeOsVersion")
+    @Expose
+    public String minimumWipeOsVersion;
+
+    /**
+     * The Mobile Threat Defense Remediation Action.
+     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property
+     */
+    @SerializedName("mobileThreatDefenseRemediationAction")
+    @Expose
+    public ManagedAppRemediationAction mobileThreatDefenseRemediationAction;
+
+    /**
+     * The Notification Restriction.
+     * Specify app notification restriction
+     */
+    @SerializedName("notificationRestriction")
+    @Expose
+    public ManagedAppNotificationRestriction notificationRestriction;
+
+    /**
+     * The Organizational Credentials Required.
+     * Indicates whether organizational credentials are required for app use.
+     */
+    @SerializedName("organizationalCredentialsRequired")
+    @Expose
+    public Boolean organizationalCredentialsRequired;
+
+    /**
+     * The Period Before Pin Reset.
+     * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
+     */
+    @SerializedName("periodBeforePinReset")
+    @Expose
+    public javax.xml.datatype.Duration periodBeforePinReset;
+
+    /**
+     * The Period Offline Before Access Check.
+     * The period after which access is checked when the device is not connected to the internet.
+     */
+    @SerializedName("periodOfflineBeforeAccessCheck")
+    @Expose
+    public javax.xml.datatype.Duration periodOfflineBeforeAccessCheck;
+
+    /**
+     * The Period Offline Before Wipe Is Enforced.
+     * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
+     */
+    @SerializedName("periodOfflineBeforeWipeIsEnforced")
+    @Expose
+    public javax.xml.datatype.Duration periodOfflineBeforeWipeIsEnforced;
+
+    /**
+     * The Period Online Before Access Check.
+     * The period after which access is checked when the device is connected to the internet.
+     */
+    @SerializedName("periodOnlineBeforeAccessCheck")
+    @Expose
+    public javax.xml.datatype.Duration periodOnlineBeforeAccessCheck;
+
+    /**
+     * The Pin Character Set.
+     * Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
+     */
+    @SerializedName("pinCharacterSet")
+    @Expose
+    public ManagedAppPinCharacterSet pinCharacterSet;
+
+    /**
+     * The Pin Required.
+     * Indicates whether an app-level pin is required.
+     */
+    @SerializedName("pinRequired")
+    @Expose
+    public Boolean pinRequired;
+
+    /**
+     * The Pin Required Instead Of Biometric Timeout.
+     * Timeout in minutes for an app pin instead of non biometrics passcode
+     */
+    @SerializedName("pinRequiredInsteadOfBiometricTimeout")
+    @Expose
+    public javax.xml.datatype.Duration pinRequiredInsteadOfBiometricTimeout;
+
+    /**
+     * The Previous Pin Block Count.
+     * Requires a pin to be unique from the number specified in this property.
+     */
+    @SerializedName("previousPinBlockCount")
+    @Expose
+    public Integer previousPinBlockCount;
+
+    /**
+     * The Print Blocked.
+     * Indicates whether printing is allowed from managed apps.
+     */
+    @SerializedName("printBlocked")
+    @Expose
+    public Boolean printBlocked;
+
+    /**
+     * The Save As Blocked.
+     * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
+     */
+    @SerializedName("saveAsBlocked")
+    @Expose
+    public Boolean saveAsBlocked;
+
+    /**
+     * The Simple Pin Blocked.
+     * Indicates whether simplePin is blocked.
+     */
+    @SerializedName("simplePinBlocked")
+    @Expose
+    public Boolean simplePinBlocked;
 
 
     /**

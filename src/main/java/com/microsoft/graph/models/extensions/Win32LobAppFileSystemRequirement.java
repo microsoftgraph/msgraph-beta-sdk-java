@@ -28,22 +28,6 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
 
 
     /**
-     * The Path.
-     * The file or folder path to detect Win32 Line of Business (LoB) app
-     */
-    @SerializedName("path")
-    @Expose
-    public String path;
-
-    /**
-     * The File Or Folder Name.
-     * The file or folder name to detect Win32 Line of Business (LoB) app
-     */
-    @SerializedName("fileOrFolderName")
-    @Expose
-    public String fileOrFolderName;
-
-    /**
      * The Check32Bit On64System.
      * A value indicating whether this file or folder is for checking 32-bit app on 64-bit system
      */
@@ -58,6 +42,22 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
     @SerializedName("detectionType")
     @Expose
     public Win32LobAppFileSystemDetectionType detectionType;
+
+    /**
+     * The File Or Folder Name.
+     * The file or folder name to detect Win32 Line of Business (LoB) app
+     */
+    @SerializedName("fileOrFolderName")
+    @Expose
+    public String fileOrFolderName;
+
+    /**
+     * The Path.
+     * The file or folder path to detect Win32 Line of Business (LoB) app
+     */
+    @SerializedName("path")
+    @Expose
+    public String path;
 
 
     /**

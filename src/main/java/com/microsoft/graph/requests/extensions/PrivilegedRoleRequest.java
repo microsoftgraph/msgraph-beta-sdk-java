@@ -121,6 +121,27 @@ public class PrivilegedRoleRequest extends BaseRequest implements IPrivilegedRol
     }
 
     /**
+     * Creates a PrivilegedRole with a new object
+     *
+     * @param newPrivilegedRole the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedRole);
+    }
+
+    /**
+     * Creates a PrivilegedRole with a new object
+     *
+     * @param newPrivilegedRole the object to create/update
+     * @return the created PrivilegedRole
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedRole put(final PrivilegedRole newPrivilegedRole) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedRole);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

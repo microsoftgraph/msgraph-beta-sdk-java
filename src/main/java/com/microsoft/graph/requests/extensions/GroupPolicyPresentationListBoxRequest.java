@@ -112,6 +112,27 @@ public class GroupPolicyPresentationListBoxRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a GroupPolicyPresentationListBox with a new object
+     *
+     * @param newGroupPolicyPresentationListBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationListBox newGroupPolicyPresentationListBox, final ICallback<GroupPolicyPresentationListBox> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationListBox);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationListBox with a new object
+     *
+     * @param newGroupPolicyPresentationListBox the object to create/update
+     * @return the created GroupPolicyPresentationListBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationListBox put(final GroupPolicyPresentationListBox newGroupPolicyPresentationListBox) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationListBox);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

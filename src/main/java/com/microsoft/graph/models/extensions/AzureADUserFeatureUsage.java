@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AzureADLicenseType;
 import com.microsoft.graph.models.extensions.FeatureUsageDetail;
+import com.microsoft.graph.models.generated.AzureADLicenseType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,44 +29,20 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
 
 
     /**
+     * The Feature Usage Details.
+     * 
+     */
+    @SerializedName("featureUsageDetails")
+    @Expose
+    public java.util.List<FeatureUsageDetail> featureUsageDetails;
+
+    /**
      * The Last Updated Date Time.
      * 
      */
     @SerializedName("lastUpdatedDateTime")
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
-
-    /**
-     * The User Id.
-     * 
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The License Recommended.
-     * 
-     */
-    @SerializedName("licenseRecommended")
-    @Expose
-    public AzureADLicenseType licenseRecommended;
 
     /**
      * The License Assigned.
@@ -77,12 +53,36 @@ public class AzureADUserFeatureUsage extends Entity implements IJsonBackedObject
     public AzureADLicenseType licenseAssigned;
 
     /**
-     * The Feature Usage Details.
+     * The License Recommended.
      * 
      */
-    @SerializedName("featureUsageDetails")
+    @SerializedName("licenseRecommended")
     @Expose
-    public java.util.List<FeatureUsageDetail> featureUsageDetails;
+    public AzureADLicenseType licenseRecommended;
+
+    /**
+     * The User Display Name.
+     * 
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

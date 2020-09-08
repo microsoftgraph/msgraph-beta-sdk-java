@@ -27,14 +27,6 @@ public class SkypeForBusinessActivityCounts extends Entity implements IJsonBacke
 
 
     /**
-     * The Peer To Peer.
-     * 
-     */
-    @SerializedName("peerToPeer")
-    @Expose
-    public Long peerToPeer;
-
-    /**
      * The Organized.
      * 
      */
@@ -51,12 +43,12 @@ public class SkypeForBusinessActivityCounts extends Entity implements IJsonBacke
     public Long participated;
 
     /**
-     * The Report Refresh Date.
+     * The Peer To Peer.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("peerToPeer")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long peerToPeer;
 
     /**
      * The Report Date.
@@ -73,6 +65,14 @@ public class SkypeForBusinessActivityCounts extends Entity implements IJsonBacke
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
 
     /**

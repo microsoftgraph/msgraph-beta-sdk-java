@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UserExperienceAnalyticsInsightValue;
 import com.microsoft.graph.models.generated.UserExperienceAnalyticsInsightSeverity;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsInsightValue;
 
 
 import com.google.gson.JsonObject;
@@ -38,14 +38,6 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
     }
 
     /**
-     * The User Experience Analytics Metric Id.
-     * The unique identifier of the user experience analytics insight.
-     */
-    @SerializedName("userExperienceAnalyticsMetricId")
-    @Expose
-    public String userExperienceAnalyticsMetricId;
-
-    /**
      * The Insight Id.
      * The unique identifier of the user experience analytics insight.
      */
@@ -54,20 +46,28 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
     public String insightId;
 
     /**
-     * The Values.
-     * The value of the user experience analytics insight.
-     */
-    @SerializedName("values")
-    @Expose
-    public java.util.List<UserExperienceAnalyticsInsightValue> values;
-
-    /**
      * The Severity.
      * The value of the user experience analytics insight.
      */
     @SerializedName("severity")
     @Expose
     public UserExperienceAnalyticsInsightSeverity severity;
+
+    /**
+     * The User Experience Analytics Metric Id.
+     * The unique identifier of the user experience analytics insight.
+     */
+    @SerializedName("userExperienceAnalyticsMetricId")
+    @Expose
+    public String userExperienceAnalyticsMetricId;
+
+    /**
+     * The Values.
+     * The value of the user experience analytics insight.
+     */
+    @SerializedName("values")
+    @Expose
+    public java.util.List<UserExperienceAnalyticsInsightValue> values;
 
 
     /**

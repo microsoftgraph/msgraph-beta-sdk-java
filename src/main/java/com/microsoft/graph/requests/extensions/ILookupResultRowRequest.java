@@ -80,6 +80,23 @@ public interface ILookupResultRowRequest extends IHttpRequest {
     LookupResultRow post(final LookupResultRow newLookupResultRow) throws ClientException;
 
     /**
+     * Posts a LookupResultRow with a new object
+     *
+     * @param newLookupResultRow the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final LookupResultRow newLookupResultRow, final ICallback<LookupResultRow> callback);
+
+    /**
+     * Posts a LookupResultRow with a new object
+     *
+     * @param newLookupResultRow the object to create/update
+     * @return the created LookupResultRow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    LookupResultRow put(final LookupResultRow newLookupResultRow) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

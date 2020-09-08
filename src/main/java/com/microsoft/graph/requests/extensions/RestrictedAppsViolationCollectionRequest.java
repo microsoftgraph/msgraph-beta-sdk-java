@@ -62,14 +62,14 @@ public class RestrictedAppsViolationCollectionRequest extends BaseCollectionRequ
     public void post(final RestrictedAppsViolation newRestrictedAppsViolation, final ICallback<RestrictedAppsViolation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedAppsViolationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRestrictedAppsViolation, callback);
     }
 
     public RestrictedAppsViolation post(final RestrictedAppsViolation newRestrictedAppsViolation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RestrictedAppsViolationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRestrictedAppsViolation);
     }
 
@@ -106,6 +106,27 @@ public class RestrictedAppsViolationCollectionRequest extends BaseCollectionRequ
         return (RestrictedAppsViolationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRestrictedAppsViolationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RestrictedAppsViolationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRestrictedAppsViolationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRestrictedAppsViolationCollectionRequest)this;
+    }
     public IRestrictedAppsViolationCollectionPage buildFromResponse(final RestrictedAppsViolationCollectionResponse response) {
         final IRestrictedAppsViolationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

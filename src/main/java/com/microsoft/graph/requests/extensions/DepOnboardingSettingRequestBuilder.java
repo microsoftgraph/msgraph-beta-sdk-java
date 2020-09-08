@@ -100,20 +100,20 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder imple
         return new DepOnboardingSettingGenerateEncryptionPublicKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.generateEncryptionPublicKey"), getClient(), null);
     }
 
-    public IDepOnboardingSettingUploadDepTokenRequestBuilder uploadDepToken(final String appleId, final String depToken) {
-        return new DepOnboardingSettingUploadDepTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadDepToken"), getClient(), null, appleId, depToken);
+    public IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder shareForSchoolDataSyncService() {
+        return new DepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.shareForSchoolDataSyncService"), getClient(), null);
     }
 
     public IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder syncWithAppleDeviceEnrollmentProgram() {
         return new DepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncWithAppleDeviceEnrollmentProgram"), getClient(), null);
     }
 
-    public IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder shareForSchoolDataSyncService() {
-        return new DepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.shareForSchoolDataSyncService"), getClient(), null);
-    }
-
     public IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder unshareForSchoolDataSyncService() {
         return new DepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unshareForSchoolDataSyncService"), getClient(), null);
+    }
+
+    public IDepOnboardingSettingUploadDepTokenRequestBuilder uploadDepToken(final String appleId, final String depToken) {
+        return new DepOnboardingSettingUploadDepTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadDepToken"), getClient(), null, appleId, depToken);
     }
 
     public IDepOnboardingSettingGetEncryptionPublicKeyRequestBuilder getEncryptionPublicKey() {

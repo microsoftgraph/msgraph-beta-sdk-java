@@ -80,6 +80,23 @@ public interface ISoftwareOathAuthenticationMethodRequest extends IHttpRequest {
     SoftwareOathAuthenticationMethod post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a SoftwareOathAuthenticationMethod with a new object
+     *
+     * @param newSoftwareOathAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback);
+
+    /**
+     * Posts a SoftwareOathAuthenticationMethod with a new object
+     *
+     * @param newSoftwareOathAuthenticationMethod the object to create/update
+     * @return the created SoftwareOathAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SoftwareOathAuthenticationMethod put(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

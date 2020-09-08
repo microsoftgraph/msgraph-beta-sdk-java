@@ -80,6 +80,23 @@ public interface IAppConsentRequestRequest extends IHttpRequest {
     AppConsentRequest post(final AppConsentRequest newAppConsentRequest) throws ClientException;
 
     /**
+     * Posts a AppConsentRequest with a new object
+     *
+     * @param newAppConsentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback);
+
+    /**
+     * Posts a AppConsentRequest with a new object
+     *
+     * @param newAppConsentRequest the object to create/update
+     * @return the created AppConsentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppConsentRequest put(final AppConsentRequest newAppConsentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

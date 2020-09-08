@@ -30,20 +30,20 @@ public class PrintTask extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public PrintTaskStatus status;
-
-    /**
      * The Parent Url.
      * 
      */
     @SerializedName("parentUrl")
     @Expose
     public String parentUrl;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public PrintTaskStatus status;
 
     /**
      * The Definition.

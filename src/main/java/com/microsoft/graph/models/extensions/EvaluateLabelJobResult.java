@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.MatchingLabel;
-import com.microsoft.graph.models.extensions.ResponsibleSensitiveType;
 import com.microsoft.graph.models.extensions.ResponsiblePolicy;
+import com.microsoft.graph.models.extensions.ResponsibleSensitiveType;
+import com.microsoft.graph.models.extensions.MatchingLabel;
 
 
 import com.google.gson.JsonObject;
@@ -39,12 +39,12 @@ public class EvaluateLabelJobResult implements IJsonBackedObject {
     }
 
     /**
-     * The Sensitivity Label.
+     * The Responsible Policy.
      * 
      */
-    @SerializedName("sensitivityLabel")
+    @SerializedName("responsiblePolicy")
     @Expose
-    public MatchingLabel sensitivityLabel;
+    public ResponsiblePolicy responsiblePolicy;
 
     /**
      * The Responsible Sensitive Types.
@@ -55,12 +55,12 @@ public class EvaluateLabelJobResult implements IJsonBackedObject {
     public java.util.List<ResponsibleSensitiveType> responsibleSensitiveTypes;
 
     /**
-     * The Responsible Policy.
+     * The Sensitivity Label.
      * 
      */
-    @SerializedName("responsiblePolicy")
+    @SerializedName("sensitivityLabel")
     @Expose
-    public ResponsiblePolicy responsiblePolicy;
+    public MatchingLabel sensitivityLabel;
 
 
     /**

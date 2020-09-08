@@ -80,6 +80,23 @@ public interface IEmbeddedSIMDeviceStateRequest extends IHttpRequest {
     EmbeddedSIMDeviceState post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException;
 
     /**
+     * Posts a EmbeddedSIMDeviceState with a new object
+     *
+     * @param newEmbeddedSIMDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback);
+
+    /**
+     * Posts a EmbeddedSIMDeviceState with a new object
+     *
+     * @param newEmbeddedSIMDeviceState the object to create/update
+     * @return the created EmbeddedSIMDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmbeddedSIMDeviceState put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

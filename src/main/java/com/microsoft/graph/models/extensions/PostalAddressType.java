@@ -36,28 +36,12 @@ public class PostalAddressType implements IJsonBackedObject {
     }
 
     /**
-     * The Street.
-     * 
-     */
-    @SerializedName("street")
-    @Expose
-    public String street;
-
-    /**
      * The City.
      * 
      */
     @SerializedName("city")
     @Expose
     public String city;
-
-    /**
-     * The State.
-     * 
-     */
-    @SerializedName("state")
-    @Expose
-    public String state;
 
     /**
      * The Country Letter Code.
@@ -74,6 +58,22 @@ public class PostalAddressType implements IJsonBackedObject {
     @SerializedName("postalCode")
     @Expose
     public String postalCode;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName("state")
+    @Expose
+    public String state;
+
+    /**
+     * The Street.
+     * 
+     */
+    @SerializedName("street")
+    @Expose
+    public String street;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WindowsUserType;
 import com.microsoft.graph.models.generated.WindowsDeviceUsageType;
+import com.microsoft.graph.models.generated.WindowsUserType;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,20 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Hide Privacy Settings.
-     * Show or hide privacy settings to user
+     * The Device Usage Type.
+     * AAD join authentication type
      */
-    @SerializedName("hidePrivacySettings")
+    @SerializedName("deviceUsageType")
     @Expose
-    public Boolean hidePrivacySettings;
+    public WindowsDeviceUsageType deviceUsageType;
+
+    /**
+     * The Hide Escape Link.
+     * If set to true, then the user can't start over with different account, on company sign-in
+     */
+    @SerializedName("hideEscapeLink")
+    @Expose
+    public Boolean hideEscapeLink;
 
     /**
      * The Hide EULA.
@@ -54,20 +62,12 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
     public Boolean hideEULA;
 
     /**
-     * The User Type.
-     * Type of user
+     * The Hide Privacy Settings.
+     * Show or hide privacy settings to user
      */
-    @SerializedName("userType")
+    @SerializedName("hidePrivacySettings")
     @Expose
-    public WindowsUserType userType;
-
-    /**
-     * The Device Usage Type.
-     * AAD join authentication type
-     */
-    @SerializedName("deviceUsageType")
-    @Expose
-    public WindowsDeviceUsageType deviceUsageType;
+    public Boolean hidePrivacySettings;
 
     /**
      * The Skip Keyboard Selection Page.
@@ -78,12 +78,12 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
     public Boolean skipKeyboardSelectionPage;
 
     /**
-     * The Hide Escape Link.
-     * If set to true, then the user can't start over with different account, on company sign-in
+     * The User Type.
+     * Type of user
      */
-    @SerializedName("hideEscapeLink")
+    @SerializedName("userType")
     @Expose
-    public Boolean hideEscapeLink;
+    public WindowsUserType userType;
 
 
     /**

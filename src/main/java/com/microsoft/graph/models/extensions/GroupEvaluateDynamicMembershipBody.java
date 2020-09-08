@@ -26,14 +26,6 @@ public class GroupEvaluateDynamicMembershipBody {
     @Expose
     public String memberId;
 
-    /**
-     * The membership Rule.
-     * 
-     */
-    @SerializedName("membershipRule")
-    @Expose
-    public String membershipRule;
-
 
     /**
      * The raw representation of this class

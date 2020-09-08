@@ -127,6 +127,27 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
     }
 
     /**
+     * Creates a MobileContainedApp with a new object
+     *
+     * @param newMobileContainedApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileContainedApp newMobileContainedApp, final ICallback<MobileContainedApp> callback) {
+        send(HttpMethod.PUT, callback, newMobileContainedApp);
+    }
+
+    /**
+     * Creates a MobileContainedApp with a new object
+     *
+     * @param newMobileContainedApp the object to create/update
+     * @return the created MobileContainedApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileContainedApp put(final MobileContainedApp newMobileContainedApp) throws ClientException {
+        return send(HttpMethod.PUT, newMobileContainedApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

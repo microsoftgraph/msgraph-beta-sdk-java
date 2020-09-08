@@ -112,6 +112,27 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a ApplicationSignInDetailedSummary with a new object
+     *
+     * @param newApplicationSignInDetailedSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback) {
+        send(HttpMethod.PUT, callback, newApplicationSignInDetailedSummary);
+    }
+
+    /**
+     * Creates a ApplicationSignInDetailedSummary with a new object
+     *
+     * @param newApplicationSignInDetailedSummary the object to create/update
+     * @return the created ApplicationSignInDetailedSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ApplicationSignInDetailedSummary put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException {
+        return send(HttpMethod.PUT, newApplicationSignInDetailedSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

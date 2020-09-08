@@ -9,21 +9,21 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TypedEmailAddress;
-import com.microsoft.graph.models.extensions.Website;
+import com.microsoft.graph.models.extensions.FollowupFlag;
 import com.microsoft.graph.models.extensions.Phone;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
-import com.microsoft.graph.models.extensions.FollowupFlag;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.Website;
+import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
-import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.OutlookItem;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,12 +42,12 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
 
     /**
-     * The Parent Folder Id.
-     * The ID of the contact's parent folder.
+     * The Assistant Name.
+     * The name of the contact's assistant.
      */
-    @SerializedName("parentFolderId")
+    @SerializedName("assistantName")
     @Expose
-    public String parentFolderId;
+    public String assistantName;
 
     /**
      * The Birthday.
@@ -58,132 +58,12 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public java.util.Calendar birthday;
 
     /**
-     * The File As.
-     * The name the contact is filed under.
+     * The Children.
+     * The names of the contact's children.
      */
-    @SerializedName("fileAs")
+    @SerializedName("children")
     @Expose
-    public String fileAs;
-
-    /**
-     * The Display Name.
-     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Given Name.
-     * The contact's given name.
-     */
-    @SerializedName("givenName")
-    @Expose
-    public String givenName;
-
-    /**
-     * The Initials.
-     * The contact's initials.
-     */
-    @SerializedName("initials")
-    @Expose
-    public String initials;
-
-    /**
-     * The Middle Name.
-     * The contact's middle name.
-     */
-    @SerializedName("middleName")
-    @Expose
-    public String middleName;
-
-    /**
-     * The Nick Name.
-     * The contact's nickname.
-     */
-    @SerializedName("nickName")
-    @Expose
-    public String nickName;
-
-    /**
-     * The Surname.
-     * The contact's surname.
-     */
-    @SerializedName("surname")
-    @Expose
-    public String surname;
-
-    /**
-     * The Title.
-     * The contact's title.
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
-     * The Yomi Given Name.
-     * The phonetic Japanese given name (first name) of the contact.
-     */
-    @SerializedName("yomiGivenName")
-    @Expose
-    public String yomiGivenName;
-
-    /**
-     * The Yomi Surname.
-     * The phonetic Japanese surname (last name)  of the contact.
-     */
-    @SerializedName("yomiSurname")
-    @Expose
-    public String yomiSurname;
-
-    /**
-     * The Yomi Company Name.
-     * The phonetic Japanese company name of the contact.
-     */
-    @SerializedName("yomiCompanyName")
-    @Expose
-    public String yomiCompanyName;
-
-    /**
-     * The Generation.
-     * The contact's generation.
-     */
-    @SerializedName("generation")
-    @Expose
-    public String generation;
-
-    /**
-     * The Email Addresses.
-     * The contact's email addresses.
-     */
-    @SerializedName("emailAddresses")
-    @Expose
-    public java.util.List<TypedEmailAddress> emailAddresses;
-
-    /**
-     * The Websites.
-     * 
-     */
-    @SerializedName("websites")
-    @Expose
-    public java.util.List<Website> websites;
-
-    /**
-     * The Im Addresses.
-     * The contact's instant messaging (IM) addresses.
-     */
-    @SerializedName("imAddresses")
-    @Expose
-    public java.util.List<String> imAddresses;
-
-    /**
-     * The Job Title.
-     * The contact’s job title.
-     */
-    @SerializedName("jobTitle")
-    @Expose
-    public String jobTitle;
+    public java.util.List<String> children;
 
     /**
      * The Company Name.
@@ -202,28 +82,92 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public String department;
 
     /**
-     * The Office Location.
-     * The location of the contact's office.
+     * The Display Name.
+     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      */
-    @SerializedName("officeLocation")
+    @SerializedName("displayName")
     @Expose
-    public String officeLocation;
+    public String displayName;
 
     /**
-     * The Profession.
-     * The contact's profession.
+     * The Email Addresses.
+     * The contact's email addresses.
      */
-    @SerializedName("profession")
+    @SerializedName("emailAddresses")
     @Expose
-    public String profession;
+    public java.util.List<TypedEmailAddress> emailAddresses;
 
     /**
-     * The Assistant Name.
-     * The name of the contact's assistant.
+     * The File As.
+     * The name the contact is filed under.
      */
-    @SerializedName("assistantName")
+    @SerializedName("fileAs")
     @Expose
-    public String assistantName;
+    public String fileAs;
+
+    /**
+     * The Flag.
+     * 
+     */
+    @SerializedName("flag")
+    @Expose
+    public FollowupFlag flag;
+
+    /**
+     * The Gender.
+     * 
+     */
+    @SerializedName("gender")
+    @Expose
+    public String gender;
+
+    /**
+     * The Generation.
+     * The contact's generation.
+     */
+    @SerializedName("generation")
+    @Expose
+    public String generation;
+
+    /**
+     * The Given Name.
+     * The contact's given name.
+     */
+    @SerializedName("givenName")
+    @Expose
+    public String givenName;
+
+    /**
+     * The Im Addresses.
+     * The contact's instant messaging (IM) addresses.
+     */
+    @SerializedName("imAddresses")
+    @Expose
+    public java.util.List<String> imAddresses;
+
+    /**
+     * The Initials.
+     * The contact's initials.
+     */
+    @SerializedName("initials")
+    @Expose
+    public String initials;
+
+    /**
+     * The Is Favorite.
+     * 
+     */
+    @SerializedName("isFavorite")
+    @Expose
+    public Boolean isFavorite;
+
+    /**
+     * The Job Title.
+     * The contact’s job title.
+     */
+    @SerializedName("jobTitle")
+    @Expose
+    public String jobTitle;
 
     /**
      * The Manager.
@@ -232,6 +176,46 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     @SerializedName("manager")
     @Expose
     public String manager;
+
+    /**
+     * The Middle Name.
+     * The contact's middle name.
+     */
+    @SerializedName("middleName")
+    @Expose
+    public String middleName;
+
+    /**
+     * The Nick Name.
+     * The contact's nickname.
+     */
+    @SerializedName("nickName")
+    @Expose
+    public String nickName;
+
+    /**
+     * The Office Location.
+     * The location of the contact's office.
+     */
+    @SerializedName("officeLocation")
+    @Expose
+    public String officeLocation;
+
+    /**
+     * The Parent Folder Id.
+     * The ID of the contact's parent folder.
+     */
+    @SerializedName("parentFolderId")
+    @Expose
+    public String parentFolderId;
+
+    /**
+     * The Personal Notes.
+     * The user's notes about the contact.
+     */
+    @SerializedName("personalNotes")
+    @Expose
+    public String personalNotes;
 
     /**
      * The Phones.
@@ -250,6 +234,14 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public java.util.List<PhysicalAddress> postalAddresses;
 
     /**
+     * The Profession.
+     * The contact's profession.
+     */
+    @SerializedName("profession")
+    @Expose
+    public String profession;
+
+    /**
      * The Spouse Name.
      * The name of the contact's spouse/partner.
      */
@@ -258,20 +250,28 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public String spouseName;
 
     /**
-     * The Personal Notes.
-     * The user's notes about the contact.
+     * The Surname.
+     * The contact's surname.
      */
-    @SerializedName("personalNotes")
+    @SerializedName("surname")
     @Expose
-    public String personalNotes;
+    public String surname;
 
     /**
-     * The Children.
-     * The names of the contact's children.
+     * The Title.
+     * The contact's title.
      */
-    @SerializedName("children")
+    @SerializedName("title")
     @Expose
-    public java.util.List<String> children;
+    public String title;
+
+    /**
+     * The Websites.
+     * 
+     */
+    @SerializedName("websites")
+    @Expose
+    public java.util.List<Website> websites;
 
     /**
      * The Wedding Anniversary.
@@ -282,34 +282,34 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public com.microsoft.graph.models.extensions.DateOnly weddingAnniversary;
 
     /**
-     * The Gender.
-     * 
+     * The Yomi Company Name.
+     * The phonetic Japanese company name of the contact.
      */
-    @SerializedName("gender")
+    @SerializedName("yomiCompanyName")
     @Expose
-    public String gender;
+    public String yomiCompanyName;
 
     /**
-     * The Is Favorite.
-     * 
+     * The Yomi Given Name.
+     * The phonetic Japanese given name (first name) of the contact.
      */
-    @SerializedName("isFavorite")
+    @SerializedName("yomiGivenName")
     @Expose
-    public Boolean isFavorite;
+    public String yomiGivenName;
 
     /**
-     * The Flag.
-     * 
+     * The Yomi Surname.
+     * The phonetic Japanese surname (last name)  of the contact.
      */
-    @SerializedName("flag")
+    @SerializedName("yomiSurname")
     @Expose
-    public FollowupFlag flag;
+    public String yomiSurname;
 
     /**
-     * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
+     * The Extensions.
+     * The collection of open extensions defined for the contact. Read-only. Nullable.
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public ExtensionCollectionPage extensions;
 
     /**
      * The Multi Value Extended Properties.
@@ -326,10 +326,10 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public ProfilePhoto photo;
 
     /**
-     * The Extensions.
-     * The collection of open extensions defined for the contact. Read-only. Nullable.
+     * The Single Value Extended Properties.
+     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      */
-    public ExtensionCollectionPage extensions;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -371,20 +371,20 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("singleValueExtendedProperties")) {
-            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+        if (json.has("extensions")) {
+            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
-            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
+            extensions = new ExtensionCollectionPage(response, null);
         }
 
         if (json.has("multiValueExtendedProperties")) {
@@ -403,20 +403,20 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
             multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
         }
 
-        if (json.has("extensions")) {
-            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
-            if (json.has("extensions@odata.nextLink")) {
-                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+        if (json.has("singleValueExtendedProperties")) {
+            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
-            final Extension[] array = new Extension[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            extensions = new ExtensionCollectionPage(response, null);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

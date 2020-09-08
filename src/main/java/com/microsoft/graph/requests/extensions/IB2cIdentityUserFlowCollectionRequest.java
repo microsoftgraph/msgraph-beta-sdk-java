@@ -53,4 +53,20 @@ public interface IB2cIdentityUserFlowCollectionRequest {
      */
     IB2cIdentityUserFlowCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IB2cIdentityUserFlowCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IB2cIdentityUserFlowCollectionRequest skipToken(String skipToken);
 }

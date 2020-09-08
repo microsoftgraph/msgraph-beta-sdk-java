@@ -29,22 +29,6 @@ public class Command extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("Status")
-    @Expose
-    public String status;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("Type")
-    @Expose
-    public String type;
-
-    /**
      * The App Service Name.
      * 
      */
@@ -53,20 +37,20 @@ public class Command extends Entity implements IJsonBackedObject {
     public String appServiceName;
 
     /**
-     * The Package Family Name.
-     * 
-     */
-    @SerializedName("PackageFamilyName")
-    @Expose
-    public String packageFamilyName;
-
-    /**
      * The Error.
      * 
      */
     @SerializedName("Error")
     @Expose
     public String error;
+
+    /**
+     * The Package Family Name.
+     * 
+     */
+    @SerializedName("PackageFamilyName")
+    @Expose
+    public String packageFamilyName;
 
     /**
      * The Payload.
@@ -91,6 +75,22 @@ public class Command extends Entity implements IJsonBackedObject {
     @SerializedName("PostBackUri")
     @Expose
     public String postBackUri;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("Status")
+    @Expose
+    public String status;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("Type")
+    @Expose
+    public String type;
 
     /**
      * The Responsepayload.

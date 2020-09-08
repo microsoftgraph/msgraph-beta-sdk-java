@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.IosAvailableUpdateVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -47,7 +47,7 @@ public class DeviceConfigurationCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/networkAccessConfigurations/" + newDeviceConfiguration.id);
         new DeviceConfigurationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfiguration, body, callback);
     }
 
@@ -55,7 +55,7 @@ public class DeviceConfigurationCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/networkAccessConfigurations/" + newDeviceConfiguration.id);
         return new DeviceConfigurationWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newDeviceConfiguration, body);
     }
     /**

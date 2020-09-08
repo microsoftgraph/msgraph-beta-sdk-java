@@ -8,9 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
-import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -64,14 +64,14 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
     public void post(final Group newGroup, final ICallback<Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroup, callback);
     }
 
     public Group post(final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroup);
     }
 
@@ -108,6 +108,27 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
         return (GroupCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupCollectionRequest)this;
+    }
     public IGroupCollectionPage buildFromResponse(final GroupCollectionResponse response) {
         final IGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.GovernanceRoleAssignmentRequestStatus;
 import com.microsoft.graph.models.extensions.GovernanceSchedule;
+import com.microsoft.graph.models.extensions.GovernanceRoleAssignmentRequestStatus;
 import com.microsoft.graph.models.extensions.GovernanceResource;
 import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
 import com.microsoft.graph.models.extensions.GovernanceSubject;
@@ -32,6 +32,38 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
 
 
     /**
+     * The Assignment State.
+     * 
+     */
+    @SerializedName("assignmentState")
+    @Expose
+    public String assignmentState;
+
+    /**
+     * The Linked Eligible Role Assignment Id.
+     * 
+     */
+    @SerializedName("linkedEligibleRoleAssignmentId")
+    @Expose
+    public String linkedEligibleRoleAssignmentId;
+
+    /**
+     * The Reason.
+     * 
+     */
+    @SerializedName("reason")
+    @Expose
+    public String reason;
+
+    /**
+     * The Requested Date Time.
+     * 
+     */
+    @SerializedName("requestedDateTime")
+    @Expose
+    public java.util.Calendar requestedDateTime;
+
+    /**
      * The Resource Id.
      * 
      */
@@ -48,52 +80,12 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
     public String roleDefinitionId;
 
     /**
-     * The Subject Id.
+     * The Schedule.
      * 
      */
-    @SerializedName("subjectId")
+    @SerializedName("schedule")
     @Expose
-    public String subjectId;
-
-    /**
-     * The Linked Eligible Role Assignment Id.
-     * 
-     */
-    @SerializedName("linkedEligibleRoleAssignmentId")
-    @Expose
-    public String linkedEligibleRoleAssignmentId;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
-     * The Assignment State.
-     * 
-     */
-    @SerializedName("assignmentState")
-    @Expose
-    public String assignmentState;
-
-    /**
-     * The Requested Date Time.
-     * 
-     */
-    @SerializedName("requestedDateTime")
-    @Expose
-    public java.util.Calendar requestedDateTime;
-
-    /**
-     * The Reason.
-     * 
-     */
-    @SerializedName("reason")
-    @Expose
-    public String reason;
+    public GovernanceSchedule schedule;
 
     /**
      * The Status.
@@ -104,12 +96,20 @@ public class GovernanceRoleAssignmentRequest extends Entity implements IJsonBack
     public GovernanceRoleAssignmentRequestStatus status;
 
     /**
-     * The Schedule.
+     * The Subject Id.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName("subjectId")
     @Expose
-    public GovernanceSchedule schedule;
+    public String subjectId;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
     /**
      * The Resource.

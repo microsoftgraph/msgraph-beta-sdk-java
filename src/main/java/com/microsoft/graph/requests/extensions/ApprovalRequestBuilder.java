@@ -55,18 +55,18 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
     }
 
 
-    public IApprovalStepCollectionRequestBuilder pendingSteps() {
-        return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps"), getClient(), null);
-    }
-
-    public IApprovalStepRequestBuilder pendingSteps(final String id) {
-        return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps") + "/" + id, getClient(), null);
-    }
     public IApprovalStepCollectionRequestBuilder completedSteps() {
         return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps"), getClient(), null);
     }
 
     public IApprovalStepRequestBuilder completedSteps(final String id) {
         return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps") + "/" + id, getClient(), null);
+    }
+    public IApprovalStepCollectionRequestBuilder pendingSteps() {
+        return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps"), getClient(), null);
+    }
+
+    public IApprovalStepRequestBuilder pendingSteps(final String id) {
+        return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps") + "/" + id, getClient(), null);
     }
 }

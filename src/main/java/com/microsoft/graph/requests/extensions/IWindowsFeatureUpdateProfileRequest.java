@@ -80,6 +80,23 @@ public interface IWindowsFeatureUpdateProfileRequest extends IHttpRequest {
     WindowsFeatureUpdateProfile post(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile) throws ClientException;
 
     /**
+     * Posts a WindowsFeatureUpdateProfile with a new object
+     *
+     * @param newWindowsFeatureUpdateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback);
+
+    /**
+     * Posts a WindowsFeatureUpdateProfile with a new object
+     *
+     * @param newWindowsFeatureUpdateProfile the object to create/update
+     * @return the created WindowsFeatureUpdateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsFeatureUpdateProfile put(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,30 +28,6 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
 
 
     /**
-     * The Launch Uri.
-     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
-     */
-    @SerializedName("launchUri")
-    @Expose
-    public String launchUri;
-
-    /**
-     * The Configuration Account.
-     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
-     */
-    @SerializedName("configurationAccount")
-    @Expose
-    public String configurationAccount;
-
-    /**
-     * The Configuration Account Type.
-     * The account type used to by ConfigurationAccount.
-     */
-    @SerializedName("configurationAccountType")
-    @Expose
-    public SecureAssessmentAccountType configurationAccountType;
-
-    /**
      * The Allow Printing.
      * Indicates whether or not to allow the app from printing during the test.
      */
@@ -76,20 +52,44 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     public Boolean allowTextSuggestion;
 
     /**
-     * The Local Guest Account Name.
-     * Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
-     */
-    @SerializedName("localGuestAccountName")
-    @Expose
-    public String localGuestAccountName;
-
-    /**
      * The Assessment App User Model Id.
      * Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
      */
     @SerializedName("assessmentAppUserModelId")
     @Expose
     public String assessmentAppUserModelId;
+
+    /**
+     * The Configuration Account.
+     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
+     */
+    @SerializedName("configurationAccount")
+    @Expose
+    public String configurationAccount;
+
+    /**
+     * The Configuration Account Type.
+     * The account type used to by ConfigurationAccount.
+     */
+    @SerializedName("configurationAccountType")
+    @Expose
+    public SecureAssessmentAccountType configurationAccountType;
+
+    /**
+     * The Launch Uri.
+     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
+     */
+    @SerializedName("launchUri")
+    @Expose
+    public String launchUri;
+
+    /**
+     * The Local Guest Account Name.
+     * Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
+     */
+    @SerializedName("localGuestAccountName")
+    @Expose
+    public String localGuestAccountName;
 
 
     /**

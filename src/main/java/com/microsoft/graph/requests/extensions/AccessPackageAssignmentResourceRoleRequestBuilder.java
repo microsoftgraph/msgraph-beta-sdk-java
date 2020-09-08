@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectio
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
@@ -61,14 +61,12 @@ public class AccessPackageAssignmentResourceRoleRequestBuilder extends BaseReque
     }
 
 
+    public IAccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments() {
+        return new AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments"), getClient(), null);
+    }
 
-    /**
-     * Gets the request builder for AccessPackageResourceScope
-     *
-     * @return the IAccessPackageResourceScopeRequestBuilder instance
-     */
-    public IAccessPackageResourceScopeRequestBuilder accessPackageResourceScope() {
-        return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScope"), getClient(), null);
+    public IAccessPackageAssignmentRequestBuilder accessPackageAssignments(final String id) {
+        return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -81,18 +79,20 @@ public class AccessPackageAssignmentResourceRoleRequestBuilder extends BaseReque
     }
 
     /**
+     * Gets the request builder for AccessPackageResourceScope
+     *
+     * @return the IAccessPackageResourceScopeRequestBuilder instance
+     */
+    public IAccessPackageResourceScopeRequestBuilder accessPackageResourceScope() {
+        return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScope"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for AccessPackageSubject
      *
      * @return the IAccessPackageSubjectRequestBuilder instance
      */
     public IAccessPackageSubjectRequestBuilder accessPackageSubject() {
         return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageSubject"), getClient(), null);
-    }
-    public IAccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments() {
-        return new AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments"), getClient(), null);
-    }
-
-    public IAccessPackageAssignmentRequestBuilder accessPackageAssignments(final String id) {
-        return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments") + "/" + id, getClient(), null);
     }
 }

@@ -114,6 +114,27 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a PrivilegedRoleAssignmentRequest with a new object
+     *
+     * @param newPrivilegedRoleAssignmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedRoleAssignmentRequest);
+    }
+
+    /**
+     * Creates a PrivilegedRoleAssignmentRequest with a new object
+     *
+     * @param newPrivilegedRoleAssignmentRequest the object to create/update
+     * @return the created PrivilegedRoleAssignmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedRoleAssignmentRequest put(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedRoleAssignmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

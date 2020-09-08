@@ -62,14 +62,14 @@ public class PersonInterestCollectionRequest extends BaseCollectionRequest<Perso
     public void post(final PersonInterest newPersonInterest, final ICallback<PersonInterest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonInterestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPersonInterest, callback);
     }
 
     public PersonInterest post(final PersonInterest newPersonInterest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PersonInterestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPersonInterest);
     }
 
@@ -106,6 +106,27 @@ public class PersonInterestCollectionRequest extends BaseCollectionRequest<Perso
         return (PersonInterestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPersonInterestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PersonInterestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPersonInterestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPersonInterestCollectionRequest)this;
+    }
     public IPersonInterestCollectionPage buildFromResponse(final PersonInterestCollectionResponse response) {
         final IPersonInterestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

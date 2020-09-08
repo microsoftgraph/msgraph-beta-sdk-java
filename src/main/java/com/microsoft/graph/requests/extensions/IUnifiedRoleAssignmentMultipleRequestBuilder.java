@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentMultiple;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,23 +38,23 @@ public interface IUnifiedRoleAssignmentMultipleRequestBuilder extends IRequestBu
     IUnifiedRoleAssignmentMultipleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IAppScopeCollectionRequestBuilder appScopes();
+
+    IAppScopeRequestBuilder appScopes(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder directoryScopes();
+
+    IDirectoryObjectWithReferenceRequestBuilder directoryScopes(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder principals();
+
+    IDirectoryObjectWithReferenceRequestBuilder principals(final String id);
+
     /**
      * Gets the request builder for UnifiedRoleDefinition
      *
      * @return the IUnifiedRoleDefinitionWithReferenceRequestBuilder instance
      */
     IUnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition();
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder principals();
-
-    IDirectoryObjectWithReferenceRequestBuilder principals(final String id);
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder directoryScopes();
-
-    IDirectoryObjectWithReferenceRequestBuilder directoryScopes(final String id);
-
-    IAppScopeCollectionRequestBuilder appScopes();
-
-    IAppScopeRequestBuilder appScopes(final String id);
 
 }

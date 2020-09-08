@@ -80,6 +80,23 @@ public interface IRoleScopeTagAutoAssignmentRequest extends IHttpRequest {
     RoleScopeTagAutoAssignment post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment) throws ClientException;
 
     /**
+     * Posts a RoleScopeTagAutoAssignment with a new object
+     *
+     * @param newRoleScopeTagAutoAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback);
+
+    /**
+     * Posts a RoleScopeTagAutoAssignment with a new object
+     *
+     * @param newRoleScopeTagAutoAssignment the object to create/update
+     * @return the created RoleScopeTagAutoAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RoleScopeTagAutoAssignment put(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

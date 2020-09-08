@@ -62,14 +62,14 @@ public class DocumentCommentReplyCollectionRequest extends BaseCollectionRequest
     public void post(final DocumentCommentReply newDocumentCommentReply, final ICallback<DocumentCommentReply> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DocumentCommentReplyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDocumentCommentReply, callback);
     }
 
     public DocumentCommentReply post(final DocumentCommentReply newDocumentCommentReply) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DocumentCommentReplyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDocumentCommentReply);
     }
 
@@ -106,6 +106,27 @@ public class DocumentCommentReplyCollectionRequest extends BaseCollectionRequest
         return (DocumentCommentReplyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDocumentCommentReplyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DocumentCommentReplyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDocumentCommentReplyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDocumentCommentReplyCollectionRequest)this;
+    }
     public IDocumentCommentReplyCollectionPage buildFromResponse(final DocumentCommentReplyCollectionResponse response) {
         final IDocumentCommentReplyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

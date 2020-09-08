@@ -80,6 +80,23 @@ public interface IWindowsAutopilotDeviceIdentityRequest extends IHttpRequest {
     WindowsAutopilotDeviceIdentity post(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity) throws ClientException;
 
     /**
+     * Posts a WindowsAutopilotDeviceIdentity with a new object
+     *
+     * @param newWindowsAutopilotDeviceIdentity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<WindowsAutopilotDeviceIdentity> callback);
+
+    /**
+     * Posts a WindowsAutopilotDeviceIdentity with a new object
+     *
+     * @param newWindowsAutopilotDeviceIdentity the object to create/update
+     * @return the created WindowsAutopilotDeviceIdentity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsAutopilotDeviceIdentity put(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IPrinterShareRequest extends IHttpRequest {
     PrinterShare post(final PrinterShare newPrinterShare) throws ClientException;
 
     /**
+     * Posts a PrinterShare with a new object
+     *
+     * @param newPrinterShare the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback);
+
+    /**
+     * Posts a PrinterShare with a new object
+     *
+     * @param newPrinterShare the object to create/update
+     * @return the created PrinterShare
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrinterShare put(final PrinterShare newPrinterShare) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

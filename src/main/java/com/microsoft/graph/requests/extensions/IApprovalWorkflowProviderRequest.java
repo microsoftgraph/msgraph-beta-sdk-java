@@ -80,6 +80,23 @@ public interface IApprovalWorkflowProviderRequest extends IHttpRequest {
     ApprovalWorkflowProvider post(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException;
 
     /**
+     * Posts a ApprovalWorkflowProvider with a new object
+     *
+     * @param newApprovalWorkflowProvider the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback);
+
+    /**
+     * Posts a ApprovalWorkflowProvider with a new object
+     *
+     * @param newApprovalWorkflowProvider the object to create/update
+     * @return the created ApprovalWorkflowProvider
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ApprovalWorkflowProvider put(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

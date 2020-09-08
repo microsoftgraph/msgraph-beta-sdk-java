@@ -112,6 +112,27 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
     }
 
     /**
+     * Creates a Currency with a new object
+     *
+     * @param newCurrency the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Currency newCurrency, final ICallback<Currency> callback) {
+        send(HttpMethod.PUT, callback, newCurrency);
+    }
+
+    /**
+     * Creates a Currency with a new object
+     *
+     * @param newCurrency the object to create/update
+     * @return the created Currency
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Currency put(final Currency newCurrency) throws ClientException {
+        return send(HttpMethod.PUT, newCurrency);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

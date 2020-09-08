@@ -80,6 +80,23 @@ public interface IEducationSynchronizationErrorRequest extends IHttpRequest {
     EducationSynchronizationError post(final EducationSynchronizationError newEducationSynchronizationError) throws ClientException;
 
     /**
+     * Posts a EducationSynchronizationError with a new object
+     *
+     * @param newEducationSynchronizationError the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback);
+
+    /**
+     * Posts a EducationSynchronizationError with a new object
+     *
+     * @param newEducationSynchronizationError the object to create/update
+     * @return the created EducationSynchronizationError
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationSynchronizationError put(final EducationSynchronizationError newEducationSynchronizationError) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

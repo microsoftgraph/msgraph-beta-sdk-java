@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationRequest extends IHttpRequest {
     GroupPolicyPresentation post(final GroupPolicyPresentation newGroupPolicyPresentation) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentation with a new object
+     *
+     * @param newGroupPolicyPresentation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentation newGroupPolicyPresentation, final ICallback<GroupPolicyPresentation> callback);
+
+    /**
+     * Posts a GroupPolicyPresentation with a new object
+     *
+     * @param newGroupPolicyPresentation the object to create/update
+     * @return the created GroupPolicyPresentation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentation put(final GroupPolicyPresentation newGroupPolicyPresentation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

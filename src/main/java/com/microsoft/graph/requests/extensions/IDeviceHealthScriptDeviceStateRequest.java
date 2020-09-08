@@ -80,6 +80,23 @@ public interface IDeviceHealthScriptDeviceStateRequest extends IHttpRequest {
     DeviceHealthScriptDeviceState post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState) throws ClientException;
 
     /**
+     * Posts a DeviceHealthScriptDeviceState with a new object
+     *
+     * @param newDeviceHealthScriptDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback);
+
+    /**
+     * Posts a DeviceHealthScriptDeviceState with a new object
+     *
+     * @param newDeviceHealthScriptDeviceState the object to create/update
+     * @return the created DeviceHealthScriptDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceHealthScriptDeviceState put(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

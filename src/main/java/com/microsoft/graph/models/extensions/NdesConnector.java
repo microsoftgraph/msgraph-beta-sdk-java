@@ -28,6 +28,14 @@ public class NdesConnector extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Display Name.
+     * The friendly name of the Ndes Connector.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Last Connection Date Time.
      * Last connection time for the Ndes Connector
      */
@@ -42,14 +50,6 @@ public class NdesConnector extends Entity implements IJsonBackedObject {
     @SerializedName("state")
     @Expose
     public NdesConnectorState state;
-
-    /**
-     * The Display Name.
-     * The friendly name of the Ndes Connector.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
 
 
     /**

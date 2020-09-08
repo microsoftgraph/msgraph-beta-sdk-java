@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingErrorDetails;
 import com.microsoft.graph.models.extensions.KeyValuePair;
+import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingErrorDetails;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,12 +29,12 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
 
 
     /**
-     * The Event Date Time.
-     * Time when the event occurred .
+     * The Additional Information.
+     * A set of string key and string value pairs which provides additional information on the Troubleshooting event
      */
-    @SerializedName("eventDateTime")
+    @SerializedName("additionalInformation")
     @Expose
-    public java.util.Calendar eventDateTime;
+    public java.util.List<KeyValuePair> additionalInformation;
 
     /**
      * The Correlation Id.
@@ -45,12 +45,12 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
     public String correlationId;
 
     /**
-     * The Troubleshooting Error Details.
-     * Object containing detailed information about the error and its remediation.
+     * The Event Date Time.
+     * Time when the event occurred .
      */
-    @SerializedName("troubleshootingErrorDetails")
+    @SerializedName("eventDateTime")
     @Expose
-    public DeviceManagementTroubleshootingErrorDetails troubleshootingErrorDetails;
+    public java.util.Calendar eventDateTime;
 
     /**
      * The Event Name.
@@ -61,12 +61,12 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
     public String eventName;
 
     /**
-     * The Additional Information.
-     * A set of string key and string value pairs which provides additional information on the Troubleshooting event
+     * The Troubleshooting Error Details.
+     * Object containing detailed information about the error and its remediation.
      */
-    @SerializedName("additionalInformation")
+    @SerializedName("troubleshootingErrorDetails")
     @Expose
-    public java.util.List<KeyValuePair> additionalInformation;
+    public DeviceManagementTroubleshootingErrorDetails troubleshootingErrorDetails;
 
 
     /**

@@ -112,6 +112,27 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
     }
 
     /**
+     * Creates a GroupPolicyPresentationValueMultiText with a new object
+     *
+     * @param newGroupPolicyPresentationValueMultiText the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<GroupPolicyPresentationValueMultiText> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueMultiText);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationValueMultiText with a new object
+     *
+     * @param newGroupPolicyPresentationValueMultiText the object to create/update
+     * @return the created GroupPolicyPresentationValueMultiText
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationValueMultiText put(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationValueMultiText);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

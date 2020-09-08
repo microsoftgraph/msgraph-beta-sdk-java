@@ -14,14 +14,14 @@ import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
-import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementData;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDevice;
@@ -59,7 +59,7 @@ public class UserCollectionReferenceRequest extends BaseCollectionRequest<UserCo
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/users/" + newUser.id);
         new UserWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUser, body, callback);
     }
 
@@ -67,7 +67,7 @@ public class UserCollectionReferenceRequest extends BaseCollectionRequest<UserCo
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/users/" + newUser.id);
         return new UserWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newUser, body);
     }
     /**

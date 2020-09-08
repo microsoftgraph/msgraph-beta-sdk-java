@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserIdentity;
-import com.microsoft.graph.models.extensions.AccessReviewScope;
 import com.microsoft.graph.models.extensions.AccessReviewReviewerScope;
+import com.microsoft.graph.models.extensions.AccessReviewScope;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleSettings;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.models.extensions.Entity;
@@ -34,12 +34,12 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
 
     /**
-     * The Display Name.
+     * The Created By.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("createdBy")
     @Expose
-    public String displayName;
+    public UserIdentity createdBy;
 
     /**
      * The Created Date Time.
@@ -48,22 +48,6 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * 
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
 
     /**
      * The Description For Admins.
@@ -82,20 +66,20 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     public String descriptionForReviewers;
 
     /**
-     * The Created By.
+     * The Display Name.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName("displayName")
     @Expose
-    public UserIdentity createdBy;
+    public String displayName;
 
     /**
-     * The Scope.
+     * The Last Modified Date Time.
      * 
      */
-    @SerializedName("scope")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public AccessReviewScope scope;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Reviewers.
@@ -106,12 +90,28 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     public java.util.List<AccessReviewReviewerScope> reviewers;
 
     /**
+     * The Scope.
+     * 
+     */
+    @SerializedName("scope")
+    @Expose
+    public AccessReviewScope scope;
+
+    /**
      * The Settings.
      * 
      */
     @SerializedName("settings")
     @Expose
     public AccessReviewScheduleSettings settings;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
 
     /**
      * The Instances.

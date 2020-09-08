@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.LabelDetails;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import com.microsoft.graph.models.generated.ActionSource;
+import com.microsoft.graph.models.extensions.LabelDetails;
 
 
 import com.google.gson.JsonObject;
@@ -29,22 +29,6 @@ public class ApplyLabelAction extends InformationProtectionAction implements IJs
 
 
     /**
-     * The Label.
-     * 
-     */
-    @SerializedName("label")
-    @Expose
-    public LabelDetails label;
-
-    /**
-     * The Responsible Sensitive Type Ids.
-     * 
-     */
-    @SerializedName("responsibleSensitiveTypeIds")
-    @Expose
-    public java.util.List<java.util.UUID> responsibleSensitiveTypeIds;
-
-    /**
      * The Actions.
      * 
      */
@@ -59,6 +43,22 @@ public class ApplyLabelAction extends InformationProtectionAction implements IJs
     @SerializedName("actionSource")
     @Expose
     public ActionSource actionSource;
+
+    /**
+     * The Label.
+     * 
+     */
+    @SerializedName("label")
+    @Expose
+    public LabelDetails label;
+
+    /**
+     * The Responsible Sensitive Type Ids.
+     * 
+     */
+    @SerializedName("responsibleSensitiveTypeIds")
+    @Expose
+    public java.util.List<java.util.UUID> responsibleSensitiveTypeIds;
 
 
     /**

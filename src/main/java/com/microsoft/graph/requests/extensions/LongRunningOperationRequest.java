@@ -112,6 +112,27 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
     }
 
     /**
+     * Creates a LongRunningOperation with a new object
+     *
+     * @param newLongRunningOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final LongRunningOperation newLongRunningOperation, final ICallback<LongRunningOperation> callback) {
+        send(HttpMethod.PUT, callback, newLongRunningOperation);
+    }
+
+    /**
+     * Creates a LongRunningOperation with a new object
+     *
+     * @param newLongRunningOperation the object to create/update
+     * @return the created LongRunningOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public LongRunningOperation put(final LongRunningOperation newLongRunningOperation) throws ClientException {
+        return send(HttpMethod.PUT, newLongRunningOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

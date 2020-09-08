@@ -122,6 +122,27 @@ public class GroupPolicyCategoryRequest extends BaseRequest implements IGroupPol
     }
 
     /**
+     * Creates a GroupPolicyCategory with a new object
+     *
+     * @param newGroupPolicyCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyCategory);
+    }
+
+    /**
+     * Creates a GroupPolicyCategory with a new object
+     *
+     * @param newGroupPolicyCategory the object to create/update
+     * @return the created GroupPolicyCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyCategory put(final GroupPolicyCategory newGroupPolicyCategory) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

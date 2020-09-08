@@ -36,14 +36,6 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
     }
 
     /**
-     * The Hide Installation Progress.
-     * Show or hide installation progress to user
-     */
-    @SerializedName("hideInstallationProgress")
-    @Expose
-    public Boolean hideInstallationProgress;
-
-    /**
      * The Allow Device Use Before Profile And App Install Complete.
      * Allow or block user to use device before profile and app installation complete
      */
@@ -52,12 +44,12 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
     public Boolean allowDeviceUseBeforeProfileAndAppInstallComplete;
 
     /**
-     * The Block Device Setup Retry By User.
-     * Allow the user to retry the setup on installation failure
+     * The Allow Device Use On Install Failure.
+     * Allow the user to continue using the device on installation failure
      */
-    @SerializedName("blockDeviceSetupRetryByUser")
+    @SerializedName("allowDeviceUseOnInstallFailure")
     @Expose
-    public Boolean blockDeviceSetupRetryByUser;
+    public Boolean allowDeviceUseOnInstallFailure;
 
     /**
      * The Allow Log Collection On Install Failure.
@@ -68,6 +60,14 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
     public Boolean allowLogCollectionOnInstallFailure;
 
     /**
+     * The Block Device Setup Retry By User.
+     * Allow the user to retry the setup on installation failure
+     */
+    @SerializedName("blockDeviceSetupRetryByUser")
+    @Expose
+    public Boolean blockDeviceSetupRetryByUser;
+
+    /**
      * The Custom Error Message.
      * Set custom error message to show upon installation failure
      */
@@ -76,20 +76,20 @@ public class WindowsEnrollmentStatusScreenSettings implements IJsonBackedObject 
     public String customErrorMessage;
 
     /**
+     * The Hide Installation Progress.
+     * Show or hide installation progress to user
+     */
+    @SerializedName("hideInstallationProgress")
+    @Expose
+    public Boolean hideInstallationProgress;
+
+    /**
      * The Install Progress Timeout In Minutes.
      * Set installation progress timeout in minutes
      */
     @SerializedName("installProgressTimeoutInMinutes")
     @Expose
     public Integer installProgressTimeoutInMinutes;
-
-    /**
-     * The Allow Device Use On Install Failure.
-     * Allow the user to continue using the device on installation failure
-     */
-    @SerializedName("allowDeviceUseOnInstallFailure")
-    @Expose
-    public Boolean allowDeviceUseOnInstallFailure;
 
 
     /**

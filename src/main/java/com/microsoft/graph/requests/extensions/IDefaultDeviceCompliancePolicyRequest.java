@@ -80,6 +80,23 @@ public interface IDefaultDeviceCompliancePolicyRequest extends IHttpRequest {
     DefaultDeviceCompliancePolicy post(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy) throws ClientException;
 
     /**
+     * Posts a DefaultDeviceCompliancePolicy with a new object
+     *
+     * @param newDefaultDeviceCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy, final ICallback<DefaultDeviceCompliancePolicy> callback);
+
+    /**
+     * Posts a DefaultDeviceCompliancePolicy with a new object
+     *
+     * @param newDefaultDeviceCompliancePolicy the object to create/update
+     * @return the created DefaultDeviceCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DefaultDeviceCompliancePolicy put(final DefaultDeviceCompliancePolicy newDefaultDeviceCompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

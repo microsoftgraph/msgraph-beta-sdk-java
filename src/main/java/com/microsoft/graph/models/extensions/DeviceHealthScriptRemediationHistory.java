@@ -37,20 +37,20 @@ public class DeviceHealthScriptRemediationHistory implements IJsonBackedObject {
     }
 
     /**
-     * The Last Modified Date Time.
-     * The date on which the results history is calculated for the healthscript.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The History Data.
      * The number of devices remediated by the device health script on the given date.
      */
     @SerializedName("historyData")
     @Expose
     public java.util.List<DeviceHealthScriptRemediationHistoryData> historyData;
+
+    /**
+     * The Last Modified Date Time.
+     * The date on which the results history is calculated for the healthscript.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
 
     /**

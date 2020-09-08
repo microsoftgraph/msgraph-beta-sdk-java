@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
 import com.microsoft.graph.models.extensions.CustomSubjectAlternativeName;
+import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
 import com.microsoft.graph.models.extensions.WindowsCertificateProfileBase;
 
 
@@ -29,20 +29,20 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
 
 
     /**
-     * The Extended Key Usages.
-     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("extendedKeyUsages")
-    @Expose
-    public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
-
-    /**
      * The Custom Subject Alternative Names.
      * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
     @SerializedName("customSubjectAlternativeNames")
     @Expose
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
+
+    /**
+     * The Extended Key Usages.
+     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("extendedKeyUsages")
+    @Expose
+    public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
 
 
     /**

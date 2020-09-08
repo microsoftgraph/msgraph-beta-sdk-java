@@ -27,28 +27,20 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Calculate Discount On Credit Memos.
+     * 
+     */
+    @SerializedName("calculateDiscountOnCreditMemos")
+    @Expose
+    public Boolean calculateDiscountOnCreditMemos;
+
+    /**
      * The Code.
      * 
      */
     @SerializedName("code")
     @Expose
     public String code;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Due Date Calculation.
-     * 
-     */
-    @SerializedName("dueDateCalculation")
-    @Expose
-    public String dueDateCalculation;
 
     /**
      * The Discount Date Calculation.
@@ -67,12 +59,20 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal discountPercent;
 
     /**
-     * The Calculate Discount On Credit Memos.
+     * The Display Name.
      * 
      */
-    @SerializedName("calculateDiscountOnCreditMemos")
+    @SerializedName("displayName")
     @Expose
-    public Boolean calculateDiscountOnCreditMemos;
+    public String displayName;
+
+    /**
+     * The Due Date Calculation.
+     * 
+     */
+    @SerializedName("dueDateCalculation")
+    @Expose
+    public String dueDateCalculation;
 
     /**
      * The Last Modified Date Time.

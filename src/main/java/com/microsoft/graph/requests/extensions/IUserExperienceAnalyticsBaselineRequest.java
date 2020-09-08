@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsBaselineRequest extends IHttpRequest {
     UserExperienceAnalyticsBaseline post(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsBaseline with a new object
+     *
+     * @param newUserExperienceAnalyticsBaseline the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline, final ICallback<UserExperienceAnalyticsBaseline> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsBaseline with a new object
+     *
+     * @param newUserExperienceAnalyticsBaseline the object to create/update
+     * @return the created UserExperienceAnalyticsBaseline
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsBaseline put(final UserExperienceAnalyticsBaseline newUserExperienceAnalyticsBaseline) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

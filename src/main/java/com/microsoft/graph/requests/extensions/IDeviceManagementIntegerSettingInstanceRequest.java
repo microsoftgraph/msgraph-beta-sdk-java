@@ -80,6 +80,23 @@ public interface IDeviceManagementIntegerSettingInstanceRequest extends IHttpReq
     DeviceManagementIntegerSettingInstance post(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance) throws ClientException;
 
     /**
+     * Posts a DeviceManagementIntegerSettingInstance with a new object
+     *
+     * @param newDeviceManagementIntegerSettingInstance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<DeviceManagementIntegerSettingInstance> callback);
+
+    /**
+     * Posts a DeviceManagementIntegerSettingInstance with a new object
+     *
+     * @param newDeviceManagementIntegerSettingInstance the object to create/update
+     * @return the created DeviceManagementIntegerSettingInstance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementIntegerSettingInstance put(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

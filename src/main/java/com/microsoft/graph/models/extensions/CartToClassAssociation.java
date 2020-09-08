@@ -27,36 +27,20 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
 
 
     /**
+     * The Classroom Ids.
+     * Identifiers of classrooms to be associated with device carts.
+     */
+    @SerializedName("classroomIds")
+    @Expose
+    public java.util.List<String> classroomIds;
+
+    /**
      * The Created Date Time.
      * DateTime the object was created.
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Version.
-     * Version of the CartToClassAssociation.
-     */
-    @SerializedName("version")
-    @Expose
-    public Integer version;
-
-    /**
-     * The Display Name.
-     * Admin provided name of the device configuration.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
 
     /**
      * The Description.
@@ -75,12 +59,28 @@ public class CartToClassAssociation extends Entity implements IJsonBackedObject 
     public java.util.List<String> deviceCartIds;
 
     /**
-     * The Classroom Ids.
-     * Identifiers of classrooms to be associated with device carts.
+     * The Display Name.
+     * Admin provided name of the device configuration.
      */
-    @SerializedName("classroomIds")
+    @SerializedName("displayName")
     @Expose
-    public java.util.List<String> classroomIds;
+    public String displayName;
+
+    /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Version.
+     * Version of the CartToClassAssociation.
+     */
+    @SerializedName("version")
+    @Expose
+    public Integer version;
 
 
     /**

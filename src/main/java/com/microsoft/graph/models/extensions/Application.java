@@ -17,10 +17,11 @@ import com.microsoft.graph.models.extensions.ParentalControlSettings;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.models.extensions.PublicClientApplication;
 import com.microsoft.graph.models.extensions.RequiredResourceAccess;
+import com.microsoft.graph.models.extensions.SpaApplication;
 import com.microsoft.graph.models.extensions.WebApplication;
 import com.microsoft.graph.models.extensions.OnPremisesPublishing;
-import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
@@ -28,10 +29,10 @@ import com.microsoft.graph.models.extensions.ConnectorGroup;
 import com.microsoft.graph.models.extensions.Synchronization;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
@@ -94,22 +95,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Is Fallback Public Client.
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
-     */
-    @SerializedName("isFallbackPublicClient")
-    @Expose
-    public Boolean isFallbackPublicClient;
-
-    /**
-     * The Identifier Uris.
-     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
-     */
-    @SerializedName("identifierUris")
-    @Expose
-    public java.util.List<String> identifierUris;
-
-    /**
      * The Display Name.
      * The display name for the application.
      */
@@ -126,6 +111,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String groupMembershipClaims;
 
     /**
+     * The Identifier Uris.
+     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+     */
+    @SerializedName("identifierUris")
+    @Expose
+    public java.util.List<String> identifierUris;
+
+    /**
      * The Info.
      * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
      */
@@ -140,6 +133,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("isDeviceOnlyAuthSupported")
     @Expose
     public Boolean isDeviceOnlyAuthSupported;
+
+    /**
+     * The Is Fallback Public Client.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+     */
+    @SerializedName("isFallbackPublicClient")
+    @Expose
+    public Boolean isFallbackPublicClient;
 
     /**
      * The Key Credentials.
@@ -214,6 +215,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String signInAudience;
 
     /**
+     * The Spa.
+     * 
+     */
+    @SerializedName("spa")
+    @Expose
+    public SpaApplication spa;
+
+    /**
      * The Tags.
      * Custom strings that can be used to categorize and identify the application. Not nullable.
      */
@@ -254,12 +263,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public OnPremisesPublishing onPremisesPublishing;
 
     /**
-     * The Extension Properties.
-     * Read-only. Nullable.
-     */
-    public ExtensionPropertyCollectionPage extensionProperties;
-
-    /**
      * The Created On Behalf Of.
      * Read-only.
      */
@@ -268,16 +271,22 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public DirectoryObject createdOnBehalfOf;
 
     /**
-     * The Owners.
-     * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
+     * The Extension Properties.
+     * Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage owners;
+    public ExtensionPropertyCollectionPage extensionProperties;
 
     /**
      * The Home Realm Discovery Policies.
      * 
      */
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+
+    /**
+     * The Owners.
+     * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
+     */
+    public DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
@@ -363,22 +372,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
             extensionProperties = new ExtensionPropertyCollectionPage(response, null);
         }
 
-        if (json.has("owners")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("owners@odata.nextLink")) {
-                response.nextLink = json.get("owners@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            owners = new DirectoryObjectCollectionPage(response, null);
-        }
-
         if (json.has("homeRealmDiscoveryPolicies")) {
             final HomeRealmDiscoveryPolicyCollectionResponse response = new HomeRealmDiscoveryPolicyCollectionResponse();
             if (json.has("homeRealmDiscoveryPolicies@odata.nextLink")) {
@@ -393,6 +386,22 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
+        }
+
+        if (json.has("owners")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("owners@odata.nextLink")) {
+                response.nextLink = json.get("owners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            owners = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("tokenIssuancePolicies")) {

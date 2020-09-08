@@ -114,6 +114,27 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
     }
 
     /**
+     * Creates a AccessPackageResourceRole with a new object
+     *
+     * @param newAccessPackageResourceRole the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageResourceRole);
+    }
+
+    /**
+     * Creates a AccessPackageResourceRole with a new object
+     *
+     * @param newAccessPackageResourceRole the object to create/update
+     * @return the created AccessPackageResourceRole
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageResourceRole put(final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageResourceRole);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

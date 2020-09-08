@@ -29,36 +29,12 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Install Status.
-     * The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError.
+     * The Compliance Grace Period Expiration Date Time.
+     * The DateTime when device compliance grace period expires
      */
-    @SerializedName("installStatus")
+    @SerializedName("complianceGracePeriodExpirationDateTime")
     @Expose
-    public IosUpdatesInstallStatus installStatus;
-
-    /**
-     * The Os Version.
-     * The device version that is being reported.
-     */
-    @SerializedName("osVersion")
-    @Expose
-    public String osVersion;
-
-    /**
-     * The Device Id.
-     * The device id that is being reported.
-     */
-    @SerializedName("deviceId")
-    @Expose
-    public String deviceId;
-
-    /**
-     * The User Id.
-     * The User id that is being reported.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
+    public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
     /**
      * The Device Display Name.
@@ -69,12 +45,12 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
     public String deviceDisplayName;
 
     /**
-     * The User Name.
-     * The User Name that is being reported
+     * The Device Id.
+     * The device id that is being reported.
      */
-    @SerializedName("userName")
+    @SerializedName("deviceId")
     @Expose
-    public String userName;
+    public String deviceId;
 
     /**
      * The Device Model.
@@ -85,20 +61,36 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
     public String deviceModel;
 
     /**
+     * The Install Status.
+     * The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError.
+     */
+    @SerializedName("installStatus")
+    @Expose
+    public IosUpdatesInstallStatus installStatus;
+
+    /**
+     * The Last Reported Date Time.
+     * Last modified date time of the policy report.
+     */
+    @SerializedName("lastReportedDateTime")
+    @Expose
+    public java.util.Calendar lastReportedDateTime;
+
+    /**
+     * The Os Version.
+     * The device version that is being reported.
+     */
+    @SerializedName("osVersion")
+    @Expose
+    public String osVersion;
+
+    /**
      * The Platform.
      * Platform of the device that is being reported
      */
     @SerializedName("platform")
     @Expose
     public Integer platform;
-
-    /**
-     * The Compliance Grace Period Expiration Date Time.
-     * The DateTime when device compliance grace period expires
-     */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
-    @Expose
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
     /**
      * The Status.
@@ -109,12 +101,20 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
     public ComplianceStatus status;
 
     /**
-     * The Last Reported Date Time.
-     * Last modified date time of the policy report.
+     * The User Id.
+     * The User id that is being reported.
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName("userId")
     @Expose
-    public java.util.Calendar lastReportedDateTime;
+    public String userId;
+
+    /**
+     * The User Name.
+     * The User Name that is being reported
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
 
     /**
      * The User Principal Name.

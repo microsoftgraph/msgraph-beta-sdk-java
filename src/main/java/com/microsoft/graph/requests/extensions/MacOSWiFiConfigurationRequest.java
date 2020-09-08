@@ -127,6 +127,27 @@ public class MacOSWiFiConfigurationRequest extends BaseRequest implements IMacOS
     }
 
     /**
+     * Creates a MacOSWiFiConfiguration with a new object
+     *
+     * @param newMacOSWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSWiFiConfiguration newMacOSWiFiConfiguration, final ICallback<MacOSWiFiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newMacOSWiFiConfiguration);
+    }
+
+    /**
+     * Creates a MacOSWiFiConfiguration with a new object
+     *
+     * @param newMacOSWiFiConfiguration the object to create/update
+     * @return the created MacOSWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSWiFiConfiguration put(final MacOSWiFiConfiguration newMacOSWiFiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSWiFiConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

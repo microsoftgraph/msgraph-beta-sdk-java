@@ -36,20 +36,20 @@ public class BookingWorkTimeSlot implements IJsonBackedObject {
     }
 
     /**
-     * The Start.
-     * 
-     */
-    @SerializedName("start")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay start;
-
-    /**
      * The End.
      * 
      */
     @SerializedName("end")
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay end;
+
+    /**
+     * The Start.
+     * 
+     */
+    @SerializedName("start")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay start;
 
 
     /**

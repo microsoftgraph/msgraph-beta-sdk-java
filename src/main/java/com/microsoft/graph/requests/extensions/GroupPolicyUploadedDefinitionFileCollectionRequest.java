@@ -63,14 +63,14 @@ public class GroupPolicyUploadedDefinitionFileCollectionRequest extends BaseColl
     public void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyUploadedDefinitionFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyUploadedDefinitionFile, callback);
     }
 
     public GroupPolicyUploadedDefinitionFile post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyUploadedDefinitionFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyUploadedDefinitionFile);
     }
 
@@ -107,6 +107,27 @@ public class GroupPolicyUploadedDefinitionFileCollectionRequest extends BaseColl
         return (GroupPolicyUploadedDefinitionFileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyUploadedDefinitionFileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyUploadedDefinitionFileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyUploadedDefinitionFileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyUploadedDefinitionFileCollectionRequest)this;
+    }
     public IGroupPolicyUploadedDefinitionFileCollectionPage buildFromResponse(final GroupPolicyUploadedDefinitionFileCollectionResponse response) {
         final IGroupPolicyUploadedDefinitionFileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

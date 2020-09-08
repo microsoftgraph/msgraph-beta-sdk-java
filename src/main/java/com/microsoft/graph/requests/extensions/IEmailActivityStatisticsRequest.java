@@ -80,6 +80,23 @@ public interface IEmailActivityStatisticsRequest extends IHttpRequest {
     EmailActivityStatistics post(final EmailActivityStatistics newEmailActivityStatistics) throws ClientException;
 
     /**
+     * Posts a EmailActivityStatistics with a new object
+     *
+     * @param newEmailActivityStatistics the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmailActivityStatistics newEmailActivityStatistics, final ICallback<EmailActivityStatistics> callback);
+
+    /**
+     * Posts a EmailActivityStatistics with a new object
+     *
+     * @param newEmailActivityStatistics the object to create/update
+     * @return the created EmailActivityStatistics
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmailActivityStatistics put(final EmailActivityStatistics newEmailActivityStatistics) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

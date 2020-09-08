@@ -80,6 +80,23 @@ public interface IAndroidForWorkEnrollmentProfileRequest extends IHttpRequest {
     AndroidForWorkEnrollmentProfile post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkEnrollmentProfile with a new object
+     *
+     * @param newAndroidForWorkEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<AndroidForWorkEnrollmentProfile> callback);
+
+    /**
+     * Posts a AndroidForWorkEnrollmentProfile with a new object
+     *
+     * @param newAndroidForWorkEnrollmentProfile the object to create/update
+     * @return the created AndroidForWorkEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkEnrollmentProfile put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

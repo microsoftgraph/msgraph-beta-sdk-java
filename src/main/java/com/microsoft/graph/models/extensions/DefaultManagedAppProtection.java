@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ManagedAppRemediationAction;
 import com.microsoft.graph.models.generated.ManagedAppDataEncryptionType;
 import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.generated.ManagedAppRemediationAction;
-import com.microsoft.graph.models.generated.AndroidManagedAppSafetyNetDeviceAttestationType;
 import com.microsoft.graph.models.generated.AndroidManagedAppSafetyNetAppsVerificationType;
+import com.microsoft.graph.models.generated.AndroidManagedAppSafetyNetDeviceAttestationType;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.ManagedAppProtection;
@@ -36,6 +36,70 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
 
 
     /**
+     * The Allowed Android Device Manufacturers.
+     * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only)
+     */
+    @SerializedName("allowedAndroidDeviceManufacturers")
+    @Expose
+    public String allowedAndroidDeviceManufacturers;
+
+    /**
+     * The Allowed Android Device Models.
+     * List of device models allowed, as a string, for the managed app to work. (Android Only)
+     */
+    @SerializedName("allowedAndroidDeviceModels")
+    @Expose
+    public java.util.List<String> allowedAndroidDeviceModels;
+
+    /**
+     * The Allowed Ios Device Models.
+     * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
+     */
+    @SerializedName("allowedIosDeviceModels")
+    @Expose
+    public String allowedIosDeviceModels;
+
+    /**
+     * The App Action If Android Device Manufacturer Not Allowed.
+     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
+     */
+    @SerializedName("appActionIfAndroidDeviceManufacturerNotAllowed")
+    @Expose
+    public ManagedAppRemediationAction appActionIfAndroidDeviceManufacturerNotAllowed;
+
+    /**
+     * The App Action If Android Device Model Not Allowed.
+     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only)
+     */
+    @SerializedName("appActionIfAndroidDeviceModelNotAllowed")
+    @Expose
+    public ManagedAppRemediationAction appActionIfAndroidDeviceModelNotAllowed;
+
+    /**
+     * The App Action If Android Safety Net Apps Verification Failed.
+     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+     */
+    @SerializedName("appActionIfAndroidSafetyNetAppsVerificationFailed")
+    @Expose
+    public ManagedAppRemediationAction appActionIfAndroidSafetyNetAppsVerificationFailed;
+
+    /**
+     * The App Action If Android Safety Net Device Attestation Failed.
+     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+     */
+    @SerializedName("appActionIfAndroidSafetyNetDeviceAttestationFailed")
+    @Expose
+    public ManagedAppRemediationAction appActionIfAndroidSafetyNetDeviceAttestationFailed;
+
+    /**
+     * The App Action If Ios Device Model Not Allowed.
+     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
+     */
+    @SerializedName("appActionIfIosDeviceModelNotAllowed")
+    @Expose
+    public ManagedAppRemediationAction appActionIfIosDeviceModelNotAllowed;
+
+    /**
      * The App Data Encryption Type.
      * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
@@ -44,36 +108,52 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
     /**
-     * The Screen Capture Blocked.
-     * Indicates whether screen capture is blocked. (Android only)
+     * The Custom Browser Display Name.
+     * Friendly name of the preferred custom browser to open weblink on Android. (Android only)
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName("customBrowserDisplayName")
     @Expose
-    public Boolean screenCaptureBlocked;
+    public String customBrowserDisplayName;
 
     /**
-     * The Encrypt App Data.
-     * Indicates whether managed-app data should be encrypted. (Android only)
+     * The Custom Browser Package Id.
+     * Unique identifier of a custom browser to open weblink on Android. (Android only)
      */
-    @SerializedName("encryptAppData")
+    @SerializedName("customBrowserPackageId")
     @Expose
-    public Boolean encryptAppData;
+    public String customBrowserPackageId;
 
     /**
-     * The Disable App Encryption If Device Encryption Is Enabled.
-     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
+     * The Custom Browser Protocol.
+     * A custom browser protocol to open weblink on iOS. (iOS only)
      */
-    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
+    @SerializedName("customBrowserProtocol")
     @Expose
-    public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
+    public String customBrowserProtocol;
 
     /**
-     * The Minimum Required Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
+     * The Custom Dialer App Display Name.
+     * Friendly name of a custom dialer app to click-to-open a phone number on Android.
      */
-    @SerializedName("minimumRequiredSdkVersion")
+    @SerializedName("customDialerAppDisplayName")
     @Expose
-    public String minimumRequiredSdkVersion;
+    public String customDialerAppDisplayName;
+
+    /**
+     * The Custom Dialer App Package Id.
+     * PackageId of a custom dialer app to click-to-open a phone number on Android.
+     */
+    @SerializedName("customDialerAppPackageId")
+    @Expose
+    public String customDialerAppPackageId;
+
+    /**
+     * The Custom Dialer App Protocol.
+     * Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
+     */
+    @SerializedName("customDialerAppProtocol")
+    @Expose
+    public String customDialerAppProtocol;
 
     /**
      * The Custom Settings.
@@ -92,108 +172,12 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public Integer deployedAppCount;
 
     /**
-     * The Minimum Required Patch Version.
-     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
+     * The Disable App Encryption If Device Encryption Is Enabled.
+     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      */
-    @SerializedName("minimumRequiredPatchVersion")
+    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
     @Expose
-    public String minimumRequiredPatchVersion;
-
-    /**
-     * The Minimum Warning Patch Version.
-     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-     */
-    @SerializedName("minimumWarningPatchVersion")
-    @Expose
-    public String minimumWarningPatchVersion;
-
-    /**
-     * The Exempted App Protocols.
-     * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
-     */
-    @SerializedName("exemptedAppProtocols")
-    @Expose
-    public java.util.List<KeyValuePair> exemptedAppProtocols;
-
-    /**
-     * The Exempted App Packages.
-     * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
-     */
-    @SerializedName("exemptedAppPackages")
-    @Expose
-    public java.util.List<KeyValuePair> exemptedAppPackages;
-
-    /**
-     * The Face Id Blocked.
-     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
-     */
-    @SerializedName("faceIdBlocked")
-    @Expose
-    public Boolean faceIdBlocked;
-
-    /**
-     * The Minimum Wipe Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
-     */
-    @SerializedName("minimumWipeSdkVersion")
-    @Expose
-    public String minimumWipeSdkVersion;
-
-    /**
-     * The Minimum Wipe Patch Version.
-     * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
-     */
-    @SerializedName("minimumWipePatchVersion")
-    @Expose
-    public String minimumWipePatchVersion;
-
-    /**
-     * The Allowed Ios Device Models.
-     * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
-     */
-    @SerializedName("allowedIosDeviceModels")
-    @Expose
-    public String allowedIosDeviceModels;
-
-    /**
-     * The App Action If Ios Device Model Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
-     */
-    @SerializedName("appActionIfIosDeviceModelNotAllowed")
-    @Expose
-    public ManagedAppRemediationAction appActionIfIosDeviceModelNotAllowed;
-
-    /**
-     * The Allowed Android Device Manufacturers.
-     * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only)
-     */
-    @SerializedName("allowedAndroidDeviceManufacturers")
-    @Expose
-    public String allowedAndroidDeviceManufacturers;
-
-    /**
-     * The App Action If Android Device Manufacturer Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
-     */
-    @SerializedName("appActionIfAndroidDeviceManufacturerNotAllowed")
-    @Expose
-    public ManagedAppRemediationAction appActionIfAndroidDeviceManufacturerNotAllowed;
-
-    /**
-     * The Third Party Keyboards Blocked.
-     * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
-     */
-    @SerializedName("thirdPartyKeyboardsBlocked")
-    @Expose
-    public Boolean thirdPartyKeyboardsBlocked;
-
-    /**
-     * The Filter Open In To Only Managed Apps.
-     * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
-     */
-    @SerializedName("filterOpenInToOnlyManagedApps")
-    @Expose
-    public Boolean filterOpenInToOnlyManagedApps;
+    public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
 
     /**
      * The Disable Protection Of Managed Outbound Open In Data.
@@ -204,68 +188,44 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public Boolean disableProtectionOfManagedOutboundOpenInData;
 
     /**
-     * The Protect Inbound Data From Unknown Sources.
-     * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
+     * The Encrypt App Data.
+     * Indicates whether managed-app data should be encrypted. (Android only)
      */
-    @SerializedName("protectInboundDataFromUnknownSources")
+    @SerializedName("encryptAppData")
     @Expose
-    public Boolean protectInboundDataFromUnknownSources;
+    public Boolean encryptAppData;
 
     /**
-     * The Required Android Safety Net Device Attestation Type.
-     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
+     * The Exempted App Packages.
+     * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
      */
-    @SerializedName("requiredAndroidSafetyNetDeviceAttestationType")
+    @SerializedName("exemptedAppPackages")
     @Expose
-    public AndroidManagedAppSafetyNetDeviceAttestationType requiredAndroidSafetyNetDeviceAttestationType;
+    public java.util.List<KeyValuePair> exemptedAppPackages;
 
     /**
-     * The App Action If Android Safety Net Device Attestation Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+     * The Exempted App Protocols.
+     * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
      */
-    @SerializedName("appActionIfAndroidSafetyNetDeviceAttestationFailed")
+    @SerializedName("exemptedAppProtocols")
     @Expose
-    public ManagedAppRemediationAction appActionIfAndroidSafetyNetDeviceAttestationFailed;
+    public java.util.List<KeyValuePair> exemptedAppProtocols;
 
     /**
-     * The Required Android Safety Net Apps Verification Type.
-     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
+     * The Face Id Blocked.
+     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      */
-    @SerializedName("requiredAndroidSafetyNetAppsVerificationType")
+    @SerializedName("faceIdBlocked")
     @Expose
-    public AndroidManagedAppSafetyNetAppsVerificationType requiredAndroidSafetyNetAppsVerificationType;
+    public Boolean faceIdBlocked;
 
     /**
-     * The App Action If Android Safety Net Apps Verification Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+     * The Filter Open In To Only Managed Apps.
+     * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
      */
-    @SerializedName("appActionIfAndroidSafetyNetAppsVerificationFailed")
+    @SerializedName("filterOpenInToOnlyManagedApps")
     @Expose
-    public ManagedAppRemediationAction appActionIfAndroidSafetyNetAppsVerificationFailed;
-
-    /**
-     * The Custom Browser Protocol.
-     * A custom browser protocol to open weblink on iOS. (iOS only)
-     */
-    @SerializedName("customBrowserProtocol")
-    @Expose
-    public String customBrowserProtocol;
-
-    /**
-     * The Custom Browser Package Id.
-     * Unique identifier of a custom browser to open weblink on Android. (Android only)
-     */
-    @SerializedName("customBrowserPackageId")
-    @Expose
-    public String customBrowserPackageId;
-
-    /**
-     * The Custom Browser Display Name.
-     * Friendly name of the preferred custom browser to open weblink on Android. (Android only)
-     */
-    @SerializedName("customBrowserDisplayName")
-    @Expose
-    public String customBrowserDisplayName;
+    public Boolean filterOpenInToOnlyManagedApps;
 
     /**
      * The Minimum Required Company Portal Version.
@@ -276,12 +236,36 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public String minimumRequiredCompanyPortalVersion;
 
     /**
+     * The Minimum Required Patch Version.
+     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
+     */
+    @SerializedName("minimumRequiredPatchVersion")
+    @Expose
+    public String minimumRequiredPatchVersion;
+
+    /**
+     * The Minimum Required Sdk Version.
+     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
+     */
+    @SerializedName("minimumRequiredSdkVersion")
+    @Expose
+    public String minimumRequiredSdkVersion;
+
+    /**
      * The Minimum Warning Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
      */
     @SerializedName("minimumWarningCompanyPortalVersion")
     @Expose
     public String minimumWarningCompanyPortalVersion;
+
+    /**
+     * The Minimum Warning Patch Version.
+     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
+     */
+    @SerializedName("minimumWarningPatchVersion")
+    @Expose
+    public String minimumWarningPatchVersion;
 
     /**
      * The Minimum Wipe Company Portal Version.
@@ -292,44 +276,60 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public String minimumWipeCompanyPortalVersion;
 
     /**
-     * The Allowed Android Device Models.
-     * List of device models allowed, as a string, for the managed app to work. (Android Only)
+     * The Minimum Wipe Patch Version.
+     * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
      */
-    @SerializedName("allowedAndroidDeviceModels")
+    @SerializedName("minimumWipePatchVersion")
     @Expose
-    public java.util.List<String> allowedAndroidDeviceModels;
+    public String minimumWipePatchVersion;
 
     /**
-     * The App Action If Android Device Model Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only)
+     * The Minimum Wipe Sdk Version.
+     * Versions less than the specified version will block the managed app from accessing company data.
      */
-    @SerializedName("appActionIfAndroidDeviceModelNotAllowed")
+    @SerializedName("minimumWipeSdkVersion")
     @Expose
-    public ManagedAppRemediationAction appActionIfAndroidDeviceModelNotAllowed;
+    public String minimumWipeSdkVersion;
 
     /**
-     * The Custom Dialer App Protocol.
-     * Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
+     * The Protect Inbound Data From Unknown Sources.
+     * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
      */
-    @SerializedName("customDialerAppProtocol")
+    @SerializedName("protectInboundDataFromUnknownSources")
     @Expose
-    public String customDialerAppProtocol;
+    public Boolean protectInboundDataFromUnknownSources;
 
     /**
-     * The Custom Dialer App Package Id.
-     * PackageId of a custom dialer app to click-to-open a phone number on Android.
+     * The Required Android Safety Net Apps Verification Type.
+     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
      */
-    @SerializedName("customDialerAppPackageId")
+    @SerializedName("requiredAndroidSafetyNetAppsVerificationType")
     @Expose
-    public String customDialerAppPackageId;
+    public AndroidManagedAppSafetyNetAppsVerificationType requiredAndroidSafetyNetAppsVerificationType;
 
     /**
-     * The Custom Dialer App Display Name.
-     * Friendly name of a custom dialer app to click-to-open a phone number on Android.
+     * The Required Android Safety Net Device Attestation Type.
+     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
      */
-    @SerializedName("customDialerAppDisplayName")
+    @SerializedName("requiredAndroidSafetyNetDeviceAttestationType")
     @Expose
-    public String customDialerAppDisplayName;
+    public AndroidManagedAppSafetyNetDeviceAttestationType requiredAndroidSafetyNetDeviceAttestationType;
+
+    /**
+     * The Screen Capture Blocked.
+     * Indicates whether screen capture is blocked. (Android only)
+     */
+    @SerializedName("screenCaptureBlocked")
+    @Expose
+    public Boolean screenCaptureBlocked;
+
+    /**
+     * The Third Party Keyboards Blocked.
+     * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
+     */
+    @SerializedName("thirdPartyKeyboardsBlocked")
+    @Expose
+    public Boolean thirdPartyKeyboardsBlocked;
 
     /**
      * The Apps.

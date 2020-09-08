@@ -80,6 +80,23 @@ public interface IWindowsInformationProtectionWipeActionRequest extends IHttpReq
     WindowsInformationProtectionWipeAction post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException;
 
     /**
+     * Posts a WindowsInformationProtectionWipeAction with a new object
+     *
+     * @param newWindowsInformationProtectionWipeAction the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback);
+
+    /**
+     * Posts a WindowsInformationProtectionWipeAction with a new object
+     *
+     * @param newWindowsInformationProtectionWipeAction the object to create/update
+     * @return the created WindowsInformationProtectionWipeAction
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsInformationProtectionWipeAction put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

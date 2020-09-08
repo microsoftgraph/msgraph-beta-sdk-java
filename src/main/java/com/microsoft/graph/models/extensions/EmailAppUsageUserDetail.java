@@ -27,20 +27,12 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Report Refresh Date.
+     * The Deleted Date.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("deletedDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
+    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
      * The Display Name.
@@ -51,20 +43,20 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
     public String displayName;
 
     /**
+     * The Imap4App.
+     * 
+     */
+    @SerializedName("imap4App")
+    @Expose
+    public java.util.List<String> imap4App;
+
+    /**
      * The Is Deleted.
      * 
      */
     @SerializedName("isDeleted")
     @Expose
     public Boolean isDeleted;
-
-    /**
-     * The Deleted Date.
-     * 
-     */
-    @SerializedName("deletedDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
      * The Last Activity Date.
@@ -83,20 +75,20 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
     public java.util.List<String> mailForMac;
 
     /**
+     * The Other For Mobile.
+     * 
+     */
+    @SerializedName("otherForMobile")
+    @Expose
+    public java.util.List<String> otherForMobile;
+
+    /**
      * The Outlook For Mac.
      * 
      */
     @SerializedName("outlookForMac")
     @Expose
     public java.util.List<String> outlookForMac;
-
-    /**
-     * The Outlook For Windows.
-     * 
-     */
-    @SerializedName("outlookForWindows")
-    @Expose
-    public java.util.List<String> outlookForWindows;
 
     /**
      * The Outlook For Mobile.
@@ -107,20 +99,20 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
     public java.util.List<String> outlookForMobile;
 
     /**
-     * The Other For Mobile.
-     * 
-     */
-    @SerializedName("otherForMobile")
-    @Expose
-    public java.util.List<String> otherForMobile;
-
-    /**
      * The Outlook For Web.
      * 
      */
     @SerializedName("outlookForWeb")
     @Expose
     public java.util.List<String> outlookForWeb;
+
+    /**
+     * The Outlook For Windows.
+     * 
+     */
+    @SerializedName("outlookForWindows")
+    @Expose
+    public java.util.List<String> outlookForWindows;
 
     /**
      * The Pop3App.
@@ -131,12 +123,20 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
     public java.util.List<String> pop3App;
 
     /**
-     * The Imap4App.
+     * The Report Period.
      * 
      */
-    @SerializedName("imap4App")
+    @SerializedName("reportPeriod")
     @Expose
-    public java.util.List<String> imap4App;
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The Smtp App.
@@ -147,12 +147,12 @@ public class EmailAppUsageUserDetail extends Entity implements IJsonBackedObject
     public java.util.List<String> smtpApp;
 
     /**
-     * The Report Period.
+     * The User Principal Name.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName("userPrincipalName")
     @Expose
-    public String reportPeriod;
+    public String userPrincipalName;
 
 
     /**

@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EntitlementManagement;
 import com.microsoft.graph.models.extensions.AccessReviewSet;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
+import com.microsoft.graph.models.extensions.EntitlementManagement;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,14 +30,6 @@ public class IdentityGovernance extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Entitlement Management.
-     * 
-     */
-    @SerializedName("entitlementManagement")
-    @Expose
-    public EntitlementManagement entitlementManagement;
-
-    /**
      * The Access Reviews.
      * 
      */
@@ -52,6 +44,14 @@ public class IdentityGovernance extends Entity implements IJsonBackedObject {
     @SerializedName("termsOfUse")
     @Expose
     public TermsOfUseContainer termsOfUse;
+
+    /**
+     * The Entitlement Management.
+     * 
+     */
+    @SerializedName("entitlementManagement")
+    @Expose
+    public EntitlementManagement entitlementManagement;
 
 
     /**

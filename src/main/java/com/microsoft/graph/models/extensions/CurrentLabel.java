@@ -37,20 +37,20 @@ public class CurrentLabel implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * 
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Application Mode.
      * 
      */
     @SerializedName("applicationMode")
     @Expose
     public ApplicationMode applicationMode;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
 
     /**

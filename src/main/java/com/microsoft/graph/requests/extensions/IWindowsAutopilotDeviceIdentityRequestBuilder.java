@@ -47,10 +47,10 @@ public interface IWindowsAutopilotDeviceIdentityRequestBuilder extends IRequestB
      * @return the IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder instance
      */
     IWindowsAutopilotDeploymentProfileWithReferenceRequestBuilder intendedDeploymentProfile();
+    IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder assignResourceAccountToDevice(final String userPrincipalName, final String addressableUserName, final String resourceAccountName);
     IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder assignUserToDevice(final String userPrincipalName, final String addressableUserName);
+    IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder unassignResourceAccountFromDevice();
     IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequestBuilder unassignUserFromDevice();
     IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBuilder updateDeviceProperties(final String userPrincipalName, final String addressableUserName, final String groupTag, final String displayName);
-    IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestBuilder assignResourceAccountToDevice(final String userPrincipalName, final String addressableUserName, final String resourceAccountName);
-    IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequestBuilder unassignResourceAccountFromDevice();
 
 }

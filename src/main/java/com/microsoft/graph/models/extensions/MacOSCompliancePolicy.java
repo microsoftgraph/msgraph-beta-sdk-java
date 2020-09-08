@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.DeviceThreatProtectionLevel;
 import com.microsoft.graph.models.generated.MacOSGatekeeperAppSources;
+import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 
 
@@ -30,12 +30,84 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
 
     /**
-     * The Password Required.
-     * Whether or not to require a password.
+     * The Device Threat Protection Enabled.
+     * Require that devices have enabled device threat protection.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("deviceThreatProtectionEnabled")
     @Expose
-    public Boolean passwordRequired;
+    public Boolean deviceThreatProtectionEnabled;
+
+    /**
+     * The Device Threat Protection Required Security Level.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     */
+    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @Expose
+    public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
+
+    /**
+     * The Firewall Block All Incoming.
+     * Corresponds to the 'Block all incoming connections' option.
+     */
+    @SerializedName("firewallBlockAllIncoming")
+    @Expose
+    public Boolean firewallBlockAllIncoming;
+
+    /**
+     * The Firewall Enabled.
+     * Whether the firewall should be enabled or not.
+     */
+    @SerializedName("firewallEnabled")
+    @Expose
+    public Boolean firewallEnabled;
+
+    /**
+     * The Firewall Enable Stealth Mode.
+     * Corresponds to 'Enable stealth mode.'
+     */
+    @SerializedName("firewallEnableStealthMode")
+    @Expose
+    public Boolean firewallEnableStealthMode;
+
+    /**
+     * The Gatekeeper Allowed App Source.
+     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+     */
+    @SerializedName("gatekeeperAllowedAppSource")
+    @Expose
+    public MacOSGatekeeperAppSources gatekeeperAllowedAppSource;
+
+    /**
+     * The Os Maximum Build Version.
+     * Maximum MacOS build version.
+     */
+    @SerializedName("osMaximumBuildVersion")
+    @Expose
+    public String osMaximumBuildVersion;
+
+    /**
+     * The Os Maximum Version.
+     * Maximum MacOS version.
+     */
+    @SerializedName("osMaximumVersion")
+    @Expose
+    public String osMaximumVersion;
+
+    /**
+     * The Os Minimum Build Version.
+     * Minimum MacOS build version.
+     */
+    @SerializedName("osMinimumBuildVersion")
+    @Expose
+    public String osMinimumBuildVersion;
+
+    /**
+     * The Os Minimum Version.
+     * Minimum MacOS version.
+     */
+    @SerializedName("osMinimumVersion")
+    @Expose
+    public String osMinimumVersion;
 
     /**
      * The Password Block Simple.
@@ -52,6 +124,14 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
     @SerializedName("passwordExpirationDays")
     @Expose
     public Integer passwordExpirationDays;
+
+    /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
 
     /**
      * The Password Minimum Length.
@@ -78,12 +158,12 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
     public Integer passwordPreviousPasswordBlockCount;
 
     /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
+     * The Password Required.
+     * Whether or not to require a password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName("passwordRequired")
     @Expose
-    public Integer passwordMinimumCharacterSetCount;
+    public Boolean passwordRequired;
 
     /**
      * The Password Required Type.
@@ -94,62 +174,6 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
     public RequiredPasswordType passwordRequiredType;
 
     /**
-     * The Os Minimum Version.
-     * Minimum MacOS version.
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
-
-    /**
-     * The Os Maximum Version.
-     * Maximum MacOS version.
-     */
-    @SerializedName("osMaximumVersion")
-    @Expose
-    public String osMaximumVersion;
-
-    /**
-     * The Os Minimum Build Version.
-     * Minimum MacOS build version.
-     */
-    @SerializedName("osMinimumBuildVersion")
-    @Expose
-    public String osMinimumBuildVersion;
-
-    /**
-     * The Os Maximum Build Version.
-     * Maximum MacOS build version.
-     */
-    @SerializedName("osMaximumBuildVersion")
-    @Expose
-    public String osMaximumBuildVersion;
-
-    /**
-     * The System Integrity Protection Enabled.
-     * Require that devices have enabled system integrity protection.
-     */
-    @SerializedName("systemIntegrityProtectionEnabled")
-    @Expose
-    public Boolean systemIntegrityProtectionEnabled;
-
-    /**
-     * The Device Threat Protection Enabled.
-     * Require that devices have enabled device threat protection.
-     */
-    @SerializedName("deviceThreatProtectionEnabled")
-    @Expose
-    public Boolean deviceThreatProtectionEnabled;
-
-    /**
-     * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-     */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
-    @Expose
-    public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
-
-    /**
      * The Storage Require Encryption.
      * Require encryption on Mac OS devices.
      */
@@ -158,36 +182,12 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
     public Boolean storageRequireEncryption;
 
     /**
-     * The Gatekeeper Allowed App Source.
-     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+     * The System Integrity Protection Enabled.
+     * Require that devices have enabled system integrity protection.
      */
-    @SerializedName("gatekeeperAllowedAppSource")
+    @SerializedName("systemIntegrityProtectionEnabled")
     @Expose
-    public MacOSGatekeeperAppSources gatekeeperAllowedAppSource;
-
-    /**
-     * The Firewall Enabled.
-     * Whether the firewall should be enabled or not.
-     */
-    @SerializedName("firewallEnabled")
-    @Expose
-    public Boolean firewallEnabled;
-
-    /**
-     * The Firewall Block All Incoming.
-     * Corresponds to the 'Block all incoming connections' option.
-     */
-    @SerializedName("firewallBlockAllIncoming")
-    @Expose
-    public Boolean firewallBlockAllIncoming;
-
-    /**
-     * The Firewall Enable Stealth Mode.
-     * Corresponds to 'Enable stealth mode.'
-     */
-    @SerializedName("firewallEnableStealthMode")
-    @Expose
-    public Boolean firewallEnableStealthMode;
+    public Boolean systemIntegrityProtectionEnabled;
 
 
     /**

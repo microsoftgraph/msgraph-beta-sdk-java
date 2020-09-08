@@ -9,18 +9,18 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.RunAsAccountType;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.models.extensions.DeviceManagementScriptRunSummary;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptDeviceState;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementScriptRunSummary;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptUserState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionPage;
 
@@ -41,52 +41,12 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Execution Frequency.
-     * The interval for script to run. If not defined the script will run once
-     */
-    @SerializedName("executionFrequency")
-    @Expose
-    public javax.xml.datatype.Duration executionFrequency;
-
-    /**
-     * The Retry Count.
-     * Number of times for the script to be retried if it fails
-     */
-    @SerializedName("retryCount")
-    @Expose
-    public Integer retryCount;
-
-    /**
      * The Block Execution Notifications.
      * Does not notify the user a script is being executed
      */
     @SerializedName("blockExecutionNotifications")
     @Expose
     public Boolean blockExecutionNotifications;
-
-    /**
-     * The Display Name.
-     * Name of the device management script.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * Optional description for the device management script.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Script Content.
-     * The script content.
-     */
-    @SerializedName("scriptContent")
-    @Expose
-    public byte[] scriptContent;
 
     /**
      * The Created Date Time.
@@ -97,20 +57,28 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * The date and time the device management script was last modified. This property is read-only.
+     * The Description.
+     * Optional description for the device management script.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("description")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String description;
 
     /**
-     * The Run As Account.
-     * Indicates the type of execution context.
+     * The Display Name.
+     * Name of the device management script.
      */
-    @SerializedName("runAsAccount")
+    @SerializedName("displayName")
     @Expose
-    public RunAsAccountType runAsAccount;
+    public String displayName;
+
+    /**
+     * The Execution Frequency.
+     * The interval for script to run. If not defined the script will run once
+     */
+    @SerializedName("executionFrequency")
+    @Expose
+    public javax.xml.datatype.Duration executionFrequency;
 
     /**
      * The File Name.
@@ -121,6 +89,22 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     public String fileName;
 
     /**
+     * The Last Modified Date Time.
+     * The date and time the device management script was last modified. This property is read-only.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Retry Count.
+     * Number of times for the script to be retried if it fails
+     */
+    @SerializedName("retryCount")
+    @Expose
+    public Integer retryCount;
+
+    /**
      * The Role Scope Tag Ids.
      * List of Scope Tag IDs for this PowerShellScript instance.
      */
@@ -129,10 +113,20 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     public java.util.List<String> roleScopeTagIds;
 
     /**
-     * The Group Assignments.
-     * The list of group assignments for the device management script.
+     * The Run As Account.
+     * Indicates the type of execution context.
      */
-    public DeviceManagementScriptGroupAssignmentCollectionPage groupAssignments;
+    @SerializedName("runAsAccount")
+    @Expose
+    public RunAsAccountType runAsAccount;
+
+    /**
+     * The Script Content.
+     * The script content.
+     */
+    @SerializedName("scriptContent")
+    @Expose
+    public byte[] scriptContent;
 
     /**
      * The Assignments.
@@ -141,18 +135,24 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     public DeviceManagementScriptAssignmentCollectionPage assignments;
 
     /**
+     * The Device Run States.
+     * List of run states for this script across all devices.
+     */
+    public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
+
+    /**
+     * The Group Assignments.
+     * The list of group assignments for the device management script.
+     */
+    public DeviceManagementScriptGroupAssignmentCollectionPage groupAssignments;
+
+    /**
      * The Run Summary.
      * Run summary for device management script.
      */
     @SerializedName("runSummary")
     @Expose
     public DeviceManagementScriptRunSummary runSummary;
-
-    /**
-     * The Device Run States.
-     * List of run states for this script across all devices.
-     */
-    public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 
     /**
      * The User Run States.
@@ -200,22 +200,6 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("groupAssignments")) {
-            final DeviceManagementScriptGroupAssignmentCollectionResponse response = new DeviceManagementScriptGroupAssignmentCollectionResponse();
-            if (json.has("groupAssignments@odata.nextLink")) {
-                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
-            final DeviceManagementScriptGroupAssignment[] array = new DeviceManagementScriptGroupAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptGroupAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupAssignments = new DeviceManagementScriptGroupAssignmentCollectionPage(response, null);
-        }
-
         if (json.has("assignments")) {
             final DeviceManagementScriptAssignmentCollectionResponse response = new DeviceManagementScriptAssignmentCollectionResponse();
             if (json.has("assignments@odata.nextLink")) {
@@ -246,6 +230,22 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             deviceRunStates = new DeviceManagementScriptDeviceStateCollectionPage(response, null);
+        }
+
+        if (json.has("groupAssignments")) {
+            final DeviceManagementScriptGroupAssignmentCollectionResponse response = new DeviceManagementScriptGroupAssignmentCollectionResponse();
+            if (json.has("groupAssignments@odata.nextLink")) {
+                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
+            final DeviceManagementScriptGroupAssignment[] array = new DeviceManagementScriptGroupAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementScriptGroupAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            groupAssignments = new DeviceManagementScriptGroupAssignmentCollectionPage(response, null);
         }
 
         if (json.has("userRunStates")) {

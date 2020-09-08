@@ -28,22 +28,6 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Device Id.
-     * The id of the device.
-     */
-    @SerializedName("deviceId")
-    @Expose
-    public String deviceId;
-
-    /**
-     * The User Id.
-     * The id of the user.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Device Display Name.
      * Device display name.
      */
@@ -52,28 +36,12 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
     public String deviceDisplayName;
 
     /**
-     * The User Principal Name.
-     * User principal name.
+     * The Device Id.
+     * The id of the device.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("deviceId")
     @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Status.
-     * Windows udpate status.
-     */
-    @SerializedName("status")
-    @Expose
-    public WindowsUpdateStatus status;
-
-    /**
-     * The Quality Update Version.
-     * The Quality Update Version of the device.
-     */
-    @SerializedName("qualityUpdateVersion")
-    @Expose
-    public String qualityUpdateVersion;
+    public String deviceId;
 
     /**
      * The Feature Update Version.
@@ -98,6 +66,38 @@ public class WindowsUpdateState extends Entity implements IJsonBackedObject {
     @SerializedName("lastSyncDateTime")
     @Expose
     public java.util.Calendar lastSyncDateTime;
+
+    /**
+     * The Quality Update Version.
+     * The Quality Update Version of the device.
+     */
+    @SerializedName("qualityUpdateVersion")
+    @Expose
+    public String qualityUpdateVersion;
+
+    /**
+     * The Status.
+     * Windows udpate status.
+     */
+    @SerializedName("status")
+    @Expose
+    public WindowsUpdateStatus status;
+
+    /**
+     * The User Id.
+     * The id of the user.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Principal Name.
+     * User principal name.
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

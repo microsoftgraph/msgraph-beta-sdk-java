@@ -61,14 +61,14 @@ public class BookingCurrencyCollectionRequest extends BaseCollectionRequest<Book
     public void post(final BookingCurrency newBookingCurrency, final ICallback<BookingCurrency> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingCurrencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingCurrency, callback);
     }
 
     public BookingCurrency post(final BookingCurrency newBookingCurrency) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BookingCurrencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingCurrency);
     }
 
@@ -105,6 +105,27 @@ public class BookingCurrencyCollectionRequest extends BaseCollectionRequest<Book
         return (BookingCurrencyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBookingCurrencyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BookingCurrencyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBookingCurrencyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBookingCurrencyCollectionRequest)this;
+    }
     public IBookingCurrencyCollectionPage buildFromResponse(final BookingCurrencyCollectionResponse response) {
         final IBookingCurrencyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

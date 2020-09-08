@@ -36,6 +36,14 @@ public class ThreatAssessmentRequestsCount implements IJsonBackedObject {
     }
 
     /**
+     * The Count.
+     * 
+     */
+    @SerializedName("count")
+    @Expose
+    public Long count;
+
+    /**
      * The Created Date Time.
      * 
      */
@@ -50,14 +58,6 @@ public class ThreatAssessmentRequestsCount implements IJsonBackedObject {
     @SerializedName("pivotValue")
     @Expose
     public String pivotValue;
-
-    /**
-     * The Count.
-     * 
-     */
-    @SerializedName("count")
-    @Expose
-    public Long count;
 
 
     /**

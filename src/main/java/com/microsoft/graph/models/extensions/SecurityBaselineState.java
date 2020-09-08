@@ -30,20 +30,20 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Security Baseline Template Id.
-     * The security baseline template id
-     */
-    @SerializedName("securityBaselineTemplateId")
-    @Expose
-    public String securityBaselineTemplateId;
-
-    /**
      * The Display Name.
      * The display name of the security baseline
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Security Baseline Template Id.
+     * The security baseline template id
+     */
+    @SerializedName("securityBaselineTemplateId")
+    @Expose
+    public String securityBaselineTemplateId;
 
     /**
      * The Setting States.

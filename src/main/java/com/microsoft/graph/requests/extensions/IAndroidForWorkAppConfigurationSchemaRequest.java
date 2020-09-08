@@ -80,6 +80,23 @@ public interface IAndroidForWorkAppConfigurationSchemaRequest extends IHttpReque
     AndroidForWorkAppConfigurationSchema post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkAppConfigurationSchema with a new object
+     *
+     * @param newAndroidForWorkAppConfigurationSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback);
+
+    /**
+     * Posts a AndroidForWorkAppConfigurationSchema with a new object
+     *
+     * @param newAndroidForWorkAppConfigurationSchema the object to create/update
+     * @return the created AndroidForWorkAppConfigurationSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkAppConfigurationSchema put(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

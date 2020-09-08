@@ -62,14 +62,14 @@ public class ConnectionOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConnectionOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnectionOperation, callback);
     }
 
     public ConnectionOperation post(final ConnectionOperation newConnectionOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConnectionOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnectionOperation);
     }
 
@@ -106,6 +106,27 @@ public class ConnectionOperationCollectionRequest extends BaseCollectionRequest<
         return (ConnectionOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IConnectionOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ConnectionOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IConnectionOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IConnectionOperationCollectionRequest)this;
+    }
     public IConnectionOperationCollectionPage buildFromResponse(final ConnectionOperationCollectionResponse response) {
         final IConnectionOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

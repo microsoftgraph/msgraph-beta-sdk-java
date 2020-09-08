@@ -27,14 +27,6 @@ public class VulnerableManagedDevice extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Managed Device Id.
-     * The Intune managed device ID.
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
      * The Display Name.
      * The device name.
      */
@@ -49,6 +41,14 @@ public class VulnerableManagedDevice extends Entity implements IJsonBackedObject
     @SerializedName("lastSyncDateTime")
     @Expose
     public java.util.Calendar lastSyncDateTime;
+
+    /**
+     * The Managed Device Id.
+     * The Intune managed device ID.
+     */
+    @SerializedName("managedDeviceId")
+    @Expose
+    public String managedDeviceId;
 
 
     /**

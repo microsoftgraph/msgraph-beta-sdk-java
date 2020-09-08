@@ -40,7 +40,7 @@ public class ManagedEBookCategoryCollectionReferenceRequest extends BaseCollecti
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newManagedEBookCategory.id);
         new ManagedEBookCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBookCategory, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class ManagedEBookCategoryCollectionReferenceRequest extends BaseCollecti
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newManagedEBookCategory.id);
         return new ManagedEBookCategoryWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newManagedEBookCategory, body);
     }
     /**

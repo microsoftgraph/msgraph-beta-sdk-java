@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Properties;
-import com.microsoft.graph.models.extensions.ExternalItemContent;
 import com.microsoft.graph.models.extensions.Acl;
+import com.microsoft.graph.models.extensions.ExternalItemContent;
+import com.microsoft.graph.models.extensions.Properties;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,12 +30,12 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Properties.
+     * The Acl.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName("acl")
     @Expose
-    public Properties properties;
+    public java.util.List<Acl> acl;
 
     /**
      * The Content.
@@ -46,12 +46,12 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
     public ExternalItemContent content;
 
     /**
-     * The Acl.
+     * The Properties.
      * 
      */
-    @SerializedName("acl")
+    @SerializedName("properties")
     @Expose
-    public java.util.List<Acl> acl;
+    public Properties properties;
 
 
     /**

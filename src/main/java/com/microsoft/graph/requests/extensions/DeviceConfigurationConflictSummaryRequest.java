@@ -112,6 +112,27 @@ public class DeviceConfigurationConflictSummaryRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a DeviceConfigurationConflictSummary with a new object
+     *
+     * @param newDeviceConfigurationConflictSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationConflictSummary);
+    }
+
+    /**
+     * Creates a DeviceConfigurationConflictSummary with a new object
+     *
+     * @param newDeviceConfigurationConflictSummary the object to create/update
+     * @return the created DeviceConfigurationConflictSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationConflictSummary put(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationConflictSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

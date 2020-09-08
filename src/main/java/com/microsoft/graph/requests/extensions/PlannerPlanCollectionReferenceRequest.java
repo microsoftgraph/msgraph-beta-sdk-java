@@ -40,7 +40,7 @@ public class PlannerPlanCollectionReferenceRequest extends BaseCollectionRequest
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/recentPlans/" + newPlannerPlan.id);
         new PlannerPlanWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPlannerPlan, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class PlannerPlanCollectionReferenceRequest extends BaseCollectionRequest
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/recentPlans/" + newPlannerPlan.id);
         return new PlannerPlanWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newPlannerPlan, body);
     }
     /**

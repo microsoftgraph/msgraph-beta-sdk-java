@@ -36,20 +36,20 @@ public class PrintMargin implements IJsonBackedObject {
     }
 
     /**
-     * The Top.
-     * 
-     */
-    @SerializedName("top")
-    @Expose
-    public Integer top;
-
-    /**
      * The Bottom.
      * 
      */
     @SerializedName("bottom")
     @Expose
     public Integer bottom;
+
+    /**
+     * The Left.
+     * 
+     */
+    @SerializedName("left")
+    @Expose
+    public Integer left;
 
     /**
      * The Right.
@@ -60,12 +60,12 @@ public class PrintMargin implements IJsonBackedObject {
     public Integer right;
 
     /**
-     * The Left.
+     * The Top.
      * 
      */
-    @SerializedName("left")
+    @SerializedName("top")
     @Expose
-    public Integer left;
+    public Integer top;
 
 
     /**

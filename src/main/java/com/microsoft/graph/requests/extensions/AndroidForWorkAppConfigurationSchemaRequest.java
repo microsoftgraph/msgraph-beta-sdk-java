@@ -112,6 +112,27 @@ public class AndroidForWorkAppConfigurationSchemaRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a AndroidForWorkAppConfigurationSchema with a new object
+     *
+     * @param newAndroidForWorkAppConfigurationSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkAppConfigurationSchema);
+    }
+
+    /**
+     * Creates a AndroidForWorkAppConfigurationSchema with a new object
+     *
+     * @param newAndroidForWorkAppConfigurationSchema the object to create/update
+     * @return the created AndroidForWorkAppConfigurationSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkAppConfigurationSchema put(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkAppConfigurationSchema);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

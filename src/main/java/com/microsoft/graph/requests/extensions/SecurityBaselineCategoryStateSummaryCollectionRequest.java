@@ -62,14 +62,14 @@ public class SecurityBaselineCategoryStateSummaryCollectionRequest extends BaseC
     public void post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary, final ICallback<SecurityBaselineCategoryStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecurityBaselineCategoryStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityBaselineCategoryStateSummary, callback);
     }
 
     public SecurityBaselineCategoryStateSummary post(final SecurityBaselineCategoryStateSummary newSecurityBaselineCategoryStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecurityBaselineCategoryStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecurityBaselineCategoryStateSummary);
     }
 
@@ -106,6 +106,27 @@ public class SecurityBaselineCategoryStateSummaryCollectionRequest extends BaseC
         return (SecurityBaselineCategoryStateSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecurityBaselineCategoryStateSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecurityBaselineCategoryStateSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecurityBaselineCategoryStateSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecurityBaselineCategoryStateSummaryCollectionRequest)this;
+    }
     public ISecurityBaselineCategoryStateSummaryCollectionPage buildFromResponse(final SecurityBaselineCategoryStateSummaryCollectionResponse response) {
         final ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

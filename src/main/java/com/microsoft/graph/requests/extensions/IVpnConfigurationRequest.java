@@ -80,6 +80,23 @@ public interface IVpnConfigurationRequest extends IHttpRequest {
     VpnConfiguration post(final VpnConfiguration newVpnConfiguration) throws ClientException;
 
     /**
+     * Posts a VpnConfiguration with a new object
+     *
+     * @param newVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final VpnConfiguration newVpnConfiguration, final ICallback<VpnConfiguration> callback);
+
+    /**
+     * Posts a VpnConfiguration with a new object
+     *
+     * @param newVpnConfiguration the object to create/update
+     * @return the created VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    VpnConfiguration put(final VpnConfiguration newVpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

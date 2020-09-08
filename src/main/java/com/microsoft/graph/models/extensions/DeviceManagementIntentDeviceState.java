@@ -28,28 +28,20 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
 
 
     /**
-     * The User Principal Name.
-     * The user principal name that is being reported on a device
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Name.
-     * The user name that is being reported on a device
-     */
-    @SerializedName("userName")
-    @Expose
-    public String userName;
-
-    /**
      * The Device Display Name.
      * Device name that is being reported
      */
     @SerializedName("deviceDisplayName")
     @Expose
     public String deviceDisplayName;
+
+    /**
+     * The Device Id.
+     * Device id that is being reported
+     */
+    @SerializedName("deviceId")
+    @Expose
+    public String deviceId;
 
     /**
      * The Last Reported Date Time.
@@ -68,12 +60,20 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
     public ComplianceStatus state;
 
     /**
-     * The Device Id.
-     * Device id that is being reported
+     * The User Name.
+     * The user name that is being reported on a device
      */
-    @SerializedName("deviceId")
+    @SerializedName("userName")
     @Expose
-    public String deviceId;
+    public String userName;
+
+    /**
+     * The User Principal Name.
+     * The user principal name that is being reported on a device
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

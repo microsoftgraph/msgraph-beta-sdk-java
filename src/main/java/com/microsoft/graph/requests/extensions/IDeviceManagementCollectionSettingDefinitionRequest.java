@@ -80,6 +80,23 @@ public interface IDeviceManagementCollectionSettingDefinitionRequest extends IHt
     DeviceManagementCollectionSettingDefinition post(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition) throws ClientException;
 
     /**
+     * Posts a DeviceManagementCollectionSettingDefinition with a new object
+     *
+     * @param newDeviceManagementCollectionSettingDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition, final ICallback<DeviceManagementCollectionSettingDefinition> callback);
+
+    /**
+     * Posts a DeviceManagementCollectionSettingDefinition with a new object
+     *
+     * @param newDeviceManagementCollectionSettingDefinition the object to create/update
+     * @return the created DeviceManagementCollectionSettingDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementCollectionSettingDefinition put(final DeviceManagementCollectionSettingDefinition newDeviceManagementCollectionSettingDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -45,20 +45,20 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
     public String connectionName;
 
     /**
-     * The Role.
-     * Role when connection type is set to Pulse Secure.
-     */
-    @SerializedName("role")
-    @Expose
-    public String role;
-
-    /**
      * The Realm.
      * Realm when connection type is set to Pulse Secure.
      */
     @SerializedName("realm")
     @Expose
     public String realm;
+
+    /**
+     * The Role.
+     * Role when connection type is set to Pulse Secure.
+     */
+    @SerializedName("role")
+    @Expose
+    public String role;
 
     /**
      * The Servers.

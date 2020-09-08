@@ -112,6 +112,27 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a CredentialUserRegistrationCount with a new object
+     *
+     * @param newCredentialUserRegistrationCount the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<CredentialUserRegistrationCount> callback) {
+        send(HttpMethod.PUT, callback, newCredentialUserRegistrationCount);
+    }
+
+    /**
+     * Creates a CredentialUserRegistrationCount with a new object
+     *
+     * @param newCredentialUserRegistrationCount the object to create/update
+     * @return the created CredentialUserRegistrationCount
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CredentialUserRegistrationCount put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount) throws ClientException {
+        return send(HttpMethod.PUT, newCredentialUserRegistrationCount);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

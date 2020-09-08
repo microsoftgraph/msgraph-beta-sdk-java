@@ -38,6 +38,22 @@ public class IosVpnSecurityAssociationParameters implements IJsonBackedObject {
     }
 
     /**
+     * The Lifetime In Minutes.
+     * Lifetime (minutes)
+     */
+    @SerializedName("lifetimeInMinutes")
+    @Expose
+    public Integer lifetimeInMinutes;
+
+    /**
+     * The Security Diffie Hellman Group.
+     * Diffie-Hellman Group
+     */
+    @SerializedName("securityDiffieHellmanGroup")
+    @Expose
+    public Integer securityDiffieHellmanGroup;
+
+    /**
      * The Security Encryption Algorithm.
      * Encryption algorithm
      */
@@ -52,22 +68,6 @@ public class IosVpnSecurityAssociationParameters implements IJsonBackedObject {
     @SerializedName("securityIntegrityAlgorithm")
     @Expose
     public VpnIntegrityAlgorithmType securityIntegrityAlgorithm;
-
-    /**
-     * The Security Diffie Hellman Group.
-     * Diffie-Hellman Group
-     */
-    @SerializedName("securityDiffieHellmanGroup")
-    @Expose
-    public Integer securityDiffieHellmanGroup;
-
-    /**
-     * The Lifetime In Minutes.
-     * Lifetime (minutes)
-     */
-    @SerializedName("lifetimeInMinutes")
-    @Expose
-    public Integer lifetimeInMinutes;
 
 
     /**

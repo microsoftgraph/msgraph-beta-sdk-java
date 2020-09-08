@@ -112,6 +112,27 @@ public class Office365ActiveUserCountsRequest extends BaseRequest implements IOf
     }
 
     /**
+     * Creates a Office365ActiveUserCounts with a new object
+     *
+     * @param newOffice365ActiveUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365ActiveUserCounts newOffice365ActiveUserCounts, final ICallback<Office365ActiveUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newOffice365ActiveUserCounts);
+    }
+
+    /**
+     * Creates a Office365ActiveUserCounts with a new object
+     *
+     * @param newOffice365ActiveUserCounts the object to create/update
+     * @return the created Office365ActiveUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365ActiveUserCounts put(final Office365ActiveUserCounts newOffice365ActiveUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365ActiveUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

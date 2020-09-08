@@ -75,16 +75,16 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
         return new EducationSynchronizationProfileStatusRequestBuilder(getRequestUrlWithAdditionalSegment("profileStatus"), getClient(), null);
     }
 
-    public IEducationSynchronizationProfileResumeRequestBuilder resume() {
-        return new EducationSynchronizationProfileResumeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resume"), getClient(), null);
-    }
-
     public IEducationSynchronizationProfilePauseRequestBuilder pause() {
         return new EducationSynchronizationProfilePauseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pause"), getClient(), null);
     }
 
     public IEducationSynchronizationProfileResetRequestBuilder reset() {
         return new EducationSynchronizationProfileResetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reset"), getClient(), null);
+    }
+
+    public IEducationSynchronizationProfileResumeRequestBuilder resume() {
+        return new EducationSynchronizationProfileResumeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resume"), getClient(), null);
     }
 
     public IEducationSynchronizationProfileStartCollectionRequestBuilder start() {

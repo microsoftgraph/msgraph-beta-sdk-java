@@ -80,6 +80,23 @@ public interface IOneDriveUsageFileCountsRequest extends IHttpRequest {
     OneDriveUsageFileCounts post(final OneDriveUsageFileCounts newOneDriveUsageFileCounts) throws ClientException;
 
     /**
+     * Posts a OneDriveUsageFileCounts with a new object
+     *
+     * @param newOneDriveUsageFileCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OneDriveUsageFileCounts newOneDriveUsageFileCounts, final ICallback<OneDriveUsageFileCounts> callback);
+
+    /**
+     * Posts a OneDriveUsageFileCounts with a new object
+     *
+     * @param newOneDriveUsageFileCounts the object to create/update
+     * @return the created OneDriveUsageFileCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OneDriveUsageFileCounts put(final OneDriveUsageFileCounts newOneDriveUsageFileCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

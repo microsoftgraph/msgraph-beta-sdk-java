@@ -45,6 +45,14 @@ public class ClassifcationErrorBase implements IJsonBackedObject {
     public String code;
 
     /**
+     * The Inner Error.
+     * 
+     */
+    @SerializedName("innerError")
+    @Expose
+    public ClassificationInnerError innerError;
+
+    /**
      * The Message.
      * 
      */
@@ -59,14 +67,6 @@ public class ClassifcationErrorBase implements IJsonBackedObject {
     @SerializedName("target")
     @Expose
     public String target;
-
-    /**
-     * The Inner Error.
-     * 
-     */
-    @SerializedName("innerError")
-    @Expose
-    public ClassificationInnerError innerError;
 
 
     /**

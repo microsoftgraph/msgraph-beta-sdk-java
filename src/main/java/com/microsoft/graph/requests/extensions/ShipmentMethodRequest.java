@@ -112,6 +112,27 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
     }
 
     /**
+     * Creates a ShipmentMethod with a new object
+     *
+     * @param newShipmentMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ShipmentMethod newShipmentMethod, final ICallback<ShipmentMethod> callback) {
+        send(HttpMethod.PUT, callback, newShipmentMethod);
+    }
+
+    /**
+     * Creates a ShipmentMethod with a new object
+     *
+     * @param newShipmentMethod the object to create/update
+     * @return the created ShipmentMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ShipmentMethod put(final ShipmentMethod newShipmentMethod) throws ClientException {
+        return send(HttpMethod.PUT, newShipmentMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -53,12 +53,12 @@ public class AuthenticationMethodRequestBuilder extends BaseRequestBuilder imple
 
 
 
-    public IAuthenticationMethodEnableSmsSignInRequestBuilder enableSmsSignIn() {
-        return new AuthenticationMethodEnableSmsSignInRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.enableSmsSignIn"), getClient(), null);
-    }
-
     public IAuthenticationMethodDisableSmsSignInRequestBuilder disableSmsSignIn() {
         return new AuthenticationMethodDisableSmsSignInRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disableSmsSignIn"), getClient(), null);
+    }
+
+    public IAuthenticationMethodEnableSmsSignInRequestBuilder enableSmsSignIn() {
+        return new AuthenticationMethodEnableSmsSignInRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.enableSmsSignIn"), getClient(), null);
     }
 
     public IAuthenticationMethodResetPasswordRequestBuilder resetPassword(final String newPassword, final Boolean requireChangeOnNextSignIn) {

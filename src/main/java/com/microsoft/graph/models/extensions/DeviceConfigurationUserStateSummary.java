@@ -27,22 +27,6 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
 
 
     /**
-     * The Unknown User Count.
-     * Number of unknown users
-     */
-    @SerializedName("unknownUserCount")
-    @Expose
-    public Integer unknownUserCount;
-
-    /**
-     * The Not Applicable User Count.
-     * Number of not applicable users
-     */
-    @SerializedName("notApplicableUserCount")
-    @Expose
-    public Integer notApplicableUserCount;
-
-    /**
      * The Compliant User Count.
      * Number of compliant users
      */
@@ -51,20 +35,12 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
     public Integer compliantUserCount;
 
     /**
-     * The Remediated User Count.
-     * Number of remediated users
+     * The Conflict User Count.
+     * Number of conflict users
      */
-    @SerializedName("remediatedUserCount")
+    @SerializedName("conflictUserCount")
     @Expose
-    public Integer remediatedUserCount;
-
-    /**
-     * The Non Compliant User Count.
-     * Number of NonCompliant users
-     */
-    @SerializedName("nonCompliantUserCount")
-    @Expose
-    public Integer nonCompliantUserCount;
+    public Integer conflictUserCount;
 
     /**
      * The Error User Count.
@@ -75,12 +51,36 @@ public class DeviceConfigurationUserStateSummary extends Entity implements IJson
     public Integer errorUserCount;
 
     /**
-     * The Conflict User Count.
-     * Number of conflict users
+     * The Non Compliant User Count.
+     * Number of NonCompliant users
      */
-    @SerializedName("conflictUserCount")
+    @SerializedName("nonCompliantUserCount")
     @Expose
-    public Integer conflictUserCount;
+    public Integer nonCompliantUserCount;
+
+    /**
+     * The Not Applicable User Count.
+     * Number of not applicable users
+     */
+    @SerializedName("notApplicableUserCount")
+    @Expose
+    public Integer notApplicableUserCount;
+
+    /**
+     * The Remediated User Count.
+     * Number of remediated users
+     */
+    @SerializedName("remediatedUserCount")
+    @Expose
+    public Integer remediatedUserCount;
+
+    /**
+     * The Unknown User Count.
+     * Number of unknown users
+     */
+    @SerializedName("unknownUserCount")
+    @Expose
+    public Integer unknownUserCount;
 
 
     /**

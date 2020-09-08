@@ -62,14 +62,14 @@ public class PersonCertificationCollectionRequest extends BaseCollectionRequest<
     public void post(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonCertificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPersonCertification, callback);
     }
 
     public PersonCertification post(final PersonCertification newPersonCertification) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PersonCertificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPersonCertification);
     }
 
@@ -106,6 +106,27 @@ public class PersonCertificationCollectionRequest extends BaseCollectionRequest<
         return (PersonCertificationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPersonCertificationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PersonCertificationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPersonCertificationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPersonCertificationCollectionRequest)this;
+    }
     public IPersonCertificationCollectionPage buildFromResponse(final PersonCertificationCollectionResponse response) {
         final IPersonCertificationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

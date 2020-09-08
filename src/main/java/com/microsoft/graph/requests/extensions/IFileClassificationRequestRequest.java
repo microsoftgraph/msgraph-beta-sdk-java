@@ -80,6 +80,23 @@ public interface IFileClassificationRequestRequest extends IHttpRequest {
     FileClassificationRequest post(final FileClassificationRequest newFileClassificationRequest) throws ClientException;
 
     /**
+     * Posts a FileClassificationRequest with a new object
+     *
+     * @param newFileClassificationRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final FileClassificationRequest newFileClassificationRequest, final ICallback<FileClassificationRequest> callback);
+
+    /**
+     * Posts a FileClassificationRequest with a new object
+     *
+     * @param newFileClassificationRequest the object to create/update
+     * @return the created FileClassificationRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    FileClassificationRequest put(final FileClassificationRequest newFileClassificationRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

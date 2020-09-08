@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackage;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
@@ -61,6 +61,13 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
+    public IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
+        return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
+    }
+
+    public IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(final String id) {
+        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AccessPackageCatalog
@@ -76,12 +83,5 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
 
     public IAccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(final String id) {
         return new AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
-    }
-    public IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
-        return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
-    }
-
-    public IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(final String id) {
-        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
     }
 }

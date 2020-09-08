@@ -80,6 +80,23 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequest extend
     ActiveDirectoryWindowsAutopilotDeploymentProfile post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException;
 
     /**
+     * Posts a ActiveDirectoryWindowsAutopilotDeploymentProfile with a new object
+     *
+     * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<ActiveDirectoryWindowsAutopilotDeploymentProfile> callback);
+
+    /**
+     * Posts a ActiveDirectoryWindowsAutopilotDeploymentProfile with a new object
+     *
+     * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
+     * @return the created ActiveDirectoryWindowsAutopilotDeploymentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ActiveDirectoryWindowsAutopilotDeploymentProfile put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

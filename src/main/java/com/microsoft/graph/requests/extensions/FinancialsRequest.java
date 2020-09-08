@@ -116,6 +116,27 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
     }
 
     /**
+     * Creates a Financials with a new object
+     *
+     * @param newFinancials the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Financials newFinancials, final ICallback<Financials> callback) {
+        send(HttpMethod.PUT, callback, newFinancials);
+    }
+
+    /**
+     * Creates a Financials with a new object
+     *
+     * @param newFinancials the object to create/update
+     * @return the created Financials
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Financials put(final Financials newFinancials) throws ClientException {
+        return send(HttpMethod.PUT, newFinancials);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

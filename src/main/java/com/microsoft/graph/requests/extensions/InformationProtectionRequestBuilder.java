@@ -12,14 +12,14 @@ import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
 import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;
 import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
@@ -80,6 +80,13 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
     public IInformationProtectionPolicyRequestBuilder policy() {
         return new InformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
+    public IDataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies() {
+        return new DataLossPreventionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies"), getClient(), null);
+    }
+
+    public IDataLossPreventionPolicyRequestBuilder dataLossPreventionPolicies(final String id) {
+        return new DataLossPreventionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies") + "/" + id, getClient(), null);
+    }
     public ISensitivityLabelCollectionRequestBuilder sensitivityLabels() {
         return new SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
     }
@@ -95,13 +102,6 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
      */
     public ISensitivityPolicySettingsRequestBuilder sensitivityPolicySettings() {
         return new SensitivityPolicySettingsRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityPolicySettings"), getClient(), null);
-    }
-    public IDataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies() {
-        return new DataLossPreventionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies"), getClient(), null);
-    }
-
-    public IDataLossPreventionPolicyRequestBuilder dataLossPreventionPolicies(final String id) {
-        return new DataLossPreventionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("dataLossPreventionPolicies") + "/" + id, getClient(), null);
     }
     public IThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);

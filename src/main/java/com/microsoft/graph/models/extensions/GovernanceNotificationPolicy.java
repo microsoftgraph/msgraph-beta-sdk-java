@@ -37,20 +37,20 @@ public class GovernanceNotificationPolicy implements IJsonBackedObject {
     }
 
     /**
-     * The Notification Templates.
-     * 
-     */
-    @SerializedName("notificationTemplates")
-    @Expose
-    public java.util.List<GovernanceNotificationTemplate> notificationTemplates;
-
-    /**
      * The Enabled Template Types.
      * 
      */
     @SerializedName("enabledTemplateTypes")
     @Expose
     public java.util.List<String> enabledTemplateTypes;
+
+    /**
+     * The Notification Templates.
+     * 
+     */
+    @SerializedName("notificationTemplates")
+    @Expose
+    public java.util.List<GovernanceNotificationTemplate> notificationTemplates;
 
 
     /**

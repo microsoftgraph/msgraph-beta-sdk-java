@@ -36,14 +36,6 @@ public class LocalizedLabel implements IJsonBackedObject {
     }
 
     /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Is Default.
      * 
      */
@@ -58,6 +50,14 @@ public class LocalizedLabel implements IJsonBackedObject {
     @SerializedName("languageTag")
     @Expose
     public String languageTag;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
 
     /**

@@ -112,6 +112,27 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
     }
 
     /**
+     * Creates a MicrosoftStoreForBusinessContainedApp with a new object
+     *
+     * @param newMicrosoftStoreForBusinessContainedApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<MicrosoftStoreForBusinessContainedApp> callback) {
+        send(HttpMethod.PUT, callback, newMicrosoftStoreForBusinessContainedApp);
+    }
+
+    /**
+     * Creates a MicrosoftStoreForBusinessContainedApp with a new object
+     *
+     * @param newMicrosoftStoreForBusinessContainedApp the object to create/update
+     * @return the created MicrosoftStoreForBusinessContainedApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MicrosoftStoreForBusinessContainedApp put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp) throws ClientException {
+        return send(HttpMethod.PUT, newMicrosoftStoreForBusinessContainedApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

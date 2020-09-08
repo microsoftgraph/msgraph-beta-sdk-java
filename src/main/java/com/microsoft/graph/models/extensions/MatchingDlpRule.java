@@ -38,20 +38,20 @@ public class MatchingDlpRule implements IJsonBackedObject {
     }
 
     /**
-     * The Rule Id.
+     * The Actions.
      * 
      */
-    @SerializedName("ruleId")
+    @SerializedName("actions")
     @Expose
-    public String ruleId;
+    public java.util.List<DlpActionInfo> actions;
 
     /**
-     * The Rule Name.
+     * The Is Most Restrictive.
      * 
      */
-    @SerializedName("ruleName")
+    @SerializedName("isMostRestrictive")
     @Expose
-    public String ruleName;
+    public Boolean isMostRestrictive;
 
     /**
      * The Policy Id.
@@ -70,14 +70,6 @@ public class MatchingDlpRule implements IJsonBackedObject {
     public String policyName;
 
     /**
-     * The Is Most Restrictive.
-     * 
-     */
-    @SerializedName("isMostRestrictive")
-    @Expose
-    public Boolean isMostRestrictive;
-
-    /**
      * The Priority.
      * 
      */
@@ -86,12 +78,12 @@ public class MatchingDlpRule implements IJsonBackedObject {
     public Integer priority;
 
     /**
-     * The Actions.
+     * The Rule Id.
      * 
      */
-    @SerializedName("actions")
+    @SerializedName("ruleId")
     @Expose
-    public java.util.List<DlpActionInfo> actions;
+    public String ruleId;
 
     /**
      * The Rule Mode.
@@ -100,6 +92,14 @@ public class MatchingDlpRule implements IJsonBackedObject {
     @SerializedName("ruleMode")
     @Expose
     public RuleMode ruleMode;
+
+    /**
+     * The Rule Name.
+     * 
+     */
+    @SerializedName("ruleName")
+    @Expose
+    public String ruleName;
 
 
     /**

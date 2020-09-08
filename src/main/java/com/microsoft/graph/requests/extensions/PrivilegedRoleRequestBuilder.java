@@ -60,6 +60,13 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+    public IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder assignments() {
+        return new PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IPrivilegedRoleAssignmentWithReferenceRequestBuilder assignments(final String id) {
+        return new PrivilegedRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for PrivilegedRoleSettings
@@ -68,13 +75,6 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder implements 
      */
     public IPrivilegedRoleSettingsRequestBuilder settings() {
         return new PrivilegedRoleSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
-    }
-    public IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder assignments() {
-        return new PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
-    }
-
-    public IPrivilegedRoleAssignmentWithReferenceRequestBuilder assignments(final String id) {
-        return new PrivilegedRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

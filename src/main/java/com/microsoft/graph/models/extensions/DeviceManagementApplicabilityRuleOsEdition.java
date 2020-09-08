@@ -38,20 +38,20 @@ public class DeviceManagementApplicabilityRuleOsEdition implements IJsonBackedOb
     }
 
     /**
-     * The Os Edition Types.
-     * Applicability rule OS edition type.
-     */
-    @SerializedName("osEditionTypes")
-    @Expose
-    public java.util.List<Windows10EditionType> osEditionTypes;
-
-    /**
      * The Name.
      * Name for object.
      */
     @SerializedName("name")
     @Expose
     public String name;
+
+    /**
+     * The Os Edition Types.
+     * Applicability rule OS edition type.
+     */
+    @SerializedName("osEditionTypes")
+    @Expose
+    public java.util.List<Windows10EditionType> osEditionTypes;
 
     /**
      * The Rule Type.

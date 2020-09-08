@@ -62,14 +62,14 @@ public class AgreementFileLocalizationCollectionRequest extends BaseCollectionRe
     public void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<AgreementFileLocalization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AgreementFileLocalizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreementFileLocalization, callback);
     }
 
     public AgreementFileLocalization post(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AgreementFileLocalizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreementFileLocalization);
     }
 
@@ -106,6 +106,27 @@ public class AgreementFileLocalizationCollectionRequest extends BaseCollectionRe
         return (AgreementFileLocalizationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAgreementFileLocalizationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AgreementFileLocalizationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAgreementFileLocalizationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAgreementFileLocalizationCollectionRequest)this;
+    }
     public IAgreementFileLocalizationCollectionPage buildFromResponse(final AgreementFileLocalizationCollectionResponse response) {
         final IAgreementFileLocalizationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

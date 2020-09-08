@@ -8,17 +8,17 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
+import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage;
 
@@ -39,38 +39,6 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
 
 
     /**
-     * The Expiration Date Time.
-     * Optional profile expiration date and time.
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Payload File Name.
-     * Payload file name (*.mobileprovision | *.xml).
-     */
-    @SerializedName("payloadFileName")
-    @Expose
-    public String payloadFileName;
-
-    /**
-     * The Payload.
-     * Payload. (UTF8 encoded byte array)
-     */
-    @SerializedName("payload")
-    @Expose
-    public byte[] payload;
-
-    /**
-     * The Role Scope Tag Ids.
-     * List of Scope Tags for this iOS LOB app provisioning configuration entity.
-     */
-    @SerializedName("roleScopeTagIds")
-    @Expose
-    public java.util.List<String> roleScopeTagIds;
-
-    /**
      * The Created Date Time.
      * DateTime the object was created.
      */
@@ -87,14 +55,6 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
     public String description;
 
     /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Display Name.
      * Admin provided name of the device configuration.
      */
@@ -103,18 +63,52 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
     public String displayName;
 
     /**
+     * The Expiration Date Time.
+     * Optional profile expiration date and time.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Payload.
+     * Payload. (UTF8 encoded byte array)
+     */
+    @SerializedName("payload")
+    @Expose
+    public byte[] payload;
+
+    /**
+     * The Payload File Name.
+     * Payload file name (*.mobileprovision | *.xml).
+     */
+    @SerializedName("payloadFileName")
+    @Expose
+    public String payloadFileName;
+
+    /**
+     * The Role Scope Tag Ids.
+     * List of Scope Tags for this iOS LOB app provisioning configuration entity.
+     */
+    @SerializedName("roleScopeTagIds")
+    @Expose
+    public java.util.List<String> roleScopeTagIds;
+
+    /**
      * The Version.
      * Version of the device configuration.
      */
     @SerializedName("version")
     @Expose
     public Integer version;
-
-    /**
-     * The Group Assignments.
-     * The associated group assignments.
-     */
-    public MobileAppProvisioningConfigGroupAssignmentCollectionPage groupAssignments;
 
     /**
      * The Assignments.
@@ -127,6 +121,12 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The list of device installation states for this mobile app configuration.
      */
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
+
+    /**
+     * The Group Assignments.
+     * The associated group assignments.
+     */
+    public MobileAppProvisioningConfigGroupAssignmentCollectionPage groupAssignments;
 
     /**
      * The User Statuses.
@@ -174,22 +174,6 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
         rawObject = json;
 
 
-        if (json.has("groupAssignments")) {
-            final MobileAppProvisioningConfigGroupAssignmentCollectionResponse response = new MobileAppProvisioningConfigGroupAssignmentCollectionResponse();
-            if (json.has("groupAssignments@odata.nextLink")) {
-                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
-            final MobileAppProvisioningConfigGroupAssignment[] array = new MobileAppProvisioningConfigGroupAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppProvisioningConfigGroupAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupAssignments = new MobileAppProvisioningConfigGroupAssignmentCollectionPage(response, null);
-        }
-
         if (json.has("assignments")) {
             final IosLobAppProvisioningConfigurationAssignmentCollectionResponse response = new IosLobAppProvisioningConfigurationAssignmentCollectionResponse();
             if (json.has("assignments@odata.nextLink")) {
@@ -220,6 +204,22 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
             }
             response.value = Arrays.asList(array);
             deviceStatuses = new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(response, null);
+        }
+
+        if (json.has("groupAssignments")) {
+            final MobileAppProvisioningConfigGroupAssignmentCollectionResponse response = new MobileAppProvisioningConfigGroupAssignmentCollectionResponse();
+            if (json.has("groupAssignments@odata.nextLink")) {
+                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
+            final MobileAppProvisioningConfigGroupAssignment[] array = new MobileAppProvisioningConfigGroupAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppProvisioningConfigGroupAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            groupAssignments = new MobileAppProvisioningConfigGroupAssignmentCollectionPage(response, null);
         }
 
         if (json.has("userStatuses")) {

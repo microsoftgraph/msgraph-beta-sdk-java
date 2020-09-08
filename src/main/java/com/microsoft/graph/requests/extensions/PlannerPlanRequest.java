@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerPlan;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class PlannerPlanRequest extends BaseRequest implements IPlannerPlanReque
      */
     public PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException {
         return send(HttpMethod.POST, newPlannerPlan);
+    }
+
+    /**
+     * Creates a PlannerPlan with a new object
+     *
+     * @param newPlannerPlan the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerPlan newPlannerPlan, final ICallback<PlannerPlan> callback) {
+        send(HttpMethod.PUT, callback, newPlannerPlan);
+    }
+
+    /**
+     * Creates a PlannerPlan with a new object
+     *
+     * @param newPlannerPlan the object to create/update
+     * @return the created PlannerPlan
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerPlan put(final PlannerPlan newPlannerPlan) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerPlan);
     }
 
     /**

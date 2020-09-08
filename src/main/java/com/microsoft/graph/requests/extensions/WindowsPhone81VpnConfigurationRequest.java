@@ -114,6 +114,27 @@ public class WindowsPhone81VpnConfigurationRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a WindowsPhone81VpnConfiguration with a new object
+     *
+     * @param newWindowsPhone81VpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhone81VpnConfiguration);
+    }
+
+    /**
+     * Creates a WindowsPhone81VpnConfiguration with a new object
+     *
+     * @param newWindowsPhone81VpnConfiguration the object to create/update
+     * @return the created WindowsPhone81VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhone81VpnConfiguration put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhone81VpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -114,6 +114,27 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
     }
 
     /**
+     * Creates a Command with a new object
+     *
+     * @param newCommand the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Command newCommand, final ICallback<Command> callback) {
+        send(HttpMethod.PUT, callback, newCommand);
+    }
+
+    /**
+     * Creates a Command with a new object
+     *
+     * @param newCommand the object to create/update
+     * @return the created Command
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Command put(final Command newCommand) throws ClientException {
+        return send(HttpMethod.PUT, newCommand);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

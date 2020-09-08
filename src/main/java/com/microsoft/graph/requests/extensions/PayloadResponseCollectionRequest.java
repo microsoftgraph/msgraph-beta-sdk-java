@@ -61,14 +61,14 @@ public class PayloadResponseCollectionRequest extends BaseCollectionRequest<Payl
     public void post(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PayloadResponseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPayloadResponse, callback);
     }
 
     public PayloadResponse post(final PayloadResponse newPayloadResponse) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PayloadResponseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPayloadResponse);
     }
 
@@ -105,6 +105,27 @@ public class PayloadResponseCollectionRequest extends BaseCollectionRequest<Payl
         return (PayloadResponseCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPayloadResponseCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PayloadResponseCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPayloadResponseCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPayloadResponseCollectionRequest)this;
+    }
     public IPayloadResponseCollectionPage buildFromResponse(final PayloadResponseCollectionResponse response) {
         final IPayloadResponseCollectionRequestBuilder builder;
         if (response.nextLink != null) {

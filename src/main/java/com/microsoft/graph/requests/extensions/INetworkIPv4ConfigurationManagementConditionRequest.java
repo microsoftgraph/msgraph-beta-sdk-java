@@ -80,6 +80,23 @@ public interface INetworkIPv4ConfigurationManagementConditionRequest extends IHt
     NetworkIPv4ConfigurationManagementCondition post(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition) throws ClientException;
 
     /**
+     * Posts a NetworkIPv4ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv4ConfigurationManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback);
+
+    /**
+     * Posts a NetworkIPv4ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv4ConfigurationManagementCondition the object to create/update
+     * @return the created NetworkIPv4ConfigurationManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    NetworkIPv4ConfigurationManagementCondition put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

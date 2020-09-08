@@ -62,14 +62,14 @@ public class ManagedDeviceMobileAppConfigurationStateCollectionRequest extends B
     public void post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState, final ICallback<ManagedDeviceMobileAppConfigurationState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceMobileAppConfigurationState, callback);
     }
 
     public ManagedDeviceMobileAppConfigurationState post(final ManagedDeviceMobileAppConfigurationState newManagedDeviceMobileAppConfigurationState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceMobileAppConfigurationState);
     }
 
@@ -106,6 +106,27 @@ public class ManagedDeviceMobileAppConfigurationStateCollectionRequest extends B
         return (ManagedDeviceMobileAppConfigurationStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceMobileAppConfigurationStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceMobileAppConfigurationStateCollectionRequest)this;
+    }
     public IManagedDeviceMobileAppConfigurationStateCollectionPage buildFromResponse(final ManagedDeviceMobileAppConfigurationStateCollectionResponse response) {
         final IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

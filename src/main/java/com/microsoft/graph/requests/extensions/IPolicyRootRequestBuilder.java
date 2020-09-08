@@ -110,15 +110,15 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
      */
     IDirectoryRoleAccessReviewPolicyRequestBuilder directoryRoleAccessReviewPolicy();
 
+    IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies();
+
+    IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id);
+
     /**
      * Gets the request builder for IdentitySecurityDefaultsEnforcementPolicy
      *
      * @return the IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
      */
     IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy();
-
-    IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies();
-
-    IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id);
 
 }

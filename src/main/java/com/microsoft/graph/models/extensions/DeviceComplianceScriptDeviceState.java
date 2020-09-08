@@ -37,20 +37,20 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
     public RunState detectionState;
 
     /**
-     * The Last State Update Date Time.
-     * The last timestamp of when the device compliance script executed
-     */
-    @SerializedName("lastStateUpdateDateTime")
-    @Expose
-    public java.util.Calendar lastStateUpdateDateTime;
-
-    /**
      * The Expected State Update Date Time.
      * The next timestamp of when the device compliance script is expected to execute
      */
     @SerializedName("expectedStateUpdateDateTime")
     @Expose
     public java.util.Calendar expectedStateUpdateDateTime;
+
+    /**
+     * The Last State Update Date Time.
+     * The last timestamp of when the device compliance script executed
+     */
+    @SerializedName("lastStateUpdateDateTime")
+    @Expose
+    public java.util.Calendar lastStateUpdateDateTime;
 
     /**
      * The Last Sync Date Time.
@@ -61,20 +61,20 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
     public java.util.Calendar lastSyncDateTime;
 
     /**
-     * The Script Output.
-     * Output of the detection script
-     */
-    @SerializedName("scriptOutput")
-    @Expose
-    public String scriptOutput;
-
-    /**
      * The Script Error.
      * Error from the detection script
      */
     @SerializedName("scriptError")
     @Expose
     public String scriptError;
+
+    /**
+     * The Script Output.
+     * Output of the detection script
+     */
+    @SerializedName("scriptOutput")
+    @Expose
+    public String scriptOutput;
 
     /**
      * The Managed Device.

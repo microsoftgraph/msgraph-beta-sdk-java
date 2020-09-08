@@ -13,12 +13,12 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -44,6 +44,10 @@ public interface IChatRequestBuilder extends IRequestBuilder {
     IChatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    ITeamsAppInstallationCollectionRequestBuilder installedApps();
+
+    ITeamsAppInstallationRequestBuilder installedApps(final String id);
+
     IConversationMemberCollectionRequestBuilder members();
 
     IConversationMemberRequestBuilder members(final String id);
@@ -51,10 +55,6 @@ public interface IChatRequestBuilder extends IRequestBuilder {
     IChatMessageCollectionRequestBuilder messages();
 
     IChatMessageRequestBuilder messages(final String id);
-
-    ITeamsAppInstallationCollectionRequestBuilder installedApps();
-
-    ITeamsAppInstallationRequestBuilder installedApps(final String id);
     IChatSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient);
 
 }

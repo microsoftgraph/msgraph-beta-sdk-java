@@ -62,14 +62,14 @@ public class JournalCollectionRequest extends BaseCollectionRequest<JournalColle
     public void post(final Journal newJournal, final ICallback<Journal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new JournalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newJournal, callback);
     }
 
     public Journal post(final Journal newJournal) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new JournalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newJournal);
     }
 
@@ -106,6 +106,27 @@ public class JournalCollectionRequest extends BaseCollectionRequest<JournalColle
         return (JournalCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IJournalCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (JournalCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IJournalCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IJournalCollectionRequest)this;
+    }
     public IJournalCollectionPage buildFromResponse(final JournalCollectionResponse response) {
         final IJournalCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -112,6 +112,27 @@ public class AgedAccountsReceivableRequest extends BaseRequest implements IAgedA
     }
 
     /**
+     * Creates a AgedAccountsReceivable with a new object
+     *
+     * @param newAgedAccountsReceivable the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback) {
+        send(HttpMethod.PUT, callback, newAgedAccountsReceivable);
+    }
+
+    /**
+     * Creates a AgedAccountsReceivable with a new object
+     *
+     * @param newAgedAccountsReceivable the object to create/update
+     * @return the created AgedAccountsReceivable
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AgedAccountsReceivable put(final AgedAccountsReceivable newAgedAccountsReceivable) throws ClientException {
+        return send(HttpMethod.PUT, newAgedAccountsReceivable);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

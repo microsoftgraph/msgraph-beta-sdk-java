@@ -62,14 +62,14 @@ public class CartToClassAssociationCollectionRequest extends BaseCollectionReque
     public void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<CartToClassAssociation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CartToClassAssociationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCartToClassAssociation, callback);
     }
 
     public CartToClassAssociation post(final CartToClassAssociation newCartToClassAssociation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CartToClassAssociationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCartToClassAssociation);
     }
 
@@ -106,6 +106,27 @@ public class CartToClassAssociationCollectionRequest extends BaseCollectionReque
         return (CartToClassAssociationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICartToClassAssociationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CartToClassAssociationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICartToClassAssociationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICartToClassAssociationCollectionRequest)this;
+    }
     public ICartToClassAssociationCollectionPage buildFromResponse(final CartToClassAssociationCollectionResponse response) {
         final ICartToClassAssociationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

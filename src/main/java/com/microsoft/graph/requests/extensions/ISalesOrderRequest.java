@@ -80,6 +80,23 @@ public interface ISalesOrderRequest extends IHttpRequest {
     SalesOrder post(final SalesOrder newSalesOrder) throws ClientException;
 
     /**
+     * Posts a SalesOrder with a new object
+     *
+     * @param newSalesOrder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SalesOrder newSalesOrder, final ICallback<SalesOrder> callback);
+
+    /**
+     * Posts a SalesOrder with a new object
+     *
+     * @param newSalesOrder the object to create/update
+     * @return the created SalesOrder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SalesOrder put(final SalesOrder newSalesOrder) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

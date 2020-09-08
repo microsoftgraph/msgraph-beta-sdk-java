@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.UserNewMessageRestriction;
 import com.microsoft.graph.models.generated.ReplyRestriction;
+import com.microsoft.graph.models.generated.UserNewMessageRestriction;
 
 
 import com.google.gson.JsonObject;
@@ -38,22 +38,6 @@ public class ChannelModerationSettings implements IJsonBackedObject {
     }
 
     /**
-     * The User New Message Restriction.
-     * 
-     */
-    @SerializedName("userNewMessageRestriction")
-    @Expose
-    public UserNewMessageRestriction userNewMessageRestriction;
-
-    /**
-     * The Reply Restriction.
-     * 
-     */
-    @SerializedName("replyRestriction")
-    @Expose
-    public ReplyRestriction replyRestriction;
-
-    /**
      * The Allow New Message From Bots.
      * 
      */
@@ -68,6 +52,22 @@ public class ChannelModerationSettings implements IJsonBackedObject {
     @SerializedName("allowNewMessageFromConnectors")
     @Expose
     public Boolean allowNewMessageFromConnectors;
+
+    /**
+     * The Reply Restriction.
+     * 
+     */
+    @SerializedName("replyRestriction")
+    @Expose
+    public ReplyRestriction replyRestriction;
+
+    /**
+     * The User New Message Restriction.
+     * 
+     */
+    @SerializedName("userNewMessageRestriction")
+    @Expose
+    public UserNewMessageRestriction userNewMessageRestriction;
 
 
     /**

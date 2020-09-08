@@ -62,14 +62,14 @@ public class UserExperienceAnalyticsDeviceStartupProcessCollectionRequest extend
     public void post(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess, final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsDeviceStartupProcessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsDeviceStartupProcess, callback);
     }
 
     public UserExperienceAnalyticsDeviceStartupProcess post(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsDeviceStartupProcessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsDeviceStartupProcess);
     }
 
@@ -106,6 +106,27 @@ public class UserExperienceAnalyticsDeviceStartupProcessCollectionRequest extend
         return (UserExperienceAnalyticsDeviceStartupProcessCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDeviceStartupProcessCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsDeviceStartupProcessCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDeviceStartupProcessCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsDeviceStartupProcessCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsDeviceStartupProcessCollectionPage buildFromResponse(final UserExperienceAnalyticsDeviceStartupProcessCollectionResponse response) {
         final IUserExperienceAnalyticsDeviceStartupProcessCollectionRequestBuilder builder;
         if (response.nextLink != null) {

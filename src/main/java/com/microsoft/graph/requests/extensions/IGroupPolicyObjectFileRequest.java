@@ -80,6 +80,23 @@ public interface IGroupPolicyObjectFileRequest extends IHttpRequest {
     GroupPolicyObjectFile post(final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException;
 
     /**
+     * Posts a GroupPolicyObjectFile with a new object
+     *
+     * @param newGroupPolicyObjectFile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<GroupPolicyObjectFile> callback);
+
+    /**
+     * Posts a GroupPolicyObjectFile with a new object
+     *
+     * @param newGroupPolicyObjectFile the object to create/update
+     * @return the created GroupPolicyObjectFile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyObjectFile put(final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

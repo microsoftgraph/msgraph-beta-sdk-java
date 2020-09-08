@@ -30,20 +30,20 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * The display or friendly name of the Role Scope Tag.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Description of the Role Scope Tag.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * The display or friendly name of the Role Scope Tag.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Is Built In.

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
@@ -41,13 +41,13 @@ public interface IAccessPackageCatalogRequestBuilder extends IRequestBuilder {
     IAccessPackageCatalogRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IAccessPackageResourceCollectionRequestBuilder accessPackageResources();
-
-    IAccessPackageResourceRequestBuilder accessPackageResources(final String id);
-
     IAccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles();
 
     IAccessPackageResourceRoleRequestBuilder accessPackageResourceRoles(final String id);
+
+    IAccessPackageResourceCollectionRequestBuilder accessPackageResources();
+
+    IAccessPackageResourceRequestBuilder accessPackageResources(final String id);
 
     IAccessPackageResourceScopeCollectionRequestBuilder accessPackageResourceScopes();
 

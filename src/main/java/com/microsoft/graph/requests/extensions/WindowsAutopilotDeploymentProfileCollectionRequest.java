@@ -63,14 +63,14 @@ public class WindowsAutopilotDeploymentProfileCollectionRequest extends BaseColl
     public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsAutopilotDeploymentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsAutopilotDeploymentProfile, callback);
     }
 
     public WindowsAutopilotDeploymentProfile post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsAutopilotDeploymentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsAutopilotDeploymentProfile);
     }
 
@@ -107,6 +107,27 @@ public class WindowsAutopilotDeploymentProfileCollectionRequest extends BaseColl
         return (WindowsAutopilotDeploymentProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsAutopilotDeploymentProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsAutopilotDeploymentProfileCollectionRequest)this;
+    }
     public IWindowsAutopilotDeploymentProfileCollectionPage buildFromResponse(final WindowsAutopilotDeploymentProfileCollectionResponse response) {
         final IWindowsAutopilotDeploymentProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

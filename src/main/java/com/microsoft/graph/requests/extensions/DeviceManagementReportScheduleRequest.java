@@ -112,6 +112,27 @@ public class DeviceManagementReportScheduleRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a DeviceManagementReportSchedule with a new object
+     *
+     * @param newDeviceManagementReportSchedule the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<DeviceManagementReportSchedule> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementReportSchedule);
+    }
+
+    /**
+     * Creates a DeviceManagementReportSchedule with a new object
+     *
+     * @param newDeviceManagementReportSchedule the object to create/update
+     * @return the created DeviceManagementReportSchedule
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementReportSchedule put(final DeviceManagementReportSchedule newDeviceManagementReportSchedule) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementReportSchedule);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

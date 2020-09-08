@@ -80,6 +80,23 @@ public interface IAppScopeRequest extends IHttpRequest {
     AppScope post(final AppScope newAppScope) throws ClientException;
 
     /**
+     * Posts a AppScope with a new object
+     *
+     * @param newAppScope the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppScope newAppScope, final ICallback<AppScope> callback);
+
+    /**
+     * Posts a AppScope with a new object
+     *
+     * @param newAppScope the object to create/update
+     * @return the created AppScope
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppScope put(final AppScope newAppScope) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

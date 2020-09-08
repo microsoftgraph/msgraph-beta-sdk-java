@@ -28,6 +28,14 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
 
     /**
+     * The Created Date Time.
+     * The date the custom baseline was created.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The Display Name.
      * The name of the user experience analytics baseline.
      */
@@ -44,12 +52,12 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
     public Boolean isBuiltIn;
 
     /**
-     * The Created Date Time.
-     * The date the custom baseline was created.
+     * The Best Practices Metrics.
+     * The user experience analytics best practices metrics.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("bestPracticesMetrics")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public UserExperienceAnalyticsCategory bestPracticesMetrics;
 
     /**
      * The Device Boot Performance Metrics.
@@ -58,14 +66,6 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
     @SerializedName("deviceBootPerformanceMetrics")
     @Expose
     public UserExperienceAnalyticsCategory deviceBootPerformanceMetrics;
-
-    /**
-     * The Best Practices Metrics.
-     * The user experience analytics best practices metrics.
-     */
-    @SerializedName("bestPracticesMetrics")
-    @Expose
-    public UserExperienceAnalyticsCategory bestPracticesMetrics;
 
 
     /**

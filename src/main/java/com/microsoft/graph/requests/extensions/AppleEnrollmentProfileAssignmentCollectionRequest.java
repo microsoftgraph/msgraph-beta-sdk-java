@@ -62,14 +62,14 @@ public class AppleEnrollmentProfileAssignmentCollectionRequest extends BaseColle
     public void post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment, final ICallback<AppleEnrollmentProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppleEnrollmentProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppleEnrollmentProfileAssignment, callback);
     }
 
     public AppleEnrollmentProfileAssignment post(final AppleEnrollmentProfileAssignment newAppleEnrollmentProfileAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppleEnrollmentProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppleEnrollmentProfileAssignment);
     }
 
@@ -106,6 +106,27 @@ public class AppleEnrollmentProfileAssignmentCollectionRequest extends BaseColle
         return (AppleEnrollmentProfileAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAppleEnrollmentProfileAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AppleEnrollmentProfileAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAppleEnrollmentProfileAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAppleEnrollmentProfileAssignmentCollectionRequest)this;
+    }
     public IAppleEnrollmentProfileAssignmentCollectionPage buildFromResponse(final AppleEnrollmentProfileAssignmentCollectionResponse response) {
         final IAppleEnrollmentProfileAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

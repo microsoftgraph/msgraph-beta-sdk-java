@@ -28,60 +28,12 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Address.
      * 
      */
     @SerializedName("address")
     @Expose
     public PostalAddressType address;
-
-    /**
-     * The Phone Number.
-     * 
-     */
-    @SerializedName("phoneNumber")
-    @Expose
-    public String phoneNumber;
-
-    /**
-     * The Fax Number.
-     * 
-     */
-    @SerializedName("faxNumber")
-    @Expose
-    public String faxNumber;
-
-    /**
-     * The Email.
-     * 
-     */
-    @SerializedName("email")
-    @Expose
-    public String email;
-
-    /**
-     * The Website.
-     * 
-     */
-    @SerializedName("website")
-    @Expose
-    public String website;
-
-    /**
-     * The Tax Registration Number.
-     * 
-     */
-    @SerializedName("taxRegistrationNumber")
-    @Expose
-    public String taxRegistrationNumber;
 
     /**
      * The Currency Code.
@@ -100,6 +52,30 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.models.extensions.DateOnly currentFiscalYearStartDate;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
+     * The Fax Number.
+     * 
+     */
+    @SerializedName("faxNumber")
+    @Expose
+    public String faxNumber;
+
+    /**
      * The Industry.
      * 
      */
@@ -114,6 +90,30 @@ public class CompanyInformation extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Phone Number.
+     * 
+     */
+    @SerializedName("phoneNumber")
+    @Expose
+    public String phoneNumber;
+
+    /**
+     * The Tax Registration Number.
+     * 
+     */
+    @SerializedName("taxRegistrationNumber")
+    @Expose
+    public String taxRegistrationNumber;
+
+    /**
+     * The Website.
+     * 
+     */
+    @SerializedName("website")
+    @Expose
+    public String website;
 
 
     /**

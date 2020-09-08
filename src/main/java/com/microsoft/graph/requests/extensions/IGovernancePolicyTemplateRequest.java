@@ -80,6 +80,23 @@ public interface IGovernancePolicyTemplateRequest extends IHttpRequest {
     GovernancePolicyTemplate post(final GovernancePolicyTemplate newGovernancePolicyTemplate) throws ClientException;
 
     /**
+     * Posts a GovernancePolicyTemplate with a new object
+     *
+     * @param newGovernancePolicyTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback);
+
+    /**
+     * Posts a GovernancePolicyTemplate with a new object
+     *
+     * @param newGovernancePolicyTemplate the object to create/update
+     * @return the created GovernancePolicyTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GovernancePolicyTemplate put(final GovernancePolicyTemplate newGovernancePolicyTemplate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

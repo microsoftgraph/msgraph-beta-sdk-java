@@ -112,6 +112,27 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
     }
 
     /**
+     * Creates a EnrollmentRestrictionsConfigurationPolicySetItem with a new object
+     *
+     * @param newEnrollmentRestrictionsConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newEnrollmentRestrictionsConfigurationPolicySetItem);
+    }
+
+    /**
+     * Creates a EnrollmentRestrictionsConfigurationPolicySetItem with a new object
+     *
+     * @param newEnrollmentRestrictionsConfigurationPolicySetItem the object to create/update
+     * @return the created EnrollmentRestrictionsConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EnrollmentRestrictionsConfigurationPolicySetItem put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newEnrollmentRestrictionsConfigurationPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

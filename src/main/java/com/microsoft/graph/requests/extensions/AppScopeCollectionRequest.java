@@ -62,14 +62,14 @@ public class AppScopeCollectionRequest extends BaseCollectionRequest<AppScopeCol
     public void post(final AppScope newAppScope, final ICallback<AppScope> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppScopeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppScope, callback);
     }
 
     public AppScope post(final AppScope newAppScope) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppScopeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppScope);
     }
 
@@ -106,6 +106,27 @@ public class AppScopeCollectionRequest extends BaseCollectionRequest<AppScopeCol
         return (AppScopeCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAppScopeCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AppScopeCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAppScopeCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAppScopeCollectionRequest)this;
+    }
     public IAppScopeCollectionPage buildFromResponse(final AppScopeCollectionResponse response) {
         final IAppScopeCollectionRequestBuilder builder;
         if (response.nextLink != null) {

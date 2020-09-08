@@ -28,20 +28,12 @@ public class Mention extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Mentioned.
+     * The Application.
      * 
      */
-    @SerializedName("mentioned")
+    @SerializedName("application")
     @Expose
-    public EmailAddress mentioned;
-
-    /**
-     * The Mention Text.
-     * 
-     */
-    @SerializedName("mentionText")
-    @Expose
-    public String mentionText;
+    public String application;
 
     /**
      * The Client Reference.
@@ -68,14 +60,6 @@ public class Mention extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Server Created Date Time.
-     * 
-     */
-    @SerializedName("serverCreatedDateTime")
-    @Expose
-    public java.util.Calendar serverCreatedDateTime;
-
-    /**
      * The Deep Link.
      * 
      */
@@ -84,12 +68,28 @@ public class Mention extends Entity implements IJsonBackedObject {
     public String deepLink;
 
     /**
-     * The Application.
+     * The Mentioned.
      * 
      */
-    @SerializedName("application")
+    @SerializedName("mentioned")
     @Expose
-    public String application;
+    public EmailAddress mentioned;
+
+    /**
+     * The Mention Text.
+     * 
+     */
+    @SerializedName("mentionText")
+    @Expose
+    public String mentionText;
+
+    /**
+     * The Server Created Date Time.
+     * 
+     */
+    @SerializedName("serverCreatedDateTime")
+    @Expose
+    public java.util.Calendar serverCreatedDateTime;
 
 
     /**

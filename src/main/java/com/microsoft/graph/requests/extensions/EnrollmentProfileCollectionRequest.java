@@ -62,14 +62,14 @@ public class EnrollmentProfileCollectionRequest extends BaseCollectionRequest<En
     public void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<EnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEnrollmentProfile, callback);
     }
 
     public EnrollmentProfile post(final EnrollmentProfile newEnrollmentProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEnrollmentProfile);
     }
 
@@ -106,6 +106,27 @@ public class EnrollmentProfileCollectionRequest extends BaseCollectionRequest<En
         return (EnrollmentProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEnrollmentProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EnrollmentProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEnrollmentProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEnrollmentProfileCollectionRequest)this;
+    }
     public IEnrollmentProfileCollectionPage buildFromResponse(final EnrollmentProfileCollectionResponse response) {
         final IEnrollmentProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

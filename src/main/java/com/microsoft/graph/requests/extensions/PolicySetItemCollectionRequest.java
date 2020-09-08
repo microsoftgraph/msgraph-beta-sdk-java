@@ -62,14 +62,14 @@ public class PolicySetItemCollectionRequest extends BaseCollectionRequest<Policy
     public void post(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PolicySetItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPolicySetItem, callback);
     }
 
     public PolicySetItem post(final PolicySetItem newPolicySetItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PolicySetItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPolicySetItem);
     }
 
@@ -106,6 +106,27 @@ public class PolicySetItemCollectionRequest extends BaseCollectionRequest<Policy
         return (PolicySetItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPolicySetItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PolicySetItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPolicySetItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPolicySetItemCollectionRequest)this;
+    }
     public IPolicySetItemCollectionPage buildFromResponse(final PolicySetItemCollectionResponse response) {
         final IPolicySetItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

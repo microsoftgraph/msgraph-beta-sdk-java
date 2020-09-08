@@ -62,14 +62,14 @@ public class SalesOrderLineCollectionRequest extends BaseCollectionRequest<Sales
     public void post(final SalesOrderLine newSalesOrderLine, final ICallback<SalesOrderLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesOrderLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesOrderLine, callback);
     }
 
     public SalesOrderLine post(final SalesOrderLine newSalesOrderLine) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SalesOrderLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesOrderLine);
     }
 
@@ -106,6 +106,27 @@ public class SalesOrderLineCollectionRequest extends BaseCollectionRequest<Sales
         return (SalesOrderLineCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISalesOrderLineCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SalesOrderLineCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISalesOrderLineCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISalesOrderLineCollectionRequest)this;
+    }
     public ISalesOrderLineCollectionPage buildFromResponse(final SalesOrderLineCollectionResponse response) {
         final ISalesOrderLineCollectionRequestBuilder builder;
         if (response.nextLink != null) {

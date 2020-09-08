@@ -112,6 +112,27 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a GroupPolicyPresentationCheckBox with a new object
+     *
+     * @param newGroupPolicyPresentationCheckBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationCheckBox);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationCheckBox with a new object
+     *
+     * @param newGroupPolicyPresentationCheckBox the object to create/update
+     * @return the created GroupPolicyPresentationCheckBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationCheckBox put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationCheckBox);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

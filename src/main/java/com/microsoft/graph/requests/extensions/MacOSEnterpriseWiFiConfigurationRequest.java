@@ -118,6 +118,27 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a MacOSEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newMacOSEnterpriseWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<MacOSEnterpriseWiFiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newMacOSEnterpriseWiFiConfiguration);
+    }
+
+    /**
+     * Creates a MacOSEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newMacOSEnterpriseWiFiConfiguration the object to create/update
+     * @return the created MacOSEnterpriseWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSEnterpriseWiFiConfiguration put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSEnterpriseWiFiConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

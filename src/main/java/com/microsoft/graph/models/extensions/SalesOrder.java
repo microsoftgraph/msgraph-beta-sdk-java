@@ -9,10 +9,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
-import com.microsoft.graph.models.extensions.SalesOrderLine;
-import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.models.extensions.Currency;
+import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.models.extensions.PaymentTerm;
+import com.microsoft.graph.models.extensions.SalesOrderLine;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionResponse;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionPage;
@@ -34,60 +34,12 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
+     * The Billing Postal Address.
      * 
      */
-    @SerializedName("number")
+    @SerializedName("billingPostalAddress")
     @Expose
-    public String number;
-
-    /**
-     * The External Document Number.
-     * 
-     */
-    @SerializedName("externalDocumentNumber")
-    @Expose
-    public String externalDocumentNumber;
-
-    /**
-     * The Order Date.
-     * 
-     */
-    @SerializedName("orderDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly orderDate;
-
-    /**
-     * The Customer Id.
-     * 
-     */
-    @SerializedName("customerId")
-    @Expose
-    public java.util.UUID customerId;
-
-    /**
-     * The Customer Number.
-     * 
-     */
-    @SerializedName("customerNumber")
-    @Expose
-    public String customerNumber;
-
-    /**
-     * The Customer Name.
-     * 
-     */
-    @SerializedName("customerName")
-    @Expose
-    public String customerName;
-
-    /**
-     * The Bill To Name.
-     * 
-     */
-    @SerializedName("billToName")
-    @Expose
-    public String billToName;
+    public PostalAddressType billingPostalAddress;
 
     /**
      * The Bill To Customer Id.
@@ -106,52 +58,12 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     public String billToCustomerNumber;
 
     /**
-     * The Ship To Name.
+     * The Bill To Name.
      * 
      */
-    @SerializedName("shipToName")
+    @SerializedName("billToName")
     @Expose
-    public String shipToName;
-
-    /**
-     * The Ship To Contact.
-     * 
-     */
-    @SerializedName("shipToContact")
-    @Expose
-    public String shipToContact;
-
-    /**
-     * The Selling Postal Address.
-     * 
-     */
-    @SerializedName("sellingPostalAddress")
-    @Expose
-    public PostalAddressType sellingPostalAddress;
-
-    /**
-     * The Billing Postal Address.
-     * 
-     */
-    @SerializedName("billingPostalAddress")
-    @Expose
-    public PostalAddressType billingPostalAddress;
-
-    /**
-     * The Shipping Postal Address.
-     * 
-     */
-    @SerializedName("shippingPostalAddress")
-    @Expose
-    public PostalAddressType shippingPostalAddress;
-
-    /**
-     * The Currency Id.
-     * 
-     */
-    @SerializedName("currencyId")
-    @Expose
-    public java.util.UUID currencyId;
+    public String billToName;
 
     /**
      * The Currency Code.
@@ -162,44 +74,36 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     public String currencyCode;
 
     /**
-     * The Prices Include Tax.
+     * The Currency Id.
      * 
      */
-    @SerializedName("pricesIncludeTax")
+    @SerializedName("currencyId")
     @Expose
-    public Boolean pricesIncludeTax;
+    public java.util.UUID currencyId;
 
     /**
-     * The Payment Terms Id.
+     * The Customer Id.
      * 
      */
-    @SerializedName("paymentTermsId")
+    @SerializedName("customerId")
     @Expose
-    public java.util.UUID paymentTermsId;
+    public java.util.UUID customerId;
 
     /**
-     * The Salesperson.
+     * The Customer Name.
      * 
      */
-    @SerializedName("salesperson")
+    @SerializedName("customerName")
     @Expose
-    public String salesperson;
+    public String customerName;
 
     /**
-     * The Partial Shipping.
+     * The Customer Number.
      * 
      */
-    @SerializedName("partialShipping")
+    @SerializedName("customerNumber")
     @Expose
-    public Boolean partialShipping;
-
-    /**
-     * The Requested Delivery Date.
-     * 
-     */
-    @SerializedName("requestedDeliveryDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly requestedDeliveryDate;
+    public String customerNumber;
 
     /**
      * The Discount Amount.
@@ -218,28 +122,20 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     public Boolean discountAppliedBeforeTax;
 
     /**
-     * The Total Amount Excluding Tax.
+     * The Email.
      * 
      */
-    @SerializedName("totalAmountExcludingTax")
+    @SerializedName("email")
     @Expose
-    public java.math.BigDecimal totalAmountExcludingTax;
+    public String email;
 
     /**
-     * The Total Tax Amount.
+     * The External Document Number.
      * 
      */
-    @SerializedName("totalTaxAmount")
+    @SerializedName("externalDocumentNumber")
     @Expose
-    public java.math.BigDecimal totalTaxAmount;
-
-    /**
-     * The Total Amount Including Tax.
-     * 
-     */
-    @SerializedName("totalAmountIncludingTax")
-    @Expose
-    public java.math.BigDecimal totalAmountIncludingTax;
+    public String externalDocumentNumber;
 
     /**
      * The Fully Shipped.
@@ -250,20 +146,44 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     public Boolean fullyShipped;
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
-
-    /**
      * The Last Modified Date Time.
      * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Number.
+     * 
+     */
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Order Date.
+     * 
+     */
+    @SerializedName("orderDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly orderDate;
+
+    /**
+     * The Partial Shipping.
+     * 
+     */
+    @SerializedName("partialShipping")
+    @Expose
+    public Boolean partialShipping;
+
+    /**
+     * The Payment Terms Id.
+     * 
+     */
+    @SerializedName("paymentTermsId")
+    @Expose
+    public java.util.UUID paymentTermsId;
 
     /**
      * The Phone Number.
@@ -274,26 +194,92 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     public String phoneNumber;
 
     /**
-     * The Email.
+     * The Prices Include Tax.
      * 
      */
-    @SerializedName("email")
+    @SerializedName("pricesIncludeTax")
     @Expose
-    public String email;
+    public Boolean pricesIncludeTax;
 
     /**
-     * The Sales Order Lines.
+     * The Requested Delivery Date.
      * 
      */
-    public SalesOrderLineCollectionPage salesOrderLines;
+    @SerializedName("requestedDeliveryDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly requestedDeliveryDate;
 
     /**
-     * The Customer.
+     * The Salesperson.
      * 
      */
-    @SerializedName("customer")
+    @SerializedName("salesperson")
     @Expose
-    public Customer customer;
+    public String salesperson;
+
+    /**
+     * The Selling Postal Address.
+     * 
+     */
+    @SerializedName("sellingPostalAddress")
+    @Expose
+    public PostalAddressType sellingPostalAddress;
+
+    /**
+     * The Shipping Postal Address.
+     * 
+     */
+    @SerializedName("shippingPostalAddress")
+    @Expose
+    public PostalAddressType shippingPostalAddress;
+
+    /**
+     * The Ship To Contact.
+     * 
+     */
+    @SerializedName("shipToContact")
+    @Expose
+    public String shipToContact;
+
+    /**
+     * The Ship To Name.
+     * 
+     */
+    @SerializedName("shipToName")
+    @Expose
+    public String shipToName;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
+
+    /**
+     * The Total Amount Excluding Tax.
+     * 
+     */
+    @SerializedName("totalAmountExcludingTax")
+    @Expose
+    public java.math.BigDecimal totalAmountExcludingTax;
+
+    /**
+     * The Total Amount Including Tax.
+     * 
+     */
+    @SerializedName("totalAmountIncludingTax")
+    @Expose
+    public java.math.BigDecimal totalAmountIncludingTax;
+
+    /**
+     * The Total Tax Amount.
+     * 
+     */
+    @SerializedName("totalTaxAmount")
+    @Expose
+    public java.math.BigDecimal totalTaxAmount;
 
     /**
      * The Currency.
@@ -304,12 +290,26 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     public Currency currency;
 
     /**
+     * The Customer.
+     * 
+     */
+    @SerializedName("customer")
+    @Expose
+    public Customer customer;
+
+    /**
      * The Payment Term.
      * 
      */
     @SerializedName("paymentTerm")
     @Expose
     public PaymentTerm paymentTerm;
+
+    /**
+     * The Sales Order Lines.
+     * 
+     */
+    public SalesOrderLineCollectionPage salesOrderLines;
 
 
     /**

@@ -36,6 +36,14 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Justification.
+     * 
+     */
+    @SerializedName("justification")
+    @Expose
+    public String justification;
+
+    /**
      * The Reviewed By.
      * 
      */
@@ -58,14 +66,6 @@ public class ApprovalStep extends Entity implements IJsonBackedObject {
     @SerializedName("reviewResult")
     @Expose
     public String reviewResult;
-
-    /**
-     * The Justification.
-     * 
-     */
-    @SerializedName("justification")
-    @Expose
-    public String justification;
 
 
     /**

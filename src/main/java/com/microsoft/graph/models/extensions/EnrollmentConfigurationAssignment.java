@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.generated.DeviceAndAppManagementAssignmentSource;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,14 +29,6 @@ public class EnrollmentConfigurationAssignment extends Entity implements IJsonBa
 
 
     /**
-     * The Target.
-     * Not yet documented
-     */
-    @SerializedName("target")
-    @Expose
-    public DeviceAndAppManagementAssignmentTarget target;
-
-    /**
      * The Source.
      * Type of resource used for deployment to a group, direct or policySet
      */
@@ -51,6 +43,14 @@ public class EnrollmentConfigurationAssignment extends Entity implements IJsonBa
     @SerializedName("sourceId")
     @Expose
     public String sourceId;
+
+    /**
+     * The Target.
+     * Not yet documented
+     */
+    @SerializedName("target")
+    @Expose
+    public DeviceAndAppManagementAssignmentTarget target;
 
 
     /**

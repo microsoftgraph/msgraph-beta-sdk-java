@@ -116,6 +116,27 @@ public class AndroidDeviceOwnerScepCertificateProfileRequest extends BaseRequest
     }
 
     /**
+     * Creates a AndroidDeviceOwnerScepCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerScepCertificateProfile newAndroidDeviceOwnerScepCertificateProfile, final ICallback<AndroidDeviceOwnerScepCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerScepCertificateProfile);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerScepCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerScepCertificateProfile the object to create/update
+     * @return the created AndroidDeviceOwnerScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerScepCertificateProfile put(final AndroidDeviceOwnerScepCertificateProfile newAndroidDeviceOwnerScepCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerScepCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

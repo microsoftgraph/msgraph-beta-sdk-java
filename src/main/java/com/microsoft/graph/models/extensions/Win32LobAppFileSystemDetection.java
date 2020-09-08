@@ -29,22 +29,6 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
 
 
     /**
-     * The Path.
-     * The file or folder path to detect Win32 Line of Business (LoB) app
-     */
-    @SerializedName("path")
-    @Expose
-    public String path;
-
-    /**
-     * The File Or Folder Name.
-     * The file or folder name to detect Win32 Line of Business (LoB) app
-     */
-    @SerializedName("fileOrFolderName")
-    @Expose
-    public String fileOrFolderName;
-
-    /**
      * The Check32Bit On64System.
      * A value indicating whether this file or folder is for checking 32-bit app on 64-bit system
      */
@@ -61,6 +45,22 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     public Win32LobAppFileSystemDetectionType detectionType;
 
     /**
+     * The Detection Value.
+     * The file or folder detection value
+     */
+    @SerializedName("detectionValue")
+    @Expose
+    public String detectionValue;
+
+    /**
+     * The File Or Folder Name.
+     * The file or folder name to detect Win32 Line of Business (LoB) app
+     */
+    @SerializedName("fileOrFolderName")
+    @Expose
+    public String fileOrFolderName;
+
+    /**
      * The Operator.
      * The operator for file or folder detection
      */
@@ -69,12 +69,12 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     public EnumSet<Win32LobAppDetectionOperator> operator;
 
     /**
-     * The Detection Value.
-     * The file or folder detection value
+     * The Path.
+     * The file or folder path to detect Win32 Line of Business (LoB) app
      */
-    @SerializedName("detectionValue")
+    @SerializedName("path")
     @Expose
-    public String detectionValue;
+    public String path;
 
 
     /**

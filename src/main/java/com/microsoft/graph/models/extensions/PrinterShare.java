@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Printer;
-import com.microsoft.graph.models.extensions.PrintUserIdentity;
 import com.microsoft.graph.models.extensions.PrintIdentity;
+import com.microsoft.graph.models.extensions.PrintUserIdentity;
+import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrinterBase;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionResponse;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionPage;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionResponse;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -50,12 +50,10 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Printer.
+     * The Allowed Groups.
      * 
      */
-    @SerializedName("printer")
-    @Expose
-    public Printer printer;
+    public PrintIdentityCollectionPage allowedGroups;
 
     /**
      * The Allowed Users.
@@ -64,10 +62,12 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
     public PrintUserIdentityCollectionPage allowedUsers;
 
     /**
-     * The Allowed Groups.
+     * The Printer.
      * 
      */
-    public PrintIdentityCollectionPage allowedGroups;
+    @SerializedName("printer")
+    @Expose
+    public Printer printer;
 
 
     /**
@@ -109,22 +109,6 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("allowedUsers")) {
-            final PrintUserIdentityCollectionResponse response = new PrintUserIdentityCollectionResponse();
-            if (json.has("allowedUsers@odata.nextLink")) {
-                response.nextLink = json.get("allowedUsers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("allowedUsers").toString(), JsonObject[].class);
-            final PrintUserIdentity[] array = new PrintUserIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUserIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            allowedUsers = new PrintUserIdentityCollectionPage(response, null);
-        }
-
         if (json.has("allowedGroups")) {
             final PrintIdentityCollectionResponse response = new PrintIdentityCollectionResponse();
             if (json.has("allowedGroups@odata.nextLink")) {
@@ -139,6 +123,22 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             allowedGroups = new PrintIdentityCollectionPage(response, null);
+        }
+
+        if (json.has("allowedUsers")) {
+            final PrintUserIdentityCollectionResponse response = new PrintUserIdentityCollectionResponse();
+            if (json.has("allowedUsers@odata.nextLink")) {
+                response.nextLink = json.get("allowedUsers@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("allowedUsers").toString(), JsonObject[].class);
+            final PrintUserIdentity[] array = new PrintUserIdentity[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUserIdentity.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            allowedUsers = new PrintUserIdentityCollectionPage(response, null);
         }
     }
 }

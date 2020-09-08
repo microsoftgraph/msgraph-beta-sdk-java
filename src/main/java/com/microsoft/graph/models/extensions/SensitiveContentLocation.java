@@ -37,20 +37,20 @@ public class SensitiveContentLocation implements IJsonBackedObject {
     }
 
     /**
+     * The Evidences.
+     * 
+     */
+    @SerializedName("evidences")
+    @Expose
+    public java.util.List<SensitiveContentEvidence> evidences;
+
+    /**
      * The Id Match.
      * 
      */
     @SerializedName("idMatch")
     @Expose
     public String idMatch;
-
-    /**
-     * The Offset.
-     * 
-     */
-    @SerializedName("offset")
-    @Expose
-    public Integer offset;
 
     /**
      * The Length.
@@ -61,12 +61,12 @@ public class SensitiveContentLocation implements IJsonBackedObject {
     public Integer length;
 
     /**
-     * The Evidences.
+     * The Offset.
      * 
      */
-    @SerializedName("evidences")
+    @SerializedName("offset")
     @Expose
-    public java.util.List<SensitiveContentEvidence> evidences;
+    public Integer offset;
 
 
     /**

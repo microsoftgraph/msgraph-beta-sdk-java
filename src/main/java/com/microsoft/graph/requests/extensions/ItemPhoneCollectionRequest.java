@@ -62,14 +62,14 @@ public class ItemPhoneCollectionRequest extends BaseCollectionRequest<ItemPhoneC
     public void post(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemPhoneRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemPhone, callback);
     }
 
     public ItemPhone post(final ItemPhone newItemPhone) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemPhoneRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemPhone);
     }
 
@@ -106,6 +106,27 @@ public class ItemPhoneCollectionRequest extends BaseCollectionRequest<ItemPhoneC
         return (ItemPhoneCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IItemPhoneCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ItemPhoneCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IItemPhoneCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IItemPhoneCollectionRequest)this;
+    }
     public IItemPhoneCollectionPage buildFromResponse(final ItemPhoneCollectionResponse response) {
         final IItemPhoneCollectionRequestBuilder builder;
         if (response.nextLink != null) {

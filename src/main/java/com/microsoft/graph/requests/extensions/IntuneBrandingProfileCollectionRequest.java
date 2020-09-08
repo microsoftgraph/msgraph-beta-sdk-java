@@ -63,14 +63,14 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
     public void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IntuneBrandingProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIntuneBrandingProfile, callback);
     }
 
     public IntuneBrandingProfile post(final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IntuneBrandingProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIntuneBrandingProfile);
     }
 
@@ -107,6 +107,27 @@ public class IntuneBrandingProfileCollectionRequest extends BaseCollectionReques
         return (IntuneBrandingProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIntuneBrandingProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IntuneBrandingProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIntuneBrandingProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIntuneBrandingProfileCollectionRequest)this;
+    }
     public IIntuneBrandingProfileCollectionPage buildFromResponse(final IntuneBrandingProfileCollectionResponse response) {
         final IIntuneBrandingProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -15,6 +15,10 @@ public enum ResultantAppState
     */
     INSTALLED,
     /**
+    * not Applicable
+    */
+    NOT_APPLICABLE,
+    /**
     * failed
     */
     FAILED,
@@ -34,10 +38,6 @@ public enum ResultantAppState
     * unknown
     */
     UNKNOWN,
-    /**
-    * not Applicable
-    */
-    NOT_APPLICABLE,
     /**
     * For ResultantAppState values that were not expected from the service
     */

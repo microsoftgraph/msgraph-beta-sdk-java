@@ -27,20 +27,12 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
 
 
     /**
-     * The Report Refresh Date.
+     * The Activated.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("activated")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Product Type.
-     * 
-     */
-    @SerializedName("productType")
-    @Expose
-    public String productType;
+    public Long activated;
 
     /**
      * The Assigned.
@@ -51,12 +43,20 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
     public Long assigned;
 
     /**
-     * The Activated.
+     * The Product Type.
      * 
      */
-    @SerializedName("activated")
+    @SerializedName("productType")
     @Expose
-    public Long activated;
+    public String productType;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The Shared Computer Activation.

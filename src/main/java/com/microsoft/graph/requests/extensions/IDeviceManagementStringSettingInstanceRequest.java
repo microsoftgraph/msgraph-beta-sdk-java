@@ -80,6 +80,23 @@ public interface IDeviceManagementStringSettingInstanceRequest extends IHttpRequ
     DeviceManagementStringSettingInstance post(final DeviceManagementStringSettingInstance newDeviceManagementStringSettingInstance) throws ClientException;
 
     /**
+     * Posts a DeviceManagementStringSettingInstance with a new object
+     *
+     * @param newDeviceManagementStringSettingInstance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementStringSettingInstance newDeviceManagementStringSettingInstance, final ICallback<DeviceManagementStringSettingInstance> callback);
+
+    /**
+     * Posts a DeviceManagementStringSettingInstance with a new object
+     *
+     * @param newDeviceManagementStringSettingInstance the object to create/update
+     * @return the created DeviceManagementStringSettingInstance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementStringSettingInstance put(final DeviceManagementStringSettingInstance newDeviceManagementStringSettingInstance) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

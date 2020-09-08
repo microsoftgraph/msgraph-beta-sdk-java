@@ -112,6 +112,27 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
     }
 
     /**
+     * Creates a DeviceAndAppManagementAssignmentFilter with a new object
+     *
+     * @param newDeviceAndAppManagementAssignmentFilter the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<DeviceAndAppManagementAssignmentFilter> callback) {
+        send(HttpMethod.PUT, callback, newDeviceAndAppManagementAssignmentFilter);
+    }
+
+    /**
+     * Creates a DeviceAndAppManagementAssignmentFilter with a new object
+     *
+     * @param newDeviceAndAppManagementAssignmentFilter the object to create/update
+     * @return the created DeviceAndAppManagementAssignmentFilter
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceAndAppManagementAssignmentFilter put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceAndAppManagementAssignmentFilter);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

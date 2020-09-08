@@ -62,14 +62,14 @@ public class PrintConnectorCollectionRequest extends BaseCollectionRequest<Print
     public void post(final PrintConnector newPrintConnector, final ICallback<PrintConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintConnector, callback);
     }
 
     public PrintConnector post(final PrintConnector newPrintConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintConnector);
     }
 
@@ -106,6 +106,27 @@ public class PrintConnectorCollectionRequest extends BaseCollectionRequest<Print
         return (PrintConnectorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintConnectorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintConnectorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintConnectorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintConnectorCollectionRequest)this;
+    }
     public IPrintConnectorCollectionPage buildFromResponse(final PrintConnectorCollectionResponse response) {
         final IPrintConnectorCollectionRequestBuilder builder;
         if (response.nextLink != null) {

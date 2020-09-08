@@ -40,7 +40,7 @@ public class AgreementAcceptanceCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/agreementAcceptances/" + newAgreementAcceptance.id);
         new AgreementAcceptanceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreementAcceptance, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class AgreementAcceptanceCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/agreementAcceptances/" + newAgreementAcceptance.id);
         return new AgreementAcceptanceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newAgreementAcceptance, body);
     }
     /**

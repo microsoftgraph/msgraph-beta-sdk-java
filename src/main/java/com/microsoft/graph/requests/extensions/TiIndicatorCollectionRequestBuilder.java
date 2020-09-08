@@ -16,10 +16,10 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequest;
-import com.microsoft.graph.requests.extensions.ITiIndicatorSubmitTiIndicatorsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITiIndicatorSubmitTiIndicatorsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -55,19 +55,19 @@ public class TiIndicatorCollectionRequestBuilder extends BaseRequestBuilder impl
 
 
 
-    public ITiIndicatorSubmitTiIndicatorsCollectionRequestBuilder submitTiIndicators(final java.util.List<TiIndicator> value) {
-        return new TiIndicatorSubmitTiIndicatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.submitTiIndicators"), getClient(), null, value);
-    }
-
-    public ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder updateTiIndicators(final java.util.List<TiIndicator> value) {
-        return new TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateTiIndicators"), getClient(), null, value);
-    }
-
     public ITiIndicatorDeleteTiIndicatorsCollectionRequestBuilder deleteTiIndicators(final java.util.List<String> value) {
         return new TiIndicatorDeleteTiIndicatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deleteTiIndicators"), getClient(), null, value);
     }
 
     public ITiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder deleteTiIndicatorsByExternalId(final java.util.List<String> value) {
         return new TiIndicatorDeleteTiIndicatorsByExternalIdCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deleteTiIndicatorsByExternalId"), getClient(), null, value);
+    }
+
+    public ITiIndicatorSubmitTiIndicatorsCollectionRequestBuilder submitTiIndicators(final java.util.List<TiIndicator> value) {
+        return new TiIndicatorSubmitTiIndicatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.submitTiIndicators"), getClient(), null, value);
+    }
+
+    public ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder updateTiIndicators(final java.util.List<TiIndicator> value) {
+        return new TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateTiIndicators"), getClient(), null, value);
     }
 }

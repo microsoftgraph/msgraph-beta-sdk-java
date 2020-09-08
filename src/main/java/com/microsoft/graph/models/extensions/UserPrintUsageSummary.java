@@ -37,22 +37,6 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
     }
 
     /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
      * The Completed Job Count.
      * 
      */
@@ -75,6 +59,22 @@ public class UserPrintUsageSummary implements IJsonBackedObject {
     @SerializedName("user")
     @Expose
     public Identity user;
+
+    /**
+     * The User Display Name.
+     * 
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

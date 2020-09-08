@@ -80,6 +80,23 @@ public interface IDocumentCommentRequest extends IHttpRequest {
     DocumentComment post(final DocumentComment newDocumentComment) throws ClientException;
 
     /**
+     * Posts a DocumentComment with a new object
+     *
+     * @param newDocumentComment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback);
+
+    /**
+     * Posts a DocumentComment with a new object
+     *
+     * @param newDocumentComment the object to create/update
+     * @return the created DocumentComment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DocumentComment put(final DocumentComment newDocumentComment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

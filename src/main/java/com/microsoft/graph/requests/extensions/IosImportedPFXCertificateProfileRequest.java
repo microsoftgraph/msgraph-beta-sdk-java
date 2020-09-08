@@ -116,6 +116,27 @@ public class IosImportedPFXCertificateProfileRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a IosImportedPFXCertificateProfile with a new object
+     *
+     * @param newIosImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile, final ICallback<IosImportedPFXCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newIosImportedPFXCertificateProfile);
+    }
+
+    /**
+     * Creates a IosImportedPFXCertificateProfile with a new object
+     *
+     * @param newIosImportedPFXCertificateProfile the object to create/update
+     * @return the created IosImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosImportedPFXCertificateProfile put(final IosImportedPFXCertificateProfile newIosImportedPFXCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newIosImportedPFXCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

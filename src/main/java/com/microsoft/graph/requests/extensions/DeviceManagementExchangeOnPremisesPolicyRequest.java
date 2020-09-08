@@ -114,6 +114,27 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
     }
 
     /**
+     * Creates a DeviceManagementExchangeOnPremisesPolicy with a new object
+     *
+     * @param newDeviceManagementExchangeOnPremisesPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementExchangeOnPremisesPolicy);
+    }
+
+    /**
+     * Creates a DeviceManagementExchangeOnPremisesPolicy with a new object
+     *
+     * @param newDeviceManagementExchangeOnPremisesPolicy the object to create/update
+     * @return the created DeviceManagementExchangeOnPremisesPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementExchangeOnPremisesPolicy put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementExchangeOnPremisesPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

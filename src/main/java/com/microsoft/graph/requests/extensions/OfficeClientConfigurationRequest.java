@@ -132,6 +132,27 @@ public class OfficeClientConfigurationRequest extends BaseRequest implements IOf
     }
 
     /**
+     * Creates a OfficeClientConfiguration with a new object
+     *
+     * @param newOfficeClientConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OfficeClientConfiguration newOfficeClientConfiguration, final ICallback<OfficeClientConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newOfficeClientConfiguration);
+    }
+
+    /**
+     * Creates a OfficeClientConfiguration with a new object
+     *
+     * @param newOfficeClientConfiguration the object to create/update
+     * @return the created OfficeClientConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OfficeClientConfiguration put(final OfficeClientConfiguration newOfficeClientConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newOfficeClientConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

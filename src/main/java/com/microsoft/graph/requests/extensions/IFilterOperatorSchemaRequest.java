@@ -80,6 +80,23 @@ public interface IFilterOperatorSchemaRequest extends IHttpRequest {
     FilterOperatorSchema post(final FilterOperatorSchema newFilterOperatorSchema) throws ClientException;
 
     /**
+     * Posts a FilterOperatorSchema with a new object
+     *
+     * @param newFilterOperatorSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<FilterOperatorSchema> callback);
+
+    /**
+     * Posts a FilterOperatorSchema with a new object
+     *
+     * @param newFilterOperatorSchema the object to create/update
+     * @return the created FilterOperatorSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    FilterOperatorSchema put(final FilterOperatorSchema newFilterOperatorSchema) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

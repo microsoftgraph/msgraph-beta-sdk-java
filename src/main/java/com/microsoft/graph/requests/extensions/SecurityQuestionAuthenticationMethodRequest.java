@@ -112,6 +112,27 @@ public class SecurityQuestionAuthenticationMethodRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a SecurityQuestionAuthenticationMethod with a new object
+     *
+     * @param newSecurityQuestionAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback) {
+        send(HttpMethod.PUT, callback, newSecurityQuestionAuthenticationMethod);
+    }
+
+    /**
+     * Creates a SecurityQuestionAuthenticationMethod with a new object
+     *
+     * @param newSecurityQuestionAuthenticationMethod the object to create/update
+     * @return the created SecurityQuestionAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityQuestionAuthenticationMethod put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityQuestionAuthenticationMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

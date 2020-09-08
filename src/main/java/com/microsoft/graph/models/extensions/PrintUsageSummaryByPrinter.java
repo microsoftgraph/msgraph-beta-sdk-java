@@ -27,22 +27,6 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Printer Id.
-     * 
-     */
-    @SerializedName("printerId")
-    @Expose
-    public String printerId;
-
-    /**
-     * The Usage Date.
-     * 
-     */
-    @SerializedName("usageDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly usageDate;
-
-    /**
      * The Completed Black And White Job Count.
      * 
      */
@@ -65,6 +49,22 @@ public class PrintUsageSummaryByPrinter extends Entity implements IJsonBackedObj
     @SerializedName("incompleteJobCount")
     @Expose
     public Long incompleteJobCount;
+
+    /**
+     * The Printer Id.
+     * 
+     */
+    @SerializedName("printerId")
+    @Expose
+    public String printerId;
+
+    /**
+     * The Usage Date.
+     * 
+     */
+    @SerializedName("usageDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly usageDate;
 
 
     /**

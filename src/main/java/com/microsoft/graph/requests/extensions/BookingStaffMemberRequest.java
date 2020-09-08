@@ -112,6 +112,27 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
     }
 
     /**
+     * Creates a BookingStaffMember with a new object
+     *
+     * @param newBookingStaffMember the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback) {
+        send(HttpMethod.PUT, callback, newBookingStaffMember);
+    }
+
+    /**
+     * Creates a BookingStaffMember with a new object
+     *
+     * @param newBookingStaffMember the object to create/update
+     * @return the created BookingStaffMember
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BookingStaffMember put(final BookingStaffMember newBookingStaffMember) throws ClientException {
+        return send(HttpMethod.PUT, newBookingStaffMember);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

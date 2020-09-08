@@ -112,6 +112,27 @@ public class IosExpeditedCheckinConfigurationRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a IosExpeditedCheckinConfiguration with a new object
+     *
+     * @param newIosExpeditedCheckinConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration, final ICallback<IosExpeditedCheckinConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosExpeditedCheckinConfiguration);
+    }
+
+    /**
+     * Creates a IosExpeditedCheckinConfiguration with a new object
+     *
+     * @param newIosExpeditedCheckinConfiguration the object to create/update
+     * @return the created IosExpeditedCheckinConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosExpeditedCheckinConfiguration put(final IosExpeditedCheckinConfiguration newIosExpeditedCheckinConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosExpeditedCheckinConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

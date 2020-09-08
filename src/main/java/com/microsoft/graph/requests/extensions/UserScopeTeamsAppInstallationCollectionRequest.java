@@ -62,14 +62,14 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
     public void post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserScopeTeamsAppInstallation, callback);
     }
 
     public UserScopeTeamsAppInstallation post(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserScopeTeamsAppInstallation);
     }
 
@@ -106,6 +106,27 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollecti
         return (UserScopeTeamsAppInstallationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserScopeTeamsAppInstallationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserScopeTeamsAppInstallationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserScopeTeamsAppInstallationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserScopeTeamsAppInstallationCollectionRequest)this;
+    }
     public IUserScopeTeamsAppInstallationCollectionPage buildFromResponse(final UserScopeTeamsAppInstallationCollectionResponse response) {
         final IUserScopeTeamsAppInstallationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

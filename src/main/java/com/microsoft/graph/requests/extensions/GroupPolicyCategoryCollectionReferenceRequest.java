@@ -39,7 +39,7 @@ public class GroupPolicyCategoryCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/children/" + newGroupPolicyCategory.id);
         new GroupPolicyCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyCategory, body, callback);
     }
 
@@ -47,7 +47,7 @@ public class GroupPolicyCategoryCollectionReferenceRequest extends BaseCollectio
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/children/" + newGroupPolicyCategory.id);
         return new GroupPolicyCategoryWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newGroupPolicyCategory, body);
     }
     /**

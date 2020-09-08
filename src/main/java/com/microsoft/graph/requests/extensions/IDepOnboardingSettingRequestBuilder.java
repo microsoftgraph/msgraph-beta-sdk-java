@@ -61,10 +61,10 @@ public interface IDepOnboardingSettingRequestBuilder extends IRequestBuilder {
 
     IImportedAppleDeviceIdentityRequestBuilder importedAppleDeviceIdentities(final String id);
     IDepOnboardingSettingGenerateEncryptionPublicKeyRequestBuilder generateEncryptionPublicKey();
-    IDepOnboardingSettingUploadDepTokenRequestBuilder uploadDepToken(final String appleId, final String depToken);
-    IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder syncWithAppleDeviceEnrollmentProgram();
     IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder shareForSchoolDataSyncService();
+    IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuilder syncWithAppleDeviceEnrollmentProgram();
     IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder unshareForSchoolDataSyncService();
+    IDepOnboardingSettingUploadDepTokenRequestBuilder uploadDepToken(final String appleId, final String depToken);
     IDepOnboardingSettingGetEncryptionPublicKeyRequestBuilder getEncryptionPublicKey();
 
 }

@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.BitLockerEncryptionMethod;
-import com.microsoft.graph.models.generated.ConfigurationUsage;
 import com.microsoft.graph.models.extensions.BitLockerRecoveryOptions;
+import com.microsoft.graph.models.generated.ConfigurationUsage;
 
 
 import com.google.gson.JsonObject;
@@ -47,68 +47,12 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
     public BitLockerEncryptionMethod encryptionMethod;
 
     /**
-     * The Startup Authentication Required.
-     * Require additional authentication at startup.
-     */
-    @SerializedName("startupAuthenticationRequired")
-    @Expose
-    public Boolean startupAuthenticationRequired;
-
-    /**
-     * The Startup Authentication Block Without Tpm Chip.
-     * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
-     */
-    @SerializedName("startupAuthenticationBlockWithoutTpmChip")
-    @Expose
-    public Boolean startupAuthenticationBlockWithoutTpmChip;
-
-    /**
-     * The Startup Authentication Tpm Usage.
-     * Indicates if TPM startup is allowed/required/disallowed.
-     */
-    @SerializedName("startupAuthenticationTpmUsage")
-    @Expose
-    public ConfigurationUsage startupAuthenticationTpmUsage;
-
-    /**
-     * The Startup Authentication Tpm Pin Usage.
-     * Indicates if TPM startup pin is allowed/required/disallowed.
-     */
-    @SerializedName("startupAuthenticationTpmPinUsage")
-    @Expose
-    public ConfigurationUsage startupAuthenticationTpmPinUsage;
-
-    /**
-     * The Startup Authentication Tpm Key Usage.
-     * Indicates if TPM startup key is allowed/required/disallowed.
-     */
-    @SerializedName("startupAuthenticationTpmKeyUsage")
-    @Expose
-    public ConfigurationUsage startupAuthenticationTpmKeyUsage;
-
-    /**
-     * The Startup Authentication Tpm Pin And Key Usage.
-     * Indicates if TPM startup pin key and key are allowed/required/disallowed.
-     */
-    @SerializedName("startupAuthenticationTpmPinAndKeyUsage")
-    @Expose
-    public ConfigurationUsage startupAuthenticationTpmPinAndKeyUsage;
-
-    /**
      * The Minimum Pin Length.
      * Indicates the minimum length of startup pin. Valid values 4 to 20
      */
     @SerializedName("minimumPinLength")
     @Expose
     public Integer minimumPinLength;
-
-    /**
-     * The Recovery Options.
-     * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
-     */
-    @SerializedName("recoveryOptions")
-    @Expose
-    public BitLockerRecoveryOptions recoveryOptions;
 
     /**
      * The Preboot Recovery Enable Message And Url.
@@ -133,6 +77,62 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
     @SerializedName("prebootRecoveryUrl")
     @Expose
     public String prebootRecoveryUrl;
+
+    /**
+     * The Recovery Options.
+     * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
+     */
+    @SerializedName("recoveryOptions")
+    @Expose
+    public BitLockerRecoveryOptions recoveryOptions;
+
+    /**
+     * The Startup Authentication Block Without Tpm Chip.
+     * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
+     */
+    @SerializedName("startupAuthenticationBlockWithoutTpmChip")
+    @Expose
+    public Boolean startupAuthenticationBlockWithoutTpmChip;
+
+    /**
+     * The Startup Authentication Required.
+     * Require additional authentication at startup.
+     */
+    @SerializedName("startupAuthenticationRequired")
+    @Expose
+    public Boolean startupAuthenticationRequired;
+
+    /**
+     * The Startup Authentication Tpm Key Usage.
+     * Indicates if TPM startup key is allowed/required/disallowed.
+     */
+    @SerializedName("startupAuthenticationTpmKeyUsage")
+    @Expose
+    public ConfigurationUsage startupAuthenticationTpmKeyUsage;
+
+    /**
+     * The Startup Authentication Tpm Pin And Key Usage.
+     * Indicates if TPM startup pin key and key are allowed/required/disallowed.
+     */
+    @SerializedName("startupAuthenticationTpmPinAndKeyUsage")
+    @Expose
+    public ConfigurationUsage startupAuthenticationTpmPinAndKeyUsage;
+
+    /**
+     * The Startup Authentication Tpm Pin Usage.
+     * Indicates if TPM startup pin is allowed/required/disallowed.
+     */
+    @SerializedName("startupAuthenticationTpmPinUsage")
+    @Expose
+    public ConfigurationUsage startupAuthenticationTpmPinUsage;
+
+    /**
+     * The Startup Authentication Tpm Usage.
+     * Indicates if TPM startup is allowed/required/disallowed.
+     */
+    @SerializedName("startupAuthenticationTpmUsage")
+    @Expose
+    public ConfigurationUsage startupAuthenticationTpmUsage;
 
 
     /**

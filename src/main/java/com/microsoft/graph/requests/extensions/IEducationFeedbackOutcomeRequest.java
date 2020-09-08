@@ -80,6 +80,23 @@ public interface IEducationFeedbackOutcomeRequest extends IHttpRequest {
     EducationFeedbackOutcome post(final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException;
 
     /**
+     * Posts a EducationFeedbackOutcome with a new object
+     *
+     * @param newEducationFeedbackOutcome the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback);
+
+    /**
+     * Posts a EducationFeedbackOutcome with a new object
+     *
+     * @param newEducationFeedbackOutcome the object to create/update
+     * @return the created EducationFeedbackOutcome
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationFeedbackOutcome put(final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

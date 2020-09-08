@@ -80,6 +80,23 @@ public interface IPersonAnniversaryRequest extends IHttpRequest {
     PersonAnniversary post(final PersonAnniversary newPersonAnniversary) throws ClientException;
 
     /**
+     * Posts a PersonAnniversary with a new object
+     *
+     * @param newPersonAnniversary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PersonAnniversary newPersonAnniversary, final ICallback<PersonAnniversary> callback);
+
+    /**
+     * Posts a PersonAnniversary with a new object
+     *
+     * @param newPersonAnniversary the object to create/update
+     * @return the created PersonAnniversary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PersonAnniversary put(final PersonAnniversary newPersonAnniversary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

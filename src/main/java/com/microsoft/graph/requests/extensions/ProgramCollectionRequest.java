@@ -61,14 +61,14 @@ public class ProgramCollectionRequest extends BaseCollectionRequest<ProgramColle
     public void post(final Program newProgram, final ICallback<Program> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProgramRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProgram, callback);
     }
 
     public Program post(final Program newProgram) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProgramRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProgram);
     }
 
@@ -105,6 +105,27 @@ public class ProgramCollectionRequest extends BaseCollectionRequest<ProgramColle
         return (ProgramCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProgramCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProgramCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProgramCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProgramCollectionRequest)this;
+    }
     public IProgramCollectionPage buildFromResponse(final ProgramCollectionResponse response) {
         final IProgramCollectionRequestBuilder builder;
         if (response.nextLink != null) {

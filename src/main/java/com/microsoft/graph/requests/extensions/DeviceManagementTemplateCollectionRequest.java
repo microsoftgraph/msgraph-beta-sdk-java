@@ -64,14 +64,14 @@ public class DeviceManagementTemplateCollectionRequest extends BaseCollectionReq
     public void post(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<DeviceManagementTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementTemplate, callback);
     }
 
     public DeviceManagementTemplate post(final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementTemplate);
     }
 
@@ -108,6 +108,27 @@ public class DeviceManagementTemplateCollectionRequest extends BaseCollectionReq
         return (DeviceManagementTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementTemplateCollectionRequest)this;
+    }
     public IDeviceManagementTemplateCollectionPage buildFromResponse(final DeviceManagementTemplateCollectionResponse response) {
         final IDeviceManagementTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

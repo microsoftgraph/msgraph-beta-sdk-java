@@ -29,12 +29,12 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
 
 
     /**
-     * The Device Name.
-     * Device name.
+     * The Deployment Status.
+     * The deployment state of the policy.
      */
-    @SerializedName("deviceName")
+    @SerializedName("deploymentStatus")
     @Expose
-    public String deviceName;
+    public WindowsDefenderApplicationControlSupplementalPolicyStatuses deploymentStatus;
 
     /**
      * The Device Id.
@@ -45,20 +45,20 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     public String deviceId;
 
     /**
+     * The Device Name.
+     * Device name.
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
      * The Last Sync Date Time.
      * Last sync date time.
      */
     @SerializedName("lastSyncDateTime")
     @Expose
     public java.util.Calendar lastSyncDateTime;
-
-    /**
-     * The Os Version.
-     * Windows OS Version.
-     */
-    @SerializedName("osVersion")
-    @Expose
-    public String osVersion;
 
     /**
      * The Os Description.
@@ -69,12 +69,20 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     public String osDescription;
 
     /**
-     * The Deployment Status.
-     * The deployment state of the policy.
+     * The Os Version.
+     * Windows OS Version.
      */
-    @SerializedName("deploymentStatus")
+    @SerializedName("osVersion")
     @Expose
-    public WindowsDefenderApplicationControlSupplementalPolicyStatuses deploymentStatus;
+    public String osVersion;
+
+    /**
+     * The Policy Version.
+     * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
+     */
+    @SerializedName("policyVersion")
+    @Expose
+    public String policyVersion;
 
     /**
      * The User Name.
@@ -91,14 +99,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Policy Version.
-     * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
-     */
-    @SerializedName("policyVersion")
-    @Expose
-    public String policyVersion;
 
     /**
      * The Policy.

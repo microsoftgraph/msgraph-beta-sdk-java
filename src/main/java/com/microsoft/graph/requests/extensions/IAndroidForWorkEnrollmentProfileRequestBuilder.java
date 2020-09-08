@@ -32,7 +32,7 @@ public interface IAndroidForWorkEnrollmentProfileRequestBuilder extends IRequest
      */
     IAndroidForWorkEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder revokeToken();
     IAndroidForWorkEnrollmentProfileCreateTokenRequestBuilder createToken(final Integer tokenValidityInSeconds);
+    IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder revokeToken();
 
 }

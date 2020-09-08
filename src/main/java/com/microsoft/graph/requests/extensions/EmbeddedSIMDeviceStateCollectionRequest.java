@@ -62,14 +62,14 @@ public class EmbeddedSIMDeviceStateCollectionRequest extends BaseCollectionReque
     public void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EmbeddedSIMDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmbeddedSIMDeviceState, callback);
     }
 
     public EmbeddedSIMDeviceState post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EmbeddedSIMDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmbeddedSIMDeviceState);
     }
 
@@ -106,6 +106,27 @@ public class EmbeddedSIMDeviceStateCollectionRequest extends BaseCollectionReque
         return (EmbeddedSIMDeviceStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEmbeddedSIMDeviceStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EmbeddedSIMDeviceStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEmbeddedSIMDeviceStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEmbeddedSIMDeviceStateCollectionRequest)this;
+    }
     public IEmbeddedSIMDeviceStateCollectionPage buildFromResponse(final EmbeddedSIMDeviceStateCollectionResponse response) {
         final IEmbeddedSIMDeviceStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -29,6 +29,14 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
 
 
     /**
+     * The Active Directory Domain Name.
+     * Active Directory domain name to join.
+     */
+    @SerializedName("activeDirectoryDomainName")
+    @Expose
+    public String activeDirectoryDomainName;
+
+    /**
      * The Computer Name Static Prefix.
      * Fixed prefix to be used for computer name.
      */
@@ -43,14 +51,6 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     @SerializedName("computerNameSuffixRandomCharCount")
     @Expose
     public Integer computerNameSuffixRandomCharCount;
-
-    /**
-     * The Active Directory Domain Name.
-     * Active Directory domain name to join.
-     */
-    @SerializedName("activeDirectoryDomainName")
-    @Expose
-    public String activeDirectoryDomainName;
 
     /**
      * The Organizational Unit.

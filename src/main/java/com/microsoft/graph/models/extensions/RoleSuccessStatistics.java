@@ -36,6 +36,38 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
     }
 
     /**
+     * The Permanent Fail.
+     * 
+     */
+    @SerializedName("permanentFail")
+    @Expose
+    public Long permanentFail;
+
+    /**
+     * The Permanent Success.
+     * 
+     */
+    @SerializedName("permanentSuccess")
+    @Expose
+    public Long permanentSuccess;
+
+    /**
+     * The Remove Fail.
+     * 
+     */
+    @SerializedName("removeFail")
+    @Expose
+    public Long removeFail;
+
+    /**
+     * The Remove Success.
+     * 
+     */
+    @SerializedName("removeSuccess")
+    @Expose
+    public Long removeSuccess;
+
+    /**
      * The Role Id.
      * 
      */
@@ -52,14 +84,6 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
     public String roleName;
 
     /**
-     * The Temporary Success.
-     * 
-     */
-    @SerializedName("temporarySuccess")
-    @Expose
-    public Long temporarySuccess;
-
-    /**
      * The Temporary Fail.
      * 
      */
@@ -68,36 +92,12 @@ public class RoleSuccessStatistics implements IJsonBackedObject {
     public Long temporaryFail;
 
     /**
-     * The Permanent Success.
+     * The Temporary Success.
      * 
      */
-    @SerializedName("permanentSuccess")
+    @SerializedName("temporarySuccess")
     @Expose
-    public Long permanentSuccess;
-
-    /**
-     * The Permanent Fail.
-     * 
-     */
-    @SerializedName("permanentFail")
-    @Expose
-    public Long permanentFail;
-
-    /**
-     * The Remove Success.
-     * 
-     */
-    @SerializedName("removeSuccess")
-    @Expose
-    public Long removeSuccess;
-
-    /**
-     * The Remove Fail.
-     * 
-     */
-    @SerializedName("removeFail")
-    @Expose
-    public Long removeFail;
+    public Long temporarySuccess;
 
     /**
      * The Unknown Fail.

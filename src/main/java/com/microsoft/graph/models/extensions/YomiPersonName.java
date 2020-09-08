@@ -52,6 +52,14 @@ public class YomiPersonName implements IJsonBackedObject {
     public String first;
 
     /**
+     * The Last.
+     * 
+     */
+    @SerializedName("last")
+    @Expose
+    public String last;
+
+    /**
      * The Maiden.
      * 
      */
@@ -66,14 +74,6 @@ public class YomiPersonName implements IJsonBackedObject {
     @SerializedName("middle")
     @Expose
     public String middle;
-
-    /**
-     * The Last.
-     * 
-     */
-    @SerializedName("last")
-    @Expose
-    public String last;
 
 
     /**

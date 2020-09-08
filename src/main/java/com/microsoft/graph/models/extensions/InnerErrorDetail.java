@@ -36,20 +36,20 @@ public class InnerErrorDetail implements IJsonBackedObject {
     }
 
     /**
-     * The Source.
-     * 
-     */
-    @SerializedName("source")
-    @Expose
-    public String source;
-
-    /**
      * The Message.
      * 
      */
     @SerializedName("message")
     @Expose
     public String message;
+
+    /**
+     * The Source.
+     * 
+     */
+    @SerializedName("source")
+    @Expose
+    public String source;
 
 
     /**

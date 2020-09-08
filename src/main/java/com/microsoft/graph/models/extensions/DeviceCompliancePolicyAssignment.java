@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.generated.DeviceAndAppManagementAssignmentSource;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,14 +29,6 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
 
 
     /**
-     * The Target.
-     * Target for the compliance policy assignment.
-     */
-    @SerializedName("target")
-    @Expose
-    public DeviceAndAppManagementAssignmentTarget target;
-
-    /**
      * The Source.
      * The assignment source for the device compliance policy, direct or parcel/policySet.
      */
@@ -51,6 +43,14 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
     @SerializedName("sourceId")
     @Expose
     public String sourceId;
+
+    /**
+     * The Target.
+     * Target for the compliance policy assignment.
+     */
+    @SerializedName("target")
+    @Expose
+    public DeviceAndAppManagementAssignmentTarget target;
 
 
     /**

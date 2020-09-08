@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Agreement;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      */
     public Agreement post(final Agreement newAgreement) throws ClientException {
         return send(HttpMethod.POST, newAgreement);
+    }
+
+    /**
+     * Creates a Agreement with a new object
+     *
+     * @param newAgreement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Agreement newAgreement, final ICallback<Agreement> callback) {
+        send(HttpMethod.PUT, callback, newAgreement);
+    }
+
+    /**
+     * Creates a Agreement with a new object
+     *
+     * @param newAgreement the object to create/update
+     * @return the created Agreement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Agreement put(final Agreement newAgreement) throws ClientException {
+        return send(HttpMethod.PUT, newAgreement);
     }
 
     /**

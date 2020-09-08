@@ -112,6 +112,27 @@ public class DeviceHealthScriptAssignmentRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a DeviceHealthScriptAssignment with a new object
+     *
+     * @param newDeviceHealthScriptAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback) {
+        send(HttpMethod.PUT, callback, newDeviceHealthScriptAssignment);
+    }
+
+    /**
+     * Creates a DeviceHealthScriptAssignment with a new object
+     *
+     * @param newDeviceHealthScriptAssignment the object to create/update
+     * @return the created DeviceHealthScriptAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceHealthScriptAssignment put(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceHealthScriptAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

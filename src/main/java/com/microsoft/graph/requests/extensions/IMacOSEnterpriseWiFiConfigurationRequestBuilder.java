@@ -36,21 +36,17 @@ public interface IMacOSEnterpriseWiFiConfigurationRequestBuilder extends IReques
     IMacOSEnterpriseWiFiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -59,6 +55,14 @@ public interface IMacOSEnterpriseWiFiConfigurationRequestBuilder extends IReques
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -66,9 +70,12 @@ public interface IMacOSEnterpriseWiFiConfigurationRequestBuilder extends IReques
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+    /**
+     * Gets the request builder for MacOSCertificateProfileBase
+     *
+     * @return the IMacOSCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    IMacOSCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
     /**
      * Gets the request builder for MacOSTrustedRootCertificate
@@ -80,12 +87,5 @@ public interface IMacOSEnterpriseWiFiConfigurationRequestBuilder extends IReques
     IMacOSTrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation();
 
     IMacOSTrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(final String id);
-
-    /**
-     * Gets the request builder for MacOSCertificateProfileBase
-     *
-     * @return the IMacOSCertificateProfileBaseWithReferenceRequestBuilder instance
-     */
-    IMacOSCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
 }

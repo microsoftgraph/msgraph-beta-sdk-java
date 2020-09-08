@@ -62,14 +62,14 @@ public class GroupPolicyDefinitionCollectionRequest extends BaseCollectionReques
     public void post(final GroupPolicyDefinition newGroupPolicyDefinition, final ICallback<GroupPolicyDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyDefinition, callback);
     }
 
     public GroupPolicyDefinition post(final GroupPolicyDefinition newGroupPolicyDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyDefinition);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyDefinitionCollectionRequest extends BaseCollectionReques
         return (GroupPolicyDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyDefinitionCollectionRequest)this;
+    }
     public IGroupPolicyDefinitionCollectionPage buildFromResponse(final GroupPolicyDefinitionCollectionResponse response) {
         final IGroupPolicyDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

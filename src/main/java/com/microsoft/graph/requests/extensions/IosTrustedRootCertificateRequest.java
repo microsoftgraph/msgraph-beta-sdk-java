@@ -112,6 +112,27 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
     }
 
     /**
+     * Creates a IosTrustedRootCertificate with a new object
+     *
+     * @param newIosTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback) {
+        send(HttpMethod.PUT, callback, newIosTrustedRootCertificate);
+    }
+
+    /**
+     * Creates a IosTrustedRootCertificate with a new object
+     *
+     * @param newIosTrustedRootCertificate the object to create/update
+     * @return the created IosTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosTrustedRootCertificate put(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newIosTrustedRootCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

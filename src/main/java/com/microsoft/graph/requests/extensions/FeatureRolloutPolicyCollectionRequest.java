@@ -62,14 +62,14 @@ public class FeatureRolloutPolicyCollectionRequest extends BaseCollectionRequest
     public void post(final FeatureRolloutPolicy newFeatureRolloutPolicy, final ICallback<FeatureRolloutPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new FeatureRolloutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFeatureRolloutPolicy, callback);
     }
 
     public FeatureRolloutPolicy post(final FeatureRolloutPolicy newFeatureRolloutPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new FeatureRolloutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFeatureRolloutPolicy);
     }
 
@@ -106,6 +106,27 @@ public class FeatureRolloutPolicyCollectionRequest extends BaseCollectionRequest
         return (FeatureRolloutPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IFeatureRolloutPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (FeatureRolloutPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IFeatureRolloutPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IFeatureRolloutPolicyCollectionRequest)this;
+    }
     public IFeatureRolloutPolicyCollectionPage buildFromResponse(final FeatureRolloutPolicyCollectionResponse response) {
         final IFeatureRolloutPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -35,20 +35,20 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     public String bundleId;
 
     /**
-     * The File Name.
-     * Configuration file name (*.plist | *.xml).
-     */
-    @SerializedName("fileName")
-    @Expose
-    public String fileName;
-
-    /**
      * The Configuration Xml.
      * Configuration xml. (UTF8 encoded byte array)
      */
     @SerializedName("configurationXml")
     @Expose
     public byte[] configurationXml;
+
+    /**
+     * The File Name.
+     * Configuration file name (*.plist | *.xml).
+     */
+    @SerializedName("fileName")
+    @Expose
+    public String fileName;
 
 
     /**

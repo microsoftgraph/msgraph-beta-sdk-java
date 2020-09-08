@@ -28,52 +28,12 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Permission Classification.
-     * 
-     */
-    @SerializedName("permissionClassification")
-    @Expose
-    public String permissionClassification;
-
-    /**
-     * The Permission Type.
-     * 
-     */
-    @SerializedName("permissionType")
-    @Expose
-    public PermissionType permissionType;
-
-    /**
-     * The Resource Application.
-     * 
-     */
-    @SerializedName("resourceApplication")
-    @Expose
-    public String resourceApplication;
-
-    /**
-     * The Permissions.
-     * 
-     */
-    @SerializedName("permissions")
-    @Expose
-    public java.util.List<String> permissions;
-
-    /**
      * The Client Application Ids.
      * 
      */
     @SerializedName("clientApplicationIds")
     @Expose
     public java.util.List<String> clientApplicationIds;
-
-    /**
-     * The Client Application Tenant Ids.
-     * 
-     */
-    @SerializedName("clientApplicationTenantIds")
-    @Expose
-    public java.util.List<String> clientApplicationTenantIds;
 
     /**
      * The Client Application Publisher Ids.
@@ -90,6 +50,46 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
     @SerializedName("clientApplicationsFromVerifiedPublisherOnly")
     @Expose
     public Boolean clientApplicationsFromVerifiedPublisherOnly;
+
+    /**
+     * The Client Application Tenant Ids.
+     * 
+     */
+    @SerializedName("clientApplicationTenantIds")
+    @Expose
+    public java.util.List<String> clientApplicationTenantIds;
+
+    /**
+     * The Permission Classification.
+     * 
+     */
+    @SerializedName("permissionClassification")
+    @Expose
+    public String permissionClassification;
+
+    /**
+     * The Permissions.
+     * 
+     */
+    @SerializedName("permissions")
+    @Expose
+    public java.util.List<String> permissions;
+
+    /**
+     * The Permission Type.
+     * 
+     */
+    @SerializedName("permissionType")
+    @Expose
+    public PermissionType permissionType;
+
+    /**
+     * The Resource Application.
+     * 
+     */
+    @SerializedName("resourceApplication")
+    @Expose
+    public String resourceApplication;
 
 
     /**

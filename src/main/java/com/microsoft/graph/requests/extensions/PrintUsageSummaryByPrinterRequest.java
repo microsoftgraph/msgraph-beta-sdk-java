@@ -112,6 +112,27 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
     }
 
     /**
+     * Creates a PrintUsageSummaryByPrinter with a new object
+     *
+     * @param newPrintUsageSummaryByPrinter the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, final ICallback<PrintUsageSummaryByPrinter> callback) {
+        send(HttpMethod.PUT, callback, newPrintUsageSummaryByPrinter);
+    }
+
+    /**
+     * Creates a PrintUsageSummaryByPrinter with a new object
+     *
+     * @param newPrintUsageSummaryByPrinter the object to create/update
+     * @return the created PrintUsageSummaryByPrinter
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintUsageSummaryByPrinter put(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter) throws ClientException {
+        return send(HttpMethod.PUT, newPrintUsageSummaryByPrinter);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

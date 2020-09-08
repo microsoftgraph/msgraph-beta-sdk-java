@@ -114,6 +114,27 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
     }
 
     /**
+     * Creates a GeneralLedgerEntry with a new object
+     *
+     * @param newGeneralLedgerEntry the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback) {
+        send(HttpMethod.PUT, callback, newGeneralLedgerEntry);
+    }
+
+    /**
+     * Creates a GeneralLedgerEntry with a new object
+     *
+     * @param newGeneralLedgerEntry the object to create/update
+     * @return the created GeneralLedgerEntry
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GeneralLedgerEntry put(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException {
+        return send(HttpMethod.PUT, newGeneralLedgerEntry);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

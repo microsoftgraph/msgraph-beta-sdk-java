@@ -36,12 +36,12 @@ public class MobileAppInstallTimeSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Use Local Time.
-     * Whether the local device time or UTC time should be used when determining the available and deadline times.
+     * The Deadline Date Time.
+     * The time at which the app should be installed.
      */
-    @SerializedName("useLocalTime")
+    @SerializedName("deadlineDateTime")
     @Expose
-    public Boolean useLocalTime;
+    public java.util.Calendar deadlineDateTime;
 
     /**
      * The Start Date Time.
@@ -52,12 +52,12 @@ public class MobileAppInstallTimeSettings implements IJsonBackedObject {
     public java.util.Calendar startDateTime;
 
     /**
-     * The Deadline Date Time.
-     * The time at which the app should be installed.
+     * The Use Local Time.
+     * Whether the local device time or UTC time should be used when determining the available and deadline times.
      */
-    @SerializedName("deadlineDateTime")
+    @SerializedName("useLocalTime")
     @Expose
-    public java.util.Calendar deadlineDateTime;
+    public Boolean useLocalTime;
 
 
     /**

@@ -116,6 +116,27 @@ public class IosPkcsCertificateProfileRequest extends BaseRequest implements IIo
     }
 
     /**
+     * Creates a IosPkcsCertificateProfile with a new object
+     *
+     * @param newIosPkcsCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosPkcsCertificateProfile newIosPkcsCertificateProfile, final ICallback<IosPkcsCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newIosPkcsCertificateProfile);
+    }
+
+    /**
+     * Creates a IosPkcsCertificateProfile with a new object
+     *
+     * @param newIosPkcsCertificateProfile the object to create/update
+     * @return the created IosPkcsCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosPkcsCertificateProfile put(final IosPkcsCertificateProfile newIosPkcsCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newIosPkcsCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

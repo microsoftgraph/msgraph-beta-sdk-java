@@ -27,22 +27,6 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
      * The Display Name.
      * 
      */
@@ -51,12 +35,28 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
     public String displayName;
 
     /**
-     * The User State.
+     * The Last Activity Date.
      * 
      */
-    @SerializedName("userState")
+    @SerializedName("lastActivityDate")
     @Expose
-    public String userState;
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The State Change Date.
@@ -67,12 +67,36 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
     public com.microsoft.graph.models.extensions.DateOnly stateChangeDate;
 
     /**
-     * The Last Activity Date.
+     * The Used Android Phone.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName("usedAndroidPhone")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+    public Boolean usedAndroidPhone;
+
+    /**
+     * The Usedi Pad.
+     * 
+     */
+    @SerializedName("usediPad")
+    @Expose
+    public Boolean usediPad;
+
+    /**
+     * The Usedi Phone.
+     * 
+     */
+    @SerializedName("usediPhone")
+    @Expose
+    public Boolean usediPhone;
+
+    /**
+     * The Used Others.
+     * 
+     */
+    @SerializedName("usedOthers")
+    @Expose
+    public Boolean usedOthers;
 
     /**
      * The Used Web.
@@ -91,44 +115,20 @@ public class YammerDeviceUsageUserDetail extends Entity implements IJsonBackedOb
     public Boolean usedWindowsPhone;
 
     /**
-     * The Used Android Phone.
+     * The User Principal Name.
      * 
      */
-    @SerializedName("usedAndroidPhone")
+    @SerializedName("userPrincipalName")
     @Expose
-    public Boolean usedAndroidPhone;
+    public String userPrincipalName;
 
     /**
-     * The Usedi Phone.
+     * The User State.
      * 
      */
-    @SerializedName("usediPhone")
+    @SerializedName("userState")
     @Expose
-    public Boolean usediPhone;
-
-    /**
-     * The Usedi Pad.
-     * 
-     */
-    @SerializedName("usediPad")
-    @Expose
-    public Boolean usediPad;
-
-    /**
-     * The Used Others.
-     * 
-     */
-    @SerializedName("usedOthers")
-    @Expose
-    public Boolean usedOthers;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
+    public String userState;
 
 
     /**

@@ -27,6 +27,14 @@ public class CountryRegion extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Address Format.
+     * 
+     */
+    @SerializedName("addressFormat")
+    @Expose
+    public String addressFormat;
+
+    /**
      * The Code.
      * 
      */
@@ -41,14 +49,6 @@ public class CountryRegion extends Entity implements IJsonBackedObject {
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Address Format.
-     * 
-     */
-    @SerializedName("addressFormat")
-    @Expose
-    public String addressFormat;
 
     /**
      * The Last Modified Date Time.

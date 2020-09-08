@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DeviceManagementComplexSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementTemplateSettingCategory;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class DeviceManagementSettingInstanceCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceManagementSettingInstanceCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of DeviceManagementComplexSettingInstance
+     * The request builder for this collection of DeviceManagementTemplateSettingCategory
      *
      * @param requestUrl     the request URL
      * @param client         the service client

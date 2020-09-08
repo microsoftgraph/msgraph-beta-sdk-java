@@ -30,6 +30,14 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
 
 
     /**
+     * The Certificate Template Name.
+     * PKCS Certificate Template Name
+     */
+    @SerializedName("certificateTemplateName")
+    @Expose
+    public String certificateTemplateName;
+
+    /**
      * The Certification Authority.
      * PKCS Certification Authority
      */
@@ -44,14 +52,6 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
     @SerializedName("certificationAuthorityName")
     @Expose
     public String certificationAuthorityName;
-
-    /**
-     * The Certificate Template Name.
-     * PKCS Certificate Template Name
-     */
-    @SerializedName("certificateTemplateName")
-    @Expose
-    public String certificateTemplateName;
 
     /**
      * The Subject Alternative Name Format String.

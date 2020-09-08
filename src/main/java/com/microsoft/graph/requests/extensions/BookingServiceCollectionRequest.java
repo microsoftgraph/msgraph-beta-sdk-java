@@ -62,14 +62,14 @@ public class BookingServiceCollectionRequest extends BaseCollectionRequest<Booki
     public void post(final BookingService newBookingService, final ICallback<BookingService> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingServiceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingService, callback);
     }
 
     public BookingService post(final BookingService newBookingService) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BookingServiceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingService);
     }
 
@@ -106,6 +106,27 @@ public class BookingServiceCollectionRequest extends BaseCollectionRequest<Booki
         return (BookingServiceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBookingServiceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BookingServiceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBookingServiceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBookingServiceCollectionRequest)this;
+    }
     public IBookingServiceCollectionPage buildFromResponse(final BookingServiceCollectionResponse response) {
         final IBookingServiceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -116,6 +116,27 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a MacOSImportedPFXCertificateProfile with a new object
+     *
+     * @param newMacOSImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<MacOSImportedPFXCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newMacOSImportedPFXCertificateProfile);
+    }
+
+    /**
+     * Creates a MacOSImportedPFXCertificateProfile with a new object
+     *
+     * @param newMacOSImportedPFXCertificateProfile the object to create/update
+     * @return the created MacOSImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSImportedPFXCertificateProfile put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSImportedPFXCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

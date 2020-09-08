@@ -112,6 +112,27 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
     }
 
     /**
+     * Creates a EducationFeedbackOutcome with a new object
+     *
+     * @param newEducationFeedbackOutcome the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<EducationFeedbackOutcome> callback) {
+        send(HttpMethod.PUT, callback, newEducationFeedbackOutcome);
+    }
+
+    /**
+     * Creates a EducationFeedbackOutcome with a new object
+     *
+     * @param newEducationFeedbackOutcome the object to create/update
+     * @return the created EducationFeedbackOutcome
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationFeedbackOutcome put(final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException {
+        return send(HttpMethod.PUT, newEducationFeedbackOutcome);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

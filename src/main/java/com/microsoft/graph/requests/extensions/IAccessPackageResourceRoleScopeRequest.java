@@ -80,6 +80,23 @@ public interface IAccessPackageResourceRoleScopeRequest extends IHttpRequest {
     AccessPackageResourceRoleScope post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException;
 
     /**
+     * Posts a AccessPackageResourceRoleScope with a new object
+     *
+     * @param newAccessPackageResourceRoleScope the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback);
+
+    /**
+     * Posts a AccessPackageResourceRoleScope with a new object
+     *
+     * @param newAccessPackageResourceRoleScope the object to create/update
+     * @return the created AccessPackageResourceRoleScope
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessPackageResourceRoleScope put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

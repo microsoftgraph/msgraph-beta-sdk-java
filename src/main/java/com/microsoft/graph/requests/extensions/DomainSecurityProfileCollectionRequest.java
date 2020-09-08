@@ -62,14 +62,14 @@ public class DomainSecurityProfileCollectionRequest extends BaseCollectionReques
     public void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<DomainSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainSecurityProfile, callback);
     }
 
     public DomainSecurityProfile post(final DomainSecurityProfile newDomainSecurityProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainSecurityProfile);
     }
 
@@ -106,6 +106,27 @@ public class DomainSecurityProfileCollectionRequest extends BaseCollectionReques
         return (DomainSecurityProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDomainSecurityProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DomainSecurityProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDomainSecurityProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDomainSecurityProfileCollectionRequest)this;
+    }
     public IDomainSecurityProfileCollectionPage buildFromResponse(final DomainSecurityProfileCollectionResponse response) {
         final IDomainSecurityProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

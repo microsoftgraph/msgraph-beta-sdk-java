@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class ConnectorGroupRequest extends BaseRequest implements IConnectorGrou
      */
     public ConnectorGroup post(final ConnectorGroup newConnectorGroup) throws ClientException {
         return send(HttpMethod.POST, newConnectorGroup);
+    }
+
+    /**
+     * Creates a ConnectorGroup with a new object
+     *
+     * @param newConnectorGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ConnectorGroup newConnectorGroup, final ICallback<ConnectorGroup> callback) {
+        send(HttpMethod.PUT, callback, newConnectorGroup);
+    }
+
+    /**
+     * Creates a ConnectorGroup with a new object
+     *
+     * @param newConnectorGroup the object to create/update
+     * @return the created ConnectorGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ConnectorGroup put(final ConnectorGroup newConnectorGroup) throws ClientException {
+        return send(HttpMethod.PUT, newConnectorGroup);
     }
 
     /**

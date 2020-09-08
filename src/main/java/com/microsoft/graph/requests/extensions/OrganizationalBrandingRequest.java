@@ -112,6 +112,27 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
     }
 
     /**
+     * Creates a OrganizationalBranding with a new object
+     *
+     * @param newOrganizationalBranding the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OrganizationalBranding newOrganizationalBranding, final ICallback<OrganizationalBranding> callback) {
+        send(HttpMethod.PUT, callback, newOrganizationalBranding);
+    }
+
+    /**
+     * Creates a OrganizationalBranding with a new object
+     *
+     * @param newOrganizationalBranding the object to create/update
+     * @return the created OrganizationalBranding
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OrganizationalBranding put(final OrganizationalBranding newOrganizationalBranding) throws ClientException {
+        return send(HttpMethod.PUT, newOrganizationalBranding);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

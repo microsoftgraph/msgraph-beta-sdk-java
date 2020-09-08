@@ -80,6 +80,23 @@ public interface IAndroidCertificateProfileBaseRequest extends IHttpRequest {
     AndroidCertificateProfileBase post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException;
 
     /**
+     * Posts a AndroidCertificateProfileBase with a new object
+     *
+     * @param newAndroidCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback);
+
+    /**
+     * Posts a AndroidCertificateProfileBase with a new object
+     *
+     * @param newAndroidCertificateProfileBase the object to create/update
+     * @return the created AndroidCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidCertificateProfileBase put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,44 +28,12 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
 
     /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
      * The Auth Methods.
      * 
      */
     @SerializedName("authMethods")
     @Expose
     public java.util.List<RegistrationAuthMethod> authMethods;
-
-    /**
-     * The Is Registered.
-     * 
-     */
-    @SerializedName("isRegistered")
-    @Expose
-    public Boolean isRegistered;
-
-    /**
-     * The Is Enabled.
-     * 
-     */
-    @SerializedName("isEnabled")
-    @Expose
-    public Boolean isEnabled;
 
     /**
      * The Is Capable.
@@ -76,12 +44,44 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
     public Boolean isCapable;
 
     /**
+     * The Is Enabled.
+     * 
+     */
+    @SerializedName("isEnabled")
+    @Expose
+    public Boolean isEnabled;
+
+    /**
      * The Is Mfa Registered.
      * 
      */
     @SerializedName("isMfaRegistered")
     @Expose
     public Boolean isMfaRegistered;
+
+    /**
+     * The Is Registered.
+     * 
+     */
+    @SerializedName("isRegistered")
+    @Expose
+    public Boolean isRegistered;
+
+    /**
+     * The User Display Name.
+     * 
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

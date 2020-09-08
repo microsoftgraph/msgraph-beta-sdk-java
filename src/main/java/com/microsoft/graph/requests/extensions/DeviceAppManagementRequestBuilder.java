@@ -8,18 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
-import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnterpriseCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnterpriseCodeSigningCertificateCollectionRequestBuilder;
@@ -28,14 +20,22 @@ import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurati
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetCollectionRequestBuilder;
@@ -48,14 +48,6 @@ import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
@@ -64,18 +56,14 @@ import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionColle
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
@@ -84,10 +72,22 @@ import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionReques
 import com.microsoft.graph.requests.extensions.IManagedAppStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionWipeActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionCollectionRequestBuilder;
@@ -147,26 +147,12 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public IManagedEBookCollectionRequestBuilder managedEBooks() {
-        return new ManagedEBookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks"), getClient(), null);
+    public IManagedEBookCategoryCollectionRequestBuilder managedEBookCategories() {
+        return new ManagedEBookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBookCategories"), getClient(), null);
     }
 
-    public IManagedEBookRequestBuilder managedEBooks(final String id) {
-        return new ManagedEBookRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks") + "/" + id, getClient(), null);
-    }
-    public IMobileAppCollectionRequestBuilder mobileApps() {
-        return new MobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps"), getClient(), null);
-    }
-
-    public IMobileAppRequestBuilder mobileApps(final String id) {
-        return new MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
-    }
-    public IMobileAppCategoryCollectionRequestBuilder mobileAppCategories() {
-        return new MobileAppCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories"), getClient(), null);
-    }
-
-    public IMobileAppCategoryRequestBuilder mobileAppCategories(final String id) {
-        return new MobileAppCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories") + "/" + id, getClient(), null);
+    public IManagedEBookCategoryRequestBuilder managedEBookCategories(final String id) {
+        return new ManagedEBookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBookCategories") + "/" + id, getClient(), null);
     }
     public IEnterpriseCodeSigningCertificateCollectionRequestBuilder enterpriseCodeSigningCertificates() {
         return new EnterpriseCodeSigningCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("enterpriseCodeSigningCertificates"), getClient(), null);
@@ -182,6 +168,27 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     public IIosLobAppProvisioningConfigurationRequestBuilder iosLobAppProvisioningConfigurations(final String id) {
         return new IosLobAppProvisioningConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("iosLobAppProvisioningConfigurations") + "/" + id, getClient(), null);
     }
+    public IMobileAppCategoryCollectionRequestBuilder mobileAppCategories() {
+        return new MobileAppCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories"), getClient(), null);
+    }
+
+    public IMobileAppCategoryRequestBuilder mobileAppCategories(final String id) {
+        return new MobileAppCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories") + "/" + id, getClient(), null);
+    }
+    public IManagedDeviceMobileAppConfigurationCollectionRequestBuilder mobileAppConfigurations() {
+        return new ManagedDeviceMobileAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations"), getClient(), null);
+    }
+
+    public IManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(final String id) {
+        return new ManagedDeviceMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations") + "/" + id, getClient(), null);
+    }
+    public IMobileAppCollectionRequestBuilder mobileApps() {
+        return new MobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps"), getClient(), null);
+    }
+
+    public IMobileAppRequestBuilder mobileApps(final String id) {
+        return new MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for SymantecCodeSigningCertificate
@@ -191,19 +198,12 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     public ISymantecCodeSigningCertificateRequestBuilder symantecCodeSigningCertificate() {
         return new SymantecCodeSigningCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("symantecCodeSigningCertificate"), getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationCollectionRequestBuilder mobileAppConfigurations() {
-        return new ManagedDeviceMobileAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations"), getClient(), null);
+    public IManagedEBookCollectionRequestBuilder managedEBooks() {
+        return new ManagedEBookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(final String id) {
-        return new ManagedDeviceMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations") + "/" + id, getClient(), null);
-    }
-    public IManagedEBookCategoryCollectionRequestBuilder managedEBookCategories() {
-        return new ManagedEBookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBookCategories"), getClient(), null);
-    }
-
-    public IManagedEBookCategoryRequestBuilder managedEBookCategories(final String id) {
-        return new ManagedEBookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBookCategories") + "/" + id, getClient(), null);
+    public IManagedEBookRequestBuilder managedEBooks(final String id) {
+        return new ManagedEBookRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks") + "/" + id, getClient(), null);
     }
     public IPolicySetCollectionRequestBuilder policySets() {
         return new PolicySetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policySets"), getClient(), null);
@@ -235,20 +235,6 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     public IWindowsManagementAppWithReferenceRequestBuilder windowsManagementApp() {
         return new WindowsManagementAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("windowsManagementApp"), getClient(), null);
     }
-    public IManagedAppPolicyCollectionRequestBuilder managedAppPolicies() {
-        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies"), getClient(), null);
-    }
-
-    public IManagedAppPolicyRequestBuilder managedAppPolicies(final String id) {
-        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies") + "/" + id, getClient(), null);
-    }
-    public IIosManagedAppProtectionCollectionRequestBuilder iosManagedAppProtections() {
-        return new IosManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections"), getClient(), null);
-    }
-
-    public IIosManagedAppProtectionRequestBuilder iosManagedAppProtections(final String id) {
-        return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections") + "/" + id, getClient(), null);
-    }
     public IAndroidManagedAppProtectionCollectionRequestBuilder androidManagedAppProtections() {
         return new AndroidManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidManagedAppProtections"), getClient(), null);
     }
@@ -263,26 +249,19 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     public IDefaultManagedAppProtectionRequestBuilder defaultManagedAppProtections(final String id) {
         return new DefaultManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultManagedAppProtections") + "/" + id, getClient(), null);
     }
-    public ITargetedManagedAppConfigurationCollectionRequestBuilder targetedManagedAppConfigurations() {
-        return new TargetedManagedAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations"), getClient(), null);
+    public IIosManagedAppProtectionCollectionRequestBuilder iosManagedAppProtections() {
+        return new IosManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections"), getClient(), null);
     }
 
-    public ITargetedManagedAppConfigurationRequestBuilder targetedManagedAppConfigurations(final String id) {
-        return new TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations") + "/" + id, getClient(), null);
+    public IIosManagedAppProtectionRequestBuilder iosManagedAppProtections(final String id) {
+        return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections") + "/" + id, getClient(), null);
     }
-    public IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder mdmWindowsInformationProtectionPolicies() {
-        return new MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies"), getClient(), null);
-    }
-
-    public IMdmWindowsInformationProtectionPolicyRequestBuilder mdmWindowsInformationProtectionPolicies(final String id) {
-        return new MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies") + "/" + id, getClient(), null);
-    }
-    public IWindowsInformationProtectionPolicyCollectionRequestBuilder windowsInformationProtectionPolicies() {
-        return new WindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies"), getClient(), null);
+    public IManagedAppPolicyCollectionRequestBuilder managedAppPolicies() {
+        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies"), getClient(), null);
     }
 
-    public IWindowsInformationProtectionPolicyRequestBuilder windowsInformationProtectionPolicies(final String id) {
-        return new WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies") + "/" + id, getClient(), null);
+    public IManagedAppPolicyRequestBuilder managedAppPolicies(final String id) {
+        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies") + "/" + id, getClient(), null);
     }
     public IManagedAppRegistrationCollectionRequestBuilder managedAppRegistrations() {
         return new ManagedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations"), getClient(), null);
@@ -298,12 +277,33 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     public IManagedAppStatusRequestBuilder managedAppStatuses(final String id) {
         return new ManagedAppStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppStatuses") + "/" + id, getClient(), null);
     }
+    public IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder mdmWindowsInformationProtectionPolicies() {
+        return new MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies"), getClient(), null);
+    }
+
+    public IMdmWindowsInformationProtectionPolicyRequestBuilder mdmWindowsInformationProtectionPolicies(final String id) {
+        return new MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies") + "/" + id, getClient(), null);
+    }
+    public ITargetedManagedAppConfigurationCollectionRequestBuilder targetedManagedAppConfigurations() {
+        return new TargetedManagedAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations"), getClient(), null);
+    }
+
+    public ITargetedManagedAppConfigurationRequestBuilder targetedManagedAppConfigurations(final String id) {
+        return new TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations") + "/" + id, getClient(), null);
+    }
     public IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder windowsInformationProtectionDeviceRegistrations() {
         return new WindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionDeviceRegistrations"), getClient(), null);
     }
 
     public IWindowsInformationProtectionDeviceRegistrationRequestBuilder windowsInformationProtectionDeviceRegistrations(final String id) {
         return new WindowsInformationProtectionDeviceRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionDeviceRegistrations") + "/" + id, getClient(), null);
+    }
+    public IWindowsInformationProtectionPolicyCollectionRequestBuilder windowsInformationProtectionPolicies() {
+        return new WindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies"), getClient(), null);
+    }
+
+    public IWindowsInformationProtectionPolicyRequestBuilder windowsInformationProtectionPolicies(final String id) {
+        return new WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies") + "/" + id, getClient(), null);
     }
     public IWindowsInformationProtectionWipeActionCollectionRequestBuilder windowsInformationProtectionWipeActions() {
         return new WindowsInformationProtectionWipeActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionWipeActions"), getClient(), null);

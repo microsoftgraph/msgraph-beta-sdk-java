@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.MacOSMinimumOperatingSystem;
 import com.microsoft.graph.models.extensions.MacOSLobChildApp;
+import com.microsoft.graph.models.extensions.MacOSMinimumOperatingSystem;
 import com.microsoft.graph.models.extensions.MobileLobApp;
 
 
@@ -29,22 +29,6 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
 
     /**
-     * The Bundle Id.
-     * The bundle id.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
-     * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
-     */
-    @SerializedName("minimumSupportedOperatingSystem")
-    @Expose
-    public MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
-
-    /**
      * The Build Number.
      * The build number of MacOS Line of Business (LoB) app.
      */
@@ -53,12 +37,12 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
     public String buildNumber;
 
     /**
-     * The Version Number.
-     * The version number of MacOS Line of Business (LoB) app.
+     * The Bundle Id.
+     * The bundle id.
      */
-    @SerializedName("versionNumber")
+    @SerializedName("bundleId")
     @Expose
-    public String versionNumber;
+    public String bundleId;
 
     /**
      * The Child Apps.
@@ -77,12 +61,12 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
     public String identityVersion;
 
     /**
-     * The Md5Hash Chunk Size.
-     * The chunk size for MD5 hash
+     * The Ignore Version Detection.
+     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
      */
-    @SerializedName("md5HashChunkSize")
+    @SerializedName("ignoreVersionDetection")
     @Expose
-    public Integer md5HashChunkSize;
+    public Boolean ignoreVersionDetection;
 
     /**
      * The Md5Hash.
@@ -93,12 +77,28 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
     public java.util.List<String> md5Hash;
 
     /**
-     * The Ignore Version Detection.
-     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
+     * The Md5Hash Chunk Size.
+     * The chunk size for MD5 hash
      */
-    @SerializedName("ignoreVersionDetection")
+    @SerializedName("md5HashChunkSize")
     @Expose
-    public Boolean ignoreVersionDetection;
+    public Integer md5HashChunkSize;
+
+    /**
+     * The Minimum Supported Operating System.
+     * The value for the minimum applicable operating system.
+     */
+    @SerializedName("minimumSupportedOperatingSystem")
+    @Expose
+    public MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
+
+    /**
+     * The Version Number.
+     * The version number of MacOS Line of Business (LoB) app.
+     */
+    @SerializedName("versionNumber")
+    @Expose
+    public String versionNumber;
 
 
     /**

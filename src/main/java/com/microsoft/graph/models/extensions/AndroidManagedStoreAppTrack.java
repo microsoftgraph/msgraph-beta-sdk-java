@@ -36,20 +36,20 @@ public class AndroidManagedStoreAppTrack implements IJsonBackedObject {
     }
 
     /**
-     * The Track Id.
-     * Unique track identifier.
-     */
-    @SerializedName("trackId")
-    @Expose
-    public String trackId;
-
-    /**
      * The Track Alias.
      * Friendly name for track.
      */
     @SerializedName("trackAlias")
     @Expose
     public String trackAlias;
+
+    /**
+     * The Track Id.
+     * Unique track identifier.
+     */
+    @SerializedName("trackId")
+    @Expose
+    public String trackId;
 
 
     /**

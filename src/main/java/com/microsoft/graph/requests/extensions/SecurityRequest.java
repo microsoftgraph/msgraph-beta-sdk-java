@@ -44,6 +44,10 @@ import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.TiIndicatorCollectionRequestBuilder;
@@ -52,10 +56,6 @@ import com.microsoft.graph.requests.extensions.IUserSecurityProfileCollectionReq
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -157,6 +157,27 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      */
     public Security post(final Security newSecurity) throws ClientException {
         return send(HttpMethod.POST, newSecurity);
+    }
+
+    /**
+     * Creates a Security with a new object
+     *
+     * @param newSecurity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Security newSecurity, final ICallback<Security> callback) {
+        send(HttpMethod.PUT, callback, newSecurity);
+    }
+
+    /**
+     * Creates a Security with a new object
+     *
+     * @param newSecurity the object to create/update
+     * @return the created Security
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Security put(final Security newSecurity) throws ClientException {
+        return send(HttpMethod.PUT, newSecurity);
     }
 
     /**

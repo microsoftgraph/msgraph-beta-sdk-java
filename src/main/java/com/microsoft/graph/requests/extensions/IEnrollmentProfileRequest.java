@@ -80,6 +80,23 @@ public interface IEnrollmentProfileRequest extends IHttpRequest {
     EnrollmentProfile post(final EnrollmentProfile newEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a EnrollmentProfile with a new object
+     *
+     * @param newEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EnrollmentProfile newEnrollmentProfile, final ICallback<EnrollmentProfile> callback);
+
+    /**
+     * Posts a EnrollmentProfile with a new object
+     *
+     * @param newEnrollmentProfile the object to create/update
+     * @return the created EnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EnrollmentProfile put(final EnrollmentProfile newEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

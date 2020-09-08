@@ -112,6 +112,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
     }
 
     /**
+     * Creates a WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> callback) {
+        send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary);
+    }
+
+    /**
+     * Creates a WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary the object to create/update
+     * @return the created WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

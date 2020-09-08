@@ -8,16 +8,16 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PrintFinishing;
-import com.microsoft.graph.models.generated.PrintOrientation;
-import com.microsoft.graph.models.generated.PrintMultipageLayout;
 import com.microsoft.graph.models.generated.PrintColorMode;
-import com.microsoft.graph.models.generated.PrintQuality;
+import com.microsoft.graph.models.generated.PrintDuplexConfiguration;
 import com.microsoft.graph.models.generated.PrintDuplexMode;
-import com.microsoft.graph.models.generated.PrintScaling;
+import com.microsoft.graph.models.generated.PrintFinishing;
+import com.microsoft.graph.models.generated.PrintMultipageLayout;
+import com.microsoft.graph.models.generated.PrintOrientation;
 import com.microsoft.graph.models.generated.PrintPresentationDirection;
 import com.microsoft.graph.models.generated.PrintColorConfiguration;
-import com.microsoft.graph.models.generated.PrintDuplexConfiguration;
+import com.microsoft.graph.models.generated.PrintQuality;
+import com.microsoft.graph.models.generated.PrintScaling;
 
 
 import com.google.gson.JsonObject;
@@ -46,12 +46,12 @@ public class PrinterDefaults implements IJsonBackedObject {
     }
 
     /**
-     * The Copies Per Job.
+     * The Color Mode.
      * 
      */
-    @SerializedName("copiesPerJob")
+    @SerializedName("colorMode")
     @Expose
-    public Integer copiesPerJob;
+    public PrintColorMode colorMode;
 
     /**
      * The Content Type.
@@ -62,12 +62,60 @@ public class PrinterDefaults implements IJsonBackedObject {
     public String contentType;
 
     /**
+     * The Copies Per Job.
+     * 
+     */
+    @SerializedName("copiesPerJob")
+    @Expose
+    public Integer copiesPerJob;
+
+    /**
+     * The Document Mime Type.
+     * 
+     */
+    @SerializedName("documentMimeType")
+    @Expose
+    public String documentMimeType;
+
+    /**
+     * The Dpi.
+     * 
+     */
+    @SerializedName("dpi")
+    @Expose
+    public Integer dpi;
+
+    /**
+     * The Duplex Configuration.
+     * 
+     */
+    @SerializedName("duplexConfiguration")
+    @Expose
+    public PrintDuplexConfiguration duplexConfiguration;
+
+    /**
+     * The Duplex Mode.
+     * 
+     */
+    @SerializedName("duplexMode")
+    @Expose
+    public PrintDuplexMode duplexMode;
+
+    /**
      * The Finishings.
      * 
      */
     @SerializedName("finishings")
     @Expose
     public java.util.List<PrintFinishing> finishings;
+
+    /**
+     * The Fit Pdf To Page.
+     * 
+     */
+    @SerializedName("fitPdfToPage")
+    @Expose
+    public Boolean fitPdfToPage;
 
     /**
      * The Media Color.
@@ -78,14 +126,6 @@ public class PrinterDefaults implements IJsonBackedObject {
     public String mediaColor;
 
     /**
-     * The Media Type.
-     * 
-     */
-    @SerializedName("mediaType")
-    @Expose
-    public String mediaType;
-
-    /**
      * The Media Size.
      * 
      */
@@ -94,12 +134,20 @@ public class PrinterDefaults implements IJsonBackedObject {
     public String mediaSize;
 
     /**
-     * The Pages Per Sheet.
+     * The Media Type.
      * 
      */
-    @SerializedName("pagesPerSheet")
+    @SerializedName("mediaType")
     @Expose
-    public Integer pagesPerSheet;
+    public String mediaType;
+
+    /**
+     * The Multipage Layout.
+     * 
+     */
+    @SerializedName("multipageLayout")
+    @Expose
+    public PrintMultipageLayout multipageLayout;
 
     /**
      * The Orientation.
@@ -118,68 +166,12 @@ public class PrinterDefaults implements IJsonBackedObject {
     public String outputBin;
 
     /**
-     * The Fit Pdf To Page.
+     * The Pages Per Sheet.
      * 
      */
-    @SerializedName("fitPdfToPage")
+    @SerializedName("pagesPerSheet")
     @Expose
-    public Boolean fitPdfToPage;
-
-    /**
-     * The Multipage Layout.
-     * 
-     */
-    @SerializedName("multipageLayout")
-    @Expose
-    public PrintMultipageLayout multipageLayout;
-
-    /**
-     * The Color Mode.
-     * 
-     */
-    @SerializedName("colorMode")
-    @Expose
-    public PrintColorMode colorMode;
-
-    /**
-     * The Quality.
-     * 
-     */
-    @SerializedName("quality")
-    @Expose
-    public PrintQuality quality;
-
-    /**
-     * The Duplex Mode.
-     * 
-     */
-    @SerializedName("duplexMode")
-    @Expose
-    public PrintDuplexMode duplexMode;
-
-    /**
-     * The Dpi.
-     * 
-     */
-    @SerializedName("dpi")
-    @Expose
-    public Integer dpi;
-
-    /**
-     * The Scaling.
-     * 
-     */
-    @SerializedName("scaling")
-    @Expose
-    public PrintScaling scaling;
-
-    /**
-     * The Document Mime Type.
-     * 
-     */
-    @SerializedName("documentMimeType")
-    @Expose
-    public String documentMimeType;
+    public Integer pagesPerSheet;
 
     /**
      * The Pdf Fit To Page.
@@ -214,12 +206,20 @@ public class PrinterDefaults implements IJsonBackedObject {
     public PrintQuality printQuality;
 
     /**
-     * The Duplex Configuration.
+     * The Quality.
      * 
      */
-    @SerializedName("duplexConfiguration")
+    @SerializedName("quality")
     @Expose
-    public PrintDuplexConfiguration duplexConfiguration;
+    public PrintQuality quality;
+
+    /**
+     * The Scaling.
+     * 
+     */
+    @SerializedName("scaling")
+    @Expose
+    public PrintScaling scaling;
 
 
     /**

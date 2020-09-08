@@ -62,14 +62,14 @@ public class GroupPolicySettingMappingCollectionRequest extends BaseCollectionRe
     public void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicySettingMappingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicySettingMapping, callback);
     }
 
     public GroupPolicySettingMapping post(final GroupPolicySettingMapping newGroupPolicySettingMapping) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicySettingMappingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicySettingMapping);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicySettingMappingCollectionRequest extends BaseCollectionRe
         return (GroupPolicySettingMappingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicySettingMappingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicySettingMappingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicySettingMappingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicySettingMappingCollectionRequest)this;
+    }
     public IGroupPolicySettingMappingCollectionPage buildFromResponse(final GroupPolicySettingMappingCollectionResponse response) {
         final IGroupPolicySettingMappingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

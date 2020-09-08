@@ -27,22 +27,6 @@ public class SharePointActivityPages extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Visited Page Count.
-     * 
-     */
-    @SerializedName("visitedPageCount")
-    @Expose
-    public Long visitedPageCount;
-
-    /**
      * The Report Date.
      * 
      */
@@ -57,6 +41,22 @@ public class SharePointActivityPages extends Entity implements IJsonBackedObject
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Visited Page Count.
+     * 
+     */
+    @SerializedName("visitedPageCount")
+    @Expose
+    public Long visitedPageCount;
 
 
     /**

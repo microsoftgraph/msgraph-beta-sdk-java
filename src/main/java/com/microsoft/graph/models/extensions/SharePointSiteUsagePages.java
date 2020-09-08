@@ -27,22 +27,6 @@ public class SharePointSiteUsagePages extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Site Type.
-     * 
-     */
-    @SerializedName("siteType")
-    @Expose
-    public String siteType;
-
-    /**
      * The Page View Count.
      * 
      */
@@ -65,6 +49,22 @@ public class SharePointSiteUsagePages extends Entity implements IJsonBackedObjec
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Site Type.
+     * 
+     */
+    @SerializedName("siteType")
+    @Expose
+    public String siteType;
 
 
     /**

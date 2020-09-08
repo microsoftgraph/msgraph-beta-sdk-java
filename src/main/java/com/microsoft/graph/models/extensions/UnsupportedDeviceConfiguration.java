@@ -28,20 +28,20 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
 
 
     /**
-     * The Original Entity Type Name.
-     * The type of entity that would be returned otherwise.
-     */
-    @SerializedName("originalEntityTypeName")
-    @Expose
-    public String originalEntityTypeName;
-
-    /**
      * The Details.
      * Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements.
      */
     @SerializedName("details")
     @Expose
     public java.util.List<UnsupportedDeviceConfigurationDetail> details;
+
+    /**
+     * The Original Entity Type Name.
+     * The type of entity that would be returned otherwise.
+     */
+    @SerializedName("originalEntityTypeName")
+    @Expose
+    public String originalEntityTypeName;
 
 
     /**

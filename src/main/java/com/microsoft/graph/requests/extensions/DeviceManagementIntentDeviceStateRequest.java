@@ -112,6 +112,27 @@ public class DeviceManagementIntentDeviceStateRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a DeviceManagementIntentDeviceState with a new object
+     *
+     * @param newDeviceManagementIntentDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState, final ICallback<DeviceManagementIntentDeviceState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementIntentDeviceState);
+    }
+
+    /**
+     * Creates a DeviceManagementIntentDeviceState with a new object
+     *
+     * @param newDeviceManagementIntentDeviceState the object to create/update
+     * @return the created DeviceManagementIntentDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementIntentDeviceState put(final DeviceManagementIntentDeviceState newDeviceManagementIntentDeviceState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementIntentDeviceState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

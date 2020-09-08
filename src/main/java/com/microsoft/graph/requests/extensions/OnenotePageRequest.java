@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenotePage;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -116,6 +116,27 @@ public class OnenotePageRequest extends BaseRequest implements IOnenotePageReque
      */
     public OnenotePage post(final byte[] newOnenotePage) throws ClientException {
         return send(HttpMethod.POST, newOnenotePage);
+    }
+
+    /**
+     * Creates a OnenotePage with a new object
+     *
+     * @param newOnenotePage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenotePage newOnenotePage, final ICallback<OnenotePage> callback) {
+        send(HttpMethod.PUT, callback, newOnenotePage);
+    }
+
+    /**
+     * Creates a OnenotePage with a new object
+     *
+     * @param newOnenotePage the object to create/update
+     * @return the created OnenotePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenotePage put(final OnenotePage newOnenotePage) throws ClientException {
+        return send(HttpMethod.PUT, newOnenotePage);
     }
 
     /**

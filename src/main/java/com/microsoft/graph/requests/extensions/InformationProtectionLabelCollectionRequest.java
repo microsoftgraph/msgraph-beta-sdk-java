@@ -10,11 +10,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.models.extensions.LabelingOptions;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.ClassificationResult;
+import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -68,14 +68,14 @@ public class InformationProtectionLabelCollectionRequest extends BaseCollectionR
     public void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<InformationProtectionLabel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InformationProtectionLabelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newInformationProtectionLabel, callback);
     }
 
     public InformationProtectionLabel post(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InformationProtectionLabelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newInformationProtectionLabel);
     }
 
@@ -112,6 +112,27 @@ public class InformationProtectionLabelCollectionRequest extends BaseCollectionR
         return (InformationProtectionLabelCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IInformationProtectionLabelCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (InformationProtectionLabelCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IInformationProtectionLabelCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IInformationProtectionLabelCollectionRequest)this;
+    }
     public IInformationProtectionLabelCollectionPage buildFromResponse(final InformationProtectionLabelCollectionResponse response) {
         final IInformationProtectionLabelCollectionRequestBuilder builder;
         if (response.nextLink != null) {

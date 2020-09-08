@@ -112,6 +112,27 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a MacOSExtensionsConfiguration with a new object
+     *
+     * @param newMacOSExtensionsConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<MacOSExtensionsConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newMacOSExtensionsConfiguration);
+    }
+
+    /**
+     * Creates a MacOSExtensionsConfiguration with a new object
+     *
+     * @param newMacOSExtensionsConfiguration the object to create/update
+     * @return the created MacOSExtensionsConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSExtensionsConfiguration put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSExtensionsConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

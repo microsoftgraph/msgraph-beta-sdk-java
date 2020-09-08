@@ -62,14 +62,14 @@ public class MobileAppInstallStatusCollectionRequest extends BaseCollectionReque
     public void post(final MobileAppInstallStatus newMobileAppInstallStatus, final ICallback<MobileAppInstallStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppInstallStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppInstallStatus, callback);
     }
 
     public MobileAppInstallStatus post(final MobileAppInstallStatus newMobileAppInstallStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppInstallStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppInstallStatus);
     }
 
@@ -106,6 +106,27 @@ public class MobileAppInstallStatusCollectionRequest extends BaseCollectionReque
         return (MobileAppInstallStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppInstallStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppInstallStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppInstallStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppInstallStatusCollectionRequest)this;
+    }
     public IMobileAppInstallStatusCollectionPage buildFromResponse(final MobileAppInstallStatusCollectionResponse response) {
         final IMobileAppInstallStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

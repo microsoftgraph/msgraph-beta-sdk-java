@@ -128,6 +128,27 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
     }
 
     /**
+     * Creates a DeviceAppManagementTask with a new object
+     *
+     * @param newDeviceAppManagementTask the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback) {
+        send(HttpMethod.PUT, callback, newDeviceAppManagementTask);
+    }
+
+    /**
+     * Creates a DeviceAppManagementTask with a new object
+     *
+     * @param newDeviceAppManagementTask the object to create/update
+     * @return the created DeviceAppManagementTask
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceAppManagementTask put(final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceAppManagementTask);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

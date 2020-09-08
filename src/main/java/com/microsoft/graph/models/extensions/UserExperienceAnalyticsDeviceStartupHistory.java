@@ -28,60 +28,12 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
 
     /**
-     * The Device Id.
-     * The user experience analytics device id.
-     */
-    @SerializedName("deviceId")
-    @Expose
-    public String deviceId;
-
-    /**
-     * The Start Time.
-     * The user experience analytics device boot start time.
-     */
-    @SerializedName("startTime")
-    @Expose
-    public java.util.Calendar startTime;
-
-    /**
      * The Core Boot Time In Ms.
      * The user experience analytics device core boot time in milliseconds.
      */
     @SerializedName("coreBootTimeInMs")
     @Expose
     public Integer coreBootTimeInMs;
-
-    /**
-     * The Group Policy Boot Time In Ms.
-     * The User experience analytics Device group policy boot time in milliseconds.
-     */
-    @SerializedName("groupPolicyBootTimeInMs")
-    @Expose
-    public Integer groupPolicyBootTimeInMs;
-
-    /**
-     * The Feature Update Boot Time In Ms.
-     * The user experience analytics device feature update time in milliseconds.
-     */
-    @SerializedName("featureUpdateBootTimeInMs")
-    @Expose
-    public Integer featureUpdateBootTimeInMs;
-
-    /**
-     * The Total Boot Time In Ms.
-     * The user experience analytics device total boot time in milliseconds.
-     */
-    @SerializedName("totalBootTimeInMs")
-    @Expose
-    public Integer totalBootTimeInMs;
-
-    /**
-     * The Group Policy Login Time In Ms.
-     * The User experience analytics Device group policy login time in milliseconds.
-     */
-    @SerializedName("groupPolicyLoginTimeInMs")
-    @Expose
-    public Integer groupPolicyLoginTimeInMs;
 
     /**
      * The Core Login Time In Ms.
@@ -92,28 +44,36 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     public Integer coreLoginTimeInMs;
 
     /**
-     * The Responsive Desktop Time In Ms.
-     * The user experience analytics responsive desktop time in milliseconds.
+     * The Device Id.
+     * The user experience analytics device id.
      */
-    @SerializedName("responsiveDesktopTimeInMs")
+    @SerializedName("deviceId")
     @Expose
-    public Integer responsiveDesktopTimeInMs;
+    public String deviceId;
 
     /**
-     * The Total Login Time In Ms.
-     * The user experience analytics device total login time in milliseconds.
+     * The Feature Update Boot Time In Ms.
+     * The user experience analytics device feature update time in milliseconds.
      */
-    @SerializedName("totalLoginTimeInMs")
+    @SerializedName("featureUpdateBootTimeInMs")
     @Expose
-    public Integer totalLoginTimeInMs;
+    public Integer featureUpdateBootTimeInMs;
 
     /**
-     * The Is First Login.
-     * The user experience analytics device first login.
+     * The Group Policy Boot Time In Ms.
+     * The User experience analytics Device group policy boot time in milliseconds.
      */
-    @SerializedName("isFirstLogin")
+    @SerializedName("groupPolicyBootTimeInMs")
     @Expose
-    public Boolean isFirstLogin;
+    public Integer groupPolicyBootTimeInMs;
+
+    /**
+     * The Group Policy Login Time In Ms.
+     * The User experience analytics Device group policy login time in milliseconds.
+     */
+    @SerializedName("groupPolicyLoginTimeInMs")
+    @Expose
+    public Integer groupPolicyLoginTimeInMs;
 
     /**
      * The Is Feature Update.
@@ -124,6 +84,14 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     public Boolean isFeatureUpdate;
 
     /**
+     * The Is First Login.
+     * The user experience analytics device first login.
+     */
+    @SerializedName("isFirstLogin")
+    @Expose
+    public Boolean isFirstLogin;
+
+    /**
      * The Operating System Version.
      * The user experience analytics device boot record's operating system version.
      */
@@ -132,12 +100,44 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     public String operatingSystemVersion;
 
     /**
+     * The Responsive Desktop Time In Ms.
+     * The user experience analytics responsive desktop time in milliseconds.
+     */
+    @SerializedName("responsiveDesktopTimeInMs")
+    @Expose
+    public Integer responsiveDesktopTimeInMs;
+
+    /**
      * The Restart Category.
      * OS restart category
      */
     @SerializedName("restartCategory")
     @Expose
     public UserExperienceAnalyticsOperatingSystemRestartCategory restartCategory;
+
+    /**
+     * The Start Time.
+     * The user experience analytics device boot start time.
+     */
+    @SerializedName("startTime")
+    @Expose
+    public java.util.Calendar startTime;
+
+    /**
+     * The Total Boot Time In Ms.
+     * The user experience analytics device total boot time in milliseconds.
+     */
+    @SerializedName("totalBootTimeInMs")
+    @Expose
+    public Integer totalBootTimeInMs;
+
+    /**
+     * The Total Login Time In Ms.
+     * The user experience analytics device total login time in milliseconds.
+     */
+    @SerializedName("totalLoginTimeInMs")
+    @Expose
+    public Integer totalLoginTimeInMs;
 
 
     /**

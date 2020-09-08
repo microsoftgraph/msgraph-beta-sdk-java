@@ -80,6 +80,23 @@ public interface IApplicationSignInDetailedSummaryRequest extends IHttpRequest {
     ApplicationSignInDetailedSummary post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException;
 
     /**
+     * Posts a ApplicationSignInDetailedSummary with a new object
+     *
+     * @param newApplicationSignInDetailedSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback);
+
+    /**
+     * Posts a ApplicationSignInDetailedSummary with a new object
+     *
+     * @param newApplicationSignInDetailedSummary the object to create/update
+     * @return the created ApplicationSignInDetailedSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ApplicationSignInDetailedSummary put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

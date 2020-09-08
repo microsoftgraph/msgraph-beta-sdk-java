@@ -112,6 +112,27 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a Windows81TrustedRootCertificate with a new object
+     *
+     * @param newWindows81TrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback) {
+        send(HttpMethod.PUT, callback, newWindows81TrustedRootCertificate);
+    }
+
+    /**
+     * Creates a Windows81TrustedRootCertificate with a new object
+     *
+     * @param newWindows81TrustedRootCertificate the object to create/update
+     * @return the created Windows81TrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows81TrustedRootCertificate put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newWindows81TrustedRootCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

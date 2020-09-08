@@ -35,12 +35,12 @@ public interface IApprovalRequestBuilder extends IRequestBuilder {
     IApprovalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IApprovalStepCollectionRequestBuilder pendingSteps();
-
-    IApprovalStepRequestBuilder pendingSteps(final String id);
-
     IApprovalStepCollectionRequestBuilder completedSteps();
 
     IApprovalStepRequestBuilder completedSteps(final String id);
+
+    IApprovalStepCollectionRequestBuilder pendingSteps();
+
+    IApprovalStepRequestBuilder pendingSteps(final String id);
 
 }

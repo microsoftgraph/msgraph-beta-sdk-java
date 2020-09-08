@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ManagedAppRemediationAction;
 import com.microsoft.graph.models.generated.ManagedAppDataEncryptionType;
 import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.generated.ManagedAppRemediationAction;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.TargetedManagedAppProtection;
@@ -34,54 +34,6 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
 
     /**
-     * The App Data Encryption Type.
-     * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
-     */
-    @SerializedName("appDataEncryptionType")
-    @Expose
-    public ManagedAppDataEncryptionType appDataEncryptionType;
-
-    /**
-     * The Minimum Required Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
-     */
-    @SerializedName("minimumRequiredSdkVersion")
-    @Expose
-    public String minimumRequiredSdkVersion;
-
-    /**
-     * The Deployed App Count.
-     * Count of apps to which the current policy is deployed.
-     */
-    @SerializedName("deployedAppCount")
-    @Expose
-    public Integer deployedAppCount;
-
-    /**
-     * The Face Id Blocked.
-     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-     */
-    @SerializedName("faceIdBlocked")
-    @Expose
-    public Boolean faceIdBlocked;
-
-    /**
-     * The Exempted App Protocols.
-     * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
-     */
-    @SerializedName("exemptedAppProtocols")
-    @Expose
-    public java.util.List<KeyValuePair> exemptedAppProtocols;
-
-    /**
-     * The Minimum Wipe Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
-     */
-    @SerializedName("minimumWipeSdkVersion")
-    @Expose
-    public String minimumWipeSdkVersion;
-
-    /**
      * The Allowed Ios Device Models.
      * Semicolon seperated list of device models allowed, as a string, for the managed app to work.
      */
@@ -98,36 +50,12 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public ManagedAppRemediationAction appActionIfIosDeviceModelNotAllowed;
 
     /**
-     * The Third Party Keyboards Blocked.
-     * Defines if third party keyboards are allowed while accessing a managed app
+     * The App Data Encryption Type.
+     * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
-    @SerializedName("thirdPartyKeyboardsBlocked")
+    @SerializedName("appDataEncryptionType")
     @Expose
-    public Boolean thirdPartyKeyboardsBlocked;
-
-    /**
-     * The Filter Open In To Only Managed Apps.
-     * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
-     */
-    @SerializedName("filterOpenInToOnlyManagedApps")
-    @Expose
-    public Boolean filterOpenInToOnlyManagedApps;
-
-    /**
-     * The Disable Protection Of Managed Outbound Open In Data.
-     * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
-     */
-    @SerializedName("disableProtectionOfManagedOutboundOpenInData")
-    @Expose
-    public Boolean disableProtectionOfManagedOutboundOpenInData;
-
-    /**
-     * The Protect Inbound Data From Unknown Sources.
-     * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
-     */
-    @SerializedName("protectInboundDataFromUnknownSources")
-    @Expose
-    public Boolean protectInboundDataFromUnknownSources;
+    public ManagedAppDataEncryptionType appDataEncryptionType;
 
     /**
      * The Custom Browser Protocol.
@@ -144,6 +72,78 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     @SerializedName("customDialerAppProtocol")
     @Expose
     public String customDialerAppProtocol;
+
+    /**
+     * The Deployed App Count.
+     * Count of apps to which the current policy is deployed.
+     */
+    @SerializedName("deployedAppCount")
+    @Expose
+    public Integer deployedAppCount;
+
+    /**
+     * The Disable Protection Of Managed Outbound Open In Data.
+     * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
+     */
+    @SerializedName("disableProtectionOfManagedOutboundOpenInData")
+    @Expose
+    public Boolean disableProtectionOfManagedOutboundOpenInData;
+
+    /**
+     * The Exempted App Protocols.
+     * Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
+     */
+    @SerializedName("exemptedAppProtocols")
+    @Expose
+    public java.util.List<KeyValuePair> exemptedAppProtocols;
+
+    /**
+     * The Face Id Blocked.
+     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+     */
+    @SerializedName("faceIdBlocked")
+    @Expose
+    public Boolean faceIdBlocked;
+
+    /**
+     * The Filter Open In To Only Managed Apps.
+     * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
+     */
+    @SerializedName("filterOpenInToOnlyManagedApps")
+    @Expose
+    public Boolean filterOpenInToOnlyManagedApps;
+
+    /**
+     * The Minimum Required Sdk Version.
+     * Versions less than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName("minimumRequiredSdkVersion")
+    @Expose
+    public String minimumRequiredSdkVersion;
+
+    /**
+     * The Minimum Wipe Sdk Version.
+     * Versions less than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName("minimumWipeSdkVersion")
+    @Expose
+    public String minimumWipeSdkVersion;
+
+    /**
+     * The Protect Inbound Data From Unknown Sources.
+     * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
+     */
+    @SerializedName("protectInboundDataFromUnknownSources")
+    @Expose
+    public Boolean protectInboundDataFromUnknownSources;
+
+    /**
+     * The Third Party Keyboards Blocked.
+     * Defines if third party keyboards are allowed while accessing a managed app
+     */
+    @SerializedName("thirdPartyKeyboardsBlocked")
+    @Expose
+    public Boolean thirdPartyKeyboardsBlocked;
 
     /**
      * The Apps.

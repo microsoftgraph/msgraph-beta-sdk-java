@@ -62,14 +62,14 @@ public class ProviderTenantSettingCollectionRequest extends BaseCollectionReques
     public void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<ProviderTenantSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProviderTenantSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProviderTenantSetting, callback);
     }
 
     public ProviderTenantSetting post(final ProviderTenantSetting newProviderTenantSetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProviderTenantSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProviderTenantSetting);
     }
 
@@ -106,6 +106,27 @@ public class ProviderTenantSettingCollectionRequest extends BaseCollectionReques
         return (ProviderTenantSettingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProviderTenantSettingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProviderTenantSettingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProviderTenantSettingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProviderTenantSettingCollectionRequest)this;
+    }
     public IProviderTenantSettingCollectionPage buildFromResponse(final ProviderTenantSettingCollectionResponse response) {
         final IProviderTenantSettingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -61,14 +61,14 @@ public class ApprovalWorkflowProviderCollectionRequest extends BaseCollectionReq
     public void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApprovalWorkflowProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApprovalWorkflowProvider, callback);
     }
 
     public ApprovalWorkflowProvider post(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApprovalWorkflowProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApprovalWorkflowProvider);
     }
 
@@ -105,6 +105,27 @@ public class ApprovalWorkflowProviderCollectionRequest extends BaseCollectionReq
         return (ApprovalWorkflowProviderCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IApprovalWorkflowProviderCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ApprovalWorkflowProviderCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IApprovalWorkflowProviderCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IApprovalWorkflowProviderCollectionRequest)this;
+    }
     public IApprovalWorkflowProviderCollectionPage buildFromResponse(final ApprovalWorkflowProviderCollectionResponse response) {
         final IApprovalWorkflowProviderCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -10,6 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
+import com.microsoft.graph.models.generated.IosKioskModeAppType;
+import com.microsoft.graph.models.generated.RatingAppsType;
 import com.microsoft.graph.models.extensions.MediaContentRatingAustralia;
 import com.microsoft.graph.models.extensions.MediaContentRatingCanada;
 import com.microsoft.graph.models.extensions.MediaContentRatingFrance;
@@ -20,10 +22,8 @@ import com.microsoft.graph.models.extensions.MediaContentRatingNewZealand;
 import com.microsoft.graph.models.extensions.MediaContentRatingUnitedKingdom;
 import com.microsoft.graph.models.extensions.MediaContentRatingUnitedStates;
 import com.microsoft.graph.models.extensions.IosNetworkUsageRule;
-import com.microsoft.graph.models.generated.RatingAppsType;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.WebBrowserCookieSettings;
-import com.microsoft.graph.models.generated.IosKioskModeAppType;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -83,6 +83,46 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean airPlayForcePairingPasswordForOutgoingRequests;
 
     /**
+     * The Air Print Block Credentials Storage.
+     * Indicates whether or not keychain storage of username and password for Airprint is blocked (iOS 11.0 and later).
+     */
+    @SerializedName("airPrintBlockCredentialsStorage")
+    @Expose
+    public Boolean airPrintBlockCredentialsStorage;
+
+    /**
+     * The Air Print Blocked.
+     * Indicates whether or not AirPrint is blocked (iOS 11.0 and later).
+     */
+    @SerializedName("airPrintBlocked")
+    @Expose
+    public Boolean airPrintBlocked;
+
+    /**
+     * The Air Print Blocki Beacon Discovery.
+     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (iOS 11.0 and later).
+     */
+    @SerializedName("airPrintBlockiBeaconDiscovery")
+    @Expose
+    public Boolean airPrintBlockiBeaconDiscovery;
+
+    /**
+     * The Air Print Force Trusted TLS.
+     * Indicates if trusted certificates are required for TLS printing communication (iOS 11.0 and later).
+     */
+    @SerializedName("airPrintForceTrustedTLS")
+    @Expose
+    public Boolean airPrintForceTrustedTLS;
+
+    /**
+     * The Apple News Blocked.
+     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
+     */
+    @SerializedName("appleNewsBlocked")
+    @Expose
+    public Boolean appleNewsBlocked;
+
+    /**
      * The Apple Watch Block Pairing.
      * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      */
@@ -99,12 +139,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean appleWatchForceWristDetection;
 
     /**
-     * The Apple News Blocked.
-     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
+     * The App Removal Blocked.
+     * Indicates if the removal of apps is allowed.
      */
-    @SerializedName("appleNewsBlocked")
+    @SerializedName("appRemovalBlocked")
     @Expose
-    public Boolean appleNewsBlocked;
+    public Boolean appRemovalBlocked;
 
     /**
      * The Apps Single App Mode List.
@@ -113,22 +153,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("appsSingleAppModeList")
     @Expose
     public java.util.List<AppListItem> appsSingleAppModeList;
-
-    /**
-     * The Apps Visibility List.
-     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("appsVisibilityList")
-    @Expose
-    public java.util.List<AppListItem> appsVisibilityList;
-
-    /**
-     * The Apps Visibility List Type.
-     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
-     */
-    @SerializedName("appsVisibilityListType")
-    @Expose
-    public AppListType appsVisibilityListType;
 
     /**
      * The App Store Block Automatic Downloads.
@@ -171,12 +195,36 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean appStoreRequirePassword;
 
     /**
+     * The Apps Visibility List.
+     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("appsVisibilityList")
+    @Expose
+    public java.util.List<AppListItem> appsVisibilityList;
+
+    /**
+     * The Apps Visibility List Type.
+     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     */
+    @SerializedName("appsVisibilityListType")
+    @Expose
+    public AppListType appsVisibilityListType;
+
+    /**
      * The Auto Fill Force Authentication.
      * Indicates whether or not to force user authentication before autofilling passwords and credit card information in Safari and other apps on supervised devices.
      */
     @SerializedName("autoFillForceAuthentication")
     @Expose
     public Boolean autoFillForceAuthentication;
+
+    /**
+     * The Block System App Removal.
+     * Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
+     */
+    @SerializedName("blockSystemAppRemoval")
+    @Expose
+    public Boolean blockSystemAppRemoval;
 
     /**
      * The Bluetooth Block Modification.
@@ -227,6 +275,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean cellularBlockPersonalHotspot;
 
     /**
+     * The Cellular Block Personal Hotspot Modification.
+     * Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
+     */
+    @SerializedName("cellularBlockPersonalHotspotModification")
+    @Expose
+    public Boolean cellularBlockPersonalHotspotModification;
+
+    /**
      * The Cellular Block Plan Modification.
      * Indicates whether or not to allow users to change the settings of the cellular plan on a supervised device.
      */
@@ -275,20 +331,20 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean classroomForceAutomaticallyJoinClasses;
 
     /**
+     * The Classroom Force Request Permission To Leave Classes.
+     * Indicates whether a student enrolled in an unmanaged course via Classroom will request permission from the teacher when attempting to leave the course (iOS 11.3 and later).
+     */
+    @SerializedName("classroomForceRequestPermissionToLeaveClasses")
+    @Expose
+    public Boolean classroomForceRequestPermissionToLeaveClasses;
+
+    /**
      * The Classroom Force Unprompted App And Device Lock.
      * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Supervised only.
      */
     @SerializedName("classroomForceUnpromptedAppAndDeviceLock")
     @Expose
     public Boolean classroomForceUnpromptedAppAndDeviceLock;
-
-    /**
-     * The Compliant Apps List.
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("compliantAppsList")
-    @Expose
-    public java.util.List<AppListItem> compliantAppsList;
 
     /**
      * The Compliant App List Type.
@@ -299,12 +355,52 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public AppListType compliantAppListType;
 
     /**
+     * The Compliant Apps List.
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("compliantAppsList")
+    @Expose
+    public java.util.List<AppListItem> compliantAppsList;
+
+    /**
      * The Configuration Profile Block Changes.
      * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
      */
     @SerializedName("configurationProfileBlockChanges")
     @Expose
     public Boolean configurationProfileBlockChanges;
+
+    /**
+     * The Contacts Allow Managed To Unmanaged Write.
+     * Indicates whether or not managed apps can write contacts to unmanaged contacts accounts (iOS 12.0 and later).
+     */
+    @SerializedName("contactsAllowManagedToUnmanagedWrite")
+    @Expose
+    public Boolean contactsAllowManagedToUnmanagedWrite;
+
+    /**
+     * The Contacts Allow Unmanaged To Managed Read.
+     * Indicates whether or not unmanaged apps can read from managed contacts accounts (iOS 12.0 or later).
+     */
+    @SerializedName("contactsAllowUnmanagedToManagedRead")
+    @Expose
+    public Boolean contactsAllowUnmanagedToManagedRead;
+
+    /**
+     * The Continuous Path Keyboard Blocked.
+     * Indicates whether or not to block the continuous path keyboard when the device is supervised (iOS 13 or later).
+     */
+    @SerializedName("continuousPathKeyboardBlocked")
+    @Expose
+    public Boolean continuousPathKeyboardBlocked;
+
+    /**
+     * The Date And Time Force Set Automatically.
+     * Indicates whether or not the Date and Time "Set Automatically" feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
+     */
+    @SerializedName("dateAndTimeForceSetAutomatically")
+    @Expose
+    public Boolean dateAndTimeForceSetAutomatically;
 
     /**
      * The Definition Lookup Blocked.
@@ -395,6 +491,22 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean enterpriseAppBlockTrustModification;
 
     /**
+     * The Enterprise Book Block Backup.
+     * Indicates whether or not Enterprise book back up is blocked.
+     */
+    @SerializedName("enterpriseBookBlockBackup")
+    @Expose
+    public Boolean enterpriseBookBlockBackup;
+
+    /**
+     * The Enterprise Book Block Metadata Sync.
+     * Indicates whether or not Enterprise book notes and highlights sync is blocked.
+     */
+    @SerializedName("enterpriseBookBlockMetadataSync")
+    @Expose
+    public Boolean enterpriseBookBlockMetadataSync;
+
+    /**
      * The Esim Block Modification.
      * Indicates whether or not to allow the addition or removal of cellular plans on the eSIM of a supervised device.
      */
@@ -411,12 +523,52 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean faceTimeBlocked;
 
     /**
+     * The Files Network Drive Access Blocked.
+     * Indicates if devices can access files or other resources on a network server using the Server Message Block (SMB) protocol. Available for devices running iOS and iPadOS, versions 13.0 and later.
+     */
+    @SerializedName("filesNetworkDriveAccessBlocked")
+    @Expose
+    public Boolean filesNetworkDriveAccessBlocked;
+
+    /**
+     * The Files Usb Drive Access Blocked.
+     * Indicates if sevices with access can connect to and open files on a USB drive. Available for devices running iOS and iPadOS, versions 13.0 and later.
+     */
+    @SerializedName("filesUsbDriveAccessBlocked")
+    @Expose
+    public Boolean filesUsbDriveAccessBlocked;
+
+    /**
+     * The Find My Device In Find My App Blocked.
+     * Indicates whether or not to block Find My Device when the device is supervised (iOS 13 or later).
+     */
+    @SerializedName("findMyDeviceInFindMyAppBlocked")
+    @Expose
+    public Boolean findMyDeviceInFindMyAppBlocked;
+
+    /**
      * The Find My Friends Blocked.
      * Indicates whether or not to block Find My Friends when the device is in supervised mode.
      */
     @SerializedName("findMyFriendsBlocked")
     @Expose
     public Boolean findMyFriendsBlocked;
+
+    /**
+     * The Find My Friends In Find My App Blocked.
+     * Indicates whether or not to block Find My Friends when the device is supervised (iOS 13 or later).
+     */
+    @SerializedName("findMyFriendsInFindMyAppBlocked")
+    @Expose
+    public Boolean findMyFriendsInFindMyAppBlocked;
+
+    /**
+     * The Game Center Blocked.
+     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
+     */
+    @SerializedName("gameCenterBlocked")
+    @Expose
+    public Boolean gameCenterBlocked;
 
     /**
      * The Gaming Block Game Center Friends.
@@ -433,14 +585,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("gamingBlockMultiplayer")
     @Expose
     public Boolean gamingBlockMultiplayer;
-
-    /**
-     * The Game Center Blocked.
-     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-     */
-    @SerializedName("gameCenterBlocked")
-    @Expose
-    public Boolean gameCenterBlocked;
 
     /**
      * The Host Pairing Blocked.
@@ -531,6 +675,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean iCloudRequireEncryptedBackup;
 
     /**
+     * The ITunes Blocked.
+     * Indicates whether or not to block the iTunes app. Requires a supervised device for iOS 13 and later.
+     */
+    @SerializedName("iTunesBlocked")
+    @Expose
+    public Boolean iTunesBlocked;
+
+    /**
      * The ITunes Block Explicit Content.
      * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
      */
@@ -595,6 +747,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean keyboardBlockSpellCheck;
 
     /**
+     * The Keychain Block Cloud Sync.
+     * Indicates whether or not iCloud keychain synchronization is blocked. Requires a supervised device for iOS 13 and later.
+     */
+    @SerializedName("keychainBlockCloudSync")
+    @Expose
+    public Boolean keychainBlockCloudSync;
+
+    /**
      * The Kiosk Mode Allow Assistive Speak.
      * Indicates whether or not to allow assistive speak while in kiosk mode.
      */
@@ -619,14 +779,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean kioskModeAllowAutoLock;
 
     /**
-     * The Kiosk Mode Block Auto Lock.
-     * Indicates whether or not to block device auto lock while in kiosk mode.
-     */
-    @SerializedName("kioskModeBlockAutoLock")
-    @Expose
-    public Boolean kioskModeBlockAutoLock;
-
-    /**
      * The Kiosk Mode Allow Color Inversion Settings.
      * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
      */
@@ -643,28 +795,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean kioskModeAllowRingerSwitch;
 
     /**
-     * The Kiosk Mode Block Ringer Switch.
-     * Indicates whether or not to block use of the ringer switch while in kiosk mode.
-     */
-    @SerializedName("kioskModeBlockRingerSwitch")
-    @Expose
-    public Boolean kioskModeBlockRingerSwitch;
-
-    /**
      * The Kiosk Mode Allow Screen Rotation.
      * Indicates whether or not to allow screen rotation while in kiosk mode.
      */
     @SerializedName("kioskModeAllowScreenRotation")
     @Expose
     public Boolean kioskModeAllowScreenRotation;
-
-    /**
-     * The Kiosk Mode Block Screen Rotation.
-     * Indicates whether or not to block screen rotation while in kiosk mode.
-     */
-    @SerializedName("kioskModeBlockScreenRotation")
-    @Expose
-    public Boolean kioskModeBlockScreenRotation;
 
     /**
      * The Kiosk Mode Allow Sleep Button.
@@ -675,36 +811,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean kioskModeAllowSleepButton;
 
     /**
-     * The Kiosk Mode Block Sleep Button.
-     * Indicates whether or not to block use of the sleep button while in kiosk mode.
-     */
-    @SerializedName("kioskModeBlockSleepButton")
-    @Expose
-    public Boolean kioskModeBlockSleepButton;
-
-    /**
      * The Kiosk Mode Allow Touchscreen.
      * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
      */
     @SerializedName("kioskModeAllowTouchscreen")
     @Expose
     public Boolean kioskModeAllowTouchscreen;
-
-    /**
-     * The Kiosk Mode Block Touchscreen.
-     * Indicates whether or not to block use of the touchscreen while in kiosk mode.
-     */
-    @SerializedName("kioskModeBlockTouchscreen")
-    @Expose
-    public Boolean kioskModeBlockTouchscreen;
-
-    /**
-     * The Kiosk Mode Enable Voice Control.
-     * Indicates whether or not to enable voice control in kiosk mode.
-     */
-    @SerializedName("kioskModeEnableVoiceControl")
-    @Expose
-    public Boolean kioskModeEnableVoiceControl;
 
     /**
      * The Kiosk Mode Allow Voice Control Modification.
@@ -731,14 +843,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean kioskModeAllowVolumeButtons;
 
     /**
-     * The Kiosk Mode Block Volume Buttons.
-     * Indicates whether or not to block the volume buttons while in Kiosk Mode.
-     */
-    @SerializedName("kioskModeBlockVolumeButtons")
-    @Expose
-    public Boolean kioskModeBlockVolumeButtons;
-
-    /**
      * The Kiosk Mode Allow Zoom Settings.
      * Indicates whether or not to allow access to the zoom settings while in kiosk mode.
      */
@@ -755,12 +859,84 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public String kioskModeAppStoreUrl;
 
     /**
+     * The Kiosk Mode App Type.
+     * Type of app to run in kiosk mode.
+     */
+    @SerializedName("kioskModeAppType")
+    @Expose
+    public IosKioskModeAppType kioskModeAppType;
+
+    /**
+     * The Kiosk Mode Block Auto Lock.
+     * Indicates whether or not to block device auto lock while in kiosk mode.
+     */
+    @SerializedName("kioskModeBlockAutoLock")
+    @Expose
+    public Boolean kioskModeBlockAutoLock;
+
+    /**
+     * The Kiosk Mode Block Ringer Switch.
+     * Indicates whether or not to block use of the ringer switch while in kiosk mode.
+     */
+    @SerializedName("kioskModeBlockRingerSwitch")
+    @Expose
+    public Boolean kioskModeBlockRingerSwitch;
+
+    /**
+     * The Kiosk Mode Block Screen Rotation.
+     * Indicates whether or not to block screen rotation while in kiosk mode.
+     */
+    @SerializedName("kioskModeBlockScreenRotation")
+    @Expose
+    public Boolean kioskModeBlockScreenRotation;
+
+    /**
+     * The Kiosk Mode Block Sleep Button.
+     * Indicates whether or not to block use of the sleep button while in kiosk mode.
+     */
+    @SerializedName("kioskModeBlockSleepButton")
+    @Expose
+    public Boolean kioskModeBlockSleepButton;
+
+    /**
+     * The Kiosk Mode Block Touchscreen.
+     * Indicates whether or not to block use of the touchscreen while in kiosk mode.
+     */
+    @SerializedName("kioskModeBlockTouchscreen")
+    @Expose
+    public Boolean kioskModeBlockTouchscreen;
+
+    /**
+     * The Kiosk Mode Block Volume Buttons.
+     * Indicates whether or not to block the volume buttons while in Kiosk Mode.
+     */
+    @SerializedName("kioskModeBlockVolumeButtons")
+    @Expose
+    public Boolean kioskModeBlockVolumeButtons;
+
+    /**
      * The Kiosk Mode Built In App Id.
      * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
      */
     @SerializedName("kioskModeBuiltInAppId")
     @Expose
     public String kioskModeBuiltInAppId;
+
+    /**
+     * The Kiosk Mode Enable Voice Control.
+     * Indicates whether or not to enable voice control in kiosk mode.
+     */
+    @SerializedName("kioskModeEnableVoiceControl")
+    @Expose
+    public Boolean kioskModeEnableVoiceControl;
+
+    /**
+     * The Kiosk Mode Managed App Id.
+     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
+     */
+    @SerializedName("kioskModeManagedAppId")
+    @Expose
+    public String kioskModeManagedAppId;
 
     /**
      * The Kiosk Mode Require Assistive Touch.
@@ -803,14 +979,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean kioskModeRequireZoom;
 
     /**
-     * The Kiosk Mode Managed App Id.
-     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-     */
-    @SerializedName("kioskModeManagedAppId")
-    @Expose
-    public String kioskModeManagedAppId;
-
-    /**
      * The Lock Screen Block Control Center.
      * Indicates whether or not to block the user from using control center on the lock screen.
      */
@@ -841,6 +1009,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("lockScreenBlockTodayView")
     @Expose
     public Boolean lockScreenBlockTodayView;
+
+    /**
+     * The Media Content Rating Apps.
+     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     */
+    @SerializedName("mediaContentRatingApps")
+    @Expose
+    public RatingAppsType mediaContentRatingApps;
 
     /**
      * The Media Content Rating Australia.
@@ -915,28 +1091,20 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public MediaContentRatingUnitedStates mediaContentRatingUnitedStates;
 
     /**
-     * The Network Usage Rules.
-     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-     */
-    @SerializedName("networkUsageRules")
-    @Expose
-    public java.util.List<IosNetworkUsageRule> networkUsageRules;
-
-    /**
-     * The Media Content Rating Apps.
-     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
-     */
-    @SerializedName("mediaContentRatingApps")
-    @Expose
-    public RatingAppsType mediaContentRatingApps;
-
-    /**
      * The Messages Blocked.
      * Indicates whether or not to block the user from using the Messages app on the supervised device.
      */
     @SerializedName("messagesBlocked")
     @Expose
     public Boolean messagesBlocked;
+
+    /**
+     * The Network Usage Rules.
+     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
+     */
+    @SerializedName("networkUsageRules")
+    @Expose
+    public java.util.List<IosNetworkUsageRule> networkUsageRules;
 
     /**
      * The Notifications Block Settings Modification.
@@ -947,20 +1115,20 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean notificationsBlockSettingsModification;
 
     /**
-     * The Passcode Block Fingerprint Unlock.
-     * Indicates whether or not to block fingerprint unlock.
-     */
-    @SerializedName("passcodeBlockFingerprintUnlock")
-    @Expose
-    public Boolean passcodeBlockFingerprintUnlock;
-
-    /**
      * The Passcode Block Fingerprint Modification.
      * Block modification of registered Touch ID fingerprints when in supervised mode.
      */
     @SerializedName("passcodeBlockFingerprintModification")
     @Expose
     public Boolean passcodeBlockFingerprintModification;
+
+    /**
+     * The Passcode Block Fingerprint Unlock.
+     * Indicates whether or not to block fingerprint unlock.
+     */
+    @SerializedName("passcodeBlockFingerprintUnlock")
+    @Expose
+    public Boolean passcodeBlockFingerprintUnlock;
 
     /**
      * The Passcode Block Modification.
@@ -987,6 +1155,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Integer passcodeExpirationDays;
 
     /**
+     * The Passcode Minimum Character Set Count.
+     * Number of character sets a passcode must contain. Valid values 0 to 4
+     */
+    @SerializedName("passcodeMinimumCharacterSetCount")
+    @Expose
+    public Integer passcodeMinimumCharacterSetCount;
+
+    /**
      * The Passcode Minimum Length.
      * Minimum length of passcode. Valid values 4 to 14
      */
@@ -1011,36 +1187,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
 
     /**
-     * The Passcode Minimum Character Set Count.
-     * Number of character sets a passcode must contain. Valid values 0 to 4
-     */
-    @SerializedName("passcodeMinimumCharacterSetCount")
-    @Expose
-    public Integer passcodeMinimumCharacterSetCount;
-
-    /**
      * The Passcode Previous Passcode Block Count.
      * Number of previous passcodes to block. Valid values 1 to 24
      */
     @SerializedName("passcodePreviousPasscodeBlockCount")
     @Expose
     public Integer passcodePreviousPasscodeBlockCount;
-
-    /**
-     * The Passcode Sign In Failure Count Before Wipe.
-     * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
-     */
-    @SerializedName("passcodeSignInFailureCountBeforeWipe")
-    @Expose
-    public Integer passcodeSignInFailureCountBeforeWipe;
-
-    /**
-     * The Passcode Required Type.
-     * Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passcodeRequiredType")
-    @Expose
-    public RequiredPasswordType passcodeRequiredType;
 
     /**
      * The Passcode Required.
@@ -1051,12 +1203,68 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean passcodeRequired;
 
     /**
+     * The Passcode Required Type.
+     * Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     */
+    @SerializedName("passcodeRequiredType")
+    @Expose
+    public RequiredPasswordType passcodeRequiredType;
+
+    /**
+     * The Passcode Sign In Failure Count Before Wipe.
+     * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
+     */
+    @SerializedName("passcodeSignInFailureCountBeforeWipe")
+    @Expose
+    public Integer passcodeSignInFailureCountBeforeWipe;
+
+    /**
+     * The Password Block Air Drop Sharing.
+     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature iOS 12.0 and later).
+     */
+    @SerializedName("passwordBlockAirDropSharing")
+    @Expose
+    public Boolean passwordBlockAirDropSharing;
+
+    /**
+     * The Password Block Auto Fill.
+     * Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).
+     */
+    @SerializedName("passwordBlockAutoFill")
+    @Expose
+    public Boolean passwordBlockAutoFill;
+
+    /**
+     * The Password Block Proximity Requests.
+     * Indicates whether or not to block requesting passwords from nearby devices (iOS 12.0 and later).
+     */
+    @SerializedName("passwordBlockProximityRequests")
+    @Expose
+    public Boolean passwordBlockProximityRequests;
+
+    /**
+     * The Pki Block OTAUpdates.
+     * Indicates whether or not over-the-air PKI updates are blocked. Setting this restriction to false does not disable CRL and OCSP checks (iOS 7.0 and later).
+     */
+    @SerializedName("pkiBlockOTAUpdates")
+    @Expose
+    public Boolean pkiBlockOTAUpdates;
+
+    /**
      * The Podcasts Blocked.
      * Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
      */
     @SerializedName("podcastsBlocked")
     @Expose
     public Boolean podcastsBlocked;
+
+    /**
+     * The Privacy Force Limit Ad Tracking.
+     * Indicates if ad tracking is limited.(iOS 7.0 and later).
+     */
+    @SerializedName("privacyForceLimitAdTracking")
+    @Expose
+    public Boolean privacyForceLimitAdTracking;
 
     /**
      * The Proximity Block Setup To New Device.
@@ -1075,6 +1283,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean safariBlockAutofill;
 
     /**
+     * The Safari Blocked.
+     * Indicates whether or not to block the user from using Safari.
+     */
+    @SerializedName("safariBlocked")
+    @Expose
+    public Boolean safariBlocked;
+
+    /**
      * The Safari Block Java Script.
      * Indicates whether or not to block JavaScript in Safari.
      */
@@ -1089,14 +1305,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("safariBlockPopups")
     @Expose
     public Boolean safariBlockPopups;
-
-    /**
-     * The Safari Blocked.
-     * Indicates whether or not to block the user from using Safari.
-     */
-    @SerializedName("safariBlocked")
-    @Expose
-    public Boolean safariBlocked;
 
     /**
      * The Safari Cookie Settings.
@@ -1137,6 +1345,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("screenCaptureBlocked")
     @Expose
     public Boolean screenCaptureBlocked;
+
+    /**
+     * The Shared Device Block Temporary Sessions.
+     * Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 or later).
+     */
+    @SerializedName("sharedDeviceBlockTemporarySessions")
+    @Expose
+    public Boolean sharedDeviceBlockTemporarySessions;
 
     /**
      * The Siri Blocked.
@@ -1195,12 +1411,28 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean spotlightBlockInternetResults;
 
     /**
+     * The Usb Restricted Mode Blocked.
+     * Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
+     */
+    @SerializedName("usbRestrictedModeBlocked")
+    @Expose
+    public Boolean usbRestrictedModeBlocked;
+
+    /**
      * The Voice Dialing Blocked.
      * Indicates whether or not to block voice dialing.
      */
     @SerializedName("voiceDialingBlocked")
     @Expose
     public Boolean voiceDialingBlocked;
+
+    /**
+     * The Vpn Block Creation.
+     * Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0 and later).
+     */
+    @SerializedName("vpnBlockCreation")
+    @Expose
+    public Boolean vpnBlockCreation;
 
     /**
      * The Wallpaper Block Modification.
@@ -1219,244 +1451,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean wiFiConnectOnlyToConfiguredNetworks;
 
     /**
-     * The Classroom Force Request Permission To Leave Classes.
-     * Indicates whether a student enrolled in an unmanaged course via Classroom will request permission from the teacher when attempting to leave the course (iOS 11.3 and later).
-     */
-    @SerializedName("classroomForceRequestPermissionToLeaveClasses")
-    @Expose
-    public Boolean classroomForceRequestPermissionToLeaveClasses;
-
-    /**
-     * The Keychain Block Cloud Sync.
-     * Indicates whether or not iCloud keychain synchronization is blocked. Requires a supervised device for iOS 13 and later.
-     */
-    @SerializedName("keychainBlockCloudSync")
-    @Expose
-    public Boolean keychainBlockCloudSync;
-
-    /**
-     * The Pki Block OTAUpdates.
-     * Indicates whether or not over-the-air PKI updates are blocked. Setting this restriction to false does not disable CRL and OCSP checks (iOS 7.0 and later).
-     */
-    @SerializedName("pkiBlockOTAUpdates")
-    @Expose
-    public Boolean pkiBlockOTAUpdates;
-
-    /**
-     * The Privacy Force Limit Ad Tracking.
-     * Indicates if ad tracking is limited.(iOS 7.0 and later).
-     */
-    @SerializedName("privacyForceLimitAdTracking")
-    @Expose
-    public Boolean privacyForceLimitAdTracking;
-
-    /**
-     * The Enterprise Book Block Backup.
-     * Indicates whether or not Enterprise book back up is blocked.
-     */
-    @SerializedName("enterpriseBookBlockBackup")
-    @Expose
-    public Boolean enterpriseBookBlockBackup;
-
-    /**
-     * The Enterprise Book Block Metadata Sync.
-     * Indicates whether or not Enterprise book notes and highlights sync is blocked.
-     */
-    @SerializedName("enterpriseBookBlockMetadataSync")
-    @Expose
-    public Boolean enterpriseBookBlockMetadataSync;
-
-    /**
-     * The Air Print Blocked.
-     * Indicates whether or not AirPrint is blocked (iOS 11.0 and later).
-     */
-    @SerializedName("airPrintBlocked")
-    @Expose
-    public Boolean airPrintBlocked;
-
-    /**
-     * The Air Print Block Credentials Storage.
-     * Indicates whether or not keychain storage of username and password for Airprint is blocked (iOS 11.0 and later).
-     */
-    @SerializedName("airPrintBlockCredentialsStorage")
-    @Expose
-    public Boolean airPrintBlockCredentialsStorage;
-
-    /**
-     * The Air Print Force Trusted TLS.
-     * Indicates if trusted certificates are required for TLS printing communication (iOS 11.0 and later).
-     */
-    @SerializedName("airPrintForceTrustedTLS")
-    @Expose
-    public Boolean airPrintForceTrustedTLS;
-
-    /**
-     * The Air Print Blocki Beacon Discovery.
-     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (iOS 11.0 and later).
-     */
-    @SerializedName("airPrintBlockiBeaconDiscovery")
-    @Expose
-    public Boolean airPrintBlockiBeaconDiscovery;
-
-    /**
-     * The Files Network Drive Access Blocked.
-     * Indicates if devices can access files or other resources on a network server using the Server Message Block (SMB) protocol. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     */
-    @SerializedName("filesNetworkDriveAccessBlocked")
-    @Expose
-    public Boolean filesNetworkDriveAccessBlocked;
-
-    /**
-     * The Files Usb Drive Access Blocked.
-     * Indicates if sevices with access can connect to and open files on a USB drive. Available for devices running iOS and iPadOS, versions 13.0 and later.
-     */
-    @SerializedName("filesUsbDriveAccessBlocked")
-    @Expose
-    public Boolean filesUsbDriveAccessBlocked;
-
-    /**
      * The Wifi Power On Forced.
      * Indicates whether or not Wi-Fi remains on, even when device is in airplane mode. Available for devices running iOS and iPadOS, versions 13.0 and later.
      */
     @SerializedName("wifiPowerOnForced")
     @Expose
     public Boolean wifiPowerOnForced;
-
-    /**
-     * The Block System App Removal.
-     * Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
-     */
-    @SerializedName("blockSystemAppRemoval")
-    @Expose
-    public Boolean blockSystemAppRemoval;
-
-    /**
-     * The Vpn Block Creation.
-     * Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0 and later).
-     */
-    @SerializedName("vpnBlockCreation")
-    @Expose
-    public Boolean vpnBlockCreation;
-
-    /**
-     * The App Removal Blocked.
-     * Indicates if the removal of apps is allowed.
-     */
-    @SerializedName("appRemovalBlocked")
-    @Expose
-    public Boolean appRemovalBlocked;
-
-    /**
-     * The Usb Restricted Mode Blocked.
-     * Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
-     */
-    @SerializedName("usbRestrictedModeBlocked")
-    @Expose
-    public Boolean usbRestrictedModeBlocked;
-
-    /**
-     * The Password Block Auto Fill.
-     * Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).
-     */
-    @SerializedName("passwordBlockAutoFill")
-    @Expose
-    public Boolean passwordBlockAutoFill;
-
-    /**
-     * The Password Block Proximity Requests.
-     * Indicates whether or not to block requesting passwords from nearby devices (iOS 12.0 and later).
-     */
-    @SerializedName("passwordBlockProximityRequests")
-    @Expose
-    public Boolean passwordBlockProximityRequests;
-
-    /**
-     * The Password Block Air Drop Sharing.
-     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature iOS 12.0 and later).
-     */
-    @SerializedName("passwordBlockAirDropSharing")
-    @Expose
-    public Boolean passwordBlockAirDropSharing;
-
-    /**
-     * The Date And Time Force Set Automatically.
-     * Indicates whether or not the Date and Time "Set Automatically" feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
-     */
-    @SerializedName("dateAndTimeForceSetAutomatically")
-    @Expose
-    public Boolean dateAndTimeForceSetAutomatically;
-
-    /**
-     * The Contacts Allow Managed To Unmanaged Write.
-     * Indicates whether or not managed apps can write contacts to unmanaged contacts accounts (iOS 12.0 and later).
-     */
-    @SerializedName("contactsAllowManagedToUnmanagedWrite")
-    @Expose
-    public Boolean contactsAllowManagedToUnmanagedWrite;
-
-    /**
-     * The Contacts Allow Unmanaged To Managed Read.
-     * Indicates whether or not unmanaged apps can read from managed contacts accounts (iOS 12.0 or later).
-     */
-    @SerializedName("contactsAllowUnmanagedToManagedRead")
-    @Expose
-    public Boolean contactsAllowUnmanagedToManagedRead;
-
-    /**
-     * The Cellular Block Personal Hotspot Modification.
-     * Indicates whether or not to block the user from modifying the personal hotspot setting (iOS 12.2 or later).
-     */
-    @SerializedName("cellularBlockPersonalHotspotModification")
-    @Expose
-    public Boolean cellularBlockPersonalHotspotModification;
-
-    /**
-     * The Continuous Path Keyboard Blocked.
-     * Indicates whether or not to block the continuous path keyboard when the device is supervised (iOS 13 or later).
-     */
-    @SerializedName("continuousPathKeyboardBlocked")
-    @Expose
-    public Boolean continuousPathKeyboardBlocked;
-
-    /**
-     * The Find My Device In Find My App Blocked.
-     * Indicates whether or not to block Find My Device when the device is supervised (iOS 13 or later).
-     */
-    @SerializedName("findMyDeviceInFindMyAppBlocked")
-    @Expose
-    public Boolean findMyDeviceInFindMyAppBlocked;
-
-    /**
-     * The Find My Friends In Find My App Blocked.
-     * Indicates whether or not to block Find My Friends when the device is supervised (iOS 13 or later).
-     */
-    @SerializedName("findMyFriendsInFindMyAppBlocked")
-    @Expose
-    public Boolean findMyFriendsInFindMyAppBlocked;
-
-    /**
-     * The ITunes Blocked.
-     * Indicates whether or not to block the iTunes app. Requires a supervised device for iOS 13 and later.
-     */
-    @SerializedName("iTunesBlocked")
-    @Expose
-    public Boolean iTunesBlocked;
-
-    /**
-     * The Shared Device Block Temporary Sessions.
-     * Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 or later).
-     */
-    @SerializedName("sharedDeviceBlockTemporarySessions")
-    @Expose
-    public Boolean sharedDeviceBlockTemporarySessions;
-
-    /**
-     * The Kiosk Mode App Type.
-     * Type of app to run in kiosk mode.
-     */
-    @SerializedName("kioskModeAppType")
-    @Expose
-    public IosKioskModeAppType kioskModeAppType;
 
 
     /**

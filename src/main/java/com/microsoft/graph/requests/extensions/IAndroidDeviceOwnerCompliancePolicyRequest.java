@@ -80,6 +80,23 @@ public interface IAndroidDeviceOwnerCompliancePolicyRequest extends IHttpRequest
     AndroidDeviceOwnerCompliancePolicy post(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceOwnerCompliancePolicy with a new object
+     *
+     * @param newAndroidDeviceOwnerCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy, final ICallback<AndroidDeviceOwnerCompliancePolicy> callback);
+
+    /**
+     * Posts a AndroidDeviceOwnerCompliancePolicy with a new object
+     *
+     * @param newAndroidDeviceOwnerCompliancePolicy the object to create/update
+     * @return the created AndroidDeviceOwnerCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceOwnerCompliancePolicy put(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

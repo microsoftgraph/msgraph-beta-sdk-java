@@ -8,9 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
-import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -55,4 +55,20 @@ public interface IGroupCollectionRequest {
      */
     IGroupCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IGroupCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IGroupCollectionRequest skipToken(String skipToken);
 }

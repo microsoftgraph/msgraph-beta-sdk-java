@@ -118,6 +118,27 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
     }
 
     /**
+     * Creates a IosScepCertificateProfile with a new object
+     *
+     * @param newIosScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<IosScepCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newIosScepCertificateProfile);
+    }
+
+    /**
+     * Creates a IosScepCertificateProfile with a new object
+     *
+     * @param newIosScepCertificateProfile the object to create/update
+     * @return the created IosScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosScepCertificateProfile put(final IosScepCertificateProfile newIosScepCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newIosScepCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

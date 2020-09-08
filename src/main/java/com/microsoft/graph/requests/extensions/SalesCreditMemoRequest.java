@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineCollectionReq
 import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      */
     public SalesCreditMemo post(final SalesCreditMemo newSalesCreditMemo) throws ClientException {
         return send(HttpMethod.POST, newSalesCreditMemo);
+    }
+
+    /**
+     * Creates a SalesCreditMemo with a new object
+     *
+     * @param newSalesCreditMemo the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback) {
+        send(HttpMethod.PUT, callback, newSalesCreditMemo);
+    }
+
+    /**
+     * Creates a SalesCreditMemo with a new object
+     *
+     * @param newSalesCreditMemo the object to create/update
+     * @return the created SalesCreditMemo
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesCreditMemo put(final SalesCreditMemo newSalesCreditMemo) throws ClientException {
+        return send(HttpMethod.PUT, newSalesCreditMemo);
     }
 
     /**

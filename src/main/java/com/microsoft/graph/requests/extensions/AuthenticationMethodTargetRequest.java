@@ -127,6 +127,27 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
     }
 
     /**
+     * Creates a AuthenticationMethodTarget with a new object
+     *
+     * @param newAuthenticationMethodTarget the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<AuthenticationMethodTarget> callback) {
+        send(HttpMethod.PUT, callback, newAuthenticationMethodTarget);
+    }
+
+    /**
+     * Creates a AuthenticationMethodTarget with a new object
+     *
+     * @param newAuthenticationMethodTarget the object to create/update
+     * @return the created AuthenticationMethodTarget
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AuthenticationMethodTarget put(final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException {
+        return send(HttpMethod.PUT, newAuthenticationMethodTarget);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

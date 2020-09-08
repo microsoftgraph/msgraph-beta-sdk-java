@@ -28,20 +28,20 @@ public class AzureADLicenseUsage extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Snapshot Date Time.
-     * 
-     */
-    @SerializedName("snapshotDateTime")
-    @Expose
-    public java.util.Calendar snapshotDateTime;
-
-    /**
      * The License Info Details.
      * 
      */
     @SerializedName("licenseInfoDetails")
     @Expose
     public java.util.List<LicenseInfoDetail> licenseInfoDetails;
+
+    /**
+     * The Snapshot Date Time.
+     * 
+     */
+    @SerializedName("snapshotDateTime")
+    @Expose
+    public java.util.Calendar snapshotDateTime;
 
 
     /**

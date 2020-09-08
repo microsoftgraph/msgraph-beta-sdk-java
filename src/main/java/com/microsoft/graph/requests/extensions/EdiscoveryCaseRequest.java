@@ -116,6 +116,27 @@ public class EdiscoveryCaseRequest extends BaseRequest implements IEdiscoveryCas
     }
 
     /**
+     * Creates a EdiscoveryCase with a new object
+     *
+     * @param newEdiscoveryCase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback) {
+        send(HttpMethod.PUT, callback, newEdiscoveryCase);
+    }
+
+    /**
+     * Creates a EdiscoveryCase with a new object
+     *
+     * @param newEdiscoveryCase the object to create/update
+     * @return the created EdiscoveryCase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EdiscoveryCase put(final EdiscoveryCase newEdiscoveryCase) throws ClientException {
+        return send(HttpMethod.PUT, newEdiscoveryCase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

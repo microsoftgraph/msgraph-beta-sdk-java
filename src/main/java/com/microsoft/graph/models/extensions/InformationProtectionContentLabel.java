@@ -38,20 +38,20 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
     }
 
     /**
-     * The Creation Date Time.
-     * 
-     */
-    @SerializedName("creationDateTime")
-    @Expose
-    public java.util.Calendar creationDateTime;
-
-    /**
      * The Assignment Method.
      * 
      */
     @SerializedName("assignmentMethod")
     @Expose
     public AssignmentMethod assignmentMethod;
+
+    /**
+     * The Creation Date Time.
+     * 
+     */
+    @SerializedName("creationDateTime")
+    @Expose
+    public java.util.Calendar creationDateTime;
 
     /**
      * The Label.

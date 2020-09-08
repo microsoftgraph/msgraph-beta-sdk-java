@@ -27,20 +27,20 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
 
 
     /**
-     * The Password.
-     * 
-     */
-    @SerializedName("password")
-    @Expose
-    public String password;
-
-    /**
      * The Creation Date Time.
      * 
      */
     @SerializedName("creationDateTime")
     @Expose
     public java.util.Calendar creationDateTime;
+
+    /**
+     * The Password.
+     * 
+     */
+    @SerializedName("password")
+    @Expose
+    public String password;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IAndroidForWorkTrustedRootCertificateRequest extends IHttpReque
     AndroidForWorkTrustedRootCertificate post(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkTrustedRootCertificate with a new object
+     *
+     * @param newAndroidForWorkTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate, final ICallback<AndroidForWorkTrustedRootCertificate> callback);
+
+    /**
+     * Posts a AndroidForWorkTrustedRootCertificate with a new object
+     *
+     * @param newAndroidForWorkTrustedRootCertificate the object to create/update
+     * @return the created AndroidForWorkTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkTrustedRootCertificate put(final AndroidForWorkTrustedRootCertificate newAndroidForWorkTrustedRootCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

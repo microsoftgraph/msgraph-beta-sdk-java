@@ -112,6 +112,27 @@ public class EmailAppUsageUserCountsRequest extends BaseRequest implements IEmai
     }
 
     /**
+     * Creates a EmailAppUsageUserCounts with a new object
+     *
+     * @param newEmailAppUsageUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmailAppUsageUserCounts newEmailAppUsageUserCounts, final ICallback<EmailAppUsageUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newEmailAppUsageUserCounts);
+    }
+
+    /**
+     * Creates a EmailAppUsageUserCounts with a new object
+     *
+     * @param newEmailAppUsageUserCounts the object to create/update
+     * @return the created EmailAppUsageUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmailAppUsageUserCounts put(final EmailAppUsageUserCounts newEmailAppUsageUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newEmailAppUsageUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
-import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
@@ -70,14 +70,14 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
     public void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDevice, callback);
     }
 
     public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDevice);
     }
 
@@ -114,6 +114,27 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         return (ManagedDeviceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceCollectionRequest)this;
+    }
     public IManagedDeviceCollectionPage buildFromResponse(final ManagedDeviceCollectionResponse response) {
         final IManagedDeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

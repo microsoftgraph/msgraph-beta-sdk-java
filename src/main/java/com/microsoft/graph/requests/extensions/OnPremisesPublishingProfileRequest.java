@@ -8,26 +8,26 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesPublishingProfile;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -129,6 +129,27 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      */
     public OnPremisesPublishingProfile post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
         return send(HttpMethod.POST, newOnPremisesPublishingProfile);
+    }
+
+    /**
+     * Creates a OnPremisesPublishingProfile with a new object
+     *
+     * @param newOnPremisesPublishingProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<OnPremisesPublishingProfile> callback) {
+        send(HttpMethod.PUT, callback, newOnPremisesPublishingProfile);
+    }
+
+    /**
+     * Creates a OnPremisesPublishingProfile with a new object
+     *
+     * @param newOnPremisesPublishingProfile the object to create/update
+     * @return the created OnPremisesPublishingProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnPremisesPublishingProfile put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
+        return send(HttpMethod.PUT, newOnPremisesPublishingProfile);
     }
 
     /**

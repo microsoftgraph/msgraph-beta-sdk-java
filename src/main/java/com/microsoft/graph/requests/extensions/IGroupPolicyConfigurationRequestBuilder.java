@@ -10,10 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,13 +39,13 @@ public interface IGroupPolicyConfigurationRequestBuilder extends IRequestBuilder
     IGroupPolicyConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IGroupPolicyDefinitionValueCollectionRequestBuilder definitionValues();
-
-    IGroupPolicyDefinitionValueRequestBuilder definitionValues(final String id);
-
     IGroupPolicyConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IGroupPolicyConfigurationAssignmentRequestBuilder assignments(final String id);
+
+    IGroupPolicyDefinitionValueCollectionRequestBuilder definitionValues();
+
+    IGroupPolicyDefinitionValueRequestBuilder definitionValues(final String id);
 
     IGroupPolicyConfigurationAssignCollectionRequestBuilder assign(final java.util.List<GroupPolicyConfigurationAssignment> assignments);
     IGroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder updateDefinitionValues(final java.util.List<GroupPolicyDefinitionValue> added, final java.util.List<GroupPolicyDefinitionValue> updated, final java.util.List<String> deletedIds);

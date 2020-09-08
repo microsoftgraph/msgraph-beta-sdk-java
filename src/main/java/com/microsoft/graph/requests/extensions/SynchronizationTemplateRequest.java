@@ -114,6 +114,27 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
     }
 
     /**
+     * Creates a SynchronizationTemplate with a new object
+     *
+     * @param newSynchronizationTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback) {
+        send(HttpMethod.PUT, callback, newSynchronizationTemplate);
+    }
+
+    /**
+     * Creates a SynchronizationTemplate with a new object
+     *
+     * @param newSynchronizationTemplate the object to create/update
+     * @return the created SynchronizationTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SynchronizationTemplate put(final SynchronizationTemplate newSynchronizationTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newSynchronizationTemplate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

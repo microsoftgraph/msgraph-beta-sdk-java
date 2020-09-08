@@ -10,15 +10,15 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerAppAutoUpdatePolicyType;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerDefaultAppPermissionPolicyType;
-import com.microsoft.graph.models.generated.MicrosoftLauncherDockPresence;
-import com.microsoft.graph.models.generated.MicrosoftLauncherSearchBarPlacement;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerEnrollmentProfileType;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerGlobalProxy;
 import com.microsoft.graph.models.extensions.AppListItem;
-import com.microsoft.graph.models.generated.AndroidDeviceOwnerVirtualHomeButtonType;
-import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeScreenOrientation;
-import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeIconSize;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeFolderIcon;
+import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeIconSize;
+import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeScreenOrientation;
+import com.microsoft.graph.models.generated.AndroidDeviceOwnerVirtualHomeButtonType;
+import com.microsoft.graph.models.generated.MicrosoftLauncherDockPresence;
+import com.microsoft.graph.models.generated.MicrosoftLauncherSearchBarPlacement;
 import com.microsoft.graph.models.generated.AndroidKeyguardFeature;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerRequiredPasswordType;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerPlayStoreMode;
@@ -123,86 +123,6 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean certificateCredentialConfigurationDisabled;
 
     /**
-     * The Microsoft Launcher Configuration Enabled.
-     * Indicates whether or not to you want configure Microsoft Launcher.
-     */
-    @SerializedName("microsoftLauncherConfigurationEnabled")
-    @Expose
-    public Boolean microsoftLauncherConfigurationEnabled;
-
-    /**
-     * The Microsoft Launcher Custom Wallpaper Enabled.
-     * Indicates whether or not to configure the wallpaper on the targeted devices.
-     */
-    @SerializedName("microsoftLauncherCustomWallpaperEnabled")
-    @Expose
-    public Boolean microsoftLauncherCustomWallpaperEnabled;
-
-    /**
-     * The Microsoft Launcher Custom Wallpaper Image Url.
-     * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
-     */
-    @SerializedName("microsoftLauncherCustomWallpaperImageUrl")
-    @Expose
-    public String microsoftLauncherCustomWallpaperImageUrl;
-
-    /**
-     * The Microsoft Launcher Custom Wallpaper Allow User Modification.
-     * Indicates whether or not the user can modify the wallpaper to personalize their device.
-     */
-    @SerializedName("microsoftLauncherCustomWallpaperAllowUserModification")
-    @Expose
-    public Boolean microsoftLauncherCustomWallpaperAllowUserModification;
-
-    /**
-     * The Microsoft Launcher Feed Enabled.
-     * Indicates whether or not you want to enable the launcher feed on the device.
-     */
-    @SerializedName("microsoftLauncherFeedEnabled")
-    @Expose
-    public Boolean microsoftLauncherFeedEnabled;
-
-    /**
-     * The Microsoft Launcher Feed Allow User Modification.
-     * Indicates whether or not the user can modify the launcher feed on the device.
-     */
-    @SerializedName("microsoftLauncherFeedAllowUserModification")
-    @Expose
-    public Boolean microsoftLauncherFeedAllowUserModification;
-
-    /**
-     * The Microsoft Launcher Dock Presence Configuration.
-     * Indicates whether or not you want to configure the device dock.
-     */
-    @SerializedName("microsoftLauncherDockPresenceConfiguration")
-    @Expose
-    public MicrosoftLauncherDockPresence microsoftLauncherDockPresenceConfiguration;
-
-    /**
-     * The Microsoft Launcher Dock Presence Allow User Modification.
-     * Indicates whether or not the user can modify the device dock configuration on the device.
-     */
-    @SerializedName("microsoftLauncherDockPresenceAllowUserModification")
-    @Expose
-    public Boolean microsoftLauncherDockPresenceAllowUserModification;
-
-    /**
-     * The Microsoft Launcher Search Bar Placement Configuration.
-     * Indicates the search bar placement configuration on the device.
-     */
-    @SerializedName("microsoftLauncherSearchBarPlacementConfiguration")
-    @Expose
-    public MicrosoftLauncherSearchBarPlacement microsoftLauncherSearchBarPlacementConfiguration;
-
-    /**
-     * The Enrollment Profile.
-     * Indicates which enrollment profile you want to configure.
-     */
-    @SerializedName("enrollmentProfile")
-    @Expose
-    public AndroidDeviceOwnerEnrollmentProfileType enrollmentProfile;
-
-    /**
      * The Data Roaming Blocked.
      * Indicates whether or not to block a user from data roaming.
      */
@@ -219,12 +139,12 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean dateTimeConfigurationBlocked;
 
     /**
-     * The Factory Reset Device Administrator Emails.
-     * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
+     * The Enrollment Profile.
+     * Indicates which enrollment profile you want to configure.
      */
-    @SerializedName("factoryResetDeviceAdministratorEmails")
+    @SerializedName("enrollmentProfile")
     @Expose
-    public java.util.List<String> factoryResetDeviceAdministratorEmails;
+    public AndroidDeviceOwnerEnrollmentProfileType enrollmentProfile;
 
     /**
      * The Factory Reset Blocked.
@@ -233,6 +153,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @SerializedName("factoryResetBlocked")
     @Expose
     public Boolean factoryResetBlocked;
+
+    /**
+     * The Factory Reset Device Administrator Emails.
+     * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
+     */
+    @SerializedName("factoryResetDeviceAdministratorEmails")
+    @Expose
+    public java.util.List<String> factoryResetDeviceAdministratorEmails;
 
     /**
      * The Global Proxy.
@@ -251,36 +179,92 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean googleAccountsBlocked;
 
     /**
+     * The Kiosk Mode Apps.
+     * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("kioskModeApps")
+    @Expose
+    public java.util.List<AppListItem> kioskModeApps;
+
+    /**
+     * The Kiosk Mode Bluetooth Configuration Enabled.
+     * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+     */
+    @SerializedName("kioskModeBluetoothConfigurationEnabled")
+    @Expose
+    public Boolean kioskModeBluetoothConfigurationEnabled;
+
+    /**
+     * The Kiosk Mode Debug Menu Easy Access Enabled.
+     * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
+     */
+    @SerializedName("kioskModeDebugMenuEasyAccessEnabled")
+    @Expose
+    public Boolean kioskModeDebugMenuEasyAccessEnabled;
+
+    /**
+     * The Kiosk Mode Exit Code.
+     * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
+     */
+    @SerializedName("kioskModeExitCode")
+    @Expose
+    public String kioskModeExitCode;
+
+    /**
+     * The Kiosk Mode Flashlight Configuration Enabled.
+     * Whether or not to allow a user to use the flashlight in Kiosk Mode.
+     */
+    @SerializedName("kioskModeFlashlightConfigurationEnabled")
+    @Expose
+    public Boolean kioskModeFlashlightConfigurationEnabled;
+
+    /**
+     * The Kiosk Mode Folder Icon.
+     * Folder icon configuration for managed home screen in Kiosk Mode.
+     */
+    @SerializedName("kioskModeFolderIcon")
+    @Expose
+    public AndroidDeviceOwnerKioskModeFolderIcon kioskModeFolderIcon;
+
+    /**
+     * The Kiosk Mode Icon Size.
+     * Icon size configuration for managed home screen in Kiosk Mode.
+     */
+    @SerializedName("kioskModeIconSize")
+    @Expose
+    public AndroidDeviceOwnerKioskModeIconSize kioskModeIconSize;
+
+    /**
+     * The Kiosk Mode Managed Settings Entry Disabled.
+     * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
+     */
+    @SerializedName("kioskModeManagedSettingsEntryDisabled")
+    @Expose
+    public Boolean kioskModeManagedSettingsEntryDisabled;
+
+    /**
+     * The Kiosk Mode Media Volume Configuration Enabled.
+     * Whether or not to allow a user to change the media volume in Kiosk Mode.
+     */
+    @SerializedName("kioskModeMediaVolumeConfigurationEnabled")
+    @Expose
+    public Boolean kioskModeMediaVolumeConfigurationEnabled;
+
+    /**
+     * The Kiosk Mode Screen Orientation.
+     * Screen orientation configuration for managed home screen in Kiosk Mode.
+     */
+    @SerializedName("kioskModeScreenOrientation")
+    @Expose
+    public AndroidDeviceOwnerKioskModeScreenOrientation kioskModeScreenOrientation;
+
+    /**
      * The Kiosk Mode Screen Saver Configuration Enabled.
      * Whether or not to enable screen saver mode or not in Kiosk Mode.
      */
     @SerializedName("kioskModeScreenSaverConfigurationEnabled")
     @Expose
     public Boolean kioskModeScreenSaverConfigurationEnabled;
-
-    /**
-     * The Kiosk Mode Screen Saver Image Url.
-     * URL for an image that will be the device's screen saver in Kiosk Mode.
-     */
-    @SerializedName("kioskModeScreenSaverImageUrl")
-    @Expose
-    public String kioskModeScreenSaverImageUrl;
-
-    /**
-     * The Kiosk Mode Screen Saver Display Time In Seconds.
-     * The number of seconds that the device will display the screen saver for in Kiosk Mode. Valid values 0 to 9999999
-     */
-    @SerializedName("kioskModeScreenSaverDisplayTimeInSeconds")
-    @Expose
-    public Integer kioskModeScreenSaverDisplayTimeInSeconds;
-
-    /**
-     * The Kiosk Mode Screen Saver Start Delay In Seconds.
-     * The number of seconds the device needs to be inactive for before the screen saver is shown in Kiosk Mode. Valid values 1 to 9999999
-     */
-    @SerializedName("kioskModeScreenSaverStartDelayInSeconds")
-    @Expose
-    public Integer kioskModeScreenSaverStartDelayInSeconds;
 
     /**
      * The Kiosk Mode Screen Saver Detect Media Disabled.
@@ -291,28 +275,44 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean kioskModeScreenSaverDetectMediaDisabled;
 
     /**
-     * The Kiosk Mode Apps.
-     * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     * The Kiosk Mode Screen Saver Display Time In Seconds.
+     * The number of seconds that the device will display the screen saver for in Kiosk Mode. Valid values 0 to 9999999
      */
-    @SerializedName("kioskModeApps")
+    @SerializedName("kioskModeScreenSaverDisplayTimeInSeconds")
     @Expose
-    public java.util.List<AppListItem> kioskModeApps;
+    public Integer kioskModeScreenSaverDisplayTimeInSeconds;
 
     /**
-     * The Kiosk Mode Wallpaper Url.
-     * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
+     * The Kiosk Mode Screen Saver Image Url.
+     * URL for an image that will be the device's screen saver in Kiosk Mode.
      */
-    @SerializedName("kioskModeWallpaperUrl")
+    @SerializedName("kioskModeScreenSaverImageUrl")
     @Expose
-    public String kioskModeWallpaperUrl;
+    public String kioskModeScreenSaverImageUrl;
 
     /**
-     * The Kiosk Mode Exit Code.
-     * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
+     * The Kiosk Mode Screen Saver Start Delay In Seconds.
+     * The number of seconds the device needs to be inactive for before the screen saver is shown in Kiosk Mode. Valid values 1 to 9999999
      */
-    @SerializedName("kioskModeExitCode")
+    @SerializedName("kioskModeScreenSaverStartDelayInSeconds")
     @Expose
-    public String kioskModeExitCode;
+    public Integer kioskModeScreenSaverStartDelayInSeconds;
+
+    /**
+     * The Kiosk Mode Show App Notification Badge.
+     * Whether or not to display application notification badges in Kiosk Mode.
+     */
+    @SerializedName("kioskModeShowAppNotificationBadge")
+    @Expose
+    public Boolean kioskModeShowAppNotificationBadge;
+
+    /**
+     * The Kiosk Mode Show Device Info.
+     * Whether or not to allow a user to access basic device information.
+     */
+    @SerializedName("kioskModeShowDeviceInfo")
+    @Expose
+    public Boolean kioskModeShowDeviceInfo;
 
     /**
      * The Kiosk Mode Virtual Home Button Enabled.
@@ -331,92 +331,12 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerVirtualHomeButtonType kioskModeVirtualHomeButtonType;
 
     /**
-     * The Kiosk Mode Bluetooth Configuration Enabled.
-     * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+     * The Kiosk Mode Wallpaper Url.
+     * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
      */
-    @SerializedName("kioskModeBluetoothConfigurationEnabled")
+    @SerializedName("kioskModeWallpaperUrl")
     @Expose
-    public Boolean kioskModeBluetoothConfigurationEnabled;
-
-    /**
-     * The Kiosk Mode Wi Fi Configuration Enabled.
-     * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
-     */
-    @SerializedName("kioskModeWiFiConfigurationEnabled")
-    @Expose
-    public Boolean kioskModeWiFiConfigurationEnabled;
-
-    /**
-     * The Kiosk Mode Flashlight Configuration Enabled.
-     * Whether or not to allow a user to use the flashlight in Kiosk Mode.
-     */
-    @SerializedName("kioskModeFlashlightConfigurationEnabled")
-    @Expose
-    public Boolean kioskModeFlashlightConfigurationEnabled;
-
-    /**
-     * The Kiosk Mode Media Volume Configuration Enabled.
-     * Whether or not to allow a user to change the media volume in Kiosk Mode.
-     */
-    @SerializedName("kioskModeMediaVolumeConfigurationEnabled")
-    @Expose
-    public Boolean kioskModeMediaVolumeConfigurationEnabled;
-
-    /**
-     * The Kiosk Mode Show Device Info.
-     * Whether or not to allow a user to access basic device information.
-     */
-    @SerializedName("kioskModeShowDeviceInfo")
-    @Expose
-    public Boolean kioskModeShowDeviceInfo;
-
-    /**
-     * The Kiosk Mode Managed Settings Entry Disabled.
-     * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
-     */
-    @SerializedName("kioskModeManagedSettingsEntryDisabled")
-    @Expose
-    public Boolean kioskModeManagedSettingsEntryDisabled;
-
-    /**
-     * The Kiosk Mode Debug Menu Easy Access Enabled.
-     * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
-     */
-    @SerializedName("kioskModeDebugMenuEasyAccessEnabled")
-    @Expose
-    public Boolean kioskModeDebugMenuEasyAccessEnabled;
-
-    /**
-     * The Kiosk Mode Show App Notification Badge.
-     * Whether or not to display application notification badges in Kiosk Mode.
-     */
-    @SerializedName("kioskModeShowAppNotificationBadge")
-    @Expose
-    public Boolean kioskModeShowAppNotificationBadge;
-
-    /**
-     * The Kiosk Mode Screen Orientation.
-     * Screen orientation configuration for managed home screen in Kiosk Mode.
-     */
-    @SerializedName("kioskModeScreenOrientation")
-    @Expose
-    public AndroidDeviceOwnerKioskModeScreenOrientation kioskModeScreenOrientation;
-
-    /**
-     * The Kiosk Mode Icon Size.
-     * Icon size configuration for managed home screen in Kiosk Mode.
-     */
-    @SerializedName("kioskModeIconSize")
-    @Expose
-    public AndroidDeviceOwnerKioskModeIconSize kioskModeIconSize;
-
-    /**
-     * The Kiosk Mode Folder Icon.
-     * Folder icon configuration for managed home screen in Kiosk Mode.
-     */
-    @SerializedName("kioskModeFolderIcon")
-    @Expose
-    public AndroidDeviceOwnerKioskModeFolderIcon kioskModeFolderIcon;
+    public String kioskModeWallpaperUrl;
 
     /**
      * The Kiosk Mode Wifi Allowed Ssids.
@@ -427,12 +347,92 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public java.util.List<String> kioskModeWifiAllowedSsids;
 
     /**
+     * The Kiosk Mode Wi Fi Configuration Enabled.
+     * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
+     */
+    @SerializedName("kioskModeWiFiConfigurationEnabled")
+    @Expose
+    public Boolean kioskModeWiFiConfigurationEnabled;
+
+    /**
      * The Microphone Force Mute.
      * Indicates whether or not to block unmuting the microphone on the device.
      */
     @SerializedName("microphoneForceMute")
     @Expose
     public Boolean microphoneForceMute;
+
+    /**
+     * The Microsoft Launcher Configuration Enabled.
+     * Indicates whether or not to you want configure Microsoft Launcher.
+     */
+    @SerializedName("microsoftLauncherConfigurationEnabled")
+    @Expose
+    public Boolean microsoftLauncherConfigurationEnabled;
+
+    /**
+     * The Microsoft Launcher Custom Wallpaper Allow User Modification.
+     * Indicates whether or not the user can modify the wallpaper to personalize their device.
+     */
+    @SerializedName("microsoftLauncherCustomWallpaperAllowUserModification")
+    @Expose
+    public Boolean microsoftLauncherCustomWallpaperAllowUserModification;
+
+    /**
+     * The Microsoft Launcher Custom Wallpaper Enabled.
+     * Indicates whether or not to configure the wallpaper on the targeted devices.
+     */
+    @SerializedName("microsoftLauncherCustomWallpaperEnabled")
+    @Expose
+    public Boolean microsoftLauncherCustomWallpaperEnabled;
+
+    /**
+     * The Microsoft Launcher Custom Wallpaper Image Url.
+     * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
+     */
+    @SerializedName("microsoftLauncherCustomWallpaperImageUrl")
+    @Expose
+    public String microsoftLauncherCustomWallpaperImageUrl;
+
+    /**
+     * The Microsoft Launcher Dock Presence Allow User Modification.
+     * Indicates whether or not the user can modify the device dock configuration on the device.
+     */
+    @SerializedName("microsoftLauncherDockPresenceAllowUserModification")
+    @Expose
+    public Boolean microsoftLauncherDockPresenceAllowUserModification;
+
+    /**
+     * The Microsoft Launcher Dock Presence Configuration.
+     * Indicates whether or not you want to configure the device dock.
+     */
+    @SerializedName("microsoftLauncherDockPresenceConfiguration")
+    @Expose
+    public MicrosoftLauncherDockPresence microsoftLauncherDockPresenceConfiguration;
+
+    /**
+     * The Microsoft Launcher Feed Allow User Modification.
+     * Indicates whether or not the user can modify the launcher feed on the device.
+     */
+    @SerializedName("microsoftLauncherFeedAllowUserModification")
+    @Expose
+    public Boolean microsoftLauncherFeedAllowUserModification;
+
+    /**
+     * The Microsoft Launcher Feed Enabled.
+     * Indicates whether or not you want to enable the launcher feed on the device.
+     */
+    @SerializedName("microsoftLauncherFeedEnabled")
+    @Expose
+    public Boolean microsoftLauncherFeedEnabled;
+
+    /**
+     * The Microsoft Launcher Search Bar Placement Configuration.
+     * Indicates the search bar placement configuration on the device.
+     */
+    @SerializedName("microsoftLauncherSearchBarPlacementConfiguration")
+    @Expose
+    public MicrosoftLauncherSearchBarPlacement microsoftLauncherSearchBarPlacementConfiguration;
 
     /**
      * The Network Escape Hatch Allowed.
@@ -643,12 +643,12 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean storageBlockUsbFileTransfer;
 
     /**
-     * The System Update Window Start Minutes After Midnight.
-     * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
+     * The System Update Install Type.
+     * The type of system update configuration.
      */
-    @SerializedName("systemUpdateWindowStartMinutesAfterMidnight")
+    @SerializedName("systemUpdateInstallType")
     @Expose
-    public Integer systemUpdateWindowStartMinutesAfterMidnight;
+    public AndroidDeviceOwnerSystemUpdateInstallType systemUpdateInstallType;
 
     /**
      * The System Update Window End Minutes After Midnight.
@@ -659,12 +659,12 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Integer systemUpdateWindowEndMinutesAfterMidnight;
 
     /**
-     * The System Update Install Type.
-     * The type of system update configuration.
+     * The System Update Window Start Minutes After Midnight.
+     * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
      */
-    @SerializedName("systemUpdateInstallType")
+    @SerializedName("systemUpdateWindowStartMinutesAfterMidnight")
     @Expose
-    public AndroidDeviceOwnerSystemUpdateInstallType systemUpdateInstallType;
+    public Integer systemUpdateWindowStartMinutesAfterMidnight;
 
     /**
      * The System Windows Blocked.

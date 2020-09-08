@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsCategoryRequest extends IHttpRequest {
     UserExperienceAnalyticsCategory post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsCategory with a new object
+     *
+     * @param newUserExperienceAnalyticsCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsCategory with a new object
+     *
+     * @param newUserExperienceAnalyticsCategory the object to create/update
+     * @return the created UserExperienceAnalyticsCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsCategory put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

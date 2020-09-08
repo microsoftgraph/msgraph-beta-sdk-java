@@ -80,6 +80,23 @@ public interface ICartToClassAssociationRequest extends IHttpRequest {
     CartToClassAssociation post(final CartToClassAssociation newCartToClassAssociation) throws ClientException;
 
     /**
+     * Posts a CartToClassAssociation with a new object
+     *
+     * @param newCartToClassAssociation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CartToClassAssociation newCartToClassAssociation, final ICallback<CartToClassAssociation> callback);
+
+    /**
+     * Posts a CartToClassAssociation with a new object
+     *
+     * @param newCartToClassAssociation the object to create/update
+     * @return the created CartToClassAssociation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CartToClassAssociation put(final CartToClassAssociation newCartToClassAssociation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

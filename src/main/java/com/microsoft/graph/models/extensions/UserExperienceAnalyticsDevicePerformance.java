@@ -29,44 +29,28 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
 
     /**
-     * The Device Name.
-     * The user experience analytics device name.
+     * The Average Blue Screens.
+     * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("deviceName")
+    @SerializedName("averageBlueScreens")
     @Expose
-    public String deviceName;
+    public Double averageBlueScreens;
 
     /**
-     * The Model.
-     * The user experience analytics device model.
+     * The Average Restarts.
+     * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("model")
+    @SerializedName("averageRestarts")
     @Expose
-    public String model;
+    public Double averageRestarts;
 
     /**
-     * The Manufacturer.
-     * The user experience analytics device manufacturer.
+     * The Blue Screen Count.
+     * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
      */
-    @SerializedName("manufacturer")
+    @SerializedName("blueScreenCount")
     @Expose
-    public String manufacturer;
-
-    /**
-     * The Disk Type.
-     * The user experience analytics device disk type.
-     */
-    @SerializedName("diskType")
-    @Expose
-    public DiskType diskType;
-
-    /**
-     * The Operating System Version.
-     * The user experience analytics device Operating System version.
-     */
-    @SerializedName("operatingSystemVersion")
-    @Expose
-    public String operatingSystemVersion;
+    public Integer blueScreenCount;
 
     /**
      * The Boot Score.
@@ -85,12 +69,52 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     public Integer coreBootTimeInMs;
 
     /**
+     * The Core Login Time In Ms.
+     * The user experience analytics device core login time in milliseconds.
+     */
+    @SerializedName("coreLoginTimeInMs")
+    @Expose
+    public Integer coreLoginTimeInMs;
+
+    /**
+     * The Device Count.
+     * User experience analytics summarized device count.
+     */
+    @SerializedName("deviceCount")
+    @Expose
+    public Long deviceCount;
+
+    /**
+     * The Device Name.
+     * The user experience analytics device name.
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
+     * The Disk Type.
+     * The user experience analytics device disk type.
+     */
+    @SerializedName("diskType")
+    @Expose
+    public DiskType diskType;
+
+    /**
      * The Group Policy Boot Time In Ms.
      * The user experience analytics device group policy boot time in milliseconds.
      */
     @SerializedName("groupPolicyBootTimeInMs")
     @Expose
     public Integer groupPolicyBootTimeInMs;
+
+    /**
+     * The Group Policy Login Time In Ms.
+     * The user experience analytics device group policy login time in milliseconds.
+     */
+    @SerializedName("groupPolicyLoginTimeInMs")
+    @Expose
+    public Integer groupPolicyLoginTimeInMs;
 
     /**
      * The Health Status.
@@ -109,28 +133,28 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     public Integer loginScore;
 
     /**
-     * The Core Login Time In Ms.
-     * The user experience analytics device core login time in milliseconds.
+     * The Manufacturer.
+     * The user experience analytics device manufacturer.
      */
-    @SerializedName("coreLoginTimeInMs")
+    @SerializedName("manufacturer")
     @Expose
-    public Integer coreLoginTimeInMs;
+    public String manufacturer;
 
     /**
-     * The Group Policy Login Time In Ms.
-     * The user experience analytics device group policy login time in milliseconds.
+     * The Model.
+     * The user experience analytics device model.
      */
-    @SerializedName("groupPolicyLoginTimeInMs")
+    @SerializedName("model")
     @Expose
-    public Integer groupPolicyLoginTimeInMs;
+    public String model;
 
     /**
-     * The Device Count.
-     * User experience analytics summarized device count.
+     * The Operating System Version.
+     * The user experience analytics device Operating System version.
      */
-    @SerializedName("deviceCount")
+    @SerializedName("operatingSystemVersion")
     @Expose
-    public Long deviceCount;
+    public String operatingSystemVersion;
 
     /**
      * The Responsive Desktop Time In Ms.
@@ -141,36 +165,12 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     public Integer responsiveDesktopTimeInMs;
 
     /**
-     * The Blue Screen Count.
-     * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
-     */
-    @SerializedName("blueScreenCount")
-    @Expose
-    public Integer blueScreenCount;
-
-    /**
      * The Restart Count.
      * Number of Restarts in the last 14 days. Valid values 0 to 9999999
      */
     @SerializedName("restartCount")
     @Expose
     public Integer restartCount;
-
-    /**
-     * The Average Blue Screens.
-     * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
-     */
-    @SerializedName("averageBlueScreens")
-    @Expose
-    public Double averageBlueScreens;
-
-    /**
-     * The Average Restarts.
-     * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
-     */
-    @SerializedName("averageRestarts")
-    @Expose
-    public Double averageRestarts;
 
 
     /**

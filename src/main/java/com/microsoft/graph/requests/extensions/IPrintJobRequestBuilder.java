@@ -46,7 +46,7 @@ public interface IPrintJobRequestBuilder extends IRequestBuilder {
 
     IPrintTaskRequestBuilder tasks(final String id);
     IPrintJobCancelPrintJobRequestBuilder cancelPrintJob();
-    IPrintJobStartPrintJobRequestBuilder startPrintJob();
     IPrintJobRedirectRequestBuilder redirect(final String destinationPrinterId);
+    IPrintJobStartPrintJobRequestBuilder startPrintJob();
 
 }

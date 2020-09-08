@@ -112,6 +112,27 @@ public class OfficeClientConfigurationAssignmentRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a OfficeClientConfigurationAssignment with a new object
+     *
+     * @param newOfficeClientConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback) {
+        send(HttpMethod.PUT, callback, newOfficeClientConfigurationAssignment);
+    }
+
+    /**
+     * Creates a OfficeClientConfigurationAssignment with a new object
+     *
+     * @param newOfficeClientConfigurationAssignment the object to create/update
+     * @return the created OfficeClientConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OfficeClientConfigurationAssignment put(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newOfficeClientConfigurationAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

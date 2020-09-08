@@ -112,6 +112,27 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
     }
 
     /**
+     * Creates a UserConsentRequest with a new object
+     *
+     * @param newUserConsentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserConsentRequest newUserConsentRequest, final ICallback<UserConsentRequest> callback) {
+        send(HttpMethod.PUT, callback, newUserConsentRequest);
+    }
+
+    /**
+     * Creates a UserConsentRequest with a new object
+     *
+     * @param newUserConsentRequest the object to create/update
+     * @return the created UserConsentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserConsentRequest put(final UserConsentRequest newUserConsentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newUserConsentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -30,68 +30,12 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Serial Number.
-     * Device serial number
-     */
-    @SerializedName("serialNumber")
-    @Expose
-    public String serialNumber;
-
-    /**
-     * The Requested Enrollment Profile Id.
-     * Enrollment profile Id admin intends to apply to the device during next enrollment
-     */
-    @SerializedName("requestedEnrollmentProfileId")
-    @Expose
-    public String requestedEnrollmentProfileId;
-
-    /**
-     * The Requested Enrollment Profile Assignment Date Time.
-     * The time enrollment profile was assigned to the device
-     */
-    @SerializedName("requestedEnrollmentProfileAssignmentDateTime")
-    @Expose
-    public java.util.Calendar requestedEnrollmentProfileAssignmentDateTime;
-
-    /**
-     * The Is Supervised.
-     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
-     */
-    @SerializedName("isSupervised")
-    @Expose
-    public Boolean isSupervised;
-
-    /**
-     * The Discovery Source.
-     * Apple device discovery source.
-     */
-    @SerializedName("discoverySource")
-    @Expose
-    public DiscoverySource discoverySource;
-
-    /**
-     * The Is Deleted.
-     * Indicates if the device is deleted from Apple Business Manager
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
-
-    /**
      * The Created Date Time.
      * Created Date Time of the device
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Contacted Date Time.
-     * Last Contacted Date Time of the device
-     */
-    @SerializedName("lastContactedDateTime")
-    @Expose
-    public java.util.Calendar lastContactedDateTime;
 
     /**
      * The Description.
@@ -102,6 +46,14 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
     public String description;
 
     /**
+     * The Discovery Source.
+     * Apple device discovery source.
+     */
+    @SerializedName("discoverySource")
+    @Expose
+    public DiscoverySource discoverySource;
+
+    /**
      * The Enrollment State.
      * The state of the device in Intune
      */
@@ -110,12 +62,60 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
     public EnrollmentState enrollmentState;
 
     /**
+     * The Is Deleted.
+     * Indicates if the device is deleted from Apple Business Manager
+     */
+    @SerializedName("isDeleted")
+    @Expose
+    public Boolean isDeleted;
+
+    /**
+     * The Is Supervised.
+     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+     */
+    @SerializedName("isSupervised")
+    @Expose
+    public Boolean isSupervised;
+
+    /**
+     * The Last Contacted Date Time.
+     * Last Contacted Date Time of the device
+     */
+    @SerializedName("lastContactedDateTime")
+    @Expose
+    public java.util.Calendar lastContactedDateTime;
+
+    /**
      * The Platform.
      * The platform of the Device.
      */
     @SerializedName("platform")
     @Expose
     public Platform platform;
+
+    /**
+     * The Requested Enrollment Profile Assignment Date Time.
+     * The time enrollment profile was assigned to the device
+     */
+    @SerializedName("requestedEnrollmentProfileAssignmentDateTime")
+    @Expose
+    public java.util.Calendar requestedEnrollmentProfileAssignmentDateTime;
+
+    /**
+     * The Requested Enrollment Profile Id.
+     * Enrollment profile Id admin intends to apply to the device during next enrollment
+     */
+    @SerializedName("requestedEnrollmentProfileId")
+    @Expose
+    public String requestedEnrollmentProfileId;
+
+    /**
+     * The Serial Number.
+     * Device serial number
+     */
+    @SerializedName("serialNumber")
+    @Expose
+    public String serialNumber;
 
 
     /**

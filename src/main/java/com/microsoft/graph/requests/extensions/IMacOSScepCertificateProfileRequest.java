@@ -80,6 +80,23 @@ public interface IMacOSScepCertificateProfileRequest extends IHttpRequest {
     MacOSScepCertificateProfile post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException;
 
     /**
+     * Posts a MacOSScepCertificateProfile with a new object
+     *
+     * @param newMacOSScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<MacOSScepCertificateProfile> callback);
+
+    /**
+     * Posts a MacOSScepCertificateProfile with a new object
+     *
+     * @param newMacOSScepCertificateProfile the object to create/update
+     * @return the created MacOSScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSScepCertificateProfile put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

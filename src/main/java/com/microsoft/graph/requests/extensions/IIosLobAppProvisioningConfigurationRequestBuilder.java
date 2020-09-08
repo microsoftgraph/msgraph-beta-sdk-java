@@ -11,12 +11,12 @@ import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import java.util.Arrays;
@@ -44,10 +44,6 @@ public interface IIosLobAppProvisioningConfigurationRequestBuilder extends IRequ
     IIosLobAppProvisioningConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IMobileAppProvisioningConfigGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IIosLobAppProvisioningConfigurationAssignmentRequestBuilder assignments(final String id);
@@ -55,6 +51,10 @@ public interface IIosLobAppProvisioningConfigurationRequestBuilder extends IRequ
     IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
+
+    IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IMobileAppProvisioningConfigGroupAssignmentRequestBuilder groupAssignments(final String id);
 
     IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses();
 

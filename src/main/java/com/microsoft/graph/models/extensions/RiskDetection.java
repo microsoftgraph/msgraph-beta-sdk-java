@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RiskEventType;
-import com.microsoft.graph.models.generated.RiskState;
-import com.microsoft.graph.models.generated.RiskLevel;
-import com.microsoft.graph.models.generated.RiskDetail;
-import com.microsoft.graph.models.generated.RiskDetectionTimingType;
 import com.microsoft.graph.models.generated.ActivityType;
-import com.microsoft.graph.models.generated.TokenIssuerType;
+import com.microsoft.graph.models.generated.RiskDetectionTimingType;
 import com.microsoft.graph.models.extensions.SignInLocation;
+import com.microsoft.graph.models.generated.RiskDetail;
+import com.microsoft.graph.models.generated.RiskLevel;
+import com.microsoft.graph.models.generated.RiskState;
+import com.microsoft.graph.models.generated.RiskEventType;
+import com.microsoft.graph.models.generated.TokenIssuerType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -35,108 +35,12 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Request Id.
-     * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     */
-    @SerializedName("requestId")
-    @Expose
-    public String requestId;
-
-    /**
-     * The Correlation Id.
-     * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     */
-    @SerializedName("correlationId")
-    @Expose
-    public String correlationId;
-
-    /**
-     * The Risk Event Type.
-     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
-     */
-    @SerializedName("riskEventType")
-    @Expose
-    public String riskEventType;
-
-    /**
-     * The Risk Type.
-     * 
-     */
-    @SerializedName("riskType")
-    @Expose
-    public RiskEventType riskType;
-
-    /**
-     * The Risk State.
-     * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     */
-    @SerializedName("riskState")
-    @Expose
-    public RiskState riskState;
-
-    /**
-     * The Risk Level.
-     * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     */
-    @SerializedName("riskLevel")
-    @Expose
-    public RiskLevel riskLevel;
-
-    /**
-     * The Risk Detail.
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     */
-    @SerializedName("riskDetail")
-    @Expose
-    public RiskDetail riskDetail;
-
-    /**
-     * The Source.
-     * Source of the risk detection. For example, 'activeDirectory'.
-     */
-    @SerializedName("source")
-    @Expose
-    public String source;
-
-    /**
-     * The Detection Timing Type.
-     * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     */
-    @SerializedName("detectionTimingType")
-    @Expose
-    public RiskDetectionTimingType detectionTimingType;
-
-    /**
      * The Activity.
      * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
      */
     @SerializedName("activity")
     @Expose
     public ActivityType activity;
-
-    /**
-     * The Token Issuer Type.
-     * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
-     */
-    @SerializedName("tokenIssuerType")
-    @Expose
-    public TokenIssuerType tokenIssuerType;
-
-    /**
-     * The Ip Address.
-     * Provides the IP address of the client from where the risk occurred.
-     */
-    @SerializedName("ipAddress")
-    @Expose
-    public String ipAddress;
-
-    /**
-     * The Location.
-     * Location of the sign-in.
-     */
-    @SerializedName("location")
-    @Expose
-    public SignInLocation location;
 
     /**
      * The Activity Date Time.
@@ -147,12 +51,44 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
     public java.util.Calendar activityDateTime;
 
     /**
+     * The Additional Info.
+     * Additional information associated with the risk detection in JSON format.
+     */
+    @SerializedName("additionalInfo")
+    @Expose
+    public String additionalInfo;
+
+    /**
+     * The Correlation Id.
+     * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+     */
+    @SerializedName("correlationId")
+    @Expose
+    public String correlationId;
+
+    /**
      * The Detected Date Time.
      * Date and time that the risk was detected.
      */
     @SerializedName("detectedDateTime")
     @Expose
     public java.util.Calendar detectedDateTime;
+
+    /**
+     * The Detection Timing Type.
+     * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     */
+    @SerializedName("detectionTimingType")
+    @Expose
+    public RiskDetectionTimingType detectionTimingType;
+
+    /**
+     * The Ip Address.
+     * Provides the IP address of the client from where the risk occurred.
+     */
+    @SerializedName("ipAddress")
+    @Expose
+    public String ipAddress;
 
     /**
      * The Last Updated Date Time.
@@ -163,12 +99,76 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastUpdatedDateTime;
 
     /**
-     * The User Id.
-     * Unique ID of the user.
+     * The Location.
+     * Location of the sign-in.
      */
-    @SerializedName("userId")
+    @SerializedName("location")
     @Expose
-    public String userId;
+    public SignInLocation location;
+
+    /**
+     * The Request Id.
+     * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+     */
+    @SerializedName("requestId")
+    @Expose
+    public String requestId;
+
+    /**
+     * The Risk Detail.
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     */
+    @SerializedName("riskDetail")
+    @Expose
+    public RiskDetail riskDetail;
+
+    /**
+     * The Risk Event Type.
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
+     */
+    @SerializedName("riskEventType")
+    @Expose
+    public String riskEventType;
+
+    /**
+     * The Risk Level.
+     * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     */
+    @SerializedName("riskLevel")
+    @Expose
+    public RiskLevel riskLevel;
+
+    /**
+     * The Risk State.
+     * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     */
+    @SerializedName("riskState")
+    @Expose
+    public RiskState riskState;
+
+    /**
+     * The Risk Type.
+     * 
+     */
+    @SerializedName("riskType")
+    @Expose
+    public RiskEventType riskType;
+
+    /**
+     * The Source.
+     * Source of the risk detection. For example, 'activeDirectory'.
+     */
+    @SerializedName("source")
+    @Expose
+    public String source;
+
+    /**
+     * The Token Issuer Type.
+     * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+     */
+    @SerializedName("tokenIssuerType")
+    @Expose
+    public TokenIssuerType tokenIssuerType;
 
     /**
      * The User Display Name.
@@ -179,20 +179,20 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
     public String userDisplayName;
 
     /**
+     * The User Id.
+     * Unique ID of the user.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
      * The User Principal Name.
      * The user principal name (UPN) of the user.
      */
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Additional Info.
-     * Additional information associated with the risk detection in JSON format.
-     */
-    @SerializedName("additionalInfo")
-    @Expose
-    public String additionalInfo;
 
 
     /**

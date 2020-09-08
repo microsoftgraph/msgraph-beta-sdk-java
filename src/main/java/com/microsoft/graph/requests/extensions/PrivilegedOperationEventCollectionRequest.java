@@ -61,14 +61,14 @@ public class PrivilegedOperationEventCollectionRequest extends BaseCollectionReq
     public void post(final PrivilegedOperationEvent newPrivilegedOperationEvent, final ICallback<PrivilegedOperationEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedOperationEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedOperationEvent, callback);
     }
 
     public PrivilegedOperationEvent post(final PrivilegedOperationEvent newPrivilegedOperationEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedOperationEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedOperationEvent);
     }
 
@@ -105,6 +105,27 @@ public class PrivilegedOperationEventCollectionRequest extends BaseCollectionReq
         return (PrivilegedOperationEventCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedOperationEventCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedOperationEventCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedOperationEventCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedOperationEventCollectionRequest)this;
+    }
     public IPrivilegedOperationEventCollectionPage buildFromResponse(final PrivilegedOperationEventCollectionResponse response) {
         final IPrivilegedOperationEventCollectionRequestBuilder builder;
         if (response.nextLink != null) {

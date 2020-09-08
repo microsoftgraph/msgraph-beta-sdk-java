@@ -36,20 +36,20 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
     public String displayName;
 
     /**
-     * The Tag.
-     * 
-     */
-    @SerializedName("tag")
-    @Expose
-    public String tag;
-
-    /**
      * The Proficiency.
      * 
      */
     @SerializedName("proficiency")
     @Expose
     public LanguageProficiencyLevel proficiency;
+
+    /**
+     * The Reading.
+     * 
+     */
+    @SerializedName("reading")
+    @Expose
+    public LanguageProficiencyLevel reading;
 
     /**
      * The Spoken.
@@ -60,20 +60,20 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
     public LanguageProficiencyLevel spoken;
 
     /**
+     * The Tag.
+     * 
+     */
+    @SerializedName("tag")
+    @Expose
+    public String tag;
+
+    /**
      * The Written.
      * 
      */
     @SerializedName("written")
     @Expose
     public LanguageProficiencyLevel written;
-
-    /**
-     * The Reading.
-     * 
-     */
-    @SerializedName("reading")
-    @Expose
-    public LanguageProficiencyLevel reading;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IYammerDeviceUsageUserCountsRequest extends IHttpRequest {
     YammerDeviceUsageUserCounts post(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException;
 
     /**
+     * Posts a YammerDeviceUsageUserCounts with a new object
+     *
+     * @param newYammerDeviceUsageUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<YammerDeviceUsageUserCounts> callback);
+
+    /**
+     * Posts a YammerDeviceUsageUserCounts with a new object
+     *
+     * @param newYammerDeviceUsageUserCounts the object to create/update
+     * @return the created YammerDeviceUsageUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    YammerDeviceUsageUserCounts put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

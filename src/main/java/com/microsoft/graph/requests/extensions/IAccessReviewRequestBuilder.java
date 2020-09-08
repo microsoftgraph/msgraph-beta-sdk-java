@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReview;
-import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,24 +39,24 @@ public interface IAccessReviewRequestBuilder extends IRequestBuilder {
     IAccessReviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IAccessReviewReviewerCollectionRequestBuilder reviewers();
-
-    IAccessReviewReviewerRequestBuilder reviewers(final String id);
-
     IAccessReviewDecisionCollectionRequestBuilder decisions();
 
     IAccessReviewDecisionRequestBuilder decisions(final String id);
+
+    IAccessReviewCollectionRequestBuilder instances();
+
+    IAccessReviewRequestBuilder instances(final String id);
 
     IAccessReviewDecisionCollectionRequestBuilder myDecisions();
 
     IAccessReviewDecisionRequestBuilder myDecisions(final String id);
 
-    IAccessReviewCollectionRequestBuilder instances();
+    IAccessReviewReviewerCollectionRequestBuilder reviewers();
 
-    IAccessReviewRequestBuilder instances(final String id);
-    IAccessReviewStopRequestBuilder stop();
-    IAccessReviewSendReminderRequestBuilder sendReminder();
-    IAccessReviewResetDecisionsRequestBuilder resetDecisions();
+    IAccessReviewReviewerRequestBuilder reviewers(final String id);
     IAccessReviewApplyDecisionsRequestBuilder applyDecisions();
+    IAccessReviewResetDecisionsRequestBuilder resetDecisions();
+    IAccessReviewSendReminderRequestBuilder sendReminder();
+    IAccessReviewStopRequestBuilder stop();
 
 }

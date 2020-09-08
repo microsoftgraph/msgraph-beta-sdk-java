@@ -28,14 +28,6 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
 
 
     /**
-     * The Use Security Key For Signin.
-     * Boolean value used to enable the Windows Hello security key as a logon credential.
-     */
-    @SerializedName("useSecurityKeyForSignin")
-    @Expose
-    public Boolean useSecurityKeyForSignin;
-
-    /**
      * The Enhanced Anti Spoofing For Facial Features Enabled.
      * Boolean value used to enable enhanced anti-spoofing for facial feature recognition on Windows Hello face authentication.
      */
@@ -44,28 +36,12 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     public Boolean enhancedAntiSpoofingForFacialFeaturesEnabled;
 
     /**
-     * The Pin Minimum Length.
-     * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
+     * The Pin Expiration In Days.
+     * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
      */
-    @SerializedName("pinMinimumLength")
+    @SerializedName("pinExpirationInDays")
     @Expose
-    public Integer pinMinimumLength;
-
-    /**
-     * The Pin Maximum Length.
-     * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
-     */
-    @SerializedName("pinMaximumLength")
-    @Expose
-    public Integer pinMaximumLength;
-
-    /**
-     * The Pin Uppercase Characters Usage.
-     * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
-     */
-    @SerializedName("pinUppercaseCharactersUsage")
-    @Expose
-    public ConfigurationUsage pinUppercaseCharactersUsage;
+    public Integer pinExpirationInDays;
 
     /**
      * The Pin Lowercase Characters Usage.
@@ -76,20 +52,20 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     public ConfigurationUsage pinLowercaseCharactersUsage;
 
     /**
-     * The Pin Special Characters Usage.
-     * Controls the ability to use special characters in the Windows Hello for Business PIN.
+     * The Pin Maximum Length.
+     * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
      */
-    @SerializedName("pinSpecialCharactersUsage")
+    @SerializedName("pinMaximumLength")
     @Expose
-    public ConfigurationUsage pinSpecialCharactersUsage;
+    public Integer pinMaximumLength;
 
     /**
-     * The Pin Expiration In Days.
-     * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
+     * The Pin Minimum Length.
+     * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
      */
-    @SerializedName("pinExpirationInDays")
+    @SerializedName("pinMinimumLength")
     @Expose
-    public Integer pinExpirationInDays;
+    public Integer pinMinimumLength;
 
     /**
      * The Pin Previous Block Count.
@@ -106,6 +82,22 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     @SerializedName("pinRecoveryEnabled")
     @Expose
     public Boolean pinRecoveryEnabled;
+
+    /**
+     * The Pin Special Characters Usage.
+     * Controls the ability to use special characters in the Windows Hello for Business PIN.
+     */
+    @SerializedName("pinSpecialCharactersUsage")
+    @Expose
+    public ConfigurationUsage pinSpecialCharactersUsage;
+
+    /**
+     * The Pin Uppercase Characters Usage.
+     * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
+     */
+    @SerializedName("pinUppercaseCharactersUsage")
+    @Expose
+    public ConfigurationUsage pinUppercaseCharactersUsage;
 
     /**
      * The Security Device Required.
@@ -130,6 +122,14 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     @SerializedName("useCertificatesForOnPremisesAuthEnabled")
     @Expose
     public Boolean useCertificatesForOnPremisesAuthEnabled;
+
+    /**
+     * The Use Security Key For Signin.
+     * Boolean value used to enable the Windows Hello security key as a logon credential.
+     */
+    @SerializedName("useSecurityKeyForSignin")
+    @Expose
+    public Boolean useSecurityKeyForSignin;
 
     /**
      * The Windows Hello For Business Blocked.

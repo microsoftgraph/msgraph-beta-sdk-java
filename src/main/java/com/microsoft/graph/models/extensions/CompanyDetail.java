@@ -37,20 +37,12 @@ public class CompanyDetail implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
+     * The Address.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("address")
     @Expose
-    public String displayName;
-
-    /**
-     * The Pronunciation.
-     * 
-     */
-    @SerializedName("pronunciation")
-    @Expose
-    public String pronunciation;
+    public PhysicalAddress address;
 
     /**
      * The Department.
@@ -61,6 +53,14 @@ public class CompanyDetail implements IJsonBackedObject {
     public String department;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Office Location.
      * 
      */
@@ -69,12 +69,12 @@ public class CompanyDetail implements IJsonBackedObject {
     public String officeLocation;
 
     /**
-     * The Address.
+     * The Pronunciation.
      * 
      */
-    @SerializedName("address")
+    @SerializedName("pronunciation")
     @Expose
-    public PhysicalAddress address;
+    public String pronunciation;
 
     /**
      * The Web Url.

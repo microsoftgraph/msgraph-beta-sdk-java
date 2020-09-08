@@ -80,6 +80,23 @@ public interface IWindowsOfficeClientConfigurationRequest extends IHttpRequest {
     WindowsOfficeClientConfiguration post(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsOfficeClientConfiguration with a new object
+     *
+     * @param newWindowsOfficeClientConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<WindowsOfficeClientConfiguration> callback);
+
+    /**
+     * Posts a WindowsOfficeClientConfiguration with a new object
+     *
+     * @param newWindowsOfficeClientConfiguration the object to create/update
+     * @return the created WindowsOfficeClientConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsOfficeClientConfiguration put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

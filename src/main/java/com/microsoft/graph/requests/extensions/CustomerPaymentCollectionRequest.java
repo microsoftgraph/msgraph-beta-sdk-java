@@ -62,14 +62,14 @@ public class CustomerPaymentCollectionRequest extends BaseCollectionRequest<Cust
     public void post(final CustomerPayment newCustomerPayment, final ICallback<CustomerPayment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CustomerPaymentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCustomerPayment, callback);
     }
 
     public CustomerPayment post(final CustomerPayment newCustomerPayment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CustomerPaymentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCustomerPayment);
     }
 
@@ -106,6 +106,27 @@ public class CustomerPaymentCollectionRequest extends BaseCollectionRequest<Cust
         return (CustomerPaymentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICustomerPaymentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CustomerPaymentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICustomerPaymentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICustomerPaymentCollectionRequest)this;
+    }
     public ICustomerPaymentCollectionPage buildFromResponse(final CustomerPaymentCollectionResponse response) {
         final ICustomerPaymentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

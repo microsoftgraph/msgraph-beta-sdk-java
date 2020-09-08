@@ -8,15 +8,15 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WindowsDeliveryOptimizationMode;
-import com.microsoft.graph.models.generated.PrereleaseFeatures;
 import com.microsoft.graph.models.generated.AutomaticUpdateMode;
-import com.microsoft.graph.models.extensions.WindowsUpdateInstallScheduleType;
-import com.microsoft.graph.models.generated.WindowsUpdateType;
-import com.microsoft.graph.models.generated.WindowsUpdateForBusinessUpdateWeeks;
 import com.microsoft.graph.models.generated.AutoRestartNotificationDismissalMethod;
-import com.microsoft.graph.models.generated.Enablement;
+import com.microsoft.graph.models.generated.WindowsUpdateType;
+import com.microsoft.graph.models.generated.WindowsDeliveryOptimizationMode;
+import com.microsoft.graph.models.extensions.WindowsUpdateInstallScheduleType;
+import com.microsoft.graph.models.generated.PrereleaseFeatures;
 import com.microsoft.graph.models.generated.WindowsUpdateNotificationDisplayOption;
+import com.microsoft.graph.models.generated.WindowsUpdateForBusinessUpdateWeeks;
+import com.microsoft.graph.models.generated.Enablement;
 import com.microsoft.graph.models.extensions.WindowsUpdateState;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.requests.extensions.WindowsUpdateStateCollectionResponse;
@@ -39,22 +39,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
     /**
-     * The Delivery Optimization Mode.
-     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
-     */
-    @SerializedName("deliveryOptimizationMode")
-    @Expose
-    public WindowsDeliveryOptimizationMode deliveryOptimizationMode;
-
-    /**
-     * The Prerelease Features.
-     * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
-     */
-    @SerializedName("prereleaseFeatures")
-    @Expose
-    public PrereleaseFeatures prereleaseFeatures;
-
-    /**
      * The Automatic Update Mode.
      * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
      */
@@ -63,76 +47,12 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public AutomaticUpdateMode automaticUpdateMode;
 
     /**
-     * The Microsoft Update Service Allowed.
-     * Allow Microsoft Update Service
+     * The Auto Restart Notification Dismissal.
+     * Specify the method by which the auto-restart required notification is dismissed
      */
-    @SerializedName("microsoftUpdateServiceAllowed")
+    @SerializedName("autoRestartNotificationDismissal")
     @Expose
-    public Boolean microsoftUpdateServiceAllowed;
-
-    /**
-     * The Drivers Excluded.
-     * Exclude Windows update Drivers
-     */
-    @SerializedName("driversExcluded")
-    @Expose
-    public Boolean driversExcluded;
-
-    /**
-     * The Installation Schedule.
-     * Installation schedule
-     */
-    @SerializedName("installationSchedule")
-    @Expose
-    public WindowsUpdateInstallScheduleType installationSchedule;
-
-    /**
-     * The Quality Updates Deferral Period In Days.
-     * Defer Quality Updates by these many days
-     */
-    @SerializedName("qualityUpdatesDeferralPeriodInDays")
-    @Expose
-    public Integer qualityUpdatesDeferralPeriodInDays;
-
-    /**
-     * The Feature Updates Deferral Period In Days.
-     * Defer Feature Updates by these many days
-     */
-    @SerializedName("featureUpdatesDeferralPeriodInDays")
-    @Expose
-    public Integer featureUpdatesDeferralPeriodInDays;
-
-    /**
-     * The Quality Updates Paused.
-     * Pause Quality Updates
-     */
-    @SerializedName("qualityUpdatesPaused")
-    @Expose
-    public Boolean qualityUpdatesPaused;
-
-    /**
-     * The Feature Updates Paused.
-     * Pause Feature Updates
-     */
-    @SerializedName("featureUpdatesPaused")
-    @Expose
-    public Boolean featureUpdatesPaused;
-
-    /**
-     * The Quality Updates Pause Expiry Date Time.
-     * Quality Updates Pause Expiry datetime
-     */
-    @SerializedName("qualityUpdatesPauseExpiryDateTime")
-    @Expose
-    public java.util.Calendar qualityUpdatesPauseExpiryDateTime;
-
-    /**
-     * The Feature Updates Pause Expiry Date Time.
-     * Feature Updates Pause Expiry datetime
-     */
-    @SerializedName("featureUpdatesPauseExpiryDateTime")
-    @Expose
-    public java.util.Calendar featureUpdatesPauseExpiryDateTime;
+    public AutoRestartNotificationDismissalMethod autoRestartNotificationDismissal;
 
     /**
      * The Business Ready Updates Only.
@@ -141,102 +61,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @SerializedName("businessReadyUpdatesOnly")
     @Expose
     public WindowsUpdateType businessReadyUpdatesOnly;
-
-    /**
-     * The Skip Checks Before Restart.
-     * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. 
-     */
-    @SerializedName("skipChecksBeforeRestart")
-    @Expose
-    public Boolean skipChecksBeforeRestart;
-
-    /**
-     * The Update Weeks.
-     * Scheduled the update installation on the weeks of the month
-     */
-    @SerializedName("updateWeeks")
-    @Expose
-    public EnumSet<WindowsUpdateForBusinessUpdateWeeks> updateWeeks;
-
-    /**
-     * The Quality Updates Pause Start Date.
-     * Quality Updates Pause start date. This property is read-only.
-     */
-    @SerializedName("qualityUpdatesPauseStartDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly qualityUpdatesPauseStartDate;
-
-    /**
-     * The Feature Updates Pause Start Date.
-     * Feature Updates Pause start date. This property is read-only.
-     */
-    @SerializedName("featureUpdatesPauseStartDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly featureUpdatesPauseStartDate;
-
-    /**
-     * The Feature Updates Rollback Window In Days.
-     * The number of days after a Feature Update for which a rollback is valid
-     */
-    @SerializedName("featureUpdatesRollbackWindowInDays")
-    @Expose
-    public Integer featureUpdatesRollbackWindowInDays;
-
-    /**
-     * The Quality Updates Will Be Rolled Back.
-     * Specifies whether to rollback Quality Updates on the next device check in
-     */
-    @SerializedName("qualityUpdatesWillBeRolledBack")
-    @Expose
-    public Boolean qualityUpdatesWillBeRolledBack;
-
-    /**
-     * The Feature Updates Will Be Rolled Back.
-     * Specifies whether to rollback Feature Updates on the next device check in
-     */
-    @SerializedName("featureUpdatesWillBeRolledBack")
-    @Expose
-    public Boolean featureUpdatesWillBeRolledBack;
-
-    /**
-     * The Quality Updates Rollback Start Date Time.
-     * Quality Updates Rollback Start datetime
-     */
-    @SerializedName("qualityUpdatesRollbackStartDateTime")
-    @Expose
-    public java.util.Calendar qualityUpdatesRollbackStartDateTime;
-
-    /**
-     * The Feature Updates Rollback Start Date Time.
-     * Feature Updates Rollback Start datetime
-     */
-    @SerializedName("featureUpdatesRollbackStartDateTime")
-    @Expose
-    public java.util.Calendar featureUpdatesRollbackStartDateTime;
-
-    /**
-     * The Engaged Restart Deadline In Days.
-     * Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days
-     */
-    @SerializedName("engagedRestartDeadlineInDays")
-    @Expose
-    public Integer engagedRestartDeadlineInDays;
-
-    /**
-     * The Engaged Restart Snooze Schedule In Days.
-     * Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days
-     */
-    @SerializedName("engagedRestartSnoozeScheduleInDays")
-    @Expose
-    public Integer engagedRestartSnoozeScheduleInDays;
-
-    /**
-     * The Engaged Restart Transition Schedule In Days.
-     * Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days
-     */
-    @SerializedName("engagedRestartTransitionScheduleInDays")
-    @Expose
-    public Integer engagedRestartTransitionScheduleInDays;
 
     /**
      * The Deadline For Feature Updates In Days.
@@ -263,6 +87,118 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public Integer deadlineGracePeriodInDays;
 
     /**
+     * The Delivery Optimization Mode.
+     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     */
+    @SerializedName("deliveryOptimizationMode")
+    @Expose
+    public WindowsDeliveryOptimizationMode deliveryOptimizationMode;
+
+    /**
+     * The Drivers Excluded.
+     * Exclude Windows update Drivers
+     */
+    @SerializedName("driversExcluded")
+    @Expose
+    public Boolean driversExcluded;
+
+    /**
+     * The Engaged Restart Deadline In Days.
+     * Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days
+     */
+    @SerializedName("engagedRestartDeadlineInDays")
+    @Expose
+    public Integer engagedRestartDeadlineInDays;
+
+    /**
+     * The Engaged Restart Snooze Schedule In Days.
+     * Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days
+     */
+    @SerializedName("engagedRestartSnoozeScheduleInDays")
+    @Expose
+    public Integer engagedRestartSnoozeScheduleInDays;
+
+    /**
+     * The Engaged Restart Transition Schedule In Days.
+     * Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days
+     */
+    @SerializedName("engagedRestartTransitionScheduleInDays")
+    @Expose
+    public Integer engagedRestartTransitionScheduleInDays;
+
+    /**
+     * The Feature Updates Deferral Period In Days.
+     * Defer Feature Updates by these many days
+     */
+    @SerializedName("featureUpdatesDeferralPeriodInDays")
+    @Expose
+    public Integer featureUpdatesDeferralPeriodInDays;
+
+    /**
+     * The Feature Updates Paused.
+     * Pause Feature Updates
+     */
+    @SerializedName("featureUpdatesPaused")
+    @Expose
+    public Boolean featureUpdatesPaused;
+
+    /**
+     * The Feature Updates Pause Expiry Date Time.
+     * Feature Updates Pause Expiry datetime
+     */
+    @SerializedName("featureUpdatesPauseExpiryDateTime")
+    @Expose
+    public java.util.Calendar featureUpdatesPauseExpiryDateTime;
+
+    /**
+     * The Feature Updates Pause Start Date.
+     * Feature Updates Pause start date. This property is read-only.
+     */
+    @SerializedName("featureUpdatesPauseStartDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly featureUpdatesPauseStartDate;
+
+    /**
+     * The Feature Updates Rollback Start Date Time.
+     * Feature Updates Rollback Start datetime
+     */
+    @SerializedName("featureUpdatesRollbackStartDateTime")
+    @Expose
+    public java.util.Calendar featureUpdatesRollbackStartDateTime;
+
+    /**
+     * The Feature Updates Rollback Window In Days.
+     * The number of days after a Feature Update for which a rollback is valid
+     */
+    @SerializedName("featureUpdatesRollbackWindowInDays")
+    @Expose
+    public Integer featureUpdatesRollbackWindowInDays;
+
+    /**
+     * The Feature Updates Will Be Rolled Back.
+     * Specifies whether to rollback Feature Updates on the next device check in
+     */
+    @SerializedName("featureUpdatesWillBeRolledBack")
+    @Expose
+    public Boolean featureUpdatesWillBeRolledBack;
+
+    /**
+     * The Installation Schedule.
+     * Installation schedule
+     */
+    @SerializedName("installationSchedule")
+    @Expose
+    public WindowsUpdateInstallScheduleType installationSchedule;
+
+    /**
+     * The Microsoft Update Service Allowed.
+     * Allow Microsoft Update Service
+     */
+    @SerializedName("microsoftUpdateServiceAllowed")
+    @Expose
+    public Boolean microsoftUpdateServiceAllowed;
+
+    /**
      * The Postpone Reboot Until After Deadline.
      * Specifies if the device should wait until deadline for rebooting outside of active hours
      */
@@ -271,12 +207,68 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public Boolean postponeRebootUntilAfterDeadline;
 
     /**
-     * The Auto Restart Notification Dismissal.
-     * Specify the method by which the auto-restart required notification is dismissed
+     * The Prerelease Features.
+     * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
      */
-    @SerializedName("autoRestartNotificationDismissal")
+    @SerializedName("prereleaseFeatures")
     @Expose
-    public AutoRestartNotificationDismissalMethod autoRestartNotificationDismissal;
+    public PrereleaseFeatures prereleaseFeatures;
+
+    /**
+     * The Quality Updates Deferral Period In Days.
+     * Defer Quality Updates by these many days
+     */
+    @SerializedName("qualityUpdatesDeferralPeriodInDays")
+    @Expose
+    public Integer qualityUpdatesDeferralPeriodInDays;
+
+    /**
+     * The Quality Updates Paused.
+     * Pause Quality Updates
+     */
+    @SerializedName("qualityUpdatesPaused")
+    @Expose
+    public Boolean qualityUpdatesPaused;
+
+    /**
+     * The Quality Updates Pause Expiry Date Time.
+     * Quality Updates Pause Expiry datetime
+     */
+    @SerializedName("qualityUpdatesPauseExpiryDateTime")
+    @Expose
+    public java.util.Calendar qualityUpdatesPauseExpiryDateTime;
+
+    /**
+     * The Quality Updates Pause Start Date.
+     * Quality Updates Pause start date. This property is read-only.
+     */
+    @SerializedName("qualityUpdatesPauseStartDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly qualityUpdatesPauseStartDate;
+
+    /**
+     * The Quality Updates Rollback Start Date Time.
+     * Quality Updates Rollback Start datetime
+     */
+    @SerializedName("qualityUpdatesRollbackStartDateTime")
+    @Expose
+    public java.util.Calendar qualityUpdatesRollbackStartDateTime;
+
+    /**
+     * The Quality Updates Will Be Rolled Back.
+     * Specifies whether to rollback Quality Updates on the next device check in
+     */
+    @SerializedName("qualityUpdatesWillBeRolledBack")
+    @Expose
+    public Boolean qualityUpdatesWillBeRolledBack;
+
+    /**
+     * The Schedule Imminent Restart Warning In Minutes.
+     * Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes).
+     */
+    @SerializedName("scheduleImminentRestartWarningInMinutes")
+    @Expose
+    public Integer scheduleImminentRestartWarningInMinutes;
 
     /**
      * The Schedule Restart Warning In Hours.
@@ -287,12 +279,28 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public Integer scheduleRestartWarningInHours;
 
     /**
-     * The Schedule Imminent Restart Warning In Minutes.
-     * Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes).
+     * The Skip Checks Before Restart.
+     * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. 
      */
-    @SerializedName("scheduleImminentRestartWarningInMinutes")
+    @SerializedName("skipChecksBeforeRestart")
     @Expose
-    public Integer scheduleImminentRestartWarningInMinutes;
+    public Boolean skipChecksBeforeRestart;
+
+    /**
+     * The Update Notification Level.
+     * Specifies what Windows Update notifications users see.
+     */
+    @SerializedName("updateNotificationLevel")
+    @Expose
+    public WindowsUpdateNotificationDisplayOption updateNotificationLevel;
+
+    /**
+     * The Update Weeks.
+     * Scheduled the update installation on the weeks of the month
+     */
+    @SerializedName("updateWeeks")
+    @Expose
+    public EnumSet<WindowsUpdateForBusinessUpdateWeeks> updateWeeks;
 
     /**
      * The User Pause Access.
@@ -309,14 +317,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @SerializedName("userWindowsUpdateScanAccess")
     @Expose
     public Enablement userWindowsUpdateScanAccess;
-
-    /**
-     * The Update Notification Level.
-     * Specifies what Windows Update notifications users see.
-     */
-    @SerializedName("updateNotificationLevel")
-    @Expose
-    public WindowsUpdateNotificationDisplayOption updateNotificationLevel;
 
     /**
      * The Device Update States.

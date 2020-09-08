@@ -36,20 +36,20 @@ public class LocalizedName implements IJsonBackedObject {
     }
 
     /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Language Tag.
      * 
      */
     @SerializedName("languageTag")
     @Expose
     public String languageTag;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
 
     /**

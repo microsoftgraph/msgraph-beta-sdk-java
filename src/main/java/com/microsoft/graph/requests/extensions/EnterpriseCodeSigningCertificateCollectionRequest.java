@@ -62,14 +62,14 @@ public class EnterpriseCodeSigningCertificateCollectionRequest extends BaseColle
     public void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnterpriseCodeSigningCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEnterpriseCodeSigningCertificate, callback);
     }
 
     public EnterpriseCodeSigningCertificate post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnterpriseCodeSigningCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEnterpriseCodeSigningCertificate);
     }
 
@@ -106,6 +106,27 @@ public class EnterpriseCodeSigningCertificateCollectionRequest extends BaseColle
         return (EnterpriseCodeSigningCertificateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEnterpriseCodeSigningCertificateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EnterpriseCodeSigningCertificateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEnterpriseCodeSigningCertificateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEnterpriseCodeSigningCertificateCollectionRequest)this;
+    }
     public IEnterpriseCodeSigningCertificateCollectionPage buildFromResponse(final EnterpriseCodeSigningCertificateCollectionResponse response) {
         final IEnterpriseCodeSigningCertificateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

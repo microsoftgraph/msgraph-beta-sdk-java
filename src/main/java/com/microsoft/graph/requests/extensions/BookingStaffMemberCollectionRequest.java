@@ -62,14 +62,14 @@ public class BookingStaffMemberCollectionRequest extends BaseCollectionRequest<B
     public void post(final BookingStaffMember newBookingStaffMember, final ICallback<BookingStaffMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingStaffMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingStaffMember, callback);
     }
 
     public BookingStaffMember post(final BookingStaffMember newBookingStaffMember) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BookingStaffMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingStaffMember);
     }
 
@@ -106,6 +106,27 @@ public class BookingStaffMemberCollectionRequest extends BaseCollectionRequest<B
         return (BookingStaffMemberCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBookingStaffMemberCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BookingStaffMemberCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBookingStaffMemberCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBookingStaffMemberCollectionRequest)this;
+    }
     public IBookingStaffMemberCollectionPage buildFromResponse(final BookingStaffMemberCollectionResponse response) {
         final IBookingStaffMemberCollectionRequestBuilder builder;
         if (response.nextLink != null) {

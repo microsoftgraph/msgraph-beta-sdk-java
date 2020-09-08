@@ -36,14 +36,6 @@ public class AuthenticationDetail implements IJsonBackedObject {
     }
 
     /**
-     * The Authentication Step Date Time.
-     * 
-     */
-    @SerializedName("authenticationStepDateTime")
-    @Expose
-    public java.util.Calendar authenticationStepDateTime;
-
-    /**
      * The Authentication Method.
      * 
      */
@@ -60,12 +52,20 @@ public class AuthenticationDetail implements IJsonBackedObject {
     public String authenticationMethodDetail;
 
     /**
-     * The Succeeded.
+     * The Authentication Step Date Time.
      * 
      */
-    @SerializedName("succeeded")
+    @SerializedName("authenticationStepDateTime")
     @Expose
-    public Boolean succeeded;
+    public java.util.Calendar authenticationStepDateTime;
+
+    /**
+     * The Authentication Step Requirement.
+     * 
+     */
+    @SerializedName("authenticationStepRequirement")
+    @Expose
+    public String authenticationStepRequirement;
 
     /**
      * The Authentication Step Result Detail.
@@ -76,12 +76,12 @@ public class AuthenticationDetail implements IJsonBackedObject {
     public String authenticationStepResultDetail;
 
     /**
-     * The Authentication Step Requirement.
+     * The Succeeded.
      * 
      */
-    @SerializedName("authenticationStepRequirement")
+    @SerializedName("succeeded")
     @Expose
-    public String authenticationStepRequirement;
+    public Boolean succeeded;
 
 
     /**

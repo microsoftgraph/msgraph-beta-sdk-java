@@ -112,6 +112,27 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a YammerDeviceUsageUserCounts with a new object
+     *
+     * @param newYammerDeviceUsageUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<YammerDeviceUsageUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newYammerDeviceUsageUserCounts);
+    }
+
+    /**
+     * Creates a YammerDeviceUsageUserCounts with a new object
+     *
+     * @param newYammerDeviceUsageUserCounts the object to create/update
+     * @return the created YammerDeviceUsageUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public YammerDeviceUsageUserCounts put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newYammerDeviceUsageUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

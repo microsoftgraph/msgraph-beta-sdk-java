@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
-import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      */
     public TermsOfUseContainer post(final TermsOfUseContainer newTermsOfUseContainer) throws ClientException {
         return send(HttpMethod.POST, newTermsOfUseContainer);
+    }
+
+    /**
+     * Creates a TermsOfUseContainer with a new object
+     *
+     * @param newTermsOfUseContainer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<TermsOfUseContainer> callback) {
+        send(HttpMethod.PUT, callback, newTermsOfUseContainer);
+    }
+
+    /**
+     * Creates a TermsOfUseContainer with a new object
+     *
+     * @param newTermsOfUseContainer the object to create/update
+     * @return the created TermsOfUseContainer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TermsOfUseContainer put(final TermsOfUseContainer newTermsOfUseContainer) throws ClientException {
+        return send(HttpMethod.PUT, newTermsOfUseContainer);
     }
 
     /**

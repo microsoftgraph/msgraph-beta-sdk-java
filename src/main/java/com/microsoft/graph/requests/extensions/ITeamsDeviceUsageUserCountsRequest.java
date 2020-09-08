@@ -80,6 +80,23 @@ public interface ITeamsDeviceUsageUserCountsRequest extends IHttpRequest {
     TeamsDeviceUsageUserCounts post(final TeamsDeviceUsageUserCounts newTeamsDeviceUsageUserCounts) throws ClientException;
 
     /**
+     * Posts a TeamsDeviceUsageUserCounts with a new object
+     *
+     * @param newTeamsDeviceUsageUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsDeviceUsageUserCounts newTeamsDeviceUsageUserCounts, final ICallback<TeamsDeviceUsageUserCounts> callback);
+
+    /**
+     * Posts a TeamsDeviceUsageUserCounts with a new object
+     *
+     * @param newTeamsDeviceUsageUserCounts the object to create/update
+     * @return the created TeamsDeviceUsageUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsDeviceUsageUserCounts put(final TeamsDeviceUsageUserCounts newTeamsDeviceUsageUserCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
