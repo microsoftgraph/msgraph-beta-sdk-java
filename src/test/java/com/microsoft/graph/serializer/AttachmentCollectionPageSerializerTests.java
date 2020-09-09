@@ -32,7 +32,7 @@ public class AttachmentCollectionPageSerializerTests {
 
 	@Test
 	public void testAttachmentCollectionPageSerialization() throws Exception {
-        String expectedString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"item\":{\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"subject\":\"Test Event Subject\",\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"},\"name\":\"Holiday event\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"},{\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"},\"name\":\"Attachment name\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"}]";
+        String expectedString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"item\":{\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"subject\":\"Test Event Subject\",\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"},\"name\":\"Holiday event\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"},{\"item\":{\"displayName\":\"displayname\",\"officeLocation\":\"Montreal\",\"@odata.type\":\"microsoft.graph.contact\"},\"name\":\"Attachment name\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"}]";
         AttachmentCollectionResponse response = new AttachmentCollectionResponse();
         response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
         AttachmentCollectionPage attachmentCollectionPage = new AttachmentCollectionPage(response, null);
@@ -63,7 +63,7 @@ public class AttachmentCollectionPageSerializerTests {
 				else if(itemAttachment.item instanceof Contact) {
 					Contact actual = (Contact)itemAttachment.item;
 					Contact expected = (Contact) getItemAttachmentWithContact().item;
-					assertEquals(expected.mobilePhone, actual.mobilePhone);
+					assertEquals(expected.officeLocation, actual.officeLocation);
 				}
 			}
 		}
@@ -90,7 +90,7 @@ public class AttachmentCollectionPageSerializerTests {
 	private ItemAttachment getItemAttachmentWithContact() {
 		Contact contact = new Contact();
         contact.displayName = "displayname";
-        contact.mobilePhone="123456890";
+        contact.officeLocation="Montreal";
 		ItemAttachment itemAttachmentContact = new ItemAttachment();
         itemAttachmentContact.oDataType = "#microsoft.graph.itemAttachment";
         itemAttachmentContact.name = "Attachment name";

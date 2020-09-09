@@ -201,7 +201,7 @@ public class OutlookTests {
 	private ItemAttachment getItemAttachmentWithContact() {
 		Contact contact = new Contact();
         contact.displayName = "displayname";
-        contact.mobilePhone="123456890";
+        contact.officeLocation="Montreal";
 		ItemAttachment itemAttachmentContact = new ItemAttachment();
         itemAttachmentContact.oDataType = "#microsoft.graph.itemAttachment";
         itemAttachmentContact.name = "Attachment name";
