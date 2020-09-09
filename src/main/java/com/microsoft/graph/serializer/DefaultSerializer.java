@@ -25,12 +25,16 @@ package com.microsoft.graph.serializer;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.logger.ILogger;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -71,7 +75,7 @@ public class DefaultSerializer implements ISerializer {
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
     	return deserializeObject(inputString, clazz, null);
     }
-    
+    private static final String graphResponseHeadersKey = "graphResponseHeaders";
     @SuppressWarnings("unchecked")
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
@@ -96,7 +100,7 @@ public class DefaultSerializer implements ISerializer {
 
             if (responseHeaders != null) {
 	            JsonElement convertedHeaders = gson.toJsonTree(responseHeaders);
-	            jsonBackedObject.additionalDataManager().put("graphResponseHeaders", convertedHeaders);
+	            jsonBackedObject.additionalDataManager().put(graphResponseHeadersKey, convertedHeaders);
             }
             
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
@@ -123,7 +127,6 @@ public class DefaultSerializer implements ISerializer {
 
                 // If the object is a HashMap, iterate through its children
                 if (fieldObject instanceof HashMap) {
-                    @SuppressWarnings("unchecked")
                     HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
                     Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 
@@ -138,6 +141,21 @@ public class DefaultSerializer implements ISerializer {
                             		&& rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).isJsonObject()) {
                             	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
                             	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                            }
+                        }
+                    }
+                }
+                // If the object is a list of Graph objects, iterate through elements
+                else if (fieldObject instanceof List && rawJson != null) {
+                    final JsonElement collectionJson = rawJson.get(field.getName());
+                    final List<?> fieldObjectList = (List<?>) fieldObject;
+                    if (collectionJson.isJsonArray() && ((JsonArray)collectionJson).size() == fieldObjectList.size()) {
+                        final JsonArray rawJsonArray = (JsonArray) collectionJson;
+                        for (int i = 0; i < fieldObjectList.size(); i++) {
+                            final Object element = fieldObjectList.get(i);
+                            if (element instanceof IJsonBackedObject) {
+                                final JsonElement elementRawJson = rawJsonArray.get(i);
+                                setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
                             }
                         }
                     }
@@ -170,22 +188,45 @@ public class DefaultSerializer implements ISerializer {
         JsonElement outJsonTree = gson.toJsonTree(serializableObject);
 
         if (serializableObject instanceof IJsonBackedObject) {
-        	IJsonBackedObject serializableJsonObject = (IJsonBackedObject) serializableObject;
-        	
-            AdditionalDataManager additionalData = serializableJsonObject.additionalDataManager();
-            
-            // If the item is a valid Graph object, add its additional data
-            if (outJsonTree.isJsonObject()) {
-                JsonObject outJson = outJsonTree.getAsJsonObject();
-                
-                addAdditionalDataToJson(additionalData, outJson);
-                outJson = getChildAdditionalData(serializableJsonObject, outJson);
-                
-                outJsonTree = outJson;
+        	outJsonTree = getDataFromAdditionalDataManager(outJsonTree, serializableObject);
+        } else if (outJsonTree.isJsonObject()) {
+            final Field[] fields = serializableObject.getClass().getDeclaredFields();
+            JsonObject outJson = outJsonTree.getAsJsonObject();
+            for(Field field : fields) {
+                if(outJson.has(field.getName())) {
+                    final Type[] interfaces = field.getType().getGenericInterfaces();
+                    for(Type interfaceType : interfaces) {
+                        if(interfaceType == IJsonBackedObject.class) {
+                            try {
+                                outJsonTree = getDataFromAdditionalDataManager(outJsonTree, field.get(serializableObject));
+                            } catch (IllegalAccessException ex ) {
+                                logger.logDebug("Couldn't access prop" + field.getName());
+                            }
+                            break;
+                        }
+                    }
+                }
             }
         }
 
         return outJsonTree.toString();
+    }
+    private <T> JsonElement getDataFromAdditionalDataManager(JsonElement outJsonTree, final T serializableObject) {
+        IJsonBackedObject serializableJsonObject = (IJsonBackedObject) serializableObject;
+        	
+        AdditionalDataManager additionalData = serializableJsonObject.additionalDataManager();
+        
+        // If the item is a valid Graph object, add its additional data
+        if (outJsonTree.isJsonObject()) {
+            JsonObject outJson = outJsonTree.getAsJsonObject();
+            
+            addAdditionalDataToJson(additionalData, outJson);
+            outJson = getChildAdditionalData(serializableJsonObject, outJson);
+            
+            return outJson;
+        } else {
+            return outJsonTree;
+        }
     }
     
     /**
@@ -256,7 +297,9 @@ public class DefaultSerializer implements ISerializer {
      */
     private void addAdditionalDataToJson(AdditionalDataManager additionalDataManager, JsonObject jsonNode) {
     	for (Map.Entry<String, JsonElement> entry : additionalDataManager.entrySet()) {
+            if(!entry.getKey().equals(graphResponseHeadersKey)) {
                 jsonNode.add(entry.getKey(), entry.getValue());
+            }
         }
     }
     
