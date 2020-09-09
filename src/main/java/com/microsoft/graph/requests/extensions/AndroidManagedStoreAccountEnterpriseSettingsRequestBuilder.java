@@ -56,12 +56,20 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
         return new AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approveApps"), getClient(), null, packageIds, approveAllPermissions);
     }
 
+    public IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBuilder completeSignup(final String enterpriseToken) {
+        return new AndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeSignup"), getClient(), null, enterpriseToken);
+    }
+
+    public IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder createGooglePlayWebToken(final String parentUri) {
+        return new AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createGooglePlayWebToken"), getClient(), null, parentUri);
+    }
+
     public IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder requestSignupUrl(final String hostName) {
         return new AndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.requestSignupUrl"), getClient(), null, hostName);
     }
 
-    public IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBuilder completeSignup(final String enterpriseToken) {
-        return new AndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeSignup"), getClient(), null, enterpriseToken);
+    public IAndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder setAndroidDeviceOwnerFullyManagedEnrollmentState(final Boolean enabled) {
+        return new AndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setAndroidDeviceOwnerFullyManagedEnrollmentState"), getClient(), null, enabled);
     }
 
     public IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequestBuilder syncApps() {
@@ -70,13 +78,5 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
 
     public IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder unbind() {
         return new AndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unbind"), getClient(), null);
-    }
-
-    public IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder createGooglePlayWebToken(final String parentUri) {
-        return new AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createGooglePlayWebToken"), getClient(), null, parentUri);
-    }
-
-    public IAndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder setAndroidDeviceOwnerFullyManagedEnrollmentState(final Boolean enabled) {
-        return new AndroidManagedStoreAccountEnterpriseSettingsSetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setAndroidDeviceOwnerFullyManagedEnrollmentState"), getClient(), null, enabled);
     }
 }

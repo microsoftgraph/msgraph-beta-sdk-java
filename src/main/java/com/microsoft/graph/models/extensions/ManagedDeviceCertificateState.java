@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DevicePlatformType;
-import com.microsoft.graph.models.generated.KeyUsages;
-import com.microsoft.graph.models.generated.CertificateValidityPeriodScale;
 import com.microsoft.graph.models.generated.CertificateIssuanceStates;
 import com.microsoft.graph.models.generated.KeyStorageProviderOption;
-import com.microsoft.graph.models.generated.SubjectNameFormat;
-import com.microsoft.graph.models.generated.SubjectAlternativeNameType;
+import com.microsoft.graph.models.generated.KeyUsages;
 import com.microsoft.graph.models.generated.CertificateRevocationStatus;
+import com.microsoft.graph.models.generated.SubjectAlternativeNameType;
+import com.microsoft.graph.models.generated.SubjectNameFormat;
+import com.microsoft.graph.models.generated.CertificateValidityPeriodScale;
+import com.microsoft.graph.models.generated.DevicePlatformType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -35,92 +35,20 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
 
     /**
-     * The Device Platform.
-     * Device platform
+     * The Certificate Enhanced Key Usage.
+     * Extended key usage
      */
-    @SerializedName("devicePlatform")
+    @SerializedName("certificateEnhancedKeyUsage")
     @Expose
-    public DevicePlatformType devicePlatform;
+    public String certificateEnhancedKeyUsage;
 
     /**
-     * The Certificate Key Usage.
-     * Key usage
+     * The Certificate Error Code.
+     * Error code
      */
-    @SerializedName("certificateKeyUsage")
+    @SerializedName("certificateErrorCode")
     @Expose
-    public EnumSet<KeyUsages> certificateKeyUsage;
-
-    /**
-     * The Certificate Validity Period Units.
-     * Validity period units
-     */
-    @SerializedName("certificateValidityPeriodUnits")
-    @Expose
-    public CertificateValidityPeriodScale certificateValidityPeriodUnits;
-
-    /**
-     * The Certificate Issuance State.
-     * Issuance State
-     */
-    @SerializedName("certificateIssuanceState")
-    @Expose
-    public CertificateIssuanceStates certificateIssuanceState;
-
-    /**
-     * The Certificate Key Storage Provider.
-     * Key Storage Provider
-     */
-    @SerializedName("certificateKeyStorageProvider")
-    @Expose
-    public KeyStorageProviderOption certificateKeyStorageProvider;
-
-    /**
-     * The Certificate Subject Name Format.
-     * Subject name format
-     */
-    @SerializedName("certificateSubjectNameFormat")
-    @Expose
-    public SubjectNameFormat certificateSubjectNameFormat;
-
-    /**
-     * The Certificate Subject Alternative Name Format.
-     * Subject alternative name format
-     */
-    @SerializedName("certificateSubjectAlternativeNameFormat")
-    @Expose
-    public EnumSet<SubjectAlternativeNameType> certificateSubjectAlternativeNameFormat;
-
-    /**
-     * The Certificate Revoke Status.
-     * Revoke status
-     */
-    @SerializedName("certificateRevokeStatus")
-    @Expose
-    public CertificateRevocationStatus certificateRevokeStatus;
-
-    /**
-     * The Certificate Profile Display Name.
-     * Certificate profile display name
-     */
-    @SerializedName("certificateProfileDisplayName")
-    @Expose
-    public String certificateProfileDisplayName;
-
-    /**
-     * The Device Display Name.
-     * Device display name
-     */
-    @SerializedName("deviceDisplayName")
-    @Expose
-    public String deviceDisplayName;
-
-    /**
-     * The User Display Name.
-     * User display name
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
+    public Integer certificateErrorCode;
 
     /**
      * The Certificate Expiration Date Time.
@@ -131,20 +59,20 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
     public java.util.Calendar certificateExpirationDateTime;
 
     /**
-     * The Certificate Last Issuance State Changed Date Time.
-     * Last certificate issuance state change
+     * The Certificate Issuance Date Time.
+     * Issuance date
      */
-    @SerializedName("certificateLastIssuanceStateChangedDateTime")
+    @SerializedName("certificateIssuanceDateTime")
     @Expose
-    public java.util.Calendar certificateLastIssuanceStateChangedDateTime;
+    public java.util.Calendar certificateIssuanceDateTime;
 
     /**
-     * The Last Certificate State Change Date Time.
-     * Last certificate issuance state change
+     * The Certificate Issuance State.
+     * Issuance State
      */
-    @SerializedName("lastCertificateStateChangeDateTime")
+    @SerializedName("certificateIssuanceState")
     @Expose
-    public java.util.Calendar lastCertificateStateChangeDateTime;
+    public CertificateIssuanceStates certificateIssuanceState;
 
     /**
      * The Certificate Issuer.
@@ -155,12 +83,52 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
     public String certificateIssuer;
 
     /**
-     * The Certificate Thumbprint.
-     * Thumbprint
+     * The Certificate Key Length.
+     * Key length
      */
-    @SerializedName("certificateThumbprint")
+    @SerializedName("certificateKeyLength")
     @Expose
-    public String certificateThumbprint;
+    public Integer certificateKeyLength;
+
+    /**
+     * The Certificate Key Storage Provider.
+     * Key Storage Provider
+     */
+    @SerializedName("certificateKeyStorageProvider")
+    @Expose
+    public KeyStorageProviderOption certificateKeyStorageProvider;
+
+    /**
+     * The Certificate Key Usage.
+     * Key usage
+     */
+    @SerializedName("certificateKeyUsage")
+    @Expose
+    public EnumSet<KeyUsages> certificateKeyUsage;
+
+    /**
+     * The Certificate Last Issuance State Changed Date Time.
+     * Last certificate issuance state change
+     */
+    @SerializedName("certificateLastIssuanceStateChangedDateTime")
+    @Expose
+    public java.util.Calendar certificateLastIssuanceStateChangedDateTime;
+
+    /**
+     * The Certificate Profile Display Name.
+     * Certificate profile display name
+     */
+    @SerializedName("certificateProfileDisplayName")
+    @Expose
+    public String certificateProfileDisplayName;
+
+    /**
+     * The Certificate Revoke Status.
+     * Revoke status
+     */
+    @SerializedName("certificateRevokeStatus")
+    @Expose
+    public CertificateRevocationStatus certificateRevokeStatus;
 
     /**
      * The Certificate Serial Number.
@@ -171,36 +139,12 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
     public String certificateSerialNumber;
 
     /**
-     * The Certificate Key Length.
-     * Key length
+     * The Certificate Subject Alternative Name Format.
+     * Subject alternative name format
      */
-    @SerializedName("certificateKeyLength")
+    @SerializedName("certificateSubjectAlternativeNameFormat")
     @Expose
-    public Integer certificateKeyLength;
-
-    /**
-     * The Certificate Enhanced Key Usage.
-     * Extended key usage
-     */
-    @SerializedName("certificateEnhancedKeyUsage")
-    @Expose
-    public String certificateEnhancedKeyUsage;
-
-    /**
-     * The Certificate Validity Period.
-     * Validity period
-     */
-    @SerializedName("certificateValidityPeriod")
-    @Expose
-    public Integer certificateValidityPeriod;
-
-    /**
-     * The Certificate Subject Name Format String.
-     * Subject name format string for custom subject name formats
-     */
-    @SerializedName("certificateSubjectNameFormatString")
-    @Expose
-    public String certificateSubjectNameFormatString;
+    public EnumSet<SubjectAlternativeNameType> certificateSubjectAlternativeNameFormat;
 
     /**
      * The Certificate Subject Alternative Name Format String.
@@ -211,20 +155,76 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
     public String certificateSubjectAlternativeNameFormatString;
 
     /**
-     * The Certificate Issuance Date Time.
-     * Issuance date
+     * The Certificate Subject Name Format.
+     * Subject name format
      */
-    @SerializedName("certificateIssuanceDateTime")
+    @SerializedName("certificateSubjectNameFormat")
     @Expose
-    public java.util.Calendar certificateIssuanceDateTime;
+    public SubjectNameFormat certificateSubjectNameFormat;
 
     /**
-     * The Certificate Error Code.
-     * Error code
+     * The Certificate Subject Name Format String.
+     * Subject name format string for custom subject name formats
      */
-    @SerializedName("certificateErrorCode")
+    @SerializedName("certificateSubjectNameFormatString")
     @Expose
-    public Integer certificateErrorCode;
+    public String certificateSubjectNameFormatString;
+
+    /**
+     * The Certificate Thumbprint.
+     * Thumbprint
+     */
+    @SerializedName("certificateThumbprint")
+    @Expose
+    public String certificateThumbprint;
+
+    /**
+     * The Certificate Validity Period.
+     * Validity period
+     */
+    @SerializedName("certificateValidityPeriod")
+    @Expose
+    public Integer certificateValidityPeriod;
+
+    /**
+     * The Certificate Validity Period Units.
+     * Validity period units
+     */
+    @SerializedName("certificateValidityPeriodUnits")
+    @Expose
+    public CertificateValidityPeriodScale certificateValidityPeriodUnits;
+
+    /**
+     * The Device Display Name.
+     * Device display name
+     */
+    @SerializedName("deviceDisplayName")
+    @Expose
+    public String deviceDisplayName;
+
+    /**
+     * The Device Platform.
+     * Device platform
+     */
+    @SerializedName("devicePlatform")
+    @Expose
+    public DevicePlatformType devicePlatform;
+
+    /**
+     * The Last Certificate State Change Date Time.
+     * Last certificate issuance state change
+     */
+    @SerializedName("lastCertificateStateChangeDateTime")
+    @Expose
+    public java.util.Calendar lastCertificateStateChangeDateTime;
+
+    /**
+     * The User Display Name.
+     * User display name
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
 
 
     /**

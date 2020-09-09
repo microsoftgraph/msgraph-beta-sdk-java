@@ -62,14 +62,14 @@ public class DeviceManagementIntentSettingCategoryCollectionRequest extends Base
     public void post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<DeviceManagementIntentSettingCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementIntentSettingCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentSettingCategory, callback);
     }
 
     public DeviceManagementIntentSettingCategory post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementIntentSettingCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementIntentSettingCategory);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementIntentSettingCategoryCollectionRequest extends Base
         return (DeviceManagementIntentSettingCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementIntentSettingCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementIntentSettingCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementIntentSettingCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementIntentSettingCategoryCollectionRequest)this;
+    }
     public IDeviceManagementIntentSettingCategoryCollectionPage buildFromResponse(final DeviceManagementIntentSettingCategoryCollectionResponse response) {
         final IDeviceManagementIntentSettingCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

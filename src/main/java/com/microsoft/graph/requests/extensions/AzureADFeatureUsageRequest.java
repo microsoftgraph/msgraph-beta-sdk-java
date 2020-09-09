@@ -112,6 +112,27 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
     }
 
     /**
+     * Creates a AzureADFeatureUsage with a new object
+     *
+     * @param newAzureADFeatureUsage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback) {
+        send(HttpMethod.PUT, callback, newAzureADFeatureUsage);
+    }
+
+    /**
+     * Creates a AzureADFeatureUsage with a new object
+     *
+     * @param newAzureADFeatureUsage the object to create/update
+     * @return the created AzureADFeatureUsage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AzureADFeatureUsage put(final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException {
+        return send(HttpMethod.PUT, newAzureADFeatureUsage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

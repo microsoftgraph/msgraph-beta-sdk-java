@@ -62,14 +62,14 @@ public class EducationalActivityCollectionRequest extends BaseCollectionRequest<
     public void post(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationalActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationalActivity, callback);
     }
 
     public EducationalActivity post(final EducationalActivity newEducationalActivity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationalActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationalActivity);
     }
 
@@ -106,6 +106,27 @@ public class EducationalActivityCollectionRequest extends BaseCollectionRequest<
         return (EducationalActivityCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationalActivityCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationalActivityCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationalActivityCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationalActivityCollectionRequest)this;
+    }
     public IEducationalActivityCollectionPage buildFromResponse(final EducationalActivityCollectionResponse response) {
         final IEducationalActivityCollectionRequestBuilder builder;
         if (response.nextLink != null) {

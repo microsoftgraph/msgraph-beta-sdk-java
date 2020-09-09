@@ -27,20 +27,20 @@ public class DomainIdentitySource extends IdentitySource implements IJsonBackedO
 
 
     /**
-     * The Domain Name.
-     * 
-     */
-    @SerializedName("domainName")
-    @Expose
-    public String domainName;
-
-    /**
      * The Display Name.
      * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Domain Name.
+     * 
+     */
+    @SerializedName("domainName")
+    @Expose
+    public String domainName;
 
 
     /**

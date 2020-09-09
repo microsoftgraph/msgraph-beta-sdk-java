@@ -62,14 +62,14 @@ public class ReviewSetQueryCollectionRequest extends BaseCollectionRequest<Revie
     public void post(final ReviewSetQuery newReviewSetQuery, final ICallback<ReviewSetQuery> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ReviewSetQueryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newReviewSetQuery, callback);
     }
 
     public ReviewSetQuery post(final ReviewSetQuery newReviewSetQuery) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ReviewSetQueryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newReviewSetQuery);
     }
 
@@ -106,6 +106,27 @@ public class ReviewSetQueryCollectionRequest extends BaseCollectionRequest<Revie
         return (ReviewSetQueryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IReviewSetQueryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ReviewSetQueryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IReviewSetQueryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IReviewSetQueryCollectionRequest)this;
+    }
     public IReviewSetQueryCollectionPage buildFromResponse(final ReviewSetQueryCollectionResponse response) {
         final IReviewSetQueryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

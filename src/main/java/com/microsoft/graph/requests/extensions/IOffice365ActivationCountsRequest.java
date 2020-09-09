@@ -80,6 +80,23 @@ public interface IOffice365ActivationCountsRequest extends IHttpRequest {
     Office365ActivationCounts post(final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException;
 
     /**
+     * Posts a Office365ActivationCounts with a new object
+     *
+     * @param newOffice365ActivationCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Office365ActivationCounts newOffice365ActivationCounts, final ICallback<Office365ActivationCounts> callback);
+
+    /**
+     * Posts a Office365ActivationCounts with a new object
+     *
+     * @param newOffice365ActivationCounts the object to create/update
+     * @return the created Office365ActivationCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Office365ActivationCounts put(final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

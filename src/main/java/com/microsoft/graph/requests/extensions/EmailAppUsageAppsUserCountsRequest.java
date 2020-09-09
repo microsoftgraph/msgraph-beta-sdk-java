@@ -112,6 +112,27 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a EmailAppUsageAppsUserCounts with a new object
+     *
+     * @param newEmailAppUsageAppsUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<EmailAppUsageAppsUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newEmailAppUsageAppsUserCounts);
+    }
+
+    /**
+     * Creates a EmailAppUsageAppsUserCounts with a new object
+     *
+     * @param newEmailAppUsageAppsUserCounts the object to create/update
+     * @return the created EmailAppUsageAppsUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmailAppUsageAppsUserCounts put(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newEmailAppUsageAppsUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

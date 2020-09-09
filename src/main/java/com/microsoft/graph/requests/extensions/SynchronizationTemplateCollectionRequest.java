@@ -62,14 +62,14 @@ public class SynchronizationTemplateCollectionRequest extends BaseCollectionRequ
     public void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<SynchronizationTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SynchronizationTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSynchronizationTemplate, callback);
     }
 
     public SynchronizationTemplate post(final SynchronizationTemplate newSynchronizationTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SynchronizationTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSynchronizationTemplate);
     }
 
@@ -106,6 +106,27 @@ public class SynchronizationTemplateCollectionRequest extends BaseCollectionRequ
         return (SynchronizationTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISynchronizationTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SynchronizationTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISynchronizationTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISynchronizationTemplateCollectionRequest)this;
+    }
     public ISynchronizationTemplateCollectionPage buildFromResponse(final SynchronizationTemplateCollectionResponse response) {
         final ISynchronizationTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

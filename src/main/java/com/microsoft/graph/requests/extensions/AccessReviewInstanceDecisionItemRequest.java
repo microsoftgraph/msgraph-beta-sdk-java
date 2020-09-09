@@ -112,6 +112,27 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a AccessReviewInstanceDecisionItem with a new object
+     *
+     * @param newAccessReviewInstanceDecisionItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback) {
+        send(HttpMethod.PUT, callback, newAccessReviewInstanceDecisionItem);
+    }
+
+    /**
+     * Creates a AccessReviewInstanceDecisionItem with a new object
+     *
+     * @param newAccessReviewInstanceDecisionItem the object to create/update
+     * @return the created AccessReviewInstanceDecisionItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReviewInstanceDecisionItem put(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReviewInstanceDecisionItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

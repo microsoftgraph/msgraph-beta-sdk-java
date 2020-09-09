@@ -80,6 +80,23 @@ public interface IAuthorizationPolicyRequest extends IHttpRequest {
     AuthorizationPolicy post(final AuthorizationPolicy newAuthorizationPolicy) throws ClientException;
 
     /**
+     * Posts a AuthorizationPolicy with a new object
+     *
+     * @param newAuthorizationPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback);
+
+    /**
+     * Posts a AuthorizationPolicy with a new object
+     *
+     * @param newAuthorizationPolicy the object to create/update
+     * @return the created AuthorizationPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AuthorizationPolicy put(final AuthorizationPolicy newAuthorizationPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

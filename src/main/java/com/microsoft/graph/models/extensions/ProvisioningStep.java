@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ProvisioningResult;
 import com.microsoft.graph.models.extensions.DetailsInfo;
 import com.microsoft.graph.models.generated.ProvisioningStepType;
+import com.microsoft.graph.models.generated.ProvisioningResult;
 
 
 import com.google.gson.JsonObject;
@@ -39,22 +39,6 @@ public class ProvisioningStep implements IJsonBackedObject {
     }
 
     /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public ProvisioningResult status;
-
-    /**
      * The Description.
      * 
      */
@@ -71,12 +55,28 @@ public class ProvisioningStep implements IJsonBackedObject {
     public DetailsInfo details;
 
     /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
      * The Provisioning Step Type.
      * 
      */
     @SerializedName("provisioningStepType")
     @Expose
     public ProvisioningStepType provisioningStepType;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public ProvisioningResult status;
 
 
     /**

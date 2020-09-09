@@ -112,6 +112,27 @@ public class SecurityBaselineDeviceStateRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a SecurityBaselineDeviceState with a new object
+     *
+     * @param newSecurityBaselineDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityBaselineDeviceState newSecurityBaselineDeviceState, final ICallback<SecurityBaselineDeviceState> callback) {
+        send(HttpMethod.PUT, callback, newSecurityBaselineDeviceState);
+    }
+
+    /**
+     * Creates a SecurityBaselineDeviceState with a new object
+     *
+     * @param newSecurityBaselineDeviceState the object to create/update
+     * @return the created SecurityBaselineDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityBaselineDeviceState put(final SecurityBaselineDeviceState newSecurityBaselineDeviceState) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityBaselineDeviceState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

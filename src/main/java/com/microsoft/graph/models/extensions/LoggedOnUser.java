@@ -36,20 +36,20 @@ public class LoggedOnUser implements IJsonBackedObject {
     }
 
     /**
-     * The User Id.
-     * User id
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Last Log On Date Time.
      * Date time when user logs on
      */
     @SerializedName("lastLogOnDateTime")
     @Expose
     public java.util.Calendar lastLogOnDateTime;
+
+    /**
+     * The User Id.
+     * User id
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

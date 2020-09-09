@@ -62,14 +62,14 @@ public class SalesQuoteLineCollectionRequest extends BaseCollectionRequest<Sales
     public void post(final SalesQuoteLine newSalesQuoteLine, final ICallback<SalesQuoteLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesQuoteLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesQuoteLine, callback);
     }
 
     public SalesQuoteLine post(final SalesQuoteLine newSalesQuoteLine) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SalesQuoteLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesQuoteLine);
     }
 
@@ -106,6 +106,27 @@ public class SalesQuoteLineCollectionRequest extends BaseCollectionRequest<Sales
         return (SalesQuoteLineCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISalesQuoteLineCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SalesQuoteLineCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISalesQuoteLineCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISalesQuoteLineCollectionRequest)this;
+    }
     public ISalesQuoteLineCollectionPage buildFromResponse(final SalesQuoteLineCollectionResponse response) {
         final ISalesQuoteLineCollectionRequestBuilder builder;
         if (response.nextLink != null) {

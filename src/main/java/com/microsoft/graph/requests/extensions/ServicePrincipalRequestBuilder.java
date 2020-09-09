@@ -18,26 +18,26 @@ import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionReq
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -112,12 +112,12 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
     public IClaimsMappingPolicyWithReferenceRequestBuilder claimsMappingPolicies(final String id) {
         return new ClaimsMappingPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
     }
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies() {
-        return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects"), getClient(), null);
     }
 
-    public IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id) {
-        return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id, getClient(), null);
     }
     public IEndpointCollectionRequestBuilder endpoints() {
         return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);
@@ -126,33 +126,12 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
     public IEndpointRequestBuilder endpoints(final String id) {
         return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
     }
-    public IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants() {
-        return new OAuth2PermissionGrantCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants"), getClient(), null);
+    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies() {
+        return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
     }
 
-    public IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id) {
-        return new OAuth2PermissionGrantWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id, getClient(), null);
+    public IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id) {
+        return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
     }
     public ILicenseDetailsCollectionRequestBuilder licenseDetails() {
         return new LicenseDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails"), getClient(), null);
@@ -161,12 +140,19 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
     public ILicenseDetailsRequestBuilder licenseDetails(final String id) {
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
+    }
+    public IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants() {
+        return new OAuth2PermissionGrantCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants"), getClient(), null);
+    }
+
+    public IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id) {
+        return new OAuth2PermissionGrantWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants") + "/" + id, getClient(), null);
     }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects"), getClient(), null);
@@ -174,6 +160,13 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
 
     public IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
     public ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
@@ -189,6 +182,13 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
     public ITokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id) {
         return new TokenLifetimePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
     }
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Synchronization
@@ -203,12 +203,12 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
         return new ServicePrincipalCreatePasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createPasswordSingleSignOnCredentials"), getClient(), null, id, credentials);
     }
 
-    public IServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials(final String id) {
-        return new ServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getPasswordSingleSignOnCredentials"), getClient(), null, id);
-    }
-
     public IServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials(final String id) {
         return new ServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deletePasswordSingleSignOnCredentials"), getClient(), null, id);
+    }
+
+    public IServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials(final String id) {
+        return new ServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getPasswordSingleSignOnCredentials"), getClient(), null, id);
     }
 
     public IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBuilder updatePasswordSingleSignOnCredentials(final String id, final java.util.List<Credential> credentials) {

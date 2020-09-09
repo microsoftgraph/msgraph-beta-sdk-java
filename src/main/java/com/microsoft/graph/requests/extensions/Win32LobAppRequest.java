@@ -112,6 +112,27 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
     }
 
     /**
+     * Creates a Win32LobApp with a new object
+     *
+     * @param newWin32LobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Win32LobApp newWin32LobApp, final ICallback<Win32LobApp> callback) {
+        send(HttpMethod.PUT, callback, newWin32LobApp);
+    }
+
+    /**
+     * Creates a Win32LobApp with a new object
+     *
+     * @param newWin32LobApp the object to create/update
+     * @return the created Win32LobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Win32LobApp put(final Win32LobApp newWin32LobApp) throws ClientException {
+        return send(HttpMethod.PUT, newWin32LobApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

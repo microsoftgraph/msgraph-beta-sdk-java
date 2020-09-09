@@ -52,14 +52,6 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
     public String firstDayOfWeek;
 
     /**
-     * The Short Date Format.
-     * 
-     */
-    @SerializedName("shortDateFormat")
-    @Expose
-    public String shortDateFormat;
-
-    /**
      * The Long Date Format.
      * 
      */
@@ -68,20 +60,28 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
     public String longDateFormat;
 
     /**
-     * The Short Time Format.
-     * 
-     */
-    @SerializedName("shortTimeFormat")
-    @Expose
-    public String shortTimeFormat;
-
-    /**
      * The Long Time Format.
      * 
      */
     @SerializedName("longTimeFormat")
     @Expose
     public String longTimeFormat;
+
+    /**
+     * The Short Date Format.
+     * 
+     */
+    @SerializedName("shortDateFormat")
+    @Expose
+    public String shortDateFormat;
+
+    /**
+     * The Short Time Format.
+     * 
+     */
+    @SerializedName("shortTimeFormat")
+    @Expose
+    public String shortTimeFormat;
 
     /**
      * The Time Zone.

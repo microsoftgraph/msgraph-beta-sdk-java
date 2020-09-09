@@ -112,6 +112,27 @@ public class ItemAddressRequest extends BaseRequest implements IItemAddressReque
     }
 
     /**
+     * Creates a ItemAddress with a new object
+     *
+     * @param newItemAddress the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemAddress newItemAddress, final ICallback<ItemAddress> callback) {
+        send(HttpMethod.PUT, callback, newItemAddress);
+    }
+
+    /**
+     * Creates a ItemAddress with a new object
+     *
+     * @param newItemAddress the object to create/update
+     * @return the created ItemAddress
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemAddress put(final ItemAddress newItemAddress) throws ClientException {
+        return send(HttpMethod.PUT, newItemAddress);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

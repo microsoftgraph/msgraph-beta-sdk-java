@@ -112,6 +112,27 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
     }
 
     /**
+     * Creates a UserConfiguration with a new object
+     *
+     * @param newUserConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newUserConfiguration);
+    }
+
+    /**
+     * Creates a UserConfiguration with a new object
+     *
+     * @param newUserConfiguration the object to create/update
+     * @return the created UserConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserConfiguration put(final UserConfiguration newUserConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newUserConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

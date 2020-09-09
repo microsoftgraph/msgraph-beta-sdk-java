@@ -36,14 +36,6 @@ public class EducationCourse implements IJsonBackedObject {
     }
 
     /**
-     * The Subject.
-     * 
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
-
-    /**
      * The Course Number.
      * 
      */
@@ -74,6 +66,14 @@ public class EducationCourse implements IJsonBackedObject {
     @SerializedName("externalId")
     @Expose
     public String externalId;
+
+    /**
+     * The Subject.
+     * 
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
 
 
     /**

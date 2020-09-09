@@ -80,6 +80,23 @@ public interface IPrinterCreateOperationRequest extends IHttpRequest {
     PrinterCreateOperation post(final PrinterCreateOperation newPrinterCreateOperation) throws ClientException;
 
     /**
+     * Posts a PrinterCreateOperation with a new object
+     *
+     * @param newPrinterCreateOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<PrinterCreateOperation> callback);
+
+    /**
+     * Posts a PrinterCreateOperation with a new object
+     *
+     * @param newPrinterCreateOperation the object to create/update
+     * @return the created PrinterCreateOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrinterCreateOperation put(final PrinterCreateOperation newPrinterCreateOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

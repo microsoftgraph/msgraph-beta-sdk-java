@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class EducationCategoryCollectionRequestBuilder extends BaseRequestBuilder implements IEducationCategoryCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of EducationAssignment
+     * The request builder for this collection of EducationClass
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -80,6 +80,23 @@ public interface IAccessReviewReviewerRequest extends IHttpRequest {
     AccessReviewReviewer post(final AccessReviewReviewer newAccessReviewReviewer) throws ClientException;
 
     /**
+     * Posts a AccessReviewReviewer with a new object
+     *
+     * @param newAccessReviewReviewer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<AccessReviewReviewer> callback);
+
+    /**
+     * Posts a AccessReviewReviewer with a new object
+     *
+     * @param newAccessReviewReviewer the object to create/update
+     * @return the created AccessReviewReviewer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessReviewReviewer put(final AccessReviewReviewer newAccessReviewReviewer) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

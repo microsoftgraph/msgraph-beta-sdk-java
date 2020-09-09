@@ -112,6 +112,27 @@ public class DeviceSetupConfigurationRequest extends BaseRequest implements IDev
     }
 
     /**
+     * Creates a DeviceSetupConfiguration with a new object
+     *
+     * @param newDeviceSetupConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceSetupConfiguration newDeviceSetupConfiguration, final ICallback<DeviceSetupConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newDeviceSetupConfiguration);
+    }
+
+    /**
+     * Creates a DeviceSetupConfiguration with a new object
+     *
+     * @param newDeviceSetupConfiguration the object to create/update
+     * @return the created DeviceSetupConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceSetupConfiguration put(final DeviceSetupConfiguration newDeviceSetupConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceSetupConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

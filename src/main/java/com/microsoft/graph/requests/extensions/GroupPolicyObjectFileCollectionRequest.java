@@ -62,14 +62,14 @@ public class GroupPolicyObjectFileCollectionRequest extends BaseCollectionReques
     public void post(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<GroupPolicyObjectFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyObjectFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyObjectFile, callback);
     }
 
     public GroupPolicyObjectFile post(final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyObjectFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyObjectFile);
     }
 
@@ -106,6 +106,27 @@ public class GroupPolicyObjectFileCollectionRequest extends BaseCollectionReques
         return (GroupPolicyObjectFileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyObjectFileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyObjectFileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyObjectFileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyObjectFileCollectionRequest)this;
+    }
     public IGroupPolicyObjectFileCollectionPage buildFromResponse(final GroupPolicyObjectFileCollectionResponse response) {
         final IGroupPolicyObjectFileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

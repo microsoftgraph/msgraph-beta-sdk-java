@@ -9,13 +9,13 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WindowsArchitecture;
-import com.microsoft.graph.models.extensions.WindowsMinimumOperatingSystem;
 import com.microsoft.graph.models.extensions.Win32LobAppDetection;
-import com.microsoft.graph.models.extensions.Win32LobAppRequirement;
-import com.microsoft.graph.models.extensions.Win32LobAppRule;
 import com.microsoft.graph.models.extensions.Win32LobAppInstallExperience;
-import com.microsoft.graph.models.extensions.Win32LobAppReturnCode;
+import com.microsoft.graph.models.extensions.WindowsMinimumOperatingSystem;
 import com.microsoft.graph.models.extensions.Win32LobAppMsiInformation;
+import com.microsoft.graph.models.extensions.Win32LobAppRequirement;
+import com.microsoft.graph.models.extensions.Win32LobAppReturnCode;
+import com.microsoft.graph.models.extensions.Win32LobAppRule;
 import com.microsoft.graph.models.extensions.MobileLobApp;
 
 
@@ -35,22 +35,6 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
 
 
     /**
-     * The Install Command Line.
-     * The command line to install this app
-     */
-    @SerializedName("installCommandLine")
-    @Expose
-    public String installCommandLine;
-
-    /**
-     * The Uninstall Command Line.
-     * The command line to uninstall this app
-     */
-    @SerializedName("uninstallCommandLine")
-    @Expose
-    public String uninstallCommandLine;
-
-    /**
      * The Applicable Architectures.
      * The Windows architecture(s) for which this app can run on.
      */
@@ -59,12 +43,44 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
     public EnumSet<WindowsArchitecture> applicableArchitectures;
 
     /**
-     * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
+     * The Detection Rules.
+     * The detection rules to detect Win32 Line of Business (LoB) app.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName("detectionRules")
     @Expose
-    public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
+    public java.util.List<Win32LobAppDetection> detectionRules;
+
+    /**
+     * The Install Command Line.
+     * The command line to install this app
+     */
+    @SerializedName("installCommandLine")
+    @Expose
+    public String installCommandLine;
+
+    /**
+     * The Install Experience.
+     * The install experience for this app.
+     */
+    @SerializedName("installExperience")
+    @Expose
+    public Win32LobAppInstallExperience installExperience;
+
+    /**
+     * The Install Language.
+     * 
+     */
+    @SerializedName("installLanguage")
+    @Expose
+    public String installLanguage;
+
+    /**
+     * The Minimum Cpu Speed In MHz.
+     * The value for the minimum CPU speed which is required to install this app.
+     */
+    @SerializedName("minimumCpuSpeedInMHz")
+    @Expose
+    public Integer minimumCpuSpeedInMHz;
 
     /**
      * The Minimum Free Disk Space In MB.
@@ -91,52 +107,20 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
     public Integer minimumNumberOfProcessors;
 
     /**
-     * The Minimum Cpu Speed In MHz.
-     * The value for the minimum CPU speed which is required to install this app.
+     * The Minimum Supported Operating System.
+     * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumCpuSpeedInMHz")
+    @SerializedName("minimumSupportedOperatingSystem")
     @Expose
-    public Integer minimumCpuSpeedInMHz;
+    public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 
     /**
-     * The Detection Rules.
-     * The detection rules to detect Win32 Line of Business (LoB) app.
+     * The Minimum Supported Windows Release.
+     * The value for the minimum supported windows release.
      */
-    @SerializedName("detectionRules")
+    @SerializedName("minimumSupportedWindowsRelease")
     @Expose
-    public java.util.List<Win32LobAppDetection> detectionRules;
-
-    /**
-     * The Requirement Rules.
-     * The requirement rules to detect Win32 Line of Business (LoB) app.
-     */
-    @SerializedName("requirementRules")
-    @Expose
-    public java.util.List<Win32LobAppRequirement> requirementRules;
-
-    /**
-     * The Rules.
-     * The detection and requirement rules for this app.
-     */
-    @SerializedName("rules")
-    @Expose
-    public java.util.List<Win32LobAppRule> rules;
-
-    /**
-     * The Install Experience.
-     * The install experience for this app.
-     */
-    @SerializedName("installExperience")
-    @Expose
-    public Win32LobAppInstallExperience installExperience;
-
-    /**
-     * The Return Codes.
-     * The return codes for post installation behavior.
-     */
-    @SerializedName("returnCodes")
-    @Expose
-    public java.util.List<Win32LobAppReturnCode> returnCodes;
+    public String minimumSupportedWindowsRelease;
 
     /**
      * The Msi Information.
@@ -147,6 +131,30 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
     public Win32LobAppMsiInformation msiInformation;
 
     /**
+     * The Requirement Rules.
+     * The requirement rules to detect Win32 Line of Business (LoB) app.
+     */
+    @SerializedName("requirementRules")
+    @Expose
+    public java.util.List<Win32LobAppRequirement> requirementRules;
+
+    /**
+     * The Return Codes.
+     * The return codes for post installation behavior.
+     */
+    @SerializedName("returnCodes")
+    @Expose
+    public java.util.List<Win32LobAppReturnCode> returnCodes;
+
+    /**
+     * The Rules.
+     * The detection and requirement rules for this app.
+     */
+    @SerializedName("rules")
+    @Expose
+    public java.util.List<Win32LobAppRule> rules;
+
+    /**
      * The Setup File Path.
      * The relative path of the setup file in the encrypted Win32LobApp package.
      */
@@ -155,20 +163,12 @@ public class Win32LobApp extends MobileLobApp implements IJsonBackedObject {
     public String setupFilePath;
 
     /**
-     * The Install Language.
-     * 
+     * The Uninstall Command Line.
+     * The command line to uninstall this app
      */
-    @SerializedName("installLanguage")
+    @SerializedName("uninstallCommandLine")
     @Expose
-    public String installLanguage;
-
-    /**
-     * The Minimum Supported Windows Release.
-     * The value for the minimum supported windows release.
-     */
-    @SerializedName("minimumSupportedWindowsRelease")
-    @Expose
-    public String minimumSupportedWindowsRelease;
+    public String uninstallCommandLine;
 
 
     /**

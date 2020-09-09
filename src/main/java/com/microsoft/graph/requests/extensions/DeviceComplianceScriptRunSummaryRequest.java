@@ -112,6 +112,27 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a DeviceComplianceScriptRunSummary with a new object
+     *
+     * @param newDeviceComplianceScriptRunSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<DeviceComplianceScriptRunSummary> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceScriptRunSummary);
+    }
+
+    /**
+     * Creates a DeviceComplianceScriptRunSummary with a new object
+     *
+     * @param newDeviceComplianceScriptRunSummary the object to create/update
+     * @return the created DeviceComplianceScriptRunSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceScriptRunSummary put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceScriptRunSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

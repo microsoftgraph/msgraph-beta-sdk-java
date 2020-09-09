@@ -62,14 +62,14 @@ public class DeviceConfigurationConflictSummaryCollectionRequest extends BaseCol
     public void post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary, final ICallback<DeviceConfigurationConflictSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationConflictSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationConflictSummary, callback);
     }
 
     public DeviceConfigurationConflictSummary post(final DeviceConfigurationConflictSummary newDeviceConfigurationConflictSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationConflictSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationConflictSummary);
     }
 
@@ -106,6 +106,27 @@ public class DeviceConfigurationConflictSummaryCollectionRequest extends BaseCol
         return (DeviceConfigurationConflictSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceConfigurationConflictSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceConfigurationConflictSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceConfigurationConflictSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceConfigurationConflictSummaryCollectionRequest)this;
+    }
     public IDeviceConfigurationConflictSummaryCollectionPage buildFromResponse(final DeviceConfigurationConflictSummaryCollectionResponse response) {
         final IDeviceConfigurationConflictSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

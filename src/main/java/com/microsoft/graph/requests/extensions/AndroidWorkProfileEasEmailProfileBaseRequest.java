@@ -129,6 +129,27 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
     }
 
     /**
+     * Creates a AndroidWorkProfileEasEmailProfileBase with a new object
+     *
+     * @param newAndroidWorkProfileEasEmailProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<AndroidWorkProfileEasEmailProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileEasEmailProfileBase);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileEasEmailProfileBase with a new object
+     *
+     * @param newAndroidWorkProfileEasEmailProfileBase the object to create/update
+     * @return the created AndroidWorkProfileEasEmailProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileEasEmailProfileBase put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileEasEmailProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class EducationSubmissionCollectionRequest extends BaseCollectionRequest<
     public void post(final EducationSubmission newEducationSubmission, final ICallback<EducationSubmission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSubmissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSubmission, callback);
     }
 
     public EducationSubmission post(final EducationSubmission newEducationSubmission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationSubmissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSubmission);
     }
 
@@ -106,6 +106,27 @@ public class EducationSubmissionCollectionRequest extends BaseCollectionRequest<
         return (EducationSubmissionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationSubmissionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationSubmissionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationSubmissionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationSubmissionCollectionRequest)this;
+    }
     public IEducationSubmissionCollectionPage buildFromResponse(final EducationSubmissionCollectionResponse response) {
         final IEducationSubmissionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -127,6 +127,27 @@ public class AndroidDeviceOwnerWiFiConfigurationRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a AndroidDeviceOwnerWiFiConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerWiFiConfiguration newAndroidDeviceOwnerWiFiConfiguration, final ICallback<AndroidDeviceOwnerWiFiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerWiFiConfiguration);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerWiFiConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerWiFiConfiguration the object to create/update
+     * @return the created AndroidDeviceOwnerWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerWiFiConfiguration put(final AndroidDeviceOwnerWiFiConfiguration newAndroidDeviceOwnerWiFiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerWiFiConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ProvisioningServicePrincipal;
 import com.microsoft.graph.models.extensions.Initiator;
-import com.microsoft.graph.models.extensions.ProvisioningSystemDetails;
-import com.microsoft.graph.models.extensions.ProvisionedIdentity;
-import com.microsoft.graph.models.extensions.StatusBase;
-import com.microsoft.graph.models.extensions.ProvisioningStep;
 import com.microsoft.graph.models.extensions.ModifiedProperty;
+import com.microsoft.graph.models.extensions.ProvisioningStep;
+import com.microsoft.graph.models.extensions.ProvisioningServicePrincipal;
+import com.microsoft.graph.models.extensions.ProvisionedIdentity;
+import com.microsoft.graph.models.extensions.ProvisioningSystemDetails;
+import com.microsoft.graph.models.extensions.StatusBase;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -34,36 +34,20 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
 
     /**
+     * The Action.
+     * 
+     */
+    @SerializedName("action")
+    @Expose
+    public String action;
+
+    /**
      * The Activity Date Time.
      * 
      */
     @SerializedName("activityDateTime")
     @Expose
     public java.util.Calendar activityDateTime;
-
-    /**
-     * The Tenant Id.
-     * 
-     */
-    @SerializedName("tenantId")
-    @Expose
-    public String tenantId;
-
-    /**
-     * The Job Id.
-     * 
-     */
-    @SerializedName("jobId")
-    @Expose
-    public String jobId;
-
-    /**
-     * The Cycle Id.
-     * 
-     */
-    @SerializedName("cycleId")
-    @Expose
-    public String cycleId;
 
     /**
      * The Change Id.
@@ -74,12 +58,12 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     public String changeId;
 
     /**
-     * The Action.
+     * The Cycle Id.
      * 
      */
-    @SerializedName("action")
+    @SerializedName("cycleId")
     @Expose
-    public String action;
+    public String cycleId;
 
     /**
      * The Duration In Milliseconds.
@@ -90,14 +74,6 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     public Integer durationInMilliseconds;
 
     /**
-     * The Service Principal.
-     * 
-     */
-    @SerializedName("servicePrincipal")
-    @Expose
-    public ProvisioningServicePrincipal servicePrincipal;
-
-    /**
      * The Initiated By.
      * 
      */
@@ -106,44 +82,20 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     public Initiator initiatedBy;
 
     /**
-     * The Source System.
+     * The Job Id.
      * 
      */
-    @SerializedName("sourceSystem")
+    @SerializedName("jobId")
     @Expose
-    public ProvisioningSystemDetails sourceSystem;
+    public String jobId;
 
     /**
-     * The Target System.
+     * The Modified Properties.
      * 
      */
-    @SerializedName("targetSystem")
+    @SerializedName("modifiedProperties")
     @Expose
-    public ProvisioningSystemDetails targetSystem;
-
-    /**
-     * The Source Identity.
-     * 
-     */
-    @SerializedName("sourceIdentity")
-    @Expose
-    public ProvisionedIdentity sourceIdentity;
-
-    /**
-     * The Target Identity.
-     * 
-     */
-    @SerializedName("targetIdentity")
-    @Expose
-    public ProvisionedIdentity targetIdentity;
-
-    /**
-     * The Status Info.
-     * 
-     */
-    @SerializedName("statusInfo")
-    @Expose
-    public StatusBase statusInfo;
+    public java.util.List<ModifiedProperty> modifiedProperties;
 
     /**
      * The Provisioning Steps.
@@ -154,12 +106,60 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     public java.util.List<ProvisioningStep> provisioningSteps;
 
     /**
-     * The Modified Properties.
+     * The Service Principal.
      * 
      */
-    @SerializedName("modifiedProperties")
+    @SerializedName("servicePrincipal")
     @Expose
-    public java.util.List<ModifiedProperty> modifiedProperties;
+    public ProvisioningServicePrincipal servicePrincipal;
+
+    /**
+     * The Source Identity.
+     * 
+     */
+    @SerializedName("sourceIdentity")
+    @Expose
+    public ProvisionedIdentity sourceIdentity;
+
+    /**
+     * The Source System.
+     * 
+     */
+    @SerializedName("sourceSystem")
+    @Expose
+    public ProvisioningSystemDetails sourceSystem;
+
+    /**
+     * The Status Info.
+     * 
+     */
+    @SerializedName("statusInfo")
+    @Expose
+    public StatusBase statusInfo;
+
+    /**
+     * The Target Identity.
+     * 
+     */
+    @SerializedName("targetIdentity")
+    @Expose
+    public ProvisionedIdentity targetIdentity;
+
+    /**
+     * The Target System.
+     * 
+     */
+    @SerializedName("targetSystem")
+    @Expose
+    public ProvisioningSystemDetails targetSystem;
+
+    /**
+     * The Tenant Id.
+     * 
+     */
+    @SerializedName("tenantId")
+    @Expose
+    public String tenantId;
 
 
     /**

@@ -62,14 +62,14 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
     public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<MacOSTrustedRootCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MacOSTrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMacOSTrustedRootCertificate, callback);
     }
 
     public MacOSTrustedRootCertificate post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MacOSTrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMacOSTrustedRootCertificate);
     }
 
@@ -106,6 +106,27 @@ public class MacOSTrustedRootCertificateCollectionRequest extends BaseCollection
         return (MacOSTrustedRootCertificateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMacOSTrustedRootCertificateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MacOSTrustedRootCertificateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMacOSTrustedRootCertificateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMacOSTrustedRootCertificateCollectionRequest)this;
+    }
     public IMacOSTrustedRootCertificateCollectionPage buildFromResponse(final MacOSTrustedRootCertificateCollectionResponse response) {
         final IMacOSTrustedRootCertificateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

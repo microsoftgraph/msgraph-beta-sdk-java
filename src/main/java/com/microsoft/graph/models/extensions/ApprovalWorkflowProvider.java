@@ -47,16 +47,16 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
     public BusinessFlowCollectionPage businessFlows;
 
     /**
-     * The Policy Templates.
-     * 
-     */
-    public GovernancePolicyTemplateCollectionPage policyTemplates;
-
-    /**
      * The Business Flows With Requests Awaiting My Decision.
      * 
      */
     public BusinessFlowCollectionPage businessFlowsWithRequestsAwaitingMyDecision;
+
+    /**
+     * The Policy Templates.
+     * 
+     */
+    public GovernancePolicyTemplateCollectionPage policyTemplates;
 
 
     /**
@@ -114,22 +114,6 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
             businessFlows = new BusinessFlowCollectionPage(response, null);
         }
 
-        if (json.has("policyTemplates")) {
-            final GovernancePolicyTemplateCollectionResponse response = new GovernancePolicyTemplateCollectionResponse();
-            if (json.has("policyTemplates@odata.nextLink")) {
-                response.nextLink = json.get("policyTemplates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policyTemplates").toString(), JsonObject[].class);
-            final GovernancePolicyTemplate[] array = new GovernancePolicyTemplate[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernancePolicyTemplate.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            policyTemplates = new GovernancePolicyTemplateCollectionPage(response, null);
-        }
-
         if (json.has("businessFlowsWithRequestsAwaitingMyDecision")) {
             final BusinessFlowCollectionResponse response = new BusinessFlowCollectionResponse();
             if (json.has("businessFlowsWithRequestsAwaitingMyDecision@odata.nextLink")) {
@@ -144,6 +128,22 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
             }
             response.value = Arrays.asList(array);
             businessFlowsWithRequestsAwaitingMyDecision = new BusinessFlowCollectionPage(response, null);
+        }
+
+        if (json.has("policyTemplates")) {
+            final GovernancePolicyTemplateCollectionResponse response = new GovernancePolicyTemplateCollectionResponse();
+            if (json.has("policyTemplates@odata.nextLink")) {
+                response.nextLink = json.get("policyTemplates@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policyTemplates").toString(), JsonObject[].class);
+            final GovernancePolicyTemplate[] array = new GovernancePolicyTemplate[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernancePolicyTemplate.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            policyTemplates = new GovernancePolicyTemplateCollectionPage(response, null);
         }
     }
 }

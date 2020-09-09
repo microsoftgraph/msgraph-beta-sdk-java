@@ -112,6 +112,27 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
     }
 
     /**
+     * Creates a WindowsAutopilotSettings with a new object
+     *
+     * @param newWindowsAutopilotSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<WindowsAutopilotSettings> callback) {
+        send(HttpMethod.PUT, callback, newWindowsAutopilotSettings);
+    }
+
+    /**
+     * Creates a WindowsAutopilotSettings with a new object
+     *
+     * @param newWindowsAutopilotSettings the object to create/update
+     * @return the created WindowsAutopilotSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsAutopilotSettings put(final WindowsAutopilotSettings newWindowsAutopilotSettings) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsAutopilotSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

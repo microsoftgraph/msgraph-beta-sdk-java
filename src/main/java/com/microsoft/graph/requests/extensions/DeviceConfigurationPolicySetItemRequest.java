@@ -112,6 +112,27 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a DeviceConfigurationPolicySetItem with a new object
+     *
+     * @param newDeviceConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<DeviceConfigurationPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationPolicySetItem);
+    }
+
+    /**
+     * Creates a DeviceConfigurationPolicySetItem with a new object
+     *
+     * @param newDeviceConfigurationPolicySetItem the object to create/update
+     * @return the created DeviceConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationPolicySetItem put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

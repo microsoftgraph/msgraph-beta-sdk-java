@@ -62,14 +62,14 @@ public class DepOnboardingSettingCollectionRequest extends BaseCollectionRequest
     public void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DepOnboardingSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDepOnboardingSetting, callback);
     }
 
     public DepOnboardingSetting post(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DepOnboardingSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDepOnboardingSetting);
     }
 
@@ -106,6 +106,27 @@ public class DepOnboardingSettingCollectionRequest extends BaseCollectionRequest
         return (DepOnboardingSettingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDepOnboardingSettingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DepOnboardingSettingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDepOnboardingSettingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDepOnboardingSettingCollectionRequest)this;
+    }
     public IDepOnboardingSettingCollectionPage buildFromResponse(final DepOnboardingSettingCollectionResponse response) {
         final IDepOnboardingSettingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

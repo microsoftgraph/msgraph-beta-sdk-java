@@ -44,6 +44,10 @@ import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.TiIndicatorCollectionRequestBuilder;
@@ -52,10 +56,6 @@ import com.microsoft.graph.requests.extensions.IUserSecurityProfileCollectionReq
 import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -162,6 +162,13 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
     public ISecureScoreRequestBuilder secureScores(final String id) {
         return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);
     }
+    public ISecurityActionCollectionRequestBuilder securityActions() {
+        return new SecurityActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityActions"), getClient(), null);
+    }
+
+    public ISecurityActionRequestBuilder securityActions(final String id) {
+        return new SecurityActionRequestBuilder(getRequestUrlWithAdditionalSegment("securityActions") + "/" + id, getClient(), null);
+    }
     public ITiIndicatorCollectionRequestBuilder tiIndicators() {
         return new TiIndicatorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tiIndicators"), getClient(), null);
     }
@@ -175,12 +182,5 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
 
     public IUserSecurityProfileRequestBuilder userSecurityProfiles(final String id) {
         return new UserSecurityProfileRequestBuilder(getRequestUrlWithAdditionalSegment("userSecurityProfiles") + "/" + id, getClient(), null);
-    }
-    public ISecurityActionCollectionRequestBuilder securityActions() {
-        return new SecurityActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityActions"), getClient(), null);
-    }
-
-    public ISecurityActionRequestBuilder securityActions(final String id) {
-        return new SecurityActionRequestBuilder(getRequestUrlWithAdditionalSegment("securityActions") + "/" + id, getClient(), null);
     }
 }

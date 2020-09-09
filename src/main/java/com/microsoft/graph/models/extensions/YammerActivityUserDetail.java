@@ -27,20 +27,12 @@ public class YammerActivityUserDetail extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Report Refresh Date.
+     * The Assigned Products.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("assignedProducts")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
+    public java.util.List<String> assignedProducts;
 
     /**
      * The Display Name.
@@ -51,28 +43,20 @@ public class YammerActivityUserDetail extends Entity implements IJsonBackedObjec
     public String displayName;
 
     /**
-     * The User State.
-     * 
-     */
-    @SerializedName("userState")
-    @Expose
-    public String userState;
-
-    /**
-     * The State Change Date.
-     * 
-     */
-    @SerializedName("stateChangeDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly stateChangeDate;
-
-    /**
      * The Last Activity Date.
      * 
      */
     @SerializedName("lastActivityDate")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+
+    /**
+     * The Liked Count.
+     * 
+     */
+    @SerializedName("likedCount")
+    @Expose
+    public Long likedCount;
 
     /**
      * The Posted Count.
@@ -91,28 +75,44 @@ public class YammerActivityUserDetail extends Entity implements IJsonBackedObjec
     public Long readCount;
 
     /**
-     * The Liked Count.
-     * 
-     */
-    @SerializedName("likedCount")
-    @Expose
-    public Long likedCount;
-
-    /**
-     * The Assigned Products.
-     * 
-     */
-    @SerializedName("assignedProducts")
-    @Expose
-    public java.util.List<String> assignedProducts;
-
-    /**
      * The Report Period.
      * 
      */
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The State Change Date.
+     * 
+     */
+    @SerializedName("stateChangeDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly stateChangeDate;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
+
+    /**
+     * The User State.
+     * 
+     */
+    @SerializedName("userState")
+    @Expose
+    public String userState;
 
 
     /**

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,6 +38,13 @@ public interface IGovernanceRoleAssignmentRequestBuilder extends IRequestBuilder
 
 
     /**
+     * Gets the request builder for GovernanceRoleAssignment
+     *
+     * @return the IGovernanceRoleAssignmentWithReferenceRequestBuilder instance
+     */
+    IGovernanceRoleAssignmentWithReferenceRequestBuilder linkedEligibleRoleAssignment();
+
+    /**
      * Gets the request builder for GovernanceResource
      *
      * @return the IGovernanceResourceRequestBuilder instance
@@ -57,12 +64,5 @@ public interface IGovernanceRoleAssignmentRequestBuilder extends IRequestBuilder
      * @return the IGovernanceSubjectRequestBuilder instance
      */
     IGovernanceSubjectRequestBuilder subject();
-
-    /**
-     * Gets the request builder for GovernanceRoleAssignment
-     *
-     * @return the IGovernanceRoleAssignmentWithReferenceRequestBuilder instance
-     */
-    IGovernanceRoleAssignmentWithReferenceRequestBuilder linkedEligibleRoleAssignment();
 
 }

@@ -112,6 +112,27 @@ public class PermissionGrantConditionSetRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a PermissionGrantConditionSet with a new object
+     *
+     * @param newPermissionGrantConditionSet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback) {
+        send(HttpMethod.PUT, callback, newPermissionGrantConditionSet);
+    }
+
+    /**
+     * Creates a PermissionGrantConditionSet with a new object
+     *
+     * @param newPermissionGrantConditionSet the object to create/update
+     * @return the created PermissionGrantConditionSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PermissionGrantConditionSet put(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
+        return send(HttpMethod.PUT, newPermissionGrantConditionSet);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

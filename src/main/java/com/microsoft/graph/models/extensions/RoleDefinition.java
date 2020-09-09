@@ -31,6 +31,14 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Description.
+     * Description of the Role definition.
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
      * The Display Name.
      * Display Name of the Role definition.
      */
@@ -39,12 +47,20 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Description.
-     * Description of the Role definition.
+     * The Is Built In.
+     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      */
-    @SerializedName("description")
+    @SerializedName("isBuiltIn")
     @Expose
-    public String description;
+    public Boolean isBuiltIn;
+
+    /**
+     * The Is Built In Role Definition.
+     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
+     */
+    @SerializedName("isBuiltInRoleDefinition")
+    @Expose
+    public Boolean isBuiltInRoleDefinition;
 
     /**
      * The Permissions.
@@ -61,22 +77,6 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
     @SerializedName("rolePermissions")
     @Expose
     public java.util.List<RolePermission> rolePermissions;
-
-    /**
-     * The Is Built In Role Definition.
-     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     */
-    @SerializedName("isBuiltInRoleDefinition")
-    @Expose
-    public Boolean isBuiltInRoleDefinition;
-
-    /**
-     * The Is Built In.
-     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     */
-    @SerializedName("isBuiltIn")
-    @Expose
-    public Boolean isBuiltIn;
 
     /**
      * The Role Scope Tag Ids.

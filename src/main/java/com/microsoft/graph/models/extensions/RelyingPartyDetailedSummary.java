@@ -29,68 +29,12 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Relying Party Id.
-     * 
-     */
-    @SerializedName("relyingPartyId")
-    @Expose
-    public String relyingPartyId;
-
-    /**
-     * The Service Id.
-     * 
-     */
-    @SerializedName("serviceId")
-    @Expose
-    public String serviceId;
-
-    /**
-     * The Relying Party Name.
-     * 
-     */
-    @SerializedName("relyingPartyName")
-    @Expose
-    public String relyingPartyName;
-
-    /**
-     * The Successful Sign In Count.
-     * 
-     */
-    @SerializedName("successfulSignInCount")
-    @Expose
-    public Long successfulSignInCount;
-
-    /**
      * The Failed Sign In Count.
      * 
      */
     @SerializedName("failedSignInCount")
     @Expose
     public Long failedSignInCount;
-
-    /**
-     * The Total Sign In Count.
-     * 
-     */
-    @SerializedName("totalSignInCount")
-    @Expose
-    public Long totalSignInCount;
-
-    /**
-     * The Sign In Success Rate.
-     * 
-     */
-    @SerializedName("signInSuccessRate")
-    @Expose
-    public Double signInSuccessRate;
-
-    /**
-     * The Unique User Count.
-     * 
-     */
-    @SerializedName("uniqueUserCount")
-    @Expose
-    public Long uniqueUserCount;
 
     /**
      * The Migration Status.
@@ -109,12 +53,68 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
     public java.util.List<KeyValuePair> migrationValidationDetails;
 
     /**
+     * The Relying Party Id.
+     * 
+     */
+    @SerializedName("relyingPartyId")
+    @Expose
+    public String relyingPartyId;
+
+    /**
+     * The Relying Party Name.
+     * 
+     */
+    @SerializedName("relyingPartyName")
+    @Expose
+    public String relyingPartyName;
+
+    /**
      * The Reply Urls.
      * 
      */
     @SerializedName("replyUrls")
     @Expose
     public java.util.List<String> replyUrls;
+
+    /**
+     * The Service Id.
+     * 
+     */
+    @SerializedName("serviceId")
+    @Expose
+    public String serviceId;
+
+    /**
+     * The Sign In Success Rate.
+     * 
+     */
+    @SerializedName("signInSuccessRate")
+    @Expose
+    public Double signInSuccessRate;
+
+    /**
+     * The Successful Sign In Count.
+     * 
+     */
+    @SerializedName("successfulSignInCount")
+    @Expose
+    public Long successfulSignInCount;
+
+    /**
+     * The Total Sign In Count.
+     * 
+     */
+    @SerializedName("totalSignInCount")
+    @Expose
+    public Long totalSignInCount;
+
+    /**
+     * The Unique User Count.
+     * 
+     */
+    @SerializedName("uniqueUserCount")
+    @Expose
+    public Long uniqueUserCount;
 
 
     /**

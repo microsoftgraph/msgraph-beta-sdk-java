@@ -27,14 +27,6 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
 
 
     /**
-     * The Setting Name.
-     * Name of a setting
-     */
-    @SerializedName("settingName")
-    @Expose
-    public String settingName;
-
-    /**
      * The Compliant Count.
      * Number of compliant devices
      */
@@ -81,6 +73,14 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     @SerializedName("remediatedCount")
     @Expose
     public Integer remediatedCount;
+
+    /**
+     * The Setting Name.
+     * Name of a setting
+     */
+    @SerializedName("settingName")
+    @Expose
+    public String settingName;
 
 
     /**

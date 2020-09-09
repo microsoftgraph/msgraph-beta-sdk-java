@@ -112,6 +112,27 @@ public class UserExperienceAnalyticsDeviceStartupProcessRequest extends BaseRequ
     }
 
     /**
+     * Creates a UserExperienceAnalyticsDeviceStartupProcess with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupProcess the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess, final ICallback<UserExperienceAnalyticsDeviceStartupProcess> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsDeviceStartupProcess);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsDeviceStartupProcess with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupProcess the object to create/update
+     * @return the created UserExperienceAnalyticsDeviceStartupProcess
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsDeviceStartupProcess put(final UserExperienceAnalyticsDeviceStartupProcess newUserExperienceAnalyticsDeviceStartupProcess) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsDeviceStartupProcess);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

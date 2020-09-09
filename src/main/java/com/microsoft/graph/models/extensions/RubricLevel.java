@@ -38,12 +38,12 @@ public class RubricLevel implements IJsonBackedObject {
     }
 
     /**
-     * The Level Id.
+     * The Description.
      * 
      */
-    @SerializedName("levelId")
+    @SerializedName("description")
     @Expose
-    public String levelId;
+    public EducationItemBody description;
 
     /**
      * The Display Name.
@@ -54,20 +54,20 @@ public class RubricLevel implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public EducationItemBody description;
-
-    /**
      * The Grading.
      * 
      */
     @SerializedName("grading")
     @Expose
     public EducationAssignmentGradeType grading;
+
+    /**
+     * The Level Id.
+     * 
+     */
+    @SerializedName("levelId")
+    @Expose
+    public String levelId;
 
 
     /**

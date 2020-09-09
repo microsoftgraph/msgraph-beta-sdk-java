@@ -62,14 +62,14 @@ public class DeviceManagementDomainJoinConnectorCollectionRequest extends BaseCo
     public void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<DeviceManagementDomainJoinConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementDomainJoinConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementDomainJoinConnector, callback);
     }
 
     public DeviceManagementDomainJoinConnector post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementDomainJoinConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementDomainJoinConnector);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementDomainJoinConnectorCollectionRequest extends BaseCo
         return (DeviceManagementDomainJoinConnectorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementDomainJoinConnectorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementDomainJoinConnectorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementDomainJoinConnectorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementDomainJoinConnectorCollectionRequest)this;
+    }
     public IDeviceManagementDomainJoinConnectorCollectionPage buildFromResponse(final DeviceManagementDomainJoinConnectorCollectionResponse response) {
         final IDeviceManagementDomainJoinConnectorCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IPrintJobRequest extends IHttpRequest {
     PrintJob post(final PrintJob newPrintJob) throws ClientException;
 
     /**
+     * Posts a PrintJob with a new object
+     *
+     * @param newPrintJob the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrintJob newPrintJob, final ICallback<PrintJob> callback);
+
+    /**
+     * Posts a PrintJob with a new object
+     *
+     * @param newPrintJob the object to create/update
+     * @return the created PrintJob
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrintJob put(final PrintJob newPrintJob) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

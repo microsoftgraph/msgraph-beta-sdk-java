@@ -11,8 +11,8 @@ import com.microsoft.graph.models.extensions.SynchronizationSchema;
 import com.microsoft.graph.models.extensions.ExpressionInputObject;
 import com.microsoft.graph.models.extensions.AttributeDefinition;
 import com.microsoft.graph.models.extensions.ParseExpressionResponse;
-import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import com.microsoft.graph.models.extensions.FilterOperatorSchema;
+import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -45,8 +45,8 @@ public interface ISynchronizationSchemaRequestBuilder extends IRequestBuilder {
     IDirectoryDefinitionRequestBuilder directories(final String id);
     ISynchronizationSchemaParseExpressionRequestBuilder parseExpression(final String expression, final ExpressionInputObject testInputObject, final AttributeDefinition targetAttributeDefinition);
 
-    ISynchronizationSchemaFunctionsCollectionRequestBuilder functions();
-
     ISynchronizationSchemaFilterOperatorsCollectionRequestBuilder filterOperators();
+
+    ISynchronizationSchemaFunctionsCollectionRequestBuilder functions();
 
 }

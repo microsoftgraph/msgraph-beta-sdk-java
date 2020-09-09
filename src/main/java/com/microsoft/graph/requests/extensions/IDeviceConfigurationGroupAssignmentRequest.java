@@ -80,6 +80,23 @@ public interface IDeviceConfigurationGroupAssignmentRequest extends IHttpRequest
     DeviceConfigurationGroupAssignment post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException;
 
     /**
+     * Posts a DeviceConfigurationGroupAssignment with a new object
+     *
+     * @param newDeviceConfigurationGroupAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<DeviceConfigurationGroupAssignment> callback);
+
+    /**
+     * Posts a DeviceConfigurationGroupAssignment with a new object
+     *
+     * @param newDeviceConfigurationGroupAssignment the object to create/update
+     * @return the created DeviceConfigurationGroupAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceConfigurationGroupAssignment put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

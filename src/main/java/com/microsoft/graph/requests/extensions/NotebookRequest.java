@@ -11,14 +11,14 @@ import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.models.extensions.RecentNotebook;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -120,6 +120,27 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      */
     public Notebook post(final Notebook newNotebook) throws ClientException {
         return send(HttpMethod.POST, newNotebook);
+    }
+
+    /**
+     * Creates a Notebook with a new object
+     *
+     * @param newNotebook the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Notebook newNotebook, final ICallback<Notebook> callback) {
+        send(HttpMethod.PUT, callback, newNotebook);
+    }
+
+    /**
+     * Creates a Notebook with a new object
+     *
+     * @param newNotebook the object to create/update
+     * @return the created Notebook
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Notebook put(final Notebook newNotebook) throws ClientException {
+        return send(HttpMethod.PUT, newNotebook);
     }
 
     /**

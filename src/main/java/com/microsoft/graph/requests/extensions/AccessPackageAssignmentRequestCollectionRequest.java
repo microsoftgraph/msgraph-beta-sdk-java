@@ -63,14 +63,14 @@ public class AccessPackageAssignmentRequestCollectionRequest extends BaseCollect
     public void post(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest, final ICallback<AccessPackageAssignmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignmentRequest, callback);
     }
 
     public AccessPackageAssignmentRequest post(final AccessPackageAssignmentRequest newAccessPackageAssignmentRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignmentRequest);
     }
 
@@ -107,6 +107,27 @@ public class AccessPackageAssignmentRequestCollectionRequest extends BaseCollect
         return (AccessPackageAssignmentRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageAssignmentRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageAssignmentRequestCollectionRequest)this;
+    }
     public IAccessPackageAssignmentRequestCollectionPage buildFromResponse(final AccessPackageAssignmentRequestCollectionResponse response) {
         final IAccessPackageAssignmentRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

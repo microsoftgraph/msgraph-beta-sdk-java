@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TrustFramework;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      */
     public TrustFramework post(final TrustFramework newTrustFramework) throws ClientException {
         return send(HttpMethod.POST, newTrustFramework);
+    }
+
+    /**
+     * Creates a TrustFramework with a new object
+     *
+     * @param newTrustFramework the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TrustFramework newTrustFramework, final ICallback<TrustFramework> callback) {
+        send(HttpMethod.PUT, callback, newTrustFramework);
+    }
+
+    /**
+     * Creates a TrustFramework with a new object
+     *
+     * @param newTrustFramework the object to create/update
+     * @return the created TrustFramework
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TrustFramework put(final TrustFramework newTrustFramework) throws ClientException {
+        return send(HttpMethod.PUT, newTrustFramework);
     }
 
     /**

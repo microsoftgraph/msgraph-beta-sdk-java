@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
+import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionResponse;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionResponse;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -33,16 +33,16 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Role Definitions.
-     * 
-     */
-    public UnifiedRoleDefinitionCollectionPage roleDefinitions;
-
-    /**
      * The Role Assignments.
      * 
      */
     public UnifiedRoleAssignmentCollectionPage roleAssignments;
+
+    /**
+     * The Role Definitions.
+     * 
+     */
+    public UnifiedRoleDefinitionCollectionPage roleDefinitions;
 
 
     /**
@@ -84,22 +84,6 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("roleDefinitions")) {
-            final UnifiedRoleDefinitionCollectionResponse response = new UnifiedRoleDefinitionCollectionResponse();
-            if (json.has("roleDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
-            final UnifiedRoleDefinition[] array = new UnifiedRoleDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UnifiedRoleDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleDefinitions = new UnifiedRoleDefinitionCollectionPage(response, null);
-        }
-
         if (json.has("roleAssignments")) {
             final UnifiedRoleAssignmentCollectionResponse response = new UnifiedRoleAssignmentCollectionResponse();
             if (json.has("roleAssignments@odata.nextLink")) {
@@ -114,6 +98,22 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             roleAssignments = new UnifiedRoleAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("roleDefinitions")) {
+            final UnifiedRoleDefinitionCollectionResponse response = new UnifiedRoleDefinitionCollectionResponse();
+            if (json.has("roleDefinitions@odata.nextLink")) {
+                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
+            final UnifiedRoleDefinition[] array = new UnifiedRoleDefinition[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UnifiedRoleDefinition.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            roleDefinitions = new UnifiedRoleDefinitionCollectionPage(response, null);
         }
     }
 }

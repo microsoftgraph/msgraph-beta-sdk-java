@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.MacOSProcessIdentifierType;
 import com.microsoft.graph.models.generated.Enablement;
 import com.microsoft.graph.models.extensions.MacOSAppleEventReceiver;
+import com.microsoft.graph.models.generated.MacOSProcessIdentifierType;
 
 
 import com.google.gson.JsonObject;
@@ -39,44 +39,28 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
-     * The display name of the app, process, or executable.
+     * The Accessibility.
+     * Allow the app or process to control the Mac via the Accessibility subsystem.
      */
-    @SerializedName("displayName")
+    @SerializedName("accessibility")
     @Expose
-    public String displayName;
+    public Enablement accessibility;
 
     /**
-     * The Identifier.
-     * The bundle ID or path of the app, process, or executable.
+     * The Address Book.
+     * Allow or block access to contact information managed by Contacts.
      */
-    @SerializedName("identifier")
+    @SerializedName("addressBook")
     @Expose
-    public String identifier;
+    public Enablement addressBook;
 
     /**
-     * The Identifier Type.
-     * A bundle ID is used to identify an app. A path is used to identify a process or executable.
+     * The Apple Events Allowed Receivers.
+     * Allow or deny the app or process to send a restricted Apple event to another app or process. You will need to know the identifier, identifier type, and code requirement of the receiving app or process. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("identifierType")
+    @SerializedName("appleEventsAllowedReceivers")
     @Expose
-    public MacOSProcessIdentifierType identifierType;
-
-    /**
-     * The Code Requirement.
-     * Enter the code requirement, which can be obtained with the command 'codesign ???display -r ???' in the Terminal app. Include everything after '=&amp;gt;'.
-     */
-    @SerializedName("codeRequirement")
-    @Expose
-    public String codeRequirement;
-
-    /**
-     * The Static Code Validation.
-     * Statically validates the code requirement. Use this setting if the process invalidates its dynamic code signature.
-     */
-    @SerializedName("staticCodeValidation")
-    @Expose
-    public Boolean staticCodeValidation;
+    public java.util.List<MacOSAppleEventReceiver> appleEventsAllowedReceivers;
 
     /**
      * The Block Camera.
@@ -85,6 +69,14 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
     @SerializedName("blockCamera")
     @Expose
     public Boolean blockCamera;
+
+    /**
+     * The Block Listen Event.
+     * Block the app or process from listening to events from input devices such as mouse, keyboard, and trackpad.Requires macOS 10.15 or later.
+     */
+    @SerializedName("blockListenEvent")
+    @Expose
+    public Boolean blockListenEvent;
 
     /**
      * The Block Microphone.
@@ -103,38 +95,6 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
     public Boolean blockScreenCapture;
 
     /**
-     * The Block Listen Event.
-     * Block the app or process from listening to events from input devices such as mouse, keyboard, and trackpad.Requires macOS 10.15 or later.
-     */
-    @SerializedName("blockListenEvent")
-    @Expose
-    public Boolean blockListenEvent;
-
-    /**
-     * The Speech Recognition.
-     * Allow or block access to system speech recognition facility.
-     */
-    @SerializedName("speechRecognition")
-    @Expose
-    public Enablement speechRecognition;
-
-    /**
-     * The Accessibility.
-     * Allow the app or process to control the Mac via the Accessibility subsystem.
-     */
-    @SerializedName("accessibility")
-    @Expose
-    public Enablement accessibility;
-
-    /**
-     * The Address Book.
-     * Allow or block access to contact information managed by Contacts.
-     */
-    @SerializedName("addressBook")
-    @Expose
-    public Enablement addressBook;
-
-    /**
      * The Calendar.
      * Allow or block access to event information managed by Calendar.
      */
@@ -143,28 +103,20 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
     public Enablement calendar;
 
     /**
-     * The Reminders.
-     * Allow or block access to information managed by Reminders.
+     * The Code Requirement.
+     * Enter the code requirement, which can be obtained with the command 'codesign ???display -r ???' in the Terminal app. Include everything after '=&amp;gt;'.
      */
-    @SerializedName("reminders")
+    @SerializedName("codeRequirement")
     @Expose
-    public Enablement reminders;
+    public String codeRequirement;
 
     /**
-     * The Photos.
-     * Allow or block access to images managed by Photos.
+     * The Display Name.
+     * The display name of the app, process, or executable.
      */
-    @SerializedName("photos")
+    @SerializedName("displayName")
     @Expose
-    public Enablement photos;
-
-    /**
-     * The Media Library.
-     * Allow or block access to music and the media library.
-     */
-    @SerializedName("mediaLibrary")
-    @Expose
-    public Enablement mediaLibrary;
+    public String displayName;
 
     /**
      * The File Provider Presence.
@@ -175,20 +127,76 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
     public Enablement fileProviderPresence;
 
     /**
+     * The Identifier.
+     * The bundle ID or path of the app, process, or executable.
+     */
+    @SerializedName("identifier")
+    @Expose
+    public String identifier;
+
+    /**
+     * The Identifier Type.
+     * A bundle ID is used to identify an app. A path is used to identify a process or executable.
+     */
+    @SerializedName("identifierType")
+    @Expose
+    public MacOSProcessIdentifierType identifierType;
+
+    /**
+     * The Media Library.
+     * Allow or block access to music and the media library.
+     */
+    @SerializedName("mediaLibrary")
+    @Expose
+    public Enablement mediaLibrary;
+
+    /**
+     * The Photos.
+     * Allow or block access to images managed by Photos.
+     */
+    @SerializedName("photos")
+    @Expose
+    public Enablement photos;
+
+    /**
+     * The Post Event.
+     * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream.
+     */
+    @SerializedName("postEvent")
+    @Expose
+    public Enablement postEvent;
+
+    /**
+     * The Reminders.
+     * Allow or block access to information managed by Reminders.
+     */
+    @SerializedName("reminders")
+    @Expose
+    public Enablement reminders;
+
+    /**
+     * The Speech Recognition.
+     * Allow or block access to system speech recognition facility.
+     */
+    @SerializedName("speechRecognition")
+    @Expose
+    public Enablement speechRecognition;
+
+    /**
+     * The Static Code Validation.
+     * Statically validates the code requirement. Use this setting if the process invalidates its dynamic code signature.
+     */
+    @SerializedName("staticCodeValidation")
+    @Expose
+    public Boolean staticCodeValidation;
+
+    /**
      * The System Policy All Files.
      * Control access to all protected files on a device. Files might be in locations such as emails, messages, apps, and administrative settings. Apply this setting with caution.
      */
     @SerializedName("systemPolicyAllFiles")
     @Expose
     public Enablement systemPolicyAllFiles;
-
-    /**
-     * The System Policy System Admin Files.
-     * Allow app or process to access files used in system administration.
-     */
-    @SerializedName("systemPolicySystemAdminFiles")
-    @Expose
-    public Enablement systemPolicySystemAdminFiles;
 
     /**
      * The System Policy Desktop Folder.
@@ -231,20 +239,12 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
     public Enablement systemPolicyRemovableVolumes;
 
     /**
-     * The Post Event.
-     * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream.
+     * The System Policy System Admin Files.
+     * Allow app or process to access files used in system administration.
      */
-    @SerializedName("postEvent")
+    @SerializedName("systemPolicySystemAdminFiles")
     @Expose
-    public Enablement postEvent;
-
-    /**
-     * The Apple Events Allowed Receivers.
-     * Allow or deny the app or process to send a restricted Apple event to another app or process. You will need to know the identifier, identifier type, and code requirement of the receiving app or process. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("appleEventsAllowedReceivers")
-    @Expose
-    public java.util.List<MacOSAppleEventReceiver> appleEventsAllowedReceivers;
+    public Enablement systemPolicySystemAdminFiles;
 
 
     /**

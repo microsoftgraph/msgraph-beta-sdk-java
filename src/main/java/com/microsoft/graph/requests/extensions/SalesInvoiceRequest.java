@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionReques
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
@@ -121,6 +121,27 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      */
     public SalesInvoice post(final SalesInvoice newSalesInvoice) throws ClientException {
         return send(HttpMethod.POST, newSalesInvoice);
+    }
+
+    /**
+     * Creates a SalesInvoice with a new object
+     *
+     * @param newSalesInvoice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesInvoice newSalesInvoice, final ICallback<SalesInvoice> callback) {
+        send(HttpMethod.PUT, callback, newSalesInvoice);
+    }
+
+    /**
+     * Creates a SalesInvoice with a new object
+     *
+     * @param newSalesInvoice the object to create/update
+     * @return the created SalesInvoice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesInvoice put(final SalesInvoice newSalesInvoice) throws ClientException {
+        return send(HttpMethod.PUT, newSalesInvoice);
     }
 
     /**

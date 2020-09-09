@@ -80,6 +80,23 @@ public interface IGeneralLedgerEntryRequest extends IHttpRequest {
     GeneralLedgerEntry post(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException;
 
     /**
+     * Posts a GeneralLedgerEntry with a new object
+     *
+     * @param newGeneralLedgerEntry the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<GeneralLedgerEntry> callback);
+
+    /**
+     * Posts a GeneralLedgerEntry with a new object
+     *
+     * @param newGeneralLedgerEntry the object to create/update
+     * @return the created GeneralLedgerEntry
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GeneralLedgerEntry put(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

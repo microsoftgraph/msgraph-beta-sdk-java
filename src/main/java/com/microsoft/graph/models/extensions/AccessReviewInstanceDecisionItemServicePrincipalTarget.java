@@ -27,12 +27,12 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
 
 
     /**
-     * The Service Principal Id.
+     * The App Id.
      * 
      */
-    @SerializedName("servicePrincipalId")
+    @SerializedName("appId")
     @Expose
-    public String servicePrincipalId;
+    public String appId;
 
     /**
      * The Service Principal Display Name.
@@ -43,12 +43,12 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     public String servicePrincipalDisplayName;
 
     /**
-     * The App Id.
+     * The Service Principal Id.
      * 
      */
-    @SerializedName("appId")
+    @SerializedName("servicePrincipalId")
     @Expose
-    public String appId;
+    public String servicePrincipalId;
 
 
     /**

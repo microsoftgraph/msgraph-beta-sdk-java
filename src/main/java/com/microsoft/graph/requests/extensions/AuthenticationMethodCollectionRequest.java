@@ -63,14 +63,14 @@ public class AuthenticationMethodCollectionRequest extends BaseCollectionRequest
     public void post(final AuthenticationMethod newAuthenticationMethod, final ICallback<AuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAuthenticationMethod, callback);
     }
 
     public AuthenticationMethod post(final AuthenticationMethod newAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAuthenticationMethod);
     }
 
@@ -107,6 +107,27 @@ public class AuthenticationMethodCollectionRequest extends BaseCollectionRequest
         return (AuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAuthenticationMethodCollectionRequest)this;
+    }
     public IAuthenticationMethodCollectionPage buildFromResponse(final AuthenticationMethodCollectionResponse response) {
         final IAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

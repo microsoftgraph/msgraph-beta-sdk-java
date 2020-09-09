@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Item;
 import com.microsoft.graph.models.extensions.Account;
+import com.microsoft.graph.models.extensions.Item;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,30 +29,6 @@ public class SalesQuoteLine extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Document Id.
-     * 
-     */
-    @SerializedName("documentId")
-    @Expose
-    public java.util.UUID documentId;
-
-    /**
-     * The Sequence.
-     * 
-     */
-    @SerializedName("sequence")
-    @Expose
-    public Integer sequence;
-
-    /**
-     * The Item Id.
-     * 
-     */
-    @SerializedName("itemId")
-    @Expose
-    public java.util.UUID itemId;
-
-    /**
      * The Account Id.
      * 
      */
@@ -61,12 +37,20 @@ public class SalesQuoteLine extends Entity implements IJsonBackedObject {
     public java.util.UUID accountId;
 
     /**
-     * The Line Type.
+     * The Amount Excluding Tax.
      * 
      */
-    @SerializedName("lineType")
+    @SerializedName("amountExcludingTax")
     @Expose
-    public String lineType;
+    public java.math.BigDecimal amountExcludingTax;
+
+    /**
+     * The Amount Including Tax.
+     * 
+     */
+    @SerializedName("amountIncludingTax")
+    @Expose
+    public java.math.BigDecimal amountIncludingTax;
 
     /**
      * The Description.
@@ -77,44 +61,12 @@ public class SalesQuoteLine extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Unit Of Measure Id.
-     * 
-     */
-    @SerializedName("unitOfMeasureId")
-    @Expose
-    public java.util.UUID unitOfMeasureId;
-
-    /**
-     * The Unit Price.
-     * 
-     */
-    @SerializedName("unitPrice")
-    @Expose
-    public java.math.BigDecimal unitPrice;
-
-    /**
-     * The Quantity.
-     * 
-     */
-    @SerializedName("quantity")
-    @Expose
-    public java.math.BigDecimal quantity;
-
-    /**
      * The Discount Amount.
      * 
      */
     @SerializedName("discountAmount")
     @Expose
     public java.math.BigDecimal discountAmount;
-
-    /**
-     * The Discount Percent.
-     * 
-     */
-    @SerializedName("discountPercent")
-    @Expose
-    public java.math.BigDecimal discountPercent;
 
     /**
      * The Discount Applied Before Tax.
@@ -125,12 +77,76 @@ public class SalesQuoteLine extends Entity implements IJsonBackedObject {
     public Boolean discountAppliedBeforeTax;
 
     /**
-     * The Amount Excluding Tax.
+     * The Discount Percent.
      * 
      */
-    @SerializedName("amountExcludingTax")
+    @SerializedName("discountPercent")
     @Expose
-    public java.math.BigDecimal amountExcludingTax;
+    public java.math.BigDecimal discountPercent;
+
+    /**
+     * The Document Id.
+     * 
+     */
+    @SerializedName("documentId")
+    @Expose
+    public java.util.UUID documentId;
+
+    /**
+     * The Item Id.
+     * 
+     */
+    @SerializedName("itemId")
+    @Expose
+    public java.util.UUID itemId;
+
+    /**
+     * The Line Type.
+     * 
+     */
+    @SerializedName("lineType")
+    @Expose
+    public String lineType;
+
+    /**
+     * The Net Amount.
+     * 
+     */
+    @SerializedName("netAmount")
+    @Expose
+    public java.math.BigDecimal netAmount;
+
+    /**
+     * The Net Amount Including Tax.
+     * 
+     */
+    @SerializedName("netAmountIncludingTax")
+    @Expose
+    public java.math.BigDecimal netAmountIncludingTax;
+
+    /**
+     * The Net Tax Amount.
+     * 
+     */
+    @SerializedName("netTaxAmount")
+    @Expose
+    public java.math.BigDecimal netTaxAmount;
+
+    /**
+     * The Quantity.
+     * 
+     */
+    @SerializedName("quantity")
+    @Expose
+    public java.math.BigDecimal quantity;
+
+    /**
+     * The Sequence.
+     * 
+     */
+    @SerializedName("sequence")
+    @Expose
+    public Integer sequence;
 
     /**
      * The Tax Code.
@@ -157,44 +173,20 @@ public class SalesQuoteLine extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal totalTaxAmount;
 
     /**
-     * The Amount Including Tax.
+     * The Unit Of Measure Id.
      * 
      */
-    @SerializedName("amountIncludingTax")
+    @SerializedName("unitOfMeasureId")
     @Expose
-    public java.math.BigDecimal amountIncludingTax;
+    public java.util.UUID unitOfMeasureId;
 
     /**
-     * The Net Amount.
+     * The Unit Price.
      * 
      */
-    @SerializedName("netAmount")
+    @SerializedName("unitPrice")
     @Expose
-    public java.math.BigDecimal netAmount;
-
-    /**
-     * The Net Tax Amount.
-     * 
-     */
-    @SerializedName("netTaxAmount")
-    @Expose
-    public java.math.BigDecimal netTaxAmount;
-
-    /**
-     * The Net Amount Including Tax.
-     * 
-     */
-    @SerializedName("netAmountIncludingTax")
-    @Expose
-    public java.math.BigDecimal netAmountIncludingTax;
-
-    /**
-     * The Item.
-     * 
-     */
-    @SerializedName("item")
-    @Expose
-    public Item item;
+    public java.math.BigDecimal unitPrice;
 
     /**
      * The Account.
@@ -203,6 +195,14 @@ public class SalesQuoteLine extends Entity implements IJsonBackedObject {
     @SerializedName("account")
     @Expose
     public Account account;
+
+    /**
+     * The Item.
+     * 
+     */
+    @SerializedName("item")
+    @Expose
+    public Item item;
 
 
     /**

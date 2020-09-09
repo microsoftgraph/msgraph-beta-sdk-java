@@ -8,33 +8,33 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.TeamDiscoverySettings;
+import com.microsoft.graph.models.extensions.TeamFunSettings;
+import com.microsoft.graph.models.extensions.TeamGuestSettings;
+import com.microsoft.graph.models.extensions.TeamMemberSettings;
+import com.microsoft.graph.models.extensions.TeamMessagingSettings;
 import com.microsoft.graph.models.generated.TeamSpecialization;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.extensions.TeamMemberSettings;
-import com.microsoft.graph.models.extensions.TeamGuestSettings;
-import com.microsoft.graph.models.extensions.TeamMessagingSettings;
-import com.microsoft.graph.models.extensions.TeamFunSettings;
-import com.microsoft.graph.models.extensions.TeamDiscoverySettings;
 import com.microsoft.graph.models.extensions.Schedule;
-import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.TeamsTemplate;
-import com.microsoft.graph.models.extensions.ProfilePhoto;
-import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.Channel;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
+import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
+import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
+import com.microsoft.graph.models.extensions.TeamsTemplate;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.UserCollectionResponse;
-import com.microsoft.graph.requests.extensions.UserCollectionPage;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -53,12 +53,20 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * The name of the team.
+     * The Classification.
+     * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
      */
-    @SerializedName("displayName")
+    @SerializedName("classification")
     @Expose
-    public String displayName;
+    public String classification;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -69,68 +77,20 @@ public class Team extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Internal Id.
-     * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     * The Discovery Settings.
+     * 
      */
-    @SerializedName("internalId")
+    @SerializedName("discoverySettings")
     @Expose
-    public String internalId;
+    public TeamDiscoverySettings discoverySettings;
 
     /**
-     * The Classification.
-     * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * The Display Name.
+     * The name of the team.
      */
-    @SerializedName("classification")
+    @SerializedName("displayName")
     @Expose
-    public String classification;
-
-    /**
-     * The Specialization.
-     * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
-     */
-    @SerializedName("specialization")
-    @Expose
-    public TeamSpecialization specialization;
-
-    /**
-     * The Visibility.
-     * The visibility of a the group and team. Defaults to Public.
-     */
-    @SerializedName("visibility")
-    @Expose
-    public TeamVisibilityType visibility;
-
-    /**
-     * The Web Url.
-     * A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
-     */
-    @SerializedName("webUrl")
-    @Expose
-    public String webUrl;
-
-    /**
-     * The Member Settings.
-     * Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
-     */
-    @SerializedName("memberSettings")
-    @Expose
-    public TeamMemberSettings memberSettings;
-
-    /**
-     * The Guest Settings.
-     * Settings to configure whether guests can create, update, or delete channels in the team.
-     */
-    @SerializedName("guestSettings")
-    @Expose
-    public TeamGuestSettings guestSettings;
-
-    /**
-     * The Messaging Settings.
-     * Settings to configure messaging and mentions in the team.
-     */
-    @SerializedName("messagingSettings")
-    @Expose
-    public TeamMessagingSettings messagingSettings;
+    public String displayName;
 
     /**
      * The Fun Settings.
@@ -141,12 +101,20 @@ public class Team extends Entity implements IJsonBackedObject {
     public TeamFunSettings funSettings;
 
     /**
-     * The Discovery Settings.
-     * 
+     * The Guest Settings.
+     * Settings to configure whether guests can create, update, or delete channels in the team.
      */
-    @SerializedName("discoverySettings")
+    @SerializedName("guestSettings")
     @Expose
-    public TeamDiscoverySettings discoverySettings;
+    public TeamGuestSettings guestSettings;
+
+    /**
+     * The Internal Id.
+     * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     */
+    @SerializedName("internalId")
+    @Expose
+    public String internalId;
 
     /**
      * The Is Archived.
@@ -165,12 +133,58 @@ public class Team extends Entity implements IJsonBackedObject {
     public Boolean isMembershipLimitedToOwners;
 
     /**
+     * The Member Settings.
+     * Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
+     */
+    @SerializedName("memberSettings")
+    @Expose
+    public TeamMemberSettings memberSettings;
+
+    /**
+     * The Messaging Settings.
+     * Settings to configure messaging and mentions in the team.
+     */
+    @SerializedName("messagingSettings")
+    @Expose
+    public TeamMessagingSettings messagingSettings;
+
+    /**
+     * The Specialization.
+     * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     */
+    @SerializedName("specialization")
+    @Expose
+    public TeamSpecialization specialization;
+
+    /**
+     * The Visibility.
+     * The visibility of the group and team. Defaults to Public.
+     */
+    @SerializedName("visibility")
+    @Expose
+    public TeamVisibilityType visibility;
+
+    /**
+     * The Web Url.
+     * A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
+
+    /**
      * The Schedule.
      * The schedule of shifts for this team.
      */
     @SerializedName("schedule")
     @Expose
     public Schedule schedule;
+
+    /**
+     * The Channels.
+     * The collection of channels &amp; messages associated with the team.
+     */
+    public ChannelCollectionPage channels;
 
     /**
      * The Group.
@@ -181,12 +195,28 @@ public class Team extends Entity implements IJsonBackedObject {
     public Group group;
 
     /**
-     * The Template.
-     * The template this team was created from. See available templates.
+     * The Installed Apps.
+     * The apps installed in this team.
      */
-    @SerializedName("template")
-    @Expose
-    public TeamsTemplate template;
+    public TeamsAppInstallationCollectionPage installedApps;
+
+    /**
+     * The Members.
+     * Members and owners of the team.
+     */
+    public ConversationMemberCollectionPage members;
+
+    /**
+     * The Operations.
+     * The async operations that ran or are running on this team.
+     */
+    public TeamsAsyncOperationCollectionPage operations;
+
+    /**
+     * The Owners.
+     * 
+     */
+    public UserCollectionPage owners;
 
     /**
      * The Photo.
@@ -197,24 +227,6 @@ public class Team extends Entity implements IJsonBackedObject {
     public ProfilePhoto photo;
 
     /**
-     * The Owners.
-     * 
-     */
-    public UserCollectionPage owners;
-
-    /**
-     * The Members.
-     * Members and owners of the team.
-     */
-    public ConversationMemberCollectionPage members;
-
-    /**
-     * The Channels.
-     * The collection of channels &amp; messages associated with the team.
-     */
-    public ChannelCollectionPage channels;
-
-    /**
      * The Primary Channel.
      * The general channel for the team.
      */
@@ -223,16 +235,12 @@ public class Team extends Entity implements IJsonBackedObject {
     public Channel primaryChannel;
 
     /**
-     * The Installed Apps.
-     * The apps installed in this team.
+     * The Template.
+     * The template this team was created from. See available templates.
      */
-    public TeamsAppInstallationCollectionPage installedApps;
-
-    /**
-     * The Operations.
-     * The async operations that ran or are running on this team.
-     */
-    public TeamsAsyncOperationCollectionPage operations;
+    @SerializedName("template")
+    @Expose
+    public TeamsTemplate template;
 
 
     /**
@@ -274,38 +282,6 @@ public class Team extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("owners")) {
-            final UserCollectionResponse response = new UserCollectionResponse();
-            if (json.has("owners@odata.nextLink")) {
-                response.nextLink = json.get("owners@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
-            final User[] array = new User[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), User.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            owners = new UserCollectionPage(response, null);
-        }
-
-        if (json.has("members")) {
-            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final ConversationMember[] array = new ConversationMember[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new ConversationMemberCollectionPage(response, null);
-        }
-
         if (json.has("channels")) {
             final ChannelCollectionResponse response = new ChannelCollectionResponse();
             if (json.has("channels@odata.nextLink")) {
@@ -338,6 +314,22 @@ public class Team extends Entity implements IJsonBackedObject {
             installedApps = new TeamsAppInstallationCollectionPage(response, null);
         }
 
+        if (json.has("members")) {
+            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
+            if (json.has("members@odata.nextLink")) {
+                response.nextLink = json.get("members@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
+            final ConversationMember[] array = new ConversationMember[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            members = new ConversationMemberCollectionPage(response, null);
+        }
+
         if (json.has("operations")) {
             final TeamsAsyncOperationCollectionResponse response = new TeamsAsyncOperationCollectionResponse();
             if (json.has("operations@odata.nextLink")) {
@@ -352,6 +344,22 @@ public class Team extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             operations = new TeamsAsyncOperationCollectionPage(response, null);
+        }
+
+        if (json.has("owners")) {
+            final UserCollectionResponse response = new UserCollectionResponse();
+            if (json.has("owners@odata.nextLink")) {
+                response.nextLink = json.get("owners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
+            final User[] array = new User[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), User.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            owners = new UserCollectionPage(response, null);
         }
     }
 }

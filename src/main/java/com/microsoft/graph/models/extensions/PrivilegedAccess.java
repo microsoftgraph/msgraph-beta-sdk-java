@@ -9,19 +9,19 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.GovernanceResource;
-import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
-import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignmentRequest;
+import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
 import com.microsoft.graph.models.extensions.GovernanceRoleSetting;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionPage;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionResponse;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionPage;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionResponse;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionResponse;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionPage;
 
@@ -56,10 +56,10 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
     public GovernanceResourceCollectionPage resources;
 
     /**
-     * The Role Definitions.
+     * The Role Assignment Requests.
      * 
      */
-    public GovernanceRoleDefinitionCollectionPage roleDefinitions;
+    public GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
 
     /**
      * The Role Assignments.
@@ -68,10 +68,10 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
     public GovernanceRoleAssignmentCollectionPage roleAssignments;
 
     /**
-     * The Role Assignment Requests.
+     * The Role Definitions.
      * 
      */
-    public GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
+    public GovernanceRoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Role Settings.
@@ -135,20 +135,20 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
             resources = new GovernanceResourceCollectionPage(response, null);
         }
 
-        if (json.has("roleDefinitions")) {
-            final GovernanceRoleDefinitionCollectionResponse response = new GovernanceRoleDefinitionCollectionResponse();
-            if (json.has("roleDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
+        if (json.has("roleAssignmentRequests")) {
+            final GovernanceRoleAssignmentRequestCollectionResponse response = new GovernanceRoleAssignmentRequestCollectionResponse();
+            if (json.has("roleAssignmentRequests@odata.nextLink")) {
+                response.nextLink = json.get("roleAssignmentRequests@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
-            final GovernanceRoleDefinition[] array = new GovernanceRoleDefinition[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignmentRequests").toString(), JsonObject[].class);
+            final GovernanceRoleAssignmentRequest[] array = new GovernanceRoleAssignmentRequest[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleDefinition.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleAssignmentRequest.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            roleDefinitions = new GovernanceRoleDefinitionCollectionPage(response, null);
+            roleAssignmentRequests = new GovernanceRoleAssignmentRequestCollectionPage(response, null);
         }
 
         if (json.has("roleAssignments")) {
@@ -167,20 +167,20 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
             roleAssignments = new GovernanceRoleAssignmentCollectionPage(response, null);
         }
 
-        if (json.has("roleAssignmentRequests")) {
-            final GovernanceRoleAssignmentRequestCollectionResponse response = new GovernanceRoleAssignmentRequestCollectionResponse();
-            if (json.has("roleAssignmentRequests@odata.nextLink")) {
-                response.nextLink = json.get("roleAssignmentRequests@odata.nextLink").getAsString();
+        if (json.has("roleDefinitions")) {
+            final GovernanceRoleDefinitionCollectionResponse response = new GovernanceRoleDefinitionCollectionResponse();
+            if (json.has("roleDefinitions@odata.nextLink")) {
+                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignmentRequests").toString(), JsonObject[].class);
-            final GovernanceRoleAssignmentRequest[] array = new GovernanceRoleAssignmentRequest[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
+            final GovernanceRoleDefinition[] array = new GovernanceRoleDefinition[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleAssignmentRequest.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GovernanceRoleDefinition.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            roleAssignmentRequests = new GovernanceRoleAssignmentRequestCollectionPage(response, null);
+            roleDefinitions = new GovernanceRoleDefinitionCollectionPage(response, null);
         }
 
         if (json.has("roleSettings")) {

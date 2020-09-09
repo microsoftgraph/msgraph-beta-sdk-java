@@ -27,22 +27,6 @@ public class PrintUsageSummaryByUser extends Entity implements IJsonBackedObject
 
 
     /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Usage Date.
-     * 
-     */
-    @SerializedName("usageDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly usageDate;
-
-    /**
      * The Completed Black And White Job Count.
      * 
      */
@@ -65,6 +49,22 @@ public class PrintUsageSummaryByUser extends Entity implements IJsonBackedObject
     @SerializedName("incompleteJobCount")
     @Expose
     public Long incompleteJobCount;
+
+    /**
+     * The Usage Date.
+     * 
+     */
+    @SerializedName("usageDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly usageDate;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

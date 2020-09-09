@@ -112,6 +112,27 @@ public class MailboxUsageQuotaStatusMailboxCountsRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a MailboxUsageQuotaStatusMailboxCounts with a new object
+     *
+     * @param newMailboxUsageQuotaStatusMailboxCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts, final ICallback<MailboxUsageQuotaStatusMailboxCounts> callback) {
+        send(HttpMethod.PUT, callback, newMailboxUsageQuotaStatusMailboxCounts);
+    }
+
+    /**
+     * Creates a MailboxUsageQuotaStatusMailboxCounts with a new object
+     *
+     * @param newMailboxUsageQuotaStatusMailboxCounts the object to create/update
+     * @return the created MailboxUsageQuotaStatusMailboxCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailboxUsageQuotaStatusMailboxCounts put(final MailboxUsageQuotaStatusMailboxCounts newMailboxUsageQuotaStatusMailboxCounts) throws ClientException {
+        return send(HttpMethod.PUT, newMailboxUsageQuotaStatusMailboxCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -116,6 +116,27 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
     }
 
     /**
+     * Creates a ExactMatchLookupJob with a new object
+     *
+     * @param newExactMatchLookupJob the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<ExactMatchLookupJob> callback) {
+        send(HttpMethod.PUT, callback, newExactMatchLookupJob);
+    }
+
+    /**
+     * Creates a ExactMatchLookupJob with a new object
+     *
+     * @param newExactMatchLookupJob the object to create/update
+     * @return the created ExactMatchLookupJob
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ExactMatchLookupJob put(final ExactMatchLookupJob newExactMatchLookupJob) throws ClientException {
+        return send(HttpMethod.PUT, newExactMatchLookupJob);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

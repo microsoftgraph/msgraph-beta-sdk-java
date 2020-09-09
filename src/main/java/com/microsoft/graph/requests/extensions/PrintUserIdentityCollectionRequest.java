@@ -62,14 +62,14 @@ public class PrintUserIdentityCollectionRequest extends BaseCollectionRequest<Pr
     public void post(final PrintUserIdentity newPrintUserIdentity, final ICallback<PrintUserIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintUserIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintUserIdentity, callback);
     }
 
     public PrintUserIdentity post(final PrintUserIdentity newPrintUserIdentity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintUserIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintUserIdentity);
     }
 
@@ -106,6 +106,27 @@ public class PrintUserIdentityCollectionRequest extends BaseCollectionRequest<Pr
         return (PrintUserIdentityCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintUserIdentityCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintUserIdentityCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintUserIdentityCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintUserIdentityCollectionRequest)this;
+    }
     public IPrintUserIdentityCollectionPage buildFromResponse(final PrintUserIdentityCollectionResponse response) {
         final IPrintUserIdentityCollectionRequestBuilder builder;
         if (response.nextLink != null) {

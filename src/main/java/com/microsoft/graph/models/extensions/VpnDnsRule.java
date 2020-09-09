@@ -36,6 +36,14 @@ public class VpnDnsRule implements IJsonBackedObject {
     }
 
     /**
+     * The Auto Trigger.
+     * Automatically connect to the VPN when the device connects to this domain: Default False.
+     */
+    @SerializedName("autoTrigger")
+    @Expose
+    public Boolean autoTrigger;
+
+    /**
      * The Name.
      * Name.
      */
@@ -44,12 +52,12 @@ public class VpnDnsRule implements IJsonBackedObject {
     public String name;
 
     /**
-     * The Servers.
-     * Servers.
+     * The Persistent.
+     * Keep this rule active even when the VPN is not connected: Default False
      */
-    @SerializedName("servers")
+    @SerializedName("persistent")
     @Expose
-    public java.util.List<String> servers;
+    public Boolean persistent;
 
     /**
      * The Proxy Server Uri.
@@ -60,20 +68,12 @@ public class VpnDnsRule implements IJsonBackedObject {
     public String proxyServerUri;
 
     /**
-     * The Auto Trigger.
-     * Automatically connect to the VPN when the device connects to this domain: Default False.
+     * The Servers.
+     * Servers.
      */
-    @SerializedName("autoTrigger")
+    @SerializedName("servers")
     @Expose
-    public Boolean autoTrigger;
-
-    /**
-     * The Persistent.
-     * Keep this rule active even when the VPN is not connected: Default False
-     */
-    @SerializedName("persistent")
-    @Expose
-    public Boolean persistent;
+    public java.util.List<String> servers;
 
 
     /**

@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.VpnEncryptionAlgorithmType;
-import com.microsoft.graph.models.generated.VpnIntegrityAlgorithmType;
-import com.microsoft.graph.models.generated.DiffieHellmanGroup;
 import com.microsoft.graph.models.generated.AuthenticationTransformConstant;
+import com.microsoft.graph.models.generated.VpnEncryptionAlgorithmType;
+import com.microsoft.graph.models.generated.DiffieHellmanGroup;
+import com.microsoft.graph.models.generated.VpnIntegrityAlgorithmType;
 import com.microsoft.graph.models.generated.PerfectForwardSecrecyGroup;
 
 
@@ -41,6 +41,30 @@ public class CryptographySuite implements IJsonBackedObject {
     }
 
     /**
+     * The Authentication Transform Constants.
+     * Authentication Transform Constants
+     */
+    @SerializedName("authenticationTransformConstants")
+    @Expose
+    public AuthenticationTransformConstant authenticationTransformConstants;
+
+    /**
+     * The Cipher Transform Constants.
+     * Cipher Transform Constants
+     */
+    @SerializedName("cipherTransformConstants")
+    @Expose
+    public VpnEncryptionAlgorithmType cipherTransformConstants;
+
+    /**
+     * The Dh Group.
+     * Diffie Hellman Group
+     */
+    @SerializedName("dhGroup")
+    @Expose
+    public DiffieHellmanGroup dhGroup;
+
+    /**
      * The Encryption Method.
      * Encryption Method
      */
@@ -55,30 +79,6 @@ public class CryptographySuite implements IJsonBackedObject {
     @SerializedName("integrityCheckMethod")
     @Expose
     public VpnIntegrityAlgorithmType integrityCheckMethod;
-
-    /**
-     * The Dh Group.
-     * Diffie Hellman Group
-     */
-    @SerializedName("dhGroup")
-    @Expose
-    public DiffieHellmanGroup dhGroup;
-
-    /**
-     * The Cipher Transform Constants.
-     * Cipher Transform Constants
-     */
-    @SerializedName("cipherTransformConstants")
-    @Expose
-    public VpnEncryptionAlgorithmType cipherTransformConstants;
-
-    /**
-     * The Authentication Transform Constants.
-     * Authentication Transform Constants
-     */
-    @SerializedName("authenticationTransformConstants")
-    @Expose
-    public AuthenticationTransformConstant authenticationTransformConstants;
 
     /**
      * The Pfs Group.

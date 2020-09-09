@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementScheduledReportRecurrence;
 import com.microsoft.graph.models.generated.DeviceManagementReportFileFormat;
+import com.microsoft.graph.models.generated.DeviceManagementScheduledReportRecurrence;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,44 +29,12 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
 
 
     /**
-     * The Report Schedule Name.
-     * Name of the schedule
-     */
-    @SerializedName("reportScheduleName")
-    @Expose
-    public String reportScheduleName;
-
-    /**
-     * The Subject.
-     * Subject of the scheduled reports that are delivered
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
-
-    /**
      * The Emails.
      * Emails to which the scheduled reports are delivered
      */
     @SerializedName("emails")
     @Expose
     public java.util.List<String> emails;
-
-    /**
-     * The Recurrence.
-     * Frequency of scheduled report delivery
-     */
-    @SerializedName("recurrence")
-    @Expose
-    public DeviceManagementScheduledReportRecurrence recurrence;
-
-    /**
-     * The Start Date Time.
-     * Time that the delivery of the scheduled reports starts
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
 
     /**
      * The End Date Time.
@@ -77,22 +45,6 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
     public java.util.Calendar endDateTime;
 
     /**
-     * The User Id.
-     * The Id of the User who created the report
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The Report Name.
-     * Name of the report
-     */
-    @SerializedName("reportName")
-    @Expose
-    public String reportName;
-
-    /**
      * The Filter.
      * Filters applied on the report
      */
@@ -101,12 +53,12 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
     public String filter;
 
     /**
-     * The Select.
-     * Columns selected from the report
+     * The Format.
+     * Format of the scheduled report
      */
-    @SerializedName("select")
+    @SerializedName("format")
     @Expose
-    public java.util.List<String> select;
+    public DeviceManagementReportFileFormat format;
 
     /**
      * The Order By.
@@ -117,12 +69,60 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
     public java.util.List<String> orderBy;
 
     /**
-     * The Format.
-     * Format of the scheduled report
+     * The Recurrence.
+     * Frequency of scheduled report delivery
      */
-    @SerializedName("format")
+    @SerializedName("recurrence")
     @Expose
-    public DeviceManagementReportFileFormat format;
+    public DeviceManagementScheduledReportRecurrence recurrence;
+
+    /**
+     * The Report Name.
+     * Name of the report
+     */
+    @SerializedName("reportName")
+    @Expose
+    public String reportName;
+
+    /**
+     * The Report Schedule Name.
+     * Name of the schedule
+     */
+    @SerializedName("reportScheduleName")
+    @Expose
+    public String reportScheduleName;
+
+    /**
+     * The Select.
+     * Columns selected from the report
+     */
+    @SerializedName("select")
+    @Expose
+    public java.util.List<String> select;
+
+    /**
+     * The Start Date Time.
+     * Time that the delivery of the scheduled reports starts
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Subject.
+     * Subject of the scheduled reports that are delivered
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
+
+    /**
+     * The User Id.
+     * The Id of the User who created the report
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

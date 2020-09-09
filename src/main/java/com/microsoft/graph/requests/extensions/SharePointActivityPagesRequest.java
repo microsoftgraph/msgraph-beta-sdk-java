@@ -112,6 +112,27 @@ public class SharePointActivityPagesRequest extends BaseRequest implements IShar
     }
 
     /**
+     * Creates a SharePointActivityPages with a new object
+     *
+     * @param newSharePointActivityPages the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharePointActivityPages newSharePointActivityPages, final ICallback<SharePointActivityPages> callback) {
+        send(HttpMethod.PUT, callback, newSharePointActivityPages);
+    }
+
+    /**
+     * Creates a SharePointActivityPages with a new object
+     *
+     * @param newSharePointActivityPages the object to create/update
+     * @return the created SharePointActivityPages
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharePointActivityPages put(final SharePointActivityPages newSharePointActivityPages) throws ClientException {
+        return send(HttpMethod.PUT, newSharePointActivityPages);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EvaluateLabelJobResultGroup;
-import com.microsoft.graph.models.extensions.DlpPoliciesJobResult;
 import com.microsoft.graph.models.extensions.DetectedSensitiveContentWrapper;
+import com.microsoft.graph.models.extensions.DlpPoliciesJobResult;
+import com.microsoft.graph.models.extensions.EvaluateLabelJobResultGroup;
 
 
 import com.google.gson.JsonObject;
@@ -39,12 +39,12 @@ public class EvaluateLabelsAndPoliciesResult implements IJsonBackedObject {
     }
 
     /**
-     * The Sensitivity Labels Result.
+     * The Classification Result.
      * 
      */
-    @SerializedName("sensitivityLabelsResult")
+    @SerializedName("classificationResult")
     @Expose
-    public EvaluateLabelJobResultGroup sensitivityLabelsResult;
+    public DetectedSensitiveContentWrapper classificationResult;
 
     /**
      * The Data Loss Prevention Policies Result.
@@ -55,12 +55,12 @@ public class EvaluateLabelsAndPoliciesResult implements IJsonBackedObject {
     public DlpPoliciesJobResult dataLossPreventionPoliciesResult;
 
     /**
-     * The Classification Result.
+     * The Sensitivity Labels Result.
      * 
      */
-    @SerializedName("classificationResult")
+    @SerializedName("sensitivityLabelsResult")
     @Expose
-    public DetectedSensitiveContentWrapper classificationResult;
+    public EvaluateLabelJobResultGroup sensitivityLabelsResult;
 
 
     /**

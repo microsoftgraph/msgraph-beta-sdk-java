@@ -80,6 +80,23 @@ public interface IRiskyUserHistoryItemRequest extends IHttpRequest {
     RiskyUserHistoryItem post(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException;
 
     /**
+     * Posts a RiskyUserHistoryItem with a new object
+     *
+     * @param newRiskyUserHistoryItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<RiskyUserHistoryItem> callback);
+
+    /**
+     * Posts a RiskyUserHistoryItem with a new object
+     *
+     * @param newRiskyUserHistoryItem the object to create/update
+     * @return the created RiskyUserHistoryItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RiskyUserHistoryItem put(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionRequestBuilder;
@@ -67,19 +67,19 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
     }
 
 
-    public IAccessPackageResourceCollectionRequestBuilder accessPackageResources() {
-        return new AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
-    }
-
-    public IAccessPackageResourceRequestBuilder accessPackageResources(final String id) {
-        return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
-    }
     public IAccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles() {
         return new AccessPackageResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles"), getClient(), null);
     }
 
     public IAccessPackageResourceRoleRequestBuilder accessPackageResourceRoles(final String id) {
         return new AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles") + "/" + id, getClient(), null);
+    }
+    public IAccessPackageResourceCollectionRequestBuilder accessPackageResources() {
+        return new AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
+    }
+
+    public IAccessPackageResourceRequestBuilder accessPackageResources(final String id) {
+        return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
     }
     public IAccessPackageResourceScopeCollectionRequestBuilder accessPackageResourceScopes() {
         return new AccessPackageResourceScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes"), getClient(), null);

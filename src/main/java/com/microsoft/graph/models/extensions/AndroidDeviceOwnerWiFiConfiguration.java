@@ -28,22 +28,6 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
 
 
     /**
-     * The Network Name.
-     * Network Name
-     */
-    @SerializedName("networkName")
-    @Expose
-    public String networkName;
-
-    /**
-     * The Ssid.
-     * This is the name of the Wi-Fi network that is broadcast to all devices.
-     */
-    @SerializedName("ssid")
-    @Expose
-    public String ssid;
-
-    /**
      * The Connect Automatically.
      * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
      */
@@ -60,12 +44,12 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     public Boolean connectWhenNetworkNameIsHidden;
 
     /**
-     * The Wi Fi Security Type.
-     * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+     * The Network Name.
+     * Network Name
      */
-    @SerializedName("wiFiSecurityType")
+    @SerializedName("networkName")
     @Expose
-    public AndroidDeviceOwnerWiFiSecurityType wiFiSecurityType;
+    public String networkName;
 
     /**
      * The Pre Shared Key.
@@ -82,6 +66,22 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     @SerializedName("preSharedKeyIsSet")
     @Expose
     public Boolean preSharedKeyIsSet;
+
+    /**
+     * The Ssid.
+     * This is the name of the Wi-Fi network that is broadcast to all devices.
+     */
+    @SerializedName("ssid")
+    @Expose
+    public String ssid;
+
+    /**
+     * The Wi Fi Security Type.
+     * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+     */
+    @SerializedName("wiFiSecurityType")
+    @Expose
+    public AndroidDeviceOwnerWiFiSecurityType wiFiSecurityType;
 
 
     /**

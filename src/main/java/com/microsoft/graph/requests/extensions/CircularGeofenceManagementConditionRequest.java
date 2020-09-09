@@ -112,6 +112,27 @@ public class CircularGeofenceManagementConditionRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a CircularGeofenceManagementCondition with a new object
+     *
+     * @param newCircularGeofenceManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition, final ICallback<CircularGeofenceManagementCondition> callback) {
+        send(HttpMethod.PUT, callback, newCircularGeofenceManagementCondition);
+    }
+
+    /**
+     * Creates a CircularGeofenceManagementCondition with a new object
+     *
+     * @param newCircularGeofenceManagementCondition the object to create/update
+     * @return the created CircularGeofenceManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CircularGeofenceManagementCondition put(final CircularGeofenceManagementCondition newCircularGeofenceManagementCondition) throws ClientException {
+        return send(HttpMethod.PUT, newCircularGeofenceManagementCondition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

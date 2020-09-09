@@ -61,14 +61,14 @@ public class ProgramControlCollectionRequest extends BaseCollectionRequest<Progr
     public void post(final ProgramControl newProgramControl, final ICallback<ProgramControl> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProgramControlRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProgramControl, callback);
     }
 
     public ProgramControl post(final ProgramControl newProgramControl) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProgramControlRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProgramControl);
     }
 
@@ -105,6 +105,27 @@ public class ProgramControlCollectionRequest extends BaseCollectionRequest<Progr
         return (ProgramControlCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProgramControlCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProgramControlCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProgramControlCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProgramControlCollectionRequest)this;
+    }
     public IProgramControlCollectionPage buildFromResponse(final ProgramControlCollectionResponse response) {
         final IProgramControlCollectionRequestBuilder builder;
         if (response.nextLink != null) {

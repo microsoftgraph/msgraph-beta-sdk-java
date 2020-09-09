@@ -36,15 +36,15 @@ public interface IItemRequestBuilder extends IRequestBuilder {
     IItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPictureCollectionRequestBuilder picture();
-
-    IPictureRequestBuilder picture(final String id);
-
     /**
      * Gets the request builder for ItemCategory
      *
      * @return the IItemCategoryRequestBuilder instance
      */
     IItemCategoryRequestBuilder itemCategory();
+
+    IPictureCollectionRequestBuilder picture();
+
+    IPictureRequestBuilder picture(final String id);
 
 }

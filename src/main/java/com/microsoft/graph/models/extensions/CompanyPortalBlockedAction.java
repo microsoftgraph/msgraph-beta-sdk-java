@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DevicePlatformType;
-import com.microsoft.graph.models.generated.OwnerType;
 import com.microsoft.graph.models.generated.CompanyPortalAction;
+import com.microsoft.graph.models.generated.OwnerType;
+import com.microsoft.graph.models.generated.DevicePlatformType;
 
 
 import com.google.gson.JsonObject;
@@ -39,12 +39,12 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
     }
 
     /**
-     * The Platform.
-     * Device OS/Platform
+     * The Action.
+     * Device Action
      */
-    @SerializedName("platform")
+    @SerializedName("action")
     @Expose
-    public DevicePlatformType platform;
+    public CompanyPortalAction action;
 
     /**
      * The Owner Type.
@@ -55,12 +55,12 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
     public OwnerType ownerType;
 
     /**
-     * The Action.
-     * Device Action
+     * The Platform.
+     * Device OS/Platform
      */
-    @SerializedName("action")
+    @SerializedName("platform")
     @Expose
-    public CompanyPortalAction action;
+    public DevicePlatformType platform;
 
 
     /**

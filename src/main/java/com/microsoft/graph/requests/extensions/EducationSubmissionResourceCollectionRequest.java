@@ -62,14 +62,14 @@ public class EducationSubmissionResourceCollectionRequest extends BaseCollection
     public void post(final EducationSubmissionResource newEducationSubmissionResource, final ICallback<EducationSubmissionResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSubmissionResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSubmissionResource, callback);
     }
 
     public EducationSubmissionResource post(final EducationSubmissionResource newEducationSubmissionResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationSubmissionResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSubmissionResource);
     }
 
@@ -106,6 +106,27 @@ public class EducationSubmissionResourceCollectionRequest extends BaseCollection
         return (EducationSubmissionResourceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationSubmissionResourceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationSubmissionResourceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationSubmissionResourceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationSubmissionResourceCollectionRequest)this;
+    }
     public IEducationSubmissionResourceCollectionPage buildFromResponse(final EducationSubmissionResourceCollectionResponse response) {
         final IEducationSubmissionResourceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

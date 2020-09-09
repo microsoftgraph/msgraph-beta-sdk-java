@@ -62,14 +62,14 @@ public class WindowsUpdateStateCollectionRequest extends BaseCollectionRequest<W
     public void post(final WindowsUpdateState newWindowsUpdateState, final ICallback<WindowsUpdateState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsUpdateStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsUpdateState, callback);
     }
 
     public WindowsUpdateState post(final WindowsUpdateState newWindowsUpdateState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsUpdateStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsUpdateState);
     }
 
@@ -106,6 +106,27 @@ public class WindowsUpdateStateCollectionRequest extends BaseCollectionRequest<W
         return (WindowsUpdateStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsUpdateStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsUpdateStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsUpdateStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsUpdateStateCollectionRequest)this;
+    }
     public IWindowsUpdateStateCollectionPage buildFromResponse(final WindowsUpdateStateCollectionResponse response) {
         final IWindowsUpdateStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

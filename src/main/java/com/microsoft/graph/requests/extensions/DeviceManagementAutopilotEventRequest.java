@@ -116,6 +116,27 @@ public class DeviceManagementAutopilotEventRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a DeviceManagementAutopilotEvent with a new object
+     *
+     * @param newDeviceManagementAutopilotEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent, final ICallback<DeviceManagementAutopilotEvent> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementAutopilotEvent);
+    }
+
+    /**
+     * Creates a DeviceManagementAutopilotEvent with a new object
+     *
+     * @param newDeviceManagementAutopilotEvent the object to create/update
+     * @return the created DeviceManagementAutopilotEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementAutopilotEvent put(final DeviceManagementAutopilotEvent newDeviceManagementAutopilotEvent) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementAutopilotEvent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

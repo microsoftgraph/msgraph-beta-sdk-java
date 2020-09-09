@@ -80,6 +80,23 @@ public interface IItemRequest extends IHttpRequest {
     Item post(final Item newItem) throws ClientException;
 
     /**
+     * Posts a Item with a new object
+     *
+     * @param newItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Item newItem, final ICallback<Item> callback);
+
+    /**
+     * Posts a Item with a new object
+     *
+     * @param newItem the object to create/update
+     * @return the created Item
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Item put(final Item newItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

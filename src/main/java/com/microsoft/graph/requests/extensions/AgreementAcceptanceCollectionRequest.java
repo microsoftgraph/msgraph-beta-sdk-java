@@ -61,14 +61,14 @@ public class AgreementAcceptanceCollectionRequest extends BaseCollectionRequest<
     public void post(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AgreementAcceptanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreementAcceptance, callback);
     }
 
     public AgreementAcceptance post(final AgreementAcceptance newAgreementAcceptance) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AgreementAcceptanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgreementAcceptance);
     }
 
@@ -105,6 +105,27 @@ public class AgreementAcceptanceCollectionRequest extends BaseCollectionRequest<
         return (AgreementAcceptanceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAgreementAcceptanceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AgreementAcceptanceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAgreementAcceptanceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAgreementAcceptanceCollectionRequest)this;
+    }
     public IAgreementAcceptanceCollectionPage buildFromResponse(final AgreementAcceptanceCollectionResponse response) {
         final IAgreementAcceptanceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

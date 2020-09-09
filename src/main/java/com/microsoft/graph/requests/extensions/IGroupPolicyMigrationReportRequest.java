@@ -80,6 +80,23 @@ public interface IGroupPolicyMigrationReportRequest extends IHttpRequest {
     GroupPolicyMigrationReport post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException;
 
     /**
+     * Posts a GroupPolicyMigrationReport with a new object
+     *
+     * @param newGroupPolicyMigrationReport the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback);
+
+    /**
+     * Posts a GroupPolicyMigrationReport with a new object
+     *
+     * @param newGroupPolicyMigrationReport the object to create/update
+     * @return the created GroupPolicyMigrationReport
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyMigrationReport put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

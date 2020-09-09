@@ -80,6 +80,23 @@ public interface IResourceSpecificPermissionGrantRequest extends IHttpRequest {
     ResourceSpecificPermissionGrant post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException;
 
     /**
+     * Posts a ResourceSpecificPermissionGrant with a new object
+     *
+     * @param newResourceSpecificPermissionGrant the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<ResourceSpecificPermissionGrant> callback);
+
+    /**
+     * Posts a ResourceSpecificPermissionGrant with a new object
+     *
+     * @param newResourceSpecificPermissionGrant the object to create/update
+     * @return the created ResourceSpecificPermissionGrant
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ResourceSpecificPermissionGrant put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

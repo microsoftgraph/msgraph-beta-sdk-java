@@ -112,6 +112,27 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
     }
 
     /**
+     * Creates a SecurityAction with a new object
+     *
+     * @param newSecurityAction the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback) {
+        send(HttpMethod.PUT, callback, newSecurityAction);
+    }
+
+    /**
+     * Creates a SecurityAction with a new object
+     *
+     * @param newSecurityAction the object to create/update
+     * @return the created SecurityAction
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityAction put(final SecurityAction newSecurityAction) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityAction);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

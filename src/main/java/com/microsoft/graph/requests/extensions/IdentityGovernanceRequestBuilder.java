@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,15 +59,6 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
 
 
     /**
-     * Gets the request builder for EntitlementManagement
-     *
-     * @return the IEntitlementManagementRequestBuilder instance
-     */
-    public IEntitlementManagementRequestBuilder entitlementManagement() {
-        return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for AccessReviewSet
      *
      * @return the IAccessReviewSetRequestBuilder instance
@@ -83,5 +74,14 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      */
     public ITermsOfUseContainerRequestBuilder termsOfUse() {
         return new TermsOfUseContainerRequestBuilder(getRequestUrlWithAdditionalSegment("termsOfUse"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EntitlementManagement
+     *
+     * @return the IEntitlementManagementRequestBuilder instance
+     */
+    public IEntitlementManagementRequestBuilder entitlementManagement() {
+        return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
 }

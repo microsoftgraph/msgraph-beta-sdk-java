@@ -112,6 +112,27 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a DeviceManagementScriptPolicySetItem with a new object
+     *
+     * @param newDeviceManagementScriptPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<DeviceManagementScriptPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementScriptPolicySetItem);
+    }
+
+    /**
+     * Creates a DeviceManagementScriptPolicySetItem with a new object
+     *
+     * @param newDeviceManagementScriptPolicySetItem the object to create/update
+     * @return the created DeviceManagementScriptPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementScriptPolicySetItem put(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementScriptPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

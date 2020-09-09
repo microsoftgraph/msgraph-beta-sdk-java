@@ -80,6 +80,23 @@ public interface IGovernanceRoleSettingRequest extends IHttpRequest {
     GovernanceRoleSetting post(final GovernanceRoleSetting newGovernanceRoleSetting) throws ClientException;
 
     /**
+     * Posts a GovernanceRoleSetting with a new object
+     *
+     * @param newGovernanceRoleSetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback);
+
+    /**
+     * Posts a GovernanceRoleSetting with a new object
+     *
+     * @param newGovernanceRoleSetting the object to create/update
+     * @return the created GovernanceRoleSetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GovernanceRoleSetting put(final GovernanceRoleSetting newGovernanceRoleSetting) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

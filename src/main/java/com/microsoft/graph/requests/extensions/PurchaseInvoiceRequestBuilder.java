@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionReq
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
-import com.microsoft.graph.requests.extensions.VendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
+import com.microsoft.graph.requests.extensions.VendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,6 +59,15 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
     }
 
 
+
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    public ICurrencyRequestBuilder currency() {
+        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
+    }
     public IPurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
         return new PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
     }
@@ -74,15 +83,6 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
      */
     public IVendorRequestBuilder vendor() {
         return new VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendor"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    public ICurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     public IPurchaseInvoicePostRequestBuilder post() {

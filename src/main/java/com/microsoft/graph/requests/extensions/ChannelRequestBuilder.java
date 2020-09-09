@@ -9,6 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
@@ -17,10 +21,6 @@ import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
@@ -66,6 +66,22 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
     }
 
 
+
+    /**
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
+     */
+    public IDriveItemRequestBuilder filesFolder() {
+        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
+    }
+    public IConversationMemberCollectionRequestBuilder members() {
+        return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    }
+
+    public IConversationMemberRequestBuilder members(final String id) {
+        return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    }
     public IChatMessageCollectionRequestBuilder messages() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
@@ -80,20 +96,8 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
     public ITeamsTabRequestBuilder tabs(final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }
-    public IConversationMemberCollectionRequestBuilder members() {
-        return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
-    }
 
-    public IConversationMemberRequestBuilder members(final String id) {
-        return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for DriveItem
-     *
-     * @return the IDriveItemRequestBuilder instance
-     */
-    public IDriveItemRequestBuilder filesFolder() {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
+    public IChannelCompleteMigrationRequestBuilder completeMigration() {
+        return new ChannelCompleteMigrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeMigration"), getClient(), null);
     }
 }

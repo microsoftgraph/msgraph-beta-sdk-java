@@ -112,6 +112,27 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a EnterpriseCodeSigningCertificate with a new object
+     *
+     * @param newEnterpriseCodeSigningCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<EnterpriseCodeSigningCertificate> callback) {
+        send(HttpMethod.PUT, callback, newEnterpriseCodeSigningCertificate);
+    }
+
+    /**
+     * Creates a EnterpriseCodeSigningCertificate with a new object
+     *
+     * @param newEnterpriseCodeSigningCertificate the object to create/update
+     * @return the created EnterpriseCodeSigningCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EnterpriseCodeSigningCertificate put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newEnterpriseCodeSigningCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

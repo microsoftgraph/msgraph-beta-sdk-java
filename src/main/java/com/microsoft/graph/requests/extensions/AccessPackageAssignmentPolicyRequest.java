@@ -116,6 +116,27 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a AccessPackageAssignmentPolicy with a new object
+     *
+     * @param newAccessPackageAssignmentPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<AccessPackageAssignmentPolicy> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageAssignmentPolicy);
+    }
+
+    /**
+     * Creates a AccessPackageAssignmentPolicy with a new object
+     *
+     * @param newAccessPackageAssignmentPolicy the object to create/update
+     * @return the created AccessPackageAssignmentPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageAssignmentPolicy put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageAssignmentPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

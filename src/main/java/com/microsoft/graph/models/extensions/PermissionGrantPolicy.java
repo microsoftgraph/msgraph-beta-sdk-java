@@ -30,16 +30,16 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
 
     /**
-     * The Includes.
-     * 
-     */
-    public PermissionGrantConditionSetCollectionPage includes;
-
-    /**
      * The Excludes.
      * 
      */
     public PermissionGrantConditionSetCollectionPage excludes;
+
+    /**
+     * The Includes.
+     * 
+     */
+    public PermissionGrantConditionSetCollectionPage includes;
 
 
     /**
@@ -81,22 +81,6 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
         rawObject = json;
 
 
-        if (json.has("includes")) {
-            final PermissionGrantConditionSetCollectionResponse response = new PermissionGrantConditionSetCollectionResponse();
-            if (json.has("includes@odata.nextLink")) {
-                response.nextLink = json.get("includes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("includes").toString(), JsonObject[].class);
-            final PermissionGrantConditionSet[] array = new PermissionGrantConditionSet[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PermissionGrantConditionSet.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            includes = new PermissionGrantConditionSetCollectionPage(response, null);
-        }
-
         if (json.has("excludes")) {
             final PermissionGrantConditionSetCollectionResponse response = new PermissionGrantConditionSetCollectionResponse();
             if (json.has("excludes@odata.nextLink")) {
@@ -111,6 +95,22 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
             }
             response.value = Arrays.asList(array);
             excludes = new PermissionGrantConditionSetCollectionPage(response, null);
+        }
+
+        if (json.has("includes")) {
+            final PermissionGrantConditionSetCollectionResponse response = new PermissionGrantConditionSetCollectionResponse();
+            if (json.has("includes@odata.nextLink")) {
+                response.nextLink = json.get("includes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("includes").toString(), JsonObject[].class);
+            final PermissionGrantConditionSet[] array = new PermissionGrantConditionSet[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PermissionGrantConditionSet.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            includes = new PermissionGrantConditionSetCollectionPage(response, null);
         }
     }
 }

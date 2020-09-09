@@ -62,14 +62,14 @@ public class EdiscoveryCaseCollectionRequest extends BaseCollectionRequest<Edisc
     public void post(final EdiscoveryCase newEdiscoveryCase, final ICallback<EdiscoveryCase> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EdiscoveryCaseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEdiscoveryCase, callback);
     }
 
     public EdiscoveryCase post(final EdiscoveryCase newEdiscoveryCase) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EdiscoveryCaseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEdiscoveryCase);
     }
 
@@ -106,6 +106,27 @@ public class EdiscoveryCaseCollectionRequest extends BaseCollectionRequest<Edisc
         return (EdiscoveryCaseCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEdiscoveryCaseCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EdiscoveryCaseCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEdiscoveryCaseCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEdiscoveryCaseCollectionRequest)this;
+    }
     public IEdiscoveryCaseCollectionPage buildFromResponse(final EdiscoveryCaseCollectionResponse response) {
         final IEdiscoveryCaseCollectionRequestBuilder builder;
         if (response.nextLink != null) {

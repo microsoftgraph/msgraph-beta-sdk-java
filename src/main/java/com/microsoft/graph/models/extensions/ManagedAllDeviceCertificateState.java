@@ -28,6 +28,46 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
 
 
     /**
+     * The Certificate Expiration Date Time.
+     * Certificate expiry date
+     */
+    @SerializedName("certificateExpirationDateTime")
+    @Expose
+    public java.util.Calendar certificateExpirationDateTime;
+
+    /**
+     * The Certificate Extended Key Usages.
+     * Enhanced Key Usage
+     */
+    @SerializedName("certificateExtendedKeyUsages")
+    @Expose
+    public String certificateExtendedKeyUsages;
+
+    /**
+     * The Certificate Issuance Date Time.
+     * Issuance date
+     */
+    @SerializedName("certificateIssuanceDateTime")
+    @Expose
+    public java.util.Calendar certificateIssuanceDateTime;
+
+    /**
+     * The Certificate Issuer Name.
+     * Issuer
+     */
+    @SerializedName("certificateIssuerName")
+    @Expose
+    public String certificateIssuerName;
+
+    /**
+     * The Certificate Key Usages.
+     * Key Usage
+     */
+    @SerializedName("certificateKeyUsages")
+    @Expose
+    public Integer certificateKeyUsages;
+
+    /**
      * The Certificate Revoke Status.
      * Revoke status
      */
@@ -42,46 +82,6 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
     @SerializedName("certificateRevokeStatusLastChangeDateTime")
     @Expose
     public java.util.Calendar certificateRevokeStatusLastChangeDateTime;
-
-    /**
-     * The Managed Device Display Name.
-     * Device display name
-     */
-    @SerializedName("managedDeviceDisplayName")
-    @Expose
-    public String managedDeviceDisplayName;
-
-    /**
-     * The User Principal Name.
-     * User principal name
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Certificate Expiration Date Time.
-     * Certificate expiry date
-     */
-    @SerializedName("certificateExpirationDateTime")
-    @Expose
-    public java.util.Calendar certificateExpirationDateTime;
-
-    /**
-     * The Certificate Issuer Name.
-     * Issuer
-     */
-    @SerializedName("certificateIssuerName")
-    @Expose
-    public String certificateIssuerName;
-
-    /**
-     * The Certificate Thumbprint.
-     * Thumbprint
-     */
-    @SerializedName("certificateThumbprint")
-    @Expose
-    public String certificateThumbprint;
 
     /**
      * The Certificate Serial Number.
@@ -100,28 +100,28 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
     public String certificateSubjectName;
 
     /**
-     * The Certificate Key Usages.
-     * Key Usage
+     * The Certificate Thumbprint.
+     * Thumbprint
      */
-    @SerializedName("certificateKeyUsages")
+    @SerializedName("certificateThumbprint")
     @Expose
-    public Integer certificateKeyUsages;
+    public String certificateThumbprint;
 
     /**
-     * The Certificate Extended Key Usages.
-     * Enhanced Key Usage
+     * The Managed Device Display Name.
+     * Device display name
      */
-    @SerializedName("certificateExtendedKeyUsages")
+    @SerializedName("managedDeviceDisplayName")
     @Expose
-    public String certificateExtendedKeyUsages;
+    public String managedDeviceDisplayName;
 
     /**
-     * The Certificate Issuance Date Time.
-     * Issuance date
+     * The User Principal Name.
+     * User principal name
      */
-    @SerializedName("certificateIssuanceDateTime")
+    @SerializedName("userPrincipalName")
     @Expose
-    public java.util.Calendar certificateIssuanceDateTime;
+    public String userPrincipalName;
 
 
     /**

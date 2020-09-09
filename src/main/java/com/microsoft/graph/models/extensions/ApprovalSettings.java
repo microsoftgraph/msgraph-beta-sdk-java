@@ -37,6 +37,22 @@ public class ApprovalSettings implements IJsonBackedObject {
     }
 
     /**
+     * The Approval Mode.
+     * 
+     */
+    @SerializedName("approvalMode")
+    @Expose
+    public String approvalMode;
+
+    /**
+     * The Approval Stages.
+     * 
+     */
+    @SerializedName("approvalStages")
+    @Expose
+    public java.util.List<ApprovalStage> approvalStages;
+
+    /**
      * The Is Approval Required.
      * 
      */
@@ -59,22 +75,6 @@ public class ApprovalSettings implements IJsonBackedObject {
     @SerializedName("isRequestorJustificationRequired")
     @Expose
     public Boolean isRequestorJustificationRequired;
-
-    /**
-     * The Approval Mode.
-     * 
-     */
-    @SerializedName("approvalMode")
-    @Expose
-    public String approvalMode;
-
-    /**
-     * The Approval Stages.
-     * 
-     */
-    @SerializedName("approvalStages")
-    @Expose
-    public java.util.List<ApprovalStage> approvalStages;
 
 
     /**

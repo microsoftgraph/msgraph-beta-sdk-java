@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.DirectorySizeQuota;
 import com.microsoft.graph.models.extensions.PrivacyProfile;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
 import com.microsoft.graph.models.extensions.VerifiedDomain;
-import com.microsoft.graph.models.generated.MdmAuthority;
 import com.microsoft.graph.models.extensions.CertificateConnectorSetting;
+import com.microsoft.graph.models.generated.MdmAuthority;
 import com.microsoft.graph.models.extensions.OrganizationalBranding;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.extensions.Extension;
@@ -220,20 +220,20 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<VerifiedDomain> verifiedDomains;
 
     /**
-     * The Mobile Device Management Authority.
-     * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
-     */
-    @SerializedName("mobileDeviceManagementAuthority")
-    @Expose
-    public MdmAuthority mobileDeviceManagementAuthority;
-
-    /**
      * The Certificate Connector Setting.
      * Certificate connector setting.
      */
     @SerializedName("certificateConnectorSetting")
     @Expose
     public CertificateConnectorSetting certificateConnectorSetting;
+
+    /**
+     * The Mobile Device Management Authority.
+     * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+     */
+    @SerializedName("mobileDeviceManagementAuthority")
+    @Expose
+    public MdmAuthority mobileDeviceManagementAuthority;
 
     /**
      * The Brandings.

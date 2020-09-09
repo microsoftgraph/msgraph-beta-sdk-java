@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.PrinterCapabilities;
 import com.microsoft.graph.models.extensions.PrinterDefaults;
 import com.microsoft.graph.models.extensions.PrinterLocation;
-import com.microsoft.graph.models.extensions.PrinterCapabilities;
 import com.microsoft.graph.models.extensions.PrinterStatus;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.Entity;
@@ -34,12 +34,36 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
+     * The Capabilities.
      * 
      */
-    @SerializedName("name")
+    @SerializedName("capabilities")
     @Expose
-    public String name;
+    public PrinterCapabilities capabilities;
+
+    /**
+     * The Defaults.
+     * 
+     */
+    @SerializedName("defaults")
+    @Expose
+    public PrinterDefaults defaults;
+
+    /**
+     * The Is Accepting Jobs.
+     * 
+     */
+    @SerializedName("isAcceptingJobs")
+    @Expose
+    public Boolean isAcceptingJobs;
+
+    /**
+     * The Location.
+     * 
+     */
+    @SerializedName("location")
+    @Expose
+    public PrinterLocation location;
 
     /**
      * The Manufacturer.
@@ -58,36 +82,12 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
     public String model;
 
     /**
-     * The Is Accepting Jobs.
+     * The Name.
      * 
      */
-    @SerializedName("isAcceptingJobs")
+    @SerializedName("name")
     @Expose
-    public Boolean isAcceptingJobs;
-
-    /**
-     * The Defaults.
-     * 
-     */
-    @SerializedName("defaults")
-    @Expose
-    public PrinterDefaults defaults;
-
-    /**
-     * The Location.
-     * 
-     */
-    @SerializedName("location")
-    @Expose
-    public PrinterLocation location;
-
-    /**
-     * The Capabilities.
-     * 
-     */
-    @SerializedName("capabilities")
-    @Expose
-    public PrinterCapabilities capabilities;
+    public String name;
 
     /**
      * The Status.

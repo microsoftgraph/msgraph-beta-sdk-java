@@ -80,6 +80,23 @@ public interface IPasswordAuthenticationMethodRequest extends IHttpRequest {
     PasswordAuthenticationMethod post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a PasswordAuthenticationMethod with a new object
+     *
+     * @param newPasswordAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback);
+
+    /**
+     * Posts a PasswordAuthenticationMethod with a new object
+     *
+     * @param newPasswordAuthenticationMethod the object to create/update
+     * @return the created PasswordAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PasswordAuthenticationMethod put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

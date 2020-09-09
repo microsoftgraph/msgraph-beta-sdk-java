@@ -27,20 +27,20 @@ public class EncryptWithTemplate extends EncryptContent implements IJsonBackedOb
 
 
     /**
-     * The Template Id.
-     * 
-     */
-    @SerializedName("templateId")
-    @Expose
-    public String templateId;
-
-    /**
      * The Available For Encryption.
      * 
      */
     @SerializedName("availableForEncryption")
     @Expose
     public Boolean availableForEncryption;
+
+    /**
+     * The Template Id.
+     * 
+     */
+    @SerializedName("templateId")
+    @Expose
+    public String templateId;
 
 
     /**

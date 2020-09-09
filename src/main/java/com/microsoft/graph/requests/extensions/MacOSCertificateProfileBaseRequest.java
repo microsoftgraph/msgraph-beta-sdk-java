@@ -127,6 +127,27 @@ public class MacOSCertificateProfileBaseRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a MacOSCertificateProfileBase with a new object
+     *
+     * @param newMacOSCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSCertificateProfileBase newMacOSCertificateProfileBase, final ICallback<MacOSCertificateProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newMacOSCertificateProfileBase);
+    }
+
+    /**
+     * Creates a MacOSCertificateProfileBase with a new object
+     *
+     * @param newMacOSCertificateProfileBase the object to create/update
+     * @return the created MacOSCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSCertificateProfileBase put(final MacOSCertificateProfileBase newMacOSCertificateProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSCertificateProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

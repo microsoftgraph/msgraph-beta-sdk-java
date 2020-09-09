@@ -62,14 +62,14 @@ public class DocumentCommentCollectionRequest extends BaseCollectionRequest<Docu
     public void post(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DocumentCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDocumentComment, callback);
     }
 
     public DocumentComment post(final DocumentComment newDocumentComment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DocumentCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDocumentComment);
     }
 
@@ -106,6 +106,27 @@ public class DocumentCommentCollectionRequest extends BaseCollectionRequest<Docu
         return (DocumentCommentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDocumentCommentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DocumentCommentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDocumentCommentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDocumentCommentCollectionRequest)this;
+    }
     public IDocumentCommentCollectionPage buildFromResponse(final DocumentCommentCollectionResponse response) {
         final IDocumentCommentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

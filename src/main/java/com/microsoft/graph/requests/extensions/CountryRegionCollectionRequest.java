@@ -62,14 +62,14 @@ public class CountryRegionCollectionRequest extends BaseCollectionRequest<Countr
     public void post(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CountryRegionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCountryRegion, callback);
     }
 
     public CountryRegion post(final CountryRegion newCountryRegion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CountryRegionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCountryRegion);
     }
 
@@ -106,6 +106,27 @@ public class CountryRegionCollectionRequest extends BaseCollectionRequest<Countr
         return (CountryRegionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICountryRegionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CountryRegionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICountryRegionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICountryRegionCollectionRequest)this;
+    }
     public ICountryRegionCollectionPage buildFromResponse(final CountryRegionCollectionResponse response) {
         final ICountryRegionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

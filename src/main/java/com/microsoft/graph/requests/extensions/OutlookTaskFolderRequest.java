@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookTaskFolder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -121,6 +121,27 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      */
     public OutlookTaskFolder post(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
         return send(HttpMethod.POST, newOutlookTaskFolder);
+    }
+
+    /**
+     * Creates a OutlookTaskFolder with a new object
+     *
+     * @param newOutlookTaskFolder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback) {
+        send(HttpMethod.PUT, callback, newOutlookTaskFolder);
+    }
+
+    /**
+     * Creates a OutlookTaskFolder with a new object
+     *
+     * @param newOutlookTaskFolder the object to create/update
+     * @return the created OutlookTaskFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OutlookTaskFolder put(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
+        return send(HttpMethod.PUT, newOutlookTaskFolder);
     }
 
     /**

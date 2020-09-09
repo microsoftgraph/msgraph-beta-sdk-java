@@ -62,14 +62,14 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
     public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPermissionGrantPolicy, callback);
     }
 
     public PermissionGrantPolicy post(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPermissionGrantPolicy);
     }
 
@@ -106,6 +106,27 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         return (PermissionGrantPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPermissionGrantPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PermissionGrantPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPermissionGrantPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPermissionGrantPolicyCollectionRequest)this;
+    }
     public IPermissionGrantPolicyCollectionPage buildFromResponse(final PermissionGrantPolicyCollectionResponse response) {
         final IPermissionGrantPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

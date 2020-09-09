@@ -80,6 +80,23 @@ public interface IPrintUsageSummaryByUserRequest extends IHttpRequest {
     PrintUsageSummaryByUser post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser) throws ClientException;
 
     /**
+     * Posts a PrintUsageSummaryByUser with a new object
+     *
+     * @param newPrintUsageSummaryByUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback);
+
+    /**
+     * Posts a PrintUsageSummaryByUser with a new object
+     *
+     * @param newPrintUsageSummaryByUser the object to create/update
+     * @return the created PrintUsageSummaryByUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrintUsageSummaryByUser put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

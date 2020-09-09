@@ -112,6 +112,27 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
     }
 
     /**
+     * Creates a WindowsPhone81StoreApp with a new object
+     *
+     * @param newWindowsPhone81StoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhone81StoreApp);
+    }
+
+    /**
+     * Creates a WindowsPhone81StoreApp with a new object
+     *
+     * @param newWindowsPhone81StoreApp the object to create/update
+     * @return the created WindowsPhone81StoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhone81StoreApp put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhone81StoreApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

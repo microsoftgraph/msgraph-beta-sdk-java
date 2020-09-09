@@ -112,6 +112,27 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
     }
 
     /**
+     * Creates a SensitivityPolicySettings with a new object
+     *
+     * @param newSensitivityPolicySettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<SensitivityPolicySettings> callback) {
+        send(HttpMethod.PUT, callback, newSensitivityPolicySettings);
+    }
+
+    /**
+     * Creates a SensitivityPolicySettings with a new object
+     *
+     * @param newSensitivityPolicySettings the object to create/update
+     * @return the created SensitivityPolicySettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SensitivityPolicySettings put(final SensitivityPolicySettings newSensitivityPolicySettings) throws ClientException {
+        return send(HttpMethod.PUT, newSensitivityPolicySettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

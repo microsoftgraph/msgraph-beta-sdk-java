@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalConnection;
+import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemCollectionRequestBuilder;
@@ -16,10 +20,6 @@ import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionReq
 import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
 import java.util.Arrays;
@@ -65,14 +65,12 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
     }
 
 
+    public IExternalGroupCollectionRequestBuilder groups() {
+        return new ExternalGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
+    }
 
-    /**
-     * Gets the request builder for Schema
-     *
-     * @return the ISchemaRequestBuilder instance
-     */
-    public ISchemaRequestBuilder schema() {
-        return new SchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
+    public IExternalGroupRequestBuilder groups(final String id) {
+        return new ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
     }
     public IExternalItemCollectionRequestBuilder items() {
         return new ExternalItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
@@ -88,11 +86,13 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
     public IConnectionOperationRequestBuilder operations(final String id) {
         return new ConnectionOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
-    public IExternalGroupCollectionRequestBuilder groups() {
-        return new ExternalGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
-    }
 
-    public IExternalGroupRequestBuilder groups(final String id) {
-        return new ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for Schema
+     *
+     * @return the ISchemaRequestBuilder instance
+     */
+    public ISchemaRequestBuilder schema() {
+        return new SchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 }

@@ -80,6 +80,23 @@ public interface IPersonAnnotationRequest extends IHttpRequest {
     PersonAnnotation post(final PersonAnnotation newPersonAnnotation) throws ClientException;
 
     /**
+     * Posts a PersonAnnotation with a new object
+     *
+     * @param newPersonAnnotation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PersonAnnotation newPersonAnnotation, final ICallback<PersonAnnotation> callback);
+
+    /**
+     * Posts a PersonAnnotation with a new object
+     *
+     * @param newPersonAnnotation the object to create/update
+     * @return the created PersonAnnotation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PersonAnnotation put(final PersonAnnotation newPersonAnnotation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

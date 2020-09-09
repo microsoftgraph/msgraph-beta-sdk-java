@@ -27,20 +27,20 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Report Refresh Date.
+     * The Assigned Products.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("assignedProducts")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public java.util.List<String> assignedProducts;
 
     /**
-     * The User Principal Name.
+     * The Deleted Date.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("deletedDate")
     @Expose
-    public String userPrincipalName;
+    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
      * The Display Name.
@@ -59,36 +59,12 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
     public Boolean isDeleted;
 
     /**
-     * The Deleted Date.
-     * 
-     */
-    @SerializedName("deletedDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
-
-    /**
      * The Last Activity Date.
      * 
      */
     @SerializedName("lastActivityDate")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
-
-    /**
-     * The Send Count.
-     * 
-     */
-    @SerializedName("sendCount")
-    @Expose
-    public Long sendCount;
-
-    /**
-     * The Receive Count.
-     * 
-     */
-    @SerializedName("receiveCount")
-    @Expose
-    public Long receiveCount;
 
     /**
      * The Read Count.
@@ -99,12 +75,12 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
     public Long readCount;
 
     /**
-     * The Assigned Products.
+     * The Receive Count.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName("receiveCount")
     @Expose
-    public java.util.List<String> assignedProducts;
+    public Long receiveCount;
 
     /**
      * The Report Period.
@@ -113,6 +89,30 @@ public class EmailActivityUserDetail extends Entity implements IJsonBackedObject
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Send Count.
+     * 
+     */
+    @SerializedName("sendCount")
+    @Expose
+    public Long sendCount;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

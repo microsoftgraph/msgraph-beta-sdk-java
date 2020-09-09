@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -55,13 +55,6 @@ public class AndroidEnterpriseWiFiConfigurationRequestBuilder extends BaseReques
     }
 
 
-    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
-    }
-
-    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
-        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
-    }
     public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -69,19 +62,19 @@ public class AndroidEnterpriseWiFiConfigurationRequestBuilder extends BaseReques
     public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    }
     public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
-    }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
-        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -92,6 +85,20 @@ public class AndroidEnterpriseWiFiConfigurationRequestBuilder extends BaseReques
     public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
@@ -101,12 +108,14 @@ public class AndroidEnterpriseWiFiConfigurationRequestBuilder extends BaseReques
     public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
-    }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for AndroidCertificateProfileBase
+     *
+     * @return the IAndroidCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    public IAndroidCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication() {
+        return new AndroidCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
 
     /**
@@ -116,14 +125,5 @@ public class AndroidEnterpriseWiFiConfigurationRequestBuilder extends BaseReques
      */
     public IAndroidTrustedRootCertificateWithReferenceRequestBuilder rootCertificateForServerValidation() {
         return new AndroidTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificateForServerValidation"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for AndroidCertificateProfileBase
-     *
-     * @return the IAndroidCertificateProfileBaseWithReferenceRequestBuilder instance
-     */
-    public IAndroidCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication() {
-        return new AndroidCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
 }

@@ -27,20 +27,20 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
 
 
     /**
-     * The Realm.
-     * Gets or sets the case-sensitive realm name for this profile.
+     * The Active Directory Site Code.
+     * Gets or sets the Active Directory site.
      */
-    @SerializedName("realm")
+    @SerializedName("activeDirectorySiteCode")
     @Expose
-    public String realm;
+    public String activeDirectorySiteCode;
 
     /**
-     * The Domains.
-     * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
+     * The Block Active Directory Site Auto Discovery.
+     * Enables or disables whether the Kerberos extension can automatically determine its site name.
      */
-    @SerializedName("domains")
+    @SerializedName("blockActiveDirectorySiteAutoDiscovery")
     @Expose
-    public java.util.List<String> domains;
+    public Boolean blockActiveDirectorySiteAutoDiscovery;
 
     /**
      * The Block Automatic Login.
@@ -75,6 +75,14 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     public java.util.List<String> domainRealms;
 
     /**
+     * The Domains.
+     * Gets or sets a list of hosts or domain names for which the app extension performs SSO.
+     */
+    @SerializedName("domains")
+    @Expose
+    public java.util.List<String> domains;
+
+    /**
      * The Is Default Realm.
      * When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
      */
@@ -89,6 +97,22 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     @SerializedName("passwordBlockModification")
     @Expose
     public Boolean passwordBlockModification;
+
+    /**
+     * The Password Change Url.
+     * Gets or sets the URL that the user will be sent to when they initiate a password change.
+     */
+    @SerializedName("passwordChangeUrl")
+    @Expose
+    public String passwordChangeUrl;
+
+    /**
+     * The Password Enable Local Sync.
+     * Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
+     */
+    @SerializedName("passwordEnableLocalSync")
+    @Expose
+    public Boolean passwordEnableLocalSync;
 
     /**
      * The Password Expiration Days.
@@ -107,28 +131,12 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     public Integer passwordExpirationNotificationDays;
 
     /**
-     * The User Principal Name.
-     * Gets or sets the principle user name to use for this profile. The realm name does not need to be included.
+     * The Password Minimum Age Days.
+     * Gets or sets the minimum number of days until a user can change their password again.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("passwordMinimumAgeDays")
     @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Password Require Active Directory Complexity.
-     * Enables or disables whether passwords must meet Active Directory's complexity requirements.
-     */
-    @SerializedName("passwordRequireActiveDirectoryComplexity")
-    @Expose
-    public Boolean passwordRequireActiveDirectoryComplexity;
-
-    /**
-     * The Password Previous Password Block Count.
-     * Gets or sets the number of previous passwords to block.
-     */
-    @SerializedName("passwordPreviousPasswordBlockCount")
-    @Expose
-    public Integer passwordPreviousPasswordBlockCount;
+    public Integer passwordMinimumAgeDays;
 
     /**
      * The Password Minimum Length.
@@ -139,12 +147,20 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     public Integer passwordMinimumLength;
 
     /**
-     * The Password Minimum Age Days.
-     * Gets or sets the minimum number of days until a user can change their password again.
+     * The Password Previous Password Block Count.
+     * Gets or sets the number of previous passwords to block.
      */
-    @SerializedName("passwordMinimumAgeDays")
+    @SerializedName("passwordPreviousPasswordBlockCount")
     @Expose
-    public Integer passwordMinimumAgeDays;
+    public Integer passwordPreviousPasswordBlockCount;
+
+    /**
+     * The Password Require Active Directory Complexity.
+     * Enables or disables whether passwords must meet Active Directory's complexity requirements.
+     */
+    @SerializedName("passwordRequireActiveDirectoryComplexity")
+    @Expose
+    public Boolean passwordRequireActiveDirectoryComplexity;
 
     /**
      * The Password Requirements Description.
@@ -155,6 +171,14 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     public String passwordRequirementsDescription;
 
     /**
+     * The Realm.
+     * Gets or sets the case-sensitive realm name for this profile.
+     */
+    @SerializedName("realm")
+    @Expose
+    public String realm;
+
+    /**
      * The Require User Presence.
      * Gets or sets whether to require authentication via Touch ID, Face ID, or a passcode to access the keychain entry.
      */
@@ -163,36 +187,12 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     public Boolean requireUserPresence;
 
     /**
-     * The Active Directory Site Code.
-     * Gets or sets the Active Directory site.
+     * The User Principal Name.
+     * Gets or sets the principle user name to use for this profile. The realm name does not need to be included.
      */
-    @SerializedName("activeDirectorySiteCode")
+    @SerializedName("userPrincipalName")
     @Expose
-    public String activeDirectorySiteCode;
-
-    /**
-     * The Password Enable Local Sync.
-     * Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
-     */
-    @SerializedName("passwordEnableLocalSync")
-    @Expose
-    public Boolean passwordEnableLocalSync;
-
-    /**
-     * The Block Active Directory Site Auto Discovery.
-     * Enables or disables whether the Kerberos extension can automatically determine its site name.
-     */
-    @SerializedName("blockActiveDirectorySiteAutoDiscovery")
-    @Expose
-    public Boolean blockActiveDirectorySiteAutoDiscovery;
-
-    /**
-     * The Password Change Url.
-     * Gets or sets the URL that the user will be sent to when they initiate a password change.
-     */
-    @SerializedName("passwordChangeUrl")
-    @Expose
-    public String passwordChangeUrl;
+    public String userPrincipalName;
 
 
     /**

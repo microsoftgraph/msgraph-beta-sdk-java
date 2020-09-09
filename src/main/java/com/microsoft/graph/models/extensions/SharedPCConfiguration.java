@@ -46,28 +46,12 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
     public EnumSet<SharedPCAllowedAccountType> allowedAccounts;
 
     /**
-     * The Local Storage.
-     * Specifies whether local storage is allowed on a shared PC.
-     */
-    @SerializedName("localStorage")
-    @Expose
-    public Enablement localStorage;
-
-    /**
      * The Allow Local Storage.
      * Specifies whether local storage is allowed on a shared PC.
      */
     @SerializedName("allowLocalStorage")
     @Expose
     public Boolean allowLocalStorage;
-
-    /**
-     * The Set Account Manager.
-     * Disables the account manager for shared PC mode.
-     */
-    @SerializedName("setAccountManager")
-    @Expose
-    public Enablement setAccountManager;
 
     /**
      * The Disable Account Manager.
@@ -78,14 +62,6 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
     public Boolean disableAccountManager;
 
     /**
-     * The Set Edu Policies.
-     * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
-     */
-    @SerializedName("setEduPolicies")
-    @Expose
-    public Enablement setEduPolicies;
-
-    /**
      * The Disable Edu Policies.
      * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
      */
@@ -94,28 +70,12 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
     public Boolean disableEduPolicies;
 
     /**
-     * The Set Power Policies.
-     * Specifies whether the default shared PC power policies should be enabled/disabled.
-     */
-    @SerializedName("setPowerPolicies")
-    @Expose
-    public Enablement setPowerPolicies;
-
-    /**
      * The Disable Power Policies.
      * Specifies whether the default shared PC power policies should be disabled.
      */
     @SerializedName("disablePowerPolicies")
     @Expose
     public Boolean disablePowerPolicies;
-
-    /**
-     * The Sign In On Resume.
-     * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
-     */
-    @SerializedName("signInOnResume")
-    @Expose
-    public Enablement signInOnResume;
 
     /**
      * The Disable Sign In On Resume.
@@ -132,6 +92,14 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
     @SerializedName("enabled")
     @Expose
     public Boolean enabled;
+
+    /**
+     * The Fast First Sign In.
+     * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+     */
+    @SerializedName("fastFirstSignIn")
+    @Expose
+    public Enablement fastFirstSignIn;
 
     /**
      * The Idle Time Before Sleep In Seconds.
@@ -158,6 +126,14 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
     public String kioskAppUserModelId;
 
     /**
+     * The Local Storage.
+     * Specifies whether local storage is allowed on a shared PC.
+     */
+    @SerializedName("localStorage")
+    @Expose
+    public Enablement localStorage;
+
+    /**
      * The Maintenance Start Time.
      * Specifies the daily start time of maintenance hour.
      */
@@ -166,12 +142,36 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
     public com.microsoft.graph.models.extensions.TimeOfDay maintenanceStartTime;
 
     /**
-     * The Fast First Sign In.
-     * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
+     * The Set Account Manager.
+     * Disables the account manager for shared PC mode.
      */
-    @SerializedName("fastFirstSignIn")
+    @SerializedName("setAccountManager")
     @Expose
-    public Enablement fastFirstSignIn;
+    public Enablement setAccountManager;
+
+    /**
+     * The Set Edu Policies.
+     * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
+     */
+    @SerializedName("setEduPolicies")
+    @Expose
+    public Enablement setEduPolicies;
+
+    /**
+     * The Set Power Policies.
+     * Specifies whether the default shared PC power policies should be enabled/disabled.
+     */
+    @SerializedName("setPowerPolicies")
+    @Expose
+    public Enablement setPowerPolicies;
+
+    /**
+     * The Sign In On Resume.
+     * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
+     */
+    @SerializedName("signInOnResume")
+    @Expose
+    public Enablement signInOnResume;
 
 
     /**

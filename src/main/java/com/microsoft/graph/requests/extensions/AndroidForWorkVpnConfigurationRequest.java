@@ -114,6 +114,27 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a AndroidForWorkVpnConfiguration with a new object
+     *
+     * @param newAndroidForWorkVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<AndroidForWorkVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkVpnConfiguration);
+    }
+
+    /**
+     * Creates a AndroidForWorkVpnConfiguration with a new object
+     *
+     * @param newAndroidForWorkVpnConfiguration the object to create/update
+     * @return the created AndroidForWorkVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkVpnConfiguration put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkVpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

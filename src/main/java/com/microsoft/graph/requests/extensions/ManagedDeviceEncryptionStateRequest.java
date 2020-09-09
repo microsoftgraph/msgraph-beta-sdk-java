@@ -112,6 +112,27 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a ManagedDeviceEncryptionState with a new object
+     *
+     * @param newManagedDeviceEncryptionState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<ManagedDeviceEncryptionState> callback) {
+        send(HttpMethod.PUT, callback, newManagedDeviceEncryptionState);
+    }
+
+    /**
+     * Creates a ManagedDeviceEncryptionState with a new object
+     *
+     * @param newManagedDeviceEncryptionState the object to create/update
+     * @return the created ManagedDeviceEncryptionState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedDeviceEncryptionState put(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException {
+        return send(HttpMethod.PUT, newManagedDeviceEncryptionState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

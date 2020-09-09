@@ -8,10 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionRequestBuilder;
@@ -20,8 +16,14 @@ import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionReq
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContinuousAccessEvaluationPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -123,6 +125,27 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      */
     public IdentityContainer post(final IdentityContainer newIdentityContainer) throws ClientException {
         return send(HttpMethod.POST, newIdentityContainer);
+    }
+
+    /**
+     * Creates a IdentityContainer with a new object
+     *
+     * @param newIdentityContainer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback) {
+        send(HttpMethod.PUT, callback, newIdentityContainer);
+    }
+
+    /**
+     * Creates a IdentityContainer with a new object
+     *
+     * @param newIdentityContainer the object to create/update
+     * @return the created IdentityContainer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IdentityContainer put(final IdentityContainer newIdentityContainer) throws ClientException {
+        return send(HttpMethod.PUT, newIdentityContainer);
     }
 
     /**

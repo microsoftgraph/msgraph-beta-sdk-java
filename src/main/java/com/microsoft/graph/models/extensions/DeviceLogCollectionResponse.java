@@ -27,52 +27,12 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Status.
-     * The status of the log collection request
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
-
-    /**
-     * The Managed Device Id.
-     * The device Id
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public java.util.UUID managedDeviceId;
-
-    /**
      * The Error Code.
      * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      */
     @SerializedName("errorCode")
     @Expose
     public Long errorCode;
-
-    /**
-     * The Requested Date Time UTC.
-     * The DateTime of the request
-     */
-    @SerializedName("requestedDateTimeUTC")
-    @Expose
-    public java.util.Calendar requestedDateTimeUTC;
-
-    /**
-     * The Received Date Time UTC.
-     * The DateTime the request was received
-     */
-    @SerializedName("receivedDateTimeUTC")
-    @Expose
-    public java.util.Calendar receivedDateTimeUTC;
-
-    /**
-     * The Initiated By User Principal Name.
-     * The UPN for who initiated the request
-     */
-    @SerializedName("initiatedByUserPrincipalName")
-    @Expose
-    public String initiatedByUserPrincipalName;
 
     /**
      * The Expiration Date Time UTC.
@@ -83,12 +43,52 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
     public java.util.Calendar expirationDateTimeUTC;
 
     /**
+     * The Initiated By User Principal Name.
+     * The UPN for who initiated the request
+     */
+    @SerializedName("initiatedByUserPrincipalName")
+    @Expose
+    public String initiatedByUserPrincipalName;
+
+    /**
+     * The Managed Device Id.
+     * The device Id
+     */
+    @SerializedName("managedDeviceId")
+    @Expose
+    public java.util.UUID managedDeviceId;
+
+    /**
+     * The Received Date Time UTC.
+     * The DateTime the request was received
+     */
+    @SerializedName("receivedDateTimeUTC")
+    @Expose
+    public java.util.Calendar receivedDateTimeUTC;
+
+    /**
+     * The Requested Date Time UTC.
+     * The DateTime of the request
+     */
+    @SerializedName("requestedDateTimeUTC")
+    @Expose
+    public java.util.Calendar requestedDateTimeUTC;
+
+    /**
      * The Size.
      * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName("size")
     @Expose
     public Double size;
+
+    /**
+     * The Status.
+     * The status of the log collection request
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
 
 
     /**

@@ -62,14 +62,14 @@ public class UserExperienceAnalyticsScoreHistoryCollectionRequest extends BaseCo
     public void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsScoreHistoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsScoreHistory, callback);
     }
 
     public UserExperienceAnalyticsScoreHistory post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsScoreHistoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -106,6 +106,27 @@ public class UserExperienceAnalyticsScoreHistoryCollectionRequest extends BaseCo
         return (UserExperienceAnalyticsScoreHistoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsScoreHistoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsScoreHistoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsScoreHistoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsScoreHistoryCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsScoreHistoryCollectionPage buildFromResponse(final UserExperienceAnalyticsScoreHistoryCollectionResponse response) {
         final IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

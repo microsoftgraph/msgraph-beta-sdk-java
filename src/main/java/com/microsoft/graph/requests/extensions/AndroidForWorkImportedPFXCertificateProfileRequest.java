@@ -116,6 +116,27 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
     }
 
     /**
+     * Creates a AndroidForWorkImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidForWorkImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<AndroidForWorkImportedPFXCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkImportedPFXCertificateProfile);
+    }
+
+    /**
+     * Creates a AndroidForWorkImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidForWorkImportedPFXCertificateProfile the object to create/update
+     * @return the created AndroidForWorkImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkImportedPFXCertificateProfile put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkImportedPFXCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

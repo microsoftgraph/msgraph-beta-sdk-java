@@ -62,14 +62,14 @@ public class OutlookTaskGroupCollectionRequest extends BaseCollectionRequest<Out
     public void post(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<OutlookTaskGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookTaskGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookTaskGroup, callback);
     }
 
     public OutlookTaskGroup post(final OutlookTaskGroup newOutlookTaskGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookTaskGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookTaskGroup);
     }
 
@@ -106,6 +106,27 @@ public class OutlookTaskGroupCollectionRequest extends BaseCollectionRequest<Out
         return (OutlookTaskGroupCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOutlookTaskGroupCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OutlookTaskGroupCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOutlookTaskGroupCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOutlookTaskGroupCollectionRequest)this;
+    }
     public IOutlookTaskGroupCollectionPage buildFromResponse(final OutlookTaskGroupCollectionResponse response) {
         final IOutlookTaskGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {

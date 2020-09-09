@@ -36,20 +36,20 @@ public class VpnServer implements IJsonBackedObject {
     }
 
     /**
-     * The Description.
-     * Description.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
      * The Address.
      * Address (IP address, FQDN or URL)
      */
     @SerializedName("address")
     @Expose
     public String address;
+
+    /**
+     * The Description.
+     * Description.
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
 
     /**
      * The Is Default Server.

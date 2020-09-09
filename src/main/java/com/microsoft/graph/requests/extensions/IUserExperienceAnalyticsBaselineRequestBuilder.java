@@ -39,13 +39,13 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics();
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics();
 
     /**
      * Gets the request builder for UserExperienceAnalyticsCategory
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics();
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics();
 
 }

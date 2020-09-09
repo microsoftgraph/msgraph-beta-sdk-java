@@ -8,12 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.KeyUsages;
-import com.microsoft.graph.models.generated.KeySize;
-import com.microsoft.graph.models.generated.HashAlgorithms;
 import com.microsoft.graph.models.generated.CertificateStore;
-import com.microsoft.graph.models.extensions.Windows81TrustedRootCertificate;
+import com.microsoft.graph.models.generated.HashAlgorithms;
+import com.microsoft.graph.models.generated.KeySize;
+import com.microsoft.graph.models.generated.KeyUsages;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
+import com.microsoft.graph.models.extensions.Windows81TrustedRootCertificate;
 import com.microsoft.graph.models.extensions.Windows81CertificateProfileBase;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionPage;
@@ -35,36 +35,12 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
 
 
     /**
-     * The Scep Server Urls.
-     * SCEP Server Url(s).
+     * The Certificate Store.
+     * Target store certificate
      */
-    @SerializedName("scepServerUrls")
+    @SerializedName("certificateStore")
     @Expose
-    public java.util.List<String> scepServerUrls;
-
-    /**
-     * The Subject Name Format String.
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    @SerializedName("subjectNameFormatString")
-    @Expose
-    public String subjectNameFormatString;
-
-    /**
-     * The Key Usage.
-     * SCEP Key Usage.
-     */
-    @SerializedName("keyUsage")
-    @Expose
-    public EnumSet<KeyUsages> keyUsage;
-
-    /**
-     * The Key Size.
-     * SCEP Key Size.
-     */
-    @SerializedName("keySize")
-    @Expose
-    public KeySize keySize;
+    public CertificateStore certificateStore;
 
     /**
      * The Hash Algorithm.
@@ -75,6 +51,30 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     public EnumSet<HashAlgorithms> hashAlgorithm;
 
     /**
+     * The Key Size.
+     * SCEP Key Size.
+     */
+    @SerializedName("keySize")
+    @Expose
+    public KeySize keySize;
+
+    /**
+     * The Key Usage.
+     * SCEP Key Usage.
+     */
+    @SerializedName("keyUsage")
+    @Expose
+    public EnumSet<KeyUsages> keyUsage;
+
+    /**
+     * The Scep Server Urls.
+     * SCEP Server Url(s).
+     */
+    @SerializedName("scepServerUrls")
+    @Expose
+    public java.util.List<String> scepServerUrls;
+
+    /**
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
@@ -83,12 +83,18 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     public String subjectAlternativeNameFormatString;
 
     /**
-     * The Certificate Store.
-     * Target store certificate
+     * The Subject Name Format String.
+     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      */
-    @SerializedName("certificateStore")
+    @SerializedName("subjectNameFormatString")
     @Expose
-    public CertificateStore certificateStore;
+    public String subjectNameFormatString;
+
+    /**
+     * The Managed Device Certificate States.
+     * Certificate state for devices
+     */
+    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
     /**
      * The Root Certificate.
@@ -97,12 +103,6 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     @SerializedName("rootCertificate")
     @Expose
     public Windows81TrustedRootCertificate rootCertificate;
-
-    /**
-     * The Managed Device Certificate States.
-     * Certificate state for devices
-     */
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 
     /**

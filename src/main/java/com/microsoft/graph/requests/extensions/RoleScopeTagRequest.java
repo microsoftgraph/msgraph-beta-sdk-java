@@ -117,6 +117,27 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
     }
 
     /**
+     * Creates a RoleScopeTag with a new object
+     *
+     * @param newRoleScopeTag the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback) {
+        send(HttpMethod.PUT, callback, newRoleScopeTag);
+    }
+
+    /**
+     * Creates a RoleScopeTag with a new object
+     *
+     * @param newRoleScopeTag the object to create/update
+     * @return the created RoleScopeTag
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RoleScopeTag put(final RoleScopeTag newRoleScopeTag) throws ClientException {
+        return send(HttpMethod.PUT, newRoleScopeTag);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

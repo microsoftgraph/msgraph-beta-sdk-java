@@ -62,14 +62,14 @@ public class DeviceManagementReportScheduleCollectionRequest extends BaseCollect
     public void post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule, final ICallback<DeviceManagementReportSchedule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementReportScheduleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementReportSchedule, callback);
     }
 
     public DeviceManagementReportSchedule post(final DeviceManagementReportSchedule newDeviceManagementReportSchedule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementReportScheduleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementReportSchedule);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementReportScheduleCollectionRequest extends BaseCollect
         return (DeviceManagementReportScheduleCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementReportScheduleCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementReportScheduleCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementReportScheduleCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementReportScheduleCollectionRequest)this;
+    }
     public IDeviceManagementReportScheduleCollectionPage buildFromResponse(final DeviceManagementReportScheduleCollectionResponse response) {
         final IDeviceManagementReportScheduleCollectionRequestBuilder builder;
         if (response.nextLink != null) {

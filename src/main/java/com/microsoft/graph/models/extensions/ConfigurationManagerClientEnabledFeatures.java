@@ -36,6 +36,30 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
     }
 
     /**
+     * The Compliance Policy.
+     * Whether compliance policy is managed by Intune
+     */
+    @SerializedName("compliancePolicy")
+    @Expose
+    public Boolean compliancePolicy;
+
+    /**
+     * The Device Configuration.
+     * Whether device configuration is managed by Intune
+     */
+    @SerializedName("deviceConfiguration")
+    @Expose
+    public Boolean deviceConfiguration;
+
+    /**
+     * The Endpoint Protection.
+     * Whether Endpoint Protection is managed by Intune
+     */
+    @SerializedName("endpointProtection")
+    @Expose
+    public Boolean endpointProtection;
+
+    /**
      * The Inventory.
      * Whether inventory is managed by Intune
      */
@@ -52,6 +76,14 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
     public Boolean modernApps;
 
     /**
+     * The Office Apps.
+     * Whether Office application is managed by Intune
+     */
+    @SerializedName("officeApps")
+    @Expose
+    public Boolean officeApps;
+
+    /**
      * The Resource Access.
      * Whether resource access is managed by Intune
      */
@@ -60,44 +92,12 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
     public Boolean resourceAccess;
 
     /**
-     * The Device Configuration.
-     * Whether device configuration is managed by Intune
-     */
-    @SerializedName("deviceConfiguration")
-    @Expose
-    public Boolean deviceConfiguration;
-
-    /**
-     * The Compliance Policy.
-     * Whether compliance policy is managed by Intune
-     */
-    @SerializedName("compliancePolicy")
-    @Expose
-    public Boolean compliancePolicy;
-
-    /**
      * The Windows Update For Business.
      * Whether Windows Update for Business is managed by Intune
      */
     @SerializedName("windowsUpdateForBusiness")
     @Expose
     public Boolean windowsUpdateForBusiness;
-
-    /**
-     * The Endpoint Protection.
-     * Whether Endpoint Protection is managed by Intune
-     */
-    @SerializedName("endpointProtection")
-    @Expose
-    public Boolean endpointProtection;
-
-    /**
-     * The Office Apps.
-     * Whether Office application is managed by Intune
-     */
-    @SerializedName("officeApps")
-    @Expose
-    public Boolean officeApps;
 
 
     /**

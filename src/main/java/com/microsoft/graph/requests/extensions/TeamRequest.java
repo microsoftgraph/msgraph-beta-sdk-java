@@ -8,22 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.generated.TeamVisibilityType;
+import com.microsoft.graph.models.generated.ClonableTeamParts;
+import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.generated.ClonableTeamParts;
-import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
@@ -32,18 +24,26 @@ import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRe
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -145,6 +145,27 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      */
     public Team post(final Team newTeam) throws ClientException {
         return send(HttpMethod.POST, newTeam);
+    }
+
+    /**
+     * Creates a Team with a new object
+     *
+     * @param newTeam the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Team newTeam, final ICallback<Team> callback) {
+        send(HttpMethod.PUT, callback, newTeam);
+    }
+
+    /**
+     * Creates a Team with a new object
+     *
+     * @param newTeam the object to create/update
+     * @return the created Team
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Team put(final Team newTeam) throws ClientException {
+        return send(HttpMethod.PUT, newTeam);
     }
 
     /**

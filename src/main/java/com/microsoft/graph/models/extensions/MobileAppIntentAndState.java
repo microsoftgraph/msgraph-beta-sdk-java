@@ -36,20 +36,20 @@ public class MobileAppIntentAndState extends Entity implements IJsonBackedObject
     public String managedDeviceIdentifier;
 
     /**
-     * The User Id.
-     * Identifier for the user that tried to enroll the device.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Mobile App List.
      * The list of payload intents and states for the tenant.
      */
     @SerializedName("mobileAppList")
     @Expose
     public java.util.List<MobileAppIntentAndStateDetail> mobileAppList;
+
+    /**
+     * The User Id.
+     * Identifier for the user that tried to enroll the device.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

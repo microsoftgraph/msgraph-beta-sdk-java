@@ -80,6 +80,23 @@ public interface IIdentityUserFlowRequest extends IHttpRequest {
     IdentityUserFlow post(final IdentityUserFlow newIdentityUserFlow) throws ClientException;
 
     /**
+     * Posts a IdentityUserFlow with a new object
+     *
+     * @param newIdentityUserFlow the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IdentityUserFlow newIdentityUserFlow, final ICallback<IdentityUserFlow> callback);
+
+    /**
+     * Posts a IdentityUserFlow with a new object
+     *
+     * @param newIdentityUserFlow the object to create/update
+     * @return the created IdentityUserFlow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IdentityUserFlow put(final IdentityUserFlow newIdentityUserFlow) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

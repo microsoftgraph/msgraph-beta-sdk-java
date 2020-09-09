@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.UserEmailSource;
-import com.microsoft.graph.models.generated.UsernameSource;
 import com.microsoft.graph.models.generated.DomainNameSource;
+import com.microsoft.graph.models.generated.UsernameSource;
+import com.microsoft.graph.models.generated.UserEmailSource;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -30,20 +30,12 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
 
 
     /**
-     * The Username Source.
-     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+     * The Custom Domain Name.
+     * Custom domain name value used while generating an email profile before installing on the device.
      */
-    @SerializedName("usernameSource")
+    @SerializedName("customDomainName")
     @Expose
-    public UserEmailSource usernameSource;
-
-    /**
-     * The Username AADSource.
-     * Name of the AAD field, that will be used to retrieve UserName for email profile.
-     */
-    @SerializedName("usernameAADSource")
-    @Expose
-    public UsernameSource usernameAADSource;
+    public String customDomainName;
 
     /**
      * The User Domain Name Source.
@@ -54,12 +46,20 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     public DomainNameSource userDomainNameSource;
 
     /**
-     * The Custom Domain Name.
-     * Custom domain name value used while generating an email profile before installing on the device.
+     * The Username AADSource.
+     * Name of the AAD field, that will be used to retrieve UserName for email profile.
      */
-    @SerializedName("customDomainName")
+    @SerializedName("usernameAADSource")
     @Expose
-    public String customDomainName;
+    public UsernameSource usernameAADSource;
+
+    /**
+     * The Username Source.
+     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+     */
+    @SerializedName("usernameSource")
+    @Expose
+    public UserEmailSource usernameSource;
 
 
     /**

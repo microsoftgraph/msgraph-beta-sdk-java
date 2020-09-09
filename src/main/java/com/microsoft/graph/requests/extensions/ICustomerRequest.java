@@ -80,6 +80,23 @@ public interface ICustomerRequest extends IHttpRequest {
     Customer post(final Customer newCustomer) throws ClientException;
 
     /**
+     * Posts a Customer with a new object
+     *
+     * @param newCustomer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Customer newCustomer, final ICallback<Customer> callback);
+
+    /**
+     * Posts a Customer with a new object
+     *
+     * @param newCustomer the object to create/update
+     * @return the created Customer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Customer put(final Customer newCustomer) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

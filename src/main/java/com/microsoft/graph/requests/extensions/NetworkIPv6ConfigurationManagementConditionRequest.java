@@ -112,6 +112,27 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
     }
 
     /**
+     * Creates a NetworkIPv6ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback) {
+        send(HttpMethod.PUT, callback, newNetworkIPv6ConfigurationManagementCondition);
+    }
+
+    /**
+     * Creates a NetworkIPv6ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
+     * @return the created NetworkIPv6ConfigurationManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public NetworkIPv6ConfigurationManagementCondition put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException {
+        return send(HttpMethod.PUT, newNetworkIPv6ConfigurationManagementCondition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

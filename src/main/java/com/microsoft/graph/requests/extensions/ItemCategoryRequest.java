@@ -112,6 +112,27 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
     }
 
     /**
+     * Creates a ItemCategory with a new object
+     *
+     * @param newItemCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemCategory newItemCategory, final ICallback<ItemCategory> callback) {
+        send(HttpMethod.PUT, callback, newItemCategory);
+    }
+
+    /**
+     * Creates a ItemCategory with a new object
+     *
+     * @param newItemCategory the object to create/update
+     * @return the created ItemCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemCategory put(final ItemCategory newItemCategory) throws ClientException {
+        return send(HttpMethod.PUT, newItemCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,28 +28,12 @@ public class NotifyUserAction extends DlpActionInfo implements IJsonBackedObject
 
 
     /**
-     * The Recipients.
-     * 
-     */
-    @SerializedName("recipients")
-    @Expose
-    public java.util.List<String> recipients;
-
-    /**
      * The Action Last Modified Date Time.
      * 
      */
     @SerializedName("actionLastModifiedDateTime")
     @Expose
     public java.util.Calendar actionLastModifiedDateTime;
-
-    /**
-     * The Override Option.
-     * 
-     */
-    @SerializedName("overrideOption")
-    @Expose
-    public OverrideOption overrideOption;
 
     /**
      * The Email Text.
@@ -60,12 +44,28 @@ public class NotifyUserAction extends DlpActionInfo implements IJsonBackedObject
     public String emailText;
 
     /**
+     * The Override Option.
+     * 
+     */
+    @SerializedName("overrideOption")
+    @Expose
+    public OverrideOption overrideOption;
+
+    /**
      * The Policy Tip.
      * 
      */
     @SerializedName("policyTip")
     @Expose
     public String policyTip;
+
+    /**
+     * The Recipients.
+     * 
+     */
+    @SerializedName("recipients")
+    @Expose
+    public java.util.List<String> recipients;
 
 
     /**

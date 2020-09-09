@@ -116,6 +116,27 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
     }
 
     /**
+     * Creates a PrintService with a new object
+     *
+     * @param newPrintService the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintService newPrintService, final ICallback<PrintService> callback) {
+        send(HttpMethod.PUT, callback, newPrintService);
+    }
+
+    /**
+     * Creates a PrintService with a new object
+     *
+     * @param newPrintService the object to create/update
+     * @return the created PrintService
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintService put(final PrintService newPrintService) throws ClientException {
+        return send(HttpMethod.PUT, newPrintService);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,12 +28,12 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
+     * The Configuration.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("configuration")
     @Expose
-    public String displayName;
+    public PrinterDocumentConfiguration configuration;
 
     /**
      * The Content Type.
@@ -44,20 +44,20 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
     public String contentType;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Size.
      * 
      */
     @SerializedName("size")
     @Expose
     public Long size;
-
-    /**
-     * The Configuration.
-     * 
-     */
-    @SerializedName("configuration")
-    @Expose
-    public PrinterDocumentConfiguration configuration;
 
 
     /**

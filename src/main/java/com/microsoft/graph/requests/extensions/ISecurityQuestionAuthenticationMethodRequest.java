@@ -80,6 +80,23 @@ public interface ISecurityQuestionAuthenticationMethodRequest extends IHttpReque
     SecurityQuestionAuthenticationMethod post(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a SecurityQuestionAuthenticationMethod with a new object
+     *
+     * @param newSecurityQuestionAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod, final ICallback<SecurityQuestionAuthenticationMethod> callback);
+
+    /**
+     * Posts a SecurityQuestionAuthenticationMethod with a new object
+     *
+     * @param newSecurityQuestionAuthenticationMethod the object to create/update
+     * @return the created SecurityQuestionAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SecurityQuestionAuthenticationMethod put(final SecurityQuestionAuthenticationMethod newSecurityQuestionAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

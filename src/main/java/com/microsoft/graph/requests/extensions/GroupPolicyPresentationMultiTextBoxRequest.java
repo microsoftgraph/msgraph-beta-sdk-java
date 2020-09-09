@@ -112,6 +112,27 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a GroupPolicyPresentationMultiTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationMultiTextBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<GroupPolicyPresentationMultiTextBox> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationMultiTextBox);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationMultiTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationMultiTextBox the object to create/update
+     * @return the created GroupPolicyPresentationMultiTextBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationMultiTextBox put(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationMultiTextBox);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ISkypeForBusinessOrganizerActivityUserCountsRequest extends IHt
     SkypeForBusinessOrganizerActivityUserCounts post(final SkypeForBusinessOrganizerActivityUserCounts newSkypeForBusinessOrganizerActivityUserCounts) throws ClientException;
 
     /**
+     * Posts a SkypeForBusinessOrganizerActivityUserCounts with a new object
+     *
+     * @param newSkypeForBusinessOrganizerActivityUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SkypeForBusinessOrganizerActivityUserCounts newSkypeForBusinessOrganizerActivityUserCounts, final ICallback<SkypeForBusinessOrganizerActivityUserCounts> callback);
+
+    /**
+     * Posts a SkypeForBusinessOrganizerActivityUserCounts with a new object
+     *
+     * @param newSkypeForBusinessOrganizerActivityUserCounts the object to create/update
+     * @return the created SkypeForBusinessOrganizerActivityUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SkypeForBusinessOrganizerActivityUserCounts put(final SkypeForBusinessOrganizerActivityUserCounts newSkypeForBusinessOrganizerActivityUserCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

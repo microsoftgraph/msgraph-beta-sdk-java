@@ -80,6 +80,23 @@ public interface IWindowsOfficeClientSecurityConfigurationRequest extends IHttpR
     WindowsOfficeClientSecurityConfiguration post(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsOfficeClientSecurityConfiguration with a new object
+     *
+     * @param newWindowsOfficeClientSecurityConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration, final ICallback<WindowsOfficeClientSecurityConfiguration> callback);
+
+    /**
+     * Posts a WindowsOfficeClientSecurityConfiguration with a new object
+     *
+     * @param newWindowsOfficeClientSecurityConfiguration the object to create/update
+     * @return the created WindowsOfficeClientSecurityConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsOfficeClientSecurityConfiguration put(final WindowsOfficeClientSecurityConfiguration newWindowsOfficeClientSecurityConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

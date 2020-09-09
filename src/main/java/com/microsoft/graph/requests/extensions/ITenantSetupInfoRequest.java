@@ -80,6 +80,23 @@ public interface ITenantSetupInfoRequest extends IHttpRequest {
     TenantSetupInfo post(final TenantSetupInfo newTenantSetupInfo) throws ClientException;
 
     /**
+     * Posts a TenantSetupInfo with a new object
+     *
+     * @param newTenantSetupInfo the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TenantSetupInfo newTenantSetupInfo, final ICallback<TenantSetupInfo> callback);
+
+    /**
+     * Posts a TenantSetupInfo with a new object
+     *
+     * @param newTenantSetupInfo the object to create/update
+     * @return the created TenantSetupInfo
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TenantSetupInfo put(final TenantSetupInfo newTenantSetupInfo) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

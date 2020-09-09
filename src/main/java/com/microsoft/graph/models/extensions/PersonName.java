@@ -52,20 +52,20 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
     public String initials;
 
     /**
-     * The Last.
-     * 
-     */
-    @SerializedName("last")
-    @Expose
-    public String last;
-
-    /**
      * The Language Tag.
      * 
      */
     @SerializedName("languageTag")
     @Expose
     public String languageTag;
+
+    /**
+     * The Last.
+     * 
+     */
+    @SerializedName("last")
+    @Expose
+    public String last;
 
     /**
      * The Maiden.
@@ -92,6 +92,14 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
     public String nickname;
 
     /**
+     * The Pronunciation.
+     * 
+     */
+    @SerializedName("pronunciation")
+    @Expose
+    public YomiPersonName pronunciation;
+
+    /**
      * The Suffix.
      * 
      */
@@ -106,14 +114,6 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
     @SerializedName("title")
     @Expose
     public String title;
-
-    /**
-     * The Pronunciation.
-     * 
-     */
-    @SerializedName("pronunciation")
-    @Expose
-    public YomiPersonName pronunciation;
 
 
     /**

@@ -62,14 +62,14 @@ public class ProvisioningObjectSummaryCollectionRequest extends BaseCollectionRe
     public void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProvisioningObjectSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProvisioningObjectSummary, callback);
     }
 
     public ProvisioningObjectSummary post(final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProvisioningObjectSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProvisioningObjectSummary);
     }
 
@@ -106,6 +106,27 @@ public class ProvisioningObjectSummaryCollectionRequest extends BaseCollectionRe
         return (ProvisioningObjectSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProvisioningObjectSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProvisioningObjectSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProvisioningObjectSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProvisioningObjectSummaryCollectionRequest)this;
+    }
     public IProvisioningObjectSummaryCollectionPage buildFromResponse(final ProvisioningObjectSummaryCollectionResponse response) {
         final IProvisioningObjectSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

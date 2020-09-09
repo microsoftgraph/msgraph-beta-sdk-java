@@ -112,6 +112,27 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
     }
 
     /**
+     * Creates a CredentialUsageSummary with a new object
+     *
+     * @param newCredentialUsageSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CredentialUsageSummary newCredentialUsageSummary, final ICallback<CredentialUsageSummary> callback) {
+        send(HttpMethod.PUT, callback, newCredentialUsageSummary);
+    }
+
+    /**
+     * Creates a CredentialUsageSummary with a new object
+     *
+     * @param newCredentialUsageSummary the object to create/update
+     * @return the created CredentialUsageSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CredentialUsageSummary put(final CredentialUsageSummary newCredentialUsageSummary) throws ClientException {
+        return send(HttpMethod.PUT, newCredentialUsageSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

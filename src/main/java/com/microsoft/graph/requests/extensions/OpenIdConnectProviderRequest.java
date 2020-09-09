@@ -112,6 +112,27 @@ public class OpenIdConnectProviderRequest extends BaseRequest implements IOpenId
     }
 
     /**
+     * Creates a OpenIdConnectProvider with a new object
+     *
+     * @param newOpenIdConnectProvider the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OpenIdConnectProvider newOpenIdConnectProvider, final ICallback<OpenIdConnectProvider> callback) {
+        send(HttpMethod.PUT, callback, newOpenIdConnectProvider);
+    }
+
+    /**
+     * Creates a OpenIdConnectProvider with a new object
+     *
+     * @param newOpenIdConnectProvider the object to create/update
+     * @return the created OpenIdConnectProvider
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OpenIdConnectProvider put(final OpenIdConnectProvider newOpenIdConnectProvider) throws ClientException {
+        return send(HttpMethod.PUT, newOpenIdConnectProvider);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

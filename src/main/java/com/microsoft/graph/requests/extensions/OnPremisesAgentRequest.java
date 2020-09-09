@@ -116,6 +116,27 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
     }
 
     /**
+     * Creates a OnPremisesAgent with a new object
+     *
+     * @param newOnPremisesAgent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback) {
+        send(HttpMethod.PUT, callback, newOnPremisesAgent);
+    }
+
+    /**
+     * Creates a OnPremisesAgent with a new object
+     *
+     * @param newOnPremisesAgent the object to create/update
+     * @return the created OnPremisesAgent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnPremisesAgent put(final OnPremisesAgent newOnPremisesAgent) throws ClientException {
+        return send(HttpMethod.PUT, newOnPremisesAgent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

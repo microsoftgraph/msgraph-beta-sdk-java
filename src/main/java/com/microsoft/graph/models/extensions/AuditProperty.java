@@ -44,20 +44,20 @@ public class AuditProperty implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Old Value.
-     * Old value.
-     */
-    @SerializedName("oldValue")
-    @Expose
-    public String oldValue;
-
-    /**
      * The New Value.
      * New value.
      */
     @SerializedName("newValue")
     @Expose
     public String newValue;
+
+    /**
+     * The Old Value.
+     * Old value.
+     */
+    @SerializedName("oldValue")
+    @Expose
+    public String oldValue;
 
 
     /**

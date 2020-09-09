@@ -62,14 +62,14 @@ public class PresenceCollectionRequest extends BaseCollectionRequest<PresenceCol
     public void post(final Presence newPresence, final ICallback<Presence> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PresenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPresence, callback);
     }
 
     public Presence post(final Presence newPresence) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PresenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPresence);
     }
 
@@ -106,6 +106,27 @@ public class PresenceCollectionRequest extends BaseCollectionRequest<PresenceCol
         return (PresenceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPresenceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PresenceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPresenceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPresenceCollectionRequest)this;
+    }
     public IPresenceCollectionPage buildFromResponse(final PresenceCollectionResponse response) {
         final IPresenceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

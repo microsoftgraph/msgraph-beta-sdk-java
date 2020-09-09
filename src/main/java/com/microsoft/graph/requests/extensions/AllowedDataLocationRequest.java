@@ -112,6 +112,27 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
     }
 
     /**
+     * Creates a AllowedDataLocation with a new object
+     *
+     * @param newAllowedDataLocation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback) {
+        send(HttpMethod.PUT, callback, newAllowedDataLocation);
+    }
+
+    /**
+     * Creates a AllowedDataLocation with a new object
+     *
+     * @param newAllowedDataLocation the object to create/update
+     * @return the created AllowedDataLocation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AllowedDataLocation put(final AllowedDataLocation newAllowedDataLocation) throws ClientException {
+        return send(HttpMethod.PUT, newAllowedDataLocation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

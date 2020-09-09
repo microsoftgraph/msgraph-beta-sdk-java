@@ -112,6 +112,27 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a DelegatedPermissionClassification with a new object
+     *
+     * @param newDelegatedPermissionClassification the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback) {
+        send(HttpMethod.PUT, callback, newDelegatedPermissionClassification);
+    }
+
+    /**
+     * Creates a DelegatedPermissionClassification with a new object
+     *
+     * @param newDelegatedPermissionClassification the object to create/update
+     * @return the created DelegatedPermissionClassification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DelegatedPermissionClassification put(final DelegatedPermissionClassification newDelegatedPermissionClassification) throws ClientException {
+        return send(HttpMethod.PUT, newDelegatedPermissionClassification);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

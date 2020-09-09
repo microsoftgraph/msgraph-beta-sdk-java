@@ -28,12 +28,44 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Posting Date.
+     * The Account Id.
      * 
      */
-    @SerializedName("postingDate")
+    @SerializedName("accountId")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly postingDate;
+    public java.util.UUID accountId;
+
+    /**
+     * The Account Number.
+     * 
+     */
+    @SerializedName("accountNumber")
+    @Expose
+    public String accountNumber;
+
+    /**
+     * The Credit Amount.
+     * 
+     */
+    @SerializedName("creditAmount")
+    @Expose
+    public java.math.BigDecimal creditAmount;
+
+    /**
+     * The Debit Amount.
+     * 
+     */
+    @SerializedName("debitAmount")
+    @Expose
+    public java.math.BigDecimal debitAmount;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
 
     /**
      * The Document Number.
@@ -52,52 +84,20 @@ public class GeneralLedgerEntry extends Entity implements IJsonBackedObject {
     public String documentType;
 
     /**
-     * The Account Id.
-     * 
-     */
-    @SerializedName("accountId")
-    @Expose
-    public java.util.UUID accountId;
-
-    /**
-     * The Account Number.
-     * 
-     */
-    @SerializedName("accountNumber")
-    @Expose
-    public String accountNumber;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Debit Amount.
-     * 
-     */
-    @SerializedName("debitAmount")
-    @Expose
-    public java.math.BigDecimal debitAmount;
-
-    /**
-     * The Credit Amount.
-     * 
-     */
-    @SerializedName("creditAmount")
-    @Expose
-    public java.math.BigDecimal creditAmount;
-
-    /**
      * The Last Modified Date Time.
      * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Posting Date.
+     * 
+     */
+    @SerializedName("postingDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly postingDate;
 
     /**
      * The Account.

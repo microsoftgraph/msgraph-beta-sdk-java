@@ -112,6 +112,27 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
     }
 
     /**
+     * Creates a TaxArea with a new object
+     *
+     * @param newTaxArea the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TaxArea newTaxArea, final ICallback<TaxArea> callback) {
+        send(HttpMethod.PUT, callback, newTaxArea);
+    }
+
+    /**
+     * Creates a TaxArea with a new object
+     *
+     * @param newTaxArea the object to create/update
+     * @return the created TaxArea
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TaxArea put(final TaxArea newTaxArea) throws ClientException {
+        return send(HttpMethod.PUT, newTaxArea);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

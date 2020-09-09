@@ -112,6 +112,27 @@ public class SkypeForBusinessDeviceUsageUserDetailRequest extends BaseRequest im
     }
 
     /**
+     * Creates a SkypeForBusinessDeviceUsageUserDetail with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail, final ICallback<SkypeForBusinessDeviceUsageUserDetail> callback) {
+        send(HttpMethod.PUT, callback, newSkypeForBusinessDeviceUsageUserDetail);
+    }
+
+    /**
+     * Creates a SkypeForBusinessDeviceUsageUserDetail with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageUserDetail the object to create/update
+     * @return the created SkypeForBusinessDeviceUsageUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SkypeForBusinessDeviceUsageUserDetail put(final SkypeForBusinessDeviceUsageUserDetail newSkypeForBusinessDeviceUsageUserDetail) throws ClientException {
+        return send(HttpMethod.PUT, newSkypeForBusinessDeviceUsageUserDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

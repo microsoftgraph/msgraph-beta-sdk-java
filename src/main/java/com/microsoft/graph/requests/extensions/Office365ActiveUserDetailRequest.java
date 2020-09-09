@@ -112,6 +112,27 @@ public class Office365ActiveUserDetailRequest extends BaseRequest implements IOf
     }
 
     /**
+     * Creates a Office365ActiveUserDetail with a new object
+     *
+     * @param newOffice365ActiveUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365ActiveUserDetail newOffice365ActiveUserDetail, final ICallback<Office365ActiveUserDetail> callback) {
+        send(HttpMethod.PUT, callback, newOffice365ActiveUserDetail);
+    }
+
+    /**
+     * Creates a Office365ActiveUserDetail with a new object
+     *
+     * @param newOffice365ActiveUserDetail the object to create/update
+     * @return the created Office365ActiveUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365ActiveUserDetail put(final Office365ActiveUserDetail newOffice365ActiveUserDetail) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365ActiveUserDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

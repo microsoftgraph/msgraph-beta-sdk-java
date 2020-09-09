@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CommsApplication;
 import com.microsoft.graph.models.extensions.Call;
-import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
@@ -25,6 +24,7 @@ import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -69,4 +69,20 @@ public interface ICallCollectionRequest {
      */
     ICallCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    ICallCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	ICallCollectionRequest skipToken(String skipToken);
 }

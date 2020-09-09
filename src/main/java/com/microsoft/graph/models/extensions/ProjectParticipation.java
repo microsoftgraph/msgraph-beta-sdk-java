@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.CompanyDetail;
-import com.microsoft.graph.models.extensions.PositionDetail;
 import com.microsoft.graph.models.extensions.RelatedPerson;
+import com.microsoft.graph.models.extensions.PositionDetail;
 import com.microsoft.graph.models.extensions.ItemFacet;
 
 
@@ -46,20 +46,12 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
     public CompanyDetail client;
 
     /**
-     * The Display Name.
+     * The Collaboration Tags.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("collaborationTags")
     @Expose
-    public String displayName;
-
-    /**
-     * The Detail.
-     * 
-     */
-    @SerializedName("detail")
-    @Expose
-    public PositionDetail detail;
+    public java.util.List<String> collaborationTags;
 
     /**
      * The Colleagues.
@@ -70,20 +62,28 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
     public java.util.List<RelatedPerson> colleagues;
 
     /**
+     * The Detail.
+     * 
+     */
+    @SerializedName("detail")
+    @Expose
+    public PositionDetail detail;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Sponsors.
      * 
      */
     @SerializedName("sponsors")
     @Expose
     public java.util.List<RelatedPerson> sponsors;
-
-    /**
-     * The Collaboration Tags.
-     * 
-     */
-    @SerializedName("collaborationTags")
-    @Expose
-    public java.util.List<String> collaborationTags;
 
 
     /**

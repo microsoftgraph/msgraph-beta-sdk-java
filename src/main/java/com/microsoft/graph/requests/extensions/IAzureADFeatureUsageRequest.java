@@ -80,6 +80,23 @@ public interface IAzureADFeatureUsageRequest extends IHttpRequest {
     AzureADFeatureUsage post(final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException;
 
     /**
+     * Posts a AzureADFeatureUsage with a new object
+     *
+     * @param newAzureADFeatureUsage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<AzureADFeatureUsage> callback);
+
+    /**
+     * Posts a AzureADFeatureUsage with a new object
+     *
+     * @param newAzureADFeatureUsage the object to create/update
+     * @return the created AzureADFeatureUsage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AzureADFeatureUsage put(final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

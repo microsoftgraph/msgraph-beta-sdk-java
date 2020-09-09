@@ -36,12 +36,12 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements IJsonBack
     public String accountId;
 
     /**
-     * The Display Name.
-     * Display name for the enrollment profile.
+     * The Created Date Time.
+     * Date time the enrollment profile was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -52,36 +52,12 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements IJsonBack
     public String description;
 
     /**
-     * The Created Date Time.
-     * Date time the enrollment profile was created.
+     * The Display Name.
+     * Display name for the enrollment profile.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("displayName")
     @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * Date time the enrollment profile was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Token Value.
-     * Value of the most recently created token for this enrollment profile.
-     */
-    @SerializedName("tokenValue")
-    @Expose
-    public String tokenValue;
-
-    /**
-     * The Token Expiration Date Time.
-     * Date time the most recently created token will expire.
-     */
-    @SerializedName("tokenExpirationDateTime")
-    @Expose
-    public java.util.Calendar tokenExpirationDateTime;
+    public String displayName;
 
     /**
      * The Enrolled Device Count.
@@ -90,6 +66,14 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements IJsonBack
     @SerializedName("enrolledDeviceCount")
     @Expose
     public Integer enrolledDeviceCount;
+
+    /**
+     * The Last Modified Date Time.
+     * Date time the enrollment profile was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Qr Code Content.
@@ -106,6 +90,22 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements IJsonBack
     @SerializedName("qrCodeImage")
     @Expose
     public MimeContent qrCodeImage;
+
+    /**
+     * The Token Expiration Date Time.
+     * Date time the most recently created token will expire.
+     */
+    @SerializedName("tokenExpirationDateTime")
+    @Expose
+    public java.util.Calendar tokenExpirationDateTime;
+
+    /**
+     * The Token Value.
+     * Value of the most recently created token for this enrollment profile.
+     */
+    @SerializedName("tokenValue")
+    @Expose
+    public String tokenValue;
 
 
     /**

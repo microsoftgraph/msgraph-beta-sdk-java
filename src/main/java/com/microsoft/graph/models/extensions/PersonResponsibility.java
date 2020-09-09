@@ -27,6 +27,14 @@ public class PersonResponsibility extends ItemFacet implements IJsonBackedObject
 
 
     /**
+     * The Collaboration Tags.
+     * 
+     */
+    @SerializedName("collaborationTags")
+    @Expose
+    public java.util.List<String> collaborationTags;
+
+    /**
      * The Description.
      * 
      */
@@ -49,14 +57,6 @@ public class PersonResponsibility extends ItemFacet implements IJsonBackedObject
     @SerializedName("webUrl")
     @Expose
     public String webUrl;
-
-    /**
-     * The Collaboration Tags.
-     * 
-     */
-    @SerializedName("collaborationTags")
-    @Expose
-    public java.util.List<String> collaborationTags;
 
 
     /**

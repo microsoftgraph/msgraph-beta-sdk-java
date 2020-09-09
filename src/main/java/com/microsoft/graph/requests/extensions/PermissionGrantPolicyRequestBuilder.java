@@ -55,18 +55,18 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder impl
     }
 
 
-    public IPermissionGrantConditionSetCollectionRequestBuilder includes() {
-        return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
-    }
-
-    public IPermissionGrantConditionSetRequestBuilder includes(final String id) {
-        return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
-    }
     public IPermissionGrantConditionSetCollectionRequestBuilder excludes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
 
     public IPermissionGrantConditionSetRequestBuilder excludes(final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
+    }
+    public IPermissionGrantConditionSetCollectionRequestBuilder includes() {
+        return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
+    }
+
+    public IPermissionGrantConditionSetRequestBuilder includes(final String id) {
+        return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
     }
 }

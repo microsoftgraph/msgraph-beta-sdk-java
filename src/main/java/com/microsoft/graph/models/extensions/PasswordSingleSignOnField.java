@@ -36,14 +36,6 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
     }
 
     /**
-     * The Field Id.
-     * 
-     */
-    @SerializedName("fieldId")
-    @Expose
-    public String fieldId;
-
-    /**
      * The Customized Label.
      * 
      */
@@ -58,6 +50,14 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
     @SerializedName("defaultLabel")
     @Expose
     public String defaultLabel;
+
+    /**
+     * The Field Id.
+     * 
+     */
+    @SerializedName("fieldId")
+    @Expose
+    public String fieldId;
 
     /**
      * The Type.

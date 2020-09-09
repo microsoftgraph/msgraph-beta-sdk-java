@@ -112,6 +112,27 @@ public class UserSecurityProfileRequest extends BaseRequest implements IUserSecu
     }
 
     /**
+     * Creates a UserSecurityProfile with a new object
+     *
+     * @param newUserSecurityProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserSecurityProfile newUserSecurityProfile, final ICallback<UserSecurityProfile> callback) {
+        send(HttpMethod.PUT, callback, newUserSecurityProfile);
+    }
+
+    /**
+     * Creates a UserSecurityProfile with a new object
+     *
+     * @param newUserSecurityProfile the object to create/update
+     * @return the created UserSecurityProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserSecurityProfile put(final UserSecurityProfile newUserSecurityProfile) throws ClientException {
+        return send(HttpMethod.PUT, newUserSecurityProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

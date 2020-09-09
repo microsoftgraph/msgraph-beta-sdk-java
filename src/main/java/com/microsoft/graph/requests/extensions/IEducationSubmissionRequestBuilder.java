@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSubmission;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationOutcomeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,6 +37,10 @@ public interface IEducationSubmissionRequestBuilder extends IRequestBuilder {
     IEducationSubmissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IEducationOutcomeCollectionRequestBuilder outcomes();
+
+    IEducationOutcomeRequestBuilder outcomes(final String id);
+
     IEducationSubmissionResourceCollectionRequestBuilder resources();
 
     IEducationSubmissionResourceRequestBuilder resources(final String id);
@@ -44,10 +48,6 @@ public interface IEducationSubmissionRequestBuilder extends IRequestBuilder {
     IEducationSubmissionResourceCollectionRequestBuilder submittedResources();
 
     IEducationSubmissionResourceRequestBuilder submittedResources(final String id);
-
-    IEducationOutcomeCollectionRequestBuilder outcomes();
-
-    IEducationOutcomeRequestBuilder outcomes(final String id);
     IEducationSubmissionReturnRequestBuilder msgraphReturn();
     IEducationSubmissionSubmitRequestBuilder submit();
     IEducationSubmissionUnsubmitRequestBuilder unsubmit();

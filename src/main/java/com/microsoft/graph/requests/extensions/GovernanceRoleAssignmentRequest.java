@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      */
     public GovernanceRoleAssignment post(final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newGovernanceRoleAssignment);
+    }
+
+    /**
+     * Creates a GovernanceRoleAssignment with a new object
+     *
+     * @param newGovernanceRoleAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<GovernanceRoleAssignment> callback) {
+        send(HttpMethod.PUT, callback, newGovernanceRoleAssignment);
+    }
+
+    /**
+     * Creates a GovernanceRoleAssignment with a new object
+     *
+     * @param newGovernanceRoleAssignment the object to create/update
+     * @return the created GovernanceRoleAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GovernanceRoleAssignment put(final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newGovernanceRoleAssignment);
     }
 
     /**

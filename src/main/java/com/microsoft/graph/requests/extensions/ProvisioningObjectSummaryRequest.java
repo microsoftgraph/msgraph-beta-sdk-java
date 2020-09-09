@@ -112,6 +112,27 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
     }
 
     /**
+     * Creates a ProvisioningObjectSummary with a new object
+     *
+     * @param newProvisioningObjectSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<ProvisioningObjectSummary> callback) {
+        send(HttpMethod.PUT, callback, newProvisioningObjectSummary);
+    }
+
+    /**
+     * Creates a ProvisioningObjectSummary with a new object
+     *
+     * @param newProvisioningObjectSummary the object to create/update
+     * @return the created ProvisioningObjectSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ProvisioningObjectSummary put(final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException {
+        return send(HttpMethod.PUT, newProvisioningObjectSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

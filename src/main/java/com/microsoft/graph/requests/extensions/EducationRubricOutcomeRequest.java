@@ -112,6 +112,27 @@ public class EducationRubricOutcomeRequest extends BaseRequest implements IEduca
     }
 
     /**
+     * Creates a EducationRubricOutcome with a new object
+     *
+     * @param newEducationRubricOutcome the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationRubricOutcome newEducationRubricOutcome, final ICallback<EducationRubricOutcome> callback) {
+        send(HttpMethod.PUT, callback, newEducationRubricOutcome);
+    }
+
+    /**
+     * Creates a EducationRubricOutcome with a new object
+     *
+     * @param newEducationRubricOutcome the object to create/update
+     * @return the created EducationRubricOutcome
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationRubricOutcome put(final EducationRubricOutcome newEducationRubricOutcome) throws ClientException {
+        return send(HttpMethod.PUT, newEducationRubricOutcome);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

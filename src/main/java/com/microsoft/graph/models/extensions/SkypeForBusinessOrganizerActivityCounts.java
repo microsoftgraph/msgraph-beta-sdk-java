@@ -27,22 +27,6 @@ public class SkypeForBusinessOrganizerActivityCounts extends Entity implements I
 
 
     /**
-     * The Im.
-     * 
-     */
-    @SerializedName("im")
-    @Expose
-    public Long im;
-
-    /**
-     * The Audio Video.
-     * 
-     */
-    @SerializedName("audioVideo")
-    @Expose
-    public Long audioVideo;
-
-    /**
      * The App Sharing.
      * 
      */
@@ -51,12 +35,12 @@ public class SkypeForBusinessOrganizerActivityCounts extends Entity implements I
     public Long appSharing;
 
     /**
-     * The Web.
+     * The Audio Video.
      * 
      */
-    @SerializedName("web")
+    @SerializedName("audioVideo")
     @Expose
-    public Long web;
+    public Long audioVideo;
 
     /**
      * The Dial In Out3rd Party.
@@ -75,12 +59,12 @@ public class SkypeForBusinessOrganizerActivityCounts extends Entity implements I
     public Long dialInOutMicrosoft;
 
     /**
-     * The Report Refresh Date.
+     * The Im.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("im")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long im;
 
     /**
      * The Report Date.
@@ -97,6 +81,22 @@ public class SkypeForBusinessOrganizerActivityCounts extends Entity implements I
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Web.
+     * 
+     */
+    @SerializedName("web")
+    @Expose
+    public Long web;
 
 
     /**

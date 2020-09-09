@@ -80,6 +80,23 @@ public interface ISharePointActivityPagesRequest extends IHttpRequest {
     SharePointActivityPages post(final SharePointActivityPages newSharePointActivityPages) throws ClientException;
 
     /**
+     * Posts a SharePointActivityPages with a new object
+     *
+     * @param newSharePointActivityPages the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharePointActivityPages newSharePointActivityPages, final ICallback<SharePointActivityPages> callback);
+
+    /**
+     * Posts a SharePointActivityPages with a new object
+     *
+     * @param newSharePointActivityPages the object to create/update
+     * @return the created SharePointActivityPages
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharePointActivityPages put(final SharePointActivityPages newSharePointActivityPages) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

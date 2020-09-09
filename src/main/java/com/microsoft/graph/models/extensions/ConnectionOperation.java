@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ConnectionOperationStatus;
 import com.microsoft.graph.models.extensions.ErrorDetail;
+import com.microsoft.graph.models.generated.ConnectionOperationStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,20 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public ConnectionOperationStatus status;
-
-    /**
      * The Error.
      * 
      */
     @SerializedName("error")
     @Expose
     public ErrorDetail error;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public ConnectionOperationStatus status;
 
 
     /**

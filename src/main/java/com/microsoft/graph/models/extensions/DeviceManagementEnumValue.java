@@ -36,20 +36,20 @@ public class DeviceManagementEnumValue implements IJsonBackedObject {
     }
 
     /**
-     * The Value.
-     * The raw enum value text
-     */
-    @SerializedName("value")
-    @Expose
-    public String value;
-
-    /**
      * The Display Name.
      * Display name for this enum value
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Value.
+     * The raw enum value text
+     */
+    @SerializedName("value")
+    @Expose
+    public String value;
 
 
     /**

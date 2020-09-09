@@ -61,14 +61,14 @@ public class GovernanceRoleDefinitionCollectionRequest extends BaseCollectionReq
     public void post(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<GovernanceRoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceRoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceRoleDefinition, callback);
     }
 
     public GovernanceRoleDefinition post(final GovernanceRoleDefinition newGovernanceRoleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GovernanceRoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceRoleDefinition);
     }
 
@@ -105,6 +105,27 @@ public class GovernanceRoleDefinitionCollectionRequest extends BaseCollectionReq
         return (GovernanceRoleDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGovernanceRoleDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GovernanceRoleDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGovernanceRoleDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGovernanceRoleDefinitionCollectionRequest)this;
+    }
     public IGovernanceRoleDefinitionCollectionPage buildFromResponse(final GovernanceRoleDefinitionCollectionResponse response) {
         final IGovernanceRoleDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

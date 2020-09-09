@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AndroidForWorkBindStatus;
-import com.microsoft.graph.models.generated.AndroidForWorkSyncStatus;
 import com.microsoft.graph.models.generated.AndroidForWorkEnrollmentTarget;
+import com.microsoft.graph.models.generated.AndroidForWorkSyncStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -38,6 +38,22 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
     public AndroidForWorkBindStatus bindStatus;
 
     /**
+     * The Device Owner Management Enabled.
+     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
+     */
+    @SerializedName("deviceOwnerManagementEnabled")
+    @Expose
+    public Boolean deviceOwnerManagementEnabled;
+
+    /**
+     * The Enrollment Target.
+     * Indicates which users can enroll devices in Android for Work device management
+     */
+    @SerializedName("enrollmentTarget")
+    @Expose
+    public AndroidForWorkEnrollmentTarget enrollmentTarget;
+
+    /**
      * The Last App Sync Date Time.
      * Last completion time for app sync
      */
@@ -54,12 +70,12 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
     public AndroidForWorkSyncStatus lastAppSyncStatus;
 
     /**
-     * The Owner User Principal Name.
-     * Owner UPN that created the enterprise
+     * The Last Modified Date Time.
+     * Last modification time for Android for Work settings
      */
-    @SerializedName("ownerUserPrincipalName")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public String ownerUserPrincipalName;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Owner Organization Name.
@@ -70,20 +86,12 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
     public String ownerOrganizationName;
 
     /**
-     * The Last Modified Date Time.
-     * Last modification time for Android for Work settings
+     * The Owner User Principal Name.
+     * Owner UPN that created the enterprise
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("ownerUserPrincipalName")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Enrollment Target.
-     * Indicates which users can enroll devices in Android for Work device management
-     */
-    @SerializedName("enrollmentTarget")
-    @Expose
-    public AndroidForWorkEnrollmentTarget enrollmentTarget;
+    public String ownerUserPrincipalName;
 
     /**
      * The Target Group Ids.
@@ -92,14 +100,6 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
     @SerializedName("targetGroupIds")
     @Expose
     public java.util.List<String> targetGroupIds;
-
-    /**
-     * The Device Owner Management Enabled.
-     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-     */
-    @SerializedName("deviceOwnerManagementEnabled")
-    @Expose
-    public Boolean deviceOwnerManagementEnabled;
 
 
     /**

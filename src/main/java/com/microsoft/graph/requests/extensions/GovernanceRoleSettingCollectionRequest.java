@@ -61,14 +61,14 @@ public class GovernanceRoleSettingCollectionRequest extends BaseCollectionReques
     public void post(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernanceRoleSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceRoleSetting, callback);
     }
 
     public GovernanceRoleSetting post(final GovernanceRoleSetting newGovernanceRoleSetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GovernanceRoleSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernanceRoleSetting);
     }
 
@@ -105,6 +105,27 @@ public class GovernanceRoleSettingCollectionRequest extends BaseCollectionReques
         return (GovernanceRoleSettingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGovernanceRoleSettingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GovernanceRoleSettingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGovernanceRoleSettingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGovernanceRoleSettingCollectionRequest)this;
+    }
     public IGovernanceRoleSettingCollectionPage buildFromResponse(final GovernanceRoleSettingCollectionResponse response) {
         final IGovernanceRoleSettingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

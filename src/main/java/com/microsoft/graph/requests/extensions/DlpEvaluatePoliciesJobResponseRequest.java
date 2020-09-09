@@ -112,6 +112,27 @@ public class DlpEvaluatePoliciesJobResponseRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a DlpEvaluatePoliciesJobResponse with a new object
+     *
+     * @param newDlpEvaluatePoliciesJobResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse, final ICallback<DlpEvaluatePoliciesJobResponse> callback) {
+        send(HttpMethod.PUT, callback, newDlpEvaluatePoliciesJobResponse);
+    }
+
+    /**
+     * Creates a DlpEvaluatePoliciesJobResponse with a new object
+     *
+     * @param newDlpEvaluatePoliciesJobResponse the object to create/update
+     * @return the created DlpEvaluatePoliciesJobResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DlpEvaluatePoliciesJobResponse put(final DlpEvaluatePoliciesJobResponse newDlpEvaluatePoliciesJobResponse) throws ClientException {
+        return send(HttpMethod.PUT, newDlpEvaluatePoliciesJobResponse);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

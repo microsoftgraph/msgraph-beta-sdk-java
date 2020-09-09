@@ -28,20 +28,20 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
 
 
     /**
-     * The Run State.
-     * Status of the item.
-     */
-    @SerializedName("runState")
-    @Expose
-    public RunState runState;
-
-    /**
      * The Error Code.
      * Error code for the failure, empty if no failure.
      */
     @SerializedName("errorCode")
     @Expose
     public String errorCode;
+
+    /**
+     * The Run State.
+     * Status of the item.
+     */
+    @SerializedName("runState")
+    @Expose
+    public RunState runState;
 
 
     /**

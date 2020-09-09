@@ -112,6 +112,27 @@ public class UnitOfMeasureRequest extends BaseRequest implements IUnitOfMeasureR
     }
 
     /**
+     * Creates a UnitOfMeasure with a new object
+     *
+     * @param newUnitOfMeasure the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnitOfMeasure newUnitOfMeasure, final ICallback<UnitOfMeasure> callback) {
+        send(HttpMethod.PUT, callback, newUnitOfMeasure);
+    }
+
+    /**
+     * Creates a UnitOfMeasure with a new object
+     *
+     * @param newUnitOfMeasure the object to create/update
+     * @return the created UnitOfMeasure
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnitOfMeasure put(final UnitOfMeasure newUnitOfMeasure) throws ClientException {
+        return send(HttpMethod.PUT, newUnitOfMeasure);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

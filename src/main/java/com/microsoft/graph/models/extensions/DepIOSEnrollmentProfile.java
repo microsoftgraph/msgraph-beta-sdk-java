@@ -29,28 +29,12 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
 
 
     /**
-     * The ITunes Pairing Mode.
-     * Indicates the iTunes pairing mode
+     * The Appearance Screen Disabled.
+     * Indicates if Apperance screen is disabled
      */
-    @SerializedName("iTunesPairingMode")
+    @SerializedName("appearanceScreenDisabled")
     @Expose
-    public ITunesPairingMode iTunesPairingMode;
-
-    /**
-     * The Management Certificates.
-     * Management certificates for Apple Configurator
-     */
-    @SerializedName("managementCertificates")
-    @Expose
-    public java.util.List<ManagementCertificateWithThumbprint> managementCertificates;
-
-    /**
-     * The Restore From Android Disabled.
-     * Indicates if Restore from Android is disabled
-     */
-    @SerializedName("restoreFromAndroidDisabled")
-    @Expose
-    public Boolean restoreFromAndroidDisabled;
+    public Boolean appearanceScreenDisabled;
 
     /**
      * The Await Device Configured Confirmation.
@@ -61,12 +45,20 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean awaitDeviceConfiguredConfirmation;
 
     /**
-     * The Shared IPad Maximum User Count.
-     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
+     * The Company Portal Vpp Token Id.
+     * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
      */
-    @SerializedName("sharedIPadMaximumUserCount")
+    @SerializedName("companyPortalVppTokenId")
     @Expose
-    public Integer sharedIPadMaximumUserCount;
+    public String companyPortalVppTokenId;
+
+    /**
+     * The Device To Device Migration Disabled.
+     * Indicates if Device To Device Migration is disabled
+     */
+    @SerializedName("deviceToDeviceMigrationDisabled")
+    @Expose
+    public Boolean deviceToDeviceMigrationDisabled;
 
     /**
      * The Enable Shared IPad.
@@ -77,20 +69,20 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean enableSharedIPad;
 
     /**
-     * The Company Portal Vpp Token Id.
-     * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
-     */
-    @SerializedName("companyPortalVppTokenId")
-    @Expose
-    public String companyPortalVppTokenId;
-
-    /**
      * The Enable Single App Enrollment Mode.
      * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
      */
     @SerializedName("enableSingleAppEnrollmentMode")
     @Expose
     public Boolean enableSingleAppEnrollmentMode;
+
+    /**
+     * The Express Language Screen Disabled.
+     * Indicates if Express Language screen is disabled
+     */
+    @SerializedName("expressLanguageScreenDisabled")
+    @Expose
+    public Boolean expressLanguageScreenDisabled;
 
     /**
      * The Home Button Screen Disabled.
@@ -109,12 +101,52 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean iMessageAndFaceTimeScreenDisabled;
 
     /**
+     * The ITunes Pairing Mode.
+     * Indicates the iTunes pairing mode
+     */
+    @SerializedName("iTunesPairingMode")
+    @Expose
+    public ITunesPairingMode iTunesPairingMode;
+
+    /**
+     * The Management Certificates.
+     * Management certificates for Apple Configurator
+     */
+    @SerializedName("managementCertificates")
+    @Expose
+    public java.util.List<ManagementCertificateWithThumbprint> managementCertificates;
+
+    /**
      * The On Boarding Screen Disabled.
      * Indicates if onboarding setup screen is disabled
      */
     @SerializedName("onBoardingScreenDisabled")
     @Expose
     public Boolean onBoardingScreenDisabled;
+
+    /**
+     * The Preferred Language Screen Disabled.
+     * Indicates if Preferred language screen is disabled
+     */
+    @SerializedName("preferredLanguageScreenDisabled")
+    @Expose
+    public Boolean preferredLanguageScreenDisabled;
+
+    /**
+     * The Restore From Android Disabled.
+     * Indicates if Restore from Android is disabled
+     */
+    @SerializedName("restoreFromAndroidDisabled")
+    @Expose
+    public Boolean restoreFromAndroidDisabled;
+
+    /**
+     * The Shared IPad Maximum User Count.
+     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
+     */
+    @SerializedName("sharedIPadMaximumUserCount")
+    @Expose
+    public Integer sharedIPadMaximumUserCount;
 
     /**
      * The Sim Setup Screen Disabled.
@@ -139,38 +171,6 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     @SerializedName("watchMigrationScreenDisabled")
     @Expose
     public Boolean watchMigrationScreenDisabled;
-
-    /**
-     * The Appearance Screen Disabled.
-     * Indicates if Apperance screen is disabled
-     */
-    @SerializedName("appearanceScreenDisabled")
-    @Expose
-    public Boolean appearanceScreenDisabled;
-
-    /**
-     * The Express Language Screen Disabled.
-     * Indicates if Express Language screen is disabled
-     */
-    @SerializedName("expressLanguageScreenDisabled")
-    @Expose
-    public Boolean expressLanguageScreenDisabled;
-
-    /**
-     * The Preferred Language Screen Disabled.
-     * Indicates if Preferred language screen is disabled
-     */
-    @SerializedName("preferredLanguageScreenDisabled")
-    @Expose
-    public Boolean preferredLanguageScreenDisabled;
-
-    /**
-     * The Device To Device Migration Disabled.
-     * Indicates if Device To Device Migration is disabled
-     */
-    @SerializedName("deviceToDeviceMigrationDisabled")
-    @Expose
-    public Boolean deviceToDeviceMigrationDisabled;
 
     /**
      * The Welcome Screen Disabled.

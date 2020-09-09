@@ -63,11 +63,11 @@ public class PrivilegedRoleAssignmentRequestBuilder extends BaseRequestBuilder i
         return new PrivilegedRoleRequestBuilder(getRequestUrlWithAdditionalSegment("roleInfo"), getClient(), null);
     }
 
-    public IPrivilegedRoleAssignmentMakePermanentRequestBuilder makePermanent(final String reason, final String ticketNumber, final String ticketSystem) {
-        return new PrivilegedRoleAssignmentMakePermanentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makePermanent"), getClient(), null, reason, ticketNumber, ticketSystem);
-    }
-
     public IPrivilegedRoleAssignmentMakeEligibleRequestBuilder makeEligible() {
         return new PrivilegedRoleAssignmentMakeEligibleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makeEligible"), getClient(), null);
+    }
+
+    public IPrivilegedRoleAssignmentMakePermanentRequestBuilder makePermanent(final String reason, final String ticketNumber, final String ticketSystem) {
+        return new PrivilegedRoleAssignmentMakePermanentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makePermanent"), getClient(), null, reason, ticketNumber, ticketSystem);
     }
 }

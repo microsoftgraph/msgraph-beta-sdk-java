@@ -114,6 +114,27 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
     }
 
     /**
+     * Creates a ProgramControl with a new object
+     *
+     * @param newProgramControl the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ProgramControl newProgramControl, final ICallback<ProgramControl> callback) {
+        send(HttpMethod.PUT, callback, newProgramControl);
+    }
+
+    /**
+     * Creates a ProgramControl with a new object
+     *
+     * @param newProgramControl the object to create/update
+     * @return the created ProgramControl
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ProgramControl put(final ProgramControl newProgramControl) throws ClientException {
+        return send(HttpMethod.PUT, newProgramControl);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

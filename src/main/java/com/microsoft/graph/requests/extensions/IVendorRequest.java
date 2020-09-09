@@ -80,6 +80,23 @@ public interface IVendorRequest extends IHttpRequest {
     Vendor post(final Vendor newVendor) throws ClientException;
 
     /**
+     * Posts a Vendor with a new object
+     *
+     * @param newVendor the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Vendor newVendor, final ICallback<Vendor> callback);
+
+    /**
+     * Posts a Vendor with a new object
+     *
+     * @param newVendor the object to create/update
+     * @return the created Vendor
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Vendor put(final Vendor newVendor) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

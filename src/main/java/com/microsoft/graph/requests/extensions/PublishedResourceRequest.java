@@ -116,6 +116,27 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
     }
 
     /**
+     * Creates a PublishedResource with a new object
+     *
+     * @param newPublishedResource the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PublishedResource newPublishedResource, final ICallback<PublishedResource> callback) {
+        send(HttpMethod.PUT, callback, newPublishedResource);
+    }
+
+    /**
+     * Creates a PublishedResource with a new object
+     *
+     * @param newPublishedResource the object to create/update
+     * @return the created PublishedResource
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PublishedResource put(final PublishedResource newPublishedResource) throws ClientException {
+        return send(HttpMethod.PUT, newPublishedResource);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IMobileAppInstallSummaryRequest extends IHttpRequest {
     MobileAppInstallSummary post(final MobileAppInstallSummary newMobileAppInstallSummary) throws ClientException;
 
     /**
+     * Posts a MobileAppInstallSummary with a new object
+     *
+     * @param newMobileAppInstallSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<MobileAppInstallSummary> callback);
+
+    /**
+     * Posts a MobileAppInstallSummary with a new object
+     *
+     * @param newMobileAppInstallSummary the object to create/update
+     * @return the created MobileAppInstallSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileAppInstallSummary put(final MobileAppInstallSummary newMobileAppInstallSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

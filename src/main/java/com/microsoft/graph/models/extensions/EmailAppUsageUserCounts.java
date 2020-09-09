@@ -27,12 +27,12 @@ public class EmailAppUsageUserCounts extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Report Refresh Date.
+     * The Imap4App.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("imap4App")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long imap4App;
 
     /**
      * The Mail For Mac.
@@ -43,20 +43,20 @@ public class EmailAppUsageUserCounts extends Entity implements IJsonBackedObject
     public Long mailForMac;
 
     /**
+     * The Other For Mobile.
+     * 
+     */
+    @SerializedName("otherForMobile")
+    @Expose
+    public Long otherForMobile;
+
+    /**
      * The Outlook For Mac.
      * 
      */
     @SerializedName("outlookForMac")
     @Expose
     public Long outlookForMac;
-
-    /**
-     * The Outlook For Windows.
-     * 
-     */
-    @SerializedName("outlookForWindows")
-    @Expose
-    public Long outlookForWindows;
 
     /**
      * The Outlook For Mobile.
@@ -67,14 +67,6 @@ public class EmailAppUsageUserCounts extends Entity implements IJsonBackedObject
     public Long outlookForMobile;
 
     /**
-     * The Other For Mobile.
-     * 
-     */
-    @SerializedName("otherForMobile")
-    @Expose
-    public Long otherForMobile;
-
-    /**
      * The Outlook For Web.
      * 
      */
@@ -83,28 +75,20 @@ public class EmailAppUsageUserCounts extends Entity implements IJsonBackedObject
     public Long outlookForWeb;
 
     /**
+     * The Outlook For Windows.
+     * 
+     */
+    @SerializedName("outlookForWindows")
+    @Expose
+    public Long outlookForWindows;
+
+    /**
      * The Pop3App.
      * 
      */
     @SerializedName("pop3App")
     @Expose
     public Long pop3App;
-
-    /**
-     * The Imap4App.
-     * 
-     */
-    @SerializedName("imap4App")
-    @Expose
-    public Long imap4App;
-
-    /**
-     * The Smtp App.
-     * 
-     */
-    @SerializedName("smtpApp")
-    @Expose
-    public Long smtpApp;
 
     /**
      * The Report Date.
@@ -121,6 +105,22 @@ public class EmailAppUsageUserCounts extends Entity implements IJsonBackedObject
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Smtp App.
+     * 
+     */
+    @SerializedName("smtpApp")
+    @Expose
+    public Long smtpApp;
 
 
     /**

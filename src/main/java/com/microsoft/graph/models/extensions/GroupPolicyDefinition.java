@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.GroupPolicyDefinitionClassType;
 import com.microsoft.graph.models.generated.GroupPolicyType;
-import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyCategory;
+import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentation;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationCollectionResponse;
@@ -32,6 +32,14 @@ import java.util.Map;
  */
 public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Category Path.
+     * The localized full category path for the policy.
+     */
+    @SerializedName("categoryPath")
+    @Expose
+    public String categoryPath;
 
     /**
      * The Class Type.
@@ -58,30 +66,6 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     public String explainText;
 
     /**
-     * The Category Path.
-     * The localized full category path for the policy.
-     */
-    @SerializedName("categoryPath")
-    @Expose
-    public String categoryPath;
-
-    /**
-     * The Supported On.
-     * Localized string used to specify what operating system or application version is affected by the policy.
-     */
-    @SerializedName("supportedOn")
-    @Expose
-    public String supportedOn;
-
-    /**
-     * The Policy Type.
-     * Specifies the type of group policy.
-     */
-    @SerializedName("policyType")
-    @Expose
-    public GroupPolicyType policyType;
-
-    /**
      * The Group Policy Category Id.
      * The category id of the parent category
      */
@@ -98,12 +82,20 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Definition File.
-     * The group policy file associated with the definition.
+     * The Policy Type.
+     * Specifies the type of group policy.
      */
-    @SerializedName("definitionFile")
+    @SerializedName("policyType")
     @Expose
-    public GroupPolicyDefinitionFile definitionFile;
+    public GroupPolicyType policyType;
+
+    /**
+     * The Supported On.
+     * Localized string used to specify what operating system or application version is affected by the policy.
+     */
+    @SerializedName("supportedOn")
+    @Expose
+    public String supportedOn;
 
     /**
      * The Category.
@@ -112,6 +104,14 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     @SerializedName("category")
     @Expose
     public GroupPolicyCategory category;
+
+    /**
+     * The Definition File.
+     * The group policy file associated with the definition.
+     */
+    @SerializedName("definitionFile")
+    @Expose
+    public GroupPolicyDefinitionFile definitionFile;
 
     /**
      * The Presentations.

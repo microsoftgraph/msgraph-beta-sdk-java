@@ -31,20 +31,20 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Display Name.
-     * The localized friendly name of the ADMX file.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * The localized description of the policy settings in the ADMX file. The default value is empty.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * The localized friendly name of the ADMX file.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Language Codes.
@@ -55,20 +55,12 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
     public java.util.List<String> languageCodes;
 
     /**
-     * The Target Prefix.
-     * Specifies the logical name that refers to the namespace within the ADMX file.
+     * The Last Modified Date Time.
+     * The date and time the entity was last modified.
      */
-    @SerializedName("targetPrefix")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public String targetPrefix;
-
-    /**
-     * The Target Namespace.
-     * Specifies the URI used to identify the namespace within the ADMX file.
-     */
-    @SerializedName("targetNamespace")
-    @Expose
-    public String targetNamespace;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Policy Type.
@@ -87,12 +79,20 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
     public String revision;
 
     /**
-     * The Last Modified Date Time.
-     * The date and time the entity was last modified.
+     * The Target Namespace.
+     * Specifies the URI used to identify the namespace within the ADMX file.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("targetNamespace")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String targetNamespace;
+
+    /**
+     * The Target Prefix.
+     * Specifies the logical name that refers to the namespace within the ADMX file.
+     */
+    @SerializedName("targetPrefix")
+    @Expose
+    public String targetPrefix;
 
     /**
      * The Definitions.

@@ -112,6 +112,27 @@ public class TaxGroupRequest extends BaseRequest implements ITaxGroupRequest {
     }
 
     /**
+     * Creates a TaxGroup with a new object
+     *
+     * @param newTaxGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TaxGroup newTaxGroup, final ICallback<TaxGroup> callback) {
+        send(HttpMethod.PUT, callback, newTaxGroup);
+    }
+
+    /**
+     * Creates a TaxGroup with a new object
+     *
+     * @param newTaxGroup the object to create/update
+     * @return the created TaxGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TaxGroup put(final TaxGroup newTaxGroup) throws ClientException {
+        return send(HttpMethod.PUT, newTaxGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

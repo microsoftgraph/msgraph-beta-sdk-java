@@ -116,6 +116,27 @@ public class AccessReviewScheduleDefinitionRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a AccessReviewScheduleDefinition with a new object
+     *
+     * @param newAccessReviewScheduleDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition, final ICallback<AccessReviewScheduleDefinition> callback) {
+        send(HttpMethod.PUT, callback, newAccessReviewScheduleDefinition);
+    }
+
+    /**
+     * Creates a AccessReviewScheduleDefinition with a new object
+     *
+     * @param newAccessReviewScheduleDefinition the object to create/update
+     * @return the created AccessReviewScheduleDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReviewScheduleDefinition put(final AccessReviewScheduleDefinition newAccessReviewScheduleDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReviewScheduleDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

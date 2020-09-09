@@ -114,6 +114,27 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
     }
 
     /**
+     * Creates a PrivilegedSignupStatus with a new object
+     *
+     * @param newPrivilegedSignupStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedSignupStatus);
+    }
+
+    /**
+     * Creates a PrivilegedSignupStatus with a new object
+     *
+     * @param newPrivilegedSignupStatus the object to create/update
+     * @return the created PrivilegedSignupStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedSignupStatus put(final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedSignupStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

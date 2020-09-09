@@ -116,6 +116,27 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
     }
 
     /**
+     * Creates a DeviceManagementCollectionSettingInstance with a new object
+     *
+     * @param newDeviceManagementCollectionSettingInstance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<DeviceManagementCollectionSettingInstance> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementCollectionSettingInstance);
+    }
+
+    /**
+     * Creates a DeviceManagementCollectionSettingInstance with a new object
+     *
+     * @param newDeviceManagementCollectionSettingInstance the object to create/update
+     * @return the created DeviceManagementCollectionSettingInstance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementCollectionSettingInstance put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementCollectionSettingInstance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

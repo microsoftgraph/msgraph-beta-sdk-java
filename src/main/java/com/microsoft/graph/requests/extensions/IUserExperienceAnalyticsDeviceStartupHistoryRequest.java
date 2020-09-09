@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsDeviceStartupHistoryRequest extends IHt
     UserExperienceAnalyticsDeviceStartupHistory post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsDeviceStartupHistory with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupHistory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<UserExperienceAnalyticsDeviceStartupHistory> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsDeviceStartupHistory with a new object
+     *
+     * @param newUserExperienceAnalyticsDeviceStartupHistory the object to create/update
+     * @return the created UserExperienceAnalyticsDeviceStartupHistory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsDeviceStartupHistory put(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

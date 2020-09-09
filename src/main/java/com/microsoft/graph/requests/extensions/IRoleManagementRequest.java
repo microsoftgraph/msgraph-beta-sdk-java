@@ -80,6 +80,23 @@ public interface IRoleManagementRequest extends IHttpRequest {
     RoleManagement post(final RoleManagement newRoleManagement) throws ClientException;
 
     /**
+     * Posts a RoleManagement with a new object
+     *
+     * @param newRoleManagement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RoleManagement newRoleManagement, final ICallback<RoleManagement> callback);
+
+    /**
+     * Posts a RoleManagement with a new object
+     *
+     * @param newRoleManagement the object to create/update
+     * @return the created RoleManagement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RoleManagement put(final RoleManagement newRoleManagement) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

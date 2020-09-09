@@ -37,13 +37,13 @@ public interface IWindowsManagedDeviceRequestBuilder extends IRequestBuilder {
 
     ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id);
 
-    IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
-
-    IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
-
     IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
 
     IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
+
+    IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
+
+    IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
 
     IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates();
 
@@ -60,19 +60,19 @@ public interface IWindowsManagedDeviceRequestBuilder extends IRequestBuilder {
      */
     IDeviceCategoryRequestBuilder deviceCategory();
 
+    IDeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests();
+
+    IDeviceLogCollectionResponseRequestBuilder logCollectionRequests(final String id);
+
+    IUserCollectionRequestBuilder users();
+
+    IUserRequestBuilder users(final String id);
+
     /**
      * Gets the request builder for WindowsProtectionState
      *
      * @return the IWindowsProtectionStateRequestBuilder instance
      */
     IWindowsProtectionStateRequestBuilder windowsProtectionState();
-
-    IUserCollectionRequestBuilder users();
-
-    IUserRequestBuilder users(final String id);
-
-    IDeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests();
-
-    IDeviceLogCollectionResponseRequestBuilder logCollectionRequests(final String id);
 
 }

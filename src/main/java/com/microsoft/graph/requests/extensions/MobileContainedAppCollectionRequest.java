@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.MicrosoftStoreForBusinessApp;
+import com.microsoft.graph.models.extensions.WindowsUniversalAppX;
 import com.microsoft.graph.models.extensions.MobileContainedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class MobileContainedAppCollectionRequest extends BaseCollectionRequest<M
     public void post(final MobileContainedApp newMobileContainedApp, final ICallback<MobileContainedApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileContainedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileContainedApp, callback);
     }
 
     public MobileContainedApp post(final MobileContainedApp newMobileContainedApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileContainedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileContainedApp);
     }
 
@@ -106,6 +106,27 @@ public class MobileContainedAppCollectionRequest extends BaseCollectionRequest<M
         return (MobileContainedAppCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileContainedAppCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileContainedAppCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileContainedAppCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileContainedAppCollectionRequest)this;
+    }
     public IMobileContainedAppCollectionPage buildFromResponse(final MobileContainedAppCollectionResponse response) {
         final IMobileContainedAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {

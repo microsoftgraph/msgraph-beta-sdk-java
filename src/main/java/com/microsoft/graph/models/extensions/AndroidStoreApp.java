@@ -28,14 +28,6 @@ public class AndroidStoreApp extends MobileApp implements IJsonBackedObject {
 
 
     /**
-     * The Package Id.
-     * The package identifier.
-     */
-    @SerializedName("packageId")
-    @Expose
-    public String packageId;
-
-    /**
      * The App Identifier.
      * The Identity Name.
      */
@@ -58,6 +50,14 @@ public class AndroidStoreApp extends MobileApp implements IJsonBackedObject {
     @SerializedName("minimumSupportedOperatingSystem")
     @Expose
     public AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
+
+    /**
+     * The Package Id.
+     * The package identifier.
+     */
+    @SerializedName("packageId")
+    @Expose
+    public String packageId;
 
 
     /**

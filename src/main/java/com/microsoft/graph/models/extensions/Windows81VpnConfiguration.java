@@ -45,20 +45,20 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     public WindowsVpnConnectionType connectionType;
 
     /**
-     * The Login Group Or Domain.
-     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     */
-    @SerializedName("loginGroupOrDomain")
-    @Expose
-    public String loginGroupOrDomain;
-
-    /**
      * The Enable Split Tunneling.
      * Enable split tunneling for the VPN.
      */
     @SerializedName("enableSplitTunneling")
     @Expose
     public Boolean enableSplitTunneling;
+
+    /**
+     * The Login Group Or Domain.
+     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
+     */
+    @SerializedName("loginGroupOrDomain")
+    @Expose
+    public String loginGroupOrDomain;
 
     /**
      * The Proxy Server.

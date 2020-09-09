@@ -27,20 +27,20 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
 
 
     /**
-     * The Trusted Root Certificate.
-     * Trusted Root Certificate
-     */
-    @SerializedName("trustedRootCertificate")
-    @Expose
-    public byte[] trustedRootCertificate;
-
-    /**
      * The Cert File Name.
      * File name to display in UI.
      */
     @SerializedName("certFileName")
     @Expose
     public String certFileName;
+
+    /**
+     * The Trusted Root Certificate.
+     * Trusted Root Certificate
+     */
+    @SerializedName("trustedRootCertificate")
+    @Expose
+    public byte[] trustedRootCertificate;
 
 
     /**

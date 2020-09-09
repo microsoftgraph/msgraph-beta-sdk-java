@@ -112,6 +112,27 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
     }
 
     /**
+     * Creates a EvaluateLabelJobResponse with a new object
+     *
+     * @param newEvaluateLabelJobResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<EvaluateLabelJobResponse> callback) {
+        send(HttpMethod.PUT, callback, newEvaluateLabelJobResponse);
+    }
+
+    /**
+     * Creates a EvaluateLabelJobResponse with a new object
+     *
+     * @param newEvaluateLabelJobResponse the object to create/update
+     * @return the created EvaluateLabelJobResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EvaluateLabelJobResponse put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException {
+        return send(HttpMethod.PUT, newEvaluateLabelJobResponse);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -118,6 +118,27 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
     }
 
     /**
+     * Creates a OrganizationSettings with a new object
+     *
+     * @param newOrganizationSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OrganizationSettings newOrganizationSettings, final ICallback<OrganizationSettings> callback) {
+        send(HttpMethod.PUT, callback, newOrganizationSettings);
+    }
+
+    /**
+     * Creates a OrganizationSettings with a new object
+     *
+     * @param newOrganizationSettings the object to create/update
+     * @return the created OrganizationSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OrganizationSettings put(final OrganizationSettings newOrganizationSettings) throws ClientException {
+        return send(HttpMethod.PUT, newOrganizationSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

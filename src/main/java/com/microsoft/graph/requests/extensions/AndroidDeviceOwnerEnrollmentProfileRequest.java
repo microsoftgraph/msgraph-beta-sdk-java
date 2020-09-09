@@ -112,6 +112,27 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a AndroidDeviceOwnerEnrollmentProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerEnrollmentProfile);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerEnrollmentProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerEnrollmentProfile the object to create/update
+     * @return the created AndroidDeviceOwnerEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerEnrollmentProfile put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerEnrollmentProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

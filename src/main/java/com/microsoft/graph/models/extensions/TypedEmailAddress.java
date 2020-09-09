@@ -28,20 +28,20 @@ public class TypedEmailAddress extends EmailAddress implements IJsonBackedObject
 
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public EmailType type;
-
-    /**
      * The Other Label.
      * 
      */
     @SerializedName("otherLabel")
     @Expose
     public String otherLabel;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public EmailType type;
 
 
     /**

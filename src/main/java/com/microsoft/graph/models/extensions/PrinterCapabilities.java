@@ -8,19 +8,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PrinterFeedDirection;
-import com.microsoft.graph.models.generated.PrintQuality;
-import com.microsoft.graph.models.generated.PrintDuplexMode;
-import com.microsoft.graph.models.extensions.IntegerRange;
-import com.microsoft.graph.models.generated.PrintFinishing;
-import com.microsoft.graph.models.generated.PrintOrientation;
-import com.microsoft.graph.models.generated.PrintMultipageLayout;
 import com.microsoft.graph.models.generated.PrintColorMode;
+import com.microsoft.graph.models.extensions.IntegerRange;
+import com.microsoft.graph.models.generated.PrintDuplexMode;
+import com.microsoft.graph.models.generated.PrinterFeedDirection;
+import com.microsoft.graph.models.generated.PrintFinishing;
+import com.microsoft.graph.models.generated.PrintMultipageLayout;
+import com.microsoft.graph.models.generated.PrintOrientation;
+import com.microsoft.graph.models.generated.PrintQuality;
 import com.microsoft.graph.models.generated.PrintScaling;
-import com.microsoft.graph.models.generated.PrintMediaType;
-import com.microsoft.graph.models.generated.PrintDuplexConfiguration;
-import com.microsoft.graph.models.generated.PrintPresentationDirection;
 import com.microsoft.graph.models.generated.PrintColorConfiguration;
+import com.microsoft.graph.models.generated.PrintDuplexConfiguration;
+import com.microsoft.graph.models.generated.PrintMediaType;
+import com.microsoft.graph.models.generated.PrintPresentationDirection;
 
 
 import com.google.gson.JsonObject;
@@ -49,6 +49,30 @@ public class PrinterCapabilities implements IJsonBackedObject {
     }
 
     /**
+     * The Bottom Margins.
+     * 
+     */
+    @SerializedName("bottomMargins")
+    @Expose
+    public java.util.List<Integer> bottomMargins;
+
+    /**
+     * The Collation.
+     * 
+     */
+    @SerializedName("collation")
+    @Expose
+    public Boolean collation;
+
+    /**
+     * The Color Modes.
+     * 
+     */
+    @SerializedName("colorModes")
+    @Expose
+    public java.util.List<PrintColorMode> colorModes;
+
+    /**
      * The Content Types.
      * 
      */
@@ -57,36 +81,12 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> contentTypes;
 
     /**
-     * The Is Color Printing Supported.
+     * The Copies Per Job.
      * 
      */
-    @SerializedName("isColorPrintingSupported")
+    @SerializedName("copiesPerJob")
     @Expose
-    public Boolean isColorPrintingSupported;
-
-    /**
-     * The Feed Directions.
-     * 
-     */
-    @SerializedName("feedDirections")
-    @Expose
-    public java.util.List<PrinterFeedDirection> feedDirections;
-
-    /**
-     * The Is Page Range Supported.
-     * 
-     */
-    @SerializedName("isPageRangeSupported")
-    @Expose
-    public Boolean isPageRangeSupported;
-
-    /**
-     * The Qualities.
-     * 
-     */
-    @SerializedName("qualities")
-    @Expose
-    public java.util.List<PrintQuality> qualities;
+    public IntegerRange copiesPerJob;
 
     /**
      * The Dpis.
@@ -105,12 +105,12 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<PrintDuplexMode> duplexModes;
 
     /**
-     * The Copies Per Job.
+     * The Feed Directions.
      * 
      */
-    @SerializedName("copiesPerJob")
+    @SerializedName("feedDirections")
     @Expose
-    public IntegerRange copiesPerJob;
+    public java.util.List<PrinterFeedDirection> feedDirections;
 
     /**
      * The Finishings.
@@ -121,20 +121,44 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<PrintFinishing> finishings;
 
     /**
+     * The Input Bins.
+     * 
+     */
+    @SerializedName("inputBins")
+    @Expose
+    public java.util.List<String> inputBins;
+
+    /**
+     * The Is Color Printing Supported.
+     * 
+     */
+    @SerializedName("isColorPrintingSupported")
+    @Expose
+    public Boolean isColorPrintingSupported;
+
+    /**
+     * The Is Page Range Supported.
+     * 
+     */
+    @SerializedName("isPageRangeSupported")
+    @Expose
+    public Boolean isPageRangeSupported;
+
+    /**
+     * The Left Margins.
+     * 
+     */
+    @SerializedName("leftMargins")
+    @Expose
+    public java.util.List<Integer> leftMargins;
+
+    /**
      * The Media Colors.
      * 
      */
     @SerializedName("mediaColors")
     @Expose
     public java.util.List<String> mediaColors;
-
-    /**
-     * The Media Types.
-     * 
-     */
-    @SerializedName("mediaTypes")
-    @Expose
-    public java.util.List<String> mediaTypes;
 
     /**
      * The Media Sizes.
@@ -145,12 +169,20 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> mediaSizes;
 
     /**
-     * The Pages Per Sheet.
+     * The Media Types.
      * 
      */
-    @SerializedName("pagesPerSheet")
+    @SerializedName("mediaTypes")
     @Expose
-    public java.util.List<Integer> pagesPerSheet;
+    public java.util.List<String> mediaTypes;
+
+    /**
+     * The Multipage Layouts.
+     * 
+     */
+    @SerializedName("multipageLayouts")
+    @Expose
+    public java.util.List<PrintMultipageLayout> multipageLayouts;
 
     /**
      * The Orientations.
@@ -169,52 +201,20 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> outputBins;
 
     /**
-     * The Supports Fit Pdf To Page.
+     * The Pages Per Sheet.
      * 
      */
-    @SerializedName("supportsFitPdfToPage")
+    @SerializedName("pagesPerSheet")
     @Expose
-    public Boolean supportsFitPdfToPage;
+    public java.util.List<Integer> pagesPerSheet;
 
     /**
-     * The Multipage Layouts.
+     * The Qualities.
      * 
      */
-    @SerializedName("multipageLayouts")
+    @SerializedName("qualities")
     @Expose
-    public java.util.List<PrintMultipageLayout> multipageLayouts;
-
-    /**
-     * The Color Modes.
-     * 
-     */
-    @SerializedName("colorModes")
-    @Expose
-    public java.util.List<PrintColorMode> colorModes;
-
-    /**
-     * The Input Bins.
-     * 
-     */
-    @SerializedName("inputBins")
-    @Expose
-    public java.util.List<String> inputBins;
-
-    /**
-     * The Top Margins.
-     * 
-     */
-    @SerializedName("topMargins")
-    @Expose
-    public java.util.List<Integer> topMargins;
-
-    /**
-     * The Bottom Margins.
-     * 
-     */
-    @SerializedName("bottomMargins")
-    @Expose
-    public java.util.List<Integer> bottomMargins;
+    public java.util.List<PrintQuality> qualities;
 
     /**
      * The Right Margins.
@@ -225,28 +225,20 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<Integer> rightMargins;
 
     /**
-     * The Left Margins.
-     * 
-     */
-    @SerializedName("leftMargins")
-    @Expose
-    public java.util.List<Integer> leftMargins;
-
-    /**
-     * The Collation.
-     * 
-     */
-    @SerializedName("collation")
-    @Expose
-    public Boolean collation;
-
-    /**
      * The Scalings.
      * 
      */
     @SerializedName("scalings")
     @Expose
     public java.util.List<PrintScaling> scalings;
+
+    /**
+     * The Supported Color Configurations.
+     * 
+     */
+    @SerializedName("supportedColorConfigurations")
+    @Expose
+    public java.util.List<PrintColorConfiguration> supportedColorConfigurations;
 
     /**
      * The Supported Copies Per Job.
@@ -265,6 +257,14 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> supportedDocumentMimeTypes;
 
     /**
+     * The Supported Duplex Configurations.
+     * 
+     */
+    @SerializedName("supportedDuplexConfigurations")
+    @Expose
+    public java.util.List<PrintDuplexConfiguration> supportedDuplexConfigurations;
+
+    /**
      * The Supported Finishings.
      * 
      */
@@ -281,22 +281,6 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> supportedMediaColors;
 
     /**
-     * The Supported Media Types.
-     * 
-     */
-    @SerializedName("supportedMediaTypes")
-    @Expose
-    public java.util.List<PrintMediaType> supportedMediaTypes;
-
-    /**
-     * The Supported Duplex Configurations.
-     * 
-     */
-    @SerializedName("supportedDuplexConfigurations")
-    @Expose
-    public java.util.List<PrintDuplexConfiguration> supportedDuplexConfigurations;
-
-    /**
      * The Supported Media Sizes.
      * 
      */
@@ -305,12 +289,12 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> supportedMediaSizes;
 
     /**
-     * The Supported Pages Per Sheet.
+     * The Supported Media Types.
      * 
      */
-    @SerializedName("supportedPagesPerSheet")
+    @SerializedName("supportedMediaTypes")
     @Expose
-    public IntegerRange supportedPagesPerSheet;
+    public java.util.List<PrintMediaType> supportedMediaTypes;
 
     /**
      * The Supported Orientations.
@@ -329,6 +313,14 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<String> supportedOutputBins;
 
     /**
+     * The Supported Pages Per Sheet.
+     * 
+     */
+    @SerializedName("supportedPagesPerSheet")
+    @Expose
+    public IntegerRange supportedPagesPerSheet;
+
+    /**
      * The Supported Presentation Directions.
      * 
      */
@@ -337,20 +329,28 @@ public class PrinterCapabilities implements IJsonBackedObject {
     public java.util.List<PrintPresentationDirection> supportedPresentationDirections;
 
     /**
-     * The Supported Color Configurations.
-     * 
-     */
-    @SerializedName("supportedColorConfigurations")
-    @Expose
-    public java.util.List<PrintColorConfiguration> supportedColorConfigurations;
-
-    /**
      * The Supported Print Qualities.
      * 
      */
     @SerializedName("supportedPrintQualities")
     @Expose
     public java.util.List<PrintQuality> supportedPrintQualities;
+
+    /**
+     * The Supports Fit Pdf To Page.
+     * 
+     */
+    @SerializedName("supportsFitPdfToPage")
+    @Expose
+    public Boolean supportsFitPdfToPage;
+
+    /**
+     * The Top Margins.
+     * 
+     */
+    @SerializedName("topMargins")
+    @Expose
+    public java.util.List<Integer> topMargins;
 
 
     /**

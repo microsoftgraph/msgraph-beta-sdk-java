@@ -62,14 +62,14 @@ public class PolicySetAssignmentCollectionRequest extends BaseCollectionRequest<
     public void post(final PolicySetAssignment newPolicySetAssignment, final ICallback<PolicySetAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PolicySetAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPolicySetAssignment, callback);
     }
 
     public PolicySetAssignment post(final PolicySetAssignment newPolicySetAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PolicySetAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPolicySetAssignment);
     }
 
@@ -106,6 +106,27 @@ public class PolicySetAssignmentCollectionRequest extends BaseCollectionRequest<
         return (PolicySetAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPolicySetAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PolicySetAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPolicySetAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPolicySetAssignmentCollectionRequest)this;
+    }
     public IPolicySetAssignmentCollectionPage buildFromResponse(final PolicySetAssignmentCollectionResponse response) {
         final IPolicySetAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

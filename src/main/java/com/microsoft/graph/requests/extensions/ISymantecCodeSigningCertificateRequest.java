@@ -80,6 +80,23 @@ public interface ISymantecCodeSigningCertificateRequest extends IHttpRequest {
     SymantecCodeSigningCertificate post(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate) throws ClientException;
 
     /**
+     * Posts a SymantecCodeSigningCertificate with a new object
+     *
+     * @param newSymantecCodeSigningCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate, final ICallback<SymantecCodeSigningCertificate> callback);
+
+    /**
+     * Posts a SymantecCodeSigningCertificate with a new object
+     *
+     * @param newSymantecCodeSigningCertificate the object to create/update
+     * @return the created SymantecCodeSigningCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SymantecCodeSigningCertificate put(final SymantecCodeSigningCertificate newSymantecCodeSigningCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

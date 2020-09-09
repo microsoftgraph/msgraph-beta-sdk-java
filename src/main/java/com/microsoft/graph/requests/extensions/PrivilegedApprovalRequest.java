@@ -116,6 +116,27 @@ public class PrivilegedApprovalRequest extends BaseRequest implements IPrivilege
     }
 
     /**
+     * Creates a PrivilegedApproval with a new object
+     *
+     * @param newPrivilegedApproval the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedApproval);
+    }
+
+    /**
+     * Creates a PrivilegedApproval with a new object
+     *
+     * @param newPrivilegedApproval the object to create/update
+     * @return the created PrivilegedApproval
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedApproval put(final PrivilegedApproval newPrivilegedApproval) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedApproval);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

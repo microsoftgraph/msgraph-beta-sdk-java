@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationLongDecimalTextBoxRequest extends IHttp
     GroupPolicyPresentationLongDecimalTextBox post(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationLongDecimalTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationLongDecimalTextBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationLongDecimalTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationLongDecimalTextBox the object to create/update
+     * @return the created GroupPolicyPresentationLongDecimalTextBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationLongDecimalTextBox put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

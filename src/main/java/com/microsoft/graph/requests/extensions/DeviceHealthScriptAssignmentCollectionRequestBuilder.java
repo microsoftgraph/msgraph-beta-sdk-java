@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DeviceComplianceScript;
+import com.microsoft.graph.models.extensions.DeviceHealthScript;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class DeviceHealthScriptAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceHealthScriptAssignmentCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of DeviceComplianceScript
+     * The request builder for this collection of DeviceHealthScript
      *
      * @param requestUrl     the request URL
      * @param client         the service client

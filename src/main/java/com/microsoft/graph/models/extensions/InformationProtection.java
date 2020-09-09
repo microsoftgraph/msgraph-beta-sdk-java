@@ -9,15 +9,15 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.DataLossPreventionPolicy;
 import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.SensitivityPolicySettings;
-import com.microsoft.graph.models.extensions.DataLossPreventionPolicy;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionResponse;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionPage;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionResponse;
+import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionPage;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionPage;
 
@@ -46,6 +46,12 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     public InformationProtectionPolicy policy;
 
     /**
+     * The Data Loss Prevention Policies.
+     * 
+     */
+    public DataLossPreventionPolicyCollectionPage dataLossPreventionPolicies;
+
+    /**
      * The Sensitivity Labels.
      * 
      */
@@ -58,12 +64,6 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName("sensitivityPolicySettings")
     @Expose
     public SensitivityPolicySettings sensitivityPolicySettings;
-
-    /**
-     * The Data Loss Prevention Policies.
-     * 
-     */
-    public DataLossPreventionPolicyCollectionPage dataLossPreventionPolicies;
 
     /**
      * The Threat Assessment Requests.
@@ -111,22 +111,6 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("sensitivityLabels")) {
-            final SensitivityLabelCollectionResponse response = new SensitivityLabelCollectionResponse();
-            if (json.has("sensitivityLabels@odata.nextLink")) {
-                response.nextLink = json.get("sensitivityLabels@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sensitivityLabels").toString(), JsonObject[].class);
-            final SensitivityLabel[] array = new SensitivityLabel[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitivityLabel.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sensitivityLabels = new SensitivityLabelCollectionPage(response, null);
-        }
-
         if (json.has("dataLossPreventionPolicies")) {
             final DataLossPreventionPolicyCollectionResponse response = new DataLossPreventionPolicyCollectionResponse();
             if (json.has("dataLossPreventionPolicies@odata.nextLink")) {
@@ -141,6 +125,22 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             dataLossPreventionPolicies = new DataLossPreventionPolicyCollectionPage(response, null);
+        }
+
+        if (json.has("sensitivityLabels")) {
+            final SensitivityLabelCollectionResponse response = new SensitivityLabelCollectionResponse();
+            if (json.has("sensitivityLabels@odata.nextLink")) {
+                response.nextLink = json.get("sensitivityLabels@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sensitivityLabels").toString(), JsonObject[].class);
+            final SensitivityLabel[] array = new SensitivityLabel[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SensitivityLabel.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            sensitivityLabels = new SensitivityLabelCollectionPage(response, null);
         }
 
         if (json.has("threatAssessmentRequests")) {

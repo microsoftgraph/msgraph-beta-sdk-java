@@ -27,28 +27,20 @@ public class DeviceComplianceUserOverview extends Entity implements IJsonBackedO
 
 
     /**
-     * The Pending Count.
-     * Number of pending Users
+     * The Configuration Version.
+     * Version of the policy for that overview
      */
-    @SerializedName("pendingCount")
+    @SerializedName("configurationVersion")
     @Expose
-    public Integer pendingCount;
+    public Integer configurationVersion;
 
     /**
-     * The Not Applicable Count.
-     * Number of not applicable users
+     * The Conflict Count.
+     * Number of users in conflict
      */
-    @SerializedName("notApplicableCount")
+    @SerializedName("conflictCount")
     @Expose
-    public Integer notApplicableCount;
-
-    /**
-     * The Success Count.
-     * Number of succeeded Users
-     */
-    @SerializedName("successCount")
-    @Expose
-    public Integer successCount;
+    public Integer conflictCount;
 
     /**
      * The Error Count.
@@ -67,14 +59,6 @@ public class DeviceComplianceUserOverview extends Entity implements IJsonBackedO
     public Integer failedCount;
 
     /**
-     * The Conflict Count.
-     * Number of users in conflict
-     */
-    @SerializedName("conflictCount")
-    @Expose
-    public Integer conflictCount;
-
-    /**
      * The Last Update Date Time.
      * Last update time
      */
@@ -83,12 +67,28 @@ public class DeviceComplianceUserOverview extends Entity implements IJsonBackedO
     public java.util.Calendar lastUpdateDateTime;
 
     /**
-     * The Configuration Version.
-     * Version of the policy for that overview
+     * The Not Applicable Count.
+     * Number of not applicable users
      */
-    @SerializedName("configurationVersion")
+    @SerializedName("notApplicableCount")
     @Expose
-    public Integer configurationVersion;
+    public Integer notApplicableCount;
+
+    /**
+     * The Pending Count.
+     * Number of pending Users
+     */
+    @SerializedName("pendingCount")
+    @Expose
+    public Integer pendingCount;
+
+    /**
+     * The Success Count.
+     * Number of succeeded Users
+     */
+    @SerializedName("successCount")
+    @Expose
+    public Integer successCount;
 
 
     /**

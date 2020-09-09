@@ -13,6 +13,10 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
@@ -21,10 +25,6 @@ import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -126,6 +126,27 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      */
     public Chat post(final Chat newChat) throws ClientException {
         return send(HttpMethod.POST, newChat);
+    }
+
+    /**
+     * Creates a Chat with a new object
+     *
+     * @param newChat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Chat newChat, final ICallback<Chat> callback) {
+        send(HttpMethod.PUT, callback, newChat);
+    }
+
+    /**
+     * Creates a Chat with a new object
+     *
+     * @param newChat the object to create/update
+     * @return the created Chat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Chat put(final Chat newChat) throws ClientException {
+        return send(HttpMethod.PUT, newChat);
     }
 
     /**

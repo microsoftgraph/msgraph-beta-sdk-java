@@ -29,14 +29,6 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The User Roles Actions.
-     * 
-     */
-    @SerializedName("userRolesActions")
-    @Expose
-    public String userRolesActions;
-
-    /**
      * The First Time Setup.
      * 
      */
@@ -53,6 +45,14 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
     public java.util.List<String> relevantRolesSettings;
 
     /**
+     * The Setup Status.
+     * 
+     */
+    @SerializedName("setupStatus")
+    @Expose
+    public SetupStatus setupStatus;
+
+    /**
      * The Skip Setup.
      * 
      */
@@ -61,12 +61,12 @@ public class TenantSetupInfo extends Entity implements IJsonBackedObject {
     public Boolean skipSetup;
 
     /**
-     * The Setup Status.
+     * The User Roles Actions.
      * 
      */
-    @SerializedName("setupStatus")
+    @SerializedName("userRolesActions")
     @Expose
-    public SetupStatus setupStatus;
+    public String userRolesActions;
 
     /**
      * The Default Roles Settings.

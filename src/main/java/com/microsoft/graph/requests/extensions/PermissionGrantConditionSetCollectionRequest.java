@@ -62,14 +62,14 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
     public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPermissionGrantConditionSet, callback);
     }
 
     public PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPermissionGrantConditionSet);
     }
 
@@ -106,6 +106,27 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPermissionGrantConditionSetCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PermissionGrantConditionSetCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPermissionGrantConditionSetCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPermissionGrantConditionSetCollectionRequest)this;
+    }
     public IPermissionGrantConditionSetCollectionPage buildFromResponse(final PermissionGrantConditionSetCollectionResponse response) {
         final IPermissionGrantConditionSetCollectionRequestBuilder builder;
         if (response.nextLink != null) {

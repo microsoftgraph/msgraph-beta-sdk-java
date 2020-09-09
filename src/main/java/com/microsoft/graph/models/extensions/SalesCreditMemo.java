@@ -9,10 +9,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
-import com.microsoft.graph.models.extensions.SalesCreditMemoLine;
-import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.models.extensions.Currency;
+import com.microsoft.graph.models.extensions.Customer;
 import com.microsoft.graph.models.extensions.PaymentTerm;
+import com.microsoft.graph.models.extensions.SalesCreditMemoLine;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionResponse;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionPage;
@@ -34,68 +34,12 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
+     * The Billing Postal Address.
      * 
      */
-    @SerializedName("number")
+    @SerializedName("billingPostalAddress")
     @Expose
-    public String number;
-
-    /**
-     * The External Document Number.
-     * 
-     */
-    @SerializedName("externalDocumentNumber")
-    @Expose
-    public String externalDocumentNumber;
-
-    /**
-     * The Credit Memo Date.
-     * 
-     */
-    @SerializedName("creditMemoDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly creditMemoDate;
-
-    /**
-     * The Due Date.
-     * 
-     */
-    @SerializedName("dueDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly dueDate;
-
-    /**
-     * The Customer Id.
-     * 
-     */
-    @SerializedName("customerId")
-    @Expose
-    public java.util.UUID customerId;
-
-    /**
-     * The Customer Number.
-     * 
-     */
-    @SerializedName("customerNumber")
-    @Expose
-    public String customerNumber;
-
-    /**
-     * The Customer Name.
-     * 
-     */
-    @SerializedName("customerName")
-    @Expose
-    public String customerName;
-
-    /**
-     * The Bill To Name.
-     * 
-     */
-    @SerializedName("billToName")
-    @Expose
-    public String billToName;
+    public PostalAddressType billingPostalAddress;
 
     /**
      * The Bill To Customer Id.
@@ -114,28 +58,20 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     public String billToCustomerNumber;
 
     /**
-     * The Selling Postal Address.
+     * The Bill To Name.
      * 
      */
-    @SerializedName("sellingPostalAddress")
+    @SerializedName("billToName")
     @Expose
-    public PostalAddressType sellingPostalAddress;
+    public String billToName;
 
     /**
-     * The Billing Postal Address.
+     * The Credit Memo Date.
      * 
      */
-    @SerializedName("billingPostalAddress")
+    @SerializedName("creditMemoDate")
     @Expose
-    public PostalAddressType billingPostalAddress;
-
-    /**
-     * The Currency Id.
-     * 
-     */
-    @SerializedName("currencyId")
-    @Expose
-    public java.util.UUID currencyId;
+    public com.microsoft.graph.models.extensions.DateOnly creditMemoDate;
 
     /**
      * The Currency Code.
@@ -146,28 +82,36 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     public String currencyCode;
 
     /**
-     * The Payment Terms Id.
+     * The Currency Id.
      * 
      */
-    @SerializedName("paymentTermsId")
+    @SerializedName("currencyId")
     @Expose
-    public java.util.UUID paymentTermsId;
+    public java.util.UUID currencyId;
 
     /**
-     * The Salesperson.
+     * The Customer Id.
      * 
      */
-    @SerializedName("salesperson")
+    @SerializedName("customerId")
     @Expose
-    public String salesperson;
+    public java.util.UUID customerId;
 
     /**
-     * The Prices Include Tax.
+     * The Customer Name.
      * 
      */
-    @SerializedName("pricesIncludeTax")
+    @SerializedName("customerName")
     @Expose
-    public Boolean pricesIncludeTax;
+    public String customerName;
+
+    /**
+     * The Customer Number.
+     * 
+     */
+    @SerializedName("customerNumber")
+    @Expose
+    public String customerNumber;
 
     /**
      * The Discount Amount.
@@ -186,44 +130,28 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     public Boolean discountAppliedBeforeTax;
 
     /**
-     * The Total Amount Excluding Tax.
+     * The Due Date.
      * 
      */
-    @SerializedName("totalAmountExcludingTax")
+    @SerializedName("dueDate")
     @Expose
-    public java.math.BigDecimal totalAmountExcludingTax;
+    public com.microsoft.graph.models.extensions.DateOnly dueDate;
 
     /**
-     * The Total Tax Amount.
+     * The Email.
      * 
      */
-    @SerializedName("totalTaxAmount")
+    @SerializedName("email")
     @Expose
-    public java.math.BigDecimal totalTaxAmount;
+    public String email;
 
     /**
-     * The Total Amount Including Tax.
+     * The External Document Number.
      * 
      */
-    @SerializedName("totalAmountIncludingTax")
+    @SerializedName("externalDocumentNumber")
     @Expose
-    public java.math.BigDecimal totalAmountIncludingTax;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
-
-    /**
-     * The Last Modified Date Time.
-     * 
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String externalDocumentNumber;
 
     /**
      * The Invoice Id.
@@ -242,6 +170,30 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     public String invoiceNumber;
 
     /**
+     * The Last Modified Date Time.
+     * 
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Number.
+     * 
+     */
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Payment Terms Id.
+     * 
+     */
+    @SerializedName("paymentTermsId")
+    @Expose
+    public java.util.UUID paymentTermsId;
+
+    /**
      * The Phone Number.
      * 
      */
@@ -250,26 +202,60 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     public String phoneNumber;
 
     /**
-     * The Email.
+     * The Prices Include Tax.
      * 
      */
-    @SerializedName("email")
+    @SerializedName("pricesIncludeTax")
     @Expose
-    public String email;
+    public Boolean pricesIncludeTax;
 
     /**
-     * The Sales Credit Memo Lines.
+     * The Salesperson.
      * 
      */
-    public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
+    @SerializedName("salesperson")
+    @Expose
+    public String salesperson;
 
     /**
-     * The Customer.
+     * The Selling Postal Address.
      * 
      */
-    @SerializedName("customer")
+    @SerializedName("sellingPostalAddress")
     @Expose
-    public Customer customer;
+    public PostalAddressType sellingPostalAddress;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
+
+    /**
+     * The Total Amount Excluding Tax.
+     * 
+     */
+    @SerializedName("totalAmountExcludingTax")
+    @Expose
+    public java.math.BigDecimal totalAmountExcludingTax;
+
+    /**
+     * The Total Amount Including Tax.
+     * 
+     */
+    @SerializedName("totalAmountIncludingTax")
+    @Expose
+    public java.math.BigDecimal totalAmountIncludingTax;
+
+    /**
+     * The Total Tax Amount.
+     * 
+     */
+    @SerializedName("totalTaxAmount")
+    @Expose
+    public java.math.BigDecimal totalTaxAmount;
 
     /**
      * The Currency.
@@ -280,12 +266,26 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
     public Currency currency;
 
     /**
+     * The Customer.
+     * 
+     */
+    @SerializedName("customer")
+    @Expose
+    public Customer customer;
+
+    /**
      * The Payment Term.
      * 
      */
     @SerializedName("paymentTerm")
     @Expose
     public PaymentTerm paymentTerm;
+
+    /**
+     * The Sales Credit Memo Lines.
+     * 
+     */
+    public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 
 
     /**

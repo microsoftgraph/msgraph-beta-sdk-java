@@ -41,12 +41,12 @@ public interface IApprovalWorkflowProviderRequestBuilder extends IRequestBuilder
 
     IBusinessFlowRequestBuilder businessFlows(final String id);
 
-    IGovernancePolicyTemplateCollectionRequestBuilder policyTemplates();
-
-    IGovernancePolicyTemplateRequestBuilder policyTemplates(final String id);
-
     IBusinessFlowCollectionRequestBuilder businessFlowsWithRequestsAwaitingMyDecision();
 
     IBusinessFlowRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(final String id);
+
+    IGovernancePolicyTemplateCollectionRequestBuilder policyTemplates();
+
+    IGovernancePolicyTemplateRequestBuilder policyTemplates(final String id);
 
 }

@@ -30,12 +30,12 @@ public class Notification extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Target Host Name.
+     * The Display Time To Live.
      * 
      */
-    @SerializedName("targetHostName")
+    @SerializedName("displayTimeToLive")
     @Expose
-    public String targetHostName;
+    public Integer displayTimeToLive;
 
     /**
      * The Expiration Date Time.
@@ -46,20 +46,20 @@ public class Notification extends Entity implements IJsonBackedObject {
     public java.util.Calendar expirationDateTime;
 
     /**
+     * The Group Name.
+     * 
+     */
+    @SerializedName("groupName")
+    @Expose
+    public String groupName;
+
+    /**
      * The Payload.
      * 
      */
     @SerializedName("payload")
     @Expose
     public PayloadTypes payload;
-
-    /**
-     * The Display Time To Live.
-     * 
-     */
-    @SerializedName("displayTimeToLive")
-    @Expose
-    public Integer displayTimeToLive;
 
     /**
      * The Priority.
@@ -70,12 +70,12 @@ public class Notification extends Entity implements IJsonBackedObject {
     public Priority priority;
 
     /**
-     * The Group Name.
+     * The Target Host Name.
      * 
      */
-    @SerializedName("groupName")
+    @SerializedName("targetHostName")
     @Expose
-    public String groupName;
+    public String targetHostName;
 
     /**
      * The Target Policy.

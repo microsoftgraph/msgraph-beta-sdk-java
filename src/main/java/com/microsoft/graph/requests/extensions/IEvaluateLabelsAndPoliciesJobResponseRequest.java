@@ -80,6 +80,23 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequest extends IHttpReque
     EvaluateLabelsAndPoliciesJobResponse post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException;
 
     /**
+     * Posts a EvaluateLabelsAndPoliciesJobResponse with a new object
+     *
+     * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<EvaluateLabelsAndPoliciesJobResponse> callback);
+
+    /**
+     * Posts a EvaluateLabelsAndPoliciesJobResponse with a new object
+     *
+     * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
+     * @return the created EvaluateLabelsAndPoliciesJobResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EvaluateLabelsAndPoliciesJobResponse put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

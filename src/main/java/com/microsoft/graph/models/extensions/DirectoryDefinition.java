@@ -29,20 +29,20 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Discovery Date Time.
-     * 
-     */
-    @SerializedName("discoveryDateTime")
-    @Expose
-    public java.util.Calendar discoveryDateTime;
-
-    /**
      * The Discoverabilities.
      * 
      */
     @SerializedName("discoverabilities")
     @Expose
     public EnumSet<DirectoryDefinitionDiscoverabilities> discoverabilities;
+
+    /**
+     * The Discovery Date Time.
+     * 
+     */
+    @SerializedName("discoveryDateTime")
+    @Expose
+    public java.util.Calendar discoveryDateTime;
 
     /**
      * The Name.

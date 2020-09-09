@@ -112,6 +112,27 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a GroupPolicyPresentationComboBox with a new object
+     *
+     * @param newGroupPolicyPresentationComboBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<GroupPolicyPresentationComboBox> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationComboBox);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationComboBox with a new object
+     *
+     * @param newGroupPolicyPresentationComboBox the object to create/update
+     * @return the created GroupPolicyPresentationComboBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationComboBox put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationComboBox);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

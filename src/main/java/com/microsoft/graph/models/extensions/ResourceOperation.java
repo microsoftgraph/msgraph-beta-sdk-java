@@ -27,22 +27,6 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Resource.
-     * Resource category to which this Operation belongs.
-     */
-    @SerializedName("resource")
-    @Expose
-    public String resource;
-
-    /**
-     * The Resource Name.
-     * Name of the Resource this operation is performed on.
-     */
-    @SerializedName("resourceName")
-    @Expose
-    public String resourceName;
-
-    /**
      * The Action Name.
      * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
      */
@@ -65,6 +49,22 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
     @SerializedName("enabledForScopeValidation")
     @Expose
     public Boolean enabledForScopeValidation;
+
+    /**
+     * The Resource.
+     * Resource category to which this Operation belongs.
+     */
+    @SerializedName("resource")
+    @Expose
+    public String resource;
+
+    /**
+     * The Resource Name.
+     * Name of the Resource this operation is performed on.
+     */
+    @SerializedName("resourceName")
+    @Expose
+    public String resourceName;
 
 
     /**

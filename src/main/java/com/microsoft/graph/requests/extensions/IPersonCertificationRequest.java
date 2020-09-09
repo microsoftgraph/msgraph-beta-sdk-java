@@ -80,6 +80,23 @@ public interface IPersonCertificationRequest extends IHttpRequest {
     PersonCertification post(final PersonCertification newPersonCertification) throws ClientException;
 
     /**
+     * Posts a PersonCertification with a new object
+     *
+     * @param newPersonCertification the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PersonCertification newPersonCertification, final ICallback<PersonCertification> callback);
+
+    /**
+     * Posts a PersonCertification with a new object
+     *
+     * @param newPersonCertification the object to create/update
+     * @return the created PersonCertification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PersonCertification put(final PersonCertification newPersonCertification) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

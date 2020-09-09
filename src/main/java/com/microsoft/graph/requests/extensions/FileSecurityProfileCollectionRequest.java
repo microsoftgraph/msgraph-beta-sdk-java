@@ -62,14 +62,14 @@ public class FileSecurityProfileCollectionRequest extends BaseCollectionRequest<
     public void post(final FileSecurityProfile newFileSecurityProfile, final ICallback<FileSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new FileSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFileSecurityProfile, callback);
     }
 
     public FileSecurityProfile post(final FileSecurityProfile newFileSecurityProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new FileSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFileSecurityProfile);
     }
 
@@ -106,6 +106,27 @@ public class FileSecurityProfileCollectionRequest extends BaseCollectionRequest<
         return (FileSecurityProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IFileSecurityProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (FileSecurityProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IFileSecurityProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IFileSecurityProfileCollectionRequest)this;
+    }
     public IFileSecurityProfileCollectionPage buildFromResponse(final FileSecurityProfileCollectionResponse response) {
         final IFileSecurityProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

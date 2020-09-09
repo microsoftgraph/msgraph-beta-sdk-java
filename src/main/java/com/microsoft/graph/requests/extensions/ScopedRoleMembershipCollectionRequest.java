@@ -61,14 +61,14 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
     public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newScopedRoleMembership, callback);
     }
 
     public ScopedRoleMembership post(final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newScopedRoleMembership);
     }
 
@@ -105,6 +105,27 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         return (ScopedRoleMembershipCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IScopedRoleMembershipCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ScopedRoleMembershipCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IScopedRoleMembershipCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IScopedRoleMembershipCollectionRequest)this;
+    }
     public IScopedRoleMembershipCollectionPage buildFromResponse(final ScopedRoleMembershipCollectionResponse response) {
         final IScopedRoleMembershipCollectionRequestBuilder builder;
         if (response.nextLink != null) {

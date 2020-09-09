@@ -112,6 +112,27 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
     }
 
     /**
+     * Creates a ApplicationSignInSummary with a new object
+     *
+     * @param newApplicationSignInSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<ApplicationSignInSummary> callback) {
+        send(HttpMethod.PUT, callback, newApplicationSignInSummary);
+    }
+
+    /**
+     * Creates a ApplicationSignInSummary with a new object
+     *
+     * @param newApplicationSignInSummary the object to create/update
+     * @return the created ApplicationSignInSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ApplicationSignInSummary put(final ApplicationSignInSummary newApplicationSignInSummary) throws ClientException {
+        return send(HttpMethod.PUT, newApplicationSignInSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ISkypeForBusinessPeerToPeerActivityCountsRequest extends IHttpR
     SkypeForBusinessPeerToPeerActivityCounts post(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts) throws ClientException;
 
     /**
+     * Posts a SkypeForBusinessPeerToPeerActivityCounts with a new object
+     *
+     * @param newSkypeForBusinessPeerToPeerActivityCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts, final ICallback<SkypeForBusinessPeerToPeerActivityCounts> callback);
+
+    /**
+     * Posts a SkypeForBusinessPeerToPeerActivityCounts with a new object
+     *
+     * @param newSkypeForBusinessPeerToPeerActivityCounts the object to create/update
+     * @return the created SkypeForBusinessPeerToPeerActivityCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SkypeForBusinessPeerToPeerActivityCounts put(final SkypeForBusinessPeerToPeerActivityCounts newSkypeForBusinessPeerToPeerActivityCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

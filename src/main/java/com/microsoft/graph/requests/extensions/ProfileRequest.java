@@ -188,6 +188,27 @@ public class ProfileRequest extends BaseRequest implements IProfileRequest {
     }
 
     /**
+     * Creates a Profile with a new object
+     *
+     * @param newProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Profile newProfile, final ICallback<Profile> callback) {
+        send(HttpMethod.PUT, callback, newProfile);
+    }
+
+    /**
+     * Creates a Profile with a new object
+     *
+     * @param newProfile the object to create/update
+     * @return the created Profile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Profile put(final Profile newProfile) throws ClientException {
+        return send(HttpMethod.PUT, newProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

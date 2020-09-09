@@ -127,6 +127,27 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
     }
 
     /**
+     * Creates a PolicySetItem with a new object
+     *
+     * @param newPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newPolicySetItem);
+    }
+
+    /**
+     * Creates a PolicySetItem with a new object
+     *
+     * @param newPolicySetItem the object to create/update
+     * @return the created PolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PolicySetItem put(final PolicySetItem newPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

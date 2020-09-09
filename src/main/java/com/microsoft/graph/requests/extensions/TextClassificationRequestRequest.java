@@ -112,6 +112,27 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
     }
 
     /**
+     * Creates a TextClassificationRequest with a new object
+     *
+     * @param newTextClassificationRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TextClassificationRequest newTextClassificationRequest, final ICallback<TextClassificationRequest> callback) {
+        send(HttpMethod.PUT, callback, newTextClassificationRequest);
+    }
+
+    /**
+     * Creates a TextClassificationRequest with a new object
+     *
+     * @param newTextClassificationRequest the object to create/update
+     * @return the created TextClassificationRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TextClassificationRequest put(final TextClassificationRequest newTextClassificationRequest) throws ClientException {
+        return send(HttpMethod.PUT, newTextClassificationRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

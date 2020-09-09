@@ -80,6 +80,23 @@ public interface IPaymentTermRequest extends IHttpRequest {
     PaymentTerm post(final PaymentTerm newPaymentTerm) throws ClientException;
 
     /**
+     * Posts a PaymentTerm with a new object
+     *
+     * @param newPaymentTerm the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PaymentTerm newPaymentTerm, final ICallback<PaymentTerm> callback);
+
+    /**
+     * Posts a PaymentTerm with a new object
+     *
+     * @param newPaymentTerm the object to create/update
+     * @return the created PaymentTerm
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PaymentTerm put(final PaymentTerm newPaymentTerm) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

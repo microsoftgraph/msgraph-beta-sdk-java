@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesInvoiceLine;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -36,17 +36,17 @@ public interface ISalesInvoiceLineRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for Item
-     *
-     * @return the IItemRequestBuilder instance
-     */
-    IItemRequestBuilder item();
-
-    /**
      * Gets the request builder for Account
      *
      * @return the IAccountRequestBuilder instance
      */
     IAccountRequestBuilder account();
+
+    /**
+     * Gets the request builder for Item
+     *
+     * @return the IItemRequestBuilder instance
+     */
+    IItemRequestBuilder item();
 
 }

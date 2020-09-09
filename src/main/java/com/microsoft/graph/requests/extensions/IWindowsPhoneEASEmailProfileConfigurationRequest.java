@@ -80,6 +80,23 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequest extends IHttpR
     WindowsPhoneEASEmailProfileConfiguration post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsPhoneEASEmailProfileConfiguration with a new object
+     *
+     * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback);
+
+    /**
+     * Posts a WindowsPhoneEASEmailProfileConfiguration with a new object
+     *
+     * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
+     * @return the created WindowsPhoneEASEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhoneEASEmailProfileConfiguration put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

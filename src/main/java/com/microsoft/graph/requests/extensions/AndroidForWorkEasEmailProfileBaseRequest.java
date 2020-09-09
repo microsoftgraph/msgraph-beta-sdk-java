@@ -129,6 +129,27 @@ public class AndroidForWorkEasEmailProfileBaseRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a AndroidForWorkEasEmailProfileBase with a new object
+     *
+     * @param newAndroidForWorkEasEmailProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase, final ICallback<AndroidForWorkEasEmailProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkEasEmailProfileBase);
+    }
+
+    /**
+     * Creates a AndroidForWorkEasEmailProfileBase with a new object
+     *
+     * @param newAndroidForWorkEasEmailProfileBase the object to create/update
+     * @return the created AndroidForWorkEasEmailProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkEasEmailProfileBase put(final AndroidForWorkEasEmailProfileBase newAndroidForWorkEasEmailProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkEasEmailProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

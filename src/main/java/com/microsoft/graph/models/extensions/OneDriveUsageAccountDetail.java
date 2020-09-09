@@ -27,36 +27,20 @@ public class OneDriveUsageAccountDetail extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Report Refresh Date.
+     * The Active File Count.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("activeFileCount")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long activeFileCount;
 
     /**
-     * The Site Url.
+     * The File Count.
      * 
      */
-    @SerializedName("siteUrl")
+    @SerializedName("fileCount")
     @Expose
-    public String siteUrl;
-
-    /**
-     * The Owner Display Name.
-     * 
-     */
-    @SerializedName("ownerDisplayName")
-    @Expose
-    public String ownerDisplayName;
-
-    /**
-     * The Owner Principal Name.
-     * 
-     */
-    @SerializedName("ownerPrincipalName")
-    @Expose
-    public String ownerPrincipalName;
+    public Long fileCount;
 
     /**
      * The Is Deleted.
@@ -75,28 +59,44 @@ public class OneDriveUsageAccountDetail extends Entity implements IJsonBackedObj
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
     /**
-     * The File Count.
+     * The Owner Display Name.
      * 
      */
-    @SerializedName("fileCount")
+    @SerializedName("ownerDisplayName")
     @Expose
-    public Long fileCount;
+    public String ownerDisplayName;
 
     /**
-     * The Active File Count.
+     * The Owner Principal Name.
      * 
      */
-    @SerializedName("activeFileCount")
+    @SerializedName("ownerPrincipalName")
     @Expose
-    public Long activeFileCount;
+    public String ownerPrincipalName;
 
     /**
-     * The Storage Used In Bytes.
+     * The Report Period.
      * 
      */
-    @SerializedName("storageUsedInBytes")
+    @SerializedName("reportPeriod")
     @Expose
-    public Long storageUsedInBytes;
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Site Url.
+     * 
+     */
+    @SerializedName("siteUrl")
+    @Expose
+    public String siteUrl;
 
     /**
      * The Storage Allocated In Bytes.
@@ -107,12 +107,12 @@ public class OneDriveUsageAccountDetail extends Entity implements IJsonBackedObj
     public Long storageAllocatedInBytes;
 
     /**
-     * The Report Period.
+     * The Storage Used In Bytes.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName("storageUsedInBytes")
     @Expose
-    public String reportPeriod;
+    public Long storageUsedInBytes;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IAndroidDeviceOwnerGeneralDeviceConfigurationRequest extends IH
     AndroidDeviceOwnerGeneralDeviceConfiguration post(final AndroidDeviceOwnerGeneralDeviceConfiguration newAndroidDeviceOwnerGeneralDeviceConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceOwnerGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceOwnerGeneralDeviceConfiguration newAndroidDeviceOwnerGeneralDeviceConfiguration, final ICallback<AndroidDeviceOwnerGeneralDeviceConfiguration> callback);
+
+    /**
+     * Posts a AndroidDeviceOwnerGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerGeneralDeviceConfiguration the object to create/update
+     * @return the created AndroidDeviceOwnerGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceOwnerGeneralDeviceConfiguration put(final AndroidDeviceOwnerGeneralDeviceConfiguration newAndroidDeviceOwnerGeneralDeviceConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

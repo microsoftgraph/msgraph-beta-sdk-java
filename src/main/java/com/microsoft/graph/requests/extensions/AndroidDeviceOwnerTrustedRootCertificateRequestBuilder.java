@@ -51,13 +51,6 @@ public class AndroidDeviceOwnerTrustedRootCertificateRequestBuilder extends Base
     }
 
 
-    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
-    }
-
-    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
-        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
-    }
     public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -65,19 +58,19 @@ public class AndroidDeviceOwnerTrustedRootCertificateRequestBuilder extends Base
     public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    }
     public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
-    }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
-        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -88,6 +81,20 @@ public class AndroidDeviceOwnerTrustedRootCertificateRequestBuilder extends Base
     public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
@@ -96,12 +103,5 @@ public class AndroidDeviceOwnerTrustedRootCertificateRequestBuilder extends Base
      */
     public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
-    }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
-    }
-
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
 }

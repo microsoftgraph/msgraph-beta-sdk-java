@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.SingleSignOnMode;
 import com.microsoft.graph.models.extensions.KerberosSignOnSettings;
+import com.microsoft.graph.models.generated.SingleSignOnMode;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
     }
 
     /**
-     * The Single Sign On Mode.
-     * 
-     */
-    @SerializedName("SingleSignOnMode")
-    @Expose
-    public SingleSignOnMode singleSignOnMode;
-
-    /**
      * The Kerberos Sign On Settings.
      * 
      */
     @SerializedName("KerberosSignOnSettings")
     @Expose
     public KerberosSignOnSettings kerberosSignOnSettings;
+
+    /**
+     * The Single Sign On Mode.
+     * 
+     */
+    @SerializedName("SingleSignOnMode")
+    @Expose
+    public SingleSignOnMode singleSignOnMode;
 
 
     /**

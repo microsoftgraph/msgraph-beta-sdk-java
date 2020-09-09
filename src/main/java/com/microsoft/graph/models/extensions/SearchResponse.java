@@ -37,20 +37,20 @@ public class SearchResponse implements IJsonBackedObject {
     }
 
     /**
-     * The Search Terms.
-     * 
-     */
-    @SerializedName("searchTerms")
-    @Expose
-    public java.util.List<String> searchTerms;
-
-    /**
      * The Hits Containers.
      * 
      */
     @SerializedName("hitsContainers")
     @Expose
     public java.util.List<SearchHitsContainer> hitsContainers;
+
+    /**
+     * The Search Terms.
+     * 
+     */
+    @SerializedName("searchTerms")
+    @Expose
+    public java.util.List<String> searchTerms;
 
 
     /**

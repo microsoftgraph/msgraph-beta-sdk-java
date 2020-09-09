@@ -61,14 +61,14 @@ public class PrivilegedRoleAssignmentCollectionRequest extends BaseCollectionReq
     public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<PrivilegedRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRoleAssignment, callback);
     }
 
     public PrivilegedRoleAssignment post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRoleAssignment);
     }
 
@@ -105,6 +105,27 @@ public class PrivilegedRoleAssignmentCollectionRequest extends BaseCollectionReq
         return (PrivilegedRoleAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedRoleAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedRoleAssignmentCollectionRequest)this;
+    }
     public IPrivilegedRoleAssignmentCollectionPage buildFromResponse(final PrivilegedRoleAssignmentCollectionResponse response) {
         final IPrivilegedRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

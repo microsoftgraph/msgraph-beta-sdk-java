@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      */
     public Domain post(final Domain newDomain) throws ClientException {
         return send(HttpMethod.POST, newDomain);
+    }
+
+    /**
+     * Creates a Domain with a new object
+     *
+     * @param newDomain the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Domain newDomain, final ICallback<Domain> callback) {
+        send(HttpMethod.PUT, callback, newDomain);
+    }
+
+    /**
+     * Creates a Domain with a new object
+     *
+     * @param newDomain the object to create/update
+     * @return the created Domain
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Domain put(final Domain newDomain) throws ClientException {
+        return send(HttpMethod.PUT, newDomain);
     }
 
     /**

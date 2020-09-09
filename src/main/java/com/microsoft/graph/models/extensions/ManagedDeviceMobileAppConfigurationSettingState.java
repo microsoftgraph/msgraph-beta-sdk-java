@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ComplianceStatus;
 import com.microsoft.graph.models.extensions.SettingSource;
+import com.microsoft.graph.models.generated.ComplianceStatus;
 
 
 import com.google.gson.JsonObject;
@@ -38,36 +38,12 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements IJsonBac
     }
 
     /**
-     * The Setting.
-     * The setting that is being reported
+     * The Current Value.
+     * Current value of setting on device
      */
-    @SerializedName("setting")
+    @SerializedName("currentValue")
     @Expose
-    public String setting;
-
-    /**
-     * The Setting Name.
-     * Localized/user friendly setting name that is being reported
-     */
-    @SerializedName("settingName")
-    @Expose
-    public String settingName;
-
-    /**
-     * The Instance Display Name.
-     * Name of setting instance that is being reported.
-     */
-    @SerializedName("instanceDisplayName")
-    @Expose
-    public String instanceDisplayName;
-
-    /**
-     * The State.
-     * The compliance state of the setting
-     */
-    @SerializedName("state")
-    @Expose
-    public ComplianceStatus state;
+    public String currentValue;
 
     /**
      * The Error Code.
@@ -86,6 +62,62 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements IJsonBac
     public String errorDescription;
 
     /**
+     * The Instance Display Name.
+     * Name of setting instance that is being reported.
+     */
+    @SerializedName("instanceDisplayName")
+    @Expose
+    public String instanceDisplayName;
+
+    /**
+     * The Setting.
+     * The setting that is being reported
+     */
+    @SerializedName("setting")
+    @Expose
+    public String setting;
+
+    /**
+     * The Setting Instance Id.
+     * SettingInstanceId
+     */
+    @SerializedName("settingInstanceId")
+    @Expose
+    public String settingInstanceId;
+
+    /**
+     * The Setting Name.
+     * Localized/user friendly setting name that is being reported
+     */
+    @SerializedName("settingName")
+    @Expose
+    public String settingName;
+
+    /**
+     * The Sources.
+     * Contributing policies
+     */
+    @SerializedName("sources")
+    @Expose
+    public java.util.List<SettingSource> sources;
+
+    /**
+     * The State.
+     * The compliance state of the setting
+     */
+    @SerializedName("state")
+    @Expose
+    public ComplianceStatus state;
+
+    /**
+     * The User Email.
+     * UserEmail
+     */
+    @SerializedName("userEmail")
+    @Expose
+    public String userEmail;
+
+    /**
      * The User Id.
      * UserId
      */
@@ -102,44 +134,12 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements IJsonBac
     public String userName;
 
     /**
-     * The User Email.
-     * UserEmail
-     */
-    @SerializedName("userEmail")
-    @Expose
-    public String userEmail;
-
-    /**
      * The User Principal Name.
      * UserPrincipalName.
      */
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Sources.
-     * Contributing policies
-     */
-    @SerializedName("sources")
-    @Expose
-    public java.util.List<SettingSource> sources;
-
-    /**
-     * The Current Value.
-     * Current value of setting on device
-     */
-    @SerializedName("currentValue")
-    @Expose
-    public String currentValue;
-
-    /**
-     * The Setting Instance Id.
-     * SettingInstanceId
-     */
-    @SerializedName("settingInstanceId")
-    @Expose
-    public String settingInstanceId;
 
 
     /**

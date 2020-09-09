@@ -112,6 +112,27 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
     }
 
     /**
+     * Creates a PersonResponsibility with a new object
+     *
+     * @param newPersonResponsibility the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PersonResponsibility newPersonResponsibility, final ICallback<PersonResponsibility> callback) {
+        send(HttpMethod.PUT, callback, newPersonResponsibility);
+    }
+
+    /**
+     * Creates a PersonResponsibility with a new object
+     *
+     * @param newPersonResponsibility the object to create/update
+     * @return the created PersonResponsibility
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PersonResponsibility put(final PersonResponsibility newPersonResponsibility) throws ClientException {
+        return send(HttpMethod.PUT, newPersonResponsibility);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

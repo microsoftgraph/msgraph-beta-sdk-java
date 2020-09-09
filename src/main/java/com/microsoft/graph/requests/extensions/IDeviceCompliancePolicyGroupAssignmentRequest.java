@@ -80,6 +80,23 @@ public interface IDeviceCompliancePolicyGroupAssignmentRequest extends IHttpRequ
     DeviceCompliancePolicyGroupAssignment post(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment) throws ClientException;
 
     /**
+     * Posts a DeviceCompliancePolicyGroupAssignment with a new object
+     *
+     * @param newDeviceCompliancePolicyGroupAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment, final ICallback<DeviceCompliancePolicyGroupAssignment> callback);
+
+    /**
+     * Posts a DeviceCompliancePolicyGroupAssignment with a new object
+     *
+     * @param newDeviceCompliancePolicyGroupAssignment the object to create/update
+     * @return the created DeviceCompliancePolicyGroupAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceCompliancePolicyGroupAssignment put(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

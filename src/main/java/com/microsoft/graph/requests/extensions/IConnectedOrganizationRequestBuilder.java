@@ -35,12 +35,12 @@ public interface IConnectedOrganizationRequestBuilder extends IRequestBuilder {
     IConnectedOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDirectoryObjectCollectionRequestBuilder internalSponsors();
-
-    IDirectoryObjectRequestBuilder internalSponsors(final String id);
-
     IDirectoryObjectCollectionRequestBuilder externalSponsors();
 
     IDirectoryObjectRequestBuilder externalSponsors(final String id);
+
+    IDirectoryObjectCollectionRequestBuilder internalSponsors();
+
+    IDirectoryObjectRequestBuilder internalSponsors(final String id);
 
 }

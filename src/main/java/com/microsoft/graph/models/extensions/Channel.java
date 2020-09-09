@@ -10,17 +10,17 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ChannelMembershipType;
 import com.microsoft.graph.models.extensions.ChannelModerationSettings;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.TeamsTab;
-import com.microsoft.graph.models.extensions.ConversationMember;
-import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,12 +39,12 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Channel name as it will appear to the user in Microsoft Teams.
+     * The Created Date Time.
+     * 
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -55,12 +55,12 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Is Favorite By Default.
-     * 
+     * The Display Name.
+     * Channel name as it will appear to the user in Microsoft Teams.
      */
-    @SerializedName("isFavoriteByDefault")
+    @SerializedName("displayName")
     @Expose
-    public Boolean isFavoriteByDefault;
+    public String displayName;
 
     /**
      * The Email.
@@ -71,12 +71,12 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String email;
 
     /**
-     * The Web Url.
-     * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     * The Is Favorite By Default.
+     * 
      */
-    @SerializedName("webUrl")
+    @SerializedName("isFavoriteByDefault")
     @Expose
-    public String webUrl;
+    public Boolean isFavoriteByDefault;
 
     /**
      * The Membership Type.
@@ -95,6 +95,28 @@ public class Channel extends Entity implements IJsonBackedObject {
     public ChannelModerationSettings moderationSettings;
 
     /**
+     * The Web Url.
+     * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
+
+    /**
+     * The Files Folder.
+     * Metadata for the location where the channel's files are stored.
+     */
+    @SerializedName("filesFolder")
+    @Expose
+    public DriveItem filesFolder;
+
+    /**
+     * The Members.
+     * 
+     */
+    public ConversationMemberCollectionPage members;
+
+    /**
      * The Messages.
      * A collection of all the messages in the channel. A navigation property. Nullable.
      */
@@ -105,20 +127,6 @@ public class Channel extends Entity implements IJsonBackedObject {
      * A collection of all the tabs in the channel. A navigation property.
      */
     public TeamsTabCollectionPage tabs;
-
-    /**
-     * The Members.
-     * 
-     */
-    public ConversationMemberCollectionPage members;
-
-    /**
-     * The Files Folder.
-     * Metadata for the location where the channel's files are stored.
-     */
-    @SerializedName("filesFolder")
-    @Expose
-    public DriveItem filesFolder;
 
 
     /**
@@ -160,6 +168,22 @@ public class Channel extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("members")) {
+            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
+            if (json.has("members@odata.nextLink")) {
+                response.nextLink = json.get("members@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
+            final ConversationMember[] array = new ConversationMember[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            members = new ConversationMemberCollectionPage(response, null);
+        }
+
         if (json.has("messages")) {
             final ChatMessageCollectionResponse response = new ChatMessageCollectionResponse();
             if (json.has("messages@odata.nextLink")) {
@@ -190,22 +214,6 @@ public class Channel extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             tabs = new TeamsTabCollectionPage(response, null);
-        }
-
-        if (json.has("members")) {
-            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final ConversationMember[] array = new ConversationMember[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new ConversationMemberCollectionPage(response, null);
         }
     }
 }

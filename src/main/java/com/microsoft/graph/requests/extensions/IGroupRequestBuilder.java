@@ -8,27 +8,27 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
-import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
@@ -70,6 +70,21 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id);
 
+    /**
+     * Gets the request builder for DirectoryObject
+     *
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
+     */
+    IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
+
+    IEndpointCollectionRequestBuilder endpoints();
+
+    IEndpointRequestBuilder endpoints(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
+
+    IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
     IDirectoryObjectWithReferenceRequestBuilder members(final String id);
@@ -78,60 +93,29 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder membersWithLicenseErrors(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
-
-    IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMembers();
-
-    IDirectoryObjectWithReferenceRequestBuilder transitiveMembers(final String id);
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
-
-    IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
-
-    /**
-     * Gets the request builder for DirectoryObject
-     *
-     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
-     */
-    IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
-
     IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
 
     IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
-
-    IDirectorySettingCollectionRequestBuilder settings();
-
-    IDirectorySettingRequestBuilder settings(final String id);
-
-    IEndpointCollectionRequestBuilder endpoints();
-
-    IEndpointRequestBuilder endpoints(final String id);
 
     IResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants();
 
     IResourceSpecificPermissionGrantRequestBuilder permissionGrants(final String id);
 
-    IConversationCollectionRequestBuilder conversations();
+    IDirectorySettingCollectionRequestBuilder settings();
 
-    IConversationRequestBuilder conversations(final String id);
+    IDirectorySettingRequestBuilder settings(final String id);
 
-    IProfilePhotoCollectionRequestBuilder photos();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
 
-    IProfilePhotoRequestBuilder photos(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMembers();
+
+    IDirectoryObjectWithReferenceRequestBuilder transitiveMembers(final String id);
 
     IDirectoryObjectCollectionRequestBuilder acceptedSenders();
 
     IDirectoryObjectRequestBuilder acceptedSenders(final String id);
-
-    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
-
-    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
-
-    IConversationThreadCollectionRequestBuilder threads();
-
-    IConversationThreadRequestBuilder threads(final String id);
 
     /**
      * Gets the request builder for Calendar
@@ -144,6 +128,10 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IEventRequestBuilder calendarView(final String id);
 
+    IConversationCollectionRequestBuilder conversations();
+
+    IConversationRequestBuilder conversations(final String id);
+
     IEventCollectionRequestBuilder events();
 
     IEventRequestBuilder events(final String id);
@@ -154,6 +142,18 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      * @return the IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
+
+    IProfilePhotoCollectionRequestBuilder photos();
+
+    IProfilePhotoRequestBuilder photos(final String id);
+
+    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
+
+    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
+
+    IConversationThreadCollectionRequestBuilder threads();
+
+    IConversationThreadRequestBuilder threads(final String id);
 
     /**
      * Gets the request builder for Drive
@@ -198,16 +198,16 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      * @return the ITeamRequestBuilder instance
      */
     ITeamRequestBuilder team();
-    IGroupEvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership(final String memberId);
-    IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
+    IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
 
     IGroupCheckGrantedPermissionsForAppCollectionRequestBuilder checkGrantedPermissionsForApp();
-    IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
-    IGroupSubscribeByMailRequestBuilder subscribeByMail();
-    IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();
+    IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
     IGroupAddFavoriteRequestBuilder addFavorite();
     IGroupRemoveFavoriteRequestBuilder removeFavorite();
     IGroupResetUnseenCountRequestBuilder resetUnseenCount();
+    IGroupSubscribeByMailRequestBuilder subscribeByMail();
+    IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();
+    IGroupEvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership(final String memberId);
     IGroupRenewRequestBuilder renew();
 
 }

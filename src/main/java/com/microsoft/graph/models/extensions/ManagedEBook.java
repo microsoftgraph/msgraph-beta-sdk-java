@@ -9,16 +9,16 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MimeContent;
-import com.microsoft.graph.models.extensions.ManagedEBookCategory;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.models.extensions.EBookInstallSummary;
+import com.microsoft.graph.models.extensions.ManagedEBookCategory;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
+import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionResponse;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionResponse;
@@ -41,12 +41,12 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Name of the eBook.
+     * The Created Date Time.
+     * The date and time when the eBook file was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -57,44 +57,12 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Publisher.
-     * Publisher.
+     * The Display Name.
+     * Name of the eBook.
      */
-    @SerializedName("publisher")
+    @SerializedName("displayName")
     @Expose
-    public String publisher;
-
-    /**
-     * The Published Date Time.
-     * The date and time when the eBook was published.
-     */
-    @SerializedName("publishedDateTime")
-    @Expose
-    public java.util.Calendar publishedDateTime;
-
-    /**
-     * The Large Cover.
-     * Book cover.
-     */
-    @SerializedName("largeCover")
-    @Expose
-    public MimeContent largeCover;
-
-    /**
-     * The Created Date Time.
-     * The date and time when the eBook file was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * The date and time when the eBook was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String displayName;
 
     /**
      * The Information Url.
@@ -105,6 +73,22 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public String informationUrl;
 
     /**
+     * The Large Cover.
+     * Book cover.
+     */
+    @SerializedName("largeCover")
+    @Expose
+    public MimeContent largeCover;
+
+    /**
+     * The Last Modified Date Time.
+     * The date and time when the eBook was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
      * The Privacy Information Url.
      * The privacy statement Url.
      */
@@ -113,10 +97,20 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public String privacyInformationUrl;
 
     /**
-     * The Categories.
-     * The list of categories for this eBook.
+     * The Published Date Time.
+     * The date and time when the eBook was published.
      */
-    public ManagedEBookCategoryCollectionPage categories;
+    @SerializedName("publishedDateTime")
+    @Expose
+    public java.util.Calendar publishedDateTime;
+
+    /**
+     * The Publisher.
+     * Publisher.
+     */
+    @SerializedName("publisher")
+    @Expose
+    public String publisher;
 
     /**
      * The Assignments.
@@ -125,18 +119,24 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public ManagedEBookAssignmentCollectionPage assignments;
 
     /**
-     * The Install Summary.
-     * Mobile App Install Summary.
+     * The Categories.
+     * The list of categories for this eBook.
      */
-    @SerializedName("installSummary")
-    @Expose
-    public EBookInstallSummary installSummary;
+    public ManagedEBookCategoryCollectionPage categories;
 
     /**
      * The Device States.
      * The list of installation states for this eBook.
      */
     public DeviceInstallStateCollectionPage deviceStates;
+
+    /**
+     * The Install Summary.
+     * Mobile App Install Summary.
+     */
+    @SerializedName("installSummary")
+    @Expose
+    public EBookInstallSummary installSummary;
 
     /**
      * The User State Summary.
@@ -184,22 +184,6 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("categories")) {
-            final ManagedEBookCategoryCollectionResponse response = new ManagedEBookCategoryCollectionResponse();
-            if (json.has("categories@odata.nextLink")) {
-                response.nextLink = json.get("categories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
-            final ManagedEBookCategory[] array = new ManagedEBookCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBookCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categories = new ManagedEBookCategoryCollectionPage(response, null);
-        }
-
         if (json.has("assignments")) {
             final ManagedEBookAssignmentCollectionResponse response = new ManagedEBookAssignmentCollectionResponse();
             if (json.has("assignments@odata.nextLink")) {
@@ -214,6 +198,22 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             assignments = new ManagedEBookAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("categories")) {
+            final ManagedEBookCategoryCollectionResponse response = new ManagedEBookCategoryCollectionResponse();
+            if (json.has("categories@odata.nextLink")) {
+                response.nextLink = json.get("categories@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
+            final ManagedEBookCategory[] array = new ManagedEBookCategory[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBookCategory.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            categories = new ManagedEBookCategoryCollectionPage(response, null);
         }
 
         if (json.has("deviceStates")) {

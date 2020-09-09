@@ -8,8 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSWiredNetworkConfiguration;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,21 +35,17 @@ public interface IMacOSWiredNetworkConfigurationRequestBuilder extends IRequestB
     IMacOSWiredNetworkConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -58,6 +54,14 @@ public interface IMacOSWiredNetworkConfigurationRequestBuilder extends IRequestB
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -65,9 +69,12 @@ public interface IMacOSWiredNetworkConfigurationRequestBuilder extends IRequestB
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+    /**
+     * Gets the request builder for MacOSCertificateProfileBase
+     *
+     * @return the IMacOSCertificateProfileBaseWithReferenceRequestBuilder instance
+     */
+    IMacOSCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
     /**
      * Gets the request builder for MacOSTrustedRootCertificate
@@ -75,12 +82,5 @@ public interface IMacOSWiredNetworkConfigurationRequestBuilder extends IRequestB
      * @return the IMacOSTrustedRootCertificateWithReferenceRequestBuilder instance
      */
     IMacOSTrustedRootCertificateWithReferenceRequestBuilder rootCertificateForServerValidation();
-
-    /**
-     * Gets the request builder for MacOSCertificateProfileBase
-     *
-     * @return the IMacOSCertificateProfileBaseWithReferenceRequestBuilder instance
-     */
-    IMacOSCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication();
 
 }

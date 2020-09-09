@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
-import com.microsoft.graph.models.generated.RestrictedAppsState;
 import com.microsoft.graph.models.extensions.ManagedDeviceReportedApp;
+import com.microsoft.graph.models.generated.RestrictedAppsState;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,38 +30,6 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
 
 
     /**
-     * The User Id.
-     * User unique identifier, must be Guid
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The User Name.
-     * User name
-     */
-    @SerializedName("userName")
-    @Expose
-    public String userName;
-
-    /**
-     * The Managed Device Id.
-     * Managed device unique identifier, must be Guid
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
-     * The Device Name.
-     * Device name
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
      * The Device Configuration Id.
      * Device configuration profile unique identifier, must be Guid
      */
@@ -78,12 +46,36 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
     public String deviceConfigurationName;
 
     /**
+     * The Device Name.
+     * Device name
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
+     * The Managed Device Id.
+     * Managed device unique identifier, must be Guid
+     */
+    @SerializedName("managedDeviceId")
+    @Expose
+    public String managedDeviceId;
+
+    /**
      * The Platform Type.
      * Platform type
      */
     @SerializedName("platformType")
     @Expose
     public PolicyPlatformType platformType;
+
+    /**
+     * The Restricted Apps.
+     * List of violated restricted apps
+     */
+    @SerializedName("restrictedApps")
+    @Expose
+    public java.util.List<ManagedDeviceReportedApp> restrictedApps;
 
     /**
      * The Restricted Apps State.
@@ -94,12 +86,20 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
     public RestrictedAppsState restrictedAppsState;
 
     /**
-     * The Restricted Apps.
-     * List of violated restricted apps
+     * The User Id.
+     * User unique identifier, must be Guid
      */
-    @SerializedName("restrictedApps")
+    @SerializedName("userId")
     @Expose
-    public java.util.List<ManagedDeviceReportedApp> restrictedApps;
+    public String userId;
+
+    /**
+     * The User Name.
+     * User name
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
 
 
     /**

@@ -36,52 +36,12 @@ public class UserActivationCounts implements IJsonBackedObject {
     }
 
     /**
-     * The Product Type.
+     * The Activated On Shared Computer.
      * 
      */
-    @SerializedName("productType")
+    @SerializedName("activatedOnSharedComputer")
     @Expose
-    public String productType;
-
-    /**
-     * The Last Activated Date.
-     * 
-     */
-    @SerializedName("lastActivatedDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivatedDate;
-
-    /**
-     * The Windows.
-     * 
-     */
-    @SerializedName("windows")
-    @Expose
-    public Long windows;
-
-    /**
-     * The Mac.
-     * 
-     */
-    @SerializedName("mac")
-    @Expose
-    public Long mac;
-
-    /**
-     * The Windows10Mobile.
-     * 
-     */
-    @SerializedName("windows10Mobile")
-    @Expose
-    public Long windows10Mobile;
-
-    /**
-     * The Ios.
-     * 
-     */
-    @SerializedName("ios")
-    @Expose
-    public Long ios;
+    public Boolean activatedOnSharedComputer;
 
     /**
      * The Android.
@@ -92,12 +52,52 @@ public class UserActivationCounts implements IJsonBackedObject {
     public Long android;
 
     /**
-     * The Activated On Shared Computer.
+     * The Ios.
      * 
      */
-    @SerializedName("activatedOnSharedComputer")
+    @SerializedName("ios")
     @Expose
-    public Boolean activatedOnSharedComputer;
+    public Long ios;
+
+    /**
+     * The Last Activated Date.
+     * 
+     */
+    @SerializedName("lastActivatedDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly lastActivatedDate;
+
+    /**
+     * The Mac.
+     * 
+     */
+    @SerializedName("mac")
+    @Expose
+    public Long mac;
+
+    /**
+     * The Product Type.
+     * 
+     */
+    @SerializedName("productType")
+    @Expose
+    public String productType;
+
+    /**
+     * The Windows.
+     * 
+     */
+    @SerializedName("windows")
+    @Expose
+    public Long windows;
+
+    /**
+     * The Windows10Mobile.
+     * 
+     */
+    @SerializedName("windows10Mobile")
+    @Expose
+    public Long windows10Mobile;
 
 
     /**

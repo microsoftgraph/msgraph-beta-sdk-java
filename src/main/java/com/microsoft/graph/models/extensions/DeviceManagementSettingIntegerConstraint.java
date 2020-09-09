@@ -27,20 +27,20 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
 
 
     /**
-     * The Minimum Value.
-     * The minimum permitted value
-     */
-    @SerializedName("minimumValue")
-    @Expose
-    public Integer minimumValue;
-
-    /**
      * The Maximum Value.
      * The maximum permitted value
      */
     @SerializedName("maximumValue")
     @Expose
     public Integer maximumValue;
+
+    /**
+     * The Minimum Value.
+     * The minimum permitted value
+     */
+    @SerializedName("minimumValue")
+    @Expose
+    public Integer minimumValue;
 
 
     /**

@@ -112,6 +112,27 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
     }
 
     /**
+     * Creates a ConnectionOperation with a new object
+     *
+     * @param newConnectionOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback) {
+        send(HttpMethod.PUT, callback, newConnectionOperation);
+    }
+
+    /**
+     * Creates a ConnectionOperation with a new object
+     *
+     * @param newConnectionOperation the object to create/update
+     * @return the created ConnectionOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ConnectionOperation put(final ConnectionOperation newConnectionOperation) throws ClientException {
+        return send(HttpMethod.PUT, newConnectionOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class EducationSynchronizationErrorCollectionRequest extends BaseCollecti
     public void post(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSynchronizationErrorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSynchronizationError, callback);
     }
 
     public EducationSynchronizationError post(final EducationSynchronizationError newEducationSynchronizationError) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationSynchronizationErrorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSynchronizationError);
     }
 
@@ -106,6 +106,27 @@ public class EducationSynchronizationErrorCollectionRequest extends BaseCollecti
         return (EducationSynchronizationErrorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationSynchronizationErrorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationSynchronizationErrorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationSynchronizationErrorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationSynchronizationErrorCollectionRequest)this;
+    }
     public IEducationSynchronizationErrorCollectionPage buildFromResponse(final EducationSynchronizationErrorCollectionResponse response) {
         final IEducationSynchronizationErrorCollectionRequestBuilder builder;
         if (response.nextLink != null) {

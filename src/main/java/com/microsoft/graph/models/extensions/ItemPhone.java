@@ -36,20 +36,20 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public PhoneType type;
-
-    /**
      * The Number.
      * 
      */
     @SerializedName("number")
     @Expose
     public String number;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public PhoneType type;
 
 
     /**

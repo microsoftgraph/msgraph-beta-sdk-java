@@ -27,38 +27,6 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Product Type.
-     * 
-     */
-    @SerializedName("productType")
-    @Expose
-    public String productType;
-
-    /**
-     * The Windows.
-     * 
-     */
-    @SerializedName("windows")
-    @Expose
-    public Long windows;
-
-    /**
-     * The Mac.
-     * 
-     */
-    @SerializedName("mac")
-    @Expose
-    public Long mac;
-
-    /**
      * The Android.
      * 
      */
@@ -73,6 +41,38 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
     @SerializedName("ios")
     @Expose
     public Long ios;
+
+    /**
+     * The Mac.
+     * 
+     */
+    @SerializedName("mac")
+    @Expose
+    public Long mac;
+
+    /**
+     * The Product Type.
+     * 
+     */
+    @SerializedName("productType")
+    @Expose
+    public String productType;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Windows.
+     * 
+     */
+    @SerializedName("windows")
+    @Expose
+    public Long windows;
 
     /**
      * The Windows10Mobile.

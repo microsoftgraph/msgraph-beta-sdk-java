@@ -57,13 +57,6 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
     }
 
 
-    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
-    }
-
-    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
-        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
-    }
     public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -71,19 +64,19 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
     public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    }
     public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
-    }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
-        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -94,6 +87,20 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
     public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
@@ -102,20 +109,6 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
      */
     public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
-    }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
-    }
-
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
-    }
-    public IWindows81TrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation() {
-        return new Windows81TrustedRootCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation"), getClient(), null);
-    }
-
-    public IWindows81TrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(final String id) {
-        return new Windows81TrustedRootCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation") + "/" + id, getClient(), null);
     }
 
     /**
@@ -134,5 +127,12 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
      */
     public IWindows81TrustedRootCertificateWithReferenceRequestBuilder rootCertificateForClientValidation() {
         return new Windows81TrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificateForClientValidation"), getClient(), null);
+    }
+    public IWindows81TrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation() {
+        return new Windows81TrustedRootCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation"), getClient(), null);
+    }
+
+    public IWindows81TrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(final String id) {
+        return new Windows81TrustedRootCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation") + "/" + id, getClient(), null);
     }
 }

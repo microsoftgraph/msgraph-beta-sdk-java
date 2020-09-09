@@ -62,14 +62,14 @@ public class IosTrustedRootCertificateCollectionRequest extends BaseCollectionRe
     public void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<IosTrustedRootCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosTrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosTrustedRootCertificate, callback);
     }
 
     public IosTrustedRootCertificate post(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosTrustedRootCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosTrustedRootCertificate);
     }
 
@@ -106,6 +106,27 @@ public class IosTrustedRootCertificateCollectionRequest extends BaseCollectionRe
         return (IosTrustedRootCertificateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIosTrustedRootCertificateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IosTrustedRootCertificateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIosTrustedRootCertificateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIosTrustedRootCertificateCollectionRequest)this;
+    }
     public IIosTrustedRootCertificateCollectionPage buildFromResponse(final IosTrustedRootCertificateCollectionResponse response) {
         final IIosTrustedRootCertificateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

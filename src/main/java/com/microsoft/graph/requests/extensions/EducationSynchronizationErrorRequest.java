@@ -112,6 +112,27 @@ public class EducationSynchronizationErrorRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a EducationSynchronizationError with a new object
+     *
+     * @param newEducationSynchronizationError the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationSynchronizationError newEducationSynchronizationError, final ICallback<EducationSynchronizationError> callback) {
+        send(HttpMethod.PUT, callback, newEducationSynchronizationError);
+    }
+
+    /**
+     * Creates a EducationSynchronizationError with a new object
+     *
+     * @param newEducationSynchronizationError the object to create/update
+     * @return the created EducationSynchronizationError
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationSynchronizationError put(final EducationSynchronizationError newEducationSynchronizationError) throws ClientException {
+        return send(HttpMethod.PUT, newEducationSynchronizationError);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

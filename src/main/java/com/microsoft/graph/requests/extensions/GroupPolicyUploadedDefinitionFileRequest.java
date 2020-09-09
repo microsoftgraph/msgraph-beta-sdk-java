@@ -117,6 +117,27 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a GroupPolicyUploadedDefinitionFile with a new object
+     *
+     * @param newGroupPolicyUploadedDefinitionFile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<GroupPolicyUploadedDefinitionFile> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyUploadedDefinitionFile);
+    }
+
+    /**
+     * Creates a GroupPolicyUploadedDefinitionFile with a new object
+     *
+     * @param newGroupPolicyUploadedDefinitionFile the object to create/update
+     * @return the created GroupPolicyUploadedDefinitionFile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyUploadedDefinitionFile put(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyUploadedDefinitionFile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

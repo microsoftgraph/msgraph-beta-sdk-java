@@ -112,6 +112,27 @@ public class AndroidTrustedRootCertificateRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a AndroidTrustedRootCertificate with a new object
+     *
+     * @param newAndroidTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback) {
+        send(HttpMethod.PUT, callback, newAndroidTrustedRootCertificate);
+    }
+
+    /**
+     * Creates a AndroidTrustedRootCertificate with a new object
+     *
+     * @param newAndroidTrustedRootCertificate the object to create/update
+     * @return the created AndroidTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidTrustedRootCertificate put(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidTrustedRootCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
     }
 
     /**
+     * Creates a MobileAppDependency with a new object
+     *
+     * @param newMobileAppDependency the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppDependency newMobileAppDependency, final ICallback<MobileAppDependency> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppDependency);
+    }
+
+    /**
+     * Creates a MobileAppDependency with a new object
+     *
+     * @param newMobileAppDependency the object to create/update
+     * @return the created MobileAppDependency
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppDependency put(final MobileAppDependency newMobileAppDependency) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppDependency);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

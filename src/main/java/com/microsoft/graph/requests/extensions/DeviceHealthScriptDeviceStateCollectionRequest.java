@@ -62,14 +62,14 @@ public class DeviceHealthScriptDeviceStateCollectionRequest extends BaseCollecti
     public void post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState, final ICallback<DeviceHealthScriptDeviceState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceHealthScriptDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceHealthScriptDeviceState, callback);
     }
 
     public DeviceHealthScriptDeviceState post(final DeviceHealthScriptDeviceState newDeviceHealthScriptDeviceState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceHealthScriptDeviceStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceHealthScriptDeviceState);
     }
 
@@ -106,6 +106,27 @@ public class DeviceHealthScriptDeviceStateCollectionRequest extends BaseCollecti
         return (DeviceHealthScriptDeviceStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceHealthScriptDeviceStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceHealthScriptDeviceStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceHealthScriptDeviceStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceHealthScriptDeviceStateCollectionRequest)this;
+    }
     public IDeviceHealthScriptDeviceStateCollectionPage buildFromResponse(final DeviceHealthScriptDeviceStateCollectionResponse response) {
         final IDeviceHealthScriptDeviceStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

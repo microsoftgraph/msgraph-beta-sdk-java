@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.RgbColor;
-import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.CompanyPortalBlockedAction;
+import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.generated.EnrollmentAvailabilityOptions;
+import com.microsoft.graph.models.extensions.RgbColor;
 
 
 import com.google.gson.JsonObject;
@@ -40,92 +40,12 @@ public class IntuneBrand implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
-     * Company/organization name that is displayed to end users.
+     * The Company Portal Blocked Actions.
+     * Collection of blocked actions on the company portal as per platform and device ownership types.
      */
-    @SerializedName("displayName")
+    @SerializedName("companyPortalBlockedActions")
     @Expose
-    public String displayName;
-
-    /**
-     * The Theme Color.
-     * Primary theme color used in the Company Portal applications and web portal.
-     */
-    @SerializedName("themeColor")
-    @Expose
-    public RgbColor themeColor;
-
-    /**
-     * The Show Logo.
-     * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
-     */
-    @SerializedName("showLogo")
-    @Expose
-    public Boolean showLogo;
-
-    /**
-     * The Light Background Logo.
-     * Logo image displayed in Company Portal apps which have a light background behind the logo.
-     */
-    @SerializedName("lightBackgroundLogo")
-    @Expose
-    public MimeContent lightBackgroundLogo;
-
-    /**
-     * The Dark Background Logo.
-     * Logo image displayed in Company Portal apps which have a dark background behind the logo.
-     */
-    @SerializedName("darkBackgroundLogo")
-    @Expose
-    public MimeContent darkBackgroundLogo;
-
-    /**
-     * The Show Name Next To Logo.
-     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
-     */
-    @SerializedName("showNameNextToLogo")
-    @Expose
-    public Boolean showNameNextToLogo;
-
-    /**
-     * The Landing Page Customized Image.
-     * Customized image displayed in Company Portal app landing page
-     */
-    @SerializedName("landingPageCustomizedImage")
-    @Expose
-    public MimeContent landingPageCustomizedImage;
-
-    /**
-     * The Show Display Name Next To Logo.
-     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
-     */
-    @SerializedName("showDisplayNameNextToLogo")
-    @Expose
-    public Boolean showDisplayNameNextToLogo;
-
-    /**
-     * The Role Scope Tag Ids.
-     * List of scope tags assigned to the default branding profile
-     */
-    @SerializedName("roleScopeTagIds")
-    @Expose
-    public java.util.List<String> roleScopeTagIds;
-
-    /**
-     * The Contact ITName.
-     * Name of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITName")
-    @Expose
-    public String contactITName;
-
-    /**
-     * The Contact ITPhone Number.
-     * Phone number of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITPhoneNumber")
-    @Expose
-    public String contactITPhoneNumber;
+    public java.util.List<CompanyPortalBlockedAction> companyPortalBlockedActions;
 
     /**
      * The Contact ITEmail Address.
@@ -136,6 +56,14 @@ public class IntuneBrand implements IJsonBackedObject {
     public String contactITEmailAddress;
 
     /**
+     * The Contact ITName.
+     * Name of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITName")
+    @Expose
+    public String contactITName;
+
+    /**
      * The Contact ITNotes.
      * Text comments regarding the person/organization responsible for IT support.
      */
@@ -144,28 +72,12 @@ public class IntuneBrand implements IJsonBackedObject {
     public String contactITNotes;
 
     /**
-     * The Online Support Site Url.
-     * URL to the company/organization’s IT helpdesk site.
+     * The Contact ITPhone Number.
+     * Phone number of the person/organization responsible for IT support.
      */
-    @SerializedName("onlineSupportSiteUrl")
+    @SerializedName("contactITPhoneNumber")
     @Expose
-    public String onlineSupportSiteUrl;
-
-    /**
-     * The Online Support Site Name.
-     * Display name of the company/organization’s IT helpdesk site.
-     */
-    @SerializedName("onlineSupportSiteName")
-    @Expose
-    public String onlineSupportSiteName;
-
-    /**
-     * The Privacy Url.
-     * URL to the company/organization’s privacy policy.
-     */
-    @SerializedName("privacyUrl")
-    @Expose
-    public String privacyUrl;
+    public String contactITPhoneNumber;
 
     /**
      * The Custom Privacy Message.
@@ -176,12 +88,28 @@ public class IntuneBrand implements IJsonBackedObject {
     public String customPrivacyMessage;
 
     /**
-     * The Is Remove Device Disabled.
-     * Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
+     * The Dark Background Logo.
+     * Logo image displayed in Company Portal apps which have a dark background behind the logo.
      */
-    @SerializedName("isRemoveDeviceDisabled")
+    @SerializedName("darkBackgroundLogo")
     @Expose
-    public Boolean isRemoveDeviceDisabled;
+    public MimeContent darkBackgroundLogo;
+
+    /**
+     * The Display Name.
+     * Company/organization name that is displayed to end users.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Enrollment Availability.
+     * Customized device enrollment flow displayed to the end user 
+     */
+    @SerializedName("enrollmentAvailability")
+    @Expose
+    public EnrollmentAvailabilityOptions enrollmentAvailability;
 
     /**
      * The Is Factory Reset Disabled.
@@ -192,28 +120,60 @@ public class IntuneBrand implements IJsonBackedObject {
     public Boolean isFactoryResetDisabled;
 
     /**
-     * The Company Portal Blocked Actions.
-     * Collection of blocked actions on the company portal as per platform and device ownership types.
+     * The Is Remove Device Disabled.
+     * Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
      */
-    @SerializedName("companyPortalBlockedActions")
+    @SerializedName("isRemoveDeviceDisabled")
     @Expose
-    public java.util.List<CompanyPortalBlockedAction> companyPortalBlockedActions;
+    public Boolean isRemoveDeviceDisabled;
 
     /**
-     * The Show Azure ADEnterprise Apps.
-     * Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
+     * The Landing Page Customized Image.
+     * Customized image displayed in Company Portal app landing page
      */
-    @SerializedName("showAzureADEnterpriseApps")
+    @SerializedName("landingPageCustomizedImage")
     @Expose
-    public Boolean showAzureADEnterpriseApps;
+    public MimeContent landingPageCustomizedImage;
 
     /**
-     * The Show Office Web Apps.
-     * Boolean that indicates if Office WebApps will be shown in Company Portal
+     * The Light Background Logo.
+     * Logo image displayed in Company Portal apps which have a light background behind the logo.
      */
-    @SerializedName("showOfficeWebApps")
+    @SerializedName("lightBackgroundLogo")
     @Expose
-    public Boolean showOfficeWebApps;
+    public MimeContent lightBackgroundLogo;
+
+    /**
+     * The Online Support Site Name.
+     * Display name of the company/organization’s IT helpdesk site.
+     */
+    @SerializedName("onlineSupportSiteName")
+    @Expose
+    public String onlineSupportSiteName;
+
+    /**
+     * The Online Support Site Url.
+     * URL to the company/organization’s IT helpdesk site.
+     */
+    @SerializedName("onlineSupportSiteUrl")
+    @Expose
+    public String onlineSupportSiteUrl;
+
+    /**
+     * The Privacy Url.
+     * URL to the company/organization’s privacy policy.
+     */
+    @SerializedName("privacyUrl")
+    @Expose
+    public String privacyUrl;
+
+    /**
+     * The Role Scope Tag Ids.
+     * List of scope tags assigned to the default branding profile
+     */
+    @SerializedName("roleScopeTagIds")
+    @Expose
+    public java.util.List<String> roleScopeTagIds;
 
     /**
      * The Send Device Ownership Change Push Notification.
@@ -224,12 +184,52 @@ public class IntuneBrand implements IJsonBackedObject {
     public Boolean sendDeviceOwnershipChangePushNotification;
 
     /**
-     * The Enrollment Availability.
-     * Customized device enrollment flow displayed to the end user 
+     * The Show Azure ADEnterprise Apps.
+     * Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
      */
-    @SerializedName("enrollmentAvailability")
+    @SerializedName("showAzureADEnterpriseApps")
     @Expose
-    public EnrollmentAvailabilityOptions enrollmentAvailability;
+    public Boolean showAzureADEnterpriseApps;
+
+    /**
+     * The Show Display Name Next To Logo.
+     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
+     */
+    @SerializedName("showDisplayNameNextToLogo")
+    @Expose
+    public Boolean showDisplayNameNextToLogo;
+
+    /**
+     * The Show Logo.
+     * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
+     */
+    @SerializedName("showLogo")
+    @Expose
+    public Boolean showLogo;
+
+    /**
+     * The Show Name Next To Logo.
+     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
+     */
+    @SerializedName("showNameNextToLogo")
+    @Expose
+    public Boolean showNameNextToLogo;
+
+    /**
+     * The Show Office Web Apps.
+     * Boolean that indicates if Office WebApps will be shown in Company Portal
+     */
+    @SerializedName("showOfficeWebApps")
+    @Expose
+    public Boolean showOfficeWebApps;
+
+    /**
+     * The Theme Color.
+     * Primary theme color used in the Company Portal applications and web portal.
+     */
+    @SerializedName("themeColor")
+    @Expose
+    public RgbColor themeColor;
 
 
     /**

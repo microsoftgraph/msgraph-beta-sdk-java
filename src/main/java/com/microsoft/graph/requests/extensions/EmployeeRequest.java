@@ -116,6 +116,27 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
     }
 
     /**
+     * Creates a Employee with a new object
+     *
+     * @param newEmployee the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Employee newEmployee, final ICallback<Employee> callback) {
+        send(HttpMethod.PUT, callback, newEmployee);
+    }
+
+    /**
+     * Creates a Employee with a new object
+     *
+     * @param newEmployee the object to create/update
+     * @return the created Employee
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Employee put(final Employee newEmployee) throws ClientException {
+        return send(HttpMethod.PUT, newEmployee);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

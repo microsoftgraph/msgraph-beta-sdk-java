@@ -62,14 +62,14 @@ public class UserConfigurationCollectionRequest extends BaseCollectionRequest<Us
     public void post(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserConfiguration, callback);
     }
 
     public UserConfiguration post(final UserConfiguration newUserConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserConfiguration);
     }
 
@@ -106,6 +106,27 @@ public class UserConfigurationCollectionRequest extends BaseCollectionRequest<Us
         return (UserConfigurationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserConfigurationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserConfigurationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserConfigurationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserConfigurationCollectionRequest)this;
+    }
     public IUserConfigurationCollectionPage buildFromResponse(final UserConfigurationCollectionResponse response) {
         final IUserConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

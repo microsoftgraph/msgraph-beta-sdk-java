@@ -112,6 +112,27 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
     }
 
     /**
+     * Creates a GroupPolicySettingMapping with a new object
+     *
+     * @param newGroupPolicySettingMapping the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<GroupPolicySettingMapping> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicySettingMapping);
+    }
+
+    /**
+     * Creates a GroupPolicySettingMapping with a new object
+     *
+     * @param newGroupPolicySettingMapping the object to create/update
+     * @return the created GroupPolicySettingMapping
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicySettingMapping put(final GroupPolicySettingMapping newGroupPolicySettingMapping) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicySettingMapping);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

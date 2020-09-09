@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
-import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
-import com.microsoft.graph.models.extensions.AccessPackageSubject;
 import com.microsoft.graph.models.extensions.AccessPackageAssignment;
+import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
+import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
+import com.microsoft.graph.models.extensions.AccessPackageSubject;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionPage;
@@ -57,12 +57,10 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
     public String status;
 
     /**
-     * The Access Package Resource Scope.
+     * The Access Package Assignments.
      * 
      */
-    @SerializedName("accessPackageResourceScope")
-    @Expose
-    public AccessPackageResourceScope accessPackageResourceScope;
+    public AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
     /**
      * The Access Package Resource Role.
@@ -73,18 +71,20 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
     public AccessPackageResourceRole accessPackageResourceRole;
 
     /**
+     * The Access Package Resource Scope.
+     * 
+     */
+    @SerializedName("accessPackageResourceScope")
+    @Expose
+    public AccessPackageResourceScope accessPackageResourceScope;
+
+    /**
      * The Access Package Subject.
      * 
      */
     @SerializedName("accessPackageSubject")
     @Expose
     public AccessPackageSubject accessPackageSubject;
-
-    /**
-     * The Access Package Assignments.
-     * 
-     */
-    public AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
 
     /**

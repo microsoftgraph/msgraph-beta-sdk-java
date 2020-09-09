@@ -112,6 +112,27 @@ public class AccessReviewDecisionRequest extends BaseRequest implements IAccessR
     }
 
     /**
+     * Creates a AccessReviewDecision with a new object
+     *
+     * @param newAccessReviewDecision the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReviewDecision newAccessReviewDecision, final ICallback<AccessReviewDecision> callback) {
+        send(HttpMethod.PUT, callback, newAccessReviewDecision);
+    }
+
+    /**
+     * Creates a AccessReviewDecision with a new object
+     *
+     * @param newAccessReviewDecision the object to create/update
+     * @return the created AccessReviewDecision
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReviewDecision put(final AccessReviewDecision newAccessReviewDecision) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReviewDecision);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -9,14 +9,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
@@ -143,6 +143,27 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      */
     public ManagedEBook post(final ManagedEBook newManagedEBook) throws ClientException {
         return send(HttpMethod.POST, newManagedEBook);
+    }
+
+    /**
+     * Creates a ManagedEBook with a new object
+     *
+     * @param newManagedEBook the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback) {
+        send(HttpMethod.PUT, callback, newManagedEBook);
+    }
+
+    /**
+     * Creates a ManagedEBook with a new object
+     *
+     * @param newManagedEBook the object to create/update
+     * @return the created ManagedEBook
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedEBook put(final ManagedEBook newManagedEBook) throws ClientException {
+        return send(HttpMethod.PUT, newManagedEBook);
     }
 
     /**

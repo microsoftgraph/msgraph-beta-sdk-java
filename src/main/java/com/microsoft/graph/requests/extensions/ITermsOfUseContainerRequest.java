@@ -80,6 +80,23 @@ public interface ITermsOfUseContainerRequest extends IHttpRequest {
     TermsOfUseContainer post(final TermsOfUseContainer newTermsOfUseContainer) throws ClientException;
 
     /**
+     * Posts a TermsOfUseContainer with a new object
+     *
+     * @param newTermsOfUseContainer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<TermsOfUseContainer> callback);
+
+    /**
+     * Posts a TermsOfUseContainer with a new object
+     *
+     * @param newTermsOfUseContainer the object to create/update
+     * @return the created TermsOfUseContainer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TermsOfUseContainer put(final TermsOfUseContainer newTermsOfUseContainer) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

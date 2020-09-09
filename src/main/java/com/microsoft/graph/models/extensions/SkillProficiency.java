@@ -36,6 +36,14 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
     public java.util.List<String> categories;
 
     /**
+     * The Collaboration Tags.
+     * 
+     */
+    @SerializedName("collaborationTags")
+    @Expose
+    public java.util.List<String> collaborationTags;
+
+    /**
      * The Display Name.
      * 
      */
@@ -58,14 +66,6 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
     @SerializedName("webUrl")
     @Expose
     public String webUrl;
-
-    /**
-     * The Collaboration Tags.
-     * 
-     */
-    @SerializedName("collaborationTags")
-    @Expose
-    public java.util.List<String> collaborationTags;
 
 
     /**

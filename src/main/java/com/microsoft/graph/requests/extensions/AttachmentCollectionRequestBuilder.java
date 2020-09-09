@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.OutlookTask;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
@@ -29,7 +29,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder implements IAttachmentCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of Post
+     * The request builder for this collection of OutlookTask
      *
      * @param requestUrl     the request URL
      * @param client         the service client

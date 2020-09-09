@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AllowedAudiences;
-import com.microsoft.graph.models.extensions.InferenceData;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.InferenceData;
 import com.microsoft.graph.models.extensions.PersonDataSource;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -39,12 +39,12 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
     public EnumSet<AllowedAudiences> allowedAudiences;
 
     /**
-     * The Inference.
+     * The Created By.
      * 
      */
-    @SerializedName("inference")
+    @SerializedName("createdBy")
     @Expose
-    public InferenceData inference;
+    public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
@@ -55,20 +55,12 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Created By.
+     * The Inference.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName("inference")
     @Expose
-    public IdentitySet createdBy;
-
-    /**
-     * The Last Modified Date Time.
-     * 
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public InferenceData inference;
 
     /**
      * The Last Modified By.
@@ -77,6 +69,14 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedBy")
     @Expose
     public IdentitySet lastModifiedBy;
+
+    /**
+     * The Last Modified Date Time.
+     * 
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Source.

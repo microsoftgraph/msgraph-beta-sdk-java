@@ -61,14 +61,14 @@ public class BookingBusinessCollectionRequest extends BaseCollectionRequest<Book
     public void post(final BookingBusiness newBookingBusiness, final ICallback<BookingBusiness> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BookingBusinessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingBusiness, callback);
     }
 
     public BookingBusiness post(final BookingBusiness newBookingBusiness) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BookingBusinessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBookingBusiness);
     }
 
@@ -105,6 +105,27 @@ public class BookingBusinessCollectionRequest extends BaseCollectionRequest<Book
         return (BookingBusinessCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBookingBusinessCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BookingBusinessCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBookingBusinessCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBookingBusinessCollectionRequest)this;
+    }
     public IBookingBusinessCollectionPage buildFromResponse(final BookingBusinessCollectionResponse response) {
         final IBookingBusinessCollectionRequestBuilder builder;
         if (response.nextLink != null) {

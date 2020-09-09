@@ -28,70 +28,6 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Journal Display Name.
-     * 
-     */
-    @SerializedName("journalDisplayName")
-    @Expose
-    public String journalDisplayName;
-
-    /**
-     * The Line Number.
-     * 
-     */
-    @SerializedName("lineNumber")
-    @Expose
-    public Integer lineNumber;
-
-    /**
-     * The Customer Id.
-     * 
-     */
-    @SerializedName("customerId")
-    @Expose
-    public java.util.UUID customerId;
-
-    /**
-     * The Customer Number.
-     * 
-     */
-    @SerializedName("customerNumber")
-    @Expose
-    public String customerNumber;
-
-    /**
-     * The Contact Id.
-     * 
-     */
-    @SerializedName("contactId")
-    @Expose
-    public String contactId;
-
-    /**
-     * The Posting Date.
-     * 
-     */
-    @SerializedName("postingDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly postingDate;
-
-    /**
-     * The Document Number.
-     * 
-     */
-    @SerializedName("documentNumber")
-    @Expose
-    public String documentNumber;
-
-    /**
-     * The External Document Number.
-     * 
-     */
-    @SerializedName("externalDocumentNumber")
-    @Expose
-    public String externalDocumentNumber;
-
-    /**
      * The Amount.
      * 
      */
@@ -116,14 +52,6 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
     public String appliesToInvoiceNumber;
 
     /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
      * The Comment.
      * 
      */
@@ -132,12 +60,84 @@ public class CustomerPayment extends Entity implements IJsonBackedObject {
     public String comment;
 
     /**
+     * The Contact Id.
+     * 
+     */
+    @SerializedName("contactId")
+    @Expose
+    public String contactId;
+
+    /**
+     * The Customer Id.
+     * 
+     */
+    @SerializedName("customerId")
+    @Expose
+    public java.util.UUID customerId;
+
+    /**
+     * The Customer Number.
+     * 
+     */
+    @SerializedName("customerNumber")
+    @Expose
+    public String customerNumber;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Document Number.
+     * 
+     */
+    @SerializedName("documentNumber")
+    @Expose
+    public String documentNumber;
+
+    /**
+     * The External Document Number.
+     * 
+     */
+    @SerializedName("externalDocumentNumber")
+    @Expose
+    public String externalDocumentNumber;
+
+    /**
+     * The Journal Display Name.
+     * 
+     */
+    @SerializedName("journalDisplayName")
+    @Expose
+    public String journalDisplayName;
+
+    /**
      * The Last Modified Date Time.
      * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Line Number.
+     * 
+     */
+    @SerializedName("lineNumber")
+    @Expose
+    public Integer lineNumber;
+
+    /**
+     * The Posting Date.
+     * 
+     */
+    @SerializedName("postingDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly postingDate;
 
     /**
      * The Customer.

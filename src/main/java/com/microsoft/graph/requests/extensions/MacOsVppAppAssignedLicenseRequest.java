@@ -112,6 +112,27 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
     }
 
     /**
+     * Creates a MacOsVppAppAssignedLicense with a new object
+     *
+     * @param newMacOsVppAppAssignedLicense the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback) {
+        send(HttpMethod.PUT, callback, newMacOsVppAppAssignedLicense);
+    }
+
+    /**
+     * Creates a MacOsVppAppAssignedLicense with a new object
+     *
+     * @param newMacOsVppAppAssignedLicense the object to create/update
+     * @return the created MacOsVppAppAssignedLicense
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOsVppAppAssignedLicense put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException {
+        return send(HttpMethod.PUT, newMacOsVppAppAssignedLicense);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

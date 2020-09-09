@@ -62,14 +62,14 @@ public class AccessPackageResourceCollectionRequest extends BaseCollectionReques
     public void post(final AccessPackageResource newAccessPackageResource, final ICallback<AccessPackageResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageResource, callback);
     }
 
     public AccessPackageResource post(final AccessPackageResource newAccessPackageResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageResource);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageResourceCollectionRequest extends BaseCollectionReques
         return (AccessPackageResourceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageResourceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageResourceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageResourceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageResourceCollectionRequest)this;
+    }
     public IAccessPackageResourceCollectionPage buildFromResponse(final AccessPackageResourceCollectionResponse response) {
         final IAccessPackageResourceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

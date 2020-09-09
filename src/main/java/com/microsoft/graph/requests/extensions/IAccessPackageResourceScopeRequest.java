@@ -80,6 +80,23 @@ public interface IAccessPackageResourceScopeRequest extends IHttpRequest {
     AccessPackageResourceScope post(final AccessPackageResourceScope newAccessPackageResourceScope) throws ClientException;
 
     /**
+     * Posts a AccessPackageResourceScope with a new object
+     *
+     * @param newAccessPackageResourceScope the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessPackageResourceScope newAccessPackageResourceScope, final ICallback<AccessPackageResourceScope> callback);
+
+    /**
+     * Posts a AccessPackageResourceScope with a new object
+     *
+     * @param newAccessPackageResourceScope the object to create/update
+     * @return the created AccessPackageResourceScope
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessPackageResourceScope put(final AccessPackageResourceScope newAccessPackageResourceScope) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

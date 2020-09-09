@@ -47,9 +47,9 @@ public interface IEducationSynchronizationProfileRequestBuilder extends IRequest
      * @return the IEducationSynchronizationProfileStatusRequestBuilder instance
      */
     IEducationSynchronizationProfileStatusRequestBuilder profileStatus();
-    IEducationSynchronizationProfileResumeRequestBuilder resume();
     IEducationSynchronizationProfilePauseRequestBuilder pause();
     IEducationSynchronizationProfileResetRequestBuilder reset();
+    IEducationSynchronizationProfileResumeRequestBuilder resume();
 
     IEducationSynchronizationProfileStartCollectionRequestBuilder start();
     IEducationSynchronizationProfileUploadUrlRequestBuilder uploadUrl();

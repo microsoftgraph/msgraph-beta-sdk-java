@@ -116,6 +116,27 @@ public class SecurityBaselineStateRequest extends BaseRequest implements ISecuri
     }
 
     /**
+     * Creates a SecurityBaselineState with a new object
+     *
+     * @param newSecurityBaselineState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityBaselineState newSecurityBaselineState, final ICallback<SecurityBaselineState> callback) {
+        send(HttpMethod.PUT, callback, newSecurityBaselineState);
+    }
+
+    /**
+     * Creates a SecurityBaselineState with a new object
+     *
+     * @param newSecurityBaselineState the object to create/update
+     * @return the created SecurityBaselineState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityBaselineState put(final SecurityBaselineState newSecurityBaselineState) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityBaselineState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

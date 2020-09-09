@@ -127,6 +127,27 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
     }
 
     /**
+     * Creates a AndroidDeviceComplianceLocalActionBase with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionBase);
+    }
+
+    /**
+     * Creates a AndroidDeviceComplianceLocalActionBase with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
+     * @return the created AndroidDeviceComplianceLocalActionBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceComplianceLocalActionBase put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceComplianceLocalActionBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

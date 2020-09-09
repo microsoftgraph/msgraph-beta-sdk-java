@@ -62,14 +62,14 @@ public class SoftwareOathAuthenticationMethodCollectionRequest extends BaseColle
     public void post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SoftwareOathAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSoftwareOathAuthenticationMethod, callback);
     }
 
     public SoftwareOathAuthenticationMethod post(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SoftwareOathAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSoftwareOathAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class SoftwareOathAuthenticationMethodCollectionRequest extends BaseColle
         return (SoftwareOathAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISoftwareOathAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SoftwareOathAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISoftwareOathAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISoftwareOathAuthenticationMethodCollectionRequest)this;
+    }
     public ISoftwareOathAuthenticationMethodCollectionPage buildFromResponse(final SoftwareOathAuthenticationMethodCollectionResponse response) {
         final ISoftwareOathAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

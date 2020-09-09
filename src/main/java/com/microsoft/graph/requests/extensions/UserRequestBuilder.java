@@ -13,14 +13,14 @@ import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
-import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.extensions.MailTips;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.Reminder;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementData;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDevice;
@@ -43,10 +43,26 @@ import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRe
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
@@ -55,30 +71,14 @@ import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EventRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
@@ -95,14 +95,14 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApprovalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppConsentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionRequestBuilder;
@@ -167,10 +167,10 @@ import com.microsoft.graph.requests.extensions.IUserAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInferenceClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemInsightsRequestBuilder;
@@ -187,6 +187,8 @@ import com.microsoft.graph.requests.extensions.IAuthenticationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
+import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -329,19 +331,63 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     }
 
     /**
-     * Gets the request builder for OutlookUser
+     * Gets the request builder for Calendar
      *
-     * @return the IOutlookUserRequestBuilder instance
+     * @return the ICalendarRequestBuilder instance
      */
-    public IOutlookUserRequestBuilder outlook() {
-        return new OutlookUserRequestBuilder(getRequestUrlWithAdditionalSegment("outlook"), getClient(), null);
+    public ICalendarRequestBuilder calendar() {
+        return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
-    public IMessageCollectionRequestBuilder messages() {
-        return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
+    public ICalendarGroupCollectionRequestBuilder calendarGroups() {
+        return new CalendarGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups"), getClient(), null);
     }
 
-    public IMessageRequestBuilder messages(final String id) {
-        return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    public ICalendarGroupRequestBuilder calendarGroups(final String id) {
+        return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups") + "/" + id, getClient(), null);
+    }
+    public ICalendarCollectionRequestBuilder calendars() {
+        return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
+    }
+
+    public ICalendarRequestBuilder calendars(final String id) {
+        return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
+    }
+    public IEventCollectionRequestBuilder calendarView() {
+        return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
+    }
+
+    public IEventRequestBuilder calendarView(final String id) {
+        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
+    }
+    public IContactFolderCollectionRequestBuilder contactFolders() {
+        return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders"), getClient(), null);
+    }
+
+    public IContactFolderRequestBuilder contactFolders(final String id) {
+        return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders") + "/" + id, getClient(), null);
+    }
+    public IContactCollectionRequestBuilder contacts() {
+        return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
+    }
+
+    public IContactRequestBuilder contacts(final String id) {
+        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
+    }
+    public IEventCollectionRequestBuilder events() {
+        return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
+    }
+
+    public IEventRequestBuilder events(final String id) {
+        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for InferenceClassification
+     *
+     * @return the IInferenceClassificationRequestBuilder instance
+     */
+    public IInferenceClassificationRequestBuilder inferenceClassification() {
+        return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
     }
     public IGroupCollectionRequestBuilder joinedGroups() {
         return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedGroups"), getClient(), null);
@@ -357,42 +403,21 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     public IMailFolderRequestBuilder mailFolders(final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders") + "/" + id, getClient(), null);
     }
+    public IMessageCollectionRequestBuilder messages() {
+        return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
+    }
+
+    public IMessageRequestBuilder messages(final String id) {
+        return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    }
 
     /**
-     * Gets the request builder for Calendar
+     * Gets the request builder for OutlookUser
      *
-     * @return the ICalendarRequestBuilder instance
+     * @return the IOutlookUserRequestBuilder instance
      */
-    public ICalendarRequestBuilder calendar() {
-        return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
-    }
-    public ICalendarCollectionRequestBuilder calendars() {
-        return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
-    }
-
-    public ICalendarRequestBuilder calendars(final String id) {
-        return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
-    }
-    public ICalendarGroupCollectionRequestBuilder calendarGroups() {
-        return new CalendarGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups"), getClient(), null);
-    }
-
-    public ICalendarGroupRequestBuilder calendarGroups(final String id) {
-        return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups") + "/" + id, getClient(), null);
-    }
-    public IEventCollectionRequestBuilder calendarView() {
-        return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
-    }
-
-    public IEventRequestBuilder calendarView(final String id) {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
-    }
-    public IEventCollectionRequestBuilder events() {
-        return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
-    }
-
-    public IEventRequestBuilder events(final String id) {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
+    public IOutlookUserRequestBuilder outlook() {
+        return new OutlookUserRequestBuilder(getRequestUrlWithAdditionalSegment("outlook"), getClient(), null);
     }
     public IPersonCollectionRequestBuilder people() {
         return new PersonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
@@ -400,29 +425,6 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public IPersonRequestBuilder people(final String id) {
         return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment("people") + "/" + id, getClient(), null);
-    }
-    public IContactCollectionRequestBuilder contacts() {
-        return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
-    }
-
-    public IContactRequestBuilder contacts(final String id) {
-        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
-    }
-    public IContactFolderCollectionRequestBuilder contactFolders() {
-        return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders"), getClient(), null);
-    }
-
-    public IContactFolderRequestBuilder contactFolders(final String id) {
-        return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for InferenceClassification
-     *
-     * @return the IInferenceClassificationRequestBuilder instance
-     */
-    public IInferenceClassificationRequestBuilder inferenceClassification() {
-        return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
     }
 
     /**
@@ -470,19 +472,19 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IApprovalCollectionRequestBuilder approvals() {
-        return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("approvals"), getClient(), null);
-    }
-
-    public IApprovalRequestBuilder approvals(final String id) {
-        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approvals") + "/" + id, getClient(), null);
-    }
     public IAppConsentRequestCollectionRequestBuilder appConsentRequestsForApproval() {
         return new AppConsentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appConsentRequestsForApproval"), getClient(), null);
     }
 
     public IAppConsentRequestRequestBuilder appConsentRequestsForApproval(final String id) {
         return new AppConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appConsentRequestsForApproval") + "/" + id, getClient(), null);
+    }
+    public IApprovalCollectionRequestBuilder approvals() {
+        return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("approvals"), getClient(), null);
+    }
+
+    public IApprovalRequestBuilder approvals(final String id) {
+        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approvals") + "/" + id, getClient(), null);
     }
     public IAccessReviewInstanceCollectionRequestBuilder pendingAccessReviewInstances() {
         return new AccessReviewInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pendingAccessReviewInstances"), getClient(), null);
@@ -662,6 +664,15 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserTeamworkRequestBuilder(getRequestUrlWithAdditionalSegment("teamwork"), getClient(), null);
     }
 
+    /**
+     * Gets the request builder for Todo
+     *
+     * @return the ITodoRequestBuilder instance
+     */
+    public ITodoRequestBuilder todo() {
+        return new TodoRequestBuilder(getRequestUrlWithAdditionalSegment("todo"), getClient(), null);
+    }
+
     public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
         return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
@@ -674,24 +685,24 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserInvalidateAllRefreshTokensRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invalidateAllRefreshTokens"), getClient(), null);
     }
 
-    public IUserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
-        return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
-    }
-
     public IUserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
         return new UserReprocessLicenseAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprocessLicenseAssignment"), getClient(), null);
+    }
+
+    public IUserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
+        return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }
 
     public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
     }
 
-    public IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {
-        return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
-    }
-
     public IUserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
         return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, emailAddresses, mailTipsOptions);
+    }
+
+    public IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {
+        return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
     }
 
     public IUserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
@@ -702,6 +713,14 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserRemoveAllDevicesFromManagementRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeAllDevicesFromManagement"), getClient(), null);
     }
 
+    public IUserUnblockManagedAppsRequestBuilder unblockManagedApps() {
+        return new UserUnblockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unblockManagedApps"), getClient(), null);
+    }
+
+    public IUserWipeAndBlockManagedAppsRequestBuilder wipeAndBlockManagedApps() {
+        return new UserWipeAndBlockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeAndBlockManagedApps"), getClient(), null);
+    }
+
     public IUserWipeManagedAppRegistrationByDeviceTagRequestBuilder wipeManagedAppRegistrationByDeviceTag(final String deviceTag) {
         return new UserWipeManagedAppRegistrationByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationByDeviceTag"), getClient(), null, deviceTag);
     }
@@ -710,20 +729,12 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByDeviceTag"), getClient(), null, deviceTag);
     }
 
-    public IUserWipeAndBlockManagedAppsRequestBuilder wipeAndBlockManagedApps() {
-        return new UserWipeAndBlockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeAndBlockManagedApps"), getClient(), null);
-    }
-
-    public IUserUnblockManagedAppsRequestBuilder unblockManagedApps() {
-        return new UserUnblockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unblockManagedApps"), getClient(), null);
-    }
-
     public IUserExportPersonalDataRequestBuilder exportPersonalData(final String storageLocation) {
         return new UserExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, storageLocation);
     }
 
-    public IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime) {
-        return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, startDateTime, endDateTime);
+    public IUserFindRoomListsCollectionRequestBuilder findRoomLists() {
+        return new UserFindRoomListsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRoomLists"), getClient(), null);
     }
 
     public IUserFindRoomsCollectionRequestBuilder findRooms() {
@@ -734,8 +745,8 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserFindRoomsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRooms"), getClient(), null, roomList);
     }
 
-    public IUserFindRoomListsCollectionRequestBuilder findRoomLists() {
-        return new UserFindRoomListsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRoomLists"), getClient(), null);
+    public IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime) {
+        return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, startDateTime, endDateTime);
     }
 
     public IUserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {

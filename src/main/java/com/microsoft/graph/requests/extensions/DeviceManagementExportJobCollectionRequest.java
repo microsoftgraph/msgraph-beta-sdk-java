@@ -62,14 +62,14 @@ public class DeviceManagementExportJobCollectionRequest extends BaseCollectionRe
     public void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<DeviceManagementExportJob> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExportJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExportJob, callback);
     }
 
     public DeviceManagementExportJob post(final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExportJobRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExportJob);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementExportJobCollectionRequest extends BaseCollectionRe
         return (DeviceManagementExportJobCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementExportJobCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementExportJobCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementExportJobCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementExportJobCollectionRequest)this;
+    }
     public IDeviceManagementExportJobCollectionPage buildFromResponse(final DeviceManagementExportJobCollectionResponse response) {
         final IDeviceManagementExportJobCollectionRequestBuilder builder;
         if (response.nextLink != null) {

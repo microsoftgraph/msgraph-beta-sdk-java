@@ -66,14 +66,14 @@ public class DeviceHealthScriptCollectionRequest extends BaseCollectionRequest<D
     public void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<DeviceHealthScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceHealthScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceHealthScript, callback);
     }
 
     public DeviceHealthScript post(final DeviceHealthScript newDeviceHealthScript) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceHealthScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceHealthScript);
     }
 
@@ -110,6 +110,27 @@ public class DeviceHealthScriptCollectionRequest extends BaseCollectionRequest<D
         return (DeviceHealthScriptCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceHealthScriptCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceHealthScriptCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceHealthScriptCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceHealthScriptCollectionRequest)this;
+    }
     public IDeviceHealthScriptCollectionPage buildFromResponse(final DeviceHealthScriptCollectionResponse response) {
         final IDeviceHealthScriptCollectionRequestBuilder builder;
         if (response.nextLink != null) {

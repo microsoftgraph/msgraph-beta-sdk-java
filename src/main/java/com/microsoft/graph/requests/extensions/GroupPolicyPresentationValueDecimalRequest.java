@@ -112,6 +112,27 @@ public class GroupPolicyPresentationValueDecimalRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a GroupPolicyPresentationValueDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueDecimal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal, final ICallback<GroupPolicyPresentationValueDecimal> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueDecimal);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationValueDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueDecimal the object to create/update
+     * @return the created GroupPolicyPresentationValueDecimal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationValueDecimal put(final GroupPolicyPresentationValueDecimal newGroupPolicyPresentationValueDecimal) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationValueDecimal);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

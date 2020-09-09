@@ -124,6 +124,27 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
     }
 
     /**
+     * Creates a DepOnboardingSetting with a new object
+     *
+     * @param newDepOnboardingSetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback) {
+        send(HttpMethod.PUT, callback, newDepOnboardingSetting);
+    }
+
+    /**
+     * Creates a DepOnboardingSetting with a new object
+     *
+     * @param newDepOnboardingSetting the object to create/update
+     * @return the created DepOnboardingSetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DepOnboardingSetting put(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException {
+        return send(HttpMethod.PUT, newDepOnboardingSetting);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

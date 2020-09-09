@@ -37,28 +37,28 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     public Boolean check32BitOn64System;
 
     /**
-     * The Key Path.
-     * The registry key path to detect Win32 Line of Business (LoB) app
-     */
-    @SerializedName("keyPath")
-    @Expose
-    public String keyPath;
-
-    /**
-     * The Value Name.
-     * The registry value name
-     */
-    @SerializedName("valueName")
-    @Expose
-    public String valueName;
-
-    /**
      * The Detection Type.
      * The registry data detection type
      */
     @SerializedName("detectionType")
     @Expose
     public Win32LobAppRegistryDetectionType detectionType;
+
+    /**
+     * The Detection Value.
+     * The registry detection value
+     */
+    @SerializedName("detectionValue")
+    @Expose
+    public String detectionValue;
+
+    /**
+     * The Key Path.
+     * The registry key path to detect Win32 Line of Business (LoB) app
+     */
+    @SerializedName("keyPath")
+    @Expose
+    public String keyPath;
 
     /**
      * The Operator.
@@ -69,12 +69,12 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     public EnumSet<Win32LobAppDetectionOperator> operator;
 
     /**
-     * The Detection Value.
-     * The registry detection value
+     * The Value Name.
+     * The registry value name
      */
-    @SerializedName("detectionValue")
+    @SerializedName("valueName")
     @Expose
-    public String detectionValue;
+    public String valueName;
 
 
     /**

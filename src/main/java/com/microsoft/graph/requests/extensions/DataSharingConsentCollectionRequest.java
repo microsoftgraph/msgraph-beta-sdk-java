@@ -62,14 +62,14 @@ public class DataSharingConsentCollectionRequest extends BaseCollectionRequest<D
     public void post(final DataSharingConsent newDataSharingConsent, final ICallback<DataSharingConsent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataSharingConsentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataSharingConsent, callback);
     }
 
     public DataSharingConsent post(final DataSharingConsent newDataSharingConsent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DataSharingConsentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataSharingConsent);
     }
 
@@ -106,6 +106,27 @@ public class DataSharingConsentCollectionRequest extends BaseCollectionRequest<D
         return (DataSharingConsentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDataSharingConsentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DataSharingConsentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDataSharingConsentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDataSharingConsentCollectionRequest)this;
+    }
     public IDataSharingConsentCollectionPage buildFromResponse(final DataSharingConsentCollectionResponse response) {
         final IDataSharingConsentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

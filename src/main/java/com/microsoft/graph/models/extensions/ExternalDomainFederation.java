@@ -27,12 +27,12 @@ public class ExternalDomainFederation extends IdentitySource implements IJsonBac
 
 
     /**
-     * The Issuer Uri.
+     * The Display Name.
      * 
      */
-    @SerializedName("issuerUri")
+    @SerializedName("displayName")
     @Expose
-    public String issuerUri;
+    public String displayName;
 
     /**
      * The Domain Name.
@@ -43,12 +43,12 @@ public class ExternalDomainFederation extends IdentitySource implements IJsonBac
     public String domainName;
 
     /**
-     * The Display Name.
+     * The Issuer Uri.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("issuerUri")
     @Expose
-    public String displayName;
+    public String issuerUri;
 
 
     /**

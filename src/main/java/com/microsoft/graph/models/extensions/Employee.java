@@ -31,116 +31,12 @@ public class Employee extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
-     * 
-     */
-    @SerializedName("number")
-    @Expose
-    public String number;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Given Name.
-     * 
-     */
-    @SerializedName("givenName")
-    @Expose
-    public String givenName;
-
-    /**
-     * The Middle Name.
-     * 
-     */
-    @SerializedName("middleName")
-    @Expose
-    public String middleName;
-
-    /**
-     * The Surname.
-     * 
-     */
-    @SerializedName("surname")
-    @Expose
-    public String surname;
-
-    /**
-     * The Job Title.
-     * 
-     */
-    @SerializedName("jobTitle")
-    @Expose
-    public String jobTitle;
-
-    /**
      * The Address.
      * 
      */
     @SerializedName("address")
     @Expose
     public PostalAddressType address;
-
-    /**
-     * The Phone Number.
-     * 
-     */
-    @SerializedName("phoneNumber")
-    @Expose
-    public String phoneNumber;
-
-    /**
-     * The Mobile Phone.
-     * 
-     */
-    @SerializedName("mobilePhone")
-    @Expose
-    public String mobilePhone;
-
-    /**
-     * The Email.
-     * 
-     */
-    @SerializedName("email")
-    @Expose
-    public String email;
-
-    /**
-     * The Personal Email.
-     * 
-     */
-    @SerializedName("personalEmail")
-    @Expose
-    public String personalEmail;
-
-    /**
-     * The Employment Date.
-     * 
-     */
-    @SerializedName("employmentDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly employmentDate;
-
-    /**
-     * The Termination Date.
-     * 
-     */
-    @SerializedName("terminationDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly terminationDate;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
 
     /**
      * The Birth Date.
@@ -151,12 +47,44 @@ public class Employee extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.models.extensions.DateOnly birthDate;
 
     /**
-     * The Statistics Group Code.
+     * The Display Name.
      * 
      */
-    @SerializedName("statisticsGroupCode")
+    @SerializedName("displayName")
     @Expose
-    public String statisticsGroupCode;
+    public String displayName;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
+     * The Employment Date.
+     * 
+     */
+    @SerializedName("employmentDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly employmentDate;
+
+    /**
+     * The Given Name.
+     * 
+     */
+    @SerializedName("givenName")
+    @Expose
+    public String givenName;
+
+    /**
+     * The Job Title.
+     * 
+     */
+    @SerializedName("jobTitle")
+    @Expose
+    public String jobTitle;
 
     /**
      * The Last Modified Date Time.
@@ -165,6 +93,78 @@ public class Employee extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Middle Name.
+     * 
+     */
+    @SerializedName("middleName")
+    @Expose
+    public String middleName;
+
+    /**
+     * The Mobile Phone.
+     * 
+     */
+    @SerializedName("mobilePhone")
+    @Expose
+    public String mobilePhone;
+
+    /**
+     * The Number.
+     * 
+     */
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Personal Email.
+     * 
+     */
+    @SerializedName("personalEmail")
+    @Expose
+    public String personalEmail;
+
+    /**
+     * The Phone Number.
+     * 
+     */
+    @SerializedName("phoneNumber")
+    @Expose
+    public String phoneNumber;
+
+    /**
+     * The Statistics Group Code.
+     * 
+     */
+    @SerializedName("statisticsGroupCode")
+    @Expose
+    public String statisticsGroupCode;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
+
+    /**
+     * The Surname.
+     * 
+     */
+    @SerializedName("surname")
+    @Expose
+    public String surname;
+
+    /**
+     * The Termination Date.
+     * 
+     */
+    @SerializedName("terminationDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly terminationDate;
 
     /**
      * The Picture.

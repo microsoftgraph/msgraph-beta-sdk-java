@@ -80,6 +80,23 @@ public interface ICompanyRequest extends IHttpRequest {
     Company post(final Company newCompany) throws ClientException;
 
     /**
+     * Posts a Company with a new object
+     *
+     * @param newCompany the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Company newCompany, final ICallback<Company> callback);
+
+    /**
+     * Posts a Company with a new object
+     *
+     * @param newCompany the object to create/update
+     * @return the created Company
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Company put(final Company newCompany) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

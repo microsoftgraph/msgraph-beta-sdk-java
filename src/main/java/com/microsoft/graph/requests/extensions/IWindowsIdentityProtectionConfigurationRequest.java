@@ -80,6 +80,23 @@ public interface IWindowsIdentityProtectionConfigurationRequest extends IHttpReq
     WindowsIdentityProtectionConfiguration post(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsIdentityProtectionConfiguration with a new object
+     *
+     * @param newWindowsIdentityProtectionConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<WindowsIdentityProtectionConfiguration> callback);
+
+    /**
+     * Posts a WindowsIdentityProtectionConfiguration with a new object
+     *
+     * @param newWindowsIdentityProtectionConfiguration the object to create/update
+     * @return the created WindowsIdentityProtectionConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsIdentityProtectionConfiguration put(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

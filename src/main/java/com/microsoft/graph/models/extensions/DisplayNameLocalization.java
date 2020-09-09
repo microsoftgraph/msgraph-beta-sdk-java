@@ -36,20 +36,20 @@ public class DisplayNameLocalization implements IJsonBackedObject {
     }
 
     /**
-     * The Language Tag.
-     * 
-     */
-    @SerializedName("languageTag")
-    @Expose
-    public String languageTag;
-
-    /**
      * The Display Name.
      * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Language Tag.
+     * 
+     */
+    @SerializedName("languageTag")
+    @Expose
+    public String languageTag;
 
 
     /**

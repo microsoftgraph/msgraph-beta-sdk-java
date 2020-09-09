@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.generated.TeamVisibilityType;
+import com.microsoft.graph.models.generated.ClonableTeamParts;
+import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.generated.ClonableTeamParts;
-import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -60,4 +60,20 @@ public interface ITeamCollectionRequest {
      */
     ITeamCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    ITeamCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	ITeamCollectionRequest skipToken(String skipToken);
 }

@@ -62,14 +62,14 @@ public class AndroidForWorkAppConfigurationSchemaCollectionRequest extends BaseC
     public void post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema, final ICallback<AndroidForWorkAppConfigurationSchema> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidForWorkAppConfigurationSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidForWorkAppConfigurationSchema, callback);
     }
 
     public AndroidForWorkAppConfigurationSchema post(final AndroidForWorkAppConfigurationSchema newAndroidForWorkAppConfigurationSchema) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidForWorkAppConfigurationSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidForWorkAppConfigurationSchema);
     }
 
@@ -106,6 +106,27 @@ public class AndroidForWorkAppConfigurationSchemaCollectionRequest extends BaseC
         return (AndroidForWorkAppConfigurationSchemaCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAndroidForWorkAppConfigurationSchemaCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AndroidForWorkAppConfigurationSchemaCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAndroidForWorkAppConfigurationSchemaCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAndroidForWorkAppConfigurationSchemaCollectionRequest)this;
+    }
     public IAndroidForWorkAppConfigurationSchemaCollectionPage buildFromResponse(final AndroidForWorkAppConfigurationSchemaCollectionResponse response) {
         final IAndroidForWorkAppConfigurationSchemaCollectionRequestBuilder builder;
         if (response.nextLink != null) {

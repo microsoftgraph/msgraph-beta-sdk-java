@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ImportedDeviceIdentityType;
 import com.microsoft.graph.models.generated.EnrollmentState;
+import com.microsoft.graph.models.generated.ImportedDeviceIdentityType;
 import com.microsoft.graph.models.generated.Platform;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -30,44 +30,12 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
 
 
     /**
-     * The Imported Device Identifier.
-     * Imported Device Identifier
-     */
-    @SerializedName("importedDeviceIdentifier")
-    @Expose
-    public String importedDeviceIdentifier;
-
-    /**
-     * The Imported Device Identity Type.
-     * Type of Imported Device Identity
-     */
-    @SerializedName("importedDeviceIdentityType")
-    @Expose
-    public ImportedDeviceIdentityType importedDeviceIdentityType;
-
-    /**
-     * The Last Modified Date Time.
-     * Last Modified DateTime of the description
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Created Date Time.
      * Created Date Time of the device
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Contacted Date Time.
-     * Last Contacted Date Time of the device
-     */
-    @SerializedName("lastContactedDateTime")
-    @Expose
-    public java.util.Calendar lastContactedDateTime;
 
     /**
      * The Description.
@@ -84,6 +52,38 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
     @SerializedName("enrollmentState")
     @Expose
     public EnrollmentState enrollmentState;
+
+    /**
+     * The Imported Device Identifier.
+     * Imported Device Identifier
+     */
+    @SerializedName("importedDeviceIdentifier")
+    @Expose
+    public String importedDeviceIdentifier;
+
+    /**
+     * The Imported Device Identity Type.
+     * Type of Imported Device Identity
+     */
+    @SerializedName("importedDeviceIdentityType")
+    @Expose
+    public ImportedDeviceIdentityType importedDeviceIdentityType;
+
+    /**
+     * The Last Contacted Date Time.
+     * Last Contacted Date Time of the device
+     */
+    @SerializedName("lastContactedDateTime")
+    @Expose
+    public java.util.Calendar lastContactedDateTime;
+
+    /**
+     * The Last Modified Date Time.
+     * Last Modified DateTime of the description
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Platform.

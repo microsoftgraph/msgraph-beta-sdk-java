@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,16 +39,16 @@ public interface ITermsAndConditionsRequestBuilder extends IRequestBuilder {
     ITermsAndConditionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ITermsAndConditionsGroupAssignmentCollectionRequestBuilder groupAssignments();
+    ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses();
 
-    ITermsAndConditionsGroupAssignmentRequestBuilder groupAssignments(final String id);
+    ITermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id);
 
     ITermsAndConditionsAssignmentCollectionRequestBuilder assignments();
 
     ITermsAndConditionsAssignmentRequestBuilder assignments(final String id);
 
-    ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses();
+    ITermsAndConditionsGroupAssignmentCollectionRequestBuilder groupAssignments();
 
-    ITermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id);
+    ITermsAndConditionsGroupAssignmentRequestBuilder groupAssignments(final String id);
 
 }

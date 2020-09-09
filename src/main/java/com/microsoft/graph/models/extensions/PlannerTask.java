@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
-import com.microsoft.graph.models.generated.PlannerPreviewType;
 import com.microsoft.graph.models.extensions.PlannerAppliedCategories;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
-import com.microsoft.graph.models.extensions.PlannerTaskDetails;
+import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.PlannerPreviewType;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
-import com.microsoft.graph.models.extensions.PlannerProgressTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerBucketTaskBoardTaskFormat;
+import com.microsoft.graph.models.extensions.PlannerTaskDetails;
+import com.microsoft.graph.models.extensions.PlannerProgressTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerDelta;
 
 
@@ -35,44 +35,20 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
 
     /**
-     * The Created By.
-     * Identity of the user that created the task.
+     * The Active Checklist Item Count.
+     * Number of checklist items with value set to false, representing incomplete items.
      */
-    @SerializedName("createdBy")
+    @SerializedName("activeChecklistItemCount")
     @Expose
-    public IdentitySet createdBy;
+    public Integer activeChecklistItemCount;
 
     /**
-     * The Plan Id.
-     * Plan ID to which the task belongs.
+     * The Applied Categories.
+     * The categories to which the task has been applied. See applied Categories for possible values.
      */
-    @SerializedName("planId")
+    @SerializedName("appliedCategories")
     @Expose
-    public String planId;
-
-    /**
-     * The Bucket Id.
-     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
-     */
-    @SerializedName("bucketId")
-    @Expose
-    public String bucketId;
-
-    /**
-     * The Title.
-     * Title of the task.
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
-     * The Order Hint.
-     * Hint used to order items of this type in a list view. The format is defined as outlined here.
-     */
-    @SerializedName("orderHint")
-    @Expose
-    public String orderHint;
+    public PlannerAppliedCategories appliedCategories;
 
     /**
      * The Assignee Priority.
@@ -83,28 +59,60 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     public String assigneePriority;
 
     /**
-     * The Percent Complete.
-     * Percentage of task completion. When set to 100, the task is considered completed.
+     * The Assignments.
+     * The set of assignees the task is assigned to.
      */
-    @SerializedName("percentComplete")
+    @SerializedName("assignments")
     @Expose
-    public Integer percentComplete;
+    public PlannerAssignments assignments;
 
     /**
-     * The Priority.
-     * 
+     * The Bucket Id.
+     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      */
-    @SerializedName("priority")
+    @SerializedName("bucketId")
     @Expose
-    public Integer priority;
+    public String bucketId;
 
     /**
-     * The Start Date Time.
-     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Checklist Item Count.
+     * Number of checklist items that are present on the task.
      */
-    @SerializedName("startDateTime")
+    @SerializedName("checklistItemCount")
     @Expose
-    public java.util.Calendar startDateTime;
+    public Integer checklistItemCount;
+
+    /**
+     * The Completed By.
+     * Identity of the user that completed the task.
+     */
+    @SerializedName("completedBy")
+    @Expose
+    public IdentitySet completedBy;
+
+    /**
+     * The Completed Date Time.
+     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     */
+    @SerializedName("completedDateTime")
+    @Expose
+    public java.util.Calendar completedDateTime;
+
+    /**
+     * The Conversation Thread Id.
+     * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
+     */
+    @SerializedName("conversationThreadId")
+    @Expose
+    public String conversationThreadId;
+
+    /**
+     * The Created By.
+     * Identity of the user that created the task.
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
@@ -131,6 +139,30 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     public Boolean hasDescription;
 
     /**
+     * The Order Hint.
+     * Hint used to order items of this type in a list view. The format is defined as outlined here.
+     */
+    @SerializedName("orderHint")
+    @Expose
+    public String orderHint;
+
+    /**
+     * The Percent Complete.
+     * Percentage of task completion. When set to 100, the task is considered completed.
+     */
+    @SerializedName("percentComplete")
+    @Expose
+    public Integer percentComplete;
+
+    /**
+     * The Plan Id.
+     * Plan ID to which the task belongs.
+     */
+    @SerializedName("planId")
+    @Expose
+    public String planId;
+
+    /**
      * The Preview Type.
      * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      */
@@ -139,20 +171,12 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     public PlannerPreviewType previewType;
 
     /**
-     * The Completed Date Time.
-     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Priority.
+     * 
      */
-    @SerializedName("completedDateTime")
+    @SerializedName("priority")
     @Expose
-    public java.util.Calendar completedDateTime;
-
-    /**
-     * The Completed By.
-     * Identity of the user that completed the task.
-     */
-    @SerializedName("completedBy")
-    @Expose
-    public IdentitySet completedBy;
+    public Integer priority;
 
     /**
      * The Reference Count.
@@ -163,52 +187,20 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     public Integer referenceCount;
 
     /**
-     * The Checklist Item Count.
-     * Number of checklist items that are present on the task.
+     * The Start Date Time.
+     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("checklistItemCount")
+    @SerializedName("startDateTime")
     @Expose
-    public Integer checklistItemCount;
+    public java.util.Calendar startDateTime;
 
     /**
-     * The Active Checklist Item Count.
-     * Number of checklist items with value set to false, representing incomplete items.
+     * The Title.
+     * Title of the task.
      */
-    @SerializedName("activeChecklistItemCount")
+    @SerializedName("title")
     @Expose
-    public Integer activeChecklistItemCount;
-
-    /**
-     * The Applied Categories.
-     * The categories to which the task has been applied. See applied Categories for possible values.
-     */
-    @SerializedName("appliedCategories")
-    @Expose
-    public PlannerAppliedCategories appliedCategories;
-
-    /**
-     * The Assignments.
-     * The set of assignees the task is assigned to.
-     */
-    @SerializedName("assignments")
-    @Expose
-    public PlannerAssignments assignments;
-
-    /**
-     * The Conversation Thread Id.
-     * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-     */
-    @SerializedName("conversationThreadId")
-    @Expose
-    public String conversationThreadId;
-
-    /**
-     * The Details.
-     * Read-only. Nullable. Additional details about the task.
-     */
-    @SerializedName("details")
-    @Expose
-    public PlannerTaskDetails details;
+    public String title;
 
     /**
      * The Assigned To Task Board Format.
@@ -219,20 +211,28 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     public PlannerAssignedToTaskBoardTaskFormat assignedToTaskBoardFormat;
 
     /**
-     * The Progress Task Board Format.
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
-     */
-    @SerializedName("progressTaskBoardFormat")
-    @Expose
-    public PlannerProgressTaskBoardTaskFormat progressTaskBoardFormat;
-
-    /**
      * The Bucket Task Board Format.
      * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      */
     @SerializedName("bucketTaskBoardFormat")
     @Expose
     public PlannerBucketTaskBoardTaskFormat bucketTaskBoardFormat;
+
+    /**
+     * The Details.
+     * Read-only. Nullable. Additional details about the task.
+     */
+    @SerializedName("details")
+    @Expose
+    public PlannerTaskDetails details;
+
+    /**
+     * The Progress Task Board Format.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     */
+    @SerializedName("progressTaskBoardFormat")
+    @Expose
+    public PlannerProgressTaskBoardTaskFormat progressTaskBoardFormat;
 
 
     /**

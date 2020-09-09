@@ -35,44 +35,12 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     public String appleIdentifier;
 
     /**
-     * The Topic Identifier.
-     * Topic Id.
+     * The Certificate.
+     * Not yet documented
      */
-    @SerializedName("topicIdentifier")
+    @SerializedName("certificate")
     @Expose
-    public String topicIdentifier;
-
-    /**
-     * The Last Modified Date Time.
-     * Last modified date and time for Apple push notification certificate.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Expiration Date Time.
-     * The expiration date and time for Apple push notification certificate.
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Certificate Upload Status.
-     * The certificate upload status.
-     */
-    @SerializedName("certificateUploadStatus")
-    @Expose
-    public String certificateUploadStatus;
-
-    /**
-     * The Certificate Upload Failure Reason.
-     * The reason the certificate upload failed.
-     */
-    @SerializedName("certificateUploadFailureReason")
-    @Expose
-    public String certificateUploadFailureReason;
+    public String certificate;
 
     /**
      * The Certificate Serial Number.
@@ -83,12 +51,44 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     public String certificateSerialNumber;
 
     /**
-     * The Certificate.
-     * Not yet documented
+     * The Certificate Upload Failure Reason.
+     * The reason the certificate upload failed.
      */
-    @SerializedName("certificate")
+    @SerializedName("certificateUploadFailureReason")
     @Expose
-    public String certificate;
+    public String certificateUploadFailureReason;
+
+    /**
+     * The Certificate Upload Status.
+     * The certificate upload status.
+     */
+    @SerializedName("certificateUploadStatus")
+    @Expose
+    public String certificateUploadStatus;
+
+    /**
+     * The Expiration Date Time.
+     * The expiration date and time for Apple push notification certificate.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The Last Modified Date Time.
+     * Last modified date and time for Apple push notification certificate.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Topic Identifier.
+     * Topic Id.
+     */
+    @SerializedName("topicIdentifier")
+    @Expose
+    public String topicIdentifier;
 
 
     /**

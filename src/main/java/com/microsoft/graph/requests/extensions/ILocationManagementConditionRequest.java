@@ -80,6 +80,23 @@ public interface ILocationManagementConditionRequest extends IHttpRequest {
     LocationManagementCondition post(final LocationManagementCondition newLocationManagementCondition) throws ClientException;
 
     /**
+     * Posts a LocationManagementCondition with a new object
+     *
+     * @param newLocationManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final LocationManagementCondition newLocationManagementCondition, final ICallback<LocationManagementCondition> callback);
+
+    /**
+     * Posts a LocationManagementCondition with a new object
+     *
+     * @param newLocationManagementCondition the object to create/update
+     * @return the created LocationManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    LocationManagementCondition put(final LocationManagementCondition newLocationManagementCondition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

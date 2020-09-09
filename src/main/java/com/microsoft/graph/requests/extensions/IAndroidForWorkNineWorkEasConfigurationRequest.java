@@ -80,6 +80,23 @@ public interface IAndroidForWorkNineWorkEasConfigurationRequest extends IHttpReq
     AndroidForWorkNineWorkEasConfiguration post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback);
+
+    /**
+     * Posts a AndroidForWorkNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
+     * @return the created AndroidForWorkNineWorkEasConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkNineWorkEasConfiguration put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

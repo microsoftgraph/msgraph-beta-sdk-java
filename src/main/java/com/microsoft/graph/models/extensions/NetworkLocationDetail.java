@@ -37,20 +37,20 @@ public class NetworkLocationDetail implements IJsonBackedObject {
     }
 
     /**
-     * The Network Type.
-     * 
-     */
-    @SerializedName("networkType")
-    @Expose
-    public NetworkType networkType;
-
-    /**
      * The Network Names.
      * 
      */
     @SerializedName("networkNames")
     @Expose
     public java.util.List<String> networkNames;
+
+    /**
+     * The Network Type.
+     * 
+     */
+    @SerializedName("networkType")
+    @Expose
+    public NetworkType networkType;
 
 
     /**

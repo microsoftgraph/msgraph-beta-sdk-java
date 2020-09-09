@@ -62,14 +62,14 @@ public class OutlookTaskFolderCollectionRequest extends BaseCollectionRequest<Ou
     public void post(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<OutlookTaskFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookTaskFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookTaskFolder, callback);
     }
 
     public OutlookTaskFolder post(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookTaskFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookTaskFolder);
     }
 
@@ -106,6 +106,27 @@ public class OutlookTaskFolderCollectionRequest extends BaseCollectionRequest<Ou
         return (OutlookTaskFolderCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOutlookTaskFolderCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OutlookTaskFolderCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOutlookTaskFolderCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOutlookTaskFolderCollectionRequest)this;
+    }
     public IOutlookTaskFolderCollectionPage buildFromResponse(final OutlookTaskFolderCollectionResponse response) {
         final IOutlookTaskFolderCollectionRequestBuilder builder;
         if (response.nextLink != null) {

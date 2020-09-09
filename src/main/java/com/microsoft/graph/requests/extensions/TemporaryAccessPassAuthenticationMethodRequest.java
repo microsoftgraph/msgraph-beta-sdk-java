@@ -112,6 +112,27 @@ public class TemporaryAccessPassAuthenticationMethodRequest extends BaseRequest 
     }
 
     /**
+     * Creates a TemporaryAccessPassAuthenticationMethod with a new object
+     *
+     * @param newTemporaryAccessPassAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod, final ICallback<TemporaryAccessPassAuthenticationMethod> callback) {
+        send(HttpMethod.PUT, callback, newTemporaryAccessPassAuthenticationMethod);
+    }
+
+    /**
+     * Creates a TemporaryAccessPassAuthenticationMethod with a new object
+     *
+     * @param newTemporaryAccessPassAuthenticationMethod the object to create/update
+     * @return the created TemporaryAccessPassAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TemporaryAccessPassAuthenticationMethod put(final TemporaryAccessPassAuthenticationMethod newTemporaryAccessPassAuthenticationMethod) throws ClientException {
+        return send(HttpMethod.PUT, newTemporaryAccessPassAuthenticationMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

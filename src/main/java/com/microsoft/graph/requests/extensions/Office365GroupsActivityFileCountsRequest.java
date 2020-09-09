@@ -112,6 +112,27 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a Office365GroupsActivityFileCounts with a new object
+     *
+     * @param newOffice365GroupsActivityFileCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts, final ICallback<Office365GroupsActivityFileCounts> callback) {
+        send(HttpMethod.PUT, callback, newOffice365GroupsActivityFileCounts);
+    }
+
+    /**
+     * Creates a Office365GroupsActivityFileCounts with a new object
+     *
+     * @param newOffice365GroupsActivityFileCounts the object to create/update
+     * @return the created Office365GroupsActivityFileCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365GroupsActivityFileCounts put(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365GroupsActivityFileCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

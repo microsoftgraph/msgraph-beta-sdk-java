@@ -36,20 +36,12 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
     }
 
     /**
-     * The Time Slot Interval.
-     * Duration of each time slot.
+     * The Allow Staff Selection.
+     * Allow customers to choose a specific person for the booking.
      */
-    @SerializedName("timeSlotInterval")
+    @SerializedName("allowStaffSelection")
     @Expose
-    public javax.xml.datatype.Duration timeSlotInterval;
-
-    /**
-     * The Minimum Lead Time.
-     * Minimum lead time for bookings and cancellations.
-     */
-    @SerializedName("minimumLeadTime")
-    @Expose
-    public javax.xml.datatype.Duration minimumLeadTime;
+    public Boolean allowStaffSelection;
 
     /**
      * The Maximum Advance.
@@ -60,6 +52,14 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
     public javax.xml.datatype.Duration maximumAdvance;
 
     /**
+     * The Minimum Lead Time.
+     * Minimum lead time for bookings and cancellations.
+     */
+    @SerializedName("minimumLeadTime")
+    @Expose
+    public javax.xml.datatype.Duration minimumLeadTime;
+
+    /**
      * The Send Confirmations To Owner.
      * Notify the business via email when a booking is created or changed.
      */
@@ -68,12 +68,12 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
     public Boolean sendConfirmationsToOwner;
 
     /**
-     * The Allow Staff Selection.
-     * Allow customers to choose a specific person for the booking.
+     * The Time Slot Interval.
+     * Duration of each time slot.
      */
-    @SerializedName("allowStaffSelection")
+    @SerializedName("timeSlotInterval")
     @Expose
-    public Boolean allowStaffSelection;
+    public javax.xml.datatype.Duration timeSlotInterval;
 
 
     /**

@@ -63,14 +63,14 @@ public class EducationSynchronizationProfileCollectionRequest extends BaseCollec
     public void post(final EducationSynchronizationProfile newEducationSynchronizationProfile, final ICallback<EducationSynchronizationProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSynchronizationProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSynchronizationProfile, callback);
     }
 
     public EducationSynchronizationProfile post(final EducationSynchronizationProfile newEducationSynchronizationProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationSynchronizationProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSynchronizationProfile);
     }
 
@@ -107,6 +107,27 @@ public class EducationSynchronizationProfileCollectionRequest extends BaseCollec
         return (EducationSynchronizationProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationSynchronizationProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationSynchronizationProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationSynchronizationProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationSynchronizationProfileCollectionRequest)this;
+    }
     public IEducationSynchronizationProfileCollectionPage buildFromResponse(final EducationSynchronizationProfileCollectionResponse response) {
         final IEducationSynchronizationProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

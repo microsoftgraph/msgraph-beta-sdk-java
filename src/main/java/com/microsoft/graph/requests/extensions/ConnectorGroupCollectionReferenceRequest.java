@@ -40,7 +40,7 @@ public class ConnectorGroupCollectionReferenceRequest extends BaseCollectionRequ
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/connectorGroups/" + newConnectorGroup.id);
         new ConnectorGroupWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnectorGroup, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class ConnectorGroupCollectionReferenceRequest extends BaseCollectionRequ
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/connectorGroups/" + newConnectorGroup.id);
         return new ConnectorGroupWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newConnectorGroup, body);
     }
     /**

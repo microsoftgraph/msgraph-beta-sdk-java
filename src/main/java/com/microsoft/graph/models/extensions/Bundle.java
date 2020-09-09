@@ -37,20 +37,20 @@ public class Bundle implements IJsonBackedObject {
     }
 
     /**
-     * The Child Count.
-     * 
-     */
-    @SerializedName("childCount")
-    @Expose
-    public Integer childCount;
-
-    /**
      * The Album.
      * 
      */
     @SerializedName("album")
     @Expose
     public Album album;
+
+    /**
+     * The Child Count.
+     * 
+     */
+    @SerializedName("childCount")
+    @Expose
+    public Integer childCount;
 
 
     /**

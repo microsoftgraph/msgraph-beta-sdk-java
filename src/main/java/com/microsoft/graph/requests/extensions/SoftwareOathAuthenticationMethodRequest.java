@@ -112,6 +112,27 @@ public class SoftwareOathAuthenticationMethodRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a SoftwareOathAuthenticationMethod with a new object
+     *
+     * @param newSoftwareOathAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod, final ICallback<SoftwareOathAuthenticationMethod> callback) {
+        send(HttpMethod.PUT, callback, newSoftwareOathAuthenticationMethod);
+    }
+
+    /**
+     * Creates a SoftwareOathAuthenticationMethod with a new object
+     *
+     * @param newSoftwareOathAuthenticationMethod the object to create/update
+     * @return the created SoftwareOathAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SoftwareOathAuthenticationMethod put(final SoftwareOathAuthenticationMethod newSoftwareOathAuthenticationMethod) throws ClientException {
+        return send(HttpMethod.PUT, newSoftwareOathAuthenticationMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

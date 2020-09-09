@@ -80,6 +80,23 @@ public interface IAndroidDeviceComplianceLocalActionBaseRequest extends IHttpReq
     AndroidDeviceComplianceLocalActionBase post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceComplianceLocalActionBase with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<AndroidDeviceComplianceLocalActionBase> callback);
+
+    /**
+     * Posts a AndroidDeviceComplianceLocalActionBase with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
+     * @return the created AndroidDeviceComplianceLocalActionBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceComplianceLocalActionBase put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

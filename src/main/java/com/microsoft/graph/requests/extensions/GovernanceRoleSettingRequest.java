@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleSetting;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class GovernanceRoleSettingRequest extends BaseRequest implements IGovern
      */
     public GovernanceRoleSetting post(final GovernanceRoleSetting newGovernanceRoleSetting) throws ClientException {
         return send(HttpMethod.POST, newGovernanceRoleSetting);
+    }
+
+    /**
+     * Creates a GovernanceRoleSetting with a new object
+     *
+     * @param newGovernanceRoleSetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GovernanceRoleSetting newGovernanceRoleSetting, final ICallback<GovernanceRoleSetting> callback) {
+        send(HttpMethod.PUT, callback, newGovernanceRoleSetting);
+    }
+
+    /**
+     * Creates a GovernanceRoleSetting with a new object
+     *
+     * @param newGovernanceRoleSetting the object to create/update
+     * @return the created GovernanceRoleSetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GovernanceRoleSetting put(final GovernanceRoleSetting newGovernanceRoleSetting) throws ClientException {
+        return send(HttpMethod.PUT, newGovernanceRoleSetting);
     }
 
     /**

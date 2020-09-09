@@ -37,20 +37,20 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     public Enablement allowDeviceHealthMonitoring;
 
     /**
-     * The Config Device Health Monitoring Scope.
-     * Specifies set of events collected from the device where health monitoring is enabled
-     */
-    @SerializedName("configDeviceHealthMonitoringScope")
-    @Expose
-    public EnumSet<WindowsHealthMonitoringScope> configDeviceHealthMonitoringScope;
-
-    /**
      * The Config Device Health Monitoring Custom Scope.
      * Specifies custom set of events collected from the device where health monitoring is enabled
      */
     @SerializedName("configDeviceHealthMonitoringCustomScope")
     @Expose
     public String configDeviceHealthMonitoringCustomScope;
+
+    /**
+     * The Config Device Health Monitoring Scope.
+     * Specifies set of events collected from the device where health monitoring is enabled
+     */
+    @SerializedName("configDeviceHealthMonitoringScope")
+    @Expose
+    public EnumSet<WindowsHealthMonitoringScope> configDeviceHealthMonitoringScope;
 
 
     /**

@@ -80,6 +80,23 @@ public interface ICountryRegionRequest extends IHttpRequest {
     CountryRegion post(final CountryRegion newCountryRegion) throws ClientException;
 
     /**
+     * Posts a CountryRegion with a new object
+     *
+     * @param newCountryRegion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback);
+
+    /**
+     * Posts a CountryRegion with a new object
+     *
+     * @param newCountryRegion the object to create/update
+     * @return the created CountryRegion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CountryRegion put(final CountryRegion newCountryRegion) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

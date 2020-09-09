@@ -112,6 +112,27 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
     }
 
     /**
+     * Creates a CountryRegion with a new object
+     *
+     * @param newCountryRegion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CountryRegion newCountryRegion, final ICallback<CountryRegion> callback) {
+        send(HttpMethod.PUT, callback, newCountryRegion);
+    }
+
+    /**
+     * Creates a CountryRegion with a new object
+     *
+     * @param newCountryRegion the object to create/update
+     * @return the created CountryRegion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CountryRegion put(final CountryRegion newCountryRegion) throws ClientException {
+        return send(HttpMethod.PUT, newCountryRegion);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

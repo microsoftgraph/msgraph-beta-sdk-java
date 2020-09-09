@@ -27,46 +27,6 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Is Deleted.
-     * 
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
-
-    /**
-     * The Deleted Date.
-     * 
-     */
-    @SerializedName("deletedDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
-
-    /**
      * The Created Date.
      * 
      */
@@ -75,28 +35,12 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.models.extensions.DateOnly createdDate;
 
     /**
-     * The Last Activity Date.
+     * The Deleted Date.
      * 
      */
-    @SerializedName("lastActivityDate")
+    @SerializedName("deletedDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
-
-    /**
-     * The Item Count.
-     * 
-     */
-    @SerializedName("itemCount")
-    @Expose
-    public Long itemCount;
-
-    /**
-     * The Storage Used In Bytes.
-     * 
-     */
-    @SerializedName("storageUsedInBytes")
-    @Expose
-    public Long storageUsedInBytes;
+    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
      * The Deleted Item Count.
@@ -115,12 +59,44 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
     public Long deletedItemSizeInBytes;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Is Deleted.
+     * 
+     */
+    @SerializedName("isDeleted")
+    @Expose
+    public Boolean isDeleted;
+
+    /**
      * The Issue Warning Quota In Bytes.
      * 
      */
     @SerializedName("issueWarningQuotaInBytes")
     @Expose
     public Long issueWarningQuotaInBytes;
+
+    /**
+     * The Item Count.
+     * 
+     */
+    @SerializedName("itemCount")
+    @Expose
+    public Long itemCount;
+
+    /**
+     * The Last Activity Date.
+     * 
+     */
+    @SerializedName("lastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
     /**
      * The Prohibit Send Quota In Bytes.
@@ -145,6 +121,30 @@ public class MailboxUsageDetail extends Entity implements IJsonBackedObject {
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Storage Used In Bytes.
+     * 
+     */
+    @SerializedName("storageUsedInBytes")
+    @Expose
+    public Long storageUsedInBytes;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

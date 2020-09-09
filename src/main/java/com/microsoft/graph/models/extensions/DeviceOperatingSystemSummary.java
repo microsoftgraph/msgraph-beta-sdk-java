@@ -36,52 +36,20 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     }
 
     /**
+     * The Android Corporate Work Profile Count.
+     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+     */
+    @SerializedName("androidCorporateWorkProfileCount")
+    @Expose
+    public Integer androidCorporateWorkProfileCount;
+
+    /**
      * The Android Count.
      * Number of android device count.
      */
     @SerializedName("androidCount")
     @Expose
     public Integer androidCount;
-
-    /**
-     * The Ios Count.
-     * Number of iOS device count.
-     */
-    @SerializedName("iosCount")
-    @Expose
-    public Integer iosCount;
-
-    /**
-     * The Mac OSCount.
-     * Number of Mac OS X device count.
-     */
-    @SerializedName("macOSCount")
-    @Expose
-    public Integer macOSCount;
-
-    /**
-     * The Windows Mobile Count.
-     * Number of Windows mobile device count.
-     */
-    @SerializedName("windowsMobileCount")
-    @Expose
-    public Integer windowsMobileCount;
-
-    /**
-     * The Windows Count.
-     * Number of Windows device count.
-     */
-    @SerializedName("windowsCount")
-    @Expose
-    public Integer windowsCount;
-
-    /**
-     * The Unknown Count.
-     * Number of unknown device count.
-     */
-    @SerializedName("unknownCount")
-    @Expose
-    public Integer unknownCount;
 
     /**
      * The Android Dedicated Count.
@@ -116,20 +84,52 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     public Integer androidWorkProfileCount;
 
     /**
-     * The Android Corporate Work Profile Count.
-     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
-     */
-    @SerializedName("androidCorporateWorkProfileCount")
-    @Expose
-    public Integer androidCorporateWorkProfileCount;
-
-    /**
      * The Config Mgr Device Count.
      * Number of ConfigMgr managed devices.
      */
     @SerializedName("configMgrDeviceCount")
     @Expose
     public Integer configMgrDeviceCount;
+
+    /**
+     * The Ios Count.
+     * Number of iOS device count.
+     */
+    @SerializedName("iosCount")
+    @Expose
+    public Integer iosCount;
+
+    /**
+     * The Mac OSCount.
+     * Number of Mac OS X device count.
+     */
+    @SerializedName("macOSCount")
+    @Expose
+    public Integer macOSCount;
+
+    /**
+     * The Unknown Count.
+     * Number of unknown device count.
+     */
+    @SerializedName("unknownCount")
+    @Expose
+    public Integer unknownCount;
+
+    /**
+     * The Windows Count.
+     * Number of Windows device count.
+     */
+    @SerializedName("windowsCount")
+    @Expose
+    public Integer windowsCount;
+
+    /**
+     * The Windows Mobile Count.
+     * Number of Windows mobile device count.
+     */
+    @SerializedName("windowsMobileCount")
+    @Expose
+    public Integer windowsMobileCount;
 
 
     /**

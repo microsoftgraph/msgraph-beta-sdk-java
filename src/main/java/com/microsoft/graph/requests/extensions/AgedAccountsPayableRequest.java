@@ -112,6 +112,27 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
     }
 
     /**
+     * Creates a AgedAccountsPayable with a new object
+     *
+     * @param newAgedAccountsPayable the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback) {
+        send(HttpMethod.PUT, callback, newAgedAccountsPayable);
+    }
+
+    /**
+     * Creates a AgedAccountsPayable with a new object
+     *
+     * @param newAgedAccountsPayable the object to create/update
+     * @return the created AgedAccountsPayable
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AgedAccountsPayable put(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException {
+        return send(HttpMethod.PUT, newAgedAccountsPayable);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

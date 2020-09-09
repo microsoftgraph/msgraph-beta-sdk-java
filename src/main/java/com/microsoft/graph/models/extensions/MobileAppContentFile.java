@@ -36,12 +36,12 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     public String azureStorageUri;
 
     /**
-     * The Is Committed.
-     * A value indicating whether the file is committed.
+     * The Azure Storage Uri Expiration Date Time.
+     * The time the Azure storage Uri expires.
      */
-    @SerializedName("isCommitted")
+    @SerializedName("azureStorageUriExpirationDateTime")
     @Expose
-    public Boolean isCommitted;
+    public java.util.Calendar azureStorageUriExpirationDateTime;
 
     /**
      * The Created Date Time.
@@ -50,6 +50,38 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Is Committed.
+     * A value indicating whether the file is committed.
+     */
+    @SerializedName("isCommitted")
+    @Expose
+    public Boolean isCommitted;
+
+    /**
+     * The Is Dependency.
+     * Whether the content file is a dependency for the main content file.
+     */
+    @SerializedName("isDependency")
+    @Expose
+    public Boolean isDependency;
+
+    /**
+     * The Is Framework File.
+     * A value indicating whether the file is a framework file.
+     */
+    @SerializedName("isFrameworkFile")
+    @Expose
+    public Boolean isFrameworkFile;
+
+    /**
+     * The Manifest.
+     * The manifest information.
+     */
+    @SerializedName("manifest")
+    @Expose
+    public byte[] manifest;
 
     /**
      * The Name.
@@ -76,44 +108,12 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     public Long sizeEncrypted;
 
     /**
-     * The Azure Storage Uri Expiration Date Time.
-     * The time the Azure storage Uri expires.
-     */
-    @SerializedName("azureStorageUriExpirationDateTime")
-    @Expose
-    public java.util.Calendar azureStorageUriExpirationDateTime;
-
-    /**
-     * The Manifest.
-     * The manifest information.
-     */
-    @SerializedName("manifest")
-    @Expose
-    public byte[] manifest;
-
-    /**
      * The Upload State.
      * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
      */
     @SerializedName("uploadState")
     @Expose
     public MobileAppContentFileUploadState uploadState;
-
-    /**
-     * The Is Framework File.
-     * A value indicating whether the file is a framework file.
-     */
-    @SerializedName("isFrameworkFile")
-    @Expose
-    public Boolean isFrameworkFile;
-
-    /**
-     * The Is Dependency.
-     * Whether the content file is a dependency for the main content file.
-     */
-    @SerializedName("isDependency")
-    @Expose
-    public Boolean isDependency;
 
 
     /**

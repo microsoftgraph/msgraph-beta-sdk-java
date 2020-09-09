@@ -62,14 +62,14 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionRequest extend
     public void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementAutopilotPolicyStatusDetailRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementAutopilotPolicyStatusDetail, callback);
     }
 
     public DeviceManagementAutopilotPolicyStatusDetail post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementAutopilotPolicyStatusDetailRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionRequest extend
         return (DeviceManagementAutopilotPolicyStatusDetailCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementAutopilotPolicyStatusDetailCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest)this;
+    }
     public IDeviceManagementAutopilotPolicyStatusDetailCollectionPage buildFromResponse(final DeviceManagementAutopilotPolicyStatusDetailCollectionResponse response) {
         final IDeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IApprovalRequest extends IHttpRequest {
     Approval post(final Approval newApproval) throws ClientException;
 
     /**
+     * Posts a Approval with a new object
+     *
+     * @param newApproval the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Approval newApproval, final ICallback<Approval> callback);
+
+    /**
+     * Posts a Approval with a new object
+     *
+     * @param newApproval the object to create/update
+     * @return the created Approval
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Approval put(final Approval newApproval) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

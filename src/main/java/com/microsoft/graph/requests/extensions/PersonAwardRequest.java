@@ -112,6 +112,27 @@ public class PersonAwardRequest extends BaseRequest implements IPersonAwardReque
     }
 
     /**
+     * Creates a PersonAward with a new object
+     *
+     * @param newPersonAward the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PersonAward newPersonAward, final ICallback<PersonAward> callback) {
+        send(HttpMethod.PUT, callback, newPersonAward);
+    }
+
+    /**
+     * Creates a PersonAward with a new object
+     *
+     * @param newPersonAward the object to create/update
+     * @return the created PersonAward
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PersonAward put(final PersonAward newPersonAward) throws ClientException {
+        return send(HttpMethod.PUT, newPersonAward);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

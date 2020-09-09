@@ -118,6 +118,27 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
     }
 
     /**
+     * Creates a Item with a new object
+     *
+     * @param newItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Item newItem, final ICallback<Item> callback) {
+        send(HttpMethod.PUT, callback, newItem);
+    }
+
+    /**
+     * Creates a Item with a new object
+     *
+     * @param newItem the object to create/update
+     * @return the created Item
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Item put(final Item newItem) throws ClientException {
+        return send(HttpMethod.PUT, newItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

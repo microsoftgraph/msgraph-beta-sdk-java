@@ -44,20 +44,20 @@ public class ResultInfo implements IJsonBackedObject {
     public Integer code;
 
     /**
-     * The Subcode.
-     * 
-     */
-    @SerializedName("subcode")
-    @Expose
-    public Integer subcode;
-
-    /**
      * The Message.
      * 
      */
     @SerializedName("message")
     @Expose
     public String message;
+
+    /**
+     * The Subcode.
+     * 
+     */
+    @SerializedName("subcode")
+    @Expose
+    public Integer subcode;
 
 
     /**

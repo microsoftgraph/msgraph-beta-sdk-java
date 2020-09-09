@@ -112,6 +112,27 @@ public class IosEducationDeviceConfigurationRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a IosEducationDeviceConfiguration with a new object
+     *
+     * @param newIosEducationDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration, final ICallback<IosEducationDeviceConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosEducationDeviceConfiguration);
+    }
+
+    /**
+     * Creates a IosEducationDeviceConfiguration with a new object
+     *
+     * @param newIosEducationDeviceConfiguration the object to create/update
+     * @return the created IosEducationDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosEducationDeviceConfiguration put(final IosEducationDeviceConfiguration newIosEducationDeviceConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosEducationDeviceConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

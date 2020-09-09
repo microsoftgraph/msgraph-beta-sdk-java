@@ -62,14 +62,14 @@ public class MacOsVppAppAssignedLicenseCollectionRequest extends BaseCollectionR
     public void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MacOsVppAppAssignedLicenseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMacOsVppAppAssignedLicense, callback);
     }
 
     public MacOsVppAppAssignedLicense post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MacOsVppAppAssignedLicenseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMacOsVppAppAssignedLicense);
     }
 
@@ -106,6 +106,27 @@ public class MacOsVppAppAssignedLicenseCollectionRequest extends BaseCollectionR
         return (MacOsVppAppAssignedLicenseCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMacOsVppAppAssignedLicenseCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MacOsVppAppAssignedLicenseCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMacOsVppAppAssignedLicenseCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMacOsVppAppAssignedLicenseCollectionRequest)this;
+    }
     public IMacOsVppAppAssignedLicenseCollectionPage buildFromResponse(final MacOsVppAppAssignedLicenseCollectionResponse response) {
         final IMacOsVppAppAssignedLicenseCollectionRequestBuilder builder;
         if (response.nextLink != null) {

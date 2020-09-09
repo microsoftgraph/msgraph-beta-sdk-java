@@ -62,14 +62,14 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionReque
     public void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAdvancedThreatProtectionOnboardingDeviceSettingState, callback);
     }
 
     public AdvancedThreatProtectionOnboardingDeviceSettingState post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -106,6 +106,27 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionReque
         return (AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest)this;
+    }
     public IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage buildFromResponse(final AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse response) {
         final IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

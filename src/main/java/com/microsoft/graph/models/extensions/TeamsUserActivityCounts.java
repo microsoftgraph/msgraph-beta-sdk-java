@@ -27,38 +27,6 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Report Date.
-     * 
-     */
-    @SerializedName("reportDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportDate;
-
-    /**
-     * The Team Chat Messages.
-     * 
-     */
-    @SerializedName("teamChatMessages")
-    @Expose
-    public Long teamChatMessages;
-
-    /**
-     * The Private Chat Messages.
-     * 
-     */
-    @SerializedName("privateChatMessages")
-    @Expose
-    public Long privateChatMessages;
-
-    /**
      * The Calls.
      * 
      */
@@ -75,12 +43,44 @@ public class TeamsUserActivityCounts extends Entity implements IJsonBackedObject
     public Long meetings;
 
     /**
+     * The Private Chat Messages.
+     * 
+     */
+    @SerializedName("privateChatMessages")
+    @Expose
+    public Long privateChatMessages;
+
+    /**
+     * The Report Date.
+     * 
+     */
+    @SerializedName("reportDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportDate;
+
+    /**
      * The Report Period.
      * 
      */
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Team Chat Messages.
+     * 
+     */
+    @SerializedName("teamChatMessages")
+    @Expose
+    public Long teamChatMessages;
 
 
     /**

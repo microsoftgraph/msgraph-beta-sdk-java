@@ -37,20 +37,36 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Trusted Root Certificate.
-     * Trusted Root Certificate.
-     */
-    @SerializedName("trustedRootCertificate")
-    @Expose
-    public byte[] trustedRootCertificate;
-
-    /**
      * The Cert File Name.
      * File name to display in UI.
      */
     @SerializedName("certFileName")
     @Expose
     public String certFileName;
+
+    /**
+     * The Certificate Template Name.
+     * PKCS Certificate Template Name.
+     */
+    @SerializedName("certificateTemplateName")
+    @Expose
+    public String certificateTemplateName;
+
+    /**
+     * The Certificate Validity Period Scale.
+     * Scale for the Certificate Validity Period.
+     */
+    @SerializedName("certificateValidityPeriodScale")
+    @Expose
+    public CertificateValidityPeriodScale certificateValidityPeriodScale;
+
+    /**
+     * The Certificate Validity Period Value.
+     * Value for the Certificate Validity Period.
+     */
+    @SerializedName("certificateValidityPeriodValue")
+    @Expose
+    public Integer certificateValidityPeriodValue;
 
     /**
      * The Certification Authority.
@@ -69,14 +85,6 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
     public String certificationAuthorityName;
 
     /**
-     * The Certificate Template Name.
-     * PKCS Certificate Template Name.
-     */
-    @SerializedName("certificateTemplateName")
-    @Expose
-    public String certificateTemplateName;
-
-    /**
      * The Renewal Threshold Percentage.
      * Certificate renewal threshold percentage. Valid values 1 to 99
      */
@@ -85,20 +93,12 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
     public Integer renewalThresholdPercentage;
 
     /**
-     * The Certificate Validity Period Value.
-     * Value for the Certificate Validity Period.
+     * The Trusted Root Certificate.
+     * Trusted Root Certificate.
      */
-    @SerializedName("certificateValidityPeriodValue")
+    @SerializedName("trustedRootCertificate")
     @Expose
-    public Integer certificateValidityPeriodValue;
-
-    /**
-     * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period.
-     */
-    @SerializedName("certificateValidityPeriodScale")
-    @Expose
-    public CertificateValidityPeriodScale certificateValidityPeriodScale;
+    public byte[] trustedRootCertificate;
 
 
     /**

@@ -27,20 +27,20 @@ public class AppScope extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Display Name.
      * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

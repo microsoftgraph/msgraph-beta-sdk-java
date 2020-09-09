@@ -38,16 +38,16 @@ public interface IPrivilegedRoleRequestBuilder extends IRequestBuilder {
     IPrivilegedRoleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder assignments();
+
+    IPrivilegedRoleAssignmentWithReferenceRequestBuilder assignments(final String id);
+
     /**
      * Gets the request builder for PrivilegedRoleSettings
      *
      * @return the IPrivilegedRoleSettingsRequestBuilder instance
      */
     IPrivilegedRoleSettingsRequestBuilder settings();
-
-    IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder assignments();
-
-    IPrivilegedRoleAssignmentWithReferenceRequestBuilder assignments(final String id);
 
     /**
      * Gets the request builder for PrivilegedRoleSummary

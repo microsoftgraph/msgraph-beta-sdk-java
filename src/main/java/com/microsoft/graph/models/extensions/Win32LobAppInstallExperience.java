@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RunAsAccountType;
 import com.microsoft.graph.models.generated.Win32LobAppRestartBehavior;
+import com.microsoft.graph.models.generated.RunAsAccountType;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class Win32LobAppInstallExperience implements IJsonBackedObject {
     }
 
     /**
-     * The Run As Account.
-     * Indicates the type of execution context the app runs in.
-     */
-    @SerializedName("runAsAccount")
-    @Expose
-    public RunAsAccountType runAsAccount;
-
-    /**
      * The Device Restart Behavior.
      * Device restart behavior.
      */
     @SerializedName("deviceRestartBehavior")
     @Expose
     public Win32LobAppRestartBehavior deviceRestartBehavior;
+
+    /**
+     * The Run As Account.
+     * Indicates the type of execution context the app runs in.
+     */
+    @SerializedName("runAsAccount")
+    @Expose
+    public RunAsAccountType runAsAccount;
 
 
     /**

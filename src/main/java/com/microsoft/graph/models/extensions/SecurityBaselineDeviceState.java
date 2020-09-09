@@ -28,14 +28,6 @@ public class SecurityBaselineDeviceState extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Managed Device Id.
-     * Intune device id
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
      * The Device Display Name.
      * Display name of the device
      */
@@ -44,12 +36,20 @@ public class SecurityBaselineDeviceState extends Entity implements IJsonBackedOb
     public String deviceDisplayName;
 
     /**
-     * The User Principal Name.
-     * User Principal Name
+     * The Last Reported Date Time.
+     * Last modified date time of the policy report
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("lastReportedDateTime")
     @Expose
-    public String userPrincipalName;
+    public java.util.Calendar lastReportedDateTime;
+
+    /**
+     * The Managed Device Id.
+     * Intune device id
+     */
+    @SerializedName("managedDeviceId")
+    @Expose
+    public String managedDeviceId;
 
     /**
      * The State.
@@ -60,12 +60,12 @@ public class SecurityBaselineDeviceState extends Entity implements IJsonBackedOb
     public SecurityBaselineComplianceState state;
 
     /**
-     * The Last Reported Date Time.
-     * Last modified date time of the policy report
+     * The User Principal Name.
+     * User Principal Name
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName("userPrincipalName")
     @Expose
-    public java.util.Calendar lastReportedDateTime;
+    public String userPrincipalName;
 
 
     /**

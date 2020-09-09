@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DeviceManagementComplexSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementTemplateSettingCategory;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class DeviceManagementSettingInstanceCollectionRequest extends BaseCollec
     public void post(final DeviceManagementSettingInstance newDeviceManagementSettingInstance, final ICallback<DeviceManagementSettingInstance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementSettingInstanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementSettingInstance, callback);
     }
 
     public DeviceManagementSettingInstance post(final DeviceManagementSettingInstance newDeviceManagementSettingInstance) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementSettingInstanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementSettingInstance);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementSettingInstanceCollectionRequest extends BaseCollec
         return (DeviceManagementSettingInstanceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementSettingInstanceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementSettingInstanceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementSettingInstanceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementSettingInstanceCollectionRequest)this;
+    }
     public IDeviceManagementSettingInstanceCollectionPage buildFromResponse(final DeviceManagementSettingInstanceCollectionResponse response) {
         final IDeviceManagementSettingInstanceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

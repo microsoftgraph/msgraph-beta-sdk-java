@@ -62,14 +62,14 @@ public class PrinterShareCollectionRequest extends BaseCollectionRequest<Printer
     public void post(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrinterShareRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrinterShare, callback);
     }
 
     public PrinterShare post(final PrinterShare newPrinterShare) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrinterShareRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrinterShare);
     }
 
@@ -106,6 +106,27 @@ public class PrinterShareCollectionRequest extends BaseCollectionRequest<Printer
         return (PrinterShareCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrinterShareCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrinterShareCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrinterShareCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrinterShareCollectionRequest)this;
+    }
     public IPrinterShareCollectionPage buildFromResponse(final PrinterShareCollectionResponse response) {
         final IPrinterShareCollectionRequestBuilder builder;
         if (response.nextLink != null) {

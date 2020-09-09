@@ -127,6 +127,27 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a EasEmailProfileConfigurationBase with a new object
+     *
+     * @param newEasEmailProfileConfigurationBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<EasEmailProfileConfigurationBase> callback) {
+        send(HttpMethod.PUT, callback, newEasEmailProfileConfigurationBase);
+    }
+
+    /**
+     * Creates a EasEmailProfileConfigurationBase with a new object
+     *
+     * @param newEasEmailProfileConfigurationBase the object to create/update
+     * @return the created EasEmailProfileConfigurationBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EasEmailProfileConfigurationBase put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase) throws ClientException {
+        return send(HttpMethod.PUT, newEasEmailProfileConfigurationBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

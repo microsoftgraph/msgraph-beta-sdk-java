@@ -127,6 +127,27 @@ public class Windows10CertificateProfileBaseRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a Windows10CertificateProfileBase with a new object
+     *
+     * @param newWindows10CertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10CertificateProfileBase newWindows10CertificateProfileBase, final ICallback<Windows10CertificateProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newWindows10CertificateProfileBase);
+    }
+
+    /**
+     * Creates a Windows10CertificateProfileBase with a new object
+     *
+     * @param newWindows10CertificateProfileBase the object to create/update
+     * @return the created Windows10CertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10CertificateProfileBase put(final Windows10CertificateProfileBase newWindows10CertificateProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10CertificateProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

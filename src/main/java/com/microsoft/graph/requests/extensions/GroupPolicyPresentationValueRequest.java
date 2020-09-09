@@ -131,6 +131,27 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a GroupPolicyPresentationValue with a new object
+     *
+     * @param newGroupPolicyPresentationValue the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationValue newGroupPolicyPresentationValue, final ICallback<GroupPolicyPresentationValue> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationValue);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationValue with a new object
+     *
+     * @param newGroupPolicyPresentationValue the object to create/update
+     * @return the created GroupPolicyPresentationValue
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationValue put(final GroupPolicyPresentationValue newGroupPolicyPresentationValue) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationValue);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionRequest extends BaseCo
     public void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<AndroidDeviceOwnerEnrollmentProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidDeviceOwnerEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidDeviceOwnerEnrollmentProfile, callback);
     }
 
     public AndroidDeviceOwnerEnrollmentProfile post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidDeviceOwnerEnrollmentProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -106,6 +106,27 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionRequest extends BaseCo
         return (AndroidDeviceOwnerEnrollmentProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAndroidDeviceOwnerEnrollmentProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AndroidDeviceOwnerEnrollmentProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAndroidDeviceOwnerEnrollmentProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAndroidDeviceOwnerEnrollmentProfileCollectionRequest)this;
+    }
     public IAndroidDeviceOwnerEnrollmentProfileCollectionPage buildFromResponse(final AndroidDeviceOwnerEnrollmentProfileCollectionResponse response) {
         final IAndroidDeviceOwnerEnrollmentProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

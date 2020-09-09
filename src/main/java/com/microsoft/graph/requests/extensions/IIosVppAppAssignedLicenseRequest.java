@@ -80,6 +80,23 @@ public interface IIosVppAppAssignedLicenseRequest extends IHttpRequest {
     IosVppAppAssignedLicense post(final IosVppAppAssignedLicense newIosVppAppAssignedLicense) throws ClientException;
 
     /**
+     * Posts a IosVppAppAssignedLicense with a new object
+     *
+     * @param newIosVppAppAssignedLicense the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosVppAppAssignedLicense newIosVppAppAssignedLicense, final ICallback<IosVppAppAssignedLicense> callback);
+
+    /**
+     * Posts a IosVppAppAssignedLicense with a new object
+     *
+     * @param newIosVppAppAssignedLicense the object to create/update
+     * @return the created IosVppAppAssignedLicense
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosVppAppAssignedLicense put(final IosVppAppAssignedLicense newIosVppAppAssignedLicense) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

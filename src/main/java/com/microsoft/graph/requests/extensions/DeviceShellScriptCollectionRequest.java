@@ -64,14 +64,14 @@ public class DeviceShellScriptCollectionRequest extends BaseCollectionRequest<De
     public void post(final DeviceShellScript newDeviceShellScript, final ICallback<DeviceShellScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceShellScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceShellScript, callback);
     }
 
     public DeviceShellScript post(final DeviceShellScript newDeviceShellScript) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceShellScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceShellScript);
     }
 
@@ -108,6 +108,27 @@ public class DeviceShellScriptCollectionRequest extends BaseCollectionRequest<De
         return (DeviceShellScriptCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceShellScriptCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceShellScriptCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceShellScriptCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceShellScriptCollectionRequest)this;
+    }
     public IDeviceShellScriptCollectionPage buildFromResponse(final DeviceShellScriptCollectionResponse response) {
         final IDeviceShellScriptCollectionRequestBuilder builder;
         if (response.nextLink != null) {

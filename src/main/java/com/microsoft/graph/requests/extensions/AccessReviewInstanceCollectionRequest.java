@@ -62,14 +62,14 @@ public class AccessReviewInstanceCollectionRequest extends BaseCollectionRequest
     public void post(final AccessReviewInstance newAccessReviewInstance, final ICallback<AccessReviewInstance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessReviewInstanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessReviewInstance, callback);
     }
 
     public AccessReviewInstance post(final AccessReviewInstance newAccessReviewInstance) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessReviewInstanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessReviewInstance);
     }
 
@@ -106,6 +106,27 @@ public class AccessReviewInstanceCollectionRequest extends BaseCollectionRequest
         return (AccessReviewInstanceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessReviewInstanceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessReviewInstanceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessReviewInstanceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessReviewInstanceCollectionRequest)this;
+    }
     public IAccessReviewInstanceCollectionPage buildFromResponse(final AccessReviewInstanceCollectionResponse response) {
         final IAccessReviewInstanceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

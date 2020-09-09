@@ -72,6 +72,13 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder impleme
     public IDeviceHealthScriptAssignmentRequestBuilder assignments(final String id) {
         return new DeviceHealthScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public IDeviceHealthScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+        return new DeviceHealthScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
+    }
+
+    public IDeviceHealthScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
+        return new DeviceHealthScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceHealthScriptRunSummary
@@ -81,24 +88,17 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder impleme
     public IDeviceHealthScriptRunSummaryRequestBuilder runSummary() {
         return new DeviceHealthScriptRunSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
     }
-    public IDeviceHealthScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
-        return new DeviceHealthScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
-    }
-
-    public IDeviceHealthScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
-        return new DeviceHealthScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
-    }
 
     public IDeviceHealthScriptAssignRequestBuilder assign(final java.util.List<DeviceHealthScriptAssignment> deviceHealthScriptAssignments) {
         return new DeviceHealthScriptAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, deviceHealthScriptAssignments);
     }
 
-    public IDeviceHealthScriptUpdateGlobalScriptRequestBuilder updateGlobalScript(final String version) {
-        return new DeviceHealthScriptUpdateGlobalScriptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateGlobalScript"), getClient(), null, version);
-    }
-
     public IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequestBuilder getGlobalScriptHighestAvailableVersion() {
         return new DeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getGlobalScriptHighestAvailableVersion"), getClient(), null);
+    }
+
+    public IDeviceHealthScriptUpdateGlobalScriptRequestBuilder updateGlobalScript(final String version) {
+        return new DeviceHealthScriptUpdateGlobalScriptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateGlobalScript"), getClient(), null, version);
     }
 
     public IDeviceHealthScriptGetRemediationHistoryRequestBuilder getRemediationHistory() {

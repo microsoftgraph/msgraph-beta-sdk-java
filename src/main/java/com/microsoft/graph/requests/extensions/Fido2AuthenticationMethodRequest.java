@@ -112,6 +112,27 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
     }
 
     /**
+     * Creates a Fido2AuthenticationMethod with a new object
+     *
+     * @param newFido2AuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback) {
+        send(HttpMethod.PUT, callback, newFido2AuthenticationMethod);
+    }
+
+    /**
+     * Creates a Fido2AuthenticationMethod with a new object
+     *
+     * @param newFido2AuthenticationMethod the object to create/update
+     * @return the created Fido2AuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Fido2AuthenticationMethod put(final Fido2AuthenticationMethod newFido2AuthenticationMethod) throws ClientException {
+        return send(HttpMethod.PUT, newFido2AuthenticationMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

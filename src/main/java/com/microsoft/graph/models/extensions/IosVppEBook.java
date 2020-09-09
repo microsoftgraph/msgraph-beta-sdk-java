@@ -27,28 +27,12 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
 
 
     /**
-     * The Vpp Token Id.
-     * The Vpp token ID.
-     */
-    @SerializedName("vppTokenId")
-    @Expose
-    public java.util.UUID vppTokenId;
-
-    /**
      * The Apple Id.
      * The Apple ID associated with Vpp token.
      */
     @SerializedName("appleId")
     @Expose
     public String appleId;
-
-    /**
-     * The Vpp Organization Name.
-     * The Vpp token's organization name.
-     */
-    @SerializedName("vppOrganizationName")
-    @Expose
-    public String vppOrganizationName;
 
     /**
      * The Genres.
@@ -65,6 +49,14 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
     @SerializedName("language")
     @Expose
     public String language;
+
+    /**
+     * The Role Scope Tag Ids.
+     * List of Scope Tags for this Entity instance.
+     */
+    @SerializedName("roleScopeTagIds")
+    @Expose
+    public java.util.List<String> roleScopeTagIds;
 
     /**
      * The Seller.
@@ -91,12 +83,20 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
     public Integer usedLicenseCount;
 
     /**
-     * The Role Scope Tag Ids.
-     * List of Scope Tags for this Entity instance.
+     * The Vpp Organization Name.
+     * The Vpp token's organization name.
      */
-    @SerializedName("roleScopeTagIds")
+    @SerializedName("vppOrganizationName")
     @Expose
-    public java.util.List<String> roleScopeTagIds;
+    public String vppOrganizationName;
+
+    /**
+     * The Vpp Token Id.
+     * The Vpp token ID.
+     */
+    @SerializedName("vppTokenId")
+    @Expose
+    public java.util.UUID vppTokenId;
 
 
     /**

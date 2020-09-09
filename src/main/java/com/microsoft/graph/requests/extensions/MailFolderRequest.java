@@ -8,26 +8,26 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserConfigurationCollectionRequestBuilder;
@@ -148,6 +148,27 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      */
     public MailFolder post(final MailFolder newMailFolder) throws ClientException {
         return send(HttpMethod.POST, newMailFolder);
+    }
+
+    /**
+     * Creates a MailFolder with a new object
+     *
+     * @param newMailFolder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailFolder newMailFolder, final ICallback<MailFolder> callback) {
+        send(HttpMethod.PUT, callback, newMailFolder);
+    }
+
+    /**
+     * Creates a MailFolder with a new object
+     *
+     * @param newMailFolder the object to create/update
+     * @return the created MailFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailFolder put(final MailFolder newMailFolder) throws ClientException {
+        return send(HttpMethod.PUT, newMailFolder);
     }
 
     /**

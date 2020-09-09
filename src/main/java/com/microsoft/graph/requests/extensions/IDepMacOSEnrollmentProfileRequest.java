@@ -80,6 +80,23 @@ public interface IDepMacOSEnrollmentProfileRequest extends IHttpRequest {
     DepMacOSEnrollmentProfile post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a DepMacOSEnrollmentProfile with a new object
+     *
+     * @param newDepMacOSEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback);
+
+    /**
+     * Posts a DepMacOSEnrollmentProfile with a new object
+     *
+     * @param newDepMacOSEnrollmentProfile the object to create/update
+     * @return the created DepMacOSEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DepMacOSEnrollmentProfile put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

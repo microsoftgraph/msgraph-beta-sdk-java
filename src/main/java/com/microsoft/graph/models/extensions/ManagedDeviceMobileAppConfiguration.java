@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
-import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceSummary;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserSummary;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
@@ -38,22 +38,6 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
 
 
     /**
-     * The Targeted Mobile Apps.
-     * the associated app.
-     */
-    @SerializedName("targetedMobileApps")
-    @Expose
-    public java.util.List<String> targetedMobileApps;
-
-    /**
-     * The Role Scope Tag Ids.
-     * List of Scope Tags for this App configuration entity.
-     */
-    @SerializedName("roleScopeTagIds")
-    @Expose
-    public java.util.List<String> roleScopeTagIds;
-
-    /**
      * The Created Date Time.
      * DateTime the object was created.
      */
@@ -70,6 +54,14 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     public String description;
 
     /**
+     * The Display Name.
+     * Admin provided name of the device configuration.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
@@ -78,12 +70,20 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Display Name.
-     * Admin provided name of the device configuration.
+     * The Role Scope Tag Ids.
+     * List of Scope Tags for this App configuration entity.
      */
-    @SerializedName("displayName")
+    @SerializedName("roleScopeTagIds")
     @Expose
-    public String displayName;
+    public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The Targeted Mobile Apps.
+     * the associated app.
+     */
+    @SerializedName("targetedMobileApps")
+    @Expose
+    public java.util.List<String> targetedMobileApps;
 
     /**
      * The Version.
@@ -106,18 +106,18 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
-     * The User Statuses.
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
-     */
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
-
-    /**
      * The Device Status Summary.
      * App configuration device status summary.
      */
     @SerializedName("deviceStatusSummary")
     @Expose
     public ManagedDeviceMobileAppConfigurationDeviceSummary deviceStatusSummary;
+
+    /**
+     * The User Statuses.
+     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     */
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 
     /**
      * The User Status Summary.

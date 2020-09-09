@@ -54,13 +54,13 @@ public interface IEducationUserRequestBuilder extends IRequestBuilder {
 
     IEducationClassWithReferenceRequestBuilder classes(final String id);
 
-    IEducationClassCollectionWithReferencesRequestBuilder taughtClasses();
-
-    IEducationClassWithReferenceRequestBuilder taughtClasses(final String id);
-
     IEducationSchoolCollectionWithReferencesRequestBuilder schools();
 
     IEducationSchoolWithReferenceRequestBuilder schools(final String id);
+
+    IEducationClassCollectionWithReferencesRequestBuilder taughtClasses();
+
+    IEducationClassWithReferenceRequestBuilder taughtClasses(final String id);
 
     /**
      * Gets the request builder for User

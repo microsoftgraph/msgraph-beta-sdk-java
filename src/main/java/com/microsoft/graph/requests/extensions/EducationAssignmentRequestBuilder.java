@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionRequestBuilder;
@@ -16,10 +20,6 @@ import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionReq
 import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
 import java.util.Arrays;
@@ -65,26 +65,19 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public IEducationAssignmentResourceCollectionRequestBuilder resources() {
-        return new EducationAssignmentResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
-    }
-
-    public IEducationAssignmentResourceRequestBuilder resources(final String id) {
-        return new EducationAssignmentResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
-    }
-    public IEducationSubmissionCollectionRequestBuilder submissions() {
-        return new EducationSubmissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions"), getClient(), null);
-    }
-
-    public IEducationSubmissionRequestBuilder submissions(final String id) {
-        return new EducationSubmissionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions") + "/" + id, getClient(), null);
-    }
     public IEducationCategoryCollectionRequestBuilder categories() {
         return new EducationCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     public IEducationCategoryRequestBuilder categories(final String id) {
         return new EducationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    }
+    public IEducationAssignmentResourceCollectionRequestBuilder resources() {
+        return new EducationAssignmentResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
+    }
+
+    public IEducationAssignmentResourceRequestBuilder resources(final String id) {
+        return new EducationAssignmentResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
 
     /**
@@ -94,6 +87,13 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder implem
      */
     public IEducationRubricRequestBuilder rubric() {
         return new EducationRubricRequestBuilder(getRequestUrlWithAdditionalSegment("rubric"), getClient(), null);
+    }
+    public IEducationSubmissionCollectionRequestBuilder submissions() {
+        return new EducationSubmissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions"), getClient(), null);
+    }
+
+    public IEducationSubmissionRequestBuilder submissions(final String id) {
+        return new EducationSubmissionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions") + "/" + id, getClient(), null);
     }
 
     public IEducationAssignmentPublishRequestBuilder publish() {

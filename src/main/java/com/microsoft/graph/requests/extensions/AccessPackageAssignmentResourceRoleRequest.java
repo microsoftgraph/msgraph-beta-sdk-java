@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectio
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class AccessPackageAssignmentResourceRoleRequest extends BaseRequest impl
      */
     public AccessPackageAssignmentResourceRole post(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageAssignmentResourceRole);
+    }
+
+    /**
+     * Creates a AccessPackageAssignmentResourceRole with a new object
+     *
+     * @param newAccessPackageAssignmentResourceRole the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole, final ICallback<AccessPackageAssignmentResourceRole> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageAssignmentResourceRole);
+    }
+
+    /**
+     * Creates a AccessPackageAssignmentResourceRole with a new object
+     *
+     * @param newAccessPackageAssignmentResourceRole the object to create/update
+     * @return the created AccessPackageAssignmentResourceRole
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageAssignmentResourceRole put(final AccessPackageAssignmentResourceRole newAccessPackageAssignmentResourceRole) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageAssignmentResourceRole);
     }
 
     /**

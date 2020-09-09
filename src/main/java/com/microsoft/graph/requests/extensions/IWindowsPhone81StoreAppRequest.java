@@ -80,6 +80,23 @@ public interface IWindowsPhone81StoreAppRequest extends IHttpRequest {
     WindowsPhone81StoreApp post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81StoreApp with a new object
+     *
+     * @param newWindowsPhone81StoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<WindowsPhone81StoreApp> callback);
+
+    /**
+     * Posts a WindowsPhone81StoreApp with a new object
+     *
+     * @param newWindowsPhone81StoreApp the object to create/update
+     * @return the created WindowsPhone81StoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81StoreApp put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

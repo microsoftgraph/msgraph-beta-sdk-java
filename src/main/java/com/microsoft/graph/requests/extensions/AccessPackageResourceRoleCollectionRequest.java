@@ -62,14 +62,14 @@ public class AccessPackageResourceRoleCollectionRequest extends BaseCollectionRe
     public void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<AccessPackageResourceRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageResourceRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageResourceRole, callback);
     }
 
     public AccessPackageResourceRole post(final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageResourceRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageResourceRole);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageResourceRoleCollectionRequest extends BaseCollectionRe
         return (AccessPackageResourceRoleCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageResourceRoleCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageResourceRoleCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageResourceRoleCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageResourceRoleCollectionRequest)this;
+    }
     public IAccessPackageResourceRoleCollectionPage buildFromResponse(final AccessPackageResourceRoleCollectionResponse response) {
         final IAccessPackageResourceRoleCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -8,12 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.NetworkSingleSignOnType;
-import com.microsoft.graph.models.generated.EapType;
 import com.microsoft.graph.models.generated.WiFiAuthenticationMethod;
+import com.microsoft.graph.models.generated.EapType;
 import com.microsoft.graph.models.generated.NonEapAuthenticationMethodForEapTtlsType;
-import com.microsoft.graph.models.extensions.Windows81TrustedRootCertificate;
+import com.microsoft.graph.models.generated.NetworkSingleSignOnType;
 import com.microsoft.graph.models.extensions.WindowsCertificateProfileBase;
+import com.microsoft.graph.models.extensions.Windows81TrustedRootCertificate;
 import com.microsoft.graph.models.extensions.WindowsWifiConfiguration;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionResponse;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionPage;
@@ -35,124 +35,12 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
 
     /**
-     * The Network Single Sign On.
-     * Specify the network single sign on type.
-     */
-    @SerializedName("networkSingleSignOn")
-    @Expose
-    public NetworkSingleSignOnType networkSingleSignOn;
-
-    /**
-     * The Maximum Authentication Timeout In Seconds.
-     * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
-     */
-    @SerializedName("maximumAuthenticationTimeoutInSeconds")
-    @Expose
-    public Integer maximumAuthenticationTimeoutInSeconds;
-
-    /**
-     * The Prompt For Additional Authentication Credentials.
-     * Specify whether the wifi connection should prompt for additional authentication credentials.
-     */
-    @SerializedName("promptForAdditionalAuthenticationCredentials")
-    @Expose
-    public Boolean promptForAdditionalAuthenticationCredentials;
-
-    /**
-     * The Enable Pairwise Master Key Caching.
-     * Specify whether the wifi connection should enable pairwise master key caching.
-     */
-    @SerializedName("enablePairwiseMasterKeyCaching")
-    @Expose
-    public Boolean enablePairwiseMasterKeyCaching;
-
-    /**
-     * The Maximum Pairwise Master Key Cache Time In Minutes.
-     * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
-     */
-    @SerializedName("maximumPairwiseMasterKeyCacheTimeInMinutes")
-    @Expose
-    public Integer maximumPairwiseMasterKeyCacheTimeInMinutes;
-
-    /**
-     * The Maximum Number Of Pairwise Master Keys In Cache.
-     * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
-     */
-    @SerializedName("maximumNumberOfPairwiseMasterKeysInCache")
-    @Expose
-    public Integer maximumNumberOfPairwiseMasterKeysInCache;
-
-    /**
-     * The Enable Pre Authentication.
-     * Specify whether pre-authentication should be enabled.
-     */
-    @SerializedName("enablePreAuthentication")
-    @Expose
-    public Boolean enablePreAuthentication;
-
-    /**
-     * The Maximum Pre Authentication Attempts.
-     * Specify maximum pre-authentication attempts.  Valid range: 1-16
-     */
-    @SerializedName("maximumPreAuthenticationAttempts")
-    @Expose
-    public Integer maximumPreAuthenticationAttempts;
-
-    /**
-     * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-     */
-    @SerializedName("eapType")
-    @Expose
-    public EapType eapType;
-
-    /**
-     * The Trusted Server Certificate Names.
-     * Specify trusted server certificate names.
-     */
-    @SerializedName("trustedServerCertificateNames")
-    @Expose
-    public java.util.List<String> trustedServerCertificateNames;
-
-    /**
      * The Authentication Method.
      * Specify the authentication method.
      */
     @SerializedName("authenticationMethod")
     @Expose
     public WiFiAuthenticationMethod authenticationMethod;
-
-    /**
-     * The Inner Authentication Protocol For EAPTTLS.
-     * Specify inner authentication protocol for EAP TTLS.
-     */
-    @SerializedName("innerAuthenticationProtocolForEAPTTLS")
-    @Expose
-    public NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEAPTTLS;
-
-    /**
-     * The Outer Identity Privacy Temporary Value.
-     * Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
-     */
-    @SerializedName("outerIdentityPrivacyTemporaryValue")
-    @Expose
-    public String outerIdentityPrivacyTemporaryValue;
-
-    /**
-     * The Require Cryptographic Binding.
-     * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
-     */
-    @SerializedName("requireCryptographicBinding")
-    @Expose
-    public Boolean requireCryptographicBinding;
-
-    /**
-     * The Perform Server Validation.
-     * Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
-     */
-    @SerializedName("performServerValidation")
-    @Expose
-    public Boolean performServerValidation;
 
     /**
      * The Disable User Prompt For Server Validation.
@@ -163,10 +51,116 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     public Boolean disableUserPromptForServerValidation;
 
     /**
-     * The Root Certificates For Server Validation.
-     * Specify root certificate for server validation.
+     * The Eap Type.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
-    public Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    @SerializedName("eapType")
+    @Expose
+    public EapType eapType;
+
+    /**
+     * The Enable Pairwise Master Key Caching.
+     * Specify whether the wifi connection should enable pairwise master key caching.
+     */
+    @SerializedName("enablePairwiseMasterKeyCaching")
+    @Expose
+    public Boolean enablePairwiseMasterKeyCaching;
+
+    /**
+     * The Enable Pre Authentication.
+     * Specify whether pre-authentication should be enabled.
+     */
+    @SerializedName("enablePreAuthentication")
+    @Expose
+    public Boolean enablePreAuthentication;
+
+    /**
+     * The Inner Authentication Protocol For EAPTTLS.
+     * Specify inner authentication protocol for EAP TTLS.
+     */
+    @SerializedName("innerAuthenticationProtocolForEAPTTLS")
+    @Expose
+    public NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEAPTTLS;
+
+    /**
+     * The Maximum Authentication Timeout In Seconds.
+     * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
+     */
+    @SerializedName("maximumAuthenticationTimeoutInSeconds")
+    @Expose
+    public Integer maximumAuthenticationTimeoutInSeconds;
+
+    /**
+     * The Maximum Number Of Pairwise Master Keys In Cache.
+     * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
+     */
+    @SerializedName("maximumNumberOfPairwiseMasterKeysInCache")
+    @Expose
+    public Integer maximumNumberOfPairwiseMasterKeysInCache;
+
+    /**
+     * The Maximum Pairwise Master Key Cache Time In Minutes.
+     * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
+     */
+    @SerializedName("maximumPairwiseMasterKeyCacheTimeInMinutes")
+    @Expose
+    public Integer maximumPairwiseMasterKeyCacheTimeInMinutes;
+
+    /**
+     * The Maximum Pre Authentication Attempts.
+     * Specify maximum pre-authentication attempts.  Valid range: 1-16
+     */
+    @SerializedName("maximumPreAuthenticationAttempts")
+    @Expose
+    public Integer maximumPreAuthenticationAttempts;
+
+    /**
+     * The Network Single Sign On.
+     * Specify the network single sign on type.
+     */
+    @SerializedName("networkSingleSignOn")
+    @Expose
+    public NetworkSingleSignOnType networkSingleSignOn;
+
+    /**
+     * The Outer Identity Privacy Temporary Value.
+     * Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
+     */
+    @SerializedName("outerIdentityPrivacyTemporaryValue")
+    @Expose
+    public String outerIdentityPrivacyTemporaryValue;
+
+    /**
+     * The Perform Server Validation.
+     * Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
+     */
+    @SerializedName("performServerValidation")
+    @Expose
+    public Boolean performServerValidation;
+
+    /**
+     * The Prompt For Additional Authentication Credentials.
+     * Specify whether the wifi connection should prompt for additional authentication credentials.
+     */
+    @SerializedName("promptForAdditionalAuthenticationCredentials")
+    @Expose
+    public Boolean promptForAdditionalAuthenticationCredentials;
+
+    /**
+     * The Require Cryptographic Binding.
+     * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
+     */
+    @SerializedName("requireCryptographicBinding")
+    @Expose
+    public Boolean requireCryptographicBinding;
+
+    /**
+     * The Trusted Server Certificate Names.
+     * Specify trusted server certificate names.
+     */
+    @SerializedName("trustedServerCertificateNames")
+    @Expose
+    public java.util.List<String> trustedServerCertificateNames;
 
     /**
      * The Identity Certificate For Client Authentication.
@@ -183,6 +177,12 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     @SerializedName("rootCertificateForClientValidation")
     @Expose
     public Windows81TrustedRootCertificate rootCertificateForClientValidation;
+
+    /**
+     * The Root Certificates For Server Validation.
+     * Specify root certificate for server validation.
+     */
+    public Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 
     /**

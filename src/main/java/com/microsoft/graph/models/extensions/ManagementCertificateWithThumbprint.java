@@ -36,20 +36,20 @@ public class ManagementCertificateWithThumbprint implements IJsonBackedObject {
     }
 
     /**
-     * The Thumbprint.
-     * The thumbprint of the management certificate
-     */
-    @SerializedName("thumbprint")
-    @Expose
-    public String thumbprint;
-
-    /**
      * The Certificate.
      * The Base 64 encoded management certificate
      */
     @SerializedName("certificate")
     @Expose
     public String certificate;
+
+    /**
+     * The Thumbprint.
+     * The thumbprint of the management certificate
+     */
+    @SerializedName("thumbprint")
+    @Expose
+    public String thumbprint;
 
 
     /**

@@ -114,6 +114,27 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
     }
 
     /**
+     * Creates a CustomerPayment with a new object
+     *
+     * @param newCustomerPayment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CustomerPayment newCustomerPayment, final ICallback<CustomerPayment> callback) {
+        send(HttpMethod.PUT, callback, newCustomerPayment);
+    }
+
+    /**
+     * Creates a CustomerPayment with a new object
+     *
+     * @param newCustomerPayment the object to create/update
+     * @return the created CustomerPayment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CustomerPayment put(final CustomerPayment newCustomerPayment) throws ClientException {
+        return send(HttpMethod.PUT, newCustomerPayment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

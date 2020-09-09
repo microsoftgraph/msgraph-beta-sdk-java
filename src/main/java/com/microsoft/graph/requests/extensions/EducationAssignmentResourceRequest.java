@@ -112,6 +112,27 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a EducationAssignmentResource with a new object
+     *
+     * @param newEducationAssignmentResource the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<EducationAssignmentResource> callback) {
+        send(HttpMethod.PUT, callback, newEducationAssignmentResource);
+    }
+
+    /**
+     * Creates a EducationAssignmentResource with a new object
+     *
+     * @param newEducationAssignmentResource the object to create/update
+     * @return the created EducationAssignmentResource
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationAssignmentResource put(final EducationAssignmentResource newEducationAssignmentResource) throws ClientException {
+        return send(HttpMethod.PUT, newEducationAssignmentResource);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -10,14 +10,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -119,6 +119,27 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      */
     public GroupPolicyConfiguration post(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyConfiguration);
+    }
+
+    /**
+     * Creates a GroupPolicyConfiguration with a new object
+     *
+     * @param newGroupPolicyConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyConfiguration);
+    }
+
+    /**
+     * Creates a GroupPolicyConfiguration with a new object
+     *
+     * @param newGroupPolicyConfiguration the object to create/update
+     * @return the created GroupPolicyConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyConfiguration put(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyConfiguration);
     }
 
     /**

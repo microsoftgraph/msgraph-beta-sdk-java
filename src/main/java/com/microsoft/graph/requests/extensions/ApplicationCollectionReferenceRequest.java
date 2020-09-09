@@ -42,7 +42,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionRequest
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);
         new ApplicationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplication, body, callback);
     }
 
@@ -50,7 +50,7 @@ public class ApplicationCollectionReferenceRequest extends BaseCollectionRequest
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/applications/" + newApplication.id);
         return new ApplicationWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newApplication, body);
     }
     /**

@@ -63,14 +63,14 @@ public class EmbeddedSIMActivationCodePoolCollectionRequest extends BaseCollecti
     public void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EmbeddedSIMActivationCodePoolRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmbeddedSIMActivationCodePool, callback);
     }
 
     public EmbeddedSIMActivationCodePool post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EmbeddedSIMActivationCodePoolRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmbeddedSIMActivationCodePool);
     }
 
@@ -107,6 +107,27 @@ public class EmbeddedSIMActivationCodePoolCollectionRequest extends BaseCollecti
         return (EmbeddedSIMActivationCodePoolCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEmbeddedSIMActivationCodePoolCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EmbeddedSIMActivationCodePoolCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEmbeddedSIMActivationCodePoolCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEmbeddedSIMActivationCodePoolCollectionRequest)this;
+    }
     public IEmbeddedSIMActivationCodePoolCollectionPage buildFromResponse(final EmbeddedSIMActivationCodePoolCollectionResponse response) {
         final IEmbeddedSIMActivationCodePoolCollectionRequestBuilder builder;
         if (response.nextLink != null) {

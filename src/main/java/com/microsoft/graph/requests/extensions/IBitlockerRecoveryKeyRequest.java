@@ -80,6 +80,23 @@ public interface IBitlockerRecoveryKeyRequest extends IHttpRequest {
     BitlockerRecoveryKey post(final BitlockerRecoveryKey newBitlockerRecoveryKey) throws ClientException;
 
     /**
+     * Posts a BitlockerRecoveryKey with a new object
+     *
+     * @param newBitlockerRecoveryKey the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback);
+
+    /**
+     * Posts a BitlockerRecoveryKey with a new object
+     *
+     * @param newBitlockerRecoveryKey the object to create/update
+     * @return the created BitlockerRecoveryKey
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    BitlockerRecoveryKey put(final BitlockerRecoveryKey newBitlockerRecoveryKey) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

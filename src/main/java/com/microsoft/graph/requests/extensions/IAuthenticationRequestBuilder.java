@@ -8,26 +8,26 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Authentication;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareOathAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityQuestionAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
@@ -55,45 +55,45 @@ public interface IAuthenticationRequestBuilder extends IRequestBuilder {
     IAuthenticationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IAuthenticationMethodCollectionRequestBuilder methods();
-
-    IAuthenticationMethodRequestBuilder methods(final String id);
-
-    ISecurityQuestionAuthenticationMethodCollectionRequestBuilder securityQuestionMethods();
-
-    ISecurityQuestionAuthenticationMethodRequestBuilder securityQuestionMethods(final String id);
-
-    IPhoneAuthenticationMethodCollectionRequestBuilder phoneMethods();
-
-    IPhoneAuthenticationMethodRequestBuilder phoneMethods(final String id);
-
-    IPasswordAuthenticationMethodCollectionRequestBuilder passwordMethods();
-
-    IPasswordAuthenticationMethodRequestBuilder passwordMethods(final String id);
-
-    ILongRunningOperationCollectionRequestBuilder operations();
-
-    ILongRunningOperationRequestBuilder operations(final String id);
-
     IEmailAuthenticationMethodCollectionRequestBuilder emailMethods();
 
     IEmailAuthenticationMethodRequestBuilder emailMethods(final String id);
 
-    ISoftwareOathAuthenticationMethodCollectionRequestBuilder oathMethods();
+    IFido2AuthenticationMethodCollectionRequestBuilder fido2Methods();
 
-    ISoftwareOathAuthenticationMethodRequestBuilder oathMethods(final String id);
+    IFido2AuthenticationMethodRequestBuilder fido2Methods(final String id);
+
+    IAuthenticationMethodCollectionRequestBuilder methods();
+
+    IAuthenticationMethodRequestBuilder methods(final String id);
 
     IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder microsoftAuthenticatorMethods();
 
     IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(final String id);
 
+    ISoftwareOathAuthenticationMethodCollectionRequestBuilder oathMethods();
+
+    ISoftwareOathAuthenticationMethodRequestBuilder oathMethods(final String id);
+
+    ILongRunningOperationCollectionRequestBuilder operations();
+
+    ILongRunningOperationRequestBuilder operations(final String id);
+
     IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder passwordlessMicrosoftAuthenticatorMethods();
 
     IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder passwordlessMicrosoftAuthenticatorMethods(final String id);
 
-    IFido2AuthenticationMethodCollectionRequestBuilder fido2Methods();
+    IPasswordAuthenticationMethodCollectionRequestBuilder passwordMethods();
 
-    IFido2AuthenticationMethodRequestBuilder fido2Methods(final String id);
+    IPasswordAuthenticationMethodRequestBuilder passwordMethods(final String id);
+
+    IPhoneAuthenticationMethodCollectionRequestBuilder phoneMethods();
+
+    IPhoneAuthenticationMethodRequestBuilder phoneMethods(final String id);
+
+    ISecurityQuestionAuthenticationMethodCollectionRequestBuilder securityQuestionMethods();
+
+    ISecurityQuestionAuthenticationMethodRequestBuilder securityQuestionMethods(final String id);
 
     ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods();
 

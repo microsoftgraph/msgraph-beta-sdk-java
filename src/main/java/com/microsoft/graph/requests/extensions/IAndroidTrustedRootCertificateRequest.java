@@ -80,6 +80,23 @@ public interface IAndroidTrustedRootCertificateRequest extends IHttpRequest {
     AndroidTrustedRootCertificate post(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate) throws ClientException;
 
     /**
+     * Posts a AndroidTrustedRootCertificate with a new object
+     *
+     * @param newAndroidTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate, final ICallback<AndroidTrustedRootCertificate> callback);
+
+    /**
+     * Posts a AndroidTrustedRootCertificate with a new object
+     *
+     * @param newAndroidTrustedRootCertificate the object to create/update
+     * @return the created AndroidTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidTrustedRootCertificate put(final AndroidTrustedRootCertificate newAndroidTrustedRootCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

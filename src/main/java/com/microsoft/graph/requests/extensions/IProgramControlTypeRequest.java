@@ -80,6 +80,23 @@ public interface IProgramControlTypeRequest extends IHttpRequest {
     ProgramControlType post(final ProgramControlType newProgramControlType) throws ClientException;
 
     /**
+     * Posts a ProgramControlType with a new object
+     *
+     * @param newProgramControlType the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ProgramControlType newProgramControlType, final ICallback<ProgramControlType> callback);
+
+    /**
+     * Posts a ProgramControlType with a new object
+     *
+     * @param newProgramControlType the object to create/update
+     * @return the created ProgramControlType
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ProgramControlType put(final ProgramControlType newProgramControlType) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IAccessReviewDecisionRequest extends IHttpRequest {
     AccessReviewDecision post(final AccessReviewDecision newAccessReviewDecision) throws ClientException;
 
     /**
+     * Posts a AccessReviewDecision with a new object
+     *
+     * @param newAccessReviewDecision the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessReviewDecision newAccessReviewDecision, final ICallback<AccessReviewDecision> callback);
+
+    /**
+     * Posts a AccessReviewDecision with a new object
+     *
+     * @param newAccessReviewDecision the object to create/update
+     * @return the created AccessReviewDecision
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessReviewDecision put(final AccessReviewDecision newAccessReviewDecision) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

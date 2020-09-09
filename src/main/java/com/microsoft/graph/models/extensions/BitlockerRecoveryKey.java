@@ -36,14 +36,6 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Volume Type.
-     * 
-     */
-    @SerializedName("volumeType")
-    @Expose
-    public VolumeType volumeType;
-
-    /**
      * The Device Id.
      * 
      */
@@ -58,6 +50,14 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
     @SerializedName("key")
     @Expose
     public String key;
+
+    /**
+     * The Volume Type.
+     * 
+     */
+    @SerializedName("volumeType")
+    @Expose
+    public VolumeType volumeType;
 
 
     /**

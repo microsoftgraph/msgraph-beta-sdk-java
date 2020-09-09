@@ -112,6 +112,27 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
     }
 
     /**
+     * Creates a BookingService with a new object
+     *
+     * @param newBookingService the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BookingService newBookingService, final ICallback<BookingService> callback) {
+        send(HttpMethod.PUT, callback, newBookingService);
+    }
+
+    /**
+     * Creates a BookingService with a new object
+     *
+     * @param newBookingService the object to create/update
+     * @return the created BookingService
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BookingService put(final BookingService newBookingService) throws ClientException {
+        return send(HttpMethod.PUT, newBookingService);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

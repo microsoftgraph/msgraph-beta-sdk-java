@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.OfficeUserCheckinSummary;
 import com.microsoft.graph.models.extensions.OfficeClientCheckinStatus;
+import com.microsoft.graph.models.extensions.OfficeUserCheckinSummary;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentCollectionResponse;
@@ -30,6 +30,14 @@ import java.util.Map;
  */
 public class OfficeClientConfiguration extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Checkin Statuses.
+     * 
+     */
+    @SerializedName("checkinStatuses")
+    @Expose
+    public java.util.List<OfficeClientCheckinStatus> checkinStatuses;
 
     /**
      * The Description.
@@ -62,14 +70,6 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
     @SerializedName("userCheckinSummary")
     @Expose
     public OfficeUserCheckinSummary userCheckinSummary;
-
-    /**
-     * The Checkin Statuses.
-     * 
-     */
-    @SerializedName("checkinStatuses")
-    @Expose
-    public java.util.List<OfficeClientCheckinStatus> checkinStatuses;
 
     /**
      * The Assignments.

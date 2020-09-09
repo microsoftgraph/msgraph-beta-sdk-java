@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
+import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.extensions.MacOSPrivacyAccessControlItem;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
@@ -31,12 +31,92 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
 
     /**
-     * The Compliant Apps List.
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     * The Air Drop Blocked.
+     * Indicates whether or not to allow AirDrop.
      */
-    @SerializedName("compliantAppsList")
+    @SerializedName("airDropBlocked")
     @Expose
-    public java.util.List<AppListItem> compliantAppsList;
+    public Boolean airDropBlocked;
+
+    /**
+     * The Air Print Blocked.
+     * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
+     */
+    @SerializedName("airPrintBlocked")
+    @Expose
+    public Boolean airPrintBlocked;
+
+    /**
+     * The Air Print Blocki Beacon Discovery.
+     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
+     */
+    @SerializedName("airPrintBlockiBeaconDiscovery")
+    @Expose
+    public Boolean airPrintBlockiBeaconDiscovery;
+
+    /**
+     * The Air Print Force Trusted TLS.
+     * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
+     */
+    @SerializedName("airPrintForceTrustedTLS")
+    @Expose
+    public Boolean airPrintForceTrustedTLS;
+
+    /**
+     * The Apple Watch Block Auto Unlock.
+     * Indicates whether or to block users from unlocking their Mac with Apple Watch.
+     */
+    @SerializedName("appleWatchBlockAutoUnlock")
+    @Expose
+    public Boolean appleWatchBlockAutoUnlock;
+
+    /**
+     * The Camera Blocked.
+     * Indicates whether or not to block the user from accessing the camera of the device.
+     */
+    @SerializedName("cameraBlocked")
+    @Expose
+    public Boolean cameraBlocked;
+
+    /**
+     * The Classroom App Block Remote Screen Observation.
+     * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    @SerializedName("classroomAppBlockRemoteScreenObservation")
+    @Expose
+    public Boolean classroomAppBlockRemoteScreenObservation;
+
+    /**
+     * The Classroom App Force Unprompted Screen Observation.
+     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    @SerializedName("classroomAppForceUnpromptedScreenObservation")
+    @Expose
+    public Boolean classroomAppForceUnpromptedScreenObservation;
+
+    /**
+     * The Classroom Force Automatically Join Classes.
+     * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    @SerializedName("classroomForceAutomaticallyJoinClasses")
+    @Expose
+    public Boolean classroomForceAutomaticallyJoinClasses;
+
+    /**
+     * The Classroom Force Request Permission To Leave Classes.
+     * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    @SerializedName("classroomForceRequestPermissionToLeaveClasses")
+    @Expose
+    public Boolean classroomForceRequestPermissionToLeaveClasses;
+
+    /**
+     * The Classroom Force Unprompted App And Device Lock.
+     * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    @SerializedName("classroomForceUnpromptedAppAndDeviceLock")
+    @Expose
+    public Boolean classroomForceUnpromptedAppAndDeviceLock;
 
     /**
      * The Compliant App List Type.
@@ -47,12 +127,180 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public AppListType compliantAppListType;
 
     /**
+     * The Compliant Apps List.
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("compliantAppsList")
+    @Expose
+    public java.util.List<AppListItem> compliantAppsList;
+
+    /**
+     * The Content Caching Blocked.
+     * Indicates whether or not to allow content caching.
+     */
+    @SerializedName("contentCachingBlocked")
+    @Expose
+    public Boolean contentCachingBlocked;
+
+    /**
+     * The Definition Lookup Blocked.
+     * Indicates whether or not to block definition lookup.
+     */
+    @SerializedName("definitionLookupBlocked")
+    @Expose
+    public Boolean definitionLookupBlocked;
+
+    /**
      * The Email In Domain Suffixes.
      * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      */
     @SerializedName("emailInDomainSuffixes")
     @Expose
     public java.util.List<String> emailInDomainSuffixes;
+
+    /**
+     * The ICloud Block Activity Continuation.
+     * Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
+     */
+    @SerializedName("iCloudBlockActivityContinuation")
+    @Expose
+    public Boolean iCloudBlockActivityContinuation;
+
+    /**
+     * The ICloud Block Address Book.
+     * Indicates whether or not to block iCloud from syncing contacts.
+     */
+    @SerializedName("iCloudBlockAddressBook")
+    @Expose
+    public Boolean iCloudBlockAddressBook;
+
+    /**
+     * The ICloud Block Bookmarks.
+     * Indicates whether or not to block iCloud from syncing bookmarks.
+     */
+    @SerializedName("iCloudBlockBookmarks")
+    @Expose
+    public Boolean iCloudBlockBookmarks;
+
+    /**
+     * The ICloud Block Calendar.
+     * Indicates whether or not to block iCloud from syncing calendars.
+     */
+    @SerializedName("iCloudBlockCalendar")
+    @Expose
+    public Boolean iCloudBlockCalendar;
+
+    /**
+     * The ICloud Block Document Sync.
+     * Indicates whether or not to block iCloud document sync.
+     */
+    @SerializedName("iCloudBlockDocumentSync")
+    @Expose
+    public Boolean iCloudBlockDocumentSync;
+
+    /**
+     * The ICloud Block Mail.
+     * Indicates whether or not to block iCloud from syncing mail.
+     */
+    @SerializedName("iCloudBlockMail")
+    @Expose
+    public Boolean iCloudBlockMail;
+
+    /**
+     * The ICloud Block Notes.
+     * Indicates whether or not to block iCloud from syncing notes.
+     */
+    @SerializedName("iCloudBlockNotes")
+    @Expose
+    public Boolean iCloudBlockNotes;
+
+    /**
+     * The ICloud Block Photo Library.
+     * Indicates whether or not to block iCloud Photo Library.
+     */
+    @SerializedName("iCloudBlockPhotoLibrary")
+    @Expose
+    public Boolean iCloudBlockPhotoLibrary;
+
+    /**
+     * The ICloud Block Reminders.
+     * Indicates whether or not to block iCloud from syncing reminders.
+     */
+    @SerializedName("iCloudBlockReminders")
+    @Expose
+    public Boolean iCloudBlockReminders;
+
+    /**
+     * The ITunes Block File Sharing.
+     * Indicates whether or not to block files from being transferred using iTunes.
+     */
+    @SerializedName("iTunesBlockFileSharing")
+    @Expose
+    public Boolean iTunesBlockFileSharing;
+
+    /**
+     * The ITunes Block Music Service.
+     * Indicates whether or not to block Music service and revert Music app to classic mode.
+     */
+    @SerializedName("iTunesBlockMusicService")
+    @Expose
+    public Boolean iTunesBlockMusicService;
+
+    /**
+     * The Keyboard Block Dictation.
+     * Indicates whether or not to block the user from using dictation input.
+     */
+    @SerializedName("keyboardBlockDictation")
+    @Expose
+    public Boolean keyboardBlockDictation;
+
+    /**
+     * The Keychain Block Cloud Sync.
+     * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
+     */
+    @SerializedName("keychainBlockCloudSync")
+    @Expose
+    public Boolean keychainBlockCloudSync;
+
+    /**
+     * The Password Block Air Drop Sharing.
+     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
+     */
+    @SerializedName("passwordBlockAirDropSharing")
+    @Expose
+    public Boolean passwordBlockAirDropSharing;
+
+    /**
+     * The Password Block Auto Fill.
+     * Indicates whether or not to block the AutoFill Passwords feature.
+     */
+    @SerializedName("passwordBlockAutoFill")
+    @Expose
+    public Boolean passwordBlockAutoFill;
+
+    /**
+     * The Password Block Fingerprint Unlock.
+     * Indicates whether or not to block fingerprint unlock.
+     */
+    @SerializedName("passwordBlockFingerprintUnlock")
+    @Expose
+    public Boolean passwordBlockFingerprintUnlock;
+
+    /**
+     * The Password Block Modification.
+     * Indicates whether or not to allow passcode modification.
+     */
+    @SerializedName("passwordBlockModification")
+    @Expose
+    public Boolean passwordBlockModification;
+
+    /**
+     * The Password Block Proximity Requests.
+     * Indicates whether or not to block requesting passwords from nearby devices.
+     */
+    @SerializedName("passwordBlockProximityRequests")
+    @Expose
+    public Boolean passwordBlockProximityRequests;
 
     /**
      * The Password Block Simple.
@@ -111,14 +359,6 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Integer passwordPreviousPasswordBlockCount;
 
     /**
-     * The Password Required Type.
-     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public RequiredPasswordType passwordRequiredType;
-
-    /**
      * The Password Required.
      * Whether or not to require a password.
      */
@@ -127,36 +367,20 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Boolean passwordRequired;
 
     /**
-     * The Keychain Block Cloud Sync.
-     * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
+     * The Password Required Type.
+     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("keychainBlockCloudSync")
+    @SerializedName("passwordRequiredType")
     @Expose
-    public Boolean keychainBlockCloudSync;
+    public RequiredPasswordType passwordRequiredType;
 
     /**
-     * The Air Print Blocked.
-     * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
+     * The Privacy Access Controls.
+     * List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("airPrintBlocked")
+    @SerializedName("privacyAccessControls")
     @Expose
-    public Boolean airPrintBlocked;
-
-    /**
-     * The Air Print Force Trusted TLS.
-     * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
-     */
-    @SerializedName("airPrintForceTrustedTLS")
-    @Expose
-    public Boolean airPrintForceTrustedTLS;
-
-    /**
-     * The Air Print Blocki Beacon Discovery.
-     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
-     */
-    @SerializedName("airPrintBlockiBeaconDiscovery")
-    @Expose
-    public Boolean airPrintBlockiBeaconDiscovery;
+    public java.util.List<MacOSPrivacyAccessControlItem> privacyAccessControls;
 
     /**
      * The Safari Block Autofill.
@@ -167,164 +391,12 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Boolean safariBlockAutofill;
 
     /**
-     * The Camera Blocked.
-     * Indicates whether or not to block the user from accessing the camera of the device.
+     * The Screen Capture Blocked.
+     * Indicates whether or not to block the user from taking Screenshots.
      */
-    @SerializedName("cameraBlocked")
+    @SerializedName("screenCaptureBlocked")
     @Expose
-    public Boolean cameraBlocked;
-
-    /**
-     * The ITunes Block Music Service.
-     * Indicates whether or not to block Music service and revert Music app to classic mode.
-     */
-    @SerializedName("iTunesBlockMusicService")
-    @Expose
-    public Boolean iTunesBlockMusicService;
-
-    /**
-     * The Spotlight Block Internet Results.
-     * Indicates whether or not to block Spotlight from returning any results from an Internet search.
-     */
-    @SerializedName("spotlightBlockInternetResults")
-    @Expose
-    public Boolean spotlightBlockInternetResults;
-
-    /**
-     * The Keyboard Block Dictation.
-     * Indicates whether or not to block the user from using dictation input.
-     */
-    @SerializedName("keyboardBlockDictation")
-    @Expose
-    public Boolean keyboardBlockDictation;
-
-    /**
-     * The Definition Lookup Blocked.
-     * Indicates whether or not to block definition lookup.
-     */
-    @SerializedName("definitionLookupBlocked")
-    @Expose
-    public Boolean definitionLookupBlocked;
-
-    /**
-     * The Apple Watch Block Auto Unlock.
-     * Indicates whether or to block users from unlocking their Mac with Apple Watch.
-     */
-    @SerializedName("appleWatchBlockAutoUnlock")
-    @Expose
-    public Boolean appleWatchBlockAutoUnlock;
-
-    /**
-     * The ITunes Block File Sharing.
-     * Indicates whether or not to block files from being transferred using iTunes.
-     */
-    @SerializedName("iTunesBlockFileSharing")
-    @Expose
-    public Boolean iTunesBlockFileSharing;
-
-    /**
-     * The ICloud Block Document Sync.
-     * Indicates whether or not to block iCloud document sync.
-     */
-    @SerializedName("iCloudBlockDocumentSync")
-    @Expose
-    public Boolean iCloudBlockDocumentSync;
-
-    /**
-     * The ICloud Block Mail.
-     * Indicates whether or not to block iCloud from syncing mail.
-     */
-    @SerializedName("iCloudBlockMail")
-    @Expose
-    public Boolean iCloudBlockMail;
-
-    /**
-     * The ICloud Block Address Book.
-     * Indicates whether or not to block iCloud from syncing contacts.
-     */
-    @SerializedName("iCloudBlockAddressBook")
-    @Expose
-    public Boolean iCloudBlockAddressBook;
-
-    /**
-     * The ICloud Block Calendar.
-     * Indicates whether or not to block iCloud from syncing calendars.
-     */
-    @SerializedName("iCloudBlockCalendar")
-    @Expose
-    public Boolean iCloudBlockCalendar;
-
-    /**
-     * The ICloud Block Reminders.
-     * Indicates whether or not to block iCloud from syncing reminders.
-     */
-    @SerializedName("iCloudBlockReminders")
-    @Expose
-    public Boolean iCloudBlockReminders;
-
-    /**
-     * The ICloud Block Bookmarks.
-     * Indicates whether or not to block iCloud from syncing bookmarks.
-     */
-    @SerializedName("iCloudBlockBookmarks")
-    @Expose
-    public Boolean iCloudBlockBookmarks;
-
-    /**
-     * The ICloud Block Notes.
-     * Indicates whether or not to block iCloud from syncing notes.
-     */
-    @SerializedName("iCloudBlockNotes")
-    @Expose
-    public Boolean iCloudBlockNotes;
-
-    /**
-     * The Air Drop Blocked.
-     * Indicates whether or not to allow AirDrop.
-     */
-    @SerializedName("airDropBlocked")
-    @Expose
-    public Boolean airDropBlocked;
-
-    /**
-     * The Password Block Modification.
-     * Indicates whether or not to allow passcode modification.
-     */
-    @SerializedName("passwordBlockModification")
-    @Expose
-    public Boolean passwordBlockModification;
-
-    /**
-     * The Password Block Fingerprint Unlock.
-     * Indicates whether or not to block fingerprint unlock.
-     */
-    @SerializedName("passwordBlockFingerprintUnlock")
-    @Expose
-    public Boolean passwordBlockFingerprintUnlock;
-
-    /**
-     * The Password Block Auto Fill.
-     * Indicates whether or not to block the AutoFill Passwords feature.
-     */
-    @SerializedName("passwordBlockAutoFill")
-    @Expose
-    public Boolean passwordBlockAutoFill;
-
-    /**
-     * The Password Block Proximity Requests.
-     * Indicates whether or not to block requesting passwords from nearby devices.
-     */
-    @SerializedName("passwordBlockProximityRequests")
-    @Expose
-    public Boolean passwordBlockProximityRequests;
-
-    /**
-     * The Password Block Air Drop Sharing.
-     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
-     */
-    @SerializedName("passwordBlockAirDropSharing")
-    @Expose
-    public Boolean passwordBlockAirDropSharing;
+    public Boolean screenCaptureBlocked;
 
     /**
      * The Software Updates Enforced Delay In Days.
@@ -343,84 +415,12 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Boolean softwareUpdatesForceDelayed;
 
     /**
-     * The Content Caching Blocked.
-     * Indicates whether or not to allow content caching.
+     * The Spotlight Block Internet Results.
+     * Indicates whether or not to block Spotlight from returning any results from an Internet search.
      */
-    @SerializedName("contentCachingBlocked")
+    @SerializedName("spotlightBlockInternetResults")
     @Expose
-    public Boolean contentCachingBlocked;
-
-    /**
-     * The ICloud Block Photo Library.
-     * Indicates whether or not to block iCloud Photo Library.
-     */
-    @SerializedName("iCloudBlockPhotoLibrary")
-    @Expose
-    public Boolean iCloudBlockPhotoLibrary;
-
-    /**
-     * The Screen Capture Blocked.
-     * Indicates whether or not to block the user from taking Screenshots.
-     */
-    @SerializedName("screenCaptureBlocked")
-    @Expose
-    public Boolean screenCaptureBlocked;
-
-    /**
-     * The Classroom App Block Remote Screen Observation.
-     * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     */
-    @SerializedName("classroomAppBlockRemoteScreenObservation")
-    @Expose
-    public Boolean classroomAppBlockRemoteScreenObservation;
-
-    /**
-     * The Classroom App Force Unprompted Screen Observation.
-     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     */
-    @SerializedName("classroomAppForceUnpromptedScreenObservation")
-    @Expose
-    public Boolean classroomAppForceUnpromptedScreenObservation;
-
-    /**
-     * The Classroom Force Automatically Join Classes.
-     * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     */
-    @SerializedName("classroomForceAutomaticallyJoinClasses")
-    @Expose
-    public Boolean classroomForceAutomaticallyJoinClasses;
-
-    /**
-     * The Classroom Force Request Permission To Leave Classes.
-     * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     */
-    @SerializedName("classroomForceRequestPermissionToLeaveClasses")
-    @Expose
-    public Boolean classroomForceRequestPermissionToLeaveClasses;
-
-    /**
-     * The Classroom Force Unprompted App And Device Lock.
-     * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     */
-    @SerializedName("classroomForceUnpromptedAppAndDeviceLock")
-    @Expose
-    public Boolean classroomForceUnpromptedAppAndDeviceLock;
-
-    /**
-     * The ICloud Block Activity Continuation.
-     * Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
-     */
-    @SerializedName("iCloudBlockActivityContinuation")
-    @Expose
-    public Boolean iCloudBlockActivityContinuation;
-
-    /**
-     * The Privacy Access Controls.
-     * List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("privacyAccessControls")
-    @Expose
-    public java.util.List<MacOSPrivacyAccessControlItem> privacyAccessControls;
+    public Boolean spotlightBlockInternetResults;
 
 
     /**

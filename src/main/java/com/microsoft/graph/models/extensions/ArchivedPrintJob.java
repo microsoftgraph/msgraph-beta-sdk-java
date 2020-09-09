@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PrintJobProcessingState;
 import com.microsoft.graph.models.extensions.UserIdentity;
+import com.microsoft.graph.models.generated.PrintJobProcessingState;
 
 
 import com.google.gson.JsonObject;
@@ -38,54 +38,6 @@ public class ArchivedPrintJob implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * 
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
-     * The Printer Id.
-     * 
-     */
-    @SerializedName("printerId")
-    @Expose
-    public String printerId;
-
-    /**
-     * The Processing State.
-     * 
-     */
-    @SerializedName("processingState")
-    @Expose
-    public PrintJobProcessingState processingState;
-
-    /**
-     * The Created Date Time.
-     * 
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Acquired Date Time.
-     * 
-     */
-    @SerializedName("acquiredDateTime")
-    @Expose
-    public java.util.Calendar acquiredDateTime;
-
-    /**
-     * The Completion Date Time.
-     * 
-     */
-    @SerializedName("completionDateTime")
-    @Expose
-    public java.util.Calendar completionDateTime;
-
-    /**
      * The Acquired By Printer.
      * 
      */
@@ -94,20 +46,12 @@ public class ArchivedPrintJob implements IJsonBackedObject {
     public Boolean acquiredByPrinter;
 
     /**
-     * The Copies Printed.
+     * The Acquired Date Time.
      * 
      */
-    @SerializedName("copiesPrinted")
+    @SerializedName("acquiredDateTime")
     @Expose
-    public Integer copiesPrinted;
-
-    /**
-     * The Page Count.
-     * 
-     */
-    @SerializedName("pageCount")
-    @Expose
-    public Integer pageCount;
+    public java.util.Calendar acquiredDateTime;
 
     /**
      * The Black And White Page Count.
@@ -126,12 +70,36 @@ public class ArchivedPrintJob implements IJsonBackedObject {
     public Integer colorPageCount;
 
     /**
-     * The Simplex Page Count.
+     * The Completion Date Time.
      * 
      */
-    @SerializedName("simplexPageCount")
+    @SerializedName("completionDateTime")
     @Expose
-    public Integer simplexPageCount;
+    public java.util.Calendar completionDateTime;
+
+    /**
+     * The Copies Printed.
+     * 
+     */
+    @SerializedName("copiesPrinted")
+    @Expose
+    public Integer copiesPrinted;
+
+    /**
+     * The Created By.
+     * 
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public UserIdentity createdBy;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Duplex Page Count.
@@ -142,12 +110,44 @@ public class ArchivedPrintJob implements IJsonBackedObject {
     public Integer duplexPageCount;
 
     /**
-     * The Created By.
+     * The Id.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName("id")
     @Expose
-    public UserIdentity createdBy;
+    public String id;
+
+    /**
+     * The Page Count.
+     * 
+     */
+    @SerializedName("pageCount")
+    @Expose
+    public Integer pageCount;
+
+    /**
+     * The Printer Id.
+     * 
+     */
+    @SerializedName("printerId")
+    @Expose
+    public String printerId;
+
+    /**
+     * The Processing State.
+     * 
+     */
+    @SerializedName("processingState")
+    @Expose
+    public PrintJobProcessingState processingState;
+
+    /**
+     * The Simplex Page Count.
+     * 
+     */
+    @SerializedName("simplexPageCount")
+    @Expose
+    public Integer simplexPageCount;
 
 
     /**

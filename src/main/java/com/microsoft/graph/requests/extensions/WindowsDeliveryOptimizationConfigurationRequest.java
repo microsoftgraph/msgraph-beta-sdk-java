@@ -112,6 +112,27 @@ public class WindowsDeliveryOptimizationConfigurationRequest extends BaseRequest
     }
 
     /**
+     * Creates a WindowsDeliveryOptimizationConfiguration with a new object
+     *
+     * @param newWindowsDeliveryOptimizationConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration, final ICallback<WindowsDeliveryOptimizationConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsDeliveryOptimizationConfiguration);
+    }
+
+    /**
+     * Creates a WindowsDeliveryOptimizationConfiguration with a new object
+     *
+     * @param newWindowsDeliveryOptimizationConfiguration the object to create/update
+     * @return the created WindowsDeliveryOptimizationConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsDeliveryOptimizationConfiguration put(final WindowsDeliveryOptimizationConfiguration newWindowsDeliveryOptimizationConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsDeliveryOptimizationConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

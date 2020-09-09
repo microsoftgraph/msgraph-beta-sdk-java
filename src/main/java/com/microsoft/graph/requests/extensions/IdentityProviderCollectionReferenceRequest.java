@@ -40,7 +40,7 @@ public class IdentityProviderCollectionReferenceRequest extends BaseCollectionRe
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identityProviders/" + newIdentityProvider.id);
         new IdentityProviderWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityProvider, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class IdentityProviderCollectionReferenceRequest extends BaseCollectionRe
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identityProviders/" + newIdentityProvider.id);
         return new IdentityProviderWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newIdentityProvider, body);
     }
     /**

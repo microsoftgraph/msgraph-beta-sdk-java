@@ -62,14 +62,14 @@ public class DeviceManagementDerivedCredentialSettingsCollectionRequest extends 
     public void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<DeviceManagementDerivedCredentialSettings> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementDerivedCredentialSettingsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementDerivedCredentialSettings, callback);
     }
 
     public DeviceManagementDerivedCredentialSettings post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementDerivedCredentialSettingsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementDerivedCredentialSettings);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementDerivedCredentialSettingsCollectionRequest extends 
         return (DeviceManagementDerivedCredentialSettingsCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementDerivedCredentialSettingsCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementDerivedCredentialSettingsCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementDerivedCredentialSettingsCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementDerivedCredentialSettingsCollectionRequest)this;
+    }
     public IDeviceManagementDerivedCredentialSettingsCollectionPage buildFromResponse(final DeviceManagementDerivedCredentialSettingsCollectionResponse response) {
         final IDeviceManagementDerivedCredentialSettingsCollectionRequestBuilder builder;
         if (response.nextLink != null) {

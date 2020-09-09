@@ -27,12 +27,12 @@ public class SideLoadingKey extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Value.
-     * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
+     * The Description.
+     * Side Loading Key description displayed to the ITPro Admins..
      */
-    @SerializedName("value")
+    @SerializedName("description")
     @Expose
-    public String value;
+    public String description;
 
     /**
      * The Display Name.
@@ -43,12 +43,12 @@ public class SideLoadingKey extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Description.
-     * Side Loading Key description displayed to the ITPro Admins..
+     * The Last Updated Date Time.
+     * Side Loading Key Last Updated Date displayed to the ITPro Admins.
      */
-    @SerializedName("description")
+    @SerializedName("lastUpdatedDateTime")
     @Expose
-    public String description;
+    public String lastUpdatedDateTime;
 
     /**
      * The Total Activation.
@@ -59,12 +59,12 @@ public class SideLoadingKey extends Entity implements IJsonBackedObject {
     public Integer totalActivation;
 
     /**
-     * The Last Updated Date Time.
-     * Side Loading Key Last Updated Date displayed to the ITPro Admins.
+     * The Value.
+     * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName("value")
     @Expose
-    public String lastUpdatedDateTime;
+    public String value;
 
 
     /**

@@ -112,6 +112,27 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
     }
 
     /**
+     * Creates a IpSecurityProfile with a new object
+     *
+     * @param newIpSecurityProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IpSecurityProfile newIpSecurityProfile, final ICallback<IpSecurityProfile> callback) {
+        send(HttpMethod.PUT, callback, newIpSecurityProfile);
+    }
+
+    /**
+     * Creates a IpSecurityProfile with a new object
+     *
+     * @param newIpSecurityProfile the object to create/update
+     * @return the created IpSecurityProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IpSecurityProfile put(final IpSecurityProfile newIpSecurityProfile) throws ClientException {
+        return send(HttpMethod.PUT, newIpSecurityProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -9,14 +9,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -133,6 +133,27 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      */
     public WindowsInformationProtection post(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
         return send(HttpMethod.POST, newWindowsInformationProtection);
+    }
+
+    /**
+     * Creates a WindowsInformationProtection with a new object
+     *
+     * @param newWindowsInformationProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback) {
+        send(HttpMethod.PUT, callback, newWindowsInformationProtection);
+    }
+
+    /**
+     * Creates a WindowsInformationProtection with a new object
+     *
+     * @param newWindowsInformationProtection the object to create/update
+     * @return the created WindowsInformationProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsInformationProtection put(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsInformationProtection);
     }
 
     /**

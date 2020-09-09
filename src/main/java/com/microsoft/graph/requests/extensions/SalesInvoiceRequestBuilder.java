@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionReques
 import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
@@ -63,12 +63,14 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
     }
 
 
-    public ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
-        return new SalesInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines"), getClient(), null);
-    }
 
-    public ISalesInvoiceLineRequestBuilder salesInvoiceLines(final String id) {
-        return new SalesInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    public ICurrencyRequestBuilder currency() {
+        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
@@ -81,21 +83,19 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
     }
 
     /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    public ICurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     public IPaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    }
+    public ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
+        return new SalesInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines"), getClient(), null);
+    }
+
+    public ISalesInvoiceLineRequestBuilder salesInvoiceLines(final String id) {
+        return new SalesInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines") + "/" + id, getClient(), null);
     }
 
     /**
@@ -107,20 +107,20 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
         return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
     }
 
-    public ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend() {
-        return new SalesInvoiceCancelAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelAndSend"), getClient(), null);
-    }
-
     public ISalesInvoiceCancelRequestBuilder cancel() {
         return new SalesInvoiceCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 
-    public ISalesInvoicePostAndSendRequestBuilder postAndSend() {
-        return new SalesInvoicePostAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.postAndSend"), getClient(), null);
+    public ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend() {
+        return new SalesInvoiceCancelAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelAndSend"), getClient(), null);
     }
 
     public ISalesInvoicePostRequestBuilder post() {
         return new SalesInvoicePostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
+    }
+
+    public ISalesInvoicePostAndSendRequestBuilder postAndSend() {
+        return new SalesInvoicePostAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.postAndSend"), getClient(), null);
     }
 
     public ISalesInvoiceSendRequestBuilder send() {

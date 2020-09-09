@@ -56,19 +56,19 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
     }
 
 
-    public IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression() {
-        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression"), getClient(), null);
-    }
-
-    public IUserExperienceAnalyticsMetricRequestBuilder modelRegression(final String id) {
-        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression") + "/" + id, getClient(), null);
-    }
     public IUserExperienceAnalyticsMetricCollectionRequestBuilder manufacturerRegression() {
         return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression"), getClient(), null);
     }
 
     public IUserExperienceAnalyticsMetricRequestBuilder manufacturerRegression(final String id) {
         return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression") + "/" + id, getClient(), null);
+    }
+    public IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression() {
+        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsMetricRequestBuilder modelRegression(final String id) {
+        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression") + "/" + id, getClient(), null);
     }
     public IUserExperienceAnalyticsMetricCollectionRequestBuilder operatingSystemRegression() {
         return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression"), getClient(), null);

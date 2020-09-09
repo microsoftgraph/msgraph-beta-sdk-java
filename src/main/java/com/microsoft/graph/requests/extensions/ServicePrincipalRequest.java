@@ -18,26 +18,26 @@ import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionReq
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -149,6 +149,27 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      */
     public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
         return send(HttpMethod.POST, newServicePrincipal);
+    }
+
+    /**
+     * Creates a ServicePrincipal with a new object
+     *
+     * @param newServicePrincipal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback) {
+        send(HttpMethod.PUT, callback, newServicePrincipal);
+    }
+
+    /**
+     * Creates a ServicePrincipal with a new object
+     *
+     * @param newServicePrincipal the object to create/update
+     * @return the created ServicePrincipal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ServicePrincipal put(final ServicePrincipal newServicePrincipal) throws ClientException {
+        return send(HttpMethod.PUT, newServicePrincipal);
     }
 
     /**

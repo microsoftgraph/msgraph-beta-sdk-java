@@ -27,46 +27,6 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Under Limit.
-     * 
-     */
-    @SerializedName("underLimit")
-    @Expose
-    public Long underLimit;
-
-    /**
-     * The Warning Issued.
-     * 
-     */
-    @SerializedName("warningIssued")
-    @Expose
-    public Long warningIssued;
-
-    /**
-     * The Send Prohibited.
-     * 
-     */
-    @SerializedName("sendProhibited")
-    @Expose
-    public Long sendProhibited;
-
-    /**
-     * The Send Receive Prohibited.
-     * 
-     */
-    @SerializedName("sendReceiveProhibited")
-    @Expose
-    public Long sendReceiveProhibited;
-
-    /**
      * The Indeterminate.
      * 
      */
@@ -89,6 +49,46 @@ public class MailboxUsageQuotaStatusMailboxCounts extends Entity implements IJso
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Send Prohibited.
+     * 
+     */
+    @SerializedName("sendProhibited")
+    @Expose
+    public Long sendProhibited;
+
+    /**
+     * The Send Receive Prohibited.
+     * 
+     */
+    @SerializedName("sendReceiveProhibited")
+    @Expose
+    public Long sendReceiveProhibited;
+
+    /**
+     * The Under Limit.
+     * 
+     */
+    @SerializedName("underLimit")
+    @Expose
+    public Long underLimit;
+
+    /**
+     * The Warning Issued.
+     * 
+     */
+    @SerializedName("warningIssued")
+    @Expose
+    public Long warningIssued;
 
 
     /**

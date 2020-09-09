@@ -112,6 +112,27 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a DirectoryRoleAccessReviewPolicy with a new object
+     *
+     * @param newDirectoryRoleAccessReviewPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<DirectoryRoleAccessReviewPolicy> callback) {
+        send(HttpMethod.PUT, callback, newDirectoryRoleAccessReviewPolicy);
+    }
+
+    /**
+     * Creates a DirectoryRoleAccessReviewPolicy with a new object
+     *
+     * @param newDirectoryRoleAccessReviewPolicy the object to create/update
+     * @return the created DirectoryRoleAccessReviewPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DirectoryRoleAccessReviewPolicy put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newDirectoryRoleAccessReviewPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -27,20 +27,20 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
 
 
     /**
-     * The Vpn Configuration Id.
-     * The VPN Configuration Id to apply for this app.
-     */
-    @SerializedName("vpnConfigurationId")
-    @Expose
-    public String vpnConfigurationId;
-
-    /**
      * The Uninstall On Device Removal.
      * Whether or not to uninstall the app when device is removed from Intune.
      */
     @SerializedName("uninstallOnDeviceRemoval")
     @Expose
     public Boolean uninstallOnDeviceRemoval;
+
+    /**
+     * The Vpn Configuration Id.
+     * The VPN Configuration Id to apply for this app.
+     */
+    @SerializedName("vpnConfigurationId")
+    @Expose
+    public String vpnConfigurationId;
 
 
     /**

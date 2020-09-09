@@ -80,6 +80,23 @@ public interface IAndroidDeviceOwnerImportedPFXCertificateProfileRequest extends
     AndroidDeviceOwnerImportedPFXCertificateProfile post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceOwnerImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback);
+
+    /**
+     * Posts a AndroidDeviceOwnerImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
+     * @return the created AndroidDeviceOwnerImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceOwnerImportedPFXCertificateProfile put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IDeviceComplianceScriptRunSummaryRequest extends IHttpRequest {
     DeviceComplianceScriptRunSummary post(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceScriptRunSummary with a new object
+     *
+     * @param newDeviceComplianceScriptRunSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<DeviceComplianceScriptRunSummary> callback);
+
+    /**
+     * Posts a DeviceComplianceScriptRunSummary with a new object
+     *
+     * @param newDeviceComplianceScriptRunSummary the object to create/update
+     * @return the created DeviceComplianceScriptRunSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceScriptRunSummary put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

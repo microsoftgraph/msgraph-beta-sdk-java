@@ -62,14 +62,14 @@ public class CredentialUserRegistrationDetailsCollectionRequest extends BaseColl
     public void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CredentialUserRegistrationDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCredentialUserRegistrationDetails, callback);
     }
 
     public CredentialUserRegistrationDetails post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CredentialUserRegistrationDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCredentialUserRegistrationDetails);
     }
 
@@ -106,6 +106,27 @@ public class CredentialUserRegistrationDetailsCollectionRequest extends BaseColl
         return (CredentialUserRegistrationDetailsCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICredentialUserRegistrationDetailsCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CredentialUserRegistrationDetailsCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICredentialUserRegistrationDetailsCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICredentialUserRegistrationDetailsCollectionRequest)this;
+    }
     public ICredentialUserRegistrationDetailsCollectionPage buildFromResponse(final CredentialUserRegistrationDetailsCollectionResponse response) {
         final ICredentialUserRegistrationDetailsCollectionRequestBuilder builder;
         if (response.nextLink != null) {

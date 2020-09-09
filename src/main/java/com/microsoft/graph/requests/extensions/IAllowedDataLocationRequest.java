@@ -80,6 +80,23 @@ public interface IAllowedDataLocationRequest extends IHttpRequest {
     AllowedDataLocation post(final AllowedDataLocation newAllowedDataLocation) throws ClientException;
 
     /**
+     * Posts a AllowedDataLocation with a new object
+     *
+     * @param newAllowedDataLocation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<AllowedDataLocation> callback);
+
+    /**
+     * Posts a AllowedDataLocation with a new object
+     *
+     * @param newAllowedDataLocation the object to create/update
+     * @return the created AllowedDataLocation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AllowedDataLocation put(final AllowedDataLocation newAllowedDataLocation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

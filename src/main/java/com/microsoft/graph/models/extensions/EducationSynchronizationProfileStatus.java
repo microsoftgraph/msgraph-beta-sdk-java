@@ -28,20 +28,20 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public EducationSynchronizationStatus status;
-
-    /**
      * The Last Synchronization Date Time.
      * 
      */
     @SerializedName("lastSynchronizationDateTime")
     @Expose
     public java.util.Calendar lastSynchronizationDateTime;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public EducationSynchronizationStatus status;
 
 
     /**

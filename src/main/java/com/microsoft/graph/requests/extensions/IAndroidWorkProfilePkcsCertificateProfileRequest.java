@@ -80,6 +80,23 @@ public interface IAndroidWorkProfilePkcsCertificateProfileRequest extends IHttpR
     AndroidWorkProfilePkcsCertificateProfile post(final AndroidWorkProfilePkcsCertificateProfile newAndroidWorkProfilePkcsCertificateProfile) throws ClientException;
 
     /**
+     * Posts a AndroidWorkProfilePkcsCertificateProfile with a new object
+     *
+     * @param newAndroidWorkProfilePkcsCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidWorkProfilePkcsCertificateProfile newAndroidWorkProfilePkcsCertificateProfile, final ICallback<AndroidWorkProfilePkcsCertificateProfile> callback);
+
+    /**
+     * Posts a AndroidWorkProfilePkcsCertificateProfile with a new object
+     *
+     * @param newAndroidWorkProfilePkcsCertificateProfile the object to create/update
+     * @return the created AndroidWorkProfilePkcsCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidWorkProfilePkcsCertificateProfile put(final AndroidWorkProfilePkcsCertificateProfile newAndroidWorkProfilePkcsCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

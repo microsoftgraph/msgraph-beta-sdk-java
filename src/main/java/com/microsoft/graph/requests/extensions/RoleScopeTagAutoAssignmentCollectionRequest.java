@@ -62,14 +62,14 @@ public class RoleScopeTagAutoAssignmentCollectionRequest extends BaseCollectionR
     public void post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment, final ICallback<RoleScopeTagAutoAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleScopeTagAutoAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleScopeTagAutoAssignment, callback);
     }
 
     public RoleScopeTagAutoAssignment post(final RoleScopeTagAutoAssignment newRoleScopeTagAutoAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleScopeTagAutoAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleScopeTagAutoAssignment);
     }
 
@@ -106,6 +106,27 @@ public class RoleScopeTagAutoAssignmentCollectionRequest extends BaseCollectionR
         return (RoleScopeTagAutoAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRoleScopeTagAutoAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RoleScopeTagAutoAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRoleScopeTagAutoAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRoleScopeTagAutoAssignmentCollectionRequest)this;
+    }
     public IRoleScopeTagAutoAssignmentCollectionPage buildFromResponse(final RoleScopeTagAutoAssignmentCollectionResponse response) {
         final IRoleScopeTagAutoAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

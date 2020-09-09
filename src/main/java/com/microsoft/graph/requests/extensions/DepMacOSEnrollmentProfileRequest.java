@@ -112,6 +112,27 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
     }
 
     /**
+     * Creates a DepMacOSEnrollmentProfile with a new object
+     *
+     * @param newDepMacOSEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<DepMacOSEnrollmentProfile> callback) {
+        send(HttpMethod.PUT, callback, newDepMacOSEnrollmentProfile);
+    }
+
+    /**
+     * Creates a DepMacOSEnrollmentProfile with a new object
+     *
+     * @param newDepMacOSEnrollmentProfile the object to create/update
+     * @return the created DepMacOSEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DepMacOSEnrollmentProfile put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException {
+        return send(HttpMethod.PUT, newDepMacOSEnrollmentProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

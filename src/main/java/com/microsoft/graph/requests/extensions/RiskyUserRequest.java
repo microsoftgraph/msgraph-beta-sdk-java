@@ -131,6 +131,27 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
     }
 
     /**
+     * Creates a RiskyUser with a new object
+     *
+     * @param newRiskyUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RiskyUser newRiskyUser, final ICallback<RiskyUser> callback) {
+        send(HttpMethod.PUT, callback, newRiskyUser);
+    }
+
+    /**
+     * Creates a RiskyUser with a new object
+     *
+     * @param newRiskyUser the object to create/update
+     * @return the created RiskyUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RiskyUser put(final RiskyUser newRiskyUser) throws ClientException {
+        return send(HttpMethod.PUT, newRiskyUser);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

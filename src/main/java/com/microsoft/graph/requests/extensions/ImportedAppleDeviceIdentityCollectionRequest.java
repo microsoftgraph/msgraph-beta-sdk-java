@@ -63,14 +63,14 @@ public class ImportedAppleDeviceIdentityCollectionRequest extends BaseCollection
     public void post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity, final ICallback<ImportedAppleDeviceIdentity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ImportedAppleDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newImportedAppleDeviceIdentity, callback);
     }
 
     public ImportedAppleDeviceIdentity post(final ImportedAppleDeviceIdentity newImportedAppleDeviceIdentity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ImportedAppleDeviceIdentityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newImportedAppleDeviceIdentity);
     }
 
@@ -107,6 +107,27 @@ public class ImportedAppleDeviceIdentityCollectionRequest extends BaseCollection
         return (ImportedAppleDeviceIdentityCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IImportedAppleDeviceIdentityCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ImportedAppleDeviceIdentityCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IImportedAppleDeviceIdentityCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IImportedAppleDeviceIdentityCollectionRequest)this;
+    }
     public IImportedAppleDeviceIdentityCollectionPage buildFromResponse(final ImportedAppleDeviceIdentityCollectionResponse response) {
         final IImportedAppleDeviceIdentityCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -27,44 +27,20 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Report Refresh Date.
+     * The Active File Count.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("activeFileCount")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public Long activeFileCount;
 
     /**
-     * The Site Id.
+     * The File Count.
      * 
      */
-    @SerializedName("siteId")
+    @SerializedName("fileCount")
     @Expose
-    public java.util.UUID siteId;
-
-    /**
-     * The Site Url.
-     * 
-     */
-    @SerializedName("siteUrl")
-    @Expose
-    public String siteUrl;
-
-    /**
-     * The Owner Display Name.
-     * 
-     */
-    @SerializedName("ownerDisplayName")
-    @Expose
-    public String ownerDisplayName;
-
-    /**
-     * The Owner Principal Name.
-     * 
-     */
-    @SerializedName("ownerPrincipalName")
-    @Expose
-    public String ownerPrincipalName;
+    public Long fileCount;
 
     /**
      * The Is Deleted.
@@ -83,20 +59,20 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
     public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
     /**
-     * The File Count.
+     * The Owner Display Name.
      * 
      */
-    @SerializedName("fileCount")
+    @SerializedName("ownerDisplayName")
     @Expose
-    public Long fileCount;
+    public String ownerDisplayName;
 
     /**
-     * The Active File Count.
+     * The Owner Principal Name.
      * 
      */
-    @SerializedName("activeFileCount")
+    @SerializedName("ownerPrincipalName")
     @Expose
-    public Long activeFileCount;
+    public String ownerPrincipalName;
 
     /**
      * The Page View Count.
@@ -107,28 +83,20 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
     public Long pageViewCount;
 
     /**
-     * The Visited Page Count.
+     * The Report Period.
      * 
      */
-    @SerializedName("visitedPageCount")
+    @SerializedName("reportPeriod")
     @Expose
-    public Long visitedPageCount;
+    public String reportPeriod;
 
     /**
-     * The Storage Used In Bytes.
+     * The Report Refresh Date.
      * 
      */
-    @SerializedName("storageUsedInBytes")
+    @SerializedName("reportRefreshDate")
     @Expose
-    public Long storageUsedInBytes;
-
-    /**
-     * The Storage Allocated In Bytes.
-     * 
-     */
-    @SerializedName("storageAllocatedInBytes")
-    @Expose
-    public Long storageAllocatedInBytes;
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The Root Web Template.
@@ -139,12 +107,44 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
     public String rootWebTemplate;
 
     /**
-     * The Report Period.
+     * The Site Id.
      * 
      */
-    @SerializedName("reportPeriod")
+    @SerializedName("siteId")
     @Expose
-    public String reportPeriod;
+    public java.util.UUID siteId;
+
+    /**
+     * The Site Url.
+     * 
+     */
+    @SerializedName("siteUrl")
+    @Expose
+    public String siteUrl;
+
+    /**
+     * The Storage Allocated In Bytes.
+     * 
+     */
+    @SerializedName("storageAllocatedInBytes")
+    @Expose
+    public Long storageAllocatedInBytes;
+
+    /**
+     * The Storage Used In Bytes.
+     * 
+     */
+    @SerializedName("storageUsedInBytes")
+    @Expose
+    public Long storageUsedInBytes;
+
+    /**
+     * The Visited Page Count.
+     * 
+     */
+    @SerializedName("visitedPageCount")
+    @Expose
+    public Long visitedPageCount;
 
 
     /**

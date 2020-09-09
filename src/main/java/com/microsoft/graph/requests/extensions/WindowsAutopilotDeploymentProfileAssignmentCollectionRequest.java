@@ -62,14 +62,14 @@ public class WindowsAutopilotDeploymentProfileAssignmentCollectionRequest extend
     public void post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsAutopilotDeploymentProfileAssignment, callback);
     }
 
     public WindowsAutopilotDeploymentProfileAssignment post(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsAutopilotDeploymentProfileAssignment);
     }
 
@@ -106,6 +106,27 @@ public class WindowsAutopilotDeploymentProfileAssignmentCollectionRequest extend
         return (WindowsAutopilotDeploymentProfileAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsAutopilotDeploymentProfileAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest)this;
+    }
     public IWindowsAutopilotDeploymentProfileAssignmentCollectionPage buildFromResponse(final WindowsAutopilotDeploymentProfileAssignmentCollectionResponse response) {
         final IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

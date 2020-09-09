@@ -28,20 +28,20 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
 
 
     /**
-     * The Package Id.
-     * The package identifier.
-     */
-    @SerializedName("packageId")
-    @Expose
-    public String packageId;
-
-    /**
      * The Identity Name.
      * The Identity Name.
      */
     @SerializedName("identityName")
     @Expose
     public String identityName;
+
+    /**
+     * The Identity Version.
+     * The identity version.
+     */
+    @SerializedName("identityVersion")
+    @Expose
+    public String identityVersion;
 
     /**
      * The Minimum Supported Operating System.
@@ -52,12 +52,12 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
     public AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
 
     /**
-     * The Version Name.
-     * The version name of managed Android Line of Business (LoB) app.
+     * The Package Id.
+     * The package identifier.
      */
-    @SerializedName("versionName")
+    @SerializedName("packageId")
     @Expose
-    public String versionName;
+    public String packageId;
 
     /**
      * The Version Code.
@@ -68,12 +68,12 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
     public String versionCode;
 
     /**
-     * The Identity Version.
-     * The identity version.
+     * The Version Name.
+     * The version name of managed Android Line of Business (LoB) app.
      */
-    @SerializedName("identityVersion")
+    @SerializedName("versionName")
     @Expose
-    public String identityVersion;
+    public String versionName;
 
 
     /**

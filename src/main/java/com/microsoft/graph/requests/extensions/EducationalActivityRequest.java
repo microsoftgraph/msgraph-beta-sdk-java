@@ -112,6 +112,27 @@ public class EducationalActivityRequest extends BaseRequest implements IEducatio
     }
 
     /**
+     * Creates a EducationalActivity with a new object
+     *
+     * @param newEducationalActivity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationalActivity newEducationalActivity, final ICallback<EducationalActivity> callback) {
+        send(HttpMethod.PUT, callback, newEducationalActivity);
+    }
+
+    /**
+     * Creates a EducationalActivity with a new object
+     *
+     * @param newEducationalActivity the object to create/update
+     * @return the created EducationalActivity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationalActivity put(final EducationalActivity newEducationalActivity) throws ClientException {
+        return send(HttpMethod.PUT, newEducationalActivity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

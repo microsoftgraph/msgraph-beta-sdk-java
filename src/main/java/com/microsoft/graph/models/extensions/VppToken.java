@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.VppTokenAccountType;
+import com.microsoft.graph.models.generated.VppTokenSyncStatus;
 import com.microsoft.graph.models.generated.VppTokenState;
 import com.microsoft.graph.models.extensions.VppTokenActionResult;
-import com.microsoft.graph.models.generated.VppTokenSyncStatus;
+import com.microsoft.graph.models.generated.VppTokenAccountType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -31,22 +31,6 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Organization Name.
-     * The organization associated with the Apple Volume Purchase Program Token
-     */
-    @SerializedName("organizationName")
-    @Expose
-    public String organizationName;
-
-    /**
-     * The Vpp Token Account Type.
-     * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
-     */
-    @SerializedName("vppTokenAccountType")
-    @Expose
-    public VppTokenAccountType vppTokenAccountType;
-
-    /**
      * The Apple Id.
      * The apple Id associated with the given Apple Volume Purchase Program Token.
      */
@@ -55,68 +39,20 @@ public class VppToken extends Entity implements IJsonBackedObject {
     public String appleId;
 
     /**
-     * The Expiration Date Time.
-     * The expiration date time of the Apple Volume Purchase Program Token.
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Last Sync Date Time.
-     * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
-     */
-    @SerializedName("lastSyncDateTime")
-    @Expose
-    public java.util.Calendar lastSyncDateTime;
-
-    /**
-     * The Token.
-     * The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
-     */
-    @SerializedName("token")
-    @Expose
-    public String token;
-
-    /**
-     * The Last Modified Date Time.
-     * Last modification date time associated with the Apple Volume Purchase Program Token.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The State.
-     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
-     */
-    @SerializedName("state")
-    @Expose
-    public VppTokenState state;
-
-    /**
-     * The Token Action Results.
-     * The collection of statuses of the actions performed on the Apple Volume Purchase Program Token.
-     */
-    @SerializedName("tokenActionResults")
-    @Expose
-    public java.util.List<VppTokenActionResult> tokenActionResults;
-
-    /**
-     * The Last Sync Status.
-     * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
-     */
-    @SerializedName("lastSyncStatus")
-    @Expose
-    public VppTokenSyncStatus lastSyncStatus;
-
-    /**
      * The Automatically Update Apps.
      * Whether or not apps for the VPP token will be automatically updated.
      */
     @SerializedName("automaticallyUpdateApps")
     @Expose
     public Boolean automaticallyUpdateApps;
+
+    /**
+     * The Claim Token Management From External Mdm.
+     * Admin consent to allow claiming token management from external MDM.
+     */
+    @SerializedName("claimTokenManagementFromExternalMdm")
+    @Expose
+    public Boolean claimTokenManagementFromExternalMdm;
 
     /**
      * The Country Or Region.
@@ -143,6 +79,38 @@ public class VppToken extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Expiration Date Time.
+     * The expiration date time of the Apple Volume Purchase Program Token.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The Last Modified Date Time.
+     * Last modification date time associated with the Apple Volume Purchase Program Token.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Last Sync Date Time.
+     * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
+     */
+    @SerializedName("lastSyncDateTime")
+    @Expose
+    public java.util.Calendar lastSyncDateTime;
+
+    /**
+     * The Last Sync Status.
+     * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
+     */
+    @SerializedName("lastSyncStatus")
+    @Expose
+    public VppTokenSyncStatus lastSyncStatus;
+
+    /**
      * The Location Name.
      * Token location returned from Apple VPP.
      */
@@ -151,12 +119,12 @@ public class VppToken extends Entity implements IJsonBackedObject {
     public String locationName;
 
     /**
-     * The Claim Token Management From External Mdm.
-     * Admin consent to allow claiming token management from external MDM.
+     * The Organization Name.
+     * The organization associated with the Apple Volume Purchase Program Token
      */
-    @SerializedName("claimTokenManagementFromExternalMdm")
+    @SerializedName("organizationName")
     @Expose
-    public Boolean claimTokenManagementFromExternalMdm;
+    public String organizationName;
 
     /**
      * The Role Scope Tag Ids.
@@ -165,6 +133,38 @@ public class VppToken extends Entity implements IJsonBackedObject {
     @SerializedName("roleScopeTagIds")
     @Expose
     public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The State.
+     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
+     */
+    @SerializedName("state")
+    @Expose
+    public VppTokenState state;
+
+    /**
+     * The Token.
+     * The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
+     */
+    @SerializedName("token")
+    @Expose
+    public String token;
+
+    /**
+     * The Token Action Results.
+     * The collection of statuses of the actions performed on the Apple Volume Purchase Program Token.
+     */
+    @SerializedName("tokenActionResults")
+    @Expose
+    public java.util.List<VppTokenActionResult> tokenActionResults;
+
+    /**
+     * The Vpp Token Account Type.
+     * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     */
+    @SerializedName("vppTokenAccountType")
+    @Expose
+    public VppTokenAccountType vppTokenAccountType;
 
 
     /**

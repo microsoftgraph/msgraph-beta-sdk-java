@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AccessReviewRecurrenceSettings;
 import com.microsoft.graph.models.extensions.AutoReviewSettings;
+import com.microsoft.graph.models.extensions.AccessReviewRecurrenceSettings;
 
 
 import com.google.gson.JsonObject;
@@ -38,44 +38,12 @@ public class AccessReviewSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Mail Notifications Enabled.
+     * The Access Recommendations Enabled.
      * 
      */
-    @SerializedName("mailNotificationsEnabled")
+    @SerializedName("accessRecommendationsEnabled")
     @Expose
-    public Boolean mailNotificationsEnabled;
-
-    /**
-     * The Reminders Enabled.
-     * 
-     */
-    @SerializedName("remindersEnabled")
-    @Expose
-    public Boolean remindersEnabled;
-
-    /**
-     * The Justification Required On Approval.
-     * 
-     */
-    @SerializedName("justificationRequiredOnApproval")
-    @Expose
-    public Boolean justificationRequiredOnApproval;
-
-    /**
-     * The Recurrence Settings.
-     * 
-     */
-    @SerializedName("recurrenceSettings")
-    @Expose
-    public AccessReviewRecurrenceSettings recurrenceSettings;
-
-    /**
-     * The Auto Review Enabled.
-     * 
-     */
-    @SerializedName("autoReviewEnabled")
-    @Expose
-    public Boolean autoReviewEnabled;
+    public Boolean accessRecommendationsEnabled;
 
     /**
      * The Activity Duration In Days.
@@ -86,14 +54,6 @@ public class AccessReviewSettings implements IJsonBackedObject {
     public Integer activityDurationInDays;
 
     /**
-     * The Auto Review Settings.
-     * 
-     */
-    @SerializedName("autoReviewSettings")
-    @Expose
-    public AutoReviewSettings autoReviewSettings;
-
-    /**
      * The Auto Apply Review Results Enabled.
      * 
      */
@@ -102,12 +62,52 @@ public class AccessReviewSettings implements IJsonBackedObject {
     public Boolean autoApplyReviewResultsEnabled;
 
     /**
-     * The Access Recommendations Enabled.
+     * The Auto Review Enabled.
      * 
      */
-    @SerializedName("accessRecommendationsEnabled")
+    @SerializedName("autoReviewEnabled")
     @Expose
-    public Boolean accessRecommendationsEnabled;
+    public Boolean autoReviewEnabled;
+
+    /**
+     * The Auto Review Settings.
+     * 
+     */
+    @SerializedName("autoReviewSettings")
+    @Expose
+    public AutoReviewSettings autoReviewSettings;
+
+    /**
+     * The Justification Required On Approval.
+     * 
+     */
+    @SerializedName("justificationRequiredOnApproval")
+    @Expose
+    public Boolean justificationRequiredOnApproval;
+
+    /**
+     * The Mail Notifications Enabled.
+     * 
+     */
+    @SerializedName("mailNotificationsEnabled")
+    @Expose
+    public Boolean mailNotificationsEnabled;
+
+    /**
+     * The Recurrence Settings.
+     * 
+     */
+    @SerializedName("recurrenceSettings")
+    @Expose
+    public AccessReviewRecurrenceSettings recurrenceSettings;
+
+    /**
+     * The Reminders Enabled.
+     * 
+     */
+    @SerializedName("remindersEnabled")
+    @Expose
+    public Boolean remindersEnabled;
 
 
     /**

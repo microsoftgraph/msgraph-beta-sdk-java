@@ -33,7 +33,7 @@ public interface IVppTokenRequestBuilder extends IRequestBuilder {
      */
     IVppTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IVppTokenSyncLicensesRequestBuilder syncLicenses();
     IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices);
+    IVppTokenSyncLicensesRequestBuilder syncLicenses();
 
 }

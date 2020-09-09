@@ -36,20 +36,20 @@ public class ClaimsMapping implements IJsonBackedObject {
     }
 
     /**
-     * The User Id.
-     * 
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Display Name.
      * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
 
     /**
      * The Given Name.
@@ -68,12 +68,12 @@ public class ClaimsMapping implements IJsonBackedObject {
     public String surname;
 
     /**
-     * The Email.
+     * The User Id.
      * 
      */
-    @SerializedName("email")
+    @SerializedName("userId")
     @Expose
-    public String email;
+    public String userId;
 
 
     /**

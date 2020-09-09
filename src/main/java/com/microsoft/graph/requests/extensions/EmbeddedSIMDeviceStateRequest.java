@@ -112,6 +112,27 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
     }
 
     /**
+     * Creates a EmbeddedSIMDeviceState with a new object
+     *
+     * @param newEmbeddedSIMDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<EmbeddedSIMDeviceState> callback) {
+        send(HttpMethod.PUT, callback, newEmbeddedSIMDeviceState);
+    }
+
+    /**
+     * Creates a EmbeddedSIMDeviceState with a new object
+     *
+     * @param newEmbeddedSIMDeviceState the object to create/update
+     * @return the created EmbeddedSIMDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmbeddedSIMDeviceState put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException {
+        return send(HttpMethod.PUT, newEmbeddedSIMDeviceState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -44,20 +44,20 @@ public class DataStoreField implements IJsonBackedObject {
     public String name;
 
     /**
-     * The Unique.
-     * 
-     */
-    @SerializedName("unique")
-    @Expose
-    public Boolean unique;
-
-    /**
      * The Searchable.
      * 
      */
     @SerializedName("searchable")
     @Expose
     public Boolean searchable;
+
+    /**
+     * The Unique.
+     * 
+     */
+    @SerializedName("unique")
+    @Expose
+    public Boolean unique;
 
 
     /**

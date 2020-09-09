@@ -28,6 +28,14 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
 
 
     /**
+     * The Checksum.
+     * 
+     */
+    @SerializedName("checksum")
+    @Expose
+    public String checksum;
+
+    /**
      * The Datastore Id.
      * 
      */
@@ -36,12 +44,12 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public String datastoreId;
 
     /**
-     * The Upload Agent Id.
+     * The Data Upload URI.
      * 
      */
-    @SerializedName("uploadAgentId")
+    @SerializedName("dataUploadURI")
     @Expose
-    public String uploadAgentId;
+    public String dataUploadURI;
 
     /**
      * The Fields.
@@ -60,20 +68,12 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public String fileName;
 
     /**
-     * The Checksum.
+     * The Processing Completion Date Time.
      * 
      */
-    @SerializedName("checksum")
+    @SerializedName("processingCompletionDateTime")
     @Expose
-    public String checksum;
-
-    /**
-     * The Data Upload URI.
-     * 
-     */
-    @SerializedName("dataUploadURI")
-    @Expose
-    public String dataUploadURI;
+    public java.util.Calendar processingCompletionDateTime;
 
     /**
      * The Remaining Block Count.
@@ -84,36 +84,12 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public Integer remainingBlockCount;
 
     /**
-     * The Total Block Count.
+     * The Remaining Job Count.
      * 
      */
-    @SerializedName("totalBlockCount")
+    @SerializedName("remainingJobCount")
     @Expose
-    public Integer totalBlockCount;
-
-    /**
-     * The State.
-     * 
-     */
-    @SerializedName("state")
-    @Expose
-    public String state;
-
-    /**
-     * The Upload Completion Date Time.
-     * 
-     */
-    @SerializedName("uploadCompletionDateTime")
-    @Expose
-    public java.util.Calendar uploadCompletionDateTime;
-
-    /**
-     * The Processing Completion Date Time.
-     * 
-     */
-    @SerializedName("processingCompletionDateTime")
-    @Expose
-    public java.util.Calendar processingCompletionDateTime;
+    public Integer remainingJobCount;
 
     /**
      * The Rows Per Block.
@@ -124,6 +100,30 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public Integer rowsPerBlock;
 
     /**
+     * The Salt.
+     * 
+     */
+    @SerializedName("salt")
+    @Expose
+    public String salt;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName("state")
+    @Expose
+    public String state;
+
+    /**
+     * The Total Block Count.
+     * 
+     */
+    @SerializedName("totalBlockCount")
+    @Expose
+    public Integer totalBlockCount;
+
+    /**
      * The Total Job Count.
      * 
      */
@@ -132,20 +132,20 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public Integer totalJobCount;
 
     /**
-     * The Remaining Job Count.
+     * The Upload Agent Id.
      * 
      */
-    @SerializedName("remainingJobCount")
+    @SerializedName("uploadAgentId")
     @Expose
-    public Integer remainingJobCount;
+    public String uploadAgentId;
 
     /**
-     * The Salt.
+     * The Upload Completion Date Time.
      * 
      */
-    @SerializedName("salt")
+    @SerializedName("uploadCompletionDateTime")
     @Expose
-    public String salt;
+    public java.util.Calendar uploadCompletionDateTime;
 
     /**
      * The Upload Agent.

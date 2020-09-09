@@ -28,20 +28,12 @@ public class SensitivityPolicySettings extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Is Mandatory.
+     * The Applicable To.
      * 
      */
-    @SerializedName("isMandatory")
+    @SerializedName("applicableTo")
     @Expose
-    public Boolean isMandatory;
-
-    /**
-     * The Help Web Url.
-     * 
-     */
-    @SerializedName("helpWebUrl")
-    @Expose
-    public String helpWebUrl;
+    public EnumSet<SensitivityLabelTarget> applicableTo;
 
     /**
      * The Downgrade Sensitivity Requires Justification.
@@ -52,12 +44,20 @@ public class SensitivityPolicySettings extends Entity implements IJsonBackedObje
     public Boolean downgradeSensitivityRequiresJustification;
 
     /**
-     * The Applicable To.
+     * The Help Web Url.
      * 
      */
-    @SerializedName("applicableTo")
+    @SerializedName("helpWebUrl")
     @Expose
-    public EnumSet<SensitivityLabelTarget> applicableTo;
+    public String helpWebUrl;
+
+    /**
+     * The Is Mandatory.
+     * 
+     */
+    @SerializedName("isMandatory")
+    @Expose
+    public Boolean isMandatory;
 
 
     /**

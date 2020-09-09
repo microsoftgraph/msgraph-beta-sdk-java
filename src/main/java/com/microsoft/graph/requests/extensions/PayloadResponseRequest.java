@@ -112,6 +112,27 @@ public class PayloadResponseRequest extends BaseRequest implements IPayloadRespo
     }
 
     /**
+     * Creates a PayloadResponse with a new object
+     *
+     * @param newPayloadResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback) {
+        send(HttpMethod.PUT, callback, newPayloadResponse);
+    }
+
+    /**
+     * Creates a PayloadResponse with a new object
+     *
+     * @param newPayloadResponse the object to create/update
+     * @return the created PayloadResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PayloadResponse put(final PayloadResponse newPayloadResponse) throws ClientException {
+        return send(HttpMethod.PUT, newPayloadResponse);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWindowsDomainJoinConfigurationRequest extends IHttpRequest {
     WindowsDomainJoinConfiguration post(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsDomainJoinConfiguration with a new object
+     *
+     * @param newWindowsDomainJoinConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback);
+
+    /**
+     * Posts a WindowsDomainJoinConfiguration with a new object
+     *
+     * @param newWindowsDomainJoinConfiguration the object to create/update
+     * @return the created WindowsDomainJoinConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsDomainJoinConfiguration put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

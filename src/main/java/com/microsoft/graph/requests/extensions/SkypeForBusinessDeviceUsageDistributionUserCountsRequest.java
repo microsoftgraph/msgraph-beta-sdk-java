@@ -112,6 +112,27 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
     }
 
     /**
+     * Creates a SkypeForBusinessDeviceUsageDistributionUserCounts with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newSkypeForBusinessDeviceUsageDistributionUserCounts);
+    }
+
+    /**
+     * Creates a SkypeForBusinessDeviceUsageDistributionUserCounts with a new object
+     *
+     * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
+     * @return the created SkypeForBusinessDeviceUsageDistributionUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SkypeForBusinessDeviceUsageDistributionUserCounts put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newSkypeForBusinessDeviceUsageDistributionUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

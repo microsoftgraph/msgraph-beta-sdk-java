@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.MicrosoftStoreForBusinessApp;
+import com.microsoft.graph.models.extensions.WindowsUniversalAppX;
 import com.microsoft.graph.models.extensions.MobileContainedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class MobileContainedAppCollectionRequestBuilder extends BaseRequestBuilder implements IMobileContainedAppCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of MicrosoftStoreForBusinessApp
+     * The request builder for this collection of WindowsUniversalAppX
      *
      * @param requestUrl     the request URL
      * @param client         the service client

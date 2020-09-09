@@ -8,39 +8,39 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PowerActionType;
 import com.microsoft.graph.models.generated.Enablement;
-import com.microsoft.graph.models.extensions.Windows10AppsForceUpdateSchedule;
-import com.microsoft.graph.models.generated.SignInAssistantOptions;
-import com.microsoft.graph.models.generated.BrowserSyncSetting;
-import com.microsoft.graph.models.generated.DiagnosticDataSubmissionMode;
-import com.microsoft.graph.models.generated.EdgeTelemetryMode;
-import com.microsoft.graph.models.generated.InkAccessSetting;
 import com.microsoft.graph.models.generated.StateManagementSetting;
-import com.microsoft.graph.models.generated.AppInstallControlType;
-import com.microsoft.graph.models.generated.EdgeCookiePolicy;
-import com.microsoft.graph.models.extensions.EdgeHomeButtonConfiguration;
-import com.microsoft.graph.models.generated.EdgeOpenOptions;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.InternetExplorerMessageSetting;
-import com.microsoft.graph.models.generated.EdgeKioskModeRestrictionType;
 import com.microsoft.graph.models.generated.ConfigurationUsage;
-import com.microsoft.graph.models.generated.DefenderMonitorFileActivity;
 import com.microsoft.graph.models.generated.DefenderCloudBlockLevelType;
-import com.microsoft.graph.models.generated.DefenderPromptForSampleSubmission;
-import com.microsoft.graph.models.generated.DefenderScanType;
-import com.microsoft.graph.models.generated.WeeklySchedule;
+import com.microsoft.graph.models.extensions.DefenderDetectedMalwareActions;
+import com.microsoft.graph.models.generated.DefenderMonitorFileActivity;
 import com.microsoft.graph.models.generated.DefenderPotentiallyUnwantedAppAction;
 import com.microsoft.graph.models.generated.DefenderProtectionType;
+import com.microsoft.graph.models.generated.DefenderPromptForSampleSubmission;
+import com.microsoft.graph.models.generated.DefenderScanType;
 import com.microsoft.graph.models.generated.DefenderSubmitSamplesConsentType;
-import com.microsoft.graph.models.extensions.DefenderDetectedMalwareActions;
+import com.microsoft.graph.models.generated.WeeklySchedule;
+import com.microsoft.graph.models.generated.DiagnosticDataSubmissionMode;
+import com.microsoft.graph.models.generated.EdgeCookiePolicy;
+import com.microsoft.graph.models.generated.VisibilitySetting;
+import com.microsoft.graph.models.extensions.EdgeHomeButtonConfiguration;
+import com.microsoft.graph.models.generated.EdgeKioskModeRestrictionType;
+import com.microsoft.graph.models.generated.EdgeOpenOptions;
+import com.microsoft.graph.models.extensions.EdgeSearchEngineBase;
+import com.microsoft.graph.models.generated.InternetExplorerMessageSetting;
+import com.microsoft.graph.models.generated.EdgeTelemetryMode;
+import com.microsoft.graph.models.generated.BrowserSyncSetting;
+import com.microsoft.graph.models.generated.InkAccessSetting;
+import com.microsoft.graph.models.generated.SignInAssistantOptions;
+import com.microsoft.graph.models.extensions.Windows10NetworkProxyServer;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
+import com.microsoft.graph.models.generated.PowerActionType;
+import com.microsoft.graph.models.generated.SafeSearchFilterType;
+import com.microsoft.graph.models.generated.AppInstallControlType;
 import com.microsoft.graph.models.generated.WindowsStartMenuAppListVisibilityType;
 import com.microsoft.graph.models.generated.WindowsStartMenuModeType;
+import com.microsoft.graph.models.extensions.Windows10AppsForceUpdateSchedule;
 import com.microsoft.graph.models.generated.WindowsSpotlightEnablementSettings;
-import com.microsoft.graph.models.extensions.Windows10NetworkProxyServer;
-import com.microsoft.graph.models.generated.SafeSearchFilterType;
-import com.microsoft.graph.models.extensions.EdgeSearchEngineBase;
 import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemCollectionResponse;
@@ -63,116 +63,68 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
 
     /**
-     * The Task Manager Block End Task.
-     * Specify whether non-administrators can use Task Manager to end tasks.
+     * The Accounts Block Adding Non Microsoft Account Email.
+     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      */
-    @SerializedName("taskManagerBlockEndTask")
+    @SerializedName("accountsBlockAddingNonMicrosoftAccountEmail")
     @Expose
-    public Boolean taskManagerBlockEndTask;
+    public Boolean accountsBlockAddingNonMicrosoftAccountEmail;
 
     /**
-     * The Energy Saver On Battery Threshold Percentage.
-     * This setting allows you to specify battery charge level at which Energy Saver is turned on. While on battery, Energy Saver is automatically turned on at (and below) the specified battery charge level. Valid input range (0-100). Valid values 0 to 100
+     * The Activate Apps With Voice.
+     * Specifies if Windows apps can be activated by voice.
      */
-    @SerializedName("energySaverOnBatteryThresholdPercentage")
+    @SerializedName("activateAppsWithVoice")
     @Expose
-    public Integer energySaverOnBatteryThresholdPercentage;
+    public Enablement activateAppsWithVoice;
 
     /**
-     * The Energy Saver Plugged In Threshold Percentage.
-     * This setting allows you to specify battery charge level at which Energy Saver is turned on. While plugged in, Energy Saver is automatically turned on at (and below) the specified battery charge level. Valid input range (0-100). Valid values 0 to 100
+     * The Anti Theft Mode Blocked.
+     * Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
      */
-    @SerializedName("energySaverPluggedInThresholdPercentage")
+    @SerializedName("antiTheftModeBlocked")
     @Expose
-    public Integer energySaverPluggedInThresholdPercentage;
+    public Boolean antiTheftModeBlocked;
 
     /**
-     * The Power Lid Close Action On Battery.
-     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery.
+     * The App Management MSIAllow User Control Over Install.
+     * This policy setting permits users to change installation options that typically are available only to system administrators.
      */
-    @SerializedName("powerLidCloseActionOnBattery")
+    @SerializedName("appManagementMSIAllowUserControlOverInstall")
     @Expose
-    public PowerActionType powerLidCloseActionOnBattery;
+    public Boolean appManagementMSIAllowUserControlOverInstall;
 
     /**
-     * The Power Lid Close Action Plugged In.
-     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in.
+     * The App Management MSIAlways Install With Elevated Privileges.
+     * This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system.
      */
-    @SerializedName("powerLidCloseActionPluggedIn")
+    @SerializedName("appManagementMSIAlwaysInstallWithElevatedPrivileges")
     @Expose
-    public PowerActionType powerLidCloseActionPluggedIn;
+    public Boolean appManagementMSIAlwaysInstallWithElevatedPrivileges;
 
     /**
-     * The Power Button Action On Battery.
-     * This setting specifies the action that Windows takes when a user presses the Power button while on battery.
+     * The App Management Package Family Names To Launch After Log On.
+     * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.???
      */
-    @SerializedName("powerButtonActionOnBattery")
+    @SerializedName("appManagementPackageFamilyNamesToLaunchAfterLogOn")
     @Expose
-    public PowerActionType powerButtonActionOnBattery;
+    public java.util.List<String> appManagementPackageFamilyNamesToLaunchAfterLogOn;
 
     /**
-     * The Power Button Action Plugged In.
-     * This setting specifies the action that Windows takes when a user presses the Power button while plugged in.
+     * The Apps Allow Trusted Apps Sideloading.
+     * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
      */
-    @SerializedName("powerButtonActionPluggedIn")
+    @SerializedName("appsAllowTrustedAppsSideloading")
     @Expose
-    public PowerActionType powerButtonActionPluggedIn;
+    public StateManagementSetting appsAllowTrustedAppsSideloading;
 
     /**
-     * The Power Sleep Button Action On Battery.
-     * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery.
+     * The Apps Block Windows Store Originated Apps.
+     * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
      */
-    @SerializedName("powerSleepButtonActionOnBattery")
+    @SerializedName("appsBlockWindowsStoreOriginatedApps")
     @Expose
-    public PowerActionType powerSleepButtonActionOnBattery;
-
-    /**
-     * The Power Sleep Button Action Plugged In.
-     * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in.
-     */
-    @SerializedName("powerSleepButtonActionPluggedIn")
-    @Expose
-    public PowerActionType powerSleepButtonActionPluggedIn;
-
-    /**
-     * The Power Hybrid Sleep On Battery.
-     * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
-     */
-    @SerializedName("powerHybridSleepOnBattery")
-    @Expose
-    public Enablement powerHybridSleepOnBattery;
-
-    /**
-     * The Power Hybrid Sleep Plugged In.
-     * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
-     */
-    @SerializedName("powerHybridSleepPluggedIn")
-    @Expose
-    public Enablement powerHybridSleepPluggedIn;
-
-    /**
-     * The Windows10Apps Force Update Schedule.
-     * Windows 10 force update schedule for Apps.
-     */
-    @SerializedName("windows10AppsForceUpdateSchedule")
-    @Expose
-    public Windows10AppsForceUpdateSchedule windows10AppsForceUpdateSchedule;
-
-    /**
-     * The Enable Automatic Redeployment.
-     * Allow users with administrative rights to delete all user data and settings using CTRL + Win + R at the device lock screen so that the device can be automatically re-configured and re-enrolled into management.
-     */
-    @SerializedName("enableAutomaticRedeployment")
-    @Expose
-    public Boolean enableAutomaticRedeployment;
-
-    /**
-     * The Microsoft Account Sign In Assistant Settings.
-     * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service.
-     */
-    @SerializedName("microsoftAccountSignInAssistantSettings")
-    @Expose
-    public SignInAssistantOptions microsoftAccountSignInAssistantSettings;
+    public Boolean appsBlockWindowsStoreOriginatedApps;
 
     /**
      * The Authentication Allow Secondary Device.
@@ -183,14 +135,6 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean authenticationAllowSecondaryDevice;
 
     /**
-     * The Authentication Web Sign In.
-     * Indicates whether or not Web Credential Provider will be enabled.
-     */
-    @SerializedName("authenticationWebSignIn")
-    @Expose
-    public Enablement authenticationWebSignIn;
-
-    /**
      * The Authentication Preferred Azure ADTenant Domain Name.
      * Specifies the preferred domain among available domains in the Azure AD tenant.
      */
@@ -199,316 +143,12 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public String authenticationPreferredAzureADTenantDomainName;
 
     /**
-     * The Cryptography Allow Fips Algorithm Policy.
-     * Specify whether to allow or disallow the Federal Information Processing Standard (FIPS) policy.
+     * The Authentication Web Sign In.
+     * Indicates whether or not Web Credential Provider will be enabled.
      */
-    @SerializedName("cryptographyAllowFipsAlgorithmPolicy")
+    @SerializedName("authenticationWebSignIn")
     @Expose
-    public Boolean cryptographyAllowFipsAlgorithmPolicy;
-
-    /**
-     * The Display App List With Gdi DPIScaling Turned On.
-     * List of legacy applications that have GDI DPI Scaling turned on.
-     */
-    @SerializedName("displayAppListWithGdiDPIScalingTurnedOn")
-    @Expose
-    public java.util.List<String> displayAppListWithGdiDPIScalingTurnedOn;
-
-    /**
-     * The Display App List With Gdi DPIScaling Turned Off.
-     * List of legacy applications that have GDI DPI Scaling turned off.
-     */
-    @SerializedName("displayAppListWithGdiDPIScalingTurnedOff")
-    @Expose
-    public java.util.List<String> displayAppListWithGdiDPIScalingTurnedOff;
-
-    /**
-     * The Enterprise Cloud Print Discovery End Point.
-     * Endpoint for discovering cloud printers.
-     */
-    @SerializedName("enterpriseCloudPrintDiscoveryEndPoint")
-    @Expose
-    public String enterpriseCloudPrintDiscoveryEndPoint;
-
-    /**
-     * The Enterprise Cloud Print OAuth Authority.
-     * Authentication endpoint for acquiring OAuth tokens.
-     */
-    @SerializedName("enterpriseCloudPrintOAuthAuthority")
-    @Expose
-    public String enterpriseCloudPrintOAuthAuthority;
-
-    /**
-     * The Enterprise Cloud Print OAuth Client Identifier.
-     * GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
-     */
-    @SerializedName("enterpriseCloudPrintOAuthClientIdentifier")
-    @Expose
-    public String enterpriseCloudPrintOAuthClientIdentifier;
-
-    /**
-     * The Enterprise Cloud Print Resource Identifier.
-     * OAuth resource URI for print service as configured in the Azure portal.
-     */
-    @SerializedName("enterpriseCloudPrintResourceIdentifier")
-    @Expose
-    public String enterpriseCloudPrintResourceIdentifier;
-
-    /**
-     * The Enterprise Cloud Print Discovery Max Limit.
-     * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
-     */
-    @SerializedName("enterpriseCloudPrintDiscoveryMaxLimit")
-    @Expose
-    public Integer enterpriseCloudPrintDiscoveryMaxLimit;
-
-    /**
-     * The Enterprise Cloud Print Mopria Discovery Resource Identifier.
-     * OAuth resource URI for printer discovery service as configured in Azure portal.
-     */
-    @SerializedName("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier")
-    @Expose
-    public String enterpriseCloudPrintMopriaDiscoveryResourceIdentifier;
-
-    /**
-     * The Experience Do Not Sync Browser Settings.
-     * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override.
-     */
-    @SerializedName("experienceDoNotSyncBrowserSettings")
-    @Expose
-    public BrowserSyncSetting experienceDoNotSyncBrowserSettings;
-
-    /**
-     * The Messaging Block Sync.
-     * Indicates whether or not to block text message back up and restore and Messaging Everywhere.
-     */
-    @SerializedName("messagingBlockSync")
-    @Expose
-    public Boolean messagingBlockSync;
-
-    /**
-     * The Messaging Block MMS.
-     * Indicates whether or not to block the MMS send/receive functionality on the device.
-     */
-    @SerializedName("messagingBlockMMS")
-    @Expose
-    public Boolean messagingBlockMMS;
-
-    /**
-     * The Messaging Block Rich Communication Services.
-     * Indicates whether or not to block the RCS send/receive functionality on the device.
-     */
-    @SerializedName("messagingBlockRichCommunicationServices")
-    @Expose
-    public Boolean messagingBlockRichCommunicationServices;
-
-    /**
-     * The Printer Names.
-     * Automatically provision printers based on their names (network host names).
-     */
-    @SerializedName("printerNames")
-    @Expose
-    public java.util.List<String> printerNames;
-
-    /**
-     * The Printer Default Name.
-     * Name (network host name) of an installed printer.
-     */
-    @SerializedName("printerDefaultName")
-    @Expose
-    public String printerDefaultName;
-
-    /**
-     * The Printer Block Addition.
-     * Prevent user installation of additional printers from printers settings.
-     */
-    @SerializedName("printerBlockAddition")
-    @Expose
-    public Boolean printerBlockAddition;
-
-    /**
-     * The Search Block Diacritics.
-     * Specifies if search can use diacritics.
-     */
-    @SerializedName("searchBlockDiacritics")
-    @Expose
-    public Boolean searchBlockDiacritics;
-
-    /**
-     * The Search Disable Auto Language Detection.
-     * Specifies whether to use automatic language detection when indexing content and properties.
-     */
-    @SerializedName("searchDisableAutoLanguageDetection")
-    @Expose
-    public Boolean searchDisableAutoLanguageDetection;
-
-    /**
-     * The Search Disable Indexing Encrypted Items.
-     * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
-     */
-    @SerializedName("searchDisableIndexingEncryptedItems")
-    @Expose
-    public Boolean searchDisableIndexingEncryptedItems;
-
-    /**
-     * The Search Enable Remote Queries.
-     * Indicates whether or not to block remote queries of this computer’s index.
-     */
-    @SerializedName("searchEnableRemoteQueries")
-    @Expose
-    public Boolean searchEnableRemoteQueries;
-
-    /**
-     * The Search Disable Use Location.
-     * Specifies if search can use location information.
-     */
-    @SerializedName("searchDisableUseLocation")
-    @Expose
-    public Boolean searchDisableUseLocation;
-
-    /**
-     * The Search Disable Location.
-     * Specifies if search can use location information.
-     */
-    @SerializedName("searchDisableLocation")
-    @Expose
-    public Boolean searchDisableLocation;
-
-    /**
-     * The Search Disable Indexer Backoff.
-     * Indicates whether or not to disable the search indexer backoff feature.
-     */
-    @SerializedName("searchDisableIndexerBackoff")
-    @Expose
-    public Boolean searchDisableIndexerBackoff;
-
-    /**
-     * The Search Disable Indexing Removable Drive.
-     * Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
-     */
-    @SerializedName("searchDisableIndexingRemovableDrive")
-    @Expose
-    public Boolean searchDisableIndexingRemovableDrive;
-
-    /**
-     * The Search Enable Automatic Index Size Manangement.
-     * Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
-     */
-    @SerializedName("searchEnableAutomaticIndexSizeManangement")
-    @Expose
-    public Boolean searchEnableAutomaticIndexSizeManangement;
-
-    /**
-     * The Search Block Web Results.
-     * Indicates whether or not to block the web search.
-     */
-    @SerializedName("searchBlockWebResults")
-    @Expose
-    public Boolean searchBlockWebResults;
-
-    /**
-     * The Find My Files.
-     * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access.
-     */
-    @SerializedName("findMyFiles")
-    @Expose
-    public Enablement findMyFiles;
-
-    /**
-     * The Security Block Azure ADJoined Devices Auto Encryption.
-     * Specify whether to allow automatic device encryption during OOBE when the device is Azure AD joined (desktop only).
-     */
-    @SerializedName("securityBlockAzureADJoinedDevicesAutoEncryption")
-    @Expose
-    public Boolean securityBlockAzureADJoinedDevicesAutoEncryption;
-
-    /**
-     * The Diagnostics Data Submission Mode.
-     * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
-     */
-    @SerializedName("diagnosticsDataSubmissionMode")
-    @Expose
-    public DiagnosticDataSubmissionMode diagnosticsDataSubmissionMode;
-
-    /**
-     * The One Drive Disable File Sync.
-     * Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
-     */
-    @SerializedName("oneDriveDisableFileSync")
-    @Expose
-    public Boolean oneDriveDisableFileSync;
-
-    /**
-     * The System Telemetry Proxy Server.
-     * Gets or sets the fully qualified domain name (FQDN) or IP address of a proxy server to forward Connected User Experiences and Telemetry requests.
-     */
-    @SerializedName("systemTelemetryProxyServer")
-    @Expose
-    public String systemTelemetryProxyServer;
-
-    /**
-     * The Edge Telemetry For Microsoft365Analytics.
-     * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics
-     */
-    @SerializedName("edgeTelemetryForMicrosoft365Analytics")
-    @Expose
-    public EdgeTelemetryMode edgeTelemetryForMicrosoft365Analytics;
-
-    /**
-     * The Ink Workspace Access.
-     * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
-     */
-    @SerializedName("inkWorkspaceAccess")
-    @Expose
-    public InkAccessSetting inkWorkspaceAccess;
-
-    /**
-     * The Ink Workspace Access State.
-     * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
-     */
-    @SerializedName("inkWorkspaceAccessState")
-    @Expose
-    public StateManagementSetting inkWorkspaceAccessState;
-
-    /**
-     * The Ink Workspace Block Suggested Apps.
-     * Specify whether to show recommended app suggestions in the ink workspace.
-     */
-    @SerializedName("inkWorkspaceBlockSuggestedApps")
-    @Expose
-    public Boolean inkWorkspaceBlockSuggestedApps;
-
-    /**
-     * The Smart Screen Enable App Install Control.
-     * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
-     */
-    @SerializedName("smartScreenEnableAppInstallControl")
-    @Expose
-    public Boolean smartScreenEnableAppInstallControl;
-
-    /**
-     * The Smart Screen App Install Control.
-     * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
-     */
-    @SerializedName("smartScreenAppInstallControl")
-    @Expose
-    public AppInstallControlType smartScreenAppInstallControl;
-
-    /**
-     * The Personalization Desktop Image Url.
-     * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
-     */
-    @SerializedName("personalizationDesktopImageUrl")
-    @Expose
-    public String personalizationDesktopImageUrl;
-
-    /**
-     * The Personalization Lock Screen Image Url.
-     * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
-     */
-    @SerializedName("personalizationLockScreenImageUrl")
-    @Expose
-    public String personalizationLockScreenImageUrl;
+    public Enablement authenticationWebSignIn;
 
     /**
      * The Bluetooth Allowed Services.
@@ -527,20 +167,20 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean bluetoothBlockAdvertising;
 
     /**
-     * The Bluetooth Block Prompted Proximal Connections.
-     * Whether or not to block the users from using Swift Pair and other proximity based scenarios.
-     */
-    @SerializedName("bluetoothBlockPromptedProximalConnections")
-    @Expose
-    public Boolean bluetoothBlockPromptedProximalConnections;
-
-    /**
      * The Bluetooth Block Discoverable Mode.
      * Whether or not to Block the user from using bluetooth discoverable mode.
      */
     @SerializedName("bluetoothBlockDiscoverableMode")
     @Expose
     public Boolean bluetoothBlockDiscoverableMode;
+
+    /**
+     * The Bluetooth Blocked.
+     * Whether or not to Block the user from using bluetooth.
+     */
+    @SerializedName("bluetoothBlocked")
+    @Expose
+    public Boolean bluetoothBlocked;
 
     /**
      * The Bluetooth Block Pre Pairing.
@@ -551,284 +191,20 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean bluetoothBlockPrePairing;
 
     /**
-     * The Edge Block Autofill.
-     * Indicates whether or not to block auto fill.
+     * The Bluetooth Block Prompted Proximal Connections.
+     * Whether or not to block the users from using Swift Pair and other proximity based scenarios.
      */
-    @SerializedName("edgeBlockAutofill")
+    @SerializedName("bluetoothBlockPromptedProximalConnections")
     @Expose
-    public Boolean edgeBlockAutofill;
+    public Boolean bluetoothBlockPromptedProximalConnections;
 
     /**
-     * The Edge Blocked.
-     * Indicates whether or not to Block the user from using the Edge browser.
+     * The Camera Blocked.
+     * Whether or not to Block the user from accessing the camera of the device.
      */
-    @SerializedName("edgeBlocked")
+    @SerializedName("cameraBlocked")
     @Expose
-    public Boolean edgeBlocked;
-
-    /**
-     * The Edge Cookie Policy.
-     * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
-     */
-    @SerializedName("edgeCookiePolicy")
-    @Expose
-    public EdgeCookiePolicy edgeCookiePolicy;
-
-    /**
-     * The Edge Block Developer Tools.
-     * Indicates whether or not to block developer tools in the Edge browser.
-     */
-    @SerializedName("edgeBlockDeveloperTools")
-    @Expose
-    public Boolean edgeBlockDeveloperTools;
-
-    /**
-     * The Edge Block Sending Do Not Track Header.
-     * Indicates whether or not to Block the user from sending the do not track header.
-     */
-    @SerializedName("edgeBlockSendingDoNotTrackHeader")
-    @Expose
-    public Boolean edgeBlockSendingDoNotTrackHeader;
-
-    /**
-     * The Edge Block Extensions.
-     * Indicates whether or not to block extensions in the Edge browser.
-     */
-    @SerializedName("edgeBlockExtensions")
-    @Expose
-    public Boolean edgeBlockExtensions;
-
-    /**
-     * The Edge Block In Private Browsing.
-     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
-     */
-    @SerializedName("edgeBlockInPrivateBrowsing")
-    @Expose
-    public Boolean edgeBlockInPrivateBrowsing;
-
-    /**
-     * The Edge Block Java Script.
-     * Indicates whether or not to Block the user from using JavaScript.
-     */
-    @SerializedName("edgeBlockJavaScript")
-    @Expose
-    public Boolean edgeBlockJavaScript;
-
-    /**
-     * The Edge Block Password Manager.
-     * Indicates whether or not to Block password manager.
-     */
-    @SerializedName("edgeBlockPasswordManager")
-    @Expose
-    public Boolean edgeBlockPasswordManager;
-
-    /**
-     * The Edge Block Address Bar Dropdown.
-     * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
-     */
-    @SerializedName("edgeBlockAddressBarDropdown")
-    @Expose
-    public Boolean edgeBlockAddressBarDropdown;
-
-    /**
-     * The Edge Block Compatibility List.
-     * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
-     */
-    @SerializedName("edgeBlockCompatibilityList")
-    @Expose
-    public Boolean edgeBlockCompatibilityList;
-
-    /**
-     * The Edge Clear Browsing Data On Exit.
-     * Clear browsing data on exiting Microsoft Edge.
-     */
-    @SerializedName("edgeClearBrowsingDataOnExit")
-    @Expose
-    public Boolean edgeClearBrowsingDataOnExit;
-
-    /**
-     * The Edge Allow Start Pages Modification.
-     * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
-     */
-    @SerializedName("edgeAllowStartPagesModification")
-    @Expose
-    public Boolean edgeAllowStartPagesModification;
-
-    /**
-     * The Edge Disable First Run Page.
-     * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
-     */
-    @SerializedName("edgeDisableFirstRunPage")
-    @Expose
-    public Boolean edgeDisableFirstRunPage;
-
-    /**
-     * The Edge Block Live Tile Data Collection.
-     * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
-     */
-    @SerializedName("edgeBlockLiveTileDataCollection")
-    @Expose
-    public Boolean edgeBlockLiveTileDataCollection;
-
-    /**
-     * The Edge Sync Favorites With Internet Explorer.
-     * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
-     */
-    @SerializedName("edgeSyncFavoritesWithInternetExplorer")
-    @Expose
-    public Boolean edgeSyncFavoritesWithInternetExplorer;
-
-    /**
-     * The Edge Favorites List Location.
-     * The location of the favorites list to provision. Could be a local file, local network or http location.
-     */
-    @SerializedName("edgeFavoritesListLocation")
-    @Expose
-    public String edgeFavoritesListLocation;
-
-    /**
-     * The Edge Block Edit Favorites.
-     * Indicates whether or not to Block the user from making changes to Favorites.
-     */
-    @SerializedName("edgeBlockEditFavorites")
-    @Expose
-    public Boolean edgeBlockEditFavorites;
-
-    /**
-     * The Edge New Tab Page URL.
-     * Specify the page opened when new tabs are created.
-     */
-    @SerializedName("edgeNewTabPageURL")
-    @Expose
-    public String edgeNewTabPageURL;
-
-    /**
-     * The Edge Home Button Configuration.
-     * Causes the Home button to either hide, load the default Start page, load a New tab page, or a custom URL
-     */
-    @SerializedName("edgeHomeButtonConfiguration")
-    @Expose
-    public EdgeHomeButtonConfiguration edgeHomeButtonConfiguration;
-
-    /**
-     * The Edge Home Button Configuration Enabled.
-     * Enable the Home button configuration.
-     */
-    @SerializedName("edgeHomeButtonConfigurationEnabled")
-    @Expose
-    public Boolean edgeHomeButtonConfigurationEnabled;
-
-    /**
-     * The Edge Opens With.
-     * Specify what kind of pages are open at start.
-     */
-    @SerializedName("edgeOpensWith")
-    @Expose
-    public EdgeOpenOptions edgeOpensWith;
-
-    /**
-     * The Edge Block Sideloading Extensions.
-     * Indicates whether the user can sideload extensions.
-     */
-    @SerializedName("edgeBlockSideloadingExtensions")
-    @Expose
-    public Boolean edgeBlockSideloadingExtensions;
-
-    /**
-     * The Edge Required Extension Package Family Names.
-     * Specify the list of package family names of browser extensions that are required and cannot be turned off by the user.
-     */
-    @SerializedName("edgeRequiredExtensionPackageFamilyNames")
-    @Expose
-    public java.util.List<String> edgeRequiredExtensionPackageFamilyNames;
-
-    /**
-     * The Edge Block Printing.
-     * Configure Edge to allow or block printing.
-     */
-    @SerializedName("edgeBlockPrinting")
-    @Expose
-    public Boolean edgeBlockPrinting;
-
-    /**
-     * The Edge Favorites Bar Visibility.
-     * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page.
-     */
-    @SerializedName("edgeFavoritesBarVisibility")
-    @Expose
-    public VisibilitySetting edgeFavoritesBarVisibility;
-
-    /**
-     * The Edge Block Saving History.
-     * Configure Edge to allow browsing history to be saved or to never save browsing history.
-     */
-    @SerializedName("edgeBlockSavingHistory")
-    @Expose
-    public Boolean edgeBlockSavingHistory;
-
-    /**
-     * The Edge Block Full Screen Mode.
-     * Allow or prevent Edge from entering the full screen mode.
-     */
-    @SerializedName("edgeBlockFullScreenMode")
-    @Expose
-    public Boolean edgeBlockFullScreenMode;
-
-    /**
-     * The Edge Block Web Content On New Tab Page.
-     * Configure to load a blank page in Edge instead of the default New tab page and prevent users from changing it.
-     */
-    @SerializedName("edgeBlockWebContentOnNewTabPage")
-    @Expose
-    public Boolean edgeBlockWebContentOnNewTabPage;
-
-    /**
-     * The Edge Block Tab Preloading.
-     * Configure whether Edge preloads the new tab page at Windows startup.
-     */
-    @SerializedName("edgeBlockTabPreloading")
-    @Expose
-    public Boolean edgeBlockTabPreloading;
-
-    /**
-     * The Edge Block Prelaunch.
-     * Decide whether Microsoft Edge is prelaunched at Windows startup.
-     */
-    @SerializedName("edgeBlockPrelaunch")
-    @Expose
-    public Boolean edgeBlockPrelaunch;
-
-    /**
-     * The Edge Show Message When Opening Internet Explorer Sites.
-     * Controls the message displayed by Edge before switching to Internet Explorer.
-     */
-    @SerializedName("edgeShowMessageWhenOpeningInternetExplorerSites")
-    @Expose
-    public InternetExplorerMessageSetting edgeShowMessageWhenOpeningInternetExplorerSites;
-
-    /**
-     * The Edge Prevent Certificate Error Override.
-     * Allow or prevent users from overriding certificate errors.
-     */
-    @SerializedName("edgePreventCertificateErrorOverride")
-    @Expose
-    public Boolean edgePreventCertificateErrorOverride;
-
-    /**
-     * The Edge Kiosk Mode Restriction.
-     * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode.
-     */
-    @SerializedName("edgeKioskModeRestriction")
-    @Expose
-    public EdgeKioskModeRestrictionType edgeKioskModeRestriction;
-
-    /**
-     * The Edge Kiosk Reset After Idle Time In Minutes.
-     * Specifies the time in minutes from the last user activity before Microsoft Edge kiosk resets.  Valid values are 0-1440. The default is 5. 0 indicates no reset. Valid values 0 to 1440
-     */
-    @SerializedName("edgeKioskResetAfterIdleTimeInMinutes")
-    @Expose
-    public Integer edgeKioskResetAfterIdleTimeInMinutes;
+    public Boolean cameraBlocked;
 
     /**
      * The Cellular Block Data When Roaming.
@@ -863,68 +239,60 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public ConfigurationUsage cellularData;
 
     /**
-     * The Defender Require Real Time Monitoring.
-     * Indicates whether or not to require real time monitoring.
+     * The Certificates Block Manual Root Certificate Installation.
+     * Whether or not to Block the user from doing manual root certificate installation.
      */
-    @SerializedName("defenderRequireRealTimeMonitoring")
+    @SerializedName("certificatesBlockManualRootCertificateInstallation")
     @Expose
-    public Boolean defenderRequireRealTimeMonitoring;
+    public Boolean certificatesBlockManualRootCertificateInstallation;
 
     /**
-     * The Defender Require Behavior Monitoring.
-     * Indicates whether or not to require behavior monitoring.
+     * The Configure Time Zone.
+     * Specifies the time zone to be applied to the device. This is the standard Windows name for the target time zone.
      */
-    @SerializedName("defenderRequireBehaviorMonitoring")
+    @SerializedName("configureTimeZone")
     @Expose
-    public Boolean defenderRequireBehaviorMonitoring;
+    public String configureTimeZone;
 
     /**
-     * The Defender Require Network Inspection System.
-     * Indicates whether or not to require network inspection system.
+     * The Connected Devices Service Blocked.
+     * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
      */
-    @SerializedName("defenderRequireNetworkInspectionSystem")
+    @SerializedName("connectedDevicesServiceBlocked")
     @Expose
-    public Boolean defenderRequireNetworkInspectionSystem;
+    public Boolean connectedDevicesServiceBlocked;
 
     /**
-     * The Defender Scan Downloads.
-     * Indicates whether or not to scan downloads.
+     * The Copy Paste Blocked.
+     * Whether or not to Block the user from using copy paste.
      */
-    @SerializedName("defenderScanDownloads")
+    @SerializedName("copyPasteBlocked")
     @Expose
-    public Boolean defenderScanDownloads;
+    public Boolean copyPasteBlocked;
 
     /**
-     * The Defender Schedule Scan Enable Low Cpu Priority.
-     * When enabled, low CPU priority will be used during scheduled scans.
+     * The Cortana Blocked.
+     * Whether or not to Block the user from using Cortana.
      */
-    @SerializedName("defenderScheduleScanEnableLowCpuPriority")
+    @SerializedName("cortanaBlocked")
     @Expose
-    public Boolean defenderScheduleScanEnableLowCpuPriority;
+    public Boolean cortanaBlocked;
 
     /**
-     * The Defender Disable Catchup Quick Scan.
-     * When blocked, catch-up scans for scheduled quick scans will be turned off.
+     * The Cryptography Allow Fips Algorithm Policy.
+     * Specify whether to allow or disallow the Federal Information Processing Standard (FIPS) policy.
      */
-    @SerializedName("defenderDisableCatchupQuickScan")
+    @SerializedName("cryptographyAllowFipsAlgorithmPolicy")
     @Expose
-    public Boolean defenderDisableCatchupQuickScan;
+    public Boolean cryptographyAllowFipsAlgorithmPolicy;
 
     /**
-     * The Defender Disable Catchup Full Scan.
-     * When blocked, catch-up scans for scheduled full scans will be turned off.
+     * The Data Protection Block Direct Memory Access.
+     * This policy setting allows you to block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows.
      */
-    @SerializedName("defenderDisableCatchupFullScan")
+    @SerializedName("dataProtectionBlockDirectMemoryAccess")
     @Expose
-    public Boolean defenderDisableCatchupFullScan;
-
-    /**
-     * The Defender Scan Scripts Loaded In Internet Explorer.
-     * Indicates whether or not to scan scripts loaded in Internet Explorer browser.
-     */
-    @SerializedName("defenderScanScriptsLoadedInInternetExplorer")
-    @Expose
-    public Boolean defenderScanScriptsLoadedInInternetExplorer;
+    public Boolean dataProtectionBlockDirectMemoryAccess;
 
     /**
      * The Defender Block End User Access.
@@ -935,84 +303,12 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean defenderBlockEndUserAccess;
 
     /**
-     * The Defender Signature Update Interval In Hours.
-     * The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
+     * The Defender Block On Access Protection.
+     * Allows or disallows Windows Defender On Access Protection functionality.
      */
-    @SerializedName("defenderSignatureUpdateIntervalInHours")
+    @SerializedName("defenderBlockOnAccessProtection")
     @Expose
-    public Integer defenderSignatureUpdateIntervalInHours;
-
-    /**
-     * The Defender Monitor File Activity.
-     * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
-     */
-    @SerializedName("defenderMonitorFileActivity")
-    @Expose
-    public DefenderMonitorFileActivity defenderMonitorFileActivity;
-
-    /**
-     * The Defender Days Before Deleting Quarantined Malware.
-     * Number of days before deleting quarantined malware. Valid values 0 to 90
-     */
-    @SerializedName("defenderDaysBeforeDeletingQuarantinedMalware")
-    @Expose
-    public Integer defenderDaysBeforeDeletingQuarantinedMalware;
-
-    /**
-     * The Defender Scan Max Cpu.
-     * Max CPU usage percentage during scan. Valid values 0 to 100
-     */
-    @SerializedName("defenderScanMaxCpu")
-    @Expose
-    public Integer defenderScanMaxCpu;
-
-    /**
-     * The Defender Scan Archive Files.
-     * Indicates whether or not to scan archive files.
-     */
-    @SerializedName("defenderScanArchiveFiles")
-    @Expose
-    public Boolean defenderScanArchiveFiles;
-
-    /**
-     * The Defender Scan Incoming Mail.
-     * Indicates whether or not to scan incoming mail messages.
-     */
-    @SerializedName("defenderScanIncomingMail")
-    @Expose
-    public Boolean defenderScanIncomingMail;
-
-    /**
-     * The Defender Scan Removable Drives During Full Scan.
-     * Indicates whether or not to scan removable drives during full scan.
-     */
-    @SerializedName("defenderScanRemovableDrivesDuringFullScan")
-    @Expose
-    public Boolean defenderScanRemovableDrivesDuringFullScan;
-
-    /**
-     * The Defender Scan Mapped Network Drives During Full Scan.
-     * Indicates whether or not to scan mapped network drives during full scan.
-     */
-    @SerializedName("defenderScanMappedNetworkDrivesDuringFullScan")
-    @Expose
-    public Boolean defenderScanMappedNetworkDrivesDuringFullScan;
-
-    /**
-     * The Defender Scan Network Files.
-     * Indicates whether or not to scan files opened from a network folder.
-     */
-    @SerializedName("defenderScanNetworkFiles")
-    @Expose
-    public Boolean defenderScanNetworkFiles;
-
-    /**
-     * The Defender Require Cloud Protection.
-     * Indicates whether or not to require cloud protection.
-     */
-    @SerializedName("defenderRequireCloudProtection")
-    @Expose
-    public Boolean defenderRequireCloudProtection;
+    public Boolean defenderBlockOnAccessProtection;
 
     /**
      * The Defender Cloud Block Level.
@@ -1039,76 +335,12 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Integer defenderCloudExtendedTimeoutInSeconds;
 
     /**
-     * The Defender Prompt For Sample Submission.
-     * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * The Defender Days Before Deleting Quarantined Malware.
+     * Number of days before deleting quarantined malware. Valid values 0 to 90
      */
-    @SerializedName("defenderPromptForSampleSubmission")
+    @SerializedName("defenderDaysBeforeDeletingQuarantinedMalware")
     @Expose
-    public DefenderPromptForSampleSubmission defenderPromptForSampleSubmission;
-
-    /**
-     * The Defender Scheduled Quick Scan Time.
-     * The time to perform a daily quick scan.
-     */
-    @SerializedName("defenderScheduledQuickScanTime")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledQuickScanTime;
-
-    /**
-     * The Defender Scan Type.
-     * The defender system scan type. Possible values are: userDefined, disabled, quick, full.
-     */
-    @SerializedName("defenderScanType")
-    @Expose
-    public DefenderScanType defenderScanType;
-
-    /**
-     * The Defender System Scan Schedule.
-     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
-     */
-    @SerializedName("defenderSystemScanSchedule")
-    @Expose
-    public WeeklySchedule defenderSystemScanSchedule;
-
-    /**
-     * The Defender Scheduled Scan Time.
-     * The defender time for the system scan.
-     */
-    @SerializedName("defenderScheduledScanTime")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledScanTime;
-
-    /**
-     * The Defender Potentially Unwanted App Action.
-     * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
-     */
-    @SerializedName("defenderPotentiallyUnwantedAppAction")
-    @Expose
-    public DefenderPotentiallyUnwantedAppAction defenderPotentiallyUnwantedAppAction;
-
-    /**
-     * The Defender Potentially Unwanted App Action Setting.
-     * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
-     */
-    @SerializedName("defenderPotentiallyUnwantedAppActionSetting")
-    @Expose
-    public DefenderProtectionType defenderPotentiallyUnwantedAppActionSetting;
-
-    /**
-     * The Defender Submit Samples Consent Type.
-     * Checks for the user consent level in Windows Defender to send data.
-     */
-    @SerializedName("defenderSubmitSamplesConsentType")
-    @Expose
-    public DefenderSubmitSamplesConsentType defenderSubmitSamplesConsentType;
-
-    /**
-     * The Defender Block On Access Protection.
-     * Allows or disallows Windows Defender On Access Protection functionality.
-     */
-    @SerializedName("defenderBlockOnAccessProtection")
-    @Expose
-    public Boolean defenderBlockOnAccessProtection;
+    public Integer defenderDaysBeforeDeletingQuarantinedMalware;
 
     /**
      * The Defender Detected Malware Actions.
@@ -1117,6 +349,22 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName("defenderDetectedMalwareActions")
     @Expose
     public DefenderDetectedMalwareActions defenderDetectedMalwareActions;
+
+    /**
+     * The Defender Disable Catchup Full Scan.
+     * When blocked, catch-up scans for scheduled full scans will be turned off.
+     */
+    @SerializedName("defenderDisableCatchupFullScan")
+    @Expose
+    public Boolean defenderDisableCatchupFullScan;
+
+    /**
+     * The Defender Disable Catchup Quick Scan.
+     * When blocked, catch-up scans for scheduled quick scans will be turned off.
+     */
+    @SerializedName("defenderDisableCatchupQuickScan")
+    @Expose
+    public Boolean defenderDisableCatchupQuickScan;
 
     /**
      * The Defender File Extensions To Exclude.
@@ -1135,12 +383,788 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public java.util.List<String> defenderFilesAndFoldersToExclude;
 
     /**
+     * The Defender Monitor File Activity.
+     * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     */
+    @SerializedName("defenderMonitorFileActivity")
+    @Expose
+    public DefenderMonitorFileActivity defenderMonitorFileActivity;
+
+    /**
+     * The Defender Potentially Unwanted App Action.
+     * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
+     */
+    @SerializedName("defenderPotentiallyUnwantedAppAction")
+    @Expose
+    public DefenderPotentiallyUnwantedAppAction defenderPotentiallyUnwantedAppAction;
+
+    /**
+     * The Defender Potentially Unwanted App Action Setting.
+     * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
+     */
+    @SerializedName("defenderPotentiallyUnwantedAppActionSetting")
+    @Expose
+    public DefenderProtectionType defenderPotentiallyUnwantedAppActionSetting;
+
+    /**
      * The Defender Processes To Exclude.
      * Processes to exclude from scans and real time protection.
      */
     @SerializedName("defenderProcessesToExclude")
     @Expose
     public java.util.List<String> defenderProcessesToExclude;
+
+    /**
+     * The Defender Prompt For Sample Submission.
+     * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     */
+    @SerializedName("defenderPromptForSampleSubmission")
+    @Expose
+    public DefenderPromptForSampleSubmission defenderPromptForSampleSubmission;
+
+    /**
+     * The Defender Require Behavior Monitoring.
+     * Indicates whether or not to require behavior monitoring.
+     */
+    @SerializedName("defenderRequireBehaviorMonitoring")
+    @Expose
+    public Boolean defenderRequireBehaviorMonitoring;
+
+    /**
+     * The Defender Require Cloud Protection.
+     * Indicates whether or not to require cloud protection.
+     */
+    @SerializedName("defenderRequireCloudProtection")
+    @Expose
+    public Boolean defenderRequireCloudProtection;
+
+    /**
+     * The Defender Require Network Inspection System.
+     * Indicates whether or not to require network inspection system.
+     */
+    @SerializedName("defenderRequireNetworkInspectionSystem")
+    @Expose
+    public Boolean defenderRequireNetworkInspectionSystem;
+
+    /**
+     * The Defender Require Real Time Monitoring.
+     * Indicates whether or not to require real time monitoring.
+     */
+    @SerializedName("defenderRequireRealTimeMonitoring")
+    @Expose
+    public Boolean defenderRequireRealTimeMonitoring;
+
+    /**
+     * The Defender Scan Archive Files.
+     * Indicates whether or not to scan archive files.
+     */
+    @SerializedName("defenderScanArchiveFiles")
+    @Expose
+    public Boolean defenderScanArchiveFiles;
+
+    /**
+     * The Defender Scan Downloads.
+     * Indicates whether or not to scan downloads.
+     */
+    @SerializedName("defenderScanDownloads")
+    @Expose
+    public Boolean defenderScanDownloads;
+
+    /**
+     * The Defender Scan Incoming Mail.
+     * Indicates whether or not to scan incoming mail messages.
+     */
+    @SerializedName("defenderScanIncomingMail")
+    @Expose
+    public Boolean defenderScanIncomingMail;
+
+    /**
+     * The Defender Scan Mapped Network Drives During Full Scan.
+     * Indicates whether or not to scan mapped network drives during full scan.
+     */
+    @SerializedName("defenderScanMappedNetworkDrivesDuringFullScan")
+    @Expose
+    public Boolean defenderScanMappedNetworkDrivesDuringFullScan;
+
+    /**
+     * The Defender Scan Max Cpu.
+     * Max CPU usage percentage during scan. Valid values 0 to 100
+     */
+    @SerializedName("defenderScanMaxCpu")
+    @Expose
+    public Integer defenderScanMaxCpu;
+
+    /**
+     * The Defender Scan Network Files.
+     * Indicates whether or not to scan files opened from a network folder.
+     */
+    @SerializedName("defenderScanNetworkFiles")
+    @Expose
+    public Boolean defenderScanNetworkFiles;
+
+    /**
+     * The Defender Scan Removable Drives During Full Scan.
+     * Indicates whether or not to scan removable drives during full scan.
+     */
+    @SerializedName("defenderScanRemovableDrivesDuringFullScan")
+    @Expose
+    public Boolean defenderScanRemovableDrivesDuringFullScan;
+
+    /**
+     * The Defender Scan Scripts Loaded In Internet Explorer.
+     * Indicates whether or not to scan scripts loaded in Internet Explorer browser.
+     */
+    @SerializedName("defenderScanScriptsLoadedInInternetExplorer")
+    @Expose
+    public Boolean defenderScanScriptsLoadedInInternetExplorer;
+
+    /**
+     * The Defender Scan Type.
+     * The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     */
+    @SerializedName("defenderScanType")
+    @Expose
+    public DefenderScanType defenderScanType;
+
+    /**
+     * The Defender Scheduled Quick Scan Time.
+     * The time to perform a daily quick scan.
+     */
+    @SerializedName("defenderScheduledQuickScanTime")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledQuickScanTime;
+
+    /**
+     * The Defender Scheduled Scan Time.
+     * The defender time for the system scan.
+     */
+    @SerializedName("defenderScheduledScanTime")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledScanTime;
+
+    /**
+     * The Defender Schedule Scan Enable Low Cpu Priority.
+     * When enabled, low CPU priority will be used during scheduled scans.
+     */
+    @SerializedName("defenderScheduleScanEnableLowCpuPriority")
+    @Expose
+    public Boolean defenderScheduleScanEnableLowCpuPriority;
+
+    /**
+     * The Defender Signature Update Interval In Hours.
+     * The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
+     */
+    @SerializedName("defenderSignatureUpdateIntervalInHours")
+    @Expose
+    public Integer defenderSignatureUpdateIntervalInHours;
+
+    /**
+     * The Defender Submit Samples Consent Type.
+     * Checks for the user consent level in Windows Defender to send data.
+     */
+    @SerializedName("defenderSubmitSamplesConsentType")
+    @Expose
+    public DefenderSubmitSamplesConsentType defenderSubmitSamplesConsentType;
+
+    /**
+     * The Defender System Scan Schedule.
+     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     */
+    @SerializedName("defenderSystemScanSchedule")
+    @Expose
+    public WeeklySchedule defenderSystemScanSchedule;
+
+    /**
+     * The Developer Unlock Setting.
+     * Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     */
+    @SerializedName("developerUnlockSetting")
+    @Expose
+    public StateManagementSetting developerUnlockSetting;
+
+    /**
+     * The Device Management Block Factory Reset On Mobile.
+     * Indicates whether or not to Block the user from resetting their phone.
+     */
+    @SerializedName("deviceManagementBlockFactoryResetOnMobile")
+    @Expose
+    public Boolean deviceManagementBlockFactoryResetOnMobile;
+
+    /**
+     * The Device Management Block Manual Unenroll.
+     * Indicates whether or not to Block the user from doing manual un-enrollment from device management.
+     */
+    @SerializedName("deviceManagementBlockManualUnenroll")
+    @Expose
+    public Boolean deviceManagementBlockManualUnenroll;
+
+    /**
+     * The Diagnostics Data Submission Mode.
+     * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     */
+    @SerializedName("diagnosticsDataSubmissionMode")
+    @Expose
+    public DiagnosticDataSubmissionMode diagnosticsDataSubmissionMode;
+
+    /**
+     * The Display App List With Gdi DPIScaling Turned Off.
+     * List of legacy applications that have GDI DPI Scaling turned off.
+     */
+    @SerializedName("displayAppListWithGdiDPIScalingTurnedOff")
+    @Expose
+    public java.util.List<String> displayAppListWithGdiDPIScalingTurnedOff;
+
+    /**
+     * The Display App List With Gdi DPIScaling Turned On.
+     * List of legacy applications that have GDI DPI Scaling turned on.
+     */
+    @SerializedName("displayAppListWithGdiDPIScalingTurnedOn")
+    @Expose
+    public java.util.List<String> displayAppListWithGdiDPIScalingTurnedOn;
+
+    /**
+     * The Edge Allow Start Pages Modification.
+     * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
+     */
+    @SerializedName("edgeAllowStartPagesModification")
+    @Expose
+    public Boolean edgeAllowStartPagesModification;
+
+    /**
+     * The Edge Block Access To About Flags.
+     * Indicates whether or not to prevent access to about flags on Edge browser.
+     */
+    @SerializedName("edgeBlockAccessToAboutFlags")
+    @Expose
+    public Boolean edgeBlockAccessToAboutFlags;
+
+    /**
+     * The Edge Block Address Bar Dropdown.
+     * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
+     */
+    @SerializedName("edgeBlockAddressBarDropdown")
+    @Expose
+    public Boolean edgeBlockAddressBarDropdown;
+
+    /**
+     * The Edge Block Autofill.
+     * Indicates whether or not to block auto fill.
+     */
+    @SerializedName("edgeBlockAutofill")
+    @Expose
+    public Boolean edgeBlockAutofill;
+
+    /**
+     * The Edge Block Compatibility List.
+     * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
+     */
+    @SerializedName("edgeBlockCompatibilityList")
+    @Expose
+    public Boolean edgeBlockCompatibilityList;
+
+    /**
+     * The Edge Block Developer Tools.
+     * Indicates whether or not to block developer tools in the Edge browser.
+     */
+    @SerializedName("edgeBlockDeveloperTools")
+    @Expose
+    public Boolean edgeBlockDeveloperTools;
+
+    /**
+     * The Edge Blocked.
+     * Indicates whether or not to Block the user from using the Edge browser.
+     */
+    @SerializedName("edgeBlocked")
+    @Expose
+    public Boolean edgeBlocked;
+
+    /**
+     * The Edge Block Edit Favorites.
+     * Indicates whether or not to Block the user from making changes to Favorites.
+     */
+    @SerializedName("edgeBlockEditFavorites")
+    @Expose
+    public Boolean edgeBlockEditFavorites;
+
+    /**
+     * The Edge Block Extensions.
+     * Indicates whether or not to block extensions in the Edge browser.
+     */
+    @SerializedName("edgeBlockExtensions")
+    @Expose
+    public Boolean edgeBlockExtensions;
+
+    /**
+     * The Edge Block Full Screen Mode.
+     * Allow or prevent Edge from entering the full screen mode.
+     */
+    @SerializedName("edgeBlockFullScreenMode")
+    @Expose
+    public Boolean edgeBlockFullScreenMode;
+
+    /**
+     * The Edge Block In Private Browsing.
+     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
+     */
+    @SerializedName("edgeBlockInPrivateBrowsing")
+    @Expose
+    public Boolean edgeBlockInPrivateBrowsing;
+
+    /**
+     * The Edge Block Java Script.
+     * Indicates whether or not to Block the user from using JavaScript.
+     */
+    @SerializedName("edgeBlockJavaScript")
+    @Expose
+    public Boolean edgeBlockJavaScript;
+
+    /**
+     * The Edge Block Live Tile Data Collection.
+     * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
+     */
+    @SerializedName("edgeBlockLiveTileDataCollection")
+    @Expose
+    public Boolean edgeBlockLiveTileDataCollection;
+
+    /**
+     * The Edge Block Password Manager.
+     * Indicates whether or not to Block password manager.
+     */
+    @SerializedName("edgeBlockPasswordManager")
+    @Expose
+    public Boolean edgeBlockPasswordManager;
+
+    /**
+     * The Edge Block Popups.
+     * Indicates whether or not to block popups.
+     */
+    @SerializedName("edgeBlockPopups")
+    @Expose
+    public Boolean edgeBlockPopups;
+
+    /**
+     * The Edge Block Prelaunch.
+     * Decide whether Microsoft Edge is prelaunched at Windows startup.
+     */
+    @SerializedName("edgeBlockPrelaunch")
+    @Expose
+    public Boolean edgeBlockPrelaunch;
+
+    /**
+     * The Edge Block Printing.
+     * Configure Edge to allow or block printing.
+     */
+    @SerializedName("edgeBlockPrinting")
+    @Expose
+    public Boolean edgeBlockPrinting;
+
+    /**
+     * The Edge Block Saving History.
+     * Configure Edge to allow browsing history to be saved or to never save browsing history.
+     */
+    @SerializedName("edgeBlockSavingHistory")
+    @Expose
+    public Boolean edgeBlockSavingHistory;
+
+    /**
+     * The Edge Block Search Engine Customization.
+     * Indicates whether or not to block the user from adding new search engine or changing the default search engine.
+     */
+    @SerializedName("edgeBlockSearchEngineCustomization")
+    @Expose
+    public Boolean edgeBlockSearchEngineCustomization;
+
+    /**
+     * The Edge Block Search Suggestions.
+     * Indicates whether or not to block the user from using the search suggestions in the address bar.
+     */
+    @SerializedName("edgeBlockSearchSuggestions")
+    @Expose
+    public Boolean edgeBlockSearchSuggestions;
+
+    /**
+     * The Edge Block Sending Do Not Track Header.
+     * Indicates whether or not to Block the user from sending the do not track header.
+     */
+    @SerializedName("edgeBlockSendingDoNotTrackHeader")
+    @Expose
+    public Boolean edgeBlockSendingDoNotTrackHeader;
+
+    /**
+     * The Edge Block Sending Intranet Traffic To Internet Explorer.
+     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
+     */
+    @SerializedName("edgeBlockSendingIntranetTrafficToInternetExplorer")
+    @Expose
+    public Boolean edgeBlockSendingIntranetTrafficToInternetExplorer;
+
+    /**
+     * The Edge Block Sideloading Extensions.
+     * Indicates whether the user can sideload extensions.
+     */
+    @SerializedName("edgeBlockSideloadingExtensions")
+    @Expose
+    public Boolean edgeBlockSideloadingExtensions;
+
+    /**
+     * The Edge Block Tab Preloading.
+     * Configure whether Edge preloads the new tab page at Windows startup.
+     */
+    @SerializedName("edgeBlockTabPreloading")
+    @Expose
+    public Boolean edgeBlockTabPreloading;
+
+    /**
+     * The Edge Block Web Content On New Tab Page.
+     * Configure to load a blank page in Edge instead of the default New tab page and prevent users from changing it.
+     */
+    @SerializedName("edgeBlockWebContentOnNewTabPage")
+    @Expose
+    public Boolean edgeBlockWebContentOnNewTabPage;
+
+    /**
+     * The Edge Clear Browsing Data On Exit.
+     * Clear browsing data on exiting Microsoft Edge.
+     */
+    @SerializedName("edgeClearBrowsingDataOnExit")
+    @Expose
+    public Boolean edgeClearBrowsingDataOnExit;
+
+    /**
+     * The Edge Cookie Policy.
+     * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     */
+    @SerializedName("edgeCookiePolicy")
+    @Expose
+    public EdgeCookiePolicy edgeCookiePolicy;
+
+    /**
+     * The Edge Disable First Run Page.
+     * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
+     */
+    @SerializedName("edgeDisableFirstRunPage")
+    @Expose
+    public Boolean edgeDisableFirstRunPage;
+
+    /**
+     * The Edge Enterprise Mode Site List Location.
+     * Indicates the enterprise mode site list location. Could be a local file, local network or http location.
+     */
+    @SerializedName("edgeEnterpriseModeSiteListLocation")
+    @Expose
+    public String edgeEnterpriseModeSiteListLocation;
+
+    /**
+     * The Edge Favorites Bar Visibility.
+     * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page.
+     */
+    @SerializedName("edgeFavoritesBarVisibility")
+    @Expose
+    public VisibilitySetting edgeFavoritesBarVisibility;
+
+    /**
+     * The Edge Favorites List Location.
+     * The location of the favorites list to provision. Could be a local file, local network or http location.
+     */
+    @SerializedName("edgeFavoritesListLocation")
+    @Expose
+    public String edgeFavoritesListLocation;
+
+    /**
+     * The Edge First Run Url.
+     * The first run URL for when Edge browser is opened for the first time.
+     */
+    @SerializedName("edgeFirstRunUrl")
+    @Expose
+    public String edgeFirstRunUrl;
+
+    /**
+     * The Edge Home Button Configuration.
+     * Causes the Home button to either hide, load the default Start page, load a New tab page, or a custom URL
+     */
+    @SerializedName("edgeHomeButtonConfiguration")
+    @Expose
+    public EdgeHomeButtonConfiguration edgeHomeButtonConfiguration;
+
+    /**
+     * The Edge Home Button Configuration Enabled.
+     * Enable the Home button configuration.
+     */
+    @SerializedName("edgeHomeButtonConfigurationEnabled")
+    @Expose
+    public Boolean edgeHomeButtonConfigurationEnabled;
+
+    /**
+     * The Edge Homepage Urls.
+     * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
+     */
+    @SerializedName("edgeHomepageUrls")
+    @Expose
+    public java.util.List<String> edgeHomepageUrls;
+
+    /**
+     * The Edge Kiosk Mode Restriction.
+     * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode.
+     */
+    @SerializedName("edgeKioskModeRestriction")
+    @Expose
+    public EdgeKioskModeRestrictionType edgeKioskModeRestriction;
+
+    /**
+     * The Edge Kiosk Reset After Idle Time In Minutes.
+     * Specifies the time in minutes from the last user activity before Microsoft Edge kiosk resets.  Valid values are 0-1440. The default is 5. 0 indicates no reset. Valid values 0 to 1440
+     */
+    @SerializedName("edgeKioskResetAfterIdleTimeInMinutes")
+    @Expose
+    public Integer edgeKioskResetAfterIdleTimeInMinutes;
+
+    /**
+     * The Edge New Tab Page URL.
+     * Specify the page opened when new tabs are created.
+     */
+    @SerializedName("edgeNewTabPageURL")
+    @Expose
+    public String edgeNewTabPageURL;
+
+    /**
+     * The Edge Opens With.
+     * Specify what kind of pages are open at start.
+     */
+    @SerializedName("edgeOpensWith")
+    @Expose
+    public EdgeOpenOptions edgeOpensWith;
+
+    /**
+     * The Edge Prevent Certificate Error Override.
+     * Allow or prevent users from overriding certificate errors.
+     */
+    @SerializedName("edgePreventCertificateErrorOverride")
+    @Expose
+    public Boolean edgePreventCertificateErrorOverride;
+
+    /**
+     * The Edge Required Extension Package Family Names.
+     * Specify the list of package family names of browser extensions that are required and cannot be turned off by the user.
+     */
+    @SerializedName("edgeRequiredExtensionPackageFamilyNames")
+    @Expose
+    public java.util.List<String> edgeRequiredExtensionPackageFamilyNames;
+
+    /**
+     * The Edge Require Smart Screen.
+     * Indicates whether or not to Require the user to use the smart screen filter.
+     */
+    @SerializedName("edgeRequireSmartScreen")
+    @Expose
+    public Boolean edgeRequireSmartScreen;
+
+    /**
+     * The Edge Search Engine.
+     * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
+     */
+    @SerializedName("edgeSearchEngine")
+    @Expose
+    public EdgeSearchEngineBase edgeSearchEngine;
+
+    /**
+     * The Edge Send Intranet Traffic To Internet Explorer.
+     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
+     */
+    @SerializedName("edgeSendIntranetTrafficToInternetExplorer")
+    @Expose
+    public Boolean edgeSendIntranetTrafficToInternetExplorer;
+
+    /**
+     * The Edge Show Message When Opening Internet Explorer Sites.
+     * Controls the message displayed by Edge before switching to Internet Explorer.
+     */
+    @SerializedName("edgeShowMessageWhenOpeningInternetExplorerSites")
+    @Expose
+    public InternetExplorerMessageSetting edgeShowMessageWhenOpeningInternetExplorerSites;
+
+    /**
+     * The Edge Sync Favorites With Internet Explorer.
+     * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
+     */
+    @SerializedName("edgeSyncFavoritesWithInternetExplorer")
+    @Expose
+    public Boolean edgeSyncFavoritesWithInternetExplorer;
+
+    /**
+     * The Edge Telemetry For Microsoft365Analytics.
+     * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics
+     */
+    @SerializedName("edgeTelemetryForMicrosoft365Analytics")
+    @Expose
+    public EdgeTelemetryMode edgeTelemetryForMicrosoft365Analytics;
+
+    /**
+     * The Enable Automatic Redeployment.
+     * Allow users with administrative rights to delete all user data and settings using CTRL + Win + R at the device lock screen so that the device can be automatically re-configured and re-enrolled into management.
+     */
+    @SerializedName("enableAutomaticRedeployment")
+    @Expose
+    public Boolean enableAutomaticRedeployment;
+
+    /**
+     * The Energy Saver On Battery Threshold Percentage.
+     * This setting allows you to specify battery charge level at which Energy Saver is turned on. While on battery, Energy Saver is automatically turned on at (and below) the specified battery charge level. Valid input range (0-100). Valid values 0 to 100
+     */
+    @SerializedName("energySaverOnBatteryThresholdPercentage")
+    @Expose
+    public Integer energySaverOnBatteryThresholdPercentage;
+
+    /**
+     * The Energy Saver Plugged In Threshold Percentage.
+     * This setting allows you to specify battery charge level at which Energy Saver is turned on. While plugged in, Energy Saver is automatically turned on at (and below) the specified battery charge level. Valid input range (0-100). Valid values 0 to 100
+     */
+    @SerializedName("energySaverPluggedInThresholdPercentage")
+    @Expose
+    public Integer energySaverPluggedInThresholdPercentage;
+
+    /**
+     * The Enterprise Cloud Print Discovery End Point.
+     * Endpoint for discovering cloud printers.
+     */
+    @SerializedName("enterpriseCloudPrintDiscoveryEndPoint")
+    @Expose
+    public String enterpriseCloudPrintDiscoveryEndPoint;
+
+    /**
+     * The Enterprise Cloud Print Discovery Max Limit.
+     * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
+     */
+    @SerializedName("enterpriseCloudPrintDiscoveryMaxLimit")
+    @Expose
+    public Integer enterpriseCloudPrintDiscoveryMaxLimit;
+
+    /**
+     * The Enterprise Cloud Print Mopria Discovery Resource Identifier.
+     * OAuth resource URI for printer discovery service as configured in Azure portal.
+     */
+    @SerializedName("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier")
+    @Expose
+    public String enterpriseCloudPrintMopriaDiscoveryResourceIdentifier;
+
+    /**
+     * The Enterprise Cloud Print OAuth Authority.
+     * Authentication endpoint for acquiring OAuth tokens.
+     */
+    @SerializedName("enterpriseCloudPrintOAuthAuthority")
+    @Expose
+    public String enterpriseCloudPrintOAuthAuthority;
+
+    /**
+     * The Enterprise Cloud Print OAuth Client Identifier.
+     * GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
+     */
+    @SerializedName("enterpriseCloudPrintOAuthClientIdentifier")
+    @Expose
+    public String enterpriseCloudPrintOAuthClientIdentifier;
+
+    /**
+     * The Enterprise Cloud Print Resource Identifier.
+     * OAuth resource URI for print service as configured in the Azure portal.
+     */
+    @SerializedName("enterpriseCloudPrintResourceIdentifier")
+    @Expose
+    public String enterpriseCloudPrintResourceIdentifier;
+
+    /**
+     * The Experience Block Device Discovery.
+     * Indicates whether or not to enable device discovery UX.
+     */
+    @SerializedName("experienceBlockDeviceDiscovery")
+    @Expose
+    public Boolean experienceBlockDeviceDiscovery;
+
+    /**
+     * The Experience Block Error Dialog When No SIM.
+     * Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
+     */
+    @SerializedName("experienceBlockErrorDialogWhenNoSIM")
+    @Expose
+    public Boolean experienceBlockErrorDialogWhenNoSIM;
+
+    /**
+     * The Experience Block Task Switcher.
+     * Indicates whether or not to enable task switching on the device.
+     */
+    @SerializedName("experienceBlockTaskSwitcher")
+    @Expose
+    public Boolean experienceBlockTaskSwitcher;
+
+    /**
+     * The Experience Do Not Sync Browser Settings.
+     * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override.
+     */
+    @SerializedName("experienceDoNotSyncBrowserSettings")
+    @Expose
+    public BrowserSyncSetting experienceDoNotSyncBrowserSettings;
+
+    /**
+     * The Find My Files.
+     * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access.
+     */
+    @SerializedName("findMyFiles")
+    @Expose
+    public Enablement findMyFiles;
+
+    /**
+     * The Game Dvr Blocked.
+     * Indicates whether or not to block DVR and broadcasting.
+     */
+    @SerializedName("gameDvrBlocked")
+    @Expose
+    public Boolean gameDvrBlocked;
+
+    /**
+     * The Ink Workspace Access.
+     * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
+     */
+    @SerializedName("inkWorkspaceAccess")
+    @Expose
+    public InkAccessSetting inkWorkspaceAccess;
+
+    /**
+     * The Ink Workspace Access State.
+     * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
+     */
+    @SerializedName("inkWorkspaceAccessState")
+    @Expose
+    public StateManagementSetting inkWorkspaceAccessState;
+
+    /**
+     * The Ink Workspace Block Suggested Apps.
+     * Specify whether to show recommended app suggestions in the ink workspace.
+     */
+    @SerializedName("inkWorkspaceBlockSuggestedApps")
+    @Expose
+    public Boolean inkWorkspaceBlockSuggestedApps;
+
+    /**
+     * The Internet Sharing Blocked.
+     * Indicates whether or not to Block the user from using internet sharing.
+     */
+    @SerializedName("internetSharingBlocked")
+    @Expose
+    public Boolean internetSharingBlocked;
+
+    /**
+     * The Location Services Blocked.
+     * Indicates whether or not to Block the user from location services.
+     */
+    @SerializedName("locationServicesBlocked")
+    @Expose
+    public Boolean locationServicesBlocked;
+
+    /**
+     * The Lock Screen Activate Apps With Voice.
+     * This policy setting specifies whether Windows apps can be activated by voice while the system is locked.
+     */
+    @SerializedName("lockScreenActivateAppsWithVoice")
+    @Expose
+    public Enablement lockScreenActivateAppsWithVoice;
 
     /**
      * The Lock Screen Allow Timeout Configuration.
@@ -1183,12 +1207,108 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Integer lockScreenTimeoutInSeconds;
 
     /**
-     * The Lock Screen Activate Apps With Voice.
-     * This policy setting specifies whether Windows apps can be activated by voice while the system is locked.
+     * The Logon Block Fast User Switching.
+     * Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
      */
-    @SerializedName("lockScreenActivateAppsWithVoice")
+    @SerializedName("logonBlockFastUserSwitching")
     @Expose
-    public Enablement lockScreenActivateAppsWithVoice;
+    public Boolean logonBlockFastUserSwitching;
+
+    /**
+     * The Messaging Block MMS.
+     * Indicates whether or not to block the MMS send/receive functionality on the device.
+     */
+    @SerializedName("messagingBlockMMS")
+    @Expose
+    public Boolean messagingBlockMMS;
+
+    /**
+     * The Messaging Block Rich Communication Services.
+     * Indicates whether or not to block the RCS send/receive functionality on the device.
+     */
+    @SerializedName("messagingBlockRichCommunicationServices")
+    @Expose
+    public Boolean messagingBlockRichCommunicationServices;
+
+    /**
+     * The Messaging Block Sync.
+     * Indicates whether or not to block text message back up and restore and Messaging Everywhere.
+     */
+    @SerializedName("messagingBlockSync")
+    @Expose
+    public Boolean messagingBlockSync;
+
+    /**
+     * The Microsoft Account Blocked.
+     * Indicates whether or not to Block a Microsoft account.
+     */
+    @SerializedName("microsoftAccountBlocked")
+    @Expose
+    public Boolean microsoftAccountBlocked;
+
+    /**
+     * The Microsoft Account Block Settings Sync.
+     * Indicates whether or not to Block Microsoft account settings sync.
+     */
+    @SerializedName("microsoftAccountBlockSettingsSync")
+    @Expose
+    public Boolean microsoftAccountBlockSettingsSync;
+
+    /**
+     * The Microsoft Account Sign In Assistant Settings.
+     * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service.
+     */
+    @SerializedName("microsoftAccountSignInAssistantSettings")
+    @Expose
+    public SignInAssistantOptions microsoftAccountSignInAssistantSettings;
+
+    /**
+     * The Network Proxy Apply Settings Device Wide.
+     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     */
+    @SerializedName("networkProxyApplySettingsDeviceWide")
+    @Expose
+    public Boolean networkProxyApplySettingsDeviceWide;
+
+    /**
+     * The Network Proxy Automatic Configuration Url.
+     * Address to the proxy auto-config (PAC) script you want to use.
+     */
+    @SerializedName("networkProxyAutomaticConfigurationUrl")
+    @Expose
+    public String networkProxyAutomaticConfigurationUrl;
+
+    /**
+     * The Network Proxy Disable Auto Detect.
+     * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
+     */
+    @SerializedName("networkProxyDisableAutoDetect")
+    @Expose
+    public Boolean networkProxyDisableAutoDetect;
+
+    /**
+     * The Network Proxy Server.
+     * Specifies manual proxy server settings.
+     */
+    @SerializedName("networkProxyServer")
+    @Expose
+    public Windows10NetworkProxyServer networkProxyServer;
+
+    /**
+     * The Nfc Blocked.
+     * Indicates whether or not to Block the user from using near field communication.
+     */
+    @SerializedName("nfcBlocked")
+    @Expose
+    public Boolean nfcBlocked;
+
+    /**
+     * The One Drive Disable File Sync.
+     * Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
+     */
+    @SerializedName("oneDriveDisableFileSync")
+    @Expose
+    public Boolean oneDriveDisableFileSync;
 
     /**
      * The Password Block Simple.
@@ -1207,6 +1327,22 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Integer passwordExpirationDays;
 
     /**
+     * The Password Minimum Age In Days.
+     * This security setting determines the period of time (in days) that a password must be used before the user can change it. Valid values 0 to 998
+     */
+    @SerializedName("passwordMinimumAgeInDays")
+    @Expose
+    public Integer passwordMinimumAgeInDays;
+
+    /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
+
+    /**
      * The Password Minimum Length.
      * The minimum password length. Valid values 4 to 16
      */
@@ -1221,14 +1357,6 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-
-    /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
 
     /**
      * The Password Previous Password Block Count.
@@ -1247,20 +1375,20 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean passwordRequired;
 
     /**
-     * The Password Require When Resume From Idle State.
-     * Indicates whether or not to require a password upon resuming from an idle state.
-     */
-    @SerializedName("passwordRequireWhenResumeFromIdleState")
-    @Expose
-    public Boolean passwordRequireWhenResumeFromIdleState;
-
-    /**
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
     @SerializedName("passwordRequiredType")
     @Expose
     public RequiredPasswordType passwordRequiredType;
+
+    /**
+     * The Password Require When Resume From Idle State.
+     * Indicates whether or not to require a password upon resuming from an idle state.
+     */
+    @SerializedName("passwordRequireWhenResumeFromIdleState")
+    @Expose
+    public Boolean passwordRequireWhenResumeFromIdleState;
 
     /**
      * The Password Sign In Failure Count Before Factory Reset.
@@ -1271,12 +1399,108 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Integer passwordSignInFailureCountBeforeFactoryReset;
 
     /**
-     * The Password Minimum Age In Days.
-     * This security setting determines the period of time (in days) that a password must be used before the user can change it. Valid values 0 to 998
+     * The Personalization Desktop Image Url.
+     * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
      */
-    @SerializedName("passwordMinimumAgeInDays")
+    @SerializedName("personalizationDesktopImageUrl")
     @Expose
-    public Integer passwordMinimumAgeInDays;
+    public String personalizationDesktopImageUrl;
+
+    /**
+     * The Personalization Lock Screen Image Url.
+     * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
+     */
+    @SerializedName("personalizationLockScreenImageUrl")
+    @Expose
+    public String personalizationLockScreenImageUrl;
+
+    /**
+     * The Power Button Action On Battery.
+     * This setting specifies the action that Windows takes when a user presses the Power button while on battery.
+     */
+    @SerializedName("powerButtonActionOnBattery")
+    @Expose
+    public PowerActionType powerButtonActionOnBattery;
+
+    /**
+     * The Power Button Action Plugged In.
+     * This setting specifies the action that Windows takes when a user presses the Power button while plugged in.
+     */
+    @SerializedName("powerButtonActionPluggedIn")
+    @Expose
+    public PowerActionType powerButtonActionPluggedIn;
+
+    /**
+     * The Power Hybrid Sleep On Battery.
+     * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
+     */
+    @SerializedName("powerHybridSleepOnBattery")
+    @Expose
+    public Enablement powerHybridSleepOnBattery;
+
+    /**
+     * The Power Hybrid Sleep Plugged In.
+     * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
+     */
+    @SerializedName("powerHybridSleepPluggedIn")
+    @Expose
+    public Enablement powerHybridSleepPluggedIn;
+
+    /**
+     * The Power Lid Close Action On Battery.
+     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery.
+     */
+    @SerializedName("powerLidCloseActionOnBattery")
+    @Expose
+    public PowerActionType powerLidCloseActionOnBattery;
+
+    /**
+     * The Power Lid Close Action Plugged In.
+     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in.
+     */
+    @SerializedName("powerLidCloseActionPluggedIn")
+    @Expose
+    public PowerActionType powerLidCloseActionPluggedIn;
+
+    /**
+     * The Power Sleep Button Action On Battery.
+     * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery.
+     */
+    @SerializedName("powerSleepButtonActionOnBattery")
+    @Expose
+    public PowerActionType powerSleepButtonActionOnBattery;
+
+    /**
+     * The Power Sleep Button Action Plugged In.
+     * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in.
+     */
+    @SerializedName("powerSleepButtonActionPluggedIn")
+    @Expose
+    public PowerActionType powerSleepButtonActionPluggedIn;
+
+    /**
+     * The Printer Block Addition.
+     * Prevent user installation of additional printers from printers settings.
+     */
+    @SerializedName("printerBlockAddition")
+    @Expose
+    public Boolean printerBlockAddition;
+
+    /**
+     * The Printer Default Name.
+     * Name (network host name) of an installed printer.
+     */
+    @SerializedName("printerDefaultName")
+    @Expose
+    public String printerDefaultName;
+
+    /**
+     * The Printer Names.
+     * Automatically provision printers based on their names (network host names).
+     */
+    @SerializedName("printerNames")
+    @Expose
+    public java.util.List<String> printerNames;
 
     /**
      * The Privacy Advertising Id.
@@ -1295,12 +1519,12 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean privacyAutoAcceptPairingAndConsentPrompts;
 
     /**
-     * The Privacy Disable Launch Experience.
-     * This policy prevents the privacy experience from launching during user logon for new and upgraded users.???
+     * The Privacy Block Activity Feed.
+     * Blocks the usage of cloud based speech services for Cortana, Dictation, or Store applications.
      */
-    @SerializedName("privacyDisableLaunchExperience")
+    @SerializedName("privacyBlockActivityFeed")
     @Expose
-    public Boolean privacyDisableLaunchExperience;
+    public Boolean privacyBlockActivityFeed;
 
     /**
      * The Privacy Block Input Personalization.
@@ -1319,20 +1543,316 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public Boolean privacyBlockPublishUserActivities;
 
     /**
-     * The Privacy Block Activity Feed.
-     * Blocks the usage of cloud based speech services for Cortana, Dictation, or Store applications.
+     * The Privacy Disable Launch Experience.
+     * This policy prevents the privacy experience from launching during user logon for new and upgraded users.???
      */
-    @SerializedName("privacyBlockActivityFeed")
+    @SerializedName("privacyDisableLaunchExperience")
     @Expose
-    public Boolean privacyBlockActivityFeed;
+    public Boolean privacyDisableLaunchExperience;
 
     /**
-     * The Activate Apps With Voice.
-     * Specifies if Windows apps can be activated by voice.
+     * The Reset Protection Mode Blocked.
+     * Indicates whether or not to Block the user from reset protection mode.
      */
-    @SerializedName("activateAppsWithVoice")
+    @SerializedName("resetProtectionModeBlocked")
     @Expose
-    public Enablement activateAppsWithVoice;
+    public Boolean resetProtectionModeBlocked;
+
+    /**
+     * The Safe Search Filter.
+     * Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     */
+    @SerializedName("safeSearchFilter")
+    @Expose
+    public SafeSearchFilterType safeSearchFilter;
+
+    /**
+     * The Screen Capture Blocked.
+     * Indicates whether or not to Block the user from taking Screenshots.
+     */
+    @SerializedName("screenCaptureBlocked")
+    @Expose
+    public Boolean screenCaptureBlocked;
+
+    /**
+     * The Search Block Diacritics.
+     * Specifies if search can use diacritics.
+     */
+    @SerializedName("searchBlockDiacritics")
+    @Expose
+    public Boolean searchBlockDiacritics;
+
+    /**
+     * The Search Block Web Results.
+     * Indicates whether or not to block the web search.
+     */
+    @SerializedName("searchBlockWebResults")
+    @Expose
+    public Boolean searchBlockWebResults;
+
+    /**
+     * The Search Disable Auto Language Detection.
+     * Specifies whether to use automatic language detection when indexing content and properties.
+     */
+    @SerializedName("searchDisableAutoLanguageDetection")
+    @Expose
+    public Boolean searchDisableAutoLanguageDetection;
+
+    /**
+     * The Search Disable Indexer Backoff.
+     * Indicates whether or not to disable the search indexer backoff feature.
+     */
+    @SerializedName("searchDisableIndexerBackoff")
+    @Expose
+    public Boolean searchDisableIndexerBackoff;
+
+    /**
+     * The Search Disable Indexing Encrypted Items.
+     * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
+     */
+    @SerializedName("searchDisableIndexingEncryptedItems")
+    @Expose
+    public Boolean searchDisableIndexingEncryptedItems;
+
+    /**
+     * The Search Disable Indexing Removable Drive.
+     * Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
+     */
+    @SerializedName("searchDisableIndexingRemovableDrive")
+    @Expose
+    public Boolean searchDisableIndexingRemovableDrive;
+
+    /**
+     * The Search Disable Location.
+     * Specifies if search can use location information.
+     */
+    @SerializedName("searchDisableLocation")
+    @Expose
+    public Boolean searchDisableLocation;
+
+    /**
+     * The Search Disable Use Location.
+     * Specifies if search can use location information.
+     */
+    @SerializedName("searchDisableUseLocation")
+    @Expose
+    public Boolean searchDisableUseLocation;
+
+    /**
+     * The Search Enable Automatic Index Size Manangement.
+     * Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
+     */
+    @SerializedName("searchEnableAutomaticIndexSizeManangement")
+    @Expose
+    public Boolean searchEnableAutomaticIndexSizeManangement;
+
+    /**
+     * The Search Enable Remote Queries.
+     * Indicates whether or not to block remote queries of this computer’s index.
+     */
+    @SerializedName("searchEnableRemoteQueries")
+    @Expose
+    public Boolean searchEnableRemoteQueries;
+
+    /**
+     * The Security Block Azure ADJoined Devices Auto Encryption.
+     * Specify whether to allow automatic device encryption during OOBE when the device is Azure AD joined (desktop only).
+     */
+    @SerializedName("securityBlockAzureADJoinedDevicesAutoEncryption")
+    @Expose
+    public Boolean securityBlockAzureADJoinedDevicesAutoEncryption;
+
+    /**
+     * The Settings Block Accounts Page.
+     * Indicates whether or not to block access to Accounts in Settings app.
+     */
+    @SerializedName("settingsBlockAccountsPage")
+    @Expose
+    public Boolean settingsBlockAccountsPage;
+
+    /**
+     * The Settings Block Add Provisioning Package.
+     * Indicates whether or not to block the user from installing provisioning packages.
+     */
+    @SerializedName("settingsBlockAddProvisioningPackage")
+    @Expose
+    public Boolean settingsBlockAddProvisioningPackage;
+
+    /**
+     * The Settings Block Apps Page.
+     * Indicates whether or not to block access to Apps in Settings app.
+     */
+    @SerializedName("settingsBlockAppsPage")
+    @Expose
+    public Boolean settingsBlockAppsPage;
+
+    /**
+     * The Settings Block Change Language.
+     * Indicates whether or not to block the user from changing the language settings.
+     */
+    @SerializedName("settingsBlockChangeLanguage")
+    @Expose
+    public Boolean settingsBlockChangeLanguage;
+
+    /**
+     * The Settings Block Change Power Sleep.
+     * Indicates whether or not to block the user from changing power and sleep settings.
+     */
+    @SerializedName("settingsBlockChangePowerSleep")
+    @Expose
+    public Boolean settingsBlockChangePowerSleep;
+
+    /**
+     * The Settings Block Change Region.
+     * Indicates whether or not to block the user from changing the region settings.
+     */
+    @SerializedName("settingsBlockChangeRegion")
+    @Expose
+    public Boolean settingsBlockChangeRegion;
+
+    /**
+     * The Settings Block Change System Time.
+     * Indicates whether or not to block the user from changing date and time settings.
+     */
+    @SerializedName("settingsBlockChangeSystemTime")
+    @Expose
+    public Boolean settingsBlockChangeSystemTime;
+
+    /**
+     * The Settings Block Devices Page.
+     * Indicates whether or not to block access to Devices in Settings app.
+     */
+    @SerializedName("settingsBlockDevicesPage")
+    @Expose
+    public Boolean settingsBlockDevicesPage;
+
+    /**
+     * The Settings Block Ease Of Access Page.
+     * Indicates whether or not to block access to Ease of Access in Settings app.
+     */
+    @SerializedName("settingsBlockEaseOfAccessPage")
+    @Expose
+    public Boolean settingsBlockEaseOfAccessPage;
+
+    /**
+     * The Settings Block Edit Device Name.
+     * Indicates whether or not to block the user from editing the device name.
+     */
+    @SerializedName("settingsBlockEditDeviceName")
+    @Expose
+    public Boolean settingsBlockEditDeviceName;
+
+    /**
+     * The Settings Block Gaming Page.
+     * Indicates whether or not to block access to Gaming in Settings app.
+     */
+    @SerializedName("settingsBlockGamingPage")
+    @Expose
+    public Boolean settingsBlockGamingPage;
+
+    /**
+     * The Settings Block Network Internet Page.
+     * Indicates whether or not to block access to Network &amp; Internet in Settings app.
+     */
+    @SerializedName("settingsBlockNetworkInternetPage")
+    @Expose
+    public Boolean settingsBlockNetworkInternetPage;
+
+    /**
+     * The Settings Block Personalization Page.
+     * Indicates whether or not to block access to Personalization in Settings app.
+     */
+    @SerializedName("settingsBlockPersonalizationPage")
+    @Expose
+    public Boolean settingsBlockPersonalizationPage;
+
+    /**
+     * The Settings Block Privacy Page.
+     * Indicates whether or not to block access to Privacy in Settings app.
+     */
+    @SerializedName("settingsBlockPrivacyPage")
+    @Expose
+    public Boolean settingsBlockPrivacyPage;
+
+    /**
+     * The Settings Block Remove Provisioning Package.
+     * Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
+     */
+    @SerializedName("settingsBlockRemoveProvisioningPackage")
+    @Expose
+    public Boolean settingsBlockRemoveProvisioningPackage;
+
+    /**
+     * The Settings Block Settings App.
+     * Indicates whether or not to block access to Settings app.
+     */
+    @SerializedName("settingsBlockSettingsApp")
+    @Expose
+    public Boolean settingsBlockSettingsApp;
+
+    /**
+     * The Settings Block System Page.
+     * Indicates whether or not to block access to System in Settings app.
+     */
+    @SerializedName("settingsBlockSystemPage")
+    @Expose
+    public Boolean settingsBlockSystemPage;
+
+    /**
+     * The Settings Block Time Language Page.
+     * Indicates whether or not to block access to Time &amp; Language in Settings app.
+     */
+    @SerializedName("settingsBlockTimeLanguagePage")
+    @Expose
+    public Boolean settingsBlockTimeLanguagePage;
+
+    /**
+     * The Settings Block Update Security Page.
+     * Indicates whether or not to block access to Update &amp; Security in Settings app.
+     */
+    @SerializedName("settingsBlockUpdateSecurityPage")
+    @Expose
+    public Boolean settingsBlockUpdateSecurityPage;
+
+    /**
+     * The Shared User App Data Allowed.
+     * Indicates whether or not to block multiple users of the same app to share data.
+     */
+    @SerializedName("sharedUserAppDataAllowed")
+    @Expose
+    public Boolean sharedUserAppDataAllowed;
+
+    /**
+     * The Smart Screen App Install Control.
+     * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+     */
+    @SerializedName("smartScreenAppInstallControl")
+    @Expose
+    public AppInstallControlType smartScreenAppInstallControl;
+
+    /**
+     * The Smart Screen Block Prompt Override.
+     * Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
+     */
+    @SerializedName("smartScreenBlockPromptOverride")
+    @Expose
+    public Boolean smartScreenBlockPromptOverride;
+
+    /**
+     * The Smart Screen Block Prompt Override For Files.
+     * Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
+     */
+    @SerializedName("smartScreenBlockPromptOverrideForFiles")
+    @Expose
+    public Boolean smartScreenBlockPromptOverrideForFiles;
+
+    /**
+     * The Smart Screen Enable App Install Control.
+     * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+     */
+    @SerializedName("smartScreenEnableAppInstallControl")
+    @Expose
+    public Boolean smartScreenEnableAppInstallControl;
 
     /**
      * The Start Block Unpinning Apps From Taskbar.
@@ -1559,100 +2079,132 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public VisibilitySetting startMenuPinnedFolderVideos;
 
     /**
-     * The Settings Block Settings App.
-     * Indicates whether or not to block access to Settings app.
+     * The Storage Block Removable Storage.
+     * Indicates whether or not to Block the user from using removable storage.
      */
-    @SerializedName("settingsBlockSettingsApp")
+    @SerializedName("storageBlockRemovableStorage")
     @Expose
-    public Boolean settingsBlockSettingsApp;
+    public Boolean storageBlockRemovableStorage;
 
     /**
-     * The Settings Block System Page.
-     * Indicates whether or not to block access to System in Settings app.
+     * The Storage Require Mobile Device Encryption.
+     * Indicating whether or not to require encryption on a mobile device.
      */
-    @SerializedName("settingsBlockSystemPage")
+    @SerializedName("storageRequireMobileDeviceEncryption")
     @Expose
-    public Boolean settingsBlockSystemPage;
+    public Boolean storageRequireMobileDeviceEncryption;
 
     /**
-     * The Settings Block Devices Page.
-     * Indicates whether or not to block access to Devices in Settings app.
+     * The Storage Restrict App Data To System Volume.
+     * Indicates whether application data is restricted to the system drive.
      */
-    @SerializedName("settingsBlockDevicesPage")
+    @SerializedName("storageRestrictAppDataToSystemVolume")
     @Expose
-    public Boolean settingsBlockDevicesPage;
+    public Boolean storageRestrictAppDataToSystemVolume;
 
     /**
-     * The Settings Block Network Internet Page.
-     * Indicates whether or not to block access to Network &amp; Internet in Settings app.
+     * The Storage Restrict App Install To System Volume.
+     * Indicates whether the installation of applications is restricted to the system drive.
      */
-    @SerializedName("settingsBlockNetworkInternetPage")
+    @SerializedName("storageRestrictAppInstallToSystemVolume")
     @Expose
-    public Boolean settingsBlockNetworkInternetPage;
+    public Boolean storageRestrictAppInstallToSystemVolume;
 
     /**
-     * The Settings Block Personalization Page.
-     * Indicates whether or not to block access to Personalization in Settings app.
+     * The System Telemetry Proxy Server.
+     * Gets or sets the fully qualified domain name (FQDN) or IP address of a proxy server to forward Connected User Experiences and Telemetry requests.
      */
-    @SerializedName("settingsBlockPersonalizationPage")
+    @SerializedName("systemTelemetryProxyServer")
     @Expose
-    public Boolean settingsBlockPersonalizationPage;
+    public String systemTelemetryProxyServer;
 
     /**
-     * The Settings Block Accounts Page.
-     * Indicates whether or not to block access to Accounts in Settings app.
+     * The Task Manager Block End Task.
+     * Specify whether non-administrators can use Task Manager to end tasks.
      */
-    @SerializedName("settingsBlockAccountsPage")
+    @SerializedName("taskManagerBlockEndTask")
     @Expose
-    public Boolean settingsBlockAccountsPage;
+    public Boolean taskManagerBlockEndTask;
 
     /**
-     * The Settings Block Time Language Page.
-     * Indicates whether or not to block access to Time &amp; Language in Settings app.
+     * The Tenant Lockdown Require Network During Out Of Box Experience.
+     * Whether the device is required to connect to the network.
      */
-    @SerializedName("settingsBlockTimeLanguagePage")
+    @SerializedName("tenantLockdownRequireNetworkDuringOutOfBoxExperience")
     @Expose
-    public Boolean settingsBlockTimeLanguagePage;
+    public Boolean tenantLockdownRequireNetworkDuringOutOfBoxExperience;
 
     /**
-     * The Settings Block Ease Of Access Page.
-     * Indicates whether or not to block access to Ease of Access in Settings app.
+     * The Uninstall Built In Apps.
+     * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
      */
-    @SerializedName("settingsBlockEaseOfAccessPage")
+    @SerializedName("uninstallBuiltInApps")
     @Expose
-    public Boolean settingsBlockEaseOfAccessPage;
+    public Boolean uninstallBuiltInApps;
 
     /**
-     * The Settings Block Privacy Page.
-     * Indicates whether or not to block access to Privacy in Settings app.
+     * The Usb Blocked.
+     * Indicates whether or not to Block the user from USB connection.
      */
-    @SerializedName("settingsBlockPrivacyPage")
+    @SerializedName("usbBlocked")
     @Expose
-    public Boolean settingsBlockPrivacyPage;
+    public Boolean usbBlocked;
 
     /**
-     * The Settings Block Update Security Page.
-     * Indicates whether or not to block access to Update &amp; Security in Settings app.
+     * The Voice Recording Blocked.
+     * Indicates whether or not to Block the user from voice recording.
      */
-    @SerializedName("settingsBlockUpdateSecurityPage")
+    @SerializedName("voiceRecordingBlocked")
     @Expose
-    public Boolean settingsBlockUpdateSecurityPage;
+    public Boolean voiceRecordingBlocked;
 
     /**
-     * The Settings Block Apps Page.
-     * Indicates whether or not to block access to Apps in Settings app.
+     * The Web Rtc Block Localhost Ip Address.
+     * Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
      */
-    @SerializedName("settingsBlockAppsPage")
+    @SerializedName("webRtcBlockLocalhostIpAddress")
     @Expose
-    public Boolean settingsBlockAppsPage;
+    public Boolean webRtcBlockLocalhostIpAddress;
 
     /**
-     * The Settings Block Gaming Page.
-     * Indicates whether or not to block access to Gaming in Settings app.
+     * The Wi Fi Block Automatic Connect Hotspots.
+     * Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      */
-    @SerializedName("settingsBlockGamingPage")
+    @SerializedName("wiFiBlockAutomaticConnectHotspots")
     @Expose
-    public Boolean settingsBlockGamingPage;
+    public Boolean wiFiBlockAutomaticConnectHotspots;
+
+    /**
+     * The Wi Fi Blocked.
+     * Indicates whether or not to Block the user from using Wi-Fi.
+     */
+    @SerializedName("wiFiBlocked")
+    @Expose
+    public Boolean wiFiBlocked;
+
+    /**
+     * The Wi Fi Block Manual Configuration.
+     * Indicates whether or not to Block the user from using Wi-Fi manual configuration.
+     */
+    @SerializedName("wiFiBlockManualConfiguration")
+    @Expose
+    public Boolean wiFiBlockManualConfiguration;
+
+    /**
+     * The Wi Fi Scan Interval.
+     * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
+     */
+    @SerializedName("wiFiScanInterval")
+    @Expose
+    public Integer wiFiScanInterval;
+
+    /**
+     * The Windows10Apps Force Update Schedule.
+     * Windows 10 force update schedule for Apps.
+     */
+    @SerializedName("windows10AppsForceUpdateSchedule")
+    @Expose
+    public Windows10AppsForceUpdateSchedule windows10AppsForceUpdateSchedule;
 
     /**
      * The Windows Spotlight Block Consumer Specific Features.
@@ -1719,412 +2271,28 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     public WindowsSpotlightEnablementSettings windowsSpotlightConfigureOnLockScreen;
 
     /**
-     * The Network Proxy Apply Settings Device Wide.
-     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * The Windows Store Block Auto Update.
+     * Indicates whether or not to block automatic update of apps from Windows Store.
      */
-    @SerializedName("networkProxyApplySettingsDeviceWide")
+    @SerializedName("windowsStoreBlockAutoUpdate")
     @Expose
-    public Boolean networkProxyApplySettingsDeviceWide;
+    public Boolean windowsStoreBlockAutoUpdate;
 
     /**
-     * The Network Proxy Disable Auto Detect.
-     * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
+     * The Windows Store Blocked.
+     * Indicates whether or not to Block the user from using the Windows store.
      */
-    @SerializedName("networkProxyDisableAutoDetect")
+    @SerializedName("windowsStoreBlocked")
     @Expose
-    public Boolean networkProxyDisableAutoDetect;
+    public Boolean windowsStoreBlocked;
 
     /**
-     * The Network Proxy Automatic Configuration Url.
-     * Address to the proxy auto-config (PAC) script you want to use.
+     * The Windows Store Enable Private Store Only.
+     * Indicates whether or not to enable Private Store Only.
      */
-    @SerializedName("networkProxyAutomaticConfigurationUrl")
+    @SerializedName("windowsStoreEnablePrivateStoreOnly")
     @Expose
-    public String networkProxyAutomaticConfigurationUrl;
-
-    /**
-     * The Network Proxy Server.
-     * Specifies manual proxy server settings.
-     */
-    @SerializedName("networkProxyServer")
-    @Expose
-    public Windows10NetworkProxyServer networkProxyServer;
-
-    /**
-     * The Accounts Block Adding Non Microsoft Account Email.
-     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
-     */
-    @SerializedName("accountsBlockAddingNonMicrosoftAccountEmail")
-    @Expose
-    public Boolean accountsBlockAddingNonMicrosoftAccountEmail;
-
-    /**
-     * The Anti Theft Mode Blocked.
-     * Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
-     */
-    @SerializedName("antiTheftModeBlocked")
-    @Expose
-    public Boolean antiTheftModeBlocked;
-
-    /**
-     * The Bluetooth Blocked.
-     * Whether or not to Block the user from using bluetooth.
-     */
-    @SerializedName("bluetoothBlocked")
-    @Expose
-    public Boolean bluetoothBlocked;
-
-    /**
-     * The Camera Blocked.
-     * Whether or not to Block the user from accessing the camera of the device.
-     */
-    @SerializedName("cameraBlocked")
-    @Expose
-    public Boolean cameraBlocked;
-
-    /**
-     * The Connected Devices Service Blocked.
-     * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
-     */
-    @SerializedName("connectedDevicesServiceBlocked")
-    @Expose
-    public Boolean connectedDevicesServiceBlocked;
-
-    /**
-     * The Certificates Block Manual Root Certificate Installation.
-     * Whether or not to Block the user from doing manual root certificate installation.
-     */
-    @SerializedName("certificatesBlockManualRootCertificateInstallation")
-    @Expose
-    public Boolean certificatesBlockManualRootCertificateInstallation;
-
-    /**
-     * The Copy Paste Blocked.
-     * Whether or not to Block the user from using copy paste.
-     */
-    @SerializedName("copyPasteBlocked")
-    @Expose
-    public Boolean copyPasteBlocked;
-
-    /**
-     * The Cortana Blocked.
-     * Whether or not to Block the user from using Cortana.
-     */
-    @SerializedName("cortanaBlocked")
-    @Expose
-    public Boolean cortanaBlocked;
-
-    /**
-     * The Device Management Block Factory Reset On Mobile.
-     * Indicates whether or not to Block the user from resetting their phone.
-     */
-    @SerializedName("deviceManagementBlockFactoryResetOnMobile")
-    @Expose
-    public Boolean deviceManagementBlockFactoryResetOnMobile;
-
-    /**
-     * The Device Management Block Manual Unenroll.
-     * Indicates whether or not to Block the user from doing manual un-enrollment from device management.
-     */
-    @SerializedName("deviceManagementBlockManualUnenroll")
-    @Expose
-    public Boolean deviceManagementBlockManualUnenroll;
-
-    /**
-     * The Safe Search Filter.
-     * Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
-     */
-    @SerializedName("safeSearchFilter")
-    @Expose
-    public SafeSearchFilterType safeSearchFilter;
-
-    /**
-     * The Edge Block Popups.
-     * Indicates whether or not to block popups.
-     */
-    @SerializedName("edgeBlockPopups")
-    @Expose
-    public Boolean edgeBlockPopups;
-
-    /**
-     * The Edge Block Search Suggestions.
-     * Indicates whether or not to block the user from using the search suggestions in the address bar.
-     */
-    @SerializedName("edgeBlockSearchSuggestions")
-    @Expose
-    public Boolean edgeBlockSearchSuggestions;
-
-    /**
-     * The Edge Block Search Engine Customization.
-     * Indicates whether or not to block the user from adding new search engine or changing the default search engine.
-     */
-    @SerializedName("edgeBlockSearchEngineCustomization")
-    @Expose
-    public Boolean edgeBlockSearchEngineCustomization;
-
-    /**
-     * The Edge Block Sending Intranet Traffic To Internet Explorer.
-     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
-     */
-    @SerializedName("edgeBlockSendingIntranetTrafficToInternetExplorer")
-    @Expose
-    public Boolean edgeBlockSendingIntranetTrafficToInternetExplorer;
-
-    /**
-     * The Edge Send Intranet Traffic To Internet Explorer.
-     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
-     */
-    @SerializedName("edgeSendIntranetTrafficToInternetExplorer")
-    @Expose
-    public Boolean edgeSendIntranetTrafficToInternetExplorer;
-
-    /**
-     * The Edge Require Smart Screen.
-     * Indicates whether or not to Require the user to use the smart screen filter.
-     */
-    @SerializedName("edgeRequireSmartScreen")
-    @Expose
-    public Boolean edgeRequireSmartScreen;
-
-    /**
-     * The Edge Enterprise Mode Site List Location.
-     * Indicates the enterprise mode site list location. Could be a local file, local network or http location.
-     */
-    @SerializedName("edgeEnterpriseModeSiteListLocation")
-    @Expose
-    public String edgeEnterpriseModeSiteListLocation;
-
-    /**
-     * The Edge First Run Url.
-     * The first run URL for when Edge browser is opened for the first time.
-     */
-    @SerializedName("edgeFirstRunUrl")
-    @Expose
-    public String edgeFirstRunUrl;
-
-    /**
-     * The Edge Search Engine.
-     * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
-     */
-    @SerializedName("edgeSearchEngine")
-    @Expose
-    public EdgeSearchEngineBase edgeSearchEngine;
-
-    /**
-     * The Edge Homepage Urls.
-     * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
-     */
-    @SerializedName("edgeHomepageUrls")
-    @Expose
-    public java.util.List<String> edgeHomepageUrls;
-
-    /**
-     * The Edge Block Access To About Flags.
-     * Indicates whether or not to prevent access to about flags on Edge browser.
-     */
-    @SerializedName("edgeBlockAccessToAboutFlags")
-    @Expose
-    public Boolean edgeBlockAccessToAboutFlags;
-
-    /**
-     * The Smart Screen Block Prompt Override.
-     * Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
-     */
-    @SerializedName("smartScreenBlockPromptOverride")
-    @Expose
-    public Boolean smartScreenBlockPromptOverride;
-
-    /**
-     * The Smart Screen Block Prompt Override For Files.
-     * Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
-     */
-    @SerializedName("smartScreenBlockPromptOverrideForFiles")
-    @Expose
-    public Boolean smartScreenBlockPromptOverrideForFiles;
-
-    /**
-     * The Web Rtc Block Localhost Ip Address.
-     * Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
-     */
-    @SerializedName("webRtcBlockLocalhostIpAddress")
-    @Expose
-    public Boolean webRtcBlockLocalhostIpAddress;
-
-    /**
-     * The Internet Sharing Blocked.
-     * Indicates whether or not to Block the user from using internet sharing.
-     */
-    @SerializedName("internetSharingBlocked")
-    @Expose
-    public Boolean internetSharingBlocked;
-
-    /**
-     * The Settings Block Add Provisioning Package.
-     * Indicates whether or not to block the user from installing provisioning packages.
-     */
-    @SerializedName("settingsBlockAddProvisioningPackage")
-    @Expose
-    public Boolean settingsBlockAddProvisioningPackage;
-
-    /**
-     * The Settings Block Remove Provisioning Package.
-     * Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
-     */
-    @SerializedName("settingsBlockRemoveProvisioningPackage")
-    @Expose
-    public Boolean settingsBlockRemoveProvisioningPackage;
-
-    /**
-     * The Settings Block Change System Time.
-     * Indicates whether or not to block the user from changing date and time settings.
-     */
-    @SerializedName("settingsBlockChangeSystemTime")
-    @Expose
-    public Boolean settingsBlockChangeSystemTime;
-
-    /**
-     * The Settings Block Edit Device Name.
-     * Indicates whether or not to block the user from editing the device name.
-     */
-    @SerializedName("settingsBlockEditDeviceName")
-    @Expose
-    public Boolean settingsBlockEditDeviceName;
-
-    /**
-     * The Settings Block Change Region.
-     * Indicates whether or not to block the user from changing the region settings.
-     */
-    @SerializedName("settingsBlockChangeRegion")
-    @Expose
-    public Boolean settingsBlockChangeRegion;
-
-    /**
-     * The Settings Block Change Language.
-     * Indicates whether or not to block the user from changing the language settings.
-     */
-    @SerializedName("settingsBlockChangeLanguage")
-    @Expose
-    public Boolean settingsBlockChangeLanguage;
-
-    /**
-     * The Settings Block Change Power Sleep.
-     * Indicates whether or not to block the user from changing power and sleep settings.
-     */
-    @SerializedName("settingsBlockChangePowerSleep")
-    @Expose
-    public Boolean settingsBlockChangePowerSleep;
-
-    /**
-     * The Location Services Blocked.
-     * Indicates whether or not to Block the user from location services.
-     */
-    @SerializedName("locationServicesBlocked")
-    @Expose
-    public Boolean locationServicesBlocked;
-
-    /**
-     * The Microsoft Account Blocked.
-     * Indicates whether or not to Block a Microsoft account.
-     */
-    @SerializedName("microsoftAccountBlocked")
-    @Expose
-    public Boolean microsoftAccountBlocked;
-
-    /**
-     * The Microsoft Account Block Settings Sync.
-     * Indicates whether or not to Block Microsoft account settings sync.
-     */
-    @SerializedName("microsoftAccountBlockSettingsSync")
-    @Expose
-    public Boolean microsoftAccountBlockSettingsSync;
-
-    /**
-     * The Nfc Blocked.
-     * Indicates whether or not to Block the user from using near field communication.
-     */
-    @SerializedName("nfcBlocked")
-    @Expose
-    public Boolean nfcBlocked;
-
-    /**
-     * The Reset Protection Mode Blocked.
-     * Indicates whether or not to Block the user from reset protection mode.
-     */
-    @SerializedName("resetProtectionModeBlocked")
-    @Expose
-    public Boolean resetProtectionModeBlocked;
-
-    /**
-     * The Screen Capture Blocked.
-     * Indicates whether or not to Block the user from taking Screenshots.
-     */
-    @SerializedName("screenCaptureBlocked")
-    @Expose
-    public Boolean screenCaptureBlocked;
-
-    /**
-     * The Storage Block Removable Storage.
-     * Indicates whether or not to Block the user from using removable storage.
-     */
-    @SerializedName("storageBlockRemovableStorage")
-    @Expose
-    public Boolean storageBlockRemovableStorage;
-
-    /**
-     * The Storage Require Mobile Device Encryption.
-     * Indicating whether or not to require encryption on a mobile device.
-     */
-    @SerializedName("storageRequireMobileDeviceEncryption")
-    @Expose
-    public Boolean storageRequireMobileDeviceEncryption;
-
-    /**
-     * The Usb Blocked.
-     * Indicates whether or not to Block the user from USB connection.
-     */
-    @SerializedName("usbBlocked")
-    @Expose
-    public Boolean usbBlocked;
-
-    /**
-     * The Voice Recording Blocked.
-     * Indicates whether or not to Block the user from voice recording.
-     */
-    @SerializedName("voiceRecordingBlocked")
-    @Expose
-    public Boolean voiceRecordingBlocked;
-
-    /**
-     * The Wi Fi Block Automatic Connect Hotspots.
-     * Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
-     */
-    @SerializedName("wiFiBlockAutomaticConnectHotspots")
-    @Expose
-    public Boolean wiFiBlockAutomaticConnectHotspots;
-
-    /**
-     * The Wi Fi Blocked.
-     * Indicates whether or not to Block the user from using Wi-Fi.
-     */
-    @SerializedName("wiFiBlocked")
-    @Expose
-    public Boolean wiFiBlocked;
-
-    /**
-     * The Wi Fi Block Manual Configuration.
-     * Indicates whether or not to Block the user from using Wi-Fi manual configuration.
-     */
-    @SerializedName("wiFiBlockManualConfiguration")
-    @Expose
-    public Boolean wiFiBlockManualConfiguration;
-
-    /**
-     * The Wi Fi Scan Interval.
-     * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
-     */
-    @SerializedName("wiFiScanInterval")
-    @Expose
-    public Integer wiFiScanInterval;
+    public Boolean windowsStoreEnablePrivateStoreOnly;
 
     /**
      * The Wireless Display Block Projection To This Device.
@@ -2149,174 +2317,6 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName("wirelessDisplayRequirePinForPairing")
     @Expose
     public Boolean wirelessDisplayRequirePinForPairing;
-
-    /**
-     * The Windows Store Blocked.
-     * Indicates whether or not to Block the user from using the Windows store.
-     */
-    @SerializedName("windowsStoreBlocked")
-    @Expose
-    public Boolean windowsStoreBlocked;
-
-    /**
-     * The Apps Allow Trusted Apps Sideloading.
-     * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
-     */
-    @SerializedName("appsAllowTrustedAppsSideloading")
-    @Expose
-    public StateManagementSetting appsAllowTrustedAppsSideloading;
-
-    /**
-     * The Windows Store Block Auto Update.
-     * Indicates whether or not to block automatic update of apps from Windows Store.
-     */
-    @SerializedName("windowsStoreBlockAutoUpdate")
-    @Expose
-    public Boolean windowsStoreBlockAutoUpdate;
-
-    /**
-     * The Developer Unlock Setting.
-     * Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
-     */
-    @SerializedName("developerUnlockSetting")
-    @Expose
-    public StateManagementSetting developerUnlockSetting;
-
-    /**
-     * The Shared User App Data Allowed.
-     * Indicates whether or not to block multiple users of the same app to share data.
-     */
-    @SerializedName("sharedUserAppDataAllowed")
-    @Expose
-    public Boolean sharedUserAppDataAllowed;
-
-    /**
-     * The Apps Block Windows Store Originated Apps.
-     * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
-     */
-    @SerializedName("appsBlockWindowsStoreOriginatedApps")
-    @Expose
-    public Boolean appsBlockWindowsStoreOriginatedApps;
-
-    /**
-     * The Windows Store Enable Private Store Only.
-     * Indicates whether or not to enable Private Store Only.
-     */
-    @SerializedName("windowsStoreEnablePrivateStoreOnly")
-    @Expose
-    public Boolean windowsStoreEnablePrivateStoreOnly;
-
-    /**
-     * The Storage Restrict App Data To System Volume.
-     * Indicates whether application data is restricted to the system drive.
-     */
-    @SerializedName("storageRestrictAppDataToSystemVolume")
-    @Expose
-    public Boolean storageRestrictAppDataToSystemVolume;
-
-    /**
-     * The Storage Restrict App Install To System Volume.
-     * Indicates whether the installation of applications is restricted to the system drive.
-     */
-    @SerializedName("storageRestrictAppInstallToSystemVolume")
-    @Expose
-    public Boolean storageRestrictAppInstallToSystemVolume;
-
-    /**
-     * The Game Dvr Blocked.
-     * Indicates whether or not to block DVR and broadcasting.
-     */
-    @SerializedName("gameDvrBlocked")
-    @Expose
-    public Boolean gameDvrBlocked;
-
-    /**
-     * The Experience Block Device Discovery.
-     * Indicates whether or not to enable device discovery UX.
-     */
-    @SerializedName("experienceBlockDeviceDiscovery")
-    @Expose
-    public Boolean experienceBlockDeviceDiscovery;
-
-    /**
-     * The Experience Block Error Dialog When No SIM.
-     * Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
-     */
-    @SerializedName("experienceBlockErrorDialogWhenNoSIM")
-    @Expose
-    public Boolean experienceBlockErrorDialogWhenNoSIM;
-
-    /**
-     * The Experience Block Task Switcher.
-     * Indicates whether or not to enable task switching on the device.
-     */
-    @SerializedName("experienceBlockTaskSwitcher")
-    @Expose
-    public Boolean experienceBlockTaskSwitcher;
-
-    /**
-     * The Logon Block Fast User Switching.
-     * Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
-     */
-    @SerializedName("logonBlockFastUserSwitching")
-    @Expose
-    public Boolean logonBlockFastUserSwitching;
-
-    /**
-     * The Tenant Lockdown Require Network During Out Of Box Experience.
-     * Whether the device is required to connect to the network.
-     */
-    @SerializedName("tenantLockdownRequireNetworkDuringOutOfBoxExperience")
-    @Expose
-    public Boolean tenantLockdownRequireNetworkDuringOutOfBoxExperience;
-
-    /**
-     * The App Management MSIAllow User Control Over Install.
-     * This policy setting permits users to change installation options that typically are available only to system administrators.
-     */
-    @SerializedName("appManagementMSIAllowUserControlOverInstall")
-    @Expose
-    public Boolean appManagementMSIAllowUserControlOverInstall;
-
-    /**
-     * The App Management MSIAlways Install With Elevated Privileges.
-     * This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system.
-     */
-    @SerializedName("appManagementMSIAlwaysInstallWithElevatedPrivileges")
-    @Expose
-    public Boolean appManagementMSIAlwaysInstallWithElevatedPrivileges;
-
-    /**
-     * The Data Protection Block Direct Memory Access.
-     * This policy setting allows you to block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows.
-     */
-    @SerializedName("dataProtectionBlockDirectMemoryAccess")
-    @Expose
-    public Boolean dataProtectionBlockDirectMemoryAccess;
-
-    /**
-     * The App Management Package Family Names To Launch After Log On.
-     * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.???
-     */
-    @SerializedName("appManagementPackageFamilyNamesToLaunchAfterLogOn")
-    @Expose
-    public java.util.List<String> appManagementPackageFamilyNamesToLaunchAfterLogOn;
-
-    /**
-     * The Uninstall Built In Apps.
-     * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
-     */
-    @SerializedName("uninstallBuiltInApps")
-    @Expose
-    public Boolean uninstallBuiltInApps;
-
-    /**
-     * The Configure Time Zone.
-     * Specifies the time zone to be applied to the device. This is the standard Windows name for the target time zone.
-     */
-    @SerializedName("configureTimeZone")
-    @Expose
-    public String configureTimeZone;
 
     /**
      * The Privacy Access Controls.

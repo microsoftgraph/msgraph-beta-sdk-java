@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineTemplate;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +38,6 @@ public interface ISecurityBaselineTemplateRequestBuilder extends IRequestBuilder
     ISecurityBaselineTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
-
-    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
-
     IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories();
 
     IDeviceManagementTemplateSettingCategoryRequestBuilder categories(final String id);
@@ -50,19 +46,23 @@ public interface ISecurityBaselineTemplateRequestBuilder extends IRequestBuilder
 
     IDeviceManagementTemplateRequestBuilder migratableTo(final String id);
 
+    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
+
+    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
+
+    ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder categoryDeviceStateSummaries();
+
+    ISecurityBaselineCategoryStateSummaryRequestBuilder categoryDeviceStateSummaries(final String id);
+
+    ISecurityBaselineDeviceStateCollectionRequestBuilder deviceStates();
+
+    ISecurityBaselineDeviceStateRequestBuilder deviceStates(final String id);
+
     /**
      * Gets the request builder for SecurityBaselineStateSummary
      *
      * @return the ISecurityBaselineStateSummaryRequestBuilder instance
      */
     ISecurityBaselineStateSummaryRequestBuilder deviceStateSummary();
-
-    ISecurityBaselineDeviceStateCollectionRequestBuilder deviceStates();
-
-    ISecurityBaselineDeviceStateRequestBuilder deviceStates(final String id);
-
-    ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder categoryDeviceStateSummaries();
-
-    ISecurityBaselineCategoryStateSummaryRequestBuilder categoryDeviceStateSummaries(final String id);
 
 }

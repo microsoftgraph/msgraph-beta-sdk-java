@@ -80,6 +80,23 @@ public interface IProfileCardPropertyRequest extends IHttpRequest {
     ProfileCardProperty post(final ProfileCardProperty newProfileCardProperty) throws ClientException;
 
     /**
+     * Posts a ProfileCardProperty with a new object
+     *
+     * @param newProfileCardProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback);
+
+    /**
+     * Posts a ProfileCardProperty with a new object
+     *
+     * @param newProfileCardProperty the object to create/update
+     * @return the created ProfileCardProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ProfileCardProperty put(final ProfileCardProperty newProfileCardProperty) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

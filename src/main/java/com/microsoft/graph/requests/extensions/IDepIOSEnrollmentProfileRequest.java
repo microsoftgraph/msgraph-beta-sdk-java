@@ -80,6 +80,23 @@ public interface IDepIOSEnrollmentProfileRequest extends IHttpRequest {
     DepIOSEnrollmentProfile post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a DepIOSEnrollmentProfile with a new object
+     *
+     * @param newDepIOSEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<DepIOSEnrollmentProfile> callback);
+
+    /**
+     * Posts a DepIOSEnrollmentProfile with a new object
+     *
+     * @param newDepIOSEnrollmentProfile the object to create/update
+     * @return the created DepIOSEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DepIOSEnrollmentProfile put(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

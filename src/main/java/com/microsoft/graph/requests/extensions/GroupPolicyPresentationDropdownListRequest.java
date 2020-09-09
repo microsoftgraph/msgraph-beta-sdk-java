@@ -112,6 +112,27 @@ public class GroupPolicyPresentationDropdownListRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a GroupPolicyPresentationDropdownList with a new object
+     *
+     * @param newGroupPolicyPresentationDropdownList the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList, final ICallback<GroupPolicyPresentationDropdownList> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationDropdownList);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationDropdownList with a new object
+     *
+     * @param newGroupPolicyPresentationDropdownList the object to create/update
+     * @return the created GroupPolicyPresentationDropdownList
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationDropdownList put(final GroupPolicyPresentationDropdownList newGroupPolicyPresentationDropdownList) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationDropdownList);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

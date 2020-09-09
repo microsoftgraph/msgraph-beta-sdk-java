@@ -62,14 +62,14 @@ public class PhoneAuthenticationMethodCollectionRequest extends BaseCollectionRe
     public void post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<PhoneAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PhoneAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPhoneAuthenticationMethod, callback);
     }
 
     public PhoneAuthenticationMethod post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PhoneAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPhoneAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class PhoneAuthenticationMethodCollectionRequest extends BaseCollectionRe
         return (PhoneAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPhoneAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PhoneAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPhoneAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPhoneAuthenticationMethodCollectionRequest)this;
+    }
     public IPhoneAuthenticationMethodCollectionPage buildFromResponse(final PhoneAuthenticationMethodCollectionResponse response) {
         final IPhoneAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

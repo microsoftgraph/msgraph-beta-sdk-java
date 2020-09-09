@@ -112,6 +112,27 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a Office365GroupsActivityDetail with a new object
+     *
+     * @param newOffice365GroupsActivityDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<Office365GroupsActivityDetail> callback) {
+        send(HttpMethod.PUT, callback, newOffice365GroupsActivityDetail);
+    }
+
+    /**
+     * Creates a Office365GroupsActivityDetail with a new object
+     *
+     * @param newOffice365GroupsActivityDetail the object to create/update
+     * @return the created Office365GroupsActivityDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Office365GroupsActivityDetail put(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail) throws ClientException {
+        return send(HttpMethod.PUT, newOffice365GroupsActivityDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

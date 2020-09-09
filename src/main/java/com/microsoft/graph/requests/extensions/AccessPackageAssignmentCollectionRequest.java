@@ -62,14 +62,14 @@ public class AccessPackageAssignmentCollectionRequest extends BaseCollectionRequ
     public void post(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<AccessPackageAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessPackageAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignment, callback);
     }
 
     public AccessPackageAssignment post(final AccessPackageAssignment newAccessPackageAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessPackageAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessPackageAssignment);
     }
 
@@ -106,6 +106,27 @@ public class AccessPackageAssignmentCollectionRequest extends BaseCollectionRequ
         return (AccessPackageAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessPackageAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessPackageAssignmentCollectionRequest)this;
+    }
     public IAccessPackageAssignmentCollectionPage buildFromResponse(final AccessPackageAssignmentCollectionResponse response) {
         final IAccessPackageAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

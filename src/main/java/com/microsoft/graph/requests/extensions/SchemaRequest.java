@@ -112,6 +112,27 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
     }
 
     /**
+     * Creates a Schema with a new object
+     *
+     * @param newSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Schema newSchema, final ICallback<Schema> callback) {
+        send(HttpMethod.PUT, callback, newSchema);
+    }
+
+    /**
+     * Creates a Schema with a new object
+     *
+     * @param newSchema the object to create/update
+     * @return the created Schema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Schema put(final Schema newSchema) throws ClientException {
+        return send(HttpMethod.PUT, newSchema);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

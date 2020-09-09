@@ -112,6 +112,27 @@ public class FileClassificationRequestRequest extends BaseRequest implements IFi
     }
 
     /**
+     * Creates a FileClassificationRequest with a new object
+     *
+     * @param newFileClassificationRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final FileClassificationRequest newFileClassificationRequest, final ICallback<FileClassificationRequest> callback) {
+        send(HttpMethod.PUT, callback, newFileClassificationRequest);
+    }
+
+    /**
+     * Creates a FileClassificationRequest with a new object
+     *
+     * @param newFileClassificationRequest the object to create/update
+     * @return the created FileClassificationRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public FileClassificationRequest put(final FileClassificationRequest newFileClassificationRequest) throws ClientException {
+        return send(HttpMethod.PUT, newFileClassificationRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

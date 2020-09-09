@@ -112,6 +112,27 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
     }
 
     /**
+     * Creates a NetworkIPv4ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv4ConfigurationManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition, final ICallback<NetworkIPv4ConfigurationManagementCondition> callback) {
+        send(HttpMethod.PUT, callback, newNetworkIPv4ConfigurationManagementCondition);
+    }
+
+    /**
+     * Creates a NetworkIPv4ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv4ConfigurationManagementCondition the object to create/update
+     * @return the created NetworkIPv4ConfigurationManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public NetworkIPv4ConfigurationManagementCondition put(final NetworkIPv4ConfigurationManagementCondition newNetworkIPv4ConfigurationManagementCondition) throws ClientException {
+        return send(HttpMethod.PUT, newNetworkIPv4ConfigurationManagementCondition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

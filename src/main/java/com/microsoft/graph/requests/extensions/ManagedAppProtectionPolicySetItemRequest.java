@@ -112,6 +112,27 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a ManagedAppProtectionPolicySetItem with a new object
+     *
+     * @param newManagedAppProtectionPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<ManagedAppProtectionPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newManagedAppProtectionPolicySetItem);
+    }
+
+    /**
+     * Creates a ManagedAppProtectionPolicySetItem with a new object
+     *
+     * @param newManagedAppProtectionPolicySetItem the object to create/update
+     * @return the created ManagedAppProtectionPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAppProtectionPolicySetItem put(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAppProtectionPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

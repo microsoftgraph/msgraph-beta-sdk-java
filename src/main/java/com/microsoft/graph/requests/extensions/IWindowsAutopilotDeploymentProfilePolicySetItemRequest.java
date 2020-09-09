@@ -80,6 +80,23 @@ public interface IWindowsAutopilotDeploymentProfilePolicySetItemRequest extends 
     WindowsAutopilotDeploymentProfilePolicySetItem post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException;
 
     /**
+     * Posts a WindowsAutopilotDeploymentProfilePolicySetItem with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfilePolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<WindowsAutopilotDeploymentProfilePolicySetItem> callback);
+
+    /**
+     * Posts a WindowsAutopilotDeploymentProfilePolicySetItem with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfilePolicySetItem the object to create/update
+     * @return the created WindowsAutopilotDeploymentProfilePolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsAutopilotDeploymentProfilePolicySetItem put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionRequest exten
     public void post(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment, final ICallback<IosLobAppProvisioningConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosLobAppProvisioningConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosLobAppProvisioningConfigurationAssignment, callback);
     }
 
     public IosLobAppProvisioningConfigurationAssignment post(final IosLobAppProvisioningConfigurationAssignment newIosLobAppProvisioningConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosLobAppProvisioningConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosLobAppProvisioningConfigurationAssignment);
     }
 
@@ -106,6 +106,27 @@ public class IosLobAppProvisioningConfigurationAssignmentCollectionRequest exten
         return (IosLobAppProvisioningConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIosLobAppProvisioningConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IosLobAppProvisioningConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIosLobAppProvisioningConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIosLobAppProvisioningConfigurationAssignmentCollectionRequest)this;
+    }
     public IIosLobAppProvisioningConfigurationAssignmentCollectionPage buildFromResponse(final IosLobAppProvisioningConfigurationAssignmentCollectionResponse response) {
         final IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

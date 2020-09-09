@@ -80,6 +80,23 @@ public interface IAndroidManagedStoreAppRequest extends IHttpRequest {
     AndroidManagedStoreApp post(final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException;
 
     /**
+     * Posts a AndroidManagedStoreApp with a new object
+     *
+     * @param newAndroidManagedStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidManagedStoreApp newAndroidManagedStoreApp, final ICallback<AndroidManagedStoreApp> callback);
+
+    /**
+     * Posts a AndroidManagedStoreApp with a new object
+     *
+     * @param newAndroidManagedStoreApp the object to create/update
+     * @return the created AndroidManagedStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidManagedStoreApp put(final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

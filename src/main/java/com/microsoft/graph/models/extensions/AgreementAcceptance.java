@@ -28,6 +28,14 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Agreement File Id.
+     * 
+     */
+    @SerializedName("agreementFileId")
+    @Expose
+    public String agreementFileId;
+
+    /**
      * The Agreement Id.
      * 
      */
@@ -36,12 +44,12 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
     public String agreementId;
 
     /**
-     * The User Id.
+     * The Device Display Name.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName("deviceDisplayName")
     @Expose
-    public String userId;
+    public String deviceDisplayName;
 
     /**
      * The Device Id.
@@ -50,14 +58,6 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
     @SerializedName("deviceId")
     @Expose
     public String deviceId;
-
-    /**
-     * The Device Display Name.
-     * 
-     */
-    @SerializedName("deviceDisplayName")
-    @Expose
-    public String deviceDisplayName;
 
     /**
      * The Device OSType.
@@ -76,36 +76,12 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
     public String deviceOSVersion;
 
     /**
-     * The Agreement File Id.
+     * The Expiration Date Time.
      * 
      */
-    @SerializedName("agreementFileId")
+    @SerializedName("expirationDateTime")
     @Expose
-    public String agreementFileId;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Email.
-     * 
-     */
-    @SerializedName("userEmail")
-    @Expose
-    public String userEmail;
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Recorded Date Time.
@@ -116,20 +92,44 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
     public java.util.Calendar recordedDateTime;
 
     /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
      * The State.
      * 
      */
     @SerializedName("state")
     @Expose
     public AgreementAcceptanceState state;
+
+    /**
+     * The User Display Name.
+     * 
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Email.
+     * 
+     */
+    @SerializedName("userEmail")
+    @Expose
+    public String userEmail;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

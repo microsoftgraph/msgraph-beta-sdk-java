@@ -43,20 +43,20 @@ public class TaxArea extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Tax Type.
-     * 
-     */
-    @SerializedName("taxType")
-    @Expose
-    public String taxType;
-
-    /**
      * The Last Modified Date Time.
      * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Tax Type.
+     * 
+     */
+    @SerializedName("taxType")
+    @Expose
+    public String taxType;
 
 
     /**

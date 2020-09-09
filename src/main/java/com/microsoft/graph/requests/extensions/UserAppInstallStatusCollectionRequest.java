@@ -62,14 +62,14 @@ public class UserAppInstallStatusCollectionRequest extends BaseCollectionRequest
     public void post(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<UserAppInstallStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserAppInstallStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserAppInstallStatus, callback);
     }
 
     public UserAppInstallStatus post(final UserAppInstallStatus newUserAppInstallStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserAppInstallStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserAppInstallStatus);
     }
 
@@ -106,6 +106,27 @@ public class UserAppInstallStatusCollectionRequest extends BaseCollectionRequest
         return (UserAppInstallStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserAppInstallStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserAppInstallStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserAppInstallStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserAppInstallStatusCollectionRequest)this;
+    }
     public IUserAppInstallStatusCollectionPage buildFromResponse(final UserAppInstallStatusCollectionResponse response) {
         final IUserAppInstallStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

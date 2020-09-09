@@ -112,6 +112,27 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
     }
 
     /**
+     * Creates a Windows10EasEmailProfileConfiguration with a new object
+     *
+     * @param newWindows10EasEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<Windows10EasEmailProfileConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10EasEmailProfileConfiguration);
+    }
+
+    /**
+     * Creates a Windows10EasEmailProfileConfiguration with a new object
+     *
+     * @param newWindows10EasEmailProfileConfiguration the object to create/update
+     * @return the created Windows10EasEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10EasEmailProfileConfiguration put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10EasEmailProfileConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

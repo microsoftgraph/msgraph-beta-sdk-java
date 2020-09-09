@@ -80,6 +80,23 @@ public interface IMentionRequest extends IHttpRequest {
     Mention post(final Mention newMention) throws ClientException;
 
     /**
+     * Posts a Mention with a new object
+     *
+     * @param newMention the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Mention newMention, final ICallback<Mention> callback);
+
+    /**
+     * Posts a Mention with a new object
+     *
+     * @param newMention the object to create/update
+     * @return the created Mention
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Mention put(final Mention newMention) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

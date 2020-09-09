@@ -112,6 +112,27 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
     }
 
     /**
+     * Creates a WindowsMicrosoftEdgeApp with a new object
+     *
+     * @param newWindowsMicrosoftEdgeApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback) {
+        send(HttpMethod.PUT, callback, newWindowsMicrosoftEdgeApp);
+    }
+
+    /**
+     * Creates a WindowsMicrosoftEdgeApp with a new object
+     *
+     * @param newWindowsMicrosoftEdgeApp the object to create/update
+     * @return the created WindowsMicrosoftEdgeApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsMicrosoftEdgeApp put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsMicrosoftEdgeApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,27 +8,27 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DeviceManagementApplicabilityRuleDeviceMode;
 import com.microsoft.graph.models.extensions.DeviceManagementApplicabilityRuleOsEdition;
 import com.microsoft.graph.models.extensions.DeviceManagementApplicabilityRuleOsVersion;
-import com.microsoft.graph.models.extensions.DeviceManagementApplicabilityRuleDeviceMode;
-import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
-import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
-import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceOverview;
-import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceOverview;
+import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -45,6 +45,54 @@ import java.util.Map;
  */
 public class DeviceConfiguration extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Created Date Time.
+     * DateTime the object was created.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
+     * The Description.
+     * Admin provided description of the Device Configuration.
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Device Management Applicability Rule Device Mode.
+     * The device mode applicability rule for this Policy.
+     */
+    @SerializedName("deviceManagementApplicabilityRuleDeviceMode")
+    @Expose
+    public DeviceManagementApplicabilityRuleDeviceMode deviceManagementApplicabilityRuleDeviceMode;
+
+    /**
+     * The Device Management Applicability Rule Os Edition.
+     * The OS edition applicability for this Policy.
+     */
+    @SerializedName("deviceManagementApplicabilityRuleOsEdition")
+    @Expose
+    public DeviceManagementApplicabilityRuleOsEdition deviceManagementApplicabilityRuleOsEdition;
+
+    /**
+     * The Device Management Applicability Rule Os Version.
+     * The OS version applicability rule for this Policy.
+     */
+    @SerializedName("deviceManagementApplicabilityRuleOsVersion")
+    @Expose
+    public DeviceManagementApplicabilityRuleOsVersion deviceManagementApplicabilityRuleOsVersion;
+
+    /**
+     * The Display Name.
+     * Admin provided name of the device configuration.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Last Modified Date Time.
@@ -71,54 +119,6 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     public Boolean supportsScopeTags;
 
     /**
-     * The Device Management Applicability Rule Os Edition.
-     * The OS edition applicability for this Policy.
-     */
-    @SerializedName("deviceManagementApplicabilityRuleOsEdition")
-    @Expose
-    public DeviceManagementApplicabilityRuleOsEdition deviceManagementApplicabilityRuleOsEdition;
-
-    /**
-     * The Device Management Applicability Rule Os Version.
-     * The OS version applicability rule for this Policy.
-     */
-    @SerializedName("deviceManagementApplicabilityRuleOsVersion")
-    @Expose
-    public DeviceManagementApplicabilityRuleOsVersion deviceManagementApplicabilityRuleOsVersion;
-
-    /**
-     * The Device Management Applicability Rule Device Mode.
-     * The device mode applicability rule for this Policy.
-     */
-    @SerializedName("deviceManagementApplicabilityRuleDeviceMode")
-    @Expose
-    public DeviceManagementApplicabilityRuleDeviceMode deviceManagementApplicabilityRuleDeviceMode;
-
-    /**
-     * The Created Date Time.
-     * DateTime the object was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Description.
-     * Admin provided description of the Device Configuration.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Display Name.
-     * Admin provided name of the device configuration.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Version.
      * Version of the device configuration.
      */
@@ -127,28 +127,22 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     public Integer version;
 
     /**
-     * The Group Assignments.
-     * The list of group assignments for the device configuration profile.
-     */
-    public DeviceConfigurationGroupAssignmentCollectionPage groupAssignments;
-
-    /**
      * The Assignments.
      * The list of assignments for the device configuration profile.
      */
     public DeviceConfigurationAssignmentCollectionPage assignments;
 
     /**
+     * The Device Setting State Summaries.
+     * Device Configuration Setting State Device Summary
+     */
+    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
+
+    /**
      * The Device Statuses.
      * Device configuration installation status by device.
      */
     public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
-
-    /**
-     * The User Statuses.
-     * Device configuration installation status by user.
-     */
-    public DeviceConfigurationUserStatusCollectionPage userStatuses;
 
     /**
      * The Device Status Overview.
@@ -159,18 +153,24 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     public DeviceConfigurationDeviceOverview deviceStatusOverview;
 
     /**
+     * The Group Assignments.
+     * The list of group assignments for the device configuration profile.
+     */
+    public DeviceConfigurationGroupAssignmentCollectionPage groupAssignments;
+
+    /**
+     * The User Statuses.
+     * Device configuration installation status by user.
+     */
+    public DeviceConfigurationUserStatusCollectionPage userStatuses;
+
+    /**
      * The User Status Overview.
      * Device Configuration users status overview
      */
     @SerializedName("userStatusOverview")
     @Expose
     public DeviceConfigurationUserOverview userStatusOverview;
-
-    /**
-     * The Device Setting State Summaries.
-     * Device Configuration Setting State Device Summary
-     */
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
 
     /**
@@ -212,22 +212,6 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("groupAssignments")) {
-            final DeviceConfigurationGroupAssignmentCollectionResponse response = new DeviceConfigurationGroupAssignmentCollectionResponse();
-            if (json.has("groupAssignments@odata.nextLink")) {
-                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
-            final DeviceConfigurationGroupAssignment[] array = new DeviceConfigurationGroupAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationGroupAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            groupAssignments = new DeviceConfigurationGroupAssignmentCollectionPage(response, null);
-        }
-
         if (json.has("assignments")) {
             final DeviceConfigurationAssignmentCollectionResponse response = new DeviceConfigurationAssignmentCollectionResponse();
             if (json.has("assignments@odata.nextLink")) {
@@ -242,6 +226,22 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             assignments = new DeviceConfigurationAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("deviceSettingStateSummaries")) {
+            final SettingStateDeviceSummaryCollectionResponse response = new SettingStateDeviceSummaryCollectionResponse();
+            if (json.has("deviceSettingStateSummaries@odata.nextLink")) {
+                response.nextLink = json.get("deviceSettingStateSummaries@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), JsonObject[].class);
+            final SettingStateDeviceSummary[] array = new SettingStateDeviceSummary[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SettingStateDeviceSummary.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceSettingStateSummaries = new SettingStateDeviceSummaryCollectionPage(response, null);
         }
 
         if (json.has("deviceStatuses")) {
@@ -260,6 +260,22 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
             deviceStatuses = new DeviceConfigurationDeviceStatusCollectionPage(response, null);
         }
 
+        if (json.has("groupAssignments")) {
+            final DeviceConfigurationGroupAssignmentCollectionResponse response = new DeviceConfigurationGroupAssignmentCollectionResponse();
+            if (json.has("groupAssignments@odata.nextLink")) {
+                response.nextLink = json.get("groupAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupAssignments").toString(), JsonObject[].class);
+            final DeviceConfigurationGroupAssignment[] array = new DeviceConfigurationGroupAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationGroupAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            groupAssignments = new DeviceConfigurationGroupAssignmentCollectionPage(response, null);
+        }
+
         if (json.has("userStatuses")) {
             final DeviceConfigurationUserStatusCollectionResponse response = new DeviceConfigurationUserStatusCollectionResponse();
             if (json.has("userStatuses@odata.nextLink")) {
@@ -274,22 +290,6 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             userStatuses = new DeviceConfigurationUserStatusCollectionPage(response, null);
-        }
-
-        if (json.has("deviceSettingStateSummaries")) {
-            final SettingStateDeviceSummaryCollectionResponse response = new SettingStateDeviceSummaryCollectionResponse();
-            if (json.has("deviceSettingStateSummaries@odata.nextLink")) {
-                response.nextLink = json.get("deviceSettingStateSummaries@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), JsonObject[].class);
-            final SettingStateDeviceSummary[] array = new SettingStateDeviceSummary[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SettingStateDeviceSummary.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceSettingStateSummaries = new SettingStateDeviceSummaryCollectionPage(response, null);
         }
     }
 }

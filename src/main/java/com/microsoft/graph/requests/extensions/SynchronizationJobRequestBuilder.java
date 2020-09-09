@@ -75,16 +75,16 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder impleme
         return new SynchronizationJobProvisionOnDemandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.provisionOnDemand"), getClient(), null, parameters);
     }
 
+    public ISynchronizationJobRestartRequestBuilder restart(final SynchronizationJobRestartCriteria criteria) {
+        return new SynchronizationJobRestartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restart"), getClient(), null, criteria);
+    }
+
     public ISynchronizationJobStartRequestBuilder start() {
         return new SynchronizationJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
     }
 
     public ISynchronizationJobStopRequestBuilder stop() {
         return new SynchronizationJobStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
-    }
-
-    public ISynchronizationJobRestartRequestBuilder restart(final SynchronizationJobRestartCriteria criteria) {
-        return new SynchronizationJobRestartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restart"), getClient(), null, criteria);
     }
 
     public ISynchronizationJobValidateCredentialsRequestBuilder validateCredentials(final String applicationIdentifier, final String templateId, final Boolean useSavedCredentials, final java.util.List<SynchronizationSecretKeyStringValuePair> credentials) {

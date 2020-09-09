@@ -33,12 +33,12 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Display Name.
-     * The display name of the profile.
+     * The Created Date Time.
+     * The date time that the profile was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -49,20 +49,20 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
     public String description;
 
     /**
+     * The Display Name.
+     * The display name of the profile.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Feature Update Version.
      * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
      */
     @SerializedName("featureUpdateVersion")
     @Expose
     public String featureUpdateVersion;
-
-    /**
-     * The Created Date Time.
-     * The date time that the profile was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
 
     /**
      * The Last Modified Date Time.

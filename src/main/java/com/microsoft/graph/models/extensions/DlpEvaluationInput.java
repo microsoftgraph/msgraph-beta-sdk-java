@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
-import com.microsoft.graph.models.extensions.CurrentLabel;
 import com.microsoft.graph.models.generated.AccessScope;
+import com.microsoft.graph.models.extensions.CurrentLabel;
+import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
 
 
 import com.google.gson.JsonObject;
@@ -39,12 +39,12 @@ public class DlpEvaluationInput implements IJsonBackedObject {
     }
 
     /**
-     * The Discovered Sensitive Types.
+     * The Access Scope.
      * 
      */
-    @SerializedName("discoveredSensitiveTypes")
+    @SerializedName("accessScope")
     @Expose
-    public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
+    public AccessScope accessScope;
 
     /**
      * The Current Label.
@@ -55,12 +55,12 @@ public class DlpEvaluationInput implements IJsonBackedObject {
     public CurrentLabel currentLabel;
 
     /**
-     * The Access Scope.
+     * The Discovered Sensitive Types.
      * 
      */
-    @SerializedName("accessScope")
+    @SerializedName("discoveredSensitiveTypes")
     @Expose
-    public AccessScope accessScope;
+    public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
 
 
     /**

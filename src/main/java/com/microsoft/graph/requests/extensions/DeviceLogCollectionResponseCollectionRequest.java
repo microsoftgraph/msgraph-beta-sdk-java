@@ -62,14 +62,14 @@ public class DeviceLogCollectionResponseCollectionRequest extends BaseCollection
     public void post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<DeviceLogCollectionResponse> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceLogCollectionResponseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceLogCollectionResponse, callback);
     }
 
     public DeviceLogCollectionResponse post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceLogCollectionResponseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceLogCollectionResponse);
     }
 
@@ -106,6 +106,27 @@ public class DeviceLogCollectionResponseCollectionRequest extends BaseCollection
         return (DeviceLogCollectionResponseCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceLogCollectionResponseCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceLogCollectionResponseCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceLogCollectionResponseCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceLogCollectionResponseCollectionRequest)this;
+    }
     public IDeviceLogCollectionResponseCollectionPage buildFromResponse(final DeviceLogCollectionResponseCollectionResponse response) {
         final IDeviceLogCollectionResponseCollectionRequestBuilder builder;
         if (response.nextLink != null) {

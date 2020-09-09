@@ -116,6 +116,27 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
     }
 
     /**
+     * Creates a UserAnalytics with a new object
+     *
+     * @param newUserAnalytics the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserAnalytics newUserAnalytics, final ICallback<UserAnalytics> callback) {
+        send(HttpMethod.PUT, callback, newUserAnalytics);
+    }
+
+    /**
+     * Creates a UserAnalytics with a new object
+     *
+     * @param newUserAnalytics the object to create/update
+     * @return the created UserAnalytics
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserAnalytics put(final UserAnalytics newUserAnalytics) throws ClientException {
+        return send(HttpMethod.PUT, newUserAnalytics);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

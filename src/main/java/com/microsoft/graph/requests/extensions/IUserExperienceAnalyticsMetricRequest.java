@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsMetricRequest extends IHttpRequest {
     UserExperienceAnalyticsMetric post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsMetric with a new object
+     *
+     * @param newUserExperienceAnalyticsMetric the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsMetric with a new object
+     *
+     * @param newUserExperienceAnalyticsMetric the object to create/update
+     * @return the created UserExperienceAnalyticsMetric
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsMetric put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

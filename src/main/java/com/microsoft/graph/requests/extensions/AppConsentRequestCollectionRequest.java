@@ -62,14 +62,14 @@ public class AppConsentRequestCollectionRequest extends BaseCollectionRequest<Ap
     public void post(final AppConsentRequest newAppConsentRequest, final ICallback<AppConsentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppConsentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppConsentRequest, callback);
     }
 
     public AppConsentRequest post(final AppConsentRequest newAppConsentRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppConsentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppConsentRequest);
     }
 
@@ -106,6 +106,27 @@ public class AppConsentRequestCollectionRequest extends BaseCollectionRequest<Ap
         return (AppConsentRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAppConsentRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AppConsentRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAppConsentRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAppConsentRequestCollectionRequest)this;
+    }
     public IAppConsentRequestCollectionPage buildFromResponse(final AppConsentRequestCollectionResponse response) {
         final IAppConsentRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

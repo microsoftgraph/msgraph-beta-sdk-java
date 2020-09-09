@@ -80,6 +80,23 @@ public interface IDeviceComplianceScriptDeviceStateRequest extends IHttpRequest 
     DeviceComplianceScriptDeviceState post(final DeviceComplianceScriptDeviceState newDeviceComplianceScriptDeviceState) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceScriptDeviceState with a new object
+     *
+     * @param newDeviceComplianceScriptDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceScriptDeviceState newDeviceComplianceScriptDeviceState, final ICallback<DeviceComplianceScriptDeviceState> callback);
+
+    /**
+     * Posts a DeviceComplianceScriptDeviceState with a new object
+     *
+     * @param newDeviceComplianceScriptDeviceState the object to create/update
+     * @return the created DeviceComplianceScriptDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceScriptDeviceState put(final DeviceComplianceScriptDeviceState newDeviceComplianceScriptDeviceState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

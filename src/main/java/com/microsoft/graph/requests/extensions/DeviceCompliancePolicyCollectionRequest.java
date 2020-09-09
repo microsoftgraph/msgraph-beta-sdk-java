@@ -10,10 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
-import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.RetireScheduledManagedDevice;
 import com.microsoft.graph.models.generated.ScheduledRetireState;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import java.util.Arrays;
@@ -69,14 +69,14 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
     public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicy, callback);
     }
 
     public DeviceCompliancePolicy post(final DeviceCompliancePolicy newDeviceCompliancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicy);
     }
 
@@ -113,6 +113,27 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
         return (DeviceCompliancePolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCompliancePolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCompliancePolicyCollectionRequest)this;
+    }
     public IDeviceCompliancePolicyCollectionPage buildFromResponse(final DeviceCompliancePolicyCollectionResponse response) {
         final IDeviceCompliancePolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

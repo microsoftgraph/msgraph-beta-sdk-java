@@ -40,7 +40,7 @@ public class GroupPolicyDefinitionCollectionReferenceRequest extends BaseCollect
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/definitions/" + newGroupPolicyDefinition.id);
         new GroupPolicyDefinitionWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyDefinition, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class GroupPolicyDefinitionCollectionReferenceRequest extends BaseCollect
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/definitions/" + newGroupPolicyDefinition.id);
         return new GroupPolicyDefinitionWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newGroupPolicyDefinition, body);
     }
     /**

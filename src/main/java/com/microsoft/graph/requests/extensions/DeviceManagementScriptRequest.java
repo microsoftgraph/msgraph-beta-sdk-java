@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
@@ -130,6 +130,27 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      */
     public DeviceManagementScript post(final DeviceManagementScript newDeviceManagementScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementScript);
+    }
+
+    /**
+     * Creates a DeviceManagementScript with a new object
+     *
+     * @param newDeviceManagementScript the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementScript newDeviceManagementScript, final ICallback<DeviceManagementScript> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementScript);
+    }
+
+    /**
+     * Creates a DeviceManagementScript with a new object
+     *
+     * @param newDeviceManagementScript the object to create/update
+     * @return the created DeviceManagementScript
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementScript put(final DeviceManagementScript newDeviceManagementScript) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementScript);
     }
 
     /**

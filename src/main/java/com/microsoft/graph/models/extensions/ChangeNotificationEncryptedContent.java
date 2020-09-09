@@ -44,20 +44,20 @@ public class ChangeNotificationEncryptedContent implements IJsonBackedObject {
     public String data;
 
     /**
-     * The Data Signature.
-     * 
-     */
-    @SerializedName("dataSignature")
-    @Expose
-    public String dataSignature;
-
-    /**
      * The Data Key.
      * 
      */
     @SerializedName("dataKey")
     @Expose
     public String dataKey;
+
+    /**
+     * The Data Signature.
+     * 
+     */
+    @SerializedName("dataSignature")
+    @Expose
+    public String dataSignature;
 
     /**
      * The Encryption Certificate Id.

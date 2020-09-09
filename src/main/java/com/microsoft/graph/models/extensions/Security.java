@@ -18,9 +18,9 @@ import com.microsoft.graph.models.extensions.IpSecurityProfile;
 import com.microsoft.graph.models.extensions.ProviderTenantSetting;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import com.microsoft.graph.models.extensions.SecureScore;
+import com.microsoft.graph.models.extensions.SecurityAction;
 import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.UserSecurityProfile;
-import com.microsoft.graph.models.extensions.SecurityAction;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.requests.extensions.AlertCollectionPage;
@@ -40,12 +40,12 @@ import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollecti
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
+import com.microsoft.graph.requests.extensions.SecurityActionCollectionResponse;
+import com.microsoft.graph.requests.extensions.SecurityActionCollectionPage;
 import com.microsoft.graph.requests.extensions.TiIndicatorCollectionResponse;
 import com.microsoft.graph.requests.extensions.TiIndicatorCollectionPage;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.SecurityActionCollectionResponse;
-import com.microsoft.graph.requests.extensions.SecurityActionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -126,6 +126,12 @@ public class Security extends Entity implements IJsonBackedObject {
     public SecureScoreCollectionPage secureScores;
 
     /**
+     * The Security Actions.
+     * 
+     */
+    public SecurityActionCollectionPage securityActions;
+
+    /**
      * The Ti Indicators.
      * 
      */
@@ -136,12 +142,6 @@ public class Security extends Entity implements IJsonBackedObject {
      * 
      */
     public UserSecurityProfileCollectionPage userSecurityProfiles;
-
-    /**
-     * The Security Actions.
-     * 
-     */
-    public SecurityActionCollectionPage securityActions;
 
 
     /**
@@ -327,6 +327,22 @@ public class Security extends Entity implements IJsonBackedObject {
             secureScores = new SecureScoreCollectionPage(response, null);
         }
 
+        if (json.has("securityActions")) {
+            final SecurityActionCollectionResponse response = new SecurityActionCollectionResponse();
+            if (json.has("securityActions@odata.nextLink")) {
+                response.nextLink = json.get("securityActions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("securityActions").toString(), JsonObject[].class);
+            final SecurityAction[] array = new SecurityAction[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityAction.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            securityActions = new SecurityActionCollectionPage(response, null);
+        }
+
         if (json.has("tiIndicators")) {
             final TiIndicatorCollectionResponse response = new TiIndicatorCollectionResponse();
             if (json.has("tiIndicators@odata.nextLink")) {
@@ -357,22 +373,6 @@ public class Security extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             userSecurityProfiles = new UserSecurityProfileCollectionPage(response, null);
-        }
-
-        if (json.has("securityActions")) {
-            final SecurityActionCollectionResponse response = new SecurityActionCollectionResponse();
-            if (json.has("securityActions@odata.nextLink")) {
-                response.nextLink = json.get("securityActions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("securityActions").toString(), JsonObject[].class);
-            final SecurityAction[] array = new SecurityAction[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecurityAction.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            securityActions = new SecurityActionCollectionPage(response, null);
         }
     }
 }

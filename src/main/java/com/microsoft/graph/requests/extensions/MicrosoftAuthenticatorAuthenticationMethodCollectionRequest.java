@@ -62,14 +62,14 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends
     public void post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod, final ICallback<MicrosoftAuthenticatorAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMicrosoftAuthenticatorAuthenticationMethod, callback);
     }
 
     public MicrosoftAuthenticatorAuthenticationMethod post(final MicrosoftAuthenticatorAuthenticationMethod newMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends
         return (MicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
     public IMicrosoftAuthenticatorAuthenticationMethodCollectionPage buildFromResponse(final MicrosoftAuthenticatorAuthenticationMethodCollectionResponse response) {
         final IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -36,12 +36,12 @@ public class IosAvailableUpdateVersion implements IJsonBackedObject {
     }
 
     /**
-     * The Product Version.
-     * The version of the update.
+     * The Expiration Date Time.
+     * The expiration date of the update.
      */
-    @SerializedName("productVersion")
+    @SerializedName("expirationDateTime")
     @Expose
-    public String productVersion;
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Posting Date Time.
@@ -52,12 +52,12 @@ public class IosAvailableUpdateVersion implements IJsonBackedObject {
     public java.util.Calendar postingDateTime;
 
     /**
-     * The Expiration Date Time.
-     * The expiration date of the update.
+     * The Product Version.
+     * The version of the update.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName("productVersion")
     @Expose
-    public java.util.Calendar expirationDateTime;
+    public String productVersion;
 
     /**
      * The Supported Devices.

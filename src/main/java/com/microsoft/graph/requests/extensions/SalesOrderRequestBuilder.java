@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesOrderLineCollectionRequestB
 import com.microsoft.graph.requests.extensions.ISalesOrderLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
@@ -61,12 +61,14 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
     }
 
 
-    public ISalesOrderLineCollectionRequestBuilder salesOrderLines() {
-        return new SalesOrderLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines"), getClient(), null);
-    }
 
-    public ISalesOrderLineRequestBuilder salesOrderLines(final String id) {
-        return new SalesOrderLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    public ICurrencyRequestBuilder currency() {
+        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
@@ -79,20 +81,18 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
     }
 
     /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    public ICurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     public IPaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    }
+    public ISalesOrderLineCollectionRequestBuilder salesOrderLines() {
+        return new SalesOrderLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines"), getClient(), null);
+    }
+
+    public ISalesOrderLineRequestBuilder salesOrderLines(final String id) {
+        return new SalesOrderLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines") + "/" + id, getClient(), null);
     }
 }

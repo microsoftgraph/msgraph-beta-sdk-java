@@ -112,6 +112,27 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
     }
 
     /**
+     * Creates a Notification with a new object
+     *
+     * @param newNotification the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Notification newNotification, final ICallback<Notification> callback) {
+        send(HttpMethod.PUT, callback, newNotification);
+    }
+
+    /**
+     * Creates a Notification with a new object
+     *
+     * @param newNotification the object to create/update
+     * @return the created Notification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Notification put(final Notification newNotification) throws ClientException {
+        return send(HttpMethod.PUT, newNotification);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

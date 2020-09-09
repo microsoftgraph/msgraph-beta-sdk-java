@@ -49,6 +49,13 @@ public interface IEducationRootRequestBuilder extends IRequestBuilder {
 
     IEducationClassRequestBuilder classes(final String id);
 
+    /**
+     * Gets the request builder for EducationUser
+     *
+     * @return the IEducationUserRequestBuilder instance
+     */
+    IEducationUserRequestBuilder me();
+
     IEducationSchoolCollectionRequestBuilder schools();
 
     IEducationSchoolRequestBuilder schools(final String id);
@@ -56,12 +63,5 @@ public interface IEducationRootRequestBuilder extends IRequestBuilder {
     IEducationUserCollectionRequestBuilder users();
 
     IEducationUserRequestBuilder users(final String id);
-
-    /**
-     * Gets the request builder for EducationUser
-     *
-     * @return the IEducationUserRequestBuilder instance
-     */
-    IEducationUserRequestBuilder me();
 
 }

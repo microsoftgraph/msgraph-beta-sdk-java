@@ -80,6 +80,23 @@ public interface IAccessPackageAssignmentRequest extends IHttpRequest {
     AccessPackageAssignment post(final AccessPackageAssignment newAccessPackageAssignment) throws ClientException;
 
     /**
+     * Posts a AccessPackageAssignment with a new object
+     *
+     * @param newAccessPackageAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<AccessPackageAssignment> callback);
+
+    /**
+     * Posts a AccessPackageAssignment with a new object
+     *
+     * @param newAccessPackageAssignment the object to create/update
+     * @return the created AccessPackageAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AccessPackageAssignment put(final AccessPackageAssignment newAccessPackageAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

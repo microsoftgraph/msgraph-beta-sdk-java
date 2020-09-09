@@ -116,6 +116,27 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a AccessPackageResourceRequest with a new object
+     *
+     * @param newAccessPackageResourceRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<AccessPackageResourceRequest> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageResourceRequest);
+    }
+
+    /**
+     * Creates a AccessPackageResourceRequest with a new object
+     *
+     * @param newAccessPackageResourceRequest the object to create/update
+     * @return the created AccessPackageResourceRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageResourceRequest put(final AccessPackageResourceRequest newAccessPackageResourceRequest) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageResourceRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

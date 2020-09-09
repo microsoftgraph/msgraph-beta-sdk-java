@@ -136,6 +136,27 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a WindowsAutopilotDeploymentProfile with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<WindowsAutopilotDeploymentProfile> callback) {
+        send(HttpMethod.PUT, callback, newWindowsAutopilotDeploymentProfile);
+    }
+
+    /**
+     * Creates a WindowsAutopilotDeploymentProfile with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfile the object to create/update
+     * @return the created WindowsAutopilotDeploymentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsAutopilotDeploymentProfile put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsAutopilotDeploymentProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

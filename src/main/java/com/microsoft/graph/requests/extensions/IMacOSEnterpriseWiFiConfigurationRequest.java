@@ -80,6 +80,23 @@ public interface IMacOSEnterpriseWiFiConfigurationRequest extends IHttpRequest {
     MacOSEnterpriseWiFiConfiguration post(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException;
 
     /**
+     * Posts a MacOSEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newMacOSEnterpriseWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<MacOSEnterpriseWiFiConfiguration> callback);
+
+    /**
+     * Posts a MacOSEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newMacOSEnterpriseWiFiConfiguration the object to create/update
+     * @return the created MacOSEnterpriseWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSEnterpriseWiFiConfiguration put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

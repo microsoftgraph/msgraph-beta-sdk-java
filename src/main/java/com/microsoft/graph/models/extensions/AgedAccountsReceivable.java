@@ -27,6 +27,38 @@ public class AgedAccountsReceivable extends Entity implements IJsonBackedObject 
 
 
     /**
+     * The Aged As Of Date.
+     * 
+     */
+    @SerializedName("agedAsOfDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly agedAsOfDate;
+
+    /**
+     * The Balance Due.
+     * 
+     */
+    @SerializedName("balanceDue")
+    @Expose
+    public java.math.BigDecimal balanceDue;
+
+    /**
+     * The Currency Code.
+     * 
+     */
+    @SerializedName("currencyCode")
+    @Expose
+    public String currencyCode;
+
+    /**
+     * The Current Amount.
+     * 
+     */
+    @SerializedName("currentAmount")
+    @Expose
+    public java.math.BigDecimal currentAmount;
+
+    /**
      * The Customer Number.
      * 
      */
@@ -41,30 +73,6 @@ public class AgedAccountsReceivable extends Entity implements IJsonBackedObject 
     @SerializedName("name")
     @Expose
     public String name;
-
-    /**
-     * The Currency Code.
-     * 
-     */
-    @SerializedName("currencyCode")
-    @Expose
-    public String currencyCode;
-
-    /**
-     * The Balance Due.
-     * 
-     */
-    @SerializedName("balanceDue")
-    @Expose
-    public java.math.BigDecimal balanceDue;
-
-    /**
-     * The Current Amount.
-     * 
-     */
-    @SerializedName("currentAmount")
-    @Expose
-    public java.math.BigDecimal currentAmount;
 
     /**
      * The Period1Amount.
@@ -89,14 +97,6 @@ public class AgedAccountsReceivable extends Entity implements IJsonBackedObject 
     @SerializedName("period3Amount")
     @Expose
     public java.math.BigDecimal period3Amount;
-
-    /**
-     * The Aged As Of Date.
-     * 
-     */
-    @SerializedName("agedAsOfDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly agedAsOfDate;
 
     /**
      * The Period Length Filter.

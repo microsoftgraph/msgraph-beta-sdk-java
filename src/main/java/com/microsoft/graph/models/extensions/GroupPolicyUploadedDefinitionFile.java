@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.GroupPolicyUploadedDefinitionFileStatus;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
+import com.microsoft.graph.models.generated.GroupPolicyUploadedDefinitionFileStatus;
 import com.microsoft.graph.models.extensions.GroupPolicyOperation;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionResponse;
@@ -32,36 +32,12 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
 
     /**
-     * The File Name.
-     * The file name of the uploaded ADML file.
-     */
-    @SerializedName("fileName")
-    @Expose
-    public String fileName;
-
-    /**
-     * The Status.
-     * The upload status of the uploaded ADMX file.
-     */
-    @SerializedName("status")
-    @Expose
-    public GroupPolicyUploadedDefinitionFileStatus status;
-
-    /**
      * The Content.
      * The contents of the uploaded ADMX file.
      */
     @SerializedName("content")
     @Expose
     public byte[] content;
-
-    /**
-     * The Upload Date Time.
-     * The uploaded time of the uploaded ADMX file.
-     */
-    @SerializedName("uploadDateTime")
-    @Expose
-    public java.util.Calendar uploadDateTime;
 
     /**
      * The Default Language Code.
@@ -72,12 +48,36 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     public String defaultLanguageCode;
 
     /**
+     * The File Name.
+     * The file name of the uploaded ADML file.
+     */
+    @SerializedName("fileName")
+    @Expose
+    public String fileName;
+
+    /**
      * The Group Policy Uploaded Language Files.
      * The list of ADML files associated with the uploaded ADMX file.
      */
     @SerializedName("groupPolicyUploadedLanguageFiles")
     @Expose
     public java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
+
+    /**
+     * The Status.
+     * The upload status of the uploaded ADMX file.
+     */
+    @SerializedName("status")
+    @Expose
+    public GroupPolicyUploadedDefinitionFileStatus status;
+
+    /**
+     * The Upload Date Time.
+     * The uploaded time of the uploaded ADMX file.
+     */
+    @SerializedName("uploadDateTime")
+    @Expose
+    public java.util.Calendar uploadDateTime;
 
     /**
      * The Group Policy Operations.

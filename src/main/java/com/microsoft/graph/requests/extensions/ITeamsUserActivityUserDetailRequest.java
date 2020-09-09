@@ -80,6 +80,23 @@ public interface ITeamsUserActivityUserDetailRequest extends IHttpRequest {
     TeamsUserActivityUserDetail post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException;
 
     /**
+     * Posts a TeamsUserActivityUserDetail with a new object
+     *
+     * @param newTeamsUserActivityUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<TeamsUserActivityUserDetail> callback);
+
+    /**
+     * Posts a TeamsUserActivityUserDetail with a new object
+     *
+     * @param newTeamsUserActivityUserDetail the object to create/update
+     * @return the created TeamsUserActivityUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsUserActivityUserDetail put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

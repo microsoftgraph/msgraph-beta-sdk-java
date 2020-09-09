@@ -113,6 +113,27 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
     }
 
     /**
+     * Creates a AppLogCollectionRequest with a new object
+     *
+     * @param newAppLogCollectionRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback) {
+        send(HttpMethod.PUT, callback, newAppLogCollectionRequest);
+    }
+
+    /**
+     * Creates a AppLogCollectionRequest with a new object
+     *
+     * @param newAppLogCollectionRequest the object to create/update
+     * @return the created AppLogCollectionRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AppLogCollectionRequest put(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException {
+        return send(HttpMethod.PUT, newAppLogCollectionRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

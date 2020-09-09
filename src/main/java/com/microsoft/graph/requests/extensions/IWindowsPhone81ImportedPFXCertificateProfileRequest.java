@@ -80,6 +80,23 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequest extends IHt
     WindowsPhone81ImportedPFXCertificateProfile post(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81ImportedPFXCertificateProfile with a new object
+     *
+     * @param newWindowsPhone81ImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile, final ICallback<WindowsPhone81ImportedPFXCertificateProfile> callback);
+
+    /**
+     * Posts a WindowsPhone81ImportedPFXCertificateProfile with a new object
+     *
+     * @param newWindowsPhone81ImportedPFXCertificateProfile the object to create/update
+     * @return the created WindowsPhone81ImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81ImportedPFXCertificateProfile put(final WindowsPhone81ImportedPFXCertificateProfile newWindowsPhone81ImportedPFXCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

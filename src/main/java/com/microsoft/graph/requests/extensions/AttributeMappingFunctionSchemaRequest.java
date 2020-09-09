@@ -112,6 +112,27 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a AttributeMappingFunctionSchema with a new object
+     *
+     * @param newAttributeMappingFunctionSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback) {
+        send(HttpMethod.PUT, callback, newAttributeMappingFunctionSchema);
+    }
+
+    /**
+     * Creates a AttributeMappingFunctionSchema with a new object
+     *
+     * @param newAttributeMappingFunctionSchema the object to create/update
+     * @return the created AttributeMappingFunctionSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AttributeMappingFunctionSchema put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException {
+        return send(HttpMethod.PUT, newAttributeMappingFunctionSchema);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

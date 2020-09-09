@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.UnaryManagementConditionExpressionOperatorType;
 import com.microsoft.graph.models.extensions.ManagementConditionExpressionModel;
+import com.microsoft.graph.models.generated.UnaryManagementConditionExpressionOperatorType;
 
 
 import com.google.gson.JsonObject;
@@ -28,20 +28,20 @@ public class UnaryManagementConditionExpression extends ManagementConditionExpre
 
 
     /**
-     * The Operator.
-     * The operator used in the evaluation of the unary operation.
-     */
-    @SerializedName("operator")
-    @Expose
-    public UnaryManagementConditionExpressionOperatorType operator;
-
-    /**
      * The Operand.
      * The operand of the unary operation.
      */
     @SerializedName("operand")
     @Expose
     public ManagementConditionExpressionModel operand;
+
+    /**
+     * The Operator.
+     * The operator used in the evaluation of the unary operation.
+     */
+    @SerializedName("operator")
+    @Expose
+    public UnaryManagementConditionExpressionOperatorType operator;
 
 
     /**

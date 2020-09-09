@@ -80,6 +80,23 @@ public interface IPolicySetItemRequest extends IHttpRequest {
     PolicySetItem post(final PolicySetItem newPolicySetItem) throws ClientException;
 
     /**
+     * Posts a PolicySetItem with a new object
+     *
+     * @param newPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PolicySetItem newPolicySetItem, final ICallback<PolicySetItem> callback);
+
+    /**
+     * Posts a PolicySetItem with a new object
+     *
+     * @param newPolicySetItem the object to create/update
+     * @return the created PolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PolicySetItem put(final PolicySetItem newPolicySetItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

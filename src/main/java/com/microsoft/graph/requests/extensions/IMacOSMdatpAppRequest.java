@@ -80,6 +80,23 @@ public interface IMacOSMdatpAppRequest extends IHttpRequest {
     MacOSMdatpApp post(final MacOSMdatpApp newMacOSMdatpApp) throws ClientException;
 
     /**
+     * Posts a MacOSMdatpApp with a new object
+     *
+     * @param newMacOSMdatpApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<MacOSMdatpApp> callback);
+
+    /**
+     * Posts a MacOSMdatpApp with a new object
+     *
+     * @param newMacOSMdatpApp the object to create/update
+     * @return the created MacOSMdatpApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSMdatpApp put(final MacOSMdatpApp newMacOSMdatpApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,20 +28,20 @@ public class PrintOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public PrintOperationStatus status;
-
-    /**
      * The Created Date Time.
      * 
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public PrintOperationStatus status;
 
 
     /**

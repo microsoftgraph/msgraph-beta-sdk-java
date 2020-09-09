@@ -62,14 +62,14 @@ public class AccountCollectionRequest extends BaseCollectionRequest<AccountColle
     public void post(final Account newAccount, final ICallback<Account> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccountRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccount, callback);
     }
 
     public Account post(final Account newAccount) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccountRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccount);
     }
 
@@ -106,6 +106,27 @@ public class AccountCollectionRequest extends BaseCollectionRequest<AccountColle
         return (AccountCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccountCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccountCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccountCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccountCollectionRequest)this;
+    }
     public IAccountCollectionPage buildFromResponse(final AccountCollectionResponse response) {
         final IAccountCollectionRequestBuilder builder;
         if (response.nextLink != null) {

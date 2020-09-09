@@ -112,6 +112,27 @@ public class SharePointActivityUserCountsRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a SharePointActivityUserCounts with a new object
+     *
+     * @param newSharePointActivityUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharePointActivityUserCounts newSharePointActivityUserCounts, final ICallback<SharePointActivityUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newSharePointActivityUserCounts);
+    }
+
+    /**
+     * Creates a SharePointActivityUserCounts with a new object
+     *
+     * @param newSharePointActivityUserCounts the object to create/update
+     * @return the created SharePointActivityUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharePointActivityUserCounts put(final SharePointActivityUserCounts newSharePointActivityUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newSharePointActivityUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -61,14 +61,14 @@ public class ExternalConnectionCollectionRequest extends BaseCollectionRequest<E
     public void post(final ExternalConnection newExternalConnection, final ICallback<ExternalConnection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExternalConnectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExternalConnection, callback);
     }
 
     public ExternalConnection post(final ExternalConnection newExternalConnection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExternalConnectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExternalConnection);
     }
 
@@ -105,6 +105,27 @@ public class ExternalConnectionCollectionRequest extends BaseCollectionRequest<E
         return (ExternalConnectionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IExternalConnectionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ExternalConnectionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IExternalConnectionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IExternalConnectionCollectionRequest)this;
+    }
     public IExternalConnectionCollectionPage buildFromResponse(final ExternalConnectionCollectionResponse response) {
         final IExternalConnectionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

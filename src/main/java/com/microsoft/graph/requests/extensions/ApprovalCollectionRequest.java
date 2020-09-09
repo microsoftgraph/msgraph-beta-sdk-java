@@ -62,14 +62,14 @@ public class ApprovalCollectionRequest extends BaseCollectionRequest<ApprovalCol
     public void post(final Approval newApproval, final ICallback<Approval> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApprovalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApproval, callback);
     }
 
     public Approval post(final Approval newApproval) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApprovalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApproval);
     }
 
@@ -106,6 +106,27 @@ public class ApprovalCollectionRequest extends BaseCollectionRequest<ApprovalCol
         return (ApprovalCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IApprovalCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ApprovalCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IApprovalCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IApprovalCollectionRequest)this;
+    }
     public IApprovalCollectionPage buildFromResponse(final ApprovalCollectionResponse response) {
         final IApprovalCollectionRequestBuilder builder;
         if (response.nextLink != null) {

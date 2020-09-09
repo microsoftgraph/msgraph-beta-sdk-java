@@ -62,14 +62,14 @@ public class PrintServiceEndpointCollectionRequest extends BaseCollectionRequest
     public void post(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintServiceEndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintServiceEndpoint, callback);
     }
 
     public PrintServiceEndpoint post(final PrintServiceEndpoint newPrintServiceEndpoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintServiceEndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintServiceEndpoint);
     }
 
@@ -106,6 +106,27 @@ public class PrintServiceEndpointCollectionRequest extends BaseCollectionRequest
         return (PrintServiceEndpointCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintServiceEndpointCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintServiceEndpointCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintServiceEndpointCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintServiceEndpointCollectionRequest)this;
+    }
     public IPrintServiceEndpointCollectionPage buildFromResponse(final PrintServiceEndpointCollectionResponse response) {
         final IPrintServiceEndpointCollectionRequestBuilder builder;
         if (response.nextLink != null) {

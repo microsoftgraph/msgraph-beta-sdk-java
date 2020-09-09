@@ -112,6 +112,27 @@ public class WindowsKioskConfigurationRequest extends BaseRequest implements IWi
     }
 
     /**
+     * Creates a WindowsKioskConfiguration with a new object
+     *
+     * @param newWindowsKioskConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsKioskConfiguration newWindowsKioskConfiguration, final ICallback<WindowsKioskConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsKioskConfiguration);
+    }
+
+    /**
+     * Creates a WindowsKioskConfiguration with a new object
+     *
+     * @param newWindowsKioskConfiguration the object to create/update
+     * @return the created WindowsKioskConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsKioskConfiguration put(final WindowsKioskConfiguration newWindowsKioskConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsKioskConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

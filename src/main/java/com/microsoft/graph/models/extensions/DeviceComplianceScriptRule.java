@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.Operator;
 import com.microsoft.graph.models.generated.DataType;
+import com.microsoft.graph.models.generated.Operator;
 
 
 import com.google.gson.JsonObject;
@@ -38,22 +38,6 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
     }
 
     /**
-     * The Setting Name.
-     * Setting name specified in the rule.
-     */
-    @SerializedName("settingName")
-    @Expose
-    public String settingName;
-
-    /**
-     * The Operator.
-     * Operator specified in the rule.
-     */
-    @SerializedName("operator")
-    @Expose
-    public Operator operator;
-
-    /**
      * The Data Type.
      * Data type specified in the rule.
      */
@@ -68,6 +52,22 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
     @SerializedName("operand")
     @Expose
     public String operand;
+
+    /**
+     * The Operator.
+     * Operator specified in the rule.
+     */
+    @SerializedName("operator")
+    @Expose
+    public Operator operator;
+
+    /**
+     * The Setting Name.
+     * Setting name specified in the rule.
+     */
+    @SerializedName("settingName")
+    @Expose
+    public String settingName;
 
 
     /**

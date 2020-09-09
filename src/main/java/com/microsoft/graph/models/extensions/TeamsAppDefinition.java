@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.TeamsAppPublishingState;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.TeamsAppPublishingState;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,28 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Teams App Id.
-     * The ID from the Teams app manifest.
-     */
-    @SerializedName("teamsAppId")
-    @Expose
-    public String teamsAppId;
-
-    /**
      * The Azure ADApp Id.
      * 
      */
     @SerializedName("azureADAppId")
     @Expose
     public String azureADAppId;
+
+    /**
+     * The Created By.
+     * 
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
 
     /**
      * The Display Name.
@@ -53,12 +61,12 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Version.
-     * The version number of the application.
+     * The Last Modified Date Time.
+     * 
      */
-    @SerializedName("version")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public String version;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Publishing State.
@@ -77,28 +85,20 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
     public String shortdescription;
 
     /**
-     * The Description.
-     * 
+     * The Teams App Id.
+     * The ID from the Teams app manifest.
      */
-    @SerializedName("description")
+    @SerializedName("teamsAppId")
     @Expose
-    public String description;
+    public String teamsAppId;
 
     /**
-     * The Last Modified Date Time.
-     * 
+     * The Version.
+     * The version number of the application.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("version")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Created By.
-     * 
-     */
-    @SerializedName("createdBy")
-    @Expose
-    public IdentitySet createdBy;
+    public String version;
 
 
     /**

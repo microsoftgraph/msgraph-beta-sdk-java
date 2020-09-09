@@ -35,13 +35,53 @@ public enum ResultantAppStateDetail
     */
     IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL,
     /**
+    * processor Architecture Not Applicable
+    */
+    PROCESSOR_ARCHITECTURE_NOT_APPLICABLE,
+    /**
     * vpp App Has Update Available
     */
     VPP_APP_HAS_UPDATE_AVAILABLE,
     /**
+    * minimum Disk Space Not Met
+    */
+    MINIMUM_DISK_SPACE_NOT_MET,
+    /**
     * user Rejected Update
     */
     USER_REJECTED_UPDATE,
+    /**
+    * minimum Os Version Not Met
+    */
+    MINIMUM_OS_VERSION_NOT_MET,
+    /**
+    * minimum Physical Memory Not Met
+    */
+    MINIMUM_PHYSICAL_MEMORY_NOT_MET,
+    /**
+    * minimum Logical Processor Count Not Met
+    */
+    MINIMUM_LOGICAL_PROCESSOR_COUNT_NOT_MET,
+    /**
+    * minimum Cpu Speed Not Met
+    */
+    MINIMUM_CPU_SPEED_NOT_MET,
+    /**
+    * platform Not Applicable
+    */
+    PLATFORM_NOT_APPLICABLE,
+    /**
+    * file System Requirement Not Met
+    */
+    FILE_SYSTEM_REQUIREMENT_NOT_MET,
+    /**
+    * registry Requirement Not Met
+    */
+    REGISTRY_REQUIREMENT_NOT_MET,
+    /**
+    * power Shell Script Requirement Not Met
+    */
+    POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET,
     /**
     * see Install Error Code
     */
@@ -78,46 +118,6 @@ public enum ResultantAppStateDetail
     * content Downloaded
     */
     CONTENT_DOWNLOADED,
-    /**
-    * power Shell Script Requirement Not Met
-    */
-    POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET,
-    /**
-    * registry Requirement Not Met
-    */
-    REGISTRY_REQUIREMENT_NOT_MET,
-    /**
-    * file System Requirement Not Met
-    */
-    FILE_SYSTEM_REQUIREMENT_NOT_MET,
-    /**
-    * platform Not Applicable
-    */
-    PLATFORM_NOT_APPLICABLE,
-    /**
-    * minimum Cpu Speed Not Met
-    */
-    MINIMUM_CPU_SPEED_NOT_MET,
-    /**
-    * minimum Logical Processor Count Not Met
-    */
-    MINIMUM_LOGICAL_PROCESSOR_COUNT_NOT_MET,
-    /**
-    * minimum Physical Memory Not Met
-    */
-    MINIMUM_PHYSICAL_MEMORY_NOT_MET,
-    /**
-    * minimum Os Version Not Met
-    */
-    MINIMUM_OS_VERSION_NOT_MET,
-    /**
-    * minimum Disk Space Not Met
-    */
-    MINIMUM_DISK_SPACE_NOT_MET,
-    /**
-    * processor Architecture Not Applicable
-    */
-    PROCESSOR_ARCHITECTURE_NOT_APPLICABLE,
     /**
     * For ResultantAppStateDetail values that were not expected from the service
     */

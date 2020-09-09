@@ -62,14 +62,14 @@ public class SalesCreditMemoLineCollectionRequest extends BaseCollectionRequest<
     public void post(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<SalesCreditMemoLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesCreditMemoLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesCreditMemoLine, callback);
     }
 
     public SalesCreditMemoLine post(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SalesCreditMemoLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesCreditMemoLine);
     }
 
@@ -106,6 +106,27 @@ public class SalesCreditMemoLineCollectionRequest extends BaseCollectionRequest<
         return (SalesCreditMemoLineCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISalesCreditMemoLineCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SalesCreditMemoLineCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISalesCreditMemoLineCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISalesCreditMemoLineCollectionRequest)this;
+    }
     public ISalesCreditMemoLineCollectionPage buildFromResponse(final SalesCreditMemoLineCollectionResponse response) {
         final ISalesCreditMemoLineCollectionRequestBuilder builder;
         if (response.nextLink != null) {

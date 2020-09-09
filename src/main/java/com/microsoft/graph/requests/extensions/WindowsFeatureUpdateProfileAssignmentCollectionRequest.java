@@ -62,14 +62,14 @@ public class WindowsFeatureUpdateProfileAssignmentCollectionRequest extends Base
     public void post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment, final ICallback<WindowsFeatureUpdateProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsFeatureUpdateProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsFeatureUpdateProfileAssignment, callback);
     }
 
     public WindowsFeatureUpdateProfileAssignment post(final WindowsFeatureUpdateProfileAssignment newWindowsFeatureUpdateProfileAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsFeatureUpdateProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsFeatureUpdateProfileAssignment);
     }
 
@@ -106,6 +106,27 @@ public class WindowsFeatureUpdateProfileAssignmentCollectionRequest extends Base
         return (WindowsFeatureUpdateProfileAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsFeatureUpdateProfileAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsFeatureUpdateProfileAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsFeatureUpdateProfileAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsFeatureUpdateProfileAssignmentCollectionRequest)this;
+    }
     public IWindowsFeatureUpdateProfileAssignmentCollectionPage buildFromResponse(final WindowsFeatureUpdateProfileAssignmentCollectionResponse response) {
         final IWindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

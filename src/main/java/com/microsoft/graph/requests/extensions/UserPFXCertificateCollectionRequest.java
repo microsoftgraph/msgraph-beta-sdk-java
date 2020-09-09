@@ -62,14 +62,14 @@ public class UserPFXCertificateCollectionRequest extends BaseCollectionRequest<U
     public void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<UserPFXCertificate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserPFXCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserPFXCertificate, callback);
     }
 
     public UserPFXCertificate post(final UserPFXCertificate newUserPFXCertificate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserPFXCertificateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserPFXCertificate);
     }
 
@@ -106,6 +106,27 @@ public class UserPFXCertificateCollectionRequest extends BaseCollectionRequest<U
         return (UserPFXCertificateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserPFXCertificateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserPFXCertificateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserPFXCertificateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserPFXCertificateCollectionRequest)this;
+    }
     public IUserPFXCertificateCollectionPage buildFromResponse(final UserPFXCertificateCollectionResponse response) {
         final IUserPFXCertificateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

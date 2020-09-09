@@ -112,6 +112,27 @@ public class UserCredentialUsageDetailsRequest extends BaseRequest implements IU
     }
 
     /**
+     * Creates a UserCredentialUsageDetails with a new object
+     *
+     * @param newUserCredentialUsageDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback) {
+        send(HttpMethod.PUT, callback, newUserCredentialUsageDetails);
+    }
+
+    /**
+     * Creates a UserCredentialUsageDetails with a new object
+     *
+     * @param newUserCredentialUsageDetails the object to create/update
+     * @return the created UserCredentialUsageDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserCredentialUsageDetails put(final UserCredentialUsageDetails newUserCredentialUsageDetails) throws ClientException {
+        return send(HttpMethod.PUT, newUserCredentialUsageDetails);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

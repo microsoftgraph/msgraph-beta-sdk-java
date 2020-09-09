@@ -11,8 +11,8 @@ import com.microsoft.graph.models.extensions.SynchronizationSchema;
 import com.microsoft.graph.models.extensions.ExpressionInputObject;
 import com.microsoft.graph.models.extensions.AttributeDefinition;
 import com.microsoft.graph.models.extensions.ParseExpressionResponse;
-import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import com.microsoft.graph.models.extensions.FilterOperatorSchema;
+import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionRequestBuilder;
@@ -118,6 +118,27 @@ public class SynchronizationSchemaRequest extends BaseRequest implements ISynchr
      */
     public SynchronizationSchema post(final SynchronizationSchema newSynchronizationSchema) throws ClientException {
         return send(HttpMethod.POST, newSynchronizationSchema);
+    }
+
+    /**
+     * Creates a SynchronizationSchema with a new object
+     *
+     * @param newSynchronizationSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SynchronizationSchema newSynchronizationSchema, final ICallback<SynchronizationSchema> callback) {
+        send(HttpMethod.PUT, callback, newSynchronizationSchema);
+    }
+
+    /**
+     * Creates a SynchronizationSchema with a new object
+     *
+     * @param newSynchronizationSchema the object to create/update
+     * @return the created SynchronizationSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SynchronizationSchema put(final SynchronizationSchema newSynchronizationSchema) throws ClientException {
+        return send(HttpMethod.PUT, newSynchronizationSchema);
     }
 
     /**

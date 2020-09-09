@@ -61,14 +61,14 @@ public class ConnectorCollectionRequest extends BaseCollectionRequest<ConnectorC
     public void post(final Connector newConnector, final ICallback<Connector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnector, callback);
     }
 
     public Connector post(final Connector newConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnector);
     }
 
@@ -105,6 +105,27 @@ public class ConnectorCollectionRequest extends BaseCollectionRequest<ConnectorC
         return (ConnectorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IConnectorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ConnectorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IConnectorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IConnectorCollectionRequest)this;
+    }
     public IConnectorCollectionPage buildFromResponse(final ConnectorCollectionResponse response) {
         final IConnectorCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IScopedRoleMembershipRequest extends IHttpRequest {
     ScopedRoleMembership post(final ScopedRoleMembership newScopedRoleMembership) throws ClientException;
 
     /**
+     * Posts a ScopedRoleMembership with a new object
+     *
+     * @param newScopedRoleMembership the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback);
+
+    /**
+     * Posts a ScopedRoleMembership with a new object
+     *
+     * @param newScopedRoleMembership the object to create/update
+     * @return the created ScopedRoleMembership
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ScopedRoleMembership put(final ScopedRoleMembership newScopedRoleMembership) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

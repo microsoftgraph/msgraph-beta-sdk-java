@@ -112,6 +112,27 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
     }
 
     /**
+     * Creates a MobileAppPolicySetItem with a new object
+     *
+     * @param newMobileAppPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppPolicySetItem);
+    }
+
+    /**
+     * Creates a MobileAppPolicySetItem with a new object
+     *
+     * @param newMobileAppPolicySetItem the object to create/update
+     * @return the created MobileAppPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppPolicySetItem put(final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -127,6 +127,27 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
     }
 
     /**
+     * Creates a AppleVpnConfiguration with a new object
+     *
+     * @param newAppleVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<AppleVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAppleVpnConfiguration);
+    }
+
+    /**
+     * Creates a AppleVpnConfiguration with a new object
+     *
+     * @param newAppleVpnConfiguration the object to create/update
+     * @return the created AppleVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AppleVpnConfiguration put(final AppleVpnConfiguration newAppleVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAppleVpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

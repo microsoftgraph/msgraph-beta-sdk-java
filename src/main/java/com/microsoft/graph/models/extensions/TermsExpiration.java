@@ -36,20 +36,20 @@ public class TermsExpiration implements IJsonBackedObject {
     }
 
     /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
      * The Frequency.
      * 
      */
     @SerializedName("frequency")
     @Expose
     public javax.xml.datatype.Duration frequency;
+
+    /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
 
     /**

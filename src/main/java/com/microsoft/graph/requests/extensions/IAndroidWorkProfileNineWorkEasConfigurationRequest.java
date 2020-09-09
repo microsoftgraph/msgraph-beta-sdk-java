@@ -80,6 +80,23 @@ public interface IAndroidWorkProfileNineWorkEasConfigurationRequest extends IHtt
     AndroidWorkProfileNineWorkEasConfiguration post(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidWorkProfileNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileNineWorkEasConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration, final ICallback<AndroidWorkProfileNineWorkEasConfiguration> callback);
+
+    /**
+     * Posts a AndroidWorkProfileNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileNineWorkEasConfiguration the object to create/update
+     * @return the created AndroidWorkProfileNineWorkEasConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidWorkProfileNineWorkEasConfiguration put(final AndroidWorkProfileNineWorkEasConfiguration newAndroidWorkProfileNineWorkEasConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

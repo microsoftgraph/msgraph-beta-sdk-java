@@ -112,6 +112,27 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a WindowsManagementAppHealthSummary with a new object
+     *
+     * @param newWindowsManagementAppHealthSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<WindowsManagementAppHealthSummary> callback) {
+        send(HttpMethod.PUT, callback, newWindowsManagementAppHealthSummary);
+    }
+
+    /**
+     * Creates a WindowsManagementAppHealthSummary with a new object
+     *
+     * @param newWindowsManagementAppHealthSummary the object to create/update
+     * @return the created WindowsManagementAppHealthSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsManagementAppHealthSummary put(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsManagementAppHealthSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

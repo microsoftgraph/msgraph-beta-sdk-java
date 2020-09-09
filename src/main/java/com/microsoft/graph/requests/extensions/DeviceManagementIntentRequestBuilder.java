@@ -8,21 +8,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
@@ -31,6 +27,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionRequestBuilder;
@@ -82,12 +82,12 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
     }
 
 
-    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
-        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public IDeviceManagementIntentAssignmentCollectionRequestBuilder assignments() {
+        return new DeviceManagementIntentAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
-        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    public IDeviceManagementIntentAssignmentRequestBuilder assignments(final String id) {
+        return new DeviceManagementIntentAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     public IDeviceManagementIntentSettingCategoryCollectionRequestBuilder categories() {
         return new DeviceManagementIntentSettingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
@@ -95,13 +95,6 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
 
     public IDeviceManagementIntentSettingCategoryRequestBuilder categories(final String id) {
         return new DeviceManagementIntentSettingCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
-    }
-    public IDeviceManagementIntentAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceManagementIntentAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
-    }
-
-    public IDeviceManagementIntentAssignmentRequestBuilder assignments(final String id) {
-        return new DeviceManagementIntentAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     public IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new DeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
@@ -117,13 +110,6 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
     public IDeviceManagementIntentDeviceStateRequestBuilder deviceStates(final String id) {
         return new DeviceManagementIntentDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
-    public IDeviceManagementIntentUserStateCollectionRequestBuilder userStates() {
-        return new DeviceManagementIntentUserStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStates"), getClient(), null);
-    }
-
-    public IDeviceManagementIntentUserStateRequestBuilder userStates(final String id) {
-        return new DeviceManagementIntentUserStateRequestBuilder(getRequestUrlWithAdditionalSegment("userStates") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for DeviceManagementIntentDeviceStateSummary
@@ -132,6 +118,20 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
      */
     public IDeviceManagementIntentDeviceStateSummaryRequestBuilder deviceStateSummary() {
         return new DeviceManagementIntentDeviceStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStateSummary"), getClient(), null);
+    }
+    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
+        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+
+    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
+        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    }
+    public IDeviceManagementIntentUserStateCollectionRequestBuilder userStates() {
+        return new DeviceManagementIntentUserStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStates"), getClient(), null);
+    }
+
+    public IDeviceManagementIntentUserStateRequestBuilder userStates(final String id) {
+        return new DeviceManagementIntentUserStateRequestBuilder(getRequestUrlWithAdditionalSegment("userStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -143,20 +143,20 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
         return new DeviceManagementIntentUserStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
 
-    public IDeviceManagementIntentUpdateSettingsRequestBuilder updateSettings(final java.util.List<DeviceManagementSettingInstance> settings) {
-        return new DeviceManagementIntentUpdateSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateSettings"), getClient(), null, settings);
-    }
-
-    public IDeviceManagementIntentMigrateToTemplateRequestBuilder migrateToTemplate(final String newTemplateId, final Boolean preserveCustomValues) {
-        return new DeviceManagementIntentMigrateToTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.migrateToTemplate"), getClient(), null, newTemplateId, preserveCustomValues);
+    public IDeviceManagementIntentAssignRequestBuilder assign(final java.util.List<DeviceManagementIntentAssignment> assignments) {
+        return new DeviceManagementIntentAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 
     public IDeviceManagementIntentCreateCopyRequestBuilder createCopy(final String displayName) {
         return new DeviceManagementIntentCreateCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createCopy"), getClient(), null, displayName);
     }
 
-    public IDeviceManagementIntentAssignRequestBuilder assign(final java.util.List<DeviceManagementIntentAssignment> assignments) {
-        return new DeviceManagementIntentAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
+    public IDeviceManagementIntentMigrateToTemplateRequestBuilder migrateToTemplate(final String newTemplateId, final Boolean preserveCustomValues) {
+        return new DeviceManagementIntentMigrateToTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.migrateToTemplate"), getClient(), null, newTemplateId, preserveCustomValues);
+    }
+
+    public IDeviceManagementIntentUpdateSettingsRequestBuilder updateSettings(final java.util.List<DeviceManagementSettingInstance> settings) {
+        return new DeviceManagementIntentUpdateSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateSettings"), getClient(), null, settings);
     }
 
     public IDeviceManagementIntentCompareCollectionRequestBuilder compare(final String templateId) {

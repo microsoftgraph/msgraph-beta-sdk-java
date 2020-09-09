@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplication;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      */
     public RbacApplication post(final RbacApplication newRbacApplication) throws ClientException {
         return send(HttpMethod.POST, newRbacApplication);
+    }
+
+    /**
+     * Creates a RbacApplication with a new object
+     *
+     * @param newRbacApplication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RbacApplication newRbacApplication, final ICallback<RbacApplication> callback) {
+        send(HttpMethod.PUT, callback, newRbacApplication);
+    }
+
+    /**
+     * Creates a RbacApplication with a new object
+     *
+     * @param newRbacApplication the object to create/update
+     * @return the created RbacApplication
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RbacApplication put(final RbacApplication newRbacApplication) throws ClientException {
+        return send(HttpMethod.PUT, newRbacApplication);
     }
 
     /**

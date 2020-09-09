@@ -39,20 +39,20 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Resource Name.
-     * 
-     */
-    @SerializedName("resourceName")
-    @Expose
-    public String resourceName;
-
-    /**
      * The Publishing Type.
      * 
      */
     @SerializedName("publishingType")
     @Expose
     public OnPremisesPublishingType publishingType;
+
+    /**
+     * The Resource Name.
+     * 
+     */
+    @SerializedName("resourceName")
+    @Expose
+    public String resourceName;
 
     /**
      * The Agent Groups.

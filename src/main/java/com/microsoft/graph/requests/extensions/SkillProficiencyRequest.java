@@ -112,6 +112,27 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
     }
 
     /**
+     * Creates a SkillProficiency with a new object
+     *
+     * @param newSkillProficiency the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback) {
+        send(HttpMethod.PUT, callback, newSkillProficiency);
+    }
+
+    /**
+     * Creates a SkillProficiency with a new object
+     *
+     * @param newSkillProficiency the object to create/update
+     * @return the created SkillProficiency
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SkillProficiency put(final SkillProficiency newSkillProficiency) throws ClientException {
+        return send(HttpMethod.PUT, newSkillProficiency);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

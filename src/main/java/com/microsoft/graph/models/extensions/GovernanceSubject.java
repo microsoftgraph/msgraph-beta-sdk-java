@@ -27,20 +27,20 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Display Name.
      * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
 
     /**
      * The Principal Name.
@@ -51,12 +51,12 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
     public String principalName;
 
     /**
-     * The Email.
+     * The Type.
      * 
      */
-    @SerializedName("email")
+    @SerializedName("type")
     @Expose
-    public String email;
+    public String type;
 
 
     /**

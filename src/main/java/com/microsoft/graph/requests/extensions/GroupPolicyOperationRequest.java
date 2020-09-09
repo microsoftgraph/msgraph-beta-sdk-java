@@ -112,6 +112,27 @@ public class GroupPolicyOperationRequest extends BaseRequest implements IGroupPo
     }
 
     /**
+     * Creates a GroupPolicyOperation with a new object
+     *
+     * @param newGroupPolicyOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyOperation newGroupPolicyOperation, final ICallback<GroupPolicyOperation> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyOperation);
+    }
+
+    /**
+     * Creates a GroupPolicyOperation with a new object
+     *
+     * @param newGroupPolicyOperation the object to create/update
+     * @return the created GroupPolicyOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyOperation put(final GroupPolicyOperation newGroupPolicyOperation) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

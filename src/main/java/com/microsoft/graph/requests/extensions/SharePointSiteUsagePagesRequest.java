@@ -112,6 +112,27 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
     }
 
     /**
+     * Creates a SharePointSiteUsagePages with a new object
+     *
+     * @param newSharePointSiteUsagePages the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<SharePointSiteUsagePages> callback) {
+        send(HttpMethod.PUT, callback, newSharePointSiteUsagePages);
+    }
+
+    /**
+     * Creates a SharePointSiteUsagePages with a new object
+     *
+     * @param newSharePointSiteUsagePages the object to create/update
+     * @return the created SharePointSiteUsagePages
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharePointSiteUsagePages put(final SharePointSiteUsagePages newSharePointSiteUsagePages) throws ClientException {
+        return send(HttpMethod.PUT, newSharePointSiteUsagePages);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

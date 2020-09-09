@@ -112,6 +112,27 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
     }
 
     /**
+     * Creates a Presence with a new object
+     *
+     * @param newPresence the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Presence newPresence, final ICallback<Presence> callback) {
+        send(HttpMethod.PUT, callback, newPresence);
+    }
+
+    /**
+     * Creates a Presence with a new object
+     *
+     * @param newPresence the object to create/update
+     * @return the created Presence
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Presence put(final Presence newPresence) throws ClientException {
+        return send(HttpMethod.PUT, newPresence);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

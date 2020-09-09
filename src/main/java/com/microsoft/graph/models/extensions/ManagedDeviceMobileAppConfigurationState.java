@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationSettingState;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationSettingState;
 import com.microsoft.graph.models.generated.ComplianceStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -30,28 +30,12 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
 
 
     /**
-     * The Setting States.
-     * 
-     */
-    @SerializedName("settingStates")
-    @Expose
-    public java.util.List<ManagedDeviceMobileAppConfigurationSettingState> settingStates;
-
-    /**
      * The Display Name.
      * The name of the policy for this policyBase
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Version.
-     * The version of the policy
-     */
-    @SerializedName("version")
-    @Expose
-    public Integer version;
 
     /**
      * The Platform Type.
@@ -62,20 +46,28 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     public PolicyPlatformType platformType;
 
     /**
-     * The State.
-     * The compliance state of the policy
-     */
-    @SerializedName("state")
-    @Expose
-    public ComplianceStatus state;
-
-    /**
      * The Setting Count.
      * Count of how many setting a policy holds
      */
     @SerializedName("settingCount")
     @Expose
     public Integer settingCount;
+
+    /**
+     * The Setting States.
+     * 
+     */
+    @SerializedName("settingStates")
+    @Expose
+    public java.util.List<ManagedDeviceMobileAppConfigurationSettingState> settingStates;
+
+    /**
+     * The State.
+     * The compliance state of the policy
+     */
+    @SerializedName("state")
+    @Expose
+    public ComplianceStatus state;
 
     /**
      * The User Id.
@@ -92,6 +84,14 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
+
+    /**
+     * The Version.
+     * The version of the policy
+     */
+    @SerializedName("version")
+    @Expose
+    public Integer version;
 
 
     /**

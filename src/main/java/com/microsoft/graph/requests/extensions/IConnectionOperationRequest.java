@@ -80,6 +80,23 @@ public interface IConnectionOperationRequest extends IHttpRequest {
     ConnectionOperation post(final ConnectionOperation newConnectionOperation) throws ClientException;
 
     /**
+     * Posts a ConnectionOperation with a new object
+     *
+     * @param newConnectionOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ConnectionOperation newConnectionOperation, final ICallback<ConnectionOperation> callback);
+
+    /**
+     * Posts a ConnectionOperation with a new object
+     *
+     * @param newConnectionOperation the object to create/update
+     * @return the created ConnectionOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ConnectionOperation put(final ConnectionOperation newConnectionOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

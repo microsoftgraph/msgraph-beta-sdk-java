@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineTemplate;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineStateSummaryRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      */
     public SecurityBaselineTemplate post(final SecurityBaselineTemplate newSecurityBaselineTemplate) throws ClientException {
         return send(HttpMethod.POST, newSecurityBaselineTemplate);
+    }
+
+    /**
+     * Creates a SecurityBaselineTemplate with a new object
+     *
+     * @param newSecurityBaselineTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<SecurityBaselineTemplate> callback) {
+        send(HttpMethod.PUT, callback, newSecurityBaselineTemplate);
+    }
+
+    /**
+     * Creates a SecurityBaselineTemplate with a new object
+     *
+     * @param newSecurityBaselineTemplate the object to create/update
+     * @return the created SecurityBaselineTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityBaselineTemplate put(final SecurityBaselineTemplate newSecurityBaselineTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityBaselineTemplate);
     }
 
     /**

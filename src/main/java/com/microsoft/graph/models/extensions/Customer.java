@@ -9,11 +9,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
-import com.microsoft.graph.models.extensions.Picture;
 import com.microsoft.graph.models.extensions.Currency;
-import com.microsoft.graph.models.extensions.PaymentTerm;
-import com.microsoft.graph.models.extensions.ShipmentMethod;
 import com.microsoft.graph.models.extensions.PaymentMethod;
+import com.microsoft.graph.models.extensions.PaymentTerm;
+import com.microsoft.graph.models.extensions.Picture;
+import com.microsoft.graph.models.extensions.ShipmentMethod;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.PictureCollectionResponse;
 import com.microsoft.graph.requests.extensions.PictureCollectionPage;
@@ -35,132 +35,12 @@ public class Customer extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
-     * 
-     */
-    @SerializedName("number")
-    @Expose
-    public String number;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Address.
      * 
      */
     @SerializedName("address")
     @Expose
     public PostalAddressType address;
-
-    /**
-     * The Phone Number.
-     * 
-     */
-    @SerializedName("phoneNumber")
-    @Expose
-    public String phoneNumber;
-
-    /**
-     * The Email.
-     * 
-     */
-    @SerializedName("email")
-    @Expose
-    public String email;
-
-    /**
-     * The Website.
-     * 
-     */
-    @SerializedName("website")
-    @Expose
-    public String website;
-
-    /**
-     * The Tax Liable.
-     * 
-     */
-    @SerializedName("taxLiable")
-    @Expose
-    public Boolean taxLiable;
-
-    /**
-     * The Tax Area Id.
-     * 
-     */
-    @SerializedName("taxAreaId")
-    @Expose
-    public java.util.UUID taxAreaId;
-
-    /**
-     * The Tax Area Display Name.
-     * 
-     */
-    @SerializedName("taxAreaDisplayName")
-    @Expose
-    public String taxAreaDisplayName;
-
-    /**
-     * The Tax Registration Number.
-     * 
-     */
-    @SerializedName("taxRegistrationNumber")
-    @Expose
-    public String taxRegistrationNumber;
-
-    /**
-     * The Currency Id.
-     * 
-     */
-    @SerializedName("currencyId")
-    @Expose
-    public java.util.UUID currencyId;
-
-    /**
-     * The Currency Code.
-     * 
-     */
-    @SerializedName("currencyCode")
-    @Expose
-    public String currencyCode;
-
-    /**
-     * The Payment Terms Id.
-     * 
-     */
-    @SerializedName("paymentTermsId")
-    @Expose
-    public java.util.UUID paymentTermsId;
-
-    /**
-     * The Shipment Method Id.
-     * 
-     */
-    @SerializedName("shipmentMethodId")
-    @Expose
-    public java.util.UUID shipmentMethodId;
-
-    /**
-     * The Payment Method Id.
-     * 
-     */
-    @SerializedName("paymentMethodId")
-    @Expose
-    public java.util.UUID paymentMethodId;
 
     /**
      * The Blocked.
@@ -171,6 +51,38 @@ public class Customer extends Entity implements IJsonBackedObject {
     public String blocked;
 
     /**
+     * The Currency Code.
+     * 
+     */
+    @SerializedName("currencyCode")
+    @Expose
+    public String currencyCode;
+
+    /**
+     * The Currency Id.
+     * 
+     */
+    @SerializedName("currencyId")
+    @Expose
+    public java.util.UUID currencyId;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
      * The Last Modified Date Time.
      * 
      */
@@ -179,10 +91,92 @@ public class Customer extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Picture.
+     * The Number.
      * 
      */
-    public PictureCollectionPage picture;
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Payment Method Id.
+     * 
+     */
+    @SerializedName("paymentMethodId")
+    @Expose
+    public java.util.UUID paymentMethodId;
+
+    /**
+     * The Payment Terms Id.
+     * 
+     */
+    @SerializedName("paymentTermsId")
+    @Expose
+    public java.util.UUID paymentTermsId;
+
+    /**
+     * The Phone Number.
+     * 
+     */
+    @SerializedName("phoneNumber")
+    @Expose
+    public String phoneNumber;
+
+    /**
+     * The Shipment Method Id.
+     * 
+     */
+    @SerializedName("shipmentMethodId")
+    @Expose
+    public java.util.UUID shipmentMethodId;
+
+    /**
+     * The Tax Area Display Name.
+     * 
+     */
+    @SerializedName("taxAreaDisplayName")
+    @Expose
+    public String taxAreaDisplayName;
+
+    /**
+     * The Tax Area Id.
+     * 
+     */
+    @SerializedName("taxAreaId")
+    @Expose
+    public java.util.UUID taxAreaId;
+
+    /**
+     * The Tax Liable.
+     * 
+     */
+    @SerializedName("taxLiable")
+    @Expose
+    public Boolean taxLiable;
+
+    /**
+     * The Tax Registration Number.
+     * 
+     */
+    @SerializedName("taxRegistrationNumber")
+    @Expose
+    public String taxRegistrationNumber;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
+
+    /**
+     * The Website.
+     * 
+     */
+    @SerializedName("website")
+    @Expose
+    public String website;
 
     /**
      * The Currency.
@@ -193,6 +187,14 @@ public class Customer extends Entity implements IJsonBackedObject {
     public Currency currency;
 
     /**
+     * The Payment Method.
+     * 
+     */
+    @SerializedName("paymentMethod")
+    @Expose
+    public PaymentMethod paymentMethod;
+
+    /**
      * The Payment Term.
      * 
      */
@@ -201,20 +203,18 @@ public class Customer extends Entity implements IJsonBackedObject {
     public PaymentTerm paymentTerm;
 
     /**
+     * The Picture.
+     * 
+     */
+    public PictureCollectionPage picture;
+
+    /**
      * The Shipment Method.
      * 
      */
     @SerializedName("shipmentMethod")
     @Expose
     public ShipmentMethod shipmentMethod;
-
-    /**
-     * The Payment Method.
-     * 
-     */
-    @SerializedName("paymentMethod")
-    @Expose
-    public PaymentMethod paymentMethod;
 
 
     /**

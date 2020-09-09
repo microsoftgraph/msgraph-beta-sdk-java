@@ -55,18 +55,18 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder impl
     }
 
 
-    public IDirectoryObjectCollectionRequestBuilder internalSponsors() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors"), getClient(), null);
-    }
-
-    public IDirectoryObjectRequestBuilder internalSponsors(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors") + "/" + id, getClient(), null);
-    }
     public IDirectoryObjectCollectionRequestBuilder externalSponsors() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors"), getClient(), null);
     }
 
     public IDirectoryObjectRequestBuilder externalSponsors(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionRequestBuilder internalSponsors() {
+        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors"), getClient(), null);
+    }
+
+    public IDirectoryObjectRequestBuilder internalSponsors(final String id) {
+        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors") + "/" + id, getClient(), null);
     }
 }

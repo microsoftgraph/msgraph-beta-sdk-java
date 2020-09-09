@@ -112,6 +112,27 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
     }
 
     /**
+     * Creates a PersonWebsite with a new object
+     *
+     * @param newPersonWebsite the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PersonWebsite newPersonWebsite, final ICallback<PersonWebsite> callback) {
+        send(HttpMethod.PUT, callback, newPersonWebsite);
+    }
+
+    /**
+     * Creates a PersonWebsite with a new object
+     *
+     * @param newPersonWebsite the object to create/update
+     * @return the created PersonWebsite
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PersonWebsite put(final PersonWebsite newPersonWebsite) throws ClientException {
+        return send(HttpMethod.PUT, newPersonWebsite);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.AllowInvitesFrom;
 import com.microsoft.graph.models.extensions.DefaultUserRolePermissions;
 import com.microsoft.graph.models.extensions.PolicyBase;
 
@@ -50,6 +51,14 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
     @SerializedName("allowEmailVerifiedUsersToJoinOrganization")
     @Expose
     public Boolean allowEmailVerifiedUsersToJoinOrganization;
+
+    /**
+     * The Allow Invites From.
+     * 
+     */
+    @SerializedName("allowInvitesFrom")
+    @Expose
+    public AllowInvitesFrom allowInvitesFrom;
 
     /**
      * The Block Msol Power Shell.

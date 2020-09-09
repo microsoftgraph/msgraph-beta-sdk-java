@@ -112,6 +112,27 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
     }
 
     /**
+     * Creates a AndroidManagedStoreAccountEnterpriseSettings with a new object
+     *
+     * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<AndroidManagedStoreAccountEnterpriseSettings> callback) {
+        send(HttpMethod.PUT, callback, newAndroidManagedStoreAccountEnterpriseSettings);
+    }
+
+    /**
+     * Creates a AndroidManagedStoreAccountEnterpriseSettings with a new object
+     *
+     * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
+     * @return the created AndroidManagedStoreAccountEnterpriseSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidManagedStoreAccountEnterpriseSettings put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidManagedStoreAccountEnterpriseSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

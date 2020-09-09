@@ -114,6 +114,27 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
     }
 
     /**
+     * Creates a IosDerivedCredentialAuthenticationConfiguration with a new object
+     *
+     * @param newIosDerivedCredentialAuthenticationConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<IosDerivedCredentialAuthenticationConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosDerivedCredentialAuthenticationConfiguration);
+    }
+
+    /**
+     * Creates a IosDerivedCredentialAuthenticationConfiguration with a new object
+     *
+     * @param newIosDerivedCredentialAuthenticationConfiguration the object to create/update
+     * @return the created IosDerivedCredentialAuthenticationConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosDerivedCredentialAuthenticationConfiguration put(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosDerivedCredentialAuthenticationConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

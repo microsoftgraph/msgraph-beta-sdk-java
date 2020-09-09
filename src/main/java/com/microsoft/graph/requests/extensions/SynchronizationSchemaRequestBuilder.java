@@ -11,8 +11,8 @@ import com.microsoft.graph.models.extensions.SynchronizationSchema;
 import com.microsoft.graph.models.extensions.ExpressionInputObject;
 import com.microsoft.graph.models.extensions.AttributeDefinition;
 import com.microsoft.graph.models.extensions.ParseExpressionResponse;
-import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import com.microsoft.graph.models.extensions.FilterOperatorSchema;
+import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryDefinitionCollectionRequestBuilder;
@@ -72,11 +72,11 @@ public class SynchronizationSchemaRequestBuilder extends BaseRequestBuilder impl
         return new SynchronizationSchemaParseExpressionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.parseExpression"), getClient(), null, expression, testInputObject, targetAttributeDefinition);
     }
 
-    public ISynchronizationSchemaFunctionsCollectionRequestBuilder functions() {
-        return new SynchronizationSchemaFunctionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.functions"), getClient(), null);
-    }
-
     public ISynchronizationSchemaFilterOperatorsCollectionRequestBuilder filterOperators() {
         return new SynchronizationSchemaFilterOperatorsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.filterOperators"), getClient(), null);
+    }
+
+    public ISynchronizationSchemaFunctionsCollectionRequestBuilder functions() {
+        return new SynchronizationSchemaFunctionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.functions"), getClient(), null);
     }
 }

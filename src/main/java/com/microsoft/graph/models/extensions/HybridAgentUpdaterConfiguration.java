@@ -37,6 +37,14 @@ public class HybridAgentUpdaterConfiguration implements IJsonBackedObject {
     }
 
     /**
+     * The Allow Update Configuration Override.
+     * 
+     */
+    @SerializedName("allowUpdateConfigurationOverride")
+    @Expose
+    public Boolean allowUpdateConfigurationOverride;
+
+    /**
      * The Defer Update Date Time.
      * 
      */
@@ -51,14 +59,6 @@ public class HybridAgentUpdaterConfiguration implements IJsonBackedObject {
     @SerializedName("updateWindow")
     @Expose
     public UpdateWindow updateWindow;
-
-    /**
-     * The Allow Update Configuration Override.
-     * 
-     */
-    @SerializedName("allowUpdateConfigurationOverride")
-    @Expose
-    public Boolean allowUpdateConfigurationOverride;
 
 
     /**

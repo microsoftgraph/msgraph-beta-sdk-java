@@ -112,6 +112,27 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
     }
 
     /**
+     * Creates a WorkPosition with a new object
+     *
+     * @param newWorkPosition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkPosition newWorkPosition, final ICallback<WorkPosition> callback) {
+        send(HttpMethod.PUT, callback, newWorkPosition);
+    }
+
+    /**
+     * Creates a WorkPosition with a new object
+     *
+     * @param newWorkPosition the object to create/update
+     * @return the created WorkPosition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkPosition put(final WorkPosition newWorkPosition) throws ClientException {
+        return send(HttpMethod.PUT, newWorkPosition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

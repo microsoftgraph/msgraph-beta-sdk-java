@@ -27,6 +27,22 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Categories.
+     * 
+     */
+    @SerializedName("categories")
+    @Expose
+    public java.util.List<String> categories;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
      * The Display Name.
      * 
      */
@@ -43,36 +59,12 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
     public String homePageUrl;
 
     /**
-     * The Supported Single Sign On Modes.
-     * 
-     */
-    @SerializedName("supportedSingleSignOnModes")
-    @Expose
-    public java.util.List<String> supportedSingleSignOnModes;
-
-    /**
-     * The Supported Provisioning Types.
-     * 
-     */
-    @SerializedName("supportedProvisioningTypes")
-    @Expose
-    public java.util.List<String> supportedProvisioningTypes;
-
-    /**
      * The Logo Url.
      * 
      */
     @SerializedName("logoUrl")
     @Expose
     public String logoUrl;
-
-    /**
-     * The Categories.
-     * 
-     */
-    @SerializedName("categories")
-    @Expose
-    public java.util.List<String> categories;
 
     /**
      * The Publisher.
@@ -83,12 +75,20 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
     public String publisher;
 
     /**
-     * The Description.
+     * The Supported Provisioning Types.
      * 
      */
-    @SerializedName("description")
+    @SerializedName("supportedProvisioningTypes")
     @Expose
-    public String description;
+    public java.util.List<String> supportedProvisioningTypes;
+
+    /**
+     * The Supported Single Sign On Modes.
+     * 
+     */
+    @SerializedName("supportedSingleSignOnModes")
+    @Expose
+    public java.util.List<String> supportedSingleSignOnModes;
 
 
     /**

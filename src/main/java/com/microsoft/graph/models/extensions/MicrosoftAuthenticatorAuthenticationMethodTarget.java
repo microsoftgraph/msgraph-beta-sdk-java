@@ -28,20 +28,20 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
 
     /**
-     * The Shown Context.
-     * 
-     */
-    @SerializedName("shownContext")
-    @Expose
-    public EnumSet<AuthenticatorAppContextType> shownContext;
-
-    /**
      * The Is Number Matching Required.
      * 
      */
     @SerializedName("isNumberMatchingRequired")
     @Expose
     public Boolean isNumberMatchingRequired;
+
+    /**
+     * The Shown Context.
+     * 
+     */
+    @SerializedName("shownContext")
+    @Expose
+    public EnumSet<AuthenticatorAppContextType> shownContext;
 
 
     /**

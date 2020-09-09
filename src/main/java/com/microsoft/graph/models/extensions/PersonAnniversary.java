@@ -28,20 +28,20 @@ public class PersonAnniversary extends ItemFacet implements IJsonBackedObject {
 
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public AnniversaryType type;
-
-    /**
      * The Date.
      * 
      */
     @SerializedName("date")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly date;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public AnniversaryType type;
 
 
     /**

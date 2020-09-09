@@ -12,14 +12,10 @@ import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
@@ -28,10 +24,14 @@ import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequest
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -133,6 +133,27 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      */
     public Onenote post(final Onenote newOnenote) throws ClientException {
         return send(HttpMethod.POST, newOnenote);
+    }
+
+    /**
+     * Creates a Onenote with a new object
+     *
+     * @param newOnenote the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Onenote newOnenote, final ICallback<Onenote> callback) {
+        send(HttpMethod.PUT, callback, newOnenote);
+    }
+
+    /**
+     * Creates a Onenote with a new object
+     *
+     * @param newOnenote the object to create/update
+     * @return the created Onenote
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Onenote put(final Onenote newOnenote) throws ClientException {
+        return send(HttpMethod.PUT, newOnenote);
     }
 
     /**

@@ -80,6 +80,23 @@ public interface IIosEasEmailProfileConfigurationRequest extends IHttpRequest {
     IosEasEmailProfileConfiguration post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException;
 
     /**
+     * Posts a IosEasEmailProfileConfiguration with a new object
+     *
+     * @param newIosEasEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<IosEasEmailProfileConfiguration> callback);
+
+    /**
+     * Posts a IosEasEmailProfileConfiguration with a new object
+     *
+     * @param newIosEasEmailProfileConfiguration the object to create/update
+     * @return the created IosEasEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosEasEmailProfileConfiguration put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

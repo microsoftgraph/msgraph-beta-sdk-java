@@ -114,6 +114,27 @@ public class ComplianceRequest extends BaseRequest implements IComplianceRequest
     }
 
     /**
+     * Creates a Compliance with a new object
+     *
+     * @param newCompliance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Compliance newCompliance, final ICallback<Compliance> callback) {
+        send(HttpMethod.PUT, callback, newCompliance);
+    }
+
+    /**
+     * Creates a Compliance with a new object
+     *
+     * @param newCompliance the object to create/update
+     * @return the created Compliance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Compliance put(final Compliance newCompliance) throws ClientException {
+        return send(HttpMethod.PUT, newCompliance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

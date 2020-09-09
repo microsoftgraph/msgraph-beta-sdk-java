@@ -27,20 +27,20 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Report Refresh Date.
+     * The Assigned Products.
      * 
      */
-    @SerializedName("reportRefreshDate")
+    @SerializedName("assignedProducts")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+    public java.util.List<String> assignedProducts;
 
     /**
-     * The User Principal Name.
+     * The Deleted Date.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName("deletedDate")
     @Expose
-    public String userPrincipalName;
+    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
      * The Display Name.
@@ -51,20 +51,20 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public String displayName;
 
     /**
-     * The Is Deleted.
+     * The Exchange Last Activity Date.
      * 
      */
-    @SerializedName("isDeleted")
+    @SerializedName("exchangeLastActivityDate")
     @Expose
-    public Boolean isDeleted;
+    public com.microsoft.graph.models.extensions.DateOnly exchangeLastActivityDate;
 
     /**
-     * The Deleted Date.
+     * The Exchange License Assign Date.
      * 
      */
-    @SerializedName("deletedDate")
+    @SerializedName("exchangeLicenseAssignDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
+    public com.microsoft.graph.models.extensions.DateOnly exchangeLicenseAssignDate;
 
     /**
      * The Has Exchange License.
@@ -99,14 +99,6 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public Boolean hasSkypeForBusinessLicense;
 
     /**
-     * The Has Yammer License.
-     * 
-     */
-    @SerializedName("hasYammerLicense")
-    @Expose
-    public Boolean hasYammerLicense;
-
-    /**
      * The Has Teams License.
      * 
      */
@@ -115,12 +107,20 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public Boolean hasTeamsLicense;
 
     /**
-     * The Exchange Last Activity Date.
+     * The Has Yammer License.
      * 
      */
-    @SerializedName("exchangeLastActivityDate")
+    @SerializedName("hasYammerLicense")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly exchangeLastActivityDate;
+    public Boolean hasYammerLicense;
+
+    /**
+     * The Is Deleted.
+     * 
+     */
+    @SerializedName("isDeleted")
+    @Expose
+    public Boolean isDeleted;
 
     /**
      * The One Drive Last Activity Date.
@@ -131,52 +131,28 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public com.microsoft.graph.models.extensions.DateOnly oneDriveLastActivityDate;
 
     /**
-     * The Share Point Last Activity Date.
-     * 
-     */
-    @SerializedName("sharePointLastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly sharePointLastActivityDate;
-
-    /**
-     * The Skype For Business Last Activity Date.
-     * 
-     */
-    @SerializedName("skypeForBusinessLastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly skypeForBusinessLastActivityDate;
-
-    /**
-     * The Yammer Last Activity Date.
-     * 
-     */
-    @SerializedName("yammerLastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly yammerLastActivityDate;
-
-    /**
-     * The Teams Last Activity Date.
-     * 
-     */
-    @SerializedName("teamsLastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly teamsLastActivityDate;
-
-    /**
-     * The Exchange License Assign Date.
-     * 
-     */
-    @SerializedName("exchangeLicenseAssignDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly exchangeLicenseAssignDate;
-
-    /**
      * The One Drive License Assign Date.
      * 
      */
     @SerializedName("oneDriveLicenseAssignDate")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly oneDriveLicenseAssignDate;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Share Point Last Activity Date.
+     * 
+     */
+    @SerializedName("sharePointLastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly sharePointLastActivityDate;
 
     /**
      * The Share Point License Assign Date.
@@ -187,6 +163,14 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public com.microsoft.graph.models.extensions.DateOnly sharePointLicenseAssignDate;
 
     /**
+     * The Skype For Business Last Activity Date.
+     * 
+     */
+    @SerializedName("skypeForBusinessLastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly skypeForBusinessLastActivityDate;
+
+    /**
      * The Skype For Business License Assign Date.
      * 
      */
@@ -195,12 +179,12 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public com.microsoft.graph.models.extensions.DateOnly skypeForBusinessLicenseAssignDate;
 
     /**
-     * The Yammer License Assign Date.
+     * The Teams Last Activity Date.
      * 
      */
-    @SerializedName("yammerLicenseAssignDate")
+    @SerializedName("teamsLastActivityDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly yammerLicenseAssignDate;
+    public com.microsoft.graph.models.extensions.DateOnly teamsLastActivityDate;
 
     /**
      * The Teams License Assign Date.
@@ -211,12 +195,28 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
     public com.microsoft.graph.models.extensions.DateOnly teamsLicenseAssignDate;
 
     /**
-     * The Assigned Products.
+     * The User Principal Name.
      * 
      */
-    @SerializedName("assignedProducts")
+    @SerializedName("userPrincipalName")
     @Expose
-    public java.util.List<String> assignedProducts;
+    public String userPrincipalName;
+
+    /**
+     * The Yammer Last Activity Date.
+     * 
+     */
+    @SerializedName("yammerLastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly yammerLastActivityDate;
+
+    /**
+     * The Yammer License Assign Date.
+     * 
+     */
+    @SerializedName("yammerLicenseAssignDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly yammerLicenseAssignDate;
 
 
     /**

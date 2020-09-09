@@ -27,6 +27,14 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
 
 
     /**
+     * The Approval On Elevation.
+     * 
+     */
+    @SerializedName("approvalOnElevation")
+    @Expose
+    public Boolean approvalOnElevation;
+
+    /**
      * The Approver Ids.
      * 
      */
@@ -35,12 +43,28 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
     public java.util.List<String> approverIds;
 
     /**
-     * The Min Elevation Duration.
+     * The Elevation Duration.
      * 
      */
-    @SerializedName("minElevationDuration")
+    @SerializedName("elevationDuration")
     @Expose
-    public javax.xml.datatype.Duration minElevationDuration;
+    public javax.xml.datatype.Duration elevationDuration;
+
+    /**
+     * The Is Mfa On Elevation Configurable.
+     * 
+     */
+    @SerializedName("isMfaOnElevationConfigurable")
+    @Expose
+    public Boolean isMfaOnElevationConfigurable;
+
+    /**
+     * The Last Global Admin.
+     * 
+     */
+    @SerializedName("lastGlobalAdmin")
+    @Expose
+    public Boolean lastGlobalAdmin;
 
     /**
      * The Max Elavation Duration.
@@ -51,12 +75,20 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
     public javax.xml.datatype.Duration maxElavationDuration;
 
     /**
-     * The Elevation Duration.
+     * The Mfa On Elevation.
      * 
      */
-    @SerializedName("elevationDuration")
+    @SerializedName("mfaOnElevation")
     @Expose
-    public javax.xml.datatype.Duration elevationDuration;
+    public Boolean mfaOnElevation;
+
+    /**
+     * The Min Elevation Duration.
+     * 
+     */
+    @SerializedName("minElevationDuration")
+    @Expose
+    public javax.xml.datatype.Duration minElevationDuration;
 
     /**
      * The Notification To User On Elevation.
@@ -73,38 +105,6 @@ public class PrivilegedRoleSettings extends Entity implements IJsonBackedObject 
     @SerializedName("ticketingInfoOnElevation")
     @Expose
     public Boolean ticketingInfoOnElevation;
-
-    /**
-     * The Mfa On Elevation.
-     * 
-     */
-    @SerializedName("mfaOnElevation")
-    @Expose
-    public Boolean mfaOnElevation;
-
-    /**
-     * The Last Global Admin.
-     * 
-     */
-    @SerializedName("lastGlobalAdmin")
-    @Expose
-    public Boolean lastGlobalAdmin;
-
-    /**
-     * The Is Mfa On Elevation Configurable.
-     * 
-     */
-    @SerializedName("isMfaOnElevationConfigurable")
-    @Expose
-    public Boolean isMfaOnElevationConfigurable;
-
-    /**
-     * The Approval On Elevation.
-     * 
-     */
-    @SerializedName("approvalOnElevation")
-    @Expose
-    public Boolean approvalOnElevation;
 
 
     /**

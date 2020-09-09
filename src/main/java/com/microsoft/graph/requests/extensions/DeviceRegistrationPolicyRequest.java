@@ -112,6 +112,27 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
     }
 
     /**
+     * Creates a DeviceRegistrationPolicy with a new object
+     *
+     * @param newDeviceRegistrationPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<DeviceRegistrationPolicy> callback) {
+        send(HttpMethod.PUT, callback, newDeviceRegistrationPolicy);
+    }
+
+    /**
+     * Creates a DeviceRegistrationPolicy with a new object
+     *
+     * @param newDeviceRegistrationPolicy the object to create/update
+     * @return the created DeviceRegistrationPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceRegistrationPolicy put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceRegistrationPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

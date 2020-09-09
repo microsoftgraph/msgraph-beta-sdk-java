@@ -80,6 +80,23 @@ public interface IFinancialsRequest extends IHttpRequest {
     Financials post(final Financials newFinancials) throws ClientException;
 
     /**
+     * Posts a Financials with a new object
+     *
+     * @param newFinancials the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Financials newFinancials, final ICallback<Financials> callback);
+
+    /**
+     * Posts a Financials with a new object
+     *
+     * @param newFinancials the object to create/update
+     * @return the created Financials
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Financials put(final Financials newFinancials) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

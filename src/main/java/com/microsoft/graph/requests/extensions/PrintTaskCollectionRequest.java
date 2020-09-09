@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.PrintTaskDefinition;
+import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.PrintTask;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,14 +62,14 @@ public class PrintTaskCollectionRequest extends BaseCollectionRequest<PrintTaskC
     public void post(final PrintTask newPrintTask, final ICallback<PrintTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintTask, callback);
     }
 
     public PrintTask post(final PrintTask newPrintTask) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintTask);
     }
 
@@ -106,6 +106,27 @@ public class PrintTaskCollectionRequest extends BaseCollectionRequest<PrintTaskC
         return (PrintTaskCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintTaskCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintTaskCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintTaskCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintTaskCollectionRequest)this;
+    }
     public IPrintTaskCollectionPage buildFromResponse(final PrintTaskCollectionResponse response) {
         final IPrintTaskCollectionRequestBuilder builder;
         if (response.nextLink != null) {

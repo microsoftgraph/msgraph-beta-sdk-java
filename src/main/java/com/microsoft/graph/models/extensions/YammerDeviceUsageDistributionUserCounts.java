@@ -27,6 +27,46 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
 
 
     /**
+     * The Android Phone.
+     * 
+     */
+    @SerializedName("androidPhone")
+    @Expose
+    public Integer androidPhone;
+
+    /**
+     * The IPad.
+     * 
+     */
+    @SerializedName("iPad")
+    @Expose
+    public Integer iPad;
+
+    /**
+     * The IPhone.
+     * 
+     */
+    @SerializedName("iPhone")
+    @Expose
+    public Integer iPhone;
+
+    /**
+     * The Other.
+     * 
+     */
+    @SerializedName("other")
+    @Expose
+    public Integer other;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
      * The Report Refresh Date.
      * 
      */
@@ -49,46 +89,6 @@ public class YammerDeviceUsageDistributionUserCounts extends Entity implements I
     @SerializedName("windowsPhone")
     @Expose
     public Integer windowsPhone;
-
-    /**
-     * The Android Phone.
-     * 
-     */
-    @SerializedName("androidPhone")
-    @Expose
-    public Integer androidPhone;
-
-    /**
-     * The IPhone.
-     * 
-     */
-    @SerializedName("iPhone")
-    @Expose
-    public Integer iPhone;
-
-    /**
-     * The IPad.
-     * 
-     */
-    @SerializedName("iPad")
-    @Expose
-    public Integer iPad;
-
-    /**
-     * The Other.
-     * 
-     */
-    @SerializedName("other")
-    @Expose
-    public Integer other;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
 
 
     /**

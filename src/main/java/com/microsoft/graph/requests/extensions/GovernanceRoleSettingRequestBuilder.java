@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleSetting;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -57,20 +57,20 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
 
 
     /**
-     * Gets the request builder for GovernanceRoleDefinition
-     *
-     * @return the IGovernanceRoleDefinitionRequestBuilder instance
-     */
-    public IGovernanceRoleDefinitionRequestBuilder roleDefinition() {
-        return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for GovernanceResource
      *
      * @return the IGovernanceResourceRequestBuilder instance
      */
     public IGovernanceResourceRequestBuilder resource() {
         return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for GovernanceRoleDefinition
+     *
+     * @return the IGovernanceRoleDefinitionRequestBuilder instance
+     */
+    public IGovernanceRoleDefinitionRequestBuilder roleDefinition() {
+        return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

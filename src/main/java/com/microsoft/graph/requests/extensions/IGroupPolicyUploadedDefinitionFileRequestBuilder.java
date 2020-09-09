@@ -44,9 +44,9 @@ public interface IGroupPolicyUploadedDefinitionFileRequestBuilder extends IReque
 
     IGroupPolicyOperationRequestBuilder groupPolicyOperations(final String id);
     IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder addLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);
+    IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder remove();
     IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder removeLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);
     IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBuilder updateLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);
     IGroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder uploadNewVersion(final byte[] content, final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles);
-    IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder remove();
 
 }

@@ -62,14 +62,14 @@ public class EducationAssignmentCollectionRequest extends BaseCollectionRequest<
     public void post(final EducationAssignment newEducationAssignment, final ICallback<EducationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationAssignment, callback);
     }
 
     public EducationAssignment post(final EducationAssignment newEducationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationAssignment);
     }
 
@@ -106,6 +106,27 @@ public class EducationAssignmentCollectionRequest extends BaseCollectionRequest<
         return (EducationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationAssignmentCollectionRequest)this;
+    }
     public IEducationAssignmentCollectionPage buildFromResponse(final EducationAssignmentCollectionResponse response) {
         final IEducationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

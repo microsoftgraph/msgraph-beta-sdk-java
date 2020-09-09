@@ -122,6 +122,27 @@ public class TermRequest extends BaseRequest implements ITermRequest {
     }
 
     /**
+     * Creates a Term with a new object
+     *
+     * @param newTerm the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Term newTerm, final ICallback<Term> callback) {
+        send(HttpMethod.PUT, callback, newTerm);
+    }
+
+    /**
+     * Creates a Term with a new object
+     *
+     * @param newTerm the object to create/update
+     * @return the created Term
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Term put(final Term newTerm) throws ClientException {
+        return send(HttpMethod.PUT, newTerm);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -66,20 +66,20 @@ public class RelationRequestBuilder extends BaseRequestBuilder implements IRelat
     }
 
     /**
-     * Gets the request builder for Term
-     *
-     * @return the ITermWithReferenceRequestBuilder instance
-     */
-    public ITermWithReferenceRequestBuilder toTerm() {
-        return new TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("toTerm"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for Set
      *
      * @return the ISetWithReferenceRequestBuilder instance
      */
     public ISetWithReferenceRequestBuilder set() {
         return new SetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("set"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Term
+     *
+     * @return the ITermWithReferenceRequestBuilder instance
+     */
+    public ITermWithReferenceRequestBuilder toTerm() {
+        return new TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("toTerm"), getClient(), null);
     }
 }

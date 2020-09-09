@@ -63,14 +63,14 @@ public class DeviceAppManagementTaskCollectionRequest extends BaseCollectionRequ
     public void post(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAppManagementTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAppManagementTask, callback);
     }
 
     public DeviceAppManagementTask post(final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceAppManagementTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAppManagementTask);
     }
 
@@ -107,6 +107,27 @@ public class DeviceAppManagementTaskCollectionRequest extends BaseCollectionRequ
         return (DeviceAppManagementTaskCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceAppManagementTaskCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceAppManagementTaskCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceAppManagementTaskCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceAppManagementTaskCollectionRequest)this;
+    }
     public IDeviceAppManagementTaskCollectionPage buildFromResponse(final DeviceAppManagementTaskCollectionResponse response) {
         final IDeviceAppManagementTaskCollectionRequestBuilder builder;
         if (response.nextLink != null) {

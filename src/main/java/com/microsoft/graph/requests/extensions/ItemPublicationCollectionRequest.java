@@ -62,14 +62,14 @@ public class ItemPublicationCollectionRequest extends BaseCollectionRequest<Item
     public void post(final ItemPublication newItemPublication, final ICallback<ItemPublication> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemPublicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemPublication, callback);
     }
 
     public ItemPublication post(final ItemPublication newItemPublication) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemPublicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemPublication);
     }
 
@@ -106,6 +106,27 @@ public class ItemPublicationCollectionRequest extends BaseCollectionRequest<Item
         return (ItemPublicationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IItemPublicationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ItemPublicationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IItemPublicationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IItemPublicationCollectionRequest)this;
+    }
     public IItemPublicationCollectionPage buildFromResponse(final ItemPublicationCollectionResponse response) {
         final IItemPublicationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

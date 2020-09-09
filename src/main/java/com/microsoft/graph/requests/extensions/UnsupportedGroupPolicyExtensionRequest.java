@@ -112,6 +112,27 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a UnsupportedGroupPolicyExtension with a new object
+     *
+     * @param newUnsupportedGroupPolicyExtension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<UnsupportedGroupPolicyExtension> callback) {
+        send(HttpMethod.PUT, callback, newUnsupportedGroupPolicyExtension);
+    }
+
+    /**
+     * Creates a UnsupportedGroupPolicyExtension with a new object
+     *
+     * @param newUnsupportedGroupPolicyExtension the object to create/update
+     * @return the created UnsupportedGroupPolicyExtension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnsupportedGroupPolicyExtension put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException {
+        return send(HttpMethod.PUT, newUnsupportedGroupPolicyExtension);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

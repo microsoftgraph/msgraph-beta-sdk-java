@@ -31,20 +31,20 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * 
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Feature.
@@ -55,20 +55,20 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
     public StagedFeatureName feature;
 
     /**
-     * The Is Enabled.
-     * 
-     */
-    @SerializedName("isEnabled")
-    @Expose
-    public Boolean isEnabled;
-
-    /**
      * The Is Applied To Organization.
      * 
      */
     @SerializedName("isAppliedToOrganization")
     @Expose
     public Boolean isAppliedToOrganization;
+
+    /**
+     * The Is Enabled.
+     * 
+     */
+    @SerializedName("isEnabled")
+    @Expose
+    public Boolean isEnabled;
 
     /**
      * The Applies To.

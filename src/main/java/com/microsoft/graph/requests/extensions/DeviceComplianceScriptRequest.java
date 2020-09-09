@@ -123,6 +123,27 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
     }
 
     /**
+     * Creates a DeviceComplianceScript with a new object
+     *
+     * @param newDeviceComplianceScript the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceScript);
+    }
+
+    /**
+     * Creates a DeviceComplianceScript with a new object
+     *
+     * @param newDeviceComplianceScript the object to create/update
+     * @return the created DeviceComplianceScript
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceScript put(final DeviceComplianceScript newDeviceComplianceScript) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceScript);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

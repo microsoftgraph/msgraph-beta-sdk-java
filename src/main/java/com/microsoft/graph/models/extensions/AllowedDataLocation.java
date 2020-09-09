@@ -35,12 +35,12 @@ public class AllowedDataLocation extends Entity implements IJsonBackedObject {
     public String appId;
 
     /**
-     * The Location.
+     * The Domain.
      * 
      */
-    @SerializedName("location")
+    @SerializedName("domain")
     @Expose
-    public String location;
+    public String domain;
 
     /**
      * The Is Default.
@@ -51,12 +51,12 @@ public class AllowedDataLocation extends Entity implements IJsonBackedObject {
     public Boolean isDefault;
 
     /**
-     * The Domain.
+     * The Location.
      * 
      */
-    @SerializedName("domain")
+    @SerializedName("location")
     @Expose
-    public String domain;
+    public String location;
 
 
     /**

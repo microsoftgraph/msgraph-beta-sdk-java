@@ -80,6 +80,23 @@ public interface IDeviceConfigurationPolicySetItemRequest extends IHttpRequest {
     DeviceConfigurationPolicySetItem post(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException;
 
     /**
+     * Posts a DeviceConfigurationPolicySetItem with a new object
+     *
+     * @param newDeviceConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<DeviceConfigurationPolicySetItem> callback);
+
+    /**
+     * Posts a DeviceConfigurationPolicySetItem with a new object
+     *
+     * @param newDeviceConfigurationPolicySetItem the object to create/update
+     * @return the created DeviceConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceConfigurationPolicySetItem put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
@@ -42,25 +42,13 @@ public interface IEducationClassRequestBuilder extends IRequestBuilder {
     IEducationClassRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IEducationAssignmentCollectionRequestBuilder assignments();
-
-    IEducationAssignmentRequestBuilder assignments(final String id);
-
     IEducationCategoryCollectionRequestBuilder assignmentCategories();
 
     IEducationCategoryRequestBuilder assignmentCategories(final String id);
 
-    IEducationUserCollectionWithReferencesRequestBuilder members();
+    IEducationAssignmentCollectionRequestBuilder assignments();
 
-    IEducationUserWithReferenceRequestBuilder members(final String id);
-
-    IEducationUserCollectionWithReferencesRequestBuilder teachers();
-
-    IEducationUserWithReferenceRequestBuilder teachers(final String id);
-
-    IEducationSchoolCollectionWithReferencesRequestBuilder schools();
-
-    IEducationSchoolWithReferenceRequestBuilder schools(final String id);
+    IEducationAssignmentRequestBuilder assignments(final String id);
 
     /**
      * Gets the request builder for Group
@@ -68,5 +56,17 @@ public interface IEducationClassRequestBuilder extends IRequestBuilder {
      * @return the IGroupWithReferenceRequestBuilder instance
      */
     IGroupWithReferenceRequestBuilder group();
+
+    IEducationUserCollectionWithReferencesRequestBuilder members();
+
+    IEducationUserWithReferenceRequestBuilder members(final String id);
+
+    IEducationSchoolCollectionWithReferencesRequestBuilder schools();
+
+    IEducationSchoolWithReferenceRequestBuilder schools(final String id);
+
+    IEducationUserCollectionWithReferencesRequestBuilder teachers();
+
+    IEducationUserWithReferenceRequestBuilder teachers(final String id);
 
 }

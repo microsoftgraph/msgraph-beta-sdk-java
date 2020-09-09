@@ -112,6 +112,27 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a UserExperienceAnalyticsMetric with a new object
+     *
+     * @param newUserExperienceAnalyticsMetric the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<UserExperienceAnalyticsMetric> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsMetric);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsMetric with a new object
+     *
+     * @param newUserExperienceAnalyticsMetric the object to create/update
+     * @return the created UserExperienceAnalyticsMetric
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsMetric put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsMetric);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

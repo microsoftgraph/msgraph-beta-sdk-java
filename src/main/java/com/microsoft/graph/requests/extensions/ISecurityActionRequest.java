@@ -80,6 +80,23 @@ public interface ISecurityActionRequest extends IHttpRequest {
     SecurityAction post(final SecurityAction newSecurityAction) throws ClientException;
 
     /**
+     * Posts a SecurityAction with a new object
+     *
+     * @param newSecurityAction the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SecurityAction newSecurityAction, final ICallback<SecurityAction> callback);
+
+    /**
+     * Posts a SecurityAction with a new object
+     *
+     * @param newSecurityAction the object to create/update
+     * @return the created SecurityAction
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SecurityAction put(final SecurityAction newSecurityAction) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

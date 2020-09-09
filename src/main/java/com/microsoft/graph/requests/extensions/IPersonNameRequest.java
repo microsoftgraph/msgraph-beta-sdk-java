@@ -80,6 +80,23 @@ public interface IPersonNameRequest extends IHttpRequest {
     PersonName post(final PersonName newPersonName) throws ClientException;
 
     /**
+     * Posts a PersonName with a new object
+     *
+     * @param newPersonName the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PersonName newPersonName, final ICallback<PersonName> callback);
+
+    /**
+     * Posts a PersonName with a new object
+     *
+     * @param newPersonName the object to create/update
+     * @return the created PersonName
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PersonName put(final PersonName newPersonName) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
     }
 
     /**
+     * Creates a AdminConsentRequestPolicy with a new object
+     *
+     * @param newAdminConsentRequestPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<AdminConsentRequestPolicy> callback) {
+        send(HttpMethod.PUT, callback, newAdminConsentRequestPolicy);
+    }
+
+    /**
+     * Creates a AdminConsentRequestPolicy with a new object
+     *
+     * @param newAdminConsentRequestPolicy the object to create/update
+     * @return the created AdminConsentRequestPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AdminConsentRequestPolicy put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAdminConsentRequestPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

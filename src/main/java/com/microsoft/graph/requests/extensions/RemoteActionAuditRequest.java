@@ -112,6 +112,27 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
     }
 
     /**
+     * Creates a RemoteActionAudit with a new object
+     *
+     * @param newRemoteActionAudit the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback) {
+        send(HttpMethod.PUT, callback, newRemoteActionAudit);
+    }
+
+    /**
+     * Creates a RemoteActionAudit with a new object
+     *
+     * @param newRemoteActionAudit the object to create/update
+     * @return the created RemoteActionAudit
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RemoteActionAudit put(final RemoteActionAudit newRemoteActionAudit) throws ClientException {
+        return send(HttpMethod.PUT, newRemoteActionAudit);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

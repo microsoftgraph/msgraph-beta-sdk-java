@@ -62,14 +62,14 @@ public class DeviceManagementCachedReportConfigurationCollectionRequest extends 
     public void post(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<DeviceManagementCachedReportConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementCachedReportConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementCachedReportConfiguration, callback);
     }
 
     public DeviceManagementCachedReportConfiguration post(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementCachedReportConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementCachedReportConfiguration);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementCachedReportConfigurationCollectionRequest extends 
         return (DeviceManagementCachedReportConfigurationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementCachedReportConfigurationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementCachedReportConfigurationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementCachedReportConfigurationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementCachedReportConfigurationCollectionRequest)this;
+    }
     public IDeviceManagementCachedReportConfigurationCollectionPage buildFromResponse(final DeviceManagementCachedReportConfigurationCollectionResponse response) {
         final IDeviceManagementCachedReportConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

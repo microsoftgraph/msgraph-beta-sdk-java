@@ -61,14 +61,14 @@ public class PrivilegedApprovalCollectionRequest extends BaseCollectionRequest<P
     public void post(final PrivilegedApproval newPrivilegedApproval, final ICallback<PrivilegedApproval> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedApprovalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedApproval, callback);
     }
 
     public PrivilegedApproval post(final PrivilegedApproval newPrivilegedApproval) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedApprovalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedApproval);
     }
 
@@ -105,6 +105,27 @@ public class PrivilegedApprovalCollectionRequest extends BaseCollectionRequest<P
         return (PrivilegedApprovalCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedApprovalCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedApprovalCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedApprovalCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedApprovalCollectionRequest)this;
+    }
     public IPrivilegedApprovalCollectionPage buildFromResponse(final PrivilegedApprovalCollectionResponse response) {
         final IPrivilegedApprovalCollectionRequestBuilder builder;
         if (response.nextLink != null) {

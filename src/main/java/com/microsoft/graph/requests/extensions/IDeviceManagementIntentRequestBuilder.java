@@ -8,19 +8,19 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
@@ -50,17 +50,13 @@ public interface IDeviceManagementIntentRequestBuilder extends IRequestBuilder {
     IDeviceManagementIntentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
+    IDeviceManagementIntentAssignmentCollectionRequestBuilder assignments();
 
-    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
+    IDeviceManagementIntentAssignmentRequestBuilder assignments(final String id);
 
     IDeviceManagementIntentSettingCategoryCollectionRequestBuilder categories();
 
     IDeviceManagementIntentSettingCategoryRequestBuilder categories(final String id);
-
-    IDeviceManagementIntentAssignmentCollectionRequestBuilder assignments();
-
-    IDeviceManagementIntentAssignmentRequestBuilder assignments(final String id);
 
     IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder deviceSettingStateSummaries();
 
@@ -70,10 +66,6 @@ public interface IDeviceManagementIntentRequestBuilder extends IRequestBuilder {
 
     IDeviceManagementIntentDeviceStateRequestBuilder deviceStates(final String id);
 
-    IDeviceManagementIntentUserStateCollectionRequestBuilder userStates();
-
-    IDeviceManagementIntentUserStateRequestBuilder userStates(final String id);
-
     /**
      * Gets the request builder for DeviceManagementIntentDeviceStateSummary
      *
@@ -81,16 +73,24 @@ public interface IDeviceManagementIntentRequestBuilder extends IRequestBuilder {
      */
     IDeviceManagementIntentDeviceStateSummaryRequestBuilder deviceStateSummary();
 
+    IDeviceManagementSettingInstanceCollectionRequestBuilder settings();
+
+    IDeviceManagementSettingInstanceRequestBuilder settings(final String id);
+
+    IDeviceManagementIntentUserStateCollectionRequestBuilder userStates();
+
+    IDeviceManagementIntentUserStateRequestBuilder userStates(final String id);
+
     /**
      * Gets the request builder for DeviceManagementIntentUserStateSummary
      *
      * @return the IDeviceManagementIntentUserStateSummaryRequestBuilder instance
      */
     IDeviceManagementIntentUserStateSummaryRequestBuilder userStateSummary();
-    IDeviceManagementIntentUpdateSettingsRequestBuilder updateSettings(final java.util.List<DeviceManagementSettingInstance> settings);
-    IDeviceManagementIntentMigrateToTemplateRequestBuilder migrateToTemplate(final String newTemplateId, final Boolean preserveCustomValues);
-    IDeviceManagementIntentCreateCopyRequestBuilder createCopy(final String displayName);
     IDeviceManagementIntentAssignRequestBuilder assign(final java.util.List<DeviceManagementIntentAssignment> assignments);
+    IDeviceManagementIntentCreateCopyRequestBuilder createCopy(final String displayName);
+    IDeviceManagementIntentMigrateToTemplateRequestBuilder migrateToTemplate(final String newTemplateId, final Boolean preserveCustomValues);
+    IDeviceManagementIntentUpdateSettingsRequestBuilder updateSettings(final java.util.List<DeviceManagementSettingInstance> settings);
 
     IDeviceManagementIntentCompareCollectionRequestBuilder compare(final String templateId);
 

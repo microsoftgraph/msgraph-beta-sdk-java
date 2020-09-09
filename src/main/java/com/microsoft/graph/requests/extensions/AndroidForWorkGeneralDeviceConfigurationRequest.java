@@ -112,6 +112,27 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
     }
 
     /**
+     * Creates a AndroidForWorkGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidForWorkGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<AndroidForWorkGeneralDeviceConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkGeneralDeviceConfiguration);
+    }
+
+    /**
+     * Creates a AndroidForWorkGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidForWorkGeneralDeviceConfiguration the object to create/update
+     * @return the created AndroidForWorkGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkGeneralDeviceConfiguration put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkGeneralDeviceConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

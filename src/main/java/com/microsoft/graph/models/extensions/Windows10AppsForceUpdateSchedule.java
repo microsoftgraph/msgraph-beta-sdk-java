@@ -37,14 +37,6 @@ public class Windows10AppsForceUpdateSchedule implements IJsonBackedObject {
     }
 
     /**
-     * The Start Date Time.
-     * The start time for the force restart.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
      * The Recurrence.
      * Recurrence schedule.
      */
@@ -59,6 +51,14 @@ public class Windows10AppsForceUpdateSchedule implements IJsonBackedObject {
     @SerializedName("runImmediatelyIfAfterStartDateTime")
     @Expose
     public Boolean runImmediatelyIfAfterStartDateTime;
+
+    /**
+     * The Start Date Time.
+     * The start time for the force restart.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
 
     /**

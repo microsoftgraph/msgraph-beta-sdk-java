@@ -80,6 +80,23 @@ public interface IVulnerableManagedDeviceRequest extends IHttpRequest {
     VulnerableManagedDevice post(final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException;
 
     /**
+     * Posts a VulnerableManagedDevice with a new object
+     *
+     * @param newVulnerableManagedDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<VulnerableManagedDevice> callback);
+
+    /**
+     * Posts a VulnerableManagedDevice with a new object
+     *
+     * @param newVulnerableManagedDevice the object to create/update
+     * @return the created VulnerableManagedDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    VulnerableManagedDevice put(final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

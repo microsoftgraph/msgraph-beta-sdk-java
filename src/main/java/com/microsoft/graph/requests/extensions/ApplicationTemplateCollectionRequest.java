@@ -62,14 +62,14 @@ public class ApplicationTemplateCollectionRequest extends BaseCollectionRequest<
     public void post(final ApplicationTemplate newApplicationTemplate, final ICallback<ApplicationTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplicationTemplate, callback);
     }
 
     public ApplicationTemplate post(final ApplicationTemplate newApplicationTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApplicationTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplicationTemplate);
     }
 
@@ -106,6 +106,27 @@ public class ApplicationTemplateCollectionRequest extends BaseCollectionRequest<
         return (ApplicationTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IApplicationTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ApplicationTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IApplicationTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IApplicationTemplateCollectionRequest)this;
+    }
     public IApplicationTemplateCollectionPage buildFromResponse(final ApplicationTemplateCollectionResponse response) {
         final IApplicationTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

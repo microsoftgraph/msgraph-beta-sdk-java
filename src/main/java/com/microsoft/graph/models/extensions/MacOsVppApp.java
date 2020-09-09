@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.VppLicensingType;
-import com.microsoft.graph.models.generated.VppTokenAccountType;
 import com.microsoft.graph.models.extensions.MacOsVppAppRevokeLicensesActionResult;
+import com.microsoft.graph.models.generated.VppTokenAccountType;
 import com.microsoft.graph.models.extensions.MacOsVppAppAssignedLicense;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.requests.extensions.MacOsVppAppAssignedLicenseCollectionResponse;
@@ -33,36 +33,20 @@ public class MacOsVppApp extends MobileApp implements IJsonBackedObject {
 
 
     /**
-     * The Used License Count.
-     * The number of VPP licenses in use.
-     */
-    @SerializedName("usedLicenseCount")
-    @Expose
-    public Integer usedLicenseCount;
-
-    /**
-     * The Total License Count.
-     * The total number of VPP licenses.
-     */
-    @SerializedName("totalLicenseCount")
-    @Expose
-    public Integer totalLicenseCount;
-
-    /**
-     * The Release Date Time.
-     * The VPP application release date and time.
-     */
-    @SerializedName("releaseDateTime")
-    @Expose
-    public java.util.Calendar releaseDateTime;
-
-    /**
      * The App Store Url.
      * The store URL.
      */
     @SerializedName("appStoreUrl")
     @Expose
     public String appStoreUrl;
+
+    /**
+     * The Bundle Id.
+     * The Identity Name.
+     */
+    @SerializedName("bundleId")
+    @Expose
+    public String bundleId;
 
     /**
      * The Licensing Type.
@@ -73,12 +57,36 @@ public class MacOsVppApp extends MobileApp implements IJsonBackedObject {
     public VppLicensingType licensingType;
 
     /**
-     * The Vpp Token Organization Name.
-     * The organization associated with the Apple Volume Purchase Program Token
+     * The Release Date Time.
+     * The VPP application release date and time.
      */
-    @SerializedName("vppTokenOrganizationName")
+    @SerializedName("releaseDateTime")
     @Expose
-    public String vppTokenOrganizationName;
+    public java.util.Calendar releaseDateTime;
+
+    /**
+     * The Revoke License Action Results.
+     * Results of revoke license actions on this app.
+     */
+    @SerializedName("revokeLicenseActionResults")
+    @Expose
+    public java.util.List<MacOsVppAppRevokeLicensesActionResult> revokeLicenseActionResults;
+
+    /**
+     * The Total License Count.
+     * The total number of VPP licenses.
+     */
+    @SerializedName("totalLicenseCount")
+    @Expose
+    public Integer totalLicenseCount;
+
+    /**
+     * The Used License Count.
+     * The number of VPP licenses in use.
+     */
+    @SerializedName("usedLicenseCount")
+    @Expose
+    public Integer usedLicenseCount;
 
     /**
      * The Vpp Token Account Type.
@@ -97,14 +105,6 @@ public class MacOsVppApp extends MobileApp implements IJsonBackedObject {
     public String vppTokenAppleId;
 
     /**
-     * The Bundle Id.
-     * The Identity Name.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
      * The Vpp Token Id.
      * Identifier of the VPP token associated with this app.
      */
@@ -113,12 +113,12 @@ public class MacOsVppApp extends MobileApp implements IJsonBackedObject {
     public String vppTokenId;
 
     /**
-     * The Revoke License Action Results.
-     * Results of revoke license actions on this app.
+     * The Vpp Token Organization Name.
+     * The organization associated with the Apple Volume Purchase Program Token
      */
-    @SerializedName("revokeLicenseActionResults")
+    @SerializedName("vppTokenOrganizationName")
     @Expose
-    public java.util.List<MacOsVppAppRevokeLicensesActionResult> revokeLicenseActionResults;
+    public String vppTokenOrganizationName;
 
     /**
      * The Assigned Licenses.

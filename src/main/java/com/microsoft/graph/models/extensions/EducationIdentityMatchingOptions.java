@@ -53,20 +53,20 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
     public String sourcePropertyName;
 
     /**
-     * The Target Property Name.
-     * 
-     */
-    @SerializedName("targetPropertyName")
-    @Expose
-    public String targetPropertyName;
-
-    /**
      * The Target Domain.
      * 
      */
     @SerializedName("targetDomain")
     @Expose
     public String targetDomain;
+
+    /**
+     * The Target Property Name.
+     * 
+     */
+    @SerializedName("targetPropertyName")
+    @Expose
+    public String targetPropertyName;
 
 
     /**

@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
-import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public IAgreementCollectionRequestBuilder agreements() {
-        return new AgreementCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreements"), getClient(), null);
-    }
-
-    public IAgreementRequestBuilder agreements(final String id) {
-        return new AgreementRequestBuilder(getRequestUrlWithAdditionalSegment("agreements") + "/" + id, getClient(), null);
-    }
     public IAgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
         return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
     }
 
     public IAgreementAcceptanceRequestBuilder agreementAcceptances(final String id) {
         return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
+    }
+    public IAgreementCollectionRequestBuilder agreements() {
+        return new AgreementCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreements"), getClient(), null);
+    }
+
+    public IAgreementRequestBuilder agreements(final String id) {
+        return new AgreementRequestBuilder(getRequestUrlWithAdditionalSegment("agreements") + "/" + id, getClient(), null);
     }
 }

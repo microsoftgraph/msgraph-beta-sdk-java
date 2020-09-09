@@ -8,21 +8,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentSettingCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBuilder;
@@ -31,6 +27,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionRequestBuilder;
@@ -140,6 +140,27 @@ public class DeviceManagementIntentRequest extends BaseRequest implements IDevic
      */
     public DeviceManagementIntent post(final DeviceManagementIntent newDeviceManagementIntent) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementIntent);
+    }
+
+    /**
+     * Creates a DeviceManagementIntent with a new object
+     *
+     * @param newDeviceManagementIntent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementIntent newDeviceManagementIntent, final ICallback<DeviceManagementIntent> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementIntent);
+    }
+
+    /**
+     * Creates a DeviceManagementIntent with a new object
+     *
+     * @param newDeviceManagementIntent the object to create/update
+     * @return the created DeviceManagementIntent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementIntent put(final DeviceManagementIntent newDeviceManagementIntent) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementIntent);
     }
 
     /**

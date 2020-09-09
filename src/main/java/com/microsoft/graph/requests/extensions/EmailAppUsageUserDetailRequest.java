@@ -112,6 +112,27 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
     }
 
     /**
+     * Creates a EmailAppUsageUserDetail with a new object
+     *
+     * @param newEmailAppUsageUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<EmailAppUsageUserDetail> callback) {
+        send(HttpMethod.PUT, callback, newEmailAppUsageUserDetail);
+    }
+
+    /**
+     * Creates a EmailAppUsageUserDetail with a new object
+     *
+     * @param newEmailAppUsageUserDetail the object to create/update
+     * @return the created EmailAppUsageUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmailAppUsageUserDetail put(final EmailAppUsageUserDetail newEmailAppUsageUserDetail) throws ClientException {
+        return send(HttpMethod.PUT, newEmailAppUsageUserDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

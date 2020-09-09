@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.RgbColor;
-import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.CompanyPortalBlockedAction;
 import com.microsoft.graph.models.generated.EnrollmentAvailabilityOptions;
+import com.microsoft.graph.models.extensions.MimeContent;
+import com.microsoft.graph.models.extensions.RgbColor;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfileAssignment;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentCollectionResponse;
@@ -34,116 +34,12 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Profile Name.
-     * Name of the profile
+     * The Company Portal Blocked Actions.
+     * Collection of blocked actions on the company portal as per platform and device ownership types.
      */
-    @SerializedName("profileName")
+    @SerializedName("companyPortalBlockedActions")
     @Expose
-    public String profileName;
-
-    /**
-     * The Profile Description.
-     * Description of the profile
-     */
-    @SerializedName("profileDescription")
-    @Expose
-    public String profileDescription;
-
-    /**
-     * The Is Default Profile.
-     * Boolean that represents whether the profile is used as default or not
-     */
-    @SerializedName("isDefaultProfile")
-    @Expose
-    public Boolean isDefaultProfile;
-
-    /**
-     * The Created Date Time.
-     * Time when the BrandingProfile was created
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * Time when the BrandingProfile was last modified
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Display Name.
-     * Company/organization name that is displayed to end users
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Theme Color.
-     * Primary theme color used in the Company Portal applications and web portal
-     */
-    @SerializedName("themeColor")
-    @Expose
-    public RgbColor themeColor;
-
-    /**
-     * The Show Logo.
-     * Boolean that represents whether the administrator-supplied logo images are shown or not
-     */
-    @SerializedName("showLogo")
-    @Expose
-    public Boolean showLogo;
-
-    /**
-     * The Show Display Name Next To Logo.
-     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
-     */
-    @SerializedName("showDisplayNameNextToLogo")
-    @Expose
-    public Boolean showDisplayNameNextToLogo;
-
-    /**
-     * The Theme Color Logo.
-     * Logo image displayed in Company Portal apps which have a theme color background behind the logo
-     */
-    @SerializedName("themeColorLogo")
-    @Expose
-    public MimeContent themeColorLogo;
-
-    /**
-     * The Light Background Logo.
-     * Logo image displayed in Company Portal apps which have a light background behind the logo
-     */
-    @SerializedName("lightBackgroundLogo")
-    @Expose
-    public MimeContent lightBackgroundLogo;
-
-    /**
-     * The Landing Page Customized Image.
-     * Customized image displayed in Company Portal apps landing page
-     */
-    @SerializedName("landingPageCustomizedImage")
-    @Expose
-    public MimeContent landingPageCustomizedImage;
-
-    /**
-     * The Contact ITName.
-     * Name of the person/organization responsible for IT support
-     */
-    @SerializedName("contactITName")
-    @Expose
-    public String contactITName;
-
-    /**
-     * The Contact ITPhone Number.
-     * Phone number of the person/organization responsible for IT support
-     */
-    @SerializedName("contactITPhoneNumber")
-    @Expose
-    public String contactITPhoneNumber;
+    public java.util.List<CompanyPortalBlockedAction> companyPortalBlockedActions;
 
     /**
      * The Contact ITEmail Address.
@@ -154,6 +50,14 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
     public String contactITEmailAddress;
 
     /**
+     * The Contact ITName.
+     * Name of the person/organization responsible for IT support
+     */
+    @SerializedName("contactITName")
+    @Expose
+    public String contactITName;
+
+    /**
      * The Contact ITNotes.
      * Text comments regarding the person/organization responsible for IT support
      */
@@ -162,36 +66,20 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
     public String contactITNotes;
 
     /**
-     * The Online Support Site Url.
-     * URL to the company/organization???s IT helpdesk site
+     * The Contact ITPhone Number.
+     * Phone number of the person/organization responsible for IT support
      */
-    @SerializedName("onlineSupportSiteUrl")
+    @SerializedName("contactITPhoneNumber")
     @Expose
-    public String onlineSupportSiteUrl;
+    public String contactITPhoneNumber;
 
     /**
-     * The Online Support Site Name.
-     * Display name of the company/organization???s IT helpdesk site
+     * The Created Date Time.
+     * Time when the BrandingProfile was created
      */
-    @SerializedName("onlineSupportSiteName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String onlineSupportSiteName;
-
-    /**
-     * The Privacy Url.
-     * URL to the company/organization???s privacy policy
-     */
-    @SerializedName("privacyUrl")
-    @Expose
-    public String privacyUrl;
-
-    /**
-     * The Custom Privacy Message.
-     * Text comments regarding what the admin doesn't have access to on the device
-     */
-    @SerializedName("customPrivacyMessage")
-    @Expose
-    public String customPrivacyMessage;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Custom Can See Privacy Message.
@@ -210,52 +98,20 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
     public String customCantSeePrivacyMessage;
 
     /**
-     * The Is Remove Device Disabled.
-     * Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
+     * The Custom Privacy Message.
+     * Text comments regarding what the admin doesn't have access to on the device
      */
-    @SerializedName("isRemoveDeviceDisabled")
+    @SerializedName("customPrivacyMessage")
     @Expose
-    public Boolean isRemoveDeviceDisabled;
+    public String customPrivacyMessage;
 
     /**
-     * The Is Factory Reset Disabled.
-     * Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
+     * The Display Name.
+     * Company/organization name that is displayed to end users
      */
-    @SerializedName("isFactoryResetDisabled")
+    @SerializedName("displayName")
     @Expose
-    public Boolean isFactoryResetDisabled;
-
-    /**
-     * The Company Portal Blocked Actions.
-     * Collection of blocked actions on the company portal as per platform and device ownership types.
-     */
-    @SerializedName("companyPortalBlockedActions")
-    @Expose
-    public java.util.List<CompanyPortalBlockedAction> companyPortalBlockedActions;
-
-    /**
-     * The Show Azure ADEnterprise Apps.
-     * Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
-     */
-    @SerializedName("showAzureADEnterpriseApps")
-    @Expose
-    public Boolean showAzureADEnterpriseApps;
-
-    /**
-     * The Show Office Web Apps.
-     * Boolean that indicates if Office WebApps will be shown in Company Portal
-     */
-    @SerializedName("showOfficeWebApps")
-    @Expose
-    public Boolean showOfficeWebApps;
-
-    /**
-     * The Send Device Ownership Change Push Notification.
-     * Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
-     */
-    @SerializedName("sendDeviceOwnershipChangePushNotification")
-    @Expose
-    public Boolean sendDeviceOwnershipChangePushNotification;
+    public String displayName;
 
     /**
      * The Enrollment Availability.
@@ -266,12 +122,156 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
     public EnrollmentAvailabilityOptions enrollmentAvailability;
 
     /**
+     * The Is Default Profile.
+     * Boolean that represents whether the profile is used as default or not
+     */
+    @SerializedName("isDefaultProfile")
+    @Expose
+    public Boolean isDefaultProfile;
+
+    /**
+     * The Is Factory Reset Disabled.
+     * Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
+     */
+    @SerializedName("isFactoryResetDisabled")
+    @Expose
+    public Boolean isFactoryResetDisabled;
+
+    /**
+     * The Is Remove Device Disabled.
+     * Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
+     */
+    @SerializedName("isRemoveDeviceDisabled")
+    @Expose
+    public Boolean isRemoveDeviceDisabled;
+
+    /**
+     * The Landing Page Customized Image.
+     * Customized image displayed in Company Portal apps landing page
+     */
+    @SerializedName("landingPageCustomizedImage")
+    @Expose
+    public MimeContent landingPageCustomizedImage;
+
+    /**
+     * The Last Modified Date Time.
+     * Time when the BrandingProfile was last modified
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Light Background Logo.
+     * Logo image displayed in Company Portal apps which have a light background behind the logo
+     */
+    @SerializedName("lightBackgroundLogo")
+    @Expose
+    public MimeContent lightBackgroundLogo;
+
+    /**
+     * The Online Support Site Name.
+     * Display name of the company/organization???s IT helpdesk site
+     */
+    @SerializedName("onlineSupportSiteName")
+    @Expose
+    public String onlineSupportSiteName;
+
+    /**
+     * The Online Support Site Url.
+     * URL to the company/organization???s IT helpdesk site
+     */
+    @SerializedName("onlineSupportSiteUrl")
+    @Expose
+    public String onlineSupportSiteUrl;
+
+    /**
+     * The Privacy Url.
+     * URL to the company/organization???s privacy policy
+     */
+    @SerializedName("privacyUrl")
+    @Expose
+    public String privacyUrl;
+
+    /**
+     * The Profile Description.
+     * Description of the profile
+     */
+    @SerializedName("profileDescription")
+    @Expose
+    public String profileDescription;
+
+    /**
+     * The Profile Name.
+     * Name of the profile
+     */
+    @SerializedName("profileName")
+    @Expose
+    public String profileName;
+
+    /**
      * The Role Scope Tag Ids.
      * List of scope tags assigned to the branding profile
      */
     @SerializedName("roleScopeTagIds")
     @Expose
     public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The Send Device Ownership Change Push Notification.
+     * Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
+     */
+    @SerializedName("sendDeviceOwnershipChangePushNotification")
+    @Expose
+    public Boolean sendDeviceOwnershipChangePushNotification;
+
+    /**
+     * The Show Azure ADEnterprise Apps.
+     * Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
+     */
+    @SerializedName("showAzureADEnterpriseApps")
+    @Expose
+    public Boolean showAzureADEnterpriseApps;
+
+    /**
+     * The Show Display Name Next To Logo.
+     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
+     */
+    @SerializedName("showDisplayNameNextToLogo")
+    @Expose
+    public Boolean showDisplayNameNextToLogo;
+
+    /**
+     * The Show Logo.
+     * Boolean that represents whether the administrator-supplied logo images are shown or not
+     */
+    @SerializedName("showLogo")
+    @Expose
+    public Boolean showLogo;
+
+    /**
+     * The Show Office Web Apps.
+     * Boolean that indicates if Office WebApps will be shown in Company Portal
+     */
+    @SerializedName("showOfficeWebApps")
+    @Expose
+    public Boolean showOfficeWebApps;
+
+    /**
+     * The Theme Color.
+     * Primary theme color used in the Company Portal applications and web portal
+     */
+    @SerializedName("themeColor")
+    @Expose
+    public RgbColor themeColor;
+
+    /**
+     * The Theme Color Logo.
+     * Logo image displayed in Company Portal apps which have a theme color background behind the logo
+     */
+    @SerializedName("themeColorLogo")
+    @Expose
+    public MimeContent themeColorLogo;
 
     /**
      * The Assignments.

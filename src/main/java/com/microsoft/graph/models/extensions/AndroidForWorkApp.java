@@ -27,14 +27,6 @@ public class AndroidForWorkApp extends MobileApp implements IJsonBackedObject {
 
 
     /**
-     * The Package Id.
-     * The package identifier.
-     */
-    @SerializedName("packageId")
-    @Expose
-    public String packageId;
-
-    /**
      * The App Identifier.
      * The Identity Name.
      */
@@ -43,12 +35,20 @@ public class AndroidForWorkApp extends MobileApp implements IJsonBackedObject {
     public String appIdentifier;
 
     /**
-     * The Used License Count.
-     * The number of VPP licenses in use.
+     * The App Store Url.
+     * The Play for Work Store app URL.
      */
-    @SerializedName("usedLicenseCount")
+    @SerializedName("appStoreUrl")
     @Expose
-    public Integer usedLicenseCount;
+    public String appStoreUrl;
+
+    /**
+     * The Package Id.
+     * The package identifier.
+     */
+    @SerializedName("packageId")
+    @Expose
+    public String packageId;
 
     /**
      * The Total License Count.
@@ -59,12 +59,12 @@ public class AndroidForWorkApp extends MobileApp implements IJsonBackedObject {
     public Integer totalLicenseCount;
 
     /**
-     * The App Store Url.
-     * The Play for Work Store app URL.
+     * The Used License Count.
+     * The number of VPP licenses in use.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName("usedLicenseCount")
     @Expose
-    public String appStoreUrl;
+    public Integer usedLicenseCount;
 
 
     /**

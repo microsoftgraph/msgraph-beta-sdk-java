@@ -80,6 +80,23 @@ public interface IAndroidForWorkAppRequest extends IHttpRequest {
     AndroidForWorkApp post(final AndroidForWorkApp newAndroidForWorkApp) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkApp with a new object
+     *
+     * @param newAndroidForWorkApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback);
+
+    /**
+     * Posts a AndroidForWorkApp with a new object
+     *
+     * @param newAndroidForWorkApp the object to create/update
+     * @return the created AndroidForWorkApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkApp put(final AndroidForWorkApp newAndroidForWorkApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -120,6 +120,27 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
     }
 
     /**
+     * Creates a ApprovalWorkflowProvider with a new object
+     *
+     * @param newApprovalWorkflowProvider the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<ApprovalWorkflowProvider> callback) {
+        send(HttpMethod.PUT, callback, newApprovalWorkflowProvider);
+    }
+
+    /**
+     * Creates a ApprovalWorkflowProvider with a new object
+     *
+     * @param newApprovalWorkflowProvider the object to create/update
+     * @return the created ApprovalWorkflowProvider
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ApprovalWorkflowProvider put(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException {
+        return send(HttpMethod.PUT, newApprovalWorkflowProvider);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

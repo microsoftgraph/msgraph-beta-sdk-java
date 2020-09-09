@@ -12,14 +12,14 @@ import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
 import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;
 import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
@@ -129,6 +129,27 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      */
     public InformationProtection post(final InformationProtection newInformationProtection) throws ClientException {
         return send(HttpMethod.POST, newInformationProtection);
+    }
+
+    /**
+     * Creates a InformationProtection with a new object
+     *
+     * @param newInformationProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback) {
+        send(HttpMethod.PUT, callback, newInformationProtection);
+    }
+
+    /**
+     * Creates a InformationProtection with a new object
+     *
+     * @param newInformationProtection the object to create/update
+     * @return the created InformationProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public InformationProtection put(final InformationProtection newInformationProtection) throws ClientException {
+        return send(HttpMethod.PUT, newInformationProtection);
     }
 
     /**

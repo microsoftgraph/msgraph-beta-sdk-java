@@ -38,6 +38,62 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements IJsonBacke
     }
 
     /**
+     * The Data Type.
+     * The type of value this item describes
+     */
+    @SerializedName("dataType")
+    @Expose
+    public AndroidManagedStoreAppConfigurationSchemaItemDataType dataType;
+
+    /**
+     * The Default Bool Value.
+     * Default value for boolean type items, if specified by the app developer
+     */
+    @SerializedName("defaultBoolValue")
+    @Expose
+    public Boolean defaultBoolValue;
+
+    /**
+     * The Default Int Value.
+     * Default value for integer type items, if specified by the app developer
+     */
+    @SerializedName("defaultIntValue")
+    @Expose
+    public Integer defaultIntValue;
+
+    /**
+     * The Default String Array Value.
+     * Default value for string array type items, if specified by the app developer
+     */
+    @SerializedName("defaultStringArrayValue")
+    @Expose
+    public java.util.List<String> defaultStringArrayValue;
+
+    /**
+     * The Default String Value.
+     * Default value for string type items, if specified by the app developer
+     */
+    @SerializedName("defaultStringValue")
+    @Expose
+    public String defaultStringValue;
+
+    /**
+     * The Description.
+     * Description of what the item controls within the application
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * Human readable name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Index.
      * Unique index the application uses to maintain nested schema items
      */
@@ -60,62 +116,6 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements IJsonBacke
     @SerializedName("schemaItemKey")
     @Expose
     public String schemaItemKey;
-
-    /**
-     * The Display Name.
-     * Human readable name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * Description of what the item controls within the application
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Default Bool Value.
-     * Default value for boolean type items, if specified by the app developer
-     */
-    @SerializedName("defaultBoolValue")
-    @Expose
-    public Boolean defaultBoolValue;
-
-    /**
-     * The Default Int Value.
-     * Default value for integer type items, if specified by the app developer
-     */
-    @SerializedName("defaultIntValue")
-    @Expose
-    public Integer defaultIntValue;
-
-    /**
-     * The Default String Value.
-     * Default value for string type items, if specified by the app developer
-     */
-    @SerializedName("defaultStringValue")
-    @Expose
-    public String defaultStringValue;
-
-    /**
-     * The Default String Array Value.
-     * Default value for string array type items, if specified by the app developer
-     */
-    @SerializedName("defaultStringArrayValue")
-    @Expose
-    public java.util.List<String> defaultStringArrayValue;
-
-    /**
-     * The Data Type.
-     * The type of value this item describes
-     */
-    @SerializedName("dataType")
-    @Expose
-    public AndroidManagedStoreAppConfigurationSchemaItemDataType dataType;
 
     /**
      * The Selections.

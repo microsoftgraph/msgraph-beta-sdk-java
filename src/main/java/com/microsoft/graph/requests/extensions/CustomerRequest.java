@@ -14,12 +14,12 @@ import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -121,6 +121,27 @@ public class CustomerRequest extends BaseRequest implements ICustomerRequest {
      */
     public Customer post(final Customer newCustomer) throws ClientException {
         return send(HttpMethod.POST, newCustomer);
+    }
+
+    /**
+     * Creates a Customer with a new object
+     *
+     * @param newCustomer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Customer newCustomer, final ICallback<Customer> callback) {
+        send(HttpMethod.PUT, callback, newCustomer);
+    }
+
+    /**
+     * Creates a Customer with a new object
+     *
+     * @param newCustomer the object to create/update
+     * @return the created Customer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Customer put(final Customer newCustomer) throws ClientException {
+        return send(HttpMethod.PUT, newCustomer);
     }
 
     /**

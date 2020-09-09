@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ProfileCardProperty;
 import com.microsoft.graph.models.extensions.ItemInsightsSettings;
+import com.microsoft.graph.models.extensions.ProfileCardProperty;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionPage;
@@ -31,18 +31,18 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Profile Card Properties.
-     * 
-     */
-    public ProfileCardPropertyCollectionPage profileCardProperties;
-
-    /**
      * The Item Insights.
      * 
      */
     @SerializedName("itemInsights")
     @Expose
     public ItemInsightsSettings itemInsights;
+
+    /**
+     * The Profile Card Properties.
+     * 
+     */
+    public ProfileCardPropertyCollectionPage profileCardProperties;
 
 
     /**

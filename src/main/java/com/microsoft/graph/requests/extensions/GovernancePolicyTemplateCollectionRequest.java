@@ -62,14 +62,14 @@ public class GovernancePolicyTemplateCollectionRequest extends BaseCollectionReq
     public void post(final GovernancePolicyTemplate newGovernancePolicyTemplate, final ICallback<GovernancePolicyTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GovernancePolicyTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernancePolicyTemplate, callback);
     }
 
     public GovernancePolicyTemplate post(final GovernancePolicyTemplate newGovernancePolicyTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GovernancePolicyTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGovernancePolicyTemplate);
     }
 
@@ -106,6 +106,27 @@ public class GovernancePolicyTemplateCollectionRequest extends BaseCollectionReq
         return (GovernancePolicyTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGovernancePolicyTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GovernancePolicyTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGovernancePolicyTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGovernancePolicyTemplateCollectionRequest)this;
+    }
     public IGovernancePolicyTemplateCollectionPage buildFromResponse(final GovernancePolicyTemplateCollectionResponse response) {
         final IGovernancePolicyTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

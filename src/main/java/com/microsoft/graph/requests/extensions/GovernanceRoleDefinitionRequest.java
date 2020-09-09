@@ -116,6 +116,27 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
     }
 
     /**
+     * Creates a GovernanceRoleDefinition with a new object
+     *
+     * @param newGovernanceRoleDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<GovernanceRoleDefinition> callback) {
+        send(HttpMethod.PUT, callback, newGovernanceRoleDefinition);
+    }
+
+    /**
+     * Creates a GovernanceRoleDefinition with a new object
+     *
+     * @param newGovernanceRoleDefinition the object to create/update
+     * @return the created GovernanceRoleDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GovernanceRoleDefinition put(final GovernanceRoleDefinition newGovernanceRoleDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newGovernanceRoleDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

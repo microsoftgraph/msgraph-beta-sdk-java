@@ -29,20 +29,12 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
+     * The Custom Data.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("customData")
     @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
+    public String customData;
 
     /**
      * The De Duplication Id.
@@ -53,28 +45,20 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
     public String deDuplicationId;
 
     /**
-     * The Schema Id.
+     * The Description.
      * 
      */
-    @SerializedName("schemaId")
+    @SerializedName("description")
     @Expose
-    public String schemaId;
+    public String description;
 
     /**
-     * The Custom Data.
+     * The Display Name.
      * 
      */
-    @SerializedName("customData")
+    @SerializedName("displayName")
     @Expose
-    public String customData;
-
-    /**
-     * The Record Version.
-     * 
-     */
-    @SerializedName("recordVersion")
-    @Expose
-    public String recordVersion;
+    public String displayName;
 
     /**
      * The Policy.
@@ -91,6 +75,22 @@ public class BusinessFlow extends Entity implements IJsonBackedObject {
     @SerializedName("policyTemplateId")
     @Expose
     public String policyTemplateId;
+
+    /**
+     * The Record Version.
+     * 
+     */
+    @SerializedName("recordVersion")
+    @Expose
+    public String recordVersion;
+
+    /**
+     * The Schema Id.
+     * 
+     */
+    @SerializedName("schemaId")
+    @Expose
+    public String schemaId;
 
     /**
      * The Settings.

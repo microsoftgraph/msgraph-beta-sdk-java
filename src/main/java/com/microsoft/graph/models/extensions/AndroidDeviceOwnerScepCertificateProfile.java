@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.KeyUsages;
-import com.microsoft.graph.models.generated.KeySize;
-import com.microsoft.graph.models.generated.HashAlgorithms;
 import com.microsoft.graph.models.generated.CertificateStore;
 import com.microsoft.graph.models.extensions.CustomSubjectAlternativeName;
+import com.microsoft.graph.models.generated.HashAlgorithms;
+import com.microsoft.graph.models.generated.KeySize;
+import com.microsoft.graph.models.generated.KeyUsages;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerCertificateProfileBase;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionResponse;
@@ -35,54 +35,6 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
 
 
     /**
-     * The Scep Server Urls.
-     * SCEP Server Url(s)
-     */
-    @SerializedName("scepServerUrls")
-    @Expose
-    public java.util.List<String> scepServerUrls;
-
-    /**
-     * The Subject Name Format String.
-     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     */
-    @SerializedName("subjectNameFormatString")
-    @Expose
-    public String subjectNameFormatString;
-
-    /**
-     * The Key Usage.
-     * SCEP Key Usage
-     */
-    @SerializedName("keyUsage")
-    @Expose
-    public EnumSet<KeyUsages> keyUsage;
-
-    /**
-     * The Key Size.
-     * SCEP Key Size
-     */
-    @SerializedName("keySize")
-    @Expose
-    public KeySize keySize;
-
-    /**
-     * The Hash Algorithm.
-     * SCEP Hash Algorithm
-     */
-    @SerializedName("hashAlgorithm")
-    @Expose
-    public EnumSet<HashAlgorithms> hashAlgorithm;
-
-    /**
-     * The Subject Alternative Name Format String.
-     * Custom String that defines the AAD Attribute.
-     */
-    @SerializedName("subjectAlternativeNameFormatString")
-    @Expose
-    public String subjectAlternativeNameFormatString;
-
-    /**
      * The Certificate Store.
      * Target store certificate
      */
@@ -97,6 +49,54 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     @SerializedName("customSubjectAlternativeNames")
     @Expose
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
+
+    /**
+     * The Hash Algorithm.
+     * SCEP Hash Algorithm
+     */
+    @SerializedName("hashAlgorithm")
+    @Expose
+    public EnumSet<HashAlgorithms> hashAlgorithm;
+
+    /**
+     * The Key Size.
+     * SCEP Key Size
+     */
+    @SerializedName("keySize")
+    @Expose
+    public KeySize keySize;
+
+    /**
+     * The Key Usage.
+     * SCEP Key Usage
+     */
+    @SerializedName("keyUsage")
+    @Expose
+    public EnumSet<KeyUsages> keyUsage;
+
+    /**
+     * The Scep Server Urls.
+     * SCEP Server Url(s)
+     */
+    @SerializedName("scepServerUrls")
+    @Expose
+    public java.util.List<String> scepServerUrls;
+
+    /**
+     * The Subject Alternative Name Format String.
+     * Custom String that defines the AAD Attribute.
+     */
+    @SerializedName("subjectAlternativeNameFormatString")
+    @Expose
+    public String subjectAlternativeNameFormatString;
+
+    /**
+     * The Subject Name Format String.
+     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     */
+    @SerializedName("subjectNameFormatString")
+    @Expose
+    public String subjectNameFormatString;
 
     /**
      * The Managed Device Certificate States.

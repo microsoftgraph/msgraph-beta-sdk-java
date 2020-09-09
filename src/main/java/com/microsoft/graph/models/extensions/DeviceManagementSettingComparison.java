@@ -37,28 +37,12 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * The setting ID
+     * The Comparison Result.
+     * Setting comparison result
      */
-    @SerializedName("id")
+    @SerializedName("comparisonResult")
     @Expose
-    public String id;
-
-    /**
-     * The Display Name.
-     * The setting's display name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Definition Id.
-     * The ID of the setting definition for this instance
-     */
-    @SerializedName("definitionId")
-    @Expose
-    public String definitionId;
+    public DeviceManagementComparisonResult comparisonResult;
 
     /**
      * The Current Value Json.
@@ -69,20 +53,36 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
     public String currentValueJson;
 
     /**
+     * The Definition Id.
+     * The ID of the setting definition for this instance
+     */
+    @SerializedName("definitionId")
+    @Expose
+    public String definitionId;
+
+    /**
+     * The Display Name.
+     * The setting's display name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Id.
+     * The setting ID
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
+
+    /**
      * The New Value Json.
      * JSON representation of new template setting's value
      */
     @SerializedName("newValueJson")
     @Expose
     public String newValueJson;
-
-    /**
-     * The Comparison Result.
-     * Setting comparison result
-     */
-    @SerializedName("comparisonResult")
-    @Expose
-    public DeviceManagementComparisonResult comparisonResult;
 
 
     /**

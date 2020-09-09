@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Print;
-import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
@@ -28,10 +28,10 @@ import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintServiceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionCollectionRequestBuilder;
@@ -137,6 +137,27 @@ public class PrintRequest extends BaseRequest implements IPrintRequest {
      */
     public Print post(final Print newPrint) throws ClientException {
         return send(HttpMethod.POST, newPrint);
+    }
+
+    /**
+     * Creates a Print with a new object
+     *
+     * @param newPrint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Print newPrint, final ICallback<Print> callback) {
+        send(HttpMethod.PUT, callback, newPrint);
+    }
+
+    /**
+     * Creates a Print with a new object
+     *
+     * @param newPrint the object to create/update
+     * @return the created Print
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Print put(final Print newPrint) throws ClientException {
+        return send(HttpMethod.PUT, newPrint);
     }
 
     /**

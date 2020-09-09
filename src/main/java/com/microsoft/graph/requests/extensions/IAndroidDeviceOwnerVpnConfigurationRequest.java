@@ -80,6 +80,23 @@ public interface IAndroidDeviceOwnerVpnConfigurationRequest extends IHttpRequest
     AndroidDeviceOwnerVpnConfiguration post(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceOwnerVpnConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration, final ICallback<AndroidDeviceOwnerVpnConfiguration> callback);
+
+    /**
+     * Posts a AndroidDeviceOwnerVpnConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerVpnConfiguration the object to create/update
+     * @return the created AndroidDeviceOwnerVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceOwnerVpnConfiguration put(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

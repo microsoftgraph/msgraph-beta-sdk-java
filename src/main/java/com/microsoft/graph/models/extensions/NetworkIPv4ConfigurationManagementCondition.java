@@ -27,20 +27,12 @@ public class NetworkIPv4ConfigurationManagementCondition extends NetworkManageme
 
 
     /**
-     * The Ip V4Prefix.
-     * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
+     * The Dns Suffix List.
+     * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
      */
-    @SerializedName("ipV4Prefix")
+    @SerializedName("dnsSuffixList")
     @Expose
-    public String ipV4Prefix;
-
-    /**
-     * The Ip V4Gateway.
-     * The IPv4 gateway address. e.g. 10.0.0.0
-     */
-    @SerializedName("ipV4Gateway")
-    @Expose
-    public String ipV4Gateway;
+    public java.util.List<String> dnsSuffixList;
 
     /**
      * The Ip V4DHCPServer.
@@ -59,12 +51,20 @@ public class NetworkIPv4ConfigurationManagementCondition extends NetworkManageme
     public java.util.List<String> ipV4DNSServerList;
 
     /**
-     * The Dns Suffix List.
-     * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
+     * The Ip V4Gateway.
+     * The IPv4 gateway address. e.g. 10.0.0.0
      */
-    @SerializedName("dnsSuffixList")
+    @SerializedName("ipV4Gateway")
     @Expose
-    public java.util.List<String> dnsSuffixList;
+    public String ipV4Gateway;
+
+    /**
+     * The Ip V4Prefix.
+     * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
+     */
+    @SerializedName("ipV4Prefix")
+    @Expose
+    public String ipV4Prefix;
 
 
     /**

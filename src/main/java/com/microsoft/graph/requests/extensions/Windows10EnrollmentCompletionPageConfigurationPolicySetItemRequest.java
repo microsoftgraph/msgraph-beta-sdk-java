@@ -112,6 +112,27 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
     }
 
     /**
+     * Creates a Windows10EnrollmentCompletionPageConfigurationPolicySetItem with a new object
+     *
+     * @param newWindows10EnrollmentCompletionPageConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
+    }
+
+    /**
+     * Creates a Windows10EnrollmentCompletionPageConfigurationPolicySetItem with a new object
+     *
+     * @param newWindows10EnrollmentCompletionPageConfigurationPolicySetItem the object to create/update
+     * @return the created Windows10EnrollmentCompletionPageConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem put(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

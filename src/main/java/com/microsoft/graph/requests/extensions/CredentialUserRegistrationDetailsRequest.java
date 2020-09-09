@@ -112,6 +112,27 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a CredentialUserRegistrationDetails with a new object
+     *
+     * @param newCredentialUserRegistrationDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback) {
+        send(HttpMethod.PUT, callback, newCredentialUserRegistrationDetails);
+    }
+
+    /**
+     * Creates a CredentialUserRegistrationDetails with a new object
+     *
+     * @param newCredentialUserRegistrationDetails the object to create/update
+     * @return the created CredentialUserRegistrationDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CredentialUserRegistrationDetails put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException {
+        return send(HttpMethod.PUT, newCredentialUserRegistrationDetails);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

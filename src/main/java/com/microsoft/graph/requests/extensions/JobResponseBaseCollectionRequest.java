@@ -62,14 +62,14 @@ public class JobResponseBaseCollectionRequest extends BaseCollectionRequest<JobR
     public void post(final JobResponseBase newJobResponseBase, final ICallback<JobResponseBase> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new JobResponseBaseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newJobResponseBase, callback);
     }
 
     public JobResponseBase post(final JobResponseBase newJobResponseBase) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new JobResponseBaseRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newJobResponseBase);
     }
 
@@ -106,6 +106,27 @@ public class JobResponseBaseCollectionRequest extends BaseCollectionRequest<JobR
         return (JobResponseBaseCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IJobResponseBaseCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (JobResponseBaseCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IJobResponseBaseCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IJobResponseBaseCollectionRequest)this;
+    }
     public IJobResponseBaseCollectionPage buildFromResponse(final JobResponseBaseCollectionResponse response) {
         final IJobResponseBaseCollectionRequestBuilder builder;
         if (response.nextLink != null) {

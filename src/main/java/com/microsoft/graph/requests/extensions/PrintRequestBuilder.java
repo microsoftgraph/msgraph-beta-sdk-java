@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Print;
-import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
@@ -28,10 +28,10 @@ import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintServiceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionCollectionRequestBuilder;
@@ -79,20 +79,6 @@ public class PrintRequestBuilder extends BaseRequestBuilder implements IPrintReq
     }
 
 
-    public IPrintServiceCollectionRequestBuilder services() {
-        return new PrintServiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("services"), getClient(), null);
-    }
-
-    public IPrintServiceRequestBuilder services(final String id) {
-        return new PrintServiceRequestBuilder(getRequestUrlWithAdditionalSegment("services") + "/" + id, getClient(), null);
-    }
-    public IPrinterCollectionRequestBuilder printers() {
-        return new PrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("printers"), getClient(), null);
-    }
-
-    public IPrinterRequestBuilder printers(final String id) {
-        return new PrinterRequestBuilder(getRequestUrlWithAdditionalSegment("printers") + "/" + id, getClient(), null);
-    }
     public IPrintConnectorCollectionRequestBuilder connectors() {
         return new PrintConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
     }
@@ -100,12 +86,19 @@ public class PrintRequestBuilder extends BaseRequestBuilder implements IPrintReq
     public IPrintConnectorRequestBuilder connectors(final String id) {
         return new PrintConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
     }
-    public IPrinterShareCollectionRequestBuilder shares() {
-        return new PrinterShareCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shares"), getClient(), null);
+    public IPrintOperationCollectionRequestBuilder operations() {
+        return new PrintOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IPrinterShareRequestBuilder shares(final String id) {
-        return new PrinterShareRequestBuilder(getRequestUrlWithAdditionalSegment("shares") + "/" + id, getClient(), null);
+    public IPrintOperationRequestBuilder operations(final String id) {
+        return new PrintOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+    public IPrinterCollectionRequestBuilder printers() {
+        return new PrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("printers"), getClient(), null);
+    }
+
+    public IPrinterRequestBuilder printers(final String id) {
+        return new PrinterRequestBuilder(getRequestUrlWithAdditionalSegment("printers") + "/" + id, getClient(), null);
     }
     public IPrinterShareCollectionRequestBuilder printerShares() {
         return new PrinterShareCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("printerShares"), getClient(), null);
@@ -121,12 +114,19 @@ public class PrintRequestBuilder extends BaseRequestBuilder implements IPrintReq
     public IReportRootRequestBuilder reports(final String id) {
         return new ReportRootRequestBuilder(getRequestUrlWithAdditionalSegment("reports") + "/" + id, getClient(), null);
     }
-    public IPrintOperationCollectionRequestBuilder operations() {
-        return new PrintOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public IPrintServiceCollectionRequestBuilder services() {
+        return new PrintServiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("services"), getClient(), null);
     }
 
-    public IPrintOperationRequestBuilder operations(final String id) {
-        return new PrintOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public IPrintServiceRequestBuilder services(final String id) {
+        return new PrintServiceRequestBuilder(getRequestUrlWithAdditionalSegment("services") + "/" + id, getClient(), null);
+    }
+    public IPrinterShareCollectionRequestBuilder shares() {
+        return new PrinterShareCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shares"), getClient(), null);
+    }
+
+    public IPrinterShareRequestBuilder shares(final String id) {
+        return new PrinterShareRequestBuilder(getRequestUrlWithAdditionalSegment("shares") + "/" + id, getClient(), null);
     }
     public IPrintTaskDefinitionCollectionRequestBuilder taskDefinitions() {
         return new PrintTaskDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskDefinitions"), getClient(), null);

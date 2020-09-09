@@ -64,14 +64,14 @@ public class ManagementConditionStatementCollectionRequest extends BaseCollectio
     public void post(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagementConditionStatementRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagementConditionStatement, callback);
     }
 
     public ManagementConditionStatement post(final ManagementConditionStatement newManagementConditionStatement) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagementConditionStatementRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagementConditionStatement);
     }
 
@@ -108,6 +108,27 @@ public class ManagementConditionStatementCollectionRequest extends BaseCollectio
         return (ManagementConditionStatementCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagementConditionStatementCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagementConditionStatementCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagementConditionStatementCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagementConditionStatementCollectionRequest)this;
+    }
     public IManagementConditionStatementCollectionPage buildFromResponse(final ManagementConditionStatementCollectionResponse response) {
         final IManagementConditionStatementCollectionRequestBuilder builder;
         if (response.nextLink != null) {

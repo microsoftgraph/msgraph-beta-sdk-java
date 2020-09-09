@@ -62,14 +62,14 @@ public class DimensionValueCollectionRequest extends BaseCollectionRequest<Dimen
     public void post(final DimensionValue newDimensionValue, final ICallback<DimensionValue> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DimensionValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDimensionValue, callback);
     }
 
     public DimensionValue post(final DimensionValue newDimensionValue) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DimensionValueRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDimensionValue);
     }
 
@@ -106,6 +106,27 @@ public class DimensionValueCollectionRequest extends BaseCollectionRequest<Dimen
         return (DimensionValueCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDimensionValueCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DimensionValueCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDimensionValueCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDimensionValueCollectionRequest)this;
+    }
     public IDimensionValueCollectionPage buildFromResponse(final DimensionValueCollectionResponse response) {
         final IDimensionValueCollectionRequestBuilder builder;
         if (response.nextLink != null) {

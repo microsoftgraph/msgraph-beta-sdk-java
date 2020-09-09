@@ -37,22 +37,6 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements IJsonBackedO
     }
 
     /**
-     * The Device Import Status.
-     * Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
-     */
-    @SerializedName("deviceImportStatus")
-    @Expose
-    public ImportedWindowsAutopilotDeviceIdentityImportStatus deviceImportStatus;
-
-    /**
-     * The Device Registration Id.
-     * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
-     */
-    @SerializedName("deviceRegistrationId")
-    @Expose
-    public String deviceRegistrationId;
-
-    /**
      * The Device Error Code.
      * Device error code reported by Device Directory Service(DDS).
      */
@@ -67,6 +51,22 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements IJsonBackedO
     @SerializedName("deviceErrorName")
     @Expose
     public String deviceErrorName;
+
+    /**
+     * The Device Import Status.
+     * Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+     */
+    @SerializedName("deviceImportStatus")
+    @Expose
+    public ImportedWindowsAutopilotDeviceIdentityImportStatus deviceImportStatus;
+
+    /**
+     * The Device Registration Id.
+     * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
+     */
+    @SerializedName("deviceRegistrationId")
+    @Expose
+    public String deviceRegistrationId;
 
 
     /**

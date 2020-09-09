@@ -112,6 +112,27 @@ public class AndroidDeviceOwnerCompliancePolicyRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a AndroidDeviceOwnerCompliancePolicy with a new object
+     *
+     * @param newAndroidDeviceOwnerCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy, final ICallback<AndroidDeviceOwnerCompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerCompliancePolicy);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerCompliancePolicy with a new object
+     *
+     * @param newAndroidDeviceOwnerCompliancePolicy the object to create/update
+     * @return the created AndroidDeviceOwnerCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerCompliancePolicy put(final AndroidDeviceOwnerCompliancePolicy newAndroidDeviceOwnerCompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerCompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

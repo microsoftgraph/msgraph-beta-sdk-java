@@ -62,14 +62,14 @@ public class ComanagementEligibleDeviceCollectionRequest extends BaseCollectionR
     public void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<ComanagementEligibleDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ComanagementEligibleDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newComanagementEligibleDevice, callback);
     }
 
     public ComanagementEligibleDevice post(final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ComanagementEligibleDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newComanagementEligibleDevice);
     }
 
@@ -106,6 +106,27 @@ public class ComanagementEligibleDeviceCollectionRequest extends BaseCollectionR
         return (ComanagementEligibleDeviceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IComanagementEligibleDeviceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ComanagementEligibleDeviceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IComanagementEligibleDeviceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IComanagementEligibleDeviceCollectionRequest)this;
+    }
     public IComanagementEligibleDeviceCollectionPage buildFromResponse(final ComanagementEligibleDeviceCollectionResponse response) {
         final IComanagementEligibleDeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

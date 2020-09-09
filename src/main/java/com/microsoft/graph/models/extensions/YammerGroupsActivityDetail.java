@@ -27,44 +27,12 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
      * The Group Display Name.
      * 
      */
     @SerializedName("groupDisplayName")
     @Expose
     public String groupDisplayName;
-
-    /**
-     * The Is Deleted.
-     * 
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
-
-    /**
-     * The Owner Principal Name.
-     * 
-     */
-    @SerializedName("ownerPrincipalName")
-    @Expose
-    public String ownerPrincipalName;
-
-    /**
-     * The Last Activity Date.
-     * 
-     */
-    @SerializedName("lastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
     /**
      * The Group Type.
@@ -75,12 +43,28 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
     public String groupType;
 
     /**
-     * The Office365Connected.
+     * The Is Deleted.
      * 
      */
-    @SerializedName("office365Connected")
+    @SerializedName("isDeleted")
     @Expose
-    public Boolean office365Connected;
+    public Boolean isDeleted;
+
+    /**
+     * The Last Activity Date.
+     * 
+     */
+    @SerializedName("lastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+
+    /**
+     * The Liked Count.
+     * 
+     */
+    @SerializedName("likedCount")
+    @Expose
+    public Long likedCount;
 
     /**
      * The Member Count.
@@ -89,6 +73,30 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
     @SerializedName("memberCount")
     @Expose
     public Long memberCount;
+
+    /**
+     * The Network Display Name.
+     * 
+     */
+    @SerializedName("networkDisplayName")
+    @Expose
+    public String networkDisplayName;
+
+    /**
+     * The Office365Connected.
+     * 
+     */
+    @SerializedName("office365Connected")
+    @Expose
+    public Boolean office365Connected;
+
+    /**
+     * The Owner Principal Name.
+     * 
+     */
+    @SerializedName("ownerPrincipalName")
+    @Expose
+    public String ownerPrincipalName;
 
     /**
      * The Posted Count.
@@ -107,28 +115,20 @@ public class YammerGroupsActivityDetail extends Entity implements IJsonBackedObj
     public Long readCount;
 
     /**
-     * The Liked Count.
-     * 
-     */
-    @SerializedName("likedCount")
-    @Expose
-    public Long likedCount;
-
-    /**
-     * The Network Display Name.
-     * 
-     */
-    @SerializedName("networkDisplayName")
-    @Expose
-    public String networkDisplayName;
-
-    /**
      * The Report Period.
      * 
      */
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
 
     /**

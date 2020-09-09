@@ -114,6 +114,27 @@ public class JournalLineRequest extends BaseRequest implements IJournalLineReque
     }
 
     /**
+     * Creates a JournalLine with a new object
+     *
+     * @param newJournalLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final JournalLine newJournalLine, final ICallback<JournalLine> callback) {
+        send(HttpMethod.PUT, callback, newJournalLine);
+    }
+
+    /**
+     * Creates a JournalLine with a new object
+     *
+     * @param newJournalLine the object to create/update
+     * @return the created JournalLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public JournalLine put(final JournalLine newJournalLine) throws ClientException {
+        return send(HttpMethod.PUT, newJournalLine);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

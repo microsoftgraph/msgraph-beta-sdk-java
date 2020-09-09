@@ -8,16 +8,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesPublishingProfile;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -43,24 +43,24 @@ public interface IOnPremisesPublishingProfileRequestBuilder extends IRequestBuil
     IOnPremisesPublishingProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IOnPremisesAgentCollectionRequestBuilder agents();
-
-    IOnPremisesAgentRequestBuilder agents(final String id);
-
     IOnPremisesAgentGroupCollectionRequestBuilder agentGroups();
 
     IOnPremisesAgentGroupRequestBuilder agentGroups(final String id);
 
-    IPublishedResourceCollectionRequestBuilder publishedResources();
+    IOnPremisesAgentCollectionRequestBuilder agents();
 
-    IPublishedResourceRequestBuilder publishedResources(final String id);
+    IOnPremisesAgentRequestBuilder agents(final String id);
+
+    IConnectorGroupCollectionRequestBuilder connectorGroups();
+
+    IConnectorGroupRequestBuilder connectorGroups(final String id);
 
     IConnectorCollectionRequestBuilder connectors();
 
     IConnectorRequestBuilder connectors(final String id);
 
-    IConnectorGroupCollectionRequestBuilder connectorGroups();
+    IPublishedResourceCollectionRequestBuilder publishedResources();
 
-    IConnectorGroupRequestBuilder connectorGroups(final String id);
+    IPublishedResourceRequestBuilder publishedResources(final String id);
 
 }

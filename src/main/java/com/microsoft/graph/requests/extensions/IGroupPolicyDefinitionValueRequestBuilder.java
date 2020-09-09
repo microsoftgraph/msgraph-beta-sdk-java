@@ -36,15 +36,15 @@ public interface IGroupPolicyDefinitionValueRequestBuilder extends IRequestBuild
     IGroupPolicyDefinitionValueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IGroupPolicyPresentationValueCollectionRequestBuilder presentationValues();
-
-    IGroupPolicyPresentationValueRequestBuilder presentationValues(final String id);
-
     /**
      * Gets the request builder for GroupPolicyDefinition
      *
      * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
     IGroupPolicyDefinitionWithReferenceRequestBuilder definition();
+
+    IGroupPolicyPresentationValueCollectionRequestBuilder presentationValues();
+
+    IGroupPolicyPresentationValueRequestBuilder presentationValues(final String id);
 
 }

@@ -80,6 +80,23 @@ public interface INetworkIPv6ConfigurationManagementConditionRequest extends IHt
     NetworkIPv6ConfigurationManagementCondition post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException;
 
     /**
+     * Posts a NetworkIPv6ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<NetworkIPv6ConfigurationManagementCondition> callback);
+
+    /**
+     * Posts a NetworkIPv6ConfigurationManagementCondition with a new object
+     *
+     * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
+     * @return the created NetworkIPv6ConfigurationManagementCondition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    NetworkIPv6ConfigurationManagementCondition put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

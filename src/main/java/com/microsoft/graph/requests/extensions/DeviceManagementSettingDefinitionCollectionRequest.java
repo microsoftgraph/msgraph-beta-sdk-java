@@ -62,14 +62,14 @@ public class DeviceManagementSettingDefinitionCollectionRequest extends BaseColl
     public void post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<DeviceManagementSettingDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementSettingDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementSettingDefinition, callback);
     }
 
     public DeviceManagementSettingDefinition post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementSettingDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementSettingDefinition);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementSettingDefinitionCollectionRequest extends BaseColl
         return (DeviceManagementSettingDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementSettingDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementSettingDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementSettingDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementSettingDefinitionCollectionRequest)this;
+    }
     public IDeviceManagementSettingDefinitionCollectionPage buildFromResponse(final DeviceManagementSettingDefinitionCollectionResponse response) {
         final IDeviceManagementSettingDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

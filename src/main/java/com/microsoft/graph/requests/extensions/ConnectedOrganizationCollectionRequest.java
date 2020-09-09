@@ -62,14 +62,14 @@ public class ConnectedOrganizationCollectionRequest extends BaseCollectionReques
     public void post(final ConnectedOrganization newConnectedOrganization, final ICallback<ConnectedOrganization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConnectedOrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnectedOrganization, callback);
     }
 
     public ConnectedOrganization post(final ConnectedOrganization newConnectedOrganization) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConnectedOrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConnectedOrganization);
     }
 
@@ -106,6 +106,27 @@ public class ConnectedOrganizationCollectionRequest extends BaseCollectionReques
         return (ConnectedOrganizationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IConnectedOrganizationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ConnectedOrganizationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IConnectedOrganizationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IConnectedOrganizationCollectionRequest)this;
+    }
     public IConnectedOrganizationCollectionPage buildFromResponse(final ConnectedOrganizationCollectionResponse response) {
         final IConnectedOrganizationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

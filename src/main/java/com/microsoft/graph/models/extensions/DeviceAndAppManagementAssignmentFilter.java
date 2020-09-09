@@ -36,12 +36,12 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * Last modified time of the Assignment Filter.
+     * The Description.
+     * Description of the Assignment Filter.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("description")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String description;
 
     /**
      * The Display Name.
@@ -52,12 +52,12 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
     public String displayName;
 
     /**
-     * The Description.
-     * Description of the Assignment Filter.
+     * The Last Modified Date Time.
+     * Last modified time of the Assignment Filter.
      */
-    @SerializedName("description")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public String description;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Platform.
@@ -68,20 +68,20 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
     public DevicePlatformType platform;
 
     /**
-     * The Rule.
-     * Rule definition of the Assignment Filter.
-     */
-    @SerializedName("rule")
-    @Expose
-    public String rule;
-
-    /**
      * The Role Scope Tags.
      * RoleScopeTags of the Assignment Filter.
      */
     @SerializedName("roleScopeTags")
     @Expose
     public java.util.List<String> roleScopeTags;
+
+    /**
+     * The Rule.
+     * Rule definition of the Assignment Filter.
+     */
+    @SerializedName("rule")
+    @Expose
+    public String rule;
 
 
     /**

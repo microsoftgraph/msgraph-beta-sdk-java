@@ -80,6 +80,23 @@ public interface IEducationRubricRequest extends IHttpRequest {
     EducationRubric post(final EducationRubric newEducationRubric) throws ClientException;
 
     /**
+     * Posts a EducationRubric with a new object
+     *
+     * @param newEducationRubric the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback);
+
+    /**
+     * Posts a EducationRubric with a new object
+     *
+     * @param newEducationRubric the object to create/update
+     * @return the created EducationRubric
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationRubric put(final EducationRubric newEducationRubric) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

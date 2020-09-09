@@ -80,6 +80,23 @@ public interface IPrintTaskRequest extends IHttpRequest {
     PrintTask post(final PrintTask newPrintTask) throws ClientException;
 
     /**
+     * Posts a PrintTask with a new object
+     *
+     * @param newPrintTask the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrintTask newPrintTask, final ICallback<PrintTask> callback);
+
+    /**
+     * Posts a PrintTask with a new object
+     *
+     * @param newPrintTask the object to create/update
+     * @return the created PrintTask
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrintTask put(final PrintTask newPrintTask) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

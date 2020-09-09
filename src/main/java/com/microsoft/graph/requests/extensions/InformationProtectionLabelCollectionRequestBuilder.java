@@ -10,21 +10,21 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.InformationProtectionLabel;
 import com.microsoft.graph.models.extensions.ContentInfo;
-import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import com.microsoft.graph.models.extensions.LabelingOptions;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
-import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.ClassificationResult;
+import com.microsoft.graph.models.extensions.DowngradeJustification;
+import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequest;
-import com.microsoft.graph.requests.extensions.IInformationProtectionLabelExtractLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionLabelExtractLabelRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -60,19 +60,19 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseRequ
 
 
 
-    public IInformationProtectionLabelExtractLabelRequestBuilder extractLabel(final ContentInfo contentInfo) {
-        return new InformationProtectionLabelExtractLabelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.extractLabel"), getClient(), null, contentInfo);
-    }
-
     public IInformationProtectionLabelEvaluateApplicationCollectionRequestBuilder evaluateApplication(final ContentInfo contentInfo, final LabelingOptions labelingOptions) {
         return new InformationProtectionLabelEvaluateApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateApplication"), getClient(), null, contentInfo, labelingOptions);
+    }
+
+    public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder evaluateClassificationResults(final ContentInfo contentInfo, final java.util.List<ClassificationResult> classificationResults) {
+        return new InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateClassificationResults"), getClient(), null, contentInfo, classificationResults);
     }
 
     public IInformationProtectionLabelEvaluateRemovalCollectionRequestBuilder evaluateRemoval(final ContentInfo contentInfo, final DowngradeJustification downgradeJustification) {
         return new InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateRemoval"), getClient(), null, contentInfo, downgradeJustification);
     }
 
-    public IInformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder evaluateClassificationResults(final ContentInfo contentInfo, final java.util.List<ClassificationResult> classificationResults) {
-        return new InformationProtectionLabelEvaluateClassificationResultsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateClassificationResults"), getClient(), null, contentInfo, classificationResults);
+    public IInformationProtectionLabelExtractLabelRequestBuilder extractLabel(final ContentInfo contentInfo) {
+        return new InformationProtectionLabelExtractLabelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.extractLabel"), getClient(), null, contentInfo);
     }
 }

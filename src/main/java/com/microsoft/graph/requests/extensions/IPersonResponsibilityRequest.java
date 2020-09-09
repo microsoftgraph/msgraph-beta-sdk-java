@@ -80,6 +80,23 @@ public interface IPersonResponsibilityRequest extends IHttpRequest {
     PersonResponsibility post(final PersonResponsibility newPersonResponsibility) throws ClientException;
 
     /**
+     * Posts a PersonResponsibility with a new object
+     *
+     * @param newPersonResponsibility the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PersonResponsibility newPersonResponsibility, final ICallback<PersonResponsibility> callback);
+
+    /**
+     * Posts a PersonResponsibility with a new object
+     *
+     * @param newPersonResponsibility the object to create/update
+     * @return the created PersonResponsibility
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PersonResponsibility put(final PersonResponsibility newPersonResponsibility) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

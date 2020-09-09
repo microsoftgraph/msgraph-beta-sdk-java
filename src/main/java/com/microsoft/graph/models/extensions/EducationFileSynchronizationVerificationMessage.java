@@ -36,12 +36,12 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
     }
 
     /**
-     * The Type.
+     * The Description.
      * 
      */
-    @SerializedName("type")
+    @SerializedName("description")
     @Expose
-    public String type;
+    public String description;
 
     /**
      * The File Name.
@@ -52,12 +52,12 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
     public String fileName;
 
     /**
-     * The Description.
+     * The Type.
      * 
      */
-    @SerializedName("description")
+    @SerializedName("type")
     @Expose
-    public String description;
+    public String type;
 
 
     /**

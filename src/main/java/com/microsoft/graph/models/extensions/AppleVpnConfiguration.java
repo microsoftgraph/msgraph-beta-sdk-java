@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.VpnAuthenticationMethod;
 import com.microsoft.graph.models.generated.AppleVpnConnectionType;
-import com.microsoft.graph.models.extensions.VpnServer;
 import com.microsoft.graph.models.extensions.KeyValue;
 import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.generated.VpnAuthenticationMethod;
 import com.microsoft.graph.models.extensions.VpnOnDemandRule;
 import com.microsoft.graph.models.generated.VpnProviderType;
 import com.microsoft.graph.models.extensions.VpnProxyServer;
+import com.microsoft.graph.models.extensions.VpnServer;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -35,6 +35,14 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
 
 
     /**
+     * The Authentication Method.
+     * Authentication method for this VPN connection.
+     */
+    @SerializedName("authenticationMethod")
+    @Expose
+    public VpnAuthenticationMethod authenticationMethod;
+
+    /**
      * The Connection Name.
      * Connection name displayed to the user.
      */
@@ -49,46 +57,6 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
     @SerializedName("connectionType")
     @Expose
     public AppleVpnConnectionType connectionType;
-
-    /**
-     * The Login Group Or Domain.
-     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     */
-    @SerializedName("loginGroupOrDomain")
-    @Expose
-    public String loginGroupOrDomain;
-
-    /**
-     * The Role.
-     * Role when connection type is set to Pulse Secure.
-     */
-    @SerializedName("role")
-    @Expose
-    public String role;
-
-    /**
-     * The Realm.
-     * Realm when connection type is set to Pulse Secure.
-     */
-    @SerializedName("realm")
-    @Expose
-    public String realm;
-
-    /**
-     * The Server.
-     * VPN Server on the network. Make sure end users can access this network location.
-     */
-    @SerializedName("server")
-    @Expose
-    public VpnServer server;
-
-    /**
-     * The Identifier.
-     * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
-     */
-    @SerializedName("identifier")
-    @Expose
-    public String identifier;
 
     /**
      * The Custom Data.
@@ -107,22 +75,6 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
     public java.util.List<KeyValuePair> customKeyValueData;
 
     /**
-     * The Enable Split Tunneling.
-     * Send all network traffic through VPN.
-     */
-    @SerializedName("enableSplitTunneling")
-    @Expose
-    public Boolean enableSplitTunneling;
-
-    /**
-     * The Authentication Method.
-     * Authentication method for this VPN connection.
-     */
-    @SerializedName("authenticationMethod")
-    @Expose
-    public VpnAuthenticationMethod authenticationMethod;
-
-    /**
      * The Enable Per App.
      * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
      */
@@ -131,12 +83,28 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
     public Boolean enablePerApp;
 
     /**
-     * The Safari Domains.
-     * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
+     * The Enable Split Tunneling.
+     * Send all network traffic through VPN.
      */
-    @SerializedName("safariDomains")
+    @SerializedName("enableSplitTunneling")
     @Expose
-    public java.util.List<String> safariDomains;
+    public Boolean enableSplitTunneling;
+
+    /**
+     * The Identifier.
+     * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
+     */
+    @SerializedName("identifier")
+    @Expose
+    public String identifier;
+
+    /**
+     * The Login Group Or Domain.
+     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
+     */
+    @SerializedName("loginGroupOrDomain")
+    @Expose
+    public String loginGroupOrDomain;
 
     /**
      * The On Demand Rules.
@@ -145,6 +113,14 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
     @SerializedName("onDemandRules")
     @Expose
     public java.util.List<VpnOnDemandRule> onDemandRules;
+
+    /**
+     * The Opt In To Device Id Sharing.
+     * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
+     */
+    @SerializedName("optInToDeviceIdSharing")
+    @Expose
+    public Boolean optInToDeviceIdSharing;
 
     /**
      * The Provider Type.
@@ -163,12 +139,36 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
     public VpnProxyServer proxyServer;
 
     /**
-     * The Opt In To Device Id Sharing.
-     * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
+     * The Realm.
+     * Realm when connection type is set to Pulse Secure.
      */
-    @SerializedName("optInToDeviceIdSharing")
+    @SerializedName("realm")
     @Expose
-    public Boolean optInToDeviceIdSharing;
+    public String realm;
+
+    /**
+     * The Role.
+     * Role when connection type is set to Pulse Secure.
+     */
+    @SerializedName("role")
+    @Expose
+    public String role;
+
+    /**
+     * The Safari Domains.
+     * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
+     */
+    @SerializedName("safariDomains")
+    @Expose
+    public java.util.List<String> safariDomains;
+
+    /**
+     * The Server.
+     * VPN Server on the network. Make sure end users can access this network location.
+     */
+    @SerializedName("server")
+    @Expose
+    public VpnServer server;
 
 
     /**

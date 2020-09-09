@@ -114,6 +114,27 @@ public class DeviceComplianceScriptDeviceStateRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a DeviceComplianceScriptDeviceState with a new object
+     *
+     * @param newDeviceComplianceScriptDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceScriptDeviceState newDeviceComplianceScriptDeviceState, final ICallback<DeviceComplianceScriptDeviceState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceScriptDeviceState);
+    }
+
+    /**
+     * Creates a DeviceComplianceScriptDeviceState with a new object
+     *
+     * @param newDeviceComplianceScriptDeviceState the object to create/update
+     * @return the created DeviceComplianceScriptDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceScriptDeviceState put(final DeviceComplianceScriptDeviceState newDeviceComplianceScriptDeviceState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceScriptDeviceState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

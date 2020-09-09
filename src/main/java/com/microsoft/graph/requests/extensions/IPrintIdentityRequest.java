@@ -80,6 +80,23 @@ public interface IPrintIdentityRequest extends IHttpRequest {
     PrintIdentity post(final PrintIdentity newPrintIdentity) throws ClientException;
 
     /**
+     * Posts a PrintIdentity with a new object
+     *
+     * @param newPrintIdentity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PrintIdentity newPrintIdentity, final ICallback<PrintIdentity> callback);
+
+    /**
+     * Posts a PrintIdentity with a new object
+     *
+     * @param newPrintIdentity the object to create/update
+     * @return the created PrintIdentity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PrintIdentity put(final PrintIdentity newPrintIdentity) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

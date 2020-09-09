@@ -119,6 +119,27 @@ public class UserTeamworkRequest extends BaseRequest implements IUserTeamworkReq
     }
 
     /**
+     * Creates a UserTeamwork with a new object
+     *
+     * @param newUserTeamwork the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserTeamwork newUserTeamwork, final ICallback<UserTeamwork> callback) {
+        send(HttpMethod.PUT, callback, newUserTeamwork);
+    }
+
+    /**
+     * Creates a UserTeamwork with a new object
+     *
+     * @param newUserTeamwork the object to create/update
+     * @return the created UserTeamwork
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserTeamwork put(final UserTeamwork newUserTeamwork) throws ClientException {
+        return send(HttpMethod.PUT, newUserTeamwork);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

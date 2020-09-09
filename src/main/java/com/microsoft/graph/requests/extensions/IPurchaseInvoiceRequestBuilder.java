@@ -10,8 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PurchaseInvoice;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,6 +37,13 @@ public interface IPurchaseInvoiceRequestBuilder extends IRequestBuilder {
     IPurchaseInvoiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    ICurrencyRequestBuilder currency();
+
     IPurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines();
 
     IPurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(final String id);
@@ -47,13 +54,6 @@ public interface IPurchaseInvoiceRequestBuilder extends IRequestBuilder {
      * @return the IVendorRequestBuilder instance
      */
     IVendorRequestBuilder vendor();
-
-    /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    ICurrencyRequestBuilder currency();
     IPurchaseInvoicePostRequestBuilder post();
 
 }

@@ -80,6 +80,23 @@ public interface IRoleScopeTagRequest extends IHttpRequest {
     RoleScopeTag post(final RoleScopeTag newRoleScopeTag) throws ClientException;
 
     /**
+     * Posts a RoleScopeTag with a new object
+     *
+     * @param newRoleScopeTag the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RoleScopeTag newRoleScopeTag, final ICallback<RoleScopeTag> callback);
+
+    /**
+     * Posts a RoleScopeTag with a new object
+     *
+     * @param newRoleScopeTag the object to create/update
+     * @return the created RoleScopeTag
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RoleScopeTag put(final RoleScopeTag newRoleScopeTag) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

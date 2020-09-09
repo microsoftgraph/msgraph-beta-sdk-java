@@ -80,6 +80,23 @@ public interface ICustomerPaymentJournalRequest extends IHttpRequest {
     CustomerPaymentJournal post(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException;
 
     /**
+     * Posts a CustomerPaymentJournal with a new object
+     *
+     * @param newCustomerPaymentJournal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback);
+
+    /**
+     * Posts a CustomerPaymentJournal with a new object
+     *
+     * @param newCustomerPaymentJournal the object to create/update
+     * @return the created CustomerPaymentJournal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CustomerPaymentJournal put(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

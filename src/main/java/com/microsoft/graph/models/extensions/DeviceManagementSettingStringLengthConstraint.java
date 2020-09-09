@@ -27,20 +27,20 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
 
 
     /**
-     * The Minimum Length.
-     * The minimum permitted string length
-     */
-    @SerializedName("minimumLength")
-    @Expose
-    public Integer minimumLength;
-
-    /**
      * The Maximum Length.
      * The maximum permitted string length
      */
     @SerializedName("maximumLength")
     @Expose
     public Integer maximumLength;
+
+    /**
+     * The Minimum Length.
+     * The minimum permitted string length
+     */
+    @SerializedName("minimumLength")
+    @Expose
+    public Integer minimumLength;
 
 
     /**

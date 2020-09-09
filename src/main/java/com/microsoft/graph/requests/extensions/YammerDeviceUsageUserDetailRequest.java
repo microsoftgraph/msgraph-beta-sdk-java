@@ -112,6 +112,27 @@ public class YammerDeviceUsageUserDetailRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a YammerDeviceUsageUserDetail with a new object
+     *
+     * @param newYammerDeviceUsageUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final YammerDeviceUsageUserDetail newYammerDeviceUsageUserDetail, final ICallback<YammerDeviceUsageUserDetail> callback) {
+        send(HttpMethod.PUT, callback, newYammerDeviceUsageUserDetail);
+    }
+
+    /**
+     * Creates a YammerDeviceUsageUserDetail with a new object
+     *
+     * @param newYammerDeviceUsageUserDetail the object to create/update
+     * @return the created YammerDeviceUsageUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public YammerDeviceUsageUserDetail put(final YammerDeviceUsageUserDetail newYammerDeviceUsageUserDetail) throws ClientException {
+        return send(HttpMethod.PUT, newYammerDeviceUsageUserDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

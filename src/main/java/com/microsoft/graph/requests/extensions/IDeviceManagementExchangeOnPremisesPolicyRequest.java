@@ -80,6 +80,23 @@ public interface IDeviceManagementExchangeOnPremisesPolicyRequest extends IHttpR
     DeviceManagementExchangeOnPremisesPolicy post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException;
 
     /**
+     * Posts a DeviceManagementExchangeOnPremisesPolicy with a new object
+     *
+     * @param newDeviceManagementExchangeOnPremisesPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<DeviceManagementExchangeOnPremisesPolicy> callback);
+
+    /**
+     * Posts a DeviceManagementExchangeOnPremisesPolicy with a new object
+     *
+     * @param newDeviceManagementExchangeOnPremisesPolicy the object to create/update
+     * @return the created DeviceManagementExchangeOnPremisesPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementExchangeOnPremisesPolicy put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

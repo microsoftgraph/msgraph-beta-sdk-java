@@ -112,6 +112,27 @@ public class DepEnrollmentProfileRequest extends BaseRequest implements IDepEnro
     }
 
     /**
+     * Creates a DepEnrollmentProfile with a new object
+     *
+     * @param newDepEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DepEnrollmentProfile newDepEnrollmentProfile, final ICallback<DepEnrollmentProfile> callback) {
+        send(HttpMethod.PUT, callback, newDepEnrollmentProfile);
+    }
+
+    /**
+     * Creates a DepEnrollmentProfile with a new object
+     *
+     * @param newDepEnrollmentProfile the object to create/update
+     * @return the created DepEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DepEnrollmentProfile put(final DepEnrollmentProfile newDepEnrollmentProfile) throws ClientException {
+        return send(HttpMethod.PUT, newDepEnrollmentProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

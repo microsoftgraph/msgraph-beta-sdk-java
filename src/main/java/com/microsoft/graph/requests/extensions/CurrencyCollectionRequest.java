@@ -62,14 +62,14 @@ public class CurrencyCollectionRequest extends BaseCollectionRequest<CurrencyCol
     public void post(final Currency newCurrency, final ICallback<Currency> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CurrencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCurrency, callback);
     }
 
     public Currency post(final Currency newCurrency) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CurrencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCurrency);
     }
 
@@ -106,6 +106,27 @@ public class CurrencyCollectionRequest extends BaseCollectionRequest<CurrencyCol
         return (CurrencyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICurrencyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CurrencyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICurrencyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICurrencyCollectionRequest)this;
+    }
     public ICurrencyCollectionPage buildFromResponse(final CurrencyCollectionResponse response) {
         final ICurrencyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

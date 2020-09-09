@@ -61,14 +61,14 @@ public class TermCollectionRequest extends BaseCollectionRequest<TermCollectionR
     public void post(final Term newTerm, final ICallback<Term> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTerm, callback);
     }
 
     public Term post(final Term newTerm) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTerm);
     }
 
@@ -105,6 +105,27 @@ public class TermCollectionRequest extends BaseCollectionRequest<TermCollectionR
         return (TermCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITermCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TermCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITermCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITermCollectionRequest)this;
+    }
     public ITermCollectionPage buildFromResponse(final TermCollectionResponse response) {
         final ITermCollectionRequestBuilder builder;
         if (response.nextLink != null) {

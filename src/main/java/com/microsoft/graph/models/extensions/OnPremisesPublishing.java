@@ -9,10 +9,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ExternalAuthenticationType;
+import com.microsoft.graph.models.extensions.OnPremisesPublishingSingleSignOn;
+import com.microsoft.graph.models.extensions.VerifiedCustomDomainCertificatesMetadata;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.models.extensions.VerifiedCustomDomainCertificatesMetadata;
-import com.microsoft.graph.models.extensions.OnPremisesPublishingSingleSignOn;
 
 
 import com.google.gson.JsonObject;
@@ -41,6 +41,38 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     }
 
     /**
+     * The Alternate Url.
+     * 
+     */
+    @SerializedName("alternateUrl")
+    @Expose
+    public String alternateUrl;
+
+    /**
+     * The Application Server Timeout.
+     * 
+     */
+    @SerializedName("applicationServerTimeout")
+    @Expose
+    public String applicationServerTimeout;
+
+    /**
+     * The Application Type.
+     * 
+     */
+    @SerializedName("applicationType")
+    @Expose
+    public String applicationType;
+
+    /**
+     * The External Authentication Type.
+     * 
+     */
+    @SerializedName("externalAuthenticationType")
+    @Expose
+    public ExternalAuthenticationType externalAuthenticationType;
+
+    /**
      * The External Url.
      * 
      */
@@ -57,12 +89,36 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     public String internalUrl;
 
     /**
-     * The External Authentication Type.
+     * The Is Http Only Cookie Enabled.
      * 
      */
-    @SerializedName("externalAuthenticationType")
+    @SerializedName("isHttpOnlyCookieEnabled")
     @Expose
-    public ExternalAuthenticationType externalAuthenticationType;
+    public Boolean isHttpOnlyCookieEnabled;
+
+    /**
+     * The Is On Prem Publishing Enabled.
+     * 
+     */
+    @SerializedName("isOnPremPublishingEnabled")
+    @Expose
+    public Boolean isOnPremPublishingEnabled;
+
+    /**
+     * The Is Persistent Cookie Enabled.
+     * 
+     */
+    @SerializedName("isPersistentCookieEnabled")
+    @Expose
+    public Boolean isPersistentCookieEnabled;
+
+    /**
+     * The Is Secure Cookie Enabled.
+     * 
+     */
+    @SerializedName("isSecureCookieEnabled")
+    @Expose
+    public Boolean isSecureCookieEnabled;
 
     /**
      * The Is Translate Host Header Enabled.
@@ -81,20 +137,28 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     public Boolean isTranslateLinksInBodyEnabled;
 
     /**
-     * The Is On Prem Publishing Enabled.
+     * The Single Sign On Settings.
      * 
      */
-    @SerializedName("isOnPremPublishingEnabled")
+    @SerializedName("singleSignOnSettings")
     @Expose
-    public Boolean isOnPremPublishingEnabled;
+    public OnPremisesPublishingSingleSignOn singleSignOnSettings;
 
     /**
-     * The Application Server Timeout.
+     * The Use Alternate Url For Translation And Redirect.
      * 
      */
-    @SerializedName("applicationServerTimeout")
+    @SerializedName("useAlternateUrlForTranslationAndRedirect")
     @Expose
-    public String applicationServerTimeout;
+    public Boolean useAlternateUrlForTranslationAndRedirect;
+
+    /**
+     * The Verified Custom Domain Certificates Metadata.
+     * 
+     */
+    @SerializedName("verifiedCustomDomainCertificatesMetadata")
+    @Expose
+    public VerifiedCustomDomainCertificatesMetadata verifiedCustomDomainCertificatesMetadata;
 
     /**
      * The Verified Custom Domain Key Credential.
@@ -111,70 +175,6 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     @SerializedName("verifiedCustomDomainPasswordCredential")
     @Expose
     public PasswordCredential verifiedCustomDomainPasswordCredential;
-
-    /**
-     * The Verified Custom Domain Certificates Metadata.
-     * 
-     */
-    @SerializedName("verifiedCustomDomainCertificatesMetadata")
-    @Expose
-    public VerifiedCustomDomainCertificatesMetadata verifiedCustomDomainCertificatesMetadata;
-
-    /**
-     * The Single Sign On Settings.
-     * 
-     */
-    @SerializedName("singleSignOnSettings")
-    @Expose
-    public OnPremisesPublishingSingleSignOn singleSignOnSettings;
-
-    /**
-     * The Application Type.
-     * 
-     */
-    @SerializedName("applicationType")
-    @Expose
-    public String applicationType;
-
-    /**
-     * The Is Http Only Cookie Enabled.
-     * 
-     */
-    @SerializedName("isHttpOnlyCookieEnabled")
-    @Expose
-    public Boolean isHttpOnlyCookieEnabled;
-
-    /**
-     * The Is Secure Cookie Enabled.
-     * 
-     */
-    @SerializedName("isSecureCookieEnabled")
-    @Expose
-    public Boolean isSecureCookieEnabled;
-
-    /**
-     * The Is Persistent Cookie Enabled.
-     * 
-     */
-    @SerializedName("isPersistentCookieEnabled")
-    @Expose
-    public Boolean isPersistentCookieEnabled;
-
-    /**
-     * The Alternate Url.
-     * 
-     */
-    @SerializedName("alternateUrl")
-    @Expose
-    public String alternateUrl;
-
-    /**
-     * The Use Alternate Url For Translation And Redirect.
-     * 
-     */
-    @SerializedName("useAlternateUrlForTranslationAndRedirect")
-    @Expose
-    public Boolean useAlternateUrlForTranslationAndRedirect;
 
 
     /**

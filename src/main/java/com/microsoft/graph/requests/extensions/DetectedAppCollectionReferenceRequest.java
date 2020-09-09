@@ -40,7 +40,7 @@ public class DetectedAppCollectionReferenceRequest extends BaseCollectionRequest
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/detectedApps/" + newDetectedApp.id);
         new DetectedAppWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDetectedApp, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class DetectedAppCollectionReferenceRequest extends BaseCollectionRequest
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceManagement/detectedApps/" + newDetectedApp.id);
         return new DetectedAppWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newDetectedApp, body);
     }
     /**

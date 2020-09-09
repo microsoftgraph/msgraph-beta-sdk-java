@@ -47,20 +47,20 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
     public SynchronizationStatus status;
 
     /**
-     * The Template Id.
-     * 
-     */
-    @SerializedName("templateId")
-    @Expose
-    public String templateId;
-
-    /**
      * The Synchronization Job Settings.
      * 
      */
     @SerializedName("synchronizationJobSettings")
     @Expose
     public java.util.List<KeyValuePair> synchronizationJobSettings;
+
+    /**
+     * The Template Id.
+     * 
+     */
+    @SerializedName("templateId")
+    @Expose
+    public String templateId;
 
     /**
      * The Schema.

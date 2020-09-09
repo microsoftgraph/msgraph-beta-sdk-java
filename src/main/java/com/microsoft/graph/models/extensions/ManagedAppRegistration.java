@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ManagedAppFlaggedReason;
 import com.microsoft.graph.models.extensions.MobileAppIdentifier;
+import com.microsoft.graph.models.generated.ManagedAppFlaggedReason;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import com.microsoft.graph.models.extensions.Entity;
@@ -35,12 +35,84 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
 
     /**
+     * The App Identifier.
+     * The app package Identifier
+     */
+    @SerializedName("appIdentifier")
+    @Expose
+    public MobileAppIdentifier appIdentifier;
+
+    /**
+     * The Application Version.
+     * App version
+     */
+    @SerializedName("applicationVersion")
+    @Expose
+    public String applicationVersion;
+
+    /**
+     * The Azure ADDevice Id.
+     * The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
+     */
+    @SerializedName("azureADDeviceId")
+    @Expose
+    public String azureADDeviceId;
+
+    /**
      * The Created Date Time.
      * Date and time of creation
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Device Manufacturer.
+     * The device manufacturer for the current app registration 
+     */
+    @SerializedName("deviceManufacturer")
+    @Expose
+    public String deviceManufacturer;
+
+    /**
+     * The Device Model.
+     * The device model for the current app registration 
+     */
+    @SerializedName("deviceModel")
+    @Expose
+    public String deviceModel;
+
+    /**
+     * The Device Name.
+     * Host device name
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
+     * The Device Tag.
+     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
+     */
+    @SerializedName("deviceTag")
+    @Expose
+    public String deviceTag;
+
+    /**
+     * The Device Type.
+     * Host device type
+     */
+    @SerializedName("deviceType")
+    @Expose
+    public String deviceType;
+
+    /**
+     * The Flagged Reasons.
+     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
+     */
+    @SerializedName("flaggedReasons")
+    @Expose
+    public java.util.List<ManagedAppFlaggedReason> flaggedReasons;
 
     /**
      * The Last Sync Date Time.
@@ -51,12 +123,12 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     public java.util.Calendar lastSyncDateTime;
 
     /**
-     * The Application Version.
-     * App version
+     * The Managed Device Id.
+     * The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
      */
-    @SerializedName("applicationVersion")
+    @SerializedName("managedDeviceId")
     @Expose
-    public String applicationVersion;
+    public String managedDeviceId;
 
     /**
      * The Management Sdk Version.
@@ -75,84 +147,12 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     public String platformVersion;
 
     /**
-     * The Device Type.
-     * Host device type
-     */
-    @SerializedName("deviceType")
-    @Expose
-    public String deviceType;
-
-    /**
-     * The Device Tag.
-     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
-     */
-    @SerializedName("deviceTag")
-    @Expose
-    public String deviceTag;
-
-    /**
-     * The Device Name.
-     * Host device name
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
-     * The Managed Device Id.
-     * The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
-     */
-    @SerializedName("managedDeviceId")
-    @Expose
-    public String managedDeviceId;
-
-    /**
-     * The Azure ADDevice Id.
-     * The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
-     */
-    @SerializedName("azureADDeviceId")
-    @Expose
-    public String azureADDeviceId;
-
-    /**
-     * The Device Model.
-     * The device model for the current app registration 
-     */
-    @SerializedName("deviceModel")
-    @Expose
-    public String deviceModel;
-
-    /**
-     * The Device Manufacturer.
-     * The device manufacturer for the current app registration 
-     */
-    @SerializedName("deviceManufacturer")
-    @Expose
-    public String deviceManufacturer;
-
-    /**
-     * The Flagged Reasons.
-     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     */
-    @SerializedName("flaggedReasons")
-    @Expose
-    public java.util.List<ManagedAppFlaggedReason> flaggedReasons;
-
-    /**
      * The User Id.
      * The user Id to who this app registration belongs.
      */
     @SerializedName("userId")
     @Expose
     public String userId;
-
-    /**
-     * The App Identifier.
-     * The app package Identifier
-     */
-    @SerializedName("appIdentifier")
-    @Expose
-    public MobileAppIdentifier appIdentifier;
 
     /**
      * The Version.

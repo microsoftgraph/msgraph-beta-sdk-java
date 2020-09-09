@@ -51,6 +51,13 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
     }
 
 
+    public IManagedEBookAssignmentCollectionRequestBuilder assignments() {
+        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
+        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
     public IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories() {
         return new ManagedEBookCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
@@ -58,12 +65,12 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
     public IManagedEBookCategoryWithReferenceRequestBuilder categories(final String id) {
         return new ManagedEBookCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IManagedEBookAssignmentCollectionRequestBuilder assignments() {
-        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
-    public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
-        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
+        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -73,13 +80,6 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
      */
     public IEBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
-    }
-    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
-        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
-    }
-
-    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
-        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
     public IUserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);

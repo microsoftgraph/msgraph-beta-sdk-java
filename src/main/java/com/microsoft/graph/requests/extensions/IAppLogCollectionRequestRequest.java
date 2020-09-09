@@ -80,6 +80,23 @@ public interface IAppLogCollectionRequestRequest extends IHttpRequest {
     AppLogCollectionRequest post(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException;
 
     /**
+     * Posts a AppLogCollectionRequest with a new object
+     *
+     * @param newAppLogCollectionRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<AppLogCollectionRequest> callback);
+
+    /**
+     * Posts a AppLogCollectionRequest with a new object
+     *
+     * @param newAppLogCollectionRequest the object to create/update
+     * @return the created AppLogCollectionRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppLogCollectionRequest put(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

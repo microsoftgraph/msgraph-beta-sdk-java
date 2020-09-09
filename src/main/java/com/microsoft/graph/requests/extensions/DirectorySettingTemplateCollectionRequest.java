@@ -61,14 +61,14 @@ public class DirectorySettingTemplateCollectionRequest extends BaseCollectionReq
     public void post(final DirectorySettingTemplate newDirectorySettingTemplate, final ICallback<DirectorySettingTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectorySettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectorySettingTemplate, callback);
     }
 
     public DirectorySettingTemplate post(final DirectorySettingTemplate newDirectorySettingTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectorySettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectorySettingTemplate);
     }
 
@@ -105,6 +105,27 @@ public class DirectorySettingTemplateCollectionRequest extends BaseCollectionReq
         return (DirectorySettingTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDirectorySettingTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DirectorySettingTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDirectorySettingTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDirectorySettingTemplateCollectionRequest)this;
+    }
     public IDirectorySettingTemplateCollectionPage buildFromResponse(final DirectorySettingTemplateCollectionResponse response) {
         final IDirectorySettingTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

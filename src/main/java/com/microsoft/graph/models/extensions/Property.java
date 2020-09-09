@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PropertyType;
 import com.microsoft.graph.models.generated.Label;
+import com.microsoft.graph.models.generated.PropertyType;
 
 
 import com.google.gson.JsonObject;
@@ -38,6 +38,62 @@ public class Property implements IJsonBackedObject {
     }
 
     /**
+     * The Aliases.
+     * 
+     */
+    @SerializedName("aliases")
+    @Expose
+    public java.util.List<String> aliases;
+
+    /**
+     * The Is Content.
+     * 
+     */
+    @SerializedName("isContent")
+    @Expose
+    public Boolean isContent;
+
+    /**
+     * The Is Queryable.
+     * 
+     */
+    @SerializedName("isQueryable")
+    @Expose
+    public Boolean isQueryable;
+
+    /**
+     * The Is Refinable.
+     * 
+     */
+    @SerializedName("isRefinable")
+    @Expose
+    public Boolean isRefinable;
+
+    /**
+     * The Is Retrievable.
+     * 
+     */
+    @SerializedName("isRetrievable")
+    @Expose
+    public Boolean isRetrievable;
+
+    /**
+     * The Is Searchable.
+     * 
+     */
+    @SerializedName("isSearchable")
+    @Expose
+    public Boolean isSearchable;
+
+    /**
+     * The Labels.
+     * 
+     */
+    @SerializedName("labels")
+    @Expose
+    public java.util.List<Label> labels;
+
+    /**
      * The Name.
      * 
      */
@@ -52,62 +108,6 @@ public class Property implements IJsonBackedObject {
     @SerializedName("type")
     @Expose
     public PropertyType type;
-
-    /**
-     * The Is Searchable.
-     * 
-     */
-    @SerializedName("isSearchable")
-    @Expose
-    public Boolean isSearchable;
-
-    /**
-     * The Is Retrievable.
-     * 
-     */
-    @SerializedName("isRetrievable")
-    @Expose
-    public Boolean isRetrievable;
-
-    /**
-     * The Is Queryable.
-     * 
-     */
-    @SerializedName("isQueryable")
-    @Expose
-    public Boolean isQueryable;
-
-    /**
-     * The Is Content.
-     * 
-     */
-    @SerializedName("isContent")
-    @Expose
-    public Boolean isContent;
-
-    /**
-     * The Is Refinable.
-     * 
-     */
-    @SerializedName("isRefinable")
-    @Expose
-    public Boolean isRefinable;
-
-    /**
-     * The Aliases.
-     * 
-     */
-    @SerializedName("aliases")
-    @Expose
-    public java.util.List<String> aliases;
-
-    /**
-     * The Labels.
-     * 
-     */
-    @SerializedName("labels")
-    @Expose
-    public java.util.List<Label> labels;
 
 
     /**

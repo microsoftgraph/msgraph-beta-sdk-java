@@ -27,100 +27,12 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
 
 
     /**
-     * The Is Default.
-     * Indicates if this is the default profile
-     */
-    @SerializedName("isDefault")
-    @Expose
-    public Boolean isDefault;
-
-    /**
-     * The Supervised Mode Enabled.
-     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-     */
-    @SerializedName("supervisedModeEnabled")
-    @Expose
-    public Boolean supervisedModeEnabled;
-
-    /**
-     * The Support Department.
-     * Support department information
-     */
-    @SerializedName("supportDepartment")
-    @Expose
-    public String supportDepartment;
-
-    /**
-     * The Pass Code Disabled.
-     * Indicates if Passcode setup pane is disabled
-     */
-    @SerializedName("passCodeDisabled")
-    @Expose
-    public Boolean passCodeDisabled;
-
-    /**
-     * The Is Mandatory.
-     * Indicates if the profile is mandatory
-     */
-    @SerializedName("isMandatory")
-    @Expose
-    public Boolean isMandatory;
-
-    /**
-     * The Location Disabled.
-     * Indicates if Location service setup pane is disabled
-     */
-    @SerializedName("locationDisabled")
-    @Expose
-    public Boolean locationDisabled;
-
-    /**
-     * The Support Phone Number.
-     * Support phone number
-     */
-    @SerializedName("supportPhoneNumber")
-    @Expose
-    public String supportPhoneNumber;
-
-    /**
-     * The Profile Removal Disabled.
-     * Indicates if the profile removal option is disabled
-     */
-    @SerializedName("profileRemovalDisabled")
-    @Expose
-    public Boolean profileRemovalDisabled;
-
-    /**
-     * The Restore Blocked.
-     * Indicates if Restore setup pane is blocked
-     */
-    @SerializedName("restoreBlocked")
-    @Expose
-    public Boolean restoreBlocked;
-
-    /**
      * The Apple Id Disabled.
      * Indicates if Apple id setup pane is disabled
      */
     @SerializedName("appleIdDisabled")
     @Expose
     public Boolean appleIdDisabled;
-
-    /**
-     * The Terms And Conditions Disabled.
-     * Indicates if 'Terms and Conditions' setup pane is disabled
-     */
-    @SerializedName("termsAndConditionsDisabled")
-    @Expose
-    public Boolean termsAndConditionsDisabled;
-
-    /**
-     * The Touch Id Disabled.
-     * Indicates if touch id setup pane is disabled
-     */
-    @SerializedName("touchIdDisabled")
-    @Expose
-    public Boolean touchIdDisabled;
 
     /**
      * The Apple Pay Disabled.
@@ -131,20 +43,20 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     public Boolean applePayDisabled;
 
     /**
-     * The Zoom Disabled.
-     * Indicates if zoom setup pane is disabled
+     * The Configuration Web Url.
+     * URL for setup assistant login
      */
-    @SerializedName("zoomDisabled")
+    @SerializedName("configurationWebUrl")
     @Expose
-    public Boolean zoomDisabled;
+    public Boolean configurationWebUrl;
 
     /**
-     * The Siri Disabled.
-     * Indicates if siri setup pane is disabled
+     * The Device Name Template.
+     * Sets a literal or name pattern.
      */
-    @SerializedName("siriDisabled")
+    @SerializedName("deviceNameTemplate")
     @Expose
-    public Boolean siriDisabled;
+    public String deviceNameTemplate;
 
     /**
      * The Diagnostics Disabled.
@@ -163,12 +75,60 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     public Boolean displayToneSetupDisabled;
 
     /**
+     * The Is Default.
+     * Indicates if this is the default profile
+     */
+    @SerializedName("isDefault")
+    @Expose
+    public Boolean isDefault;
+
+    /**
+     * The Is Mandatory.
+     * Indicates if the profile is mandatory
+     */
+    @SerializedName("isMandatory")
+    @Expose
+    public Boolean isMandatory;
+
+    /**
+     * The Location Disabled.
+     * Indicates if Location service setup pane is disabled
+     */
+    @SerializedName("locationDisabled")
+    @Expose
+    public Boolean locationDisabled;
+
+    /**
+     * The Pass Code Disabled.
+     * Indicates if Passcode setup pane is disabled
+     */
+    @SerializedName("passCodeDisabled")
+    @Expose
+    public Boolean passCodeDisabled;
+
+    /**
      * The Privacy Pane Disabled.
      * Indicates if privacy screen is disabled
      */
     @SerializedName("privacyPaneDisabled")
     @Expose
     public Boolean privacyPaneDisabled;
+
+    /**
+     * The Profile Removal Disabled.
+     * Indicates if the profile removal option is disabled
+     */
+    @SerializedName("profileRemovalDisabled")
+    @Expose
+    public Boolean profileRemovalDisabled;
+
+    /**
+     * The Restore Blocked.
+     * Indicates if Restore setup pane is blocked
+     */
+    @SerializedName("restoreBlocked")
+    @Expose
+    public Boolean restoreBlocked;
 
     /**
      * The Screen Time Screen Disabled.
@@ -179,20 +139,60 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     public Boolean screenTimeScreenDisabled;
 
     /**
-     * The Device Name Template.
-     * Sets a literal or name pattern.
+     * The Siri Disabled.
+     * Indicates if siri setup pane is disabled
      */
-    @SerializedName("deviceNameTemplate")
+    @SerializedName("siriDisabled")
     @Expose
-    public String deviceNameTemplate;
+    public Boolean siriDisabled;
 
     /**
-     * The Configuration Web Url.
-     * URL for setup assistant login
+     * The Supervised Mode Enabled.
+     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      */
-    @SerializedName("configurationWebUrl")
+    @SerializedName("supervisedModeEnabled")
     @Expose
-    public Boolean configurationWebUrl;
+    public Boolean supervisedModeEnabled;
+
+    /**
+     * The Support Department.
+     * Support department information
+     */
+    @SerializedName("supportDepartment")
+    @Expose
+    public String supportDepartment;
+
+    /**
+     * The Support Phone Number.
+     * Support phone number
+     */
+    @SerializedName("supportPhoneNumber")
+    @Expose
+    public String supportPhoneNumber;
+
+    /**
+     * The Terms And Conditions Disabled.
+     * Indicates if 'Terms and Conditions' setup pane is disabled
+     */
+    @SerializedName("termsAndConditionsDisabled")
+    @Expose
+    public Boolean termsAndConditionsDisabled;
+
+    /**
+     * The Touch Id Disabled.
+     * Indicates if touch id setup pane is disabled
+     */
+    @SerializedName("touchIdDisabled")
+    @Expose
+    public Boolean touchIdDisabled;
+
+    /**
+     * The Zoom Disabled.
+     * Indicates if zoom setup pane is disabled
+     */
+    @SerializedName("zoomDisabled")
+    @Expose
+    public Boolean zoomDisabled;
 
 
     /**

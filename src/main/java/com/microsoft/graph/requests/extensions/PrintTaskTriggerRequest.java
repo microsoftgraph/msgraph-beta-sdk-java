@@ -114,6 +114,27 @@ public class PrintTaskTriggerRequest extends BaseRequest implements IPrintTaskTr
     }
 
     /**
+     * Creates a PrintTaskTrigger with a new object
+     *
+     * @param newPrintTaskTrigger the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintTaskTrigger newPrintTaskTrigger, final ICallback<PrintTaskTrigger> callback) {
+        send(HttpMethod.PUT, callback, newPrintTaskTrigger);
+    }
+
+    /**
+     * Creates a PrintTaskTrigger with a new object
+     *
+     * @param newPrintTaskTrigger the object to create/update
+     * @return the created PrintTaskTrigger
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintTaskTrigger put(final PrintTaskTrigger newPrintTaskTrigger) throws ClientException {
+        return send(HttpMethod.PUT, newPrintTaskTrigger);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

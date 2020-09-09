@@ -112,6 +112,27 @@ public class DeviceHealthScriptRunSummaryRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a DeviceHealthScriptRunSummary with a new object
+     *
+     * @param newDeviceHealthScriptRunSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary, final ICallback<DeviceHealthScriptRunSummary> callback) {
+        send(HttpMethod.PUT, callback, newDeviceHealthScriptRunSummary);
+    }
+
+    /**
+     * Creates a DeviceHealthScriptRunSummary with a new object
+     *
+     * @param newDeviceHealthScriptRunSummary the object to create/update
+     * @return the created DeviceHealthScriptRunSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceHealthScriptRunSummary put(final DeviceHealthScriptRunSummary newDeviceHealthScriptRunSummary) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceHealthScriptRunSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

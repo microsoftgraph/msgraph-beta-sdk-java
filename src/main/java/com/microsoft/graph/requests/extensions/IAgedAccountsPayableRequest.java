@@ -80,6 +80,23 @@ public interface IAgedAccountsPayableRequest extends IHttpRequest {
     AgedAccountsPayable post(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException;
 
     /**
+     * Posts a AgedAccountsPayable with a new object
+     *
+     * @param newAgedAccountsPayable the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback);
+
+    /**
+     * Posts a AgedAccountsPayable with a new object
+     *
+     * @param newAgedAccountsPayable the object to create/update
+     * @return the created AgedAccountsPayable
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AgedAccountsPayable put(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

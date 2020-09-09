@@ -80,6 +80,23 @@ public interface IAttributeMappingFunctionSchemaRequest extends IHttpRequest {
     AttributeMappingFunctionSchema post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException;
 
     /**
+     * Posts a AttributeMappingFunctionSchema with a new object
+     *
+     * @param newAttributeMappingFunctionSchema the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback);
+
+    /**
+     * Posts a AttributeMappingFunctionSchema with a new object
+     *
+     * @param newAttributeMappingFunctionSchema the object to create/update
+     * @return the created AttributeMappingFunctionSchema
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AttributeMappingFunctionSchema put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

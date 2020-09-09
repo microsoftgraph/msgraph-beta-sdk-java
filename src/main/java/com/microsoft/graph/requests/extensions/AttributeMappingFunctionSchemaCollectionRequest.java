@@ -61,14 +61,14 @@ public class AttributeMappingFunctionSchemaCollectionRequest extends BaseCollect
     public void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<AttributeMappingFunctionSchema> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttributeMappingFunctionSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAttributeMappingFunctionSchema, callback);
     }
 
     public AttributeMappingFunctionSchema post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AttributeMappingFunctionSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAttributeMappingFunctionSchema);
     }
 
@@ -105,6 +105,27 @@ public class AttributeMappingFunctionSchemaCollectionRequest extends BaseCollect
         return (AttributeMappingFunctionSchemaCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAttributeMappingFunctionSchemaCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AttributeMappingFunctionSchemaCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAttributeMappingFunctionSchemaCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAttributeMappingFunctionSchemaCollectionRequest)this;
+    }
     public IAttributeMappingFunctionSchemaCollectionPage buildFromResponse(final AttributeMappingFunctionSchemaCollectionResponse response) {
         final IAttributeMappingFunctionSchemaCollectionRequestBuilder builder;
         if (response.nextLink != null) {

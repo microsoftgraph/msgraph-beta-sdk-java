@@ -112,6 +112,27 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a GroupPolicyConfigurationAssignment with a new object
+     *
+     * @param newGroupPolicyConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<GroupPolicyConfigurationAssignment> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyConfigurationAssignment);
+    }
+
+    /**
+     * Creates a GroupPolicyConfigurationAssignment with a new object
+     *
+     * @param newGroupPolicyConfigurationAssignment the object to create/update
+     * @return the created GroupPolicyConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyConfigurationAssignment put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyConfigurationAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EducationItemBody;
-import com.microsoft.graph.models.extensions.RubricQuality;
-import com.microsoft.graph.models.extensions.RubricLevel;
-import com.microsoft.graph.models.extensions.EducationAssignmentGradeType;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.EducationItemBody;
+import com.microsoft.graph.models.extensions.EducationAssignmentGradeType;
+import com.microsoft.graph.models.extensions.RubricLevel;
+import com.microsoft.graph.models.extensions.RubricQuality;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -32,44 +32,12 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
+     * The Created By.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("createdBy")
     @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public EducationItemBody description;
-
-    /**
-     * The Qualities.
-     * 
-     */
-    @SerializedName("qualities")
-    @Expose
-    public java.util.List<RubricQuality> qualities;
-
-    /**
-     * The Levels.
-     * 
-     */
-    @SerializedName("levels")
-    @Expose
-    public java.util.List<RubricLevel> levels;
-
-    /**
-     * The Grading.
-     * 
-     */
-    @SerializedName("grading")
-    @Expose
-    public EducationAssignmentGradeType grading;
+    public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
@@ -80,12 +48,36 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Created By.
+     * The Description.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName("description")
     @Expose
-    public IdentitySet createdBy;
+    public EducationItemBody description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Grading.
+     * 
+     */
+    @SerializedName("grading")
+    @Expose
+    public EducationAssignmentGradeType grading;
+
+    /**
+     * The Last Modified By.
+     * 
+     */
+    @SerializedName("lastModifiedBy")
+    @Expose
+    public IdentitySet lastModifiedBy;
 
     /**
      * The Last Modified Date Time.
@@ -96,12 +88,20 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Last Modified By.
+     * The Levels.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName("levels")
     @Expose
-    public IdentitySet lastModifiedBy;
+    public java.util.List<RubricLevel> levels;
+
+    /**
+     * The Qualities.
+     * 
+     */
+    @SerializedName("qualities")
+    @Expose
+    public java.util.List<RubricQuality> qualities;
 
 
     /**

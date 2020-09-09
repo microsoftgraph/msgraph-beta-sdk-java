@@ -80,6 +80,23 @@ public interface IPaymentMethodRequest extends IHttpRequest {
     PaymentMethod post(final PaymentMethod newPaymentMethod) throws ClientException;
 
     /**
+     * Posts a PaymentMethod with a new object
+     *
+     * @param newPaymentMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PaymentMethod newPaymentMethod, final ICallback<PaymentMethod> callback);
+
+    /**
+     * Posts a PaymentMethod with a new object
+     *
+     * @param newPaymentMethod the object to create/update
+     * @return the created PaymentMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PaymentMethod put(final PaymentMethod newPaymentMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

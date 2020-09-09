@@ -65,14 +65,14 @@ public class DeviceManagementScriptCollectionRequest extends BaseCollectionReque
     public void post(final DeviceManagementScript newDeviceManagementScript, final ICallback<DeviceManagementScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementScript, callback);
     }
 
     public DeviceManagementScript post(final DeviceManagementScript newDeviceManagementScript) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementScript);
     }
 
@@ -109,6 +109,27 @@ public class DeviceManagementScriptCollectionRequest extends BaseCollectionReque
         return (DeviceManagementScriptCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementScriptCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementScriptCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementScriptCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementScriptCollectionRequest)this;
+    }
     public IDeviceManagementScriptCollectionPage buildFromResponse(final DeviceManagementScriptCollectionResponse response) {
         final IDeviceManagementScriptCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsDevicePerformanceRequest extends IHttpR
     UserExperienceAnalyticsDevicePerformance post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsDevicePerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsDevicePerformance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<UserExperienceAnalyticsDevicePerformance> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsDevicePerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsDevicePerformance the object to create/update
+     * @return the created UserExperienceAnalyticsDevicePerformance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsDevicePerformance put(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

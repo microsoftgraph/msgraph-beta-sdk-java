@@ -44,12 +44,12 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
     public String appleIdentifier;
 
     /**
-     * The Token Expiration Date Time.
-     * When the token will expire.
+     * The Data Sharing Consent Granted.
+     * Consent granted for data sharing with Apple Dep Service
      */
-    @SerializedName("tokenExpirationDateTime")
+    @SerializedName("dataSharingConsentGranted")
     @Expose
-    public java.util.Calendar tokenExpirationDateTime;
+    public Boolean dataSharingConsentGranted;
 
     /**
      * The Last Modified Date Time.
@@ -68,12 +68,28 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastSuccessfulSyncDateTime;
 
     /**
+     * The Last Sync Error Code.
+     * Error code reported by Apple during last dep sync.
+     */
+    @SerializedName("lastSyncErrorCode")
+    @Expose
+    public Integer lastSyncErrorCode;
+
+    /**
      * The Last Sync Triggered Date Time.
      * When Intune last requested a sync.
      */
     @SerializedName("lastSyncTriggeredDateTime")
     @Expose
     public java.util.Calendar lastSyncTriggeredDateTime;
+
+    /**
+     * The Role Scope Tag Ids.
+     * List of Scope Tags for this Entity instance.
+     */
+    @SerializedName("roleScopeTagIds")
+    @Expose
+    public java.util.List<String> roleScopeTagIds;
 
     /**
      * The Share Token With School Data Sync Service.
@@ -84,20 +100,20 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
     public Boolean shareTokenWithSchoolDataSyncService;
 
     /**
-     * The Last Sync Error Code.
-     * Error code reported by Apple during last dep sync.
+     * The Synced Device Count.
+     * Gets synced device count
      */
-    @SerializedName("lastSyncErrorCode")
+    @SerializedName("syncedDeviceCount")
     @Expose
-    public Integer lastSyncErrorCode;
+    public Integer syncedDeviceCount;
 
     /**
-     * The Token Type.
-     * Gets or sets the Dep Token Type.
+     * The Token Expiration Date Time.
+     * When the token will expire.
      */
-    @SerializedName("tokenType")
+    @SerializedName("tokenExpirationDateTime")
     @Expose
-    public DepTokenType tokenType;
+    public java.util.Calendar tokenExpirationDateTime;
 
     /**
      * The Token Name.
@@ -108,28 +124,12 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
     public String tokenName;
 
     /**
-     * The Synced Device Count.
-     * Gets synced device count
+     * The Token Type.
+     * Gets or sets the Dep Token Type.
      */
-    @SerializedName("syncedDeviceCount")
+    @SerializedName("tokenType")
     @Expose
-    public Integer syncedDeviceCount;
-
-    /**
-     * The Data Sharing Consent Granted.
-     * Consent granted for data sharing with Apple Dep Service
-     */
-    @SerializedName("dataSharingConsentGranted")
-    @Expose
-    public Boolean dataSharingConsentGranted;
-
-    /**
-     * The Role Scope Tag Ids.
-     * List of Scope Tags for this Entity instance.
-     */
-    @SerializedName("roleScopeTagIds")
-    @Expose
-    public java.util.List<String> roleScopeTagIds;
+    public DepTokenType tokenType;
 
     /**
      * The Default Ios Enrollment Profile.

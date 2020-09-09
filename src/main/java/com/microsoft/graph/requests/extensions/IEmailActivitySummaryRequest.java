@@ -80,6 +80,23 @@ public interface IEmailActivitySummaryRequest extends IHttpRequest {
     EmailActivitySummary post(final EmailActivitySummary newEmailActivitySummary) throws ClientException;
 
     /**
+     * Posts a EmailActivitySummary with a new object
+     *
+     * @param newEmailActivitySummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmailActivitySummary newEmailActivitySummary, final ICallback<EmailActivitySummary> callback);
+
+    /**
+     * Posts a EmailActivitySummary with a new object
+     *
+     * @param newEmailActivitySummary the object to create/update
+     * @return the created EmailActivitySummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmailActivitySummary put(final EmailActivitySummary newEmailActivitySummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

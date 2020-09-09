@@ -80,6 +80,23 @@ public interface IItemCategoryRequest extends IHttpRequest {
     ItemCategory post(final ItemCategory newItemCategory) throws ClientException;
 
     /**
+     * Posts a ItemCategory with a new object
+     *
+     * @param newItemCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ItemCategory newItemCategory, final ICallback<ItemCategory> callback);
+
+    /**
+     * Posts a ItemCategory with a new object
+     *
+     * @param newItemCategory the object to create/update
+     * @return the created ItemCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ItemCategory put(final ItemCategory newItemCategory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

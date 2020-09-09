@@ -27,68 +27,12 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Last Activity Date.
-     * 
-     */
-    @SerializedName("lastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
-
-    /**
-     * The Is Deleted.
-     * 
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
-
-    /**
-     * The Deleted Date.
-     * 
-     */
-    @SerializedName("deletedDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
-
-    /**
      * The Assigned Products.
      * 
      */
     @SerializedName("assignedProducts")
     @Expose
     public java.util.List<String> assignedProducts;
-
-    /**
-     * The Team Chat Message Count.
-     * 
-     */
-    @SerializedName("teamChatMessageCount")
-    @Expose
-    public Long teamChatMessageCount;
-
-    /**
-     * The Private Chat Message Count.
-     * 
-     */
-    @SerializedName("privateChatMessageCount")
-    @Expose
-    public Long privateChatMessageCount;
 
     /**
      * The Call Count.
@@ -99,12 +43,12 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     public Long callCount;
 
     /**
-     * The Meeting Count.
+     * The Deleted Date.
      * 
      */
-    @SerializedName("meetingCount")
+    @SerializedName("deletedDate")
     @Expose
-    public Long meetingCount;
+    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
      * The Has Other Action.
@@ -115,12 +59,68 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     public Boolean hasOtherAction;
 
     /**
+     * The Is Deleted.
+     * 
+     */
+    @SerializedName("isDeleted")
+    @Expose
+    public Boolean isDeleted;
+
+    /**
+     * The Last Activity Date.
+     * 
+     */
+    @SerializedName("lastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
+
+    /**
+     * The Meeting Count.
+     * 
+     */
+    @SerializedName("meetingCount")
+    @Expose
+    public Long meetingCount;
+
+    /**
+     * The Private Chat Message Count.
+     * 
+     */
+    @SerializedName("privateChatMessageCount")
+    @Expose
+    public Long privateChatMessageCount;
+
+    /**
      * The Report Period.
      * 
      */
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Team Chat Message Count.
+     * 
+     */
+    @SerializedName("teamChatMessageCount")
+    @Expose
+    public Long teamChatMessageCount;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

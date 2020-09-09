@@ -34,22 +34,6 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
 
     /**
-     * The Display Name.
-     * The display name of WindowsDefenderApplicationControl supplemental policy.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * The description of WindowsDefenderApplicationControl supplemental policy.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
      * The Content.
      * The WindowsDefenderApplicationControl supplemental policy content in byte array format.
      */
@@ -66,20 +50,28 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     public String contentFileName;
 
     /**
-     * The Version.
-     * The WindowsDefenderApplicationControl supplemental policy's version.
-     */
-    @SerializedName("version")
-    @Expose
-    public String version;
-
-    /**
      * The Creation Date Time.
      * The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
      */
     @SerializedName("creationDateTime")
     @Expose
     public java.util.Calendar creationDateTime;
+
+    /**
+     * The Description.
+     * The description of WindowsDefenderApplicationControl supplemental policy.
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * The display name of WindowsDefenderApplicationControl supplemental policy.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Last Modified Date Time.
@@ -96,6 +88,14 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     @SerializedName("roleScopeTagIds")
     @Expose
     public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The Version.
+     * The WindowsDefenderApplicationControl supplemental policy's version.
+     */
+    @SerializedName("version")
+    @Expose
+    public String version;
 
     /**
      * The Assignments.

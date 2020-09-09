@@ -112,6 +112,27 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a RegionalAndLanguageSettings with a new object
+     *
+     * @param newRegionalAndLanguageSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<RegionalAndLanguageSettings> callback) {
+        send(HttpMethod.PUT, callback, newRegionalAndLanguageSettings);
+    }
+
+    /**
+     * Creates a RegionalAndLanguageSettings with a new object
+     *
+     * @param newRegionalAndLanguageSettings the object to create/update
+     * @return the created RegionalAndLanguageSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RegionalAndLanguageSettings put(final RegionalAndLanguageSettings newRegionalAndLanguageSettings) throws ClientException {
+        return send(HttpMethod.PUT, newRegionalAndLanguageSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

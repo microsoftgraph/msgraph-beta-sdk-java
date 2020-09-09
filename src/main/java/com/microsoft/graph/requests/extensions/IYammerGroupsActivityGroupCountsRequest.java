@@ -80,6 +80,23 @@ public interface IYammerGroupsActivityGroupCountsRequest extends IHttpRequest {
     YammerGroupsActivityGroupCounts post(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts) throws ClientException;
 
     /**
+     * Posts a YammerGroupsActivityGroupCounts with a new object
+     *
+     * @param newYammerGroupsActivityGroupCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts, final ICallback<YammerGroupsActivityGroupCounts> callback);
+
+    /**
+     * Posts a YammerGroupsActivityGroupCounts with a new object
+     *
+     * @param newYammerGroupsActivityGroupCounts the object to create/update
+     * @return the created YammerGroupsActivityGroupCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    YammerGroupsActivityGroupCounts put(final YammerGroupsActivityGroupCounts newYammerGroupsActivityGroupCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -31,6 +31,22 @@ public class Journal extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Balancing Account Id.
+     * 
+     */
+    @SerializedName("balancingAccountId")
+    @Expose
+    public java.util.UUID balancingAccountId;
+
+    /**
+     * The Balancing Account Number.
+     * 
+     */
+    @SerializedName("balancingAccountNumber")
+    @Expose
+    public String balancingAccountNumber;
+
+    /**
      * The Code.
      * 
      */
@@ -53,22 +69,6 @@ public class Journal extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Balancing Account Id.
-     * 
-     */
-    @SerializedName("balancingAccountId")
-    @Expose
-    public java.util.UUID balancingAccountId;
-
-    /**
-     * The Balancing Account Number.
-     * 
-     */
-    @SerializedName("balancingAccountNumber")
-    @Expose
-    public String balancingAccountNumber;
 
     /**
      * The Account.

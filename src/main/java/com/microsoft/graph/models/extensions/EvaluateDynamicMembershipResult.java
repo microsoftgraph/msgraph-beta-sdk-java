@@ -45,20 +45,20 @@ public class EvaluateDynamicMembershipResult implements IJsonBackedObject {
     public String membershipRule;
 
     /**
-     * The Membership Rule Evaluation Result.
-     * 
-     */
-    @SerializedName("membershipRuleEvaluationResult")
-    @Expose
-    public Boolean membershipRuleEvaluationResult;
-
-    /**
      * The Membership Rule Evaluation Details.
      * 
      */
     @SerializedName("membershipRuleEvaluationDetails")
     @Expose
     public ExpressionEvaluationDetails membershipRuleEvaluationDetails;
+
+    /**
+     * The Membership Rule Evaluation Result.
+     * 
+     */
+    @SerializedName("membershipRuleEvaluationResult")
+    @Expose
+    public Boolean membershipRuleEvaluationResult;
 
 
     /**

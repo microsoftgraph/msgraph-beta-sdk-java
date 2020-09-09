@@ -112,6 +112,27 @@ public class GroupPolicyPresentationValueBooleanRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a GroupPolicyPresentationValueBoolean with a new object
+     *
+     * @param newGroupPolicyPresentationValueBoolean the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean, final ICallback<GroupPolicyPresentationValueBoolean> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueBoolean);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationValueBoolean with a new object
+     *
+     * @param newGroupPolicyPresentationValueBoolean the object to create/update
+     * @return the created GroupPolicyPresentationValueBoolean
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationValueBoolean put(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationValueBoolean);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,12 +28,12 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
 
 
     /**
-     * The Order Identifier.
-     * Order Id of the Windows autopilot device.
+     * The Assigned User Principal Name.
+     * UPN of the user the device will be assigned
      */
-    @SerializedName("orderIdentifier")
+    @SerializedName("assignedUserPrincipalName")
     @Expose
-    public String orderIdentifier;
+    public String assignedUserPrincipalName;
 
     /**
      * The Group Tag.
@@ -44,20 +44,12 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
     public String groupTag;
 
     /**
-     * The Serial Number.
-     * Serial number of the Windows autopilot device.
+     * The Hardware Identifier.
+     * Hardware Blob of the Windows autopilot device.
      */
-    @SerializedName("serialNumber")
+    @SerializedName("hardwareIdentifier")
     @Expose
-    public String serialNumber;
-
-    /**
-     * The Product Key.
-     * Product Key of the Windows autopilot device.
-     */
-    @SerializedName("productKey")
-    @Expose
-    public String productKey;
+    public byte[] hardwareIdentifier;
 
     /**
      * The Import Id.
@@ -68,12 +60,28 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
     public String importId;
 
     /**
-     * The Hardware Identifier.
-     * Hardware Blob of the Windows autopilot device.
+     * The Order Identifier.
+     * Order Id of the Windows autopilot device.
      */
-    @SerializedName("hardwareIdentifier")
+    @SerializedName("orderIdentifier")
     @Expose
-    public byte[] hardwareIdentifier;
+    public String orderIdentifier;
+
+    /**
+     * The Product Key.
+     * Product Key of the Windows autopilot device.
+     */
+    @SerializedName("productKey")
+    @Expose
+    public String productKey;
+
+    /**
+     * The Serial Number.
+     * Serial number of the Windows autopilot device.
+     */
+    @SerializedName("serialNumber")
+    @Expose
+    public String serialNumber;
 
     /**
      * The State.
@@ -82,14 +90,6 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
     @SerializedName("state")
     @Expose
     public ImportedWindowsAutopilotDeviceIdentityState state;
-
-    /**
-     * The Assigned User Principal Name.
-     * UPN of the user the device will be assigned
-     */
-    @SerializedName("assignedUserPrincipalName")
-    @Expose
-    public String assignedUserPrincipalName;
 
 
     /**

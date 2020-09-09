@@ -80,6 +80,23 @@ public interface ITrustFrameworkKeySetRequest extends IHttpRequest {
     TrustFrameworkKeySet post(final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException;
 
     /**
+     * Posts a TrustFrameworkKeySet with a new object
+     *
+     * @param newTrustFrameworkKeySet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<TrustFrameworkKeySet> callback);
+
+    /**
+     * Posts a TrustFrameworkKeySet with a new object
+     *
+     * @param newTrustFrameworkKeySet the object to create/update
+     * @return the created TrustFrameworkKeySet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TrustFrameworkKeySet put(final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

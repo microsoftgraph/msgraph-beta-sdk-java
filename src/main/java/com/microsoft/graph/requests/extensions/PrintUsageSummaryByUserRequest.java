@@ -112,6 +112,27 @@ public class PrintUsageSummaryByUserRequest extends BaseRequest implements IPrin
     }
 
     /**
+     * Creates a PrintUsageSummaryByUser with a new object
+     *
+     * @param newPrintUsageSummaryByUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback) {
+        send(HttpMethod.PUT, callback, newPrintUsageSummaryByUser);
+    }
+
+    /**
+     * Creates a PrintUsageSummaryByUser with a new object
+     *
+     * @param newPrintUsageSummaryByUser the object to create/update
+     * @return the created PrintUsageSummaryByUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintUsageSummaryByUser put(final PrintUsageSummaryByUser newPrintUsageSummaryByUser) throws ClientException {
+        return send(HttpMethod.PUT, newPrintUsageSummaryByUser);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

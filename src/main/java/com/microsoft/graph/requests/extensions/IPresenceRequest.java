@@ -80,6 +80,23 @@ public interface IPresenceRequest extends IHttpRequest {
     Presence post(final Presence newPresence) throws ClientException;
 
     /**
+     * Posts a Presence with a new object
+     *
+     * @param newPresence the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Presence newPresence, final ICallback<Presence> callback);
+
+    /**
+     * Posts a Presence with a new object
+     *
+     * @param newPresence the object to create/update
+     * @return the created Presence
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Presence put(final Presence newPresence) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

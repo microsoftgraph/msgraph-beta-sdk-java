@@ -80,6 +80,23 @@ public interface IUserConfigurationRequest extends IHttpRequest {
     UserConfiguration post(final UserConfiguration newUserConfiguration) throws ClientException;
 
     /**
+     * Posts a UserConfiguration with a new object
+     *
+     * @param newUserConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserConfiguration newUserConfiguration, final ICallback<UserConfiguration> callback);
+
+    /**
+     * Posts a UserConfiguration with a new object
+     *
+     * @param newUserConfiguration the object to create/update
+     * @return the created UserConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserConfiguration put(final UserConfiguration newUserConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

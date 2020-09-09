@@ -80,6 +80,23 @@ public interface IUserExperienceAnalyticsScoreHistoryRequest extends IHttpReques
     UserExperienceAnalyticsScoreHistory post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException;
 
     /**
+     * Posts a UserExperienceAnalyticsScoreHistory with a new object
+     *
+     * @param newUserExperienceAnalyticsScoreHistory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<UserExperienceAnalyticsScoreHistory> callback);
+
+    /**
+     * Posts a UserExperienceAnalyticsScoreHistory with a new object
+     *
+     * @param newUserExperienceAnalyticsScoreHistory the object to create/update
+     * @return the created UserExperienceAnalyticsScoreHistory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserExperienceAnalyticsScoreHistory put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

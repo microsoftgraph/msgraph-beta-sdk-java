@@ -80,6 +80,23 @@ public interface IStoreRequest extends IHttpRequest {
     Store post(final Store newStore) throws ClientException;
 
     /**
+     * Posts a Store with a new object
+     *
+     * @param newStore the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Store newStore, final ICallback<Store> callback);
+
+    /**
+     * Posts a Store with a new object
+     *
+     * @param newStore the object to create/update
+     * @return the created Store
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Store put(final Store newStore) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

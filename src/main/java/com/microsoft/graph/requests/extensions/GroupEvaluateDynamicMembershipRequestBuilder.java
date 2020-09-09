@@ -26,12 +26,10 @@ public class GroupEvaluateDynamicMembershipRequestBuilder extends BaseActionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param memberId the memberId
-     * @param membershipRule the membershipRule
      */
-    public GroupEvaluateDynamicMembershipRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String memberId, final String membershipRule) {
+    public GroupEvaluateDynamicMembershipRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String memberId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("memberId", memberId);
-        bodyParams.put("membershipRule", membershipRule);
     }
     /**
      * The request builder for this GroupEvaluateDynamicMembership
@@ -40,10 +38,12 @@ public class GroupEvaluateDynamicMembershipRequestBuilder extends BaseActionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param memberId the memberId
+     * @param membershipRule the membershipRule
      */
-    public GroupEvaluateDynamicMembershipRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String memberId) {
+    public GroupEvaluateDynamicMembershipRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String memberId, final String membershipRule) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("memberId", memberId);
+        bodyParams.put("membershipRule", membershipRule);
     }
 
     /**
@@ -70,10 +70,6 @@ public class GroupEvaluateDynamicMembershipRequestBuilder extends BaseActionRequ
 
         if (hasParameter("memberId")) {
             request.body.memberId = getParameter("memberId");
-        }
-
-        if (hasParameter("membershipRule")) {
-            request.body.membershipRule = getParameter("membershipRule");
         }
 
         return request;

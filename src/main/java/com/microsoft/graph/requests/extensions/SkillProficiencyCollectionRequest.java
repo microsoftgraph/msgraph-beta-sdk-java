@@ -62,14 +62,14 @@ public class SkillProficiencyCollectionRequest extends BaseCollectionRequest<Ski
     public void post(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SkillProficiencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSkillProficiency, callback);
     }
 
     public SkillProficiency post(final SkillProficiency newSkillProficiency) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SkillProficiencyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSkillProficiency);
     }
 
@@ -106,6 +106,27 @@ public class SkillProficiencyCollectionRequest extends BaseCollectionRequest<Ski
         return (SkillProficiencyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISkillProficiencyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SkillProficiencyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISkillProficiencyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISkillProficiencyCollectionRequest)this;
+    }
     public ISkillProficiencyCollectionPage buildFromResponse(final SkillProficiencyCollectionResponse response) {
         final ISkillProficiencyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

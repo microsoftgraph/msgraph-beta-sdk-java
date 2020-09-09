@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollect
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,13 +59,6 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
     }
 
 
-    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
-    }
-
-    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
-        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
-    }
     public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
@@ -73,19 +66,19 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
     public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    }
     public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
-    }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
-        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -96,6 +89,20 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
     public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    }
+
+    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+        return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
@@ -105,19 +112,14 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
     public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
-    }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
-    }
-    public IIosTrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation() {
-        return new IosTrustedRootCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation"), getClient(), null);
-    }
-
-    public IIosTrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(final String id) {
-        return new IosTrustedRootCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for DeviceManagementDerivedCredentialSettings
+     *
+     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
+     */
+    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings() {
+        return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
     }
 
     /**
@@ -128,13 +130,11 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
     public IIosCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication() {
         return new IosCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
+    public IIosTrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation() {
+        return new IosTrustedRootCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation"), getClient(), null);
+    }
 
-    /**
-     * Gets the request builder for DeviceManagementDerivedCredentialSettings
-     *
-     * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder instance
-     */
-    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder derivedCredentialSettings() {
-        return new DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("derivedCredentialSettings"), getClient(), null);
+    public IIosTrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(final String id) {
+        return new IosTrustedRootCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation") + "/" + id, getClient(), null);
     }
 }

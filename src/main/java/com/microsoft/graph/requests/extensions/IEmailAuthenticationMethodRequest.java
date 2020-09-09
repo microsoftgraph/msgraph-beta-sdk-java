@@ -80,6 +80,23 @@ public interface IEmailAuthenticationMethodRequest extends IHttpRequest {
     EmailAuthenticationMethod post(final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException;
 
     /**
+     * Posts a EmailAuthenticationMethod with a new object
+     *
+     * @param newEmailAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<EmailAuthenticationMethod> callback);
+
+    /**
+     * Posts a EmailAuthenticationMethod with a new object
+     *
+     * @param newEmailAuthenticationMethod the object to create/update
+     * @return the created EmailAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmailAuthenticationMethod put(final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

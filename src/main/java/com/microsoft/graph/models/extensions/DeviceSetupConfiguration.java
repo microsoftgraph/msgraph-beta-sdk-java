@@ -43,20 +43,20 @@ public class DeviceSetupConfiguration extends Entity implements IJsonBackedObjec
     public String description;
 
     /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Display Name.
      * Admin provided name of the device configuration.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Version.

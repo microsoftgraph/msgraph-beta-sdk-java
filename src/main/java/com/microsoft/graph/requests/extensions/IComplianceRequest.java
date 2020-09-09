@@ -80,6 +80,23 @@ public interface IComplianceRequest extends IHttpRequest {
     Compliance post(final Compliance newCompliance) throws ClientException;
 
     /**
+     * Posts a Compliance with a new object
+     *
+     * @param newCompliance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Compliance newCompliance, final ICallback<Compliance> callback);
+
+    /**
+     * Posts a Compliance with a new object
+     *
+     * @param newCompliance the object to create/update
+     * @return the created Compliance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Compliance put(final Compliance newCompliance) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

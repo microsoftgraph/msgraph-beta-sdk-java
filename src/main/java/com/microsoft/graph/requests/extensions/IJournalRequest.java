@@ -80,6 +80,23 @@ public interface IJournalRequest extends IHttpRequest {
     Journal post(final Journal newJournal) throws ClientException;
 
     /**
+     * Posts a Journal with a new object
+     *
+     * @param newJournal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Journal newJournal, final ICallback<Journal> callback);
+
+    /**
+     * Posts a Journal with a new object
+     *
+     * @param newJournal the object to create/update
+     * @return the created Journal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Journal put(final Journal newJournal) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

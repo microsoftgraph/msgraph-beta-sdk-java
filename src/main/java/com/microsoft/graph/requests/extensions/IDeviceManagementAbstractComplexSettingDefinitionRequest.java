@@ -80,6 +80,23 @@ public interface IDeviceManagementAbstractComplexSettingDefinitionRequest extend
     DeviceManagementAbstractComplexSettingDefinition post(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition) throws ClientException;
 
     /**
+     * Posts a DeviceManagementAbstractComplexSettingDefinition with a new object
+     *
+     * @param newDeviceManagementAbstractComplexSettingDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition, final ICallback<DeviceManagementAbstractComplexSettingDefinition> callback);
+
+    /**
+     * Posts a DeviceManagementAbstractComplexSettingDefinition with a new object
+     *
+     * @param newDeviceManagementAbstractComplexSettingDefinition the object to create/update
+     * @return the created DeviceManagementAbstractComplexSettingDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementAbstractComplexSettingDefinition put(final DeviceManagementAbstractComplexSettingDefinition newDeviceManagementAbstractComplexSettingDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

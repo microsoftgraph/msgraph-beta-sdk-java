@@ -27,77 +27,77 @@ public enum IosUpdatesInstallStatus
     */
     UNKNOWN,
     /**
-    * mdm Client Crashed
+    * update Scan Failed
     */
-    MDM_CLIENT_CRASHED,
-    /**
-    * timeout
-    */
-    TIMEOUT,
-    /**
-    * downloading
-    */
-    DOWNLOADING,
-    /**
-    * download Failed
-    */
-    DOWNLOAD_FAILED,
-    /**
-    * download Requires Computer
-    */
-    DOWNLOAD_REQUIRES_COMPUTER,
-    /**
-    * download Insufficient Space
-    */
-    DOWNLOAD_INSUFFICIENT_SPACE,
-    /**
-    * download Insufficient Power
-    */
-    DOWNLOAD_INSUFFICIENT_POWER,
-    /**
-    * download Insufficient Network
-    */
-    DOWNLOAD_INSUFFICIENT_NETWORK,
-    /**
-    * installing
-    */
-    INSTALLING,
-    /**
-    * install Insufficient Space
-    */
-    INSTALL_INSUFFICIENT_SPACE,
-    /**
-    * install Insufficient Power
-    */
-    INSTALL_INSUFFICIENT_POWER,
-    /**
-    * install Phone Call In Progress
-    */
-    INSTALL_PHONE_CALL_IN_PROGRESS,
-    /**
-    * install Failed
-    */
-    INSTALL_FAILED,
-    /**
-    * not Supported Operation
-    */
-    NOT_SUPPORTED_OPERATION,
-    /**
-    * shared Device User Logged In Error
-    */
-    SHARED_DEVICE_USER_LOGGED_IN_ERROR,
-    /**
-    * update Error
-    */
-    UPDATE_ERROR,
+    UPDATE_SCAN_FAILED,
     /**
     * device Os Higher Than Desired Os Version
     */
     DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION,
     /**
-    * update Scan Failed
+    * update Error
     */
-    UPDATE_SCAN_FAILED,
+    UPDATE_ERROR,
+    /**
+    * shared Device User Logged In Error
+    */
+    SHARED_DEVICE_USER_LOGGED_IN_ERROR,
+    /**
+    * not Supported Operation
+    */
+    NOT_SUPPORTED_OPERATION,
+    /**
+    * install Failed
+    */
+    INSTALL_FAILED,
+    /**
+    * install Phone Call In Progress
+    */
+    INSTALL_PHONE_CALL_IN_PROGRESS,
+    /**
+    * install Insufficient Power
+    */
+    INSTALL_INSUFFICIENT_POWER,
+    /**
+    * install Insufficient Space
+    */
+    INSTALL_INSUFFICIENT_SPACE,
+    /**
+    * installing
+    */
+    INSTALLING,
+    /**
+    * download Insufficient Network
+    */
+    DOWNLOAD_INSUFFICIENT_NETWORK,
+    /**
+    * download Insufficient Power
+    */
+    DOWNLOAD_INSUFFICIENT_POWER,
+    /**
+    * download Insufficient Space
+    */
+    DOWNLOAD_INSUFFICIENT_SPACE,
+    /**
+    * download Requires Computer
+    */
+    DOWNLOAD_REQUIRES_COMPUTER,
+    /**
+    * download Failed
+    */
+    DOWNLOAD_FAILED,
+    /**
+    * downloading
+    */
+    DOWNLOADING,
+    /**
+    * timeout
+    */
+    TIMEOUT,
+    /**
+    * mdm Client Crashed
+    */
+    MDM_CLIENT_CRASHED,
     /**
     * For IosUpdatesInstallStatus values that were not expected from the service
     */

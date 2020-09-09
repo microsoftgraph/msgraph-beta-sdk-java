@@ -62,14 +62,14 @@ public class B2xIdentityUserFlowCollectionRequest extends BaseCollectionRequest<
     public void post(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<B2xIdentityUserFlow> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new B2xIdentityUserFlowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newB2xIdentityUserFlow, callback);
     }
 
     public B2xIdentityUserFlow post(final B2xIdentityUserFlow newB2xIdentityUserFlow) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new B2xIdentityUserFlowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newB2xIdentityUserFlow);
     }
 
@@ -106,6 +106,27 @@ public class B2xIdentityUserFlowCollectionRequest extends BaseCollectionRequest<
         return (B2xIdentityUserFlowCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IB2xIdentityUserFlowCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (B2xIdentityUserFlowCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IB2xIdentityUserFlowCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IB2xIdentityUserFlowCollectionRequest)this;
+    }
     public IB2xIdentityUserFlowCollectionPage buildFromResponse(final B2xIdentityUserFlowCollectionResponse response) {
         final IB2xIdentityUserFlowCollectionRequestBuilder builder;
         if (response.nextLink != null) {

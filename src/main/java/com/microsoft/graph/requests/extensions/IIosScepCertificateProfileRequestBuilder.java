@@ -36,21 +36,17 @@ public interface IIosScepCertificateProfileRequestBuilder extends IRequestBuilde
     IIosScepCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -59,6 +55,14 @@ public interface IIosScepCertificateProfileRequestBuilder extends IRequestBuilde
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -66,9 +70,9 @@ public interface IIosScepCertificateProfileRequestBuilder extends IRequestBuilde
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+    IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates();
 
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+    IManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(final String id);
 
     /**
      * Gets the request builder for IosTrustedRootCertificate
@@ -76,9 +80,5 @@ public interface IIosScepCertificateProfileRequestBuilder extends IRequestBuilde
      * @return the IIosTrustedRootCertificateWithReferenceRequestBuilder instance
      */
     IIosTrustedRootCertificateWithReferenceRequestBuilder rootCertificate();
-
-    IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates();
-
-    IManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(final String id);
 
 }

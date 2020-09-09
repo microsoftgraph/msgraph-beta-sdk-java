@@ -46,20 +46,20 @@ public class Relation extends Entity implements IJsonBackedObject {
     public Term fromTerm;
 
     /**
-     * The To Term.
-     * 
-     */
-    @SerializedName("toTerm")
-    @Expose
-    public Term toTerm;
-
-    /**
      * The Set.
      * 
      */
     @SerializedName("set")
     @Expose
     public Set set;
+
+    /**
+     * The To Term.
+     * 
+     */
+    @SerializedName("toTerm")
+    @Expose
+    public Term toTerm;
 
 
     /**

@@ -36,20 +36,20 @@ public class RubricQualitySelectedColumnModel implements IJsonBackedObject {
     }
 
     /**
-     * The Quality Id.
-     * 
-     */
-    @SerializedName("qualityId")
-    @Expose
-    public String qualityId;
-
-    /**
      * The Column Id.
      * 
      */
     @SerializedName("columnId")
     @Expose
     public String columnId;
+
+    /**
+     * The Quality Id.
+     * 
+     */
+    @SerializedName("qualityId")
+    @Expose
+    public String qualityId;
 
 
     /**

@@ -61,14 +61,14 @@ public class PrivilegedAccessCollectionRequest extends BaseCollectionRequest<Pri
     public void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<PrivilegedAccess> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedAccessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedAccess, callback);
     }
 
     public PrivilegedAccess post(final PrivilegedAccess newPrivilegedAccess) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedAccessRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedAccess);
     }
 
@@ -105,6 +105,27 @@ public class PrivilegedAccessCollectionRequest extends BaseCollectionRequest<Pri
         return (PrivilegedAccessCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedAccessCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedAccessCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedAccessCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedAccessCollectionRequest)this;
+    }
     public IPrivilegedAccessCollectionPage buildFromResponse(final PrivilegedAccessCollectionResponse response) {
         final IPrivilegedAccessCollectionRequestBuilder builder;
         if (response.nextLink != null) {

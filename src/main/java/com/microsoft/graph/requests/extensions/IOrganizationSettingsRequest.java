@@ -80,6 +80,23 @@ public interface IOrganizationSettingsRequest extends IHttpRequest {
     OrganizationSettings post(final OrganizationSettings newOrganizationSettings) throws ClientException;
 
     /**
+     * Posts a OrganizationSettings with a new object
+     *
+     * @param newOrganizationSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OrganizationSettings newOrganizationSettings, final ICallback<OrganizationSettings> callback);
+
+    /**
+     * Posts a OrganizationSettings with a new object
+     *
+     * @param newOrganizationSettings the object to create/update
+     * @return the created OrganizationSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OrganizationSettings put(final OrganizationSettings newOrganizationSettings) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

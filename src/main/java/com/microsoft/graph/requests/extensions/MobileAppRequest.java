@@ -12,26 +12,26 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequestBuilder;
 import java.util.Arrays;
@@ -150,6 +150,27 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      */
     public MobileApp post(final MobileApp newMobileApp) throws ClientException {
         return send(HttpMethod.POST, newMobileApp);
+    }
+
+    /**
+     * Creates a MobileApp with a new object
+     *
+     * @param newMobileApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileApp newMobileApp, final ICallback<MobileApp> callback) {
+        send(HttpMethod.PUT, callback, newMobileApp);
+    }
+
+    /**
+     * Creates a MobileApp with a new object
+     *
+     * @param newMobileApp the object to create/update
+     * @return the created MobileApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileApp put(final MobileApp newMobileApp) throws ClientException {
+        return send(HttpMethod.PUT, newMobileApp);
     }
 
     /**

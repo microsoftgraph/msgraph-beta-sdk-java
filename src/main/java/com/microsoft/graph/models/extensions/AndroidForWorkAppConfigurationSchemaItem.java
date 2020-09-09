@@ -38,28 +38,12 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
     }
 
     /**
-     * The Schema Item Key.
-     * Unique key the application uses to identify the item
+     * The Data Type.
+     * The type of value this item describes
      */
-    @SerializedName("schemaItemKey")
+    @SerializedName("dataType")
     @Expose
-    public String schemaItemKey;
-
-    /**
-     * The Display Name.
-     * Human readable name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * Description of what the item controls within the application
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
+    public AndroidForWorkAppConfigurationSchemaItemDataType dataType;
 
     /**
      * The Default Bool Value.
@@ -78,14 +62,6 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
     public Integer defaultIntValue;
 
     /**
-     * The Default String Value.
-     * Default value for string type items, if specified by the app developer
-     */
-    @SerializedName("defaultStringValue")
-    @Expose
-    public String defaultStringValue;
-
-    /**
      * The Default String Array Value.
      * Default value for string array type items, if specified by the app developer
      */
@@ -94,12 +70,36 @@ public class AndroidForWorkAppConfigurationSchemaItem implements IJsonBackedObje
     public java.util.List<String> defaultStringArrayValue;
 
     /**
-     * The Data Type.
-     * The type of value this item describes
+     * The Default String Value.
+     * Default value for string type items, if specified by the app developer
      */
-    @SerializedName("dataType")
+    @SerializedName("defaultStringValue")
     @Expose
-    public AndroidForWorkAppConfigurationSchemaItemDataType dataType;
+    public String defaultStringValue;
+
+    /**
+     * The Description.
+     * Description of what the item controls within the application
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * Human readable name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Schema Item Key.
+     * Unique key the application uses to identify the item
+     */
+    @SerializedName("schemaItemKey")
+    @Expose
+    public String schemaItemKey;
 
     /**
      * The Selections.

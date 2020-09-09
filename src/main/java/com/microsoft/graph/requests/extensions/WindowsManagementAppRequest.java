@@ -116,6 +116,27 @@ public class WindowsManagementAppRequest extends BaseRequest implements IWindows
     }
 
     /**
+     * Creates a WindowsManagementApp with a new object
+     *
+     * @param newWindowsManagementApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsManagementApp newWindowsManagementApp, final ICallback<WindowsManagementApp> callback) {
+        send(HttpMethod.PUT, callback, newWindowsManagementApp);
+    }
+
+    /**
+     * Creates a WindowsManagementApp with a new object
+     *
+     * @param newWindowsManagementApp the object to create/update
+     * @return the created WindowsManagementApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsManagementApp put(final WindowsManagementApp newWindowsManagementApp) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsManagementApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

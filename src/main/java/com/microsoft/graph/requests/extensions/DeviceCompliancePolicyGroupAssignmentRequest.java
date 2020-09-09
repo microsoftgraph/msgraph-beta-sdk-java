@@ -114,6 +114,27 @@ public class DeviceCompliancePolicyGroupAssignmentRequest extends BaseRequest im
     }
 
     /**
+     * Creates a DeviceCompliancePolicyGroupAssignment with a new object
+     *
+     * @param newDeviceCompliancePolicyGroupAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment, final ICallback<DeviceCompliancePolicyGroupAssignment> callback) {
+        send(HttpMethod.PUT, callback, newDeviceCompliancePolicyGroupAssignment);
+    }
+
+    /**
+     * Creates a DeviceCompliancePolicyGroupAssignment with a new object
+     *
+     * @param newDeviceCompliancePolicyGroupAssignment the object to create/update
+     * @return the created DeviceCompliancePolicyGroupAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceCompliancePolicyGroupAssignment put(final DeviceCompliancePolicyGroupAssignment newDeviceCompliancePolicyGroupAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceCompliancePolicyGroupAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

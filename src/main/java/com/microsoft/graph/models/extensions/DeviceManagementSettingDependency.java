@@ -37,20 +37,20 @@ public class DeviceManagementSettingDependency implements IJsonBackedObject {
     }
 
     /**
-     * The Definition Id.
-     * The setting definition ID of the setting depended on
-     */
-    @SerializedName("definitionId")
-    @Expose
-    public String definitionId;
-
-    /**
      * The Constraints.
      * Collection of constraints for the dependency setting value
      */
     @SerializedName("constraints")
     @Expose
     public java.util.List<DeviceManagementConstraint> constraints;
+
+    /**
+     * The Definition Id.
+     * The setting definition ID of the setting depended on
+     */
+    @SerializedName("definitionId")
+    @Expose
+    public String definitionId;
 
 
     /**

@@ -8,16 +8,16 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.OutlookTask;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.OutlookTask;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OutlookTaskCollectionResponse;
-import com.microsoft.graph.requests.extensions.OutlookTaskCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.OutlookTaskCollectionResponse;
+import com.microsoft.graph.requests.extensions.OutlookTaskCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -44,20 +44,20 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
     public String changeKey;
 
     /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Is Default Folder.
      * 
      */
     @SerializedName("isDefaultFolder")
     @Expose
     public Boolean isDefaultFolder;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
     /**
      * The Parent Group Key.
@@ -68,10 +68,10 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
     public java.util.UUID parentGroupKey;
 
     /**
-     * The Tasks.
+     * The Multi Value Extended Properties.
      * 
      */
-    public OutlookTaskCollectionPage tasks;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -80,10 +80,10 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
-     * The Multi Value Extended Properties.
+     * The Tasks.
      * 
      */
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public OutlookTaskCollectionPage tasks;
 
 
     /**
@@ -125,20 +125,20 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("tasks")) {
-            final OutlookTaskCollectionResponse response = new OutlookTaskCollectionResponse();
-            if (json.has("tasks@odata.nextLink")) {
-                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
+        if (json.has("multiValueExtendedProperties")) {
+            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
-            final OutlookTask[] array = new OutlookTask[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OutlookTask.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            tasks = new OutlookTaskCollectionPage(response, null);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
         }
 
         if (json.has("singleValueExtendedProperties")) {
@@ -157,20 +157,20 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
             singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
         }
 
-        if (json.has("multiValueExtendedProperties")) {
-            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
+        if (json.has("tasks")) {
+            final OutlookTaskCollectionResponse response = new OutlookTaskCollectionResponse();
+            if (json.has("tasks@odata.nextLink")) {
+                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
-            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
+            final OutlookTask[] array = new OutlookTask[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OutlookTask.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+            tasks = new OutlookTaskCollectionPage(response, null);
         }
     }
 }

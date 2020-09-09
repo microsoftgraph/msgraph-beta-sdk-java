@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.SubjectNameFormat;
 import com.microsoft.graph.models.generated.CertificateValidityPeriodScale;
 import com.microsoft.graph.models.extensions.ExtendedKeyUsage;
 import com.microsoft.graph.models.generated.SubjectAlternativeNameType;
+import com.microsoft.graph.models.generated.SubjectNameFormat;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerTrustedRootCertificate;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
@@ -32,20 +32,12 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
 
 
     /**
-     * The Renewal Threshold Percentage.
-     * Certificate renewal threshold percentage. Valid values 1 to 99
+     * The Certificate Validity Period Scale.
+     * Scale for the Certificate Validity Period.
      */
-    @SerializedName("renewalThresholdPercentage")
+    @SerializedName("certificateValidityPeriodScale")
     @Expose
-    public Integer renewalThresholdPercentage;
-
-    /**
-     * The Subject Name Format.
-     * Certificate Subject Name Format.
-     */
-    @SerializedName("subjectNameFormat")
-    @Expose
-    public SubjectNameFormat subjectNameFormat;
+    public CertificateValidityPeriodScale certificateValidityPeriodScale;
 
     /**
      * The Certificate Validity Period Value.
@@ -56,14 +48,6 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     public Integer certificateValidityPeriodValue;
 
     /**
-     * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period.
-     */
-    @SerializedName("certificateValidityPeriodScale")
-    @Expose
-    public CertificateValidityPeriodScale certificateValidityPeriodScale;
-
-    /**
      * The Extended Key Usages.
      * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      */
@@ -72,12 +56,28 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     public java.util.List<ExtendedKeyUsage> extendedKeyUsages;
 
     /**
+     * The Renewal Threshold Percentage.
+     * Certificate renewal threshold percentage. Valid values 1 to 99
+     */
+    @SerializedName("renewalThresholdPercentage")
+    @Expose
+    public Integer renewalThresholdPercentage;
+
+    /**
      * The Subject Alternative Name Type.
      * Certificate Subject Alternative Name Type.
      */
     @SerializedName("subjectAlternativeNameType")
     @Expose
     public EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
+
+    /**
+     * The Subject Name Format.
+     * Certificate Subject Name Format.
+     */
+    @SerializedName("subjectNameFormat")
+    @Expose
+    public SubjectNameFormat subjectNameFormat;
 
     /**
      * The Root Certificate.

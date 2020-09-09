@@ -35,6 +35,14 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
 
     /**
+     * The Data Provider.
+     * 
+     */
+    @SerializedName("dataProvider")
+    @Expose
+    public EducationSynchronizationDataProvider dataProvider;
+
+    /**
      * The Display Name.
      * 
      */
@@ -51,12 +59,12 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
     public com.microsoft.graph.models.extensions.DateOnly expirationDate;
 
     /**
-     * The Data Provider.
+     * The Handle Special Character Constraint.
      * 
      */
-    @SerializedName("dataProvider")
+    @SerializedName("handleSpecialCharacterConstraint")
     @Expose
-    public EducationSynchronizationDataProvider dataProvider;
+    public Boolean handleSpecialCharacterConstraint;
 
     /**
      * The Identity Synchronization Configuration.
@@ -81,14 +89,6 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
     @SerializedName("state")
     @Expose
     public EducationSynchronizationProfileState state;
-
-    /**
-     * The Handle Special Character Constraint.
-     * 
-     */
-    @SerializedName("handleSpecialCharacterConstraint")
-    @Expose
-    public Boolean handleSpecialCharacterConstraint;
 
     /**
      * The Errors.

@@ -62,14 +62,14 @@ public class DimensionCollectionRequest extends BaseCollectionRequest<DimensionC
     public void post(final Dimension newDimension, final ICallback<Dimension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DimensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDimension, callback);
     }
 
     public Dimension post(final Dimension newDimension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DimensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDimension);
     }
 
@@ -106,6 +106,27 @@ public class DimensionCollectionRequest extends BaseCollectionRequest<DimensionC
         return (DimensionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDimensionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DimensionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDimensionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDimensionCollectionRequest)this;
+    }
     public IDimensionCollectionPage buildFromResponse(final DimensionCollectionResponse response) {
         final IDimensionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

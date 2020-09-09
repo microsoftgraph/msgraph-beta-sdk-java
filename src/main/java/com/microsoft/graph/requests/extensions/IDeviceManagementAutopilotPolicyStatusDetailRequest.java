@@ -80,6 +80,23 @@ public interface IDeviceManagementAutopilotPolicyStatusDetailRequest extends IHt
     DeviceManagementAutopilotPolicyStatusDetail post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException;
 
     /**
+     * Posts a DeviceManagementAutopilotPolicyStatusDetail with a new object
+     *
+     * @param newDeviceManagementAutopilotPolicyStatusDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<DeviceManagementAutopilotPolicyStatusDetail> callback);
+
+    /**
+     * Posts a DeviceManagementAutopilotPolicyStatusDetail with a new object
+     *
+     * @param newDeviceManagementAutopilotPolicyStatusDetail the object to create/update
+     * @return the created DeviceManagementAutopilotPolicyStatusDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementAutopilotPolicyStatusDetail put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

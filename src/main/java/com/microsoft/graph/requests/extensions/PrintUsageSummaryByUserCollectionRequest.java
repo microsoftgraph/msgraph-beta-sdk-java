@@ -62,14 +62,14 @@ public class PrintUsageSummaryByUserCollectionRequest extends BaseCollectionRequ
     public void post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser, final ICallback<PrintUsageSummaryByUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintUsageSummaryByUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintUsageSummaryByUser, callback);
     }
 
     public PrintUsageSummaryByUser post(final PrintUsageSummaryByUser newPrintUsageSummaryByUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintUsageSummaryByUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintUsageSummaryByUser);
     }
 
@@ -106,6 +106,27 @@ public class PrintUsageSummaryByUserCollectionRequest extends BaseCollectionRequ
         return (PrintUsageSummaryByUserCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintUsageSummaryByUserCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintUsageSummaryByUserCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintUsageSummaryByUserCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintUsageSummaryByUserCollectionRequest)this;
+    }
     public IPrintUsageSummaryByUserCollectionPage buildFromResponse(final PrintUsageSummaryByUserCollectionResponse response) {
         final IPrintUsageSummaryByUserCollectionRequestBuilder builder;
         if (response.nextLink != null) {

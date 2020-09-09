@@ -62,14 +62,14 @@ public class EmployeeCollectionRequest extends BaseCollectionRequest<EmployeeCol
     public void post(final Employee newEmployee, final ICallback<Employee> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EmployeeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmployee, callback);
     }
 
     public Employee post(final Employee newEmployee) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EmployeeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEmployee);
     }
 
@@ -106,6 +106,27 @@ public class EmployeeCollectionRequest extends BaseCollectionRequest<EmployeeCol
         return (EmployeeCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEmployeeCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EmployeeCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEmployeeCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEmployeeCollectionRequest)this;
+    }
     public IEmployeeCollectionPage buildFromResponse(final EmployeeCollectionResponse response) {
         final IEmployeeCollectionRequestBuilder builder;
         if (response.nextLink != null) {

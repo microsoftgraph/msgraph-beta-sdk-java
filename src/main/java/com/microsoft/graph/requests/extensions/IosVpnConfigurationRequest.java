@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -128,6 +128,27 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      */
     public IosVpnConfiguration post(final IosVpnConfiguration newIosVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosVpnConfiguration);
+    }
+
+    /**
+     * Creates a IosVpnConfiguration with a new object
+     *
+     * @param newIosVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<IosVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosVpnConfiguration);
+    }
+
+    /**
+     * Creates a IosVpnConfiguration with a new object
+     *
+     * @param newIosVpnConfiguration the object to create/update
+     * @return the created IosVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosVpnConfiguration put(final IosVpnConfiguration newIosVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosVpnConfiguration);
     }
 
     /**

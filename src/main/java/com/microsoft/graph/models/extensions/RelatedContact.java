@@ -37,12 +37,12 @@ public class RelatedContact implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Identity of the contact within Azure Active Directory.
+     * The Access Consent.
+     * Indicates whether the user has been consented to access student data.
      */
-    @SerializedName("id")
+    @SerializedName("accessConsent")
     @Expose
-    public String id;
+    public Boolean accessConsent;
 
     /**
      * The Display Name.
@@ -61,6 +61,14 @@ public class RelatedContact implements IJsonBackedObject {
     public String emailAddress;
 
     /**
+     * The Id.
+     * Identity of the contact within Azure Active Directory.
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
+
+    /**
      * The Mobile Phone.
      * Mobile phone number of the contact.
      */
@@ -75,14 +83,6 @@ public class RelatedContact implements IJsonBackedObject {
     @SerializedName("relationship")
     @Expose
     public ContactRelationship relationship;
-
-    /**
-     * The Access Consent.
-     * Indicates whether the user has been consented to access student data.
-     */
-    @SerializedName("accessConsent")
-    @Expose
-    public Boolean accessConsent;
 
 
     /**

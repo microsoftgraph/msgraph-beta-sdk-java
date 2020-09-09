@@ -112,6 +112,27 @@ public class DeviceManagementStringSettingInstanceRequest extends BaseRequest im
     }
 
     /**
+     * Creates a DeviceManagementStringSettingInstance with a new object
+     *
+     * @param newDeviceManagementStringSettingInstance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementStringSettingInstance newDeviceManagementStringSettingInstance, final ICallback<DeviceManagementStringSettingInstance> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementStringSettingInstance);
+    }
+
+    /**
+     * Creates a DeviceManagementStringSettingInstance with a new object
+     *
+     * @param newDeviceManagementStringSettingInstance the object to create/update
+     * @return the created DeviceManagementStringSettingInstance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementStringSettingInstance put(final DeviceManagementStringSettingInstance newDeviceManagementStringSettingInstance) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementStringSettingInstance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

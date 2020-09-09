@@ -80,6 +80,23 @@ public interface IItemPatentRequest extends IHttpRequest {
     ItemPatent post(final ItemPatent newItemPatent) throws ClientException;
 
     /**
+     * Posts a ItemPatent with a new object
+     *
+     * @param newItemPatent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback);
+
+    /**
+     * Posts a ItemPatent with a new object
+     *
+     * @param newItemPatent the object to create/update
+     * @return the created ItemPatent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ItemPatent put(final ItemPatent newItemPatent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

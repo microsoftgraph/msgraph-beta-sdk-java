@@ -112,6 +112,27 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a SecurityBaselineSettingState with a new object
+     *
+     * @param newSecurityBaselineSettingState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<SecurityBaselineSettingState> callback) {
+        send(HttpMethod.PUT, callback, newSecurityBaselineSettingState);
+    }
+
+    /**
+     * Creates a SecurityBaselineSettingState with a new object
+     *
+     * @param newSecurityBaselineSettingState the object to create/update
+     * @return the created SecurityBaselineSettingState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecurityBaselineSettingState put(final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException {
+        return send(HttpMethod.PUT, newSecurityBaselineSettingState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

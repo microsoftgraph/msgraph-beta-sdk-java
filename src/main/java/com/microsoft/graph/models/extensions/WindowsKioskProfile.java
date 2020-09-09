@@ -38,6 +38,14 @@ public class WindowsKioskProfile implements IJsonBackedObject {
     }
 
     /**
+     * The App Configuration.
+     * The App configuration that will be used for this kiosk configuration.
+     */
+    @SerializedName("appConfiguration")
+    @Expose
+    public WindowsKioskAppConfiguration appConfiguration;
+
+    /**
      * The Profile Id.
      * Key of the entity.
      */
@@ -47,19 +55,11 @@ public class WindowsKioskProfile implements IJsonBackedObject {
 
     /**
      * The Profile Name.
-     * This is a friendly name??used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      */
     @SerializedName("profileName")
     @Expose
     public String profileName;
-
-    /**
-     * The App Configuration.
-     * The App configuration that will be used for this kiosk configuration.
-     */
-    @SerializedName("appConfiguration")
-    @Expose
-    public WindowsKioskAppConfiguration appConfiguration;
 
     /**
      * The User Accounts Configuration.

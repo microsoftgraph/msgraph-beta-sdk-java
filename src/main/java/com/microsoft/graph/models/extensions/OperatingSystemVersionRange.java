@@ -44,20 +44,20 @@ public class OperatingSystemVersionRange implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Lowest Version.
-     * The lowest inclusive version that this range contains.
-     */
-    @SerializedName("lowestVersion")
-    @Expose
-    public String lowestVersion;
-
-    /**
      * The Highest Version.
      * The highest inclusive version that this range contains.
      */
     @SerializedName("highestVersion")
     @Expose
     public String highestVersion;
+
+    /**
+     * The Lowest Version.
+     * The lowest inclusive version that this range contains.
+     */
+    @SerializedName("lowestVersion")
+    @Expose
+    public String lowestVersion;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IWindows10PFXImportCertificateProfileRequest extends IHttpReque
     Windows10PFXImportCertificateProfile post(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile) throws ClientException;
 
     /**
+     * Posts a Windows10PFXImportCertificateProfile with a new object
+     *
+     * @param newWindows10PFXImportCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<Windows10PFXImportCertificateProfile> callback);
+
+    /**
+     * Posts a Windows10PFXImportCertificateProfile with a new object
+     *
+     * @param newWindows10PFXImportCertificateProfile the object to create/update
+     * @return the created Windows10PFXImportCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10PFXImportCertificateProfile put(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

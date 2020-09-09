@@ -27,28 +27,12 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Vendor Number.
+     * The Aged As Of Date.
      * 
      */
-    @SerializedName("vendorNumber")
+    @SerializedName("agedAsOfDate")
     @Expose
-    public String vendorNumber;
-
-    /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
-     * The Currency Code.
-     * 
-     */
-    @SerializedName("currencyCode")
-    @Expose
-    public String currencyCode;
+    public com.microsoft.graph.models.extensions.DateOnly agedAsOfDate;
 
     /**
      * The Balance Due.
@@ -59,12 +43,28 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal balanceDue;
 
     /**
+     * The Currency Code.
+     * 
+     */
+    @SerializedName("currencyCode")
+    @Expose
+    public String currencyCode;
+
+    /**
      * The Current Amount.
      * 
      */
     @SerializedName("currentAmount")
     @Expose
     public java.math.BigDecimal currentAmount;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
     /**
      * The Period1Amount.
@@ -91,20 +91,20 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal period3Amount;
 
     /**
-     * The Aged As Of Date.
-     * 
-     */
-    @SerializedName("agedAsOfDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly agedAsOfDate;
-
-    /**
      * The Period Length Filter.
      * 
      */
     @SerializedName("periodLengthFilter")
     @Expose
     public String periodLengthFilter;
+
+    /**
+     * The Vendor Number.
+     * 
+     */
+    @SerializedName("vendorNumber")
+    @Expose
+    public String vendorNumber;
 
 
     /**

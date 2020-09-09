@@ -28,14 +28,6 @@ public class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtensio
 
 
     /**
-     * The Enable Shared Device Mode.
-     * Enables or disables shared device mode.
-     */
-    @SerializedName("enableSharedDeviceMode")
-    @Expose
-    public Boolean enableSharedDeviceMode;
-
-    /**
      * The Bundle Id Access Control List.
      * An optional list of additional bundle IDs allowed to use the AAD extension for single sign-on.
      */
@@ -50,6 +42,14 @@ public class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtensio
     @SerializedName("configurations")
     @Expose
     public java.util.List<KeyTypedValuePair> configurations;
+
+    /**
+     * The Enable Shared Device Mode.
+     * Enables or disables shared device mode.
+     */
+    @SerializedName("enableSharedDeviceMode")
+    @Expose
+    public Boolean enableSharedDeviceMode;
 
 
     /**

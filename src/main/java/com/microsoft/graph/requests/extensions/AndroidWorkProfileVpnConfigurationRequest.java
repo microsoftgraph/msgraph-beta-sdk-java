@@ -114,6 +114,27 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a AndroidWorkProfileVpnConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<AndroidWorkProfileVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileVpnConfiguration);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileVpnConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileVpnConfiguration the object to create/update
+     * @return the created AndroidWorkProfileVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileVpnConfiguration put(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileVpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

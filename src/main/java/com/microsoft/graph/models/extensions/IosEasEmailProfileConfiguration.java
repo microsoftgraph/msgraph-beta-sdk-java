@@ -10,12 +10,12 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.EasAuthenticationMethod;
 import com.microsoft.graph.models.generated.EmailSyncDuration;
-import com.microsoft.graph.models.generated.UserEmailSource;
 import com.microsoft.graph.models.generated.EasServices;
+import com.microsoft.graph.models.generated.UserEmailSource;
 import com.microsoft.graph.models.generated.EmailCertificateType;
+import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
 import com.microsoft.graph.models.extensions.IosCertificateProfileBase;
 import com.microsoft.graph.models.extensions.IosCertificateProfile;
-import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
 import com.microsoft.graph.models.extensions.EasEmailProfileConfigurationBase;
 
 
@@ -83,14 +83,6 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public EmailSyncDuration durationOfEmailToSync;
 
     /**
-     * The Email Address Source.
-     * Email attribute that is picked from AAD and injected into this profile before installing on the device.
-     */
-    @SerializedName("emailAddressSource")
-    @Expose
-    public UserEmailSource emailAddressSource;
-
-    /**
      * The Eas Services.
      * Exchange data to sync.
      */
@@ -105,6 +97,22 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     @SerializedName("easServicesUserOverrideEnabled")
     @Expose
     public Boolean easServicesUserOverrideEnabled;
+
+    /**
+     * The Email Address Source.
+     * Email attribute that is picked from AAD and injected into this profile before installing on the device.
+     */
+    @SerializedName("emailAddressSource")
+    @Expose
+    public UserEmailSource emailAddressSource;
+
+    /**
+     * The Encryption Certificate Type.
+     * Encryption Certificate type for this Email profile.
+     */
+    @SerializedName("encryptionCertificateType")
+    @Expose
+    public EmailCertificateType encryptionCertificateType;
 
     /**
      * The Host Name.
@@ -123,6 +131,22 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public Boolean requireSmime;
 
     /**
+     * The Require Ssl.
+     * Indicates whether or not to use SSL.
+     */
+    @SerializedName("requireSsl")
+    @Expose
+    public Boolean requireSsl;
+
+    /**
+     * The Signing Certificate Type.
+     * Signing Certificate type for this Email profile.
+     */
+    @SerializedName("signingCertificateType")
+    @Expose
+    public EmailCertificateType signingCertificateType;
+
+    /**
      * The Smime Enable Per Message Switch.
      * Indicates whether or not to allow unencrypted emails.
      */
@@ -137,6 +161,30 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     @SerializedName("smimeEncryptByDefaultEnabled")
     @Expose
     public Boolean smimeEncryptByDefaultEnabled;
+
+    /**
+     * The Smime Encrypt By Default User Override Enabled.
+     * If set to true, the user can toggle the encryption by default setting.
+     */
+    @SerializedName("smimeEncryptByDefaultUserOverrideEnabled")
+    @Expose
+    public Boolean smimeEncryptByDefaultUserOverrideEnabled;
+
+    /**
+     * The Smime Encryption Certificate User Override Enabled.
+     * If set to true the user can select the S/MIME encryption identity. 
+     */
+    @SerializedName("smimeEncryptionCertificateUserOverrideEnabled")
+    @Expose
+    public Boolean smimeEncryptionCertificateUserOverrideEnabled;
+
+    /**
+     * The Smime Signing Certificate User Override Enabled.
+     * If set to true, the user can select the signing identity.
+     */
+    @SerializedName("smimeSigningCertificateUserOverrideEnabled")
+    @Expose
+    public Boolean smimeSigningCertificateUserOverrideEnabled;
 
     /**
      * The Smime Signing Enabled.
@@ -155,38 +203,6 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public Boolean smimeSigningUserOverrideEnabled;
 
     /**
-     * The Smime Encrypt By Default User Override Enabled.
-     * If set to true, the user can toggle the encryption by default setting.
-     */
-    @SerializedName("smimeEncryptByDefaultUserOverrideEnabled")
-    @Expose
-    public Boolean smimeEncryptByDefaultUserOverrideEnabled;
-
-    /**
-     * The Smime Signing Certificate User Override Enabled.
-     * If set to true, the user can select the signing identity.
-     */
-    @SerializedName("smimeSigningCertificateUserOverrideEnabled")
-    @Expose
-    public Boolean smimeSigningCertificateUserOverrideEnabled;
-
-    /**
-     * The Smime Encryption Certificate User Override Enabled.
-     * If set to true the user can select the S/MIME encryption identity. 
-     */
-    @SerializedName("smimeEncryptionCertificateUserOverrideEnabled")
-    @Expose
-    public Boolean smimeEncryptionCertificateUserOverrideEnabled;
-
-    /**
-     * The Require Ssl.
-     * Indicates whether or not to use SSL.
-     */
-    @SerializedName("requireSsl")
-    @Expose
-    public Boolean requireSsl;
-
-    /**
      * The Use OAuth.
      * Specifies whether the connection should use OAuth for authentication.
      */
@@ -195,20 +211,12 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public Boolean useOAuth;
 
     /**
-     * The Signing Certificate Type.
-     * Signing Certificate type for this Email profile.
+     * The Derived Credential Settings.
+     * Tenant level settings for the Derived Credentials to be used for authentication.
      */
-    @SerializedName("signingCertificateType")
+    @SerializedName("derivedCredentialSettings")
     @Expose
-    public EmailCertificateType signingCertificateType;
-
-    /**
-     * The Encryption Certificate Type.
-     * Encryption Certificate type for this Email profile.
-     */
-    @SerializedName("encryptionCertificateType")
-    @Expose
-    public EmailCertificateType encryptionCertificateType;
+    public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
     /**
      * The Identity Certificate.
@@ -219,14 +227,6 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public IosCertificateProfileBase identityCertificate;
 
     /**
-     * The Smime Signing Certificate.
-     * S/MIME signing certificate.
-     */
-    @SerializedName("smimeSigningCertificate")
-    @Expose
-    public IosCertificateProfile smimeSigningCertificate;
-
-    /**
      * The Smime Encryption Certificate.
      * S/MIME encryption certificate.
      */
@@ -235,12 +235,12 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public IosCertificateProfile smimeEncryptionCertificate;
 
     /**
-     * The Derived Credential Settings.
-     * Tenant level settings for the Derived Credentials to be used for authentication.
+     * The Smime Signing Certificate.
+     * S/MIME signing certificate.
      */
-    @SerializedName("derivedCredentialSettings")
+    @SerializedName("smimeSigningCertificate")
     @Expose
-    public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
+    public IosCertificateProfile smimeSigningCertificate;
 
 
     /**

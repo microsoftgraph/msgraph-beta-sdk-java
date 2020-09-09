@@ -37,44 +37,20 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
     }
 
     /**
-     * The Product Code.
-     * The MSI product code.
-     */
-    @SerializedName("productCode")
-    @Expose
-    public String productCode;
-
-    /**
-     * The Product Version.
-     * The MSI product version.
-     */
-    @SerializedName("productVersion")
-    @Expose
-    public String productVersion;
-
-    /**
-     * The Upgrade Code.
-     * The MSI upgrade code.
-     */
-    @SerializedName("upgradeCode")
-    @Expose
-    public String upgradeCode;
-
-    /**
-     * The Requires Reboot.
-     * Whether the MSI app requires the machine to reboot to complete installation.
-     */
-    @SerializedName("requiresReboot")
-    @Expose
-    public Boolean requiresReboot;
-
-    /**
      * The Package Type.
      * The MSI package type.
      */
     @SerializedName("packageType")
     @Expose
     public Win32LobAppMsiPackageType packageType;
+
+    /**
+     * The Product Code.
+     * The MSI product code.
+     */
+    @SerializedName("productCode")
+    @Expose
+    public String productCode;
 
     /**
      * The Product Name.
@@ -85,12 +61,36 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
     public String productName;
 
     /**
+     * The Product Version.
+     * The MSI product version.
+     */
+    @SerializedName("productVersion")
+    @Expose
+    public String productVersion;
+
+    /**
      * The Publisher.
      * The MSI publisher.
      */
     @SerializedName("publisher")
     @Expose
     public String publisher;
+
+    /**
+     * The Requires Reboot.
+     * Whether the MSI app requires the machine to reboot to complete installation.
+     */
+    @SerializedName("requiresReboot")
+    @Expose
+    public Boolean requiresReboot;
+
+    /**
+     * The Upgrade Code.
+     * The MSI upgrade code.
+     */
+    @SerializedName("upgradeCode")
+    @Expose
+    public String upgradeCode;
 
 
     /**

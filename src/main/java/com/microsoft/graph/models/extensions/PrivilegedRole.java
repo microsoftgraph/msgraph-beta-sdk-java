@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PrivilegedRoleSettings;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
+import com.microsoft.graph.models.extensions.PrivilegedRoleSettings;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSummary;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionResponse;
@@ -40,18 +40,18 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
     public String name;
 
     /**
+     * The Assignments.
+     * 
+     */
+    public PrivilegedRoleAssignmentCollectionPage assignments;
+
+    /**
      * The Settings.
      * 
      */
     @SerializedName("settings")
     @Expose
     public PrivilegedRoleSettings settings;
-
-    /**
-     * The Assignments.
-     * 
-     */
-    public PrivilegedRoleAssignmentCollectionPage assignments;
 
     /**
      * The Summary.

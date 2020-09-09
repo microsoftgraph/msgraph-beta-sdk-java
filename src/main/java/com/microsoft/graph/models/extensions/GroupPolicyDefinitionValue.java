@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.GroupPolicyConfigurationType;
-import com.microsoft.graph.models.extensions.GroupPolicyPresentationValue;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
+import com.microsoft.graph.models.extensions.GroupPolicyPresentationValue;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueCollectionPage;
@@ -32,6 +32,14 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
 
 
     /**
+     * The Configuration Type.
+     * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
+     */
+    @SerializedName("configurationType")
+    @Expose
+    public GroupPolicyConfigurationType configurationType;
+
+    /**
      * The Created Date Time.
      * The date and time the object was created.
      */
@@ -48,14 +56,6 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
     public Boolean enabled;
 
     /**
-     * The Configuration Type.
-     * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
-     */
-    @SerializedName("configurationType")
-    @Expose
-    public GroupPolicyConfigurationType configurationType;
-
-    /**
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
@@ -64,18 +64,18 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Presentation Values.
-     * The associated group policy presentation values with the definition value.
-     */
-    public GroupPolicyPresentationValueCollectionPage presentationValues;
-
-    /**
      * The Definition.
      * The associated group policy definition with the value.
      */
     @SerializedName("definition")
     @Expose
     public GroupPolicyDefinition definition;
+
+    /**
+     * The Presentation Values.
+     * The associated group policy presentation values with the definition value.
+     */
+    public GroupPolicyPresentationValueCollectionPage presentationValues;
 
 
     /**

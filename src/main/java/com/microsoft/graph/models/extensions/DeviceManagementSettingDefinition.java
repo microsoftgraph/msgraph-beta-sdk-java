@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManangementIntentValueType;
 import com.microsoft.graph.models.extensions.DeviceManagementConstraint;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingDependency;
+import com.microsoft.graph.models.generated.DeviceManangementIntentValueType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,62 +30,6 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
 
 
     /**
-     * The Value Type.
-     * The data type of the value
-     */
-    @SerializedName("valueType")
-    @Expose
-    public DeviceManangementIntentValueType valueType;
-
-    /**
-     * The Display Name.
-     * The setting's display name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Is Top Level.
-     * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
-     */
-    @SerializedName("isTopLevel")
-    @Expose
-    public Boolean isTopLevel;
-
-    /**
-     * The Description.
-     * The setting's description
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Placeholder Text.
-     * Placeholder text as an example of valid input
-     */
-    @SerializedName("placeholderText")
-    @Expose
-    public String placeholderText;
-
-    /**
-     * The Documentation Url.
-     * Url to setting documentation
-     */
-    @SerializedName("documentationUrl")
-    @Expose
-    public String documentationUrl;
-
-    /**
-     * The Keywords.
-     * Keywords associated with the setting
-     */
-    @SerializedName("keywords")
-    @Expose
-    public java.util.List<String> keywords;
-
-    /**
      * The Constraints.
      * Collection of constraints for the setting value
      */
@@ -100,6 +44,62 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
     @SerializedName("dependencies")
     @Expose
     public java.util.List<DeviceManagementSettingDependency> dependencies;
+
+    /**
+     * The Description.
+     * The setting's description
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * The setting's display name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Documentation Url.
+     * Url to setting documentation
+     */
+    @SerializedName("documentationUrl")
+    @Expose
+    public String documentationUrl;
+
+    /**
+     * The Is Top Level.
+     * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
+     */
+    @SerializedName("isTopLevel")
+    @Expose
+    public Boolean isTopLevel;
+
+    /**
+     * The Keywords.
+     * Keywords associated with the setting
+     */
+    @SerializedName("keywords")
+    @Expose
+    public java.util.List<String> keywords;
+
+    /**
+     * The Placeholder Text.
+     * Placeholder text as an example of valid input
+     */
+    @SerializedName("placeholderText")
+    @Expose
+    public String placeholderText;
+
+    /**
+     * The Value Type.
+     * The data type of the value
+     */
+    @SerializedName("valueType")
+    @Expose
+    public DeviceManangementIntentValueType valueType;
 
 
     /**

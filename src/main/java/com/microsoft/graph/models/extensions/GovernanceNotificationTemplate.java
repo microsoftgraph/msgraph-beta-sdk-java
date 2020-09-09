@@ -36,20 +36,20 @@ public class GovernanceNotificationTemplate implements IJsonBackedObject {
     }
 
     /**
+     * The Culture.
+     * 
+     */
+    @SerializedName("culture")
+    @Expose
+    public String culture;
+
+    /**
      * The Id.
      * 
      */
     @SerializedName("id")
     @Expose
     public String id;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
 
     /**
      * The Source.
@@ -60,20 +60,20 @@ public class GovernanceNotificationTemplate implements IJsonBackedObject {
     public String source;
 
     /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
+
+    /**
      * The Version.
      * 
      */
     @SerializedName("version")
     @Expose
     public String version;
-
-    /**
-     * The Culture.
-     * 
-     */
-    @SerializedName("culture")
-    @Expose
-    public String culture;
 
 
     /**

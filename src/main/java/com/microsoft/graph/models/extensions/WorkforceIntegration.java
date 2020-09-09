@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.EligibilityFilteringEnabledEntities;
 import com.microsoft.graph.models.extensions.WorkforceIntegrationEncryption;
 import com.microsoft.graph.models.generated.WorkforceIntegrationSupportedEntities;
-import com.microsoft.graph.models.generated.EligibilityFilteringEnabledEntities;
 import com.microsoft.graph.models.extensions.ChangeTrackedEntity;
 
 
@@ -30,6 +30,14 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
 
 
     /**
+     * The Api Version.
+     * API version for the call back URL. Start with 1.
+     */
+    @SerializedName("apiVersion")
+    @Expose
+    public Integer apiVersion;
+
+    /**
      * The Display Name.
      * Name of the workforce integration.
      */
@@ -38,12 +46,12 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
     public String displayName;
 
     /**
-     * The Api Version.
-     * API version for the call back URL. Start with 1.
+     * The Eligibility Filtering Enabled Entities.
+     * 
      */
-    @SerializedName("apiVersion")
+    @SerializedName("eligibilityFilteringEnabledEntities")
     @Expose
-    public Integer apiVersion;
+    public EnumSet<EligibilityFilteringEnabledEntities> eligibilityFilteringEnabledEntities;
 
     /**
      * The Encryption.
@@ -62,12 +70,12 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
     public Boolean isActive;
 
     /**
-     * The Url.
-     * Workforce Integration URL for callbacks from the Shifts service.
+     * The Supported Entities.
+     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
      */
-    @SerializedName("url")
+    @SerializedName("supportedEntities")
     @Expose
-    public String url;
+    public EnumSet<WorkforceIntegrationSupportedEntities> supportedEntities;
 
     /**
      * The Supports.
@@ -78,20 +86,12 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements IJsonBa
     public EnumSet<WorkforceIntegrationSupportedEntities> supports;
 
     /**
-     * The Supported Entities.
-     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
+     * The Url.
+     * Workforce Integration URL for callbacks from the Shifts service.
      */
-    @SerializedName("supportedEntities")
+    @SerializedName("url")
     @Expose
-    public EnumSet<WorkforceIntegrationSupportedEntities> supportedEntities;
-
-    /**
-     * The Eligibility Filtering Enabled Entities.
-     * 
-     */
-    @SerializedName("eligibilityFilteringEnabledEntities")
-    @Expose
-    public EnumSet<EligibilityFilteringEnabledEntities> eligibilityFilteringEnabledEntities;
+    public String url;
 
 
     /**

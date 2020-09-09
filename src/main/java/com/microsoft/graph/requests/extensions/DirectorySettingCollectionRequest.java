@@ -61,14 +61,14 @@ public class DirectorySettingCollectionRequest extends BaseCollectionRequest<Dir
     public void post(final DirectorySetting newDirectorySetting, final ICallback<DirectorySetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectorySettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectorySetting, callback);
     }
 
     public DirectorySetting post(final DirectorySetting newDirectorySetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectorySettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectorySetting);
     }
 
@@ -105,6 +105,27 @@ public class DirectorySettingCollectionRequest extends BaseCollectionRequest<Dir
         return (DirectorySettingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDirectorySettingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DirectorySettingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDirectorySettingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDirectorySettingCollectionRequest)this;
+    }
     public IDirectorySettingCollectionPage buildFromResponse(final DirectorySettingCollectionResponse response) {
         final IDirectorySettingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

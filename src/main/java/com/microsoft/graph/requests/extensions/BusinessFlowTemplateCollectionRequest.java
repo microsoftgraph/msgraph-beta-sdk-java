@@ -61,14 +61,14 @@ public class BusinessFlowTemplateCollectionRequest extends BaseCollectionRequest
     public void post(final BusinessFlowTemplate newBusinessFlowTemplate, final ICallback<BusinessFlowTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BusinessFlowTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBusinessFlowTemplate, callback);
     }
 
     public BusinessFlowTemplate post(final BusinessFlowTemplate newBusinessFlowTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BusinessFlowTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBusinessFlowTemplate);
     }
 
@@ -105,6 +105,27 @@ public class BusinessFlowTemplateCollectionRequest extends BaseCollectionRequest
         return (BusinessFlowTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBusinessFlowTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BusinessFlowTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBusinessFlowTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBusinessFlowTemplateCollectionRequest)this;
+    }
     public IBusinessFlowTemplateCollectionPage buildFromResponse(final BusinessFlowTemplateCollectionResponse response) {
         final IBusinessFlowTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

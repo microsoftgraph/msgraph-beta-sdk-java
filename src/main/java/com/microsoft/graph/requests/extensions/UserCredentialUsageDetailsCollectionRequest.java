@@ -62,14 +62,14 @@ public class UserCredentialUsageDetailsCollectionRequest extends BaseCollectionR
     public void post(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserCredentialUsageDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserCredentialUsageDetails, callback);
     }
 
     public UserCredentialUsageDetails post(final UserCredentialUsageDetails newUserCredentialUsageDetails) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserCredentialUsageDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserCredentialUsageDetails);
     }
 
@@ -106,6 +106,27 @@ public class UserCredentialUsageDetailsCollectionRequest extends BaseCollectionR
         return (UserCredentialUsageDetailsCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserCredentialUsageDetailsCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserCredentialUsageDetailsCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserCredentialUsageDetailsCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserCredentialUsageDetailsCollectionRequest)this;
+    }
     public IUserCredentialUsageDetailsCollectionPage buildFromResponse(final UserCredentialUsageDetailsCollectionResponse response) {
         final IUserCredentialUsageDetailsCollectionRequestBuilder builder;
         if (response.nextLink != null) {

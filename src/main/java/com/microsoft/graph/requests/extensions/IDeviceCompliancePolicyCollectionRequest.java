@@ -10,10 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
-import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.RetireScheduledManagedDevice;
 import com.microsoft.graph.models.generated.ScheduledRetireState;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import java.util.Arrays;
@@ -60,4 +60,20 @@ public interface IDeviceCompliancePolicyCollectionRequest {
      */
     IDeviceCompliancePolicyCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IDeviceCompliancePolicyCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IDeviceCompliancePolicyCollectionRequest skipToken(String skipToken);
 }

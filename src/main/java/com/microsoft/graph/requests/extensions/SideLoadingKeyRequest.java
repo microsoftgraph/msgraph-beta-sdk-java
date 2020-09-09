@@ -112,6 +112,27 @@ public class SideLoadingKeyRequest extends BaseRequest implements ISideLoadingKe
     }
 
     /**
+     * Creates a SideLoadingKey with a new object
+     *
+     * @param newSideLoadingKey the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SideLoadingKey newSideLoadingKey, final ICallback<SideLoadingKey> callback) {
+        send(HttpMethod.PUT, callback, newSideLoadingKey);
+    }
+
+    /**
+     * Creates a SideLoadingKey with a new object
+     *
+     * @param newSideLoadingKey the object to create/update
+     * @return the created SideLoadingKey
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SideLoadingKey put(final SideLoadingKey newSideLoadingKey) throws ClientException {
+        return send(HttpMethod.PUT, newSideLoadingKey);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

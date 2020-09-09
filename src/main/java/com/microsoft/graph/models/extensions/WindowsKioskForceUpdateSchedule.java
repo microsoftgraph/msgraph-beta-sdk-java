@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.Windows10AppsUpdateRecurrence;
 import com.microsoft.graph.models.generated.DayOfWeek;
+import com.microsoft.graph.models.generated.Windows10AppsUpdateRecurrence;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,12 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
     }
 
     /**
-     * The Start Date Time.
-     * The start time for the force restart.
+     * The Dayof Month.
+     * Day of month. Valid values 1 to 31
      */
-    @SerializedName("startDateTime")
+    @SerializedName("dayofMonth")
     @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The Recurrence.
-     * Recurrence schedule.
-     */
-    @SerializedName("recurrence")
-    @Expose
-    public Windows10AppsUpdateRecurrence recurrence;
+    public Integer dayofMonth;
 
     /**
      * The Dayof Week.
@@ -62,12 +54,12 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
     public DayOfWeek dayofWeek;
 
     /**
-     * The Dayof Month.
-     * Day of month. Valid values 1 to 31
+     * The Recurrence.
+     * Recurrence schedule.
      */
-    @SerializedName("dayofMonth")
+    @SerializedName("recurrence")
     @Expose
-    public Integer dayofMonth;
+    public Windows10AppsUpdateRecurrence recurrence;
 
     /**
      * The Run Immediately If After Start Date Time.
@@ -76,6 +68,14 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
     @SerializedName("runImmediatelyIfAfterStartDateTime")
     @Expose
     public Boolean runImmediatelyIfAfterStartDateTime;
+
+    /**
+     * The Start Date Time.
+     * The start time for the force restart.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
 
     /**

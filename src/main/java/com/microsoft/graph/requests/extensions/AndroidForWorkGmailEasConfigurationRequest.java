@@ -112,6 +112,27 @@ public class AndroidForWorkGmailEasConfigurationRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a AndroidForWorkGmailEasConfiguration with a new object
+     *
+     * @param newAndroidForWorkGmailEasConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration, final ICallback<AndroidForWorkGmailEasConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkGmailEasConfiguration);
+    }
+
+    /**
+     * Creates a AndroidForWorkGmailEasConfiguration with a new object
+     *
+     * @param newAndroidForWorkGmailEasConfiguration the object to create/update
+     * @return the created AndroidForWorkGmailEasConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkGmailEasConfiguration put(final AndroidForWorkGmailEasConfiguration newAndroidForWorkGmailEasConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkGmailEasConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

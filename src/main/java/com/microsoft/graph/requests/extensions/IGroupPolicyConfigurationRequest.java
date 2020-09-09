@@ -80,6 +80,23 @@ public interface IGroupPolicyConfigurationRequest extends IHttpRequest {
     GroupPolicyConfiguration post(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException;
 
     /**
+     * Posts a GroupPolicyConfiguration with a new object
+     *
+     * @param newGroupPolicyConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<GroupPolicyConfiguration> callback);
+
+    /**
+     * Posts a GroupPolicyConfiguration with a new object
+     *
+     * @param newGroupPolicyConfiguration the object to create/update
+     * @return the created GroupPolicyConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyConfiguration put(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

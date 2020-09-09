@@ -112,6 +112,27 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
     }
 
     /**
+     * Creates a EmailActivitySummary with a new object
+     *
+     * @param newEmailActivitySummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmailActivitySummary newEmailActivitySummary, final ICallback<EmailActivitySummary> callback) {
+        send(HttpMethod.PUT, callback, newEmailActivitySummary);
+    }
+
+    /**
+     * Creates a EmailActivitySummary with a new object
+     *
+     * @param newEmailActivitySummary the object to create/update
+     * @return the created EmailActivitySummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmailActivitySummary put(final EmailActivitySummary newEmailActivitySummary) throws ClientException {
+        return send(HttpMethod.PUT, newEmailActivitySummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

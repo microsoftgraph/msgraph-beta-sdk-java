@@ -27,14 +27,6 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
 
     /**
-     * The Client Id.
-     * 
-     */
-    @SerializedName("clientId")
-    @Expose
-    public String clientId;
-
-    /**
      * The Client App Id.
      * 
      */
@@ -43,12 +35,20 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     public String clientAppId;
 
     /**
-     * The Resource App Id.
+     * The Client Id.
      * 
      */
-    @SerializedName("resourceAppId")
+    @SerializedName("clientId")
     @Expose
-    public String resourceAppId;
+    public String clientId;
+
+    /**
+     * The Permission.
+     * 
+     */
+    @SerializedName("permission")
+    @Expose
+    public String permission;
 
     /**
      * The Permission Type.
@@ -59,12 +59,12 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     public String permissionType;
 
     /**
-     * The Permission.
+     * The Resource App Id.
      * 
      */
-    @SerializedName("permission")
+    @SerializedName("resourceAppId")
     @Expose
-    public String permission;
+    public String resourceAppId;
 
 
     /**

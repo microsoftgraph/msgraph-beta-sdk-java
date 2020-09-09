@@ -37,78 +37,6 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
     }
 
     /**
-     * The Firewall Enabled.
-     * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
-     */
-    @SerializedName("firewallEnabled")
-    @Expose
-    public StateManagementSetting firewallEnabled;
-
-    /**
-     * The Stealth Mode Required.
-     * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     */
-    @SerializedName("stealthModeRequired")
-    @Expose
-    public Boolean stealthModeRequired;
-
-    /**
-     * The Stealth Mode Blocked.
-     * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     */
-    @SerializedName("stealthModeBlocked")
-    @Expose
-    public Boolean stealthModeBlocked;
-
-    /**
-     * The Incoming Traffic Required.
-     * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     */
-    @SerializedName("incomingTrafficRequired")
-    @Expose
-    public Boolean incomingTrafficRequired;
-
-    /**
-     * The Incoming Traffic Blocked.
-     * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     */
-    @SerializedName("incomingTrafficBlocked")
-    @Expose
-    public Boolean incomingTrafficBlocked;
-
-    /**
-     * The Unicast Responses To Multicast Broadcasts Required.
-     * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     */
-    @SerializedName("unicastResponsesToMulticastBroadcastsRequired")
-    @Expose
-    public Boolean unicastResponsesToMulticastBroadcastsRequired;
-
-    /**
-     * The Unicast Responses To Multicast Broadcasts Blocked.
-     * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     */
-    @SerializedName("unicastResponsesToMulticastBroadcastsBlocked")
-    @Expose
-    public Boolean unicastResponsesToMulticastBroadcastsBlocked;
-
-    /**
-     * The Inbound Notifications Required.
-     * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     */
-    @SerializedName("inboundNotificationsRequired")
-    @Expose
-    public Boolean inboundNotificationsRequired;
-
-    /**
-     * The Inbound Notifications Blocked.
-     * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     */
-    @SerializedName("inboundNotificationsBlocked")
-    @Expose
-    public Boolean inboundNotificationsBlocked;
-
-    /**
      * The Authorized Application Rules From Group Policy Merged.
      * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
      */
@@ -123,22 +51,6 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
     @SerializedName("authorizedApplicationRulesFromGroupPolicyNotMerged")
     @Expose
     public Boolean authorizedApplicationRulesFromGroupPolicyNotMerged;
-
-    /**
-     * The Global Port Rules From Group Policy Merged.
-     * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     */
-    @SerializedName("globalPortRulesFromGroupPolicyMerged")
-    @Expose
-    public Boolean globalPortRulesFromGroupPolicyMerged;
-
-    /**
-     * The Global Port Rules From Group Policy Not Merged.
-     * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     */
-    @SerializedName("globalPortRulesFromGroupPolicyNotMerged")
-    @Expose
-    public Boolean globalPortRulesFromGroupPolicyNotMerged;
 
     /**
      * The Connection Security Rules From Group Policy Merged.
@@ -157,20 +69,36 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
     public Boolean connectionSecurityRulesFromGroupPolicyNotMerged;
 
     /**
-     * The Outbound Connections Required.
-     * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+     * The Firewall Enabled.
+     * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
      */
-    @SerializedName("outboundConnectionsRequired")
+    @SerializedName("firewallEnabled")
     @Expose
-    public Boolean outboundConnectionsRequired;
+    public StateManagementSetting firewallEnabled;
 
     /**
-     * The Outbound Connections Blocked.
-     * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+     * The Global Port Rules From Group Policy Merged.
+     * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
      */
-    @SerializedName("outboundConnectionsBlocked")
+    @SerializedName("globalPortRulesFromGroupPolicyMerged")
     @Expose
-    public Boolean outboundConnectionsBlocked;
+    public Boolean globalPortRulesFromGroupPolicyMerged;
+
+    /**
+     * The Global Port Rules From Group Policy Not Merged.
+     * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
+     */
+    @SerializedName("globalPortRulesFromGroupPolicyNotMerged")
+    @Expose
+    public Boolean globalPortRulesFromGroupPolicyNotMerged;
+
+    /**
+     * The Inbound Connections Blocked.
+     * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
+     */
+    @SerializedName("inboundConnectionsBlocked")
+    @Expose
+    public Boolean inboundConnectionsBlocked;
 
     /**
      * The Inbound Connections Required.
@@ -181,12 +109,68 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
     public Boolean inboundConnectionsRequired;
 
     /**
-     * The Inbound Connections Blocked.
-     * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
+     * The Inbound Notifications Blocked.
+     * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
      */
-    @SerializedName("inboundConnectionsBlocked")
+    @SerializedName("inboundNotificationsBlocked")
     @Expose
-    public Boolean inboundConnectionsBlocked;
+    public Boolean inboundNotificationsBlocked;
+
+    /**
+     * The Inbound Notifications Required.
+     * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
+     */
+    @SerializedName("inboundNotificationsRequired")
+    @Expose
+    public Boolean inboundNotificationsRequired;
+
+    /**
+     * The Incoming Traffic Blocked.
+     * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
+     */
+    @SerializedName("incomingTrafficBlocked")
+    @Expose
+    public Boolean incomingTrafficBlocked;
+
+    /**
+     * The Incoming Traffic Required.
+     * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
+     */
+    @SerializedName("incomingTrafficRequired")
+    @Expose
+    public Boolean incomingTrafficRequired;
+
+    /**
+     * The Outbound Connections Blocked.
+     * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+     */
+    @SerializedName("outboundConnectionsBlocked")
+    @Expose
+    public Boolean outboundConnectionsBlocked;
+
+    /**
+     * The Outbound Connections Required.
+     * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+     */
+    @SerializedName("outboundConnectionsRequired")
+    @Expose
+    public Boolean outboundConnectionsRequired;
+
+    /**
+     * The Policy Rules From Group Policy Merged.
+     * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+     */
+    @SerializedName("policyRulesFromGroupPolicyMerged")
+    @Expose
+    public Boolean policyRulesFromGroupPolicyMerged;
+
+    /**
+     * The Policy Rules From Group Policy Not Merged.
+     * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+     */
+    @SerializedName("policyRulesFromGroupPolicyNotMerged")
+    @Expose
+    public Boolean policyRulesFromGroupPolicyNotMerged;
 
     /**
      * The Secured Packet Exemption Allowed.
@@ -205,20 +189,36 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
     public Boolean securedPacketExemptionBlocked;
 
     /**
-     * The Policy Rules From Group Policy Merged.
-     * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+     * The Stealth Mode Blocked.
+     * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
      */
-    @SerializedName("policyRulesFromGroupPolicyMerged")
+    @SerializedName("stealthModeBlocked")
     @Expose
-    public Boolean policyRulesFromGroupPolicyMerged;
+    public Boolean stealthModeBlocked;
 
     /**
-     * The Policy Rules From Group Policy Not Merged.
-     * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+     * The Stealth Mode Required.
+     * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
      */
-    @SerializedName("policyRulesFromGroupPolicyNotMerged")
+    @SerializedName("stealthModeRequired")
     @Expose
-    public Boolean policyRulesFromGroupPolicyNotMerged;
+    public Boolean stealthModeRequired;
+
+    /**
+     * The Unicast Responses To Multicast Broadcasts Blocked.
+     * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
+     */
+    @SerializedName("unicastResponsesToMulticastBroadcastsBlocked")
+    @Expose
+    public Boolean unicastResponsesToMulticastBroadcastsBlocked;
+
+    /**
+     * The Unicast Responses To Multicast Broadcasts Required.
+     * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
+     */
+    @SerializedName("unicastResponsesToMulticastBroadcastsRequired")
+    @Expose
+    public Boolean unicastResponsesToMulticastBroadcastsRequired;
 
 
     /**

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PurchaseInvoiceLine;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class PurchaseInvoiceLineRequest extends BaseRequest implements IPurchase
      */
     public PurchaseInvoiceLine post(final PurchaseInvoiceLine newPurchaseInvoiceLine) throws ClientException {
         return send(HttpMethod.POST, newPurchaseInvoiceLine);
+    }
+
+    /**
+     * Creates a PurchaseInvoiceLine with a new object
+     *
+     * @param newPurchaseInvoiceLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PurchaseInvoiceLine newPurchaseInvoiceLine, final ICallback<PurchaseInvoiceLine> callback) {
+        send(HttpMethod.PUT, callback, newPurchaseInvoiceLine);
+    }
+
+    /**
+     * Creates a PurchaseInvoiceLine with a new object
+     *
+     * @param newPurchaseInvoiceLine the object to create/update
+     * @return the created PurchaseInvoiceLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PurchaseInvoiceLine put(final PurchaseInvoiceLine newPurchaseInvoiceLine) throws ClientException {
+        return send(HttpMethod.PUT, newPurchaseInvoiceLine);
     }
 
     /**

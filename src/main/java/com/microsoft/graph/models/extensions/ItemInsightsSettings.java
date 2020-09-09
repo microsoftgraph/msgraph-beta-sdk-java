@@ -27,20 +27,20 @@ public class ItemInsightsSettings extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Is Enabled In Organization.
-     * 
-     */
-    @SerializedName("isEnabledInOrganization")
-    @Expose
-    public Boolean isEnabledInOrganization;
-
-    /**
      * The Disabled For Group.
      * 
      */
     @SerializedName("disabledForGroup")
     @Expose
     public String disabledForGroup;
+
+    /**
+     * The Is Enabled In Organization.
+     * 
+     */
+    @SerializedName("isEnabledInOrganization")
+    @Expose
+    public Boolean isEnabledInOrganization;
 
 
     /**

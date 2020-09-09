@@ -116,6 +116,27 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
     }
 
     /**
+     * Creates a AndroidDeviceOwnerImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerImportedPFXCertificateProfile);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerImportedPFXCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
+     * @return the created AndroidDeviceOwnerImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerImportedPFXCertificateProfile put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerImportedPFXCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

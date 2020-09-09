@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
-import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
@@ -48,7 +48,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDevice, body, callback);
     }
 
@@ -56,7 +56,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newManagedDevice, body);
     }
     /**

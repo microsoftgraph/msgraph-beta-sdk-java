@@ -62,14 +62,14 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollec
     public void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsDefenderApplicationControlSupplementalPolicyAssignment, callback);
     }
 
     public WindowsDefenderApplicationControlSupplementalPolicyAssignment post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -106,6 +106,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollec
         return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequest)this;
+    }
     public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage buildFromResponse(final WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse response) {
         final IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

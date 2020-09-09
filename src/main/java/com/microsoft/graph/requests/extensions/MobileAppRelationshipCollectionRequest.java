@@ -62,14 +62,14 @@ public class MobileAppRelationshipCollectionRequest extends BaseCollectionReques
     public void post(final MobileAppRelationship newMobileAppRelationship, final ICallback<MobileAppRelationship> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppRelationshipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppRelationship, callback);
     }
 
     public MobileAppRelationship post(final MobileAppRelationship newMobileAppRelationship) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppRelationshipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppRelationship);
     }
 
@@ -106,6 +106,27 @@ public class MobileAppRelationshipCollectionRequest extends BaseCollectionReques
         return (MobileAppRelationshipCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppRelationshipCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppRelationshipCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppRelationshipCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppRelationshipCollectionRequest)this;
+    }
     public IMobileAppRelationshipCollectionPage buildFromResponse(final MobileAppRelationshipCollectionResponse response) {
         final IMobileAppRelationshipCollectionRequestBuilder builder;
         if (response.nextLink != null) {

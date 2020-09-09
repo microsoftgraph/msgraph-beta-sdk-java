@@ -116,6 +116,27 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
     }
 
     /**
+     * Creates a ReviewSet with a new object
+     *
+     * @param newReviewSet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ReviewSet newReviewSet, final ICallback<ReviewSet> callback) {
+        send(HttpMethod.PUT, callback, newReviewSet);
+    }
+
+    /**
+     * Creates a ReviewSet with a new object
+     *
+     * @param newReviewSet the object to create/update
+     * @return the created ReviewSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ReviewSet put(final ReviewSet newReviewSet) throws ClientException {
+        return send(HttpMethod.PUT, newReviewSet);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

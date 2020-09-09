@@ -52,12 +52,12 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
     public String deviceName;
 
     /**
-     * The User Id.
-     * The id of the user in the checkin.
+     * The Last Checkin Date Time.
+     * Last checkin time for this user/device pair.
      */
-    @SerializedName("userId")
+    @SerializedName("lastCheckinDateTime")
     @Expose
-    public String userId;
+    public java.util.Calendar lastCheckinDateTime;
 
     /**
      * The User Display Name.
@@ -68,20 +68,20 @@ public class DeviceConfigurationTargetedUserAndDevice implements IJsonBackedObje
     public String userDisplayName;
 
     /**
+     * The User Id.
+     * The id of the user in the checkin.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
      * The User Principal Name.
      * The UPN of the user in the checkin.
      */
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Last Checkin Date Time.
-     * Last checkin time for this user/device pair.
-     */
-    @SerializedName("lastCheckinDateTime")
-    @Expose
-    public java.util.Calendar lastCheckinDateTime;
 
 
     /**

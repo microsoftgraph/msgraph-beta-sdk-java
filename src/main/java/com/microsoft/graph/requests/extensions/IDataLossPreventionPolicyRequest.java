@@ -80,6 +80,23 @@ public interface IDataLossPreventionPolicyRequest extends IHttpRequest {
     DataLossPreventionPolicy post(final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException;
 
     /**
+     * Posts a DataLossPreventionPolicy with a new object
+     *
+     * @param newDataLossPreventionPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback);
+
+    /**
+     * Posts a DataLossPreventionPolicy with a new object
+     *
+     * @param newDataLossPreventionPolicy the object to create/update
+     * @return the created DataLossPreventionPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DataLossPreventionPolicy put(final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

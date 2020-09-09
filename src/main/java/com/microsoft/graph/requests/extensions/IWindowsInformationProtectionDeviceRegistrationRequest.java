@@ -80,6 +80,23 @@ public interface IWindowsInformationProtectionDeviceRegistrationRequest extends 
     WindowsInformationProtectionDeviceRegistration post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException;
 
     /**
+     * Posts a WindowsInformationProtectionDeviceRegistration with a new object
+     *
+     * @param newWindowsInformationProtectionDeviceRegistration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<WindowsInformationProtectionDeviceRegistration> callback);
+
+    /**
+     * Posts a WindowsInformationProtectionDeviceRegistration with a new object
+     *
+     * @param newWindowsInformationProtectionDeviceRegistration the object to create/update
+     * @return the created WindowsInformationProtectionDeviceRegistration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsInformationProtectionDeviceRegistration put(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

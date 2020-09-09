@@ -36,22 +36,6 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
     }
 
     /**
-     * The File Name.
-     * The file name of the uploaded ADML file.
-     */
-    @SerializedName("fileName")
-    @Expose
-    public String fileName;
-
-    /**
-     * The Language Code.
-     * The language code of the uploaded ADML file.
-     */
-    @SerializedName("languageCode")
-    @Expose
-    public String languageCode;
-
-    /**
      * The Content.
      * The contents of the uploaded ADML file.
      */
@@ -60,12 +44,28 @@ public class GroupPolicyUploadedLanguageFile implements IJsonBackedObject {
     public byte[] content;
 
     /**
+     * The File Name.
+     * The file name of the uploaded ADML file.
+     */
+    @SerializedName("fileName")
+    @Expose
+    public String fileName;
+
+    /**
      * The Id.
      * Key of the entity.
      */
     @SerializedName("id")
     @Expose
     public String id;
+
+    /**
+     * The Language Code.
+     * The language code of the uploaded ADML file.
+     */
+    @SerializedName("languageCode")
+    @Expose
+    public String languageCode;
 
     /**
      * The Last Modified Date Time.

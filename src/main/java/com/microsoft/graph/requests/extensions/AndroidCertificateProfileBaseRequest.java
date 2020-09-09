@@ -129,6 +129,27 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a AndroidCertificateProfileBase with a new object
+     *
+     * @param newAndroidCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<AndroidCertificateProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newAndroidCertificateProfileBase);
+    }
+
+    /**
+     * Creates a AndroidCertificateProfileBase with a new object
+     *
+     * @param newAndroidCertificateProfileBase the object to create/update
+     * @return the created AndroidCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidCertificateProfileBase put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidCertificateProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

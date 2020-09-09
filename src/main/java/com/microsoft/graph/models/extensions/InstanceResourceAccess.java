@@ -37,20 +37,20 @@ public class InstanceResourceAccess implements IJsonBackedObject {
     }
 
     /**
-     * The Resource App Id.
-     * 
-     */
-    @SerializedName("resourceAppId")
-    @Expose
-    public String resourceAppId;
-
-    /**
      * The Permissions.
      * 
      */
     @SerializedName("permissions")
     @Expose
     public java.util.List<ResourcePermission> permissions;
+
+    /**
+     * The Resource App Id.
+     * 
+     */
+    @SerializedName("resourceAppId")
+    @Expose
+    public String resourceAppId;
 
 
     /**

@@ -114,6 +114,27 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a TermsAndConditionsGroupAssignment with a new object
+     *
+     * @param newTermsAndConditionsGroupAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<TermsAndConditionsGroupAssignment> callback) {
+        send(HttpMethod.PUT, callback, newTermsAndConditionsGroupAssignment);
+    }
+
+    /**
+     * Creates a TermsAndConditionsGroupAssignment with a new object
+     *
+     * @param newTermsAndConditionsGroupAssignment the object to create/update
+     * @return the created TermsAndConditionsGroupAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TermsAndConditionsGroupAssignment put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newTermsAndConditionsGroupAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

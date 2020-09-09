@@ -36,12 +36,12 @@ public class DiscoveredSensitiveType implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Confidence.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("confidence")
     @Expose
-    public java.util.UUID id;
+    public Integer confidence;
 
     /**
      * The Count.
@@ -52,12 +52,12 @@ public class DiscoveredSensitiveType implements IJsonBackedObject {
     public Integer count;
 
     /**
-     * The Confidence.
+     * The Id.
      * 
      */
-    @SerializedName("confidence")
+    @SerializedName("id")
     @Expose
-    public Integer confidence;
+    public java.util.UUID id;
 
 
     /**

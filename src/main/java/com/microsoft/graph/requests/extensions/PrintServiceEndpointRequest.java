@@ -112,6 +112,27 @@ public class PrintServiceEndpointRequest extends BaseRequest implements IPrintSe
     }
 
     /**
+     * Creates a PrintServiceEndpoint with a new object
+     *
+     * @param newPrintServiceEndpoint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintServiceEndpoint newPrintServiceEndpoint, final ICallback<PrintServiceEndpoint> callback) {
+        send(HttpMethod.PUT, callback, newPrintServiceEndpoint);
+    }
+
+    /**
+     * Creates a PrintServiceEndpoint with a new object
+     *
+     * @param newPrintServiceEndpoint the object to create/update
+     * @return the created PrintServiceEndpoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintServiceEndpoint put(final PrintServiceEndpoint newPrintServiceEndpoint) throws ClientException {
+        return send(HttpMethod.PUT, newPrintServiceEndpoint);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

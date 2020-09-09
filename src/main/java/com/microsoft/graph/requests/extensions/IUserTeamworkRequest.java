@@ -80,6 +80,23 @@ public interface IUserTeamworkRequest extends IHttpRequest {
     UserTeamwork post(final UserTeamwork newUserTeamwork) throws ClientException;
 
     /**
+     * Posts a UserTeamwork with a new object
+     *
+     * @param newUserTeamwork the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserTeamwork newUserTeamwork, final ICallback<UserTeamwork> callback);
+
+    /**
+     * Posts a UserTeamwork with a new object
+     *
+     * @param newUserTeamwork the object to create/update
+     * @return the created UserTeamwork
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserTeamwork put(final UserTeamwork newUserTeamwork) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

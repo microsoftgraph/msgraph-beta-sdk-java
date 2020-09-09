@@ -80,6 +80,23 @@ public interface IOnPremisesAgentRequest extends IHttpRequest {
     OnPremisesAgent post(final OnPremisesAgent newOnPremisesAgent) throws ClientException;
 
     /**
+     * Posts a OnPremisesAgent with a new object
+     *
+     * @param newOnPremisesAgent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback);
+
+    /**
+     * Posts a OnPremisesAgent with a new object
+     *
+     * @param newOnPremisesAgent the object to create/update
+     * @return the created OnPremisesAgent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnPremisesAgent put(final OnPremisesAgent newOnPremisesAgent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ITaxGroupRequest extends IHttpRequest {
     TaxGroup post(final TaxGroup newTaxGroup) throws ClientException;
 
     /**
+     * Posts a TaxGroup with a new object
+     *
+     * @param newTaxGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TaxGroup newTaxGroup, final ICallback<TaxGroup> callback);
+
+    /**
+     * Posts a TaxGroup with a new object
+     *
+     * @param newTaxGroup the object to create/update
+     * @return the created TaxGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TaxGroup put(final TaxGroup newTaxGroup) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

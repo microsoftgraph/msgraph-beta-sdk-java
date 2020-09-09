@@ -69,6 +69,13 @@ public class DeviceComplianceScriptRequestBuilder extends BaseRequestBuilder imp
     public IDeviceHealthScriptAssignmentRequestBuilder assignments(final String id) {
         return new DeviceHealthScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public IDeviceComplianceScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+        return new DeviceComplianceScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
+    }
+
+    public IDeviceComplianceScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
+        return new DeviceComplianceScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceComplianceScriptRunSummary
@@ -77,13 +84,6 @@ public class DeviceComplianceScriptRequestBuilder extends BaseRequestBuilder imp
      */
     public IDeviceComplianceScriptRunSummaryRequestBuilder runSummary() {
         return new DeviceComplianceScriptRunSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
-    }
-    public IDeviceComplianceScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
-        return new DeviceComplianceScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
-    }
-
-    public IDeviceComplianceScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
-        return new DeviceComplianceScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
 
     public IDeviceComplianceScriptAssignRequestBuilder assign(final java.util.List<DeviceHealthScriptAssignment> deviceHealthScriptAssignments) {

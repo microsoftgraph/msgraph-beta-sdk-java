@@ -122,6 +122,27 @@ public class SetRequest extends BaseRequest implements ISetRequest {
     }
 
     /**
+     * Creates a Set with a new object
+     *
+     * @param newSet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Set newSet, final ICallback<Set> callback) {
+        send(HttpMethod.PUT, callback, newSet);
+    }
+
+    /**
+     * Creates a Set with a new object
+     *
+     * @param newSet the object to create/update
+     * @return the created Set
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Set put(final Set newSet) throws ClientException {
+        return send(HttpMethod.PUT, newSet);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

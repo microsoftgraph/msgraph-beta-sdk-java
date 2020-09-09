@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.VpnAuthenticationMethod;
 import com.microsoft.graph.models.generated.AndroidVpnConnectionType;
-import com.microsoft.graph.models.extensions.VpnServer;
 import com.microsoft.graph.models.extensions.KeyValue;
 import com.microsoft.graph.models.extensions.KeyValuePair;
-import com.microsoft.graph.models.generated.VpnAuthenticationMethod;
+import com.microsoft.graph.models.extensions.VpnServer;
 import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
@@ -33,6 +33,14 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements IJso
 
 
     /**
+     * The Authentication Method.
+     * Authentication method.
+     */
+    @SerializedName("authenticationMethod")
+    @Expose
+    public VpnAuthenticationMethod authenticationMethod;
+
+    /**
      * The Connection Name.
      * Connection name displayed to the user.
      */
@@ -47,38 +55,6 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements IJso
     @SerializedName("connectionType")
     @Expose
     public AndroidVpnConnectionType connectionType;
-
-    /**
-     * The Role.
-     * Role when connection type is set to Pulse Secure.
-     */
-    @SerializedName("role")
-    @Expose
-    public String role;
-
-    /**
-     * The Realm.
-     * Realm when connection type is set to Pulse Secure.
-     */
-    @SerializedName("realm")
-    @Expose
-    public String realm;
-
-    /**
-     * The Servers.
-     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("servers")
-    @Expose
-    public java.util.List<VpnServer> servers;
-
-    /**
-     * The Fingerprint.
-     * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
-     */
-    @SerializedName("fingerprint")
-    @Expose
-    public String fingerprint;
 
     /**
      * The Custom Data.
@@ -97,12 +73,36 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements IJso
     public java.util.List<KeyValuePair> customKeyValueData;
 
     /**
-     * The Authentication Method.
-     * Authentication method.
+     * The Fingerprint.
+     * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName("fingerprint")
     @Expose
-    public VpnAuthenticationMethod authenticationMethod;
+    public String fingerprint;
+
+    /**
+     * The Realm.
+     * Realm when connection type is set to Pulse Secure.
+     */
+    @SerializedName("realm")
+    @Expose
+    public String realm;
+
+    /**
+     * The Role.
+     * Role when connection type is set to Pulse Secure.
+     */
+    @SerializedName("role")
+    @Expose
+    public String role;
+
+    /**
+     * The Servers.
+     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("servers")
+    @Expose
+    public java.util.List<VpnServer> servers;
 
     /**
      * The Identity Certificate.

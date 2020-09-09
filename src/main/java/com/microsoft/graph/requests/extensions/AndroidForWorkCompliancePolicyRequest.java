@@ -112,6 +112,27 @@ public class AndroidForWorkCompliancePolicyRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a AndroidForWorkCompliancePolicy with a new object
+     *
+     * @param newAndroidForWorkCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy, final ICallback<AndroidForWorkCompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkCompliancePolicy);
+    }
+
+    /**
+     * Creates a AndroidForWorkCompliancePolicy with a new object
+     *
+     * @param newAndroidForWorkCompliancePolicy the object to create/update
+     * @return the created AndroidForWorkCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkCompliancePolicy put(final AndroidForWorkCompliancePolicy newAndroidForWorkCompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkCompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

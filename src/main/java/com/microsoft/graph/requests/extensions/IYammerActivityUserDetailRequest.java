@@ -80,6 +80,23 @@ public interface IYammerActivityUserDetailRequest extends IHttpRequest {
     YammerActivityUserDetail post(final YammerActivityUserDetail newYammerActivityUserDetail) throws ClientException;
 
     /**
+     * Posts a YammerActivityUserDetail with a new object
+     *
+     * @param newYammerActivityUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<YammerActivityUserDetail> callback);
+
+    /**
+     * Posts a YammerActivityUserDetail with a new object
+     *
+     * @param newYammerActivityUserDetail the object to create/update
+     * @return the created YammerActivityUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    YammerActivityUserDetail put(final YammerActivityUserDetail newYammerActivityUserDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

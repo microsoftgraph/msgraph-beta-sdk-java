@@ -112,6 +112,27 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a AndroidManagedStoreAppConfiguration with a new object
+     *
+     * @param newAndroidManagedStoreAppConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<AndroidManagedStoreAppConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidManagedStoreAppConfiguration);
+    }
+
+    /**
+     * Creates a AndroidManagedStoreAppConfiguration with a new object
+     *
+     * @param newAndroidManagedStoreAppConfiguration the object to create/update
+     * @return the created AndroidManagedStoreAppConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidManagedStoreAppConfiguration put(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidManagedStoreAppConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

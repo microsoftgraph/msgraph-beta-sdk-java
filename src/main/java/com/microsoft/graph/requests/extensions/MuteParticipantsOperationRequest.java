@@ -112,6 +112,27 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
     }
 
     /**
+     * Creates a MuteParticipantsOperation with a new object
+     *
+     * @param newMuteParticipantsOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MuteParticipantsOperation newMuteParticipantsOperation, final ICallback<MuteParticipantsOperation> callback) {
+        send(HttpMethod.PUT, callback, newMuteParticipantsOperation);
+    }
+
+    /**
+     * Creates a MuteParticipantsOperation with a new object
+     *
+     * @param newMuteParticipantsOperation the object to create/update
+     * @return the created MuteParticipantsOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MuteParticipantsOperation put(final MuteParticipantsOperation newMuteParticipantsOperation) throws ClientException {
+        return send(HttpMethod.PUT, newMuteParticipantsOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

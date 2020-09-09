@@ -32,7 +32,7 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRequestBuilder extends IReq
      */
     IAndroidDeviceOwnerEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder revokeToken();
     IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder createToken(final Integer tokenValidityInSeconds);
+    IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder revokeToken();
 
 }

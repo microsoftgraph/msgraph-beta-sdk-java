@@ -62,14 +62,14 @@ public class PrintTaskTriggerCollectionRequest extends BaseCollectionRequest<Pri
     public void post(final PrintTaskTrigger newPrintTaskTrigger, final ICallback<PrintTaskTrigger> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintTaskTriggerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintTaskTrigger, callback);
     }
 
     public PrintTaskTrigger post(final PrintTaskTrigger newPrintTaskTrigger) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintTaskTriggerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintTaskTrigger);
     }
 
@@ -106,6 +106,27 @@ public class PrintTaskTriggerCollectionRequest extends BaseCollectionRequest<Pri
         return (PrintTaskTriggerCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintTaskTriggerCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintTaskTriggerCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintTaskTriggerCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintTaskTriggerCollectionRequest)this;
+    }
     public IPrintTaskTriggerCollectionPage buildFromResponse(final PrintTaskTriggerCollectionResponse response) {
         final IPrintTaskTriggerCollectionRequestBuilder builder;
         if (response.nextLink != null) {

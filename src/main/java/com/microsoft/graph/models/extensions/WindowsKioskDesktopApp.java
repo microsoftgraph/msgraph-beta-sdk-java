@@ -27,14 +27,6 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements IJson
 
 
     /**
-     * The Path.
-     * Define the path of a desktop app
-     */
-    @SerializedName("path")
-    @Expose
-    public String path;
-
-    /**
      * The Desktop Application Id.
      * Define the DesktopApplicationID of the app
      */
@@ -49,6 +41,14 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements IJson
     @SerializedName("desktopApplicationLinkPath")
     @Expose
     public String desktopApplicationLinkPath;
+
+    /**
+     * The Path.
+     * Define the path of a desktop app
+     */
+    @SerializedName("path")
+    @Expose
+    public String path;
 
 
     /**

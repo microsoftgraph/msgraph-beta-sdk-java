@@ -14,10 +14,10 @@ import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
-import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
+import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -119,6 +119,27 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      */
     public Vendor post(final Vendor newVendor) throws ClientException {
         return send(HttpMethod.POST, newVendor);
+    }
+
+    /**
+     * Creates a Vendor with a new object
+     *
+     * @param newVendor the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Vendor newVendor, final ICallback<Vendor> callback) {
+        send(HttpMethod.PUT, callback, newVendor);
+    }
+
+    /**
+     * Creates a Vendor with a new object
+     *
+     * @param newVendor the object to create/update
+     * @return the created Vendor
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Vendor put(final Vendor newVendor) throws ClientException {
+        return send(HttpMethod.PUT, newVendor);
     }
 
     /**

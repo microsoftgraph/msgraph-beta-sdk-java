@@ -30,20 +30,20 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
 
 
     /**
-     * The Kernel Extension Overrides Allowed.
-     * If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
-     */
-    @SerializedName("kernelExtensionOverridesAllowed")
-    @Expose
-    public Boolean kernelExtensionOverridesAllowed;
-
-    /**
      * The Kernel Extension Allowed Team Identifiers.
      * All kernel extensions validly signed by the team identifiers in this list will be allowed to load.
      */
     @SerializedName("kernelExtensionAllowedTeamIdentifiers")
     @Expose
     public java.util.List<String> kernelExtensionAllowedTeamIdentifiers;
+
+    /**
+     * The Kernel Extension Overrides Allowed.
+     * If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
+     */
+    @SerializedName("kernelExtensionOverridesAllowed")
+    @Expose
+    public Boolean kernelExtensionOverridesAllowed;
 
     /**
      * The Kernel Extensions Allowed.
@@ -54,12 +54,12 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     public java.util.List<MacOSKernelExtension> kernelExtensionsAllowed;
 
     /**
-     * The System Extensions Block Override.
-     * Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
+     * The System Extensions Allowed.
+     * Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("systemExtensionsBlockOverride")
+    @SerializedName("systemExtensionsAllowed")
     @Expose
-    public Boolean systemExtensionsBlockOverride;
+    public java.util.List<MacOSSystemExtension> systemExtensionsAllowed;
 
     /**
      * The System Extensions Allowed Team Identifiers.
@@ -70,20 +70,20 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     public java.util.List<String> systemExtensionsAllowedTeamIdentifiers;
 
     /**
-     * The System Extensions Allowed.
-     * Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("systemExtensionsAllowed")
-    @Expose
-    public java.util.List<MacOSSystemExtension> systemExtensionsAllowed;
-
-    /**
      * The System Extensions Allowed Types.
      * Gets or sets a list of allowed macOS system extension types. This collection can contain a maximum of 500 elements.
      */
     @SerializedName("systemExtensionsAllowedTypes")
     @Expose
     public java.util.List<MacOSSystemExtensionTypeMapping> systemExtensionsAllowedTypes;
+
+    /**
+     * The System Extensions Block Override.
+     * Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
+     */
+    @SerializedName("systemExtensionsBlockOverride")
+    @Expose
+    public Boolean systemExtensionsBlockOverride;
 
 
     /**

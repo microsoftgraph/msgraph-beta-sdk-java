@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementCertificationAuthority;
 import com.microsoft.graph.models.generated.CertificateStore;
+import com.microsoft.graph.models.generated.DeviceManagementCertificationAuthority;
 import com.microsoft.graph.models.extensions.CustomSubjectAlternativeName;
 import com.microsoft.graph.models.extensions.ManagedDeviceCertificateState;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerCertificateProfileBase;
@@ -31,6 +31,22 @@ import java.util.Map;
  */
 public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements IJsonBackedObject {
 
+
+    /**
+     * The Certificate Store.
+     * Target store certificate
+     */
+    @SerializedName("certificateStore")
+    @Expose
+    public CertificateStore certificateStore;
+
+    /**
+     * The Certificate Template Name.
+     * PKCS Certificate Template Name
+     */
+    @SerializedName("certificateTemplateName")
+    @Expose
+    public String certificateTemplateName;
 
     /**
      * The Certification Authority.
@@ -57,12 +73,12 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     public DeviceManagementCertificationAuthority certificationAuthorityType;
 
     /**
-     * The Certificate Template Name.
-     * PKCS Certificate Template Name
+     * The Custom Subject Alternative Names.
+     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName("customSubjectAlternativeNames")
     @Expose
-    public String certificateTemplateName;
+    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Subject Alternative Name Format String.
@@ -79,22 +95,6 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     @SerializedName("subjectNameFormatString")
     @Expose
     public String subjectNameFormatString;
-
-    /**
-     * The Certificate Store.
-     * Target store certificate
-     */
-    @SerializedName("certificateStore")
-    @Expose
-    public CertificateStore certificateStore;
-
-    /**
-     * The Custom Subject Alternative Names.
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("customSubjectAlternativeNames")
-    @Expose
-    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Managed Device Certificate States.

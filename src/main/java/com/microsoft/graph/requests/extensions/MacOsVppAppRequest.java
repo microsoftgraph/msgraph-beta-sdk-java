@@ -116,6 +116,27 @@ public class MacOsVppAppRequest extends BaseRequest implements IMacOsVppAppReque
     }
 
     /**
+     * Creates a MacOsVppApp with a new object
+     *
+     * @param newMacOsVppApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOsVppApp newMacOsVppApp, final ICallback<MacOsVppApp> callback) {
+        send(HttpMethod.PUT, callback, newMacOsVppApp);
+    }
+
+    /**
+     * Creates a MacOsVppApp with a new object
+     *
+     * @param newMacOsVppApp the object to create/update
+     * @return the created MacOsVppApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOsVppApp put(final MacOsVppApp newMacOsVppApp) throws ClientException {
+        return send(HttpMethod.PUT, newMacOsVppApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

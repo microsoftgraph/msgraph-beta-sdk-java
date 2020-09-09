@@ -29,68 +29,12 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Thumbprint.
-     * SHA-1 thumbprint of the PFX certificate.
+     * The Created Date Time.
+     * Date/time when this PFX certificate was imported.
      */
-    @SerializedName("thumbprint")
+    @SerializedName("createdDateTime")
     @Expose
-    public String thumbprint;
-
-    /**
-     * The Intended Purpose.
-     * Certificate's intended purpose from the point-of-view of deployment.
-     */
-    @SerializedName("intendedPurpose")
-    @Expose
-    public UserPfxIntendedPurpose intendedPurpose;
-
-    /**
-     * The User Principal Name.
-     * User Principal Name of the PFX certificate.
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Start Date Time.
-     * Certificate's validity start date/time.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The Expiration Date Time.
-     * Certificate's validity expiration date/time.
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
-     * The Provider Name.
-     * Crypto provider used to encrypt this blob.
-     */
-    @SerializedName("providerName")
-    @Expose
-    public String providerName;
-
-    /**
-     * The Key Name.
-     * Name of the key (within the provider) used to encrypt the blob.
-     */
-    @SerializedName("keyName")
-    @Expose
-    public String keyName;
-
-    /**
-     * The Padding Scheme.
-     * Padding scheme used by the provider during encryption/decryption.
-     */
-    @SerializedName("paddingScheme")
-    @Expose
-    public UserPfxPaddingScheme paddingScheme;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Encrypted Pfx Blob.
@@ -109,12 +53,28 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
     public String encryptedPfxPassword;
 
     /**
-     * The Created Date Time.
-     * Date/time when this PFX certificate was imported.
+     * The Expiration Date Time.
+     * Certificate's validity expiration date/time.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("expirationDateTime")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The Intended Purpose.
+     * Certificate's intended purpose from the point-of-view of deployment.
+     */
+    @SerializedName("intendedPurpose")
+    @Expose
+    public UserPfxIntendedPurpose intendedPurpose;
+
+    /**
+     * The Key Name.
+     * Name of the key (within the provider) used to encrypt the blob.
+     */
+    @SerializedName("keyName")
+    @Expose
+    public String keyName;
 
     /**
      * The Last Modified Date Time.
@@ -123,6 +83,46 @@ public class UserPFXCertificate extends Entity implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Padding Scheme.
+     * Padding scheme used by the provider during encryption/decryption.
+     */
+    @SerializedName("paddingScheme")
+    @Expose
+    public UserPfxPaddingScheme paddingScheme;
+
+    /**
+     * The Provider Name.
+     * Crypto provider used to encrypt this blob.
+     */
+    @SerializedName("providerName")
+    @Expose
+    public String providerName;
+
+    /**
+     * The Start Date Time.
+     * Certificate's validity start date/time.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Thumbprint.
+     * SHA-1 thumbprint of the PFX certificate.
+     */
+    @SerializedName("thumbprint")
+    @Expose
+    public String thumbprint;
+
+    /**
+     * The User Principal Name.
+     * User Principal Name of the PFX certificate.
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

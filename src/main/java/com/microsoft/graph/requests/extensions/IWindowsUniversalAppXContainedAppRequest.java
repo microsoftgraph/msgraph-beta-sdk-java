@@ -80,6 +80,23 @@ public interface IWindowsUniversalAppXContainedAppRequest extends IHttpRequest {
     WindowsUniversalAppXContainedApp post(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp) throws ClientException;
 
     /**
+     * Posts a WindowsUniversalAppXContainedApp with a new object
+     *
+     * @param newWindowsUniversalAppXContainedApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<WindowsUniversalAppXContainedApp> callback);
+
+    /**
+     * Posts a WindowsUniversalAppXContainedApp with a new object
+     *
+     * @param newWindowsUniversalAppXContainedApp the object to create/update
+     * @return the created WindowsUniversalAppXContainedApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsUniversalAppXContainedApp put(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

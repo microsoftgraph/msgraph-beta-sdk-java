@@ -80,6 +80,23 @@ public interface IRemoteActionAuditRequest extends IHttpRequest {
     RemoteActionAudit post(final RemoteActionAudit newRemoteActionAudit) throws ClientException;
 
     /**
+     * Posts a RemoteActionAudit with a new object
+     *
+     * @param newRemoteActionAudit the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback);
+
+    /**
+     * Posts a RemoteActionAudit with a new object
+     *
+     * @param newRemoteActionAudit the object to create/update
+     * @return the created RemoteActionAudit
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RemoteActionAudit put(final RemoteActionAudit newRemoteActionAudit) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

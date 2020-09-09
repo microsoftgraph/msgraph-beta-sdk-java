@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
-import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.AppScope;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.AppScopeCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppScopeCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,12 +34,12 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
 
     /**
-     * The Role Definition Id.
+     * The App Scope Ids.
      * 
      */
-    @SerializedName("roleDefinitionId")
+    @SerializedName("appScopeIds")
     @Expose
-    public String roleDefinitionId;
+    public java.util.List<String> appScopeIds;
 
     /**
      * The Condition.
@@ -50,28 +50,12 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
     public String condition;
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * 
      */
     @SerializedName("description")
     @Expose
     public String description;
-
-    /**
-     * The Principal Ids.
-     * 
-     */
-    @SerializedName("principalIds")
-    @Expose
-    public java.util.List<String> principalIds;
 
     /**
      * The Directory Scope Ids.
@@ -82,26 +66,34 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
     public java.util.List<String> directoryScopeIds;
 
     /**
-     * The App Scope Ids.
+     * The Display Name.
      * 
      */
-    @SerializedName("appScopeIds")
+    @SerializedName("displayName")
     @Expose
-    public java.util.List<String> appScopeIds;
+    public String displayName;
 
     /**
-     * The Role Definition.
+     * The Principal Ids.
      * 
      */
-    @SerializedName("roleDefinition")
+    @SerializedName("principalIds")
     @Expose
-    public UnifiedRoleDefinition roleDefinition;
+    public java.util.List<String> principalIds;
 
     /**
-     * The Principals.
+     * The Role Definition Id.
      * 
      */
-    public DirectoryObjectCollectionPage principals;
+    @SerializedName("roleDefinitionId")
+    @Expose
+    public String roleDefinitionId;
+
+    /**
+     * The App Scopes.
+     * 
+     */
+    public AppScopeCollectionPage appScopes;
 
     /**
      * The Directory Scopes.
@@ -110,10 +102,18 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
     public DirectoryObjectCollectionPage directoryScopes;
 
     /**
-     * The App Scopes.
+     * The Principals.
      * 
      */
-    public AppScopeCollectionPage appScopes;
+    public DirectoryObjectCollectionPage principals;
+
+    /**
+     * The Role Definition.
+     * 
+     */
+    @SerializedName("roleDefinition")
+    @Expose
+    public UnifiedRoleDefinition roleDefinition;
 
 
     /**
@@ -155,20 +155,20 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
         rawObject = json;
 
 
-        if (json.has("principals")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("principals@odata.nextLink")) {
-                response.nextLink = json.get("principals@odata.nextLink").getAsString();
+        if (json.has("appScopes")) {
+            final AppScopeCollectionResponse response = new AppScopeCollectionResponse();
+            if (json.has("appScopes@odata.nextLink")) {
+                response.nextLink = json.get("appScopes@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("principals").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appScopes").toString(), JsonObject[].class);
+            final AppScope[] array = new AppScope[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppScope.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            principals = new DirectoryObjectCollectionPage(response, null);
+            appScopes = new AppScopeCollectionPage(response, null);
         }
 
         if (json.has("directoryScopes")) {
@@ -187,20 +187,20 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
             directoryScopes = new DirectoryObjectCollectionPage(response, null);
         }
 
-        if (json.has("appScopes")) {
-            final AppScopeCollectionResponse response = new AppScopeCollectionResponse();
-            if (json.has("appScopes@odata.nextLink")) {
-                response.nextLink = json.get("appScopes@odata.nextLink").getAsString();
+        if (json.has("principals")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("principals@odata.nextLink")) {
+                response.nextLink = json.get("principals@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appScopes").toString(), JsonObject[].class);
-            final AppScope[] array = new AppScope[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("principals").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppScope.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            appScopes = new AppScopeCollectionPage(response, null);
+            principals = new DirectoryObjectCollectionPage(response, null);
         }
     }
 }

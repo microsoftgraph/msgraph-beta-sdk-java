@@ -12,29 +12,29 @@ import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.IosAvailableUpdateVersion;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
@@ -155,6 +155,27 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      */
     public DeviceConfiguration post(final DeviceConfiguration newDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfiguration);
+    }
+
+    /**
+     * Creates a DeviceConfiguration with a new object
+     *
+     * @param newDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfiguration);
+    }
+
+    /**
+     * Creates a DeviceConfiguration with a new object
+     *
+     * @param newDeviceConfiguration the object to create/update
+     * @return the created DeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfiguration put(final DeviceConfiguration newDeviceConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfiguration);
     }
 
     /**

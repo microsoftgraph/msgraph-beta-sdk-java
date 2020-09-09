@@ -40,7 +40,7 @@ public class PrivilegedRoleAssignmentCollectionReferenceRequest extends BaseColl
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/privilegedRoleAssignments/" + newPrivilegedRoleAssignment.id);
         new PrivilegedRoleAssignmentWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRoleAssignment, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class PrivilegedRoleAssignmentCollectionReferenceRequest extends BaseColl
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/privilegedRoleAssignments/" + newPrivilegedRoleAssignment.id);
         return new PrivilegedRoleAssignmentWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newPrivilegedRoleAssignment, body);
     }
     /**

@@ -80,6 +80,23 @@ public interface IWindows10NetworkBoundaryConfigurationRequest extends IHttpRequ
     Windows10NetworkBoundaryConfiguration post(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration) throws ClientException;
 
     /**
+     * Posts a Windows10NetworkBoundaryConfiguration with a new object
+     *
+     * @param newWindows10NetworkBoundaryConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration, final ICallback<Windows10NetworkBoundaryConfiguration> callback);
+
+    /**
+     * Posts a Windows10NetworkBoundaryConfiguration with a new object
+     *
+     * @param newWindows10NetworkBoundaryConfiguration the object to create/update
+     * @return the created Windows10NetworkBoundaryConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10NetworkBoundaryConfiguration put(final Windows10NetworkBoundaryConfiguration newWindows10NetworkBoundaryConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

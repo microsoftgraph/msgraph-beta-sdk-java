@@ -62,14 +62,14 @@ public class Fido2AuthenticationMethodCollectionRequest extends BaseCollectionRe
     public void post(final Fido2AuthenticationMethod newFido2AuthenticationMethod, final ICallback<Fido2AuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new Fido2AuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFido2AuthenticationMethod, callback);
     }
 
     public Fido2AuthenticationMethod post(final Fido2AuthenticationMethod newFido2AuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new Fido2AuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newFido2AuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class Fido2AuthenticationMethodCollectionRequest extends BaseCollectionRe
         return (Fido2AuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IFido2AuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (Fido2AuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IFido2AuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IFido2AuthenticationMethodCollectionRequest)this;
+    }
     public IFido2AuthenticationMethodCollectionPage buildFromResponse(final Fido2AuthenticationMethodCollectionResponse response) {
         final IFido2AuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

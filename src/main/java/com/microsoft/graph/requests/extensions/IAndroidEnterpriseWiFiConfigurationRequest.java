@@ -80,6 +80,23 @@ public interface IAndroidEnterpriseWiFiConfigurationRequest extends IHttpRequest
     AndroidEnterpriseWiFiConfiguration post(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newAndroidEnterpriseWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<AndroidEnterpriseWiFiConfiguration> callback);
+
+    /**
+     * Posts a AndroidEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newAndroidEnterpriseWiFiConfiguration the object to create/update
+     * @return the created AndroidEnterpriseWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidEnterpriseWiFiConfiguration put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

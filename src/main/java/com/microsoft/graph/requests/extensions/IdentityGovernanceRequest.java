@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -115,6 +115,27 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      */
     public IdentityGovernance post(final IdentityGovernance newIdentityGovernance) throws ClientException {
         return send(HttpMethod.POST, newIdentityGovernance);
+    }
+
+    /**
+     * Creates a IdentityGovernance with a new object
+     *
+     * @param newIdentityGovernance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IdentityGovernance newIdentityGovernance, final ICallback<IdentityGovernance> callback) {
+        send(HttpMethod.PUT, callback, newIdentityGovernance);
+    }
+
+    /**
+     * Creates a IdentityGovernance with a new object
+     *
+     * @param newIdentityGovernance the object to create/update
+     * @return the created IdentityGovernance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IdentityGovernance put(final IdentityGovernance newIdentityGovernance) throws ClientException {
+        return send(HttpMethod.PUT, newIdentityGovernance);
     }
 
     /**

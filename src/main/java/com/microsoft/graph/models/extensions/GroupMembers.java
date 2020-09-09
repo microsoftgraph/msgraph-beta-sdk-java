@@ -27,20 +27,20 @@ public class GroupMembers extends UserSet implements IJsonBackedObject {
 
 
     /**
-     * The Id.
-     * 
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Description.
      * 
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
 
     /**

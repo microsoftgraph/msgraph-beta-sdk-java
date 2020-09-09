@@ -36,20 +36,20 @@ public class Win32LobAppRestartSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Grace Period In Minutes.
-     * The number of minutes to wait before restarting the device after an app installation.
-     */
-    @SerializedName("gracePeriodInMinutes")
-    @Expose
-    public Integer gracePeriodInMinutes;
-
-    /**
      * The Countdown Display Before Restart In Minutes.
      * The number of minutes before the restart time to display the countdown dialog for pending restarts.
      */
     @SerializedName("countdownDisplayBeforeRestartInMinutes")
     @Expose
     public Integer countdownDisplayBeforeRestartInMinutes;
+
+    /**
+     * The Grace Period In Minutes.
+     * The number of minutes to wait before restarting the device after an app installation.
+     */
+    @SerializedName("gracePeriodInMinutes")
+    @Expose
+    public Integer gracePeriodInMinutes;
 
     /**
      * The Restart Notification Snooze Duration In Minutes.

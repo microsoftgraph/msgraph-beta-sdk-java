@@ -28,20 +28,12 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The User Id.
+     * The Expiration Date Time.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName("expirationDateTime")
     @Expose
-    public String userId;
-
-    /**
-     * The Role Id.
-     * 
-     */
-    @SerializedName("roleId")
-    @Expose
-    public String roleId;
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Is Elevated.
@@ -52,20 +44,28 @@ public class PrivilegedRoleAssignment extends Entity implements IJsonBackedObjec
     public Boolean isElevated;
 
     /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
      * The Result Message.
      * 
      */
     @SerializedName("resultMessage")
     @Expose
     public String resultMessage;
+
+    /**
+     * The Role Id.
+     * 
+     */
+    @SerializedName("roleId")
+    @Expose
+    public String roleId;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The Role Info.

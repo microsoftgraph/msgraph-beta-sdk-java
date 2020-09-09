@@ -63,14 +63,14 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
     public void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<PrivilegedSignupStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedSignupStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedSignupStatus, callback);
     }
 
     public PrivilegedSignupStatus post(final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedSignupStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedSignupStatus);
     }
 
@@ -107,6 +107,27 @@ public class PrivilegedSignupStatusCollectionRequest extends BaseCollectionReque
         return (PrivilegedSignupStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedSignupStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedSignupStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedSignupStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedSignupStatusCollectionRequest)this;
+    }
     public IPrivilegedSignupStatusCollectionPage buildFromResponse(final PrivilegedSignupStatusCollectionResponse response) {
         final IPrivilegedSignupStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

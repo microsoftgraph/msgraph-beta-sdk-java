@@ -80,6 +80,23 @@ public interface IMacOSEndpointProtectionConfigurationRequest extends IHttpReque
     MacOSEndpointProtectionConfiguration post(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException;
 
     /**
+     * Posts a MacOSEndpointProtectionConfiguration with a new object
+     *
+     * @param newMacOSEndpointProtectionConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<MacOSEndpointProtectionConfiguration> callback);
+
+    /**
+     * Posts a MacOSEndpointProtectionConfiguration with a new object
+     *
+     * @param newMacOSEndpointProtectionConfiguration the object to create/update
+     * @return the created MacOSEndpointProtectionConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSEndpointProtectionConfiguration put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class AgedAccountsReceivableCollectionRequest extends BaseCollectionReque
     public void post(final AgedAccountsReceivable newAgedAccountsReceivable, final ICallback<AgedAccountsReceivable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AgedAccountsReceivableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgedAccountsReceivable, callback);
     }
 
     public AgedAccountsReceivable post(final AgedAccountsReceivable newAgedAccountsReceivable) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AgedAccountsReceivableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgedAccountsReceivable);
     }
 
@@ -106,6 +106,27 @@ public class AgedAccountsReceivableCollectionRequest extends BaseCollectionReque
         return (AgedAccountsReceivableCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAgedAccountsReceivableCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AgedAccountsReceivableCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAgedAccountsReceivableCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAgedAccountsReceivableCollectionRequest)this;
+    }
     public IAgedAccountsReceivableCollectionPage buildFromResponse(final AgedAccountsReceivableCollectionResponse response) {
         final IAgedAccountsReceivableCollectionRequestBuilder builder;
         if (response.nextLink != null) {

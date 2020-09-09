@@ -112,6 +112,27 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
     }
 
     /**
+     * Creates a PrivilegedRoleSummary with a new object
+     *
+     * @param newPrivilegedRoleSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<PrivilegedRoleSummary> callback) {
+        send(HttpMethod.PUT, callback, newPrivilegedRoleSummary);
+    }
+
+    /**
+     * Creates a PrivilegedRoleSummary with a new object
+     *
+     * @param newPrivilegedRoleSummary the object to create/update
+     * @return the created PrivilegedRoleSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrivilegedRoleSummary put(final PrivilegedRoleSummary newPrivilegedRoleSummary) throws ClientException {
+        return send(HttpMethod.PUT, newPrivilegedRoleSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

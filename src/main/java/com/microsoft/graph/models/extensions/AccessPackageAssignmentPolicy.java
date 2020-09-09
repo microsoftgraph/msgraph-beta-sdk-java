@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.RequestorSettings;
-import com.microsoft.graph.models.extensions.ApprovalSettings;
 import com.microsoft.graph.models.extensions.AssignmentReviewSettings;
+import com.microsoft.graph.models.extensions.ApprovalSettings;
+import com.microsoft.graph.models.extensions.RequestorSettings;
 import com.microsoft.graph.models.extensions.AccessPackage;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
 import com.microsoft.graph.models.extensions.Entity;
@@ -40,20 +40,12 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     public String accessPackageId;
 
     /**
-     * The Display Name.
+     * The Access Review Settings.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("accessReviewSettings")
     @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
+    public AssignmentReviewSettings accessReviewSettings;
 
     /**
      * The Can Extend.
@@ -62,22 +54,6 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     @SerializedName("canExtend")
     @Expose
     public Boolean canExtend;
-
-    /**
-     * The Duration In Days.
-     * 
-     */
-    @SerializedName("durationInDays")
-    @Expose
-    public Integer durationInDays;
-
-    /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
 
     /**
      * The Created By.
@@ -96,6 +72,38 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     public java.util.Calendar createdDateTime;
 
     /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Duration In Days.
+     * 
+     */
+    @SerializedName("durationInDays")
+    @Expose
+    public Integer durationInDays;
+
+    /**
+     * The Expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Modified By.
      * 
      */
@@ -112,14 +120,6 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     public java.util.Calendar modifiedDateTime;
 
     /**
-     * The Requestor Settings.
-     * 
-     */
-    @SerializedName("requestorSettings")
-    @Expose
-    public RequestorSettings requestorSettings;
-
-    /**
      * The Request Approval Settings.
      * 
      */
@@ -128,12 +128,12 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     public ApprovalSettings requestApprovalSettings;
 
     /**
-     * The Access Review Settings.
+     * The Requestor Settings.
      * 
      */
-    @SerializedName("accessReviewSettings")
+    @SerializedName("requestorSettings")
     @Expose
-    public AssignmentReviewSettings accessReviewSettings;
+    public RequestorSettings requestorSettings;
 
     /**
      * The Access Package.

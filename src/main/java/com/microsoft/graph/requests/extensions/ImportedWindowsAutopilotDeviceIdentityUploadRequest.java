@@ -116,6 +116,27 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
     }
 
     /**
+     * Creates a ImportedWindowsAutopilotDeviceIdentityUpload with a new object
+     *
+     * @param newImportedWindowsAutopilotDeviceIdentityUpload the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload, final ICallback<ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
+        send(HttpMethod.PUT, callback, newImportedWindowsAutopilotDeviceIdentityUpload);
+    }
+
+    /**
+     * Creates a ImportedWindowsAutopilotDeviceIdentityUpload with a new object
+     *
+     * @param newImportedWindowsAutopilotDeviceIdentityUpload the object to create/update
+     * @return the created ImportedWindowsAutopilotDeviceIdentityUpload
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ImportedWindowsAutopilotDeviceIdentityUpload put(final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
+        return send(HttpMethod.PUT, newImportedWindowsAutopilotDeviceIdentityUpload);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

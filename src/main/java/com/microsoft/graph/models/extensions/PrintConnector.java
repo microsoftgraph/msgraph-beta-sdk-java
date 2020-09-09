@@ -29,30 +29,6 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
-     * The Fully Qualified Domain Name.
-     * 
-     */
-    @SerializedName("fullyQualifiedDomainName")
-    @Expose
-    public String fullyQualifiedDomainName;
-
-    /**
-     * The Operating System.
-     * 
-     */
-    @SerializedName("operatingSystem")
-    @Expose
-    public String operatingSystem;
-
-    /**
      * The App Version.
      * 
      */
@@ -69,12 +45,36 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
     public DeviceHealth deviceHealth;
 
     /**
+     * The Fully Qualified Domain Name.
+     * 
+     */
+    @SerializedName("fullyQualifiedDomainName")
+    @Expose
+    public String fullyQualifiedDomainName;
+
+    /**
      * The Location.
      * 
      */
     @SerializedName("location")
     @Expose
     public PrinterLocation location;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Operating System.
+     * 
+     */
+    @SerializedName("operatingSystem")
+    @Expose
+    public String operatingSystem;
 
     /**
      * The Registered Date Time.

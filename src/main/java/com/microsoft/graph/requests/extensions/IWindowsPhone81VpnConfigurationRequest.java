@@ -80,6 +80,23 @@ public interface IWindowsPhone81VpnConfigurationRequest extends IHttpRequest {
     WindowsPhone81VpnConfiguration post(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81VpnConfiguration with a new object
+     *
+     * @param newWindowsPhone81VpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration, final ICallback<WindowsPhone81VpnConfiguration> callback);
+
+    /**
+     * Posts a WindowsPhone81VpnConfiguration with a new object
+     *
+     * @param newWindowsPhone81VpnConfiguration the object to create/update
+     * @return the created WindowsPhone81VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81VpnConfiguration put(final WindowsPhone81VpnConfiguration newWindowsPhone81VpnConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

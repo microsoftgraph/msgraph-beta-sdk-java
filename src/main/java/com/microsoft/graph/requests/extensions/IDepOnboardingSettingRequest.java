@@ -80,6 +80,23 @@ public interface IDepOnboardingSettingRequest extends IHttpRequest {
     DepOnboardingSetting post(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException;
 
     /**
+     * Posts a DepOnboardingSetting with a new object
+     *
+     * @param newDepOnboardingSetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<DepOnboardingSetting> callback);
+
+    /**
+     * Posts a DepOnboardingSetting with a new object
+     *
+     * @param newDepOnboardingSetting the object to create/update
+     * @return the created DepOnboardingSetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DepOnboardingSetting put(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class ExactMatchDataStoreCollectionRequest extends BaseCollectionRequest<
     public void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<ExactMatchDataStore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExactMatchDataStoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExactMatchDataStore, callback);
     }
 
     public ExactMatchDataStore post(final ExactMatchDataStore newExactMatchDataStore) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExactMatchDataStoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExactMatchDataStore);
     }
 
@@ -106,6 +106,27 @@ public class ExactMatchDataStoreCollectionRequest extends BaseCollectionRequest<
         return (ExactMatchDataStoreCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IExactMatchDataStoreCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ExactMatchDataStoreCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IExactMatchDataStoreCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IExactMatchDataStoreCollectionRequest)this;
+    }
     public IExactMatchDataStoreCollectionPage buildFromResponse(final ExactMatchDataStoreCollectionResponse response) {
         final IExactMatchDataStoreCollectionRequestBuilder builder;
         if (response.nextLink != null) {

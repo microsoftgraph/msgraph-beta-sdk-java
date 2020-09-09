@@ -80,6 +80,23 @@ public interface IEdiscoveryRequest extends IHttpRequest {
     Ediscovery post(final Ediscovery newEdiscovery) throws ClientException;
 
     /**
+     * Posts a Ediscovery with a new object
+     *
+     * @param newEdiscovery the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Ediscovery newEdiscovery, final ICallback<Ediscovery> callback);
+
+    /**
+     * Posts a Ediscovery with a new object
+     *
+     * @param newEdiscovery the object to create/update
+     * @return the created Ediscovery
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Ediscovery put(final Ediscovery newEdiscovery) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

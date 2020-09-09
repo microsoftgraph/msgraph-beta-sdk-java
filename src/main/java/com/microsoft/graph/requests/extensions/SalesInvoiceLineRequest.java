@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesInvoiceLine;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class SalesInvoiceLineRequest extends BaseRequest implements ISalesInvoic
      */
     public SalesInvoiceLine post(final SalesInvoiceLine newSalesInvoiceLine) throws ClientException {
         return send(HttpMethod.POST, newSalesInvoiceLine);
+    }
+
+    /**
+     * Creates a SalesInvoiceLine with a new object
+     *
+     * @param newSalesInvoiceLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback) {
+        send(HttpMethod.PUT, callback, newSalesInvoiceLine);
+    }
+
+    /**
+     * Creates a SalesInvoiceLine with a new object
+     *
+     * @param newSalesInvoiceLine the object to create/update
+     * @return the created SalesInvoiceLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SalesInvoiceLine put(final SalesInvoiceLine newSalesInvoiceLine) throws ClientException {
+        return send(HttpMethod.PUT, newSalesInvoiceLine);
     }
 
     /**

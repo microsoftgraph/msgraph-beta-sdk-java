@@ -80,6 +80,23 @@ public interface IMobileAppPolicySetItemRequest extends IHttpRequest {
     MobileAppPolicySetItem post(final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException;
 
     /**
+     * Posts a MobileAppPolicySetItem with a new object
+     *
+     * @param newMobileAppPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<MobileAppPolicySetItem> callback);
+
+    /**
+     * Posts a MobileAppPolicySetItem with a new object
+     *
+     * @param newMobileAppPolicySetItem the object to create/update
+     * @return the created MobileAppPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileAppPolicySetItem put(final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

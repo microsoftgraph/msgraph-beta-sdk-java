@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EducationItemBody;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.EducationItemBody;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,12 @@ public class EducationFeedback implements IJsonBackedObject {
     }
 
     /**
-     * The Text.
+     * The Feedback By.
      * 
      */
-    @SerializedName("text")
+    @SerializedName("feedbackBy")
     @Expose
-    public EducationItemBody text;
+    public IdentitySet feedbackBy;
 
     /**
      * The Feedback Date Time.
@@ -54,12 +54,12 @@ public class EducationFeedback implements IJsonBackedObject {
     public java.util.Calendar feedbackDateTime;
 
     /**
-     * The Feedback By.
+     * The Text.
      * 
      */
-    @SerializedName("feedbackBy")
+    @SerializedName("text")
     @Expose
-    public IdentitySet feedbackBy;
+    public EducationItemBody text;
 
 
     /**

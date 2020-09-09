@@ -80,6 +80,23 @@ public interface IAppleExpeditedCheckinConfigurationBaseRequest extends IHttpReq
     AppleExpeditedCheckinConfigurationBase post(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase) throws ClientException;
 
     /**
+     * Posts a AppleExpeditedCheckinConfigurationBase with a new object
+     *
+     * @param newAppleExpeditedCheckinConfigurationBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<AppleExpeditedCheckinConfigurationBase> callback);
+
+    /**
+     * Posts a AppleExpeditedCheckinConfigurationBase with a new object
+     *
+     * @param newAppleExpeditedCheckinConfigurationBase the object to create/update
+     * @return the created AppleExpeditedCheckinConfigurationBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppleExpeditedCheckinConfigurationBase put(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

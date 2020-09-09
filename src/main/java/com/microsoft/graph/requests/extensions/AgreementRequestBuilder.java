@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Agreement;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import java.util.Arrays;
@@ -61,6 +61,13 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
     }
 
 
+    public IAgreementAcceptanceCollectionRequestBuilder acceptances() {
+        return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances"), getClient(), null);
+    }
+
+    public IAgreementAcceptanceRequestBuilder acceptances(final String id) {
+        return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AgreementFile
@@ -76,12 +83,5 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
 
     public IAgreementFileLocalizationRequestBuilder files(final String id) {
         return new AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
-    }
-    public IAgreementAcceptanceCollectionRequestBuilder acceptances() {
-        return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances"), getClient(), null);
-    }
-
-    public IAgreementAcceptanceRequestBuilder acceptances(final String id) {
-        return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances") + "/" + id, getClient(), null);
     }
 }

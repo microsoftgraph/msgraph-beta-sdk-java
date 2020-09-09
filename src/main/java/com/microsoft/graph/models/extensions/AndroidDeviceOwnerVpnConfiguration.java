@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AndroidVpnConnectionType;
 import com.microsoft.graph.models.extensions.VpnProxyServer;
-import com.microsoft.graph.models.extensions.AndroidDeviceOwnerCertificateProfileBase;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerCertificateProfileBase;
 import com.microsoft.graph.models.extensions.VpnConfiguration;
 
 
@@ -29,6 +29,22 @@ import java.util.Map;
  */
 public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Always On.
+     * Whether or not to enable always-on VPN connection.
+     */
+    @SerializedName("alwaysOn")
+    @Expose
+    public Boolean alwaysOn;
+
+    /**
+     * The Always On Lockdown.
+     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
+     */
+    @SerializedName("alwaysOnLockdown")
+    @Expose
+    public Boolean alwaysOnLockdown;
 
     /**
      * The Connection Type.
@@ -55,20 +71,12 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     public java.util.List<String> targetedPackageIds;
 
     /**
-     * The Always On.
-     * Whether or not to enable always-on VPN connection.
+     * The Derived Credential Settings.
+     * Tenant level settings for the Derived Credentials to be used for authentication.
      */
-    @SerializedName("alwaysOn")
+    @SerializedName("derivedCredentialSettings")
     @Expose
-    public Boolean alwaysOn;
-
-    /**
-     * The Always On Lockdown.
-     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-     */
-    @SerializedName("alwaysOnLockdown")
-    @Expose
-    public Boolean alwaysOnLockdown;
+    public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
     /**
      * The Identity Certificate.
@@ -77,14 +85,6 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     @SerializedName("identityCertificate")
     @Expose
     public AndroidDeviceOwnerCertificateProfileBase identityCertificate;
-
-    /**
-     * The Derived Credential Settings.
-     * Tenant level settings for the Derived Credentials to be used for authentication.
-     */
-    @SerializedName("derivedCredentialSettings")
-    @Expose
-    public DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
 
 
     /**

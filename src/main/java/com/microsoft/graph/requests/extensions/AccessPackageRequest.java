@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackage;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class AccessPackageRequest extends BaseRequest implements IAccessPackageR
      */
     public AccessPackage post(final AccessPackage newAccessPackage) throws ClientException {
         return send(HttpMethod.POST, newAccessPackage);
+    }
+
+    /**
+     * Creates a AccessPackage with a new object
+     *
+     * @param newAccessPackage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackage newAccessPackage, final ICallback<AccessPackage> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackage);
+    }
+
+    /**
+     * Creates a AccessPackage with a new object
+     *
+     * @param newAccessPackage the object to create/update
+     * @return the created AccessPackage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackage put(final AccessPackage newAccessPackage) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackage);
     }
 
     /**

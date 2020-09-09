@@ -37,12 +37,20 @@ public class PrinterUsageSummary implements IJsonBackedObject {
     }
 
     /**
-     * The Printer Id.
+     * The Completed Job Count.
      * 
      */
-    @SerializedName("printerId")
+    @SerializedName("completedJobCount")
     @Expose
-    public String printerId;
+    public Integer completedJobCount;
+
+    /**
+     * The Incomplete Job Count.
+     * 
+     */
+    @SerializedName("incompleteJobCount")
+    @Expose
+    public Integer incompleteJobCount;
 
     /**
      * The Printer Display Name.
@@ -51,6 +59,14 @@ public class PrinterUsageSummary implements IJsonBackedObject {
     @SerializedName("printerDisplayName")
     @Expose
     public String printerDisplayName;
+
+    /**
+     * The Printer Id.
+     * 
+     */
+    @SerializedName("printerId")
+    @Expose
+    public String printerId;
 
     /**
      * The Printer Manufacturer.
@@ -67,22 +83,6 @@ public class PrinterUsageSummary implements IJsonBackedObject {
     @SerializedName("printerModel")
     @Expose
     public String printerModel;
-
-    /**
-     * The Completed Job Count.
-     * 
-     */
-    @SerializedName("completedJobCount")
-    @Expose
-    public Integer completedJobCount;
-
-    /**
-     * The Incomplete Job Count.
-     * 
-     */
-    @SerializedName("incompleteJobCount")
-    @Expose
-    public Integer incompleteJobCount;
 
     /**
      * The Printer.

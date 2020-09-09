@@ -36,20 +36,20 @@ public class DeviceAndAppManagementAssignedRoleDetails implements IJsonBackedObj
     }
 
     /**
-     * The Role Definition Ids.
-     * Role Definition IDs for the specifc Role Definitions assigned to a user.
-     */
-    @SerializedName("roleDefinitionIds")
-    @Expose
-    public java.util.List<String> roleDefinitionIds;
-
-    /**
      * The Role Assignment Ids.
      * Role Assignment IDs for the specifc Role Assignments assigned to a user.
      */
     @SerializedName("roleAssignmentIds")
     @Expose
     public java.util.List<String> roleAssignmentIds;
+
+    /**
+     * The Role Definition Ids.
+     * Role Definition IDs for the specifc Role Definitions assigned to a user.
+     */
+    @SerializedName("roleDefinitionIds")
+    @Expose
+    public java.util.List<String> roleDefinitionIds;
 
 
     /**

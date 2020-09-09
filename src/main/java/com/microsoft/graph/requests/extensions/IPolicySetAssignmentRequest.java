@@ -80,6 +80,23 @@ public interface IPolicySetAssignmentRequest extends IHttpRequest {
     PolicySetAssignment post(final PolicySetAssignment newPolicySetAssignment) throws ClientException;
 
     /**
+     * Posts a PolicySetAssignment with a new object
+     *
+     * @param newPolicySetAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PolicySetAssignment newPolicySetAssignment, final ICallback<PolicySetAssignment> callback);
+
+    /**
+     * Posts a PolicySetAssignment with a new object
+     *
+     * @param newPolicySetAssignment the object to create/update
+     * @return the created PolicySetAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PolicySetAssignment put(final PolicySetAssignment newPolicySetAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

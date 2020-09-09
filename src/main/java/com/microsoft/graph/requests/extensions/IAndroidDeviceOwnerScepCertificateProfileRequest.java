@@ -80,6 +80,23 @@ public interface IAndroidDeviceOwnerScepCertificateProfileRequest extends IHttpR
     AndroidDeviceOwnerScepCertificateProfile post(final AndroidDeviceOwnerScepCertificateProfile newAndroidDeviceOwnerScepCertificateProfile) throws ClientException;
 
     /**
+     * Posts a AndroidDeviceOwnerScepCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidDeviceOwnerScepCertificateProfile newAndroidDeviceOwnerScepCertificateProfile, final ICallback<AndroidDeviceOwnerScepCertificateProfile> callback);
+
+    /**
+     * Posts a AndroidDeviceOwnerScepCertificateProfile with a new object
+     *
+     * @param newAndroidDeviceOwnerScepCertificateProfile the object to create/update
+     * @return the created AndroidDeviceOwnerScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidDeviceOwnerScepCertificateProfile put(final AndroidDeviceOwnerScepCertificateProfile newAndroidDeviceOwnerScepCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

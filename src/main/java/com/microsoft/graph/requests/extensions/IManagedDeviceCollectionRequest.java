@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.generated.AdministratorConfiguredDeviceComplianceState;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionRequest;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
-import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.extensions.ConfigurationManagerAction;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
@@ -61,4 +61,20 @@ public interface IManagedDeviceCollectionRequest {
      */
     IManagedDeviceCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IManagedDeviceCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IManagedDeviceCollectionRequest skipToken(String skipToken);
 }

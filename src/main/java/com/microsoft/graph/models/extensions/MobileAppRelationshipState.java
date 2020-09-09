@@ -38,36 +38,20 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
     }
 
     /**
-     * The Source Ids.
-     * The collection of source mobile app's ids.
-     */
-    @SerializedName("sourceIds")
-    @Expose
-    public java.util.List<String> sourceIds;
-
-    /**
-     * The Target Id.
-     * The related target app's id.
-     */
-    @SerializedName("targetId")
-    @Expose
-    public String targetId;
-
-    /**
-     * The Target Display Name.
-     * The related target app's display name.
-     */
-    @SerializedName("targetDisplayName")
-    @Expose
-    public String targetDisplayName;
-
-    /**
      * The Device Id.
      * The corresponding device id.
      */
     @SerializedName("deviceId")
     @Expose
     public String deviceId;
+
+    /**
+     * The Error Code.
+     * The error code for install or uninstall failures of target app.
+     */
+    @SerializedName("errorCode")
+    @Expose
+    public Integer errorCode;
 
     /**
      * The Install State.
@@ -86,12 +70,28 @@ public class MobileAppRelationshipState implements IJsonBackedObject {
     public ResultantAppStateDetail installStateDetail;
 
     /**
-     * The Error Code.
-     * The error code for install or uninstall failures of target app.
+     * The Source Ids.
+     * The collection of source mobile app's ids.
      */
-    @SerializedName("errorCode")
+    @SerializedName("sourceIds")
     @Expose
-    public Integer errorCode;
+    public java.util.List<String> sourceIds;
+
+    /**
+     * The Target Display Name.
+     * The related target app's display name.
+     */
+    @SerializedName("targetDisplayName")
+    @Expose
+    public String targetDisplayName;
+
+    /**
+     * The Target Id.
+     * The related target app's id.
+     */
+    @SerializedName("targetId")
+    @Expose
+    public String targetId;
 
     /**
      * The Target Last Sync Date Time.

@@ -63,14 +63,14 @@ public class WindowsDefenderApplicationControlSupplementalPolicyCollectionReques
     public void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsDefenderApplicationControlSupplementalPolicy, callback);
     }
 
     public WindowsDefenderApplicationControlSupplementalPolicy post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -107,6 +107,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyCollectionReques
         return (WindowsDefenderApplicationControlSupplementalPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsDefenderApplicationControlSupplementalPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest)this;
+    }
     public IWindowsDefenderApplicationControlSupplementalPolicyCollectionPage buildFromResponse(final WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse response) {
         final IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

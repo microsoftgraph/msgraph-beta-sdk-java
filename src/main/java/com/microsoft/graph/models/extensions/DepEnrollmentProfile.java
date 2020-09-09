@@ -29,36 +29,52 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
 
 
     /**
+     * The Apple Id Disabled.
+     * Indicates if Apple id setup pane is disabled
+     */
+    @SerializedName("appleIdDisabled")
+    @Expose
+    public Boolean appleIdDisabled;
+
+    /**
+     * The Apple Pay Disabled.
+     * Indicates if Apple pay setup pane is disabled
+     */
+    @SerializedName("applePayDisabled")
+    @Expose
+    public Boolean applePayDisabled;
+
+    /**
+     * The Await Device Configured Confirmation.
+     * Indicates if the device will need to wait for configured confirmation
+     */
+    @SerializedName("awaitDeviceConfiguredConfirmation")
+    @Expose
+    public Boolean awaitDeviceConfiguredConfirmation;
+
+    /**
+     * The Diagnostics Disabled.
+     * Indicates if diagnostics setup pane is disabled
+     */
+    @SerializedName("diagnosticsDisabled")
+    @Expose
+    public Boolean diagnosticsDisabled;
+
+    /**
+     * The Enable Shared IPad.
+     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
+     */
+    @SerializedName("enableSharedIPad")
+    @Expose
+    public Boolean enableSharedIPad;
+
+    /**
      * The Is Default.
      * Indicates if this is the default profile
      */
     @SerializedName("isDefault")
     @Expose
     public Boolean isDefault;
-
-    /**
-     * The Supervised Mode Enabled.
-     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-     */
-    @SerializedName("supervisedModeEnabled")
-    @Expose
-    public Boolean supervisedModeEnabled;
-
-    /**
-     * The Support Department.
-     * Support department information
-     */
-    @SerializedName("supportDepartment")
-    @Expose
-    public String supportDepartment;
-
-    /**
-     * The Pass Code Disabled.
-     * Indicates if Passcode setup pane is disabled
-     */
-    @SerializedName("passCodeDisabled")
-    @Expose
-    public Boolean passCodeDisabled;
 
     /**
      * The Is Mandatory.
@@ -69,22 +85,6 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
     public Boolean isMandatory;
 
     /**
-     * The Location Disabled.
-     * Indicates if Location service setup pane is disabled
-     */
-    @SerializedName("locationDisabled")
-    @Expose
-    public Boolean locationDisabled;
-
-    /**
-     * The Support Phone Number.
-     * Support phone number
-     */
-    @SerializedName("supportPhoneNumber")
-    @Expose
-    public String supportPhoneNumber;
-
-    /**
      * The ITunes Pairing Mode.
      * Indicates the iTunes pairing mode
      */
@@ -93,12 +93,28 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
     public ITunesPairingMode iTunesPairingMode;
 
     /**
-     * The Profile Removal Disabled.
-     * Indicates if the profile removal option is disabled
+     * The Location Disabled.
+     * Indicates if Location service setup pane is disabled
      */
-    @SerializedName("profileRemovalDisabled")
+    @SerializedName("locationDisabled")
     @Expose
-    public Boolean profileRemovalDisabled;
+    public Boolean locationDisabled;
+
+    /**
+     * The Mac OSFile Vault Disabled.
+     * Indicates if Mac OS file vault is disabled
+     */
+    @SerializedName("macOSFileVaultDisabled")
+    @Expose
+    public Boolean macOSFileVaultDisabled;
+
+    /**
+     * The Mac OSRegistration Disabled.
+     * Indicates if Mac OS registration is disabled
+     */
+    @SerializedName("macOSRegistrationDisabled")
+    @Expose
+    public Boolean macOSRegistrationDisabled;
 
     /**
      * The Management Certificates.
@@ -107,6 +123,22 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
     @SerializedName("managementCertificates")
     @Expose
     public java.util.List<ManagementCertificateWithThumbprint> managementCertificates;
+
+    /**
+     * The Pass Code Disabled.
+     * Indicates if Passcode setup pane is disabled
+     */
+    @SerializedName("passCodeDisabled")
+    @Expose
+    public Boolean passCodeDisabled;
+
+    /**
+     * The Profile Removal Disabled.
+     * Indicates if the profile removal option is disabled
+     */
+    @SerializedName("profileRemovalDisabled")
+    @Expose
+    public Boolean profileRemovalDisabled;
 
     /**
      * The Restore Blocked.
@@ -125,12 +157,44 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
     public Boolean restoreFromAndroidDisabled;
 
     /**
-     * The Apple Id Disabled.
-     * Indicates if Apple id setup pane is disabled
+     * The Shared IPad Maximum User Count.
+     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
      */
-    @SerializedName("appleIdDisabled")
+    @SerializedName("sharedIPadMaximumUserCount")
     @Expose
-    public Boolean appleIdDisabled;
+    public Integer sharedIPadMaximumUserCount;
+
+    /**
+     * The Siri Disabled.
+     * Indicates if siri setup pane is disabled
+     */
+    @SerializedName("siriDisabled")
+    @Expose
+    public Boolean siriDisabled;
+
+    /**
+     * The Supervised Mode Enabled.
+     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     */
+    @SerializedName("supervisedModeEnabled")
+    @Expose
+    public Boolean supervisedModeEnabled;
+
+    /**
+     * The Support Department.
+     * Support department information
+     */
+    @SerializedName("supportDepartment")
+    @Expose
+    public String supportDepartment;
+
+    /**
+     * The Support Phone Number.
+     * Support phone number
+     */
+    @SerializedName("supportPhoneNumber")
+    @Expose
+    public String supportPhoneNumber;
 
     /**
      * The Terms And Conditions Disabled.
@@ -149,76 +213,12 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
     public Boolean touchIdDisabled;
 
     /**
-     * The Apple Pay Disabled.
-     * Indicates if Apple pay setup pane is disabled
-     */
-    @SerializedName("applePayDisabled")
-    @Expose
-    public Boolean applePayDisabled;
-
-    /**
      * The Zoom Disabled.
      * Indicates if zoom setup pane is disabled
      */
     @SerializedName("zoomDisabled")
     @Expose
     public Boolean zoomDisabled;
-
-    /**
-     * The Siri Disabled.
-     * Indicates if siri setup pane is disabled
-     */
-    @SerializedName("siriDisabled")
-    @Expose
-    public Boolean siriDisabled;
-
-    /**
-     * The Diagnostics Disabled.
-     * Indicates if diagnostics setup pane is disabled
-     */
-    @SerializedName("diagnosticsDisabled")
-    @Expose
-    public Boolean diagnosticsDisabled;
-
-    /**
-     * The Mac OSRegistration Disabled.
-     * Indicates if Mac OS registration is disabled
-     */
-    @SerializedName("macOSRegistrationDisabled")
-    @Expose
-    public Boolean macOSRegistrationDisabled;
-
-    /**
-     * The Mac OSFile Vault Disabled.
-     * Indicates if Mac OS file vault is disabled
-     */
-    @SerializedName("macOSFileVaultDisabled")
-    @Expose
-    public Boolean macOSFileVaultDisabled;
-
-    /**
-     * The Await Device Configured Confirmation.
-     * Indicates if the device will need to wait for configured confirmation
-     */
-    @SerializedName("awaitDeviceConfiguredConfirmation")
-    @Expose
-    public Boolean awaitDeviceConfiguredConfirmation;
-
-    /**
-     * The Shared IPad Maximum User Count.
-     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
-     */
-    @SerializedName("sharedIPadMaximumUserCount")
-    @Expose
-    public Integer sharedIPadMaximumUserCount;
-
-    /**
-     * The Enable Shared IPad.
-     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
-     */
-    @SerializedName("enableSharedIPad")
-    @Expose
-    public Boolean enableSharedIPad;
 
 
     /**

@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
+import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionResponse;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionPage;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionResponse;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -33,12 +33,20 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
+     * The Added By.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("addedBy")
     @Expose
-    public String displayName;
+    public String addedBy;
+
+    /**
+     * The Added On.
+     * 
+     */
+    @SerializedName("addedOn")
+    @Expose
+    public java.util.Calendar addedOn;
 
     /**
      * The Description.
@@ -49,20 +57,20 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Url.
+     * The Display Name.
      * 
      */
-    @SerializedName("url")
+    @SerializedName("displayName")
     @Expose
-    public String url;
+    public String displayName;
 
     /**
-     * The Resource Type.
+     * The Is Pending Onboarding.
      * 
      */
-    @SerializedName("resourceType")
+    @SerializedName("isPendingOnboarding")
     @Expose
-    public String resourceType;
+    public Boolean isPendingOnboarding;
 
     /**
      * The Origin Id.
@@ -81,40 +89,32 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
     public String originSystem;
 
     /**
-     * The Is Pending Onboarding.
+     * The Resource Type.
      * 
      */
-    @SerializedName("isPendingOnboarding")
+    @SerializedName("resourceType")
     @Expose
-    public Boolean isPendingOnboarding;
+    public String resourceType;
 
     /**
-     * The Added By.
+     * The Url.
      * 
      */
-    @SerializedName("addedBy")
+    @SerializedName("url")
     @Expose
-    public String addedBy;
-
-    /**
-     * The Added On.
-     * 
-     */
-    @SerializedName("addedOn")
-    @Expose
-    public java.util.Calendar addedOn;
-
-    /**
-     * The Access Package Resource Scopes.
-     * 
-     */
-    public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
+    public String url;
 
     /**
      * The Access Package Resource Roles.
      * 
      */
     public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
+
+    /**
+     * The Access Package Resource Scopes.
+     * 
+     */
+    public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
 
 
     /**
@@ -156,22 +156,6 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("accessPackageResourceScopes")) {
-            final AccessPackageResourceScopeCollectionResponse response = new AccessPackageResourceScopeCollectionResponse();
-            if (json.has("accessPackageResourceScopes@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceScopes").toString(), JsonObject[].class);
-            final AccessPackageResourceScope[] array = new AccessPackageResourceScope[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceScope.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceScopes = new AccessPackageResourceScopeCollectionPage(response, null);
-        }
-
         if (json.has("accessPackageResourceRoles")) {
             final AccessPackageResourceRoleCollectionResponse response = new AccessPackageResourceRoleCollectionResponse();
             if (json.has("accessPackageResourceRoles@odata.nextLink")) {
@@ -186,6 +170,22 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             accessPackageResourceRoles = new AccessPackageResourceRoleCollectionPage(response, null);
+        }
+
+        if (json.has("accessPackageResourceScopes")) {
+            final AccessPackageResourceScopeCollectionResponse response = new AccessPackageResourceScopeCollectionResponse();
+            if (json.has("accessPackageResourceScopes@odata.nextLink")) {
+                response.nextLink = json.get("accessPackageResourceScopes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceScopes").toString(), JsonObject[].class);
+            final AccessPackageResourceScope[] array = new AccessPackageResourceScope[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceScope.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            accessPackageResourceScopes = new AccessPackageResourceScopeCollectionPage(response, null);
         }
     }
 }

@@ -112,6 +112,27 @@ public class TargetedManagedAppConfigurationPolicySetItemRequest extends BaseReq
     }
 
     /**
+     * Creates a TargetedManagedAppConfigurationPolicySetItem with a new object
+     *
+     * @param newTargetedManagedAppConfigurationPolicySetItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem, final ICallback<TargetedManagedAppConfigurationPolicySetItem> callback) {
+        send(HttpMethod.PUT, callback, newTargetedManagedAppConfigurationPolicySetItem);
+    }
+
+    /**
+     * Creates a TargetedManagedAppConfigurationPolicySetItem with a new object
+     *
+     * @param newTargetedManagedAppConfigurationPolicySetItem the object to create/update
+     * @return the created TargetedManagedAppConfigurationPolicySetItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TargetedManagedAppConfigurationPolicySetItem put(final TargetedManagedAppConfigurationPolicySetItem newTargetedManagedAppConfigurationPolicySetItem) throws ClientException {
+        return send(HttpMethod.PUT, newTargetedManagedAppConfigurationPolicySetItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -127,6 +127,27 @@ public class BookingNamedEntityRequest extends BaseRequest implements IBookingNa
     }
 
     /**
+     * Creates a BookingNamedEntity with a new object
+     *
+     * @param newBookingNamedEntity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BookingNamedEntity newBookingNamedEntity, final ICallback<BookingNamedEntity> callback) {
+        send(HttpMethod.PUT, callback, newBookingNamedEntity);
+    }
+
+    /**
+     * Creates a BookingNamedEntity with a new object
+     *
+     * @param newBookingNamedEntity the object to create/update
+     * @return the created BookingNamedEntity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BookingNamedEntity put(final BookingNamedEntity newBookingNamedEntity) throws ClientException {
+        return send(HttpMethod.PUT, newBookingNamedEntity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

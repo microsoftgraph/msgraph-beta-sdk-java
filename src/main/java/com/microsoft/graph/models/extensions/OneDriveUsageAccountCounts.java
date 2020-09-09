@@ -27,30 +27,6 @@ public class OneDriveUsageAccountCounts extends Entity implements IJsonBackedObj
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
-     * The Site Type.
-     * 
-     */
-    @SerializedName("siteType")
-    @Expose
-    public String siteType;
-
-    /**
-     * The Total.
-     * 
-     */
-    @SerializedName("total")
-    @Expose
-    public Long total;
-
-    /**
      * The Active.
      * 
      */
@@ -73,6 +49,30 @@ public class OneDriveUsageAccountCounts extends Entity implements IJsonBackedObj
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
+
+    /**
+     * The Site Type.
+     * 
+     */
+    @SerializedName("siteType")
+    @Expose
+    public String siteType;
+
+    /**
+     * The Total.
+     * 
+     */
+    @SerializedName("total")
+    @Expose
+    public Long total;
 
 
     /**

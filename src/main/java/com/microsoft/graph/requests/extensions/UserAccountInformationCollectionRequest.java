@@ -62,14 +62,14 @@ public class UserAccountInformationCollectionRequest extends BaseCollectionReque
     public void post(final UserAccountInformation newUserAccountInformation, final ICallback<UserAccountInformation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserAccountInformationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserAccountInformation, callback);
     }
 
     public UserAccountInformation post(final UserAccountInformation newUserAccountInformation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserAccountInformationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserAccountInformation);
     }
 
@@ -106,6 +106,27 @@ public class UserAccountInformationCollectionRequest extends BaseCollectionReque
         return (UserAccountInformationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserAccountInformationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserAccountInformationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserAccountInformationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserAccountInformationCollectionRequest)this;
+    }
     public IUserAccountInformationCollectionPage buildFromResponse(final UserAccountInformationCollectionResponse response) {
         final IUserAccountInformationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

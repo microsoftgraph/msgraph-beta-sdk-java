@@ -112,6 +112,27 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
     }
 
     /**
+     * Creates a AndroidForWorkApp with a new object
+     *
+     * @param newAndroidForWorkApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<AndroidForWorkApp> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkApp);
+    }
+
+    /**
+     * Creates a AndroidForWorkApp with a new object
+     *
+     * @param newAndroidForWorkApp the object to create/update
+     * @return the created AndroidForWorkApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkApp put(final AndroidForWorkApp newAndroidForWorkApp) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

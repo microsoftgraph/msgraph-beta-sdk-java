@@ -31,12 +31,12 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
 
     /**
-     * The Malware Protection Enabled.
-     * Anti malware is enabled or not
+     * The Anti Malware Version.
+     * Current anti malware version
      */
-    @SerializedName("malwareProtectionEnabled")
+    @SerializedName("antiMalwareVersion")
     @Expose
-    public Boolean malwareProtectionEnabled;
+    public String antiMalwareVersion;
 
     /**
      * The Device State.
@@ -47,12 +47,76 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     public EnumSet<WindowsDeviceHealthState> deviceState;
 
     /**
-     * The Real Time Protection Enabled.
-     * Real time protection is enabled or not?
+     * The Engine Version.
+     * Current endpoint protection engine's version
      */
-    @SerializedName("realTimeProtectionEnabled")
+    @SerializedName("engineVersion")
     @Expose
-    public Boolean realTimeProtectionEnabled;
+    public String engineVersion;
+
+    /**
+     * The Full Scan Overdue.
+     * Full scan overdue or not?
+     */
+    @SerializedName("fullScanOverdue")
+    @Expose
+    public Boolean fullScanOverdue;
+
+    /**
+     * The Full Scan Required.
+     * Full scan required or not?
+     */
+    @SerializedName("fullScanRequired")
+    @Expose
+    public Boolean fullScanRequired;
+
+    /**
+     * The Last Full Scan Date Time.
+     * Last quick scan datetime
+     */
+    @SerializedName("lastFullScanDateTime")
+    @Expose
+    public java.util.Calendar lastFullScanDateTime;
+
+    /**
+     * The Last Full Scan Signature Version.
+     * Last full scan signature version
+     */
+    @SerializedName("lastFullScanSignatureVersion")
+    @Expose
+    public String lastFullScanSignatureVersion;
+
+    /**
+     * The Last Quick Scan Date Time.
+     * Last quick scan datetime
+     */
+    @SerializedName("lastQuickScanDateTime")
+    @Expose
+    public java.util.Calendar lastQuickScanDateTime;
+
+    /**
+     * The Last Quick Scan Signature Version.
+     * Last quick scan signature version
+     */
+    @SerializedName("lastQuickScanSignatureVersion")
+    @Expose
+    public String lastQuickScanSignatureVersion;
+
+    /**
+     * The Last Reported Date Time.
+     * Last device health status reported time
+     */
+    @SerializedName("lastReportedDateTime")
+    @Expose
+    public java.util.Calendar lastReportedDateTime;
+
+    /**
+     * The Malware Protection Enabled.
+     * Anti malware is enabled or not
+     */
+    @SerializedName("malwareProtectionEnabled")
+    @Expose
+    public Boolean malwareProtectionEnabled;
 
     /**
      * The Network Inspection System Enabled.
@@ -71,20 +135,12 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     public Boolean quickScanOverdue;
 
     /**
-     * The Full Scan Overdue.
-     * Full scan overdue or not?
+     * The Real Time Protection Enabled.
+     * Real time protection is enabled or not?
      */
-    @SerializedName("fullScanOverdue")
+    @SerializedName("realTimeProtectionEnabled")
     @Expose
-    public Boolean fullScanOverdue;
-
-    /**
-     * The Signature Update Overdue.
-     * Signature out of date or not?
-     */
-    @SerializedName("signatureUpdateOverdue")
-    @Expose
-    public Boolean signatureUpdateOverdue;
+    public Boolean realTimeProtectionEnabled;
 
     /**
      * The Reboot Required.
@@ -95,20 +151,12 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     public Boolean rebootRequired;
 
     /**
-     * The Full Scan Required.
-     * Full scan required or not?
+     * The Signature Update Overdue.
+     * Signature out of date or not?
      */
-    @SerializedName("fullScanRequired")
+    @SerializedName("signatureUpdateOverdue")
     @Expose
-    public Boolean fullScanRequired;
-
-    /**
-     * The Engine Version.
-     * Current endpoint protection engine's version
-     */
-    @SerializedName("engineVersion")
-    @Expose
-    public String engineVersion;
+    public Boolean signatureUpdateOverdue;
 
     /**
      * The Signature Version.
@@ -117,54 +165,6 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
     @SerializedName("signatureVersion")
     @Expose
     public String signatureVersion;
-
-    /**
-     * The Anti Malware Version.
-     * Current anti malware version
-     */
-    @SerializedName("antiMalwareVersion")
-    @Expose
-    public String antiMalwareVersion;
-
-    /**
-     * The Last Quick Scan Date Time.
-     * Last quick scan datetime
-     */
-    @SerializedName("lastQuickScanDateTime")
-    @Expose
-    public java.util.Calendar lastQuickScanDateTime;
-
-    /**
-     * The Last Full Scan Date Time.
-     * Last quick scan datetime
-     */
-    @SerializedName("lastFullScanDateTime")
-    @Expose
-    public java.util.Calendar lastFullScanDateTime;
-
-    /**
-     * The Last Quick Scan Signature Version.
-     * Last quick scan signature version
-     */
-    @SerializedName("lastQuickScanSignatureVersion")
-    @Expose
-    public String lastQuickScanSignatureVersion;
-
-    /**
-     * The Last Full Scan Signature Version.
-     * Last full scan signature version
-     */
-    @SerializedName("lastFullScanSignatureVersion")
-    @Expose
-    public String lastFullScanSignatureVersion;
-
-    /**
-     * The Last Reported Date Time.
-     * Last device health status reported time
-     */
-    @SerializedName("lastReportedDateTime")
-    @Expose
-    public java.util.Calendar lastReportedDateTime;
 
     /**
      * The Detected Malware State.

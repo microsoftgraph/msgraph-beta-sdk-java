@@ -63,14 +63,14 @@ public class GroupPolicyMigrationReportCollectionRequest extends BaseCollectionR
     public void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<GroupPolicyMigrationReport> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupPolicyMigrationReportRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyMigrationReport, callback);
     }
 
     public GroupPolicyMigrationReport post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupPolicyMigrationReportRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupPolicyMigrationReport);
     }
 
@@ -107,6 +107,27 @@ public class GroupPolicyMigrationReportCollectionRequest extends BaseCollectionR
         return (GroupPolicyMigrationReportCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupPolicyMigrationReportCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupPolicyMigrationReportCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupPolicyMigrationReportCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupPolicyMigrationReportCollectionRequest)this;
+    }
     public IGroupPolicyMigrationReportCollectionPage buildFromResponse(final GroupPolicyMigrationReportCollectionResponse response) {
         final IGroupPolicyMigrationReportCollectionRequestBuilder builder;
         if (response.nextLink != null) {

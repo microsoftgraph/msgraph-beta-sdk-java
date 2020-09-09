@@ -8,16 +8,16 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerPlanContextCollection;
-import com.microsoft.graph.models.extensions.PlannerTask;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.models.extensions.PlannerPlanDetails;
+import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerDelta;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionPage;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,6 +34,14 @@ import java.util.Map;
  */
 public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
+
+    /**
+     * The Contexts.
+     * 
+     */
+    @SerializedName("contexts")
+    @Expose
+    public PlannerPlanContextCollection contexts;
 
     /**
      * The Created By.
@@ -68,20 +76,6 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     public String title;
 
     /**
-     * The Contexts.
-     * 
-     */
-    @SerializedName("contexts")
-    @Expose
-    public PlannerPlanContextCollection contexts;
-
-    /**
-     * The Tasks.
-     * Read-only. Nullable. Collection of tasks in the plan.
-     */
-    public PlannerTaskCollectionPage tasks;
-
-    /**
      * The Buckets.
      * Read-only. Nullable. Collection of buckets in the plan.
      */
@@ -94,6 +88,12 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     @SerializedName("details")
     @Expose
     public PlannerPlanDetails details;
+
+    /**
+     * The Tasks.
+     * Read-only. Nullable. Collection of tasks in the plan.
+     */
+    public PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -135,22 +135,6 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("tasks")) {
-            final PlannerTaskCollectionResponse response = new PlannerTaskCollectionResponse();
-            if (json.has("tasks@odata.nextLink")) {
-                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
-            final PlannerTask[] array = new PlannerTask[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerTask.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tasks = new PlannerTaskCollectionPage(response, null);
-        }
-
         if (json.has("buckets")) {
             final PlannerBucketCollectionResponse response = new PlannerBucketCollectionResponse();
             if (json.has("buckets@odata.nextLink")) {
@@ -165,6 +149,22 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             buckets = new PlannerBucketCollectionPage(response, null);
+        }
+
+        if (json.has("tasks")) {
+            final PlannerTaskCollectionResponse response = new PlannerTaskCollectionResponse();
+            if (json.has("tasks@odata.nextLink")) {
+                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
+            final PlannerTask[] array = new PlannerTask[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerTask.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            tasks = new PlannerTaskCollectionPage(response, null);
         }
     }
 }

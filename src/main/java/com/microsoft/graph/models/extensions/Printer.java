@@ -8,16 +8,16 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PrintUserIdentity;
 import com.microsoft.graph.models.extensions.PrintIdentity;
-import com.microsoft.graph.models.extensions.PrinterShare;
+import com.microsoft.graph.models.extensions.PrintUserIdentity;
 import com.microsoft.graph.models.extensions.PrintConnector;
+import com.microsoft.graph.models.extensions.PrinterShare;
 import com.microsoft.graph.models.extensions.PrintTaskTrigger;
 import com.microsoft.graph.models.extensions.PrinterBase;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionResponse;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionPage;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionResponse;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionResponse;
@@ -40,12 +40,12 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
 
     /**
-     * The Registered Date Time.
+     * The Accepting Jobs.
      * 
      */
-    @SerializedName("registeredDateTime")
+    @SerializedName("acceptingJobs")
     @Expose
-    public java.util.Calendar registeredDateTime;
+    public Boolean acceptingJobs;
 
     /**
      * The Is Shared.
@@ -56,18 +56,12 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     public Boolean isShared;
 
     /**
-     * The Accepting Jobs.
+     * The Registered Date Time.
      * 
      */
-    @SerializedName("acceptingJobs")
+    @SerializedName("registeredDateTime")
     @Expose
-    public Boolean acceptingJobs;
-
-    /**
-     * The Allowed Users.
-     * 
-     */
-    public PrintUserIdentityCollectionPage allowedUsers;
+    public java.util.Calendar registeredDateTime;
 
     /**
      * The Allowed Groups.
@@ -76,18 +70,24 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     public PrintIdentityCollectionPage allowedGroups;
 
     /**
-     * The Share.
+     * The Allowed Users.
      * 
      */
-    @SerializedName("share")
-    @Expose
-    public PrinterShare share;
+    public PrintUserIdentityCollectionPage allowedUsers;
 
     /**
      * The Connectors.
      * 
      */
     public PrintConnectorCollectionPage connectors;
+
+    /**
+     * The Share.
+     * 
+     */
+    @SerializedName("share")
+    @Expose
+    public PrinterShare share;
 
     /**
      * The Task Triggers.
@@ -135,22 +135,6 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("allowedUsers")) {
-            final PrintUserIdentityCollectionResponse response = new PrintUserIdentityCollectionResponse();
-            if (json.has("allowedUsers@odata.nextLink")) {
-                response.nextLink = json.get("allowedUsers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("allowedUsers").toString(), JsonObject[].class);
-            final PrintUserIdentity[] array = new PrintUserIdentity[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUserIdentity.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            allowedUsers = new PrintUserIdentityCollectionPage(response, null);
-        }
-
         if (json.has("allowedGroups")) {
             final PrintIdentityCollectionResponse response = new PrintIdentityCollectionResponse();
             if (json.has("allowedGroups@odata.nextLink")) {
@@ -165,6 +149,22 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             allowedGroups = new PrintIdentityCollectionPage(response, null);
+        }
+
+        if (json.has("allowedUsers")) {
+            final PrintUserIdentityCollectionResponse response = new PrintUserIdentityCollectionResponse();
+            if (json.has("allowedUsers@odata.nextLink")) {
+                response.nextLink = json.get("allowedUsers@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("allowedUsers").toString(), JsonObject[].class);
+            final PrintUserIdentity[] array = new PrintUserIdentity[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PrintUserIdentity.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            allowedUsers = new PrintUserIdentityCollectionPage(response, null);
         }
 
         if (json.has("connectors")) {

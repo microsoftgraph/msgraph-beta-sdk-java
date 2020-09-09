@@ -28,12 +28,12 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
 
 
     /**
-     * The Report Name.
-     * Name of the report
+     * The Expiration Date Time.
+     * Time that the cached report expires
      */
-    @SerializedName("reportName")
+    @SerializedName("expirationDateTime")
     @Expose
-    public String reportName;
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Filter.
@@ -44,20 +44,12 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     public String filter;
 
     /**
-     * The Select.
-     * Columns selected from the report
+     * The Last Refresh Date Time.
+     * Time that the cached report was last refreshed
      */
-    @SerializedName("select")
+    @SerializedName("lastRefreshDateTime")
     @Expose
-    public java.util.List<String> select;
-
-    /**
-     * The Order By.
-     * Ordering of columns in the report
-     */
-    @SerializedName("orderBy")
-    @Expose
-    public java.util.List<String> orderBy;
+    public java.util.Calendar lastRefreshDateTime;
 
     /**
      * The Metadata.
@@ -68,28 +60,36 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     public String metadata;
 
     /**
+     * The Order By.
+     * Ordering of columns in the report
+     */
+    @SerializedName("orderBy")
+    @Expose
+    public java.util.List<String> orderBy;
+
+    /**
+     * The Report Name.
+     * Name of the report
+     */
+    @SerializedName("reportName")
+    @Expose
+    public String reportName;
+
+    /**
+     * The Select.
+     * Columns selected from the report
+     */
+    @SerializedName("select")
+    @Expose
+    public java.util.List<String> select;
+
+    /**
      * The Status.
      * Status of the cached report
      */
     @SerializedName("status")
     @Expose
     public DeviceManagementReportStatus status;
-
-    /**
-     * The Last Refresh Date Time.
-     * Time that the cached report was last refreshed
-     */
-    @SerializedName("lastRefreshDateTime")
-    @Expose
-    public java.util.Calendar lastRefreshDateTime;
-
-    /**
-     * The Expiration Date Time.
-     * Time that the cached report expires
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
 
 
     /**

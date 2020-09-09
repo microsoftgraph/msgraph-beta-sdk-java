@@ -80,6 +80,23 @@ public interface IMacOsVppAppAssignedLicenseRequest extends IHttpRequest {
     MacOsVppAppAssignedLicense post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException;
 
     /**
+     * Posts a MacOsVppAppAssignedLicense with a new object
+     *
+     * @param newMacOsVppAppAssignedLicense the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<MacOsVppAppAssignedLicense> callback);
+
+    /**
+     * Posts a MacOsVppAppAssignedLicense with a new object
+     *
+     * @param newMacOsVppAppAssignedLicense the object to create/update
+     * @return the created MacOsVppAppAssignedLicense
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOsVppAppAssignedLicense put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

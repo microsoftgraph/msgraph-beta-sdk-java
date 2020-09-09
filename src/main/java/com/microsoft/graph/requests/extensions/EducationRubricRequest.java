@@ -112,6 +112,27 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
     }
 
     /**
+     * Creates a EducationRubric with a new object
+     *
+     * @param newEducationRubric the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationRubric newEducationRubric, final ICallback<EducationRubric> callback) {
+        send(HttpMethod.PUT, callback, newEducationRubric);
+    }
+
+    /**
+     * Creates a EducationRubric with a new object
+     *
+     * @param newEducationRubric the object to create/update
+     * @return the created EducationRubric
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationRubric put(final EducationRubric newEducationRubric) throws ClientException {
+        return send(HttpMethod.PUT, newEducationRubric);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

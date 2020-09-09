@@ -32,6 +32,30 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
 
 
     /**
+     * The Allow All Apps Access.
+     * AllowAllAppsAccess setting
+     */
+    @SerializedName("allowAllAppsAccess")
+    @Expose
+    public Boolean allowAllAppsAccess;
+
+    /**
+     * The Certificate Store.
+     * Target store certificate
+     */
+    @SerializedName("certificateStore")
+    @Expose
+    public CertificateStore certificateStore;
+
+    /**
+     * The Certificate Template Name.
+     * PKCS certificate template name.
+     */
+    @SerializedName("certificateTemplateName")
+    @Expose
+    public String certificateTemplateName;
+
+    /**
      * The Certification Authority.
      * PKCS certification authority FQDN.
      */
@@ -48,12 +72,12 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     public String certificationAuthorityName;
 
     /**
-     * The Certificate Template Name.
-     * PKCS certificate template name.
+     * The Custom Subject Alternative Names.
+     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("certificateTemplateName")
+    @SerializedName("customSubjectAlternativeNames")
     @Expose
-    public String certificateTemplateName;
+    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
      * The Subject Alternative Name Format String.
@@ -70,30 +94,6 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     @SerializedName("subjectNameFormatString")
     @Expose
     public String subjectNameFormatString;
-
-    /**
-     * The Certificate Store.
-     * Target store certificate
-     */
-    @SerializedName("certificateStore")
-    @Expose
-    public CertificateStore certificateStore;
-
-    /**
-     * The Custom Subject Alternative Names.
-     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("customSubjectAlternativeNames")
-    @Expose
-    public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
-
-    /**
-     * The Allow All Apps Access.
-     * AllowAllAppsAccess setting
-     */
-    @SerializedName("allowAllAppsAccess")
-    @Expose
-    public Boolean allowAllAppsAccess;
 
     /**
      * The Managed Device Certificate States.

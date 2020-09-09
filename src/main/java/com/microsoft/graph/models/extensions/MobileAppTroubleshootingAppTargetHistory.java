@@ -28,12 +28,12 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
 
 
     /**
-     * The Security Group Id.
-     * AAD security group id to which it was targeted.
+     * The Error Code.
+     * Error code for the failure, empty if no failure.
      */
-    @SerializedName("securityGroupId")
+    @SerializedName("errorCode")
     @Expose
-    public String securityGroupId;
+    public String errorCode;
 
     /**
      * The Run State.
@@ -44,12 +44,12 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
     public RunState runState;
 
     /**
-     * The Error Code.
-     * Error code for the failure, empty if no failure.
+     * The Security Group Id.
+     * AAD security group id to which it was targeted.
      */
-    @SerializedName("errorCode")
+    @SerializedName("securityGroupId")
     @Expose
-    public String errorCode;
+    public String securityGroupId;
 
 
     /**

@@ -27,84 +27,12 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
 
 
     /**
-     * The App Name.
-     * The name of the application.
-     */
-    @SerializedName("appName")
-    @Expose
-    public String appName;
-
-    /**
-     * The App Friendly Name.
-     * The friendly name of the application.
-     */
-    @SerializedName("appFriendlyName")
-    @Expose
-    public String appFriendlyName;
-
-    /**
-     * The App Publisher.
-     * The publisher of the application.
-     */
-    @SerializedName("appPublisher")
-    @Expose
-    public String appPublisher;
-
-    /**
      * The Active Devices.
      * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
      */
     @SerializedName("activeDevices")
     @Expose
     public Integer activeDevices;
-
-    /**
-     * The Total App Usage Duration.
-     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName("totalAppUsageDuration")
-    @Expose
-    public Integer totalAppUsageDuration;
-
-    /**
-     * The Total App Crashes.
-     * The number of crashes for the app. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName("totalAppCrashes")
-    @Expose
-    public Integer totalAppCrashes;
-
-    /**
-     * The Total App Hangs.
-     * The number of hangs for the app. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName("totalAppHangs")
-    @Expose
-    public Integer totalAppHangs;
-
-    /**
-     * The Mean Time To Failure.
-     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName("meanTimeToFailure")
-    @Expose
-    public Integer meanTimeToFailure;
-
-    /**
-     * The App Health Score.
-     * The health score of the app. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    @SerializedName("appHealthScore")
-    @Expose
-    public Double appHealthScore;
-
-    /**
-     * The App Health Status.
-     * The overall health status of the app.
-     */
-    @SerializedName("appHealthStatus")
-    @Expose
-    public String appHealthStatus;
 
     /**
      * The All Orgs Health Score.
@@ -123,12 +51,52 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     public Integer allOrgsMeanTimeToFailure;
 
     /**
-     * The Tenant Id.
-     * The id of the tenant associated with this app object.
+     * The App Friendly Name.
+     * The friendly name of the application.
      */
-    @SerializedName("tenantId")
+    @SerializedName("appFriendlyName")
     @Expose
-    public String tenantId;
+    public String appFriendlyName;
+
+    /**
+     * The App Health Score.
+     * The health score of the app. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName("appHealthScore")
+    @Expose
+    public Double appHealthScore;
+
+    /**
+     * The App Health Status.
+     * The overall health status of the app.
+     */
+    @SerializedName("appHealthStatus")
+    @Expose
+    public String appHealthStatus;
+
+    /**
+     * The App Name.
+     * The name of the application.
+     */
+    @SerializedName("appName")
+    @Expose
+    public String appName;
+
+    /**
+     * The App Publisher.
+     * The publisher of the application.
+     */
+    @SerializedName("appPublisher")
+    @Expose
+    public String appPublisher;
+
+    /**
+     * The Mean Time To Failure.
+     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName("meanTimeToFailure")
+    @Expose
+    public Integer meanTimeToFailure;
 
     /**
      * The Mema Time Generated.
@@ -137,6 +105,38 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     @SerializedName("memaTimeGenerated")
     @Expose
     public String memaTimeGenerated;
+
+    /**
+     * The Tenant Id.
+     * The id of the tenant associated with this app object.
+     */
+    @SerializedName("tenantId")
+    @Expose
+    public String tenantId;
+
+    /**
+     * The Total App Crashes.
+     * The number of crashes for the app. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName("totalAppCrashes")
+    @Expose
+    public Integer totalAppCrashes;
+
+    /**
+     * The Total App Hangs.
+     * The number of hangs for the app. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName("totalAppHangs")
+    @Expose
+    public Integer totalAppHangs;
+
+    /**
+     * The Total App Usage Duration.
+     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName("totalAppUsageDuration")
+    @Expose
+    public Integer totalAppUsageDuration;
 
 
     /**

@@ -112,6 +112,27 @@ public class BitlockerRecoveryKeyRequest extends BaseRequest implements IBitlock
     }
 
     /**
+     * Creates a BitlockerRecoveryKey with a new object
+     *
+     * @param newBitlockerRecoveryKey the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback) {
+        send(HttpMethod.PUT, callback, newBitlockerRecoveryKey);
+    }
+
+    /**
+     * Creates a BitlockerRecoveryKey with a new object
+     *
+     * @param newBitlockerRecoveryKey the object to create/update
+     * @return the created BitlockerRecoveryKey
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BitlockerRecoveryKey put(final BitlockerRecoveryKey newBitlockerRecoveryKey) throws ClientException {
+        return send(HttpMethod.PUT, newBitlockerRecoveryKey);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -9,13 +9,13 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ConditionalAccessApplications;
-import com.microsoft.graph.models.extensions.ConditionalAccessUsers;
-import com.microsoft.graph.models.generated.RiskLevel;
-import com.microsoft.graph.models.extensions.ConditionalAccessPlatforms;
-import com.microsoft.graph.models.extensions.ConditionalAccessLocations;
 import com.microsoft.graph.models.generated.ConditionalAccessClientApp;
-import com.microsoft.graph.models.extensions.ConditionalAccessDeviceStates;
 import com.microsoft.graph.models.extensions.ConditionalAccessDevices;
+import com.microsoft.graph.models.extensions.ConditionalAccessDeviceStates;
+import com.microsoft.graph.models.extensions.ConditionalAccessLocations;
+import com.microsoft.graph.models.extensions.ConditionalAccessPlatforms;
+import com.microsoft.graph.models.generated.RiskLevel;
+import com.microsoft.graph.models.extensions.ConditionalAccessUsers;
 
 
 import com.google.gson.JsonObject;
@@ -52,12 +52,44 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
     public ConditionalAccessApplications applications;
 
     /**
-     * The Users.
-     * Users, groups, and roles included in and excluded from the policy. Required.
+     * The Client App Types.
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
      */
-    @SerializedName("users")
+    @SerializedName("clientAppTypes")
     @Expose
-    public ConditionalAccessUsers users;
+    public java.util.List<ConditionalAccessClientApp> clientAppTypes;
+
+    /**
+     * The Devices.
+     * 
+     */
+    @SerializedName("devices")
+    @Expose
+    public ConditionalAccessDevices devices;
+
+    /**
+     * The Device States.
+     * 
+     */
+    @SerializedName("deviceStates")
+    @Expose
+    public ConditionalAccessDeviceStates deviceStates;
+
+    /**
+     * The Locations.
+     * Locations included in and excluded from the policy.
+     */
+    @SerializedName("locations")
+    @Expose
+    public ConditionalAccessLocations locations;
+
+    /**
+     * The Platforms.
+     * Platforms included in and excluded from the policy.
+     */
+    @SerializedName("platforms")
+    @Expose
+    public ConditionalAccessPlatforms platforms;
 
     /**
      * The Sign In Risk Levels.
@@ -76,44 +108,12 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
     public java.util.List<RiskLevel> userRiskLevels;
 
     /**
-     * The Platforms.
-     * Platforms included in and excluded from the policy.
+     * The Users.
+     * Users, groups, and roles included in and excluded from the policy. Required.
      */
-    @SerializedName("platforms")
+    @SerializedName("users")
     @Expose
-    public ConditionalAccessPlatforms platforms;
-
-    /**
-     * The Locations.
-     * Locations included in and excluded from the policy.
-     */
-    @SerializedName("locations")
-    @Expose
-    public ConditionalAccessLocations locations;
-
-    /**
-     * The Client App Types.
-     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
-     */
-    @SerializedName("clientAppTypes")
-    @Expose
-    public java.util.List<ConditionalAccessClientApp> clientAppTypes;
-
-    /**
-     * The Device States.
-     * 
-     */
-    @SerializedName("deviceStates")
-    @Expose
-    public ConditionalAccessDeviceStates deviceStates;
-
-    /**
-     * The Devices.
-     * 
-     */
-    @SerializedName("devices")
-    @Expose
-    public ConditionalAccessDevices devices;
+    public ConditionalAccessUsers users;
 
 
     /**

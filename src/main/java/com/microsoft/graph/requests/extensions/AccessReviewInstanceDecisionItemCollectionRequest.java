@@ -62,14 +62,14 @@ public class AccessReviewInstanceDecisionItemCollectionRequest extends BaseColle
     public void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<AccessReviewInstanceDecisionItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AccessReviewInstanceDecisionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessReviewInstanceDecisionItem, callback);
     }
 
     public AccessReviewInstanceDecisionItem post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AccessReviewInstanceDecisionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAccessReviewInstanceDecisionItem);
     }
 
@@ -106,6 +106,27 @@ public class AccessReviewInstanceDecisionItemCollectionRequest extends BaseColle
         return (AccessReviewInstanceDecisionItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAccessReviewInstanceDecisionItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AccessReviewInstanceDecisionItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAccessReviewInstanceDecisionItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAccessReviewInstanceDecisionItemCollectionRequest)this;
+    }
     public IAccessReviewInstanceDecisionItemCollectionPage buildFromResponse(final AccessReviewInstanceDecisionItemCollectionResponse response) {
         final IAccessReviewInstanceDecisionItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

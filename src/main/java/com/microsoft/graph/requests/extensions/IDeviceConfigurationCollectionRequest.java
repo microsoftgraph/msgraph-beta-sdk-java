@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.IosAvailableUpdateVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -60,4 +60,20 @@ public interface IDeviceConfigurationCollectionRequest {
      */
     IDeviceConfigurationCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IDeviceConfigurationCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IDeviceConfigurationCollectionRequest skipToken(String skipToken);
 }

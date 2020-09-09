@@ -80,6 +80,23 @@ public interface IItemPhoneRequest extends IHttpRequest {
     ItemPhone post(final ItemPhone newItemPhone) throws ClientException;
 
     /**
+     * Posts a ItemPhone with a new object
+     *
+     * @param newItemPhone the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback);
+
+    /**
+     * Posts a ItemPhone with a new object
+     *
+     * @param newItemPhone the object to create/update
+     * @return the created ItemPhone
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ItemPhone put(final ItemPhone newItemPhone) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

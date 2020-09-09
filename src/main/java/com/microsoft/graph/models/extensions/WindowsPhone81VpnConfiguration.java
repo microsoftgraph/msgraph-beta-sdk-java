@@ -29,6 +29,14 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
 
 
     /**
+     * The Authentication Method.
+     * Authentication method.
+     */
+    @SerializedName("authenticationMethod")
+    @Expose
+    public VpnAuthenticationMethod authenticationMethod;
+
+    /**
      * The Bypass Vpn On Company Wifi.
      * Bypass VPN on company Wi-Fi.
      */
@@ -45,12 +53,12 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     public Boolean bypassVpnOnHomeWifi;
 
     /**
-     * The Authentication Method.
-     * Authentication method.
+     * The Dns Suffix Search List.
+     * DNS suffix search list.
      */
-    @SerializedName("authenticationMethod")
+    @SerializedName("dnsSuffixSearchList")
     @Expose
-    public VpnAuthenticationMethod authenticationMethod;
+    public java.util.List<String> dnsSuffixSearchList;
 
     /**
      * The Remember User Credentials.
@@ -59,14 +67,6 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     @SerializedName("rememberUserCredentials")
     @Expose
     public Boolean rememberUserCredentials;
-
-    /**
-     * The Dns Suffix Search List.
-     * DNS suffix search list.
-     */
-    @SerializedName("dnsSuffixSearchList")
-    @Expose
-    public java.util.List<String> dnsSuffixSearchList;
 
     /**
      * The Identity Certificate.

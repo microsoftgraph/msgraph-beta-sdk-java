@@ -118,6 +118,27 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
     }
 
     /**
+     * Creates a AccessReviewInstance with a new object
+     *
+     * @param newAccessReviewInstance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReviewInstance newAccessReviewInstance, final ICallback<AccessReviewInstance> callback) {
+        send(HttpMethod.PUT, callback, newAccessReviewInstance);
+    }
+
+    /**
+     * Creates a AccessReviewInstance with a new object
+     *
+     * @param newAccessReviewInstance the object to create/update
+     * @return the created AccessReviewInstance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReviewInstance put(final AccessReviewInstance newAccessReviewInstance) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReviewInstance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

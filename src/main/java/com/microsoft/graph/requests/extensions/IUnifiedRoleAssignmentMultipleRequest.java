@@ -80,6 +80,23 @@ public interface IUnifiedRoleAssignmentMultipleRequest extends IHttpRequest {
     UnifiedRoleAssignmentMultiple post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException;
 
     /**
+     * Posts a UnifiedRoleAssignmentMultiple with a new object
+     *
+     * @param newUnifiedRoleAssignmentMultiple the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<UnifiedRoleAssignmentMultiple> callback);
+
+    /**
+     * Posts a UnifiedRoleAssignmentMultiple with a new object
+     *
+     * @param newUnifiedRoleAssignmentMultiple the object to create/update
+     * @return the created UnifiedRoleAssignmentMultiple
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UnifiedRoleAssignmentMultiple put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

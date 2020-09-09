@@ -112,6 +112,27 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
     }
 
     /**
+     * Creates a AuthenticationFlowsPolicy with a new object
+     *
+     * @param newAuthenticationFlowsPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<AuthenticationFlowsPolicy> callback) {
+        send(HttpMethod.PUT, callback, newAuthenticationFlowsPolicy);
+    }
+
+    /**
+     * Creates a AuthenticationFlowsPolicy with a new object
+     *
+     * @param newAuthenticationFlowsPolicy the object to create/update
+     * @return the created AuthenticationFlowsPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AuthenticationFlowsPolicy put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAuthenticationFlowsPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

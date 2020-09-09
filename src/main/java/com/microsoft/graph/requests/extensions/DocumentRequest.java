@@ -116,6 +116,27 @@ public class DocumentRequest extends BaseRequest implements IDocumentRequest {
     }
 
     /**
+     * Creates a Document with a new object
+     *
+     * @param newDocument the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Document newDocument, final ICallback<Document> callback) {
+        send(HttpMethod.PUT, callback, newDocument);
+    }
+
+    /**
+     * Creates a Document with a new object
+     *
+     * @param newDocument the object to create/update
+     * @return the created Document
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Document put(final Document newDocument) throws ClientException {
+        return send(HttpMethod.PUT, newDocument);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

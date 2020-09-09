@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplicationMultiple;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentMultipleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,12 +37,12 @@ public interface IRbacApplicationMultipleRequestBuilder extends IRequestBuilder 
     IRbacApplicationMultipleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IUnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions();
-
-    IUnifiedRoleDefinitionRequestBuilder roleDefinitions(final String id);
-
     IUnifiedRoleAssignmentMultipleCollectionRequestBuilder roleAssignments();
 
     IUnifiedRoleAssignmentMultipleRequestBuilder roleAssignments(final String id);
+
+    IUnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions();
+
+    IUnifiedRoleDefinitionRequestBuilder roleDefinitions(final String id);
 
 }

@@ -9,10 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
@@ -43,13 +43,17 @@ public interface IManagedEBookRequestBuilder extends IRequestBuilder {
     IManagedEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IManagedEBookAssignmentCollectionRequestBuilder assignments();
+
+    IManagedEBookAssignmentRequestBuilder assignments(final String id);
+
     IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories();
 
     IManagedEBookCategoryWithReferenceRequestBuilder categories(final String id);
 
-    IManagedEBookAssignmentCollectionRequestBuilder assignments();
+    IDeviceInstallStateCollectionRequestBuilder deviceStates();
 
-    IManagedEBookAssignmentRequestBuilder assignments(final String id);
+    IDeviceInstallStateRequestBuilder deviceStates(final String id);
 
     /**
      * Gets the request builder for EBookInstallSummary
@@ -57,10 +61,6 @@ public interface IManagedEBookRequestBuilder extends IRequestBuilder {
      * @return the IEBookInstallSummaryRequestBuilder instance
      */
     IEBookInstallSummaryRequestBuilder installSummary();
-
-    IDeviceInstallStateCollectionRequestBuilder deviceStates();
-
-    IDeviceInstallStateRequestBuilder deviceStates(final String id);
 
     IUserInstallStateSummaryCollectionRequestBuilder userStateSummary();
 

@@ -120,6 +120,27 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
     }
 
     /**
+     * Creates a CommsApplication with a new object
+     *
+     * @param newCommsApplication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CommsApplication newCommsApplication, final ICallback<CommsApplication> callback) {
+        send(HttpMethod.PUT, callback, newCommsApplication);
+    }
+
+    /**
+     * Creates a CommsApplication with a new object
+     *
+     * @param newCommsApplication the object to create/update
+     * @return the created CommsApplication
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CommsApplication put(final CommsApplication newCommsApplication) throws ClientException {
+        return send(HttpMethod.PUT, newCommsApplication);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

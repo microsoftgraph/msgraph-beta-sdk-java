@@ -42,52 +42,12 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
 
     /**
-     * The Business Type.
-     * 
-     */
-    @SerializedName("businessType")
-    @Expose
-    public String businessType;
-
-    /**
      * The Address.
      * 
      */
     @SerializedName("address")
     @Expose
     public PhysicalAddress address;
-
-    /**
-     * The Phone.
-     * 
-     */
-    @SerializedName("phone")
-    @Expose
-    public String phone;
-
-    /**
-     * The Email.
-     * 
-     */
-    @SerializedName("email")
-    @Expose
-    public String email;
-
-    /**
-     * The Web Site Url.
-     * Example: https://www.contoso.com
-     */
-    @SerializedName("webSiteUrl")
-    @Expose
-    public String webSiteUrl;
-
-    /**
-     * The Default Currency Iso.
-     * 
-     */
-    @SerializedName("defaultCurrencyIso")
-    @Expose
-    public String defaultCurrencyIso;
 
     /**
      * The Business Hours.
@@ -98,12 +58,28 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
     public java.util.List<BookingWorkHours> businessHours;
 
     /**
-     * The Scheduling Policy.
+     * The Business Type.
      * 
      */
-    @SerializedName("schedulingPolicy")
+    @SerializedName("businessType")
     @Expose
-    public BookingSchedulingPolicy schedulingPolicy;
+    public String businessType;
+
+    /**
+     * The Default Currency Iso.
+     * 
+     */
+    @SerializedName("defaultCurrencyIso")
+    @Expose
+    public String defaultCurrencyIso;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
 
     /**
      * The Is Published.
@@ -114,12 +90,36 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
     public Boolean isPublished;
 
     /**
+     * The Phone.
+     * 
+     */
+    @SerializedName("phone")
+    @Expose
+    public String phone;
+
+    /**
      * The Public Url.
      * 
      */
     @SerializedName("publicUrl")
     @Expose
     public String publicUrl;
+
+    /**
+     * The Scheduling Policy.
+     * 
+     */
+    @SerializedName("schedulingPolicy")
+    @Expose
+    public BookingSchedulingPolicy schedulingPolicy;
+
+    /**
+     * The Web Site Url.
+     * Example: https://www.contoso.com
+     */
+    @SerializedName("webSiteUrl")
+    @Expose
+    public String webSiteUrl;
 
     /**
      * The Appointments.

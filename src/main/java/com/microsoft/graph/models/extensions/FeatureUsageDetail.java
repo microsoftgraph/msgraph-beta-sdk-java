@@ -45,20 +45,12 @@ public class FeatureUsageDetail implements IJsonBackedObject {
     public String featureName;
 
     /**
-     * The License Required.
+     * The Last Configured Date Time.
      * 
      */
-    @SerializedName("licenseRequired")
+    @SerializedName("lastConfiguredDateTime")
     @Expose
-    public AzureADLicenseType licenseRequired;
-
-    /**
-     * The License Assigned.
-     * 
-     */
-    @SerializedName("licenseAssigned")
-    @Expose
-    public AzureADLicenseType licenseAssigned;
+    public java.util.Calendar lastConfiguredDateTime;
 
     /**
      * The Last Used Date Time.
@@ -69,12 +61,20 @@ public class FeatureUsageDetail implements IJsonBackedObject {
     public java.util.Calendar lastUsedDateTime;
 
     /**
-     * The Last Configured Date Time.
+     * The License Assigned.
      * 
      */
-    @SerializedName("lastConfiguredDateTime")
+    @SerializedName("licenseAssigned")
     @Expose
-    public java.util.Calendar lastConfiguredDateTime;
+    public AzureADLicenseType licenseAssigned;
+
+    /**
+     * The License Required.
+     * 
+     */
+    @SerializedName("licenseRequired")
+    @Expose
+    public AzureADLicenseType licenseRequired;
 
 
     /**

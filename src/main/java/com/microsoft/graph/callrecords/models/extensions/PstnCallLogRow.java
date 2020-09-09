@@ -36,12 +36,20 @@ public class PstnCallLogRow implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Callee Number.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("calleeNumber")
     @Expose
-    public String id;
+    public String calleeNumber;
+
+    /**
+     * The Caller Number.
+     * 
+     */
+    @SerializedName("callerNumber")
+    @Expose
+    public String callerNumber;
 
     /**
      * The Call Id.
@@ -52,52 +60,12 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public String callId;
 
     /**
-     * The User Id.
+     * The Call Type.
      * 
      */
-    @SerializedName("userId")
+    @SerializedName("callType")
     @Expose
-    public String userId;
-
-    /**
-     * The User Principal Name.
-     * 
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Display Name.
-     * 
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * 
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Duration.
-     * 
-     */
-    @SerializedName("duration")
-    @Expose
-    public Integer duration;
+    public String callType;
 
     /**
      * The Charge.
@@ -108,44 +76,12 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public java.math.BigDecimal charge;
 
     /**
-     * The Call Type.
+     * The Conference Id.
      * 
      */
-    @SerializedName("callType")
+    @SerializedName("conferenceId")
     @Expose
-    public String callType;
-
-    /**
-     * The Currency.
-     * 
-     */
-    @SerializedName("currency")
-    @Expose
-    public String currency;
-
-    /**
-     * The Callee Number.
-     * 
-     */
-    @SerializedName("calleeNumber")
-    @Expose
-    public String calleeNumber;
-
-    /**
-     * The Usage Country Code.
-     * 
-     */
-    @SerializedName("usageCountryCode")
-    @Expose
-    public String usageCountryCode;
-
-    /**
-     * The Tenant Country Code.
-     * 
-     */
-    @SerializedName("tenantCountryCode")
-    @Expose
-    public String tenantCountryCode;
+    public String conferenceId;
 
     /**
      * The Connection Charge.
@@ -156,12 +92,12 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public java.math.BigDecimal connectionCharge;
 
     /**
-     * The Caller Number.
+     * The Currency.
      * 
      */
-    @SerializedName("callerNumber")
+    @SerializedName("currency")
     @Expose
-    public String callerNumber;
+    public String currency;
 
     /**
      * The Destination Context.
@@ -180,12 +116,36 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public String destinationName;
 
     /**
-     * The Conference Id.
+     * The Duration.
      * 
      */
-    @SerializedName("conferenceId")
+    @SerializedName("duration")
     @Expose
-    public String conferenceId;
+    public Integer duration;
+
+    /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
+
+    /**
+     * The Inventory Type.
+     * 
+     */
+    @SerializedName("inventoryType")
+    @Expose
+    public String inventoryType;
 
     /**
      * The License Capability.
@@ -196,12 +156,52 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public String licenseCapability;
 
     /**
-     * The Inventory Type.
+     * The Start Date Time.
      * 
      */
-    @SerializedName("inventoryType")
+    @SerializedName("startDateTime")
     @Expose
-    public String inventoryType;
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Tenant Country Code.
+     * 
+     */
+    @SerializedName("tenantCountryCode")
+    @Expose
+    public String tenantCountryCode;
+
+    /**
+     * The Usage Country Code.
+     * 
+     */
+    @SerializedName("usageCountryCode")
+    @Expose
+    public String usageCountryCode;
+
+    /**
+     * The User Display Name.
+     * 
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Principal Name.
+     * 
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
 
     /**

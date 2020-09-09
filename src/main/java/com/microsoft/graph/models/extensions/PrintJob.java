@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PrintJobStatus;
 import com.microsoft.graph.models.extensions.UserIdentity;
+import com.microsoft.graph.models.extensions.PrintJobStatus;
 import com.microsoft.graph.models.extensions.PrintDocument;
 import com.microsoft.graph.models.extensions.PrintTask;
 import com.microsoft.graph.models.extensions.Entity;
@@ -35,6 +35,14 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Created By.
+     * 
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public UserIdentity createdBy;
+
+    /**
      * The Created Date Time.
      * 
      */
@@ -49,14 +57,6 @@ public class PrintJob extends Entity implements IJsonBackedObject {
     @SerializedName("status")
     @Expose
     public PrintJobStatus status;
-
-    /**
-     * The Created By.
-     * 
-     */
-    @SerializedName("createdBy")
-    @Expose
-    public UserIdentity createdBy;
 
     /**
      * The Documents.

@@ -62,14 +62,14 @@ public class ProjectParticipationCollectionRequest extends BaseCollectionRequest
     public void post(final ProjectParticipation newProjectParticipation, final ICallback<ProjectParticipation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProjectParticipationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProjectParticipation, callback);
     }
 
     public ProjectParticipation post(final ProjectParticipation newProjectParticipation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProjectParticipationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProjectParticipation);
     }
 
@@ -106,6 +106,27 @@ public class ProjectParticipationCollectionRequest extends BaseCollectionRequest
         return (ProjectParticipationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProjectParticipationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProjectParticipationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProjectParticipationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProjectParticipationCollectionRequest)this;
+    }
     public IProjectParticipationCollectionPage buildFromResponse(final ProjectParticipationCollectionResponse response) {
         final IProjectParticipationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

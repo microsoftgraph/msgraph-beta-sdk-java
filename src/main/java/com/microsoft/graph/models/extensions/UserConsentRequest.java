@@ -28,14 +28,6 @@ public class UserConsentRequest extends Request implements IJsonBackedObject {
 
 
     /**
-     * The Reason.
-     * 
-     */
-    @SerializedName("reason")
-    @Expose
-    public String reason;
-
-    /**
      * The Created By.
      * 
      */
@@ -50,6 +42,14 @@ public class UserConsentRequest extends Request implements IJsonBackedObject {
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Reason.
+     * 
+     */
+    @SerializedName("reason")
+    @Expose
+    public String reason;
 
 
     /**

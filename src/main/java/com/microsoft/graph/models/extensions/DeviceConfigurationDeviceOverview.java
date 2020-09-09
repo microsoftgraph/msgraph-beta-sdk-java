@@ -27,36 +27,20 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
 
 
     /**
-     * The Pending Count.
-     * Number of pending devices
+     * The Configuration Version.
+     * Version of the policy for that overview
      */
-    @SerializedName("pendingCount")
+    @SerializedName("configurationVersion")
     @Expose
-    public Integer pendingCount;
+    public Integer configurationVersion;
 
     /**
-     * The Not Applicable Count.
-     * Number of not applicable devices
+     * The Conflict Count.
+     * Number of devices in conflict
      */
-    @SerializedName("notApplicableCount")
+    @SerializedName("conflictCount")
     @Expose
-    public Integer notApplicableCount;
-
-    /**
-     * The Not Applicable Platform Count.
-     * Number of not applicable devices due to mismatch platform and policy
-     */
-    @SerializedName("notApplicablePlatformCount")
-    @Expose
-    public Integer notApplicablePlatformCount;
-
-    /**
-     * The Success Count.
-     * Number of succeeded devices
-     */
-    @SerializedName("successCount")
-    @Expose
-    public Integer successCount;
+    public Integer conflictCount;
 
     /**
      * The Error Count.
@@ -75,14 +59,6 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
     public Integer failedCount;
 
     /**
-     * The Conflict Count.
-     * Number of devices in conflict
-     */
-    @SerializedName("conflictCount")
-    @Expose
-    public Integer conflictCount;
-
-    /**
      * The Last Update Date Time.
      * Last update time
      */
@@ -91,12 +67,36 @@ public class DeviceConfigurationDeviceOverview extends Entity implements IJsonBa
     public java.util.Calendar lastUpdateDateTime;
 
     /**
-     * The Configuration Version.
-     * Version of the policy for that overview
+     * The Not Applicable Count.
+     * Number of not applicable devices
      */
-    @SerializedName("configurationVersion")
+    @SerializedName("notApplicableCount")
     @Expose
-    public Integer configurationVersion;
+    public Integer notApplicableCount;
+
+    /**
+     * The Not Applicable Platform Count.
+     * Number of not applicable devices due to mismatch platform and policy
+     */
+    @SerializedName("notApplicablePlatformCount")
+    @Expose
+    public Integer notApplicablePlatformCount;
+
+    /**
+     * The Pending Count.
+     * Number of pending devices
+     */
+    @SerializedName("pendingCount")
+    @Expose
+    public Integer pendingCount;
+
+    /**
+     * The Success Count.
+     * Number of succeeded devices
+     */
+    @SerializedName("successCount")
+    @Expose
+    public Integer successCount;
 
 
     /**

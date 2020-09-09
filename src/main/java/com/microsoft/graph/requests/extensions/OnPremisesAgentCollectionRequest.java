@@ -62,14 +62,14 @@ public class OnPremisesAgentCollectionRequest extends BaseCollectionRequest<OnPr
     public void post(final OnPremisesAgent newOnPremisesAgent, final ICallback<OnPremisesAgent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnPremisesAgentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnPremisesAgent, callback);
     }
 
     public OnPremisesAgent post(final OnPremisesAgent newOnPremisesAgent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnPremisesAgentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnPremisesAgent);
     }
 
@@ -106,6 +106,27 @@ public class OnPremisesAgentCollectionRequest extends BaseCollectionRequest<OnPr
         return (OnPremisesAgentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnPremisesAgentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnPremisesAgentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnPremisesAgentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnPremisesAgentCollectionRequest)this;
+    }
     public IOnPremisesAgentCollectionPage buildFromResponse(final OnPremisesAgentCollectionResponse response) {
         final IOnPremisesAgentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

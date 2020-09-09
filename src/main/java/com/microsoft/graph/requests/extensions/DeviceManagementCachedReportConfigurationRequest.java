@@ -112,6 +112,27 @@ public class DeviceManagementCachedReportConfigurationRequest extends BaseReques
     }
 
     /**
+     * Creates a DeviceManagementCachedReportConfiguration with a new object
+     *
+     * @param newDeviceManagementCachedReportConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration, final ICallback<DeviceManagementCachedReportConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementCachedReportConfiguration);
+    }
+
+    /**
+     * Creates a DeviceManagementCachedReportConfiguration with a new object
+     *
+     * @param newDeviceManagementCachedReportConfiguration the object to create/update
+     * @return the created DeviceManagementCachedReportConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementCachedReportConfiguration put(final DeviceManagementCachedReportConfiguration newDeviceManagementCachedReportConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementCachedReportConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

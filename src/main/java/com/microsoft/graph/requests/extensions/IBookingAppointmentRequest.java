@@ -80,6 +80,23 @@ public interface IBookingAppointmentRequest extends IHttpRequest {
     BookingAppointment post(final BookingAppointment newBookingAppointment) throws ClientException;
 
     /**
+     * Posts a BookingAppointment with a new object
+     *
+     * @param newBookingAppointment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final BookingAppointment newBookingAppointment, final ICallback<BookingAppointment> callback);
+
+    /**
+     * Posts a BookingAppointment with a new object
+     *
+     * @param newBookingAppointment the object to create/update
+     * @return the created BookingAppointment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    BookingAppointment put(final BookingAppointment newBookingAppointment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

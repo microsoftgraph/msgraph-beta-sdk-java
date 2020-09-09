@@ -80,6 +80,23 @@ public interface IIosCertificateProfileBaseRequest extends IHttpRequest {
     IosCertificateProfileBase post(final IosCertificateProfileBase newIosCertificateProfileBase) throws ClientException;
 
     /**
+     * Posts a IosCertificateProfileBase with a new object
+     *
+     * @param newIosCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosCertificateProfileBase newIosCertificateProfileBase, final ICallback<IosCertificateProfileBase> callback);
+
+    /**
+     * Posts a IosCertificateProfileBase with a new object
+     *
+     * @param newIosCertificateProfileBase the object to create/update
+     * @return the created IosCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosCertificateProfileBase put(final IosCertificateProfileBase newIosCertificateProfileBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

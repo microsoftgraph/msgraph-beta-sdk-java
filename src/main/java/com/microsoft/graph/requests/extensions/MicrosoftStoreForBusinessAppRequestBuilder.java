@@ -55,6 +55,13 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
     }
 
 
+    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
     public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
@@ -62,12 +69,12 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
     public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
-        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
-        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
+        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -78,12 +85,12 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
     public IMobileAppInstallSummaryRequestBuilder installSummary() {
         return new MobileAppInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
-    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
-        return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public IMobileAppRelationshipCollectionRequestBuilder relationships() {
+        return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
     }
 
-    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
-        return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public IMobileAppRelationshipRequestBuilder relationships(final String id) {
+        return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
     public IUserAppInstallStatusCollectionRequestBuilder userStatuses() {
         return new UserAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
@@ -91,13 +98,6 @@ public class MicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuild
 
     public IUserAppInstallStatusRequestBuilder userStatuses(final String id) {
         return new UserAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
-    }
-    public IMobileAppRelationshipCollectionRequestBuilder relationships() {
-        return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
-    }
-
-    public IMobileAppRelationshipRequestBuilder relationships(final String id) {
-        return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
     public IMobileContainedAppCollectionRequestBuilder containedApps() {
         return new MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps"), getClient(), null);

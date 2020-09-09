@@ -116,6 +116,27 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
     }
 
     /**
+     * Creates a Bitlocker with a new object
+     *
+     * @param newBitlocker the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Bitlocker newBitlocker, final ICallback<Bitlocker> callback) {
+        send(HttpMethod.PUT, callback, newBitlocker);
+    }
+
+    /**
+     * Creates a Bitlocker with a new object
+     *
+     * @param newBitlocker the object to create/update
+     * @return the created Bitlocker
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Bitlocker put(final Bitlocker newBitlocker) throws ClientException {
+        return send(HttpMethod.PUT, newBitlocker);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

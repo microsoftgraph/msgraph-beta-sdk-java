@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.NumberRange;
-import com.microsoft.graph.models.extensions.IPv4Range;
 import com.microsoft.graph.models.generated.VpnTrafficRuleAppType;
+import com.microsoft.graph.models.extensions.IPv4Range;
+import com.microsoft.graph.models.extensions.NumberRange;
 import com.microsoft.graph.models.generated.VpnTrafficRuleRoutingPolicyType;
 
 
@@ -40,54 +40,6 @@ public class VpnTrafficRule implements IJsonBackedObject {
     }
 
     /**
-     * The Name.
-     * Name.
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
-     * The Protocols.
-     * Protocols (0-255). Valid values 0 to 255
-     */
-    @SerializedName("protocols")
-    @Expose
-    public Integer protocols;
-
-    /**
-     * The Local Port Ranges.
-     * Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("localPortRanges")
-    @Expose
-    public java.util.List<NumberRange> localPortRanges;
-
-    /**
-     * The Remote Port Ranges.
-     * Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("remotePortRanges")
-    @Expose
-    public java.util.List<NumberRange> remotePortRanges;
-
-    /**
-     * The Local Address Ranges.
-     * Local address range. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("localAddressRanges")
-    @Expose
-    public java.util.List<IPv4Range> localAddressRanges;
-
-    /**
-     * The Remote Address Ranges.
-     * Remote address range. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("remoteAddressRanges")
-    @Expose
-    public java.util.List<IPv4Range> remoteAddressRanges;
-
-    /**
      * The App Id.
      * App identifier, if this traffic rule is triggered by an app.
      */
@@ -104,20 +56,68 @@ public class VpnTrafficRule implements IJsonBackedObject {
     public VpnTrafficRuleAppType appType;
 
     /**
-     * The Routing Policy Type.
-     * When app triggered, indicates whether to enable split tunneling along this route.
-     */
-    @SerializedName("routingPolicyType")
-    @Expose
-    public VpnTrafficRuleRoutingPolicyType routingPolicyType;
-
-    /**
      * The Claims.
      * Claims associated with this traffic rule.
      */
     @SerializedName("claims")
     @Expose
     public String claims;
+
+    /**
+     * The Local Address Ranges.
+     * Local address range. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("localAddressRanges")
+    @Expose
+    public java.util.List<IPv4Range> localAddressRanges;
+
+    /**
+     * The Local Port Ranges.
+     * Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("localPortRanges")
+    @Expose
+    public java.util.List<NumberRange> localPortRanges;
+
+    /**
+     * The Name.
+     * Name.
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Protocols.
+     * Protocols (0-255). Valid values 0 to 255
+     */
+    @SerializedName("protocols")
+    @Expose
+    public Integer protocols;
+
+    /**
+     * The Remote Address Ranges.
+     * Remote address range. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("remoteAddressRanges")
+    @Expose
+    public java.util.List<IPv4Range> remoteAddressRanges;
+
+    /**
+     * The Remote Port Ranges.
+     * Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("remotePortRanges")
+    @Expose
+    public java.util.List<NumberRange> remotePortRanges;
+
+    /**
+     * The Routing Policy Type.
+     * When app triggered, indicates whether to enable split tunneling along this route.
+     */
+    @SerializedName("routingPolicyType")
+    @Expose
+    public VpnTrafficRuleRoutingPolicyType routingPolicyType;
 
 
     /**

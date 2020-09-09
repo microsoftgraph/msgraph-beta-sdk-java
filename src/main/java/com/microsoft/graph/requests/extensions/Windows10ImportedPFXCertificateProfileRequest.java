@@ -116,6 +116,27 @@ public class Windows10ImportedPFXCertificateProfileRequest extends BaseRequest i
     }
 
     /**
+     * Creates a Windows10ImportedPFXCertificateProfile with a new object
+     *
+     * @param newWindows10ImportedPFXCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10ImportedPFXCertificateProfile newWindows10ImportedPFXCertificateProfile, final ICallback<Windows10ImportedPFXCertificateProfile> callback) {
+        send(HttpMethod.PUT, callback, newWindows10ImportedPFXCertificateProfile);
+    }
+
+    /**
+     * Creates a Windows10ImportedPFXCertificateProfile with a new object
+     *
+     * @param newWindows10ImportedPFXCertificateProfile the object to create/update
+     * @return the created Windows10ImportedPFXCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10ImportedPFXCertificateProfile put(final Windows10ImportedPFXCertificateProfile newWindows10ImportedPFXCertificateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10ImportedPFXCertificateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

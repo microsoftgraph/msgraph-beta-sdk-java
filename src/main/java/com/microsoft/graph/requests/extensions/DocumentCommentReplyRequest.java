@@ -112,6 +112,27 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
     }
 
     /**
+     * Creates a DocumentCommentReply with a new object
+     *
+     * @param newDocumentCommentReply the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DocumentCommentReply newDocumentCommentReply, final ICallback<DocumentCommentReply> callback) {
+        send(HttpMethod.PUT, callback, newDocumentCommentReply);
+    }
+
+    /**
+     * Creates a DocumentCommentReply with a new object
+     *
+     * @param newDocumentCommentReply the object to create/update
+     * @return the created DocumentCommentReply
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DocumentCommentReply put(final DocumentCommentReply newDocumentCommentReply) throws ClientException {
+        return send(HttpMethod.PUT, newDocumentCommentReply);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

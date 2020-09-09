@@ -112,6 +112,27 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequest extends BaseReques
     }
 
     /**
+     * Creates a GroupPolicyPresentationLongDecimalTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationLongDecimalTextBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox, final ICallback<GroupPolicyPresentationLongDecimalTextBox> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationLongDecimalTextBox);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationLongDecimalTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationLongDecimalTextBox the object to create/update
+     * @return the created GroupPolicyPresentationLongDecimalTextBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationLongDecimalTextBox put(final GroupPolicyPresentationLongDecimalTextBox newGroupPolicyPresentationLongDecimalTextBox) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationLongDecimalTextBox);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

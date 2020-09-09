@@ -112,6 +112,27 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
     }
 
     /**
+     * Creates a WindowsManagedDevice with a new object
+     *
+     * @param newWindowsManagedDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<WindowsManagedDevice> callback) {
+        send(HttpMethod.PUT, callback, newWindowsManagedDevice);
+    }
+
+    /**
+     * Creates a WindowsManagedDevice with a new object
+     *
+     * @param newWindowsManagedDevice the object to create/update
+     * @return the created WindowsManagedDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsManagedDevice put(final WindowsManagedDevice newWindowsManagedDevice) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsManagedDevice);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

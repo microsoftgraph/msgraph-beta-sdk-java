@@ -36,28 +36,12 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
     }
 
     /**
-     * The Inventory Count.
-     * Number of devices with Inventory swung-over. This property is read-only.
-     */
-    @SerializedName("inventoryCount")
-    @Expose
-    public Integer inventoryCount;
-
-    /**
      * The Compliance Policy Count.
      * Number of devices with CompliancePolicy swung-over. This property is read-only.
      */
     @SerializedName("compliancePolicyCount")
     @Expose
     public Integer compliancePolicyCount;
-
-    /**
-     * The Resource Access Count.
-     * Number of devices with ResourceAccess swung-over. This property is read-only.
-     */
-    @SerializedName("resourceAccessCount")
-    @Expose
-    public Integer resourceAccessCount;
 
     /**
      * The Configuration Settings Count.
@@ -68,20 +52,20 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
     public Integer configurationSettingsCount;
 
     /**
-     * The Windows Update For Business Count.
-     * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
-     */
-    @SerializedName("windowsUpdateForBusinessCount")
-    @Expose
-    public Integer windowsUpdateForBusinessCount;
-
-    /**
      * The Endpoint Protection Count.
      * Number of devices with EndpointProtection swung-over. This property is read-only.
      */
     @SerializedName("endpointProtectionCount")
     @Expose
     public Integer endpointProtectionCount;
+
+    /**
+     * The Inventory Count.
+     * Number of devices with Inventory swung-over. This property is read-only.
+     */
+    @SerializedName("inventoryCount")
+    @Expose
+    public Integer inventoryCount;
 
     /**
      * The Modern Apps Count.
@@ -100,12 +84,28 @@ public class ComanagedDevicesSummary implements IJsonBackedObject {
     public Integer officeAppsCount;
 
     /**
+     * The Resource Access Count.
+     * Number of devices with ResourceAccess swung-over. This property is read-only.
+     */
+    @SerializedName("resourceAccessCount")
+    @Expose
+    public Integer resourceAccessCount;
+
+    /**
      * The Total Comanaged Count.
      * Number of Co-Managed Devices. This property is read-only.
      */
     @SerializedName("totalComanagedCount")
     @Expose
     public Integer totalComanagedCount;
+
+    /**
+     * The Windows Update For Business Count.
+     * Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
+     */
+    @SerializedName("windowsUpdateForBusinessCount")
+    @Expose
+    public Integer windowsUpdateForBusinessCount;
 
 
     /**

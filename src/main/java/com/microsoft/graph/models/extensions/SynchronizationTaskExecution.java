@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.SynchronizationTaskExecutionResult;
 import com.microsoft.graph.models.extensions.SynchronizationError;
+import com.microsoft.graph.models.generated.SynchronizationTaskExecutionResult;
 
 
 import com.google.gson.JsonObject;
@@ -118,20 +118,20 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
     public Long countImportedReferenceDeltas;
 
     /**
-     * The State.
-     * 
-     */
-    @SerializedName("state")
-    @Expose
-    public SynchronizationTaskExecutionResult state;
-
-    /**
      * The Error.
      * 
      */
     @SerializedName("error")
     @Expose
     public SynchronizationError error;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName("state")
+    @Expose
+    public SynchronizationTaskExecutionResult state;
 
     /**
      * The Time Began.

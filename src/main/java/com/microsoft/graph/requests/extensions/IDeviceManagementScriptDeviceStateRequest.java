@@ -80,6 +80,23 @@ public interface IDeviceManagementScriptDeviceStateRequest extends IHttpRequest 
     DeviceManagementScriptDeviceState post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState) throws ClientException;
 
     /**
+     * Posts a DeviceManagementScriptDeviceState with a new object
+     *
+     * @param newDeviceManagementScriptDeviceState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<DeviceManagementScriptDeviceState> callback);
+
+    /**
+     * Posts a DeviceManagementScriptDeviceState with a new object
+     *
+     * @param newDeviceManagementScriptDeviceState the object to create/update
+     * @return the created DeviceManagementScriptDeviceState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementScriptDeviceState put(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

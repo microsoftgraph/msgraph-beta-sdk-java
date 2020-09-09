@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.EndpointSecurityConfigurationType;
 import com.microsoft.graph.models.generated.EndpointSecurityConfigurationApplicablePlatform;
+import com.microsoft.graph.models.generated.EndpointSecurityConfigurationType;
 import com.microsoft.graph.models.generated.EndpointSecurityConfigurationProfileType;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.VulnerableManagedDevice;
@@ -34,20 +34,20 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
 
     /**
-     * The Endpoint Security Policy.
-     * The endpoint security policy type.
-     */
-    @SerializedName("endpointSecurityPolicy")
-    @Expose
-    public EndpointSecurityConfigurationType endpointSecurityPolicy;
-
-    /**
      * The Applicable Platform.
      * The applicable platform.
      */
     @SerializedName("applicablePlatform")
     @Expose
     public EndpointSecurityConfigurationApplicablePlatform applicablePlatform;
+
+    /**
+     * The Endpoint Security Policy.
+     * The endpoint security policy type.
+     */
+    @SerializedName("endpointSecurityPolicy")
+    @Expose
+    public EndpointSecurityConfigurationType endpointSecurityPolicy;
 
     /**
      * The Endpoint Security Policy Profile.
@@ -66,20 +66,20 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     public String insights;
 
     /**
-     * The Managed Device Count.
-     * The number of vulnerable devices.
-     */
-    @SerializedName("managedDeviceCount")
-    @Expose
-    public Integer managedDeviceCount;
-
-    /**
      * The Intended Settings.
      * The intended settings and their values.
      */
     @SerializedName("intendedSettings")
     @Expose
     public java.util.List<KeyValuePair> intendedSettings;
+
+    /**
+     * The Managed Device Count.
+     * The number of vulnerable devices.
+     */
+    @SerializedName("managedDeviceCount")
+    @Expose
+    public Integer managedDeviceCount;
 
     /**
      * The Managed Devices.

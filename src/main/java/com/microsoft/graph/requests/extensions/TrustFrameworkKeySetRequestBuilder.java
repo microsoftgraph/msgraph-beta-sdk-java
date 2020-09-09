@@ -57,16 +57,16 @@ public class TrustFrameworkKeySetRequestBuilder extends BaseRequestBuilder imple
         return new TrustFrameworkKeySetGenerateKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.generateKey"), getClient(), null, use, kty, nbf, exp);
     }
 
-    public ITrustFrameworkKeySetUploadSecretRequestBuilder uploadSecret(final String use, final String k, final Long nbf, final Long exp) {
-        return new TrustFrameworkKeySetUploadSecretRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadSecret"), getClient(), null, use, k, nbf, exp);
-    }
-
     public ITrustFrameworkKeySetUploadCertificateRequestBuilder uploadCertificate(final String key) {
         return new TrustFrameworkKeySetUploadCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadCertificate"), getClient(), null, key);
     }
 
     public ITrustFrameworkKeySetUploadPkcs12RequestBuilder uploadPkcs12(final String key, final String password) {
         return new TrustFrameworkKeySetUploadPkcs12RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadPkcs12"), getClient(), null, key, password);
+    }
+
+    public ITrustFrameworkKeySetUploadSecretRequestBuilder uploadSecret(final String use, final String k, final Long nbf, final Long exp) {
+        return new TrustFrameworkKeySetUploadSecretRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadSecret"), getClient(), null, use, k, nbf, exp);
     }
 
     public ITrustFrameworkKeySetGetActiveKeyRequestBuilder getActiveKey() {

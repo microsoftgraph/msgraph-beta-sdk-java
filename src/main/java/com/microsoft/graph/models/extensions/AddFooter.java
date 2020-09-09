@@ -28,20 +28,20 @@ public class AddFooter extends MarkContent implements IJsonBackedObject {
 
 
     /**
-     * The Margin.
-     * 
-     */
-    @SerializedName("margin")
-    @Expose
-    public Integer margin;
-
-    /**
      * The Alignment.
      * 
      */
     @SerializedName("alignment")
     @Expose
     public Alignment alignment;
+
+    /**
+     * The Margin.
+     * 
+     */
+    @SerializedName("margin")
+    @Expose
+    public Integer margin;
 
 
     /**

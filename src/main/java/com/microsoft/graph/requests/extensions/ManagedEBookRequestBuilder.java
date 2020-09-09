@@ -9,14 +9,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
@@ -70,6 +70,13 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
     }
 
 
+    public IManagedEBookAssignmentCollectionRequestBuilder assignments() {
+        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
+        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
     public IManagedEBookCategoryCollectionWithReferencesRequestBuilder categories() {
         return new ManagedEBookCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
@@ -77,12 +84,12 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
     public IManagedEBookCategoryWithReferenceRequestBuilder categories(final String id) {
         return new ManagedEBookCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IManagedEBookAssignmentCollectionRequestBuilder assignments() {
-        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
-    public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
-        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
+        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -92,13 +99,6 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
      */
     public IEBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
-    }
-    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
-        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
-    }
-
-    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
-        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
     public IUserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);

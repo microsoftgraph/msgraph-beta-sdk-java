@@ -112,6 +112,27 @@ public class ItemPatentRequest extends BaseRequest implements IItemPatentRequest
     }
 
     /**
+     * Creates a ItemPatent with a new object
+     *
+     * @param newItemPatent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemPatent newItemPatent, final ICallback<ItemPatent> callback) {
+        send(HttpMethod.PUT, callback, newItemPatent);
+    }
+
+    /**
+     * Creates a ItemPatent with a new object
+     *
+     * @param newItemPatent the object to create/update
+     * @return the created ItemPatent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemPatent put(final ItemPatent newItemPatent) throws ClientException {
+        return send(HttpMethod.PUT, newItemPatent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -28,20 +28,20 @@ public class MediaPrompt extends Prompt implements IJsonBackedObject {
 
 
     /**
-     * The Media Info.
-     * The media information
-     */
-    @SerializedName("mediaInfo")
-    @Expose
-    public MediaInfo mediaInfo;
-
-    /**
      * The Loop.
      * 
      */
     @SerializedName("loop")
     @Expose
     public Integer loop;
+
+    /**
+     * The Media Info.
+     * The media information
+     */
+    @SerializedName("mediaInfo")
+    @Expose
+    public MediaInfo mediaInfo;
 
 
     /**

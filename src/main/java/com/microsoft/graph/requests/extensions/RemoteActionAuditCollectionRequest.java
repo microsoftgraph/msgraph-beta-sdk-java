@@ -62,14 +62,14 @@ public class RemoteActionAuditCollectionRequest extends BaseCollectionRequest<Re
     public void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<RemoteActionAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteActionAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteActionAudit, callback);
     }
 
     public RemoteActionAudit post(final RemoteActionAudit newRemoteActionAudit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RemoteActionAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteActionAudit);
     }
 
@@ -106,6 +106,27 @@ public class RemoteActionAuditCollectionRequest extends BaseCollectionRequest<Re
         return (RemoteActionAuditCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRemoteActionAuditCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RemoteActionAuditCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRemoteActionAuditCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRemoteActionAuditCollectionRequest)this;
+    }
     public IRemoteActionAuditCollectionPage buildFromResponse(final RemoteActionAuditCollectionResponse response) {
         final IRemoteActionAuditCollectionRequestBuilder builder;
         if (response.nextLink != null) {

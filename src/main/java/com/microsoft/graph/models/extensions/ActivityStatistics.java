@@ -36,12 +36,12 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
     public AnalyticsActivityType activity;
 
     /**
-     * The Start Date.
+     * The Duration.
      * 
      */
-    @SerializedName("startDate")
+    @SerializedName("duration")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly startDate;
+    public javax.xml.datatype.Duration duration;
 
     /**
      * The End Date.
@@ -52,20 +52,20 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.models.extensions.DateOnly endDate;
 
     /**
+     * The Start Date.
+     * 
+     */
+    @SerializedName("startDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly startDate;
+
+    /**
      * The Time Zone Used.
      * 
      */
     @SerializedName("timeZoneUsed")
     @Expose
     public String timeZoneUsed;
-
-    /**
-     * The Duration.
-     * 
-     */
-    @SerializedName("duration")
-    @Expose
-    public javax.xml.datatype.Duration duration;
 
 
     /**

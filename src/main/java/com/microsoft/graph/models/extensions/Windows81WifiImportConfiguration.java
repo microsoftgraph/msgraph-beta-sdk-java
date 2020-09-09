@@ -27,6 +27,14 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
 
 
     /**
+     * The Payload.
+     * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
+     */
+    @SerializedName("payload")
+    @Expose
+    public byte[] payload;
+
+    /**
      * The Payload File Name.
      * Payload file name (*.xml).
      */
@@ -41,14 +49,6 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     @SerializedName("profileName")
     @Expose
     public String profileName;
-
-    /**
-     * The Payload.
-     * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-     */
-    @SerializedName("payload")
-    @Expose
-    public byte[] payload;
 
 
     /**

@@ -11,8 +11,8 @@ import com.microsoft.graph.models.extensions.Vendor;
 import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,10 +38,6 @@ public interface IVendorRequestBuilder extends IRequestBuilder {
     IVendorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPictureCollectionRequestBuilder picture();
-
-    IPictureRequestBuilder picture(final String id);
-
     /**
      * Gets the request builder for Currency
      *
@@ -50,17 +46,21 @@ public interface IVendorRequestBuilder extends IRequestBuilder {
     ICurrencyRequestBuilder currency();
 
     /**
+     * Gets the request builder for PaymentMethod
+     *
+     * @return the IPaymentMethodRequestBuilder instance
+     */
+    IPaymentMethodRequestBuilder paymentMethod();
+
+    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     IPaymentTermRequestBuilder paymentTerm();
 
-    /**
-     * Gets the request builder for PaymentMethod
-     *
-     * @return the IPaymentMethodRequestBuilder instance
-     */
-    IPaymentMethodRequestBuilder paymentMethod();
+    IPictureCollectionRequestBuilder picture();
+
+    IPictureRequestBuilder picture(final String id);
 
 }

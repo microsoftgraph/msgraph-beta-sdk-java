@@ -112,6 +112,27 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
     }
 
     /**
+     * Creates a LanguageProficiency with a new object
+     *
+     * @param newLanguageProficiency the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final LanguageProficiency newLanguageProficiency, final ICallback<LanguageProficiency> callback) {
+        send(HttpMethod.PUT, callback, newLanguageProficiency);
+    }
+
+    /**
+     * Creates a LanguageProficiency with a new object
+     *
+     * @param newLanguageProficiency the object to create/update
+     * @return the created LanguageProficiency
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public LanguageProficiency put(final LanguageProficiency newLanguageProficiency) throws ClientException {
+        return send(HttpMethod.PUT, newLanguageProficiency);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

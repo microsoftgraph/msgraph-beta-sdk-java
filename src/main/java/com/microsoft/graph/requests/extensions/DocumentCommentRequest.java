@@ -116,6 +116,27 @@ public class DocumentCommentRequest extends BaseRequest implements IDocumentComm
     }
 
     /**
+     * Creates a DocumentComment with a new object
+     *
+     * @param newDocumentComment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DocumentComment newDocumentComment, final ICallback<DocumentComment> callback) {
+        send(HttpMethod.PUT, callback, newDocumentComment);
+    }
+
+    /**
+     * Creates a DocumentComment with a new object
+     *
+     * @param newDocumentComment the object to create/update
+     * @return the created DocumentComment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DocumentComment put(final DocumentComment newDocumentComment) throws ClientException {
+        return send(HttpMethod.PUT, newDocumentComment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

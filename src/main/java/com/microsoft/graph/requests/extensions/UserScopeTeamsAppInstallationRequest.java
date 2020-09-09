@@ -114,6 +114,27 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a UserScopeTeamsAppInstallation with a new object
+     *
+     * @param newUserScopeTeamsAppInstallation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, final ICallback<UserScopeTeamsAppInstallation> callback) {
+        send(HttpMethod.PUT, callback, newUserScopeTeamsAppInstallation);
+    }
+
+    /**
+     * Creates a UserScopeTeamsAppInstallation with a new object
+     *
+     * @param newUserScopeTeamsAppInstallation the object to create/update
+     * @return the created UserScopeTeamsAppInstallation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserScopeTeamsAppInstallation put(final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) throws ClientException {
+        return send(HttpMethod.PUT, newUserScopeTeamsAppInstallation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

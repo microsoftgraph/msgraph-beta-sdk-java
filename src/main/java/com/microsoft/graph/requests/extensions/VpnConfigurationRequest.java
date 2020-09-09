@@ -127,6 +127,27 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
     }
 
     /**
+     * Creates a VpnConfiguration with a new object
+     *
+     * @param newVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final VpnConfiguration newVpnConfiguration, final ICallback<VpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newVpnConfiguration);
+    }
+
+    /**
+     * Creates a VpnConfiguration with a new object
+     *
+     * @param newVpnConfiguration the object to create/update
+     * @return the created VpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public VpnConfiguration put(final VpnConfiguration newVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newVpnConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

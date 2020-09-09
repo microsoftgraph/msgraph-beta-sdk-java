@@ -80,6 +80,23 @@ public interface IUserConsentRequestRequest extends IHttpRequest {
     UserConsentRequest post(final UserConsentRequest newUserConsentRequest) throws ClientException;
 
     /**
+     * Posts a UserConsentRequest with a new object
+     *
+     * @param newUserConsentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserConsentRequest newUserConsentRequest, final ICallback<UserConsentRequest> callback);
+
+    /**
+     * Posts a UserConsentRequest with a new object
+     *
+     * @param newUserConsentRequest the object to create/update
+     * @return the created UserConsentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserConsentRequest put(final UserConsentRequest newUserConsentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

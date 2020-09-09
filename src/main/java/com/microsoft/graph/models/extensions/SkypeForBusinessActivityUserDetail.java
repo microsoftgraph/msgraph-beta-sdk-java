@@ -27,116 +27,44 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
 
 
     /**
-     * The Total Peer To Peer Session Count.
+     * The Assigned Products.
      * 
      */
-    @SerializedName("totalPeerToPeerSessionCount")
+    @SerializedName("assignedProducts")
     @Expose
-    public Long totalPeerToPeerSessionCount;
+    public java.util.List<String> assignedProducts;
 
     /**
-     * The Total Organized Conference Count.
+     * The Deleted Date.
      * 
      */
-    @SerializedName("totalOrganizedConferenceCount")
+    @SerializedName("deletedDate")
     @Expose
-    public Long totalOrganizedConferenceCount;
+    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
 
     /**
-     * The Total Participated Conference Count.
+     * The Is Deleted.
      * 
      */
-    @SerializedName("totalParticipatedConferenceCount")
+    @SerializedName("isDeleted")
     @Expose
-    public Long totalParticipatedConferenceCount;
+    public Boolean isDeleted;
 
     /**
-     * The Peer To Peer Last Activity Date.
+     * The Last Activity Date.
      * 
      */
-    @SerializedName("peerToPeerLastActivityDate")
+    @SerializedName("lastActivityDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly peerToPeerLastActivityDate;
+    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
 
     /**
-     * The Organized Conference Last Activity Date.
+     * The Organized Conference App Sharing Count.
      * 
      */
-    @SerializedName("organizedConferenceLastActivityDate")
+    @SerializedName("organizedConferenceAppSharingCount")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly organizedConferenceLastActivityDate;
-
-    /**
-     * The Participated Conference Last Activity Date.
-     * 
-     */
-    @SerializedName("participatedConferenceLastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly participatedConferenceLastActivityDate;
-
-    /**
-     * The Peer To Peer IMCount.
-     * 
-     */
-    @SerializedName("peerToPeerIMCount")
-    @Expose
-    public Long peerToPeerIMCount;
-
-    /**
-     * The Peer To Peer Audio Count.
-     * 
-     */
-    @SerializedName("peerToPeerAudioCount")
-    @Expose
-    public Long peerToPeerAudioCount;
-
-    /**
-     * The Peer To Peer Audio Minutes.
-     * 
-     */
-    @SerializedName("peerToPeerAudioMinutes")
-    @Expose
-    public Long peerToPeerAudioMinutes;
-
-    /**
-     * The Peer To Peer Video Count.
-     * 
-     */
-    @SerializedName("peerToPeerVideoCount")
-    @Expose
-    public Long peerToPeerVideoCount;
-
-    /**
-     * The Peer To Peer Video Minutes.
-     * 
-     */
-    @SerializedName("peerToPeerVideoMinutes")
-    @Expose
-    public Long peerToPeerVideoMinutes;
-
-    /**
-     * The Peer To Peer App Sharing Count.
-     * 
-     */
-    @SerializedName("peerToPeerAppSharingCount")
-    @Expose
-    public Long peerToPeerAppSharingCount;
-
-    /**
-     * The Peer To Peer File Transfer Count.
-     * 
-     */
-    @SerializedName("peerToPeerFileTransferCount")
-    @Expose
-    public Long peerToPeerFileTransferCount;
-
-    /**
-     * The Organized Conference IMCount.
-     * 
-     */
-    @SerializedName("organizedConferenceIMCount")
-    @Expose
-    public Long organizedConferenceIMCount;
+    public Long organizedConferenceAppSharingCount;
 
     /**
      * The Organized Conference Audio Video Count.
@@ -155,28 +83,12 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
     public Long organizedConferenceAudioVideoMinutes;
 
     /**
-     * The Organized Conference App Sharing Count.
+     * The Organized Conference Cloud Dial In Microsoft Minutes.
      * 
      */
-    @SerializedName("organizedConferenceAppSharingCount")
+    @SerializedName("organizedConferenceCloudDialInMicrosoftMinutes")
     @Expose
-    public Long organizedConferenceAppSharingCount;
-
-    /**
-     * The Organized Conference Web Count.
-     * 
-     */
-    @SerializedName("organizedConferenceWebCount")
-    @Expose
-    public Long organizedConferenceWebCount;
-
-    /**
-     * The Organized Conference Dial In Out3rd Party Count.
-     * 
-     */
-    @SerializedName("organizedConferenceDialInOut3rdPartyCount")
-    @Expose
-    public Long organizedConferenceDialInOut3rdPartyCount;
+    public Long organizedConferenceCloudDialInMicrosoftMinutes;
 
     /**
      * The Organized Conference Cloud Dial In Out Microsoft Count.
@@ -187,14 +99,6 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
     public Long organizedConferenceCloudDialInOutMicrosoftCount;
 
     /**
-     * The Organized Conference Cloud Dial In Microsoft Minutes.
-     * 
-     */
-    @SerializedName("organizedConferenceCloudDialInMicrosoftMinutes")
-    @Expose
-    public Long organizedConferenceCloudDialInMicrosoftMinutes;
-
-    /**
      * The Organized Conference Cloud Dial Out Microsoft Minutes.
      * 
      */
@@ -203,12 +107,44 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
     public Long organizedConferenceCloudDialOutMicrosoftMinutes;
 
     /**
-     * The Participated Conference IMCount.
+     * The Organized Conference Dial In Out3rd Party Count.
      * 
      */
-    @SerializedName("participatedConferenceIMCount")
+    @SerializedName("organizedConferenceDialInOut3rdPartyCount")
     @Expose
-    public Long participatedConferenceIMCount;
+    public Long organizedConferenceDialInOut3rdPartyCount;
+
+    /**
+     * The Organized Conference IMCount.
+     * 
+     */
+    @SerializedName("organizedConferenceIMCount")
+    @Expose
+    public Long organizedConferenceIMCount;
+
+    /**
+     * The Organized Conference Last Activity Date.
+     * 
+     */
+    @SerializedName("organizedConferenceLastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly organizedConferenceLastActivityDate;
+
+    /**
+     * The Organized Conference Web Count.
+     * 
+     */
+    @SerializedName("organizedConferenceWebCount")
+    @Expose
+    public Long organizedConferenceWebCount;
+
+    /**
+     * The Participated Conference App Sharing Count.
+     * 
+     */
+    @SerializedName("participatedConferenceAppSharingCount")
+    @Expose
+    public Long participatedConferenceAppSharingCount;
 
     /**
      * The Participated Conference Audio Video Count.
@@ -227,12 +163,28 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
     public Long participatedConferenceAudioVideoMinutes;
 
     /**
-     * The Participated Conference App Sharing Count.
+     * The Participated Conference Dial In Out3rd Party Count.
      * 
      */
-    @SerializedName("participatedConferenceAppSharingCount")
+    @SerializedName("participatedConferenceDialInOut3rdPartyCount")
     @Expose
-    public Long participatedConferenceAppSharingCount;
+    public Long participatedConferenceDialInOut3rdPartyCount;
+
+    /**
+     * The Participated Conference IMCount.
+     * 
+     */
+    @SerializedName("participatedConferenceIMCount")
+    @Expose
+    public Long participatedConferenceIMCount;
+
+    /**
+     * The Participated Conference Last Activity Date.
+     * 
+     */
+    @SerializedName("participatedConferenceLastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly participatedConferenceLastActivityDate;
 
     /**
      * The Participated Conference Web Count.
@@ -243,12 +195,76 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
     public Long participatedConferenceWebCount;
 
     /**
-     * The Participated Conference Dial In Out3rd Party Count.
+     * The Peer To Peer App Sharing Count.
      * 
      */
-    @SerializedName("participatedConferenceDialInOut3rdPartyCount")
+    @SerializedName("peerToPeerAppSharingCount")
     @Expose
-    public Long participatedConferenceDialInOut3rdPartyCount;
+    public Long peerToPeerAppSharingCount;
+
+    /**
+     * The Peer To Peer Audio Count.
+     * 
+     */
+    @SerializedName("peerToPeerAudioCount")
+    @Expose
+    public Long peerToPeerAudioCount;
+
+    /**
+     * The Peer To Peer Audio Minutes.
+     * 
+     */
+    @SerializedName("peerToPeerAudioMinutes")
+    @Expose
+    public Long peerToPeerAudioMinutes;
+
+    /**
+     * The Peer To Peer File Transfer Count.
+     * 
+     */
+    @SerializedName("peerToPeerFileTransferCount")
+    @Expose
+    public Long peerToPeerFileTransferCount;
+
+    /**
+     * The Peer To Peer IMCount.
+     * 
+     */
+    @SerializedName("peerToPeerIMCount")
+    @Expose
+    public Long peerToPeerIMCount;
+
+    /**
+     * The Peer To Peer Last Activity Date.
+     * 
+     */
+    @SerializedName("peerToPeerLastActivityDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly peerToPeerLastActivityDate;
+
+    /**
+     * The Peer To Peer Video Count.
+     * 
+     */
+    @SerializedName("peerToPeerVideoCount")
+    @Expose
+    public Long peerToPeerVideoCount;
+
+    /**
+     * The Peer To Peer Video Minutes.
+     * 
+     */
+    @SerializedName("peerToPeerVideoMinutes")
+    @Expose
+    public Long peerToPeerVideoMinutes;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
 
     /**
      * The Report Refresh Date.
@@ -259,52 +275,36 @@ public class SkypeForBusinessActivityUserDetail extends Entity implements IJsonB
     public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
+     * The Total Organized Conference Count.
+     * 
+     */
+    @SerializedName("totalOrganizedConferenceCount")
+    @Expose
+    public Long totalOrganizedConferenceCount;
+
+    /**
+     * The Total Participated Conference Count.
+     * 
+     */
+    @SerializedName("totalParticipatedConferenceCount")
+    @Expose
+    public Long totalParticipatedConferenceCount;
+
+    /**
+     * The Total Peer To Peer Session Count.
+     * 
+     */
+    @SerializedName("totalPeerToPeerSessionCount")
+    @Expose
+    public Long totalPeerToPeerSessionCount;
+
+    /**
      * The User Principal Name.
      * 
      */
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Is Deleted.
-     * 
-     */
-    @SerializedName("isDeleted")
-    @Expose
-    public Boolean isDeleted;
-
-    /**
-     * The Deleted Date.
-     * 
-     */
-    @SerializedName("deletedDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly deletedDate;
-
-    /**
-     * The Last Activity Date.
-     * 
-     */
-    @SerializedName("lastActivityDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly lastActivityDate;
-
-    /**
-     * The Assigned Products.
-     * 
-     */
-    @SerializedName("assignedProducts")
-    @Expose
-    public java.util.List<String> assignedProducts;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
 
 
     /**

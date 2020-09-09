@@ -116,6 +116,27 @@ public class RelationRequest extends BaseRequest implements IRelationRequest {
     }
 
     /**
+     * Creates a Relation with a new object
+     *
+     * @param newRelation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Relation newRelation, final ICallback<Relation> callback) {
+        send(HttpMethod.PUT, callback, newRelation);
+    }
+
+    /**
+     * Creates a Relation with a new object
+     *
+     * @param newRelation the object to create/update
+     * @return the created Relation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Relation put(final Relation newRelation) throws ClientException {
+        return send(HttpMethod.PUT, newRelation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

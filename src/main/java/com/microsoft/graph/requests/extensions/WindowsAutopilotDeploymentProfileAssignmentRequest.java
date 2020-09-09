@@ -112,6 +112,27 @@ public class WindowsAutopilotDeploymentProfileAssignmentRequest extends BaseRequ
     }
 
     /**
+     * Creates a WindowsAutopilotDeploymentProfileAssignment with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfileAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment, final ICallback<WindowsAutopilotDeploymentProfileAssignment> callback) {
+        send(HttpMethod.PUT, callback, newWindowsAutopilotDeploymentProfileAssignment);
+    }
+
+    /**
+     * Creates a WindowsAutopilotDeploymentProfileAssignment with a new object
+     *
+     * @param newWindowsAutopilotDeploymentProfileAssignment the object to create/update
+     * @return the created WindowsAutopilotDeploymentProfileAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsAutopilotDeploymentProfileAssignment put(final WindowsAutopilotDeploymentProfileAssignment newWindowsAutopilotDeploymentProfileAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsAutopilotDeploymentProfileAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

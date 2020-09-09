@@ -118,6 +118,27 @@ public class ManagementConditionStatementRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a ManagementConditionStatement with a new object
+     *
+     * @param newManagementConditionStatement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagementConditionStatement newManagementConditionStatement, final ICallback<ManagementConditionStatement> callback) {
+        send(HttpMethod.PUT, callback, newManagementConditionStatement);
+    }
+
+    /**
+     * Creates a ManagementConditionStatement with a new object
+     *
+     * @param newManagementConditionStatement the object to create/update
+     * @return the created ManagementConditionStatement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagementConditionStatement put(final ManagementConditionStatement newManagementConditionStatement) throws ClientException {
+        return send(HttpMethod.PUT, newManagementConditionStatement);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterShare;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import java.util.Arrays;
@@ -119,6 +119,27 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
      */
     public PrinterShare post(final PrinterShare newPrinterShare) throws ClientException {
         return send(HttpMethod.POST, newPrinterShare);
+    }
+
+    /**
+     * Creates a PrinterShare with a new object
+     *
+     * @param newPrinterShare the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrinterShare newPrinterShare, final ICallback<PrinterShare> callback) {
+        send(HttpMethod.PUT, callback, newPrinterShare);
+    }
+
+    /**
+     * Creates a PrinterShare with a new object
+     *
+     * @param newPrinterShare the object to create/update
+     * @return the created PrinterShare
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrinterShare put(final PrinterShare newPrinterShare) throws ClientException {
+        return send(HttpMethod.PUT, newPrinterShare);
     }
 
     /**

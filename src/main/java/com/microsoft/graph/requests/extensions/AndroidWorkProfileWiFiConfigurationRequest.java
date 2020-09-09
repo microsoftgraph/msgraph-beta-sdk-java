@@ -127,6 +127,27 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
     }
 
     /**
+     * Creates a AndroidWorkProfileWiFiConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration, final ICallback<AndroidWorkProfileWiFiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileWiFiConfiguration);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileWiFiConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileWiFiConfiguration the object to create/update
+     * @return the created AndroidWorkProfileWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileWiFiConfiguration put(final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileWiFiConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -10,14 +10,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
@@ -129,6 +129,27 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      */
     public Printer post(final Printer newPrinter) throws ClientException {
         return send(HttpMethod.POST, newPrinter);
+    }
+
+    /**
+     * Creates a Printer with a new object
+     *
+     * @param newPrinter the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Printer newPrinter, final ICallback<Printer> callback) {
+        send(HttpMethod.PUT, callback, newPrinter);
+    }
+
+    /**
+     * Creates a Printer with a new object
+     *
+     * @param newPrinter the object to create/update
+     * @return the created Printer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Printer put(final Printer newPrinter) throws ClientException {
+        return send(HttpMethod.PUT, newPrinter);
     }
 
     /**

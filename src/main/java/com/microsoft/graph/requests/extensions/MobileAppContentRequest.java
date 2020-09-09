@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppContent;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -117,6 +117,27 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      */
     public MobileAppContent post(final MobileAppContent newMobileAppContent) throws ClientException {
         return send(HttpMethod.POST, newMobileAppContent);
+    }
+
+    /**
+     * Creates a MobileAppContent with a new object
+     *
+     * @param newMobileAppContent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppContent);
+    }
+
+    /**
+     * Creates a MobileAppContent with a new object
+     *
+     * @param newMobileAppContent the object to create/update
+     * @return the created MobileAppContent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppContent put(final MobileAppContent newMobileAppContent) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppContent);
     }
 
     /**

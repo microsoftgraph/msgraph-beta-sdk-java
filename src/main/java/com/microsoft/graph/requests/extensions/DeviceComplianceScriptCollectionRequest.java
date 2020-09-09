@@ -63,14 +63,14 @@ public class DeviceComplianceScriptCollectionRequest extends BaseCollectionReque
     public void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<DeviceComplianceScript> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceScript, callback);
     }
 
     public DeviceComplianceScript post(final DeviceComplianceScript newDeviceComplianceScript) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceScriptRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceScript);
     }
 
@@ -107,6 +107,27 @@ public class DeviceComplianceScriptCollectionRequest extends BaseCollectionReque
         return (DeviceComplianceScriptCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceComplianceScriptCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceComplianceScriptCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceComplianceScriptCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceComplianceScriptCollectionRequest)this;
+    }
     public IDeviceComplianceScriptCollectionPage buildFromResponse(final DeviceComplianceScriptCollectionResponse response) {
         final IDeviceComplianceScriptCollectionRequestBuilder builder;
         if (response.nextLink != null) {

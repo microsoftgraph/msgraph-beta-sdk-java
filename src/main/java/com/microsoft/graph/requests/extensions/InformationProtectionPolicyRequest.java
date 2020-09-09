@@ -116,6 +116,27 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a InformationProtectionPolicy with a new object
+     *
+     * @param newInformationProtectionPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<InformationProtectionPolicy> callback) {
+        send(HttpMethod.PUT, callback, newInformationProtectionPolicy);
+    }
+
+    /**
+     * Creates a InformationProtectionPolicy with a new object
+     *
+     * @param newInformationProtectionPolicy the object to create/update
+     * @return the created InformationProtectionPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public InformationProtectionPolicy put(final InformationProtectionPolicy newInformationProtectionPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newInformationProtectionPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -31,22 +31,6 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
      * The Created By.
      * 
      */
@@ -61,6 +45,30 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Identity Sources.
+     * 
+     */
+    @SerializedName("identitySources")
+    @Expose
+    public java.util.List<IdentitySource> identitySources;
 
     /**
      * The Modified By.
@@ -79,24 +87,16 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
     public java.util.Calendar modifiedDateTime;
 
     /**
-     * The Identity Sources.
+     * The External Sponsors.
      * 
      */
-    @SerializedName("identitySources")
-    @Expose
-    public java.util.List<IdentitySource> identitySources;
+    public DirectoryObjectCollectionPage externalSponsors;
 
     /**
      * The Internal Sponsors.
      * 
      */
     public DirectoryObjectCollectionPage internalSponsors;
-
-    /**
-     * The External Sponsors.
-     * 
-     */
-    public DirectoryObjectCollectionPage externalSponsors;
 
 
     /**
@@ -138,22 +138,6 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("internalSponsors")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("internalSponsors@odata.nextLink")) {
-                response.nextLink = json.get("internalSponsors@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("internalSponsors").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            internalSponsors = new DirectoryObjectCollectionPage(response, null);
-        }
-
         if (json.has("externalSponsors")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
             if (json.has("externalSponsors@odata.nextLink")) {
@@ -168,6 +152,22 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             externalSponsors = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("internalSponsors")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("internalSponsors@odata.nextLink")) {
+                response.nextLink = json.get("internalSponsors@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("internalSponsors").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            internalSponsors = new DirectoryObjectCollectionPage(response, null);
         }
     }
 }

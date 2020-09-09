@@ -80,6 +80,23 @@ public interface IEmbeddedSIMActivationCodePoolRequest extends IHttpRequest {
     EmbeddedSIMActivationCodePool post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException;
 
     /**
+     * Posts a EmbeddedSIMActivationCodePool with a new object
+     *
+     * @param newEmbeddedSIMActivationCodePool the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<EmbeddedSIMActivationCodePool> callback);
+
+    /**
+     * Posts a EmbeddedSIMActivationCodePool with a new object
+     *
+     * @param newEmbeddedSIMActivationCodePool the object to create/update
+     * @return the created EmbeddedSIMActivationCodePool
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmbeddedSIMActivationCodePool put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

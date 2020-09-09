@@ -112,6 +112,27 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceRequest exten
     }
 
     /**
+     * Creates a UserExperienceAnalyticsAppHealthApplicationPerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsAppHealthApplicationPerformance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance, final ICallback<UserExperienceAnalyticsAppHealthApplicationPerformance> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsAppHealthApplicationPerformance);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsAppHealthApplicationPerformance with a new object
+     *
+     * @param newUserExperienceAnalyticsAppHealthApplicationPerformance the object to create/update
+     * @return the created UserExperienceAnalyticsAppHealthApplicationPerformance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsAppHealthApplicationPerformance put(final UserExperienceAnalyticsAppHealthApplicationPerformance newUserExperienceAnalyticsAppHealthApplicationPerformance) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsAppHealthApplicationPerformance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

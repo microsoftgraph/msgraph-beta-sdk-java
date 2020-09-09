@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationValueBooleanRequest extends IHttpReques
     GroupPolicyPresentationValueBoolean post(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationValueBoolean with a new object
+     *
+     * @param newGroupPolicyPresentationValueBoolean the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean, final ICallback<GroupPolicyPresentationValueBoolean> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationValueBoolean with a new object
+     *
+     * @param newGroupPolicyPresentationValueBoolean the object to create/update
+     * @return the created GroupPolicyPresentationValueBoolean
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationValueBoolean put(final GroupPolicyPresentationValueBoolean newGroupPolicyPresentationValueBoolean) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

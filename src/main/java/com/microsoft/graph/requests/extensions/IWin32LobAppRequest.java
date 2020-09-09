@@ -80,6 +80,23 @@ public interface IWin32LobAppRequest extends IHttpRequest {
     Win32LobApp post(final Win32LobApp newWin32LobApp) throws ClientException;
 
     /**
+     * Posts a Win32LobApp with a new object
+     *
+     * @param newWin32LobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Win32LobApp newWin32LobApp, final ICallback<Win32LobApp> callback);
+
+    /**
+     * Posts a Win32LobApp with a new object
+     *
+     * @param newWin32LobApp the object to create/update
+     * @return the created Win32LobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Win32LobApp put(final Win32LobApp newWin32LobApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

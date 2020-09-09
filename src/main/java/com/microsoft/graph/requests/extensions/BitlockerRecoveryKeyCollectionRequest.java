@@ -62,14 +62,14 @@ public class BitlockerRecoveryKeyCollectionRequest extends BaseCollectionRequest
     public void post(final BitlockerRecoveryKey newBitlockerRecoveryKey, final ICallback<BitlockerRecoveryKey> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BitlockerRecoveryKeyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBitlockerRecoveryKey, callback);
     }
 
     public BitlockerRecoveryKey post(final BitlockerRecoveryKey newBitlockerRecoveryKey) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BitlockerRecoveryKeyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBitlockerRecoveryKey);
     }
 
@@ -106,6 +106,27 @@ public class BitlockerRecoveryKeyCollectionRequest extends BaseCollectionRequest
         return (BitlockerRecoveryKeyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBitlockerRecoveryKeyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BitlockerRecoveryKeyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBitlockerRecoveryKeyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBitlockerRecoveryKeyCollectionRequest)this;
+    }
     public IBitlockerRecoveryKeyCollectionPage buildFromResponse(final BitlockerRecoveryKeyCollectionResponse response) {
         final IBitlockerRecoveryKeyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

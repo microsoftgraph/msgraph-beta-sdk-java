@@ -51,19 +51,19 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements II
     }
 
 
-    public ITrendingCollectionRequestBuilder trending() {
-        return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
-    }
-
-    public ITrendingRequestBuilder trending(final String id) {
-        return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
-    }
     public ISharedInsightCollectionRequestBuilder shared() {
         return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
     }
 
     public ISharedInsightRequestBuilder shared(final String id) {
         return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
+    }
+    public ITrendingCollectionRequestBuilder trending() {
+        return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
+    }
+
+    public ITrendingRequestBuilder trending(final String id) {
+        return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
     }
     public IUsedInsightCollectionRequestBuilder used() {
         return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);

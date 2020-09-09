@@ -36,6 +36,14 @@ public class SensitiveContentEvidence implements IJsonBackedObject {
     }
 
     /**
+     * The Length.
+     * 
+     */
+    @SerializedName("length")
+    @Expose
+    public Integer length;
+
+    /**
      * The Match.
      * 
      */
@@ -50,14 +58,6 @@ public class SensitiveContentEvidence implements IJsonBackedObject {
     @SerializedName("offset")
     @Expose
     public Integer offset;
-
-    /**
-     * The Length.
-     * 
-     */
-    @SerializedName("length")
-    @Expose
-    public Integer length;
 
 
     /**

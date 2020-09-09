@@ -62,14 +62,14 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionRequest extends 
     public void post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema, final ICallback<AndroidManagedStoreAppConfigurationSchema> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AndroidManagedStoreAppConfigurationSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidManagedStoreAppConfigurationSchema, callback);
     }
 
     public AndroidManagedStoreAppConfigurationSchema post(final AndroidManagedStoreAppConfigurationSchema newAndroidManagedStoreAppConfigurationSchema) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidManagedStoreAppConfigurationSchemaRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAndroidManagedStoreAppConfigurationSchema);
     }
 
@@ -106,6 +106,27 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionRequest extends 
         return (AndroidManagedStoreAppConfigurationSchemaCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAndroidManagedStoreAppConfigurationSchemaCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AndroidManagedStoreAppConfigurationSchemaCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAndroidManagedStoreAppConfigurationSchemaCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAndroidManagedStoreAppConfigurationSchemaCollectionRequest)this;
+    }
     public IAndroidManagedStoreAppConfigurationSchemaCollectionPage buildFromResponse(final AndroidManagedStoreAppConfigurationSchemaCollectionResponse response) {
         final IAndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder builder;
         if (response.nextLink != null) {

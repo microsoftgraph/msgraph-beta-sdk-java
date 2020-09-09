@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterShare;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUserIdentityRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUserIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import java.util.Arrays;
@@ -68,14 +68,12 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder implements IP
     public IPrintJobRequestBuilder jobs(final String id) {
         return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
+    public IPrintIdentityCollectionRequestBuilder allowedGroups() {
+        return new PrintIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups"), getClient(), null);
+    }
 
-    /**
-     * Gets the request builder for Printer
-     *
-     * @return the IPrinterWithReferenceRequestBuilder instance
-     */
-    public IPrinterWithReferenceRequestBuilder printer() {
-        return new PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
+    public IPrintIdentityRequestBuilder allowedGroups(final String id) {
+        return new PrintIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
     }
     public IPrintUserIdentityCollectionRequestBuilder allowedUsers() {
         return new PrintUserIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers"), getClient(), null);
@@ -84,11 +82,13 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder implements IP
     public IPrintUserIdentityRequestBuilder allowedUsers(final String id) {
         return new PrintUserIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers") + "/" + id, getClient(), null);
     }
-    public IPrintIdentityCollectionRequestBuilder allowedGroups() {
-        return new PrintIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups"), getClient(), null);
-    }
 
-    public IPrintIdentityRequestBuilder allowedGroups(final String id) {
-        return new PrintIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for Printer
+     *
+     * @return the IPrinterWithReferenceRequestBuilder instance
+     */
+    public IPrinterWithReferenceRequestBuilder printer() {
+        return new PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
     }
 }

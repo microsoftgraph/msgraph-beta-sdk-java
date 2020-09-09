@@ -15,14 +15,14 @@ import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequest
 import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
@@ -128,6 +128,27 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      */
     public OutlookUser post(final OutlookUser newOutlookUser) throws ClientException {
         return send(HttpMethod.POST, newOutlookUser);
+    }
+
+    /**
+     * Creates a OutlookUser with a new object
+     *
+     * @param newOutlookUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback) {
+        send(HttpMethod.PUT, callback, newOutlookUser);
+    }
+
+    /**
+     * Creates a OutlookUser with a new object
+     *
+     * @param newOutlookUser the object to create/update
+     * @return the created OutlookUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OutlookUser put(final OutlookUser newOutlookUser) throws ClientException {
+        return send(HttpMethod.PUT, newOutlookUser);
     }
 
     /**

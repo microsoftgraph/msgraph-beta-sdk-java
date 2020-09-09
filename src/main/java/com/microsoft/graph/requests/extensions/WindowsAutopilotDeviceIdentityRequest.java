@@ -114,6 +114,27 @@ public class WindowsAutopilotDeviceIdentityRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a WindowsAutopilotDeviceIdentity with a new object
+     *
+     * @param newWindowsAutopilotDeviceIdentity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity, final ICallback<WindowsAutopilotDeviceIdentity> callback) {
+        send(HttpMethod.PUT, callback, newWindowsAutopilotDeviceIdentity);
+    }
+
+    /**
+     * Creates a WindowsAutopilotDeviceIdentity with a new object
+     *
+     * @param newWindowsAutopilotDeviceIdentity the object to create/update
+     * @return the created WindowsAutopilotDeviceIdentity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsAutopilotDeviceIdentity put(final WindowsAutopilotDeviceIdentity newWindowsAutopilotDeviceIdentity) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsAutopilotDeviceIdentity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

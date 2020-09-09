@@ -80,6 +80,23 @@ public interface IWindowsStoreAppRequest extends IHttpRequest {
     WindowsStoreApp post(final WindowsStoreApp newWindowsStoreApp) throws ClientException;
 
     /**
+     * Posts a WindowsStoreApp with a new object
+     *
+     * @param newWindowsStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsStoreApp newWindowsStoreApp, final ICallback<WindowsStoreApp> callback);
+
+    /**
+     * Posts a WindowsStoreApp with a new object
+     *
+     * @param newWindowsStoreApp the object to create/update
+     * @return the created WindowsStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsStoreApp put(final WindowsStoreApp newWindowsStoreApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

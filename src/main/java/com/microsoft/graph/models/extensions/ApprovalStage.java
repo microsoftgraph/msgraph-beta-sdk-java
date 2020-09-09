@@ -45,6 +45,22 @@ public class ApprovalStage implements IJsonBackedObject {
     public Integer approvalStageTimeOutInDays;
 
     /**
+     * The Escalation Approvers.
+     * 
+     */
+    @SerializedName("escalationApprovers")
+    @Expose
+    public java.util.List<UserSet> escalationApprovers;
+
+    /**
+     * The Escalation Time In Minutes.
+     * 
+     */
+    @SerializedName("escalationTimeInMinutes")
+    @Expose
+    public Integer escalationTimeInMinutes;
+
+    /**
      * The Is Approver Justification Required.
      * 
      */
@@ -61,28 +77,12 @@ public class ApprovalStage implements IJsonBackedObject {
     public Boolean isEscalationEnabled;
 
     /**
-     * The Escalation Time In Minutes.
-     * 
-     */
-    @SerializedName("escalationTimeInMinutes")
-    @Expose
-    public Integer escalationTimeInMinutes;
-
-    /**
      * The Primary Approvers.
      * 
      */
     @SerializedName("primaryApprovers")
     @Expose
     public java.util.List<UserSet> primaryApprovers;
-
-    /**
-     * The Escalation Approvers.
-     * 
-     */
-    @SerializedName("escalationApprovers")
-    @Expose
-    public java.util.List<UserSet> escalationApprovers;
 
 
     /**

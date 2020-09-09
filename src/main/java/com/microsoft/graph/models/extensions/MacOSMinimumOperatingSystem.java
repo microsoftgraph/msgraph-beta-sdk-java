@@ -36,30 +36,6 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
     }
 
     /**
-     * The V10_7.
-     * Mac OS 10.7 or later.
-     */
-    @SerializedName("v10_7")
-    @Expose
-    public Boolean v10_7;
-
-    /**
-     * The V10_8.
-     * Mac OS 10.8 or later.
-     */
-    @SerializedName("v10_8")
-    @Expose
-    public Boolean v10_8;
-
-    /**
-     * The V10_9.
-     * Mac OS 10.9 or later.
-     */
-    @SerializedName("v10_9")
-    @Expose
-    public Boolean v10_9;
-
-    /**
      * The V10_10.
      * Mac OS 10.10 or later.
      */
@@ -106,6 +82,30 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
     @SerializedName("v10_15")
     @Expose
     public Boolean v10_15;
+
+    /**
+     * The V10_7.
+     * Mac OS 10.7 or later.
+     */
+    @SerializedName("v10_7")
+    @Expose
+    public Boolean v10_7;
+
+    /**
+     * The V10_8.
+     * Mac OS 10.8 or later.
+     */
+    @SerializedName("v10_8")
+    @Expose
+    public Boolean v10_8;
+
+    /**
+     * The V10_9.
+     * Mac OS 10.9 or later.
+     */
+    @SerializedName("v10_9")
+    @Expose
+    public Boolean v10_9;
 
 
     /**

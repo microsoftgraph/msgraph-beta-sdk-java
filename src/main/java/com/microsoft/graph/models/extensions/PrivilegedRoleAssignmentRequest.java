@@ -29,60 +29,12 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
 
 
     /**
-     * The Schedule.
-     * 
-     */
-    @SerializedName("schedule")
-    @Expose
-    public GovernanceSchedule schedule;
-
-    /**
-     * The User Id.
-     * 
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The Role Id.
-     * 
-     */
-    @SerializedName("roleId")
-    @Expose
-    public String roleId;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Assignment State.
      * 
      */
     @SerializedName("assignmentState")
     @Expose
     public String assignmentState;
-
-    /**
-     * The Requested Date Time.
-     * 
-     */
-    @SerializedName("requestedDateTime")
-    @Expose
-    public java.util.Calendar requestedDateTime;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("status")
-    @Expose
-    public String status;
 
     /**
      * The Duration.
@@ -101,6 +53,38 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
     public String reason;
 
     /**
+     * The Requested Date Time.
+     * 
+     */
+    @SerializedName("requestedDateTime")
+    @Expose
+    public java.util.Calendar requestedDateTime;
+
+    /**
+     * The Role Id.
+     * 
+     */
+    @SerializedName("roleId")
+    @Expose
+    public String roleId;
+
+    /**
+     * The Schedule.
+     * 
+     */
+    @SerializedName("schedule")
+    @Expose
+    public GovernanceSchedule schedule;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("status")
+    @Expose
+    public String status;
+
+    /**
      * The Ticket Number.
      * 
      */
@@ -115,6 +99,22 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements IJsonBack
     @SerializedName("ticketSystem")
     @Expose
     public String ticketSystem;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The Role Info.

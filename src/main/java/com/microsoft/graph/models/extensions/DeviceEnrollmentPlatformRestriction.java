@@ -36,28 +36,12 @@ public class DeviceEnrollmentPlatformRestriction implements IJsonBackedObject {
     }
 
     /**
-     * The Platform Blocked.
-     * Block the platform from enrolling
+     * The Blocked Manufacturers.
+     * Collection of blocked Manufacturers.
      */
-    @SerializedName("platformBlocked")
+    @SerializedName("blockedManufacturers")
     @Expose
-    public Boolean platformBlocked;
-
-    /**
-     * The Personal Device Enrollment Blocked.
-     * Block personally owned devices from enrolling
-     */
-    @SerializedName("personalDeviceEnrollmentBlocked")
-    @Expose
-    public Boolean personalDeviceEnrollmentBlocked;
-
-    /**
-     * The Os Minimum Version.
-     * Min OS version supported
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
+    public java.util.List<String> blockedManufacturers;
 
     /**
      * The Os Maximum Version.
@@ -68,12 +52,28 @@ public class DeviceEnrollmentPlatformRestriction implements IJsonBackedObject {
     public String osMaximumVersion;
 
     /**
-     * The Blocked Manufacturers.
-     * Collection of blocked Manufacturers.
+     * The Os Minimum Version.
+     * Min OS version supported
      */
-    @SerializedName("blockedManufacturers")
+    @SerializedName("osMinimumVersion")
     @Expose
-    public java.util.List<String> blockedManufacturers;
+    public String osMinimumVersion;
+
+    /**
+     * The Personal Device Enrollment Blocked.
+     * Block personally owned devices from enrolling
+     */
+    @SerializedName("personalDeviceEnrollmentBlocked")
+    @Expose
+    public Boolean personalDeviceEnrollmentBlocked;
+
+    /**
+     * The Platform Blocked.
+     * Block the platform from enrolling
+     */
+    @SerializedName("platformBlocked")
+    @Expose
+    public Boolean platformBlocked;
 
 
     /**

@@ -37,20 +37,20 @@ public class MacOSSystemExtensionTypeMapping implements IJsonBackedObject {
     }
 
     /**
-     * The Team Identifier.
-     * Gets or sets the team identifier used to sign the system extension.
-     */
-    @SerializedName("teamIdentifier")
-    @Expose
-    public String teamIdentifier;
-
-    /**
      * The Allowed Types.
      * Gets or sets the allowed macOS system extension types.
      */
     @SerializedName("allowedTypes")
     @Expose
     public EnumSet<MacOSSystemExtensionType> allowedTypes;
+
+    /**
+     * The Team Identifier.
+     * Gets or sets the team identifier used to sign the system extension.
+     */
+    @SerializedName("teamIdentifier")
+    @Expose
+    public String teamIdentifier;
 
 
     /**

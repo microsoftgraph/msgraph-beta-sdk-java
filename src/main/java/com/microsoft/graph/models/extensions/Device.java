@@ -253,12 +253,12 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public String trustType;
 
     /**
-     * The Name.
+     * The Kind.
      * 
      */
-    @SerializedName("Name")
+    @SerializedName("Kind")
     @Expose
-    public String name;
+    public String kind;
 
     /**
      * The Manufacturer.
@@ -277,20 +277,12 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public String model;
 
     /**
-     * The Kind.
+     * The Name.
      * 
      */
-    @SerializedName("Kind")
+    @SerializedName("Name")
     @Expose
-    public String kind;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName("Status")
-    @Expose
-    public String status;
+    public String name;
 
     /**
      * The Platform.
@@ -299,6 +291,14 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("Platform")
     @Expose
     public String platform;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName("Status")
+    @Expose
+    public String status;
 
     /**
      * The Member Of.

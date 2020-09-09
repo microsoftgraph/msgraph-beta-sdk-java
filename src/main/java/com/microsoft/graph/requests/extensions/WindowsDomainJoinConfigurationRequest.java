@@ -116,6 +116,27 @@ public class WindowsDomainJoinConfigurationRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a WindowsDomainJoinConfiguration with a new object
+     *
+     * @param newWindowsDomainJoinConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration, final ICallback<WindowsDomainJoinConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsDomainJoinConfiguration);
+    }
+
+    /**
+     * Creates a WindowsDomainJoinConfiguration with a new object
+     *
+     * @param newWindowsDomainJoinConfiguration the object to create/update
+     * @return the created WindowsDomainJoinConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsDomainJoinConfiguration put(final WindowsDomainJoinConfiguration newWindowsDomainJoinConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsDomainJoinConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

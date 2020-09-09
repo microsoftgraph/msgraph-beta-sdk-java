@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.BinaryManagementConditionExpressionOperatorType;
 import com.microsoft.graph.models.extensions.ManagementConditionExpressionModel;
+import com.microsoft.graph.models.generated.BinaryManagementConditionExpressionOperatorType;
 
 
 import com.google.gson.JsonObject;
@@ -28,20 +28,20 @@ public class BinaryManagementConditionExpression extends ManagementConditionExpr
 
 
     /**
-     * The Operator.
-     * The operator used in the evaluation of the binary operation.
-     */
-    @SerializedName("operator")
-    @Expose
-    public BinaryManagementConditionExpressionOperatorType operator;
-
-    /**
      * The First Operand.
      * The first operand of the binary operation.
      */
     @SerializedName("firstOperand")
     @Expose
     public ManagementConditionExpressionModel firstOperand;
+
+    /**
+     * The Operator.
+     * The operator used in the evaluation of the binary operation.
+     */
+    @SerializedName("operator")
+    @Expose
+    public BinaryManagementConditionExpressionOperatorType operator;
 
     /**
      * The Second Operand.

@@ -114,6 +114,27 @@ public class ExactMatchSessionRequest extends BaseRequest implements IExactMatch
     }
 
     /**
+     * Creates a ExactMatchSession with a new object
+     *
+     * @param newExactMatchSession the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ExactMatchSession newExactMatchSession, final ICallback<ExactMatchSession> callback) {
+        send(HttpMethod.PUT, callback, newExactMatchSession);
+    }
+
+    /**
+     * Creates a ExactMatchSession with a new object
+     *
+     * @param newExactMatchSession the object to create/update
+     * @return the created ExactMatchSession
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ExactMatchSession put(final ExactMatchSession newExactMatchSession) throws ClientException {
+        return send(HttpMethod.PUT, newExactMatchSession);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

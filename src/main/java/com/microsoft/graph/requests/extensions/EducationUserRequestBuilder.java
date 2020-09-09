@@ -90,19 +90,19 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder implements I
     public IEducationClassWithReferenceRequestBuilder classes(final String id) {
         return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
-    public IEducationClassCollectionWithReferencesRequestBuilder taughtClasses() {
-        return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses"), getClient(), null);
-    }
-
-    public IEducationClassWithReferenceRequestBuilder taughtClasses(final String id) {
-        return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses") + "/" + id, getClient(), null);
-    }
     public IEducationSchoolCollectionWithReferencesRequestBuilder schools() {
         return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
     public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
+    }
+    public IEducationClassCollectionWithReferencesRequestBuilder taughtClasses() {
+        return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses"), getClient(), null);
+    }
+
+    public IEducationClassWithReferenceRequestBuilder taughtClasses(final String id) {
+        return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses") + "/" + id, getClient(), null);
     }
 
     /**

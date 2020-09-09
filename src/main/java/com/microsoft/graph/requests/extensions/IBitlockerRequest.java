@@ -80,6 +80,23 @@ public interface IBitlockerRequest extends IHttpRequest {
     Bitlocker post(final Bitlocker newBitlocker) throws ClientException;
 
     /**
+     * Posts a Bitlocker with a new object
+     *
+     * @param newBitlocker the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Bitlocker newBitlocker, final ICallback<Bitlocker> callback);
+
+    /**
+     * Posts a Bitlocker with a new object
+     *
+     * @param newBitlocker the object to create/update
+     * @return the created Bitlocker
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Bitlocker put(final Bitlocker newBitlocker) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

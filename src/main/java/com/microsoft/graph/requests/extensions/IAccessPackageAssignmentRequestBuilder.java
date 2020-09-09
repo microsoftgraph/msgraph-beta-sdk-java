@@ -54,13 +54,6 @@ public interface IAccessPackageAssignmentRequestBuilder extends IRequestBuilder 
      */
     IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicy();
 
-    /**
-     * Gets the request builder for AccessPackageSubject
-     *
-     * @return the IAccessPackageSubjectRequestBuilder instance
-     */
-    IAccessPackageSubjectRequestBuilder target();
-
     IAccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests();
 
     IAccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(final String id);
@@ -68,5 +61,12 @@ public interface IAccessPackageAssignmentRequestBuilder extends IRequestBuilder 
     IAccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles();
 
     IAccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(final String id);
+
+    /**
+     * Gets the request builder for AccessPackageSubject
+     *
+     * @return the IAccessPackageSubjectRequestBuilder instance
+     */
+    IAccessPackageSubjectRequestBuilder target();
 
 }

@@ -12,19 +12,19 @@ import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
+import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.extensions.IosAvailableUpdateVersion;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;
@@ -52,21 +52,17 @@ public interface IDeviceConfigurationRequestBuilder extends IRequestBuilder {
     IDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
-
-    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
-
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
     IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
@@ -75,6 +71,14 @@ public interface IDeviceConfigurationRequestBuilder extends IRequestBuilder {
      */
     IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments();
+
+    IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
@@ -82,12 +86,8 @@ public interface IDeviceConfigurationRequestBuilder extends IRequestBuilder {
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
-
     IDeviceConfigurationAssignCollectionRequestBuilder assign(final java.util.List<DeviceConfigurationGroupAssignment> deviceConfigurationGroupAssignments, final java.util.List<DeviceConfigurationAssignment> assignments);
-    IDeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder windowsPrivacyAccessControls(final java.util.List<WindowsPrivacyDataAccessControlItem> windowsPrivacyAccessControls);
     IDeviceConfigurationAssignedAccessMultiModeProfilesRequestBuilder assignedAccessMultiModeProfiles(final java.util.List<WindowsAssignedAccessProfile> assignedAccessMultiModeProfiles);
+    IDeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder windowsPrivacyAccessControls(final java.util.List<WindowsPrivacyDataAccessControlItem> windowsPrivacyAccessControls);
 
 }

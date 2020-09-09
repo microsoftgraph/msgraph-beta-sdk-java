@@ -112,6 +112,27 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
     }
 
     /**
+     * Creates a AndroidWorkProfileTrustedRootCertificate with a new object
+     *
+     * @param newAndroidWorkProfileTrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final ICallback<AndroidWorkProfileTrustedRootCertificate> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileTrustedRootCertificate);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileTrustedRootCertificate with a new object
+     *
+     * @param newAndroidWorkProfileTrustedRootCertificate the object to create/update
+     * @return the created AndroidWorkProfileTrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileTrustedRootCertificate put(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileTrustedRootCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

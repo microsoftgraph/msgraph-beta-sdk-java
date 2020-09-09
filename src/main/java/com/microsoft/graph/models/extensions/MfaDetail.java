@@ -36,20 +36,20 @@ public class MfaDetail implements IJsonBackedObject {
     }
 
     /**
-     * The Auth Method.
-     * 
-     */
-    @SerializedName("authMethod")
-    @Expose
-    public String authMethod;
-
-    /**
      * The Auth Detail.
      * 
      */
     @SerializedName("authDetail")
     @Expose
     public String authDetail;
+
+    /**
+     * The Auth Method.
+     * 
+     */
+    @SerializedName("authMethod")
+    @Expose
+    public String authMethod;
 
 
     /**

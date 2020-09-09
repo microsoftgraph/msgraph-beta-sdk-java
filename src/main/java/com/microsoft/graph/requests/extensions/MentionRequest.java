@@ -112,6 +112,27 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
     }
 
     /**
+     * Creates a Mention with a new object
+     *
+     * @param newMention the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Mention newMention, final ICallback<Mention> callback) {
+        send(HttpMethod.PUT, callback, newMention);
+    }
+
+    /**
+     * Creates a Mention with a new object
+     *
+     * @param newMention the object to create/update
+     * @return the created Mention
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Mention put(final Mention newMention) throws ClientException {
+        return send(HttpMethod.PUT, newMention);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

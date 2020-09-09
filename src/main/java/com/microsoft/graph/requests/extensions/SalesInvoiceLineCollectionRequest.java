@@ -62,14 +62,14 @@ public class SalesInvoiceLineCollectionRequest extends BaseCollectionRequest<Sal
     public void post(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesInvoiceLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesInvoiceLine, callback);
     }
 
     public SalesInvoiceLine post(final SalesInvoiceLine newSalesInvoiceLine) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SalesInvoiceLineRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesInvoiceLine);
     }
 
@@ -106,6 +106,27 @@ public class SalesInvoiceLineCollectionRequest extends BaseCollectionRequest<Sal
         return (SalesInvoiceLineCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISalesInvoiceLineCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SalesInvoiceLineCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISalesInvoiceLineCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISalesInvoiceLineCollectionRequest)this;
+    }
     public ISalesInvoiceLineCollectionPage buildFromResponse(final SalesInvoiceLineCollectionResponse response) {
         final ISalesInvoiceLineCollectionRequestBuilder builder;
         if (response.nextLink != null) {

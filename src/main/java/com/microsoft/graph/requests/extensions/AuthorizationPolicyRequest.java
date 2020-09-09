@@ -112,6 +112,27 @@ public class AuthorizationPolicyRequest extends BaseRequest implements IAuthoriz
     }
 
     /**
+     * Creates a AuthorizationPolicy with a new object
+     *
+     * @param newAuthorizationPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AuthorizationPolicy newAuthorizationPolicy, final ICallback<AuthorizationPolicy> callback) {
+        send(HttpMethod.PUT, callback, newAuthorizationPolicy);
+    }
+
+    /**
+     * Creates a AuthorizationPolicy with a new object
+     *
+     * @param newAuthorizationPolicy the object to create/update
+     * @return the created AuthorizationPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AuthorizationPolicy put(final AuthorizationPolicy newAuthorizationPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAuthorizationPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

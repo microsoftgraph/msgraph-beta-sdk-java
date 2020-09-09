@@ -38,6 +38,10 @@ public interface ISetRequestBuilder extends IRequestBuilder {
     ISetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    ITermCollectionRequestBuilder children();
+
+    ITermRequestBuilder children(final String id);
+
     /**
      * Gets the request builder for Group
      *
@@ -45,16 +49,12 @@ public interface ISetRequestBuilder extends IRequestBuilder {
      */
     IGroupRequestBuilder parentGroup();
 
-    ITermCollectionRequestBuilder terms();
-
-    ITermRequestBuilder terms(final String id);
-
     IRelationCollectionRequestBuilder relations();
 
     IRelationRequestBuilder relations(final String id);
 
-    ITermCollectionRequestBuilder children();
+    ITermCollectionRequestBuilder terms();
 
-    ITermRequestBuilder children(final String id);
+    ITermRequestBuilder terms(final String id);
 
 }

@@ -112,6 +112,27 @@ public class EmailActivityStatisticsRequest extends BaseRequest implements IEmai
     }
 
     /**
+     * Creates a EmailActivityStatistics with a new object
+     *
+     * @param newEmailActivityStatistics the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmailActivityStatistics newEmailActivityStatistics, final ICallback<EmailActivityStatistics> callback) {
+        send(HttpMethod.PUT, callback, newEmailActivityStatistics);
+    }
+
+    /**
+     * Creates a EmailActivityStatistics with a new object
+     *
+     * @param newEmailActivityStatistics the object to create/update
+     * @return the created EmailActivityStatistics
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmailActivityStatistics put(final EmailActivityStatistics newEmailActivityStatistics) throws ClientException {
+        return send(HttpMethod.PUT, newEmailActivityStatistics);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

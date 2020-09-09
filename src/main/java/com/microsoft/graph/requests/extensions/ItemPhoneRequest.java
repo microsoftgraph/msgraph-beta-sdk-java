@@ -112,6 +112,27 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
     }
 
     /**
+     * Creates a ItemPhone with a new object
+     *
+     * @param newItemPhone the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemPhone newItemPhone, final ICallback<ItemPhone> callback) {
+        send(HttpMethod.PUT, callback, newItemPhone);
+    }
+
+    /**
+     * Creates a ItemPhone with a new object
+     *
+     * @param newItemPhone the object to create/update
+     * @return the created ItemPhone
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemPhone put(final ItemPhone newItemPhone) throws ClientException {
+        return send(HttpMethod.PUT, newItemPhone);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

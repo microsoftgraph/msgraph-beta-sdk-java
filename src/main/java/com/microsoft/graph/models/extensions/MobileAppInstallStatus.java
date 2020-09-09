@@ -30,14 +30,6 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
 
 
     /**
-     * The Device Name.
-     * Device name
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
      * The Device Id.
      * Device ID
      */
@@ -46,20 +38,28 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
     public String deviceId;
 
     /**
-     * The Last Sync Date Time.
-     * Last sync date time
+     * The Device Name.
+     * Device name
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName("deviceName")
     @Expose
-    public java.util.Calendar lastSyncDateTime;
+    public String deviceName;
 
     /**
-     * The Mobile App Install Status Value.
-     * The install state of the app.
+     * The Display Version.
+     * Human readable version of the application
      */
-    @SerializedName("mobileAppInstallStatusValue")
+    @SerializedName("displayVersion")
     @Expose
-    public ResultantAppState mobileAppInstallStatusValue;
+    public String displayVersion;
+
+    /**
+     * The Error Code.
+     * The error code for install or uninstall failures.
+     */
+    @SerializedName("errorCode")
+    @Expose
+    public Integer errorCode;
 
     /**
      * The Install State.
@@ -78,20 +78,20 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
     public ResultantAppStateDetail installStateDetail;
 
     /**
-     * The Error Code.
-     * The error code for install or uninstall failures.
+     * The Last Sync Date Time.
+     * Last sync date time
      */
-    @SerializedName("errorCode")
+    @SerializedName("lastSyncDateTime")
     @Expose
-    public Integer errorCode;
+    public java.util.Calendar lastSyncDateTime;
 
     /**
-     * The Os Version.
-     * OS Version
+     * The Mobile App Install Status Value.
+     * The install state of the app.
      */
-    @SerializedName("osVersion")
+    @SerializedName("mobileAppInstallStatusValue")
     @Expose
-    public String osVersion;
+    public ResultantAppState mobileAppInstallStatusValue;
 
     /**
      * The Os Description.
@@ -100,6 +100,14 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
     @SerializedName("osDescription")
     @Expose
     public String osDescription;
+
+    /**
+     * The Os Version.
+     * OS Version
+     */
+    @SerializedName("osVersion")
+    @Expose
+    public String osVersion;
 
     /**
      * The User Name.
@@ -116,14 +124,6 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Display Version.
-     * Human readable version of the application
-     */
-    @SerializedName("displayVersion")
-    @Expose
-    public String displayVersion;
 
     /**
      * The App.

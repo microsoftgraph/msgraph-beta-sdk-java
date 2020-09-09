@@ -112,6 +112,27 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a DeviceLogCollectionResponse with a new object
+     *
+     * @param newDeviceLogCollectionResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<DeviceLogCollectionResponse> callback) {
+        send(HttpMethod.PUT, callback, newDeviceLogCollectionResponse);
+    }
+
+    /**
+     * Creates a DeviceLogCollectionResponse with a new object
+     *
+     * @param newDeviceLogCollectionResponse the object to create/update
+     * @return the created DeviceLogCollectionResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceLogCollectionResponse put(final DeviceLogCollectionResponse newDeviceLogCollectionResponse) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceLogCollectionResponse);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

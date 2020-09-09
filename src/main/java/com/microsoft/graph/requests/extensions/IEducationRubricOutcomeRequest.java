@@ -80,6 +80,23 @@ public interface IEducationRubricOutcomeRequest extends IHttpRequest {
     EducationRubricOutcome post(final EducationRubricOutcome newEducationRubricOutcome) throws ClientException;
 
     /**
+     * Posts a EducationRubricOutcome with a new object
+     *
+     * @param newEducationRubricOutcome the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationRubricOutcome newEducationRubricOutcome, final ICallback<EducationRubricOutcome> callback);
+
+    /**
+     * Posts a EducationRubricOutcome with a new object
+     *
+     * @param newEducationRubricOutcome the object to create/update
+     * @return the created EducationRubricOutcome
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationRubricOutcome put(final EducationRubricOutcome newEducationRubricOutcome) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

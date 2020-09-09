@@ -112,6 +112,27 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
     }
 
     /**
+     * Creates a WindowsInformationProtectionWipeAction with a new object
+     *
+     * @param newWindowsInformationProtectionWipeAction the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<WindowsInformationProtectionWipeAction> callback) {
+        send(HttpMethod.PUT, callback, newWindowsInformationProtectionWipeAction);
+    }
+
+    /**
+     * Creates a WindowsInformationProtectionWipeAction with a new object
+     *
+     * @param newWindowsInformationProtectionWipeAction the object to create/update
+     * @return the created WindowsInformationProtectionWipeAction
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsInformationProtectionWipeAction put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsInformationProtectionWipeAction);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

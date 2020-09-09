@@ -62,14 +62,14 @@ public class MentionCollectionRequest extends BaseCollectionRequest<MentionColle
     public void post(final Mention newMention, final ICallback<Mention> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MentionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMention, callback);
     }
 
     public Mention post(final Mention newMention) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MentionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMention);
     }
 
@@ -106,6 +106,27 @@ public class MentionCollectionRequest extends BaseCollectionRequest<MentionColle
         return (MentionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMentionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MentionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMentionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMentionCollectionRequest)this;
+    }
     public IMentionCollectionPage buildFromResponse(final MentionCollectionResponse response) {
         final IMentionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

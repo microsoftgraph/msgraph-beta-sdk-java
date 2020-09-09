@@ -80,6 +80,23 @@ public interface IOffice365GroupsActivityFileCountsRequest extends IHttpRequest 
     Office365GroupsActivityFileCounts post(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts) throws ClientException;
 
     /**
+     * Posts a Office365GroupsActivityFileCounts with a new object
+     *
+     * @param newOffice365GroupsActivityFileCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts, final ICallback<Office365GroupsActivityFileCounts> callback);
+
+    /**
+     * Posts a Office365GroupsActivityFileCounts with a new object
+     *
+     * @param newOffice365GroupsActivityFileCounts the object to create/update
+     * @return the created Office365GroupsActivityFileCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Office365GroupsActivityFileCounts put(final Office365GroupsActivityFileCounts newOffice365GroupsActivityFileCounts) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

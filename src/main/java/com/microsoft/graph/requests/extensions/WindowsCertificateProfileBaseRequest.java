@@ -127,6 +127,27 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a WindowsCertificateProfileBase with a new object
+     *
+     * @param newWindowsCertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<WindowsCertificateProfileBase> callback) {
+        send(HttpMethod.PUT, callback, newWindowsCertificateProfileBase);
+    }
+
+    /**
+     * Creates a WindowsCertificateProfileBase with a new object
+     *
+     * @param newWindowsCertificateProfileBase the object to create/update
+     * @return the created WindowsCertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsCertificateProfileBase put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsCertificateProfileBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

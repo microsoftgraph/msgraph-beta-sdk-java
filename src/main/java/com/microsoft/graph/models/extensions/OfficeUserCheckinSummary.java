@@ -36,20 +36,20 @@ public class OfficeUserCheckinSummary implements IJsonBackedObject {
     }
 
     /**
-     * The Succeeded User Count.
-     * 
-     */
-    @SerializedName("succeededUserCount")
-    @Expose
-    public Integer succeededUserCount;
-
-    /**
      * The Failed User Count.
      * 
      */
     @SerializedName("failedUserCount")
     @Expose
     public Integer failedUserCount;
+
+    /**
+     * The Succeeded User Count.
+     * 
+     */
+    @SerializedName("succeededUserCount")
+    @Expose
+    public Integer succeededUserCount;
 
 
     /**

@@ -80,6 +80,23 @@ public interface ISalesCreditMemoLineRequest extends IHttpRequest {
     SalesCreditMemoLine post(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException;
 
     /**
+     * Posts a SalesCreditMemoLine with a new object
+     *
+     * @param newSalesCreditMemoLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<SalesCreditMemoLine> callback);
+
+    /**
+     * Posts a SalesCreditMemoLine with a new object
+     *
+     * @param newSalesCreditMemoLine the object to create/update
+     * @return the created SalesCreditMemoLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SalesCreditMemoLine put(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

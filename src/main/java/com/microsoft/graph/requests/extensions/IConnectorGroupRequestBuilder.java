@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,12 +37,12 @@ public interface IConnectorGroupRequestBuilder extends IRequestBuilder {
     IConnectorGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IConnectorCollectionWithReferencesRequestBuilder members();
-
-    IConnectorWithReferenceRequestBuilder members(final String id);
-
     IApplicationCollectionWithReferencesRequestBuilder applications();
 
     IApplicationWithReferenceRequestBuilder applications(final String id);
+
+    IConnectorCollectionWithReferencesRequestBuilder members();
+
+    IConnectorWithReferenceRequestBuilder members(final String id);
 
 }

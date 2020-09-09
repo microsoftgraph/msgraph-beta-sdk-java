@@ -121,6 +121,27 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
     }
 
     /**
+     * Creates a PrintJob with a new object
+     *
+     * @param newPrintJob the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PrintJob newPrintJob, final ICallback<PrintJob> callback) {
+        send(HttpMethod.PUT, callback, newPrintJob);
+    }
+
+    /**
+     * Creates a PrintJob with a new object
+     *
+     * @param newPrintJob the object to create/update
+     * @return the created PrintJob
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PrintJob put(final PrintJob newPrintJob) throws ClientException {
+        return send(HttpMethod.PUT, newPrintJob);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

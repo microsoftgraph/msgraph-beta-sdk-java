@@ -80,6 +80,23 @@ public interface IDeviceHealthScriptAssignmentRequest extends IHttpRequest {
     DeviceHealthScriptAssignment post(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment) throws ClientException;
 
     /**
+     * Posts a DeviceHealthScriptAssignment with a new object
+     *
+     * @param newDeviceHealthScriptAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment, final ICallback<DeviceHealthScriptAssignment> callback);
+
+    /**
+     * Posts a DeviceHealthScriptAssignment with a new object
+     *
+     * @param newDeviceHealthScriptAssignment the object to create/update
+     * @return the created DeviceHealthScriptAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceHealthScriptAssignment put(final DeviceHealthScriptAssignment newDeviceHealthScriptAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

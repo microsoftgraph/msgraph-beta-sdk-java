@@ -36,22 +36,6 @@ public class RemoteAssistancePartner extends Entity implements IJsonBackedObject
     public String displayName;
 
     /**
-     * The Onboarding Url.
-     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-     */
-    @SerializedName("onboardingUrl")
-    @Expose
-    public String onboardingUrl;
-
-    /**
-     * The Onboarding Status.
-     * TBD. Possible values are: notOnboarded, onboarding, onboarded.
-     */
-    @SerializedName("onboardingStatus")
-    @Expose
-    public RemoteAssistanceOnboardingStatus onboardingStatus;
-
-    /**
      * The Last Connection Date Time.
      * Timestamp of the last request sent to Intune by the TEM partner.
      */
@@ -66,6 +50,22 @@ public class RemoteAssistancePartner extends Entity implements IJsonBackedObject
     @SerializedName("onboardingRequestExpiryDateTime")
     @Expose
     public java.util.Calendar onboardingRequestExpiryDateTime;
+
+    /**
+     * The Onboarding Status.
+     * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+     */
+    @SerializedName("onboardingStatus")
+    @Expose
+    public RemoteAssistanceOnboardingStatus onboardingStatus;
+
+    /**
+     * The Onboarding Url.
+     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+     */
+    @SerializedName("onboardingUrl")
+    @Expose
+    public String onboardingUrl;
 
 
     /**

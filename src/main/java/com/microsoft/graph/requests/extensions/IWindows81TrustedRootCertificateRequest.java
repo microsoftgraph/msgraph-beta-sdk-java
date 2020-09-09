@@ -80,6 +80,23 @@ public interface IWindows81TrustedRootCertificateRequest extends IHttpRequest {
     Windows81TrustedRootCertificate post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException;
 
     /**
+     * Posts a Windows81TrustedRootCertificate with a new object
+     *
+     * @param newWindows81TrustedRootCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<Windows81TrustedRootCertificate> callback);
+
+    /**
+     * Posts a Windows81TrustedRootCertificate with a new object
+     *
+     * @param newWindows81TrustedRootCertificate the object to create/update
+     * @return the created Windows81TrustedRootCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows81TrustedRootCertificate put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.MicrosoftStoreForBusinessApp;
+import com.microsoft.graph.models.extensions.WindowsUniversalAppX;
 import com.microsoft.graph.models.extensions.MobileContainedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,4 +53,20 @@ public interface IMobileContainedAppCollectionRequest {
      */
     IMobileContainedAppCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IMobileContainedAppCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IMobileContainedAppCollectionRequest skipToken(String skipToken);
 }

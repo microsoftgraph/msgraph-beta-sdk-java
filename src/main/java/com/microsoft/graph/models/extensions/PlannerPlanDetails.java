@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PlannerUserIds;
 import com.microsoft.graph.models.extensions.PlannerCategoryDescriptions;
 import com.microsoft.graph.models.extensions.PlannerPlanContextDetailsCollection;
+import com.microsoft.graph.models.extensions.PlannerUserIds;
 import com.microsoft.graph.models.extensions.PlannerDelta;
 
 
@@ -30,14 +30,6 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
 
 
     /**
-     * The Shared With.
-     * Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
-     */
-    @SerializedName("sharedWith")
-    @Expose
-    public PlannerUserIds sharedWith;
-
-    /**
      * The Category Descriptions.
      * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
      */
@@ -52,6 +44,14 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
     @SerializedName("contextDetails")
     @Expose
     public PlannerPlanContextDetailsCollection contextDetails;
+
+    /**
+     * The Shared With.
+     * Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     */
+    @SerializedName("sharedWith")
+    @Expose
+    public PlannerUserIds sharedWith;
 
 
     /**

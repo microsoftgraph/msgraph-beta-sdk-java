@@ -36,28 +36,12 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
     }
 
     /**
-     * The Thumbprint.
+     * The Expiry Date.
      * 
      */
-    @SerializedName("thumbprint")
+    @SerializedName("expiryDate")
     @Expose
-    public String thumbprint;
-
-    /**
-     * The Subject Name.
-     * 
-     */
-    @SerializedName("subjectName")
-    @Expose
-    public String subjectName;
-
-    /**
-     * The Issuer Name.
-     * 
-     */
-    @SerializedName("issuerName")
-    @Expose
-    public String issuerName;
+    public java.util.Calendar expiryDate;
 
     /**
      * The Issue Date.
@@ -68,12 +52,28 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
     public java.util.Calendar issueDate;
 
     /**
-     * The Expiry Date.
+     * The Issuer Name.
      * 
      */
-    @SerializedName("expiryDate")
+    @SerializedName("issuerName")
     @Expose
-    public java.util.Calendar expiryDate;
+    public String issuerName;
+
+    /**
+     * The Subject Name.
+     * 
+     */
+    @SerializedName("subjectName")
+    @Expose
+    public String subjectName;
+
+    /**
+     * The Thumbprint.
+     * 
+     */
+    @SerializedName("thumbprint")
+    @Expose
+    public String thumbprint;
 
 
     /**

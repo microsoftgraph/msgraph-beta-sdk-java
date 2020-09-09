@@ -38,12 +38,20 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Unique GUID of the conditional access policy.
+     * The Conditions Not Satisfied.
+     * 
      */
-    @SerializedName("id")
+    @SerializedName("conditionsNotSatisfied")
     @Expose
-    public String id;
+    public EnumSet<ConditionalAccessConditions> conditionsNotSatisfied;
+
+    /**
+     * The Conditions Satisfied.
+     * 
+     */
+    @SerializedName("conditionsSatisfied")
+    @Expose
+    public EnumSet<ConditionalAccessConditions> conditionsSatisfied;
 
     /**
      * The Display Name.
@@ -70,20 +78,12 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     public java.util.List<String> enforcedSessionControls;
 
     /**
-     * The Conditions Satisfied.
-     * 
+     * The Id.
+     * Unique GUID of the conditional access policy.
      */
-    @SerializedName("conditionsSatisfied")
+    @SerializedName("id")
     @Expose
-    public EnumSet<ConditionalAccessConditions> conditionsSatisfied;
-
-    /**
-     * The Conditions Not Satisfied.
-     * 
-     */
-    @SerializedName("conditionsNotSatisfied")
-    @Expose
-    public EnumSet<ConditionalAccessConditions> conditionsNotSatisfied;
+    public String id;
 
     /**
      * The Result.

@@ -127,6 +127,27 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
     }
 
     /**
+     * Creates a PlannerDelta with a new object
+     *
+     * @param newPlannerDelta the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerDelta newPlannerDelta, final ICallback<PlannerDelta> callback) {
+        send(HttpMethod.PUT, callback, newPlannerDelta);
+    }
+
+    /**
+     * Creates a PlannerDelta with a new object
+     *
+     * @param newPlannerDelta the object to create/update
+     * @return the created PlannerDelta
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerDelta put(final PlannerDelta newPlannerDelta) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerDelta);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.DeviceThreatProtectionLevel;
+import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 
@@ -30,6 +30,62 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
 
 
     /**
+     * The Device Threat Protection Enabled.
+     * Require that devices have enabled device threat protection .
+     */
+    @SerializedName("deviceThreatProtectionEnabled")
+    @Expose
+    public Boolean deviceThreatProtectionEnabled;
+
+    /**
+     * The Device Threat Protection Required Security Level.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     */
+    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @Expose
+    public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
+
+    /**
+     * The Managed Email Profile Required.
+     * Indicates whether or not to require a managed email profile.
+     */
+    @SerializedName("managedEmailProfileRequired")
+    @Expose
+    public Boolean managedEmailProfileRequired;
+
+    /**
+     * The Os Maximum Build Version.
+     * Maximum IOS build version.
+     */
+    @SerializedName("osMaximumBuildVersion")
+    @Expose
+    public String osMaximumBuildVersion;
+
+    /**
+     * The Os Maximum Version.
+     * Maximum IOS version.
+     */
+    @SerializedName("osMaximumVersion")
+    @Expose
+    public String osMaximumVersion;
+
+    /**
+     * The Os Minimum Build Version.
+     * Minimum IOS build version.
+     */
+    @SerializedName("osMinimumBuildVersion")
+    @Expose
+    public String osMinimumBuildVersion;
+
+    /**
+     * The Os Minimum Version.
+     * Minimum IOS version.
+     */
+    @SerializedName("osMinimumVersion")
+    @Expose
+    public String osMinimumVersion;
+
+    /**
      * The Passcode Block Simple.
      * Indicates whether or not to block simple passcodes.
      */
@@ -44,6 +100,14 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
     @SerializedName("passcodeExpirationDays")
     @Expose
     public Integer passcodeExpirationDays;
+
+    /**
+     * The Passcode Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passcodeMinimumCharacterSetCount")
+    @Expose
+    public Integer passcodeMinimumCharacterSetCount;
 
     /**
      * The Passcode Minimum Length.
@@ -78,12 +142,12 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
     public Integer passcodePreviousPasscodeBlockCount;
 
     /**
-     * The Passcode Minimum Character Set Count.
-     * The number of character sets required in the password.
+     * The Passcode Required.
+     * Indicates whether or not to require a passcode.
      */
-    @SerializedName("passcodeMinimumCharacterSetCount")
+    @SerializedName("passcodeRequired")
     @Expose
-    public Integer passcodeMinimumCharacterSetCount;
+    public Boolean passcodeRequired;
 
     /**
      * The Passcode Required Type.
@@ -94,44 +158,12 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
     public RequiredPasswordType passcodeRequiredType;
 
     /**
-     * The Passcode Required.
-     * Indicates whether or not to require a passcode.
+     * The Restricted Apps.
+     * Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
      */
-    @SerializedName("passcodeRequired")
+    @SerializedName("restrictedApps")
     @Expose
-    public Boolean passcodeRequired;
-
-    /**
-     * The Os Minimum Version.
-     * Minimum IOS version.
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
-
-    /**
-     * The Os Maximum Version.
-     * Maximum IOS version.
-     */
-    @SerializedName("osMaximumVersion")
-    @Expose
-    public String osMaximumVersion;
-
-    /**
-     * The Os Minimum Build Version.
-     * Minimum IOS build version.
-     */
-    @SerializedName("osMinimumBuildVersion")
-    @Expose
-    public String osMinimumBuildVersion;
-
-    /**
-     * The Os Maximum Build Version.
-     * Maximum IOS build version.
-     */
-    @SerializedName("osMaximumBuildVersion")
-    @Expose
-    public String osMaximumBuildVersion;
+    public java.util.List<AppListItem> restrictedApps;
 
     /**
      * The Security Block Jailbroken Devices.
@@ -140,38 +172,6 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
     @SerializedName("securityBlockJailbrokenDevices")
     @Expose
     public Boolean securityBlockJailbrokenDevices;
-
-    /**
-     * The Device Threat Protection Enabled.
-     * Require that devices have enabled device threat protection .
-     */
-    @SerializedName("deviceThreatProtectionEnabled")
-    @Expose
-    public Boolean deviceThreatProtectionEnabled;
-
-    /**
-     * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-     */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
-    @Expose
-    public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
-
-    /**
-     * The Managed Email Profile Required.
-     * Indicates whether or not to require a managed email profile.
-     */
-    @SerializedName("managedEmailProfileRequired")
-    @Expose
-    public Boolean managedEmailProfileRequired;
-
-    /**
-     * The Restricted Apps.
-     * Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
-     */
-    @SerializedName("restrictedApps")
-    @Expose
-    public java.util.List<AppListItem> restrictedApps;
 
 
     /**

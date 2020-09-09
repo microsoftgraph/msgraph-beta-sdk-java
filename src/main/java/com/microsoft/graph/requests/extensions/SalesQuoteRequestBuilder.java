@@ -12,10 +12,10 @@ import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestB
 import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
+import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
@@ -63,12 +63,14 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
     }
 
 
-    public ISalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
-        return new SalesQuoteLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines"), getClient(), null);
-    }
 
-    public ISalesQuoteLineRequestBuilder salesQuoteLines(final String id) {
-        return new SalesQuoteLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for Currency
+     *
+     * @return the ICurrencyRequestBuilder instance
+     */
+    public ICurrencyRequestBuilder currency() {
+        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
@@ -81,21 +83,19 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
     }
 
     /**
-     * Gets the request builder for Currency
-     *
-     * @return the ICurrencyRequestBuilder instance
-     */
-    public ICurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for PaymentTerm
      *
      * @return the IPaymentTermRequestBuilder instance
      */
     public IPaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    }
+    public ISalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
+        return new SalesQuoteLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines"), getClient(), null);
+    }
+
+    public ISalesQuoteLineRequestBuilder salesQuoteLines(final String id) {
+        return new SalesQuoteLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines") + "/" + id, getClient(), null);
     }
 
     /**

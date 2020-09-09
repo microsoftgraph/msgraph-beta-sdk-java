@@ -37,12 +37,12 @@ public class HasPayloadLinkResultItem implements IJsonBackedObject {
     }
 
     /**
-     * The Payload Id.
-     * Key of the Payload, In the format of Guid.
+     * The Error.
+     * Exception information indicates if check for this item was successful or not.Empty string for no error.
      */
-    @SerializedName("payloadId")
+    @SerializedName("error")
     @Expose
-    public String payloadId;
+    public String error;
 
     /**
      * The Has Link.
@@ -53,12 +53,12 @@ public class HasPayloadLinkResultItem implements IJsonBackedObject {
     public Boolean hasLink;
 
     /**
-     * The Error.
-     * Exception information indicates if check for this item was successful or not.Empty string for no error.
+     * The Payload Id.
+     * Key of the Payload, In the format of Guid.
      */
-    @SerializedName("error")
+    @SerializedName("payloadId")
     @Expose
-    public String error;
+    public String payloadId;
 
     /**
      * The Sources.

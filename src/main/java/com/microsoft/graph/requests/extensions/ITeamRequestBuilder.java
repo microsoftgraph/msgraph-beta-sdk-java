@@ -8,28 +8,28 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.models.generated.TeamVisibilityType;
+import com.microsoft.graph.models.generated.ClonableTeamParts;
+import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamworkActivityTopic;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
-import com.microsoft.graph.models.generated.TeamVisibilityType;
-import com.microsoft.graph.models.generated.ClonableTeamParts;
-import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -62,6 +62,10 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IScheduleRequestBuilder schedule();
 
+    IChannelCollectionRequestBuilder channels();
+
+    IChannelRequestBuilder channels(final String id);
+
     /**
      * Gets the request builder for Group
      *
@@ -69,12 +73,21 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IGroupWithReferenceRequestBuilder group();
 
-    /**
-     * Gets the request builder for TeamsTemplate
-     *
-     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
-     */
-    ITeamsTemplateWithReferenceRequestBuilder template();
+    ITeamsAppInstallationCollectionRequestBuilder installedApps();
+
+    ITeamsAppInstallationRequestBuilder installedApps(final String id);
+
+    IConversationMemberCollectionRequestBuilder members();
+
+    IConversationMemberRequestBuilder members(final String id);
+
+    ITeamsAsyncOperationCollectionRequestBuilder operations();
+
+    ITeamsAsyncOperationRequestBuilder operations(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder owners();
+
+    IUserWithReferenceRequestBuilder owners(final String id);
 
     /**
      * Gets the request builder for ProfilePhoto
@@ -83,18 +96,6 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IProfilePhotoRequestBuilder photo();
 
-    IUserCollectionWithReferencesRequestBuilder owners();
-
-    IUserWithReferenceRequestBuilder owners(final String id);
-
-    IConversationMemberCollectionRequestBuilder members();
-
-    IConversationMemberRequestBuilder members(final String id);
-
-    IChannelCollectionRequestBuilder channels();
-
-    IChannelRequestBuilder channels(final String id);
-
     /**
      * Gets the request builder for Channel
      *
@@ -102,16 +103,16 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IChannelRequestBuilder primaryChannel();
 
-    ITeamsAppInstallationCollectionRequestBuilder installedApps();
-
-    ITeamsAppInstallationRequestBuilder installedApps(final String id);
-
-    ITeamsAsyncOperationCollectionRequestBuilder operations();
-
-    ITeamsAsyncOperationRequestBuilder operations(final String id);
-    ITeamSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient);
-    ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone);
+    /**
+     * Gets the request builder for TeamsTemplate
+     *
+     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
+     */
+    ITeamsTemplateWithReferenceRequestBuilder template();
     ITeamArchiveRequestBuilder archive(final Boolean shouldSetSpoSiteReadOnlyForMembers);
+    ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone);
+    ITeamCompleteMigrationRequestBuilder completeMigration();
+    ITeamSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient);
     ITeamUnarchiveRequestBuilder unarchive();
 
 }

@@ -80,6 +80,23 @@ public interface IWindowsManagedDeviceRequest extends IHttpRequest {
     WindowsManagedDevice post(final WindowsManagedDevice newWindowsManagedDevice) throws ClientException;
 
     /**
+     * Posts a WindowsManagedDevice with a new object
+     *
+     * @param newWindowsManagedDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<WindowsManagedDevice> callback);
+
+    /**
+     * Posts a WindowsManagedDevice with a new object
+     *
+     * @param newWindowsManagedDevice the object to create/update
+     * @return the created WindowsManagedDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsManagedDevice put(final WindowsManagedDevice newWindowsManagedDevice) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

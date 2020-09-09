@@ -12,16 +12,16 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -48,13 +48,17 @@ public interface IMobileAppRequestBuilder extends IRequestBuilder {
     IMobileAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IMobileAppAssignmentCollectionRequestBuilder assignments();
+
+    IMobileAppAssignmentRequestBuilder assignments(final String id);
+
     IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
 
     IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
 
-    IMobileAppAssignmentCollectionRequestBuilder assignments();
+    IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses();
 
-    IMobileAppAssignmentRequestBuilder assignments(final String id);
+    IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id);
 
     /**
      * Gets the request builder for MobileAppInstallSummary
@@ -63,17 +67,13 @@ public interface IMobileAppRequestBuilder extends IRequestBuilder {
      */
     IMobileAppInstallSummaryRequestBuilder installSummary();
 
-    IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses();
+    IMobileAppRelationshipCollectionRequestBuilder relationships();
 
-    IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id);
+    IMobileAppRelationshipRequestBuilder relationships(final String id);
 
     IUserAppInstallStatusCollectionRequestBuilder userStatuses();
 
     IUserAppInstallStatusRequestBuilder userStatuses(final String id);
-
-    IMobileAppRelationshipCollectionRequestBuilder relationships();
-
-    IMobileAppRelationshipRequestBuilder relationships(final String id);
     IMobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments);
     IMobileAppUpdateRelationshipsRequestBuilder updateRelationships(final java.util.List<MobileAppRelationship> relationships);
 

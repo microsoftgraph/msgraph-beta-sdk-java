@@ -66,14 +66,14 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
     public void post(final Chat newChat, final ICallback<Chat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChat, callback);
     }
 
     public Chat post(final Chat newChat) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChat);
     }
 
@@ -110,6 +110,27 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
         return (ChatCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IChatCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ChatCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IChatCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IChatCollectionRequest)this;
+    }
     public IChatCollectionPage buildFromResponse(final ChatCollectionResponse response) {
         final IChatCollectionRequestBuilder builder;
         if (response.nextLink != null) {

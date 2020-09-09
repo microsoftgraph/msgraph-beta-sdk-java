@@ -112,6 +112,27 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
     }
 
     /**
+     * Creates a HostSecurityProfile with a new object
+     *
+     * @param newHostSecurityProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final HostSecurityProfile newHostSecurityProfile, final ICallback<HostSecurityProfile> callback) {
+        send(HttpMethod.PUT, callback, newHostSecurityProfile);
+    }
+
+    /**
+     * Creates a HostSecurityProfile with a new object
+     *
+     * @param newHostSecurityProfile the object to create/update
+     * @return the created HostSecurityProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public HostSecurityProfile put(final HostSecurityProfile newHostSecurityProfile) throws ClientException {
+        return send(HttpMethod.PUT, newHostSecurityProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

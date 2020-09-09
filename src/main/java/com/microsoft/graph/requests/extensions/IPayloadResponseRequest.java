@@ -80,6 +80,23 @@ public interface IPayloadResponseRequest extends IHttpRequest {
     PayloadResponse post(final PayloadResponse newPayloadResponse) throws ClientException;
 
     /**
+     * Posts a PayloadResponse with a new object
+     *
+     * @param newPayloadResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PayloadResponse newPayloadResponse, final ICallback<PayloadResponse> callback);
+
+    /**
+     * Posts a PayloadResponse with a new object
+     *
+     * @param newPayloadResponse the object to create/update
+     * @return the created PayloadResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PayloadResponse put(final PayloadResponse newPayloadResponse) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      */
     public AndroidEnterpriseWiFiConfiguration post(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidEnterpriseWiFiConfiguration);
+    }
+
+    /**
+     * Creates a AndroidEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newAndroidEnterpriseWiFiConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<AndroidEnterpriseWiFiConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidEnterpriseWiFiConfiguration);
+    }
+
+    /**
+     * Creates a AndroidEnterpriseWiFiConfiguration with a new object
+     *
+     * @param newAndroidEnterpriseWiFiConfiguration the object to create/update
+     * @return the created AndroidEnterpriseWiFiConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidEnterpriseWiFiConfiguration put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidEnterpriseWiFiConfiguration);
     }
 
     /**

@@ -118,6 +118,27 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
     }
 
     /**
+     * Creates a Journal with a new object
+     *
+     * @param newJournal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Journal newJournal, final ICallback<Journal> callback) {
+        send(HttpMethod.PUT, callback, newJournal);
+    }
+
+    /**
+     * Creates a Journal with a new object
+     *
+     * @param newJournal the object to create/update
+     * @return the created Journal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Journal put(final Journal newJournal) throws ClientException {
+        return send(HttpMethod.PUT, newJournal);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

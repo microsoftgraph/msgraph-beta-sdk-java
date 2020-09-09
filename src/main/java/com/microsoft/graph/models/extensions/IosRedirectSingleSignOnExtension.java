@@ -28,6 +28,14 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
 
 
     /**
+     * The Configurations.
+     * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("configurations")
+    @Expose
+    public java.util.List<KeyTypedValuePair> configurations;
+
+    /**
      * The Extension Identifier.
      * Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      */
@@ -42,14 +50,6 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
     @SerializedName("teamIdentifier")
     @Expose
     public String teamIdentifier;
-
-    /**
-     * The Configurations.
-     * Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("configurations")
-    @Expose
-    public java.util.List<KeyTypedValuePair> configurations;
 
     /**
      * The Url Prefixes.

@@ -27,30 +27,6 @@ public class Currency extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Code.
-     * 
-     */
-    @SerializedName("code")
-    @Expose
-    public String code;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Symbol.
-     * 
-     */
-    @SerializedName("symbol")
-    @Expose
-    public String symbol;
-
-    /**
      * The Amount Decimal Places.
      * 
      */
@@ -67,12 +43,36 @@ public class Currency extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal amountRoundingPrecision;
 
     /**
+     * The Code.
+     * 
+     */
+    @SerializedName("code")
+    @Expose
+    public String code;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Last Modified Date Time.
      * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Symbol.
+     * 
+     */
+    @SerializedName("symbol")
+    @Expose
+    public String symbol;
 
 
     /**

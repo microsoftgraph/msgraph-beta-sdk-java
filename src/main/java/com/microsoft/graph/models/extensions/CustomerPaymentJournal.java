@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.CustomerPayment;
 import com.microsoft.graph.models.extensions.Account;
+import com.microsoft.graph.models.extensions.CustomerPayment;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionResponse;
 import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionPage;
@@ -29,6 +29,22 @@ import java.util.Map;
  */
 public class CustomerPaymentJournal extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Balancing Account Id.
+     * 
+     */
+    @SerializedName("balancingAccountId")
+    @Expose
+    public java.util.UUID balancingAccountId;
+
+    /**
+     * The Balancing Account Number.
+     * 
+     */
+    @SerializedName("balancingAccountNumber")
+    @Expose
+    public String balancingAccountNumber;
 
     /**
      * The Code.
@@ -55,34 +71,18 @@ public class CustomerPaymentJournal extends Entity implements IJsonBackedObject 
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Balancing Account Id.
-     * 
-     */
-    @SerializedName("balancingAccountId")
-    @Expose
-    public java.util.UUID balancingAccountId;
-
-    /**
-     * The Balancing Account Number.
-     * 
-     */
-    @SerializedName("balancingAccountNumber")
-    @Expose
-    public String balancingAccountNumber;
-
-    /**
-     * The Customer Payments.
-     * 
-     */
-    public CustomerPaymentCollectionPage customerPayments;
-
-    /**
      * The Account.
      * 
      */
     @SerializedName("account")
     @Expose
     public Account account;
+
+    /**
+     * The Customer Payments.
+     * 
+     */
+    public CustomerPaymentCollectionPage customerPayments;
 
 
     /**

@@ -116,6 +116,27 @@ public class UnifiedRoleDefinitionRequest extends BaseRequest implements IUnifie
     }
 
     /**
+     * Creates a UnifiedRoleDefinition with a new object
+     *
+     * @param newUnifiedRoleDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnifiedRoleDefinition newUnifiedRoleDefinition, final ICallback<UnifiedRoleDefinition> callback) {
+        send(HttpMethod.PUT, callback, newUnifiedRoleDefinition);
+    }
+
+    /**
+     * Creates a UnifiedRoleDefinition with a new object
+     *
+     * @param newUnifiedRoleDefinition the object to create/update
+     * @return the created UnifiedRoleDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnifiedRoleDefinition put(final UnifiedRoleDefinition newUnifiedRoleDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newUnifiedRoleDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,22 +8,22 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditLogRoot;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -67,26 +67,12 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
     }
 
 
-    public ISignInCollectionRequestBuilder signIns() {
-        return new SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
-    }
-
-    public ISignInRequestBuilder signIns(final String id) {
-        return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);
-    }
     public IDirectoryAuditCollectionRequestBuilder directoryAudits() {
         return new DirectoryAuditCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits"), getClient(), null);
     }
 
     public IDirectoryAuditRequestBuilder directoryAudits(final String id) {
         return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
-    }
-    public IRestrictedSignInCollectionRequestBuilder restrictedSignIns() {
-        return new RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
-    }
-
-    public IRestrictedSignInRequestBuilder restrictedSignIns(final String id) {
-        return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
     }
     public IProvisioningObjectSummaryCollectionRequestBuilder directoryProvisioning() {
         return new ProvisioningObjectSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryProvisioning"), getClient(), null);
@@ -101,5 +87,19 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
 
     public IProvisioningObjectSummaryRequestBuilder provisioning(final String id) {
         return new ProvisioningObjectSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning") + "/" + id, getClient(), null);
+    }
+    public IRestrictedSignInCollectionRequestBuilder restrictedSignIns() {
+        return new RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
+    }
+
+    public IRestrictedSignInRequestBuilder restrictedSignIns(final String id) {
+        return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
+    }
+    public ISignInCollectionRequestBuilder signIns() {
+        return new SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
+    }
+
+    public ISignInRequestBuilder signIns(final String id) {
+        return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);
     }
 }

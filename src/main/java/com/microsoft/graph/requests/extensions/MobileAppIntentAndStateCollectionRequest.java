@@ -62,14 +62,14 @@ public class MobileAppIntentAndStateCollectionRequest extends BaseCollectionRequ
     public void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppIntentAndStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppIntentAndState, callback);
     }
 
     public MobileAppIntentAndState post(final MobileAppIntentAndState newMobileAppIntentAndState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppIntentAndStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppIntentAndState);
     }
 
@@ -106,6 +106,27 @@ public class MobileAppIntentAndStateCollectionRequest extends BaseCollectionRequ
         return (MobileAppIntentAndStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppIntentAndStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppIntentAndStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppIntentAndStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppIntentAndStateCollectionRequest)this;
+    }
     public IMobileAppIntentAndStateCollectionPage buildFromResponse(final MobileAppIntentAndStateCollectionResponse response) {
         final IMobileAppIntentAndStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

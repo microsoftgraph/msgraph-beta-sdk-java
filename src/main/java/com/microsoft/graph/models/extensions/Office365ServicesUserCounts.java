@@ -27,14 +27,6 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
      * The Exchange Active.
      * 
      */
@@ -51,6 +43,22 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
     public Long exchangeInactive;
 
     /**
+     * The Office365Active.
+     * 
+     */
+    @SerializedName("office365Active")
+    @Expose
+    public Long office365Active;
+
+    /**
+     * The Office365Inactive.
+     * 
+     */
+    @SerializedName("office365Inactive")
+    @Expose
+    public Long office365Inactive;
+
+    /**
      * The One Drive Active.
      * 
      */
@@ -65,6 +73,22 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
     @SerializedName("oneDriveInactive")
     @Expose
     public Long oneDriveInactive;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
     /**
      * The Share Point Active.
@@ -99,22 +123,6 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
     public Long skypeForBusinessInactive;
 
     /**
-     * The Yammer Active.
-     * 
-     */
-    @SerializedName("yammerActive")
-    @Expose
-    public Long yammerActive;
-
-    /**
-     * The Yammer Inactive.
-     * 
-     */
-    @SerializedName("yammerInactive")
-    @Expose
-    public Long yammerInactive;
-
-    /**
      * The Teams Active.
      * 
      */
@@ -131,28 +139,20 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
     public Long teamsInactive;
 
     /**
-     * The Office365Active.
+     * The Yammer Active.
      * 
      */
-    @SerializedName("office365Active")
+    @SerializedName("yammerActive")
     @Expose
-    public Long office365Active;
+    public Long yammerActive;
 
     /**
-     * The Office365Inactive.
+     * The Yammer Inactive.
      * 
      */
-    @SerializedName("office365Inactive")
+    @SerializedName("yammerInactive")
     @Expose
-    public Long office365Inactive;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
+    public Long yammerInactive;
 
 
     /**

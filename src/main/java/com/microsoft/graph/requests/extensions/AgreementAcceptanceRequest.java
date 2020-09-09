@@ -112,6 +112,27 @@ public class AgreementAcceptanceRequest extends BaseRequest implements IAgreemen
     }
 
     /**
+     * Creates a AgreementAcceptance with a new object
+     *
+     * @param newAgreementAcceptance the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AgreementAcceptance newAgreementAcceptance, final ICallback<AgreementAcceptance> callback) {
+        send(HttpMethod.PUT, callback, newAgreementAcceptance);
+    }
+
+    /**
+     * Creates a AgreementAcceptance with a new object
+     *
+     * @param newAgreementAcceptance the object to create/update
+     * @return the created AgreementAcceptance
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AgreementAcceptance put(final AgreementAcceptance newAgreementAcceptance) throws ClientException {
+        return send(HttpMethod.PUT, newAgreementAcceptance);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

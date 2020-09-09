@@ -8,10 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReview;
-import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionRequestBuilder;
@@ -20,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewReviewerRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewReviewerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -121,6 +121,27 @@ public class AccessReviewRequest extends BaseRequest implements IAccessReviewReq
      */
     public AccessReview post(final AccessReview newAccessReview) throws ClientException {
         return send(HttpMethod.POST, newAccessReview);
+    }
+
+    /**
+     * Creates a AccessReview with a new object
+     *
+     * @param newAccessReview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessReview newAccessReview, final ICallback<AccessReview> callback) {
+        send(HttpMethod.PUT, callback, newAccessReview);
+    }
+
+    /**
+     * Creates a AccessReview with a new object
+     *
+     * @param newAccessReview the object to create/update
+     * @return the created AccessReview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessReview put(final AccessReview newAccessReview) throws ClientException {
+        return send(HttpMethod.PUT, newAccessReview);
     }
 
     /**

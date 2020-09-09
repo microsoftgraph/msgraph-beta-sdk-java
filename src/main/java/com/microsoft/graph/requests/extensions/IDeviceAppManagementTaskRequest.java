@@ -80,6 +80,23 @@ public interface IDeviceAppManagementTaskRequest extends IHttpRequest {
     DeviceAppManagementTask post(final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException;
 
     /**
+     * Posts a DeviceAppManagementTask with a new object
+     *
+     * @param newDeviceAppManagementTask the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<DeviceAppManagementTask> callback);
+
+    /**
+     * Posts a DeviceAppManagementTask with a new object
+     *
+     * @param newDeviceAppManagementTask the object to create/update
+     * @return the created DeviceAppManagementTask
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceAppManagementTask put(final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

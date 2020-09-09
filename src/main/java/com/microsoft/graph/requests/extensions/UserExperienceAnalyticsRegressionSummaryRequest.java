@@ -117,6 +117,27 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
     }
 
     /**
+     * Creates a UserExperienceAnalyticsRegressionSummary with a new object
+     *
+     * @param newUserExperienceAnalyticsRegressionSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<UserExperienceAnalyticsRegressionSummary> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsRegressionSummary);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsRegressionSummary with a new object
+     *
+     * @param newUserExperienceAnalyticsRegressionSummary the object to create/update
+     * @return the created UserExperienceAnalyticsRegressionSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsRegressionSummary put(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsRegressionSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

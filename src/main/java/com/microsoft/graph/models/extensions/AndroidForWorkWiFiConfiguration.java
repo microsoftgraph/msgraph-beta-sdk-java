@@ -28,22 +28,6 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
 
 
     /**
-     * The Network Name.
-     * Network Name
-     */
-    @SerializedName("networkName")
-    @Expose
-    public String networkName;
-
-    /**
-     * The Ssid.
-     * This is the name of the Wi-Fi network that is broadcast to all devices.
-     */
-    @SerializedName("ssid")
-    @Expose
-    public String ssid;
-
-    /**
      * The Connect Automatically.
      * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
      */
@@ -58,6 +42,22 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     @SerializedName("connectWhenNetworkNameIsHidden")
     @Expose
     public Boolean connectWhenNetworkNameIsHidden;
+
+    /**
+     * The Network Name.
+     * Network Name
+     */
+    @SerializedName("networkName")
+    @Expose
+    public String networkName;
+
+    /**
+     * The Ssid.
+     * This is the name of the Wi-Fi network that is broadcast to all devices.
+     */
+    @SerializedName("ssid")
+    @Expose
+    public String ssid;
 
     /**
      * The Wi Fi Security Type.

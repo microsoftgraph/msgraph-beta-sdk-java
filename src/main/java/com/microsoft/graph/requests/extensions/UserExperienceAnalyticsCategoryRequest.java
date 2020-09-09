@@ -116,6 +116,27 @@ public class UserExperienceAnalyticsCategoryRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a UserExperienceAnalyticsCategory with a new object
+     *
+     * @param newUserExperienceAnalyticsCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final ICallback<UserExperienceAnalyticsCategory> callback) {
+        send(HttpMethod.PUT, callback, newUserExperienceAnalyticsCategory);
+    }
+
+    /**
+     * Creates a UserExperienceAnalyticsCategory with a new object
+     *
+     * @param newUserExperienceAnalyticsCategory the object to create/update
+     * @return the created UserExperienceAnalyticsCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserExperienceAnalyticsCategory put(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory) throws ClientException {
+        return send(HttpMethod.PUT, newUserExperienceAnalyticsCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

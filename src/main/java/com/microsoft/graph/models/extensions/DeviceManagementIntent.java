@@ -8,25 +8,25 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
-import com.microsoft.graph.models.extensions.DeviceManagementIntentSettingCategory;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentAssignment;
+import com.microsoft.graph.models.extensions.DeviceManagementIntentSettingCategory;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentDeviceSettingStateSummary;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentDeviceState;
-import com.microsoft.graph.models.extensions.DeviceManagementIntentUserState;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentDeviceStateSummary;
+import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.extensions.DeviceManagementIntentUserState;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentUserStateSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionPage;
 
@@ -47,20 +47,20 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
 
 
     /**
-     * The Display Name.
-     * The user given display name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * The user given description
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * The user given display name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Is Assigned.
@@ -79,14 +79,6 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Template Id.
-     * The ID of the template this intent was created from (if any)
-     */
-    @SerializedName("templateId")
-    @Expose
-    public String templateId;
-
-    /**
      * The Role Scope Tag Ids.
      * List of Scope Tags for this Entity instance.
      */
@@ -95,22 +87,24 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     public java.util.List<String> roleScopeTagIds;
 
     /**
-     * The Settings.
-     * Collection of all settings to be applied
+     * The Template Id.
+     * The ID of the template this intent was created from (if any)
      */
-    public DeviceManagementSettingInstanceCollectionPage settings;
-
-    /**
-     * The Categories.
-     * Collection of setting categories within the intent
-     */
-    public DeviceManagementIntentSettingCategoryCollectionPage categories;
+    @SerializedName("templateId")
+    @Expose
+    public String templateId;
 
     /**
      * The Assignments.
      * Collection of assignments
      */
     public DeviceManagementIntentAssignmentCollectionPage assignments;
+
+    /**
+     * The Categories.
+     * Collection of setting categories within the intent
+     */
+    public DeviceManagementIntentSettingCategoryCollectionPage categories;
 
     /**
      * The Device Setting State Summaries.
@@ -125,18 +119,24 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     public DeviceManagementIntentDeviceStateCollectionPage deviceStates;
 
     /**
-     * The User States.
-     * Collection of states of all users that the intent is applied to
-     */
-    public DeviceManagementIntentUserStateCollectionPage userStates;
-
-    /**
      * The Device State Summary.
      * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
      */
     @SerializedName("deviceStateSummary")
     @Expose
     public DeviceManagementIntentDeviceStateSummary deviceStateSummary;
+
+    /**
+     * The Settings.
+     * Collection of all settings to be applied
+     */
+    public DeviceManagementSettingInstanceCollectionPage settings;
+
+    /**
+     * The User States.
+     * Collection of states of all users that the intent is applied to
+     */
+    public DeviceManagementIntentUserStateCollectionPage userStates;
 
     /**
      * The User State Summary.
@@ -186,20 +186,20 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
         rawObject = json;
 
 
-        if (json.has("settings")) {
-            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
-            if (json.has("settings@odata.nextLink")) {
-                response.nextLink = json.get("settings@odata.nextLink").getAsString();
+        if (json.has("assignments")) {
+            final DeviceManagementIntentAssignmentCollectionResponse response = new DeviceManagementIntentAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settings").toString(), JsonObject[].class);
-            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final DeviceManagementIntentAssignment[] array = new DeviceManagementIntentAssignment[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementIntentAssignment.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            settings = new DeviceManagementSettingInstanceCollectionPage(response, null);
+            assignments = new DeviceManagementIntentAssignmentCollectionPage(response, null);
         }
 
         if (json.has("categories")) {
@@ -216,22 +216,6 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
             }
             response.value = Arrays.asList(array);
             categories = new DeviceManagementIntentSettingCategoryCollectionPage(response, null);
-        }
-
-        if (json.has("assignments")) {
-            final DeviceManagementIntentAssignmentCollectionResponse response = new DeviceManagementIntentAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final DeviceManagementIntentAssignment[] array = new DeviceManagementIntentAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementIntentAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new DeviceManagementIntentAssignmentCollectionPage(response, null);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
@@ -264,6 +248,22 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
             }
             response.value = Arrays.asList(array);
             deviceStates = new DeviceManagementIntentDeviceStateCollectionPage(response, null);
+        }
+
+        if (json.has("settings")) {
+            final DeviceManagementSettingInstanceCollectionResponse response = new DeviceManagementSettingInstanceCollectionResponse();
+            if (json.has("settings@odata.nextLink")) {
+                response.nextLink = json.get("settings@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("settings").toString(), JsonObject[].class);
+            final DeviceManagementSettingInstance[] array = new DeviceManagementSettingInstance[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementSettingInstance.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            settings = new DeviceManagementSettingInstanceCollectionPage(response, null);
         }
 
         if (json.has("userStates")) {

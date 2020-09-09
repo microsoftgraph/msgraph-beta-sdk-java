@@ -62,14 +62,14 @@ public class PrivilegedRoleAssignmentRequestCollectionRequest extends BaseCollec
     public void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<PrivilegedRoleAssignmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedRoleAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRoleAssignmentRequest, callback);
     }
 
     public PrivilegedRoleAssignmentRequest post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedRoleAssignmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRoleAssignmentRequest);
     }
 
@@ -106,6 +106,27 @@ public class PrivilegedRoleAssignmentRequestCollectionRequest extends BaseCollec
         return (PrivilegedRoleAssignmentRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedRoleAssignmentRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedRoleAssignmentRequestCollectionRequest)this;
+    }
     public IPrivilegedRoleAssignmentRequestCollectionPage buildFromResponse(final PrivilegedRoleAssignmentRequestCollectionResponse response) {
         final IPrivilegedRoleAssignmentRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

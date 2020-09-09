@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.PolicySetStatus;
 import com.microsoft.graph.models.generated.ErrorCode;
+import com.microsoft.graph.models.generated.PolicySetStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -37,44 +37,12 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * Last modified time of the PolicySetItem.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Payload Id.
-     * PayloadId of the PolicySetItem.
-     */
-    @SerializedName("payloadId")
-    @Expose
-    public String payloadId;
-
-    /**
-     * The Item Type.
-     * policySetType of the PolicySetItem.
-     */
-    @SerializedName("itemType")
-    @Expose
-    public String itemType;
-
-    /**
      * The Display Name.
      * DisplayName of the PolicySetItem.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Status.
-     * Status of the PolicySetItem.
-     */
-    @SerializedName("status")
-    @Expose
-    public PolicySetStatus status;
 
     /**
      * The Error Code.
@@ -91,6 +59,38 @@ public class PolicySetItem extends Entity implements IJsonBackedObject {
     @SerializedName("guidedDeploymentTags")
     @Expose
     public java.util.List<String> guidedDeploymentTags;
+
+    /**
+     * The Item Type.
+     * policySetType of the PolicySetItem.
+     */
+    @SerializedName("itemType")
+    @Expose
+    public String itemType;
+
+    /**
+     * The Last Modified Date Time.
+     * Last modified time of the PolicySetItem.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Payload Id.
+     * PayloadId of the PolicySetItem.
+     */
+    @SerializedName("payloadId")
+    @Expose
+    public String payloadId;
+
+    /**
+     * The Status.
+     * Status of the PolicySetItem.
+     */
+    @SerializedName("status")
+    @Expose
+    public PolicySetStatus status;
 
 
     /**

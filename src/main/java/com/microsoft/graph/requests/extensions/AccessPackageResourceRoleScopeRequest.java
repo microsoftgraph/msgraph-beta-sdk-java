@@ -116,6 +116,27 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a AccessPackageResourceRoleScope with a new object
+     *
+     * @param newAccessPackageResourceRoleScope the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<AccessPackageResourceRoleScope> callback) {
+        send(HttpMethod.PUT, callback, newAccessPackageResourceRoleScope);
+    }
+
+    /**
+     * Creates a AccessPackageResourceRoleScope with a new object
+     *
+     * @param newAccessPackageResourceRoleScope the object to create/update
+     * @return the created AccessPackageResourceRoleScope
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AccessPackageResourceRoleScope put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException {
+        return send(HttpMethod.PUT, newAccessPackageResourceRoleScope);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

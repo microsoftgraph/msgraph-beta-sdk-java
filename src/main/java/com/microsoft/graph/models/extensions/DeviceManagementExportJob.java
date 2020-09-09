@@ -29,12 +29,12 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Report Name.
-     * Name of the report
+     * The Expiration Date Time.
+     * Time that the exported report expires
      */
-    @SerializedName("reportName")
+    @SerializedName("expirationDateTime")
     @Expose
-    public String reportName;
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Filter.
@@ -45,20 +45,36 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
     public String filter;
 
     /**
-     * The Select.
-     * Columns selected from the report
-     */
-    @SerializedName("select")
-    @Expose
-    public java.util.List<String> select;
-
-    /**
      * The Format.
      * Format of the exported report
      */
     @SerializedName("format")
     @Expose
     public DeviceManagementReportFileFormat format;
+
+    /**
+     * The Report Name.
+     * Name of the report
+     */
+    @SerializedName("reportName")
+    @Expose
+    public String reportName;
+
+    /**
+     * The Request Date Time.
+     * Time that the exported report was requested
+     */
+    @SerializedName("requestDateTime")
+    @Expose
+    public java.util.Calendar requestDateTime;
+
+    /**
+     * The Select.
+     * Columns selected from the report
+     */
+    @SerializedName("select")
+    @Expose
+    public java.util.List<String> select;
 
     /**
      * The Snapshot Id.
@@ -83,22 +99,6 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
     @SerializedName("url")
     @Expose
     public String url;
-
-    /**
-     * The Request Date Time.
-     * Time that the exported report was requested
-     */
-    @SerializedName("requestDateTime")
-    @Expose
-    public java.util.Calendar requestDateTime;
-
-    /**
-     * The Expiration Date Time.
-     * Time that the exported report expires
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
 
 
     /**

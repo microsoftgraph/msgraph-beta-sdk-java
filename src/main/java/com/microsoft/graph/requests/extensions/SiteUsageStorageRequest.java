@@ -112,6 +112,27 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
     }
 
     /**
+     * Creates a SiteUsageStorage with a new object
+     *
+     * @param newSiteUsageStorage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SiteUsageStorage newSiteUsageStorage, final ICallback<SiteUsageStorage> callback) {
+        send(HttpMethod.PUT, callback, newSiteUsageStorage);
+    }
+
+    /**
+     * Creates a SiteUsageStorage with a new object
+     *
+     * @param newSiteUsageStorage the object to create/update
+     * @return the created SiteUsageStorage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SiteUsageStorage put(final SiteUsageStorage newSiteUsageStorage) throws ClientException {
+        return send(HttpMethod.PUT, newSiteUsageStorage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

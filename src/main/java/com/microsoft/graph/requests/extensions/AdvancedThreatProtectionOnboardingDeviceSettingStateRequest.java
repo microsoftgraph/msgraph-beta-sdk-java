@@ -112,6 +112,27 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
     }
 
     /**
+     * Creates a AdvancedThreatProtectionOnboardingDeviceSettingState with a new object
+     *
+     * @param newAdvancedThreatProtectionOnboardingDeviceSettingState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+        send(HttpMethod.PUT, callback, newAdvancedThreatProtectionOnboardingDeviceSettingState);
+    }
+
+    /**
+     * Creates a AdvancedThreatProtectionOnboardingDeviceSettingState with a new object
+     *
+     * @param newAdvancedThreatProtectionOnboardingDeviceSettingState the object to create/update
+     * @return the created AdvancedThreatProtectionOnboardingDeviceSettingState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AdvancedThreatProtectionOnboardingDeviceSettingState put(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
+        return send(HttpMethod.PUT, newAdvancedThreatProtectionOnboardingDeviceSettingState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

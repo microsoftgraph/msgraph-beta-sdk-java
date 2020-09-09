@@ -112,6 +112,27 @@ public class TeamsDeviceUsageUserCountsRequest extends BaseRequest implements IT
     }
 
     /**
+     * Creates a TeamsDeviceUsageUserCounts with a new object
+     *
+     * @param newTeamsDeviceUsageUserCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TeamsDeviceUsageUserCounts newTeamsDeviceUsageUserCounts, final ICallback<TeamsDeviceUsageUserCounts> callback) {
+        send(HttpMethod.PUT, callback, newTeamsDeviceUsageUserCounts);
+    }
+
+    /**
+     * Creates a TeamsDeviceUsageUserCounts with a new object
+     *
+     * @param newTeamsDeviceUsageUserCounts the object to create/update
+     * @return the created TeamsDeviceUsageUserCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TeamsDeviceUsageUserCounts put(final TeamsDeviceUsageUserCounts newTeamsDeviceUsageUserCounts) throws ClientException {
+        return send(HttpMethod.PUT, newTeamsDeviceUsageUserCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

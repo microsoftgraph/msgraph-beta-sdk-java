@@ -30,52 +30,12 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
 
 
     /**
-     * The Unknown Device Count.
-     * Number of unknown devices
-     */
-    @SerializedName("unknownDeviceCount")
-    @Expose
-    public Integer unknownDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Number of not applicable devices
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
-
-    /**
      * The Compliant Device Count.
      * Number of compliant devices
      */
     @SerializedName("compliantDeviceCount")
     @Expose
     public Integer compliantDeviceCount;
-
-    /**
-     * The Remediated Device Count.
-     * Number of remediated devices
-     */
-    @SerializedName("remediatedDeviceCount")
-    @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
-     * The Non Compliant Device Count.
-     * Number of NonCompliant devices
-     */
-    @SerializedName("nonCompliantDeviceCount")
-    @Expose
-    public Integer nonCompliantDeviceCount;
-
-    /**
-     * The Error Device Count.
-     * Number of error devices
-     */
-    @SerializedName("errorDeviceCount")
-    @Expose
-    public Integer errorDeviceCount;
 
     /**
      * The Conflict Device Count.
@@ -86,12 +46,52 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     public Integer conflictDeviceCount;
 
     /**
+     * The Error Device Count.
+     * Number of error devices
+     */
+    @SerializedName("errorDeviceCount")
+    @Expose
+    public Integer errorDeviceCount;
+
+    /**
+     * The Non Compliant Device Count.
+     * Number of NonCompliant devices
+     */
+    @SerializedName("nonCompliantDeviceCount")
+    @Expose
+    public Integer nonCompliantDeviceCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Number of not applicable devices
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
      * The Not Assigned Device Count.
      * Number of not assigned devices
      */
     @SerializedName("notAssignedDeviceCount")
     @Expose
     public Integer notAssignedDeviceCount;
+
+    /**
+     * The Remediated Device Count.
+     * Number of remediated devices
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
+
+    /**
+     * The Unknown Device Count.
+     * Number of unknown devices
+     */
+    @SerializedName("unknownDeviceCount")
+    @Expose
+    public Integer unknownDeviceCount;
 
     /**
      * The Advanced Threat Protection Onboarding Device Setting States.

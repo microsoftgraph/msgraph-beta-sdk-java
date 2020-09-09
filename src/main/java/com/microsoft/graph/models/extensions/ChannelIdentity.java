@@ -36,20 +36,20 @@ public class ChannelIdentity implements IJsonBackedObject {
     }
 
     /**
-     * The Team Id.
-     * 
-     */
-    @SerializedName("teamId")
-    @Expose
-    public String teamId;
-
-    /**
      * The Channel Id.
      * 
      */
     @SerializedName("channelId")
     @Expose
     public String channelId;
+
+    /**
+     * The Team Id.
+     * 
+     */
+    @SerializedName("teamId")
+    @Expose
+    public String teamId;
 
 
     /**

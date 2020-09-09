@@ -31,20 +31,20 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Created By.
      * 
      */
     @SerializedName("createdBy")
     @Expose
     public AppIdentity createdBy;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Tasks.

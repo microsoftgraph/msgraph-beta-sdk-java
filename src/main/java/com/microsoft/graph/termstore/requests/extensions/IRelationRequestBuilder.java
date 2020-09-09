@@ -43,17 +43,17 @@ public interface IRelationRequestBuilder extends IRequestBuilder {
     ITermWithReferenceRequestBuilder fromTerm();
 
     /**
-     * Gets the request builder for Term
-     *
-     * @return the ITermWithReferenceRequestBuilder instance
-     */
-    ITermWithReferenceRequestBuilder toTerm();
-
-    /**
      * Gets the request builder for Set
      *
      * @return the ISetWithReferenceRequestBuilder instance
      */
     ISetWithReferenceRequestBuilder set();
+
+    /**
+     * Gets the request builder for Term
+     *
+     * @return the ITermWithReferenceRequestBuilder instance
+     */
+    ITermWithReferenceRequestBuilder toTerm();
 
 }

@@ -29,22 +29,6 @@ public class EducationRubricOutcome extends EducationOutcome implements IJsonBac
 
 
     /**
-     * The Rubric Quality Feedback.
-     * 
-     */
-    @SerializedName("rubricQualityFeedback")
-    @Expose
-    public java.util.List<RubricQualityFeedbackModel> rubricQualityFeedback;
-
-    /**
-     * The Rubric Quality Selected Levels.
-     * 
-     */
-    @SerializedName("rubricQualitySelectedLevels")
-    @Expose
-    public java.util.List<RubricQualitySelectedColumnModel> rubricQualitySelectedLevels;
-
-    /**
      * The Published Rubric Quality Feedback.
      * 
      */
@@ -59,6 +43,22 @@ public class EducationRubricOutcome extends EducationOutcome implements IJsonBac
     @SerializedName("publishedRubricQualitySelectedLevels")
     @Expose
     public java.util.List<RubricQualitySelectedColumnModel> publishedRubricQualitySelectedLevels;
+
+    /**
+     * The Rubric Quality Feedback.
+     * 
+     */
+    @SerializedName("rubricQualityFeedback")
+    @Expose
+    public java.util.List<RubricQualityFeedbackModel> rubricQualityFeedback;
+
+    /**
+     * The Rubric Quality Selected Levels.
+     * 
+     */
+    @SerializedName("rubricQualitySelectedLevels")
+    @Expose
+    public java.util.List<RubricQualitySelectedColumnModel> rubricQualitySelectedLevels;
 
 
     /**

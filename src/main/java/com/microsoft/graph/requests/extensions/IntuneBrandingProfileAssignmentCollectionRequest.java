@@ -62,14 +62,14 @@ public class IntuneBrandingProfileAssignmentCollectionRequest extends BaseCollec
     public void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<IntuneBrandingProfileAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IntuneBrandingProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIntuneBrandingProfileAssignment, callback);
     }
 
     public IntuneBrandingProfileAssignment post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IntuneBrandingProfileAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIntuneBrandingProfileAssignment);
     }
 
@@ -106,6 +106,27 @@ public class IntuneBrandingProfileAssignmentCollectionRequest extends BaseCollec
         return (IntuneBrandingProfileAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIntuneBrandingProfileAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IntuneBrandingProfileAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIntuneBrandingProfileAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIntuneBrandingProfileAssignmentCollectionRequest)this;
+    }
     public IIntuneBrandingProfileAssignmentCollectionPage buildFromResponse(final IntuneBrandingProfileAssignmentCollectionResponse response) {
         final IIntuneBrandingProfileAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

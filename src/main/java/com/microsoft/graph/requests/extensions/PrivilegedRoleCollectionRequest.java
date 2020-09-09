@@ -62,14 +62,14 @@ public class PrivilegedRoleCollectionRequest extends BaseCollectionRequest<Privi
     public void post(final PrivilegedRole newPrivilegedRole, final ICallback<PrivilegedRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrivilegedRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRole, callback);
     }
 
     public PrivilegedRole post(final PrivilegedRole newPrivilegedRole) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrivilegedRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrivilegedRole);
     }
 
@@ -106,6 +106,27 @@ public class PrivilegedRoleCollectionRequest extends BaseCollectionRequest<Privi
         return (PrivilegedRoleCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrivilegedRoleCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrivilegedRoleCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrivilegedRoleCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrivilegedRoleCollectionRequest)this;
+    }
     public IPrivilegedRoleCollectionPage buildFromResponse(final PrivilegedRoleCollectionResponse response) {
         final IPrivilegedRoleCollectionRequestBuilder builder;
         if (response.nextLink != null) {

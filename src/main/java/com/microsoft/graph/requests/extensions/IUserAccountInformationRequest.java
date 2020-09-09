@@ -80,6 +80,23 @@ public interface IUserAccountInformationRequest extends IHttpRequest {
     UserAccountInformation post(final UserAccountInformation newUserAccountInformation) throws ClientException;
 
     /**
+     * Posts a UserAccountInformation with a new object
+     *
+     * @param newUserAccountInformation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserAccountInformation newUserAccountInformation, final ICallback<UserAccountInformation> callback);
+
+    /**
+     * Posts a UserAccountInformation with a new object
+     *
+     * @param newUserAccountInformation the object to create/update
+     * @return the created UserAccountInformation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserAccountInformation put(final UserAccountInformation newUserAccountInformation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

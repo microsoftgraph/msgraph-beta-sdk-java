@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Location;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.generated.BookingInvoiceStatus;
 import com.microsoft.graph.models.generated.BookingPriceType;
 import com.microsoft.graph.models.extensions.BookingReminder;
-import com.microsoft.graph.models.generated.BookingInvoiceStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -32,12 +32,12 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Self Service Appointment Id.
+     * The Customer Email Address.
      * 
      */
-    @SerializedName("selfServiceAppointmentId")
+    @SerializedName("customerEmailAddress")
     @Expose
-    public String selfServiceAppointmentId;
+    public String customerEmailAddress;
 
     /**
      * The Customer Id.
@@ -48,36 +48,20 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public String customerId;
 
     /**
-     * The Customer Name.
-     * 
-     */
-    @SerializedName("customerName")
-    @Expose
-    public String customerName;
-
-    /**
-     * The Customer Email Address.
-     * 
-     */
-    @SerializedName("customerEmailAddress")
-    @Expose
-    public String customerEmailAddress;
-
-    /**
-     * The Customer Phone.
-     * 
-     */
-    @SerializedName("customerPhone")
-    @Expose
-    public String customerPhone;
-
-    /**
      * The Customer Location.
      * 
      */
     @SerializedName("customerLocation")
     @Expose
     public Location customerLocation;
+
+    /**
+     * The Customer Name.
+     * 
+     */
+    @SerializedName("customerName")
+    @Expose
+    public String customerName;
 
     /**
      * The Customer Notes.
@@ -88,36 +72,12 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public String customerNotes;
 
     /**
-     * The Service Id.
-     * The id of the booking service associated with this appointment.
-     */
-    @SerializedName("serviceId")
-    @Expose
-    public String serviceId;
-
-    /**
-     * The Service Name.
-     * This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the service id.
-     */
-    @SerializedName("serviceName")
-    @Expose
-    public String serviceName;
-
-    /**
-     * The Start.
+     * The Customer Phone.
      * 
      */
-    @SerializedName("start")
+    @SerializedName("customerPhone")
     @Expose
-    public DateTimeTimeZone start;
-
-    /**
-     * The End.
-     * 
-     */
-    @SerializedName("end")
-    @Expose
-    public DateTimeTimeZone end;
+    public String customerPhone;
 
     /**
      * The Duration.
@@ -128,76 +88,12 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public javax.xml.datatype.Duration duration;
 
     /**
-     * The Pre Buffer.
+     * The End.
      * 
      */
-    @SerializedName("preBuffer")
+    @SerializedName("end")
     @Expose
-    public javax.xml.datatype.Duration preBuffer;
-
-    /**
-     * The Post Buffer.
-     * 
-     */
-    @SerializedName("postBuffer")
-    @Expose
-    public javax.xml.datatype.Duration postBuffer;
-
-    /**
-     * The Service Location.
-     * 
-     */
-    @SerializedName("serviceLocation")
-    @Expose
-    public Location serviceLocation;
-
-    /**
-     * The Price Type.
-     * 
-     */
-    @SerializedName("priceType")
-    @Expose
-    public BookingPriceType priceType;
-
-    /**
-     * The Price.
-     * 
-     */
-    @SerializedName("price")
-    @Expose
-    public Double price;
-
-    /**
-     * The Service Notes.
-     * The value of this property is only available when reading an individual booking appointment by id.
-     */
-    @SerializedName("serviceNotes")
-    @Expose
-    public String serviceNotes;
-
-    /**
-     * The Reminders.
-     * The value of this property is only available when reading an individual booking appointment by id.
-     */
-    @SerializedName("reminders")
-    @Expose
-    public java.util.List<BookingReminder> reminders;
-
-    /**
-     * The Opt Out Of Customer Email.
-     * 
-     */
-    @SerializedName("optOutOfCustomerEmail")
-    @Expose
-    public Boolean optOutOfCustomerEmail;
-
-    /**
-     * The Staff Member Ids.
-     * 
-     */
-    @SerializedName("staffMemberIds")
-    @Expose
-    public java.util.List<String> staffMemberIds;
+    public DateTimeTimeZone end;
 
     /**
      * The Invoice Amount.
@@ -238,6 +134,110 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     @SerializedName("invoiceUrl")
     @Expose
     public String invoiceUrl;
+
+    /**
+     * The Opt Out Of Customer Email.
+     * 
+     */
+    @SerializedName("optOutOfCustomerEmail")
+    @Expose
+    public Boolean optOutOfCustomerEmail;
+
+    /**
+     * The Post Buffer.
+     * 
+     */
+    @SerializedName("postBuffer")
+    @Expose
+    public javax.xml.datatype.Duration postBuffer;
+
+    /**
+     * The Pre Buffer.
+     * 
+     */
+    @SerializedName("preBuffer")
+    @Expose
+    public javax.xml.datatype.Duration preBuffer;
+
+    /**
+     * The Price.
+     * 
+     */
+    @SerializedName("price")
+    @Expose
+    public Double price;
+
+    /**
+     * The Price Type.
+     * 
+     */
+    @SerializedName("priceType")
+    @Expose
+    public BookingPriceType priceType;
+
+    /**
+     * The Reminders.
+     * The value of this property is only available when reading an individual booking appointment by id.
+     */
+    @SerializedName("reminders")
+    @Expose
+    public java.util.List<BookingReminder> reminders;
+
+    /**
+     * The Self Service Appointment Id.
+     * 
+     */
+    @SerializedName("selfServiceAppointmentId")
+    @Expose
+    public String selfServiceAppointmentId;
+
+    /**
+     * The Service Id.
+     * The id of the booking service associated with this appointment.
+     */
+    @SerializedName("serviceId")
+    @Expose
+    public String serviceId;
+
+    /**
+     * The Service Location.
+     * 
+     */
+    @SerializedName("serviceLocation")
+    @Expose
+    public Location serviceLocation;
+
+    /**
+     * The Service Name.
+     * This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the service id.
+     */
+    @SerializedName("serviceName")
+    @Expose
+    public String serviceName;
+
+    /**
+     * The Service Notes.
+     * The value of this property is only available when reading an individual booking appointment by id.
+     */
+    @SerializedName("serviceNotes")
+    @Expose
+    public String serviceNotes;
+
+    /**
+     * The Staff Member Ids.
+     * 
+     */
+    @SerializedName("staffMemberIds")
+    @Expose
+    public java.util.List<String> staffMemberIds;
+
+    /**
+     * The Start.
+     * 
+     */
+    @SerializedName("start")
+    @Expose
+    public DateTimeTimeZone start;
 
 
     /**

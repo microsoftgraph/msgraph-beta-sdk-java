@@ -61,21 +61,21 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-
-    /**
-     * Gets the request builder for GroupPolicyCategory
-     *
-     * @return the IGroupPolicyCategoryWithReferenceRequestBuilder instance
-     */
-    public IGroupPolicyCategoryWithReferenceRequestBuilder parent() {
-        return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
-    }
     public IGroupPolicyCategoryCollectionWithReferencesRequestBuilder children() {
         return new GroupPolicyCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
 
     public IGroupPolicyCategoryWithReferenceRequestBuilder children(final String id) {
         return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for GroupPolicyDefinitionFile
+     *
+     * @return the IGroupPolicyDefinitionFileWithReferenceRequestBuilder instance
+     */
+    public IGroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
+        return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
     }
     public IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
         return new GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
@@ -86,11 +86,11 @@ public class GroupPolicyCategoryRequestBuilder extends BaseRequestBuilder implem
     }
 
     /**
-     * Gets the request builder for GroupPolicyDefinitionFile
+     * Gets the request builder for GroupPolicyCategory
      *
-     * @return the IGroupPolicyDefinitionFileWithReferenceRequestBuilder instance
+     * @return the IGroupPolicyCategoryWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
-        return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
+    public IGroupPolicyCategoryWithReferenceRequestBuilder parent() {
+        return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
     }
 }

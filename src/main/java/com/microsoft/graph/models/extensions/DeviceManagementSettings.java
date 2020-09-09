@@ -37,44 +37,12 @@ public class DeviceManagementSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Device Compliance Checkin Threshold Days.
-     * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
+     * The Android Device Administrator Enrollment Enabled.
+     * The property to determine if Android device administrator enrollment is enabled for this account.
      */
-    @SerializedName("deviceComplianceCheckinThresholdDays")
+    @SerializedName("androidDeviceAdministratorEnrollmentEnabled")
     @Expose
-    public Integer deviceComplianceCheckinThresholdDays;
-
-    /**
-     * The Is Scheduled Action Enabled.
-     * Is feature enabled or not for scheduled action for rule.
-     */
-    @SerializedName("isScheduledActionEnabled")
-    @Expose
-    public Boolean isScheduledActionEnabled;
-
-    /**
-     * The Secure By Default.
-     * Device should be noncompliant when there is no compliance policy targeted when this is true
-     */
-    @SerializedName("secureByDefault")
-    @Expose
-    public Boolean secureByDefault;
-
-    /**
-     * The Enhanced Jail Break.
-     * Is feature enabled or not for enhanced jailbreak detection.
-     */
-    @SerializedName("enhancedJailBreak")
-    @Expose
-    public Boolean enhancedJailBreak;
-
-    /**
-     * The Device Inactivity Before Retirement In Day.
-     * When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
-     */
-    @SerializedName("deviceInactivityBeforeRetirementInDay")
-    @Expose
-    public Integer deviceInactivityBeforeRetirementInDay;
+    public Boolean androidDeviceAdministratorEnrollmentEnabled;
 
     /**
      * The Derived Credential Provider.
@@ -93,12 +61,36 @@ public class DeviceManagementSettings implements IJsonBackedObject {
     public String derivedCredentialUrl;
 
     /**
-     * The Android Device Administrator Enrollment Enabled.
-     * The property to determine if Android device administrator enrollment is enabled for this account.
+     * The Device Compliance Checkin Threshold Days.
+     * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
      */
-    @SerializedName("androidDeviceAdministratorEnrollmentEnabled")
+    @SerializedName("deviceComplianceCheckinThresholdDays")
     @Expose
-    public Boolean androidDeviceAdministratorEnrollmentEnabled;
+    public Integer deviceComplianceCheckinThresholdDays;
+
+    /**
+     * The Device Inactivity Before Retirement In Day.
+     * When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
+     */
+    @SerializedName("deviceInactivityBeforeRetirementInDay")
+    @Expose
+    public Integer deviceInactivityBeforeRetirementInDay;
+
+    /**
+     * The Enable Log Collection.
+     * Determines whether the log collection feature should be available for use.
+     */
+    @SerializedName("enableLogCollection")
+    @Expose
+    public Boolean enableLogCollection;
+
+    /**
+     * The Enhanced Jail Break.
+     * Is feature enabled or not for enhanced jailbreak detection.
+     */
+    @SerializedName("enhancedJailBreak")
+    @Expose
+    public Boolean enhancedJailBreak;
 
     /**
      * The Ignore Devices For Unsupported Settings Enabled.
@@ -109,12 +101,20 @@ public class DeviceManagementSettings implements IJsonBackedObject {
     public Boolean ignoreDevicesForUnsupportedSettingsEnabled;
 
     /**
-     * The Enable Log Collection.
-     * Determines whether the log collection feature should be available for use.
+     * The Is Scheduled Action Enabled.
+     * Is feature enabled or not for scheduled action for rule.
      */
-    @SerializedName("enableLogCollection")
+    @SerializedName("isScheduledActionEnabled")
     @Expose
-    public Boolean enableLogCollection;
+    public Boolean isScheduledActionEnabled;
+
+    /**
+     * The Secure By Default.
+     * Device should be noncompliant when there is no compliance policy targeted when this is true
+     */
+    @SerializedName("secureByDefault")
+    @Expose
+    public Boolean secureByDefault;
 
 
     /**

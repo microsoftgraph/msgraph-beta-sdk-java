@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.FeatureType;
 import com.microsoft.graph.models.generated.UsageAuthMethod;
+import com.microsoft.graph.models.generated.FeatureType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,6 +29,22 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
 
     /**
+     * The Auth Method.
+     * 
+     */
+    @SerializedName("authMethod")
+    @Expose
+    public UsageAuthMethod authMethod;
+
+    /**
+     * The Failure Activity Count.
+     * 
+     */
+    @SerializedName("failureActivityCount")
+    @Expose
+    public Long failureActivityCount;
+
+    /**
      * The Feature.
      * 
      */
@@ -43,22 +59,6 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
     @SerializedName("successfulActivityCount")
     @Expose
     public Long successfulActivityCount;
-
-    /**
-     * The Failure Activity Count.
-     * 
-     */
-    @SerializedName("failureActivityCount")
-    @Expose
-    public Long failureActivityCount;
-
-    /**
-     * The Auth Method.
-     * 
-     */
-    @SerializedName("authMethod")
-    @Expose
-    public UsageAuthMethod authMethod;
 
 
     /**

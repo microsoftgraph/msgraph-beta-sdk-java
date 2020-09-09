@@ -63,14 +63,14 @@ public class ManagementConditionCollectionRequest extends BaseCollectionRequest<
     public void post(final ManagementCondition newManagementCondition, final ICallback<ManagementCondition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagementConditionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagementCondition, callback);
     }
 
     public ManagementCondition post(final ManagementCondition newManagementCondition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagementConditionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagementCondition);
     }
 
@@ -107,6 +107,27 @@ public class ManagementConditionCollectionRequest extends BaseCollectionRequest<
         return (ManagementConditionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagementConditionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagementConditionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagementConditionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagementConditionCollectionRequest)this;
+    }
     public IManagementConditionCollectionPage buildFromResponse(final ManagementConditionCollectionResponse response) {
         final IManagementConditionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

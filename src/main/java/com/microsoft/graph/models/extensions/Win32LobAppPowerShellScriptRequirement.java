@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RunAsAccountType;
 import com.microsoft.graph.models.generated.Win32LobAppPowerShellScriptDetectionType;
+import com.microsoft.graph.models.generated.RunAsAccountType;
 import com.microsoft.graph.models.extensions.Win32LobAppRequirement;
 
 
@@ -27,6 +27,14 @@ import java.util.Map;
  */
 public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement implements IJsonBackedObject {
 
+
+    /**
+     * The Detection Type.
+     * The detection type for script output
+     */
+    @SerializedName("detectionType")
+    @Expose
+    public Win32LobAppPowerShellScriptDetectionType detectionType;
 
     /**
      * The Display Name.
@@ -67,14 +75,6 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     @SerializedName("scriptContent")
     @Expose
     public String scriptContent;
-
-    /**
-     * The Detection Type.
-     * The detection type for script output
-     */
-    @SerializedName("detectionType")
-    @Expose
-    public Win32LobAppPowerShellScriptDetectionType detectionType;
 
 
     /**

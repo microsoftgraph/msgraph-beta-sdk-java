@@ -61,6 +61,14 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
     public String identityResourceIdentifier;
 
     /**
+     * The Identity Version.
+     * The identity version.
+     */
+    @SerializedName("identityVersion")
+    @Expose
+    public String identityVersion;
+
+    /**
      * The Is Bundle.
      * Whether or not the app is a bundle.
      */
@@ -75,14 +83,6 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
     @SerializedName("minimumSupportedOperatingSystem")
     @Expose
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
-
-    /**
-     * The Identity Version.
-     * The identity version.
-     */
-    @SerializedName("identityVersion")
-    @Expose
-    public String identityVersion;
 
 
     /**

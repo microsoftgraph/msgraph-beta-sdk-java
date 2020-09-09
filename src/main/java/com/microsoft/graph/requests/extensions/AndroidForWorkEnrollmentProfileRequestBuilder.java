@@ -52,11 +52,11 @@ public class AndroidForWorkEnrollmentProfileRequestBuilder extends BaseRequestBu
 
 
 
-    public IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder revokeToken() {
-        return new AndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeToken"), getClient(), null);
-    }
-
     public IAndroidForWorkEnrollmentProfileCreateTokenRequestBuilder createToken(final Integer tokenValidityInSeconds) {
         return new AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createToken"), getClient(), null, tokenValidityInSeconds);
+    }
+
+    public IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder revokeToken() {
+        return new AndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeToken"), getClient(), null);
     }
 }

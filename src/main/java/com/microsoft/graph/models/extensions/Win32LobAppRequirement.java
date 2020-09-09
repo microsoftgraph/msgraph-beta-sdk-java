@@ -37,20 +37,20 @@ public class Win32LobAppRequirement implements IJsonBackedObject {
     }
 
     /**
-     * The Operator.
-     * The operator for detection
-     */
-    @SerializedName("operator")
-    @Expose
-    public EnumSet<Win32LobAppDetectionOperator> operator;
-
-    /**
      * The Detection Value.
      * The detection value
      */
     @SerializedName("detectionValue")
     @Expose
     public String detectionValue;
+
+    /**
+     * The Operator.
+     * The operator for detection
+     */
+    @SerializedName("operator")
+    @Expose
+    public EnumSet<Win32LobAppDetectionOperator> operator;
 
 
     /**

@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.RiskDetail;
 import com.microsoft.graph.models.generated.RiskLevel;
 import com.microsoft.graph.models.generated.RiskState;
-import com.microsoft.graph.models.generated.RiskDetail;
 import com.microsoft.graph.models.extensions.RiskyUserHistoryItem;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemCollectionResponse;
@@ -49,6 +49,14 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
     public Boolean isProcessing;
 
     /**
+     * The Risk Detail.
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     */
+    @SerializedName("riskDetail")
+    @Expose
+    public RiskDetail riskDetail;
+
+    /**
      * The Risk Last Updated Date Time.
      * The date and time that the risky user was last updated.
      */
@@ -71,14 +79,6 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
     @SerializedName("riskState")
     @Expose
     public RiskState riskState;
-
-    /**
-     * The Risk Detail.
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     */
-    @SerializedName("riskDetail")
-    @Expose
-    public RiskDetail riskDetail;
 
     /**
      * The User Display Name.

@@ -31,28 +31,12 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Unique Name.
-     * Unique name for the management condition. Used in management condition expressions.
+     * The Applicable Platforms.
+     * The applicable platforms for this management condition.
      */
-    @SerializedName("uniqueName")
+    @SerializedName("applicablePlatforms")
     @Expose
-    public String uniqueName;
-
-    /**
-     * The Display Name.
-     * The admin defined name of the management condition.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * The admin defined description of the management condition.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
+    public java.util.List<DevicePlatformType> applicablePlatforms;
 
     /**
      * The Created Date Time.
@@ -63,12 +47,20 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Modified Date Time.
-     * The time the management condition was last modified. Updated service side.
+     * The Description.
+     * The admin defined description of the management condition.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName("description")
     @Expose
-    public java.util.Calendar modifiedDateTime;
+    public String description;
+
+    /**
+     * The Display Name.
+     * The admin defined name of the management condition.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The ETag.
@@ -79,12 +71,20 @@ public class ManagementCondition extends Entity implements IJsonBackedObject {
     public String eTag;
 
     /**
-     * The Applicable Platforms.
-     * The applicable platforms for this management condition.
+     * The Modified Date Time.
+     * The time the management condition was last modified. Updated service side.
      */
-    @SerializedName("applicablePlatforms")
+    @SerializedName("modifiedDateTime")
     @Expose
-    public java.util.List<DevicePlatformType> applicablePlatforms;
+    public java.util.Calendar modifiedDateTime;
+
+    /**
+     * The Unique Name.
+     * Unique name for the management condition. Used in management condition expressions.
+     */
+    @SerializedName("uniqueName")
+    @Expose
+    public String uniqueName;
 
     /**
      * The Management Condition Statements.

@@ -40,7 +40,7 @@ public class PrintConnectorCollectionReferenceRequest extends BaseCollectionRequ
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/print/connectors/" + newPrintConnector.id);
         new PrintConnectorWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintConnector, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class PrintConnectorCollectionReferenceRequest extends BaseCollectionRequ
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/print/connectors/" + newPrintConnector.id);
         return new PrintConnectorWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newPrintConnector, body);
     }
     /**

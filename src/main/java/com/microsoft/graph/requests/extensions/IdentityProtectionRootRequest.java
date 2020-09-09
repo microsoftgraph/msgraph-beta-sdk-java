@@ -120,6 +120,27 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
     }
 
     /**
+     * Creates a IdentityProtectionRoot with a new object
+     *
+     * @param newIdentityProtectionRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback) {
+        send(HttpMethod.PUT, callback, newIdentityProtectionRoot);
+    }
+
+    /**
+     * Creates a IdentityProtectionRoot with a new object
+     *
+     * @param newIdentityProtectionRoot the object to create/update
+     * @return the created IdentityProtectionRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IdentityProtectionRoot put(final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException {
+        return send(HttpMethod.PUT, newIdentityProtectionRoot);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

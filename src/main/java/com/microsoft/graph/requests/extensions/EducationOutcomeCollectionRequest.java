@@ -62,14 +62,14 @@ public class EducationOutcomeCollectionRequest extends BaseCollectionRequest<Edu
     public void post(final EducationOutcome newEducationOutcome, final ICallback<EducationOutcome> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationOutcomeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationOutcome, callback);
     }
 
     public EducationOutcome post(final EducationOutcome newEducationOutcome) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationOutcomeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationOutcome);
     }
 
@@ -106,6 +106,27 @@ public class EducationOutcomeCollectionRequest extends BaseCollectionRequest<Edu
         return (EducationOutcomeCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationOutcomeCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationOutcomeCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationOutcomeCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationOutcomeCollectionRequest)this;
+    }
     public IEducationOutcomeCollectionPage buildFromResponse(final EducationOutcomeCollectionResponse response) {
         final IEducationOutcomeCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PurchaseInvoiceLine;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -57,20 +57,20 @@ public class PurchaseInvoiceLineRequestBuilder extends BaseRequestBuilder implem
 
 
     /**
-     * Gets the request builder for Item
-     *
-     * @return the IItemRequestBuilder instance
-     */
-    public IItemRequestBuilder item() {
-        return new ItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for Account
      *
      * @return the IAccountRequestBuilder instance
      */
     public IAccountRequestBuilder account() {
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Item
+     *
+     * @return the IItemRequestBuilder instance
+     */
+    public IItemRequestBuilder item() {
+        return new ItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
     }
 }

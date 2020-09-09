@@ -112,6 +112,27 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
     }
 
     /**
+     * Creates a GroupPolicyPresentationValueLongDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueLongDecimal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<GroupPolicyPresentationValueLongDecimal> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueLongDecimal);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationValueLongDecimal with a new object
+     *
+     * @param newGroupPolicyPresentationValueLongDecimal the object to create/update
+     * @return the created GroupPolicyPresentationValueLongDecimal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationValueLongDecimal put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationValueLongDecimal);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

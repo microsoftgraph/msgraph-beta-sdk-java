@@ -112,6 +112,27 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
     }
 
     /**
+     * Creates a MobileAppIntentAndState with a new object
+     *
+     * @param newMobileAppIntentAndState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<MobileAppIntentAndState> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppIntentAndState);
+    }
+
+    /**
+     * Creates a MobileAppIntentAndState with a new object
+     *
+     * @param newMobileAppIntentAndState the object to create/update
+     * @return the created MobileAppIntentAndState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppIntentAndState put(final MobileAppIntentAndState newMobileAppIntentAndState) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppIntentAndState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

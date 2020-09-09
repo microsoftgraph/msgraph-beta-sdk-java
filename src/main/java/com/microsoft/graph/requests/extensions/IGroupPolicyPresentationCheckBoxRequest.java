@@ -80,6 +80,23 @@ public interface IGroupPolicyPresentationCheckBoxRequest extends IHttpRequest {
     GroupPolicyPresentationCheckBox post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException;
 
     /**
+     * Posts a GroupPolicyPresentationCheckBox with a new object
+     *
+     * @param newGroupPolicyPresentationCheckBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<GroupPolicyPresentationCheckBox> callback);
+
+    /**
+     * Posts a GroupPolicyPresentationCheckBox with a new object
+     *
+     * @param newGroupPolicyPresentationCheckBox the object to create/update
+     * @return the created GroupPolicyPresentationCheckBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyPresentationCheckBox put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

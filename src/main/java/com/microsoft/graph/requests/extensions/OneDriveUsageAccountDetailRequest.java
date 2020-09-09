@@ -112,6 +112,27 @@ public class OneDriveUsageAccountDetailRequest extends BaseRequest implements IO
     }
 
     /**
+     * Creates a OneDriveUsageAccountDetail with a new object
+     *
+     * @param newOneDriveUsageAccountDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail, final ICallback<OneDriveUsageAccountDetail> callback) {
+        send(HttpMethod.PUT, callback, newOneDriveUsageAccountDetail);
+    }
+
+    /**
+     * Creates a OneDriveUsageAccountDetail with a new object
+     *
+     * @param newOneDriveUsageAccountDetail the object to create/update
+     * @return the created OneDriveUsageAccountDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OneDriveUsageAccountDetail put(final OneDriveUsageAccountDetail newOneDriveUsageAccountDetail) throws ClientException {
+        return send(HttpMethod.PUT, newOneDriveUsageAccountDetail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

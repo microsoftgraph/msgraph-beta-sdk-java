@@ -80,6 +80,23 @@ public interface ITrustFrameworkRequest extends IHttpRequest {
     TrustFramework post(final TrustFramework newTrustFramework) throws ClientException;
 
     /**
+     * Posts a TrustFramework with a new object
+     *
+     * @param newTrustFramework the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TrustFramework newTrustFramework, final ICallback<TrustFramework> callback);
+
+    /**
+     * Posts a TrustFramework with a new object
+     *
+     * @param newTrustFramework the object to create/update
+     * @return the created TrustFramework
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TrustFramework put(final TrustFramework newTrustFramework) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

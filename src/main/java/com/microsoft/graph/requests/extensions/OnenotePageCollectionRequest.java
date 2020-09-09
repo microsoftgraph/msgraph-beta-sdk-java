@@ -9,8 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenotePage;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -65,14 +65,14 @@ public class OnenotePageCollectionRequest extends BaseCollectionRequest<OnenoteP
     public void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenotePageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenotePage, callback);
     }
 
     public OnenotePage post(final byte[] newOnenotePage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenotePageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenotePage);
     }
 
@@ -109,6 +109,27 @@ public class OnenotePageCollectionRequest extends BaseCollectionRequest<OnenoteP
         return (OnenotePageCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnenotePageCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnenotePageCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnenotePageCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnenotePageCollectionRequest)this;
+    }
     public IOnenotePageCollectionPage buildFromResponse(final OnenotePageCollectionResponse response) {
         final IOnenotePageCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IPermissionGrantPolicyRequest extends IHttpRequest {
     PermissionGrantPolicy post(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException;
 
     /**
+     * Posts a PermissionGrantPolicy with a new object
+     *
+     * @param newPermissionGrantPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback);
+
+    /**
+     * Posts a PermissionGrantPolicy with a new object
+     *
+     * @param newPermissionGrantPolicy the object to create/update
+     * @return the created PermissionGrantPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PermissionGrantPolicy put(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

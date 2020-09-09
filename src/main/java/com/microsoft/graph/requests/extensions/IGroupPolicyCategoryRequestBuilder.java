@@ -38,20 +38,9 @@ public interface IGroupPolicyCategoryRequestBuilder extends IRequestBuilder {
     IGroupPolicyCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    /**
-     * Gets the request builder for GroupPolicyCategory
-     *
-     * @return the IGroupPolicyCategoryWithReferenceRequestBuilder instance
-     */
-    IGroupPolicyCategoryWithReferenceRequestBuilder parent();
-
     IGroupPolicyCategoryCollectionWithReferencesRequestBuilder children();
 
     IGroupPolicyCategoryWithReferenceRequestBuilder children(final String id);
-
-    IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions();
-
-    IGroupPolicyDefinitionWithReferenceRequestBuilder definitions(final String id);
 
     /**
      * Gets the request builder for GroupPolicyDefinitionFile
@@ -59,5 +48,16 @@ public interface IGroupPolicyCategoryRequestBuilder extends IRequestBuilder {
      * @return the IGroupPolicyDefinitionFileWithReferenceRequestBuilder instance
      */
     IGroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile();
+
+    IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions();
+
+    IGroupPolicyDefinitionWithReferenceRequestBuilder definitions(final String id);
+
+    /**
+     * Gets the request builder for GroupPolicyCategory
+     *
+     * @return the IGroupPolicyCategoryWithReferenceRequestBuilder instance
+     */
+    IGroupPolicyCategoryWithReferenceRequestBuilder parent();
 
 }

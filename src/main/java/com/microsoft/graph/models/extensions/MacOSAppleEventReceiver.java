@@ -37,6 +37,14 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
     }
 
     /**
+     * The Allowed.
+     * Allow or block this app from receiving Apple events.
+     */
+    @SerializedName("allowed")
+    @Expose
+    public Boolean allowed;
+
+    /**
      * The Code Requirement.
      * Code requirement for the app or binary that receives the Apple Event.
      */
@@ -59,14 +67,6 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
     @SerializedName("identifierType")
     @Expose
     public MacOSProcessIdentifierType identifierType;
-
-    /**
-     * The Allowed.
-     * Allow or block this app from receiving Apple events.
-     */
-    @SerializedName("allowed")
-    @Expose
-    public Boolean allowed;
 
 
     /**

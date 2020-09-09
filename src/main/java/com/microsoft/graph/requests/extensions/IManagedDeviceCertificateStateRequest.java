@@ -80,6 +80,23 @@ public interface IManagedDeviceCertificateStateRequest extends IHttpRequest {
     ManagedDeviceCertificateState post(final ManagedDeviceCertificateState newManagedDeviceCertificateState) throws ClientException;
 
     /**
+     * Posts a ManagedDeviceCertificateState with a new object
+     *
+     * @param newManagedDeviceCertificateState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedDeviceCertificateState newManagedDeviceCertificateState, final ICallback<ManagedDeviceCertificateState> callback);
+
+    /**
+     * Posts a ManagedDeviceCertificateState with a new object
+     *
+     * @param newManagedDeviceCertificateState the object to create/update
+     * @return the created ManagedDeviceCertificateState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedDeviceCertificateState put(final ManagedDeviceCertificateState newManagedDeviceCertificateState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

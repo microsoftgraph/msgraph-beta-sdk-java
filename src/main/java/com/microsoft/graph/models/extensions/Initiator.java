@@ -37,20 +37,20 @@ public class Initiator implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * 
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Display Name.
      * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
     /**
      * The Initiator Type.

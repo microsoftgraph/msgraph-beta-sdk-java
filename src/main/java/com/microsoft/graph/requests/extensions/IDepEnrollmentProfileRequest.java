@@ -80,6 +80,23 @@ public interface IDepEnrollmentProfileRequest extends IHttpRequest {
     DepEnrollmentProfile post(final DepEnrollmentProfile newDepEnrollmentProfile) throws ClientException;
 
     /**
+     * Posts a DepEnrollmentProfile with a new object
+     *
+     * @param newDepEnrollmentProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DepEnrollmentProfile newDepEnrollmentProfile, final ICallback<DepEnrollmentProfile> callback);
+
+    /**
+     * Posts a DepEnrollmentProfile with a new object
+     *
+     * @param newDepEnrollmentProfile the object to create/update
+     * @return the created DepEnrollmentProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DepEnrollmentProfile put(final DepEnrollmentProfile newDepEnrollmentProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

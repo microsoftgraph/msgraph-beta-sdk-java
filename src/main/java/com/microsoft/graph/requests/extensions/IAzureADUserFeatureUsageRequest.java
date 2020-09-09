@@ -80,6 +80,23 @@ public interface IAzureADUserFeatureUsageRequest extends IHttpRequest {
     AzureADUserFeatureUsage post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException;
 
     /**
+     * Posts a AzureADUserFeatureUsage with a new object
+     *
+     * @param newAzureADUserFeatureUsage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<AzureADUserFeatureUsage> callback);
+
+    /**
+     * Posts a AzureADUserFeatureUsage with a new object
+     *
+     * @param newAzureADUserFeatureUsage the object to create/update
+     * @return the created AzureADUserFeatureUsage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AzureADUserFeatureUsage put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

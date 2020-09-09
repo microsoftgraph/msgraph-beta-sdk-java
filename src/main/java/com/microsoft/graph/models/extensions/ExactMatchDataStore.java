@@ -30,12 +30,12 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
+     * The Data Last Updated Date Time.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("dataLastUpdatedDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar dataLastUpdatedDateTime;
 
     /**
      * The Description.
@@ -46,12 +46,12 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Data Last Updated Date Time.
+     * The Display Name.
      * 
      */
-    @SerializedName("dataLastUpdatedDateTime")
+    @SerializedName("displayName")
     @Expose
-    public java.util.Calendar dataLastUpdatedDateTime;
+    public String displayName;
 
     /**
      * The Sessions.

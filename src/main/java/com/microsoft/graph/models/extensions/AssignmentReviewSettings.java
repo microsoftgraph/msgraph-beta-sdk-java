@@ -37,6 +37,14 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
     }
 
     /**
+     * The Duration In Days.
+     * 
+     */
+    @SerializedName("durationInDays")
+    @Expose
+    public Integer durationInDays;
+
+    /**
      * The Is Enabled.
      * 
      */
@@ -53,6 +61,14 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
     public String recurrenceType;
 
     /**
+     * The Reviewers.
+     * 
+     */
+    @SerializedName("reviewers")
+    @Expose
+    public java.util.List<UserSet> reviewers;
+
+    /**
      * The Reviewer Type.
      * 
      */
@@ -67,22 +83,6 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
     @SerializedName("startDateTime")
     @Expose
     public java.util.Calendar startDateTime;
-
-    /**
-     * The Duration In Days.
-     * 
-     */
-    @SerializedName("durationInDays")
-    @Expose
-    public Integer durationInDays;
-
-    /**
-     * The Reviewers.
-     * 
-     */
-    @SerializedName("reviewers")
-    @Expose
-    public java.util.List<UserSet> reviewers;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IProfileRequest extends IHttpRequest {
     Profile post(final Profile newProfile) throws ClientException;
 
     /**
+     * Posts a Profile with a new object
+     *
+     * @param newProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Profile newProfile, final ICallback<Profile> callback);
+
+    /**
+     * Posts a Profile with a new object
+     *
+     * @param newProfile the object to create/update
+     * @return the created Profile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Profile put(final Profile newProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -61,14 +61,14 @@ public class ActivityStatisticsCollectionRequest extends BaseCollectionRequest<A
     public void post(final ActivityStatistics newActivityStatistics, final ICallback<ActivityStatistics> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityStatisticsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityStatistics, callback);
     }
 
     public ActivityStatistics post(final ActivityStatistics newActivityStatistics) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityStatisticsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityStatistics);
     }
 
@@ -105,6 +105,27 @@ public class ActivityStatisticsCollectionRequest extends BaseCollectionRequest<A
         return (ActivityStatisticsCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IActivityStatisticsCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ActivityStatisticsCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IActivityStatisticsCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IActivityStatisticsCollectionRequest)this;
+    }
     public IActivityStatisticsCollectionPage buildFromResponse(final ActivityStatisticsCollectionResponse response) {
         final IActivityStatisticsCollectionRequestBuilder builder;
         if (response.nextLink != null) {

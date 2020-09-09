@@ -112,6 +112,27 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
     }
 
     /**
+     * Creates a WindowsPhoneXAP with a new object
+     *
+     * @param newWindowsPhoneXAP the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<WindowsPhoneXAP> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhoneXAP);
+    }
+
+    /**
+     * Creates a WindowsPhoneXAP with a new object
+     *
+     * @param newWindowsPhoneXAP the object to create/update
+     * @return the created WindowsPhoneXAP
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhoneXAP put(final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhoneXAP);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

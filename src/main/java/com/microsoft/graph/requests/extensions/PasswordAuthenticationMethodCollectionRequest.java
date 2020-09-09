@@ -62,14 +62,14 @@ public class PasswordAuthenticationMethodCollectionRequest extends BaseCollectio
     public void post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<PasswordAuthenticationMethod> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PasswordAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPasswordAuthenticationMethod, callback);
     }
 
     public PasswordAuthenticationMethod post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PasswordAuthenticationMethodRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPasswordAuthenticationMethod);
     }
 
@@ -106,6 +106,27 @@ public class PasswordAuthenticationMethodCollectionRequest extends BaseCollectio
         return (PasswordAuthenticationMethodCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPasswordAuthenticationMethodCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PasswordAuthenticationMethodCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPasswordAuthenticationMethodCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPasswordAuthenticationMethodCollectionRequest)this;
+    }
     public IPasswordAuthenticationMethodCollectionPage buildFromResponse(final PasswordAuthenticationMethodCollectionResponse response) {
         final IPasswordAuthenticationMethodCollectionRequestBuilder builder;
         if (response.nextLink != null) {

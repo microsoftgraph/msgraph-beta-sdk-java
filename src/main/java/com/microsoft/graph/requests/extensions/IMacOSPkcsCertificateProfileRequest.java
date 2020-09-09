@@ -80,6 +80,23 @@ public interface IMacOSPkcsCertificateProfileRequest extends IHttpRequest {
     MacOSPkcsCertificateProfile post(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile) throws ClientException;
 
     /**
+     * Posts a MacOSPkcsCertificateProfile with a new object
+     *
+     * @param newMacOSPkcsCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile, final ICallback<MacOSPkcsCertificateProfile> callback);
+
+    /**
+     * Posts a MacOSPkcsCertificateProfile with a new object
+     *
+     * @param newMacOSPkcsCertificateProfile the object to create/update
+     * @return the created MacOSPkcsCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSPkcsCertificateProfile put(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

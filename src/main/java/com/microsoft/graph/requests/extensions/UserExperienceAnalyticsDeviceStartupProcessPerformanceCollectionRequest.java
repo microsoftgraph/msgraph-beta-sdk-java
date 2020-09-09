@@ -62,14 +62,14 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionReq
     public void post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance, final ICallback<UserExperienceAnalyticsDeviceStartupProcessPerformance> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsDeviceStartupProcessPerformance, callback);
     }
 
     public UserExperienceAnalyticsDeviceStartupProcessPerformance post(final UserExperienceAnalyticsDeviceStartupProcessPerformance newUserExperienceAnalyticsDeviceStartupProcessPerformance) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserExperienceAnalyticsDeviceStartupProcessPerformance);
     }
 
@@ -106,6 +106,27 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionReq
         return (UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequest)this;
+    }
     public IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage buildFromResponse(final UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse response) {
         final IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

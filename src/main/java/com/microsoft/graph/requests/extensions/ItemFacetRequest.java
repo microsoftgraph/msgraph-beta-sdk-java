@@ -127,6 +127,27 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
     }
 
     /**
+     * Creates a ItemFacet with a new object
+     *
+     * @param newItemFacet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemFacet newItemFacet, final ICallback<ItemFacet> callback) {
+        send(HttpMethod.PUT, callback, newItemFacet);
+    }
+
+    /**
+     * Creates a ItemFacet with a new object
+     *
+     * @param newItemFacet the object to create/update
+     * @return the created ItemFacet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemFacet put(final ItemFacet newItemFacet) throws ClientException {
+        return send(HttpMethod.PUT, newItemFacet);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

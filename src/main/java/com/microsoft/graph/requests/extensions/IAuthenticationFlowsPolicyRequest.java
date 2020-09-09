@@ -80,6 +80,23 @@ public interface IAuthenticationFlowsPolicyRequest extends IHttpRequest {
     AuthenticationFlowsPolicy post(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException;
 
     /**
+     * Posts a AuthenticationFlowsPolicy with a new object
+     *
+     * @param newAuthenticationFlowsPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<AuthenticationFlowsPolicy> callback);
+
+    /**
+     * Posts a AuthenticationFlowsPolicy with a new object
+     *
+     * @param newAuthenticationFlowsPolicy the object to create/update
+     * @return the created AuthenticationFlowsPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AuthenticationFlowsPolicy put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

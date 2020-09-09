@@ -112,6 +112,27 @@ public class ScopedRoleMembershipRequest extends BaseRequest implements IScopedR
     }
 
     /**
+     * Creates a ScopedRoleMembership with a new object
+     *
+     * @param newScopedRoleMembership the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
+        send(HttpMethod.PUT, callback, newScopedRoleMembership);
+    }
+
+    /**
+     * Creates a ScopedRoleMembership with a new object
+     *
+     * @param newScopedRoleMembership the object to create/update
+     * @return the created ScopedRoleMembership
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ScopedRoleMembership put(final ScopedRoleMembership newScopedRoleMembership) throws ClientException {
+        return send(HttpMethod.PUT, newScopedRoleMembership);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

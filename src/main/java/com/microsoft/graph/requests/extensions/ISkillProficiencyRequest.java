@@ -80,6 +80,23 @@ public interface ISkillProficiencyRequest extends IHttpRequest {
     SkillProficiency post(final SkillProficiency newSkillProficiency) throws ClientException;
 
     /**
+     * Posts a SkillProficiency with a new object
+     *
+     * @param newSkillProficiency the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SkillProficiency newSkillProficiency, final ICallback<SkillProficiency> callback);
+
+    /**
+     * Posts a SkillProficiency with a new object
+     *
+     * @param newSkillProficiency the object to create/update
+     * @return the created SkillProficiency
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SkillProficiency put(final SkillProficiency newSkillProficiency) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

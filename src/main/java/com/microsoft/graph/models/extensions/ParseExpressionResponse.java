@@ -46,20 +46,20 @@ public class ParseExpressionResponse implements IJsonBackedObject {
     public PublicError error;
 
     /**
-     * The Evaluation Succeeded.
-     * 
-     */
-    @SerializedName("evaluationSucceeded")
-    @Expose
-    public Boolean evaluationSucceeded;
-
-    /**
      * The Evaluation Result.
      * 
      */
     @SerializedName("evaluationResult")
     @Expose
     public java.util.List<String> evaluationResult;
+
+    /**
+     * The Evaluation Succeeded.
+     * 
+     */
+    @SerializedName("evaluationSucceeded")
+    @Expose
+    public Boolean evaluationSucceeded;
 
     /**
      * The Parsed Expression.

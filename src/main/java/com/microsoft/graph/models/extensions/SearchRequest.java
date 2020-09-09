@@ -38,14 +38,6 @@ public class SearchRequest implements IJsonBackedObject {
     }
 
     /**
-     * The Entity Types.
-     * 
-     */
-    @SerializedName("entityTypes")
-    @Expose
-    public java.util.List<EntityType> entityTypes;
-
-    /**
      * The Content Sources.
      * 
      */
@@ -54,12 +46,20 @@ public class SearchRequest implements IJsonBackedObject {
     public java.util.List<String> contentSources;
 
     /**
-     * The Query.
+     * The Enable Top Results.
      * 
      */
-    @SerializedName("query")
+    @SerializedName("enableTopResults")
     @Expose
-    public SearchQuery query;
+    public Boolean enableTopResults;
+
+    /**
+     * The Entity Types.
+     * 
+     */
+    @SerializedName("entityTypes")
+    @Expose
+    public java.util.List<EntityType> entityTypes;
 
     /**
      * The From.
@@ -68,6 +68,14 @@ public class SearchRequest implements IJsonBackedObject {
     @SerializedName("from")
     @Expose
     public Integer from;
+
+    /**
+     * The Query.
+     * 
+     */
+    @SerializedName("query")
+    @Expose
+    public SearchQuery query;
 
     /**
      * The Size.
@@ -84,14 +92,6 @@ public class SearchRequest implements IJsonBackedObject {
     @SerializedName("stored_fields")
     @Expose
     public java.util.List<String> stored_fields;
-
-    /**
-     * The Enable Top Results.
-     * 
-     */
-    @SerializedName("enableTopResults")
-    @Expose
-    public Boolean enableTopResults;
 
 
     /**

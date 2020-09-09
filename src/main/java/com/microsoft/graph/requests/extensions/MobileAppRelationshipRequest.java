@@ -127,6 +127,27 @@ public class MobileAppRelationshipRequest extends BaseRequest implements IMobile
     }
 
     /**
+     * Creates a MobileAppRelationship with a new object
+     *
+     * @param newMobileAppRelationship the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppRelationship newMobileAppRelationship, final ICallback<MobileAppRelationship> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppRelationship);
+    }
+
+    /**
+     * Creates a MobileAppRelationship with a new object
+     *
+     * @param newMobileAppRelationship the object to create/update
+     * @return the created MobileAppRelationship
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppRelationship put(final MobileAppRelationship newMobileAppRelationship) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppRelationship);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

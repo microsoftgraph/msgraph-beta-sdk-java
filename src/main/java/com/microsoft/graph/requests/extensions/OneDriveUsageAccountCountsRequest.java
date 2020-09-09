@@ -112,6 +112,27 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
     }
 
     /**
+     * Creates a OneDriveUsageAccountCounts with a new object
+     *
+     * @param newOneDriveUsageAccountCounts the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts, final ICallback<OneDriveUsageAccountCounts> callback) {
+        send(HttpMethod.PUT, callback, newOneDriveUsageAccountCounts);
+    }
+
+    /**
+     * Creates a OneDriveUsageAccountCounts with a new object
+     *
+     * @param newOneDriveUsageAccountCounts the object to create/update
+     * @return the created OneDriveUsageAccountCounts
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OneDriveUsageAccountCounts put(final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts) throws ClientException {
+        return send(HttpMethod.PUT, newOneDriveUsageAccountCounts);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -8,9 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,18 +37,11 @@ public interface IUnifiedRoleAssignmentRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for UnifiedRoleDefinition
+     * Gets the request builder for AppScope
      *
-     * @return the IUnifiedRoleDefinitionWithReferenceRequestBuilder instance
+     * @return the IAppScopeRequestBuilder instance
      */
-    IUnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition();
-
-    /**
-     * Gets the request builder for DirectoryObject
-     *
-     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
-     */
-    IDirectoryObjectWithReferenceRequestBuilder principal();
+    IAppScopeRequestBuilder appScope();
 
     /**
      * Gets the request builder for DirectoryObject
@@ -58,10 +51,17 @@ public interface IUnifiedRoleAssignmentRequestBuilder extends IRequestBuilder {
     IDirectoryObjectWithReferenceRequestBuilder directoryScope();
 
     /**
-     * Gets the request builder for AppScope
+     * Gets the request builder for DirectoryObject
      *
-     * @return the IAppScopeRequestBuilder instance
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
-    IAppScopeRequestBuilder appScope();
+    IDirectoryObjectWithReferenceRequestBuilder principal();
+
+    /**
+     * Gets the request builder for UnifiedRoleDefinition
+     *
+     * @return the IUnifiedRoleDefinitionWithReferenceRequestBuilder instance
+     */
+    IUnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition();
 
 }

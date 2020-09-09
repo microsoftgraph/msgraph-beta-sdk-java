@@ -80,6 +80,23 @@ public interface ISensitiveTypeRequest extends IHttpRequest {
     SensitiveType post(final SensitiveType newSensitiveType) throws ClientException;
 
     /**
+     * Posts a SensitiveType with a new object
+     *
+     * @param newSensitiveType the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SensitiveType newSensitiveType, final ICallback<SensitiveType> callback);
+
+    /**
+     * Posts a SensitiveType with a new object
+     *
+     * @param newSensitiveType the object to create/update
+     * @return the created SensitiveType
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SensitiveType put(final SensitiveType newSensitiveType) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

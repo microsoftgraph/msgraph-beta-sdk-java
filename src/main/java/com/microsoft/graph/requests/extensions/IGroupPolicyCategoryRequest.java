@@ -80,6 +80,23 @@ public interface IGroupPolicyCategoryRequest extends IHttpRequest {
     GroupPolicyCategory post(final GroupPolicyCategory newGroupPolicyCategory) throws ClientException;
 
     /**
+     * Posts a GroupPolicyCategory with a new object
+     *
+     * @param newGroupPolicyCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupPolicyCategory newGroupPolicyCategory, final ICallback<GroupPolicyCategory> callback);
+
+    /**
+     * Posts a GroupPolicyCategory with a new object
+     *
+     * @param newGroupPolicyCategory the object to create/update
+     * @return the created GroupPolicyCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupPolicyCategory put(final GroupPolicyCategory newGroupPolicyCategory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a WindowsAssignedAccessProfile with a new object
+     *
+     * @param newWindowsAssignedAccessProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<WindowsAssignedAccessProfile> callback) {
+        send(HttpMethod.PUT, callback, newWindowsAssignedAccessProfile);
+    }
+
+    /**
+     * Creates a WindowsAssignedAccessProfile with a new object
+     *
+     * @param newWindowsAssignedAccessProfile the object to create/update
+     * @return the created WindowsAssignedAccessProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsAssignedAccessProfile put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsAssignedAccessProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

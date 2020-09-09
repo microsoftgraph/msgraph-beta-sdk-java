@@ -31,6 +31,14 @@ public class Group extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The Description.
      * 
      */
@@ -45,14 +53,6 @@ public class Group extends Entity implements IJsonBackedObject {
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Created Date Time.
-     * 
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
 
     /**
      * The Scope.

@@ -80,6 +80,23 @@ public interface IEmailActivityUserDetailRequest extends IHttpRequest {
     EmailActivityUserDetail post(final EmailActivityUserDetail newEmailActivityUserDetail) throws ClientException;
 
     /**
+     * Posts a EmailActivityUserDetail with a new object
+     *
+     * @param newEmailActivityUserDetail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<EmailActivityUserDetail> callback);
+
+    /**
+     * Posts a EmailActivityUserDetail with a new object
+     *
+     * @param newEmailActivityUserDetail the object to create/update
+     * @return the created EmailActivityUserDetail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EmailActivityUserDetail put(final EmailActivityUserDetail newEmailActivityUserDetail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

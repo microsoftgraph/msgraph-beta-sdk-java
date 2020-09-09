@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.GroupPolicyOperationType;
 import com.microsoft.graph.models.generated.GroupPolicyOperationStatus;
+import com.microsoft.graph.models.generated.GroupPolicyOperationType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,12 +29,12 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Operation Type.
-     * The type of group policy operation.
+     * The Last Modified Date Time.
+     * The date and time the entity was last modified.
      */
-    @SerializedName("operationType")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public GroupPolicyOperationType operationType;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Operation Status.
@@ -45,20 +45,20 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
     public GroupPolicyOperationStatus operationStatus;
 
     /**
+     * The Operation Type.
+     * The type of group policy operation.
+     */
+    @SerializedName("operationType")
+    @Expose
+    public GroupPolicyOperationType operationType;
+
+    /**
      * The Status Details.
      * The group policy operation status detail.
      */
     @SerializedName("statusDetails")
     @Expose
     public String statusDetails;
-
-    /**
-     * The Last Modified Date Time.
-     * The date and time the entity was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
 
 
     /**

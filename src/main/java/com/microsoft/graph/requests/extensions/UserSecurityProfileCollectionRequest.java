@@ -62,14 +62,14 @@ public class UserSecurityProfileCollectionRequest extends BaseCollectionRequest<
     public void post(final UserSecurityProfile newUserSecurityProfile, final ICallback<UserSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserSecurityProfile, callback);
     }
 
     public UserSecurityProfile post(final UserSecurityProfile newUserSecurityProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserSecurityProfile);
     }
 
@@ -106,6 +106,27 @@ public class UserSecurityProfileCollectionRequest extends BaseCollectionRequest<
         return (UserSecurityProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserSecurityProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserSecurityProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserSecurityProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserSecurityProfileCollectionRequest)this;
+    }
     public IUserSecurityProfileCollectionPage buildFromResponse(final UserSecurityProfileCollectionResponse response) {
         final IUserSecurityProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

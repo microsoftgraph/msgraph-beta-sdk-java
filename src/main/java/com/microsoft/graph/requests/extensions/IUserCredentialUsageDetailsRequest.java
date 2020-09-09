@@ -80,6 +80,23 @@ public interface IUserCredentialUsageDetailsRequest extends IHttpRequest {
     UserCredentialUsageDetails post(final UserCredentialUsageDetails newUserCredentialUsageDetails) throws ClientException;
 
     /**
+     * Posts a UserCredentialUsageDetails with a new object
+     *
+     * @param newUserCredentialUsageDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserCredentialUsageDetails newUserCredentialUsageDetails, final ICallback<UserCredentialUsageDetails> callback);
+
+    /**
+     * Posts a UserCredentialUsageDetails with a new object
+     *
+     * @param newUserCredentialUsageDetails the object to create/update
+     * @return the created UserCredentialUsageDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserCredentialUsageDetails put(final UserCredentialUsageDetails newUserCredentialUsageDetails) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class OfficeClientConfigurationAssignmentCollectionRequest extends BaseCo
     public void post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment, final ICallback<OfficeClientConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfficeClientConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfficeClientConfigurationAssignment, callback);
     }
 
     public OfficeClientConfigurationAssignment post(final OfficeClientConfigurationAssignment newOfficeClientConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OfficeClientConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfficeClientConfigurationAssignment);
     }
 
@@ -106,6 +106,27 @@ public class OfficeClientConfigurationAssignmentCollectionRequest extends BaseCo
         return (OfficeClientConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOfficeClientConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OfficeClientConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOfficeClientConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOfficeClientConfigurationAssignmentCollectionRequest)this;
+    }
     public IOfficeClientConfigurationAssignmentCollectionPage buildFromResponse(final OfficeClientConfigurationAssignmentCollectionResponse response) {
         final IOfficeClientConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

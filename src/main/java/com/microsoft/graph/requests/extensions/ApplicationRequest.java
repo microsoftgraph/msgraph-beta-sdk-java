@@ -14,14 +14,14 @@ import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionReque
 import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -135,6 +135,27 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
      */
     public Application post(final Application newApplication) throws ClientException {
         return send(HttpMethod.POST, newApplication);
+    }
+
+    /**
+     * Creates a Application with a new object
+     *
+     * @param newApplication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Application newApplication, final ICallback<Application> callback) {
+        send(HttpMethod.PUT, callback, newApplication);
+    }
+
+    /**
+     * Creates a Application with a new object
+     *
+     * @param newApplication the object to create/update
+     * @return the created Application
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Application put(final Application newApplication) throws ClientException {
+        return send(HttpMethod.PUT, newApplication);
     }
 
     /**

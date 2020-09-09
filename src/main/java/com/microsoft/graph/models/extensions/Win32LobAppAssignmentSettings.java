@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.Win32LobAppDeliveryOptimizationPriority;
+import com.microsoft.graph.models.extensions.MobileAppInstallTimeSettings;
 import com.microsoft.graph.models.generated.Win32LobAppNotification;
 import com.microsoft.graph.models.extensions.Win32LobAppRestartSettings;
-import com.microsoft.graph.models.extensions.MobileAppInstallTimeSettings;
-import com.microsoft.graph.models.generated.Win32LobAppDeliveryOptimizationPriority;
 import com.microsoft.graph.models.extensions.MobileAppAssignmentSettings;
 
 
@@ -31,6 +31,22 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
 
 
     /**
+     * The Delivery Optimization Priority.
+     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
+     */
+    @SerializedName("deliveryOptimizationPriority")
+    @Expose
+    public Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
+
+    /**
+     * The Install Time Settings.
+     * The install time settings to apply for this app assignment.
+     */
+    @SerializedName("installTimeSettings")
+    @Expose
+    public MobileAppInstallTimeSettings installTimeSettings;
+
+    /**
      * The Notifications.
      * The notification status for this app assignment.
      */
@@ -45,22 +61,6 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     @SerializedName("restartSettings")
     @Expose
     public Win32LobAppRestartSettings restartSettings;
-
-    /**
-     * The Install Time Settings.
-     * The install time settings to apply for this app assignment.
-     */
-    @SerializedName("installTimeSettings")
-    @Expose
-    public MobileAppInstallTimeSettings installTimeSettings;
-
-    /**
-     * The Delivery Optimization Priority.
-     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
-     */
-    @SerializedName("deliveryOptimizationPriority")
-    @Expose
-    public Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
 
 
     /**

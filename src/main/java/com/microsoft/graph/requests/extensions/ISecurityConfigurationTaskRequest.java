@@ -80,6 +80,23 @@ public interface ISecurityConfigurationTaskRequest extends IHttpRequest {
     SecurityConfigurationTask post(final SecurityConfigurationTask newSecurityConfigurationTask) throws ClientException;
 
     /**
+     * Posts a SecurityConfigurationTask with a new object
+     *
+     * @param newSecurityConfigurationTask the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<SecurityConfigurationTask> callback);
+
+    /**
+     * Posts a SecurityConfigurationTask with a new object
+     *
+     * @param newSecurityConfigurationTask the object to create/update
+     * @return the created SecurityConfigurationTask
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SecurityConfigurationTask put(final SecurityConfigurationTask newSecurityConfigurationTask) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

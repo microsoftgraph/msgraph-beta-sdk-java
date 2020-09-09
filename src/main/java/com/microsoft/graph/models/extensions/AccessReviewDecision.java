@@ -28,44 +28,20 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Access Recommendation.
+     * 
+     */
+    @SerializedName("accessRecommendation")
+    @Expose
+    public String accessRecommendation;
+
+    /**
      * The Access Review Id.
      * 
      */
     @SerializedName("accessReviewId")
     @Expose
     public String accessReviewId;
-
-    /**
-     * The Reviewed By.
-     * 
-     */
-    @SerializedName("reviewedBy")
-    @Expose
-    public UserIdentity reviewedBy;
-
-    /**
-     * The Reviewed Date Time.
-     * 
-     */
-    @SerializedName("reviewedDateTime")
-    @Expose
-    public java.util.Calendar reviewedDateTime;
-
-    /**
-     * The Review Result.
-     * 
-     */
-    @SerializedName("reviewResult")
-    @Expose
-    public String reviewResult;
-
-    /**
-     * The Justification.
-     * 
-     */
-    @SerializedName("justification")
-    @Expose
-    public String justification;
 
     /**
      * The Applied By.
@@ -92,12 +68,36 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
     public String applyResult;
 
     /**
-     * The Access Recommendation.
+     * The Justification.
      * 
      */
-    @SerializedName("accessRecommendation")
+    @SerializedName("justification")
     @Expose
-    public String accessRecommendation;
+    public String justification;
+
+    /**
+     * The Reviewed By.
+     * 
+     */
+    @SerializedName("reviewedBy")
+    @Expose
+    public UserIdentity reviewedBy;
+
+    /**
+     * The Reviewed Date Time.
+     * 
+     */
+    @SerializedName("reviewedDateTime")
+    @Expose
+    public java.util.Calendar reviewedDateTime;
+
+    /**
+     * The Review Result.
+     * 
+     */
+    @SerializedName("reviewResult")
+    @Expose
+    public String reviewResult;
 
 
     /**

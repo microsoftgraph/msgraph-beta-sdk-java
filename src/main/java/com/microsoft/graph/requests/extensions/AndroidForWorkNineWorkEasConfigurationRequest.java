@@ -112,6 +112,27 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
     }
 
     /**
+     * Creates a AndroidForWorkNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<AndroidForWorkNineWorkEasConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidForWorkNineWorkEasConfiguration);
+    }
+
+    /**
+     * Creates a AndroidForWorkNineWorkEasConfiguration with a new object
+     *
+     * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
+     * @return the created AndroidForWorkNineWorkEasConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidForWorkNineWorkEasConfiguration put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidForWorkNineWorkEasConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

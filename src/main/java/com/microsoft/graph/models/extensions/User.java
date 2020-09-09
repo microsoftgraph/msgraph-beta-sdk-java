@@ -25,23 +25,23 @@ import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
-import com.microsoft.graph.models.extensions.OutlookUser;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.models.extensions.Person;
-import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.ContactFolder;
+import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.InferenceClassification;
+import com.microsoft.graph.models.extensions.Group;
+import com.microsoft.graph.models.extensions.MailFolder;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.OutlookUser;
+import com.microsoft.graph.models.extensions.Person;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Extension;
-import com.microsoft.graph.models.extensions.Approval;
 import com.microsoft.graph.models.extensions.AppConsentRequest;
+import com.microsoft.graph.models.extensions.Approval;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
@@ -65,6 +65,7 @@ import com.microsoft.graph.models.extensions.Authentication;
 import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.UserTeamwork;
+import com.microsoft.graph.models.extensions.Todo;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
@@ -73,24 +74,24 @@ import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
-import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
-import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionResponse;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
+import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
-import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
-import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
-import com.microsoft.graph.requests.extensions.CalendarGroupCollectionResponse;
-import com.microsoft.graph.requests.extensions.CalendarGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.EventCollectionResponse;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.PersonCollectionResponse;
 import com.microsoft.graph.requests.extensions.PersonCollectionPage;
-import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
-import com.microsoft.graph.requests.extensions.ContactCollectionPage;
-import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
-import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
@@ -99,10 +100,10 @@ import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
 import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
-import com.microsoft.graph.requests.extensions.ApprovalCollectionResponse;
-import com.microsoft.graph.requests.extensions.ApprovalCollectionPage;
 import com.microsoft.graph.requests.extensions.AppConsentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppConsentRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.ApprovalCollectionResponse;
+import com.microsoft.graph.requests.extensions.ApprovalCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionPage;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionResponse;
@@ -208,7 +209,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
      */
     @SerializedName("companyName")
     @Expose
@@ -277,6 +278,22 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("employeeId")
     @Expose
     public String employeeId;
+
+    /**
+     * The External User State.
+     * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
+     */
+    @SerializedName("externalUserState")
+    @Expose
+    public String externalUserState;
+
+    /**
+     * The External User State Change Date Time.
+     * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
+     */
+    @SerializedName("externalUserStateChangeDateTime")
+    @Expose
+    public String externalUserStateChangeDateTime;
 
     /**
      * The Fax Number.
@@ -360,7 +377,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
      */
     @SerializedName("mail")
     @Expose
@@ -383,12 +400,28 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String mobilePhone;
 
     /**
+     * The Office Location.
+     * The office location in the user's place of business.
+     */
+    @SerializedName("officeLocation")
+    @Expose
+    public String officeLocation;
+
+    /**
      * The On Premises Distinguished Name.
      * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
     @SerializedName("onPremisesDistinguishedName")
     @Expose
     public String onPremisesDistinguishedName;
+
+    /**
+     * The On Premises Domain Name.
+     * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+     */
+    @SerializedName("onPremisesDomainName")
+    @Expose
+    public String onPremisesDomainName;
 
     /**
      * The On Premises Extension Attributes.
@@ -423,6 +456,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
 
     /**
+     * The On Premises Sam Account Name.
+     * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+     */
+    @SerializedName("onPremisesSamAccountName")
+    @Expose
+    public String onPremisesSamAccountName;
+
+    /**
      * The On Premises Security Identifier.
      * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
      */
@@ -437,22 +478,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("onPremisesSyncEnabled")
     @Expose
     public Boolean onPremisesSyncEnabled;
-
-    /**
-     * The On Premises Domain Name.
-     * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
-     */
-    @SerializedName("onPremisesDomainName")
-    @Expose
-    public String onPremisesDomainName;
-
-    /**
-     * The On Premises Sam Account Name.
-     * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
-     */
-    @SerializedName("onPremisesSamAccountName")
-    @Expose
-    public String onPremisesSamAccountName;
 
     /**
      * The On Premises User Principal Name.
@@ -487,14 +512,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public PasswordProfile passwordProfile;
 
     /**
-     * The Office Location.
-     * The office location in the user's place of business.
-     */
-    @SerializedName("officeLocation")
-    @Expose
-    public String officeLocation;
-
-    /**
      * The Postal Code.
      * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
      */
@@ -504,7 +521,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Data Location.
-     * The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
+     * 
      */
     @SerializedName("preferredDataLocation")
     @Expose
@@ -597,22 +614,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The External User State.
-     * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
-     */
-    @SerializedName("externalUserState")
-    @Expose
-    public String externalUserState;
-
-    /**
-     * The External User State Change Date Time.
-     * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
-     */
-    @SerializedName("externalUserStateChangeDateTime")
-    @Expose
-    public String externalUserStateChangeDateTime;
 
     /**
      * The User Type.
@@ -803,18 +804,56 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
-     * The Outlook.
-     * Read-only.
+     * The Calendar.
+     * The user's primary calendar. Read-only.
      */
-    @SerializedName("outlook")
+    @SerializedName("calendar")
     @Expose
-    public OutlookUser outlook;
+    public Calendar calendar;
 
     /**
-     * The Messages.
-     * The messages in a mailbox or folder. Read-only. Nullable.
+     * The Calendar Groups.
+     * The user's calendar groups. Read-only. Nullable.
      */
-    public MessageCollectionPage messages;
+    public CalendarGroupCollectionPage calendarGroups;
+
+    /**
+     * The Calendars.
+     * The user's calendars. Read-only. Nullable.
+     */
+    public CalendarCollectionPage calendars;
+
+    /**
+     * The Calendar View.
+     * The calendar view for the calendar. Read-only. Nullable.
+     */
+    public EventCollectionPage calendarView;
+
+    /**
+     * The Contact Folders.
+     * The user's contacts folders. Read-only. Nullable.
+     */
+    public ContactFolderCollectionPage contactFolders;
+
+    /**
+     * The Contacts.
+     * The user's contacts. Read-only. Nullable.
+     */
+    public ContactCollectionPage contacts;
+
+    /**
+     * The Events.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     */
+    public EventCollectionPage events;
+
+    /**
+     * The Inference Classification.
+     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     */
+    @SerializedName("inferenceClassification")
+    @Expose
+    public InferenceClassification inferenceClassification;
 
     /**
      * The Joined Groups.
@@ -829,62 +868,24 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public MailFolderCollectionPage mailFolders;
 
     /**
-     * The Calendar.
-     * The user's primary calendar. Read-only.
+     * The Messages.
+     * The messages in a mailbox or folder. Read-only. Nullable.
      */
-    @SerializedName("calendar")
+    public MessageCollectionPage messages;
+
+    /**
+     * The Outlook.
+     * Read-only.
+     */
+    @SerializedName("outlook")
     @Expose
-    public Calendar calendar;
-
-    /**
-     * The Calendars.
-     * The user's calendars. Read-only. Nullable.
-     */
-    public CalendarCollectionPage calendars;
-
-    /**
-     * The Calendar Groups.
-     * The user's calendar groups. Read-only. Nullable.
-     */
-    public CalendarGroupCollectionPage calendarGroups;
-
-    /**
-     * The Calendar View.
-     * The calendar view for the calendar. Read-only. Nullable.
-     */
-    public EventCollectionPage calendarView;
-
-    /**
-     * The Events.
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
-     */
-    public EventCollectionPage events;
+    public OutlookUser outlook;
 
     /**
      * The People.
      * People that are relevant to the user. Read-only. Nullable.
      */
     public PersonCollectionPage people;
-
-    /**
-     * The Contacts.
-     * The user's contacts. Read-only. Nullable.
-     */
-    public ContactCollectionPage contacts;
-
-    /**
-     * The Contact Folders.
-     * The user's contacts folders. Read-only. Nullable.
-     */
-    public ContactFolderCollectionPage contactFolders;
-
-    /**
-     * The Inference Classification.
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
-     */
-    @SerializedName("inferenceClassification")
-    @Expose
-    public InferenceClassification inferenceClassification;
 
     /**
      * The Photo.
@@ -927,16 +928,16 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public ExtensionCollectionPage extensions;
 
     /**
-     * The Approvals.
-     * 
-     */
-    public ApprovalCollectionPage approvals;
-
-    /**
      * The App Consent Requests For Approval.
      * 
      */
     public AppConsentRequestCollectionPage appConsentRequestsForApproval;
+
+    /**
+     * The Approvals.
+     * 
+     */
+    public ApprovalCollectionPage approvals;
 
     /**
      * The Pending Access Review Instances.
@@ -1091,6 +1092,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("teamwork")
     @Expose
     public UserTeamwork teamwork;
+
+    /**
+     * The Todo.
+     * 
+     */
+    @SerializedName("todo")
+    @Expose
+    public Todo todo;
 
 
     /**
@@ -1292,20 +1301,100 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
-        if (json.has("messages")) {
-            final MessageCollectionResponse response = new MessageCollectionResponse();
-            if (json.has("messages@odata.nextLink")) {
-                response.nextLink = json.get("messages@odata.nextLink").getAsString();
+        if (json.has("calendarGroups")) {
+            final CalendarGroupCollectionResponse response = new CalendarGroupCollectionResponse();
+            if (json.has("calendarGroups@odata.nextLink")) {
+                response.nextLink = json.get("calendarGroups@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("messages").toString(), JsonObject[].class);
-            final Message[] array = new Message[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarGroups").toString(), JsonObject[].class);
+            final CalendarGroup[] array = new CalendarGroup[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Message.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CalendarGroup.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            messages = new MessageCollectionPage(response, null);
+            calendarGroups = new CalendarGroupCollectionPage(response, null);
+        }
+
+        if (json.has("calendars")) {
+            final CalendarCollectionResponse response = new CalendarCollectionResponse();
+            if (json.has("calendars@odata.nextLink")) {
+                response.nextLink = json.get("calendars@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendars").toString(), JsonObject[].class);
+            final Calendar[] array = new Calendar[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Calendar.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendars = new CalendarCollectionPage(response, null);
+        }
+
+        if (json.has("calendarView")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("calendarView@odata.nextLink")) {
+                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendarView = new EventCollectionPage(response, null);
+        }
+
+        if (json.has("contactFolders")) {
+            final ContactFolderCollectionResponse response = new ContactFolderCollectionResponse();
+            if (json.has("contactFolders@odata.nextLink")) {
+                response.nextLink = json.get("contactFolders@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contactFolders").toString(), JsonObject[].class);
+            final ContactFolder[] array = new ContactFolder[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContactFolder.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            contactFolders = new ContactFolderCollectionPage(response, null);
+        }
+
+        if (json.has("contacts")) {
+            final ContactCollectionResponse response = new ContactCollectionResponse();
+            if (json.has("contacts@odata.nextLink")) {
+                response.nextLink = json.get("contacts@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contacts").toString(), JsonObject[].class);
+            final Contact[] array = new Contact[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Contact.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            contacts = new ContactCollectionPage(response, null);
+        }
+
+        if (json.has("events")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("events@odata.nextLink")) {
+                response.nextLink = json.get("events@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            events = new EventCollectionPage(response, null);
         }
 
         if (json.has("joinedGroups")) {
@@ -1340,68 +1429,20 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             mailFolders = new MailFolderCollectionPage(response, null);
         }
 
-        if (json.has("calendars")) {
-            final CalendarCollectionResponse response = new CalendarCollectionResponse();
-            if (json.has("calendars@odata.nextLink")) {
-                response.nextLink = json.get("calendars@odata.nextLink").getAsString();
+        if (json.has("messages")) {
+            final MessageCollectionResponse response = new MessageCollectionResponse();
+            if (json.has("messages@odata.nextLink")) {
+                response.nextLink = json.get("messages@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendars").toString(), JsonObject[].class);
-            final Calendar[] array = new Calendar[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("messages").toString(), JsonObject[].class);
+            final Message[] array = new Message[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Calendar.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Message.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            calendars = new CalendarCollectionPage(response, null);
-        }
-
-        if (json.has("calendarGroups")) {
-            final CalendarGroupCollectionResponse response = new CalendarGroupCollectionResponse();
-            if (json.has("calendarGroups@odata.nextLink")) {
-                response.nextLink = json.get("calendarGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarGroups").toString(), JsonObject[].class);
-            final CalendarGroup[] array = new CalendarGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CalendarGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calendarGroups = new CalendarGroupCollectionPage(response, null);
-        }
-
-        if (json.has("calendarView")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("calendarView@odata.nextLink")) {
-                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calendarView = new EventCollectionPage(response, null);
-        }
-
-        if (json.has("events")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("events@odata.nextLink")) {
-                response.nextLink = json.get("events@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            events = new EventCollectionPage(response, null);
+            messages = new MessageCollectionPage(response, null);
         }
 
         if (json.has("people")) {
@@ -1418,38 +1459,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             people = new PersonCollectionPage(response, null);
-        }
-
-        if (json.has("contacts")) {
-            final ContactCollectionResponse response = new ContactCollectionResponse();
-            if (json.has("contacts@odata.nextLink")) {
-                response.nextLink = json.get("contacts@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contacts").toString(), JsonObject[].class);
-            final Contact[] array = new Contact[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Contact.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            contacts = new ContactCollectionPage(response, null);
-        }
-
-        if (json.has("contactFolders")) {
-            final ContactFolderCollectionResponse response = new ContactFolderCollectionResponse();
-            if (json.has("contactFolders@odata.nextLink")) {
-                response.nextLink = json.get("contactFolders@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contactFolders").toString(), JsonObject[].class);
-            final ContactFolder[] array = new ContactFolder[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContactFolder.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            contactFolders = new ContactFolderCollectionPage(response, null);
         }
 
         if (json.has("photos")) {
@@ -1516,22 +1525,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             extensions = new ExtensionCollectionPage(response, null);
         }
 
-        if (json.has("approvals")) {
-            final ApprovalCollectionResponse response = new ApprovalCollectionResponse();
-            if (json.has("approvals@odata.nextLink")) {
-                response.nextLink = json.get("approvals@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("approvals").toString(), JsonObject[].class);
-            final Approval[] array = new Approval[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Approval.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            approvals = new ApprovalCollectionPage(response, null);
-        }
-
         if (json.has("appConsentRequestsForApproval")) {
             final AppConsentRequestCollectionResponse response = new AppConsentRequestCollectionResponse();
             if (json.has("appConsentRequestsForApproval@odata.nextLink")) {
@@ -1546,6 +1539,22 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             appConsentRequestsForApproval = new AppConsentRequestCollectionPage(response, null);
+        }
+
+        if (json.has("approvals")) {
+            final ApprovalCollectionResponse response = new ApprovalCollectionResponse();
+            if (json.has("approvals@odata.nextLink")) {
+                response.nextLink = json.get("approvals@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("approvals").toString(), JsonObject[].class);
+            final Approval[] array = new Approval[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Approval.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            approvals = new ApprovalCollectionPage(response, null);
         }
 
         if (json.has("pendingAccessReviewInstances")) {

@@ -118,6 +118,27 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
     }
 
     /**
+     * Creates a CustomerPaymentJournal with a new object
+     *
+     * @param newCustomerPaymentJournal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<CustomerPaymentJournal> callback) {
+        send(HttpMethod.PUT, callback, newCustomerPaymentJournal);
+    }
+
+    /**
+     * Creates a CustomerPaymentJournal with a new object
+     *
+     * @param newCustomerPaymentJournal the object to create/update
+     * @return the created CustomerPaymentJournal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CustomerPaymentJournal put(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException {
+        return send(HttpMethod.PUT, newCustomerPaymentJournal);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

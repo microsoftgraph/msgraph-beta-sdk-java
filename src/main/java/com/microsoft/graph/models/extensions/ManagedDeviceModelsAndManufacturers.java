@@ -36,20 +36,20 @@ public class ManagedDeviceModelsAndManufacturers implements IJsonBackedObject {
     }
 
     /**
-     * The Device Models.
-     * List of Models for managed devices in the account
-     */
-    @SerializedName("deviceModels")
-    @Expose
-    public java.util.List<String> deviceModels;
-
-    /**
      * The Device Manufacturers.
      * List of Manufactures for managed devices in the account
      */
     @SerializedName("deviceManufacturers")
     @Expose
     public java.util.List<String> deviceManufacturers;
+
+    /**
+     * The Device Models.
+     * List of Models for managed devices in the account
+     */
+    @SerializedName("deviceModels")
+    @Expose
+    public java.util.List<String> deviceModels;
 
 
     /**

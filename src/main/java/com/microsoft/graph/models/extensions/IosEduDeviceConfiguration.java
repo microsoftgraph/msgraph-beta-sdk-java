@@ -28,12 +28,12 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements IJ
 
 
     /**
-     * The Teacher Certificate Settings.
-     * The Trusted Root and PFX certificates for Teacher
+     * The Device Certificate Settings.
+     * The Trusted Root and PFX certificates for Device
      */
-    @SerializedName("teacherCertificateSettings")
+    @SerializedName("deviceCertificateSettings")
     @Expose
-    public IosEduCertificateSettings teacherCertificateSettings;
+    public IosEduCertificateSettings deviceCertificateSettings;
 
     /**
      * The Student Certificate Settings.
@@ -44,12 +44,12 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements IJ
     public IosEduCertificateSettings studentCertificateSettings;
 
     /**
-     * The Device Certificate Settings.
-     * The Trusted Root and PFX certificates for Device
+     * The Teacher Certificate Settings.
+     * The Trusted Root and PFX certificates for Teacher
      */
-    @SerializedName("deviceCertificateSettings")
+    @SerializedName("teacherCertificateSettings")
     @Expose
-    public IosEduCertificateSettings deviceCertificateSettings;
+    public IosEduCertificateSettings teacherCertificateSettings;
 
 
     /**

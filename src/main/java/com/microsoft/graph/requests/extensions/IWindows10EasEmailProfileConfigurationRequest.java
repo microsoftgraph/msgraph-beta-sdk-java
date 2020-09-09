@@ -80,6 +80,23 @@ public interface IWindows10EasEmailProfileConfigurationRequest extends IHttpRequ
     Windows10EasEmailProfileConfiguration post(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException;
 
     /**
+     * Posts a Windows10EasEmailProfileConfiguration with a new object
+     *
+     * @param newWindows10EasEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<Windows10EasEmailProfileConfiguration> callback);
+
+    /**
+     * Posts a Windows10EasEmailProfileConfiguration with a new object
+     *
+     * @param newWindows10EasEmailProfileConfiguration the object to create/update
+     * @return the created Windows10EasEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10EasEmailProfileConfiguration put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

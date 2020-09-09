@@ -27,20 +27,20 @@ public class Presence extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Availability.
-     * 
-     */
-    @SerializedName("availability")
-    @Expose
-    public String availability;
-
-    /**
      * The Activity.
      * 
      */
     @SerializedName("activity")
     @Expose
     public String activity;
+
+    /**
+     * The Availability.
+     * 
+     */
+    @SerializedName("availability")
+    @Expose
+    public String availability;
 
 
     /**

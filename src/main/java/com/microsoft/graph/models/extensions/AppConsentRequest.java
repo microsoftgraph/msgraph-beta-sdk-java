@@ -31,20 +31,20 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The App Id.
-     * 
-     */
-    @SerializedName("appId")
-    @Expose
-    public String appId;
-
-    /**
      * The App Display Name.
      * 
      */
     @SerializedName("appDisplayName")
     @Expose
     public String appDisplayName;
+
+    /**
+     * The App Id.
+     * 
+     */
+    @SerializedName("appId")
+    @Expose
+    public String appId;
 
     /**
      * The Consent Type.

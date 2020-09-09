@@ -112,6 +112,27 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
     }
 
     /**
+     * Creates a AndroidManagedStoreWebApp with a new object
+     *
+     * @param newAndroidManagedStoreWebApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp, final ICallback<AndroidManagedStoreWebApp> callback) {
+        send(HttpMethod.PUT, callback, newAndroidManagedStoreWebApp);
+    }
+
+    /**
+     * Creates a AndroidManagedStoreWebApp with a new object
+     *
+     * @param newAndroidManagedStoreWebApp the object to create/update
+     * @return the created AndroidManagedStoreWebApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidManagedStoreWebApp put(final AndroidManagedStoreWebApp newAndroidManagedStoreWebApp) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidManagedStoreWebApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

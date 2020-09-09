@@ -62,14 +62,14 @@ public class SalesCreditMemoCollectionRequest extends BaseCollectionRequest<Sale
     public void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<SalesCreditMemo> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesCreditMemoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesCreditMemo, callback);
     }
 
     public SalesCreditMemo post(final SalesCreditMemo newSalesCreditMemo) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SalesCreditMemoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesCreditMemo);
     }
 
@@ -106,6 +106,27 @@ public class SalesCreditMemoCollectionRequest extends BaseCollectionRequest<Sale
         return (SalesCreditMemoCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISalesCreditMemoCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SalesCreditMemoCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISalesCreditMemoCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISalesCreditMemoCollectionRequest)this;
+    }
     public ISalesCreditMemoCollectionPage buildFromResponse(final SalesCreditMemoCollectionResponse response) {
         final ISalesCreditMemoCollectionRequestBuilder builder;
         if (response.nextLink != null) {

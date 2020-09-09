@@ -52,11 +52,11 @@ public class AndroidDeviceOwnerEnrollmentProfileRequestBuilder extends BaseReque
 
 
 
-    public IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder revokeToken() {
-        return new AndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeToken"), getClient(), null);
-    }
-
     public IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder createToken(final Integer tokenValidityInSeconds) {
         return new AndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createToken"), getClient(), null, tokenValidityInSeconds);
+    }
+
+    public IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder revokeToken() {
+        return new AndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeToken"), getClient(), null);
     }
 }

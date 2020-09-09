@@ -117,6 +117,27 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
     }
 
     /**
+     * Creates a IntuneBrandingProfile with a new object
+     *
+     * @param newIntuneBrandingProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<IntuneBrandingProfile> callback) {
+        send(HttpMethod.PUT, callback, newIntuneBrandingProfile);
+    }
+
+    /**
+     * Creates a IntuneBrandingProfile with a new object
+     *
+     * @param newIntuneBrandingProfile the object to create/update
+     * @return the created IntuneBrandingProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IntuneBrandingProfile put(final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException {
+        return send(HttpMethod.PUT, newIntuneBrandingProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

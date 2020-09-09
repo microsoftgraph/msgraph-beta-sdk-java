@@ -8,18 +8,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -121,6 +121,27 @@ public class PlannerUserRequest extends BaseRequest implements IPlannerUserReque
      */
     public PlannerUser post(final PlannerUser newPlannerUser) throws ClientException {
         return send(HttpMethod.POST, newPlannerUser);
+    }
+
+    /**
+     * Creates a PlannerUser with a new object
+     *
+     * @param newPlannerUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerUser newPlannerUser, final ICallback<PlannerUser> callback) {
+        send(HttpMethod.PUT, callback, newPlannerUser);
+    }
+
+    /**
+     * Creates a PlannerUser with a new object
+     *
+     * @param newPlannerUser the object to create/update
+     * @return the created PlannerUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerUser put(final PlannerUser newPlannerUser) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerUser);
     }
 
     /**

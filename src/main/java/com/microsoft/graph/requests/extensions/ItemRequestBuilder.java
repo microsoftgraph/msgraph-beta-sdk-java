@@ -57,13 +57,6 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
     }
 
 
-    public IPictureCollectionRequestBuilder picture() {
-        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
-    }
-
-    public IPictureRequestBuilder picture(final String id) {
-        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for ItemCategory
@@ -72,5 +65,12 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
      */
     public IItemCategoryRequestBuilder itemCategory() {
         return new ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategory"), getClient(), null);
+    }
+    public IPictureCollectionRequestBuilder picture() {
+        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    }
+
+    public IPictureRequestBuilder picture(final String id) {
+        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }

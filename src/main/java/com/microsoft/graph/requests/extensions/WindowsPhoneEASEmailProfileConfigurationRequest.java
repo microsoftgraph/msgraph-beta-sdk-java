@@ -112,6 +112,27 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
     }
 
     /**
+     * Creates a WindowsPhoneEASEmailProfileConfiguration with a new object
+     *
+     * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<WindowsPhoneEASEmailProfileConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhoneEASEmailProfileConfiguration);
+    }
+
+    /**
+     * Creates a WindowsPhoneEASEmailProfileConfiguration with a new object
+     *
+     * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
+     * @return the created WindowsPhoneEASEmailProfileConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhoneEASEmailProfileConfiguration put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhoneEASEmailProfileConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -27,52 +27,12 @@ public class MobileAppInstallSummary extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Installed Device Count.
-     * Number of Devices that have successfully installed this app.
-     */
-    @SerializedName("installedDeviceCount")
-    @Expose
-    public Integer installedDeviceCount;
-
-    /**
      * The Failed Device Count.
      * Number of Devices that have failed to install this app.
      */
     @SerializedName("failedDeviceCount")
     @Expose
     public Integer failedDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Number of Devices that are not applicable for this app.
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
-
-    /**
-     * The Not Installed Device Count.
-     * Number of Devices that does not have this app installed.
-     */
-    @SerializedName("notInstalledDeviceCount")
-    @Expose
-    public Integer notInstalledDeviceCount;
-
-    /**
-     * The Pending Install Device Count.
-     * Number of Devices that have been notified to install this app.
-     */
-    @SerializedName("pendingInstallDeviceCount")
-    @Expose
-    public Integer pendingInstallDeviceCount;
-
-    /**
-     * The Installed User Count.
-     * Number of Users whose devices have all succeeded to install this app.
-     */
-    @SerializedName("installedUserCount")
-    @Expose
-    public Integer installedUserCount;
 
     /**
      * The Failed User Count.
@@ -83,6 +43,30 @@ public class MobileAppInstallSummary extends Entity implements IJsonBackedObject
     public Integer failedUserCount;
 
     /**
+     * The Installed Device Count.
+     * Number of Devices that have successfully installed this app.
+     */
+    @SerializedName("installedDeviceCount")
+    @Expose
+    public Integer installedDeviceCount;
+
+    /**
+     * The Installed User Count.
+     * Number of Users whose devices have all succeeded to install this app.
+     */
+    @SerializedName("installedUserCount")
+    @Expose
+    public Integer installedUserCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Number of Devices that are not applicable for this app.
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
      * The Not Applicable User Count.
      * Number of Users whose devices were all not applicable for this app.
      */
@@ -91,12 +75,28 @@ public class MobileAppInstallSummary extends Entity implements IJsonBackedObject
     public Integer notApplicableUserCount;
 
     /**
+     * The Not Installed Device Count.
+     * Number of Devices that does not have this app installed.
+     */
+    @SerializedName("notInstalledDeviceCount")
+    @Expose
+    public Integer notInstalledDeviceCount;
+
+    /**
      * The Not Installed User Count.
      * Number of Users that have 1 or more devices that did not install this app.
      */
     @SerializedName("notInstalledUserCount")
     @Expose
     public Integer notInstalledUserCount;
+
+    /**
+     * The Pending Install Device Count.
+     * Number of Devices that have been notified to install this app.
+     */
+    @SerializedName("pendingInstallDeviceCount")
+    @Expose
+    public Integer pendingInstallDeviceCount;
 
     /**
      * The Pending Install User Count.

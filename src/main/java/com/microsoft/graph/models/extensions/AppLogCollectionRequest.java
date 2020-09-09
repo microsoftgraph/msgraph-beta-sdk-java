@@ -28,20 +28,12 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Status.
-     * Log upload status
+     * The Completed Date Time.
+     * Time at which the upload log request reached a terminal state
      */
-    @SerializedName("status")
+    @SerializedName("completedDateTime")
     @Expose
-    public AppLogUploadState status;
-
-    /**
-     * The Error Message.
-     * Error message if any during the upload process
-     */
-    @SerializedName("errorMessage")
-    @Expose
-    public String errorMessage;
+    public java.util.Calendar completedDateTime;
 
     /**
      * The Custom Log Folders.
@@ -52,12 +44,20 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
     public java.util.List<String> customLogFolders;
 
     /**
-     * The Completed Date Time.
-     * Time at which the upload log request reached a terminal state
+     * The Error Message.
+     * Error message if any during the upload process
      */
-    @SerializedName("completedDateTime")
+    @SerializedName("errorMessage")
     @Expose
-    public java.util.Calendar completedDateTime;
+    public String errorMessage;
+
+    /**
+     * The Status.
+     * Log upload status
+     */
+    @SerializedName("status")
+    @Expose
+    public AppLogUploadState status;
 
 
     /**

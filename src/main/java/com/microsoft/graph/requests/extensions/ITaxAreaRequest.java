@@ -80,6 +80,23 @@ public interface ITaxAreaRequest extends IHttpRequest {
     TaxArea post(final TaxArea newTaxArea) throws ClientException;
 
     /**
+     * Posts a TaxArea with a new object
+     *
+     * @param newTaxArea the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TaxArea newTaxArea, final ICallback<TaxArea> callback);
+
+    /**
+     * Posts a TaxArea with a new object
+     *
+     * @param newTaxArea the object to create/update
+     * @return the created TaxArea
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TaxArea put(final TaxArea newTaxArea) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

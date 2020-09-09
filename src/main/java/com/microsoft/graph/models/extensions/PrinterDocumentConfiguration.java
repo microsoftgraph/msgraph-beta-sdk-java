@@ -8,15 +8,15 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.PrintColorMode;
+import com.microsoft.graph.models.generated.PrintDuplexMode;
+import com.microsoft.graph.models.generated.PrinterFeedDirection;
+import com.microsoft.graph.models.generated.PrintFinishing;
+import com.microsoft.graph.models.extensions.PrintMargin;
+import com.microsoft.graph.models.generated.PrintMultipageLayout;
+import com.microsoft.graph.models.generated.PrintOrientation;
 import com.microsoft.graph.models.extensions.IntegerRange;
 import com.microsoft.graph.models.generated.PrintQuality;
-import com.microsoft.graph.models.generated.PrinterFeedDirection;
-import com.microsoft.graph.models.generated.PrintOrientation;
-import com.microsoft.graph.models.generated.PrintDuplexMode;
-import com.microsoft.graph.models.generated.PrintColorMode;
-import com.microsoft.graph.models.extensions.PrintMargin;
-import com.microsoft.graph.models.generated.PrintFinishing;
-import com.microsoft.graph.models.generated.PrintMultipageLayout;
 import com.microsoft.graph.models.generated.PrintScaling;
 
 
@@ -46,60 +46,12 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     }
 
     /**
-     * The Page Ranges.
+     * The Collate.
      * 
      */
-    @SerializedName("pageRanges")
+    @SerializedName("collate")
     @Expose
-    public java.util.List<IntegerRange> pageRanges;
-
-    /**
-     * The Quality.
-     * 
-     */
-    @SerializedName("quality")
-    @Expose
-    public PrintQuality quality;
-
-    /**
-     * The Dpi.
-     * 
-     */
-    @SerializedName("dpi")
-    @Expose
-    public Integer dpi;
-
-    /**
-     * The Feed Direction.
-     * 
-     */
-    @SerializedName("feedDirection")
-    @Expose
-    public PrinterFeedDirection feedDirection;
-
-    /**
-     * The Orientation.
-     * 
-     */
-    @SerializedName("orientation")
-    @Expose
-    public PrintOrientation orientation;
-
-    /**
-     * The Duplex Mode.
-     * 
-     */
-    @SerializedName("duplexMode")
-    @Expose
-    public PrintDuplexMode duplexMode;
-
-    /**
-     * The Copies.
-     * 
-     */
-    @SerializedName("copies")
-    @Expose
-    public Integer copies;
+    public Boolean collate;
 
     /**
      * The Color Mode.
@@ -110,44 +62,36 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     public PrintColorMode colorMode;
 
     /**
-     * The Input Bin.
+     * The Copies.
      * 
      */
-    @SerializedName("inputBin")
+    @SerializedName("copies")
     @Expose
-    public String inputBin;
+    public Integer copies;
 
     /**
-     * The Output Bin.
+     * The Dpi.
      * 
      */
-    @SerializedName("outputBin")
+    @SerializedName("dpi")
     @Expose
-    public String outputBin;
+    public Integer dpi;
 
     /**
-     * The Media Size.
+     * The Duplex Mode.
      * 
      */
-    @SerializedName("mediaSize")
+    @SerializedName("duplexMode")
     @Expose
-    public String mediaSize;
+    public PrintDuplexMode duplexMode;
 
     /**
-     * The Margin.
+     * The Feed Direction.
      * 
      */
-    @SerializedName("margin")
+    @SerializedName("feedDirection")
     @Expose
-    public PrintMargin margin;
-
-    /**
-     * The Media Type.
-     * 
-     */
-    @SerializedName("mediaType")
-    @Expose
-    public String mediaType;
+    public PrinterFeedDirection feedDirection;
 
     /**
      * The Finishings.
@@ -158,12 +102,44 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     public java.util.List<PrintFinishing> finishings;
 
     /**
-     * The Pages Per Sheet.
+     * The Fit Pdf To Page.
      * 
      */
-    @SerializedName("pagesPerSheet")
+    @SerializedName("fitPdfToPage")
     @Expose
-    public Integer pagesPerSheet;
+    public Boolean fitPdfToPage;
+
+    /**
+     * The Input Bin.
+     * 
+     */
+    @SerializedName("inputBin")
+    @Expose
+    public String inputBin;
+
+    /**
+     * The Margin.
+     * 
+     */
+    @SerializedName("margin")
+    @Expose
+    public PrintMargin margin;
+
+    /**
+     * The Media Size.
+     * 
+     */
+    @SerializedName("mediaSize")
+    @Expose
+    public String mediaSize;
+
+    /**
+     * The Media Type.
+     * 
+     */
+    @SerializedName("mediaType")
+    @Expose
+    public String mediaType;
 
     /**
      * The Multipage Layout.
@@ -174,12 +150,44 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     public PrintMultipageLayout multipageLayout;
 
     /**
-     * The Collate.
+     * The Orientation.
      * 
      */
-    @SerializedName("collate")
+    @SerializedName("orientation")
     @Expose
-    public Boolean collate;
+    public PrintOrientation orientation;
+
+    /**
+     * The Output Bin.
+     * 
+     */
+    @SerializedName("outputBin")
+    @Expose
+    public String outputBin;
+
+    /**
+     * The Page Ranges.
+     * 
+     */
+    @SerializedName("pageRanges")
+    @Expose
+    public java.util.List<IntegerRange> pageRanges;
+
+    /**
+     * The Pages Per Sheet.
+     * 
+     */
+    @SerializedName("pagesPerSheet")
+    @Expose
+    public Integer pagesPerSheet;
+
+    /**
+     * The Quality.
+     * 
+     */
+    @SerializedName("quality")
+    @Expose
+    public PrintQuality quality;
 
     /**
      * The Scaling.
@@ -188,14 +196,6 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     @SerializedName("scaling")
     @Expose
     public PrintScaling scaling;
-
-    /**
-     * The Fit Pdf To Page.
-     * 
-     */
-    @SerializedName("fitPdfToPage")
-    @Expose
-    public Boolean fitPdfToPage;
 
 
     /**

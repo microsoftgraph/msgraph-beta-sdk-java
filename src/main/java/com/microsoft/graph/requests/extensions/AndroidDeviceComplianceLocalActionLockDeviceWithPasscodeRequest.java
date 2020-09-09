@@ -112,6 +112,27 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
     }
 
     /**
+     * Creates a AndroidDeviceComplianceLocalActionLockDeviceWithPasscode with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
+    }
+
+    /**
+     * Creates a AndroidDeviceComplianceLocalActionLockDeviceWithPasscode with a new object
+     *
+     * @param newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the object to create/update
+     * @return the created AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode put(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

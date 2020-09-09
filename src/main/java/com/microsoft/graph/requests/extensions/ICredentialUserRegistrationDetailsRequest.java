@@ -80,6 +80,23 @@ public interface ICredentialUserRegistrationDetailsRequest extends IHttpRequest 
     CredentialUserRegistrationDetails post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException;
 
     /**
+     * Posts a CredentialUserRegistrationDetails with a new object
+     *
+     * @param newCredentialUserRegistrationDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<CredentialUserRegistrationDetails> callback);
+
+    /**
+     * Posts a CredentialUserRegistrationDetails with a new object
+     *
+     * @param newCredentialUserRegistrationDetails the object to create/update
+     * @return the created CredentialUserRegistrationDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CredentialUserRegistrationDetails put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

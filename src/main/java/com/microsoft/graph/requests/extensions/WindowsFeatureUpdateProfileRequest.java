@@ -121,6 +121,27 @@ public class WindowsFeatureUpdateProfileRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a WindowsFeatureUpdateProfile with a new object
+     *
+     * @param newWindowsFeatureUpdateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile, final ICallback<WindowsFeatureUpdateProfile> callback) {
+        send(HttpMethod.PUT, callback, newWindowsFeatureUpdateProfile);
+    }
+
+    /**
+     * Creates a WindowsFeatureUpdateProfile with a new object
+     *
+     * @param newWindowsFeatureUpdateProfile the object to create/update
+     * @return the created WindowsFeatureUpdateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsFeatureUpdateProfile put(final WindowsFeatureUpdateProfile newWindowsFeatureUpdateProfile) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsFeatureUpdateProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

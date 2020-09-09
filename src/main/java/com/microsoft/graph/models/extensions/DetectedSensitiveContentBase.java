@@ -37,12 +37,12 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
+     * The Confidence.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("confidence")
     @Expose
-    public java.util.UUID id;
+    public Integer confidence;
 
     /**
      * The Display Name.
@@ -53,20 +53,20 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Unique Count.
+     * The Id.
      * 
      */
-    @SerializedName("uniqueCount")
+    @SerializedName("id")
     @Expose
-    public Integer uniqueCount;
+    public java.util.UUID id;
 
     /**
-     * The Confidence.
+     * The Matches.
      * 
      */
-    @SerializedName("confidence")
+    @SerializedName("matches")
     @Expose
-    public Integer confidence;
+    public java.util.List<SensitiveContentLocation> matches;
 
     /**
      * The Recommended Confidence.
@@ -77,12 +77,12 @@ public class DetectedSensitiveContentBase implements IJsonBackedObject {
     public Integer recommendedConfidence;
 
     /**
-     * The Matches.
+     * The Unique Count.
      * 
      */
-    @SerializedName("matches")
+    @SerializedName("uniqueCount")
     @Expose
-    public java.util.List<SensitiveContentLocation> matches;
+    public Integer uniqueCount;
 
 
     /**

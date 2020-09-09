@@ -112,6 +112,27 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
     }
 
     /**
+     * Creates a GroupPolicyPresentationDecimalTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationDecimalTextBox the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<GroupPolicyPresentationDecimalTextBox> callback) {
+        send(HttpMethod.PUT, callback, newGroupPolicyPresentationDecimalTextBox);
+    }
+
+    /**
+     * Creates a GroupPolicyPresentationDecimalTextBox with a new object
+     *
+     * @param newGroupPolicyPresentationDecimalTextBox the object to create/update
+     * @return the created GroupPolicyPresentationDecimalTextBox
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupPolicyPresentationDecimalTextBox put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox) throws ClientException {
+        return send(HttpMethod.PUT, newGroupPolicyPresentationDecimalTextBox);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

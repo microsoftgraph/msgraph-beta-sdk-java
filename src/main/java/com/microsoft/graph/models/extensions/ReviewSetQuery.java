@@ -27,22 +27,6 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Query.
-     * 
-     */
-    @SerializedName("query")
-    @Expose
-    public String query;
-
-    /**
-     * The Last Modified By.
-     * 
-     */
-    @SerializedName("lastModifiedBy")
-    @Expose
-    public String lastModifiedBy;
-
-    /**
      * The Created By.
      * 
      */
@@ -51,12 +35,12 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
     public String createdBy;
 
     /**
-     * The Last Modified Date Time.
+     * The Created Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("createdDateTime")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Display Name.
@@ -67,12 +51,28 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Created Date Time.
+     * The Last Modified By.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("lastModifiedBy")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public String lastModifiedBy;
+
+    /**
+     * The Last Modified Date Time.
+     * 
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Query.
+     * 
+     */
+    @SerializedName("query")
+    @Expose
+    public String query;
 
 
     /**

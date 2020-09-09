@@ -80,6 +80,23 @@ public interface IIdentityProtectionRootRequest extends IHttpRequest {
     IdentityProtectionRoot post(final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException;
 
     /**
+     * Posts a IdentityProtectionRoot with a new object
+     *
+     * @param newIdentityProtectionRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<IdentityProtectionRoot> callback);
+
+    /**
+     * Posts a IdentityProtectionRoot with a new object
+     *
+     * @param newIdentityProtectionRoot the object to create/update
+     * @return the created IdentityProtectionRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IdentityProtectionRoot put(final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

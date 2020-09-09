@@ -62,14 +62,14 @@ public class SalesQuoteCollectionRequest extends BaseCollectionRequest<SalesQuot
     public void post(final SalesQuote newSalesQuote, final ICallback<SalesQuote> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SalesQuoteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesQuote, callback);
     }
 
     public SalesQuote post(final SalesQuote newSalesQuote) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SalesQuoteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSalesQuote);
     }
 
@@ -106,6 +106,27 @@ public class SalesQuoteCollectionRequest extends BaseCollectionRequest<SalesQuot
         return (SalesQuoteCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISalesQuoteCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SalesQuoteCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISalesQuoteCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISalesQuoteCollectionRequest)this;
+    }
     public ISalesQuoteCollectionPage buildFromResponse(final SalesQuoteCollectionResponse response) {
         final ISalesQuoteCollectionRequestBuilder builder;
         if (response.nextLink != null) {

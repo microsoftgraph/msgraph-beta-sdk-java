@@ -61,14 +61,14 @@ public class CommandCollectionRequest extends BaseCollectionRequest<CommandColle
     public void post(final Command newCommand, final ICallback<Command> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommandRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCommand, callback);
     }
 
     public Command post(final Command newCommand) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CommandRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCommand);
     }
 
@@ -105,6 +105,27 @@ public class CommandCollectionRequest extends BaseCollectionRequest<CommandColle
         return (CommandCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICommandCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CommandCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICommandCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICommandCollectionRequest)this;
+    }
     public ICommandCollectionPage buildFromResponse(final CommandCollectionResponse response) {
         final ICommandCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -112,6 +112,27 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a MacOSEndpointProtectionConfiguration with a new object
+     *
+     * @param newMacOSEndpointProtectionConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<MacOSEndpointProtectionConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newMacOSEndpointProtectionConfiguration);
+    }
+
+    /**
+     * Creates a MacOSEndpointProtectionConfiguration with a new object
+     *
+     * @param newMacOSEndpointProtectionConfiguration the object to create/update
+     * @return the created MacOSEndpointProtectionConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSEndpointProtectionConfiguration put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSEndpointProtectionConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

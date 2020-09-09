@@ -62,14 +62,14 @@ public class PrintTaskDefinitionCollectionRequest extends BaseCollectionRequest<
     public void post(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<PrintTaskDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PrintTaskDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintTaskDefinition, callback);
     }
 
     public PrintTaskDefinition post(final PrintTaskDefinition newPrintTaskDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PrintTaskDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPrintTaskDefinition);
     }
 
@@ -106,6 +106,27 @@ public class PrintTaskDefinitionCollectionRequest extends BaseCollectionRequest<
         return (PrintTaskDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPrintTaskDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PrintTaskDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPrintTaskDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPrintTaskDefinitionCollectionRequest)this;
+    }
     public IPrintTaskDefinitionCollectionPage buildFromResponse(final PrintTaskDefinitionCollectionResponse response) {
         final IPrintTaskDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

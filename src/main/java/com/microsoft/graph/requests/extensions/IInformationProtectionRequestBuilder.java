@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
 import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;
 import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
@@ -52,6 +52,10 @@ public interface IInformationProtectionRequestBuilder extends IRequestBuilder {
      */
     IInformationProtectionPolicyRequestBuilder policy();
 
+    IDataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies();
+
+    IDataLossPreventionPolicyRequestBuilder dataLossPreventionPolicies(final String id);
+
     ISensitivityLabelCollectionRequestBuilder sensitivityLabels();
 
     ISensitivityLabelRequestBuilder sensitivityLabels(final String id);
@@ -62,10 +66,6 @@ public interface IInformationProtectionRequestBuilder extends IRequestBuilder {
      * @return the ISensitivityPolicySettingsRequestBuilder instance
      */
     ISensitivityPolicySettingsRequestBuilder sensitivityPolicySettings();
-
-    IDataLossPreventionPolicyCollectionRequestBuilder dataLossPreventionPolicies();
-
-    IDataLossPreventionPolicyRequestBuilder dataLossPreventionPolicies(final String id);
 
     IThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests();
 

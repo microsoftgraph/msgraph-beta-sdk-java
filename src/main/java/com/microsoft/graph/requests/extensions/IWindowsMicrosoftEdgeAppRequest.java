@@ -80,6 +80,23 @@ public interface IWindowsMicrosoftEdgeAppRequest extends IHttpRequest {
     WindowsMicrosoftEdgeApp post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException;
 
     /**
+     * Posts a WindowsMicrosoftEdgeApp with a new object
+     *
+     * @param newWindowsMicrosoftEdgeApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<WindowsMicrosoftEdgeApp> callback);
+
+    /**
+     * Posts a WindowsMicrosoftEdgeApp with a new object
+     *
+     * @param newWindowsMicrosoftEdgeApp the object to create/update
+     * @return the created WindowsMicrosoftEdgeApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsMicrosoftEdgeApp put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -10,10 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
-import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.RetireScheduledManagedDevice;
 import com.microsoft.graph.models.generated.ScheduledRetireState;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyScript;
+import com.microsoft.graph.models.extensions.DeviceComplianceScriptValidationResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import java.util.Arrays;
@@ -23,10 +23,10 @@ import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyCollection
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyValidateComplianceScriptRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySetScheduledRetireStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySetScheduledRetireStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyValidateComplianceScriptRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -66,19 +66,19 @@ public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseRequestB
         return new DeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hasPayloadLinks"), getClient(), null, payloadIds);
     }
 
-    public IDeviceCompliancePolicyValidateComplianceScriptRequestBuilder validateComplianceScript(final DeviceCompliancePolicyScript deviceCompliancePolicyScript) {
-        return new DeviceCompliancePolicyValidateComplianceScriptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateComplianceScript"), getClient(), null, deviceCompliancePolicyScript);
-    }
-
     public IDeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder getDevicesScheduledToRetire() {
         return new DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDevicesScheduledToRetire"), getClient(), null);
+    }
+
+    public IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder refreshDeviceComplianceReportSummarization() {
+        return new DeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshDeviceComplianceReportSummarization"), getClient(), null);
     }
 
     public IDeviceCompliancePolicySetScheduledRetireStateRequestBuilder setScheduledRetireState(final ScheduledRetireState state, final java.util.List<String> managedDeviceIds) {
         return new DeviceCompliancePolicySetScheduledRetireStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setScheduledRetireState"), getClient(), null, state, managedDeviceIds);
     }
 
-    public IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder refreshDeviceComplianceReportSummarization() {
-        return new DeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshDeviceComplianceReportSummarization"), getClient(), null);
+    public IDeviceCompliancePolicyValidateComplianceScriptRequestBuilder validateComplianceScript(final DeviceCompliancePolicyScript deviceCompliancePolicyScript) {
+        return new DeviceCompliancePolicyValidateComplianceScriptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateComplianceScript"), getClient(), null, deviceCompliancePolicyScript);
     }
 }

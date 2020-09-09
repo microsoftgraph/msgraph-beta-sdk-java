@@ -29,6 +29,14 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
 
 
     /**
+     * The App Supports Oem Config.
+     * Whether or not this AppConfig is an OEMConfig policy.
+     */
+    @SerializedName("appSupportsOemConfig")
+    @Expose
+    public Boolean appSupportsOemConfig;
+
+    /**
      * The Package Id.
      * Android Enterprise app configuration package id.
      */
@@ -51,14 +59,6 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     @SerializedName("permissionActions")
     @Expose
     public java.util.List<AndroidPermissionAction> permissionActions;
-
-    /**
-     * The App Supports Oem Config.
-     * Whether or not this AppConfig is an OEMConfig policy.
-     */
-    @SerializedName("appSupportsOemConfig")
-    @Expose
-    public Boolean appSupportsOemConfig;
 
     /**
      * The Profile Applicability.

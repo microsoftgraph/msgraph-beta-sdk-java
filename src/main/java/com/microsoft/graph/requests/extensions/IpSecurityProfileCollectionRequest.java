@@ -62,14 +62,14 @@ public class IpSecurityProfileCollectionRequest extends BaseCollectionRequest<Ip
     public void post(final IpSecurityProfile newIpSecurityProfile, final ICallback<IpSecurityProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IpSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIpSecurityProfile, callback);
     }
 
     public IpSecurityProfile post(final IpSecurityProfile newIpSecurityProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IpSecurityProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIpSecurityProfile);
     }
 
@@ -106,6 +106,27 @@ public class IpSecurityProfileCollectionRequest extends BaseCollectionRequest<Ip
         return (IpSecurityProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIpSecurityProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IpSecurityProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIpSecurityProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIpSecurityProfileCollectionRequest)this;
+    }
     public IIpSecurityProfileCollectionPage buildFromResponse(final IpSecurityProfileCollectionResponse response) {
         final IIpSecurityProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

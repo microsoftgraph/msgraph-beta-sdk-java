@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
@@ -47,10 +47,6 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
     IApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IExtensionPropertyCollectionRequestBuilder extensionProperties();
-
-    IExtensionPropertyRequestBuilder extensionProperties(final String id);
-
     /**
      * Gets the request builder for DirectoryObject
      *
@@ -58,13 +54,17 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
      */
     IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
+    IExtensionPropertyCollectionRequestBuilder extensionProperties();
 
-    IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
+    IExtensionPropertyRequestBuilder extensionProperties(final String id);
 
     IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies();
 
     IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
+
+    IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
 
     ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies();
 

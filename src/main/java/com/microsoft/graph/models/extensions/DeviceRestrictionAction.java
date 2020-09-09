@@ -29,6 +29,14 @@ public class DeviceRestrictionAction extends DlpActionInfo implements IJsonBacke
 
 
     /**
+     * The Message.
+     * 
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
+
+    /**
      * The Restriction Action.
      * 
      */
@@ -43,14 +51,6 @@ public class DeviceRestrictionAction extends DlpActionInfo implements IJsonBacke
     @SerializedName("triggers")
     @Expose
     public java.util.List<RestrictionTrigger> triggers;
-
-    /**
-     * The Message.
-     * 
-     */
-    @SerializedName("message")
-    @Expose
-    public String message;
 
 
     /**

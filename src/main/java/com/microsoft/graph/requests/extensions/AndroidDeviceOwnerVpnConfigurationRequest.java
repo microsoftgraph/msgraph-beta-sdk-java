@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.AndroidDeviceOwnerCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -113,6 +113,27 @@ public class AndroidDeviceOwnerVpnConfigurationRequest extends BaseRequest imple
      */
     public AndroidDeviceOwnerVpnConfiguration post(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceOwnerVpnConfiguration);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerVpnConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerVpnConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration, final ICallback<AndroidDeviceOwnerVpnConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidDeviceOwnerVpnConfiguration);
+    }
+
+    /**
+     * Creates a AndroidDeviceOwnerVpnConfiguration with a new object
+     *
+     * @param newAndroidDeviceOwnerVpnConfiguration the object to create/update
+     * @return the created AndroidDeviceOwnerVpnConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidDeviceOwnerVpnConfiguration put(final AndroidDeviceOwnerVpnConfiguration newAndroidDeviceOwnerVpnConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidDeviceOwnerVpnConfiguration);
     }
 
     /**

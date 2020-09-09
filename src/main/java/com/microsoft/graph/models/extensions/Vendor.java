@@ -9,10 +9,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PostalAddressType;
-import com.microsoft.graph.models.extensions.Picture;
 import com.microsoft.graph.models.extensions.Currency;
-import com.microsoft.graph.models.extensions.PaymentTerm;
 import com.microsoft.graph.models.extensions.PaymentMethod;
+import com.microsoft.graph.models.extensions.PaymentTerm;
+import com.microsoft.graph.models.extensions.Picture;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.PictureCollectionResponse;
 import com.microsoft.graph.requests.extensions.PictureCollectionPage;
@@ -34,108 +34,12 @@ public class Vendor extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
-     * 
-     */
-    @SerializedName("number")
-    @Expose
-    public String number;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Address.
      * 
      */
     @SerializedName("address")
     @Expose
     public PostalAddressType address;
-
-    /**
-     * The Phone Number.
-     * 
-     */
-    @SerializedName("phoneNumber")
-    @Expose
-    public String phoneNumber;
-
-    /**
-     * The Email.
-     * 
-     */
-    @SerializedName("email")
-    @Expose
-    public String email;
-
-    /**
-     * The Website.
-     * 
-     */
-    @SerializedName("website")
-    @Expose
-    public String website;
-
-    /**
-     * The Tax Registration Number.
-     * 
-     */
-    @SerializedName("taxRegistrationNumber")
-    @Expose
-    public String taxRegistrationNumber;
-
-    /**
-     * The Currency Id.
-     * 
-     */
-    @SerializedName("currencyId")
-    @Expose
-    public java.util.UUID currencyId;
-
-    /**
-     * The Currency Code.
-     * 
-     */
-    @SerializedName("currencyCode")
-    @Expose
-    public String currencyCode;
-
-    /**
-     * The Payment Terms Id.
-     * 
-     */
-    @SerializedName("paymentTermsId")
-    @Expose
-    public java.util.UUID paymentTermsId;
-
-    /**
-     * The Payment Method Id.
-     * 
-     */
-    @SerializedName("paymentMethodId")
-    @Expose
-    public java.util.UUID paymentMethodId;
-
-    /**
-     * The Tax Liable.
-     * 
-     */
-    @SerializedName("taxLiable")
-    @Expose
-    public Boolean taxLiable;
-
-    /**
-     * The Blocked.
-     * 
-     */
-    @SerializedName("blocked")
-    @Expose
-    public String blocked;
 
     /**
      * The Balance.
@@ -146,6 +50,46 @@ public class Vendor extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal balance;
 
     /**
+     * The Blocked.
+     * 
+     */
+    @SerializedName("blocked")
+    @Expose
+    public String blocked;
+
+    /**
+     * The Currency Code.
+     * 
+     */
+    @SerializedName("currencyCode")
+    @Expose
+    public String currencyCode;
+
+    /**
+     * The Currency Id.
+     * 
+     */
+    @SerializedName("currencyId")
+    @Expose
+    public java.util.UUID currencyId;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
      * The Last Modified Date Time.
      * 
      */
@@ -154,10 +98,60 @@ public class Vendor extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Picture.
+     * The Number.
      * 
      */
-    public PictureCollectionPage picture;
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Payment Method Id.
+     * 
+     */
+    @SerializedName("paymentMethodId")
+    @Expose
+    public java.util.UUID paymentMethodId;
+
+    /**
+     * The Payment Terms Id.
+     * 
+     */
+    @SerializedName("paymentTermsId")
+    @Expose
+    public java.util.UUID paymentTermsId;
+
+    /**
+     * The Phone Number.
+     * 
+     */
+    @SerializedName("phoneNumber")
+    @Expose
+    public String phoneNumber;
+
+    /**
+     * The Tax Liable.
+     * 
+     */
+    @SerializedName("taxLiable")
+    @Expose
+    public Boolean taxLiable;
+
+    /**
+     * The Tax Registration Number.
+     * 
+     */
+    @SerializedName("taxRegistrationNumber")
+    @Expose
+    public String taxRegistrationNumber;
+
+    /**
+     * The Website.
+     * 
+     */
+    @SerializedName("website")
+    @Expose
+    public String website;
 
     /**
      * The Currency.
@@ -168,6 +162,14 @@ public class Vendor extends Entity implements IJsonBackedObject {
     public Currency currency;
 
     /**
+     * The Payment Method.
+     * 
+     */
+    @SerializedName("paymentMethod")
+    @Expose
+    public PaymentMethod paymentMethod;
+
+    /**
      * The Payment Term.
      * 
      */
@@ -176,12 +178,10 @@ public class Vendor extends Entity implements IJsonBackedObject {
     public PaymentTerm paymentTerm;
 
     /**
-     * The Payment Method.
+     * The Picture.
      * 
      */
-    @SerializedName("paymentMethod")
-    @Expose
-    public PaymentMethod paymentMethod;
+    public PictureCollectionPage picture;
 
 
     /**

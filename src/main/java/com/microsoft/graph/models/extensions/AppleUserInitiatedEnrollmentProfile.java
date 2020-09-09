@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AppleUserInitiatedEnrollmentType;
 import com.microsoft.graph.models.extensions.AppleOwnerTypeEnrollmentType;
+import com.microsoft.graph.models.generated.AppleUserInitiatedEnrollmentType;
 import com.microsoft.graph.models.generated.DevicePlatformType;
 import com.microsoft.graph.models.extensions.AppleEnrollmentProfileAssignment;
 import com.microsoft.graph.models.extensions.Entity;
@@ -33,52 +33,12 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
 
 
     /**
-     * The Default Enrollment Type.
-     * The default profile enrollment type.
-     */
-    @SerializedName("defaultEnrollmentType")
-    @Expose
-    public AppleUserInitiatedEnrollmentType defaultEnrollmentType;
-
-    /**
      * The Available Enrollment Type Options.
      * List of available enrollment type options
      */
     @SerializedName("availableEnrollmentTypeOptions")
     @Expose
     public java.util.List<AppleOwnerTypeEnrollmentType> availableEnrollmentTypeOptions;
-
-    /**
-     * The Display Name.
-     * Name of the profile
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * Description of the profile
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Priority.
-     * Priority, 0 is highest
-     */
-    @SerializedName("priority")
-    @Expose
-    public Integer priority;
-
-    /**
-     * The Platform.
-     * The platform of the Device.
-     */
-    @SerializedName("platform")
-    @Expose
-    public DevicePlatformType platform;
 
     /**
      * The Created Date Time.
@@ -89,12 +49,52 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
     public java.util.Calendar createdDateTime;
 
     /**
+     * The Default Enrollment Type.
+     * The default profile enrollment type.
+     */
+    @SerializedName("defaultEnrollmentType")
+    @Expose
+    public AppleUserInitiatedEnrollmentType defaultEnrollmentType;
+
+    /**
+     * The Description.
+     * Description of the profile
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * Name of the profile
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Last Modified Date Time.
      * Profile last modified time
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Platform.
+     * The platform of the Device.
+     */
+    @SerializedName("platform")
+    @Expose
+    public DevicePlatformType platform;
+
+    /**
+     * The Priority.
+     * Priority, 0 is highest
+     */
+    @SerializedName("priority")
+    @Expose
+    public Integer priority;
 
     /**
      * The Assignments.

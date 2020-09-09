@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollecti
 import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -139,6 +139,27 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      */
     public DeviceManagementTemplate post(final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementTemplate);
+    }
+
+    /**
+     * Creates a DeviceManagementTemplate with a new object
+     *
+     * @param newDeviceManagementTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<DeviceManagementTemplate> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementTemplate);
+    }
+
+    /**
+     * Creates a DeviceManagementTemplate with a new object
+     *
+     * @param newDeviceManagementTemplate the object to create/update
+     * @return the created DeviceManagementTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementTemplate put(final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementTemplate);
     }
 
     /**

@@ -28,12 +28,12 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
 
     /**
-     * The Connection Url.
+     * The Allow Teachers In Multiple Schools.
      * 
      */
-    @SerializedName("connectionUrl")
+    @SerializedName("allowTeachersInMultipleSchools")
     @Expose
-    public String connectionUrl;
+    public Boolean allowTeachersInMultipleSchools;
 
     /**
      * The Client Id.
@@ -52,6 +52,22 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     public String clientSecret;
 
     /**
+     * The Connection Url.
+     * 
+     */
+    @SerializedName("connectionUrl")
+    @Expose
+    public String connectionUrl;
+
+    /**
+     * The Customizations.
+     * 
+     */
+    @SerializedName("customizations")
+    @Expose
+    public EducationSynchronizationCustomizations customizations;
+
+    /**
      * The Schools Ids.
      * 
      */
@@ -66,22 +82,6 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     @SerializedName("schoolYear")
     @Expose
     public String schoolYear;
-
-    /**
-     * The Allow Teachers In Multiple Schools.
-     * 
-     */
-    @SerializedName("allowTeachersInMultipleSchools")
-    @Expose
-    public Boolean allowTeachersInMultipleSchools;
-
-    /**
-     * The Customizations.
-     * 
-     */
-    @SerializedName("customizations")
-    @Expose
-    public EducationSynchronizationCustomizations customizations;
 
 
     /**

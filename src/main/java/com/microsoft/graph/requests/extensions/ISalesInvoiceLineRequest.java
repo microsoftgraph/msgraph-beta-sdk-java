@@ -80,6 +80,23 @@ public interface ISalesInvoiceLineRequest extends IHttpRequest {
     SalesInvoiceLine post(final SalesInvoiceLine newSalesInvoiceLine) throws ClientException;
 
     /**
+     * Posts a SalesInvoiceLine with a new object
+     *
+     * @param newSalesInvoiceLine the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SalesInvoiceLine newSalesInvoiceLine, final ICallback<SalesInvoiceLine> callback);
+
+    /**
+     * Posts a SalesInvoiceLine with a new object
+     *
+     * @param newSalesInvoiceLine the object to create/update
+     * @return the created SalesInvoiceLine
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SalesInvoiceLine put(final SalesInvoiceLine newSalesInvoiceLine) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

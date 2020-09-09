@@ -112,6 +112,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
     }
 
     /**
+     * Creates a WindowsDefenderApplicationControlSupplementalPolicyAssignment with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+        send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
+    }
+
+    /**
+     * Creates a WindowsDefenderApplicationControlSupplementalPolicyAssignment with a new object
+     *
+     * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
+     * @return the created WindowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignment put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

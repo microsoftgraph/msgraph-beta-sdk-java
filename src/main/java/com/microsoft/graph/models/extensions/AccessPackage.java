@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRoleScope;
-import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionResponse;
-import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionResponse;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,12 +42,20 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     public String catalogId;
 
     /**
-     * The Display Name.
+     * The Created By.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName("createdBy")
     @Expose
-    public String displayName;
+    public String createdBy;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -56,6 +64,14 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Is Hidden.
@@ -74,22 +90,6 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     public Boolean isRoleScopesVisible;
 
     /**
-     * The Created By.
-     * 
-     */
-    @SerializedName("createdBy")
-    @Expose
-    public String createdBy;
-
-    /**
-     * The Created Date Time.
-     * 
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
      * The Modified By.
      * 
      */
@@ -106,6 +106,12 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     public java.util.Calendar modifiedDateTime;
 
     /**
+     * The Access Package Assignment Policies.
+     * 
+     */
+    public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
+
+    /**
      * The Access Package Catalog.
      * 
      */
@@ -118,12 +124,6 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * 
      */
     public AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
-
-    /**
-     * The Access Package Assignment Policies.
-     * 
-     */
-    public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
 
 
     /**
@@ -165,22 +165,6 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("accessPackageResourceRoleScopes")) {
-            final AccessPackageResourceRoleScopeCollectionResponse response = new AccessPackageResourceRoleScopeCollectionResponse();
-            if (json.has("accessPackageResourceRoleScopes@odata.nextLink")) {
-                response.nextLink = json.get("accessPackageResourceRoleScopes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes").toString(), JsonObject[].class);
-            final AccessPackageResourceRoleScope[] array = new AccessPackageResourceRoleScope[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceRoleScope.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            accessPackageResourceRoleScopes = new AccessPackageResourceRoleScopeCollectionPage(response, null);
-        }
-
         if (json.has("accessPackageAssignmentPolicies")) {
             final AccessPackageAssignmentPolicyCollectionResponse response = new AccessPackageAssignmentPolicyCollectionResponse();
             if (json.has("accessPackageAssignmentPolicies@odata.nextLink")) {
@@ -195,6 +179,22 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             accessPackageAssignmentPolicies = new AccessPackageAssignmentPolicyCollectionPage(response, null);
+        }
+
+        if (json.has("accessPackageResourceRoleScopes")) {
+            final AccessPackageResourceRoleScopeCollectionResponse response = new AccessPackageResourceRoleScopeCollectionResponse();
+            if (json.has("accessPackageResourceRoleScopes@odata.nextLink")) {
+                response.nextLink = json.get("accessPackageResourceRoleScopes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("accessPackageResourceRoleScopes").toString(), JsonObject[].class);
+            final AccessPackageResourceRoleScope[] array = new AccessPackageResourceRoleScope[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AccessPackageResourceRoleScope.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            accessPackageResourceRoleScopes = new AccessPackageResourceRoleScopeCollectionPage(response, null);
         }
     }
 }

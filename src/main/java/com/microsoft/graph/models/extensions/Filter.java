@@ -37,6 +37,14 @@ public class Filter implements IJsonBackedObject {
     }
 
     /**
+     * The Category Filter Groups.
+     * 
+     */
+    @SerializedName("categoryFilterGroups")
+    @Expose
+    public java.util.List<FilterGroup> categoryFilterGroups;
+
+    /**
      * The Groups.
      * 
      */
@@ -51,14 +59,6 @@ public class Filter implements IJsonBackedObject {
     @SerializedName("inputFilterGroups")
     @Expose
     public java.util.List<FilterGroup> inputFilterGroups;
-
-    /**
-     * The Category Filter Groups.
-     * 
-     */
-    @SerializedName("categoryFilterGroups")
-    @Expose
-    public java.util.List<FilterGroup> categoryFilterGroups;
 
 
     /**

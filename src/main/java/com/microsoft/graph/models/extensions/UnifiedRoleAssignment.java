@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
-import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.AppScope;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,12 +30,12 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Role Definition Id.
+     * The App Scope Id.
      * 
      */
-    @SerializedName("roleDefinitionId")
+    @SerializedName("appScopeId")
     @Expose
-    public String roleDefinitionId;
+    public String appScopeId;
 
     /**
      * The Condition.
@@ -46,14 +46,6 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
     public String condition;
 
     /**
-     * The Principal Id.
-     * 
-     */
-    @SerializedName("principalId")
-    @Expose
-    public String principalId;
-
-    /**
      * The Directory Scope Id.
      * 
      */
@@ -62,12 +54,12 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
     public String directoryScopeId;
 
     /**
-     * The App Scope Id.
+     * The Principal Id.
      * 
      */
-    @SerializedName("appScopeId")
+    @SerializedName("principalId")
     @Expose
-    public String appScopeId;
+    public String principalId;
 
     /**
      * The Resource Scope.
@@ -78,20 +70,20 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
     public String resourceScope;
 
     /**
-     * The Role Definition.
+     * The Role Definition Id.
      * 
      */
-    @SerializedName("roleDefinition")
+    @SerializedName("roleDefinitionId")
     @Expose
-    public UnifiedRoleDefinition roleDefinition;
+    public String roleDefinitionId;
 
     /**
-     * The Principal.
+     * The App Scope.
      * 
      */
-    @SerializedName("principal")
+    @SerializedName("appScope")
     @Expose
-    public DirectoryObject principal;
+    public AppScope appScope;
 
     /**
      * The Directory Scope.
@@ -102,12 +94,20 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
     public DirectoryObject directoryScope;
 
     /**
-     * The App Scope.
+     * The Principal.
      * 
      */
-    @SerializedName("appScope")
+    @SerializedName("principal")
     @Expose
-    public AppScope appScope;
+    public DirectoryObject principal;
+
+    /**
+     * The Role Definition.
+     * 
+     */
+    @SerializedName("roleDefinition")
+    @Expose
+    public UnifiedRoleDefinition roleDefinition;
 
 
     /**

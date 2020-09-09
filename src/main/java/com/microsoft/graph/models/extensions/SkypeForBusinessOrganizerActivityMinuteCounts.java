@@ -51,14 +51,6 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
     public Long dialOutMicrosoft;
 
     /**
-     * The Report Refresh Date.
-     * 
-     */
-    @SerializedName("reportRefreshDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
-
-    /**
      * The Report Date.
      * 
      */
@@ -73,6 +65,14 @@ public class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity implem
     @SerializedName("reportPeriod")
     @Expose
     public String reportPeriod;
+
+    /**
+     * The Report Refresh Date.
+     * 
+     */
+    @SerializedName("reportRefreshDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportRefreshDate;
 
 
     /**

@@ -80,6 +80,23 @@ public interface IAndroidForWorkScepCertificateProfileRequest extends IHttpReque
     AndroidForWorkScepCertificateProfile post(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile) throws ClientException;
 
     /**
+     * Posts a AndroidForWorkScepCertificateProfile with a new object
+     *
+     * @param newAndroidForWorkScepCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile, final ICallback<AndroidForWorkScepCertificateProfile> callback);
+
+    /**
+     * Posts a AndroidForWorkScepCertificateProfile with a new object
+     *
+     * @param newAndroidForWorkScepCertificateProfile the object to create/update
+     * @return the created AndroidForWorkScepCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidForWorkScepCertificateProfile put(final AndroidForWorkScepCertificateProfile newAndroidForWorkScepCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

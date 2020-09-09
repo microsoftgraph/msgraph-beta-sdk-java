@@ -62,14 +62,14 @@ public class ApplicationSignInDetailedSummaryCollectionRequest extends BaseColle
     public void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<ApplicationSignInDetailedSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationSignInDetailedSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplicationSignInDetailedSummary, callback);
     }
 
     public ApplicationSignInDetailedSummary post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApplicationSignInDetailedSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplicationSignInDetailedSummary);
     }
 
@@ -106,6 +106,27 @@ public class ApplicationSignInDetailedSummaryCollectionRequest extends BaseColle
         return (ApplicationSignInDetailedSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IApplicationSignInDetailedSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ApplicationSignInDetailedSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IApplicationSignInDetailedSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IApplicationSignInDetailedSummaryCollectionRequest)this;
+    }
     public IApplicationSignInDetailedSummaryCollectionPage buildFromResponse(final ApplicationSignInDetailedSummaryCollectionResponse response) {
         final IApplicationSignInDetailedSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

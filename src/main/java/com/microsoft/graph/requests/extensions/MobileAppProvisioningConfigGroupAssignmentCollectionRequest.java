@@ -62,14 +62,14 @@ public class MobileAppProvisioningConfigGroupAssignmentCollectionRequest extends
     public void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<MobileAppProvisioningConfigGroupAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppProvisioningConfigGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppProvisioningConfigGroupAssignment, callback);
     }
 
     public MobileAppProvisioningConfigGroupAssignment post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppProvisioningConfigGroupAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -106,6 +106,27 @@ public class MobileAppProvisioningConfigGroupAssignmentCollectionRequest extends
         return (MobileAppProvisioningConfigGroupAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppProvisioningConfigGroupAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppProvisioningConfigGroupAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppProvisioningConfigGroupAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppProvisioningConfigGroupAssignmentCollectionRequest)this;
+    }
     public IMobileAppProvisioningConfigGroupAssignmentCollectionPage buildFromResponse(final MobileAppProvisioningConfigGroupAssignmentCollectionResponse response) {
         final IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

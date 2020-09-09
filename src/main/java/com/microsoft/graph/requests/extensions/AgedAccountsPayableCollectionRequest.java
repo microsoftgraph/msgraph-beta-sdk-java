@@ -62,14 +62,14 @@ public class AgedAccountsPayableCollectionRequest extends BaseCollectionRequest<
     public void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<AgedAccountsPayable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AgedAccountsPayableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgedAccountsPayable, callback);
     }
 
     public AgedAccountsPayable post(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AgedAccountsPayableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAgedAccountsPayable);
     }
 
@@ -106,6 +106,27 @@ public class AgedAccountsPayableCollectionRequest extends BaseCollectionRequest<
         return (AgedAccountsPayableCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAgedAccountsPayableCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AgedAccountsPayableCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAgedAccountsPayableCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAgedAccountsPayableCollectionRequest)this;
+    }
     public IAgedAccountsPayableCollectionPage buildFromResponse(final AgedAccountsPayableCollectionResponse response) {
         final IAgedAccountsPayableCollectionRequestBuilder builder;
         if (response.nextLink != null) {

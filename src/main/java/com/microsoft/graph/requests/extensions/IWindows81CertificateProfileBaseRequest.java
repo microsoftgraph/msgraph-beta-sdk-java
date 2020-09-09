@@ -80,6 +80,23 @@ public interface IWindows81CertificateProfileBaseRequest extends IHttpRequest {
     Windows81CertificateProfileBase post(final Windows81CertificateProfileBase newWindows81CertificateProfileBase) throws ClientException;
 
     /**
+     * Posts a Windows81CertificateProfileBase with a new object
+     *
+     * @param newWindows81CertificateProfileBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows81CertificateProfileBase newWindows81CertificateProfileBase, final ICallback<Windows81CertificateProfileBase> callback);
+
+    /**
+     * Posts a Windows81CertificateProfileBase with a new object
+     *
+     * @param newWindows81CertificateProfileBase the object to create/update
+     * @return the created Windows81CertificateProfileBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows81CertificateProfileBase put(final Windows81CertificateProfileBase newWindows81CertificateProfileBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -35,6 +35,30 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
     public Long defaultValue;
 
     /**
+     * The Max Value.
+     * An unsigned long that specifies the maximum allowed value. The default value is 9999.
+     */
+    @SerializedName("maxValue")
+    @Expose
+    public Long maxValue;
+
+    /**
+     * The Min Value.
+     * An unsigned long that specifies the minimum allowed value. The default value is 0.
+     */
+    @SerializedName("minValue")
+    @Expose
+    public Long minValue;
+
+    /**
+     * The Required.
+     * Requirement to enter a value in the parameter box. The default value is false.
+     */
+    @SerializedName("required")
+    @Expose
+    public Boolean required;
+
+    /**
      * The Spin.
      * If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
      */
@@ -49,30 +73,6 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyPresen
     @SerializedName("spinStep")
     @Expose
     public Long spinStep;
-
-    /**
-     * The Required.
-     * Requirement to enter a value in the parameter box. The default value is false.
-     */
-    @SerializedName("required")
-    @Expose
-    public Boolean required;
-
-    /**
-     * The Min Value.
-     * An unsigned long that specifies the minimum allowed value. The default value is 0.
-     */
-    @SerializedName("minValue")
-    @Expose
-    public Long minValue;
-
-    /**
-     * The Max Value.
-     * An unsigned long that specifies the maximum allowed value. The default value is 9999.
-     */
-    @SerializedName("maxValue")
-    @Expose
-    public Long maxValue;
 
 
     /**

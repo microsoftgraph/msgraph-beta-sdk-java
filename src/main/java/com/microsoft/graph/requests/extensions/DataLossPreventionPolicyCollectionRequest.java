@@ -65,14 +65,14 @@ public class DataLossPreventionPolicyCollectionRequest extends BaseCollectionReq
     public void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<DataLossPreventionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataLossPreventionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataLossPreventionPolicy, callback);
     }
 
     public DataLossPreventionPolicy post(final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DataLossPreventionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataLossPreventionPolicy);
     }
 
@@ -109,6 +109,27 @@ public class DataLossPreventionPolicyCollectionRequest extends BaseCollectionReq
         return (DataLossPreventionPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDataLossPreventionPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DataLossPreventionPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDataLossPreventionPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDataLossPreventionPolicyCollectionRequest)this;
+    }
     public IDataLossPreventionPolicyCollectionPage buildFromResponse(final DataLossPreventionPolicyCollectionResponse response) {
         final IDataLossPreventionPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

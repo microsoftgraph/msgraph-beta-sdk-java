@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ReferenceAttachmentProvider;
 import com.microsoft.graph.models.generated.ReferenceAttachmentPermission;
+import com.microsoft.graph.models.generated.ReferenceAttachmentProvider;
 import com.microsoft.graph.models.extensions.Attachment;
 
 
@@ -29,36 +29,12 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
 
     /**
-     * The Source Url.
+     * The Is Folder.
      * 
      */
-    @SerializedName("sourceUrl")
+    @SerializedName("isFolder")
     @Expose
-    public String sourceUrl;
-
-    /**
-     * The Provider Type.
-     * 
-     */
-    @SerializedName("providerType")
-    @Expose
-    public ReferenceAttachmentProvider providerType;
-
-    /**
-     * The Thumbnail Url.
-     * 
-     */
-    @SerializedName("thumbnailUrl")
-    @Expose
-    public String thumbnailUrl;
-
-    /**
-     * The Preview Url.
-     * 
-     */
-    @SerializedName("previewUrl")
-    @Expose
-    public String previewUrl;
+    public Boolean isFolder;
 
     /**
      * The Permission.
@@ -69,12 +45,36 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
     public ReferenceAttachmentPermission permission;
 
     /**
-     * The Is Folder.
+     * The Preview Url.
      * 
      */
-    @SerializedName("isFolder")
+    @SerializedName("previewUrl")
     @Expose
-    public Boolean isFolder;
+    public String previewUrl;
+
+    /**
+     * The Provider Type.
+     * 
+     */
+    @SerializedName("providerType")
+    @Expose
+    public ReferenceAttachmentProvider providerType;
+
+    /**
+     * The Source Url.
+     * 
+     */
+    @SerializedName("sourceUrl")
+    @Expose
+    public String sourceUrl;
+
+    /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName("thumbnailUrl")
+    @Expose
+    public String thumbnailUrl;
 
 
     /**

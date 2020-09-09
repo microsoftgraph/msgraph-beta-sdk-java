@@ -35,12 +35,12 @@ public interface IPermissionGrantPolicyRequestBuilder extends IRequestBuilder {
     IPermissionGrantPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPermissionGrantConditionSetCollectionRequestBuilder includes();
-
-    IPermissionGrantConditionSetRequestBuilder includes(final String id);
-
     IPermissionGrantConditionSetCollectionRequestBuilder excludes();
 
     IPermissionGrantConditionSetRequestBuilder excludes(final String id);
+
+    IPermissionGrantConditionSetCollectionRequestBuilder includes();
+
+    IPermissionGrantConditionSetRequestBuilder includes(final String id);
 
 }

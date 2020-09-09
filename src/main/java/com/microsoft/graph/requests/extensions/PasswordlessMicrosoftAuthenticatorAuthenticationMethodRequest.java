@@ -112,6 +112,27 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
     }
 
     /**
+     * Creates a PasswordlessMicrosoftAuthenticatorAuthenticationMethod with a new object
+     *
+     * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+        send(HttpMethod.PUT, callback, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
+    }
+
+    /**
+     * Creates a PasswordlessMicrosoftAuthenticatorAuthenticationMethod with a new object
+     *
+     * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the object to create/update
+     * @return the created PasswordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
+        return send(HttpMethod.PUT, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

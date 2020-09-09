@@ -62,14 +62,14 @@ public class ProfileCardPropertyCollectionRequest extends BaseCollectionRequest<
     public void post(final ProfileCardProperty newProfileCardProperty, final ICallback<ProfileCardProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfileCardPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProfileCardProperty, callback);
     }
 
     public ProfileCardProperty post(final ProfileCardProperty newProfileCardProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProfileCardPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newProfileCardProperty);
     }
 
@@ -106,6 +106,27 @@ public class ProfileCardPropertyCollectionRequest extends BaseCollectionRequest<
         return (ProfileCardPropertyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProfileCardPropertyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProfileCardPropertyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProfileCardPropertyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProfileCardPropertyCollectionRequest)this;
+    }
     public IProfileCardPropertyCollectionPage buildFromResponse(final ProfileCardPropertyCollectionResponse response) {
         final IProfileCardPropertyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

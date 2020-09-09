@@ -36,15 +36,15 @@ public interface ICustomerPaymentJournalRequestBuilder extends IRequestBuilder {
     ICustomerPaymentJournalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ICustomerPaymentCollectionRequestBuilder customerPayments();
-
-    ICustomerPaymentRequestBuilder customerPayments(final String id);
-
     /**
      * Gets the request builder for Account
      *
      * @return the IAccountRequestBuilder instance
      */
     IAccountRequestBuilder account();
+
+    ICustomerPaymentCollectionRequestBuilder customerPayments();
+
+    ICustomerPaymentRequestBuilder customerPayments(final String id);
 
 }

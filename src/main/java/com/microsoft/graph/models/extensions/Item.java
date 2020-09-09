@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Picture;
 import com.microsoft.graph.models.extensions.ItemCategory;
+import com.microsoft.graph.models.extensions.Picture;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.PictureCollectionResponse;
 import com.microsoft.graph.requests.extensions.PictureCollectionPage;
@@ -31,44 +31,12 @@ public class Item extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Number.
+     * The Base Unit Of Measure Id.
      * 
      */
-    @SerializedName("number")
+    @SerializedName("baseUnitOfMeasureId")
     @Expose
-    public String number;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
-     * The Item Category Id.
-     * 
-     */
-    @SerializedName("itemCategoryId")
-    @Expose
-    public java.util.UUID itemCategoryId;
-
-    /**
-     * The Item Category Code.
-     * 
-     */
-    @SerializedName("itemCategoryCode")
-    @Expose
-    public String itemCategoryCode;
+    public java.util.UUID baseUnitOfMeasureId;
 
     /**
      * The Blocked.
@@ -79,12 +47,12 @@ public class Item extends Entity implements IJsonBackedObject {
     public Boolean blocked;
 
     /**
-     * The Base Unit Of Measure Id.
+     * The Display Name.
      * 
      */
-    @SerializedName("baseUnitOfMeasureId")
+    @SerializedName("displayName")
     @Expose
-    public java.util.UUID baseUnitOfMeasureId;
+    public String displayName;
 
     /**
      * The Gtin.
@@ -103,44 +71,20 @@ public class Item extends Entity implements IJsonBackedObject {
     public java.math.BigDecimal inventory;
 
     /**
-     * The Unit Price.
+     * The Item Category Code.
      * 
      */
-    @SerializedName("unitPrice")
+    @SerializedName("itemCategoryCode")
     @Expose
-    public java.math.BigDecimal unitPrice;
+    public String itemCategoryCode;
 
     /**
-     * The Price Includes Tax.
+     * The Item Category Id.
      * 
      */
-    @SerializedName("priceIncludesTax")
+    @SerializedName("itemCategoryId")
     @Expose
-    public Boolean priceIncludesTax;
-
-    /**
-     * The Unit Cost.
-     * 
-     */
-    @SerializedName("unitCost")
-    @Expose
-    public java.math.BigDecimal unitCost;
-
-    /**
-     * The Tax Group Id.
-     * 
-     */
-    @SerializedName("taxGroupId")
-    @Expose
-    public java.util.UUID taxGroupId;
-
-    /**
-     * The Tax Group Code.
-     * 
-     */
-    @SerializedName("taxGroupCode")
-    @Expose
-    public String taxGroupCode;
+    public java.util.UUID itemCategoryId;
 
     /**
      * The Last Modified Date Time.
@@ -151,10 +95,60 @@ public class Item extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Picture.
+     * The Number.
      * 
      */
-    public PictureCollectionPage picture;
+    @SerializedName("number")
+    @Expose
+    public String number;
+
+    /**
+     * The Price Includes Tax.
+     * 
+     */
+    @SerializedName("priceIncludesTax")
+    @Expose
+    public Boolean priceIncludesTax;
+
+    /**
+     * The Tax Group Code.
+     * 
+     */
+    @SerializedName("taxGroupCode")
+    @Expose
+    public String taxGroupCode;
+
+    /**
+     * The Tax Group Id.
+     * 
+     */
+    @SerializedName("taxGroupId")
+    @Expose
+    public java.util.UUID taxGroupId;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
+
+    /**
+     * The Unit Cost.
+     * 
+     */
+    @SerializedName("unitCost")
+    @Expose
+    public java.math.BigDecimal unitCost;
+
+    /**
+     * The Unit Price.
+     * 
+     */
+    @SerializedName("unitPrice")
+    @Expose
+    public java.math.BigDecimal unitPrice;
 
     /**
      * The Item Category.
@@ -163,6 +157,12 @@ public class Item extends Entity implements IJsonBackedObject {
     @SerializedName("itemCategory")
     @Expose
     public ItemCategory itemCategory;
+
+    /**
+     * The Picture.
+     * 
+     */
+    public PictureCollectionPage picture;
 
 
     /**

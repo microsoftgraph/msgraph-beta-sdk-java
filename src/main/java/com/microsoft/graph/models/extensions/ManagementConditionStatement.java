@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ManagementConditionExpression;
 import com.microsoft.graph.models.generated.DevicePlatformType;
+import com.microsoft.graph.models.extensions.ManagementConditionExpression;
 import com.microsoft.graph.models.extensions.ManagementCondition;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ManagementConditionCollectionResponse;
@@ -32,20 +32,12 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
 
 
     /**
-     * The Display Name.
-     * The admin defined name of the management condition statement.
+     * The Applicable Platforms.
+     * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
      */
-    @SerializedName("displayName")
+    @SerializedName("applicablePlatforms")
     @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * The admin defined description of the management condition statement.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
+    public java.util.List<DevicePlatformType> applicablePlatforms;
 
     /**
      * The Created Date Time.
@@ -56,20 +48,20 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Modified Date Time.
-     * The time the management condition statement was last modified. Updated service side.
+     * The Description.
+     * The admin defined description of the management condition statement.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName("description")
     @Expose
-    public java.util.Calendar modifiedDateTime;
+    public String description;
 
     /**
-     * The Expression.
-     * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
+     * The Display Name.
+     * The admin defined name of the management condition statement.
      */
-    @SerializedName("expression")
+    @SerializedName("displayName")
     @Expose
-    public ManagementConditionExpression expression;
+    public String displayName;
 
     /**
      * The ETag.
@@ -80,12 +72,20 @@ public class ManagementConditionStatement extends Entity implements IJsonBackedO
     public String eTag;
 
     /**
-     * The Applicable Platforms.
-     * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
+     * The Expression.
+     * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
      */
-    @SerializedName("applicablePlatforms")
+    @SerializedName("expression")
     @Expose
-    public java.util.List<DevicePlatformType> applicablePlatforms;
+    public ManagementConditionExpression expression;
+
+    /**
+     * The Modified Date Time.
+     * The time the management condition statement was last modified. Updated service side.
+     */
+    @SerializedName("modifiedDateTime")
+    @Expose
+    public java.util.Calendar modifiedDateTime;
 
     /**
      * The Management Conditions.

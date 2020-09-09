@@ -40,9 +40,9 @@ public interface IOfficeClientConfigurationRequestBuilder extends IRequestBuilde
 
     IOfficeClientConfigurationAssignmentRequestBuilder assignments(final String id);
 
-    IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder userPreferencePayload();
-
     IOfficeClientConfigurationPolicyPayloadStreamRequestBuilder policyPayload();
+
+    IOfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder userPreferencePayload();
 
     IOfficeClientConfigurationAssignCollectionRequestBuilder assign(final java.util.List<OfficeClientConfigurationAssignment> officeConfigurationAssignments);
 

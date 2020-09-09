@@ -38,28 +38,12 @@ public class WindowsNetworkIsolationPolicy implements IJsonBackedObject {
     }
 
     /**
-     * The Enterprise Network Domain Names.
-     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
-     */
-    @SerializedName("enterpriseNetworkDomainNames")
-    @Expose
-    public java.util.List<String> enterpriseNetworkDomainNames;
-
-    /**
      * The Enterprise Cloud Resources.
      * Contains a list of enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy. This collection can contain a maximum of 500 elements.
      */
     @SerializedName("enterpriseCloudResources")
     @Expose
     public java.util.List<ProxiedDomain> enterpriseCloudResources;
-
-    /**
-     * The Enterprise IPRanges.
-     * Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("enterpriseIPRanges")
-    @Expose
-    public java.util.List<IpRange> enterpriseIPRanges;
 
     /**
      * The Enterprise Internal Proxy Servers.
@@ -70,12 +54,28 @@ public class WindowsNetworkIsolationPolicy implements IJsonBackedObject {
     public java.util.List<String> enterpriseInternalProxyServers;
 
     /**
+     * The Enterprise IPRanges.
+     * Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("enterpriseIPRanges")
+    @Expose
+    public java.util.List<IpRange> enterpriseIPRanges;
+
+    /**
      * The Enterprise IPRanges Are Authoritative.
      * Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false.
      */
     @SerializedName("enterpriseIPRangesAreAuthoritative")
     @Expose
     public Boolean enterpriseIPRangesAreAuthoritative;
+
+    /**
+     * The Enterprise Network Domain Names.
+     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
+     */
+    @SerializedName("enterpriseNetworkDomainNames")
+    @Expose
+    public java.util.List<String> enterpriseNetworkDomainNames;
 
     /**
      * The Enterprise Proxy Servers.

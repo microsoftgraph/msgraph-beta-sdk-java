@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.OfficeProductId;
 import com.microsoft.graph.models.extensions.ExcludedApps;
-import com.microsoft.graph.models.generated.OfficeUpdateChannel;
-import com.microsoft.graph.models.generated.WindowsArchitecture;
 import com.microsoft.graph.models.generated.OfficeSuiteInstallProgressDisplayLevel;
+import com.microsoft.graph.models.generated.WindowsArchitecture;
+import com.microsoft.graph.models.generated.OfficeProductId;
+import com.microsoft.graph.models.generated.OfficeUpdateChannel;
 import com.microsoft.graph.models.extensions.MobileApp;
 
 
@@ -40,14 +40,6 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
     public Boolean autoAcceptEula;
 
     /**
-     * The Product Ids.
-     * The Product Ids that represent the Office365 Suite SKU.
-     */
-    @SerializedName("productIds")
-    @Expose
-    public java.util.List<OfficeProductId> productIds;
-
-    /**
      * The Excluded Apps.
      * The property to represent the apps which are excluded from the selected Office365 Product Id.
      */
@@ -56,28 +48,12 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
     public ExcludedApps excludedApps;
 
     /**
-     * The Use Shared Computer Activation.
-     * The property to represent that whether the shared computer activation is used not for Office365 app suite.
+     * The Install Progress Display Level.
+     * To specify the level of display for the Installation Progress Setup UI on the Device.
      */
-    @SerializedName("useSharedComputerActivation")
+    @SerializedName("installProgressDisplayLevel")
     @Expose
-    public Boolean useSharedComputerActivation;
-
-    /**
-     * The Update Channel.
-     * The property to represent the Office365 Update Channel.
-     */
-    @SerializedName("updateChannel")
-    @Expose
-    public OfficeUpdateChannel updateChannel;
-
-    /**
-     * The Office Platform Architecture.
-     * The property to represent the Office365 app suite version.
-     */
-    @SerializedName("officePlatformArchitecture")
-    @Expose
-    public EnumSet<WindowsArchitecture> officePlatformArchitecture;
+    public OfficeSuiteInstallProgressDisplayLevel installProgressDisplayLevel;
 
     /**
      * The Locales To Install.
@@ -88,12 +64,28 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
     public java.util.List<String> localesToInstall;
 
     /**
-     * The Install Progress Display Level.
-     * To specify the level of display for the Installation Progress Setup UI on the Device.
+     * The Office Configuration Xml.
+     * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
      */
-    @SerializedName("installProgressDisplayLevel")
+    @SerializedName("officeConfigurationXml")
     @Expose
-    public OfficeSuiteInstallProgressDisplayLevel installProgressDisplayLevel;
+    public byte[] officeConfigurationXml;
+
+    /**
+     * The Office Platform Architecture.
+     * The property to represent the Office365 app suite version.
+     */
+    @SerializedName("officePlatformArchitecture")
+    @Expose
+    public EnumSet<WindowsArchitecture> officePlatformArchitecture;
+
+    /**
+     * The Product Ids.
+     * The Product Ids that represent the Office365 Suite SKU.
+     */
+    @SerializedName("productIds")
+    @Expose
+    public java.util.List<OfficeProductId> productIds;
 
     /**
      * The Should Uninstall Older Versions Of Office.
@@ -112,6 +104,14 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
     public String targetVersion;
 
     /**
+     * The Update Channel.
+     * The property to represent the Office365 Update Channel.
+     */
+    @SerializedName("updateChannel")
+    @Expose
+    public OfficeUpdateChannel updateChannel;
+
+    /**
      * The Update Version.
      * The property to represent the update version in which the specific target version is available for the Office365 app suite.
      */
@@ -120,12 +120,12 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
     public String updateVersion;
 
     /**
-     * The Office Configuration Xml.
-     * The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
+     * The Use Shared Computer Activation.
+     * The property to represent that whether the shared computer activation is used not for Office365 app suite.
      */
-    @SerializedName("officeConfigurationXml")
+    @SerializedName("useSharedComputerActivation")
     @Expose
-    public byte[] officeConfigurationXml;
+    public Boolean useSharedComputerActivation;
 
 
     /**

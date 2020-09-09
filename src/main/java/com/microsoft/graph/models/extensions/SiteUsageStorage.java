@@ -27,6 +27,22 @@ public class SiteUsageStorage extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Report Date.
+     * 
+     */
+    @SerializedName("reportDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly reportDate;
+
+    /**
+     * The Report Period.
+     * 
+     */
+    @SerializedName("reportPeriod")
+    @Expose
+    public String reportPeriod;
+
+    /**
      * The Report Refresh Date.
      * 
      */
@@ -49,22 +65,6 @@ public class SiteUsageStorage extends Entity implements IJsonBackedObject {
     @SerializedName("storageUsedInBytes")
     @Expose
     public Long storageUsedInBytes;
-
-    /**
-     * The Report Date.
-     * 
-     */
-    @SerializedName("reportDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly reportDate;
-
-    /**
-     * The Report Period.
-     * 
-     */
-    @SerializedName("reportPeriod")
-    @Expose
-    public String reportPeriod;
 
 
     /**
