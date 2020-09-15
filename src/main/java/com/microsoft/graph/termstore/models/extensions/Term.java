@@ -80,12 +80,16 @@ public class Term extends Entity implements IJsonBackedObject {
      * The Children.
      * 
      */
+    @SerializedName("children")
+    @Expose
     public TermCollectionPage children;
 
     /**
      * The Relations.
      * 
      */
+    @SerializedName("relations")
+    @Expose
     public RelationCollectionPage relations;
 
     /**

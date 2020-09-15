@@ -135,12 +135,16 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
      * The Assigned Devices.
      * The list of assigned devices for the profile.
      */
+    @SerializedName("assignedDevices")
+    @Expose
     public WindowsAutopilotDeviceIdentityCollectionPage assignedDevices;
 
     /**
      * The Assignments.
      * The list of group assignments for the profile.
      */
+    @SerializedName("assignments")
+    @Expose
     public WindowsAutopilotDeploymentProfileAssignmentCollectionPage assignments;
 
 

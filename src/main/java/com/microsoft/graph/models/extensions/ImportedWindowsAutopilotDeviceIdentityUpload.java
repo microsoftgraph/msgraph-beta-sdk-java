@@ -50,6 +50,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * The Device Identities.
      * Collection of all Autopilot devices as a part of this upload.
      */
+    @SerializedName("deviceIdentities")
+    @Expose
     public ImportedWindowsAutopilotDeviceIdentityCollectionPage deviceIdentities;
 
 

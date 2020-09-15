@@ -9,10 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.models.extensions.DriveRecipient;
-import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
@@ -184,6 +184,18 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
         return new DriveItemContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
+    public IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name) {
+        return new DriveItemRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null, parentReference, name);
+    }
+
+    public IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference) {
+        return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
+    }
+
+    public IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item) {
+        return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
+    }
+
     public IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment) {
         return new DriveItemCheckinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkin"), getClient(), null, checkInAs, comment);
     }
@@ -192,16 +204,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
         return new DriveItemCheckoutRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkout"), getClient(), null);
     }
 
-    public IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference) {
-        return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
-    }
-
     public IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message, final java.util.List<DriveRecipient> recipients) {
         return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope, expirationDateTime, password, message, recipients);
-    }
-
-    public IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item) {
-        return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
     }
 
     public IDriveItemFollowRequestBuilder follow() {
@@ -214,10 +218,6 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemPreviewRequestBuilder preview(final String viewer, final Boolean chromeless, final Boolean allowEdit, final String page, final Double zoom) {
         return new DriveItemPreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null, viewer, chromeless, allowEdit, page, zoom);
-    }
-
-    public IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name) {
-        return new DriveItemRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null, parentReference, name);
     }
 
     public IDriveItemUnfollowRequestBuilder unfollow() {

@@ -33,6 +33,8 @@ public interface IWorkbookFunctionsRequestBuilder extends IRequestBuilder {
      */
     IWorkbookFunctionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+    IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2);
+    IWorkbookFunctionsLookupRequestBuilder lookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector);
     IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number);
     IWorkbookFunctionsAccrIntRequestBuilder accrInt(final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstInterest, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis, final com.google.gson.JsonElement calcMethod);
     IWorkbookFunctionsAccrIntMRequestBuilder accrIntM(final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis);
@@ -128,7 +130,6 @@ public interface IWorkbookFunctionsRequestBuilder extends IRequestBuilder {
     IWorkbookFunctionsDec2OctRequestBuilder dec2Oct(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places);
     IWorkbookFunctionsDecimalRequestBuilder decimal(final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix);
     IWorkbookFunctionsDegreesRequestBuilder degrees(final com.google.gson.JsonElement angle);
-    IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2);
     IWorkbookFunctionsDevSqRequestBuilder devSq(final com.google.gson.JsonElement values);
     IWorkbookFunctionsDgetRequestBuilder dget(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria);
     IWorkbookFunctionsDiscRequestBuilder disc(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis);
@@ -246,7 +247,6 @@ public interface IWorkbookFunctionsRequestBuilder extends IRequestBuilder {
     IWorkbookFunctionsLog10RequestBuilder log10(final com.google.gson.JsonElement number);
     IWorkbookFunctionsLogNorm_DistRequestBuilder logNorm_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative);
     IWorkbookFunctionsLogNorm_InvRequestBuilder logNorm_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev);
-    IWorkbookFunctionsLookupRequestBuilder lookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector);
     IWorkbookFunctionsLowerRequestBuilder lower(final com.google.gson.JsonElement text);
     IWorkbookFunctionsMatchRequestBuilder match(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupArray, final com.google.gson.JsonElement matchType);
     IWorkbookFunctionsMaxRequestBuilder max(final com.google.gson.JsonElement values);

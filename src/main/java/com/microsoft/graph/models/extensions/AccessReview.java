@@ -122,24 +122,32 @@ public class AccessReview extends Entity implements IJsonBackedObject {
      * The Decisions.
      * 
      */
+    @SerializedName("decisions")
+    @Expose
     public AccessReviewDecisionCollectionPage decisions;
 
     /**
      * The Instances.
      * 
      */
+    @SerializedName("instances")
+    @Expose
     public AccessReviewCollectionPage instances;
 
     /**
      * The My Decisions.
      * 
      */
+    @SerializedName("myDecisions")
+    @Expose
     public AccessReviewDecisionCollectionPage myDecisions;
 
     /**
      * The Reviewers.
      * 
      */
+    @SerializedName("reviewers")
+    @Expose
     public AccessReviewReviewerCollectionPage reviewers;
 
 

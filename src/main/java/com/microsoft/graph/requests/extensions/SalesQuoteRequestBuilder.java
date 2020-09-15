@@ -107,11 +107,11 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
         return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
     }
 
-    public ISalesQuoteMakeInvoiceRequestBuilder makeInvoice() {
-        return new SalesQuoteMakeInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makeInvoice"), getClient(), null);
-    }
-
     public ISalesQuoteSendRequestBuilder send() {
         return new SalesQuoteSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
+    }
+
+    public ISalesQuoteMakeInvoiceRequestBuilder makeInvoice() {
+        return new SalesQuoteMakeInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makeInvoice"), getClient(), null);
     }
 }

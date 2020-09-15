@@ -61,60 +61,80 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
      * The Access Package Assignment Policies.
      * 
      */
+    @SerializedName("accessPackageAssignmentPolicies")
+    @Expose
     public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
 
     /**
      * The Access Package Assignment Requests.
      * 
      */
+    @SerializedName("accessPackageAssignmentRequests")
+    @Expose
     public AccessPackageAssignmentRequestCollectionPage accessPackageAssignmentRequests;
 
     /**
      * The Access Package Assignment Resource Roles.
      * 
      */
+    @SerializedName("accessPackageAssignmentResourceRoles")
+    @Expose
     public AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
 
     /**
      * The Access Package Assignments.
      * 
      */
+    @SerializedName("accessPackageAssignments")
+    @Expose
     public AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
     /**
      * The Access Package Catalogs.
      * 
      */
+    @SerializedName("accessPackageCatalogs")
+    @Expose
     public AccessPackageCatalogCollectionPage accessPackageCatalogs;
 
     /**
      * The Access Package Resource Requests.
      * 
      */
+    @SerializedName("accessPackageResourceRequests")
+    @Expose
     public AccessPackageResourceRequestCollectionPage accessPackageResourceRequests;
 
     /**
      * The Access Package Resource Role Scopes.
      * 
      */
+    @SerializedName("accessPackageResourceRoleScopes")
+    @Expose
     public AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
 
     /**
      * The Access Package Resources.
      * 
      */
+    @SerializedName("accessPackageResources")
+    @Expose
     public AccessPackageResourceCollectionPage accessPackageResources;
 
     /**
      * The Access Packages.
      * 
      */
+    @SerializedName("accessPackages")
+    @Expose
     public AccessPackageCollectionPage accessPackages;
 
     /**
      * The Connected Organizations.
      * 
      */
+    @SerializedName("connectedOrganizations")
+    @Expose
     public ConnectedOrganizationCollectionPage connectedOrganizations;
 
     /**

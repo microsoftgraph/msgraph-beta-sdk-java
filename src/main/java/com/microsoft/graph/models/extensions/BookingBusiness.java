@@ -125,30 +125,40 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
      * The Appointments.
      * All appointments in this business.
      */
+    @SerializedName("appointments")
+    @Expose
     public BookingAppointmentCollectionPage appointments;
 
     /**
      * The Calendar View.
      * A calendar view of appointments in this business.
      */
+    @SerializedName("calendarView")
+    @Expose
     public BookingAppointmentCollectionPage calendarView;
 
     /**
      * The Customers.
      * All customers of this business.
      */
+    @SerializedName("customers")
+    @Expose
     public BookingCustomerCollectionPage customers;
 
     /**
      * The Services.
      * All services offered by this business.
      */
+    @SerializedName("services")
+    @Expose
     public BookingServiceCollectionPage services;
 
     /**
      * The Staff Members.
      * All staff members that provides services in this business.
      */
+    @SerializedName("staffMembers")
+    @Expose
     public BookingStaffMemberCollectionPage staffMembers;
 
 

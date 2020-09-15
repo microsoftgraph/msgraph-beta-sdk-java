@@ -66,6 +66,8 @@ public class Group extends Entity implements IJsonBackedObject {
      * The Sets.
      * 
      */
+    @SerializedName("sets")
+    @Expose
     public SetCollectionPage sets;
 
 

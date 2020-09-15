@@ -103,6 +103,8 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
+    @SerializedName("managedDeviceCertificateStates")
+    @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
     /**

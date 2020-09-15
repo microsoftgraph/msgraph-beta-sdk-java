@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequest;
 import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -58,5 +60,21 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
 
     public ISiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value) {
         return new SiteRemoveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null, value);
+    }
+
+    public ISiteDeltaCollectionRequestBuilder delta() {
+        return new SiteDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public ISiteDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new SiteDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
+
+    public ISiteDeltaCollectionRequestBuilder delta(final String token) {
+        return new SiteDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
+    }
+
+	public ISiteDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new SiteDeltaCollectionRequestBuilder(deltaLink, getClient(), null, token);
     }
 }

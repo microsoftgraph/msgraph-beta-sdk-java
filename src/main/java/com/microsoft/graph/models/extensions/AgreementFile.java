@@ -33,6 +33,8 @@ public class AgreementFile extends AgreementFileProperties implements IJsonBacke
      * The Localizations.
      * 
      */
+    @SerializedName("localizations")
+    @Expose
     public AgreementFileLocalizationCollectionPage localizations;
 
 

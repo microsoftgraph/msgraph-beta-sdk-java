@@ -67,11 +67,11 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
         return new ExactMatchSessionCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 
-    public IExactMatchSessionCommitRequestBuilder commit() {
-        return new ExactMatchSessionCommitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.commit"), getClient(), null);
-    }
-
     public IExactMatchSessionRenewRequestBuilder renew() {
         return new ExactMatchSessionRenewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renew"), getClient(), null);
+    }
+
+    public IExactMatchSessionCommitRequestBuilder commit() {
+        return new ExactMatchSessionCommitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.commit"), getClient(), null);
     }
 }

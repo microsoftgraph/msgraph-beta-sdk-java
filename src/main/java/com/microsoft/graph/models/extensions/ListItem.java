@@ -57,6 +57,8 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Activities.
      * The list of recent activities that took place on this item.
      */
+    @SerializedName("activities")
+    @Expose
     public ItemActivityOLDCollectionPage activities;
 
     /**
@@ -87,6 +89,8 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Versions.
      * The list of previous versions of the list item.
      */
+    @SerializedName("versions")
+    @Expose
     public ListItemVersionCollectionPage versions;
 
 

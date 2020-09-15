@@ -82,6 +82,8 @@ public class CustomerPaymentJournal extends Entity implements IJsonBackedObject 
      * The Customer Payments.
      * 
      */
+    @SerializedName("customerPayments")
+    @Expose
     public CustomerPaymentCollectionPage customerPayments;
 
 

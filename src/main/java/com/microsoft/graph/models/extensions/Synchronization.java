@@ -45,12 +45,16 @@ public class Synchronization extends Entity implements IJsonBackedObject {
      * The Jobs.
      * 
      */
+    @SerializedName("jobs")
+    @Expose
     public SynchronizationJobCollectionPage jobs;
 
     /**
      * The Templates.
      * 
      */
+    @SerializedName("templates")
+    @Expose
     public SynchronizationTemplateCollectionPage templates;
 
 

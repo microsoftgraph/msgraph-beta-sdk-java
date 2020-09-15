@@ -184,6 +184,8 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for this mobile app.
      */
+    @SerializedName("assignments")
+    @Expose
     public MobileAppAssignmentCollectionPage assignments;
 
     /**
@@ -196,6 +198,8 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Device Statuses.
      * The list of installation states for this mobile app.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public MobileAppInstallStatusCollectionPage deviceStatuses;
 
     /**
@@ -210,12 +214,16 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Relationships.
      * List of relationships for this mobile app.
      */
+    @SerializedName("relationships")
+    @Expose
     public MobileAppRelationshipCollectionPage relationships;
 
     /**
      * The User Statuses.
      * The list of installation states for this mobile app.
      */
+    @SerializedName("userStatuses")
+    @Expose
     public UserAppInstallStatusCollectionPage userStatuses;
 
 

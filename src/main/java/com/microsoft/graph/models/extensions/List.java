@@ -81,18 +81,24 @@ public class List extends BaseItem implements IJsonBackedObject {
      * The Activities.
      * 
      */
+    @SerializedName("activities")
+    @Expose
     public ItemActivityOLDCollectionPage activities;
 
     /**
      * The Columns.
      * The collection of field definitions for this list.
      */
+    @SerializedName("columns")
+    @Expose
     public ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
      * The collection of content types present in this list.
      */
+    @SerializedName("contentTypes")
+    @Expose
     public ContentTypeCollectionPage contentTypes;
 
     /**
@@ -107,12 +113,16 @@ public class List extends BaseItem implements IJsonBackedObject {
      * The Items.
      * All items contained in the list.
      */
+    @SerializedName("items")
+    @Expose
     public ListItemCollectionPage items;
 
     /**
      * The Subscriptions.
      * The set of subscriptions on the list.
      */
+    @SerializedName("subscriptions")
+    @Expose
     public SubscriptionCollectionPage subscriptions;
 
 

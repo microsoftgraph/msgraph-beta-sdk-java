@@ -71,6 +71,8 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Children.
      * 
      */
+    @SerializedName("children")
+    @Expose
     public TermCollectionPage children;
 
     /**
@@ -85,12 +87,16 @@ public class Set extends Entity implements IJsonBackedObject {
      * The Relations.
      * 
      */
+    @SerializedName("relations")
+    @Expose
     public RelationCollectionPage relations;
 
     /**
      * The Terms.
      * 
      */
+    @SerializedName("terms")
+    @Expose
     public TermCollectionPage terms;
 
 

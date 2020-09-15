@@ -453,6 +453,8 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The App Role Assignments.
      * 
      */
+    @SerializedName("appRoleAssignments")
+    @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
@@ -467,6 +469,8 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Endpoints.
      * 
      */
+    @SerializedName("endpoints")
+    @Expose
     public EndpointCollectionPage endpoints;
 
     /**
@@ -497,12 +501,16 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Permission Grants.
      * 
      */
+    @SerializedName("permissionGrants")
+    @Expose
     public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
 
     /**
      * The Settings.
      * Read-only. Nullable.
      */
+    @SerializedName("settings")
+    @Expose
     public DirectorySettingCollectionPage settings;
 
     /**
@@ -521,6 +529,8 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Accepted Senders.
      * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      */
+    @SerializedName("acceptedSenders")
+    @Expose
     public DirectoryObjectCollectionPage acceptedSenders;
 
     /**
@@ -535,18 +545,24 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Calendar View.
      * The calendar view for the calendar. Read-only.
      */
+    @SerializedName("calendarView")
+    @Expose
     public EventCollectionPage calendarView;
 
     /**
      * The Conversations.
      * The group's conversations.
      */
+    @SerializedName("conversations")
+    @Expose
     public ConversationCollectionPage conversations;
 
     /**
      * The Events.
      * The group's calendar events.
      */
+    @SerializedName("events")
+    @Expose
     public EventCollectionPage events;
 
     /**
@@ -561,18 +577,24 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Photos.
      * The profile photos owned by the group. Read-only. Nullable.
      */
+    @SerializedName("photos")
+    @Expose
     public ProfilePhotoCollectionPage photos;
 
     /**
      * The Rejected Senders.
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
+    @SerializedName("rejectedSenders")
+    @Expose
     public DirectoryObjectCollectionPage rejectedSenders;
 
     /**
      * The Threads.
      * The group's conversation threads. Nullable.
      */
+    @SerializedName("threads")
+    @Expose
     public ConversationThreadCollectionPage threads;
 
     /**
@@ -587,24 +609,32 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * The group's drives. Read-only.
      */
+    @SerializedName("drives")
+    @Expose
     public DriveCollectionPage drives;
 
     /**
      * The Sites.
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      */
+    @SerializedName("sites")
+    @Expose
     public SiteCollectionPage sites;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the group. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Group Lifecycle Policies.
      * The collection of lifecycle policies for this group. Read-only. Nullable.
      */
+    @SerializedName("groupLifecyclePolicies")
+    @Expose
     public GroupLifecyclePolicyCollectionPage groupLifecyclePolicies;
 
     /**

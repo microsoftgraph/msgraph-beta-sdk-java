@@ -53,30 +53,40 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
      * The Resources.
      * 
      */
+    @SerializedName("resources")
+    @Expose
     public GovernanceResourceCollectionPage resources;
 
     /**
      * The Role Assignment Requests.
      * 
      */
+    @SerializedName("roleAssignmentRequests")
+    @Expose
     public GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
 
     /**
      * The Role Assignments.
      * 
      */
+    @SerializedName("roleAssignments")
+    @Expose
     public GovernanceRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
      * 
      */
+    @SerializedName("roleDefinitions")
+    @Expose
     public GovernanceRoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Role Settings.
      * 
      */
+    @SerializedName("roleSettings")
+    @Expose
     public GovernanceRoleSettingCollectionPage roleSettings;
 
 

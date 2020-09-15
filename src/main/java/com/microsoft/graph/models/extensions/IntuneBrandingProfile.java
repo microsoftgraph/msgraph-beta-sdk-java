@@ -277,6 +277,8 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for the branding profile
      */
+    @SerializedName("assignments")
+    @Expose
     public IntuneBrandingProfileAssignmentCollectionPage assignments;
 
 

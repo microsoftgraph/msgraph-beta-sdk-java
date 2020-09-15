@@ -42,6 +42,8 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
+    @SerializedName("managedDeviceCertificateStates")
+    @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 

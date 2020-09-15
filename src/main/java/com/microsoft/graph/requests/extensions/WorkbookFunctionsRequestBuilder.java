@@ -53,6 +53,14 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
 
 
+    public IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+        return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, number1, number2);
+    }
+
+    public IWorkbookFunctionsLookupRequestBuilder lookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
+        return new WorkbookFunctionsLookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lookup"), getClient(), null, lookupValue, lookupVector, resultVector);
+    }
+
     public IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.abs"), getClient(), null, number);
     }
@@ -431,10 +439,6 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
     public IWorkbookFunctionsDegreesRequestBuilder degrees(final com.google.gson.JsonElement angle) {
         return new WorkbookFunctionsDegreesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.degrees"), getClient(), null, angle);
-    }
-
-    public IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
-        return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, number1, number2);
     }
 
     public IWorkbookFunctionsDevSqRequestBuilder devSq(final com.google.gson.JsonElement values) {
@@ -903,10 +907,6 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
     public IWorkbookFunctionsLogNorm_InvRequestBuilder logNorm_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         return new WorkbookFunctionsLogNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Inv"), getClient(), null, probability, mean, standardDev);
-    }
-
-    public IWorkbookFunctionsLookupRequestBuilder lookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
-        return new WorkbookFunctionsLookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lookup"), getClient(), null, lookupValue, lookupVector, resultVector);
     }
 
     public IWorkbookFunctionsLowerRequestBuilder lower(final com.google.gson.JsonElement text) {

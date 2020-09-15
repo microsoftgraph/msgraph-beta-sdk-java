@@ -143,12 +143,16 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * The Assignment Categories.
      * 
      */
+    @SerializedName("assignmentCategories")
+    @Expose
     public EducationCategoryCollectionPage assignmentCategories;
 
     /**
      * The Assignments.
      * 
      */
+    @SerializedName("assignments")
+    @Expose
     public EducationAssignmentCollectionPage assignments;
 
     /**

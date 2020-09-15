@@ -322,6 +322,8 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Device Update States.
      * Windows update for business configuration device states.
      */
+    @SerializedName("deviceUpdateStates")
+    @Expose
     public WindowsUpdateStateCollectionPage deviceUpdateStates;
 
 

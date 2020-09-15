@@ -32,6 +32,8 @@ public class DeviceManagementCollectionSettingInstance extends DeviceManagementS
      * The Value.
      * The collection of values
      */
+    @SerializedName("value")
+    @Expose
     public DeviceManagementSettingInstanceCollectionPage value;
 
 

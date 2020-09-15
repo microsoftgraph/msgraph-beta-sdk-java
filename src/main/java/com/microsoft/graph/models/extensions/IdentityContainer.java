@@ -49,18 +49,24 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
      * The B2c User Flows.
      * 
      */
+    @SerializedName("b2cUserFlows")
+    @Expose
     public B2cIdentityUserFlowCollectionPage b2cUserFlows;
 
     /**
      * The B2x User Flows.
      * 
      */
+    @SerializedName("b2xUserFlows")
+    @Expose
     public B2xIdentityUserFlowCollectionPage b2xUserFlows;
 
     /**
      * The User Flows.
      * 
      */
+    @SerializedName("userFlows")
+    @Expose
     public IdentityUserFlowCollectionPage userFlows;
 
     /**

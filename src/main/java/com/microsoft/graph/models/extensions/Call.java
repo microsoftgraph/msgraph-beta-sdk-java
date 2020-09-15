@@ -264,18 +264,24 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Audio Routing Groups.
      * 
      */
+    @SerializedName("audioRoutingGroups")
+    @Expose
     public AudioRoutingGroupCollectionPage audioRoutingGroups;
 
     /**
      * The Operations.
      * Read-only. Nullable.
      */
+    @SerializedName("operations")
+    @Expose
     public CommsOperationCollectionPage operations;
 
     /**
      * The Participants.
      * Read-only. Nullable.
      */
+    @SerializedName("participants")
+    @Expose
     public ParticipantCollectionPage participants;
 
 

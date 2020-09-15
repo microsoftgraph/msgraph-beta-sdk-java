@@ -98,6 +98,7 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
      * @return the IWindowsProtectionStateRequestBuilder instance
      */
     IWindowsProtectionStateRequestBuilder windowsProtectionState();
+    IManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(final String notificationTitle, final String notificationBody);
     IManagedDeviceOverrideComplianceStateRequestBuilder overrideComplianceState(final AdministratorConfiguredDeviceComplianceState complianceState, final String remediationUrl);
     IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock();
     IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData);
@@ -117,7 +118,6 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
     IManagedDeviceRevokeAppleVppLicensesRequestBuilder revokeAppleVppLicenses();
     IManagedDeviceRotateBitLockerKeysRequestBuilder rotateBitLockerKeys();
     IManagedDeviceRotateFileVaultKeyRequestBuilder rotateFileVaultKey();
-    IManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(final String notificationTitle, final String notificationBody);
     IManagedDeviceSetDeviceNameRequestBuilder setDeviceName(final String deviceName);
     IManagedDeviceShutDownRequestBuilder shutDown();
     IManagedDeviceSyncDeviceRequestBuilder syncDevice();

@@ -2322,6 +2322,8 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Privacy Access Controls.
      * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category.
      */
+    @SerializedName("privacyAccessControls")
+    @Expose
     public WindowsPrivacyDataAccessControlItemCollectionPage privacyAccessControls;
 
 

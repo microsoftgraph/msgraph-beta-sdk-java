@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserIdentity;
-import com.microsoft.graph.models.extensions.AccessReviewReviewerScope;
 import com.microsoft.graph.models.extensions.AccessReviewScope;
+import com.microsoft.graph.models.extensions.AccessReviewReviewerScope;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleSettings;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.models.extensions.Entity;
@@ -74,6 +74,14 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     public String displayName;
 
     /**
+     * The Instance Enumeration Scope.
+     * 
+     */
+    @SerializedName("instanceEnumerationScope")
+    @Expose
+    public AccessReviewScope instanceEnumerationScope;
+
+    /**
      * The Last Modified Date Time.
      * 
      */
@@ -117,6 +125,8 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
      * The Instances.
      * 
      */
+    @SerializedName("instances")
+    @Expose
     public AccessReviewInstanceCollectionPage instances;
 
 

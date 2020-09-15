@@ -100,6 +100,8 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
      * The History.
      * The activity related to user risk level change
      */
+    @SerializedName("history")
+    @Expose
     public RiskyUserHistoryItemCollectionPage history;
 
 

@@ -97,6 +97,8 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * The Advanced Threat Protection Onboarding Device Setting States.
      * 
      */
+    @SerializedName("advancedThreatProtectionOnboardingDeviceSettingStates")
+    @Expose
     public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionPage advancedThreatProtectionOnboardingDeviceSettingStates;
 
 

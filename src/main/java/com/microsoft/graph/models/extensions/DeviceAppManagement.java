@@ -142,36 +142,48 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed EBook Categories.
      * The mobile eBook categories.
      */
+    @SerializedName("managedEBookCategories")
+    @Expose
     public ManagedEBookCategoryCollectionPage managedEBookCategories;
 
     /**
      * The Enterprise Code Signing Certificates.
      * The Windows Enterprise Code Signing Certificate.
      */
+    @SerializedName("enterpriseCodeSigningCertificates")
+    @Expose
     public EnterpriseCodeSigningCertificateCollectionPage enterpriseCodeSigningCertificates;
 
     /**
      * The Ios Lob App Provisioning Configurations.
      * The IOS Lob App Provisioning Configurations.
      */
+    @SerializedName("iosLobAppProvisioningConfigurations")
+    @Expose
     public IosLobAppProvisioningConfigurationCollectionPage iosLobAppProvisioningConfigurations;
 
     /**
      * The Mobile App Categories.
      * The mobile app categories.
      */
+    @SerializedName("mobileAppCategories")
+    @Expose
     public MobileAppCategoryCollectionPage mobileAppCategories;
 
     /**
      * The Mobile App Configurations.
      * The Managed Device Mobile Application Configurations.
      */
+    @SerializedName("mobileAppConfigurations")
+    @Expose
     public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
     /**
      * The Mobile Apps.
      * The mobile apps.
      */
+    @SerializedName("mobileApps")
+    @Expose
     public MobileAppCollectionPage mobileApps;
 
     /**
@@ -186,24 +198,32 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed EBooks.
      * The Managed eBook.
      */
+    @SerializedName("managedEBooks")
+    @Expose
     public ManagedEBookCollectionPage managedEBooks;
 
     /**
      * The Policy Sets.
      * The PolicySet of Policies and Applications
      */
+    @SerializedName("policySets")
+    @Expose
     public PolicySetCollectionPage policySets;
 
     /**
      * The Side Loading Keys.
      * Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation.
      */
+    @SerializedName("sideLoadingKeys")
+    @Expose
     public SideLoadingKeyCollectionPage sideLoadingKeys;
 
     /**
      * The Vpp Tokens.
      * List of Vpp tokens for this organization.
      */
+    @SerializedName("vppTokens")
+    @Expose
     public VppTokenCollectionPage vppTokens;
 
     /**
@@ -218,78 +238,104 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Android Managed App Protections.
      * Android managed app policies.
      */
+    @SerializedName("androidManagedAppProtections")
+    @Expose
     public AndroidManagedAppProtectionCollectionPage androidManagedAppProtections;
 
     /**
      * The Default Managed App Protections.
      * Default managed app policies.
      */
+    @SerializedName("defaultManagedAppProtections")
+    @Expose
     public DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
 
     /**
      * The Ios Managed App Protections.
      * iOS managed app policies.
      */
+    @SerializedName("iosManagedAppProtections")
+    @Expose
     public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
     /**
      * The Managed App Policies.
      * Managed app policies.
      */
+    @SerializedName("managedAppPolicies")
+    @Expose
     public ManagedAppPolicyCollectionPage managedAppPolicies;
 
     /**
      * The Managed App Registrations.
      * The managed app registrations.
      */
+    @SerializedName("managedAppRegistrations")
+    @Expose
     public ManagedAppRegistrationCollectionPage managedAppRegistrations;
 
     /**
      * The Managed App Statuses.
      * The managed app statuses.
      */
+    @SerializedName("managedAppStatuses")
+    @Expose
     public ManagedAppStatusCollectionPage managedAppStatuses;
 
     /**
      * The Mdm Windows Information Protection Policies.
      * Windows information protection for apps running on devices which are MDM enrolled.
      */
+    @SerializedName("mdmWindowsInformationProtectionPolicies")
+    @Expose
     public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
 
     /**
      * The Targeted Managed App Configurations.
      * Targeted managed app configurations.
      */
+    @SerializedName("targetedManagedAppConfigurations")
+    @Expose
     public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
 
     /**
      * The Windows Information Protection Device Registrations.
      * Windows information protection device registrations that are not MDM enrolled.
      */
+    @SerializedName("windowsInformationProtectionDeviceRegistrations")
+    @Expose
     public WindowsInformationProtectionDeviceRegistrationCollectionPage windowsInformationProtectionDeviceRegistrations;
 
     /**
      * The Windows Information Protection Policies.
      * Windows information protection for apps running on devices which are not MDM enrolled.
      */
+    @SerializedName("windowsInformationProtectionPolicies")
+    @Expose
     public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
 
     /**
      * The Windows Information Protection Wipe Actions.
      * Windows information protection wipe actions.
      */
+    @SerializedName("windowsInformationProtectionWipeActions")
+    @Expose
     public WindowsInformationProtectionWipeActionCollectionPage windowsInformationProtectionWipeActions;
 
     /**
      * The Device App Management Tasks.
      * Device app management tasks.
      */
+    @SerializedName("deviceAppManagementTasks")
+    @Expose
     public DeviceAppManagementTaskCollectionPage deviceAppManagementTasks;
 
     /**
      * The Wdac Supplemental Policies.
      * The collection of Windows Defender Application Control Supplemental Policies.
      */
+    @SerializedName("wdacSupplementalPolicies")
+    @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyCollectionPage wdacSupplementalPolicies;
 
 

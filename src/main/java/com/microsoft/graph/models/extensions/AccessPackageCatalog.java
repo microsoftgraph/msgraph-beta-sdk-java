@@ -114,24 +114,32 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Access Package Resource Roles.
      * 
      */
+    @SerializedName("accessPackageResourceRoles")
+    @Expose
     public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
 
     /**
      * The Access Package Resources.
      * 
      */
+    @SerializedName("accessPackageResources")
+    @Expose
     public AccessPackageResourceCollectionPage accessPackageResources;
 
     /**
      * The Access Package Resource Scopes.
      * 
      */
+    @SerializedName("accessPackageResourceScopes")
+    @Expose
     public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
 
     /**
      * The Access Packages.
      * 
      */
+    @SerializedName("accessPackages")
+    @Expose
     public AccessPackageCollectionPage accessPackages;
 
 

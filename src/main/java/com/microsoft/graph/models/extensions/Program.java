@@ -49,6 +49,8 @@ public class Program extends Entity implements IJsonBackedObject {
      * The Controls.
      * 
      */
+    @SerializedName("controls")
+    @Expose
     public ProgramControlCollectionPage controls;
 
 

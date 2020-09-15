@@ -121,12 +121,16 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * Read-only. Nullable.
      */
+    @SerializedName("attachments")
+    @Expose
     public AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the post. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
@@ -141,18 +145,24 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Mentions.
      * 
      */
+    @SerializedName("mentions")
+    @Expose
     public MentionCollectionPage mentions;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the post. Read-only. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

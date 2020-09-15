@@ -60,48 +60,64 @@ public class Print extends Entity implements IJsonBackedObject {
      * The Connectors.
      * 
      */
+    @SerializedName("connectors")
+    @Expose
     public PrintConnectorCollectionPage connectors;
 
     /**
      * The Operations.
      * 
      */
+    @SerializedName("operations")
+    @Expose
     public PrintOperationCollectionPage operations;
 
     /**
      * The Printers.
      * 
      */
+    @SerializedName("printers")
+    @Expose
     public PrinterCollectionPage printers;
 
     /**
      * The Printer Shares.
      * 
      */
+    @SerializedName("printerShares")
+    @Expose
     public PrinterShareCollectionPage printerShares;
 
     /**
      * The Reports.
      * 
      */
+    @SerializedName("reports")
+    @Expose
     public ReportRootCollectionPage reports;
 
     /**
      * The Services.
      * 
      */
+    @SerializedName("services")
+    @Expose
     public PrintServiceCollectionPage services;
 
     /**
      * The Shares.
      * 
      */
+    @SerializedName("shares")
+    @Expose
     public PrinterShareCollectionPage shares;
 
     /**
      * The Task Definitions.
      * 
      */
+    @SerializedName("taskDefinitions")
+    @Expose
     public PrintTaskDefinitionCollectionPage taskDefinitions;
 
 

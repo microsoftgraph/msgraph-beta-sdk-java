@@ -49,6 +49,8 @@ public class DeviceManagementSettingCategory extends Entity implements IJsonBack
      * The Setting Definitions.
      * The setting definitions this category contains
      */
+    @SerializedName("settingDefinitions")
+    @Expose
     public DeviceManagementSettingDefinitionCollectionPage settingDefinitions;
 
 

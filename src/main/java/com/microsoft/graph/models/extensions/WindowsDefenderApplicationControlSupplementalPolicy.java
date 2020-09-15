@@ -101,6 +101,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Assignments.
      * The associated group assignments for this WindowsDefenderApplicationControl supplemental policy.
      */
+    @SerializedName("assignments")
+    @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionPage assignments;
 
     /**
@@ -115,6 +117,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * The Device Statuses.
      * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionPage deviceStatuses;
 
 

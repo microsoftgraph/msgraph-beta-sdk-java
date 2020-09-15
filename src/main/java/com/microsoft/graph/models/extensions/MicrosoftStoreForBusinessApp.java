@@ -83,6 +83,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
      * The Contained Apps.
      * The collection of contained apps in a mobileApp acting as a package.
      */
+    @SerializedName("containedApps")
+    @Expose
     public MobileContainedAppCollectionPage containedApps;
 
 

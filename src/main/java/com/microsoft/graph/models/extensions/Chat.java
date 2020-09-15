@@ -63,18 +63,24 @@ public class Chat extends Entity implements IJsonBackedObject {
      * The Installed Apps.
      * 
      */
+    @SerializedName("installedApps")
+    @Expose
     public TeamsAppInstallationCollectionPage installedApps;
 
     /**
      * The Members.
      * 
      */
+    @SerializedName("members")
+    @Expose
     public ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
      * 
      */
+    @SerializedName("messages")
+    @Expose
     public ChatMessageCollectionPage messages;
 
 

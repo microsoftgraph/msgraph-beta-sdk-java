@@ -67,12 +67,16 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Allowed Groups.
      * 
      */
+    @SerializedName("allowedGroups")
+    @Expose
     public PrintIdentityCollectionPage allowedGroups;
 
     /**
      * The Allowed Users.
      * 
      */
+    @SerializedName("allowedUsers")
+    @Expose
     public PrintUserIdentityCollectionPage allowedUsers;
 
     /**
@@ -93,6 +97,8 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The Task Triggers.
      * 
      */
+    @SerializedName("taskTriggers")
+    @Expose
     public PrintTaskTriggerCollectionPage taskTriggers;
 
 

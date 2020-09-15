@@ -65,6 +65,8 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
      * The Task Folders.
      * 
      */
+    @SerializedName("taskFolders")
+    @Expose
     public OutlookTaskFolderCollectionPage taskFolders;
 
 

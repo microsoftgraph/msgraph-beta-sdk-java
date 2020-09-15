@@ -56,6 +56,8 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
      * The All.
      * 
      */
+    @SerializedName("all")
+    @Expose
     public PlannerDeltaCollectionPage all;
 
     /**
@@ -68,6 +70,8 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
      * The Plans.
      * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
+    @SerializedName("plans")
+    @Expose
     public PlannerPlanCollectionPage plans;
 
     /**
@@ -80,6 +84,8 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
+    @SerializedName("tasks")
+    @Expose
     public PlannerTaskCollectionPage tasks;
 
 

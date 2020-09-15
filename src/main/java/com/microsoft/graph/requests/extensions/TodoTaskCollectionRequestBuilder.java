@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class TodoTaskCollectionRequestBuilder extends BaseRequestBuilder implements ITodoTaskCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of TodoTask
+     * The request builder for this collection of TodoTaskList
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -114,24 +114,32 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
      * The Assignments.
      * The associated group assignments for IosLobAppProvisioningConfiguration.
      */
+    @SerializedName("assignments")
+    @Expose
     public IosLobAppProvisioningConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Device Statuses.
      * The list of device installation states for this mobile app configuration.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
      * The Group Assignments.
      * The associated group assignments.
      */
+    @SerializedName("groupAssignments")
+    @Expose
     public MobileAppProvisioningConfigGroupAssignmentCollectionPage groupAssignments;
 
     /**
      * The User Statuses.
      * The list of user installation states for this mobile app configuration.
      */
+    @SerializedName("userStatuses")
+    @Expose
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 
 

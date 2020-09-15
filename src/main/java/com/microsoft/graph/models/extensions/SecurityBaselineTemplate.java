@@ -37,12 +37,16 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * The Category Device State Summaries.
      * The security baseline per category device state summary
      */
+    @SerializedName("categoryDeviceStateSummaries")
+    @Expose
     public SecurityBaselineCategoryStateSummaryCollectionPage categoryDeviceStateSummaries;
 
     /**
      * The Device States.
      * The security baseline device states
      */
+    @SerializedName("deviceStates")
+    @Expose
     public SecurityBaselineDeviceStateCollectionPage deviceStates;
 
     /**

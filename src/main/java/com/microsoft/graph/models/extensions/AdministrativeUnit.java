@@ -68,12 +68,16 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Scoped Role Members.
      * 
      */
+    @SerializedName("scopedRoleMembers")
+    @Expose
     public ScopedRoleMembershipCollectionPage scopedRoleMembers;
 
     /**
      * The Extensions.
      * 
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
 

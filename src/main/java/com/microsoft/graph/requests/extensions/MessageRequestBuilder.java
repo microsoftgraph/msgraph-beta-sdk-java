@@ -108,8 +108,16 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
+    public IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
+        return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
+    }
+
     public IMessageCopyRequestBuilder copy(final String destinationId) {
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
+    }
+
+    public IMessageMoveRequestBuilder move(final String destinationId) {
+        return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 
     public IMessageCreateForwardRequestBuilder createForward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
@@ -122,14 +130,6 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
 
     public IMessageCreateReplyAllRequestBuilder createReplyAll(final Message message, final String comment) {
         return new MessageCreateReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReplyAll"), getClient(), null, message, comment);
-    }
-
-    public IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
-        return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
-    }
-
-    public IMessageMoveRequestBuilder move(final String destinationId) {
-        return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 
     public IMessageReplyRequestBuilder reply(final Message message, final String comment) {

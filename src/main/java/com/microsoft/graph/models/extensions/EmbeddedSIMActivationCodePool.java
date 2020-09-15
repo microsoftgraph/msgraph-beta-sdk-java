@@ -77,12 +77,16 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
      * The Assignments.
      * Navigational property to a list of targets to which this pool is assigned.
      */
+    @SerializedName("assignments")
+    @Expose
     public EmbeddedSIMActivationCodePoolAssignmentCollectionPage assignments;
 
     /**
      * The Device States.
      * Navigational property to a list of device states for this pool.
      */
+    @SerializedName("deviceStates")
+    @Expose
     public EmbeddedSIMDeviceStateCollectionPage deviceStates;
 
 

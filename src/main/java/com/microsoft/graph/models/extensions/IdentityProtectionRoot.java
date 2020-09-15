@@ -36,12 +36,16 @@ public class IdentityProtectionRoot extends Entity implements IJsonBackedObject 
      * The Risk Detections.
      * 
      */
+    @SerializedName("riskDetections")
+    @Expose
     public RiskDetectionCollectionPage riskDetections;
 
     /**
      * The Risky Users.
      * 
      */
+    @SerializedName("riskyUsers")
+    @Expose
     public RiskyUserCollectionPage riskyUsers;
 
 

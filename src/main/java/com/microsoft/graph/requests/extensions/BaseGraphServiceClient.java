@@ -299,18 +299,6 @@ import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBu
 import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.LinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.LinkedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
@@ -367,8 +355,6 @@ import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IBaseGraphServiceClient;
@@ -1792,63 +1778,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of LinkedResources objects
-     *
-     * @return the request builder for the collection of LinkedResources objects
-     */
-    public ILinkedResourceCollectionRequestBuilder linkedResources() {
-        return new LinkedResourceCollectionRequestBuilder(getServiceRoot() + "/linkedResources", this, null);
-    }
-
-    /**
-     * Gets a single LinkedResources
-     *
-     * @param id the id of the LinkedResources to retrieve
-     * @return the request builder for the LinkedResources object
-     */
-    public ILinkedResourceRequestBuilder linkedResources(final String id) {
-        return new LinkedResourceRequestBuilder(getServiceRoot() + "/linkedResources/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Lists objects
-     *
-     * @return the request builder for the collection of Lists objects
-     */
-    public ITodoTaskListCollectionRequestBuilder lists() {
-        return new TodoTaskListCollectionRequestBuilder(getServiceRoot() + "/lists", this, null);
-    }
-
-    /**
-     * Gets a single Lists
-     *
-     * @param id the id of the Lists to retrieve
-     * @return the request builder for the Lists object
-     */
-    public ITodoTaskListRequestBuilder lists(final String id) {
-        return new TodoTaskListRequestBuilder(getServiceRoot() + "/lists/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Tasks objects
-     *
-     * @return the request builder for the collection of Tasks objects
-     */
-    public ITodoTaskCollectionRequestBuilder tasks() {
-        return new TodoTaskCollectionRequestBuilder(getServiceRoot() + "/tasks", this, null);
-    }
-
-    /**
-     * Gets a single Tasks
-     *
-     * @param id the id of the Tasks to retrieve
-     * @return the request builder for the Tasks object
-     */
-    public ITodoTaskRequestBuilder tasks(final String id) {
-        return new TodoTaskRequestBuilder(getServiceRoot() + "/tasks/" + id, this, null);
-    }
-
-    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the AuditLogRoot
@@ -2116,14 +2045,5 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public ITeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Todo
-     */
-    public ITodoRequestBuilder todo() {
-        return new TodoRequestBuilder(getServiceRoot() + "/todo", this, null);
     }
 }

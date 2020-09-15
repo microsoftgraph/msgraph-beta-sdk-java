@@ -102,12 +102,16 @@ public class PolicySet extends Entity implements IJsonBackedObject {
      * The Assignments.
      * Assignments of the PolicySet.
      */
+    @SerializedName("assignments")
+    @Expose
     public PolicySetAssignmentCollectionPage assignments;
 
     /**
      * The Items.
      * Items of the PolicySet with maximum count 100.
      */
+    @SerializedName("items")
+    @Expose
     public PolicySetItemCollectionPage items;
 
 

@@ -76,12 +76,16 @@ public class GroupPolicyConfiguration extends Entity implements IJsonBackedObjec
      * The Assignments.
      * The list of group assignments for the configuration.
      */
+    @SerializedName("assignments")
+    @Expose
     public GroupPolicyConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Definition Values.
      * The list of enabled or disabled group policy definition values for the configuration.
      */
+    @SerializedName("definitionValues")
+    @Expose
     public GroupPolicyDefinitionValueCollectionPage definitionValues;
 
 

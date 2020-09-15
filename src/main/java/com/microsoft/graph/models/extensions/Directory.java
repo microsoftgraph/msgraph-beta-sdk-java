@@ -8,9 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.FeatureRolloutPolicy;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionResponse;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionResponse;
@@ -33,15 +36,27 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Administrative Units.
+     * 
+     */
+    @SerializedName("administrativeUnits")
+    @Expose
+    public AdministrativeUnitCollectionPage administrativeUnits;
+
+    /**
      * The Deleted Items.
      * Recently deleted items. Read-only. Nullable.
      */
+    @SerializedName("deletedItems")
+    @Expose
     public DirectoryObjectCollectionPage deletedItems;
 
     /**
      * The Feature Rollout Policies.
      * 
      */
+    @SerializedName("featureRolloutPolicies")
+    @Expose
     public FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
 
 
@@ -83,6 +98,22 @@ public class Directory extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("administrativeUnits")) {
+            final AdministrativeUnitCollectionResponse response = new AdministrativeUnitCollectionResponse();
+            if (json.has("administrativeUnits@odata.nextLink")) {
+                response.nextLink = json.get("administrativeUnits@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("administrativeUnits").toString(), JsonObject[].class);
+            final AdministrativeUnit[] array = new AdministrativeUnit[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AdministrativeUnit.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            administrativeUnits = new AdministrativeUnitCollectionPage(response, null);
+        }
 
         if (json.has("deletedItems")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();

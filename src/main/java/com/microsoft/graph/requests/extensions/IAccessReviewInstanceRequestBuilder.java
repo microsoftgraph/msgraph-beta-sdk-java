@@ -46,10 +46,10 @@ public interface IAccessReviewInstanceRequestBuilder extends IRequestBuilder {
      * @return the IAccessReviewScheduleDefinitionWithReferenceRequestBuilder instance
      */
     IAccessReviewScheduleDefinitionWithReferenceRequestBuilder definition();
+    IAccessReviewInstanceStopRequestBuilder stop();
     IAccessReviewInstanceAcceptRecommendationsRequestBuilder acceptRecommendations();
     IAccessReviewInstanceApplyDecisionsRequestBuilder applyDecisions();
     IAccessReviewInstanceResetDecisionsRequestBuilder resetDecisions();
     IAccessReviewInstanceSendReminderRequestBuilder sendReminder();
-    IAccessReviewInstanceStopRequestBuilder stop();
 
 }

@@ -98,6 +98,8 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
      * The Inherits Permissions From.
      * 
      */
+    @SerializedName("inheritsPermissionsFrom")
+    @Expose
     public UnifiedRoleDefinitionCollectionPage inheritsPermissionsFrom;
 
 

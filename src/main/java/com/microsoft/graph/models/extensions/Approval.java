@@ -33,12 +33,16 @@ public class Approval extends Entity implements IJsonBackedObject {
      * The Completed Steps.
      * 
      */
+    @SerializedName("completedSteps")
+    @Expose
     public ApprovalStepCollectionPage completedSteps;
 
     /**
      * The Pending Steps.
      * 
      */
+    @SerializedName("pendingSteps")
+    @Expose
     public ApprovalStepCollectionPage pendingSteps;
 
 

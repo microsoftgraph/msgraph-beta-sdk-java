@@ -87,114 +87,152 @@ public class Profile extends Entity implements IJsonBackedObject {
      * The Account.
      * 
      */
+    @SerializedName("account")
+    @Expose
     public UserAccountInformationCollectionPage account;
 
     /**
      * The Addresses.
      * 
      */
+    @SerializedName("addresses")
+    @Expose
     public ItemAddressCollectionPage addresses;
 
     /**
      * The Anniversaries.
      * 
      */
+    @SerializedName("anniversaries")
+    @Expose
     public PersonAnniversaryCollectionPage anniversaries;
 
     /**
      * The Awards.
      * 
      */
+    @SerializedName("awards")
+    @Expose
     public PersonAwardCollectionPage awards;
 
     /**
      * The Certifications.
      * 
      */
+    @SerializedName("certifications")
+    @Expose
     public PersonCertificationCollectionPage certifications;
 
     /**
      * The Educational Activities.
      * 
      */
+    @SerializedName("educationalActivities")
+    @Expose
     public EducationalActivityCollectionPage educationalActivities;
 
     /**
      * The Emails.
      * 
      */
+    @SerializedName("emails")
+    @Expose
     public ItemEmailCollectionPage emails;
 
     /**
      * The Interests.
      * 
      */
+    @SerializedName("interests")
+    @Expose
     public PersonInterestCollectionPage interests;
 
     /**
      * The Languages.
      * 
      */
+    @SerializedName("languages")
+    @Expose
     public LanguageProficiencyCollectionPage languages;
 
     /**
      * The Names.
      * 
      */
+    @SerializedName("names")
+    @Expose
     public PersonNameCollectionPage names;
 
     /**
      * The Notes.
      * 
      */
+    @SerializedName("notes")
+    @Expose
     public PersonAnnotationCollectionPage notes;
 
     /**
      * The Patents.
      * 
      */
+    @SerializedName("patents")
+    @Expose
     public ItemPatentCollectionPage patents;
 
     /**
      * The Phones.
      * 
      */
+    @SerializedName("phones")
+    @Expose
     public ItemPhoneCollectionPage phones;
 
     /**
      * The Positions.
      * 
      */
+    @SerializedName("positions")
+    @Expose
     public WorkPositionCollectionPage positions;
 
     /**
      * The Projects.
      * 
      */
+    @SerializedName("projects")
+    @Expose
     public ProjectParticipationCollectionPage projects;
 
     /**
      * The Publications.
      * 
      */
+    @SerializedName("publications")
+    @Expose
     public ItemPublicationCollectionPage publications;
 
     /**
      * The Skills.
      * 
      */
+    @SerializedName("skills")
+    @Expose
     public SkillProficiencyCollectionPage skills;
 
     /**
      * The Web Accounts.
      * 
      */
+    @SerializedName("webAccounts")
+    @Expose
     public WebAccountCollectionPage webAccounts;
 
     /**
      * The Websites.
      * 
      */
+    @SerializedName("websites")
+    @Expose
     public PersonWebsiteCollectionPage websites;
 
 

@@ -182,6 +182,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The Root Certificates For Server Validation.
      * Specify root certificate for server validation.
      */
+    @SerializedName("rootCertificatesForServerValidation")
+    @Expose
     public Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 

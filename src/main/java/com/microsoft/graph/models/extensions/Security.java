@@ -75,72 +75,96 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Alerts.
      * Read-only. Nullable.
      */
+    @SerializedName("alerts")
+    @Expose
     public AlertCollectionPage alerts;
 
     /**
      * The Cloud App Security Profiles.
      * 
      */
+    @SerializedName("cloudAppSecurityProfiles")
+    @Expose
     public CloudAppSecurityProfileCollectionPage cloudAppSecurityProfiles;
 
     /**
      * The Domain Security Profiles.
      * 
      */
+    @SerializedName("domainSecurityProfiles")
+    @Expose
     public DomainSecurityProfileCollectionPage domainSecurityProfiles;
 
     /**
      * The File Security Profiles.
      * 
      */
+    @SerializedName("fileSecurityProfiles")
+    @Expose
     public FileSecurityProfileCollectionPage fileSecurityProfiles;
 
     /**
      * The Host Security Profiles.
      * 
      */
+    @SerializedName("hostSecurityProfiles")
+    @Expose
     public HostSecurityProfileCollectionPage hostSecurityProfiles;
 
     /**
      * The Ip Security Profiles.
      * 
      */
+    @SerializedName("ipSecurityProfiles")
+    @Expose
     public IpSecurityProfileCollectionPage ipSecurityProfiles;
 
     /**
      * The Provider Tenant Settings.
      * 
      */
+    @SerializedName("providerTenantSettings")
+    @Expose
     public ProviderTenantSettingCollectionPage providerTenantSettings;
 
     /**
      * The Secure Score Control Profiles.
      * 
      */
+    @SerializedName("secureScoreControlProfiles")
+    @Expose
     public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
     /**
      * The Secure Scores.
      * 
      */
+    @SerializedName("secureScores")
+    @Expose
     public SecureScoreCollectionPage secureScores;
 
     /**
      * The Security Actions.
      * 
      */
+    @SerializedName("securityActions")
+    @Expose
     public SecurityActionCollectionPage securityActions;
 
     /**
      * The Ti Indicators.
      * 
      */
+    @SerializedName("tiIndicators")
+    @Expose
     public TiIndicatorCollectionPage tiIndicators;
 
     /**
      * The User Security Profiles.
      * 
      */
+    @SerializedName("userSecurityProfiles")
+    @Expose
     public UserSecurityProfileCollectionPage userSecurityProfiles;
 
 

@@ -310,6 +310,8 @@ public class SalesQuote extends Entity implements IJsonBackedObject {
      * The Sales Quote Lines.
      * 
      */
+    @SerializedName("salesQuoteLines")
+    @Expose
     public SalesQuoteLineCollectionPage salesQuoteLines;
 
     /**

@@ -84,12 +84,16 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
      * The Assignments.
      * The list of group assignments of the profile.
      */
+    @SerializedName("assignments")
+    @Expose
     public WindowsFeatureUpdateProfileAssignmentCollectionPage assignments;
 
     /**
      * The Device Update States.
      * The list of device states this profile targeted to
      */
+    @SerializedName("deviceUpdateStates")
+    @Expose
     public WindowsUpdateStateCollectionPage deviceUpdateStates;
 
 

@@ -65,6 +65,8 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
      * The Scoped Members.
      * 
      */
+    @SerializedName("scopedMembers")
+    @Expose
     public ScopedRoleMembershipCollectionPage scopedMembers;
 
 

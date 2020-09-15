@@ -70,7 +70,7 @@ public interface ISalesQuoteRequestBuilder extends IRequestBuilder {
      * @return the IShipmentMethodRequestBuilder instance
      */
     IShipmentMethodRequestBuilder shipmentMethod();
-    ISalesQuoteMakeInvoiceRequestBuilder makeInvoice();
     ISalesQuoteSendRequestBuilder send();
+    ISalesQuoteMakeInvoiceRequestBuilder makeInvoice();
 
 }

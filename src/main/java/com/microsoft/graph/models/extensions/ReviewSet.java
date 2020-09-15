@@ -57,6 +57,8 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
      * The Queries.
      * 
      */
+    @SerializedName("queries")
+    @Expose
     public ReviewSetQueryCollectionPage queries;
 
 

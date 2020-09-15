@@ -71,9 +71,9 @@ public interface ISalesInvoiceRequestBuilder extends IRequestBuilder {
      */
     IShipmentMethodRequestBuilder shipmentMethod();
     ISalesInvoiceCancelRequestBuilder cancel();
+    ISalesInvoiceSendRequestBuilder send();
     ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend();
     ISalesInvoicePostRequestBuilder post();
     ISalesInvoicePostAndSendRequestBuilder postAndSend();
-    ISalesInvoiceSendRequestBuilder send();
 
 }

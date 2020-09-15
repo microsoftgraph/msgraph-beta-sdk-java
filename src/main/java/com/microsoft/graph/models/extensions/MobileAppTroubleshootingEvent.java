@@ -66,6 +66,8 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * The App Log Collection Requests.
      * The collection property of AppLogUploadRequest.
      */
+    @SerializedName("appLogCollectionRequests")
+    @Expose
     public AppLogCollectionRequestCollectionPage appLogCollectionRequests;
 
 

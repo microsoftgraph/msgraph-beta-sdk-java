@@ -159,6 +159,10 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
         return new WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionState"), getClient(), null);
     }
 
+    public IManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(final String notificationTitle, final String notificationBody) {
+        return new ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, notificationTitle, notificationBody);
+    }
+
     public IManagedDeviceOverrideComplianceStateRequestBuilder overrideComplianceState(final AdministratorConfiguredDeviceComplianceState complianceState, final String remediationUrl) {
         return new ManagedDeviceOverrideComplianceStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.overrideComplianceState"), getClient(), null, complianceState, remediationUrl);
     }
@@ -233,10 +237,6 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
 
     public IManagedDeviceRotateFileVaultKeyRequestBuilder rotateFileVaultKey() {
         return new ManagedDeviceRotateFileVaultKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rotateFileVaultKey"), getClient(), null);
-    }
-
-    public IManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(final String notificationTitle, final String notificationBody) {
-        return new ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, notificationTitle, notificationBody);
     }
 
     public IManagedDeviceSetDeviceNameRequestBuilder setDeviceName(final String deviceName) {

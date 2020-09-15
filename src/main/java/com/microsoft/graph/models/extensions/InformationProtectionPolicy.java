@@ -33,6 +33,8 @@ public class InformationProtectionPolicy extends Entity implements IJsonBackedOb
      * The Labels.
      * 
      */
+    @SerializedName("labels")
+    @Expose
     public InformationProtectionLabelCollectionPage labels;
 
 

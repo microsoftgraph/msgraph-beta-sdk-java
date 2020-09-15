@@ -42,6 +42,8 @@ public class UserExperienceAnalyticsCategory extends Entity implements IJsonBack
      * The Metric Values.
      * The metric values for the user experience analytics category.
      */
+    @SerializedName("metricValues")
+    @Expose
     public UserExperienceAnalyticsMetricCollectionPage metricValues;
 
 

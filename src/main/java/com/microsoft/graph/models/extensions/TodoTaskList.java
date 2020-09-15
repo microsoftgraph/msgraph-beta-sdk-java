@@ -69,12 +69,16 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
      * The Extensions.
      * 
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Tasks.
      * 
      */
+    @SerializedName("tasks")
+    @Expose
     public TodoTaskCollectionPage tasks;
 
 

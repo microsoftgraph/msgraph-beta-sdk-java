@@ -85,6 +85,8 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * The Managed Devices.
      * The vulnerable managed devices.
      */
+    @SerializedName("managedDevices")
+    @Expose
     public VulnerableManagedDeviceCollectionPage managedDevices;
 
 

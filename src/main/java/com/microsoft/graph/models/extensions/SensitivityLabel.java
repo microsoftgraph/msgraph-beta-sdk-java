@@ -134,6 +134,8 @@ public class SensitivityLabel extends Entity implements IJsonBackedObject {
      * The Sublabels.
      * 
      */
+    @SerializedName("sublabels")
+    @Expose
     public SensitivityLabelCollectionPage sublabels;
 
 

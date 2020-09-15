@@ -127,18 +127,24 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
      * The Outcomes.
      * 
      */
+    @SerializedName("outcomes")
+    @Expose
     public EducationOutcomeCollectionPage outcomes;
 
     /**
      * The Resources.
      * 
      */
+    @SerializedName("resources")
+    @Expose
     public EducationSubmissionResourceCollectionPage resources;
 
     /**
      * The Submitted Resources.
      * 
      */
+    @SerializedName("submittedResources")
+    @Expose
     public EducationSubmissionResourceCollectionPage submittedResources;
 
 

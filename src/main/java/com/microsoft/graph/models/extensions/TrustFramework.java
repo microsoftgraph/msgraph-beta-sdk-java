@@ -36,12 +36,16 @@ public class TrustFramework extends Entity implements IJsonBackedObject {
      * The Key Sets.
      * 
      */
+    @SerializedName("keySets")
+    @Expose
     public TrustFrameworkKeySetCollectionPage keySets;
 
     /**
      * The Policies.
      * 
      */
+    @SerializedName("policies")
+    @Expose
     public TrustFrameworkPolicyCollectionPage policies;
 
 

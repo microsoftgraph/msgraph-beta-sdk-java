@@ -170,6 +170,8 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
      * The Detected Malware State.
      * Device malware list
      */
+    @SerializedName("detectedMalwareState")
+    @Expose
     public WindowsDeviceMalwareStateCollectionPage detectedMalwareState;
 
 

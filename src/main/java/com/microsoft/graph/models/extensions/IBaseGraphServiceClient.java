@@ -153,12 +153,6 @@ import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
@@ -187,7 +181,6 @@ import com.microsoft.graph.requests.extensions.ICommsApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExternalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -1295,51 +1288,6 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     ITeamsTemplateRequestBuilder teamsTemplates(final String id);
 
     /**
-     * Gets the collection of LinkedResources objects
-     *
-     * @return the request builder for the collection of LinkedResources objects
-     */
-    ILinkedResourceCollectionRequestBuilder linkedResources();
-
-    /**
-     * Gets a single LinkedResources
-     *
-     * @param id the id of the LinkedResources to retrieve
-     * @return the request builder for the LinkedResources object
-     */
-    ILinkedResourceRequestBuilder linkedResources(final String id);
-
-    /**
-     * Gets the collection of Lists objects
-     *
-     * @return the request builder for the collection of Lists objects
-     */
-    ITodoTaskListCollectionRequestBuilder lists();
-
-    /**
-     * Gets a single Lists
-     *
-     * @param id the id of the Lists to retrieve
-     * @return the request builder for the Lists object
-     */
-    ITodoTaskListRequestBuilder lists(final String id);
-
-    /**
-     * Gets the collection of Tasks objects
-     *
-     * @return the request builder for the collection of Tasks objects
-     */
-    ITodoTaskCollectionRequestBuilder tasks();
-
-    /**
-     * Gets a single Tasks
-     *
-     * @param id the id of the Tasks to retrieve
-     * @return the request builder for the Tasks object
-     */
-    ITodoTaskRequestBuilder tasks(final String id);
-
-    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the AuditLogRoot
@@ -1548,12 +1496,5 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the Teamwork
      */
     ITeamworkRequestBuilder teamwork();
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Todo
-     */
-    ITodoRequestBuilder todo();
 
 }

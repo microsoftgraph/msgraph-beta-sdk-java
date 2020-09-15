@@ -100,6 +100,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      * The Committed Contained Apps.
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      */
+    @SerializedName("committedContainedApps")
+    @Expose
     public MobileContainedAppCollectionPage committedContainedApps;
 
 

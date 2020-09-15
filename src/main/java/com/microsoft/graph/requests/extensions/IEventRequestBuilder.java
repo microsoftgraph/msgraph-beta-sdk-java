@@ -76,8 +76,8 @@ public interface IEventRequestBuilder extends IRequestBuilder {
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-    IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse);
     IEventCancelRequestBuilder cancel(final String comment);
+    IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse);
     IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse);
     IEventDismissReminderRequestBuilder dismissReminder();
     IEventForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final String comment);

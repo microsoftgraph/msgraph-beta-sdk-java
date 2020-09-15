@@ -133,12 +133,16 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
      * The Group Policy Setting Mappings.
      * A list of group policy settings to MDM/Intune mappings.
      */
+    @SerializedName("groupPolicySettingMappings")
+    @Expose
     public GroupPolicySettingMappingCollectionPage groupPolicySettingMappings;
 
     /**
      * The Unsupported Group Policy Extensions.
      * A list of unsupported group policy extensions inside the Group Policy Object.
      */
+    @SerializedName("unsupportedGroupPolicyExtensions")
+    @Expose
     public UnsupportedGroupPolicyExtensionCollectionPage unsupportedGroupPolicyExtensions;
 
 

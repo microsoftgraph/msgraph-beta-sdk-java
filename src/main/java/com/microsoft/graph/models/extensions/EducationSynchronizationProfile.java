@@ -94,6 +94,8 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
      * The Errors.
      * 
      */
+    @SerializedName("errors")
+    @Expose
     public EducationSynchronizationErrorCollectionPage errors;
 
     /**

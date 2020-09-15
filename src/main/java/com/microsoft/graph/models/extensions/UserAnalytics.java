@@ -42,6 +42,8 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
      * The Activity Statistics.
      * 
      */
+    @SerializedName("activityStatistics")
+    @Expose
     public ActivityStatisticsCollectionPage activityStatistics;
 
 

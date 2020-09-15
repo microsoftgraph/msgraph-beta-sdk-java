@@ -71,16 +71,16 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder impleme
         return new SynchronizationJobPauseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pause"), getClient(), null);
     }
 
+    public ISynchronizationJobStartRequestBuilder start() {
+        return new SynchronizationJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
+    }
+
     public ISynchronizationJobProvisionOnDemandRequestBuilder provisionOnDemand(final java.util.List<SynchronizationJobApplicationParameters> parameters) {
         return new SynchronizationJobProvisionOnDemandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.provisionOnDemand"), getClient(), null, parameters);
     }
 
     public ISynchronizationJobRestartRequestBuilder restart(final SynchronizationJobRestartCriteria criteria) {
         return new SynchronizationJobRestartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restart"), getClient(), null, criteria);
-    }
-
-    public ISynchronizationJobStartRequestBuilder start() {
-        return new SynchronizationJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
     }
 
     public ISynchronizationJobStopRequestBuilder stop() {

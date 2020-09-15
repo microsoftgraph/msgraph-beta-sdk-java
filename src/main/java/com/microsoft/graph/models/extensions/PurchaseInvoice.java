@@ -252,6 +252,8 @@ public class PurchaseInvoice extends Entity implements IJsonBackedObject {
      * The Purchase Invoice Lines.
      * 
      */
+    @SerializedName("purchaseInvoiceLines")
+    @Expose
     public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
 
     /**

@@ -82,6 +82,8 @@ public class UserAppInstallStatus extends Entity implements IJsonBackedObject {
      * The Device Statuses.
      * The install state of the app on devices.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public MobileAppInstallStatusCollectionPage deviceStatuses;
 
 

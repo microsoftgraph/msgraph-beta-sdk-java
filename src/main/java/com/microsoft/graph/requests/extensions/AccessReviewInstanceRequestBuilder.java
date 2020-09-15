@@ -74,6 +74,10 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
         return new AccessReviewScheduleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 
+    public IAccessReviewInstanceStopRequestBuilder stop() {
+        return new AccessReviewInstanceStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
+    }
+
     public IAccessReviewInstanceAcceptRecommendationsRequestBuilder acceptRecommendations() {
         return new AccessReviewInstanceAcceptRecommendationsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acceptRecommendations"), getClient(), null);
     }
@@ -88,9 +92,5 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
 
     public IAccessReviewInstanceSendReminderRequestBuilder sendReminder() {
         return new AccessReviewInstanceSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
-    }
-
-    public IAccessReviewInstanceStopRequestBuilder stop() {
-        return new AccessReviewInstanceStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }

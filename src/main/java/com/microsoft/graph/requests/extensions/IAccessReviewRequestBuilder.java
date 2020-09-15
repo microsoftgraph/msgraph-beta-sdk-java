@@ -54,9 +54,9 @@ public interface IAccessReviewRequestBuilder extends IRequestBuilder {
     IAccessReviewReviewerCollectionRequestBuilder reviewers();
 
     IAccessReviewReviewerRequestBuilder reviewers(final String id);
+    IAccessReviewStopRequestBuilder stop();
     IAccessReviewApplyDecisionsRequestBuilder applyDecisions();
     IAccessReviewResetDecisionsRequestBuilder resetDecisions();
     IAccessReviewSendReminderRequestBuilder sendReminder();
-    IAccessReviewStopRequestBuilder stop();
 
 }

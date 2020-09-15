@@ -39,18 +39,24 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
      * The Cached Report Configurations.
      * Entity representing the configuration of a cached report
      */
+    @SerializedName("cachedReportConfigurations")
+    @Expose
     public DeviceManagementCachedReportConfigurationCollectionPage cachedReportConfigurations;
 
     /**
      * The Export Jobs.
      * Entity representing a job to export a report
      */
+    @SerializedName("exportJobs")
+    @Expose
     public DeviceManagementExportJobCollectionPage exportJobs;
 
     /**
      * The Report Schedules.
      * Entity representing a schedule for which reports are delivered
      */
+    @SerializedName("reportSchedules")
+    @Expose
     public DeviceManagementReportScheduleCollectionPage reportSchedules;
 
 

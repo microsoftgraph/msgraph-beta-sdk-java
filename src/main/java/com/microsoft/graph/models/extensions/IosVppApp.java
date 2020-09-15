@@ -133,6 +133,8 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Assigned Licenses.
      * The licenses assigned to this app.
      */
+    @SerializedName("assignedLicenses")
+    @Expose
     public IosVppAppAssignedLicenseCollectionPage assignedLicenses;
 
 

@@ -66,6 +66,8 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
      * The User Consent Requests.
      * 
      */
+    @SerializedName("userConsentRequests")
+    @Expose
     public UserConsentRequestCollectionPage userConsentRequests;
 
 

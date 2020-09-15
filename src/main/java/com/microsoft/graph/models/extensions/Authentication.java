@@ -63,66 +63,88 @@ public class Authentication extends Entity implements IJsonBackedObject {
      * The Email Methods.
      * 
      */
+    @SerializedName("emailMethods")
+    @Expose
     public EmailAuthenticationMethodCollectionPage emailMethods;
 
     /**
      * The Fido2Methods.
      * 
      */
+    @SerializedName("fido2Methods")
+    @Expose
     public Fido2AuthenticationMethodCollectionPage fido2Methods;
 
     /**
      * The Methods.
      * 
      */
+    @SerializedName("methods")
+    @Expose
     public AuthenticationMethodCollectionPage methods;
 
     /**
      * The Microsoft Authenticator Methods.
      * 
      */
+    @SerializedName("microsoftAuthenticatorMethods")
+    @Expose
     public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
 
     /**
      * The Oath Methods.
      * 
      */
+    @SerializedName("oathMethods")
+    @Expose
     public SoftwareOathAuthenticationMethodCollectionPage oathMethods;
 
     /**
      * The Operations.
      * 
      */
+    @SerializedName("operations")
+    @Expose
     public LongRunningOperationCollectionPage operations;
 
     /**
      * The Passwordless Microsoft Authenticator Methods.
      * 
      */
+    @SerializedName("passwordlessMicrosoftAuthenticatorMethods")
+    @Expose
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage passwordlessMicrosoftAuthenticatorMethods;
 
     /**
      * The Password Methods.
      * 
      */
+    @SerializedName("passwordMethods")
+    @Expose
     public PasswordAuthenticationMethodCollectionPage passwordMethods;
 
     /**
      * The Phone Methods.
      * 
      */
+    @SerializedName("phoneMethods")
+    @Expose
     public PhoneAuthenticationMethodCollectionPage phoneMethods;
 
     /**
      * The Security Question Methods.
      * 
      */
+    @SerializedName("securityQuestionMethods")
+    @Expose
     public SecurityQuestionAuthenticationMethodCollectionPage securityQuestionMethods;
 
     /**
      * The Temporary Access Pass Methods.
      * 
      */
+    @SerializedName("temporaryAccessPassMethods")
+    @Expose
     public TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
 
 

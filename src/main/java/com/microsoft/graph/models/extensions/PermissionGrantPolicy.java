@@ -33,12 +33,16 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
      * The Excludes.
      * 
      */
+    @SerializedName("excludes")
+    @Expose
     public PermissionGrantConditionSetCollectionPage excludes;
 
     /**
      * The Includes.
      * 
      */
+    @SerializedName("includes")
+    @Expose
     public PermissionGrantConditionSetCollectionPage includes;
 
 

@@ -71,12 +71,12 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
         return new GroupPolicyOperationRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyOperations") + "/" + id, getClient(), null);
     }
 
-    public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder addLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
-        return new GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addLanguageFiles"), getClient(), null, groupPolicyUploadedLanguageFiles);
-    }
-
     public IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder remove() {
         return new GroupPolicyUploadedDefinitionFileRemoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null);
+    }
+
+    public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder addLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {
+        return new GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addLanguageFiles"), getClient(), null, groupPolicyUploadedLanguageFiles);
     }
 
     public IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder removeLanguageFiles(final java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles) {

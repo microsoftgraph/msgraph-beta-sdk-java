@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Deleted;
 import com.microsoft.graph.models.extensions.Root;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SiteCollection;
@@ -50,6 +51,14 @@ import java.util.Map;
  */
 public class Site extends BaseItem implements IJsonBackedObject {
 
+
+    /**
+     * The Deleted.
+     * 
+     */
+    @SerializedName("deleted")
+    @Expose
+    public Deleted deleted;
 
     /**
      * The Display Name.
@@ -95,12 +104,16 @@ public class Site extends BaseItem implements IJsonBackedObject {
      * The Columns.
      * The collection of column definitions reusable across lists under this site.
      */
+    @SerializedName("columns")
+    @Expose
     public ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
      * The collection of content types defined for this site.
      */
+    @SerializedName("contentTypes")
+    @Expose
     public ContentTypeCollectionPage contentTypes;
 
     /**
@@ -115,30 +128,40 @@ public class Site extends BaseItem implements IJsonBackedObject {
      * The Drives.
      * The collection of drives (document libraries) under this site.
      */
+    @SerializedName("drives")
+    @Expose
     public DriveCollectionPage drives;
 
     /**
      * The Items.
      * Used to address any item contained in this site. This collection cannot be enumerated.
      */
+    @SerializedName("items")
+    @Expose
     public BaseItemCollectionPage items;
 
     /**
      * The Lists.
      * The collection of lists under this site.
      */
+    @SerializedName("lists")
+    @Expose
     public ListCollectionPage lists;
 
     /**
      * The Pages.
      * 
      */
+    @SerializedName("pages")
+    @Expose
     public SitePageCollectionPage pages;
 
     /**
      * The Sites.
      * The collection of the sub-sites under this site.
      */
+    @SerializedName("sites")
+    @Expose
     public SiteCollectionPage sites;
 
     /**

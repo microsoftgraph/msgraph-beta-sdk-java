@@ -309,12 +309,16 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the contact. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
@@ -329,6 +333,8 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

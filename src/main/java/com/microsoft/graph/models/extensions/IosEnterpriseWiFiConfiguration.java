@@ -119,6 +119,8 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * The Root Certificates For Server Validation.
      * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
      */
+    @SerializedName("rootCertificatesForServerValidation")
+    @Expose
     public IosTrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
 

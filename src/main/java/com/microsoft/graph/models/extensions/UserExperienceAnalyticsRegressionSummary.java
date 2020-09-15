@@ -33,18 +33,24 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * The Manufacturer Regression.
      * The metric values for the user experience analytics Manufacturer regression.
      */
+    @SerializedName("manufacturerRegression")
+    @Expose
     public UserExperienceAnalyticsMetricCollectionPage manufacturerRegression;
 
     /**
      * The Model Regression.
      * The metric values for the user experience analytics model regression.
      */
+    @SerializedName("modelRegression")
+    @Expose
     public UserExperienceAnalyticsMetricCollectionPage modelRegression;
 
     /**
      * The Operating System Regression.
      * The metric values for the user experience analytics operating system regression.
      */
+    @SerializedName("operatingSystemRegression")
+    @Expose
     public UserExperienceAnalyticsMetricCollectionPage operatingSystemRegression;
 
 

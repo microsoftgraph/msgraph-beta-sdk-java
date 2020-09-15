@@ -101,6 +101,8 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
      * The Jobs.
      * 
      */
+    @SerializedName("jobs")
+    @Expose
     public PrintJobCollectionPage jobs;
 
 

@@ -173,12 +173,16 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Categories.
      * 
      */
+    @SerializedName("categories")
+    @Expose
     public EducationCategoryCollectionPage categories;
 
     /**
      * The Resources.
      * 
      */
+    @SerializedName("resources")
+    @Expose
     public EducationAssignmentResourceCollectionPage resources;
 
     /**
@@ -193,6 +197,8 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
      * The Submissions.
      * 
      */
+    @SerializedName("submissions")
+    @Expose
     public EducationSubmissionCollectionPage submissions;
 
 

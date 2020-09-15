@@ -83,6 +83,8 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * The Group Policy Operations.
      * The list of operations on the uploaded ADMX file.
      */
+    @SerializedName("groupPolicyOperations")
+    @Expose
     public GroupPolicyOperationCollectionPage groupPolicyOperations;
 
 

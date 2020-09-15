@@ -75,6 +75,8 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
      * The Assignments.
      * 
      */
+    @SerializedName("assignments")
+    @Expose
     public OfficeClientConfigurationAssignmentCollectionPage assignments;
 
 
