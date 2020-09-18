@@ -41,8 +41,4 @@ public interface ISiteCollectionRequestBuilder extends IRequestBuilder {
     ISiteDeltaCollectionRequestBuilder delta();
 
 	ISiteDeltaCollectionRequestBuilder delta(final String deltaLink);
-
-    ISiteDeltaCollectionRequestBuilder delta(final String token);
-
-	ISiteDeltaCollectionRequestBuilder delta(final String deltaLink);
 }
