@@ -36,12 +36,16 @@ public class CommsApplication extends Entity implements IJsonBackedObject {
      * The Calls.
      * 
      */
+    @SerializedName("calls")
+    @Expose
     public CallCollectionPage calls;
 
     /**
      * The Online Meetings.
      * 
      */
+    @SerializedName("onlineMeetings")
+    @Expose
     public OnlineMeetingCollectionPage onlineMeetings;
 
 

@@ -137,12 +137,16 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      * The Extensions.
      * 
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Linked Resources.
      * 
      */
+    @SerializedName("linkedResources")
+    @Expose
     public LinkedResourceCollectionPage linkedResources;
 
 

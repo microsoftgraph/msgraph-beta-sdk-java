@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Call;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.generated.CallDisposition;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
@@ -16,8 +18,6 @@ import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import com.microsoft.graph.models.extensions.RecordOperation;
-import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
-import com.microsoft.graph.models.generated.CallDisposition;
 import com.microsoft.graph.models.generated.RejectReason;
 import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
@@ -101,6 +101,10 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
         return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants") + "/" + id, getClient(), null);
     }
 
+    public ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final CallDisposition targetDisposition, final Integer timeout, final Boolean maskCallee, final Boolean maskCaller, final String callbackUri) {
+        return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, targets, targetDisposition, timeout, maskCallee, maskCaller, callbackUri);
+    }
+
     public ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities) {
         return new CallAnswerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.answer"), getClient(), null, callbackUri, mediaConfig, acceptedModalities);
     }
@@ -131,10 +135,6 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
 
     public ICallRecordResponseRequestBuilder recordResponse(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final Boolean streamWhileRecording, final java.util.List<String> stopTones, final String clientContext) {
         return new CallRecordResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordResponse"), getClient(), null, prompts, bargeInAllowed, initialSilenceTimeoutInSeconds, maxSilenceTimeoutInSeconds, maxRecordDurationInSeconds, playBeep, streamWhileRecording, stopTones, clientContext);
-    }
-
-    public ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final CallDisposition targetDisposition, final Integer timeout, final Boolean maskCallee, final Boolean maskCaller, final String callbackUri) {
-        return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, targets, targetDisposition, timeout, maskCallee, maskCaller, callbackUri);
     }
 
     public ICallRejectRequestBuilder reject(final RejectReason reason, final String callbackUri) {

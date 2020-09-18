@@ -65,18 +65,24 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      * The Groups.
      * 
      */
+    @SerializedName("groups")
+    @Expose
     public ExternalGroupCollectionPage groups;
 
     /**
      * The Items.
      * 
      */
+    @SerializedName("items")
+    @Expose
     public ExternalItemCollectionPage items;
 
     /**
      * The Operations.
      * 
      */
+    @SerializedName("operations")
+    @Expose
     public ConnectionOperationCollectionPage operations;
 
     /**

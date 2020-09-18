@@ -36,12 +36,16 @@ public class RbacApplicationMultiple extends Entity implements IJsonBackedObject
      * The Role Assignments.
      * 
      */
+    @SerializedName("roleAssignments")
+    @Expose
     public UnifiedRoleAssignmentMultipleCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
      * 
      */
+    @SerializedName("roleDefinitions")
+    @Expose
     public UnifiedRoleDefinitionCollectionPage roleDefinitions;
 
 

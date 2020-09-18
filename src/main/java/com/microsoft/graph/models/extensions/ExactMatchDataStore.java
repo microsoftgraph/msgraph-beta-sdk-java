@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ExactDataMatchStoreColumn;
 import com.microsoft.graph.models.extensions.ExactMatchSession;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionResponse;
@@ -28,6 +29,14 @@ import java.util.Map;
  */
 public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Columns.
+     * 
+     */
+    @SerializedName("columns")
+    @Expose
+    public java.util.List<ExactDataMatchStoreColumn> columns;
 
     /**
      * The Data Last Updated Date Time.
@@ -57,6 +66,8 @@ public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
      * The Sessions.
      * 
      */
+    @SerializedName("sessions")
+    @Expose
     public ExactMatchSessionCollectionPage sessions;
 
 

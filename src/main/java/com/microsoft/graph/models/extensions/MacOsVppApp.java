@@ -124,6 +124,8 @@ public class MacOsVppApp extends MobileApp implements IJsonBackedObject {
      * The Assigned Licenses.
      * The licenses assigned to this app.
      */
+    @SerializedName("assignedLicenses")
+    @Expose
     public MacOsVppAppAssignedLicenseCollectionPage assignedLicenses;
 
 

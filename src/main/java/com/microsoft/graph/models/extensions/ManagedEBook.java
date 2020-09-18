@@ -116,6 +116,8 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for this eBook.
      */
+    @SerializedName("assignments")
+    @Expose
     public ManagedEBookAssignmentCollectionPage assignments;
 
     /**
@@ -128,6 +130,8 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Device States.
      * The list of installation states for this eBook.
      */
+    @SerializedName("deviceStates")
+    @Expose
     public DeviceInstallStateCollectionPage deviceStates;
 
     /**
@@ -142,6 +146,8 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The User State Summary.
      * The list of installation states for this eBook.
      */
+    @SerializedName("userStateSummary")
+    @Expose
     public UserInstallStateSummaryCollectionPage userStateSummary;
 
 

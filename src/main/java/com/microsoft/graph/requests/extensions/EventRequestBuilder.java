@@ -127,12 +127,12 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse) {
-        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
-    }
-
     public IEventCancelRequestBuilder cancel(final String comment) {
         return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, comment);
+    }
+
+    public IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse) {
+        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
     }
 
     public IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse) {

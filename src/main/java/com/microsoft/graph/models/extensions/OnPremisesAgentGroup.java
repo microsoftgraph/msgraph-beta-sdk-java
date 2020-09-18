@@ -61,12 +61,16 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
      * The Agents.
      * 
      */
+    @SerializedName("agents")
+    @Expose
     public OnPremisesAgentCollectionPage agents;
 
     /**
      * The Published Resources.
      * 
      */
+    @SerializedName("publishedResources")
+    @Expose
     public PublishedResourceCollectionPage publishedResources;
 
 

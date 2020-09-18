@@ -40,7 +40,7 @@ public interface IRequestRequestBuilder extends IRequestBuilder {
      * @return the IApprovalRequestBuilder instance
      */
     IApprovalRequestBuilder approval();
-    IRequestRecordDecisionsRequestBuilder recordDecisions(final String reviewResult, final String justification);
     IRequestStopRequestBuilder stop();
+    IRequestRecordDecisionsRequestBuilder recordDecisions(final String reviewResult, final String justification);
 
 }

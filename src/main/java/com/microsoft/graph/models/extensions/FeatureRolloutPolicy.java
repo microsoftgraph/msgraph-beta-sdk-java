@@ -74,6 +74,8 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
      * The Applies To.
      * 
      */
+    @SerializedName("appliesTo")
+    @Expose
     public DirectoryObjectCollectionPage appliesTo;
 
 

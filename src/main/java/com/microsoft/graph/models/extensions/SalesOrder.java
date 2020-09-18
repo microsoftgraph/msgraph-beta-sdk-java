@@ -309,6 +309,8 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
      * The Sales Order Lines.
      * 
      */
+    @SerializedName("salesOrderLines")
+    @Expose
     public SalesOrderLineCollectionPage salesOrderLines;
 
 

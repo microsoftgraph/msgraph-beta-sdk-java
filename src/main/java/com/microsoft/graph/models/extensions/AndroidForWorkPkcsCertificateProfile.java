@@ -65,6 +65,8 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
+    @SerializedName("managedDeviceCertificateStates")
+    @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 

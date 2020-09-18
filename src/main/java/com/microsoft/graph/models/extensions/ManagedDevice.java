@@ -667,24 +667,32 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Security Baseline States.
      * Security baseline states for this device.
      */
+    @SerializedName("securityBaselineStates")
+    @Expose
     public SecurityBaselineStateCollectionPage securityBaselineStates;
 
     /**
      * The Device Compliance Policy States.
      * Device compliance policy states for this device.
      */
+    @SerializedName("deviceCompliancePolicyStates")
+    @Expose
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
      * Device configuration states for this device.
      */
+    @SerializedName("deviceConfigurationStates")
+    @Expose
     public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**
      * The Managed Device Mobile App Configuration States.
      * Managed device mobile app configuration states for this device.
      */
+    @SerializedName("managedDeviceMobileAppConfigurationStates")
+    @Expose
     public ManagedDeviceMobileAppConfigurationStateCollectionPage managedDeviceMobileAppConfigurationStates;
 
     /**
@@ -705,12 +713,16 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Log Collection Requests.
      * List of log collection requests
      */
+    @SerializedName("logCollectionRequests")
+    @Expose
     public DeviceLogCollectionResponseCollectionPage logCollectionRequests;
 
     /**
      * The Users.
      * The primary users associated with the managed device.
      */
+    @SerializedName("users")
+    @Expose
     public UserCollectionPage users;
 
     /**

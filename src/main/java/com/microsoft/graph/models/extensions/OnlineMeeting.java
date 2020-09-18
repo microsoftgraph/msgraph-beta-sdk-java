@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AccessLevel;
+import com.microsoft.graph.models.generated.OnlineMeetingPresenters;
 import com.microsoft.graph.models.extensions.AudioConferencing;
 import com.microsoft.graph.models.generated.MeetingCapabilities;
 import com.microsoft.graph.models.extensions.ChatInfo;
@@ -40,6 +41,14 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName("accessLevel")
     @Expose
     public AccessLevel accessLevel;
+
+    /**
+     * The Allowed Presenters.
+     * 
+     */
+    @SerializedName("allowedPresenters")
+    @Expose
+    public OnlineMeetingPresenters allowedPresenters;
 
     /**
      * The Audio Conferencing.

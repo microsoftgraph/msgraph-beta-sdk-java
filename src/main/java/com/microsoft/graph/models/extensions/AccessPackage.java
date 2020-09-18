@@ -109,6 +109,8 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Access Package Assignment Policies.
      * 
      */
+    @SerializedName("accessPackageAssignmentPolicies")
+    @Expose
     public AccessPackageAssignmentPolicyCollectionPage accessPackageAssignmentPolicies;
 
     /**
@@ -123,6 +125,8 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The Access Package Resource Role Scopes.
      * 
      */
+    @SerializedName("accessPackageResourceRoleScopes")
+    @Expose
     public AccessPackageResourceRoleScopeCollectionPage accessPackageResourceRoleScopes;
 
 

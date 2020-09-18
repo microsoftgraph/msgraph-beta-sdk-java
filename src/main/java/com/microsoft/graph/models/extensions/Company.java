@@ -167,210 +167,280 @@ public class Company extends Entity implements IJsonBackedObject {
      * The Accounts.
      * 
      */
+    @SerializedName("accounts")
+    @Expose
     public AccountCollectionPage accounts;
 
     /**
      * The Aged Accounts Payable.
      * 
      */
+    @SerializedName("agedAccountsPayable")
+    @Expose
     public AgedAccountsPayableCollectionPage agedAccountsPayable;
 
     /**
      * The Aged Accounts Receivable.
      * 
      */
+    @SerializedName("agedAccountsReceivable")
+    @Expose
     public AgedAccountsReceivableCollectionPage agedAccountsReceivable;
 
     /**
      * The Company Information.
      * 
      */
+    @SerializedName("companyInformation")
+    @Expose
     public CompanyInformationCollectionPage companyInformation;
 
     /**
      * The Countries Regions.
      * 
      */
+    @SerializedName("countriesRegions")
+    @Expose
     public CountryRegionCollectionPage countriesRegions;
 
     /**
      * The Currencies.
      * 
      */
+    @SerializedName("currencies")
+    @Expose
     public CurrencyCollectionPage currencies;
 
     /**
      * The Customer Payment Journals.
      * 
      */
+    @SerializedName("customerPaymentJournals")
+    @Expose
     public CustomerPaymentJournalCollectionPage customerPaymentJournals;
 
     /**
      * The Customer Payments.
      * 
      */
+    @SerializedName("customerPayments")
+    @Expose
     public CustomerPaymentCollectionPage customerPayments;
 
     /**
      * The Customers.
      * 
      */
+    @SerializedName("customers")
+    @Expose
     public CustomerCollectionPage customers;
 
     /**
      * The Dimensions.
      * 
      */
+    @SerializedName("dimensions")
+    @Expose
     public DimensionCollectionPage dimensions;
 
     /**
      * The Dimension Values.
      * 
      */
+    @SerializedName("dimensionValues")
+    @Expose
     public DimensionValueCollectionPage dimensionValues;
 
     /**
      * The Employees.
      * 
      */
+    @SerializedName("employees")
+    @Expose
     public EmployeeCollectionPage employees;
 
     /**
      * The General Ledger Entries.
      * 
      */
+    @SerializedName("generalLedgerEntries")
+    @Expose
     public GeneralLedgerEntryCollectionPage generalLedgerEntries;
 
     /**
      * The Item Categories.
      * 
      */
+    @SerializedName("itemCategories")
+    @Expose
     public ItemCategoryCollectionPage itemCategories;
 
     /**
      * The Items.
      * 
      */
+    @SerializedName("items")
+    @Expose
     public ItemCollectionPage items;
 
     /**
      * The Journal Lines.
      * 
      */
+    @SerializedName("journalLines")
+    @Expose
     public JournalLineCollectionPage journalLines;
 
     /**
      * The Journals.
      * 
      */
+    @SerializedName("journals")
+    @Expose
     public JournalCollectionPage journals;
 
     /**
      * The Payment Methods.
      * 
      */
+    @SerializedName("paymentMethods")
+    @Expose
     public PaymentMethodCollectionPage paymentMethods;
 
     /**
      * The Payment Terms.
      * 
      */
+    @SerializedName("paymentTerms")
+    @Expose
     public PaymentTermCollectionPage paymentTerms;
 
     /**
      * The Picture.
      * 
      */
+    @SerializedName("picture")
+    @Expose
     public PictureCollectionPage picture;
 
     /**
      * The Purchase Invoice Lines.
      * 
      */
+    @SerializedName("purchaseInvoiceLines")
+    @Expose
     public PurchaseInvoiceLineCollectionPage purchaseInvoiceLines;
 
     /**
      * The Purchase Invoices.
      * 
      */
+    @SerializedName("purchaseInvoices")
+    @Expose
     public PurchaseInvoiceCollectionPage purchaseInvoices;
 
     /**
      * The Sales Credit Memo Lines.
      * 
      */
+    @SerializedName("salesCreditMemoLines")
+    @Expose
     public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 
     /**
      * The Sales Credit Memos.
      * 
      */
+    @SerializedName("salesCreditMemos")
+    @Expose
     public SalesCreditMemoCollectionPage salesCreditMemos;
 
     /**
      * The Sales Invoice Lines.
      * 
      */
+    @SerializedName("salesInvoiceLines")
+    @Expose
     public SalesInvoiceLineCollectionPage salesInvoiceLines;
 
     /**
      * The Sales Invoices.
      * 
      */
+    @SerializedName("salesInvoices")
+    @Expose
     public SalesInvoiceCollectionPage salesInvoices;
 
     /**
      * The Sales Order Lines.
      * 
      */
+    @SerializedName("salesOrderLines")
+    @Expose
     public SalesOrderLineCollectionPage salesOrderLines;
 
     /**
      * The Sales Orders.
      * 
      */
+    @SerializedName("salesOrders")
+    @Expose
     public SalesOrderCollectionPage salesOrders;
 
     /**
      * The Sales Quote Lines.
      * 
      */
+    @SerializedName("salesQuoteLines")
+    @Expose
     public SalesQuoteLineCollectionPage salesQuoteLines;
 
     /**
      * The Sales Quotes.
      * 
      */
+    @SerializedName("salesQuotes")
+    @Expose
     public SalesQuoteCollectionPage salesQuotes;
 
     /**
      * The Shipment Methods.
      * 
      */
+    @SerializedName("shipmentMethods")
+    @Expose
     public ShipmentMethodCollectionPage shipmentMethods;
 
     /**
      * The Tax Areas.
      * 
      */
+    @SerializedName("taxAreas")
+    @Expose
     public TaxAreaCollectionPage taxAreas;
 
     /**
      * The Tax Groups.
      * 
      */
+    @SerializedName("taxGroups")
+    @Expose
     public TaxGroupCollectionPage taxGroups;
 
     /**
      * The Units Of Measure.
      * 
      */
+    @SerializedName("unitsOfMeasure")
+    @Expose
     public UnitOfMeasureCollectionPage unitsOfMeasure;
 
     /**
      * The Vendors.
      * 
      */
+    @SerializedName("vendors")
+    @Expose
     public VendorCollectionPage vendors;
 
 

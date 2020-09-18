@@ -92,6 +92,10 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
         return new AccessReviewReviewerRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers") + "/" + id, getClient(), null);
     }
 
+    public IAccessReviewStopRequestBuilder stop() {
+        return new AccessReviewStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
+    }
+
     public IAccessReviewApplyDecisionsRequestBuilder applyDecisions() {
         return new AccessReviewApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDecisions"), getClient(), null);
     }
@@ -102,9 +106,5 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
 
     public IAccessReviewSendReminderRequestBuilder sendReminder() {
         return new AccessReviewSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
-    }
-
-    public IAccessReviewStopRequestBuilder stop() {
-        return new AccessReviewStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }

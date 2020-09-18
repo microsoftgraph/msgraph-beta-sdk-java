@@ -75,42 +75,56 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Activity Based Timeout Policies.
      * 
      */
+    @SerializedName("activityBasedTimeoutPolicies")
+    @Expose
     public ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
 
     /**
      * The Authorization Policy.
      * 
      */
+    @SerializedName("authorizationPolicy")
+    @Expose
     public AuthorizationPolicyCollectionPage authorizationPolicy;
 
     /**
      * The Claims Mapping Policies.
      * 
      */
+    @SerializedName("claimsMappingPolicies")
+    @Expose
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
     /**
      * The Home Realm Discovery Policies.
      * 
      */
+    @SerializedName("homeRealmDiscoveryPolicies")
+    @Expose
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Permission Grant Policies.
      * 
      */
+    @SerializedName("permissionGrantPolicies")
+    @Expose
     public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
 
     /**
      * The Token Issuance Policies.
      * 
      */
+    @SerializedName("tokenIssuancePolicies")
+    @Expose
     public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * 
      */
+    @SerializedName("tokenLifetimePolicies")
+    @Expose
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
@@ -133,6 +147,8 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Conditional Access Policies.
      * 
      */
+    @SerializedName("conditionalAccessPolicies")
+    @Expose
     public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
 
     /**

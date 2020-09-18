@@ -33,6 +33,8 @@ public class Bitlocker extends Entity implements IJsonBackedObject {
      * The Recovery Keys.
      * 
      */
+    @SerializedName("recoveryKeys")
+    @Expose
     public BitlockerRecoveryKeyCollectionPage recoveryKeys;
 
 

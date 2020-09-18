@@ -60,6 +60,8 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
      * The Access Package Assignments.
      * 
      */
+    @SerializedName("accessPackageAssignments")
+    @Expose
     public AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
     /**

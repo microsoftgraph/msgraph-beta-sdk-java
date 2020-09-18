@@ -355,6 +355,8 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
      */
+    @SerializedName("attachments")
+    @Expose
     public AttachmentCollectionPage attachments;
 
     /**
@@ -369,30 +371,40 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      * The Exception Occurrences.
      * 
      */
+    @SerializedName("exceptionOccurrences")
+    @Expose
     public EventCollectionPage exceptionOccurrences;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the event. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Instances.
      * The instances of the event. Navigation property. Read-only. Nullable.
      */
+    @SerializedName("instances")
+    @Expose
     public EventCollectionPage instances;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the event. Read-only. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

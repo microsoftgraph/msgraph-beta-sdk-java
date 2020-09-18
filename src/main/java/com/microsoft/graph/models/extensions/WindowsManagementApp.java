@@ -41,6 +41,8 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
      * The Health States.
      * The list of health states for installed Windows management app.
      */
+    @SerializedName("healthStates")
+    @Expose
     public WindowsManagementAppHealthStateCollectionPage healthStates;
 
 

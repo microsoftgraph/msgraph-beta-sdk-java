@@ -57,6 +57,8 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
      * The Device Run States.
      * List of run states for this script across all devices of specific user.
      */
+    @SerializedName("deviceRunStates")
+    @Expose
     public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 
 

@@ -49,12 +49,16 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Data Loss Prevention Policies.
      * 
      */
+    @SerializedName("dataLossPreventionPolicies")
+    @Expose
     public DataLossPreventionPolicyCollectionPage dataLossPreventionPolicies;
 
     /**
      * The Sensitivity Labels.
      * 
      */
+    @SerializedName("sensitivityLabels")
+    @Expose
     public SensitivityLabelCollectionPage sensitivityLabels;
 
     /**
@@ -69,6 +73,8 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Threat Assessment Requests.
      * 
      */
+    @SerializedName("threatAssessmentRequests")
+    @Expose
     public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 
 

@@ -57,6 +57,8 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for this Role Scope Tag.
      */
+    @SerializedName("assignments")
+    @Expose
     public RoleScopeTagAutoAssignmentCollectionPage assignments;
 
 

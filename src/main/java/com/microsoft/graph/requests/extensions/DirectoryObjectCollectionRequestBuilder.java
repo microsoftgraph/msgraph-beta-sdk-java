@@ -14,9 +14,9 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetUserOwnedObjectsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -52,15 +52,15 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder 
 
 
 
+    public IDirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
+        return new DirectoryObjectValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, entityType, displayName, mailNickname, onBehalfOfUserId);
+    }
+
     public IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, ids, types);
     }
 
     public IDirectoryObjectGetUserOwnedObjectsRequestBuilder getUserOwnedObjects(final String userId, final String type) {
         return new DirectoryObjectGetUserOwnedObjectsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserOwnedObjects"), getClient(), null, userId, type);
-    }
-
-    public IDirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
-        return new DirectoryObjectValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, entityType, displayName, mailNickname, onBehalfOfUserId);
     }
 }

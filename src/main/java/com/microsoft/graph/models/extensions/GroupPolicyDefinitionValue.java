@@ -75,6 +75,8 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
      * The Presentation Values.
      * The associated group policy presentation values with the definition value.
      */
+    @SerializedName("presentationValues")
+    @Expose
     public GroupPolicyPresentationValueCollectionPage presentationValues;
 
 

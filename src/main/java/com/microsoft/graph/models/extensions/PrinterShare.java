@@ -53,12 +53,16 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The Allowed Groups.
      * 
      */
+    @SerializedName("allowedGroups")
+    @Expose
     public PrintIdentityCollectionPage allowedGroups;
 
     /**
      * The Allowed Users.
      * 
      */
+    @SerializedName("allowedUsers")
+    @Expose
     public PrintUserIdentityCollectionPage allowedUsers;
 
     /**

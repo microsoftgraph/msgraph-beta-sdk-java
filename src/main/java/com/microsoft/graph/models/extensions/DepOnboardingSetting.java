@@ -151,12 +151,16 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
      * The Enrollment Profiles.
      * The enrollment profiles.
      */
+    @SerializedName("enrollmentProfiles")
+    @Expose
     public EnrollmentProfileCollectionPage enrollmentProfiles;
 
     /**
      * The Imported Apple Device Identities.
      * The imported Apple device identities.
      */
+    @SerializedName("importedAppleDeviceIdentities")
+    @Expose
     public ImportedAppleDeviceIdentityCollectionPage importedAppleDeviceIdentities;
 
 

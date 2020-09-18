@@ -42,30 +42,40 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
      * The Directory Audits.
      * Read-only. Nullable.
      */
+    @SerializedName("directoryAudits")
+    @Expose
     public DirectoryAuditCollectionPage directoryAudits;
 
     /**
      * The Directory Provisioning.
      * 
      */
+    @SerializedName("directoryProvisioning")
+    @Expose
     public ProvisioningObjectSummaryCollectionPage directoryProvisioning;
 
     /**
      * The Provisioning.
      * 
      */
+    @SerializedName("provisioning")
+    @Expose
     public ProvisioningObjectSummaryCollectionPage provisioning;
 
     /**
      * The Restricted Sign Ins.
      * 
      */
+    @SerializedName("restrictedSignIns")
+    @Expose
     public RestrictedSignInCollectionPage restrictedSignIns;
 
     /**
      * The Sign Ins.
      * Read-only. Nullable.
      */
+    @SerializedName("signIns")
+    @Expose
     public SignInCollectionPage signIns;
 
 

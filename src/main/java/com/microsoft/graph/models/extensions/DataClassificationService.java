@@ -51,72 +51,96 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
      * The Exact Match Data Stores.
      * 
      */
+    @SerializedName("exactMatchDataStores")
+    @Expose
     public ExactMatchDataStoreCollectionPage exactMatchDataStores;
 
     /**
      * The Classify File.
      * 
      */
+    @SerializedName("classifyFile")
+    @Expose
     public FileClassificationRequestCollectionPage classifyFile;
 
     /**
      * The Classify File Jobs.
      * 
      */
+    @SerializedName("classifyFileJobs")
+    @Expose
     public JobResponseBaseCollectionPage classifyFileJobs;
 
     /**
      * The Classify Text.
      * 
      */
+    @SerializedName("classifyText")
+    @Expose
     public TextClassificationRequestCollectionPage classifyText;
 
     /**
      * The Classify Text Jobs.
      * 
      */
+    @SerializedName("classifyTextJobs")
+    @Expose
     public JobResponseBaseCollectionPage classifyTextJobs;
 
     /**
      * The Evaluate Dlp Policies Jobs.
      * 
      */
+    @SerializedName("evaluateDlpPoliciesJobs")
+    @Expose
     public JobResponseBaseCollectionPage evaluateDlpPoliciesJobs;
 
     /**
      * The Evaluate Label Jobs.
      * 
      */
+    @SerializedName("evaluateLabelJobs")
+    @Expose
     public JobResponseBaseCollectionPage evaluateLabelJobs;
 
     /**
      * The Jobs.
      * 
      */
+    @SerializedName("jobs")
+    @Expose
     public JobResponseBaseCollectionPage jobs;
 
     /**
      * The Labels And Policies Evaluation Jobs.
      * 
      */
+    @SerializedName("labelsAndPoliciesEvaluationJobs")
+    @Expose
     public JobResponseBaseCollectionPage labelsAndPoliciesEvaluationJobs;
 
     /**
      * The Sensitive Types.
      * 
      */
+    @SerializedName("sensitiveTypes")
+    @Expose
     public SensitiveTypeCollectionPage sensitiveTypes;
 
     /**
      * The Sensitivity Labels.
      * 
      */
+    @SerializedName("sensitivityLabels")
+    @Expose
     public SensitivityLabelCollectionPage sensitivityLabels;
 
     /**
      * The Exact Match Upload Agents.
      * 
      */
+    @SerializedName("exactMatchUploadAgents")
+    @Expose
     public ExactMatchUploadAgentCollectionPage exactMatchUploadAgents;
 
 

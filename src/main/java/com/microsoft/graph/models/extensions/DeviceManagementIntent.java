@@ -98,24 +98,32 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Assignments.
      * Collection of assignments
      */
+    @SerializedName("assignments")
+    @Expose
     public DeviceManagementIntentAssignmentCollectionPage assignments;
 
     /**
      * The Categories.
      * Collection of setting categories within the intent
      */
+    @SerializedName("categories")
+    @Expose
     public DeviceManagementIntentSettingCategoryCollectionPage categories;
 
     /**
      * The Device Setting State Summaries.
      * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
      */
+    @SerializedName("deviceSettingStateSummaries")
+    @Expose
     public DeviceManagementIntentDeviceSettingStateSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device States.
      * Collection of states of all devices that the intent is applied to
      */
+    @SerializedName("deviceStates")
+    @Expose
     public DeviceManagementIntentDeviceStateCollectionPage deviceStates;
 
     /**
@@ -130,12 +138,16 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
      * The Settings.
      * Collection of all settings to be applied
      */
+    @SerializedName("settings")
+    @Expose
     public DeviceManagementSettingInstanceCollectionPage settings;
 
     /**
      * The User States.
      * Collection of states of all users that the intent is applied to
      */
+    @SerializedName("userStates")
+    @Expose
     public DeviceManagementIntentUserStateCollectionPage userStates;
 
     /**

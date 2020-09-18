@@ -75,24 +75,32 @@ public class Note extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * 
      */
+    @SerializedName("attachments")
+    @Expose
     public AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
      * 
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Multi Value Extended Properties.
      * 
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * 
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

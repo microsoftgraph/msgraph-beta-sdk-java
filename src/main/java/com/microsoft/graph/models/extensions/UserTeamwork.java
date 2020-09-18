@@ -33,6 +33,8 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
      * The Installed Apps.
      * The apps installed in the personal scope of this user.
      */
+    @SerializedName("installedApps")
+    @Expose
     public UserScopeTeamsAppInstallationCollectionPage installedApps;
 
 

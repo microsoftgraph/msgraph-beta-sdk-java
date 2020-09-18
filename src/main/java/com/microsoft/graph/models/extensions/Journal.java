@@ -82,6 +82,8 @@ public class Journal extends Entity implements IJsonBackedObject {
      * The Journal Lines.
      * 
      */
+    @SerializedName("journalLines")
+    @Expose
     public JournalLineCollectionPage journalLines;
 
 

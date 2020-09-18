@@ -106,6 +106,8 @@ public class EdiscoveryCase extends Entity implements IJsonBackedObject {
      * The Review Sets.
      * 
      */
+    @SerializedName("reviewSets")
+    @Expose
     public ReviewSetCollectionPage reviewSets;
 
 

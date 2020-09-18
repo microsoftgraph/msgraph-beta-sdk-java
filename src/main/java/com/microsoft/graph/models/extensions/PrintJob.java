@@ -62,12 +62,16 @@ public class PrintJob extends Entity implements IJsonBackedObject {
      * The Documents.
      * 
      */
+    @SerializedName("documents")
+    @Expose
     public PrintDocumentCollectionPage documents;
 
     /**
      * The Tasks.
      * 
      */
+    @SerializedName("tasks")
+    @Expose
     public PrintTaskCollectionPage tasks;
 
 

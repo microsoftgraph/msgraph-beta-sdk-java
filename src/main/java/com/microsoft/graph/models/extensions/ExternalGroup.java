@@ -49,6 +49,8 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
      * The Members.
      * 
      */
+    @SerializedName("members")
+    @Expose
     public ExternalGroupMemberCollectionPage members;
 
 

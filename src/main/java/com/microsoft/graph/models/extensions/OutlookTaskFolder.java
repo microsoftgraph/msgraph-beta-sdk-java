@@ -71,18 +71,24 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * 
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * 
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Tasks.
      * 
      */
+    @SerializedName("tasks")
+    @Expose
     public OutlookTaskCollectionPage tasks;
 
 

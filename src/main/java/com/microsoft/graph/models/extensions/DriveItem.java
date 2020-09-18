@@ -253,6 +253,8 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Activities.
      * The list of recent activities that took place on this item.
      */
+    @SerializedName("activities")
+    @Expose
     public ItemActivityOLDCollectionPage activities;
 
     /**
@@ -267,6 +269,8 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Children.
      * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      */
+    @SerializedName("children")
+    @Expose
     public DriveItemCollectionPage children;
 
     /**
@@ -281,24 +285,32 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The Permissions.
      * The set of permissions for the item. Read-only. Nullable.
      */
+    @SerializedName("permissions")
+    @Expose
     public PermissionCollectionPage permissions;
 
     /**
      * The Subscriptions.
      * The set of subscriptions on the item. Only supported on the root of a drive.
      */
+    @SerializedName("subscriptions")
+    @Expose
     public SubscriptionCollectionPage subscriptions;
 
     /**
      * The Thumbnails.
      * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      */
+    @SerializedName("thumbnails")
+    @Expose
     public ThumbnailSetCollectionPage thumbnails;
 
     /**
      * The Versions.
      * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      */
+    @SerializedName("versions")
+    @Expose
     public DriveItemVersionCollectionPage versions;
 
 

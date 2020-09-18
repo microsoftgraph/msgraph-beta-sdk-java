@@ -111,6 +111,10 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
         return new SalesInvoiceCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 
+    public ISalesInvoiceSendRequestBuilder send() {
+        return new SalesInvoiceSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
+    }
+
     public ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend() {
         return new SalesInvoiceCancelAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelAndSend"), getClient(), null);
     }
@@ -121,9 +125,5 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
 
     public ISalesInvoicePostAndSendRequestBuilder postAndSend() {
         return new SalesInvoicePostAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.postAndSend"), getClient(), null);
-    }
-
-    public ISalesInvoiceSendRequestBuilder send() {
-        return new SalesInvoiceSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 }

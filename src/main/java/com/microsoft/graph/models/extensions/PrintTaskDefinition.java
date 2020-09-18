@@ -50,6 +50,8 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
      * The Tasks.
      * 
      */
+    @SerializedName("tasks")
+    @Expose
     public PrintTaskCollectionPage tasks;
 
 

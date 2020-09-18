@@ -49,6 +49,8 @@ public class SecurityBaselineState extends Entity implements IJsonBackedObject {
      * The Setting States.
      * The security baseline state for different settings for a device
      */
+    @SerializedName("settingStates")
+    @Expose
     public SecurityBaselineSettingStateCollectionPage settingStates;
 
 

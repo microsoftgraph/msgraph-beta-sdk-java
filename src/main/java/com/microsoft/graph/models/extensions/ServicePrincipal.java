@@ -345,12 +345,16 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The App Role Assigned To.
      * Principals (users, groups, and service principals) that are assigned to this service principal. Read-only.
      */
+    @SerializedName("appRoleAssignedTo")
+    @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignedTo;
 
     /**
      * The App Role Assignments.
      * Applications that this service principal is assigned to. Read-only. Nullable.
      */
+    @SerializedName("appRoleAssignments")
+    @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
@@ -369,6 +373,8 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The Endpoints.
      * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      */
+    @SerializedName("endpoints")
+    @Expose
     public EndpointCollectionPage endpoints;
 
     /**
@@ -381,6 +387,8 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The License Details.
      * 
      */
+    @SerializedName("licenseDetails")
+    @Expose
     public LicenseDetailsCollectionPage licenseDetails;
 
     /**

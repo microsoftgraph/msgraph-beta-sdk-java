@@ -117,6 +117,8 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
      * The Presentations.
      * The group policy presentations associated with the definition.
      */
+    @SerializedName("presentations")
+    @Expose
     public GroupPolicyPresentationCollectionPage presentations;
 
 

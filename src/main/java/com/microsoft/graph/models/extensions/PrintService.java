@@ -33,6 +33,8 @@ public class PrintService extends Entity implements IJsonBackedObject {
      * The Endpoints.
      * 
      */
+    @SerializedName("endpoints")
+    @Expose
     public PrintServiceEndpointCollectionPage endpoints;
 
 

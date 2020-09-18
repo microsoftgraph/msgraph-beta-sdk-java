@@ -220,6 +220,8 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
      * The Policy Status Details.
      * Policy and application status details for this device.
      */
+    @SerializedName("policyStatusDetails")
+    @Expose
     public DeviceManagementAutopilotPolicyStatusDetailCollectionPage policyStatusDetails;
 
 

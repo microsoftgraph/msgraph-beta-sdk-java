@@ -59,6 +59,22 @@ public class EmailAppUsageVersionsUserCounts extends Entity implements IJsonBack
     public Long outlook2016;
 
     /**
+     * The Outlook2019.
+     * 
+     */
+    @SerializedName("outlook2019")
+    @Expose
+    public Long outlook2019;
+
+    /**
+     * The Outlook M365.
+     * 
+     */
+    @SerializedName("outlookM365")
+    @Expose
+    public Long outlookM365;
+
+    /**
      * The Report Period.
      * 
      */

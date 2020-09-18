@@ -41,6 +41,8 @@ public class DocumentComment extends Entity implements IJsonBackedObject {
      * The Replies.
      * 
      */
+    @SerializedName("replies")
+    @Expose
     public DocumentCommentReplyCollectionPage replies;
 
 

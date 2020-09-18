@@ -206,6 +206,8 @@ public class Customer extends Entity implements IJsonBackedObject {
      * The Picture.
      * 
      */
+    @SerializedName("picture")
+    @Expose
     public PictureCollectionPage picture;
 
     /**

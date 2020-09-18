@@ -114,18 +114,24 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
      * The Categories.
      * Collection of setting categories within the template
      */
+    @SerializedName("categories")
+    @Expose
     public DeviceManagementTemplateSettingCategoryCollectionPage categories;
 
     /**
      * The Migratable To.
      * Collection of templates this template can migrate to
      */
+    @SerializedName("migratableTo")
+    @Expose
     public DeviceManagementTemplateCollectionPage migratableTo;
 
     /**
      * The Settings.
      * Collection of all settings this template has
      */
+    @SerializedName("settings")
+    @Expose
     public DeviceManagementSettingInstanceCollectionPage settings;
 
 

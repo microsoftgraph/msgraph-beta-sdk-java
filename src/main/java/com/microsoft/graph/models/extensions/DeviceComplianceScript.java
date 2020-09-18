@@ -126,12 +126,16 @@ public class DeviceComplianceScript extends Entity implements IJsonBackedObject 
      * The Assignments.
      * The list of group assignments for the device compliance script
      */
+    @SerializedName("assignments")
+    @Expose
     public DeviceHealthScriptAssignmentCollectionPage assignments;
 
     /**
      * The Device Run States.
      * List of run states for the device compliance script across all devices
      */
+    @SerializedName("deviceRunStates")
+    @Expose
     public DeviceComplianceScriptDeviceStateCollectionPage deviceRunStates;
 
     /**

@@ -62,30 +62,40 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
      * The Agent Groups.
      * 
      */
+    @SerializedName("agentGroups")
+    @Expose
     public OnPremisesAgentGroupCollectionPage agentGroups;
 
     /**
      * The Agents.
      * 
      */
+    @SerializedName("agents")
+    @Expose
     public OnPremisesAgentCollectionPage agents;
 
     /**
      * The Connector Groups.
      * 
      */
+    @SerializedName("connectorGroups")
+    @Expose
     public ConnectorGroupCollectionPage connectorGroups;
 
     /**
      * The Connectors.
      * 
      */
+    @SerializedName("connectors")
+    @Expose
     public ConnectorCollectionPage connectors;
 
     /**
      * The Published Resources.
      * 
      */
+    @SerializedName("publishedResources")
+    @Expose
     public PublishedResourceCollectionPage publishedResources;
 
 

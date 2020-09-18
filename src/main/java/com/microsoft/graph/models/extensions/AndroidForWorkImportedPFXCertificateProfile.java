@@ -42,6 +42,8 @@ public class AndroidForWorkImportedPFXCertificateProfile extends AndroidCertific
      * The Managed Device Certificate States.
      * Certificate state for devices
      */
+    @SerializedName("managedDeviceCertificateStates")
+    @Expose
     public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 

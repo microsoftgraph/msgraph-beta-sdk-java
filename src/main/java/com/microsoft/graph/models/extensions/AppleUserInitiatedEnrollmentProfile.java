@@ -100,6 +100,8 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
      * The Assignments.
      * The list of assignments for this profile.
      */
+    @SerializedName("assignments")
+    @Expose
     public AppleEnrollmentProfileAssignmentCollectionPage assignments;
 
 

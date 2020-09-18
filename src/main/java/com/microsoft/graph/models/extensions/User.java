@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.SignInActivity;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
 import com.microsoft.graph.models.extensions.DeviceKey;
+import com.microsoft.graph.models.extensions.EmployeeOrgData;
 import com.microsoft.graph.models.extensions.ObjectIdentity;
 import com.microsoft.graph.models.extensions.LicenseAssignmentState;
 import com.microsoft.graph.models.extensions.OnPremisesExtensionAttributes;
@@ -272,12 +273,36 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Employee Hire Date.
+     * 
+     */
+    @SerializedName("employeeHireDate")
+    @Expose
+    public java.util.Calendar employeeHireDate;
+
+    /**
      * The Employee Id.
      * The employee identifier assigned to the user by the organization. Supports $filter.
      */
     @SerializedName("employeeId")
     @Expose
     public String employeeId;
+
+    /**
+     * The Employee Org Data.
+     * 
+     */
+    @SerializedName("employeeOrgData")
+    @Expose
+    public EmployeeOrgData employeeOrgData;
+
+    /**
+     * The Employee Type.
+     * 
+     */
+    @SerializedName("employeeType")
+    @Expose
+    public String employeeType;
 
     /**
      * The External User State.
@@ -739,6 +764,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The App Role Assignments.
      * 
      */
+    @SerializedName("appRoleAssignments")
+    @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
@@ -757,6 +784,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The License Details.
      * A collection of this user's license details. Read-only.
      */
+    @SerializedName("licenseDetails")
+    @Expose
     public LicenseDetailsCollectionPage licenseDetails;
 
     /**
@@ -795,6 +824,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Scoped Role Member Of.
      * 
      */
+    @SerializedName("scopedRoleMemberOf")
+    @Expose
     public ScopedRoleMembershipCollectionPage scopedRoleMemberOf;
 
     /**
@@ -815,36 +846,48 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Calendar Groups.
      * The user's calendar groups. Read-only. Nullable.
      */
+    @SerializedName("calendarGroups")
+    @Expose
     public CalendarGroupCollectionPage calendarGroups;
 
     /**
      * The Calendars.
      * The user's calendars. Read-only. Nullable.
      */
+    @SerializedName("calendars")
+    @Expose
     public CalendarCollectionPage calendars;
 
     /**
      * The Calendar View.
      * The calendar view for the calendar. Read-only. Nullable.
      */
+    @SerializedName("calendarView")
+    @Expose
     public EventCollectionPage calendarView;
 
     /**
      * The Contact Folders.
      * The user's contacts folders. Read-only. Nullable.
      */
+    @SerializedName("contactFolders")
+    @Expose
     public ContactFolderCollectionPage contactFolders;
 
     /**
      * The Contacts.
      * The user's contacts. Read-only. Nullable.
      */
+    @SerializedName("contacts")
+    @Expose
     public ContactCollectionPage contacts;
 
     /**
      * The Events.
      * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      */
+    @SerializedName("events")
+    @Expose
     public EventCollectionPage events;
 
     /**
@@ -859,18 +902,24 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Joined Groups.
      * 
      */
+    @SerializedName("joinedGroups")
+    @Expose
     public GroupCollectionPage joinedGroups;
 
     /**
      * The Mail Folders.
      * The user's mail folders. Read-only. Nullable.
      */
+    @SerializedName("mailFolders")
+    @Expose
     public MailFolderCollectionPage mailFolders;
 
     /**
      * The Messages.
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
+    @SerializedName("messages")
+    @Expose
     public MessageCollectionPage messages;
 
     /**
@@ -885,6 +934,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The People.
      * People that are relevant to the user. Read-only. Nullable.
      */
+    @SerializedName("people")
+    @Expose
     public PersonCollectionPage people;
 
     /**
@@ -899,6 +950,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Photos.
      * 
      */
+    @SerializedName("photos")
+    @Expose
     public ProfilePhotoCollectionPage photos;
 
     /**
@@ -913,6 +966,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * A collection of drives available for this user. Read-only.
      */
+    @SerializedName("drives")
+    @Expose
     public DriveCollectionPage drives;
 
     /**
@@ -925,24 +980,32 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the user. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The App Consent Requests For Approval.
      * 
      */
+    @SerializedName("appConsentRequestsForApproval")
+    @Expose
     public AppConsentRequestCollectionPage appConsentRequestsForApproval;
 
     /**
      * The Approvals.
      * 
      */
+    @SerializedName("approvals")
+    @Expose
     public ApprovalCollectionPage approvals;
 
     /**
      * The Pending Access Review Instances.
      * 
      */
+    @SerializedName("pendingAccessReviewInstances")
+    @Expose
     public AccessReviewInstanceCollectionPage pendingAccessReviewInstances;
 
     /**
@@ -955,12 +1018,16 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Device Enrollment Configurations.
      * Get enrollment configurations targeted to the user
      */
+    @SerializedName("deviceEnrollmentConfigurations")
+    @Expose
     public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Managed Devices.
      * The managed devices associated with the user.
      */
+    @SerializedName("managedDevices")
+    @Expose
     public ManagedDeviceCollectionPage managedDevices;
 
     /**
@@ -979,24 +1046,32 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Device Management Troubleshooting Events.
      * The list of troubleshooting events for this user.
      */
+    @SerializedName("deviceManagementTroubleshootingEvents")
+    @Expose
     public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
 
     /**
      * The Mobile App Intent And States.
      * The list of troubleshooting events for this user.
      */
+    @SerializedName("mobileAppIntentAndStates")
+    @Expose
     public MobileAppIntentAndStateCollectionPage mobileAppIntentAndStates;
 
     /**
      * The Mobile App Troubleshooting Events.
      * The list of mobile app troubleshooting events for this user.
      */
+    @SerializedName("mobileAppTroubleshootingEvents")
+    @Expose
     public MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
 
     /**
      * The Notifications.
      * 
      */
+    @SerializedName("notifications")
+    @Expose
     public NotificationCollectionPage notifications;
 
     /**
@@ -1043,18 +1118,24 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Activities.
      * The user's activities across devices. Read-only. Nullable.
      */
+    @SerializedName("activities")
+    @Expose
     public UserActivityCollectionPage activities;
 
     /**
      * The Devices.
      * 
      */
+    @SerializedName("devices")
+    @Expose
     public DeviceCollectionPage devices;
 
     /**
      * The Online Meetings.
      * 
      */
+    @SerializedName("onlineMeetings")
+    @Expose
     public OnlineMeetingCollectionPage onlineMeetings;
 
     /**
@@ -1077,12 +1158,16 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Chats.
      * 
      */
+    @SerializedName("chats")
+    @Expose
     public ChatCollectionPage chats;
 
     /**
      * The Joined Teams.
      * 
      */
+    @SerializedName("joinedTeams")
+    @Expose
     public TeamCollectionPage joinedTeams;
 
     /**

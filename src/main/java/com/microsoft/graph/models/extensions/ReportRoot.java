@@ -45,42 +45,56 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      * The Application Sign In Detailed Summary.
      * 
      */
+    @SerializedName("applicationSignInDetailedSummary")
+    @Expose
     public ApplicationSignInDetailedSummaryCollectionPage applicationSignInDetailedSummary;
 
     /**
      * The Credential User Registration Details.
      * 
      */
+    @SerializedName("credentialUserRegistrationDetails")
+    @Expose
     public CredentialUserRegistrationDetailsCollectionPage credentialUserRegistrationDetails;
 
     /**
      * The User Credential Usage Details.
      * 
      */
+    @SerializedName("userCredentialUsageDetails")
+    @Expose
     public UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
 
     /**
      * The Daily Print Usage Summaries By Printer.
      * 
      */
+    @SerializedName("dailyPrintUsageSummariesByPrinter")
+    @Expose
     public PrintUsageSummaryByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
 
     /**
      * The Daily Print Usage Summaries By User.
      * 
      */
+    @SerializedName("dailyPrintUsageSummariesByUser")
+    @Expose
     public PrintUsageSummaryByUserCollectionPage dailyPrintUsageSummariesByUser;
 
     /**
      * The Monthly Print Usage Summaries By Printer.
      * 
      */
+    @SerializedName("monthlyPrintUsageSummariesByPrinter")
+    @Expose
     public PrintUsageSummaryByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
 
     /**
      * The Monthly Print Usage Summaries By User.
      * 
      */
+    @SerializedName("monthlyPrintUsageSummariesByUser")
+    @Expose
     public PrintUsageSummaryByUserCollectionPage monthlyPrintUsageSummariesByUser;
 
 

@@ -41,6 +41,8 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements IJsonBacke
      * The Matching Rows.
      * 
      */
+    @SerializedName("matchingRows")
+    @Expose
     public LookupResultRowCollectionPage matchingRows;
 
 

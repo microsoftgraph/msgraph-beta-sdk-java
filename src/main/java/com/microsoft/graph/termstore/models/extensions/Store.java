@@ -52,12 +52,16 @@ public class Store extends Entity implements IJsonBackedObject {
      * The Groups.
      * 
      */
+    @SerializedName("groups")
+    @Expose
     public GroupCollectionPage groups;
 
     /**
      * The Sets.
      * 
      */
+    @SerializedName("sets")
+    @Expose
     public SetCollectionPage sets;
 
 

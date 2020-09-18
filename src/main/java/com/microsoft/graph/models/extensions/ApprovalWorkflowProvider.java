@@ -44,18 +44,24 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
      * The Business Flows.
      * 
      */
+    @SerializedName("businessFlows")
+    @Expose
     public BusinessFlowCollectionPage businessFlows;
 
     /**
      * The Business Flows With Requests Awaiting My Decision.
      * 
      */
+    @SerializedName("businessFlowsWithRequestsAwaitingMyDecision")
+    @Expose
     public BusinessFlowCollectionPage businessFlowsWithRequestsAwaitingMyDecision;
 
     /**
      * The Policy Templates.
      * 
      */
+    @SerializedName("policyTemplates")
+    @Expose
     public GovernancePolicyTemplateCollectionPage policyTemplates;
 
 

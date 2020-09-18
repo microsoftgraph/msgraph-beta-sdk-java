@@ -57,6 +57,8 @@ public class Dimension extends Entity implements IJsonBackedObject {
      * The Dimension Values.
      * 
      */
+    @SerializedName("dimensionValues")
+    @Expose
     public DimensionValueCollectionPage dimensionValues;
 
 

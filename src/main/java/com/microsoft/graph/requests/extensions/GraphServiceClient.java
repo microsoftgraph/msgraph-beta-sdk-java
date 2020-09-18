@@ -299,18 +299,6 @@ import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBu
 import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.LinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.LinkedResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
@@ -367,8 +355,6 @@ import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
-import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

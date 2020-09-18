@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AccessReviewScope;
 import com.microsoft.graph.models.extensions.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.extensions.Entity;
@@ -39,6 +40,14 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     public java.util.Calendar endDateTime;
 
     /**
+     * The Scope.
+     * 
+     */
+    @SerializedName("scope")
+    @Expose
+    public AccessReviewScope scope;
+
+    /**
      * The Start Date Time.
      * 
      */
@@ -58,6 +67,8 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      * The Decisions.
      * 
      */
+    @SerializedName("decisions")
+    @Expose
     public AccessReviewInstanceDecisionItemCollectionPage decisions;
 
     /**

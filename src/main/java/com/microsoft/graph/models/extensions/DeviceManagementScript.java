@@ -124,18 +124,24 @@ public class DeviceManagementScript extends Entity implements IJsonBackedObject 
      * The Assignments.
      * The list of group assignments for the device management script.
      */
+    @SerializedName("assignments")
+    @Expose
     public DeviceManagementScriptAssignmentCollectionPage assignments;
 
     /**
      * The Device Run States.
      * List of run states for this script across all devices.
      */
+    @SerializedName("deviceRunStates")
+    @Expose
     public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 
     /**
      * The Group Assignments.
      * The list of group assignments for the device management script.
      */
+    @SerializedName("groupAssignments")
+    @Expose
     public DeviceManagementScriptGroupAssignmentCollectionPage groupAssignments;
 
     /**
@@ -150,6 +156,8 @@ public class DeviceManagementScript extends Entity implements IJsonBackedObject 
      * The User Run States.
      * List of run states for this script across all users.
      */
+    @SerializedName("userRunStates")
+    @Expose
     public DeviceManagementScriptUserStateCollectionPage userRunStates;
 
 

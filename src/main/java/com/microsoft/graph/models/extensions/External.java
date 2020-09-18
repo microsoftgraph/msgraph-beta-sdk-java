@@ -33,6 +33,8 @@ public class External extends Entity implements IJsonBackedObject {
      * The Connections.
      * 
      */
+    @SerializedName("connections")
+    @Expose
     public ExternalConnectionCollectionPage connections;
 
 

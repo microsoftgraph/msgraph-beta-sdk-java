@@ -128,12 +128,16 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
      * The Access Package Assignment Requests.
      * 
      */
+    @SerializedName("accessPackageAssignmentRequests")
+    @Expose
     public AccessPackageAssignmentRequestCollectionPage accessPackageAssignmentRequests;
 
     /**
      * The Access Package Assignment Resource Roles.
      * 
      */
+    @SerializedName("accessPackageAssignmentResourceRoles")
+    @Expose
     public AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
 
     /**

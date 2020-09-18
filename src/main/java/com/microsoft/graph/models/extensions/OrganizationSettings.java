@@ -42,6 +42,8 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
      * The Profile Card Properties.
      * 
      */
+    @SerializedName("profileCardProperties")
+    @Expose
     public ProfileCardPropertyCollectionPage profileCardProperties;
 
 

@@ -93,6 +93,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
      * The App Scopes.
      * 
      */
+    @SerializedName("appScopes")
+    @Expose
     public AppScopeCollectionPage appScopes;
 
     /**

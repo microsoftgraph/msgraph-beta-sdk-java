@@ -74,6 +74,8 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      * The Localized Notification Messages.
      * The list of localized messages for this Notification Message Template.
      */
+    @SerializedName("localizedNotificationMessages")
+    @Expose
     public LocalizedNotificationMessageCollectionPage localizedNotificationMessages;
 
 

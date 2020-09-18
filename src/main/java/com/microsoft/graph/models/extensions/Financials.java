@@ -33,6 +33,8 @@ public class Financials extends Entity implements IJsonBackedObject {
      * The Companies.
      * 
      */
+    @SerializedName("companies")
+    @Expose
     public CompanyCollectionPage companies;
 
 

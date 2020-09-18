@@ -58,6 +58,8 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
      * The Agent Groups.
      * 
      */
+    @SerializedName("agentGroups")
+    @Expose
     public OnPremisesAgentGroupCollectionPage agentGroups;
 
 

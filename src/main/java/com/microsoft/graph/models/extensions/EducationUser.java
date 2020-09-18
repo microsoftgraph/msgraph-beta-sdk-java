@@ -311,12 +311,16 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * The Assignments.
      * List of assignments for the user. Nullable.
      */
+    @SerializedName("assignments")
+    @Expose
     public EducationAssignmentCollectionPage assignments;
 
     /**
      * The Rubrics.
      * 
      */
+    @SerializedName("rubrics")
+    @Expose
     public EducationRubricCollectionPage rubrics;
 
     /**

@@ -90,12 +90,16 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The External Sponsors.
      * 
      */
+    @SerializedName("externalSponsors")
+    @Expose
     public DirectoryObjectCollectionPage externalSponsors;
 
     /**
      * The Internal Sponsors.
      * 
      */
+    @SerializedName("internalSponsors")
+    @Expose
     public DirectoryObjectCollectionPage internalSponsors;
 
 

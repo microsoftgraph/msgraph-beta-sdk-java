@@ -79,6 +79,8 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
      * The Buckets.
      * Read-only. Nullable. Collection of buckets in the plan.
      */
+    @SerializedName("buckets")
+    @Expose
     public PlannerBucketCollectionPage buckets;
 
     /**
@@ -93,6 +95,8 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. Collection of tasks in the plan.
      */
+    @SerializedName("tasks")
+    @Expose
     public PlannerTaskCollectionPage tasks;
 
 

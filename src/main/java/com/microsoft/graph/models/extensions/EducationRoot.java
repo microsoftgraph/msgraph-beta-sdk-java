@@ -42,12 +42,16 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Synchronization Profiles.
      * 
      */
+    @SerializedName("synchronizationProfiles")
+    @Expose
     public EducationSynchronizationProfileCollectionPage synchronizationProfiles;
 
     /**
      * The Classes.
      * Read-only. Nullable.
      */
+    @SerializedName("classes")
+    @Expose
     public EducationClassCollectionPage classes;
 
     /**
@@ -62,12 +66,16 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Schools.
      * Read-only. Nullable.
      */
+    @SerializedName("schools")
+    @Expose
     public EducationSchoolCollectionPage schools;
 
     /**
      * The Users.
      * Read-only. Nullable.
      */
+    @SerializedName("users")
+    @Expose
     public EducationUserCollectionPage users;
 
 

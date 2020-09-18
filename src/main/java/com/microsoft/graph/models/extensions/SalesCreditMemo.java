@@ -285,6 +285,8 @@ public class SalesCreditMemo extends Entity implements IJsonBackedObject {
      * The Sales Credit Memo Lines.
      * 
      */
+    @SerializedName("salesCreditMemoLines")
+    @Expose
     public SalesCreditMemoLineCollectionPage salesCreditMemoLines;
 
 

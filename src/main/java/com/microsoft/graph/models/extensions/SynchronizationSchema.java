@@ -50,6 +50,8 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
      * The Directories.
      * 
      */
+    @SerializedName("directories")
+    @Expose
     public DirectoryDefinitionCollectionPage directories;
 
 

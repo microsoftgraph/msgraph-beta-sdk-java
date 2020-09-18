@@ -33,6 +33,8 @@ public class Todo extends Entity implements IJsonBackedObject {
      * The Lists.
      * 
      */
+    @SerializedName("lists")
+    @Expose
     public TodoTaskListCollectionPage lists;
 
 

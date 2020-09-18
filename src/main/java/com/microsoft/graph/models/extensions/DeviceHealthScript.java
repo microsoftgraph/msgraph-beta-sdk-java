@@ -167,12 +167,16 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for the device health script
      */
+    @SerializedName("assignments")
+    @Expose
     public DeviceHealthScriptAssignmentCollectionPage assignments;
 
     /**
      * The Device Run States.
      * List of run states for the device health script across all devices
      */
+    @SerializedName("deviceRunStates")
+    @Expose
     public DeviceHealthScriptDeviceStateCollectionPage deviceRunStates;
 
     /**

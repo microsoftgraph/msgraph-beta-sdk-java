@@ -36,12 +36,16 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
      * The Agreement Acceptances.
      * 
      */
+    @SerializedName("agreementAcceptances")
+    @Expose
     public AgreementAcceptanceCollectionPage agreementAcceptances;
 
     /**
      * The Agreements.
      * 
      */
+    @SerializedName("agreements")
+    @Expose
     public AgreementCollectionPage agreements;
 
 

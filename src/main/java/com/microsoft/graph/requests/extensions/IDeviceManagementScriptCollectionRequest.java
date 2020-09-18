@@ -9,9 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceManagementScript;
-import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
+import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 

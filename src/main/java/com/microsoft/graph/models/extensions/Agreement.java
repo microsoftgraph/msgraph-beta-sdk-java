@@ -78,6 +78,8 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Acceptances.
      * 
      */
+    @SerializedName("acceptances")
+    @Expose
     public AgreementAcceptanceCollectionPage acceptances;
 
     /**
@@ -92,6 +94,8 @@ public class Agreement extends Entity implements IJsonBackedObject {
      * The Files.
      * 
      */
+    @SerializedName("files")
+    @Expose
     public AgreementFileLocalizationCollectionPage files;
 
 

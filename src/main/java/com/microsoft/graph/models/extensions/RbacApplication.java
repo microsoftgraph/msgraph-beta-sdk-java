@@ -36,12 +36,16 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
      * The Role Assignments.
      * 
      */
+    @SerializedName("roleAssignments")
+    @Expose
     public UnifiedRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
      * 
      */
+    @SerializedName("roleDefinitions")
+    @Expose
     public UnifiedRoleDefinitionCollectionPage roleDefinitions;
 
 

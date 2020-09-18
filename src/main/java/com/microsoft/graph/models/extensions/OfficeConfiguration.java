@@ -51,6 +51,8 @@ public class OfficeConfiguration extends Entity implements IJsonBackedObject {
      * The Client Configurations.
      * 
      */
+    @SerializedName("clientConfigurations")
+    @Expose
     public OfficeClientConfigurationCollectionPage clientConfigurations;
 
 

@@ -239,6 +239,8 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Brandings.
      * 
      */
+    @SerializedName("brandings")
+    @Expose
     public OrganizationalBrandingCollectionPage brandings;
 
     /**
@@ -251,6 +253,8 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**

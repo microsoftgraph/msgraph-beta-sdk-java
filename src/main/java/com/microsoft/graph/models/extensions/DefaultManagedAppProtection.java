@@ -335,6 +335,8 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Apps.
      * List of apps to which the policy is deployed.
      */
+    @SerializedName("apps")
+    @Expose
     public ManagedMobileAppCollectionPage apps;
 
     /**

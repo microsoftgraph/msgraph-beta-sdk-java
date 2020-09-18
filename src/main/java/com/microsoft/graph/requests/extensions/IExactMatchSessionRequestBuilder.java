@@ -41,7 +41,7 @@ public interface IExactMatchSessionRequestBuilder extends IRequestBuilder {
      */
     IExactMatchUploadAgentRequestBuilder uploadAgent();
     IExactMatchSessionCancelRequestBuilder cancel();
-    IExactMatchSessionCommitRequestBuilder commit();
     IExactMatchSessionRenewRequestBuilder renew();
+    IExactMatchSessionCommitRequestBuilder commit();
 
 }

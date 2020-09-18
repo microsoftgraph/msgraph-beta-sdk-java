@@ -42,24 +42,32 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
      * The Master Categories.
      * A list of categories defined for the user.
      */
+    @SerializedName("masterCategories")
+    @Expose
     public OutlookCategoryCollectionPage masterCategories;
 
     /**
      * The Task Folders.
      * 
      */
+    @SerializedName("taskFolders")
+    @Expose
     public OutlookTaskFolderCollectionPage taskFolders;
 
     /**
      * The Task Groups.
      * 
      */
+    @SerializedName("taskGroups")
+    @Expose
     public OutlookTaskGroupCollectionPage taskGroups;
 
     /**
      * The Tasks.
      * 
      */
+    @SerializedName("tasks")
+    @Expose
     public OutlookTaskCollectionPage tasks;
 
 
