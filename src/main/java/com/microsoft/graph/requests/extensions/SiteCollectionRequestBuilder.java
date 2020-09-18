@@ -81,12 +81,4 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
 	public ISiteDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new SiteDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
-
-    public ISiteDeltaCollectionRequestBuilder delta(final String token) {
-        return new SiteDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
-    }
-
-	public ISiteDeltaCollectionRequestBuilder delta(final String deltaLink) {
-        return new SiteDeltaCollectionRequestBuilder(deltaLink, getClient(), null, token);
-    }
 }
