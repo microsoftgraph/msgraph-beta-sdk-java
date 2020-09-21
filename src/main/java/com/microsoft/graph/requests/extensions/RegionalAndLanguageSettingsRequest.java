@@ -154,5 +154,16 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
          return (RegionalAndLanguageSettingsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IRegionalAndLanguageSettingsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (RegionalAndLanguageSettingsRequest)this;
+     }
+
 }
 

@@ -38,10 +38,11 @@ public class AndroidDeviceOwnerScepCertificateProfileRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerScepCertificateProfileRequest instance
      */
-    public IAndroidDeviceOwnerScepCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerScepCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

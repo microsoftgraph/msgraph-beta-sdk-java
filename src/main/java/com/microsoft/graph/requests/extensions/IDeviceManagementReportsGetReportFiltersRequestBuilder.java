@@ -17,9 +17,10 @@ public interface IDeviceManagementReportsGetReportFiltersRequestBuilder extends 
     /**
      * Creates the IDeviceManagementReportsGetReportFiltersRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetReportFiltersRequest instance
      */
-    IDeviceManagementReportsGetReportFiltersRequest buildRequest();
+    IDeviceManagementReportsGetReportFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementReportsGetReportFiltersRequest with specific options instead of the existing options

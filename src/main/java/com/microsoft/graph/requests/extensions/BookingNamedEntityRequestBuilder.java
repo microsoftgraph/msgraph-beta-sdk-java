@@ -34,10 +34,11 @@ public class BookingNamedEntityRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBookingNamedEntityRequest instance
      */
-    public IBookingNamedEntityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingNamedEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

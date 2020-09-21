@@ -20,9 +20,10 @@ public interface IEmailAppUsageAppsUserCountsRequestBuilder extends IRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmailAppUsageAppsUserCountsRequest instance
      */
-    IEmailAppUsageAppsUserCountsRequest buildRequest();
+    IEmailAppUsageAppsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

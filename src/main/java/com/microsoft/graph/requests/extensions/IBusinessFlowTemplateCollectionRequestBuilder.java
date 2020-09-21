@@ -22,8 +22,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IBusinessFlowTemplateCollectionRequestBuilder extends IRequestBuilder {
 
-    IBusinessFlowTemplateCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IBusinessFlowTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IBusinessFlowTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IBusinessFlowTemplateRequestBuilder byId(final String id);

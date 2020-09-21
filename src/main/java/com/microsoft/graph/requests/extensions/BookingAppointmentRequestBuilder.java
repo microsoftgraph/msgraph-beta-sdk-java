@@ -34,10 +34,11 @@ public class BookingAppointmentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBookingAppointmentRequest instance
      */
-    public IBookingAppointmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingAppointmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

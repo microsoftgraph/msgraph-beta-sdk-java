@@ -104,4 +104,15 @@ public class ReportRootGetMailboxUsageDetailCollectionRequest extends BaseCollec
         return (IReportRootGetMailboxUsageDetailCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetMailboxUsageDetailCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetMailboxUsageDetailCollectionRequest)this;
+    }
+
 }

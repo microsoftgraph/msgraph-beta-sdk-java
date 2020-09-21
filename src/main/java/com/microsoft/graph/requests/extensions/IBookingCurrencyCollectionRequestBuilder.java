@@ -22,8 +22,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IBookingCurrencyCollectionRequestBuilder extends IRequestBuilder {
 
-    IBookingCurrencyCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IBookingCurrencyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IBookingCurrencyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IBookingCurrencyRequestBuilder byId(final String id);

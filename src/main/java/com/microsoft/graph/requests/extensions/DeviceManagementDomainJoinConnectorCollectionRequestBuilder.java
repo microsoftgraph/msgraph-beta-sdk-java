@@ -36,10 +36,22 @@ public class DeviceManagementDomainJoinConnectorCollectionRequestBuilder extends
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceManagementDomainJoinConnectorCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementDomainJoinConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementDomainJoinConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementDomainJoinConnectorCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

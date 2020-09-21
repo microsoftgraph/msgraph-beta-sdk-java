@@ -34,10 +34,22 @@ public class ManagementConditionCollectionWithReferencesRequestBuilder extends B
         super(requestUrl, client, requestOptions);
     }
 
-    public IManagementConditionCollectionWithReferencesRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IManagementConditionCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IManagementConditionCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }

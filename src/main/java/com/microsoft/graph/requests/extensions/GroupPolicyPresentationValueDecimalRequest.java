@@ -154,5 +154,16 @@ public class GroupPolicyPresentationValueDecimalRequest extends BaseRequest impl
          return (GroupPolicyPresentationValueDecimalRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IGroupPolicyPresentationValueDecimalRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (GroupPolicyPresentationValueDecimalRequest)this;
+     }
+
 }
 

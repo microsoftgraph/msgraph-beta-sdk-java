@@ -34,10 +34,11 @@ public class ItemEmailRequestBuilder extends BaseRequestBuilder implements IItem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemEmailRequest instance
      */
-    public IItemEmailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemEmailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

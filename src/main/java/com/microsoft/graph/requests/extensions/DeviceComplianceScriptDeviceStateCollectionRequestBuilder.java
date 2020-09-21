@@ -36,10 +36,22 @@ public class DeviceComplianceScriptDeviceStateCollectionRequestBuilder extends B
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceComplianceScriptDeviceStateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceComplianceScriptDeviceStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceComplianceScriptDeviceStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceComplianceScriptDeviceStateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -20,9 +20,10 @@ public interface IEducationRubricOutcomeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationRubricOutcomeRequest instance
      */
-    IEducationRubricOutcomeRequest buildRequest();
+    IEducationRubricOutcomeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

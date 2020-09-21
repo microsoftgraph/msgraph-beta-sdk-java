@@ -85,6 +85,17 @@ public class DeviceManagementScriptGroupAssignmentCollectionRequest extends Base
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementScriptGroupAssignmentCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementScriptGroupAssignmentCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

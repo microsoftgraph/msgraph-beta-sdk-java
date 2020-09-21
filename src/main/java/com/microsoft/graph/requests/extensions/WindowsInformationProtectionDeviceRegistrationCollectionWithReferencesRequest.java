@@ -59,6 +59,11 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferen
         return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;
     }
 
+    public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;
+    }
+
     public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest)this;

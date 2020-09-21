@@ -40,10 +40,11 @@ public class AccessReviewScheduleDefinitionReferenceRequestBuilder extends BaseR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IAccessReviewScheduleDefinitionReferenceRequest instance
      */
-    public IAccessReviewScheduleDefinitionReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewScheduleDefinitionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

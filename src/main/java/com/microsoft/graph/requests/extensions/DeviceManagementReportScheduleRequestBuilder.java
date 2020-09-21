@@ -34,10 +34,11 @@ public class DeviceManagementReportScheduleRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementReportScheduleRequest instance
      */
-    public IDeviceManagementReportScheduleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportScheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

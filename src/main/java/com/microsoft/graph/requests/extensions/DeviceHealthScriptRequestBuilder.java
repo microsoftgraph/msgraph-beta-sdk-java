@@ -48,10 +48,11 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceHealthScriptRequest instance
      */
-    public IDeviceHealthScriptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

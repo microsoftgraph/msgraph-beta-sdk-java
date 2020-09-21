@@ -104,4 +104,15 @@ public class UserGetManagedAppBlockedUsersCollectionRequest extends BaseCollecti
         return (IUserGetManagedAppBlockedUsersCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserGetManagedAppBlockedUsersCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IUserGetManagedAppBlockedUsersCollectionRequest)this;
+    }
+
 }

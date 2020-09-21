@@ -104,4 +104,15 @@ public class ReportRootGetOffice365ActivationsUserCountsCollectionRequest extend
         return (IReportRootGetOffice365ActivationsUserCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365ActivationsUserCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOffice365ActivationsUserCountsCollectionRequest)this;
+    }
+
 }

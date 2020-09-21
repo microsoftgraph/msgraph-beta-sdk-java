@@ -38,10 +38,11 @@ public class Windows10ImportedPFXCertificateProfileRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10ImportedPFXCertificateProfileRequest instance
      */
-    public IWindows10ImportedPFXCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10ImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

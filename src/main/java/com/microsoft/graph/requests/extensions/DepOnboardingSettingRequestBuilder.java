@@ -46,10 +46,11 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDepOnboardingSettingRequest instance
      */
-    public IDepOnboardingSettingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

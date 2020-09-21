@@ -46,10 +46,11 @@ public class OutlookTaskFolderRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOutlookTaskFolderRequest instance
      */
-    public IOutlookTaskFolderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOutlookTaskFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICredentialUserRegistrationDetailsRequest instance
      */
-    public ICredentialUserRegistrationDetailsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICredentialUserRegistrationDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class GroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilder ext
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -21,9 +21,10 @@ public interface IAndroidEasEmailProfileConfigurationRequestBuilder extends IReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidEasEmailProfileConfigurationRequest instance
      */
-    IAndroidEasEmailProfileConfigurationRequest buildRequest();
+    IAndroidEasEmailProfileConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

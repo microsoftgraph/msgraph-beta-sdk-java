@@ -34,10 +34,11 @@ public class ReviewSetQueryRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IReviewSetQueryRequest instance
      */
-    public IReviewSetQueryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReviewSetQueryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DomainSecurityProfileRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDomainSecurityProfileRequest instance
      */
-    public IDomainSecurityProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainSecurityProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

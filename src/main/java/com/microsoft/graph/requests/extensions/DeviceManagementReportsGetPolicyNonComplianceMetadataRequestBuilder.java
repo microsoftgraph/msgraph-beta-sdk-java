@@ -50,10 +50,11 @@ public class DeviceManagementReportsGetPolicyNonComplianceMetadataRequestBuilder
     /**
      * Creates the IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest instance
      */
-    public IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetPolicyNonComplianceMetadataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WindowsWifiConfigurationRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsWifiConfigurationRequest instance
      */
-    public IWindowsWifiConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsWifiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

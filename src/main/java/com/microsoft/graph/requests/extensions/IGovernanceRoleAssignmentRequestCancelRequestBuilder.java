@@ -17,9 +17,10 @@ public interface IGovernanceRoleAssignmentRequestCancelRequestBuilder extends IR
     /**
      * Creates the IGovernanceRoleAssignmentRequestCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGovernanceRoleAssignmentRequestCancelRequest instance
      */
-    IGovernanceRoleAssignmentRequestCancelRequest buildRequest();
+    IGovernanceRoleAssignmentRequestCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGovernanceRoleAssignmentRequestCancelRequest with specific options instead of the existing options

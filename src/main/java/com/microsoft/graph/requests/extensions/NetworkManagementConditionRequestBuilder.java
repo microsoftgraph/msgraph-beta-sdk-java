@@ -34,10 +34,11 @@ public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INetworkManagementConditionRequest instance
      */
-    public INetworkManagementConditionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INetworkManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class GroupPolicyPresentationValueDecimalRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationValueDecimalRequest instance
      */
-    public IGroupPolicyPresentationValueDecimalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationValueDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

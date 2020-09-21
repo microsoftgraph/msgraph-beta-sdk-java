@@ -54,10 +54,11 @@ public class DeviceShellScriptRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceShellScriptRequest instance
      */
-    public IDeviceShellScriptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceShellScriptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

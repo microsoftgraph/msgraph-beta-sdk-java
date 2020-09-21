@@ -34,10 +34,11 @@ public class WindowsPhone81AppXRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81AppXRequest instance
      */
-    public IWindowsPhone81AppXRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81AppXRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

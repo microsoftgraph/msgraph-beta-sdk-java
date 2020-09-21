@@ -38,10 +38,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRoleManagementRequest instance
      */
-    public IRoleManagementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

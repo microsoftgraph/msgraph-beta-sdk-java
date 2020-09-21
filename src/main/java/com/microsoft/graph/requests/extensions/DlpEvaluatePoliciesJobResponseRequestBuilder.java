@@ -34,10 +34,11 @@ public class DlpEvaluatePoliciesJobResponseRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDlpEvaluatePoliciesJobResponseRequest instance
      */
-    public IDlpEvaluatePoliciesJobResponseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDlpEvaluatePoliciesJobResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

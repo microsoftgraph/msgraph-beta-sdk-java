@@ -36,10 +36,22 @@ public class FileSecurityProfileCollectionRequestBuilder extends BaseRequestBuil
         super(requestUrl, client, requestOptions);
     }
 
-    public IFileSecurityProfileCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IFileSecurityProfileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IFileSecurityProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new FileSecurityProfileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

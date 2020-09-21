@@ -34,10 +34,11 @@ public class BookingCurrencyRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBookingCurrencyRequest instance
      */
-    public IBookingCurrencyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingCurrencyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

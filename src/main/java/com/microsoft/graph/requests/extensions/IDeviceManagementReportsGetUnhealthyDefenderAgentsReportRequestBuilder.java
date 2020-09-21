@@ -17,9 +17,10 @@ public interface IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest
     /**
      * Creates the IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest instance
      */
-    IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest buildRequest();
+    IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest with specific options instead of the existing options

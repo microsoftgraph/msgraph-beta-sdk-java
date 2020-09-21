@@ -38,10 +38,11 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEdiscoveryCaseRequest instance
      */
-    public IEdiscoveryCaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEdiscoveryCaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

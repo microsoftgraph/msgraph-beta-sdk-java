@@ -36,10 +36,11 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserScopeTeamsAppInstallationRequest instance
      */
-    public IUserScopeTeamsAppInstallationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserScopeTeamsAppInstallationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

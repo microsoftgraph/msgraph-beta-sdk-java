@@ -36,10 +36,11 @@ public class MacOSVpnConfigurationRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSVpnConfigurationRequest instance
      */
-    public IMacOSVpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSVpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

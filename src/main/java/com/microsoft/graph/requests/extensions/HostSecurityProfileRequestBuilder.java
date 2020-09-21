@@ -34,10 +34,11 @@ public class HostSecurityProfileRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IHostSecurityProfileRequest instance
      */
-    public IHostSecurityProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IHostSecurityProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

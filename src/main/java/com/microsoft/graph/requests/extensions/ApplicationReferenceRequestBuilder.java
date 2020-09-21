@@ -62,10 +62,11 @@ public class ApplicationReferenceRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IApplicationReferenceRequest instance
      */
-    public IApplicationReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

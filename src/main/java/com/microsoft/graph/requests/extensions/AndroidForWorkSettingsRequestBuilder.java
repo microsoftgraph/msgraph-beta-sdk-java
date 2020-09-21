@@ -34,10 +34,11 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkSettingsRequest instance
      */
-    public IAndroidForWorkSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

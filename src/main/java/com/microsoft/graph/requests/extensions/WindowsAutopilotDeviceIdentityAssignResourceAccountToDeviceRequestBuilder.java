@@ -38,10 +38,11 @@ public class WindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequestB
     /**
      * Creates the IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeviceIdentityAssignResourceAccountToDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

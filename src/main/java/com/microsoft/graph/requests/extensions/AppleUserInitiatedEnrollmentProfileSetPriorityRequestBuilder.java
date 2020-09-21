@@ -34,10 +34,11 @@ public class AppleUserInitiatedEnrollmentProfileSetPriorityRequestBuilder extend
     /**
      * Creates the IAppleUserInitiatedEnrollmentProfileSetPriorityRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAppleUserInitiatedEnrollmentProfileSetPriorityRequest instance
      */
-    public IAppleUserInitiatedEnrollmentProfileSetPriorityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppleUserInitiatedEnrollmentProfileSetPriorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

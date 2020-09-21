@@ -39,11 +39,23 @@ public class DeviceManagementScriptHasPayloadLinksCollectionRequestBuilder exten
 			bodyParams.put("payloadIds", payloadIds);
 		}
       }
-
-    public IDeviceManagementScriptHasPayloadLinksCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementScriptHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementScriptHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementScriptHasPayloadLinksCollectionRequest request = new DeviceManagementScriptHasPayloadLinksCollectionRequest(
                 getRequestUrl(),

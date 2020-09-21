@@ -17,9 +17,10 @@ public interface IAuthenticationMethodDisableSmsSignInRequestBuilder extends IRe
     /**
      * Creates the IAuthenticationMethodDisableSmsSignInRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAuthenticationMethodDisableSmsSignInRequest instance
      */
-    IAuthenticationMethodDisableSmsSignInRequest buildRequest();
+    IAuthenticationMethodDisableSmsSignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAuthenticationMethodDisableSmsSignInRequest with specific options instead of the existing options

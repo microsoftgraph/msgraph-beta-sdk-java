@@ -38,10 +38,11 @@ public class GroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder extend
     /**
      * Creates the IGroupPolicyConfigurationUpdateDefinitionValuesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyConfigurationUpdateDefinitionValuesRequest instance
      */
-    public IGroupPolicyConfigurationUpdateDefinitionValuesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyConfigurationUpdateDefinitionValuesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

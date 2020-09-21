@@ -17,9 +17,10 @@ public interface IManagedDeviceSetDeviceNameRequestBuilder extends IRequestBuild
     /**
      * Creates the IManagedDeviceSetDeviceNameRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceSetDeviceNameRequest instance
      */
-    IManagedDeviceSetDeviceNameRequest buildRequest();
+    IManagedDeviceSetDeviceNameRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceSetDeviceNameRequest with specific options instead of the existing options

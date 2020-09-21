@@ -34,10 +34,11 @@ public class TaxAreaRequestBuilder extends BaseRequestBuilder implements ITaxAre
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITaxAreaRequest instance
      */
-    public ITaxAreaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITaxAreaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

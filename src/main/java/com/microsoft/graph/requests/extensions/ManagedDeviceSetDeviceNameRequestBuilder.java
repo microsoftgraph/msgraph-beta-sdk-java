@@ -34,10 +34,11 @@ public class ManagedDeviceSetDeviceNameRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IManagedDeviceSetDeviceNameRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceSetDeviceNameRequest instance
      */
-    public IManagedDeviceSetDeviceNameRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceSetDeviceNameRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

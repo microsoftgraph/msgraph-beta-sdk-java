@@ -74,6 +74,16 @@ public class PrinterShareReferenceRequest extends BaseRequest implements IPrinte
         return (PrinterShareReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrinterShareReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrinterShareReferenceRequest)this;
+    }
+    /**
      * Puts the PrinterShare
      *
      * @param srcPrinterShare the PrinterShare reference to PUT

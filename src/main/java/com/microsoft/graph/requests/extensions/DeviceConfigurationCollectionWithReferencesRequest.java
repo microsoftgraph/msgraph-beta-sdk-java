@@ -66,6 +66,11 @@ public class DeviceConfigurationCollectionWithReferencesRequest extends BaseColl
         return (DeviceConfigurationCollectionWithReferencesRequest)this;
     }
 
+    public IDeviceConfigurationCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceConfigurationCollectionWithReferencesRequest)this;
+    }
+
     public IDeviceConfigurationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceConfigurationCollectionWithReferencesRequest)this;

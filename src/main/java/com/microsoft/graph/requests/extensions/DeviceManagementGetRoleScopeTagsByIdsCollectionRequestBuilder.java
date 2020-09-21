@@ -39,11 +39,23 @@ public class DeviceManagementGetRoleScopeTagsByIdsCollectionRequestBuilder exten
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("ids", ids));
 		}
       }
-
-    public IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementGetRoleScopeTagsByIdsCollectionRequest request = new DeviceManagementGetRoleScopeTagsByIdsCollectionRequest(
                 getRequestUrl(),

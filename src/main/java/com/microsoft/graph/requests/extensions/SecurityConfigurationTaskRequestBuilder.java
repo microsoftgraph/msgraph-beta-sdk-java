@@ -38,10 +38,11 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityConfigurationTaskRequest instance
      */
-    public ISecurityConfigurationTaskRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityConfigurationTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

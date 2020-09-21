@@ -85,6 +85,17 @@ public class B2cIdentityUserFlowCollectionRequest extends BaseCollectionRequest<
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IB2cIdentityUserFlowCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (B2cIdentityUserFlowCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

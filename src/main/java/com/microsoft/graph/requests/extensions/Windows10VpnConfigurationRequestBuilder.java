@@ -36,10 +36,11 @@ public class Windows10VpnConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10VpnConfigurationRequest instance
      */
-    public IWindows10VpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10VpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

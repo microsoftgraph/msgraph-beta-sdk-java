@@ -38,10 +38,11 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptUserStateRequest instance
      */
-    public IDeviceManagementScriptUserStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementScriptUserStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

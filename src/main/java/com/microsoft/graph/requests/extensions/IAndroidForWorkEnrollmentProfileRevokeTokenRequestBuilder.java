@@ -17,9 +17,10 @@ public interface IAndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder exten
     /**
      * Creates the IAndroidForWorkEnrollmentProfileRevokeTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkEnrollmentProfileRevokeTokenRequest instance
      */
-    IAndroidForWorkEnrollmentProfileRevokeTokenRequest buildRequest();
+    IAndroidForWorkEnrollmentProfileRevokeTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidForWorkEnrollmentProfileRevokeTokenRequest with specific options instead of the existing options

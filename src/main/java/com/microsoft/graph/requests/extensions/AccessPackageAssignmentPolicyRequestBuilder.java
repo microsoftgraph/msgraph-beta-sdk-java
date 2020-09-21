@@ -38,10 +38,11 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessPackageAssignmentPolicyRequest instance
      */
-    public IAccessPackageAssignmentPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessPackageAssignmentPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

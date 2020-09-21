@@ -154,5 +154,16 @@ public class SkypeForBusinessDeviceUsageUserCountsRequest extends BaseRequest im
          return (SkypeForBusinessDeviceUsageUserCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISkypeForBusinessDeviceUsageUserCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SkypeForBusinessDeviceUsageUserCountsRequest)this;
+     }
+
 }
 

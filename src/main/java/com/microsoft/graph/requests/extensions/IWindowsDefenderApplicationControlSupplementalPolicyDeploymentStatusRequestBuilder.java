@@ -21,9 +21,10 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyDeploymentS
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest instance
      */
-    IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest buildRequest();
+    IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

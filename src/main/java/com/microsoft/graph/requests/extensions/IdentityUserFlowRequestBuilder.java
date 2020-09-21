@@ -34,10 +34,11 @@ public class IdentityUserFlowRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIdentityUserFlowRequest instance
      */
-    public IIdentityUserFlowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIdentityUserFlowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

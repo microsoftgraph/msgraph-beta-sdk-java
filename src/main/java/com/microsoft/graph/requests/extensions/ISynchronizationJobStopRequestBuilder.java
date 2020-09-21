@@ -17,9 +17,10 @@ public interface ISynchronizationJobStopRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ISynchronizationJobStopRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobStopRequest instance
      */
-    ISynchronizationJobStopRequest buildRequest();
+    ISynchronizationJobStopRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISynchronizationJobStopRequest with specific options instead of the existing options

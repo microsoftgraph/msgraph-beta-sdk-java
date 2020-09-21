@@ -34,10 +34,11 @@ public class EmailAppUsageVersionsUserCountsRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmailAppUsageVersionsUserCountsRequest instance
      */
-    public IEmailAppUsageVersionsUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmailAppUsageVersionsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

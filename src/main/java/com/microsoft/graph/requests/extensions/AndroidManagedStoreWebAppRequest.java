@@ -154,5 +154,16 @@ public class AndroidManagedStoreWebAppRequest extends BaseRequest implements IAn
          return (AndroidManagedStoreWebAppRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidManagedStoreWebAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidManagedStoreWebAppRequest)this;
+     }
+
 }
 

@@ -66,6 +66,16 @@ public class AndroidWorkProfileCertificateProfileBaseReferenceRequest extends Ba
         return (AndroidWorkProfileCertificateProfileBaseReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAndroidWorkProfileCertificateProfileBaseReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidWorkProfileCertificateProfileBaseReferenceRequest)this;
+    }
+    /**
      * Puts the AndroidWorkProfileCertificateProfileBase
      *
      * @param srcAndroidWorkProfileCertificateProfileBase the AndroidWorkProfileCertificateProfileBase reference to PUT

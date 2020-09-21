@@ -34,10 +34,11 @@ public class EnrollmentProfileUpdateDeviceProfileAssignmentRequestBuilder extend
     /**
      * Creates the IEnrollmentProfileUpdateDeviceProfileAssignmentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEnrollmentProfileUpdateDeviceProfileAssignmentRequest instance
      */
-    public IEnrollmentProfileUpdateDeviceProfileAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEnrollmentProfileUpdateDeviceProfileAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

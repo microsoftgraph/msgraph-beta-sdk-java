@@ -17,9 +17,10 @@ public interface IDeviceHealthScriptGetRemediationSummaryRequestBuilder extends 
     /**
      * Creates the IDeviceHealthScriptGetRemediationSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptGetRemediationSummaryRequest instance
      */
-    IDeviceHealthScriptGetRemediationSummaryRequest buildRequest();
+    IDeviceHealthScriptGetRemediationSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceHealthScriptGetRemediationSummaryRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class OfficeClientConfigurationUserPreferencePayloadStreamRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfficeClientConfigurationUserPreferencePayloadStreamRequest instance
      */
-    public IOfficeClientConfigurationUserPreferencePayloadStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeClientConfigurationUserPreferencePayloadStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

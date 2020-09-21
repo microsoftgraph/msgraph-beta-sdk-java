@@ -34,10 +34,11 @@ public class CloudAppSecurityProfileRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICloudAppSecurityProfileRequest instance
      */
-    public ICloudAppSecurityProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICloudAppSecurityProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

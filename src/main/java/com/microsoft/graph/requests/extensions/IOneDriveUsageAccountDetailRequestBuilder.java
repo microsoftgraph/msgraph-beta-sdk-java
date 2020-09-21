@@ -20,9 +20,10 @@ public interface IOneDriveUsageAccountDetailRequestBuilder extends IRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOneDriveUsageAccountDetailRequest instance
      */
-    IOneDriveUsageAccountDetailRequest buildRequest();
+    IOneDriveUsageAccountDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

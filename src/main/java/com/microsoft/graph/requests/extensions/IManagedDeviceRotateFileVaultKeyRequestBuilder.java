@@ -17,9 +17,10 @@ public interface IManagedDeviceRotateFileVaultKeyRequestBuilder extends IRequest
     /**
      * Creates the IManagedDeviceRotateFileVaultKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRotateFileVaultKeyRequest instance
      */
-    IManagedDeviceRotateFileVaultKeyRequest buildRequest();
+    IManagedDeviceRotateFileVaultKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceRotateFileVaultKeyRequest with specific options instead of the existing options

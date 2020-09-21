@@ -34,10 +34,11 @@ public class BusinessFlowTemplateRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBusinessFlowTemplateRequest instance
      */
-    public IBusinessFlowTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBusinessFlowTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

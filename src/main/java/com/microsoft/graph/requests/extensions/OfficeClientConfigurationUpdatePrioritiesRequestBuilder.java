@@ -36,10 +36,11 @@ public class OfficeClientConfigurationUpdatePrioritiesRequestBuilder extends Bas
     /**
      * Creates the IOfficeClientConfigurationUpdatePrioritiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOfficeClientConfigurationUpdatePrioritiesRequest instance
      */
-    public IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

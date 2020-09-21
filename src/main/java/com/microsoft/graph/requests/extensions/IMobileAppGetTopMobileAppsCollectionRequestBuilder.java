@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IMobileAppGetTopMobileAppsCollect
  */
 public interface IMobileAppGetTopMobileAppsCollectionRequestBuilder extends IRequestBuilder {
 
-    IMobileAppGetTopMobileAppsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IMobileAppGetTopMobileAppsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IMobileAppGetTopMobileAppsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

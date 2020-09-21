@@ -38,10 +38,11 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrivilegedApprovalRequest instance
      */
-    public IPrivilegedApprovalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedApprovalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

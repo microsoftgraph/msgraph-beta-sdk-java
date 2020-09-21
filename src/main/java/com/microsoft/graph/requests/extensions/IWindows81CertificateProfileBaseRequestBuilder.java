@@ -20,9 +20,10 @@ public interface IWindows81CertificateProfileBaseRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81CertificateProfileBaseRequest instance
      */
-    IWindows81CertificateProfileBaseRequest buildRequest();
+    IWindows81CertificateProfileBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

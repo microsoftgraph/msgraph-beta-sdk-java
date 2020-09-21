@@ -17,9 +17,10 @@ public interface IDeviceShellScriptAssignRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IDeviceShellScriptAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceShellScriptAssignRequest instance
      */
-    IDeviceShellScriptAssignRequest buildRequest();
+    IDeviceShellScriptAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceShellScriptAssignRequest with specific options instead of the existing options

@@ -104,4 +104,15 @@ public class ReportRootGetSharePointSiteUsageDetailCollectionRequest extends Bas
         return (IReportRootGetSharePointSiteUsageDetailCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetSharePointSiteUsageDetailCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetSharePointSiteUsageDetailCollectionRequest)this;
+    }
+
 }

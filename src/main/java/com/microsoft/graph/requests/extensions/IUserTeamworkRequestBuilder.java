@@ -25,9 +25,10 @@ public interface IUserTeamworkRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserTeamworkRequest instance
      */
-    IUserTeamworkRequest buildRequest();
+    IUserTeamworkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

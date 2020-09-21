@@ -17,9 +17,10 @@ public interface ISynchronizationJobPauseRequestBuilder extends IRequestBuilder 
     /**
      * Creates the ISynchronizationJobPauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobPauseRequest instance
      */
-    ISynchronizationJobPauseRequest buildRequest();
+    ISynchronizationJobPauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISynchronizationJobPauseRequest with specific options instead of the existing options

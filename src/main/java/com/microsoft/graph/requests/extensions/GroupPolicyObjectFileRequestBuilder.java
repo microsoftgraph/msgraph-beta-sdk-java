@@ -34,10 +34,11 @@ public class GroupPolicyObjectFileRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyObjectFileRequest instance
      */
-    public IGroupPolicyObjectFileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyObjectFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -64,6 +64,16 @@ public class WindowsInformationProtectionDeviceRegistrationReferenceRequest exte
         return (WindowsInformationProtectionDeviceRegistrationReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionDeviceRegistrationReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsInformationProtectionDeviceRegistrationReferenceRequest)this;
+    }
+    /**
      * Puts the WindowsInformationProtectionDeviceRegistration
      *
      * @param srcWindowsInformationProtectionDeviceRegistration the WindowsInformationProtectionDeviceRegistration reference to PUT

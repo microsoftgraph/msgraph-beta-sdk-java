@@ -34,10 +34,11 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryObjectRequest instance
      */
-    public IDirectoryObjectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryObjectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementExchangeOnPremisesPolicyRequest instance
      */
-    public IDeviceManagementExchangeOnPremisesPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementExchangeOnPremisesPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

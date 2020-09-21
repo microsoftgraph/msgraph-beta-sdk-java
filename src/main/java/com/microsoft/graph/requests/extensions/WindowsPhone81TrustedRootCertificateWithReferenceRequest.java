@@ -93,4 +93,14 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WindowsPhone81TrustedRootCertificateWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsPhone81TrustedRootCertificateWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsPhone81TrustedRootCertificateWithReferenceRequest)this;
+    }
 }

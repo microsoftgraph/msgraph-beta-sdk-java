@@ -32,10 +32,11 @@ public class DeviceLogCollectionResponseCreateDownloadUrlRequestBuilder extends 
     /**
      * Creates the IDeviceLogCollectionResponseCreateDownloadUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceLogCollectionResponseCreateDownloadUrlRequest instance
      */
-    public IDeviceLogCollectionResponseCreateDownloadUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceLogCollectionResponseCreateDownloadUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

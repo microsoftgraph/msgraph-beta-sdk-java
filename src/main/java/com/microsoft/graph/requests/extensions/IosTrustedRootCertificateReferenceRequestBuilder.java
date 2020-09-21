@@ -36,10 +36,11 @@ public class IosTrustedRootCertificateReferenceRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IIosTrustedRootCertificateReferenceRequest instance
      */
-    public IIosTrustedRootCertificateReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosTrustedRootCertificateReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

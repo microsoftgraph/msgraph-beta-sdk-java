@@ -27,8 +27,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface ISiteCollectionRequestBuilder extends IRequestBuilder {
 
-    ISiteCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ISiteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ISiteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ISiteRequestBuilder byId(final String id);
@@ -39,6 +51,10 @@ public interface ISiteCollectionRequestBuilder extends IRequestBuilder {
     ISiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value);
 
     ISiteDeltaCollectionRequestBuilder delta();
+
+	ISiteDeltaCollectionRequestBuilder delta(final String deltaLink);
+
+    ISiteDeltaCollectionRequestBuilder delta(final String token);
 
 	ISiteDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

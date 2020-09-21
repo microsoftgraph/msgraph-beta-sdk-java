@@ -34,10 +34,11 @@ public class DeviceComplianceScriptAssignRequestBuilder extends BaseActionReques
     /**
      * Creates the IDeviceComplianceScriptAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceComplianceScriptAssignRequest instance
      */
-    public IDeviceComplianceScriptAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceComplianceScriptAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

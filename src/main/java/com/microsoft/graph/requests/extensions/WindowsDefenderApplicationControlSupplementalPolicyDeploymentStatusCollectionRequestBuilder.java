@@ -36,10 +36,22 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
         super(requestUrl, client, requestOptions);
     }
 
-    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

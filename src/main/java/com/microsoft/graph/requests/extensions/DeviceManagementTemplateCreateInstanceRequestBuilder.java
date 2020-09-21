@@ -41,10 +41,11 @@ public class DeviceManagementTemplateCreateInstanceRequestBuilder extends BaseAc
     /**
      * Creates the IDeviceManagementTemplateCreateInstanceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementTemplateCreateInstanceRequest instance
      */
-    public IDeviceManagementTemplateCreateInstanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementTemplateCreateInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

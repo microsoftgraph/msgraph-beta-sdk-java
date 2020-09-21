@@ -35,10 +35,11 @@ public class WindowsInformationProtectionDeviceRegistrationWithReferenceRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionDeviceRegistrationWithReferenceRequest instance
      */
-    public IWindowsInformationProtectionDeviceRegistrationWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionDeviceRegistrationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

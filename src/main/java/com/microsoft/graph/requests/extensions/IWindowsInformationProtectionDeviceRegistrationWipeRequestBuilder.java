@@ -17,9 +17,10 @@ public interface IWindowsInformationProtectionDeviceRegistrationWipeRequestBuild
     /**
      * Creates the IWindowsInformationProtectionDeviceRegistrationWipeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsInformationProtectionDeviceRegistrationWipeRequest instance
      */
-    IWindowsInformationProtectionDeviceRegistrationWipeRequest buildRequest();
+    IWindowsInformationProtectionDeviceRegistrationWipeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsInformationProtectionDeviceRegistrationWipeRequest with specific options instead of the existing options

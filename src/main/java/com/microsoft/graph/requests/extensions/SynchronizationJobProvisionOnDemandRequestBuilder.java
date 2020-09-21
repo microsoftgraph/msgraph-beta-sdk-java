@@ -35,10 +35,11 @@ public class SynchronizationJobProvisionOnDemandRequestBuilder extends BaseActio
     /**
      * Creates the ISynchronizationJobProvisionOnDemandRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobProvisionOnDemandRequest instance
      */
-    public ISynchronizationJobProvisionOnDemandRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationJobProvisionOnDemandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

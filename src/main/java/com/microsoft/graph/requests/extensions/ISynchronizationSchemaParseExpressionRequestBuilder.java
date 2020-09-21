@@ -17,9 +17,10 @@ public interface ISynchronizationSchemaParseExpressionRequestBuilder extends IRe
     /**
      * Creates the ISynchronizationSchemaParseExpressionRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationSchemaParseExpressionRequest instance
      */
-    ISynchronizationSchemaParseExpressionRequest buildRequest();
+    ISynchronizationSchemaParseExpressionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISynchronizationSchemaParseExpressionRequest with specific options instead of the existing options

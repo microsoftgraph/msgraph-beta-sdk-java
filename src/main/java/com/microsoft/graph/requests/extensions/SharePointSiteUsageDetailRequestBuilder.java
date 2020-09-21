@@ -34,10 +34,11 @@ public class SharePointSiteUsageDetailRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharePointSiteUsageDetailRequest instance
      */
-    public ISharePointSiteUsageDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharePointSiteUsageDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class SynchronizationJobPauseRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the ISynchronizationJobPauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobPauseRequest instance
      */
-    public ISynchronizationJobPauseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationJobPauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

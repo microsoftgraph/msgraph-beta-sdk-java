@@ -42,10 +42,11 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnPremisesAgentGroupRequest instance
      */
-    public IOnPremisesAgentGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnPremisesAgentGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

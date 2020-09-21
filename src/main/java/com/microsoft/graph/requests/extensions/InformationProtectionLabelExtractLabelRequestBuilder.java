@@ -35,10 +35,11 @@ public class InformationProtectionLabelExtractLabelRequestBuilder extends BaseAc
     /**
      * Creates the IInformationProtectionLabelExtractLabelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IInformationProtectionLabelExtractLabelRequest instance
      */
-    public IInformationProtectionLabelExtractLabelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IInformationProtectionLabelExtractLabelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

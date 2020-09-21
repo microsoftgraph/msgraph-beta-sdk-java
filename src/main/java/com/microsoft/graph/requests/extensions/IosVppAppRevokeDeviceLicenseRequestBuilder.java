@@ -36,10 +36,11 @@ public class IosVppAppRevokeDeviceLicenseRequestBuilder extends BaseActionReques
     /**
      * Creates the IIosVppAppRevokeDeviceLicenseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IIosVppAppRevokeDeviceLicenseRequest instance
      */
-    public IIosVppAppRevokeDeviceLicenseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVppAppRevokeDeviceLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

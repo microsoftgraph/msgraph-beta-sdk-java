@@ -32,10 +32,11 @@ public class EducationSynchronizationProfileUploadUrlRequestBuilder extends Base
     /**
      * Creates the IEducationSynchronizationProfileUploadUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileUploadUrlRequest instance
      */
-    public IEducationSynchronizationProfileUploadUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSynchronizationProfileUploadUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

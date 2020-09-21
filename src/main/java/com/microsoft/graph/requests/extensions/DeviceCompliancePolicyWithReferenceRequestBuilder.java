@@ -66,10 +66,11 @@ public class DeviceCompliancePolicyWithReferenceRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyWithReferenceRequest instance
      */
-    public IDeviceCompliancePolicyWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceCompliancePolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

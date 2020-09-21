@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IChannelAllMessagesCollectionRequ
  */
 public interface IChannelAllMessagesCollectionRequestBuilder extends IRequestBuilder {
 
-    IChannelAllMessagesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IChannelAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IChannelAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

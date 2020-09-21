@@ -36,10 +36,22 @@ public class GroupPolicyPresentationValueCollectionRequestBuilder extends BaseRe
         super(requestUrl, client, requestOptions);
     }
 
-    public IGroupPolicyPresentationValueCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IGroupPolicyPresentationValueCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IGroupPolicyPresentationValueCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyPresentationValueCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

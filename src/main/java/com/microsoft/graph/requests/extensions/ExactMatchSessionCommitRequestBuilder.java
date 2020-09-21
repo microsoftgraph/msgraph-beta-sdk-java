@@ -32,10 +32,11 @@ public class ExactMatchSessionCommitRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IExactMatchSessionCommitRequest
      *
+     * @param requestOptions the options for the request
      * @return the IExactMatchSessionCommitRequest instance
      */
-    public IExactMatchSessionCommitRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExactMatchSessionCommitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

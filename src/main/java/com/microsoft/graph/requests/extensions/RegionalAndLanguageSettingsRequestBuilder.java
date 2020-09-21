@@ -34,10 +34,11 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRegionalAndLanguageSettingsRequest instance
      */
-    public IRegionalAndLanguageSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRegionalAndLanguageSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

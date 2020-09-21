@@ -20,9 +20,10 @@ public interface IAndroidForWorkAppConfigurationSchemaRequestBuilder extends IRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkAppConfigurationSchemaRequest instance
      */
-    IAndroidForWorkAppConfigurationSchemaRequest buildRequest();
+    IAndroidForWorkAppConfigurationSchemaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

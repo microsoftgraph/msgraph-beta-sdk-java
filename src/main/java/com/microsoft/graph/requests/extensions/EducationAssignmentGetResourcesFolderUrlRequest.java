@@ -72,4 +72,15 @@ public class EducationAssignmentGetResourcesFolderUrlRequest extends BaseRequest
         return (EducationAssignmentGetResourcesFolderUrlRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEducationAssignmentGetResourcesFolderUrlRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationAssignmentGetResourcesFolderUrlRequest)this;
+    }
+
 }

@@ -44,10 +44,11 @@ public class UnifiedRoleAssignmentMultipleRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUnifiedRoleAssignmentMultipleRequest instance
      */
-    public IUnifiedRoleAssignmentMultipleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUnifiedRoleAssignmentMultipleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

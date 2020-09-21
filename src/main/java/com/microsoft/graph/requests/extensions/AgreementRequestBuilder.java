@@ -44,10 +44,11 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAgreementRequest instance
      */
-    public IAgreementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAgreementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

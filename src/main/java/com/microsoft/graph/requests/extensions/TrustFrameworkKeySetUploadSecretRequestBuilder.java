@@ -40,10 +40,11 @@ public class TrustFrameworkKeySetUploadSecretRequestBuilder extends BaseActionRe
     /**
      * Creates the ITrustFrameworkKeySetUploadSecretRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadSecretRequest instance
      */
-    public ITrustFrameworkKeySetUploadSecretRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkKeySetUploadSecretRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

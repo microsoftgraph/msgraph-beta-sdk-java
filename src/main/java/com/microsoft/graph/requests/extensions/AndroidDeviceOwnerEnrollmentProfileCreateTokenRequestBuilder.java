@@ -34,10 +34,11 @@ public class AndroidDeviceOwnerEnrollmentProfileCreateTokenRequestBuilder extend
     /**
      * Creates the IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest instance
      */
-    public IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerEnrollmentProfileCreateTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

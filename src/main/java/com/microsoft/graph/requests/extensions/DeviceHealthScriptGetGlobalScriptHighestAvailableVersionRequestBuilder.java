@@ -32,10 +32,11 @@ public class DeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequestBuil
     /**
      * Creates the IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest instance
      */
-    public IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

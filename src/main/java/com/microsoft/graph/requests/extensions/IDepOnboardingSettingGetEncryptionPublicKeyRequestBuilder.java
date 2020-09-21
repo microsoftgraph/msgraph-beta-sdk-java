@@ -17,9 +17,10 @@ public interface IDepOnboardingSettingGetEncryptionPublicKeyRequestBuilder exten
     /**
      * Creates the IDepOnboardingSettingGetEncryptionPublicKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingGetEncryptionPublicKeyRequest instance
      */
-    IDepOnboardingSettingGetEncryptionPublicKeyRequest buildRequest();
+    IDepOnboardingSettingGetEncryptionPublicKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDepOnboardingSettingGetEncryptionPublicKeyRequest with specific options instead of the existing options

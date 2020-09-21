@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IAndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder extends IRequestBuilder {
 
-    IAndroidManagedStoreAppConfigurationSchemaCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IAndroidManagedStoreAppConfigurationSchemaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IAndroidManagedStoreAppConfigurationSchemaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAndroidManagedStoreAppConfigurationSchemaRequestBuilder byId(final String id);

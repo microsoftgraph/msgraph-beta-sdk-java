@@ -34,10 +34,11 @@ public class WindowsFeatureUpdateProfileAssignRequestBuilder extends BaseActionR
     /**
      * Creates the IWindowsFeatureUpdateProfileAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsFeatureUpdateProfileAssignRequest instance
      */
-    public IWindowsFeatureUpdateProfileAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsFeatureUpdateProfileAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -21,8 +21,20 @@ import com.microsoft.graph.requests.extensions.IManagementConditionStatementGetM
  */
 public interface IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequestBuilder extends IRequestBuilder {
 
-    IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IManagementConditionStatementGetManagementConditionStatementsForPlatformCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

@@ -32,10 +32,11 @@ public class BookingBusinessPublishRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IBookingBusinessPublishRequest
      *
+     * @param requestOptions the options for the request
      * @return the IBookingBusinessPublishRequest instance
      */
-    public IBookingBusinessPublishRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingBusinessPublishRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

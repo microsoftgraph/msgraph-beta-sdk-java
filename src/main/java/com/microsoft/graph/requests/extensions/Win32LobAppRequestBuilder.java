@@ -34,10 +34,11 @@ public class Win32LobAppRequestBuilder extends BaseRequestBuilder implements IWi
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWin32LobAppRequest instance
      */
-    public IWin32LobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWin32LobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

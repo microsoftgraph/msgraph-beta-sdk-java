@@ -25,8 +25,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IImportedAppleDeviceIdentityCollectionRequestBuilder extends IRequestBuilder {
 
-    IImportedAppleDeviceIdentityCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IImportedAppleDeviceIdentityCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IImportedAppleDeviceIdentityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IImportedAppleDeviceIdentityRequestBuilder byId(final String id);

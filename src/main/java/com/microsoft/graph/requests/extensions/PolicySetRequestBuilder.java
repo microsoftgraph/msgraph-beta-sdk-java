@@ -44,10 +44,11 @@ public class PolicySetRequestBuilder extends BaseRequestBuilder implements IPoli
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicySetRequest instance
      */
-    public IPolicySetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPolicySetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

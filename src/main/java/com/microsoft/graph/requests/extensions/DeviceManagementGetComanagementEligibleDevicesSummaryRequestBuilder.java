@@ -32,10 +32,11 @@ public class DeviceManagementGetComanagementEligibleDevicesSummaryRequestBuilder
     /**
      * Creates the IDeviceManagementGetComanagementEligibleDevicesSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementGetComanagementEligibleDevicesSummaryRequest instance
      */
-    public IDeviceManagementGetComanagementEligibleDevicesSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementGetComanagementEligibleDevicesSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WindowsAppXRequestBuilder extends BaseRequestBuilder implements IWi
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAppXRequest instance
      */
-    public IWindowsAppXRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAppXRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

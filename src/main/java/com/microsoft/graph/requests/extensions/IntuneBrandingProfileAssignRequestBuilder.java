@@ -34,10 +34,11 @@ public class IntuneBrandingProfileAssignRequestBuilder extends BaseActionRequest
     /**
      * Creates the IIntuneBrandingProfileAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IIntuneBrandingProfileAssignRequest instance
      */
-    public IIntuneBrandingProfileAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIntuneBrandingProfileAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

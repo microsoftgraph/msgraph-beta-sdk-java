@@ -35,10 +35,22 @@ public class DirectorySettingTemplateCollectionRequestBuilder extends BaseReques
         super(requestUrl, client, requestOptions);
     }
 
-    public IDirectorySettingTemplateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDirectorySettingTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDirectorySettingTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectorySettingTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -39,11 +39,23 @@ public class AlertUpdateAlertsCollectionRequestBuilder extends BaseActionRequest
 			bodyParams.put("value", value);
 		}
       }
-
-    public IAlertUpdateAlertsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAlertUpdateAlertsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAlertUpdateAlertsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AlertUpdateAlertsCollectionRequest request = new AlertUpdateAlertsCollectionRequest(
                 getRequestUrl(),

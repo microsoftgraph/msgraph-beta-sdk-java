@@ -23,9 +23,10 @@ public interface IDeviceManagementScriptRunSummaryReferenceRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptRunSummaryReferenceRequest instance
      */
-    IDeviceManagementScriptRunSummaryReferenceRequest buildRequest();
+    IDeviceManagementScriptRunSummaryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

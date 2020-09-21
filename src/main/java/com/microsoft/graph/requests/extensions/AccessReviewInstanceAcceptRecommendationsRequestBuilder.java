@@ -32,10 +32,11 @@ public class AccessReviewInstanceAcceptRecommendationsRequestBuilder extends Bas
     /**
      * Creates the IAccessReviewInstanceAcceptRecommendationsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceAcceptRecommendationsRequest instance
      */
-    public IAccessReviewInstanceAcceptRecommendationsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewInstanceAcceptRecommendationsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class PersonAwardRequestBuilder extends BaseRequestBuilder implements IPe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonAwardRequest instance
      */
-    public IPersonAwardRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonAwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,22 @@ public class PersonAwardCollectionRequestBuilder extends BaseRequestBuilder impl
         super(requestUrl, client, requestOptions);
     }
 
-    public IPersonAwardCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPersonAwardCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPersonAwardCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PersonAwardCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

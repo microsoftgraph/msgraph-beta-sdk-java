@@ -22,8 +22,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IBookingBusinessCollectionRequestBuilder extends IRequestBuilder {
 
-    IBookingBusinessCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IBookingBusinessCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IBookingBusinessCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IBookingBusinessRequestBuilder byId(final String id);

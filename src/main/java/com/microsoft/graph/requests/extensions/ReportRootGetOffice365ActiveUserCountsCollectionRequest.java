@@ -104,4 +104,15 @@ public class ReportRootGetOffice365ActiveUserCountsCollectionRequest extends Bas
         return (IReportRootGetOffice365ActiveUserCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365ActiveUserCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOffice365ActiveUserCountsCollectionRequest)this;
+    }
+
 }

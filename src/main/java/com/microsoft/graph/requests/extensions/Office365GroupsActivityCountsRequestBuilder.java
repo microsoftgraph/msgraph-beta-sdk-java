@@ -34,10 +34,11 @@ public class Office365GroupsActivityCountsRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365GroupsActivityCountsRequest instance
      */
-    public IOffice365GroupsActivityCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOffice365GroupsActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DepOnboardingSettingGetExpiringVppTokenCountRequestBuilder extends 
     /**
      * Creates the IDepOnboardingSettingGetExpiringVppTokenCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingGetExpiringVppTokenCountRequest instance
      */
-    public IDepOnboardingSettingGetExpiringVppTokenCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingGetExpiringVppTokenCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

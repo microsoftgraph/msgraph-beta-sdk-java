@@ -36,10 +36,11 @@ public class DepMacOSEnrollmentProfileReferenceRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IDepMacOSEnrollmentProfileReferenceRequest instance
      */
-    public IDepMacOSEnrollmentProfileReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepMacOSEnrollmentProfileReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

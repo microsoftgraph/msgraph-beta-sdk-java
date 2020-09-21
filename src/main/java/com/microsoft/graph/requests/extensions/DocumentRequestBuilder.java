@@ -38,10 +38,11 @@ public class DocumentRequestBuilder extends BaseRequestBuilder implements IDocum
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDocumentRequest instance
      */
-    public IDocumentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDocumentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

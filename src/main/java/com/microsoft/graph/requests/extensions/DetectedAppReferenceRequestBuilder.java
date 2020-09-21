@@ -40,10 +40,11 @@ public class DetectedAppReferenceRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IDetectedAppReferenceRequest instance
      */
-    public IDetectedAppReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDetectedAppReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

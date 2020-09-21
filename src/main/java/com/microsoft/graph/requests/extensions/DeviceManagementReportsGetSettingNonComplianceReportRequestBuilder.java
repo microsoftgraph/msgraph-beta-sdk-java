@@ -50,10 +50,11 @@ public class DeviceManagementReportsGetSettingNonComplianceReportRequestBuilder 
     /**
      * Creates the IDeviceManagementReportsGetSettingNonComplianceReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetSettingNonComplianceReportRequest instance
      */
-    public IDeviceManagementReportsGetSettingNonComplianceReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetSettingNonComplianceReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

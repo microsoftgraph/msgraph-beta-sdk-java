@@ -36,10 +36,11 @@ public class DeviceCompliancePolicySetScheduledRetireStateRequestBuilder extends
     /**
      * Creates the IDeviceCompliancePolicySetScheduledRetireStateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicySetScheduledRetireStateRequest instance
      */
-    public IDeviceCompliancePolicySetScheduledRetireStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceCompliancePolicySetScheduledRetireStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

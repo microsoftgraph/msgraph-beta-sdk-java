@@ -34,10 +34,11 @@ public class SiteActivitySummaryRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISiteActivitySummaryRequest instance
      */
-    public ISiteActivitySummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISiteActivitySummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

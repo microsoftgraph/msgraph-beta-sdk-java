@@ -38,10 +38,11 @@ public class MacOSWiredNetworkConfigurationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSWiredNetworkConfigurationRequest instance
      */
-    public IMacOSWiredNetworkConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSWiredNetworkConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

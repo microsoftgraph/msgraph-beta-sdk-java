@@ -45,11 +45,23 @@ public class InformationProtectionLabelEvaluateRemovalCollectionRequestBuilder e
 			bodyParams.put("downgradeJustification", downgradeJustification);
 		}
       }
-
-    public IInformationProtectionLabelEvaluateRemovalCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IInformationProtectionLabelEvaluateRemovalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IInformationProtectionLabelEvaluateRemovalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         InformationProtectionLabelEvaluateRemovalCollectionRequest request = new InformationProtectionLabelEvaluateRemovalCollectionRequest(
                 getRequestUrl(),

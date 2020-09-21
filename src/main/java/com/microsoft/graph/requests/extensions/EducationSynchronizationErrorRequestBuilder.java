@@ -34,10 +34,11 @@ public class EducationSynchronizationErrorRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationSynchronizationErrorRequest instance
      */
-    public IEducationSynchronizationErrorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSynchronizationErrorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

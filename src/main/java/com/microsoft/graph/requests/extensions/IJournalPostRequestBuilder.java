@@ -17,9 +17,10 @@ public interface IJournalPostRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IJournalPostRequest
      *
+     * @param requestOptions the options for the request
      * @return the IJournalPostRequest instance
      */
-    IJournalPostRequest buildRequest();
+    IJournalPostRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IJournalPostRequest with specific options instead of the existing options

@@ -32,10 +32,11 @@ public class ManagedDevicePlayLostModeSoundRequestBuilder extends BaseActionRequ
     /**
      * Creates the IManagedDevicePlayLostModeSoundRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDevicePlayLostModeSoundRequest instance
      */
-    public IManagedDevicePlayLostModeSoundRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDevicePlayLostModeSoundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

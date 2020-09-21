@@ -34,10 +34,11 @@ public class GovernanceResourceRegisterRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IGovernanceResourceRegisterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGovernanceResourceRegisterRequest instance
      */
-    public IGovernanceResourceRegisterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGovernanceResourceRegisterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

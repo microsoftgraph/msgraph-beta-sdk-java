@@ -36,10 +36,11 @@ public class AndroidWorkProfileCertificateProfileBaseRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCertificateProfileBaseRequest instance
      */
-    public IAndroidWorkProfileCertificateProfileBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidWorkProfileCertificateProfileBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

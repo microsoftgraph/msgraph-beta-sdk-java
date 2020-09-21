@@ -34,10 +34,11 @@ public class GroupPolicyUploadedDefinitionFileAddLanguageFilesRequestBuilder ext
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyUploadedDefinitionFileAddLanguageFilesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

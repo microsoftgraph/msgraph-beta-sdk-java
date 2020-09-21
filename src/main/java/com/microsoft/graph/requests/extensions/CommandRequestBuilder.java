@@ -36,10 +36,11 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICommandRequest instance
      */
-    public ICommandRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICommandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

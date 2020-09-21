@@ -34,10 +34,11 @@ public class RelyingPartyDetailedSummaryRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRelyingPartyDetailedSummaryRequest instance
      */
-    public IRelyingPartyDetailedSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRelyingPartyDetailedSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

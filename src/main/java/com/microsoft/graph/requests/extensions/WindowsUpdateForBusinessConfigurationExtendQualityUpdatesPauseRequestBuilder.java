@@ -32,10 +32,11 @@ public class WindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseReque
     /**
      * Creates the IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest instance
      */
-    public IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsUpdateForBusinessConfigurationExtendQualityUpdatesPauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

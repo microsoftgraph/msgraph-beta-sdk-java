@@ -154,5 +154,16 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
          return (DepIOSEnrollmentProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDepIOSEnrollmentProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DepIOSEnrollmentProfileRequest)this;
+     }
+
 }
 

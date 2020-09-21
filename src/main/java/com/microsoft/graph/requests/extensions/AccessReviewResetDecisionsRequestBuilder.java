@@ -32,10 +32,11 @@ public class AccessReviewResetDecisionsRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IAccessReviewResetDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewResetDecisionsRequest instance
      */
-    public IAccessReviewResetDecisionsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewResetDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

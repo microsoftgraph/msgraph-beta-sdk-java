@@ -38,10 +38,11 @@ public class RiskyUserRequestBuilder extends BaseRequestBuilder implements IRisk
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRiskyUserRequest instance
      */
-    public IRiskyUserRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRiskyUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

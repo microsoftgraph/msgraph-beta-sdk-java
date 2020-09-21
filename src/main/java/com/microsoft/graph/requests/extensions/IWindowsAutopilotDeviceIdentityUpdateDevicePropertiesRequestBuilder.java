@@ -17,9 +17,10 @@ public interface IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequestBui
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest instance
      */
-    IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest buildRequest();
+    IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUpdateDevicePropertiesRequest with specific options instead of the existing options

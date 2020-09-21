@@ -154,5 +154,16 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
          return (TextClassificationRequestRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITextClassificationRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (TextClassificationRequestRequest)this;
+     }
+
 }
 

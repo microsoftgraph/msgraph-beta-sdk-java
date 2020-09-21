@@ -159,5 +159,16 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
          return (RoleScopeTagRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IRoleScopeTagRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (RoleScopeTagRequest)this;
+     }
+
 }
 

@@ -17,9 +17,10 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRe
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest buildRequest();
+    IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest with specific options instead of the existing options

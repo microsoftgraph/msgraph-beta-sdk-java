@@ -20,9 +20,10 @@ public interface IEvaluateLabelsAndPoliciesJobResponseRequestBuilder extends IRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEvaluateLabelsAndPoliciesJobResponseRequest instance
      */
-    IEvaluateLabelsAndPoliciesJobResponseRequest buildRequest();
+    IEvaluateLabelsAndPoliciesJobResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

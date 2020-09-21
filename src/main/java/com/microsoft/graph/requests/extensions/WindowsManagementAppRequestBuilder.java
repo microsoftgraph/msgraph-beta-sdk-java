@@ -38,10 +38,11 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsManagementAppRequest instance
      */
-    public IWindowsManagementAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsManagementAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

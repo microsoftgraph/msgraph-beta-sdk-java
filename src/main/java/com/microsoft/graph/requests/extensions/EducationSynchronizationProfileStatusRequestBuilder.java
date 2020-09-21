@@ -34,10 +34,11 @@ public class EducationSynchronizationProfileStatusRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationSynchronizationProfileStatusRequest instance
      */
-    public IEducationSynchronizationProfileStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSynchronizationProfileStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest instance
      */
-    public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

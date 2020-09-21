@@ -95,6 +95,16 @@ public class DeviceCompliancePolicyReferenceRequest extends BaseRequest implemen
         return (DeviceCompliancePolicyReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceCompliancePolicyReferenceRequest)this;
+    }
+    /**
      * Puts the DeviceCompliancePolicy
      *
      * @param srcDeviceCompliancePolicy the DeviceCompliancePolicy reference to PUT

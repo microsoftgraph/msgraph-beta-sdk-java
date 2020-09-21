@@ -36,10 +36,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequestBuild
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

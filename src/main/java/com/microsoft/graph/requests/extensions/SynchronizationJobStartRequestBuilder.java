@@ -32,10 +32,11 @@ public class SynchronizationJobStartRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the ISynchronizationJobStartRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobStartRequest instance
      */
-    public ISynchronizationJobStartRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationJobStartRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

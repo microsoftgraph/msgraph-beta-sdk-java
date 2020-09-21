@@ -38,10 +38,11 @@ public class ReportRootGetGroupPrintUsageSummaryRequestBuilder extends BaseFunct
     /**
      * Creates the IReportRootGetGroupPrintUsageSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetGroupPrintUsageSummaryRequest instance
      */
-    public IReportRootGetGroupPrintUsageSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetGroupPrintUsageSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

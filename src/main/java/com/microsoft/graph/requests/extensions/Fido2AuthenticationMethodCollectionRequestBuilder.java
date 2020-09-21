@@ -36,10 +36,22 @@ public class Fido2AuthenticationMethodCollectionRequestBuilder extends BaseReque
         super(requestUrl, client, requestOptions);
     }
 
-    public IFido2AuthenticationMethodCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IFido2AuthenticationMethodCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IFido2AuthenticationMethodCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Fido2AuthenticationMethodCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

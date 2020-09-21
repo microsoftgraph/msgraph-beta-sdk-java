@@ -36,10 +36,11 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsMetricHistoryRequest instance
      */
-    public IUserExperienceAnalyticsMetricHistoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsMetricHistoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

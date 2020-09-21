@@ -17,9 +17,10 @@ public interface IPrinterCreateRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPrinterCreateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrinterCreateRequest instance
      */
-    IPrinterCreateRequest buildRequest();
+    IPrinterCreateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrinterCreateRequest with specific options instead of the existing options

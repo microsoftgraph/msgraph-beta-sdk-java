@@ -32,10 +32,11 @@ public class SalesInvoiceCancelRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the ISalesInvoiceCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesInvoiceCancelRequest instance
      */
-    public ISalesInvoiceCancelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesInvoiceCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

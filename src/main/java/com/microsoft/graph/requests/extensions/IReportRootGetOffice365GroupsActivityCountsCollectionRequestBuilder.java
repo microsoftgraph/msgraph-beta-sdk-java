@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActi
  */
 public interface IReportRootGetOffice365GroupsActivityCountsCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetOffice365GroupsActivityCountsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetOffice365GroupsActivityCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetOffice365GroupsActivityCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

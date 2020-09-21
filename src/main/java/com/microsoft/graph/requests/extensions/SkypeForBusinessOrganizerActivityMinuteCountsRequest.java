@@ -154,5 +154,16 @@ public class SkypeForBusinessOrganizerActivityMinuteCountsRequest extends BaseRe
          return (SkypeForBusinessOrganizerActivityMinuteCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISkypeForBusinessOrganizerActivityMinuteCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SkypeForBusinessOrganizerActivityMinuteCountsRequest)this;
+     }
+
 }
 

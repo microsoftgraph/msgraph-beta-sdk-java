@@ -36,10 +36,11 @@ public class MacOSTrustedRootCertificateReferenceRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IMacOSTrustedRootCertificateReferenceRequest instance
      */
-    public IMacOSTrustedRootCertificateReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSTrustedRootCertificateReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

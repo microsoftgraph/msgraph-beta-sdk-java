@@ -158,5 +158,16 @@ public class PublishedResourceRequest extends BaseRequest implements IPublishedR
          return (PublishedResourceRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPublishedResourceRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PublishedResourceRequest)this;
+     }
+
 }
 

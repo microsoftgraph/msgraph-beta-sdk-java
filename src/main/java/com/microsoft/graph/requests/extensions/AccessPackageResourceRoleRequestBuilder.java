@@ -36,10 +36,11 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessPackageResourceRoleRequest instance
      */
-    public IAccessPackageResourceRoleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessPackageResourceRoleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

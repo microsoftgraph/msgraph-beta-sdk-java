@@ -39,11 +39,23 @@ public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequestBuild
 			bodyParams.put("deviceConfigurationIds", deviceConfigurationIds);
 		}
       }
-
-    public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest request = new DeviceConfigurationGetTargetedUsersAndDevicesCollectionRequest(
                 getRequestUrl(),

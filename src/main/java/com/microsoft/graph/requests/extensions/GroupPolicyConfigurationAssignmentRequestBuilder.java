@@ -34,10 +34,11 @@ public class GroupPolicyConfigurationAssignmentRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyConfigurationAssignmentRequest instance
      */
-    public IGroupPolicyConfigurationAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

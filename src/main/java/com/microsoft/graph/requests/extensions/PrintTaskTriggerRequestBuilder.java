@@ -36,10 +36,11 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintTaskTriggerRequest instance
      */
-    public IPrintTaskTriggerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintTaskTriggerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

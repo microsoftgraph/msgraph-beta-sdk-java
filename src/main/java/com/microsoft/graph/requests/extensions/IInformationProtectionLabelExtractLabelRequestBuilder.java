@@ -17,9 +17,10 @@ public interface IInformationProtectionLabelExtractLabelRequestBuilder extends I
     /**
      * Creates the IInformationProtectionLabelExtractLabelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IInformationProtectionLabelExtractLabelRequest instance
      */
-    IInformationProtectionLabelExtractLabelRequest buildRequest();
+    IInformationProtectionLabelExtractLabelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IInformationProtectionLabelExtractLabelRequest with specific options instead of the existing options

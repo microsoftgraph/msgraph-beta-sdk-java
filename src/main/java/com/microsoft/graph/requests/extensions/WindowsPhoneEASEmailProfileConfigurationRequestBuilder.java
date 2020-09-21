@@ -34,10 +34,11 @@ public class WindowsPhoneEASEmailProfileConfigurationRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhoneEASEmailProfileConfigurationRequest instance
      */
-    public IWindowsPhoneEASEmailProfileConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhoneEASEmailProfileConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

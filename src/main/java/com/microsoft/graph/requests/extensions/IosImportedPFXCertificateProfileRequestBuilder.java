@@ -38,10 +38,11 @@ public class IosImportedPFXCertificateProfileRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosImportedPFXCertificateProfileRequest instance
      */
-    public IIosImportedPFXCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

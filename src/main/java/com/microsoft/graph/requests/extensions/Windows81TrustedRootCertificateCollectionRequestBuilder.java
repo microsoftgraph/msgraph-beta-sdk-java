@@ -36,10 +36,22 @@ public class Windows81TrustedRootCertificateCollectionRequestBuilder extends Bas
         super(requestUrl, client, requestOptions);
     }
 
-    public IWindows81TrustedRootCertificateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IWindows81TrustedRootCertificateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IWindows81TrustedRootCertificateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Windows81TrustedRootCertificateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

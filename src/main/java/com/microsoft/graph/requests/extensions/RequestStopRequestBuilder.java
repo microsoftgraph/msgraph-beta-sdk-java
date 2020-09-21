@@ -32,10 +32,11 @@ public class RequestStopRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IRequestStopRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRequestStopRequest instance
      */
-    public IRequestStopRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRequestStopRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintTaskDefinitionRequest instance
      */
-    public IPrintTaskDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintTaskDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

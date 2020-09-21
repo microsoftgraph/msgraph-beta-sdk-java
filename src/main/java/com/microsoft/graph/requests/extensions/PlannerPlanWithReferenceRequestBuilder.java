@@ -45,10 +45,11 @@ public class PlannerPlanWithReferenceRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerPlanWithReferenceRequest instance
      */
-    public IPlannerPlanWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerPlanWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

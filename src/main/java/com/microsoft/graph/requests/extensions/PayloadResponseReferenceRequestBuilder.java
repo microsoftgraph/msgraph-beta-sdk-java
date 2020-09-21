@@ -36,10 +36,11 @@ public class PayloadResponseReferenceRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IPayloadResponseReferenceRequest instance
      */
-    public IPayloadResponseReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPayloadResponseReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

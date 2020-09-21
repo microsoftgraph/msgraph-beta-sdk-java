@@ -61,6 +61,11 @@ public class ManagementConditionStatementCollectionWithReferencesRequest extends
         return (ManagementConditionStatementCollectionWithReferencesRequest)this;
     }
 
+    public IManagementConditionStatementCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagementConditionStatementCollectionWithReferencesRequest)this;
+    }
+
     public IManagementConditionStatementCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagementConditionStatementCollectionWithReferencesRequest)this;

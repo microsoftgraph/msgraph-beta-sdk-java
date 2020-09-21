@@ -78,4 +78,15 @@ public class ApplicationTemplateInstantiateRequest extends BaseRequest implement
         return (ApplicationTemplateInstantiateRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IApplicationTemplateInstantiateRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApplicationTemplateInstantiateRequest)this;
+    }
+
 }

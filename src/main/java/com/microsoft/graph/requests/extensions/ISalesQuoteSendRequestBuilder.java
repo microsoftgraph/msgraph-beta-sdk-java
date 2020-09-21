@@ -17,9 +17,10 @@ public interface ISalesQuoteSendRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ISalesQuoteSendRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesQuoteSendRequest instance
      */
-    ISalesQuoteSendRequest buildRequest();
+    ISalesQuoteSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISalesQuoteSendRequest with specific options instead of the existing options

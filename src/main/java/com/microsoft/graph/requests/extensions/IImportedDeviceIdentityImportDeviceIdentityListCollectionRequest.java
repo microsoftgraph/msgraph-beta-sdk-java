@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Imported Device Identity Import Device Identity List Collection Request.
  */
-public interface IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest {
+public interface IImportedDeviceIdentityImportDeviceIdentityListCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<IImportedDeviceIdentityImportDeviceIdentityListCollectionPage> callback);
 

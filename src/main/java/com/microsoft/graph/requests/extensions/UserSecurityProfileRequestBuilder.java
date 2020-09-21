@@ -34,10 +34,11 @@ public class UserSecurityProfileRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserSecurityProfileRequest instance
      */
-    public IUserSecurityProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserSecurityProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

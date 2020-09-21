@@ -34,10 +34,11 @@ public class RiskyUserDismissRequestBuilder extends BaseActionRequestBuilder imp
     /**
      * Creates the IRiskyUserDismissRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRiskyUserDismissRequest instance
      */
-    public IRiskyUserDismissRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRiskyUserDismissRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

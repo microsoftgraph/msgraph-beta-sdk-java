@@ -34,10 +34,11 @@ public class TrustFrameworkPolicyStreamRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITrustFrameworkPolicyStreamRequest instance
      */
-    public ITrustFrameworkPolicyStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkPolicyStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

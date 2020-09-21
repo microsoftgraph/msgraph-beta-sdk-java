@@ -20,9 +20,10 @@ public interface ISecurityBaselineStateSummaryRequestBuilder extends IRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityBaselineStateSummaryRequest instance
      */
-    ISecurityBaselineStateSummaryRequest buildRequest();
+    ISecurityBaselineStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

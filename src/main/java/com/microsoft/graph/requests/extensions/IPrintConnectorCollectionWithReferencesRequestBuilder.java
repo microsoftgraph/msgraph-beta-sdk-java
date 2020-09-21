@@ -21,8 +21,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPrintConnectorCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IPrintConnectorCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IPrintConnectorCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IPrintConnectorCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IPrintConnectorWithReferenceRequestBuilder byId(final String id);

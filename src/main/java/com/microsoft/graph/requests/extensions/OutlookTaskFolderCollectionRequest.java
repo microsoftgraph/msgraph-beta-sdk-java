@@ -85,6 +85,17 @@ public class OutlookTaskFolderCollectionRequest extends BaseCollectionRequest<Ou
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOutlookTaskFolderCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OutlookTaskFolderCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

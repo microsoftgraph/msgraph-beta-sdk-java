@@ -54,10 +54,11 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnPremisesPublishingProfileRequest instance
      */
-    public IOnPremisesPublishingProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnPremisesPublishingProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

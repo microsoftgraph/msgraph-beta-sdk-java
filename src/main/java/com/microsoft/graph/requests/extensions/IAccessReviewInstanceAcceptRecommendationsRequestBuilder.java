@@ -17,9 +17,10 @@ public interface IAccessReviewInstanceAcceptRecommendationsRequestBuilder extend
     /**
      * Creates the IAccessReviewInstanceAcceptRecommendationsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceAcceptRecommendationsRequest instance
      */
-    IAccessReviewInstanceAcceptRecommendationsRequest buildRequest();
+    IAccessReviewInstanceAcceptRecommendationsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAccessReviewInstanceAcceptRecommendationsRequest with specific options instead of the existing options

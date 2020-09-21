@@ -34,10 +34,11 @@ public class AndroidForWorkEnrollmentProfileRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkEnrollmentProfileRequest instance
      */
-    public IAndroidForWorkEnrollmentProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkEnrollmentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

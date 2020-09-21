@@ -20,9 +20,10 @@ public interface IAndroidWorkProfileTrustedRootCertificateRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileTrustedRootCertificateRequest instance
      */
-    IAndroidWorkProfileTrustedRootCertificateRequest buildRequest();
+    IAndroidWorkProfileTrustedRootCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

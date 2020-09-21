@@ -17,9 +17,10 @@ public interface IDeviceManagementReportsGetCachedReportRequestBuilder extends I
     /**
      * Creates the IDeviceManagementReportsGetCachedReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetCachedReportRequest instance
      */
-    IDeviceManagementReportsGetCachedReportRequest buildRequest();
+    IDeviceManagementReportsGetCachedReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementReportsGetCachedReportRequest with specific options instead of the existing options

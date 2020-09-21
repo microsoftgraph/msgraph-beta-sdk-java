@@ -20,9 +20,10 @@ public interface IJobResponseBaseRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IJobResponseBaseRequest instance
      */
-    IJobResponseBaseRequest buildRequest();
+    IJobResponseBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

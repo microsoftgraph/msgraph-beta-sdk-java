@@ -34,10 +34,11 @@ public class AndroidWorkProfileNineWorkEasConfigurationRequestBuilder extends Ba
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileNineWorkEasConfigurationRequest instance
      */
-    public IAndroidWorkProfileNineWorkEasConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidWorkProfileNineWorkEasConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

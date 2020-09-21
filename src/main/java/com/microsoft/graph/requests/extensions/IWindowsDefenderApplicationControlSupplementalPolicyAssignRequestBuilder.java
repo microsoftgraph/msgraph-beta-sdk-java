@@ -17,9 +17,10 @@ public interface IWindowsDefenderApplicationControlSupplementalPolicyAssignReque
     /**
      * Creates the IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest instance
      */
-    IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest buildRequest();
+    IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest with specific options instead of the existing options

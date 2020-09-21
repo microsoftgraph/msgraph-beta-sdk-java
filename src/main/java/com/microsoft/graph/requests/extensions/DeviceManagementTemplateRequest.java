@@ -184,5 +184,16 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
          return (DeviceManagementTemplateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementTemplateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceManagementTemplateRequest)this;
+     }
+
 }
 

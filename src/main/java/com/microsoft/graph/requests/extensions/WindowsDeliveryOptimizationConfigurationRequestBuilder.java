@@ -34,10 +34,11 @@ public class WindowsDeliveryOptimizationConfigurationRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsDeliveryOptimizationConfigurationRequest instance
      */
-    public IWindowsDeliveryOptimizationConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsDeliveryOptimizationConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

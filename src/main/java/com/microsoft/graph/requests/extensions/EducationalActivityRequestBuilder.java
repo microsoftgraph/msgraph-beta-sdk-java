@@ -34,10 +34,11 @@ public class EducationalActivityRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationalActivityRequest instance
      */
-    public IEducationalActivityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationalActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

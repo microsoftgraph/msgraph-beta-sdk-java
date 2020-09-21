@@ -17,9 +17,10 @@ public interface IGroupPolicyMigrationReportCreateMigrationReportRequestBuilder 
     /**
      * Creates the IGroupPolicyMigrationReportCreateMigrationReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyMigrationReportCreateMigrationReportRequest instance
      */
-    IGroupPolicyMigrationReportCreateMigrationReportRequest buildRequest();
+    IGroupPolicyMigrationReportCreateMigrationReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupPolicyMigrationReportCreateMigrationReportRequest with specific options instead of the existing options

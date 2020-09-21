@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.YammerDeviceUsageDistributionUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Yammer Device Usage Distribution User Counts Collection Request.
  */
-public interface IReportRootGetYammerDeviceUsageDistributionUserCountsCollectionRequest {
+public interface IReportRootGetYammerDeviceUsageDistributionUserCountsCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetYammerDeviceUsageDistributionUserCountsCollectionPage> callback);
 

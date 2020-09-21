@@ -154,5 +154,16 @@ public class CredentialUsageSummaryRequest extends BaseRequest implements ICrede
          return (CredentialUsageSummaryRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICredentialUsageSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (CredentialUsageSummaryRequest)this;
+     }
+
 }
 

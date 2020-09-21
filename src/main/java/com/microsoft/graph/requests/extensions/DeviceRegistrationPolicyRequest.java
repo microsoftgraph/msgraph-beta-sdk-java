@@ -154,5 +154,16 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
          return (DeviceRegistrationPolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceRegistrationPolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceRegistrationPolicyRequest)this;
+     }
+
 }
 

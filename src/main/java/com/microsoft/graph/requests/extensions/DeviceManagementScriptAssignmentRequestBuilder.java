@@ -34,10 +34,11 @@ public class DeviceManagementScriptAssignmentRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptAssignmentRequest instance
      */
-    public IDeviceManagementScriptAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementScriptAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

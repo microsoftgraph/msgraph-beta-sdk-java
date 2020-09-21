@@ -32,10 +32,11 @@ public class EdiscoveryCaseReopenRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IEdiscoveryCaseReopenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEdiscoveryCaseReopenRequest instance
      */
-    public IEdiscoveryCaseReopenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEdiscoveryCaseReopenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

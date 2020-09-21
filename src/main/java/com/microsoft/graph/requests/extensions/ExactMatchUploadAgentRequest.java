@@ -154,5 +154,16 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
          return (ExactMatchUploadAgentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IExactMatchUploadAgentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ExactMatchUploadAgentRequest)this;
+     }
+
 }
 

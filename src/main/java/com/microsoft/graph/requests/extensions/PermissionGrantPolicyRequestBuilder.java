@@ -38,10 +38,11 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPermissionGrantPolicyRequest instance
      */
-    public IPermissionGrantPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPermissionGrantPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

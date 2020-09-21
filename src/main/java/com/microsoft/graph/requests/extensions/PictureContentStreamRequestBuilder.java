@@ -34,10 +34,11 @@ public class PictureContentStreamRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPictureContentStreamRequest instance
      */
-    public IPictureContentStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPictureContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -35,10 +35,11 @@ public class ApplicationTemplateRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApplicationTemplateRequest instance
      */
-    public IApplicationTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

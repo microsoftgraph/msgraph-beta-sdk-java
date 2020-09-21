@@ -34,10 +34,11 @@ public class EventCancelRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IEventCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventCancelRequest instance
      */
-    public IEventCancelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

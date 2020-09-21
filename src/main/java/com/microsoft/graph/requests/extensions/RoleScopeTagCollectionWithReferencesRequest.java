@@ -60,6 +60,11 @@ public class RoleScopeTagCollectionWithReferencesRequest extends BaseCollectionR
         return (RoleScopeTagCollectionWithReferencesRequest)this;
     }
 
+    public IRoleScopeTagCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleScopeTagCollectionWithReferencesRequest)this;
+    }
+
     public IRoleScopeTagCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (RoleScopeTagCollectionWithReferencesRequest)this;

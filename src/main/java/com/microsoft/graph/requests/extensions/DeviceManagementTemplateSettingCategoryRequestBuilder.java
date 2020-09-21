@@ -38,10 +38,11 @@ public class DeviceManagementTemplateSettingCategoryRequestBuilder extends BaseR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementTemplateSettingCategoryRequest instance
      */
-    public IDeviceManagementTemplateSettingCategoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementTemplateSettingCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

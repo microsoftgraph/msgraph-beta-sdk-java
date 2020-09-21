@@ -158,5 +158,16 @@ public class AndroidPkcsCertificateProfileRequest extends BaseRequest implements
          return (AndroidPkcsCertificateProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidPkcsCertificateProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidPkcsCertificateProfileRequest)this;
+     }
+
 }
 

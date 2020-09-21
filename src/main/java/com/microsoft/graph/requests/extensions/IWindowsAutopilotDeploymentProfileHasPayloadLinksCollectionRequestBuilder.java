@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfil
  */
 public interface IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionRequestBuilder extends IRequestBuilder {
 
-    IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWindowsAutopilotDeploymentProfileHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

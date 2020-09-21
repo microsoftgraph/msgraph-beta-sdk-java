@@ -42,10 +42,11 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICommsApplicationRequest instance
      */
-    public ICommsApplicationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICommsApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -11,6 +11,7 @@ import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the User Experience Analytics Device Performance Summarize Device Performance Devices Collection Request.
  */
-public interface IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest {
+public interface IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionPage> callback);
 

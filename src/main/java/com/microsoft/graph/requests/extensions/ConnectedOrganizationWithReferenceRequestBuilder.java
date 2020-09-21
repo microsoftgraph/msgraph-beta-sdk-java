@@ -39,10 +39,11 @@ public class ConnectedOrganizationWithReferenceRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IConnectedOrganizationWithReferenceRequest instance
      */
-    public IConnectedOrganizationWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IConnectedOrganizationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

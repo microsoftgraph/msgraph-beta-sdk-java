@@ -35,10 +35,11 @@ public class TrustFrameworkKeySetRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITrustFrameworkKeySetRequest instance
      */
-    public ITrustFrameworkKeySetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkKeySetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

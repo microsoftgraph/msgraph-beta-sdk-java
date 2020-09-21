@@ -34,10 +34,11 @@ public class VulnerableManagedDeviceRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVulnerableManagedDeviceRequest instance
      */
-    public IVulnerableManagedDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVulnerableManagedDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

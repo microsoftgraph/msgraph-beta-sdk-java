@@ -36,10 +36,22 @@ public class MobileContainedAppCollectionRequestBuilder extends BaseRequestBuild
         super(requestUrl, client, requestOptions);
     }
 
-    public IMobileContainedAppCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IMobileContainedAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IMobileContainedAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileContainedAppCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

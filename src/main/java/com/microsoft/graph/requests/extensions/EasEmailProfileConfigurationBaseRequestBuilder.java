@@ -34,10 +34,11 @@ public class EasEmailProfileConfigurationBaseRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEasEmailProfileConfigurationBaseRequest instance
      */
-    public IEasEmailProfileConfigurationBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEasEmailProfileConfigurationBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

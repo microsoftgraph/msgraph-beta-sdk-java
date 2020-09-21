@@ -21,8 +21,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedEBookCategoryCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IManagedEBookCategoryCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IManagedEBookCategoryCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IManagedEBookCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedEBookCategoryWithReferenceRequestBuilder byId(final String id);

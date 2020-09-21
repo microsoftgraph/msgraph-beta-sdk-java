@@ -64,6 +64,16 @@ public class IdentityProviderReferenceRequest extends BaseRequest implements IId
         return (IdentityProviderReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IIdentityProviderReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IdentityProviderReferenceRequest)this;
+    }
+    /**
      * Puts the IdentityProvider
      *
      * @param srcIdentityProvider the IdentityProvider reference to PUT

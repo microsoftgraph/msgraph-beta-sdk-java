@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignCo
  */
 public interface IGroupPolicyConfigurationAssignCollectionRequestBuilder extends IRequestBuilder {
 
-    IGroupPolicyConfigurationAssignCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IGroupPolicyConfigurationAssignCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IGroupPolicyConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

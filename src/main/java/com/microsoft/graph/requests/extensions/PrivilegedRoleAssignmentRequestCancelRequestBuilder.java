@@ -32,10 +32,11 @@ public class PrivilegedRoleAssignmentRequestCancelRequestBuilder extends BaseAct
     /**
      * Creates the IPrivilegedRoleAssignmentRequestCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentRequestCancelRequest instance
      */
-    public IPrivilegedRoleAssignmentRequestCancelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleAssignmentRequestCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,22 @@ public class UnifiedRoleAssignmentMultipleCollectionRequestBuilder extends BaseR
         super(requestUrl, client, requestOptions);
     }
 
-    public IUnifiedRoleAssignmentMultipleCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUnifiedRoleAssignmentMultipleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUnifiedRoleAssignmentMultipleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UnifiedRoleAssignmentMultipleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

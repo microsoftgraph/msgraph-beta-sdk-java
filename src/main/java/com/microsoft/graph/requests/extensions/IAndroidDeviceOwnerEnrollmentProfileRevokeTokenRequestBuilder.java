@@ -17,9 +17,10 @@ public interface IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder e
     /**
      * Creates the IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest instance
      */
-    IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest buildRequest();
+    IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest with specific options instead of the existing options

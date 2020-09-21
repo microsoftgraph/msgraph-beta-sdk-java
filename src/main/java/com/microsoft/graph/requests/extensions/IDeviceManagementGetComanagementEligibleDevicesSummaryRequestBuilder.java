@@ -17,9 +17,10 @@ public interface IDeviceManagementGetComanagementEligibleDevicesSummaryRequestBu
     /**
      * Creates the IDeviceManagementGetComanagementEligibleDevicesSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementGetComanagementEligibleDevicesSummaryRequest instance
      */
-    IDeviceManagementGetComanagementEligibleDevicesSummaryRequest buildRequest();
+    IDeviceManagementGetComanagementEligibleDevicesSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementGetComanagementEligibleDevicesSummaryRequest with specific options instead of the existing options

@@ -35,11 +35,23 @@ public class ReportRootGetOffice365ActivationsUserDetailCollectionRequestBuilder
     public ReportRootGetOffice365ActivationsUserDetailCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IReportRootGetOffice365ActivationsUserDetailCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetOffice365ActivationsUserDetailCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetOffice365ActivationsUserDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365ActivationsUserDetailCollectionRequest request = new ReportRootGetOffice365ActivationsUserDetailCollectionRequest(
                 getRequestUrl(),

@@ -34,10 +34,11 @@ public class OrganizationalBrandingBackgroundImageStreamRequestBuilder extends B
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationalBrandingBackgroundImageStreamRequest instance
      */
-    public IOrganizationalBrandingBackgroundImageStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationalBrandingBackgroundImageStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

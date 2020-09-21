@@ -17,9 +17,10 @@ public interface IAndroidForWorkSettingsUnbindRequestBuilder extends IRequestBui
     /**
      * Creates the IAndroidForWorkSettingsUnbindRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsUnbindRequest instance
      */
-    IAndroidForWorkSettingsUnbindRequest buildRequest();
+    IAndroidForWorkSettingsUnbindRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidForWorkSettingsUnbindRequest with specific options instead of the existing options

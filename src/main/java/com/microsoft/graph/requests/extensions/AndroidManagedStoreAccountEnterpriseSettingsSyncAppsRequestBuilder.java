@@ -32,10 +32,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequestBuilder 
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

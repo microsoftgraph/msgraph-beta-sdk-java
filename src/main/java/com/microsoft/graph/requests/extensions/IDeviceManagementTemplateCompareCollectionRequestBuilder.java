@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCompareC
  */
 public interface IDeviceManagementTemplateCompareCollectionRequestBuilder extends IRequestBuilder {
 
-    IDeviceManagementTemplateCompareCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDeviceManagementTemplateCompareCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDeviceManagementTemplateCompareCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

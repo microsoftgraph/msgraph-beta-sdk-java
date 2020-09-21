@@ -93,4 +93,14 @@ public class Windows81TrustedRootCertificateWithReferenceRequest extends BaseReq
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (Windows81TrustedRootCertificateWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindows81TrustedRootCertificateWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (Windows81TrustedRootCertificateWithReferenceRequest)this;
+    }
 }

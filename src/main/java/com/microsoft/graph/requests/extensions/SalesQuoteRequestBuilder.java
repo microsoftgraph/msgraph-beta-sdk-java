@@ -46,10 +46,11 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISalesQuoteRequest instance
      */
-    public ISalesQuoteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesQuoteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

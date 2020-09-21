@@ -154,5 +154,16 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
          return (ApplicationSignInSummaryRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IApplicationSignInSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ApplicationSignInSummaryRequest)this;
+     }
+
 }
 

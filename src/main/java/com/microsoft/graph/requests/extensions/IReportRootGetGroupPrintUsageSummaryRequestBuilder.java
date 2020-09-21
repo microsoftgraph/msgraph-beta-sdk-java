@@ -17,9 +17,10 @@ public interface IReportRootGetGroupPrintUsageSummaryRequestBuilder extends IReq
     /**
      * Creates the IReportRootGetGroupPrintUsageSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetGroupPrintUsageSummaryRequest instance
      */
-    IReportRootGetGroupPrintUsageSummaryRequest buildRequest();
+    IReportRootGetGroupPrintUsageSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetGroupPrintUsageSummaryRequest with specific options instead of the existing options

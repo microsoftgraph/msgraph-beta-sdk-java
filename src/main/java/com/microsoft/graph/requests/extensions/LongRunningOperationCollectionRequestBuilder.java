@@ -36,10 +36,22 @@ public class LongRunningOperationCollectionRequestBuilder extends BaseRequestBui
         super(requestUrl, client, requestOptions);
     }
 
-    public ILongRunningOperationCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ILongRunningOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ILongRunningOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new LongRunningOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

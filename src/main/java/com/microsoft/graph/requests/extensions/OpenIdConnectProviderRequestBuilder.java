@@ -34,10 +34,11 @@ public class OpenIdConnectProviderRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOpenIdConnectProviderRequest instance
      */
-    public IOpenIdConnectProviderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOpenIdConnectProviderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

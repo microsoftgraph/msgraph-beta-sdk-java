@@ -93,4 +93,14 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceManagementScriptRunSummaryWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementScriptRunSummaryWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementScriptRunSummaryWithReferenceRequest)this;
+    }
 }

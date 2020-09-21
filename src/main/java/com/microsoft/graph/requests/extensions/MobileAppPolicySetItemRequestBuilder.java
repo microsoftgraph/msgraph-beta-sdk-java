@@ -34,10 +34,11 @@ public class MobileAppPolicySetItemRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppPolicySetItemRequest instance
      */
-    public IMobileAppPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

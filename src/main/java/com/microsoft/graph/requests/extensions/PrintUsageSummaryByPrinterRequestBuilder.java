@@ -34,10 +34,11 @@ public class PrintUsageSummaryByPrinterRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintUsageSummaryByPrinterRequest instance
      */
-    public IPrintUsageSummaryByPrinterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintUsageSummaryByPrinterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

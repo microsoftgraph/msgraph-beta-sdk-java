@@ -34,10 +34,11 @@ public class MobileAppIntentAndStateRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppIntentAndStateRequest instance
      */
-    public IMobileAppIntentAndStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppIntentAndStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

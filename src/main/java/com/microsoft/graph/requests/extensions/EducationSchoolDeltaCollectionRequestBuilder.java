@@ -35,11 +35,23 @@ public class EducationSchoolDeltaCollectionRequestBuilder extends BaseFunctionRe
     public EducationSchoolDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IEducationSchoolDeltaCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IEducationSchoolDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IEducationSchoolDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EducationSchoolDeltaCollectionRequest request = new EducationSchoolDeltaCollectionRequest(
                 getRequestUrl(),

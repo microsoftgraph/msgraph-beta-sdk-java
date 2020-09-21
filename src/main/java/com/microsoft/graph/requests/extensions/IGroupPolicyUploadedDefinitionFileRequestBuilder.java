@@ -23,9 +23,10 @@ public interface IGroupPolicyUploadedDefinitionFileRequestBuilder extends IReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyUploadedDefinitionFileRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileRequest buildRequest();
+    IGroupPolicyUploadedDefinitionFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

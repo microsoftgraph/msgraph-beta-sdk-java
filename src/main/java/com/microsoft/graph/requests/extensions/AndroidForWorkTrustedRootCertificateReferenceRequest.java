@@ -64,6 +64,16 @@ public class AndroidForWorkTrustedRootCertificateReferenceRequest extends BaseRe
         return (AndroidForWorkTrustedRootCertificateReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAndroidForWorkTrustedRootCertificateReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidForWorkTrustedRootCertificateReferenceRequest)this;
+    }
+    /**
      * Puts the AndroidForWorkTrustedRootCertificate
      *
      * @param srcAndroidForWorkTrustedRootCertificate the AndroidForWorkTrustedRootCertificate reference to PUT

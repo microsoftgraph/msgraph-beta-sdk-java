@@ -38,10 +38,11 @@ public class ExternalRequestBuilder extends BaseRequestBuilder implements IExter
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExternalRequest instance
      */
-    public IExternalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExternalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

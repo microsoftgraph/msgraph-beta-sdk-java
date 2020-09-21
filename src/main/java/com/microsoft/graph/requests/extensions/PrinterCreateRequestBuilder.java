@@ -46,10 +46,11 @@ public class PrinterCreateRequestBuilder extends BaseActionRequestBuilder implem
     /**
      * Creates the IPrinterCreateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrinterCreateRequest instance
      */
-    public IPrinterCreateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrinterCreateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -20,9 +20,10 @@ public interface IWindows81WifiImportConfigurationRequestBuilder extends IReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81WifiImportConfigurationRequest instance
      */
-    IWindows81WifiImportConfigurationRequest buildRequest();
+    IWindows81WifiImportConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

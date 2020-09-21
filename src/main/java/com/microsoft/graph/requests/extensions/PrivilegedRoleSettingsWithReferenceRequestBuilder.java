@@ -35,10 +35,11 @@ public class PrivilegedRoleSettingsWithReferenceRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrivilegedRoleSettingsWithReferenceRequest instance
      */
-    public IPrivilegedRoleSettingsWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleSettingsWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class UserConfigurationRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserConfigurationRequest instance
      */
-    public IUserConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

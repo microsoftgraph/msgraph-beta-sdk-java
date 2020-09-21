@@ -34,10 +34,11 @@ public class OfficeSuiteAppRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfficeSuiteAppRequest instance
      */
-    public IOfficeSuiteAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeSuiteAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

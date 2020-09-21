@@ -64,6 +64,16 @@ public class PayloadResponseReferenceRequest extends BaseRequest implements IPay
         return (PayloadResponseReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPayloadResponseReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PayloadResponseReferenceRequest)this;
+    }
+    /**
      * Puts the PayloadResponse
      *
      * @param srcPayloadResponse the PayloadResponse reference to PUT

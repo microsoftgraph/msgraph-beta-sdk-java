@@ -34,10 +34,11 @@ public class AndroidForWorkSettingsRequestSignupUrlRequestBuilder extends BaseAc
     /**
      * Creates the IAndroidForWorkSettingsRequestSignupUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsRequestSignupUrlRequest instance
      */
-    public IAndroidForWorkSettingsRequestSignupUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkSettingsRequestSignupUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

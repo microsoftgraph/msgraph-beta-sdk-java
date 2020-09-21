@@ -39,11 +39,23 @@ public class MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionReque
 			bodyParams.put("payloadIds", payloadIds);
 		}
       }
-
-    public IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest request = new MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest(
                 getRequestUrl(),

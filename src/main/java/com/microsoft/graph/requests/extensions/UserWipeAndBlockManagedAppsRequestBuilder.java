@@ -32,10 +32,11 @@ public class UserWipeAndBlockManagedAppsRequestBuilder extends BaseActionRequest
     /**
      * Creates the IUserWipeAndBlockManagedAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserWipeAndBlockManagedAppsRequest instance
      */
-    public IUserWipeAndBlockManagedAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserWipeAndBlockManagedAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

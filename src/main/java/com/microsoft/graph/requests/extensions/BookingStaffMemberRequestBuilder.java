@@ -34,10 +34,11 @@ public class BookingStaffMemberRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBookingStaffMemberRequest instance
      */
-    public IBookingStaffMemberRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingStaffMemberRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

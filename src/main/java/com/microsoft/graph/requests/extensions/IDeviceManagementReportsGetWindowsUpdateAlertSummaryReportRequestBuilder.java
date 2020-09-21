@@ -17,9 +17,10 @@ public interface IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportReque
     /**
      * Creates the IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest instance
      */
-    IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest buildRequest();
+    IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder implements IPrese
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPresenceRequest instance
      */
-    public IPresenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPresenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

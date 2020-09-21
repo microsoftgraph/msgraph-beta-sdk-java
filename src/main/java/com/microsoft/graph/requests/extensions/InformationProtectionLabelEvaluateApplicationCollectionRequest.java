@@ -111,4 +111,15 @@ public class InformationProtectionLabelEvaluateApplicationCollectionRequest exte
         return (IInformationProtectionLabelEvaluateApplicationCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IInformationProtectionLabelEvaluateApplicationCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IInformationProtectionLabelEvaluateApplicationCollectionRequest)this;
+    }
+
 }

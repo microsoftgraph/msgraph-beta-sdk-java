@@ -20,9 +20,10 @@ public interface IWindowsManagementAppHealthSummaryRequestBuilder extends IReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsManagementAppHealthSummaryRequest instance
      */
-    IWindowsManagementAppHealthSummaryRequest buildRequest();
+    IWindowsManagementAppHealthSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

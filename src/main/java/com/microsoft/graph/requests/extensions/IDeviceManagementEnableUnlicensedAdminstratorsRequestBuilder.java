@@ -17,9 +17,10 @@ public interface IDeviceManagementEnableUnlicensedAdminstratorsRequestBuilder ex
     /**
      * Creates the IDeviceManagementEnableUnlicensedAdminstratorsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableUnlicensedAdminstratorsRequest instance
      */
-    IDeviceManagementEnableUnlicensedAdminstratorsRequest buildRequest();
+    IDeviceManagementEnableUnlicensedAdminstratorsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementEnableUnlicensedAdminstratorsRequest with specific options instead of the existing options

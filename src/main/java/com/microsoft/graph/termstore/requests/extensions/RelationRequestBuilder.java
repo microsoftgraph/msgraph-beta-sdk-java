@@ -38,10 +38,11 @@ public class RelationRequestBuilder extends BaseRequestBuilder implements IRelat
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRelationRequest instance
      */
-    public IRelationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRelationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

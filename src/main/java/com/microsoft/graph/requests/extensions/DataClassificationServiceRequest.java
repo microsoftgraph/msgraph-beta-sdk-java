@@ -184,5 +184,16 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
          return (DataClassificationServiceRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDataClassificationServiceRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DataClassificationServiceRequest)this;
+     }
+
 }
 

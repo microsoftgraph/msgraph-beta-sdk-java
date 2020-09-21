@@ -36,10 +36,22 @@ public class SalesQuoteLineCollectionRequestBuilder extends BaseRequestBuilder i
         super(requestUrl, client, requestOptions);
     }
 
-    public ISalesQuoteLineCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISalesQuoteLineCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISalesQuoteLineCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SalesQuoteLineCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

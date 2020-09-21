@@ -73,4 +73,15 @@ public class DeviceHealthScriptAreGlobalScriptsAvailableRequest extends BaseRequ
         return (DeviceHealthScriptAreGlobalScriptsAvailableRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceHealthScriptAreGlobalScriptsAvailableRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceHealthScriptAreGlobalScriptsAvailableRequest)this;
+    }
+
 }

@@ -34,10 +34,11 @@ public class CartToClassAssociationRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICartToClassAssociationRequest instance
      */
-    public ICartToClassAssociationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICartToClassAssociationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

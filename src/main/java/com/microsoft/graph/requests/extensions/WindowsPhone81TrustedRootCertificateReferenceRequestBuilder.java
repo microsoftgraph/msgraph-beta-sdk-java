@@ -36,10 +36,11 @@ public class WindowsPhone81TrustedRootCertificateReferenceRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IWindowsPhone81TrustedRootCertificateReferenceRequest instance
      */
-    public IWindowsPhone81TrustedRootCertificateReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81TrustedRootCertificateReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

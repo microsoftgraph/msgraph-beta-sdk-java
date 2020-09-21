@@ -34,10 +34,11 @@ public class OneDriveUsageFileCountsRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOneDriveUsageFileCountsRequest instance
      */
-    public IOneDriveUsageFileCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOneDriveUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -59,6 +59,11 @@ public class IdentityProviderCollectionWithReferencesRequest extends BaseCollect
         return (IdentityProviderCollectionWithReferencesRequest)this;
     }
 
+    public IIdentityProviderCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IdentityProviderCollectionWithReferencesRequest)this;
+    }
+
     public IIdentityProviderCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IdentityProviderCollectionWithReferencesRequest)this;

@@ -34,10 +34,11 @@ public class OfficeClientConfigurationAssignmentRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfficeClientConfigurationAssignmentRequest instance
      */
-    public IOfficeClientConfigurationAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeClientConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Exact Match Data Store Lookup Collection Request.
  */
-public interface IExactMatchDataStoreLookupCollectionRequest {
+public interface IExactMatchDataStoreLookupCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<IExactMatchDataStoreLookupCollectionPage> callback);
 

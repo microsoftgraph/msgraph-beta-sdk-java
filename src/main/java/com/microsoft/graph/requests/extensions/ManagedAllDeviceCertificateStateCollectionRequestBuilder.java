@@ -36,10 +36,22 @@ public class ManagedAllDeviceCertificateStateCollectionRequestBuilder extends Ba
         super(requestUrl, client, requestOptions);
     }
 
-    public IManagedAllDeviceCertificateStateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IManagedAllDeviceCertificateStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IManagedAllDeviceCertificateStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAllDeviceCertificateStateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

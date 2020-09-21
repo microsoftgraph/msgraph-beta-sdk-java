@@ -34,10 +34,11 @@ public class VppTokenRevokeLicensesRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IVppTokenRevokeLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IVppTokenRevokeLicensesRequest instance
      */
-    public IVppTokenRevokeLicensesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVppTokenRevokeLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

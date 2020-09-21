@@ -38,10 +38,11 @@ public class DeviceManagementAbstractComplexSettingInstanceRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementAbstractComplexSettingInstanceRequest instance
      */
-    public IDeviceManagementAbstractComplexSettingInstanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementAbstractComplexSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

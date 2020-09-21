@@ -17,9 +17,10 @@ public interface IBusinessFlowRecordDecisionsRequestBuilder extends IRequestBuil
     /**
      * Creates the IBusinessFlowRecordDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IBusinessFlowRecordDecisionsRequest instance
      */
-    IBusinessFlowRecordDecisionsRequest buildRequest();
+    IBusinessFlowRecordDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IBusinessFlowRecordDecisionsRequest with specific options instead of the existing options

@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ServicesUs
  */
 public interface IReportRootGetOffice365ServicesUserCountsCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetOffice365ServicesUserCountsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetOffice365ServicesUserCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetOffice365ServicesUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

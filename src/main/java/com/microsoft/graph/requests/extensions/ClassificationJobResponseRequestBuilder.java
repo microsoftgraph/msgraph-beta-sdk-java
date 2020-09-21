@@ -34,10 +34,11 @@ public class ClassificationJobResponseRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IClassificationJobResponseRequest instance
      */
-    public IClassificationJobResponseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IClassificationJobResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

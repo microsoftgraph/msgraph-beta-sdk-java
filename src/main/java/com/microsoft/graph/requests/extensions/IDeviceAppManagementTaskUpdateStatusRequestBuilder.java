@@ -17,9 +17,10 @@ public interface IDeviceAppManagementTaskUpdateStatusRequestBuilder extends IReq
     /**
      * Creates the IDeviceAppManagementTaskUpdateStatusRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceAppManagementTaskUpdateStatusRequest instance
      */
-    IDeviceAppManagementTaskUpdateStatusRequest buildRequest();
+    IDeviceAppManagementTaskUpdateStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceAppManagementTaskUpdateStatusRequest with specific options instead of the existing options

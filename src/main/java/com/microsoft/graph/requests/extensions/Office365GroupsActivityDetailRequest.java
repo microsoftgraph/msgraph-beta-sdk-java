@@ -154,5 +154,16 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
          return (Office365GroupsActivityDetailRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOffice365GroupsActivityDetailRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Office365GroupsActivityDetailRequest)this;
+     }
+
 }
 

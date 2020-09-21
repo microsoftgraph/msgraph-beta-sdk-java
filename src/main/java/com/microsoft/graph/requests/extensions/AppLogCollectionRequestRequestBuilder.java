@@ -35,10 +35,11 @@ public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppLogCollectionRequestRequest instance
      */
-    public IAppLogCollectionRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppLogCollectionRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

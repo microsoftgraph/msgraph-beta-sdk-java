@@ -34,10 +34,11 @@ public class MdmWindowsInformationProtectionPolicyPolicySetItemRequestBuilder ex
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMdmWindowsInformationProtectionPolicyPolicySetItemRequest instance
      */
-    public IMdmWindowsInformationProtectionPolicyPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMdmWindowsInformationProtectionPolicyPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

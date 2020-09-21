@@ -34,10 +34,11 @@ public class ItemFacetRequestBuilder extends BaseRequestBuilder implements IItem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemFacetRequest instance
      */
-    public IItemFacetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemFacetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

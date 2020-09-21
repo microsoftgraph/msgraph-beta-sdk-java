@@ -34,10 +34,11 @@ public class IpSecurityProfileRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIpSecurityProfileRequest instance
      */
-    public IIpSecurityProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIpSecurityProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

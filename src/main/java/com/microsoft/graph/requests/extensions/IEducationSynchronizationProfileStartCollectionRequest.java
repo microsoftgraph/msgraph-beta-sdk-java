@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationFileSynchronizationVerificationMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Education Synchronization Profile Start Collection Request.
  */
-public interface IEducationSynchronizationProfileStartCollectionRequest {
+public interface IEducationSynchronizationProfileStartCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<IEducationSynchronizationProfileStartCollectionPage> callback);
 

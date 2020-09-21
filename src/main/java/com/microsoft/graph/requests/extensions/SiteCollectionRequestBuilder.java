@@ -40,10 +40,22 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
         super(requestUrl, client, requestOptions);
     }
 
-    public ISiteCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISiteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISiteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
@@ -68,5 +80,13 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
 
 	public ISiteDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new SiteDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
+
+    public ISiteDeltaCollectionRequestBuilder delta(final String token) {
+        return new SiteDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
+    }
+
+	public ISiteDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new SiteDeltaCollectionRequestBuilder(deltaLink, getClient(), null, token);
     }
 }

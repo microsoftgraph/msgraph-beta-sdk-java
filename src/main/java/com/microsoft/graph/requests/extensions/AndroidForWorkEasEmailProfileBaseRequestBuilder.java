@@ -36,10 +36,11 @@ public class AndroidForWorkEasEmailProfileBaseRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkEasEmailProfileBaseRequest instance
      */
-    public IAndroidForWorkEasEmailProfileBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkEasEmailProfileBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

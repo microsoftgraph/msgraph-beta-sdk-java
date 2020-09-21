@@ -154,5 +154,16 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
          return (DocumentCommentReplyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDocumentCommentReplyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DocumentCommentReplyRequest)this;
+     }
+
 }
 

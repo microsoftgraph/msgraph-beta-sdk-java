@@ -41,10 +41,11 @@ public class InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder extend
     /**
      * Creates the IInformationProtectionEvaluateLabelsAndPoliciesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IInformationProtectionEvaluateLabelsAndPoliciesRequest instance
      */
-    public IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

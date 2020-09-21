@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityU
  */
 public interface IReportRootGetSharePointActivityUserCountsCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetSharePointActivityUserCountsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetSharePointActivityUserCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetSharePointActivityUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

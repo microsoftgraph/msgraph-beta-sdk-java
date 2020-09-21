@@ -44,10 +44,11 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder implements IP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrinterShareRequest instance
      */
-    public IPrinterShareRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrinterShareRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

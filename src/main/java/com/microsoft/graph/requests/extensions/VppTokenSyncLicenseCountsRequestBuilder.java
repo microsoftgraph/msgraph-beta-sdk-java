@@ -32,10 +32,11 @@ public class VppTokenSyncLicenseCountsRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IVppTokenSyncLicenseCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IVppTokenSyncLicenseCountsRequest instance
      */
-    public IVppTokenSyncLicenseCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVppTokenSyncLicenseCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

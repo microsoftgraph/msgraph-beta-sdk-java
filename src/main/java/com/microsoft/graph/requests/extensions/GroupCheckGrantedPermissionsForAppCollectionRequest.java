@@ -104,4 +104,15 @@ public class GroupCheckGrantedPermissionsForAppCollectionRequest extends BaseCol
         return (IGroupCheckGrantedPermissionsForAppCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupCheckGrantedPermissionsForAppCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IGroupCheckGrantedPermissionsForAppCollectionRequest)this;
+    }
+
 }

@@ -17,9 +17,10 @@ public interface IEventCancelRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IEventCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventCancelRequest instance
      */
-    IEventCancelRequest buildRequest();
+    IEventCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEventCancelRequest with specific options instead of the existing options

@@ -38,10 +38,11 @@ public class SalesOrderLineRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISalesOrderLineRequest instance
      */
-    public ISalesOrderLineRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesOrderLineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

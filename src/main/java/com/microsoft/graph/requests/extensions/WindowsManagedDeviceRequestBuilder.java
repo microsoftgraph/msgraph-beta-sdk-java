@@ -34,10 +34,11 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsManagedDeviceRequest instance
      */
-    public IWindowsManagedDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsManagedDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

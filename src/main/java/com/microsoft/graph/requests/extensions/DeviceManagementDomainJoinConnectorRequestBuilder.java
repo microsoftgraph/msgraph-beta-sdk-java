@@ -34,10 +34,11 @@ public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementDomainJoinConnectorRequest instance
      */
-    public IDeviceManagementDomainJoinConnectorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementDomainJoinConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class SharePointSiteUsagePagesRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharePointSiteUsagePagesRequest instance
      */
-    public ISharePointSiteUsagePagesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharePointSiteUsagePagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

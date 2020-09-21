@@ -72,6 +72,16 @@ public class GroupPolicyDefinitionReferenceRequest extends BaseRequest implement
         return (GroupPolicyDefinitionReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyDefinitionReferenceRequest)this;
+    }
+    /**
      * Puts the GroupPolicyDefinition
      *
      * @param srcGroupPolicyDefinition the GroupPolicyDefinition reference to PUT

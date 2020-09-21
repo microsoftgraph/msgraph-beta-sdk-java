@@ -36,10 +36,11 @@ public class RequestRequestBuilder extends BaseRequestBuilder implements IReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRequestRequest instance
      */
-    public IRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

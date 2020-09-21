@@ -34,10 +34,11 @@ public class MacOSMdatpAppRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSMdatpAppRequest instance
      */
-    public IMacOSMdatpAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSMdatpAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

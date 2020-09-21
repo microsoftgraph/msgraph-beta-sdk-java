@@ -34,10 +34,11 @@ public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceHealthScriptAssignmentRequest instance
      */
-    public IDeviceHealthScriptAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

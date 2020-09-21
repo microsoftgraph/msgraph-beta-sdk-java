@@ -154,5 +154,16 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
          return (NdesConnectorRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public INdesConnectorRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (NdesConnectorRequest)this;
+     }
+
 }
 

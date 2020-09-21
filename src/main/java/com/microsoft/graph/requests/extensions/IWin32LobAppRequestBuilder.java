@@ -20,9 +20,10 @@ public interface IWin32LobAppRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWin32LobAppRequest instance
      */
-    IWin32LobAppRequest buildRequest();
+    IWin32LobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

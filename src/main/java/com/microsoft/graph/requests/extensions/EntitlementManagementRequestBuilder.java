@@ -76,10 +76,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEntitlementManagementRequest instance
      */
-    public IEntitlementManagementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEntitlementManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

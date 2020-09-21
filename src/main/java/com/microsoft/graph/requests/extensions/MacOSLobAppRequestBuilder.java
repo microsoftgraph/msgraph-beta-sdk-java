@@ -34,10 +34,11 @@ public class MacOSLobAppRequestBuilder extends BaseRequestBuilder implements IMa
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSLobAppRequest instance
      */
-    public IMacOSLobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface ITeamCompleteMigrationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ITeamCompleteMigrationRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamCompleteMigrationRequest instance
      */
-    ITeamCompleteMigrationRequest buildRequest();
+    ITeamCompleteMigrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITeamCompleteMigrationRequest with specific options instead of the existing options

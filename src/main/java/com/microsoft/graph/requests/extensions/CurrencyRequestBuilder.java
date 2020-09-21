@@ -34,10 +34,11 @@ public class CurrencyRequestBuilder extends BaseRequestBuilder implements ICurre
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICurrencyRequest instance
      */
-    public ICurrencyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICurrencyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

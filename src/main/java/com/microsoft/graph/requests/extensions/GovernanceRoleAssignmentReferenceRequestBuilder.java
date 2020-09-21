@@ -44,10 +44,11 @@ public class GovernanceRoleAssignmentReferenceRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IGovernanceRoleAssignmentReferenceRequest instance
      */
-    public IGovernanceRoleAssignmentReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGovernanceRoleAssignmentReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

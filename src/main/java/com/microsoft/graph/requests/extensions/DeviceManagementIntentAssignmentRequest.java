@@ -154,5 +154,16 @@ public class DeviceManagementIntentAssignmentRequest extends BaseRequest impleme
          return (DeviceManagementIntentAssignmentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementIntentAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceManagementIntentAssignmentRequest)this;
+     }
+
 }
 

@@ -17,9 +17,10 @@ public interface IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPause
     /**
      * Creates the IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest instance
      */
-    IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest buildRequest();
+    IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest with specific options instead of the existing options

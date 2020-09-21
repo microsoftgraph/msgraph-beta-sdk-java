@@ -68,6 +68,16 @@ public class GroupPolicyDefinitionFileReferenceRequest extends BaseRequest imple
         return (GroupPolicyDefinitionFileReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionFileReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyDefinitionFileReferenceRequest)this;
+    }
+    /**
      * Puts the GroupPolicyDefinitionFile
      *
      * @param srcGroupPolicyDefinitionFile the GroupPolicyDefinitionFile reference to PUT

@@ -38,10 +38,11 @@ public class FeatureRolloutPolicyRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFeatureRolloutPolicyRequest instance
      */
-    public IFeatureRolloutPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFeatureRolloutPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

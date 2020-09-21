@@ -34,10 +34,11 @@ public class DeviceManagementScriptPolicySetItemRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptPolicySetItemRequest instance
      */
-    public IDeviceManagementScriptPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementScriptPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

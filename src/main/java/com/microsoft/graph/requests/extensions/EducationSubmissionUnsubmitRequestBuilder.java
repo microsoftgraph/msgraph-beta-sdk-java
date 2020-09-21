@@ -32,10 +32,11 @@ public class EducationSubmissionUnsubmitRequestBuilder extends BaseActionRequest
     /**
      * Creates the IEducationSubmissionUnsubmitRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSubmissionUnsubmitRequest instance
      */
-    public IEducationSubmissionUnsubmitRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSubmissionUnsubmitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

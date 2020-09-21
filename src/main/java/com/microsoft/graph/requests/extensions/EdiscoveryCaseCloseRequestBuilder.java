@@ -32,10 +32,11 @@ public class EdiscoveryCaseCloseRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IEdiscoveryCaseCloseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEdiscoveryCaseCloseRequest instance
      */
-    public IEdiscoveryCaseCloseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEdiscoveryCaseCloseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

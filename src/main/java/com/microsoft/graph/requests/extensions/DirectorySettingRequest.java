@@ -154,5 +154,16 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
          return (DirectorySettingRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDirectorySettingRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DirectorySettingRequest)this;
+     }
+
 }
 

@@ -85,6 +85,17 @@ public class DeviceManagementExchangeOnPremisesPolicyCollectionRequest extends B
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementExchangeOnPremisesPolicyCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementExchangeOnPremisesPolicyCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

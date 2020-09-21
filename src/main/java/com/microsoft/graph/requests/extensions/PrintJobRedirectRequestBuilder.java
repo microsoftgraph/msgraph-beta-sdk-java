@@ -34,10 +34,11 @@ public class PrintJobRedirectRequestBuilder extends BaseActionRequestBuilder imp
     /**
      * Creates the IPrintJobRedirectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrintJobRedirectRequest instance
      */
-    public IPrintJobRedirectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintJobRedirectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ComanagementEligibleDeviceRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IComanagementEligibleDeviceRequest instance
      */
-    public IComanagementEligibleDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IComanagementEligibleDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

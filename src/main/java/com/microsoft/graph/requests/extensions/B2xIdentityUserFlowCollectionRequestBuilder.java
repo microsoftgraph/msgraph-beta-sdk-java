@@ -36,10 +36,22 @@ public class B2xIdentityUserFlowCollectionRequestBuilder extends BaseRequestBuil
         super(requestUrl, client, requestOptions);
     }
 
-    public IB2xIdentityUserFlowCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IB2xIdentityUserFlowCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IB2xIdentityUserFlowCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new B2xIdentityUserFlowCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

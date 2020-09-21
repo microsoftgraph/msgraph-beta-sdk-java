@@ -47,10 +47,11 @@ public class ReportRootGetM365AppUserDetailRequestBuilder extends BaseFunctionRe
     /**
      * Creates the IReportRootGetM365AppUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetM365AppUserDetailRequest instance
      */
-    public IReportRootGetM365AppUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetM365AppUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

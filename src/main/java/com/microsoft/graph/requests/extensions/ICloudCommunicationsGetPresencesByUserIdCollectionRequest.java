@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Presence;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Cloud Communications Get Presences By User Id Collection Request.
  */
-public interface ICloudCommunicationsGetPresencesByUserIdCollectionRequest {
+public interface ICloudCommunicationsGetPresencesByUserIdCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<ICloudCommunicationsGetPresencesByUserIdCollectionPage> callback);
 

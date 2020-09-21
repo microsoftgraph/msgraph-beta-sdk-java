@@ -40,10 +40,11 @@ public class IosScepCertificateProfileRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosScepCertificateProfileRequest instance
      */
-    public IIosScepCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosScepCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

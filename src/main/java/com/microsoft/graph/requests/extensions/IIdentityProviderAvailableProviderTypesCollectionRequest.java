@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Identity Provider Available Provider Types Collection Request.
  */
-public interface IIdentityProviderAvailableProviderTypesCollectionRequest {
+public interface IIdentityProviderAvailableProviderTypesCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IIdentityProviderAvailableProviderTypesCollectionPage> callback);
 

@@ -20,9 +20,10 @@ public interface IWindowsAssignedAccessProfileRequestBuilder extends IRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAssignedAccessProfileRequest instance
      */
-    IWindowsAssignedAccessProfileRequest buildRequest();
+    IWindowsAssignedAccessProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

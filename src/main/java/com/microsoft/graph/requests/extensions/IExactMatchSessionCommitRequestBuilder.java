@@ -17,9 +17,10 @@ public interface IExactMatchSessionCommitRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IExactMatchSessionCommitRequest
      *
+     * @param requestOptions the options for the request
      * @return the IExactMatchSessionCommitRequest instance
      */
-    IExactMatchSessionCommitRequest buildRequest();
+    IExactMatchSessionCommitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IExactMatchSessionCommitRequest with specific options instead of the existing options

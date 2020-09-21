@@ -169,5 +169,16 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
          return (JobResponseBaseRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IJobResponseBaseRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (JobResponseBaseRequest)this;
+     }
+
 }
 

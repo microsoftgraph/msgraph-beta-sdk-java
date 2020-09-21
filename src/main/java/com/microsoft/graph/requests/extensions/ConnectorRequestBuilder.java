@@ -38,10 +38,11 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder implements IConn
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IConnectorRequest instance
      */
-    public IConnectorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

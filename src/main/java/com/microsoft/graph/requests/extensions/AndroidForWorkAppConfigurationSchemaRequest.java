@@ -154,5 +154,16 @@ public class AndroidForWorkAppConfigurationSchemaRequest extends BaseRequest imp
          return (AndroidForWorkAppConfigurationSchemaRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidForWorkAppConfigurationSchemaRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidForWorkAppConfigurationSchemaRequest)this;
+     }
+
 }
 

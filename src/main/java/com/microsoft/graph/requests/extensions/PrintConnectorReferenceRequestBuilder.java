@@ -36,10 +36,11 @@ public class PrintConnectorReferenceRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IPrintConnectorReferenceRequest instance
      */
-    public IPrintConnectorReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintConnectorReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

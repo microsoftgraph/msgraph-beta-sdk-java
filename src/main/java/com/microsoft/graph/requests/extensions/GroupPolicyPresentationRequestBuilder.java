@@ -36,10 +36,11 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationRequest instance
      */
-    public IGroupPolicyPresentationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

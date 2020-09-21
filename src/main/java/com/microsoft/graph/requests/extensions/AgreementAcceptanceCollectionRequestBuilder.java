@@ -35,10 +35,22 @@ public class AgreementAcceptanceCollectionRequestBuilder extends BaseRequestBuil
         super(requestUrl, client, requestOptions);
     }
 
-    public IAgreementAcceptanceCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAgreementAcceptanceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAgreementAcceptanceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AgreementAcceptanceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

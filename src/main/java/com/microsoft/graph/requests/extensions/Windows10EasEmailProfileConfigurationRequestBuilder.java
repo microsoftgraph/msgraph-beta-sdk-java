@@ -34,10 +34,11 @@ public class Windows10EasEmailProfileConfigurationRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10EasEmailProfileConfigurationRequest instance
      */
-    public IWindows10EasEmailProfileConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10EasEmailProfileConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

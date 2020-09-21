@@ -34,10 +34,11 @@ public class ItemCategoryRequestBuilder extends BaseRequestBuilder implements II
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemCategoryRequest instance
      */
-    public IItemCategoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

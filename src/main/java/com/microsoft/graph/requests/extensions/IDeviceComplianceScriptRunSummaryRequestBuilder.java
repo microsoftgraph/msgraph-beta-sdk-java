@@ -20,9 +20,10 @@ public interface IDeviceComplianceScriptRunSummaryRequestBuilder extends IReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceScriptRunSummaryRequest instance
      */
-    IDeviceComplianceScriptRunSummaryRequest buildRequest();
+    IDeviceComplianceScriptRunSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -40,10 +40,11 @@ public class DataLossPreventionPolicyEvaluateRequestBuilder extends BaseActionRe
     /**
      * Creates the IDataLossPreventionPolicyEvaluateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDataLossPreventionPolicyEvaluateRequest instance
      */
-    public IDataLossPreventionPolicyEvaluateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDataLossPreventionPolicyEvaluateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

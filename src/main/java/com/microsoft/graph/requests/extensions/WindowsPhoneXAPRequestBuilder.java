@@ -34,10 +34,11 @@ public class WindowsPhoneXAPRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhoneXAPRequest instance
      */
-    public IWindowsPhoneXAPRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhoneXAPRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

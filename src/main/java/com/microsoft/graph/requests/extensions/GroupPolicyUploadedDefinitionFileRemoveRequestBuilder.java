@@ -32,10 +32,11 @@ public class GroupPolicyUploadedDefinitionFileRemoveRequestBuilder extends BaseA
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileRemoveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileRemoveRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileRemoveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyUploadedDefinitionFileRemoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

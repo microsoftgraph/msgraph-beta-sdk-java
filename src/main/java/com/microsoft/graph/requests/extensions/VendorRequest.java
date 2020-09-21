@@ -164,5 +164,16 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
          return (VendorRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IVendorRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (VendorRequest)this;
+     }
+
 }
 

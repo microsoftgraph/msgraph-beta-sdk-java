@@ -34,10 +34,11 @@ public class ItemInsightsSettingsRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemInsightsSettingsRequest instance
      */
-    public IItemInsightsSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemInsightsSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

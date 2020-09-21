@@ -64,6 +64,16 @@ public class AgreementAcceptanceReferenceRequest extends BaseRequest implements 
         return (AgreementAcceptanceReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAgreementAcceptanceReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AgreementAcceptanceReferenceRequest)this;
+    }
+    /**
      * Puts the AgreementAcceptance
      *
      * @param srcAgreementAcceptance the AgreementAcceptance reference to PUT

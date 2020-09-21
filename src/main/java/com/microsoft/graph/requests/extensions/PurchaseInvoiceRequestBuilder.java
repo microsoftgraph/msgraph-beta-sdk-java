@@ -42,10 +42,11 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPurchaseInvoiceRequest instance
      */
-    public IPurchaseInvoiceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPurchaseInvoiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

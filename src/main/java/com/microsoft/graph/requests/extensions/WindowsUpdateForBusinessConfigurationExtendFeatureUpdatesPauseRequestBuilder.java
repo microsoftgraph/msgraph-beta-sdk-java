@@ -32,10 +32,11 @@ public class WindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseReque
     /**
      * Creates the IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest instance
      */
-    public IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsUpdateForBusinessConfigurationExtendFeatureUpdatesPauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

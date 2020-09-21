@@ -54,10 +54,11 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrivilegedAccessRequest instance
      */
-    public IPrivilegedAccessRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedAccessRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

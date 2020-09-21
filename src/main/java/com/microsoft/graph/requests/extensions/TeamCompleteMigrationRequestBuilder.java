@@ -32,10 +32,11 @@ public class TeamCompleteMigrationRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the ITeamCompleteMigrationRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamCompleteMigrationRequest instance
      */
-    public ITeamCompleteMigrationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamCompleteMigrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

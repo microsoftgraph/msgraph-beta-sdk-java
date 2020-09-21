@@ -22,9 +22,10 @@ public interface IAndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkEnterpriseWiFiConfigurationRequest instance
      */
-    IAndroidForWorkEnterpriseWiFiConfigurationRequest buildRequest();
+    IAndroidForWorkEnterpriseWiFiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

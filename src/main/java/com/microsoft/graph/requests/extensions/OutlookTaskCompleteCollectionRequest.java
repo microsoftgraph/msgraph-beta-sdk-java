@@ -104,4 +104,15 @@ public class OutlookTaskCompleteCollectionRequest extends BaseCollectionRequest<
         return (IOutlookTaskCompleteCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOutlookTaskCompleteCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IOutlookTaskCompleteCollectionRequest)this;
+    }
+
 }

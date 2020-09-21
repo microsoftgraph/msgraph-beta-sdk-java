@@ -20,9 +20,10 @@ public interface IWindowsPhone81TrustedRootCertificateRequestBuilder extends IRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81TrustedRootCertificateRequest instance
      */
-    IWindowsPhone81TrustedRootCertificateRequest buildRequest();
+    IWindowsPhone81TrustedRootCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

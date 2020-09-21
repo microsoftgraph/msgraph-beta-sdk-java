@@ -68,6 +68,16 @@ public class WindowsManagementAppReferenceRequest extends BaseRequest implements
         return (WindowsManagementAppReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsManagementAppReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsManagementAppReferenceRequest)this;
+    }
+    /**
      * Puts the WindowsManagementApp
      *
      * @param srcWindowsManagementApp the WindowsManagementApp reference to PUT

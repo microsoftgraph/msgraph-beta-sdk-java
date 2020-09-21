@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder extends IRequestBuilder {
 
-    IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWindowsAutopilotDeploymentProfileAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder byId(final String id);

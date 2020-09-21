@@ -36,10 +36,11 @@ public class EventMessageRequestAcceptRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IEventMessageRequestAcceptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventMessageRequestAcceptRequest instance
      */
-    public IEventMessageRequestAcceptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventMessageRequestAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

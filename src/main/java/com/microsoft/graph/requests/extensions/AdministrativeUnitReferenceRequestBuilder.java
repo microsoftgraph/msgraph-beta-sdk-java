@@ -48,10 +48,11 @@ public class AdministrativeUnitReferenceRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IAdministrativeUnitReferenceRequest instance
      */
-    public IAdministrativeUnitReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAdministrativeUnitReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

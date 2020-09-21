@@ -36,10 +36,22 @@ public class AccessReviewScheduleDefinitionCollectionRequestBuilder extends Base
         super(requestUrl, client, requestOptions);
     }
 
-    public IAccessReviewScheduleDefinitionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAccessReviewScheduleDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAccessReviewScheduleDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessReviewScheduleDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

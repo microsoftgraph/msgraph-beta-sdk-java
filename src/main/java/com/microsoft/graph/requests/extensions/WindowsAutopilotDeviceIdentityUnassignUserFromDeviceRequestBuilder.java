@@ -32,10 +32,11 @@ public class WindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequestBuilder 
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

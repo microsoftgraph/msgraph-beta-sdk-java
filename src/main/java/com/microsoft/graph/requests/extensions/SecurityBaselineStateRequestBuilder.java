@@ -38,10 +38,11 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityBaselineStateRequest instance
      */
-    public ISecurityBaselineStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityBaselineStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

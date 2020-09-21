@@ -34,10 +34,11 @@ public class LanguageProficiencyRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ILanguageProficiencyRequest instance
      */
-    public ILanguageProficiencyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ILanguageProficiencyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

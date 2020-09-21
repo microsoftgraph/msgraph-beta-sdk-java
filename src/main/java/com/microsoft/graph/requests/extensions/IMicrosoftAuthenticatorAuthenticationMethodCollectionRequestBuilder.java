@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder extends IRequestBuilder {
 
-    IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder byId(final String id);

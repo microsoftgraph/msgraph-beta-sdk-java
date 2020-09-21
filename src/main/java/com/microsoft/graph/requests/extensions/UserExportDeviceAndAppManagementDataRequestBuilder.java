@@ -47,10 +47,11 @@ public class UserExportDeviceAndAppManagementDataRequestBuilder extends BaseFunc
     /**
      * Creates the IUserExportDeviceAndAppManagementDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserExportDeviceAndAppManagementDataRequest instance
      */
-    public IUserExportDeviceAndAppManagementDataRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExportDeviceAndAppManagementDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

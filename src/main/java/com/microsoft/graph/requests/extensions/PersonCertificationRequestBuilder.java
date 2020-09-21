@@ -34,10 +34,11 @@ public class PersonCertificationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonCertificationRequest instance
      */
-    public IPersonCertificationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonCertificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

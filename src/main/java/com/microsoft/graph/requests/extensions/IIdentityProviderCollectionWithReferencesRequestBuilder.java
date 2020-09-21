@@ -21,8 +21,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIdentityProviderCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IIdentityProviderCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IIdentityProviderCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IIdentityProviderCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IIdentityProviderWithReferenceRequestBuilder byId(final String id);

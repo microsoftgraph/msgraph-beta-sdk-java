@@ -42,10 +42,11 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder implements IT
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITodoTaskListRequest instance
      */
-    public ITodoTaskListRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITodoTaskListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

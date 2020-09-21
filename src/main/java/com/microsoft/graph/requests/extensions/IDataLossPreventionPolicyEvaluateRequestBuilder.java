@@ -17,9 +17,10 @@ public interface IDataLossPreventionPolicyEvaluateRequestBuilder extends IReques
     /**
      * Creates the IDataLossPreventionPolicyEvaluateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDataLossPreventionPolicyEvaluateRequest instance
      */
-    IDataLossPreventionPolicyEvaluateRequest buildRequest();
+    IDataLossPreventionPolicyEvaluateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDataLossPreventionPolicyEvaluateRequest with specific options instead of the existing options

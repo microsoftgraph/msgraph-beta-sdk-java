@@ -32,10 +32,11 @@ public class EducationAssignmentPublishRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IEducationAssignmentPublishRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationAssignmentPublishRequest instance
      */
-    public IEducationAssignmentPublishRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationAssignmentPublishRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

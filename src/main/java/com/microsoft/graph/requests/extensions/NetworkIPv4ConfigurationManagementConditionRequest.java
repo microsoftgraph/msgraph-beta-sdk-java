@@ -154,5 +154,16 @@ public class NetworkIPv4ConfigurationManagementConditionRequest extends BaseRequ
          return (NetworkIPv4ConfigurationManagementConditionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public INetworkIPv4ConfigurationManagementConditionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (NetworkIPv4ConfigurationManagementConditionRequest)this;
+     }
+
 }
 

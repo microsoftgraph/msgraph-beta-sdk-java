@@ -34,10 +34,11 @@ public class LinkedResourceRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ILinkedResourceRequest instance
      */
-    public ILinkedResourceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ILinkedResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

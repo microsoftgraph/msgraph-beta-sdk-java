@@ -32,10 +32,11 @@ public class PrivilegedRoleAssignmentMakeEligibleRequestBuilder extends BaseActi
     /**
      * Creates the IPrivilegedRoleAssignmentMakeEligibleRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentMakeEligibleRequest instance
      */
-    public IPrivilegedRoleAssignmentMakeEligibleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleAssignmentMakeEligibleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

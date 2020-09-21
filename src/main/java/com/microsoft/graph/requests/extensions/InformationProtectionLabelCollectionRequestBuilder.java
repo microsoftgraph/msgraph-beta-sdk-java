@@ -46,10 +46,22 @@ public class InformationProtectionLabelCollectionRequestBuilder extends BaseRequ
         super(requestUrl, client, requestOptions);
     }
 
-    public IInformationProtectionLabelCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IInformationProtectionLabelCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IInformationProtectionLabelCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new InformationProtectionLabelCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

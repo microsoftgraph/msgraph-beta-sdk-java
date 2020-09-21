@@ -154,5 +154,16 @@ public class ProgramControlTypeRequest extends BaseRequest implements IProgramCo
          return (ProgramControlTypeRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IProgramControlTypeRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ProgramControlTypeRequest)this;
+     }
+
 }
 

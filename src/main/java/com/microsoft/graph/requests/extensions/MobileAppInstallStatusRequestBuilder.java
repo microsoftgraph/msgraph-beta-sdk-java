@@ -36,10 +36,11 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppInstallStatusRequest instance
      */
-    public IMobileAppInstallStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppInstallStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

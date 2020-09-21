@@ -34,10 +34,11 @@ public class AzureADLicenseUsageRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAzureADLicenseUsageRequest instance
      */
-    public IAzureADLicenseUsageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAzureADLicenseUsageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

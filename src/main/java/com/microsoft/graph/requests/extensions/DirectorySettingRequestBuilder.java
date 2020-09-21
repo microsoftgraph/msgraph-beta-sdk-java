@@ -34,10 +34,11 @@ public class DirectorySettingRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectorySettingRequest instance
      */
-    public IDirectorySettingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectorySettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

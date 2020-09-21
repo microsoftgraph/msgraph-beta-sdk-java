@@ -40,10 +40,11 @@ public class SynchronizationSchemaParseExpressionRequestBuilder extends BaseActi
     /**
      * Creates the ISynchronizationSchemaParseExpressionRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationSchemaParseExpressionRequest instance
      */
-    public ISynchronizationSchemaParseExpressionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationSchemaParseExpressionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

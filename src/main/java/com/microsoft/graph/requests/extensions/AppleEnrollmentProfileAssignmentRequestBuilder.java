@@ -34,10 +34,11 @@ public class AppleEnrollmentProfileAssignmentRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppleEnrollmentProfileAssignmentRequest instance
      */
-    public IAppleEnrollmentProfileAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppleEnrollmentProfileAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

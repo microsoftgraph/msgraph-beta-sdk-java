@@ -38,10 +38,11 @@ public class Windows10PkcsCertificateProfileRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10PkcsCertificateProfileRequest instance
      */
-    public IWindows10PkcsCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10PkcsCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

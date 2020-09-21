@@ -34,10 +34,11 @@ public class EducationAssignmentResourceRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationAssignmentResourceRequest instance
      */
-    public IEducationAssignmentResourceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationAssignmentResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

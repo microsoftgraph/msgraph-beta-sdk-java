@@ -21,8 +21,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder byId(final String id);

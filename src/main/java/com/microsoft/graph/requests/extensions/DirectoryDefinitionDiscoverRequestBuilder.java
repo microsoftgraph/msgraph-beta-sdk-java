@@ -32,10 +32,11 @@ public class DirectoryDefinitionDiscoverRequestBuilder extends BaseActionRequest
     /**
      * Creates the IDirectoryDefinitionDiscoverRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryDefinitionDiscoverRequest instance
      */
-    public IDirectoryDefinitionDiscoverRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryDefinitionDiscoverRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class AccessReviewInstanceSendReminderRequestBuilder extends BaseActionRe
     /**
      * Creates the IAccessReviewInstanceSendReminderRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceSendReminderRequest instance
      */
-    public IAccessReviewInstanceSendReminderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewInstanceSendReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -43,10 +43,11 @@ public class EmbeddedSIMActivationCodePoolRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmbeddedSIMActivationCodePoolRequest instance
      */
-    public IEmbeddedSIMActivationCodePoolRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmbeddedSIMActivationCodePoolRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

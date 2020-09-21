@@ -34,10 +34,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -59,6 +59,11 @@ public class PrivilegedRoleAssignmentCollectionWithReferencesRequest extends Bas
         return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;
     }
 
+    public IPrivilegedRoleAssignmentCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;
+    }
+
     public IPrivilegedRoleAssignmentCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PrivilegedRoleAssignmentCollectionWithReferencesRequest)this;

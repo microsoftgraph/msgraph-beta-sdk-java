@@ -32,10 +32,11 @@ public class PrivilegedSignupStatusCanSignUpRequestBuilder extends BaseFunctionR
     /**
      * Creates the IPrivilegedSignupStatusCanSignUpRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedSignupStatusCanSignUpRequest instance
      */
-    public IPrivilegedSignupStatusCanSignUpRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedSignupStatusCanSignUpRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

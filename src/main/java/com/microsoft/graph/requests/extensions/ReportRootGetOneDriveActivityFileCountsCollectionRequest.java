@@ -104,4 +104,15 @@ public class ReportRootGetOneDriveActivityFileCountsCollectionRequest extends Ba
         return (IReportRootGetOneDriveActivityFileCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOneDriveActivityFileCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOneDriveActivityFileCountsCollectionRequest)this;
+    }
+
 }

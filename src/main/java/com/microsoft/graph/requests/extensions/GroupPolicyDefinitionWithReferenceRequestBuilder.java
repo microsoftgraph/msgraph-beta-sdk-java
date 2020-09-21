@@ -43,10 +43,11 @@ public class GroupPolicyDefinitionWithReferenceRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyDefinitionWithReferenceRequest instance
      */
-    public IGroupPolicyDefinitionWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

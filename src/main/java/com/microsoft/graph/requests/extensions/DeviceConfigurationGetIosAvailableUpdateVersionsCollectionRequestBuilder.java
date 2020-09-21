@@ -35,11 +35,23 @@ public class DeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequestBu
     public DeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest request = new DeviceConfigurationGetIosAvailableUpdateVersionsCollectionRequest(
                 getRequestUrl(),

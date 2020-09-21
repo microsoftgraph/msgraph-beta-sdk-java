@@ -20,9 +20,10 @@ public interface IFido2AuthenticationMethodRequestBuilder extends IRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFido2AuthenticationMethodRequest instance
      */
-    IFido2AuthenticationMethodRequest buildRequest();
+    IFido2AuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

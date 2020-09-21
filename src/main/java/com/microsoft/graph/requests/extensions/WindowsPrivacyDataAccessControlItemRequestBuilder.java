@@ -34,10 +34,11 @@ public class WindowsPrivacyDataAccessControlItemRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPrivacyDataAccessControlItemRequest instance
      */
-    public IWindowsPrivacyDataAccessControlItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPrivacyDataAccessControlItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

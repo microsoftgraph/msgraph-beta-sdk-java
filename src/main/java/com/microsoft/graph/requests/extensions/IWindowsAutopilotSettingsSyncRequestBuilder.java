@@ -17,9 +17,10 @@ public interface IWindowsAutopilotSettingsSyncRequestBuilder extends IRequestBui
     /**
      * Creates the IWindowsAutopilotSettingsSyncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotSettingsSyncRequest instance
      */
-    IWindowsAutopilotSettingsSyncRequest buildRequest();
+    IWindowsAutopilotSettingsSyncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsAutopilotSettingsSyncRequest with specific options instead of the existing options

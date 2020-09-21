@@ -40,10 +40,11 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserAppInstallStatusRequest instance
      */
-    public IUserAppInstallStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserAppInstallStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

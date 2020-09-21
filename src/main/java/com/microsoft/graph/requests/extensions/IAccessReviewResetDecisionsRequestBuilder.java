@@ -17,9 +17,10 @@ public interface IAccessReviewResetDecisionsRequestBuilder extends IRequestBuild
     /**
      * Creates the IAccessReviewResetDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewResetDecisionsRequest instance
      */
-    IAccessReviewResetDecisionsRequest buildRequest();
+    IAccessReviewResetDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAccessReviewResetDecisionsRequest with specific options instead of the existing options

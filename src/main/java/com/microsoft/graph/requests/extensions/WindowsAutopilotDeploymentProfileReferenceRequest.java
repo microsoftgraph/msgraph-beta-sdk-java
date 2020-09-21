@@ -73,6 +73,16 @@ public class WindowsAutopilotDeploymentProfileReferenceRequest extends BaseReque
         return (WindowsAutopilotDeploymentProfileReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsAutopilotDeploymentProfileReferenceRequest)this;
+    }
+    /**
      * Puts the WindowsAutopilotDeploymentProfile
      *
      * @param srcWindowsAutopilotDeploymentProfile the WindowsAutopilotDeploymentProfile reference to PUT

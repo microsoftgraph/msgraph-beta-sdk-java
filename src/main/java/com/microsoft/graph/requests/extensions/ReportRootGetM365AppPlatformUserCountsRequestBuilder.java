@@ -34,10 +34,11 @@ public class ReportRootGetM365AppPlatformUserCountsRequestBuilder extends BaseFu
     /**
      * Creates the IReportRootGetM365AppPlatformUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetM365AppPlatformUserCountsRequest instance
      */
-    public IReportRootGetM365AppPlatformUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetM365AppPlatformUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

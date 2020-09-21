@@ -50,10 +50,11 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessPackageCatalogRequest instance
      */
-    public IAccessPackageCatalogRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessPackageCatalogRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

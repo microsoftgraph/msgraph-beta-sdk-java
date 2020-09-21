@@ -40,10 +40,11 @@ public class MacOSScepCertificateProfileRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSScepCertificateProfileRequest instance
      */
-    public IMacOSScepCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSScepCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

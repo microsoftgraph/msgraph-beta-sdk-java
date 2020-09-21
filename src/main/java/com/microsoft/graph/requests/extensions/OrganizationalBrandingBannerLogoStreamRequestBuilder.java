@@ -34,10 +34,11 @@ public class OrganizationalBrandingBannerLogoStreamRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationalBrandingBannerLogoStreamRequest instance
      */
-    public IOrganizationalBrandingBannerLogoStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationalBrandingBannerLogoStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

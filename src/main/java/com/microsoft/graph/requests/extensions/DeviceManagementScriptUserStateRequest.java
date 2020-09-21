@@ -158,5 +158,16 @@ public class DeviceManagementScriptUserStateRequest extends BaseRequest implemen
          return (DeviceManagementScriptUserStateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementScriptUserStateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceManagementScriptUserStateRequest)this;
+     }
+
 }
 

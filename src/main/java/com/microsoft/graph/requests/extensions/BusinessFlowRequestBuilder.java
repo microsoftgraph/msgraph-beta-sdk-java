@@ -34,10 +34,11 @@ public class BusinessFlowRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBusinessFlowRequest instance
      */
-    public IBusinessFlowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBusinessFlowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

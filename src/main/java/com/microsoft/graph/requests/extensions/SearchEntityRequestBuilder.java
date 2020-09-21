@@ -36,10 +36,11 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder implements IS
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISearchEntityRequest instance
      */
-    public ISearchEntityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISearchEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

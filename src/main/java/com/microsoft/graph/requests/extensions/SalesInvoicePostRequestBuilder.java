@@ -32,10 +32,11 @@ public class SalesInvoicePostRequestBuilder extends BaseActionRequestBuilder imp
     /**
      * Creates the ISalesInvoicePostRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesInvoicePostRequest instance
      */
-    public ISalesInvoicePostRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesInvoicePostRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

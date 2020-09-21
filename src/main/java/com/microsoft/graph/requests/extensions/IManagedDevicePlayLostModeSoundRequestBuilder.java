@@ -17,9 +17,10 @@ public interface IManagedDevicePlayLostModeSoundRequestBuilder extends IRequestB
     /**
      * Creates the IManagedDevicePlayLostModeSoundRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDevicePlayLostModeSoundRequest instance
      */
-    IManagedDevicePlayLostModeSoundRequest buildRequest();
+    IManagedDevicePlayLostModeSoundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDevicePlayLostModeSoundRequest with specific options instead of the existing options

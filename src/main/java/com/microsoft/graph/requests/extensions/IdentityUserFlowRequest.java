@@ -169,5 +169,16 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
          return (IdentityUserFlowRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIdentityUserFlowRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IdentityUserFlowRequest)this;
+     }
+
 }
 

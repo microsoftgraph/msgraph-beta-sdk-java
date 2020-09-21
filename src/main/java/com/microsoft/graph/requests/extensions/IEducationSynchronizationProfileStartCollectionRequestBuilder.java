@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileS
  */
 public interface IEducationSynchronizationProfileStartCollectionRequestBuilder extends IRequestBuilder {
 
-    IEducationSynchronizationProfileStartCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IEducationSynchronizationProfileStartCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IEducationSynchronizationProfileStartCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

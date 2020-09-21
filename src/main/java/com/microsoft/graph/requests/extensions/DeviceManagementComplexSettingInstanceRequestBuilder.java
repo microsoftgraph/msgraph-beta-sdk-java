@@ -38,10 +38,11 @@ public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementComplexSettingInstanceRequest instance
      */
-    public IDeviceManagementComplexSettingInstanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementComplexSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

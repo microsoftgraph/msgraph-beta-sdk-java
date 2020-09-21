@@ -85,6 +85,17 @@ public class AccessPackageAssignmentPolicyCollectionRequest extends BaseCollecti
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAccessPackageAssignmentPolicyCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageAssignmentPolicyCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
