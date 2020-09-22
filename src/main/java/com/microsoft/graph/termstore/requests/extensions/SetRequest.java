@@ -164,5 +164,16 @@ public class SetRequest extends BaseRequest implements ISetRequest {
          return (SetRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISetRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SetRequest)this;
+     }
+
 }
 

@@ -34,10 +34,11 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryRoleAccessReviewPolicyRequest instance
      */
-    public IDirectoryRoleAccessReviewPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryRoleAccessReviewPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

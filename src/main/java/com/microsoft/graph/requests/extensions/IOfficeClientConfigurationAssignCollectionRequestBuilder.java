@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationAssignC
  */
 public interface IOfficeClientConfigurationAssignCollectionRequestBuilder extends IRequestBuilder {
 
-    IOfficeClientConfigurationAssignCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IOfficeClientConfigurationAssignCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IOfficeClientConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

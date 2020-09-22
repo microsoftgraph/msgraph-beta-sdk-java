@@ -34,10 +34,11 @@ public class PrintDocumentRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintDocumentRequest instance
      */
-    public IPrintDocumentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintDocumentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

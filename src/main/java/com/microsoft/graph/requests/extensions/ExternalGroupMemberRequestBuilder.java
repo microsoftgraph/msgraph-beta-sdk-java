@@ -34,10 +34,11 @@ public class ExternalGroupMemberRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExternalGroupMemberRequest instance
      */
-    public IExternalGroupMemberRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExternalGroupMemberRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

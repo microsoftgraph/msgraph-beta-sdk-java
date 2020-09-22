@@ -32,10 +32,11 @@ public class AccessReviewInstanceStopRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IAccessReviewInstanceStopRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceStopRequest instance
      */
-    public IAccessReviewInstanceStopRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewInstanceStopRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

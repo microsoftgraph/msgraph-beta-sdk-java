@@ -36,10 +36,11 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsAndConditionsGroupAssignmentRequest instance
      */
-    public ITermsAndConditionsGroupAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermsAndConditionsGroupAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

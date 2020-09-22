@@ -40,10 +40,11 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsWifiEnterpriseEAPConfigurationRequest instance
      */
-    public IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

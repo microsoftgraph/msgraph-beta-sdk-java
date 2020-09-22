@@ -17,9 +17,10 @@ public interface IEducationSynchronizationProfileUploadUrlRequestBuilder extends
     /**
      * Creates the IEducationSynchronizationProfileUploadUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileUploadUrlRequest instance
      */
-    IEducationSynchronizationProfileUploadUrlRequest buildRequest();
+    IEducationSynchronizationProfileUploadUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationSynchronizationProfileUploadUrlRequest with specific options instead of the existing options

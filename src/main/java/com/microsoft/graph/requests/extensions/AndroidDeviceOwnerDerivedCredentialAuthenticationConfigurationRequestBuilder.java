@@ -36,10 +36,11 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest instance
      */
-    public IAndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationValueLongDecimalRequest instance
      */
-    public IGroupPolicyPresentationValueLongDecimalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationValueLongDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

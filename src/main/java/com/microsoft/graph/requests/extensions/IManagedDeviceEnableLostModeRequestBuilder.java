@@ -17,9 +17,10 @@ public interface IManagedDeviceEnableLostModeRequestBuilder extends IRequestBuil
     /**
      * Creates the IManagedDeviceEnableLostModeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceEnableLostModeRequest instance
      */
-    IManagedDeviceEnableLostModeRequest buildRequest();
+    IManagedDeviceEnableLostModeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceEnableLostModeRequest with specific options instead of the existing options

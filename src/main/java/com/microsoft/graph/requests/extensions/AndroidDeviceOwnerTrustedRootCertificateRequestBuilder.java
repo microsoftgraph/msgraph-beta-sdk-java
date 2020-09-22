@@ -34,10 +34,11 @@ public class AndroidDeviceOwnerTrustedRootCertificateRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerTrustedRootCertificateRequest instance
      */
-    public IAndroidDeviceOwnerTrustedRootCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerTrustedRootCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

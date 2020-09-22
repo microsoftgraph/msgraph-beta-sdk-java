@@ -34,10 +34,11 @@ public class EnterpriseCodeSigningCertificateRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEnterpriseCodeSigningCertificateRequest instance
      */
-    public IEnterpriseCodeSigningCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEnterpriseCodeSigningCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

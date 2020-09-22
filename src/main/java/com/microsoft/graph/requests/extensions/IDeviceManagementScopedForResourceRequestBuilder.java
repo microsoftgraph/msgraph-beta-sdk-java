@@ -17,9 +17,10 @@ public interface IDeviceManagementScopedForResourceRequestBuilder extends IReque
     /**
      * Creates the IDeviceManagementScopedForResourceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementScopedForResourceRequest instance
      */
-    IDeviceManagementScopedForResourceRequest buildRequest();
+    IDeviceManagementScopedForResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementScopedForResourceRequest with specific options instead of the existing options

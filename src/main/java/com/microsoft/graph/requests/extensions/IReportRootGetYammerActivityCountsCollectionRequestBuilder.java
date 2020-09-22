@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityCount
  */
 public interface IReportRootGetYammerActivityCountsCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetYammerActivityCountsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetYammerActivityCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetYammerActivityCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

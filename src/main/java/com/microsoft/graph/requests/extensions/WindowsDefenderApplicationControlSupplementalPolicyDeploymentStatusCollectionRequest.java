@@ -85,6 +85,17 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

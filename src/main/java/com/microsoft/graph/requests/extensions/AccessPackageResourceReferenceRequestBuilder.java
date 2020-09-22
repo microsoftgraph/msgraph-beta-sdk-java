@@ -44,10 +44,11 @@ public class AccessPackageResourceReferenceRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IAccessPackageResourceReferenceRequest instance
      */
-    public IAccessPackageResourceReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessPackageResourceReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

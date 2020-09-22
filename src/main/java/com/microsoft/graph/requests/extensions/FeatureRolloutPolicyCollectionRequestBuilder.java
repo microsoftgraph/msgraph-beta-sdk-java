@@ -36,10 +36,22 @@ public class FeatureRolloutPolicyCollectionRequestBuilder extends BaseRequestBui
         super(requestUrl, client, requestOptions);
     }
 
-    public IFeatureRolloutPolicyCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IFeatureRolloutPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IFeatureRolloutPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new FeatureRolloutPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

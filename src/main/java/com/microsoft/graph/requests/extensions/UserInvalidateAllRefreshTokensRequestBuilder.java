@@ -32,10 +32,11 @@ public class UserInvalidateAllRefreshTokensRequestBuilder extends BaseActionRequ
     /**
      * Creates the IUserInvalidateAllRefreshTokensRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserInvalidateAllRefreshTokensRequest instance
      */
-    public IUserInvalidateAllRefreshTokensRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserInvalidateAllRefreshTokensRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

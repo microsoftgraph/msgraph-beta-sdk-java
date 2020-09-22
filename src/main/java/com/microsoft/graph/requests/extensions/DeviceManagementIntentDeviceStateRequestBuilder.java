@@ -34,10 +34,11 @@ public class DeviceManagementIntentDeviceStateRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementIntentDeviceStateRequest instance
      */
-    public IDeviceManagementIntentDeviceStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementIntentDeviceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

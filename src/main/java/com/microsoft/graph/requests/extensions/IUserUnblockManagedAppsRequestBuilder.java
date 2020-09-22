@@ -17,9 +17,10 @@ public interface IUserUnblockManagedAppsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserUnblockManagedAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserUnblockManagedAppsRequest instance
      */
-    IUserUnblockManagedAppsRequest buildRequest();
+    IUserUnblockManagedAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserUnblockManagedAppsRequest with specific options instead of the existing options

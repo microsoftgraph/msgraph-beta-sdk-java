@@ -34,10 +34,11 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISitePageRequest instance
      */
-    public ISitePageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISitePageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

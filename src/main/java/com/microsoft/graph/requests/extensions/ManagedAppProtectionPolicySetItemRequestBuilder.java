@@ -34,10 +34,11 @@ public class ManagedAppProtectionPolicySetItemRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAppProtectionPolicySetItemRequest instance
      */
-    public IManagedAppProtectionPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppProtectionPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

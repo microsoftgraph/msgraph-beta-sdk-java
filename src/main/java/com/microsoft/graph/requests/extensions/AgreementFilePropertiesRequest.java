@@ -169,5 +169,16 @@ public class AgreementFilePropertiesRequest extends BaseRequest implements IAgre
          return (AgreementFilePropertiesRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAgreementFilePropertiesRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AgreementFilePropertiesRequest)this;
+     }
+
 }
 

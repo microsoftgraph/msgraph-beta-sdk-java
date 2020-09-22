@@ -32,10 +32,11 @@ public class BookingBusinessUnpublishRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IBookingBusinessUnpublishRequest
      *
+     * @param requestOptions the options for the request
      * @return the IBookingBusinessUnpublishRequest instance
      */
-    public IBookingBusinessUnpublishRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingBusinessUnpublishRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

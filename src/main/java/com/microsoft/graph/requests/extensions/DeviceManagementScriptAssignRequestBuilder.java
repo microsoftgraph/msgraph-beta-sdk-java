@@ -37,10 +37,11 @@ public class DeviceManagementScriptAssignRequestBuilder extends BaseActionReques
     /**
      * Creates the IDeviceManagementScriptAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementScriptAssignRequest instance
      */
-    public IDeviceManagementScriptAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementScriptAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

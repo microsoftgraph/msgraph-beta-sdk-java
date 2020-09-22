@@ -53,11 +53,23 @@ public class ReportRootGetEmailActivityUserDetailCollectionRequestBuilder extend
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetEmailActivityUserDetailCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetEmailActivityUserDetailCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetEmailActivityUserDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetEmailActivityUserDetailCollectionRequest request = new ReportRootGetEmailActivityUserDetailCollectionRequest(
                 getRequestUrl(),

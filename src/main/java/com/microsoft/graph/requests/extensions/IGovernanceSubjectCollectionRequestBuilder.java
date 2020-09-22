@@ -22,8 +22,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IGovernanceSubjectCollectionRequestBuilder extends IRequestBuilder {
 
-    IGovernanceSubjectCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IGovernanceSubjectCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IGovernanceSubjectCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IGovernanceSubjectRequestBuilder byId(final String id);

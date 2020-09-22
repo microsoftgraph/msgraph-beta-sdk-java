@@ -156,5 +156,16 @@ public class JournalLineRequest extends BaseRequest implements IJournalLineReque
          return (JournalLineRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IJournalLineRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (JournalLineRequest)this;
+     }
+
 }
 

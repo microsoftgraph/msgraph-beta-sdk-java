@@ -17,9 +17,10 @@ public interface IChatSendActivityNotificationRequestBuilder extends IRequestBui
     /**
      * Creates the IChatSendActivityNotificationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IChatSendActivityNotificationRequest instance
      */
-    IChatSendActivityNotificationRequest buildRequest();
+    IChatSendActivityNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IChatSendActivityNotificationRequest with specific options instead of the existing options

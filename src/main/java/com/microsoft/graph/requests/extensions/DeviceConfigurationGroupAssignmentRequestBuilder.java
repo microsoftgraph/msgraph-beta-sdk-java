@@ -36,10 +36,11 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceConfigurationGroupAssignmentRequest instance
      */
-    public IDeviceConfigurationGroupAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceConfigurationGroupAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

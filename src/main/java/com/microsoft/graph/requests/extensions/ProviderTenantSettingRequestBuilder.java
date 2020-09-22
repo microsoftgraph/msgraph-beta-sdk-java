@@ -34,10 +34,11 @@ public class ProviderTenantSettingRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IProviderTenantSettingRequest instance
      */
-    public IProviderTenantSettingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IProviderTenantSettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

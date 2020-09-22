@@ -36,10 +36,11 @@ public class DeviceManagementIntentMigrateToTemplateRequestBuilder extends BaseA
     /**
      * Creates the IDeviceManagementIntentMigrateToTemplateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentMigrateToTemplateRequest instance
      */
-    public IDeviceManagementIntentMigrateToTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementIntentMigrateToTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

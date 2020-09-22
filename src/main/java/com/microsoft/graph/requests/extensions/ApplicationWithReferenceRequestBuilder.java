@@ -61,10 +61,11 @@ public class ApplicationWithReferenceRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApplicationWithReferenceRequest instance
      */
-    public IApplicationWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

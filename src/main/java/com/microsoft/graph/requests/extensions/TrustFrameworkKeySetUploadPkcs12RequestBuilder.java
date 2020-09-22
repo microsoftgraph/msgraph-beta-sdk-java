@@ -36,10 +36,11 @@ public class TrustFrameworkKeySetUploadPkcs12RequestBuilder extends BaseActionRe
     /**
      * Creates the ITrustFrameworkKeySetUploadPkcs12Request
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadPkcs12Request instance
      */
-    public ITrustFrameworkKeySetUploadPkcs12Request buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkKeySetUploadPkcs12Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

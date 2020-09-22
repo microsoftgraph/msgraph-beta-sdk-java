@@ -32,10 +32,11 @@ public class PrintJobStartPrintJobRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IPrintJobStartPrintJobRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrintJobStartPrintJobRequest instance
      */
-    public IPrintJobStartPrintJobRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintJobStartPrintJobRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

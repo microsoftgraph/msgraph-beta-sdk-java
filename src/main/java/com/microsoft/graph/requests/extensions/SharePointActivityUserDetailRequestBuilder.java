@@ -34,10 +34,11 @@ public class SharePointActivityUserDetailRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharePointActivityUserDetailRequest instance
      */
-    public ISharePointActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharePointActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

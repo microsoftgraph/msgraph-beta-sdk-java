@@ -34,10 +34,11 @@ public class WindowsOfficeClientConfigurationRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsOfficeClientConfigurationRequest instance
      */
-    public IWindowsOfficeClientConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsOfficeClientConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

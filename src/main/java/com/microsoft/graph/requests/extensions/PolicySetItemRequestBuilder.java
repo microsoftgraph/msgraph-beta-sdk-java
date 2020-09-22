@@ -34,10 +34,11 @@ public class PolicySetItemRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicySetItemRequest instance
      */
-    public IPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

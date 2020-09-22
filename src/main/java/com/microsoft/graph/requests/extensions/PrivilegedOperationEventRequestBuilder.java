@@ -34,10 +34,11 @@ public class PrivilegedOperationEventRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrivilegedOperationEventRequest instance
      */
-    public IPrivilegedOperationEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedOperationEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

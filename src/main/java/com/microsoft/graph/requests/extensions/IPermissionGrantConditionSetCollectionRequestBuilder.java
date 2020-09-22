@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IPermissionGrantConditionSetCollectionRequestBuilder extends IRequestBuilder {
 
-    IPermissionGrantConditionSetCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IPermissionGrantConditionSetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IPermissionGrantConditionSetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IPermissionGrantConditionSetRequestBuilder byId(final String id);

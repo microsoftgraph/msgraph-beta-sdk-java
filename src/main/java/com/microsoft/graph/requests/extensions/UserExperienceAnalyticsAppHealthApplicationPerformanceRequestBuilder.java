@@ -34,10 +34,11 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsAppHealthApplicationPerformanceRequest instance
      */
-    public IUserExperienceAnalyticsAppHealthApplicationPerformanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsAppHealthApplicationPerformanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

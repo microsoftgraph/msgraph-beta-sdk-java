@@ -39,11 +39,23 @@ public class ReportRootGetYammerActivityUserCountsCollectionRequestBuilder exten
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetYammerActivityUserCountsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetYammerActivityUserCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetYammerActivityUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetYammerActivityUserCountsCollectionRequest request = new ReportRootGetYammerActivityUserCountsCollectionRequest(
                 getRequestUrl(),

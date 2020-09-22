@@ -34,10 +34,11 @@ public class PersonNameRequestBuilder extends BaseRequestBuilder implements IPer
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonNameRequest instance
      */
-    public IPersonNameRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonNameRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

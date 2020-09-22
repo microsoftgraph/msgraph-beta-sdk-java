@@ -17,9 +17,10 @@ public interface IReportRootGetM365AppUserCountsRequestBuilder extends IRequestB
     /**
      * Creates the IReportRootGetM365AppUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetM365AppUserCountsRequest instance
      */
-    IReportRootGetM365AppUserCountsRequest buildRequest();
+    IReportRootGetM365AppUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetM365AppUserCountsRequest with specific options instead of the existing options

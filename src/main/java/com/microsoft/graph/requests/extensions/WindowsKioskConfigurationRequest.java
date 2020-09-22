@@ -154,5 +154,16 @@ public class WindowsKioskConfigurationRequest extends BaseRequest implements IWi
          return (WindowsKioskConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsKioskConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WindowsKioskConfigurationRequest)this;
+     }
+
 }
 

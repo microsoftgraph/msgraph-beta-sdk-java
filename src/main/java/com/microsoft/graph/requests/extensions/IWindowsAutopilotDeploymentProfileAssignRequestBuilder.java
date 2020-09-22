@@ -17,9 +17,10 @@ public interface IWindowsAutopilotDeploymentProfileAssignRequestBuilder extends 
     /**
      * Creates the IWindowsAutopilotDeploymentProfileAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeploymentProfileAssignRequest instance
      */
-    IWindowsAutopilotDeploymentProfileAssignRequest buildRequest();
+    IWindowsAutopilotDeploymentProfileAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsAutopilotDeploymentProfileAssignRequest with specific options instead of the existing options

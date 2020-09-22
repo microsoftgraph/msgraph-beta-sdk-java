@@ -34,10 +34,11 @@ public class AndroidForWorkGmailEasConfigurationRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkGmailEasConfigurationRequest instance
      */
-    public IAndroidForWorkGmailEasConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkGmailEasConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

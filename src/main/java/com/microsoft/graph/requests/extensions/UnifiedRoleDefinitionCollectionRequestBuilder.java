@@ -36,10 +36,22 @@ public class UnifiedRoleDefinitionCollectionRequestBuilder extends BaseRequestBu
         super(requestUrl, client, requestOptions);
     }
 
-    public IUnifiedRoleDefinitionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUnifiedRoleDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUnifiedRoleDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UnifiedRoleDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

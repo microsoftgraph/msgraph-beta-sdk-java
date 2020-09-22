@@ -17,9 +17,10 @@ public interface IManagedDeviceGetFileVaultKeyRequestBuilder extends IRequestBui
     /**
      * Creates the IManagedDeviceGetFileVaultKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceGetFileVaultKeyRequest instance
      */
-    IManagedDeviceGetFileVaultKeyRequest buildRequest();
+    IManagedDeviceGetFileVaultKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceGetFileVaultKeyRequest with specific options instead of the existing options

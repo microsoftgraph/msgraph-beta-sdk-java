@@ -158,5 +158,16 @@ public class WindowsPhone81ImportedPFXCertificateProfileRequest extends BaseRequ
          return (WindowsPhone81ImportedPFXCertificateProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsPhone81ImportedPFXCertificateProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WindowsPhone81ImportedPFXCertificateProfileRequest)this;
+     }
+
 }
 

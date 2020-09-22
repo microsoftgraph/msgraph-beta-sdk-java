@@ -17,9 +17,10 @@ public interface IPrintDocumentUploadDataRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IPrintDocumentUploadDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrintDocumentUploadDataRequest instance
      */
-    IPrintDocumentUploadDataRequest buildRequest();
+    IPrintDocumentUploadDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrintDocumentUploadDataRequest with specific options instead of the existing options

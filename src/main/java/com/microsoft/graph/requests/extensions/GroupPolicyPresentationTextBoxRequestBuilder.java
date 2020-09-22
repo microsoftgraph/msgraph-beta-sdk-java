@@ -34,10 +34,11 @@ public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationTextBoxRequest instance
      */
-    public IGroupPolicyPresentationTextBoxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationTextBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

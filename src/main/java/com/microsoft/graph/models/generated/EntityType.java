@@ -23,13 +23,29 @@ public enum EntityType
     */
     DRIVE_ITEM,
     /**
-    * external File
-    */
-    EXTERNAL_FILE,
-    /**
     * external Item
     */
     EXTERNAL_ITEM,
+    /**
+    * site
+    */
+    SITE,
+    /**
+    * list
+    */
+    LIST,
+    /**
+    * list Item
+    */
+    LIST_ITEM,
+    /**
+    * drive
+    */
+    DRIVE,
+    /**
+    * unknownfuturevalue
+    */
+    UNKNOWNFUTUREVALUE,
     /**
     * For EntityType values that were not expected from the service
     */

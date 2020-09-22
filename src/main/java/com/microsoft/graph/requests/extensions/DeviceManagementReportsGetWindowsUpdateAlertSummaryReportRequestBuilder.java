@@ -50,10 +50,11 @@ public class DeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequestBui
     /**
      * Creates the IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest instance
      */
-    public IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetWindowsUpdateAlertSummaryReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

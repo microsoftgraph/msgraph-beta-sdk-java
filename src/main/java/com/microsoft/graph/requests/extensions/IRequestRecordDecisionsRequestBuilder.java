@@ -17,9 +17,10 @@ public interface IRequestRecordDecisionsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IRequestRecordDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRequestRecordDecisionsRequest instance
      */
-    IRequestRecordDecisionsRequest buildRequest();
+    IRequestRecordDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IRequestRecordDecisionsRequest with specific options instead of the existing options

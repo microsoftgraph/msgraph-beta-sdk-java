@@ -34,10 +34,11 @@ public class ResourceSpecificPermissionGrantRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IResourceSpecificPermissionGrantRequest instance
      */
-    public IResourceSpecificPermissionGrantRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IResourceSpecificPermissionGrantRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface ISensitivityLabelEvaluateRequestBuilder extends IRequestBuilder
     /**
      * Creates the ISensitivityLabelEvaluateRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISensitivityLabelEvaluateRequest instance
      */
-    ISensitivityLabelEvaluateRequest buildRequest();
+    ISensitivityLabelEvaluateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISensitivityLabelEvaluateRequest with specific options instead of the existing options

@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface ITaxGroupCollectionRequestBuilder extends IRequestBuilder {
 
-    ITaxGroupCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ITaxGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ITaxGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ITaxGroupRequestBuilder byId(final String id);

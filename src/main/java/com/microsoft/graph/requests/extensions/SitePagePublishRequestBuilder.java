@@ -32,10 +32,11 @@ public class SitePagePublishRequestBuilder extends BaseActionRequestBuilder impl
     /**
      * Creates the ISitePagePublishRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISitePagePublishRequest instance
      */
-    public ISitePagePublishRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISitePagePublishRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

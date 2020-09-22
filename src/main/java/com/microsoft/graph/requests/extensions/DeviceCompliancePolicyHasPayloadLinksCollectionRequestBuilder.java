@@ -39,11 +39,23 @@ public class DeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder exten
 			bodyParams.put("payloadIds", payloadIds);
 		}
       }
-
-    public IDeviceCompliancePolicyHasPayloadLinksCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceCompliancePolicyHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceCompliancePolicyHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceCompliancePolicyHasPayloadLinksCollectionRequest request = new DeviceCompliancePolicyHasPayloadLinksCollectionRequest(
                 getRequestUrl(),

@@ -34,10 +34,11 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsOfficeClientSecurityConfigurationRequest instance
      */
-    public IWindowsOfficeClientSecurityConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsOfficeClientSecurityConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

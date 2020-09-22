@@ -34,10 +34,11 @@ public class ItemPatentRequestBuilder extends BaseRequestBuilder implements IIte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemPatentRequest instance
      */
-    public IItemPatentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemPatentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

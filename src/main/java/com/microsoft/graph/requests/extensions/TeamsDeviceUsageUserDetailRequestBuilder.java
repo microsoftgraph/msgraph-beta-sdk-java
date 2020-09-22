@@ -34,10 +34,11 @@ public class TeamsDeviceUsageUserDetailRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsDeviceUsageUserDetailRequest instance
      */
-    public ITeamsDeviceUsageUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

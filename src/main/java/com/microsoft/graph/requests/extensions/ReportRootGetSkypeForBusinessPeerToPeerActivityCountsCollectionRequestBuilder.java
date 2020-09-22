@@ -39,11 +39,23 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequ
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequest request = new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsCollectionRequest(
                 getRequestUrl(),

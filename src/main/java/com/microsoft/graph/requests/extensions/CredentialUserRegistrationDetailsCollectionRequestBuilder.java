@@ -36,10 +36,22 @@ public class CredentialUserRegistrationDetailsCollectionRequestBuilder extends B
         super(requestUrl, client, requestOptions);
     }
 
-    public ICredentialUserRegistrationDetailsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICredentialUserRegistrationDetailsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICredentialUserRegistrationDetailsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CredentialUserRegistrationDetailsCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

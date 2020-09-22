@@ -17,9 +17,10 @@ public interface IGovernanceRoleAssignmentRequestUpdateRequestRequestBuilder ext
     /**
      * Creates the IGovernanceRoleAssignmentRequestUpdateRequestRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGovernanceRoleAssignmentRequestUpdateRequestRequest instance
      */
-    IGovernanceRoleAssignmentRequestUpdateRequestRequest buildRequest();
+    IGovernanceRoleAssignmentRequestUpdateRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGovernanceRoleAssignmentRequestUpdateRequestRequest with specific options instead of the existing options

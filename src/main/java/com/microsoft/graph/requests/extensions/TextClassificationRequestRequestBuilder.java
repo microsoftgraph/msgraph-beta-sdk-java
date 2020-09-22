@@ -34,10 +34,11 @@ public class TextClassificationRequestRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITextClassificationRequestRequest instance
      */
-    public ITextClassificationRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITextClassificationRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

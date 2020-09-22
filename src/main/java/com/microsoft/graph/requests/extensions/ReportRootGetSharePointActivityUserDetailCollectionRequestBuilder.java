@@ -53,11 +53,23 @@ public class ReportRootGetSharePointActivityUserDetailCollectionRequestBuilder e
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetSharePointActivityUserDetailCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetSharePointActivityUserDetailCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetSharePointActivityUserDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSharePointActivityUserDetailCollectionRequest request = new ReportRootGetSharePointActivityUserDetailCollectionRequest(
                 getRequestUrl(),

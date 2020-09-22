@@ -44,10 +44,11 @@ public class SetRequestBuilder extends BaseRequestBuilder implements ISetRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISetRequest instance
      */
-    public ISetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

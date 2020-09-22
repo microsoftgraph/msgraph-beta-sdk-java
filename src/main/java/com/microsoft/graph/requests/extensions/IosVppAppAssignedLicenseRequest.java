@@ -169,5 +169,16 @@ public class IosVppAppAssignedLicenseRequest extends BaseRequest implements IIos
          return (IosVppAppAssignedLicenseRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosVppAppAssignedLicenseRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IosVppAppAssignedLicenseRequest)this;
+     }
+
 }
 

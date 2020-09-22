@@ -50,10 +50,11 @@ public class DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceRepo
     /**
      * Creates the IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest instance
      */
-    public IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class DepOnboardingSettingUploadDepTokenRequestBuilder extends BaseAction
     /**
      * Creates the IDepOnboardingSettingUploadDepTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingUploadDepTokenRequest instance
      */
-    public IDepOnboardingSettingUploadDepTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingUploadDepTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

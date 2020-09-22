@@ -164,5 +164,16 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
          return (SalesCreditMemoRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISalesCreditMemoRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SalesCreditMemoRequest)this;
+     }
+
 }
 

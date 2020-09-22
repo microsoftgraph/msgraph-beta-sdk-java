@@ -34,10 +34,11 @@ public class ServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBuilder
     /**
      * Creates the IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest instance
      */
-    public IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IAuthorizationPolicyCollectionRequestBuilder extends IRequestBuilder {
 
-    IAuthorizationPolicyCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IAuthorizationPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IAuthorizationPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAuthorizationPolicyRequestBuilder byId(final String id);

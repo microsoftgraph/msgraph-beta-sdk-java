@@ -39,10 +39,11 @@ public class GroupPolicyDefinitionFileWithReferenceRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyDefinitionFileWithReferenceRequest instance
      */
-    public IGroupPolicyDefinitionFileWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyDefinitionFileWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

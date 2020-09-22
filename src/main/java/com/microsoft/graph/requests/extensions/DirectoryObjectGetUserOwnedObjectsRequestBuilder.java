@@ -36,10 +36,11 @@ public class DirectoryObjectGetUserOwnedObjectsRequestBuilder extends BaseAction
     /**
      * Creates the IDirectoryObjectGetUserOwnedObjectsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryObjectGetUserOwnedObjectsRequest instance
      */
-    public IDirectoryObjectGetUserOwnedObjectsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryObjectGetUserOwnedObjectsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

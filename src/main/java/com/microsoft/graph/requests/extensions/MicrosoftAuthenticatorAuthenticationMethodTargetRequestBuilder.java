@@ -34,10 +34,11 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMicrosoftAuthenticatorAuthenticationMethodTargetRequest instance
      */
-    public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

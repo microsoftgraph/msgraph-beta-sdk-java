@@ -34,10 +34,11 @@ public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityBaselineDeviceStateRequest instance
      */
-    public ISecurityBaselineDeviceStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityBaselineDeviceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

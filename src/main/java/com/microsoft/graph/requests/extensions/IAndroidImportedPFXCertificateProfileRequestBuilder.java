@@ -22,9 +22,10 @@ public interface IAndroidImportedPFXCertificateProfileRequestBuilder extends IRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidImportedPFXCertificateProfileRequest instance
      */
-    IAndroidImportedPFXCertificateProfileRequest buildRequest();
+    IAndroidImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

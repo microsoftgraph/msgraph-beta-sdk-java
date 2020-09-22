@@ -46,10 +46,11 @@ public class GroupPolicyCategoryReferenceRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IGroupPolicyCategoryReferenceRequest instance
      */
-    public IGroupPolicyCategoryReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyCategoryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

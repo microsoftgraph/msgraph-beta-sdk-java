@@ -34,10 +34,11 @@ public class AccessReviewReviewerRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessReviewReviewerRequest instance
      */
-    public IAccessReviewReviewerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewReviewerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

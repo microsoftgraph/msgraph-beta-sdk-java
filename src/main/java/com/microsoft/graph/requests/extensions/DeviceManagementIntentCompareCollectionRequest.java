@@ -104,4 +104,15 @@ public class DeviceManagementIntentCompareCollectionRequest extends BaseCollecti
         return (IDeviceManagementIntentCompareCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementIntentCompareCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceManagementIntentCompareCollectionRequest)this;
+    }
+
 }

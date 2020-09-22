@@ -72,6 +72,16 @@ public class GovernanceRoleAssignmentReferenceRequest extends BaseRequest implem
         return (GovernanceRoleAssignmentReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGovernanceRoleAssignmentReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GovernanceRoleAssignmentReferenceRequest)this;
+    }
+    /**
      * Puts the GovernanceRoleAssignment
      *
      * @param srcGovernanceRoleAssignment the GovernanceRoleAssignment reference to PUT

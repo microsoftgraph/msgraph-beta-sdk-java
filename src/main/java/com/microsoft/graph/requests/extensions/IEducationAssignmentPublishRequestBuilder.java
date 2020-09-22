@@ -17,9 +17,10 @@ public interface IEducationAssignmentPublishRequestBuilder extends IRequestBuild
     /**
      * Creates the IEducationAssignmentPublishRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationAssignmentPublishRequest instance
      */
-    IEducationAssignmentPublishRequest buildRequest();
+    IEducationAssignmentPublishRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationAssignmentPublishRequest with specific options instead of the existing options

@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SkypeForBusinessParticipantActivityMinuteCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Skype For Business Participant Activity Minute Counts Collection Request.
  */
-public interface IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest {
+public interface IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionPage> callback);
 

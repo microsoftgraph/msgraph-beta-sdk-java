@@ -77,4 +77,15 @@ public class WindowsFeatureUpdateProfileAssignRequest extends BaseRequest implem
         return (WindowsFeatureUpdateProfileAssignRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsFeatureUpdateProfileAssignRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsFeatureUpdateProfileAssignRequest)this;
+    }
+
 }

@@ -32,10 +32,11 @@ public class ChannelCompleteMigrationRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IChannelCompleteMigrationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IChannelCompleteMigrationRequest instance
      */
-    public IChannelCompleteMigrationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChannelCompleteMigrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

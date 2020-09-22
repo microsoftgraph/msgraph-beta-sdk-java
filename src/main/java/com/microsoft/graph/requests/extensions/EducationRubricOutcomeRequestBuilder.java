@@ -34,10 +34,11 @@ public class EducationRubricOutcomeRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationRubricOutcomeRequest instance
      */
-    public IEducationRubricOutcomeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationRubricOutcomeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

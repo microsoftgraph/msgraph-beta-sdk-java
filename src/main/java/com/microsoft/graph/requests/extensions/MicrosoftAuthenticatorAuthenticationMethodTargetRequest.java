@@ -154,5 +154,16 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
          return (MicrosoftAuthenticatorAuthenticationMethodTargetRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MicrosoftAuthenticatorAuthenticationMethodTargetRequest)this;
+     }
+
 }
 

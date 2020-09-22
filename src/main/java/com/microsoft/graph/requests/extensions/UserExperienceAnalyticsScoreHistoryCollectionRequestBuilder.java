@@ -36,10 +36,22 @@ public class UserExperienceAnalyticsScoreHistoryCollectionRequestBuilder extends
         super(requestUrl, client, requestOptions);
     }
 
-    public IUserExperienceAnalyticsScoreHistoryCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserExperienceAnalyticsScoreHistoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserExperienceAnalyticsScoreHistoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserExperienceAnalyticsScoreHistoryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

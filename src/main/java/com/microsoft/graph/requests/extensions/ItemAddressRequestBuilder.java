@@ -34,10 +34,11 @@ public class ItemAddressRequestBuilder extends BaseRequestBuilder implements IIt
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemAddressRequest instance
      */
-    public IItemAddressRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemAddressRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

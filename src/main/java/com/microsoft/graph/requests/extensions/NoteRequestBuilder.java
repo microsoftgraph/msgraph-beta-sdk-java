@@ -50,10 +50,11 @@ public class NoteRequestBuilder extends BaseRequestBuilder implements INoteReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INoteRequest instance
      */
-    public INoteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INoteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

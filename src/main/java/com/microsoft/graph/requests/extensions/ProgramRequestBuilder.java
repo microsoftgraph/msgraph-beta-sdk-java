@@ -38,10 +38,11 @@ public class ProgramRequestBuilder extends BaseRequestBuilder implements IProgra
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IProgramRequest instance
      */
-    public IProgramRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IProgramRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

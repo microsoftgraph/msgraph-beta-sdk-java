@@ -34,10 +34,11 @@ public class DeviceManagementCachedReportConfigurationRequestBuilder extends Bas
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementCachedReportConfigurationRequest instance
      */
-    public IDeviceManagementCachedReportConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementCachedReportConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

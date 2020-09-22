@@ -17,9 +17,10 @@ public interface IMobileAppValidateXmlRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMobileAppValidateXmlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppValidateXmlRequest instance
      */
-    IMobileAppValidateXmlRequest buildRequest();
+    IMobileAppValidateXmlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMobileAppValidateXmlRequest with specific options instead of the existing options

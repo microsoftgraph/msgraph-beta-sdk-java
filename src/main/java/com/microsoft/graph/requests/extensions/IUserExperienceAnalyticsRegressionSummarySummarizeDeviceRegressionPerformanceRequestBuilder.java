@@ -17,9 +17,10 @@ public interface IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegress
     /**
      * Creates the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest instance
      */
-    IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest();
+    IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest with specific options instead of the existing options
@@ -28,4 +29,16 @@ public interface IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegress
      * @return the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest instance
      */
     IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    IUserExperienceAnalyticsMetricCollectionRequestBuilder manufacturerRegression();
+
+    IUserExperienceAnalyticsMetricRequestBuilder manufacturerRegression(final String id);
+
+    IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression();
+
+    IUserExperienceAnalyticsMetricRequestBuilder modelRegression(final String id);
+
+    IUserExperienceAnalyticsMetricCollectionRequestBuilder operatingSystemRegression();
+
+    IUserExperienceAnalyticsMetricRequestBuilder operatingSystemRegression(final String id);
 }

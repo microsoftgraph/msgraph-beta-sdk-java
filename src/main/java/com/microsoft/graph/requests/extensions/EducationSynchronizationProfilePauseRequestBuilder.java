@@ -32,10 +32,11 @@ public class EducationSynchronizationProfilePauseRequestBuilder extends BaseActi
     /**
      * Creates the IEducationSynchronizationProfilePauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfilePauseRequest instance
      */
-    public IEducationSynchronizationProfilePauseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSynchronizationProfilePauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

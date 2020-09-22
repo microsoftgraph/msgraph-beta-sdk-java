@@ -38,10 +38,11 @@ public class SensitivityLabelEvaluateRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the ISensitivityLabelEvaluateRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISensitivityLabelEvaluateRequest instance
      */
-    public ISensitivityLabelEvaluateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISensitivityLabelEvaluateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

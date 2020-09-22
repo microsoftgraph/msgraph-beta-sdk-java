@@ -77,4 +77,15 @@ public class DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest exte
         return (DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementReportsGetUnhealthyDefenderAgentsReportRequest)this;
+    }
+
 }

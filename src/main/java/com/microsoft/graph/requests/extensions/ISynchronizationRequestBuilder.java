@@ -25,9 +25,10 @@ public interface ISynchronizationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISynchronizationRequest instance
      */
-    ISynchronizationRequest buildRequest();
+    ISynchronizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

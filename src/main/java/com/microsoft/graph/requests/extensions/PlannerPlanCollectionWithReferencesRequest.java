@@ -59,6 +59,11 @@ public class PlannerPlanCollectionWithReferencesRequest extends BaseCollectionRe
         return (PlannerPlanCollectionWithReferencesRequest)this;
     }
 
+    public IPlannerPlanCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PlannerPlanCollectionWithReferencesRequest)this;
+    }
+
     public IPlannerPlanCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PlannerPlanCollectionWithReferencesRequest)this;

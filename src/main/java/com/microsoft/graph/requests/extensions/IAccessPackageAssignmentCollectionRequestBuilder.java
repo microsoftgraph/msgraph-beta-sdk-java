@@ -24,8 +24,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IAccessPackageAssignmentCollectionRequestBuilder extends IRequestBuilder {
 
-    IAccessPackageAssignmentCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IAccessPackageAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IAccessPackageAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAccessPackageAssignmentRequestBuilder byId(final String id);

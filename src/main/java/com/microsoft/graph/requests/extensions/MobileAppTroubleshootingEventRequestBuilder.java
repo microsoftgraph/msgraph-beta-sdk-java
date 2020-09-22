@@ -38,10 +38,11 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppTroubleshootingEventRequest instance
      */
-    public IMobileAppTroubleshootingEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

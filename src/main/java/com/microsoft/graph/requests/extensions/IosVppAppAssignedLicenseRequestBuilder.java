@@ -34,10 +34,11 @@ public class IosVppAppAssignedLicenseRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosVppAppAssignedLicenseRequest instance
      */
-    public IIosVppAppAssignedLicenseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVppAppAssignedLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

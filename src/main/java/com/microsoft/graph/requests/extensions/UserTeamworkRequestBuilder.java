@@ -41,10 +41,11 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder implements IU
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserTeamworkRequest instance
      */
-    public IUserTeamworkRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserTeamworkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

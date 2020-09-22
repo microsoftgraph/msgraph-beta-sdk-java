@@ -34,10 +34,11 @@ public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsUserActivityUserCountsRequest instance
      */
-    public ITeamsUserActivityUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsUserActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

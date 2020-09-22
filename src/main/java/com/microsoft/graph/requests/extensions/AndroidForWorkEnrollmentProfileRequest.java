@@ -154,5 +154,16 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
          return (AndroidForWorkEnrollmentProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidForWorkEnrollmentProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidForWorkEnrollmentProfileRequest)this;
+     }
+
 }
 

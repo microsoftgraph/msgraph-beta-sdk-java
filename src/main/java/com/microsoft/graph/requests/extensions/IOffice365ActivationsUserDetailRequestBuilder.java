@@ -20,9 +20,10 @@ public interface IOffice365ActivationsUserDetailRequestBuilder extends IRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365ActivationsUserDetailRequest instance
      */
-    IOffice365ActivationsUserDetailRequest buildRequest();
+    IOffice365ActivationsUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

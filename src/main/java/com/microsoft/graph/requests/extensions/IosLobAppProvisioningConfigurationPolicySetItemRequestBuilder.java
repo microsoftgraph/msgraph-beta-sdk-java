@@ -34,10 +34,11 @@ public class IosLobAppProvisioningConfigurationPolicySetItemRequestBuilder exten
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosLobAppProvisioningConfigurationPolicySetItemRequest instance
      */
-    public IIosLobAppProvisioningConfigurationPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosLobAppProvisioningConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

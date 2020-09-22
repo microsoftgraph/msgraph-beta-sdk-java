@@ -34,10 +34,11 @@ public class IosExpeditedCheckinConfigurationRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosExpeditedCheckinConfigurationRequest instance
      */
-    public IIosExpeditedCheckinConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosExpeditedCheckinConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

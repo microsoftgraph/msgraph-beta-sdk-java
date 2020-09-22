@@ -20,9 +20,10 @@ public interface IAppleVppTokenTroubleshootingEventRequestBuilder extends IReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppleVppTokenTroubleshootingEventRequest instance
      */
-    IAppleVppTokenTroubleshootingEventRequest buildRequest();
+    IAppleVppTokenTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

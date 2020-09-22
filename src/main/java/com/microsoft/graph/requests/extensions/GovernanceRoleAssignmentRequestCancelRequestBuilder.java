@@ -32,10 +32,11 @@ public class GovernanceRoleAssignmentRequestCancelRequestBuilder extends BaseAct
     /**
      * Creates the IGovernanceRoleAssignmentRequestCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGovernanceRoleAssignmentRequestCancelRequest instance
      */
-    public IGovernanceRoleAssignmentRequestCancelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGovernanceRoleAssignmentRequestCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

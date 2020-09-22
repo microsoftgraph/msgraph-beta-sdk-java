@@ -84,6 +84,16 @@ public class PrinterReferenceRequest extends BaseRequest implements IPrinterRefe
         return (PrinterReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrinterReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrinterReferenceRequest)this;
+    }
+    /**
      * Puts the Printer
      *
      * @param srcPrinter the Printer reference to PUT

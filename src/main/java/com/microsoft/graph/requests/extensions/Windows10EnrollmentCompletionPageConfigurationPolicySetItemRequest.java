@@ -154,5 +154,16 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
          return (Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest)this;
+     }
+
 }
 

@@ -34,10 +34,11 @@ public class AccessReviewInstanceDecisionItemRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessReviewInstanceDecisionItemRequest instance
      */
-    public IAccessReviewInstanceDecisionItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewInstanceDecisionItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

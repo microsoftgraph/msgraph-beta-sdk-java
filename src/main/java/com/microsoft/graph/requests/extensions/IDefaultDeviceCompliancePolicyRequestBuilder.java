@@ -20,9 +20,10 @@ public interface IDefaultDeviceCompliancePolicyRequestBuilder extends IRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDefaultDeviceCompliancePolicyRequest instance
      */
-    IDefaultDeviceCompliancePolicyRequest buildRequest();
+    IDefaultDeviceCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

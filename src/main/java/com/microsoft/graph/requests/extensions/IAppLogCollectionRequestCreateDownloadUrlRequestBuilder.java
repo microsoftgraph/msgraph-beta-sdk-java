@@ -17,9 +17,10 @@ public interface IAppLogCollectionRequestCreateDownloadUrlRequestBuilder extends
     /**
      * Creates the IAppLogCollectionRequestCreateDownloadUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAppLogCollectionRequestCreateDownloadUrlRequest instance
      */
-    IAppLogCollectionRequestCreateDownloadUrlRequest buildRequest();
+    IAppLogCollectionRequestCreateDownloadUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAppLogCollectionRequestCreateDownloadUrlRequest with specific options instead of the existing options

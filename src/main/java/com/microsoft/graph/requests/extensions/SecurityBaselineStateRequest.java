@@ -158,5 +158,16 @@ public class SecurityBaselineStateRequest extends BaseRequest implements ISecuri
          return (SecurityBaselineStateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISecurityBaselineStateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SecurityBaselineStateRequest)this;
+     }
+
 }
 

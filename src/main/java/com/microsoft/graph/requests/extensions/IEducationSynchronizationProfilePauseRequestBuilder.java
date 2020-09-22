@@ -17,9 +17,10 @@ public interface IEducationSynchronizationProfilePauseRequestBuilder extends IRe
     /**
      * Creates the IEducationSynchronizationProfilePauseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfilePauseRequest instance
      */
-    IEducationSynchronizationProfilePauseRequest buildRequest();
+    IEducationSynchronizationProfilePauseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationSynchronizationProfilePauseRequest with specific options instead of the existing options

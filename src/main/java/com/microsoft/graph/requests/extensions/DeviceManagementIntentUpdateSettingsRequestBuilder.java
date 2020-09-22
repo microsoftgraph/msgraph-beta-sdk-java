@@ -34,10 +34,11 @@ public class DeviceManagementIntentUpdateSettingsRequestBuilder extends BaseActi
     /**
      * Creates the IDeviceManagementIntentUpdateSettingsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentUpdateSettingsRequest instance
      */
-    public IDeviceManagementIntentUpdateSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementIntentUpdateSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

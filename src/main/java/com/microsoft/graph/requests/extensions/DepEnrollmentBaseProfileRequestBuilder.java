@@ -34,10 +34,11 @@ public class DepEnrollmentBaseProfileRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDepEnrollmentBaseProfileRequest instance
      */
-    public IDepEnrollmentBaseProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepEnrollmentBaseProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

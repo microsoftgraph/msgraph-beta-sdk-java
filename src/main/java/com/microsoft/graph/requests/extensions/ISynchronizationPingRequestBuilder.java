@@ -17,9 +17,10 @@ public interface ISynchronizationPingRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ISynchronizationPingRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationPingRequest instance
      */
-    ISynchronizationPingRequest buildRequest();
+    ISynchronizationPingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISynchronizationPingRequest with specific options instead of the existing options

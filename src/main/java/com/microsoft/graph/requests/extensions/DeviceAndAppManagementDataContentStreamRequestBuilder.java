@@ -34,10 +34,11 @@ public class DeviceAndAppManagementDataContentStreamRequestBuilder extends BaseR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceAndAppManagementDataContentStreamRequest instance
      */
-    public IDeviceAndAppManagementDataContentStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceAndAppManagementDataContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

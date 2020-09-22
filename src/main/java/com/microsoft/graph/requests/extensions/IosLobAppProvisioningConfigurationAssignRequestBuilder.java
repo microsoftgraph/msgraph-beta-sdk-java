@@ -37,10 +37,11 @@ public class IosLobAppProvisioningConfigurationAssignRequestBuilder extends Base
     /**
      * Creates the IIosLobAppProvisioningConfigurationAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IIosLobAppProvisioningConfigurationAssignRequest instance
      */
-    public IIosLobAppProvisioningConfigurationAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosLobAppProvisioningConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

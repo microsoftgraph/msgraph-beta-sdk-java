@@ -17,9 +17,10 @@ public interface IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequestBui
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest instance
      */
-    IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest buildRequest();
+    IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUnassignUserFromDeviceRequest with specific options instead of the existing options

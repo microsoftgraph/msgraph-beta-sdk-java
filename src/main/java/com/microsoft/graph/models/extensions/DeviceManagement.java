@@ -66,8 +66,14 @@ import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
 import com.microsoft.graph.models.extensions.MobileAppTroubleshootingEvent;
 import com.microsoft.graph.models.extensions.RemoteActionAudit;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthApplicationPerformance;
-import com.microsoft.graph.models.extensions.UserExperienceAnalyticsBaseline;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthDeviceModelPerformance;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthDevicePerformance;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceDetails;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsBaseline;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupHistory;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupProcess;
@@ -94,6 +100,8 @@ import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
+import com.microsoft.graph.models.extensions.MicrosoftTunnelConfiguration;
+import com.microsoft.graph.models.extensions.MicrosoftTunnelSite;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementDomainJoinConnector;
 import com.microsoft.graph.models.extensions.ResourceOperation;
@@ -190,6 +198,18 @@ import com.microsoft.graph.requests.extensions.RemoteActionAuditCollectionRespon
 import com.microsoft.graph.requests.extensions.RemoteActionAuditCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryCollectionResponse;
@@ -240,6 +260,10 @@ import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionRe
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileCollectionPage;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelSiteCollectionResponse;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelSiteCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorCollectionResponse;
@@ -275,11 +299,8 @@ import com.microsoft.graph.requests.extensions.UserPFXCertificateCollectionPage;
 
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
-import java.util.HashMap;
-import java.util.Map;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -826,6 +847,62 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage userExperienceAnalyticsAppHealthApplicationPerformance;
 
     /**
+     * The User Experience Analytics App Health Application Performance By App Version.
+     * User experience analytics appHealth Application Performance by App Version
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion")
+    @Expose
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
+
+    /**
+     * The User Experience Analytics App Health Application Performance By OSVersion.
+     * User experience analytics appHealth Application Performance by OS Version
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion")
+    @Expose
+    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+
+    /**
+     * The User Experience Analytics App Health Device Model Performance.
+     * User experience analytics appHealth Model Performance
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthDeviceModelPerformance")
+    @Expose
+    public UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage userExperienceAnalyticsAppHealthDeviceModelPerformance;
+
+    /**
+     * The User Experience Analytics App Health Device Performance.
+     * User experience analytics appHealth Device Performance
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthDevicePerformance")
+    @Expose
+    public UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage userExperienceAnalyticsAppHealthDevicePerformance;
+
+    /**
+     * The User Experience Analytics App Health Device Performance Details.
+     * User experience analytics device performance details
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthDevicePerformanceDetails")
+    @Expose
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+
+    /**
+     * The User Experience Analytics App Health OSVersion Performance.
+     * User experience analytics appHealth OS version Performance
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthOSVersionPerformance")
+    @Expose
+    public UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage userExperienceAnalyticsAppHealthOSVersionPerformance;
+
+    /**
+     * The User Experience Analytics App Health Overview.
+     * User experience analytics appHealth overview
+     */
+    @SerializedName("userExperienceAnalyticsAppHealthOverview")
+    @Expose
+    public UserExperienceAnalyticsCategory userExperienceAnalyticsAppHealthOverview;
+
+    /**
      * The User Experience Analytics Baselines.
      * User experience analytics baselines
      */
@@ -1048,6 +1125,22 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName("groupPolicyUploadedDefinitionFiles")
     @Expose
     public GroupPolicyUploadedDefinitionFileCollectionPage groupPolicyUploadedDefinitionFiles;
+
+    /**
+     * The Microsoft Tunnel Configurations.
+     * Collection of MicrosoftTunnelConfiguration settings associated with account.
+     */
+    @SerializedName("microsoftTunnelConfigurations")
+    @Expose
+    public MicrosoftTunnelConfigurationCollectionPage microsoftTunnelConfigurations;
+
+    /**
+     * The Microsoft Tunnel Sites.
+     * Collection of MicrosoftTunnelSite settings associated with account.
+     */
+    @SerializedName("microsoftTunnelSites")
+    @Expose
+    public MicrosoftTunnelSiteCollectionPage microsoftTunnelSites;
 
     /**
      * The Notification Message Templates.
@@ -1865,6 +1958,102 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsAppHealthApplicationPerformance = new UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage(response, null);
         }
 
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion")) {
+            final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionResponse response = new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionResponse();
+            if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion@odata.nextLink")) {
+                response.nextLink = json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion[] array = new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage(response, null);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion")) {
+            final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse response = new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse();
+            if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion@odata.nextLink")) {
+                response.nextLink = json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion[] array = new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage(response, null);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthDeviceModelPerformance")) {
+            final UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionResponse response = new UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionResponse();
+            if (json.has("userExperienceAnalyticsAppHealthDeviceModelPerformance@odata.nextLink")) {
+                response.nextLink = json.get("userExperienceAnalyticsAppHealthDeviceModelPerformance@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDeviceModelPerformance").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsAppHealthDeviceModelPerformance[] array = new UserExperienceAnalyticsAppHealthDeviceModelPerformance[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsAppHealthDeviceModelPerformance.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userExperienceAnalyticsAppHealthDeviceModelPerformance = new UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage(response, null);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthDevicePerformance")) {
+            final UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse response = new UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse();
+            if (json.has("userExperienceAnalyticsAppHealthDevicePerformance@odata.nextLink")) {
+                response.nextLink = json.get("userExperienceAnalyticsAppHealthDevicePerformance@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformance").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsAppHealthDevicePerformance[] array = new UserExperienceAnalyticsAppHealthDevicePerformance[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsAppHealthDevicePerformance.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userExperienceAnalyticsAppHealthDevicePerformance = new UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage(response, null);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthDevicePerformanceDetails")) {
+            final UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse response = new UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse();
+            if (json.has("userExperienceAnalyticsAppHealthDevicePerformanceDetails@odata.nextLink")) {
+                response.nextLink = json.get("userExperienceAnalyticsAppHealthDevicePerformanceDetails@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformanceDetails").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsAppHealthDevicePerformanceDetails[] array = new UserExperienceAnalyticsAppHealthDevicePerformanceDetails[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsAppHealthDevicePerformanceDetails.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userExperienceAnalyticsAppHealthDevicePerformanceDetails = new UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage(response, null);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthOSVersionPerformance")) {
+            final UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse response = new UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionResponse();
+            if (json.has("userExperienceAnalyticsAppHealthOSVersionPerformance@odata.nextLink")) {
+                response.nextLink = json.get("userExperienceAnalyticsAppHealthOSVersionPerformance@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthOSVersionPerformance").toString(), JsonObject[].class);
+            final UserExperienceAnalyticsAppHealthOSVersionPerformance[] array = new UserExperienceAnalyticsAppHealthOSVersionPerformance[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserExperienceAnalyticsAppHealthOSVersionPerformance.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userExperienceAnalyticsAppHealthOSVersionPerformance = new UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage(response, null);
+        }
+
         if (json.has("userExperienceAnalyticsBaselines")) {
             final UserExperienceAnalyticsBaselineCollectionResponse response = new UserExperienceAnalyticsBaselineCollectionResponse();
             if (json.has("userExperienceAnalyticsBaselines@odata.nextLink")) {
@@ -2263,6 +2452,38 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             groupPolicyUploadedDefinitionFiles = new GroupPolicyUploadedDefinitionFileCollectionPage(response, null);
+        }
+
+        if (json.has("microsoftTunnelConfigurations")) {
+            final MicrosoftTunnelConfigurationCollectionResponse response = new MicrosoftTunnelConfigurationCollectionResponse();
+            if (json.has("microsoftTunnelConfigurations@odata.nextLink")) {
+                response.nextLink = json.get("microsoftTunnelConfigurations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("microsoftTunnelConfigurations").toString(), JsonObject[].class);
+            final MicrosoftTunnelConfiguration[] array = new MicrosoftTunnelConfiguration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MicrosoftTunnelConfiguration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            microsoftTunnelConfigurations = new MicrosoftTunnelConfigurationCollectionPage(response, null);
+        }
+
+        if (json.has("microsoftTunnelSites")) {
+            final MicrosoftTunnelSiteCollectionResponse response = new MicrosoftTunnelSiteCollectionResponse();
+            if (json.has("microsoftTunnelSites@odata.nextLink")) {
+                response.nextLink = json.get("microsoftTunnelSites@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("microsoftTunnelSites").toString(), JsonObject[].class);
+            final MicrosoftTunnelSite[] array = new MicrosoftTunnelSite[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MicrosoftTunnelSite.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            microsoftTunnelSites = new MicrosoftTunnelSiteCollectionPage(response, null);
         }
 
         if (json.has("notificationMessageTemplates")) {

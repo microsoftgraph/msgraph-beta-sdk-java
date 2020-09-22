@@ -77,4 +77,15 @@ public class PrinterCreateRequest extends BaseRequest implements IPrinterCreateR
         return (PrinterCreateRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrinterCreateRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrinterCreateRequest)this;
+    }
+
 }

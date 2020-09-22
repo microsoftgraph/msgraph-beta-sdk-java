@@ -34,10 +34,11 @@ public class AzureADFeatureUsageRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAzureADFeatureUsageRequest instance
      */
-    public IAzureADFeatureUsageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAzureADFeatureUsageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

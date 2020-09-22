@@ -37,10 +37,22 @@ public class AccessPackageCatalogCollectionRequestBuilder extends BaseRequestBui
         super(requestUrl, client, requestOptions);
     }
 
-    public IAccessPackageCatalogCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAccessPackageCatalogCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAccessPackageCatalogCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessPackageCatalogCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -36,10 +36,11 @@ public class BusinessFlowRecordDecisionsRequestBuilder extends BaseActionRequest
     /**
      * Creates the IBusinessFlowRecordDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IBusinessFlowRecordDecisionsRequest instance
      */
-    public IBusinessFlowRecordDecisionsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBusinessFlowRecordDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

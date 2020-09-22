@@ -34,10 +34,11 @@ public class DirectoryDefinitionRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryDefinitionRequest instance
      */
-    public IDirectoryDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class DeviceManagementEnableLegacyPcManagementRequestBuilder extends Base
     /**
      * Creates the IDeviceManagementEnableLegacyPcManagementRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableLegacyPcManagementRequest instance
      */
-    public IDeviceManagementEnableLegacyPcManagementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementEnableLegacyPcManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

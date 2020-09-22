@@ -34,10 +34,11 @@ public class MailboxUsageQuotaStatusMailboxCountsRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
-    public IMailboxUsageQuotaStatusMailboxCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

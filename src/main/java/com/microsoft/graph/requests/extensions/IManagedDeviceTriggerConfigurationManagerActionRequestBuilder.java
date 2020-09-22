@@ -17,9 +17,10 @@ public interface IManagedDeviceTriggerConfigurationManagerActionRequestBuilder e
     /**
      * Creates the IManagedDeviceTriggerConfigurationManagerActionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceTriggerConfigurationManagerActionRequest instance
      */
-    IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest();
+    IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceTriggerConfigurationManagerActionRequest with specific options instead of the existing options

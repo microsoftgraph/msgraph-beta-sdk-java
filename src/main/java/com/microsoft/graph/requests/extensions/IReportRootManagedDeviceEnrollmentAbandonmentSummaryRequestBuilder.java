@@ -17,9 +17,10 @@ public interface IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequestBuil
     /**
      * Creates the IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest instance
      */
-    IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest buildRequest();
+    IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest with specific options instead of the existing options

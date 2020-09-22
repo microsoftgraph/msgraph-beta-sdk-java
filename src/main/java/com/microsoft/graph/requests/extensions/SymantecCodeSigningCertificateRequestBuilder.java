@@ -34,10 +34,11 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISymantecCodeSigningCertificateRequest instance
      */
-    public ISymantecCodeSigningCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISymantecCodeSigningCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -78,10 +78,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuthenticationRequest instance
      */
-    public IAuthenticationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

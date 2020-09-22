@@ -45,10 +45,11 @@ public class SetWithReferenceRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISetWithReferenceRequest instance
      */
-    public ISetWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISetWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

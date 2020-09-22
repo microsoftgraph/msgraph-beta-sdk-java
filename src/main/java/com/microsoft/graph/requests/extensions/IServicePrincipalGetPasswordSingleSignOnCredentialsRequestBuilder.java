@@ -17,9 +17,10 @@ public interface IServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuild
     /**
      * Creates the IServicePrincipalGetPasswordSingleSignOnCredentialsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalGetPasswordSingleSignOnCredentialsRequest instance
      */
-    IServicePrincipalGetPasswordSingleSignOnCredentialsRequest buildRequest();
+    IServicePrincipalGetPasswordSingleSignOnCredentialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IServicePrincipalGetPasswordSingleSignOnCredentialsRequest with specific options instead of the existing options

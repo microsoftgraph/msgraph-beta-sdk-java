@@ -34,10 +34,11 @@ public class MacOsVppAppAssignedLicenseRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOsVppAppAssignedLicenseRequest instance
      */
-    public IMacOsVppAppAssignedLicenseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOsVppAppAssignedLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

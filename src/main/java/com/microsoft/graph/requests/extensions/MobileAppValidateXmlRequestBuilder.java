@@ -34,10 +34,11 @@ public class MobileAppValidateXmlRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IMobileAppValidateXmlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppValidateXmlRequest instance
      */
-    public IMobileAppValidateXmlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppValidateXmlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

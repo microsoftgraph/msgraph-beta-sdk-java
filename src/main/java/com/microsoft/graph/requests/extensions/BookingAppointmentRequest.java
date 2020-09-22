@@ -154,5 +154,16 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
          return (BookingAppointmentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IBookingAppointmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (BookingAppointmentRequest)this;
+     }
+
 }
 

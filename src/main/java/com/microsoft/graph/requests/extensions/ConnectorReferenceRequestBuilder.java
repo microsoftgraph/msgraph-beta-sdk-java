@@ -40,10 +40,11 @@ public class ConnectorReferenceRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IConnectorReferenceRequest instance
      */
-    public IConnectorReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IConnectorReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

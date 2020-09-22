@@ -38,10 +38,11 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfficeConfigurationRequest instance
      */
-    public IOfficeConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

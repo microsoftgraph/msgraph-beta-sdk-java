@@ -38,10 +38,11 @@ public class PrivilegedRoleAssignmentRequestReferenceRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IPrivilegedRoleAssignmentRequestReferenceRequest instance
      */
-    public IPrivilegedRoleAssignmentRequestReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleAssignmentRequestReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

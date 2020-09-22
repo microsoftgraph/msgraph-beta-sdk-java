@@ -17,9 +17,10 @@ public interface IDeviceHealthScriptEnableGlobalScriptsRequestBuilder extends IR
     /**
      * Creates the IDeviceHealthScriptEnableGlobalScriptsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptEnableGlobalScriptsRequest instance
      */
-    IDeviceHealthScriptEnableGlobalScriptsRequest buildRequest();
+    IDeviceHealthScriptEnableGlobalScriptsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceHealthScriptEnableGlobalScriptsRequest with specific options instead of the existing options

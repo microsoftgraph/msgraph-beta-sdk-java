@@ -36,10 +36,22 @@ public class IosTrustedRootCertificateCollectionRequestBuilder extends BaseReque
         super(requestUrl, client, requestOptions);
     }
 
-    public IIosTrustedRootCertificateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IIosTrustedRootCertificateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IIosTrustedRootCertificateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosTrustedRootCertificateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

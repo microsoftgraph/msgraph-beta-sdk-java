@@ -104,4 +104,15 @@ public class ReportRootGetSharePointActivityFileCountsCollectionRequest extends 
         return (IReportRootGetSharePointActivityFileCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetSharePointActivityFileCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetSharePointActivityFileCountsCollectionRequest)this;
+    }
+
 }

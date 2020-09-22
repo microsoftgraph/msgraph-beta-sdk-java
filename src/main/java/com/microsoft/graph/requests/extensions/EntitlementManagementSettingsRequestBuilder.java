@@ -34,10 +34,11 @@ public class EntitlementManagementSettingsRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEntitlementManagementSettingsRequest instance
      */
-    public IEntitlementManagementSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEntitlementManagementSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

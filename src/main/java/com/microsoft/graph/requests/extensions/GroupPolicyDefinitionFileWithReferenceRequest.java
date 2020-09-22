@@ -97,4 +97,14 @@ public class GroupPolicyDefinitionFileWithReferenceRequest extends BaseRequest i
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupPolicyDefinitionFileWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupPolicyDefinitionFileWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyDefinitionFileWithReferenceRequest)this;
+    }
 }

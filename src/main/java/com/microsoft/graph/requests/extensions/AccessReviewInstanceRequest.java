@@ -160,5 +160,16 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
          return (AccessReviewInstanceRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAccessReviewInstanceRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AccessReviewInstanceRequest)this;
+     }
+
 }
 

@@ -8,10 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
@@ -20,6 +16,8 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationSettingsRequestBuilder;
 import java.util.Arrays;
@@ -48,10 +46,11 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationRequest instance
      */
-    public IOrganizationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -65,12 +64,14 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
     }
 
 
-    public IOrganizationalBrandingCollectionRequestBuilder brandings() {
-        return new OrganizationalBrandingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("brandings"), getClient(), null);
-    }
 
-    public IOrganizationalBrandingRequestBuilder brandings(final String id) {
-        return new OrganizationalBrandingRequestBuilder(getRequestUrlWithAdditionalSegment("brandings") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for OrganizationalBranding
+     *
+     * @return the IOrganizationalBrandingRequestBuilder instance
+     */
+    public IOrganizationalBrandingRequestBuilder branding() {
+        return new OrganizationalBrandingRequestBuilder(getRequestUrlWithAdditionalSegment("branding"), getClient(), null);
     }
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);

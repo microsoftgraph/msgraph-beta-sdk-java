@@ -36,10 +36,11 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAutopilotDeviceIdentityRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeviceIdentityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

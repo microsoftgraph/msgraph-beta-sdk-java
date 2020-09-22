@@ -26,9 +26,10 @@ public interface IDeviceManagementReportsRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementReportsRequest instance
      */
-    IDeviceManagementReportsRequest buildRequest();
+    IDeviceManagementReportsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -50,6 +51,10 @@ public interface IDeviceManagementReportsRequestBuilder extends IRequestBuilder 
     IDeviceManagementReportScheduleCollectionRequestBuilder reportSchedules();
 
     IDeviceManagementReportScheduleRequestBuilder reportSchedules(final String id);
+    IDeviceManagementReportsGetAppsInstallSummaryReportRequestBuilder getAppsInstallSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
+    IDeviceManagementReportsGetAppStatusOverviewReportRequestBuilder getAppStatusOverviewReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
+    IDeviceManagementReportsGetDeviceInstallStatusReportRequestBuilder getDeviceInstallStatusReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
+    IDeviceManagementReportsGetUserInstallStatusReportRequestBuilder getUserInstallStatusReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
     IDeviceManagementReportsGetActiveMalwareReportRequestBuilder getActiveMalwareReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
     IDeviceManagementReportsGetMalwareSummaryReportRequestBuilder getMalwareSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);
     IDeviceManagementReportsGetUnhealthyDefenderAgentsReportRequestBuilder getUnhealthyDefenderAgentsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter);

@@ -35,10 +35,11 @@ public class UserExperienceAnalyticsMetricWithReferenceRequestBuilder extends Ba
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsMetricWithReferenceRequest instance
      */
-    public IUserExperienceAnalyticsMetricWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsMetricWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

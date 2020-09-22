@@ -34,10 +34,11 @@ public class SynchronizationAcquireAccessTokenRequestBuilder extends BaseActionR
     /**
      * Creates the ISynchronizationAcquireAccessTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationAcquireAccessTokenRequest instance
      */
-    public ISynchronizationAcquireAccessTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationAcquireAccessTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

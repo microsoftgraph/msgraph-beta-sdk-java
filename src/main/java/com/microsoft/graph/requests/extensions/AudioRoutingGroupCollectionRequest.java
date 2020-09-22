@@ -85,6 +85,17 @@ public class AudioRoutingGroupCollectionRequest extends BaseCollectionRequest<Au
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAudioRoutingGroupCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AudioRoutingGroupCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

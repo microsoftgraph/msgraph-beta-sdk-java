@@ -34,10 +34,11 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IContinuousAccessEvaluationPolicyRequest instance
      */
-    public IContinuousAccessEvaluationPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IContinuousAccessEvaluationPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

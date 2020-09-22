@@ -34,10 +34,11 @@ public class AgedAccountsPayableRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAgedAccountsPayableRequest instance
      */
-    public IAgedAccountsPayableRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAgedAccountsPayableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

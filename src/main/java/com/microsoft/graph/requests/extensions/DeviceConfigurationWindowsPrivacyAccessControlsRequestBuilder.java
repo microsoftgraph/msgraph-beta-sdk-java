@@ -34,10 +34,11 @@ public class DeviceConfigurationWindowsPrivacyAccessControlsRequestBuilder exten
     /**
      * Creates the IDeviceConfigurationWindowsPrivacyAccessControlsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceConfigurationWindowsPrivacyAccessControlsRequest instance
      */
-    public IDeviceConfigurationWindowsPrivacyAccessControlsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceConfigurationWindowsPrivacyAccessControlsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

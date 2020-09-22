@@ -41,10 +41,11 @@ public class DataClassificationServiceClassifyExactMatchesRequestBuilder extends
     /**
      * Creates the IDataClassificationServiceClassifyExactMatchesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDataClassificationServiceClassifyExactMatchesRequest instance
      */
-    public IDataClassificationServiceClassifyExactMatchesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDataClassificationServiceClassifyExactMatchesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

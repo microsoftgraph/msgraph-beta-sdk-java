@@ -17,9 +17,10 @@ public interface ITeamSendActivityNotificationRequestBuilder extends IRequestBui
     /**
      * Creates the ITeamSendActivityNotificationRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamSendActivityNotificationRequest instance
      */
-    ITeamSendActivityNotificationRequest buildRequest();
+    ITeamSendActivityNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITeamSendActivityNotificationRequest with specific options instead of the existing options

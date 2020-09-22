@@ -22,9 +22,10 @@ public interface IAdvancedThreatProtectionOnboardingStateSummaryRequestBuilder e
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAdvancedThreatProtectionOnboardingStateSummaryRequest instance
      */
-    IAdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest();
+    IAdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

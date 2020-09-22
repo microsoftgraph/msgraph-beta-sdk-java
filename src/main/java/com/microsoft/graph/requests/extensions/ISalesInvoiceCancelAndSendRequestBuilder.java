@@ -17,9 +17,10 @@ public interface ISalesInvoiceCancelAndSendRequestBuilder extends IRequestBuilde
     /**
      * Creates the ISalesInvoiceCancelAndSendRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesInvoiceCancelAndSendRequest instance
      */
-    ISalesInvoiceCancelAndSendRequest buildRequest();
+    ISalesInvoiceCancelAndSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISalesInvoiceCancelAndSendRequest with specific options instead of the existing options

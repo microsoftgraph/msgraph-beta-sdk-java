@@ -17,9 +17,10 @@ public interface IEnrollmentProfileUpdateDeviceProfileAssignmentRequestBuilder e
     /**
      * Creates the IEnrollmentProfileUpdateDeviceProfileAssignmentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEnrollmentProfileUpdateDeviceProfileAssignmentRequest instance
      */
-    IEnrollmentProfileUpdateDeviceProfileAssignmentRequest buildRequest();
+    IEnrollmentProfileUpdateDeviceProfileAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEnrollmentProfileUpdateDeviceProfileAssignmentRequest with specific options instead of the existing options

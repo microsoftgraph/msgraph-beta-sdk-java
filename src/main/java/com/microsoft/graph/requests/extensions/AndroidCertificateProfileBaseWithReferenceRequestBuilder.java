@@ -37,10 +37,11 @@ public class AndroidCertificateProfileBaseWithReferenceRequestBuilder extends Ba
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidCertificateProfileBaseWithReferenceRequest instance
      */
-    public IAndroidCertificateProfileBaseWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidCertificateProfileBaseWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

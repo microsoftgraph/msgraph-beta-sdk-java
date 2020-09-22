@@ -32,10 +32,11 @@ public class AndroidForWorkSettingsSyncAppsRequestBuilder extends BaseActionRequ
     /**
      * Creates the IAndroidForWorkSettingsSyncAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsSyncAppsRequest instance
      */
-    public IAndroidForWorkSettingsSyncAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkSettingsSyncAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

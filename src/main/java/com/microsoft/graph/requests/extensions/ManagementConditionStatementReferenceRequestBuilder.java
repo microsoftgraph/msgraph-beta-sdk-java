@@ -42,10 +42,11 @@ public class ManagementConditionStatementReferenceRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IManagementConditionStatementReferenceRequest instance
      */
-    public IManagementConditionStatementReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagementConditionStatementReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

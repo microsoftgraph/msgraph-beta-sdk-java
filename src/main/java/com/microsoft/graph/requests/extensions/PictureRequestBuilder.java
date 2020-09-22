@@ -34,10 +34,11 @@ public class PictureRequestBuilder extends BaseRequestBuilder implements IPictur
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPictureRequest instance
      */
-    public IPictureRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPictureRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

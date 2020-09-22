@@ -36,10 +36,22 @@ public class PrivilegedApprovalCollectionRequestBuilder extends BaseRequestBuild
         super(requestUrl, client, requestOptions);
     }
 
-    public IPrivilegedApprovalCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPrivilegedApprovalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPrivilegedApprovalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PrivilegedApprovalCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

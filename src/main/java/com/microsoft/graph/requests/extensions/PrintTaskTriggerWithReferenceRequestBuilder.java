@@ -37,10 +37,11 @@ public class PrintTaskTriggerWithReferenceRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintTaskTriggerWithReferenceRequest instance
      */
-    public IPrintTaskTriggerWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintTaskTriggerWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -43,10 +43,11 @@ public class WindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAutopilotDeploymentProfileRequest instance
      */
-    public IWindowsAutopilotDeploymentProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeploymentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -56,10 +56,11 @@ public class PrinterReferenceRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IPrinterReferenceRequest instance
      */
-    public IPrinterReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrinterReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

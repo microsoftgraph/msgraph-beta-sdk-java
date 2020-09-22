@@ -32,10 +32,11 @@ public class AppLogCollectionRequestCreateDownloadUrlRequestBuilder extends Base
     /**
      * Creates the IAppLogCollectionRequestCreateDownloadUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAppLogCollectionRequestCreateDownloadUrlRequest instance
      */
-    public IAppLogCollectionRequestCreateDownloadUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppLogCollectionRequestCreateDownloadUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

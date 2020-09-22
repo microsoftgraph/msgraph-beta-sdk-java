@@ -22,8 +22,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagementConditionCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IManagementConditionCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IManagementConditionCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IManagementConditionCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagementConditionWithReferenceRequestBuilder byId(final String id);

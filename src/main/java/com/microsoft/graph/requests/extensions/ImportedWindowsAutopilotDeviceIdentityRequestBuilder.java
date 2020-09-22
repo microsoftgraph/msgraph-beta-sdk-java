@@ -34,10 +34,11 @@ public class ImportedWindowsAutopilotDeviceIdentityRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IImportedWindowsAutopilotDeviceIdentityRequest instance
      */
-    public IImportedWindowsAutopilotDeviceIdentityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IImportedWindowsAutopilotDeviceIdentityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

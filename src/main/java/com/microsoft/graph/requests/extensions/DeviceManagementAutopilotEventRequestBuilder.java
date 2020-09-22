@@ -38,10 +38,11 @@ public class DeviceManagementAutopilotEventRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementAutopilotEventRequest instance
      */
-    public IDeviceManagementAutopilotEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementAutopilotEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

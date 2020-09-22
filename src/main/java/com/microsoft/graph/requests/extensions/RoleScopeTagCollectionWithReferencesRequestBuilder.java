@@ -34,10 +34,22 @@ public class RoleScopeTagCollectionWithReferencesRequestBuilder extends BaseRequ
         super(requestUrl, client, requestOptions);
     }
 
-    public IRoleScopeTagCollectionWithReferencesRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IRoleScopeTagCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IRoleScopeTagCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleScopeTagCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }

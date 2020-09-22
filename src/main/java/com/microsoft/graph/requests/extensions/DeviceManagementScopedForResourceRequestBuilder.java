@@ -34,10 +34,11 @@ public class DeviceManagementScopedForResourceRequestBuilder extends BaseFunctio
     /**
      * Creates the IDeviceManagementScopedForResourceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementScopedForResourceRequest instance
      */
-    public IDeviceManagementScopedForResourceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementScopedForResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

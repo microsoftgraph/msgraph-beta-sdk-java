@@ -34,10 +34,11 @@ public class IosVppAppRevokeAllLicensesRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IIosVppAppRevokeAllLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IIosVppAppRevokeAllLicensesRequest instance
      */
-    public IIosVppAppRevokeAllLicensesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVppAppRevokeAllLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

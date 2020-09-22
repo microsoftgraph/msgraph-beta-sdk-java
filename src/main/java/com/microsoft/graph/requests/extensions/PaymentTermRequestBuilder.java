@@ -34,10 +34,11 @@ public class PaymentTermRequestBuilder extends BaseRequestBuilder implements IPa
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPaymentTermRequest instance
      */
-    public IPaymentTermRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPaymentTermRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

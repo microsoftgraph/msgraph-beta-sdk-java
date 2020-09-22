@@ -40,11 +40,23 @@ public class PrivilegedSignupStatusCompleteSetupCollectionRequestBuilder extends
 			bodyParams.put("tenantSetupInfo", tenantSetupInfo);
 		}
       }
-
-    public IPrivilegedSignupStatusCompleteSetupCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPrivilegedSignupStatusCompleteSetupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPrivilegedSignupStatusCompleteSetupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PrivilegedSignupStatusCompleteSetupCollectionRequest request = new PrivilegedSignupStatusCompleteSetupCollectionRequest(
                 getRequestUrl(),

@@ -166,5 +166,16 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
          return (SalesQuoteRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISalesQuoteRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SalesQuoteRequest)this;
+     }
+
 }
 

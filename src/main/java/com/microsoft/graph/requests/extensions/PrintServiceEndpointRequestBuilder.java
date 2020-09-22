@@ -34,10 +34,11 @@ public class PrintServiceEndpointRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintServiceEndpointRequest instance
      */
-    public IPrintServiceEndpointRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintServiceEndpointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

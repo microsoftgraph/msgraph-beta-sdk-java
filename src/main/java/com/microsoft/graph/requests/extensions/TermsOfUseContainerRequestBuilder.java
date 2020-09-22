@@ -42,10 +42,11 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsOfUseContainerRequest instance
      */
-    public ITermsOfUseContainerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermsOfUseContainerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

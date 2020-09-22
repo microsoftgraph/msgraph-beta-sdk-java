@@ -38,10 +38,11 @@ public class ExactMatchDataStoreRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExactMatchDataStoreRequest instance
      */
-    public IExactMatchDataStoreRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExactMatchDataStoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

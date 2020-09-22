@@ -104,4 +104,15 @@ public class DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesC
         return (IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionRequest)this;
+    }
+
 }

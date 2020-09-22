@@ -44,10 +44,11 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISalesOrderRequest instance
      */
-    public ISalesOrderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesOrderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

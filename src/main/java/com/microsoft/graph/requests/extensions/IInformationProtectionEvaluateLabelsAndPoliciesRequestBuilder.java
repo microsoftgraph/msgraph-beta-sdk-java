@@ -17,9 +17,10 @@ public interface IInformationProtectionEvaluateLabelsAndPoliciesRequestBuilder e
     /**
      * Creates the IInformationProtectionEvaluateLabelsAndPoliciesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IInformationProtectionEvaluateLabelsAndPoliciesRequest instance
      */
-    IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest();
+    IInformationProtectionEvaluateLabelsAndPoliciesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IInformationProtectionEvaluateLabelsAndPoliciesRequest with specific options instead of the existing options

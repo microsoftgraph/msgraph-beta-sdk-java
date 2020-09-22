@@ -17,9 +17,10 @@ public interface IAccessReviewStopRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IAccessReviewStopRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewStopRequest instance
      */
-    IAccessReviewStopRequest buildRequest();
+    IAccessReviewStopRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAccessReviewStopRequest with specific options instead of the existing options

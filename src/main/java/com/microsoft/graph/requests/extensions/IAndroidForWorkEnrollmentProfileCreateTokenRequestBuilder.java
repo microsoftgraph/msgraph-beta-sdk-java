@@ -17,9 +17,10 @@ public interface IAndroidForWorkEnrollmentProfileCreateTokenRequestBuilder exten
     /**
      * Creates the IAndroidForWorkEnrollmentProfileCreateTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkEnrollmentProfileCreateTokenRequest instance
      */
-    IAndroidForWorkEnrollmentProfileCreateTokenRequest buildRequest();
+    IAndroidForWorkEnrollmentProfileCreateTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidForWorkEnrollmentProfileCreateTokenRequest with specific options instead of the existing options

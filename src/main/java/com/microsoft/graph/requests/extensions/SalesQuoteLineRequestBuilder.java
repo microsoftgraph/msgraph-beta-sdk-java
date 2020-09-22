@@ -38,10 +38,11 @@ public class SalesQuoteLineRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISalesQuoteLineRequest instance
      */
-    public ISalesQuoteLineRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesQuoteLineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

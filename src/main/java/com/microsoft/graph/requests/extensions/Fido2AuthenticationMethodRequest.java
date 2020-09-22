@@ -154,5 +154,16 @@ public class Fido2AuthenticationMethodRequest extends BaseRequest implements IFi
          return (Fido2AuthenticationMethodRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IFido2AuthenticationMethodRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Fido2AuthenticationMethodRequest)this;
+     }
+
 }
 

@@ -34,10 +34,11 @@ public class AppleExpeditedCheckinConfigurationBaseRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppleExpeditedCheckinConfigurationBaseRequest instance
      */
-    public IAppleExpeditedCheckinConfigurationBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppleExpeditedCheckinConfigurationBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

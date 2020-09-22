@@ -34,10 +34,11 @@ public class WindowsAssignedAccessProfileRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAssignedAccessProfileRequest instance
      */
-    public IWindowsAssignedAccessProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAssignedAccessProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

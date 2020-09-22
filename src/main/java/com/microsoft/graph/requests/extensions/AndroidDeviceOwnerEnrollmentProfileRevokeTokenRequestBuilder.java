@@ -32,10 +32,11 @@ public class AndroidDeviceOwnerEnrollmentProfileRevokeTokenRequestBuilder extend
     /**
      * Creates the IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest instance
      */
-    public IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerEnrollmentProfileRevokeTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

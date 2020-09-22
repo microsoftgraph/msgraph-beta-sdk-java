@@ -21,9 +21,10 @@ public interface IAppLogCollectionRequestRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppLogCollectionRequestRequest instance
      */
-    IAppLogCollectionRequestRequest buildRequest();
+    IAppLogCollectionRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

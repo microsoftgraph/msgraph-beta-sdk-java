@@ -32,10 +32,11 @@ public class EnrollmentProfileExportMobileConfigRequestBuilder extends BaseFunct
     /**
      * Creates the IEnrollmentProfileExportMobileConfigRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEnrollmentProfileExportMobileConfigRequest instance
      */
-    public IEnrollmentProfileExportMobileConfigRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEnrollmentProfileExportMobileConfigRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

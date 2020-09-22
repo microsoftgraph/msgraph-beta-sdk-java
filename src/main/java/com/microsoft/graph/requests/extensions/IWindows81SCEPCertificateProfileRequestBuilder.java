@@ -23,9 +23,10 @@ public interface IWindows81SCEPCertificateProfileRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81SCEPCertificateProfileRequest instance
      */
-    IWindows81SCEPCertificateProfileRequest buildRequest();
+    IWindows81SCEPCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

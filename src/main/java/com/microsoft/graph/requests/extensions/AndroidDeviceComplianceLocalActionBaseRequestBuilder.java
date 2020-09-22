@@ -34,10 +34,11 @@ public class AndroidDeviceComplianceLocalActionBaseRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceComplianceLocalActionBaseRequest instance
      */
-    public IAndroidDeviceComplianceLocalActionBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceComplianceLocalActionBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DataSharingConsentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDataSharingConsentRequest instance
      */
-    public IDataSharingConsentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDataSharingConsentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

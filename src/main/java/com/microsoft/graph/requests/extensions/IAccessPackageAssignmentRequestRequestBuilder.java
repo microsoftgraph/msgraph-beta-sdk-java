@@ -23,9 +23,10 @@ public interface IAccessPackageAssignmentRequestRequestBuilder extends IRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessPackageAssignmentRequestRequest instance
      */
-    IAccessPackageAssignmentRequestRequest buildRequest();
+    IAccessPackageAssignmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

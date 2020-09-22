@@ -45,10 +45,11 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsDefenderApplicationControlSupplementalPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

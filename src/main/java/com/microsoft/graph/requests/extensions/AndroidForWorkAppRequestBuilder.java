@@ -34,10 +34,11 @@ public class AndroidForWorkAppRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkAppRequest instance
      */
-    public IAndroidForWorkAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

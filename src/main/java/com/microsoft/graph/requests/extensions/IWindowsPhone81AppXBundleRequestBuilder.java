@@ -20,9 +20,10 @@ public interface IWindowsPhone81AppXBundleRequestBuilder extends IRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81AppXBundleRequest instance
      */
-    IWindowsPhone81AppXBundleRequest buildRequest();
+    IWindowsPhone81AppXBundleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

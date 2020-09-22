@@ -34,10 +34,11 @@ public class MobileAppGetMobileAppCountRequestBuilder extends BaseFunctionReques
     /**
      * Creates the IMobileAppGetMobileAppCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppGetMobileAppCountRequest instance
      */
-    public IMobileAppGetMobileAppCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppGetMobileAppCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -39,10 +39,11 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyUploadedDefinitionFileRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyUploadedDefinitionFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

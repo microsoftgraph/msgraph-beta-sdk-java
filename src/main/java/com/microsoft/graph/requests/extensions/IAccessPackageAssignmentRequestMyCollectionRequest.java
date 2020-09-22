@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Access Package Assignment Request My Collection Request.
  */
-public interface IAccessPackageAssignmentRequestMyCollectionRequest {
+public interface IAccessPackageAssignmentRequestMyCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IAccessPackageAssignmentRequestMyCollectionPage> callback);
 

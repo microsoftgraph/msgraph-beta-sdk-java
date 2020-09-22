@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageStorage
  */
 public interface IReportRootGetMailboxUsageStorageCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetMailboxUsageStorageCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetMailboxUsageStorageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetMailboxUsageStorageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

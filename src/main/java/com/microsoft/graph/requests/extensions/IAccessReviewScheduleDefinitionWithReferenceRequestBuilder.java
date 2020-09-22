@@ -24,9 +24,10 @@ public interface IAccessReviewScheduleDefinitionWithReferenceRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessReviewScheduleDefinitionWithReferenceRequest instance
      */
-    IAccessReviewScheduleDefinitionWithReferenceRequest buildRequest();
+    IAccessReviewScheduleDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

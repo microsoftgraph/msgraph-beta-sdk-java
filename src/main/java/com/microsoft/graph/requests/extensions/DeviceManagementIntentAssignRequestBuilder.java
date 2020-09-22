@@ -34,10 +34,11 @@ public class DeviceManagementIntentAssignRequestBuilder extends BaseActionReques
     /**
      * Creates the IDeviceManagementIntentAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentAssignRequest instance
      */
-    public IDeviceManagementIntentAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementIntentAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

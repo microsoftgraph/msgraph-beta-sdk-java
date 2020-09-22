@@ -73,4 +73,15 @@ public class DirectoryDefinitionDiscoverRequest extends BaseRequest implements I
         return (DirectoryDefinitionDiscoverRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDirectoryDefinitionDiscoverRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DirectoryDefinitionDiscoverRequest)this;
+    }
+
 }

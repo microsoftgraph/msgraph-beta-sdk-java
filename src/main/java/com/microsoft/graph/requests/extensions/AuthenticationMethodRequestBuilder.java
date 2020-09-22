@@ -35,10 +35,11 @@ public class AuthenticationMethodRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuthenticationMethodRequest instance
      */
-    public IAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

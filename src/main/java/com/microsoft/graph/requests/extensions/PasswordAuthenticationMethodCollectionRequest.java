@@ -85,6 +85,17 @@ public class PasswordAuthenticationMethodCollectionRequest extends BaseCollectio
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPasswordAuthenticationMethodCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PasswordAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

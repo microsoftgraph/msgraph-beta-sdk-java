@@ -34,10 +34,11 @@ public class DeviceManagementExportJobRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementExportJobRequest instance
      */
-    public IDeviceManagementExportJobRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementExportJobRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

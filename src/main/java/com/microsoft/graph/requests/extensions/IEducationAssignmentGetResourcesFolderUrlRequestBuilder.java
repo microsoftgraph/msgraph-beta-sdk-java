@@ -17,9 +17,10 @@ public interface IEducationAssignmentGetResourcesFolderUrlRequestBuilder extends
     /**
      * Creates the IEducationAssignmentGetResourcesFolderUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationAssignmentGetResourcesFolderUrlRequest instance
      */
-    IEducationAssignmentGetResourcesFolderUrlRequest buildRequest();
+    IEducationAssignmentGetResourcesFolderUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationAssignmentGetResourcesFolderUrlRequest with specific options instead of the existing options

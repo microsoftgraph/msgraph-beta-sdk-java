@@ -34,10 +34,11 @@ public class NdesConnectorRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INdesConnectorRequest instance
      */
-    public INdesConnectorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INdesConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

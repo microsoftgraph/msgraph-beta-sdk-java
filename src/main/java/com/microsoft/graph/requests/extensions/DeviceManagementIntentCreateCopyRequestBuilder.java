@@ -34,10 +34,11 @@ public class DeviceManagementIntentCreateCopyRequestBuilder extends BaseActionRe
     /**
      * Creates the IDeviceManagementIntentCreateCopyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentCreateCopyRequest instance
      */
-    public IDeviceManagementIntentCreateCopyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementIntentCreateCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -58,6 +58,11 @@ public class GroupPolicyCategoryCollectionWithReferencesRequest extends BaseColl
         return (GroupPolicyCategoryCollectionWithReferencesRequest)this;
     }
 
+    public IGroupPolicyCategoryCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyCategoryCollectionWithReferencesRequest)this;
+    }
+
     public IGroupPolicyCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupPolicyCategoryCollectionWithReferencesRequest)this;

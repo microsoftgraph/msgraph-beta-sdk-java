@@ -17,9 +17,10 @@ public interface IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizati
     /**
      * Creates the IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest instance
      */
-    IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest buildRequest();
+    IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceHealthScriptRunSummaryRequest instance
      */
-    public IDeviceHealthScriptRunSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptRunSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

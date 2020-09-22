@@ -34,10 +34,11 @@ public class MailboxUsageStorageRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMailboxUsageStorageRequest instance
      */
-    public IMailboxUsageStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailboxUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

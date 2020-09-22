@@ -40,10 +40,11 @@ public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IInformationProtectionLabelRequest instance
      */
-    public IInformationProtectionLabelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IInformationProtectionLabelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

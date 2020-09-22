@@ -17,9 +17,10 @@ public interface IPrivilegedRoleSelfActivateRequestBuilder extends IRequestBuild
     /**
      * Creates the IPrivilegedRoleSelfActivateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleSelfActivateRequest instance
      */
-    IPrivilegedRoleSelfActivateRequest buildRequest();
+    IPrivilegedRoleSelfActivateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrivilegedRoleSelfActivateRequest with specific options instead of the existing options

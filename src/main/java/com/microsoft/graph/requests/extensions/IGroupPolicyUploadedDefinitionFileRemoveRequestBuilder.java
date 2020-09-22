@@ -17,9 +17,10 @@ public interface IGroupPolicyUploadedDefinitionFileRemoveRequestBuilder extends 
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileRemoveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileRemoveRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileRemoveRequest buildRequest();
+    IGroupPolicyUploadedDefinitionFileRemoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileRemoveRequest with specific options instead of the existing options

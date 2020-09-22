@@ -17,9 +17,10 @@ public interface IPrintJobCancelPrintJobRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPrintJobCancelPrintJobRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrintJobCancelPrintJobRequest instance
      */
-    IPrintJobCancelPrintJobRequest buildRequest();
+    IPrintJobCancelPrintJobRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrintJobCancelPrintJobRequest with specific options instead of the existing options

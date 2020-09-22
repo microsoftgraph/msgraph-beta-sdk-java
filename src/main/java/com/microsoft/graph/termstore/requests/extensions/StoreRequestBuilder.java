@@ -42,10 +42,11 @@ public class StoreRequestBuilder extends BaseRequestBuilder implements IStoreReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IStoreRequest instance
      */
-    public IStoreRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IStoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

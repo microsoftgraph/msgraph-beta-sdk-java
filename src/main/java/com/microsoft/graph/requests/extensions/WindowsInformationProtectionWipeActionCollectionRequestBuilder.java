@@ -36,10 +36,22 @@ public class WindowsInformationProtectionWipeActionCollectionRequestBuilder exte
         super(requestUrl, client, requestOptions);
     }
 
-    public IWindowsInformationProtectionWipeActionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IWindowsInformationProtectionWipeActionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IWindowsInformationProtectionWipeActionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionWipeActionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

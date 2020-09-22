@@ -36,10 +36,22 @@ public class JobResponseBaseCollectionRequestBuilder extends BaseRequestBuilder 
         super(requestUrl, client, requestOptions);
     }
 
-    public IJobResponseBaseCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IJobResponseBaseCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IJobResponseBaseCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new JobResponseBaseCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

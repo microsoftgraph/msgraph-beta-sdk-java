@@ -42,10 +42,11 @@ public class IosEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosEnterpriseWiFiConfigurationRequest instance
      */
-    public IIosEnterpriseWiFiConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosEnterpriseWiFiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

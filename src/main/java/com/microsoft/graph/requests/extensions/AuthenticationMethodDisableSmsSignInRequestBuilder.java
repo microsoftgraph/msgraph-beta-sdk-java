@@ -32,10 +32,11 @@ public class AuthenticationMethodDisableSmsSignInRequestBuilder extends BaseActi
     /**
      * Creates the IAuthenticationMethodDisableSmsSignInRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAuthenticationMethodDisableSmsSignInRequest instance
      */
-    public IAuthenticationMethodDisableSmsSignInRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationMethodDisableSmsSignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

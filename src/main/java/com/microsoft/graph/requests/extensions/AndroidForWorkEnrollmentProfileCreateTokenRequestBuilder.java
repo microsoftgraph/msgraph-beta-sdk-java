@@ -34,10 +34,11 @@ public class AndroidForWorkEnrollmentProfileCreateTokenRequestBuilder extends Ba
     /**
      * Creates the IAndroidForWorkEnrollmentProfileCreateTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkEnrollmentProfileCreateTokenRequest instance
      */
-    public IAndroidForWorkEnrollmentProfileCreateTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkEnrollmentProfileCreateTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

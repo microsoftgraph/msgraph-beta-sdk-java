@@ -37,10 +37,11 @@ public class AndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCertificateProfileBaseWithReferenceRequest instance
      */
-    public IAndroidWorkProfileCertificateProfileBaseWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidWorkProfileCertificateProfileBaseWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

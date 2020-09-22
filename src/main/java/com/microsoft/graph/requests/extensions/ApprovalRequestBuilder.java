@@ -38,10 +38,11 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApprovalRequest instance
      */
-    public IApprovalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApprovalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

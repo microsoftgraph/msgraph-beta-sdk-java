@@ -34,10 +34,11 @@ public class SkypeForBusinessDeviceUsageUserCountsRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkypeForBusinessDeviceUsageUserCountsRequest instance
      */
-    public ISkypeForBusinessDeviceUsageUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

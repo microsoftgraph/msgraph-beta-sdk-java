@@ -34,10 +34,11 @@ public class IosikEv2VpnConfigurationRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosikEv2VpnConfigurationRequest instance
      */
-    public IIosikEv2VpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosikEv2VpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

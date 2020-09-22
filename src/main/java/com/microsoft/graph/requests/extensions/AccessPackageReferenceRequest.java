@@ -74,6 +74,16 @@ public class AccessPackageReferenceRequest extends BaseRequest implements IAcces
         return (AccessPackageReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAccessPackageReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessPackageReferenceRequest)this;
+    }
+    /**
      * Puts the AccessPackage
      *
      * @param srcAccessPackage the AccessPackage reference to PUT

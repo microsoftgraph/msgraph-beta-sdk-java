@@ -36,10 +36,22 @@ public class DeviceManagementIntentDeviceSettingStateSummaryCollectionRequestBui
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementIntentDeviceSettingStateSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementIntentDeviceSettingStateSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

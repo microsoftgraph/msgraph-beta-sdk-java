@@ -38,10 +38,11 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBitlockerRequest instance
      */
-    public IBitlockerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBitlockerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

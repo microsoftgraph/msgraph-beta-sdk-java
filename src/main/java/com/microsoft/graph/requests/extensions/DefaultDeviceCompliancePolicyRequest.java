@@ -154,5 +154,16 @@ public class DefaultDeviceCompliancePolicyRequest extends BaseRequest implements
          return (DefaultDeviceCompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDefaultDeviceCompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DefaultDeviceCompliancePolicyRequest)this;
+     }
+
 }
 

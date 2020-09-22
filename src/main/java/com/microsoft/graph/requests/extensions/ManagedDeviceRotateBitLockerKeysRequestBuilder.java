@@ -32,10 +32,11 @@ public class ManagedDeviceRotateBitLockerKeysRequestBuilder extends BaseActionRe
     /**
      * Creates the IManagedDeviceRotateBitLockerKeysRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRotateBitLockerKeysRequest instance
      */
-    public IManagedDeviceRotateBitLockerKeysRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRotateBitLockerKeysRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

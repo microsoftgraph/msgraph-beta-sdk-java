@@ -68,6 +68,16 @@ public class PrintTaskDefinitionReferenceRequest extends BaseRequest implements 
         return (PrintTaskDefinitionReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrintTaskDefinitionReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintTaskDefinitionReferenceRequest)this;
+    }
+    /**
      * Puts the PrintTaskDefinition
      *
      * @param srcPrintTaskDefinition the PrintTaskDefinition reference to PUT

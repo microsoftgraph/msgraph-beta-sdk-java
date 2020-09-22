@@ -32,10 +32,11 @@ public class DataSharingConsentConsentToDataSharingRequestBuilder extends BaseAc
     /**
      * Creates the IDataSharingConsentConsentToDataSharingRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDataSharingConsentConsentToDataSharingRequest instance
      */
-    public IDataSharingConsentConsentToDataSharingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDataSharingConsentConsentToDataSharingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

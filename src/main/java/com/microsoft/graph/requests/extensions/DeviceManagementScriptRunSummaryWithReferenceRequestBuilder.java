@@ -35,10 +35,11 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptRunSummaryWithReferenceRequest instance
      */
-    public IDeviceManagementScriptRunSummaryWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementScriptRunSummaryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

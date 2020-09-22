@@ -158,5 +158,16 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
          return (AppleUserInitiatedEnrollmentProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAppleUserInitiatedEnrollmentProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AppleUserInitiatedEnrollmentProfileRequest)this;
+     }
+
 }
 

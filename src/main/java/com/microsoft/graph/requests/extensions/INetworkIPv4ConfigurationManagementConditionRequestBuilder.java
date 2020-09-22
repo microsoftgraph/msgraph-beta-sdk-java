@@ -20,9 +20,10 @@ public interface INetworkIPv4ConfigurationManagementConditionRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INetworkIPv4ConfigurationManagementConditionRequest instance
      */
-    INetworkIPv4ConfigurationManagementConditionRequest buildRequest();
+    INetworkIPv4ConfigurationManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

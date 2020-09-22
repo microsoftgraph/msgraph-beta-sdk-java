@@ -77,4 +77,15 @@ public class DeviceManagementReportsGetHistoricalReportRequest extends BaseReque
         return (DeviceManagementReportsGetHistoricalReportRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementReportsGetHistoricalReportRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementReportsGetHistoricalReportRequest)this;
+    }
+
 }

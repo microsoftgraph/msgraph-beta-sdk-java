@@ -34,10 +34,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebToke
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

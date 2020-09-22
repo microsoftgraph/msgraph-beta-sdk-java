@@ -154,5 +154,16 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
          return (AgreementFileLocalizationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAgreementFileLocalizationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AgreementFileLocalizationRequest)this;
+     }
+
 }
 

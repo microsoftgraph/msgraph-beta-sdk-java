@@ -36,10 +36,11 @@ public class AuthenticationMethodResetPasswordRequestBuilder extends BaseActionR
     /**
      * Creates the IAuthenticationMethodResetPasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAuthenticationMethodResetPasswordRequest instance
      */
-    public IAuthenticationMethodResetPasswordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationMethodResetPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

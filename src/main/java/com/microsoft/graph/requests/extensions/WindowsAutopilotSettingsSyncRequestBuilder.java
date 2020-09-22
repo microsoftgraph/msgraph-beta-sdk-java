@@ -32,10 +32,11 @@ public class WindowsAutopilotSettingsSyncRequestBuilder extends BaseActionReques
     /**
      * Creates the IWindowsAutopilotSettingsSyncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotSettingsSyncRequest instance
      */
-    public IWindowsAutopilotSettingsSyncRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotSettingsSyncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -68,6 +68,16 @@ public class ConnectorReferenceRequest extends BaseRequest implements IConnector
         return (ConnectorReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IConnectorReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectorReferenceRequest)this;
+    }
+    /**
      * Puts the Connector
      *
      * @param srcConnector the Connector reference to PUT

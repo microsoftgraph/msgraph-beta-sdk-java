@@ -109,4 +109,15 @@ public class ImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest ext
         return (IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest)this;
+    }
+
 }

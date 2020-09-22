@@ -17,9 +17,10 @@ public interface IIosVppAppRevokeAllLicensesRequestBuilder extends IRequestBuild
     /**
      * Creates the IIosVppAppRevokeAllLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IIosVppAppRevokeAllLicensesRequest instance
      */
-    IIosVppAppRevokeAllLicensesRequest buildRequest();
+    IIosVppAppRevokeAllLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IIosVppAppRevokeAllLicensesRequest with specific options instead of the existing options

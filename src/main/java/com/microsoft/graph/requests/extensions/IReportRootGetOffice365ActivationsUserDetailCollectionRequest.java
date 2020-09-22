@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365ActivationsUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Office365Activations User Detail Collection Request.
  */
-public interface IReportRootGetOffice365ActivationsUserDetailCollectionRequest {
+public interface IReportRootGetOffice365ActivationsUserDetailCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetOffice365ActivationsUserDetailCollectionPage> callback);
 

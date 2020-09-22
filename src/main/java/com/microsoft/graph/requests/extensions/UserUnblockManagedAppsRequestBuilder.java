@@ -32,10 +32,11 @@ public class UserUnblockManagedAppsRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IUserUnblockManagedAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserUnblockManagedAppsRequest instance
      */
-    public IUserUnblockManagedAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserUnblockManagedAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

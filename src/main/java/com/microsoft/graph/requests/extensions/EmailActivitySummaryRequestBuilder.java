@@ -34,10 +34,11 @@ public class EmailActivitySummaryRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmailActivitySummaryRequest instance
      */
-    public IEmailActivitySummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmailActivitySummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class RiskyUserConfirmCompromisedRequestBuilder extends BaseActionRequest
     /**
      * Creates the IRiskyUserConfirmCompromisedRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRiskyUserConfirmCompromisedRequest instance
      */
-    public IRiskyUserConfirmCompromisedRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRiskyUserConfirmCompromisedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

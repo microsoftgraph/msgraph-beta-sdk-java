@@ -34,10 +34,11 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationLongDecimalTextBoxRequest instance
      */
-    public IGroupPolicyPresentationLongDecimalTextBoxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationLongDecimalTextBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

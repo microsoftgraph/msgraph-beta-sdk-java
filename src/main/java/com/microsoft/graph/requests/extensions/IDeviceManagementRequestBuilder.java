@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ComanagedDevicesSummary;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevicesSummary;
+import com.microsoft.graph.models.extensions.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
@@ -91,6 +92,18 @@ import com.microsoft.graph.requests.extensions.IRemoteActionAuditCollectionReque
 import com.microsoft.graph.requests.extensions.IRemoteActionAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryCollectionRequestBuilder;
@@ -141,6 +154,10 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionR
 import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelSiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelSiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementDomainJoinConnectorCollectionRequestBuilder;
@@ -199,9 +216,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementRequest instance
      */
-    IDeviceManagementRequest buildRequest();
+    IDeviceManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -449,6 +467,37 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance(final String id);
 
+    IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion();
+
+    IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(final String id);
+
+    IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion();
+
+    IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(final String id);
+
+    IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance();
+
+    IUserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance(final String id);
+
+    IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance();
+
+    IUserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance(final String id);
+
+    IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails();
+
+    IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails(final String id);
+
+    IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance();
+
+    IUserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance(final String id);
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryRequestBuilder instance
+     */
+    IUserExperienceAnalyticsCategoryRequestBuilder userExperienceAnalyticsAppHealthOverview();
+
     IUserExperienceAnalyticsBaselineCollectionRequestBuilder userExperienceAnalyticsBaselines();
 
     IUserExperienceAnalyticsBaselineRequestBuilder userExperienceAnalyticsBaselines(final String id);
@@ -570,6 +619,14 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IGroupPolicyUploadedDefinitionFileRequestBuilder groupPolicyUploadedDefinitionFiles(final String id);
 
+    IMicrosoftTunnelConfigurationCollectionRequestBuilder microsoftTunnelConfigurations();
+
+    IMicrosoftTunnelConfigurationRequestBuilder microsoftTunnelConfigurations(final String id);
+
+    IMicrosoftTunnelSiteCollectionRequestBuilder microsoftTunnelSites();
+
+    IMicrosoftTunnelSiteRequestBuilder microsoftTunnelSites(final String id);
+
     INotificationMessageTemplateCollectionRequestBuilder notificationMessageTemplates();
 
     INotificationMessageTemplateRequestBuilder notificationMessageTemplates(final String id);
@@ -647,6 +704,7 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder verifyWindowsEnrollmentAutoDiscovery(final String domainName);
     IDeviceManagementGetComanagedDevicesSummaryRequestBuilder getComanagedDevicesSummary();
     IDeviceManagementGetComanagementEligibleDevicesSummaryRequestBuilder getComanagementEligibleDevicesSummary();
+    IDeviceManagementGetSuggestedEnrollmentLimitRequestBuilder getSuggestedEnrollmentLimit(final String enrollmentType);
     IDeviceManagementGetAssignedRoleDetailsRequestBuilder getAssignedRoleDetails();
 
     IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions();

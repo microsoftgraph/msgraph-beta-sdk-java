@@ -17,9 +17,10 @@ public interface IPrintJobRedirectRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPrintJobRedirectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrintJobRedirectRequest instance
      */
-    IPrintJobRedirectRequest buildRequest();
+    IPrintJobRedirectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrintJobRedirectRequest with specific options instead of the existing options

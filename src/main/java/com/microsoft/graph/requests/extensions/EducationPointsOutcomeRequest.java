@@ -154,5 +154,16 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
          return (EducationPointsOutcomeRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEducationPointsOutcomeRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EducationPointsOutcomeRequest)this;
+     }
+
 }
 

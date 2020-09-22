@@ -154,5 +154,16 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
          return (PersonAnnotationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPersonAnnotationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PersonAnnotationRequest)this;
+     }
+
 }
 

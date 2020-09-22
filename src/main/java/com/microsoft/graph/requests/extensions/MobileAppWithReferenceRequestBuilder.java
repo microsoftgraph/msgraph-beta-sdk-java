@@ -61,10 +61,11 @@ public class MobileAppWithReferenceRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppWithReferenceRequest instance
      */
-    public IMobileAppWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

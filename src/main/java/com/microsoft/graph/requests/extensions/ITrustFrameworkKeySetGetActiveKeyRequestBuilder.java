@@ -17,9 +17,10 @@ public interface ITrustFrameworkKeySetGetActiveKeyRequestBuilder extends IReques
     /**
      * Creates the ITrustFrameworkKeySetGetActiveKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetGetActiveKeyRequest instance
      */
-    ITrustFrameworkKeySetGetActiveKeyRequest buildRequest();
+    ITrustFrameworkKeySetGetActiveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITrustFrameworkKeySetGetActiveKeyRequest with specific options instead of the existing options

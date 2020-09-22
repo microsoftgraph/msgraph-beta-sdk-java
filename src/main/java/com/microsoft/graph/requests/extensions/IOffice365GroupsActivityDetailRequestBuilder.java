@@ -20,9 +20,10 @@ public interface IOffice365GroupsActivityDetailRequestBuilder extends IRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365GroupsActivityDetailRequest instance
      */
-    IOffice365GroupsActivityDetailRequest buildRequest();
+    IOffice365GroupsActivityDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

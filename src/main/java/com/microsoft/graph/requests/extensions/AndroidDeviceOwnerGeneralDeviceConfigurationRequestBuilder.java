@@ -34,10 +34,11 @@ public class AndroidDeviceOwnerGeneralDeviceConfigurationRequestBuilder extends 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerGeneralDeviceConfigurationRequest instance
      */
-    public IAndroidDeviceOwnerGeneralDeviceConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerGeneralDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

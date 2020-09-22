@@ -34,10 +34,11 @@ public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10EnrollmentCompletionPageConfigurationRequest instance
      */
-    public IWindows10EnrollmentCompletionPageConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10EnrollmentCompletionPageConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -43,10 +43,11 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISynchronizationRequest instance
      */
-    public ISynchronizationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class SynchronizationPingRequestBuilder extends BaseFunctionRequestBuilde
     /**
      * Creates the ISynchronizationPingRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationPingRequest instance
      */
-    public ISynchronizationPingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationPingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

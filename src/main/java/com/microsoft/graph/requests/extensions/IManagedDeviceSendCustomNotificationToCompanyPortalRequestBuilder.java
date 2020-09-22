@@ -17,9 +17,10 @@ public interface IManagedDeviceSendCustomNotificationToCompanyPortalRequestBuild
     /**
      * Creates the IManagedDeviceSendCustomNotificationToCompanyPortalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceSendCustomNotificationToCompanyPortalRequest instance
      */
-    IManagedDeviceSendCustomNotificationToCompanyPortalRequest buildRequest();
+    IManagedDeviceSendCustomNotificationToCompanyPortalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceSendCustomNotificationToCompanyPortalRequest with specific options instead of the existing options

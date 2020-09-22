@@ -34,10 +34,11 @@ public class SkypeForBusinessParticipantActivityUserCountsRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkypeForBusinessParticipantActivityUserCountsRequest instance
      */
-    public ISkypeForBusinessParticipantActivityUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISkypeForBusinessParticipantActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

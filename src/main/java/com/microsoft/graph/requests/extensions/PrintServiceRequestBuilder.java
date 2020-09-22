@@ -38,10 +38,11 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder implements IP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintServiceRequest instance
      */
-    public IPrintServiceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintServiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

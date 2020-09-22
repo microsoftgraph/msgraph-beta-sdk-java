@@ -36,10 +36,22 @@ public class DeviceManagementSettingDefinitionCollectionRequestBuilder extends B
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceManagementSettingDefinitionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementSettingDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementSettingDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementSettingDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

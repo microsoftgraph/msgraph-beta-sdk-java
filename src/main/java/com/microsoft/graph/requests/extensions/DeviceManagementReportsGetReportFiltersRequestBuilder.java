@@ -50,10 +50,11 @@ public class DeviceManagementReportsGetReportFiltersRequestBuilder extends BaseA
     /**
      * Creates the IDeviceManagementReportsGetReportFiltersRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetReportFiltersRequest instance
      */
-    public IDeviceManagementReportsGetReportFiltersRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetReportFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

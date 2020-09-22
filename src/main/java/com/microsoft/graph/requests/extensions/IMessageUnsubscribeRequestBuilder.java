@@ -17,9 +17,10 @@ public interface IMessageUnsubscribeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMessageUnsubscribeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageUnsubscribeRequest instance
      */
-    IMessageUnsubscribeRequest buildRequest();
+    IMessageUnsubscribeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMessageUnsubscribeRequest with specific options instead of the existing options

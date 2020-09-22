@@ -34,10 +34,11 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAutopilotDeploymentProfilePolicySetItemRequest instance
      */
-    public IWindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

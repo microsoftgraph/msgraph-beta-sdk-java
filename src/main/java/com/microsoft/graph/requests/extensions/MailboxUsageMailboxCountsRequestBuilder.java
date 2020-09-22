@@ -34,10 +34,11 @@ public class MailboxUsageMailboxCountsRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMailboxUsageMailboxCountsRequest instance
      */
-    public IMailboxUsageMailboxCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailboxUsageMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

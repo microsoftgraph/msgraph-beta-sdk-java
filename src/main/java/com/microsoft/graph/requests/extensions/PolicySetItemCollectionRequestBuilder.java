@@ -36,10 +36,22 @@ public class PolicySetItemCollectionRequestBuilder extends BaseRequestBuilder im
         super(requestUrl, client, requestOptions);
     }
 
-    public IPolicySetItemCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPolicySetItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPolicySetItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PolicySetItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

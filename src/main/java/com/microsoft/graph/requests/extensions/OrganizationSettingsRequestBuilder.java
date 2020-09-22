@@ -40,10 +40,11 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationSettingsRequest instance
      */
-    public IOrganizationSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

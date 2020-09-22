@@ -20,9 +20,10 @@ public interface IYammerDeviceUsageUserCountsRequestBuilder extends IRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IYammerDeviceUsageUserCountsRequest instance
      */
-    IYammerDeviceUsageUserCountsRequest buildRequest();
+    IYammerDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

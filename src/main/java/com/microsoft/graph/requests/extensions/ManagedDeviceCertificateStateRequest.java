@@ -154,5 +154,16 @@ public class ManagedDeviceCertificateStateRequest extends BaseRequest implements
          return (ManagedDeviceCertificateStateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedDeviceCertificateStateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ManagedDeviceCertificateStateRequest)this;
+     }
+
 }
 

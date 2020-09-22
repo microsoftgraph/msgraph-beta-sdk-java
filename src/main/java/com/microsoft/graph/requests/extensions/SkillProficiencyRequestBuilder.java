@@ -34,10 +34,11 @@ public class SkillProficiencyRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkillProficiencyRequest instance
      */
-    public ISkillProficiencyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISkillProficiencyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

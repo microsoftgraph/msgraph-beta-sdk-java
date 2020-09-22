@@ -36,10 +36,22 @@ public class UserConsentRequestCollectionRequestBuilder extends BaseRequestBuild
         super(requestUrl, client, requestOptions);
     }
 
-    public IUserConsentRequestCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserConsentRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserConsentRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserConsentRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

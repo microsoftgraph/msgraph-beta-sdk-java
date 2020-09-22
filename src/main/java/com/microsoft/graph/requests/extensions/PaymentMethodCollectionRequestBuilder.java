@@ -36,10 +36,22 @@ public class PaymentMethodCollectionRequestBuilder extends BaseRequestBuilder im
         super(requestUrl, client, requestOptions);
     }
 
-    public IPaymentMethodCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPaymentMethodCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPaymentMethodCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PaymentMethodCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

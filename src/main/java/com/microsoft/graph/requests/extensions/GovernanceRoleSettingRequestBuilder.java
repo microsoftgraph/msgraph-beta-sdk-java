@@ -38,10 +38,11 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGovernanceRoleSettingRequest instance
      */
-    public IGovernanceRoleSettingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGovernanceRoleSettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

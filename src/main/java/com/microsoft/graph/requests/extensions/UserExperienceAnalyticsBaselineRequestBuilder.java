@@ -36,10 +36,11 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsBaselineRequest instance
      */
-    public IUserExperienceAnalyticsBaselineRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsBaselineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -70,5 +71,14 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      */
     public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceBootPerformanceMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rebootAnalyticsMetrics"), getClient(), null);
     }
 }

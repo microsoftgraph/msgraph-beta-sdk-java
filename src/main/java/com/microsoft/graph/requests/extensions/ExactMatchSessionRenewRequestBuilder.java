@@ -32,10 +32,11 @@ public class ExactMatchSessionRenewRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IExactMatchSessionRenewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IExactMatchSessionRenewRequest instance
      */
-    public IExactMatchSessionRenewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExactMatchSessionRenewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

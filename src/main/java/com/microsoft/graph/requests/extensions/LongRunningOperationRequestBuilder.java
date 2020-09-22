@@ -34,10 +34,11 @@ public class LongRunningOperationRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ILongRunningOperationRequest instance
      */
-    public ILongRunningOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ILongRunningOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

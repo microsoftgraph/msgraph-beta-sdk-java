@@ -72,6 +72,16 @@ public class ConnectorGroupReferenceRequest extends BaseRequest implements IConn
         return (ConnectorGroupReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IConnectorGroupReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectorGroupReferenceRequest)this;
+    }
+    /**
      * Puts the ConnectorGroup
      *
      * @param srcConnectorGroup the ConnectorGroup reference to PUT

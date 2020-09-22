@@ -34,10 +34,11 @@ public class MacOSExtensionsConfigurationRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSExtensionsConfigurationRequest instance
      */
-    public IMacOSExtensionsConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSExtensionsConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

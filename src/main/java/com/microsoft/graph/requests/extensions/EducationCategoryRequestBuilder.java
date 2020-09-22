@@ -34,10 +34,11 @@ public class EducationCategoryRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationCategoryRequest instance
      */
-    public IEducationCategoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

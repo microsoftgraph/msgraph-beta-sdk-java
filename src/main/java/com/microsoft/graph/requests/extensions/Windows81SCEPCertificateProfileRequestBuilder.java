@@ -40,10 +40,11 @@ public class Windows81SCEPCertificateProfileRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81SCEPCertificateProfileRequest instance
      */
-    public IWindows81SCEPCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows81SCEPCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

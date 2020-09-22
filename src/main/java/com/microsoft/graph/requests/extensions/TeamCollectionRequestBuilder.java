@@ -23,6 +23,7 @@ import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequest;
 import com.microsoft.graph.requests.extensions.ITeamAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -44,10 +45,22 @@ public class TeamCollectionRequestBuilder extends BaseRequestBuilder implements 
         super(requestUrl, client, requestOptions);
     }
 
-    public ITeamCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ITeamCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ITeamCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
@@ -60,5 +73,9 @@ public class TeamCollectionRequestBuilder extends BaseRequestBuilder implements 
 
     public ITeamAllMessagesCollectionRequestBuilder allMessages() {
         return new TeamAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.allMessages"), getClient(), null);
+    }
+
+    public ITeamGetAllMessagesCollectionRequestBuilder getAllMessages() {
+        return new TeamGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
     }
 }

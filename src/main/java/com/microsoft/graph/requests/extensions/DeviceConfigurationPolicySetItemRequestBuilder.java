@@ -34,10 +34,11 @@ public class DeviceConfigurationPolicySetItemRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceConfigurationPolicySetItemRequest instance
      */
-    public IDeviceConfigurationPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

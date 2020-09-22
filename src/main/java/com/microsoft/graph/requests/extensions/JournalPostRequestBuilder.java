@@ -32,10 +32,11 @@ public class JournalPostRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IJournalPostRequest
      *
+     * @param requestOptions the options for the request
      * @return the IJournalPostRequest instance
      */
-    public IJournalPostRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IJournalPostRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

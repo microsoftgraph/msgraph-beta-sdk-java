@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IEmbeddedSIMDeviceStateCollectionRequestBuilder extends IRequestBuilder {
 
-    IEmbeddedSIMDeviceStateCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IEmbeddedSIMDeviceStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IEmbeddedSIMDeviceStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IEmbeddedSIMDeviceStateRequestBuilder byId(final String id);

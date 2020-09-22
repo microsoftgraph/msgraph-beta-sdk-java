@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IWindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder extends IRequestBuilder {
 
-    IWindowsFeatureUpdateProfileAssignmentCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWindowsFeatureUpdateProfileAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWindowsFeatureUpdateProfileAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsFeatureUpdateProfileAssignmentRequestBuilder byId(final String id);

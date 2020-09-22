@@ -85,6 +85,17 @@ public class EmbeddedSIMActivationCodePoolAssignmentCollectionRequest extends Ba
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEmbeddedSIMActivationCodePoolAssignmentCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EmbeddedSIMActivationCodePoolAssignmentCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

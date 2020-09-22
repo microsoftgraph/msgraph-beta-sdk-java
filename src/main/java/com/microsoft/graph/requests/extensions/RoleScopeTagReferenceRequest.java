@@ -69,6 +69,16 @@ public class RoleScopeTagReferenceRequest extends BaseRequest implements IRoleSc
         return (RoleScopeTagReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IRoleScopeTagReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleScopeTagReferenceRequest)this;
+    }
+    /**
      * Puts the RoleScopeTag
      *
      * @param srcRoleScopeTag the RoleScopeTag reference to PUT

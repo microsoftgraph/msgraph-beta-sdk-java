@@ -154,5 +154,16 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
          return (Office365ActivationCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOffice365ActivationCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Office365ActivationCountsRequest)this;
+     }
+
 }
 

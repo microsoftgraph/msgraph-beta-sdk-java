@@ -17,9 +17,10 @@ public interface IServicePrincipalDeletePasswordSingleSignOnCredentialsRequestBu
     /**
      * Creates the IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest instance
      */
-    IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest buildRequest();
+    IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IServicePrincipalDeletePasswordSingleSignOnCredentialsRequest with specific options instead of the existing options

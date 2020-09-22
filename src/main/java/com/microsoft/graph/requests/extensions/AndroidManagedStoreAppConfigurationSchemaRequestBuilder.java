@@ -34,10 +34,11 @@ public class AndroidManagedStoreAppConfigurationSchemaRequestBuilder extends Bas
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidManagedStoreAppConfigurationSchemaRequest instance
      */
-    public IAndroidManagedStoreAppConfigurationSchemaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAppConfigurationSchemaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

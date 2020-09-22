@@ -104,4 +104,15 @@ public class ReportRootGetOneDriveUsageAccountCountsCollectionRequest extends Ba
         return (IReportRootGetOneDriveUsageAccountCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOneDriveUsageAccountCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOneDriveUsageAccountCountsCollectionRequest)this;
+    }
+
 }

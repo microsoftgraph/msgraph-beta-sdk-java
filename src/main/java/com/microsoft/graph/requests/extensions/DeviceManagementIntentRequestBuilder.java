@@ -65,10 +65,11 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementIntentRequest instance
      */
-    public IDeviceManagementIntentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementIntentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

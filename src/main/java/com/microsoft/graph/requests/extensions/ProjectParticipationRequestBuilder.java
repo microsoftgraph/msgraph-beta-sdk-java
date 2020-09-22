@@ -34,10 +34,11 @@ public class ProjectParticipationRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IProjectParticipationRequest instance
      */
-    public IProjectParticipationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IProjectParticipationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

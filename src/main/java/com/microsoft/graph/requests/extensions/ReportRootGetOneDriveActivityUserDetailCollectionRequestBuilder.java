@@ -53,11 +53,23 @@ public class ReportRootGetOneDriveActivityUserDetailCollectionRequestBuilder ext
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetOneDriveActivityUserDetailCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetOneDriveActivityUserDetailCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetOneDriveActivityUserDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOneDriveActivityUserDetailCollectionRequest request = new ReportRootGetOneDriveActivityUserDetailCollectionRequest(
                 getRequestUrl(),

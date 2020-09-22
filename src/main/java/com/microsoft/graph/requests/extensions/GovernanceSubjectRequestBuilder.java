@@ -34,10 +34,11 @@ public class GovernanceSubjectRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGovernanceSubjectRequest instance
      */
-    public IGovernanceSubjectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGovernanceSubjectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

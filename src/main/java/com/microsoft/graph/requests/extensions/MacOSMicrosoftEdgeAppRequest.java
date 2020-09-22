@@ -154,5 +154,16 @@ public class MacOSMicrosoftEdgeAppRequest extends BaseRequest implements IMacOSM
          return (MacOSMicrosoftEdgeAppRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSMicrosoftEdgeAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MacOSMicrosoftEdgeAppRequest)this;
+     }
+
 }
 

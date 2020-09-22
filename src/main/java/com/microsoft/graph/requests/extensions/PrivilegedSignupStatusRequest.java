@@ -156,5 +156,16 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
          return (PrivilegedSignupStatusRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPrivilegedSignupStatusRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PrivilegedSignupStatusRequest)this;
+     }
+
 }
 

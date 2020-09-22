@@ -34,10 +34,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequestBu
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsCompleteSignupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

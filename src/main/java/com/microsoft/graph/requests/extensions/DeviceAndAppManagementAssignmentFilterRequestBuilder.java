@@ -34,10 +34,11 @@ public class DeviceAndAppManagementAssignmentFilterRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceAndAppManagementAssignmentFilterRequest instance
      */
-    public IDeviceAndAppManagementAssignmentFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceAndAppManagementAssignmentFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

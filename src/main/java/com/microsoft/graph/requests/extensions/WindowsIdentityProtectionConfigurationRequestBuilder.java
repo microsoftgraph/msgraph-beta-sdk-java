@@ -34,10 +34,11 @@ public class WindowsIdentityProtectionConfigurationRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsIdentityProtectionConfigurationRequest instance
      */
-    public IWindowsIdentityProtectionConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsIdentityProtectionConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -169,5 +169,16 @@ public class PolicySetItemRequest extends BaseRequest implements IPolicySetItemR
          return (PolicySetItemRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPolicySetItemRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PolicySetItemRequest)this;
+     }
+
 }
 

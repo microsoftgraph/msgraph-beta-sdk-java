@@ -17,9 +17,10 @@ public interface IAccessReviewInstanceApplyDecisionsRequestBuilder extends IRequ
     /**
      * Creates the IAccessReviewInstanceApplyDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceApplyDecisionsRequest instance
      */
-    IAccessReviewInstanceApplyDecisionsRequest buildRequest();
+    IAccessReviewInstanceApplyDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAccessReviewInstanceApplyDecisionsRequest with specific options instead of the existing options

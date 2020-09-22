@@ -40,10 +40,11 @@ public class ReportRootManagedDeviceEnrollmentAbandonmentDetailsRequestBuilder e
     /**
      * Creates the IReportRootManagedDeviceEnrollmentAbandonmentDetailsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootManagedDeviceEnrollmentAbandonmentDetailsRequest instance
      */
-    public IReportRootManagedDeviceEnrollmentAbandonmentDetailsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootManagedDeviceEnrollmentAbandonmentDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

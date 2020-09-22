@@ -34,10 +34,11 @@ public class Office365GroupsActivityStorageRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365GroupsActivityStorageRequest instance
      */
-    public IOffice365GroupsActivityStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOffice365GroupsActivityStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

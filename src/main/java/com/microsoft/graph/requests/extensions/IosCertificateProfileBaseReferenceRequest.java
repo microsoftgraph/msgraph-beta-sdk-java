@@ -64,6 +64,16 @@ public class IosCertificateProfileBaseReferenceRequest extends BaseRequest imple
         return (IosCertificateProfileBaseReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IIosCertificateProfileBaseReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IosCertificateProfileBaseReferenceRequest)this;
+    }
+    /**
      * Puts the IosCertificateProfileBase
      *
      * @param srcIosCertificateProfileBase the IosCertificateProfileBase reference to PUT

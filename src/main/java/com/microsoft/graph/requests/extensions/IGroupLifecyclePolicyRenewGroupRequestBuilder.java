@@ -17,9 +17,10 @@ public interface IGroupLifecyclePolicyRenewGroupRequestBuilder extends IRequestB
     /**
      * Creates the IGroupLifecyclePolicyRenewGroupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyRenewGroupRequest instance
      */
-    IGroupLifecyclePolicyRenewGroupRequest buildRequest();
+    IGroupLifecyclePolicyRenewGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupLifecyclePolicyRenewGroupRequest with specific options instead of the existing options

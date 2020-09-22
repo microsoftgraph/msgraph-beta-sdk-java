@@ -17,9 +17,10 @@ public interface IDeviceManagementReportsGetHistoricalReportRequestBuilder exten
     /**
      * Creates the IDeviceManagementReportsGetHistoricalReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetHistoricalReportRequest instance
      */
-    IDeviceManagementReportsGetHistoricalReportRequest buildRequest();
+    IDeviceManagementReportsGetHistoricalReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementReportsGetHistoricalReportRequest with specific options instead of the existing options

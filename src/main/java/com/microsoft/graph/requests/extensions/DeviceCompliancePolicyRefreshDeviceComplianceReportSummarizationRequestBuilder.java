@@ -32,10 +32,11 @@ public class DeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationReq
     /**
      * Creates the IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest instance
      */
-    public IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -154,5 +154,16 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
          return (WindowsPhoneXAPRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsPhoneXAPRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WindowsPhoneXAPRequest)this;
+     }
+
 }
 

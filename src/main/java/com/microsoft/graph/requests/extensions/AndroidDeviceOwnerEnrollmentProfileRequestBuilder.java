@@ -34,10 +34,11 @@ public class AndroidDeviceOwnerEnrollmentProfileRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerEnrollmentProfileRequest instance
      */
-    public IAndroidDeviceOwnerEnrollmentProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerEnrollmentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

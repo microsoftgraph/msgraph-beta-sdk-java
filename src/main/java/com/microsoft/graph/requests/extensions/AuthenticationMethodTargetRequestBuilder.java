@@ -34,10 +34,11 @@ public class AuthenticationMethodTargetRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuthenticationMethodTargetRequest instance
      */
-    public IAuthenticationMethodTargetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationMethodTargetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

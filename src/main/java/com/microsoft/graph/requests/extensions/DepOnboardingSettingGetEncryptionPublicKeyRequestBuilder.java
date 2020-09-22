@@ -32,10 +32,11 @@ public class DepOnboardingSettingGetEncryptionPublicKeyRequestBuilder extends Ba
     /**
      * Creates the IDepOnboardingSettingGetEncryptionPublicKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingGetEncryptionPublicKeyRequest instance
      */
-    public IDepOnboardingSettingGetEncryptionPublicKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingGetEncryptionPublicKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

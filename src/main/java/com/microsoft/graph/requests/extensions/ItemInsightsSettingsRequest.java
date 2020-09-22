@@ -154,5 +154,16 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
          return (ItemInsightsSettingsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IItemInsightsSettingsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ItemInsightsSettingsRequest)this;
+     }
+
 }
 

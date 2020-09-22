@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetAzureADApplicationS
  */
 public interface IReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetAzureADApplicationSignInSummaryCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetAzureADApplicationSignInSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetAzureADApplicationSignInSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

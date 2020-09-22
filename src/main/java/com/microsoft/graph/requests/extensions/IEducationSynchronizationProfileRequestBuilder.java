@@ -24,9 +24,10 @@ public interface IEducationSynchronizationProfileRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationSynchronizationProfileRequest instance
      */
-    IEducationSynchronizationProfileRequest buildRequest();
+    IEducationSynchronizationProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -19,7 +19,19 @@ import java.util.EnumSet;
  */
 public interface IPrivilegedRoleAssignmentCollectionReferenceRequestBuilder extends IRequestBuilder {
 
-    IPrivilegedRoleAssignmentCollectionReferenceRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IPrivilegedRoleAssignmentCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IPrivilegedRoleAssignmentCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

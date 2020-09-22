@@ -154,5 +154,16 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
          return (AllowedDataLocationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAllowedDataLocationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AllowedDataLocationRequest)this;
+     }
+
 }
 

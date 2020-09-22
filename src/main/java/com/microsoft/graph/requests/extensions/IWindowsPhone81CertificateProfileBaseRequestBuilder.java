@@ -20,9 +20,10 @@ public interface IWindowsPhone81CertificateProfileBaseRequestBuilder extends IRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81CertificateProfileBaseRequest instance
      */
-    IWindowsPhone81CertificateProfileBaseRequest buildRequest();
+    IWindowsPhone81CertificateProfileBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -32,10 +32,11 @@ public class ReportRootManagedDeviceEnrollmentFailureTrendsRequestBuilder extend
     /**
      * Creates the IReportRootManagedDeviceEnrollmentFailureTrendsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootManagedDeviceEnrollmentFailureTrendsRequest instance
      */
-    public IReportRootManagedDeviceEnrollmentFailureTrendsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootManagedDeviceEnrollmentFailureTrendsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

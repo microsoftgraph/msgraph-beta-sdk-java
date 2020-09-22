@@ -38,10 +38,11 @@ public class DeviceManagementSettingCategoryRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementSettingCategoryRequest instance
      */
-    public IDeviceManagementSettingCategoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementSettingCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

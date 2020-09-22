@@ -47,11 +47,23 @@ public class ReportRootGetOverallPrintUsageSummaryCollectionRequestBuilder exten
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("topListsSize", topListsSize));
 		}
       }
-
-    public IReportRootGetOverallPrintUsageSummaryCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetOverallPrintUsageSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetOverallPrintUsageSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOverallPrintUsageSummaryCollectionRequest request = new ReportRootGetOverallPrintUsageSummaryCollectionRequest(
                 getRequestUrl(),

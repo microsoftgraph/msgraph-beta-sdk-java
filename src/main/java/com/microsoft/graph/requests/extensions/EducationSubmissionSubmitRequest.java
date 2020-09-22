@@ -73,4 +73,15 @@ public class EducationSubmissionSubmitRequest extends BaseRequest implements IEd
         return (EducationSubmissionSubmitRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEducationSubmissionSubmitRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationSubmissionSubmitRequest)this;
+    }
+
 }

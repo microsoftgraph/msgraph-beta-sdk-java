@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetCredentialUsageSumm
  */
 public interface IReportRootGetCredentialUsageSummaryCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetCredentialUsageSummaryCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetCredentialUsageSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetCredentialUsageSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

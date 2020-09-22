@@ -34,10 +34,11 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignRequestBui
     /**
      * Creates the IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsDefenderApplicationControlSupplementalPolicyAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

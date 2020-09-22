@@ -17,9 +17,10 @@ public interface IDeviceManagementSendCustomNotificationToCompanyPortalRequestBu
     /**
      * Creates the IDeviceManagementSendCustomNotificationToCompanyPortalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementSendCustomNotificationToCompanyPortalRequest instance
      */
-    IDeviceManagementSendCustomNotificationToCompanyPortalRequest buildRequest();
+    IDeviceManagementSendCustomNotificationToCompanyPortalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementSendCustomNotificationToCompanyPortalRequest with specific options instead of the existing options

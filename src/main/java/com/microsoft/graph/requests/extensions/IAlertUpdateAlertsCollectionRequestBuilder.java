@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IAlertUpdateAlertsCollectionReque
  */
 public interface IAlertUpdateAlertsCollectionRequestBuilder extends IRequestBuilder {
 
-    IAlertUpdateAlertsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IAlertUpdateAlertsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IAlertUpdateAlertsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

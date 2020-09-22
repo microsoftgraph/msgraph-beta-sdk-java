@@ -154,5 +154,16 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
          return (PersonNameRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPersonNameRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PersonNameRequest)this;
+     }
+
 }
 

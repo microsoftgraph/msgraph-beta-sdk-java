@@ -34,10 +34,11 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements II
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemInsightsRequest instance
      */
-    public IItemInsightsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemInsightsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

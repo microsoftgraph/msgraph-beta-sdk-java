@@ -17,9 +17,10 @@ public interface IPrivilegedRoleAssignmentMakePermanentRequestBuilder extends IR
     /**
      * Creates the IPrivilegedRoleAssignmentMakePermanentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentMakePermanentRequest instance
      */
-    IPrivilegedRoleAssignmentMakePermanentRequest buildRequest();
+    IPrivilegedRoleAssignmentMakePermanentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrivilegedRoleAssignmentMakePermanentRequest with specific options instead of the existing options

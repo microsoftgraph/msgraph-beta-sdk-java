@@ -34,10 +34,11 @@ public class ReportRootGetM365AppUserCountsRequestBuilder extends BaseFunctionRe
     /**
      * Creates the IReportRootGetM365AppUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetM365AppUserCountsRequest instance
      */
-    public IReportRootGetM365AppUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetM365AppUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

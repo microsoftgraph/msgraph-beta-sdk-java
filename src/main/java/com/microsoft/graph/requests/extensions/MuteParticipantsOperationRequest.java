@@ -154,5 +154,16 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
          return (MuteParticipantsOperationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMuteParticipantsOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MuteParticipantsOperationRequest)this;
+     }
+
 }
 

@@ -37,10 +37,11 @@ public class DeviceShellScriptAssignRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IDeviceShellScriptAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceShellScriptAssignRequest instance
      */
-    public IDeviceShellScriptAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceShellScriptAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

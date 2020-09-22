@@ -34,10 +34,11 @@ public class PrintUserIdentityRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintUserIdentityRequest instance
      */
-    public IPrintUserIdentityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintUserIdentityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

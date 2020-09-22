@@ -34,10 +34,11 @@ public class SkypeForBusinessActivityUserDetailRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkypeForBusinessActivityUserDetailRequest instance
      */
-    public ISkypeForBusinessActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISkypeForBusinessActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

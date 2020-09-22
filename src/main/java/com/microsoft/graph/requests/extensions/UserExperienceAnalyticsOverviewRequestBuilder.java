@@ -34,10 +34,11 @@ public class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsOverviewRequest instance
      */
-    public IUserExperienceAnalyticsOverviewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

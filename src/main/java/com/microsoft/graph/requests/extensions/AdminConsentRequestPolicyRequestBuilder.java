@@ -34,10 +34,11 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAdminConsentRequestPolicyRequest instance
      */
-    public IAdminConsentRequestPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAdminConsentRequestPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

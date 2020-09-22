@@ -8,10 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
@@ -20,6 +16,8 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationSettingsRequestBuilder;
 import java.util.Arrays;
@@ -165,6 +163,17 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      */
      public IOrganizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OrganizationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOrganizationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OrganizationRequest)this;
      }
 

@@ -98,4 +98,14 @@ public class RoleScopeTagWithReferenceRequest extends BaseRequest implements IRo
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (RoleScopeTagWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IRoleScopeTagWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleScopeTagWithReferenceRequest)this;
+    }
 }

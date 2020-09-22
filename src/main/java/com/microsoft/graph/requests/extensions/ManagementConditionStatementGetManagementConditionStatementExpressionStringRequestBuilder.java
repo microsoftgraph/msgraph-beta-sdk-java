@@ -32,10 +32,11 @@ public class ManagementConditionStatementGetManagementConditionStatementExpressi
     /**
      * Creates the IManagementConditionStatementGetManagementConditionStatementExpressionStringRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagementConditionStatementGetManagementConditionStatementExpressionStringRequest instance
      */
-    public IManagementConditionStatementGetManagementConditionStatementExpressionStringRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagementConditionStatementGetManagementConditionStatementExpressionStringRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

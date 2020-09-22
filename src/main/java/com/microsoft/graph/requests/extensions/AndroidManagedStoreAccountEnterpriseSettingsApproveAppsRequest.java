@@ -77,4 +77,15 @@ public class AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest exte
         return (AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidManagedStoreAccountEnterpriseSettingsApproveAppsRequest)this;
+    }
+
 }

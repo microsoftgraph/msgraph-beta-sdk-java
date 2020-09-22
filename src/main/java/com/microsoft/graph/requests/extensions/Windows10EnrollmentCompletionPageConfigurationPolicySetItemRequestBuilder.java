@@ -34,10 +34,11 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
      */
-    public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

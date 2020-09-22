@@ -34,10 +34,11 @@ public class MentionRequestBuilder extends BaseRequestBuilder implements IMentio
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMentionRequest instance
      */
-    public IMentionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMentionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

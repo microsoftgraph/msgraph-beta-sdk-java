@@ -36,10 +36,11 @@ public class IdentityProviderReferenceRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IIdentityProviderReferenceRequest instance
      */
-    public IIdentityProviderReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIdentityProviderReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

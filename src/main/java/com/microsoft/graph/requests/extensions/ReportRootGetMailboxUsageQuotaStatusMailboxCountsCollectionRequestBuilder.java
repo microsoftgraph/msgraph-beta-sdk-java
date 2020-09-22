@@ -39,11 +39,23 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequestB
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest request = new ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionRequest(
                 getRequestUrl(),

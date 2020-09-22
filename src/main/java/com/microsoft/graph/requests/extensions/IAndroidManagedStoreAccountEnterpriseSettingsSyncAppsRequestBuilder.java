@@ -17,9 +17,10 @@ public interface IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequestBui
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest instance
      */
-    IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest buildRequest();
+    IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsSyncAppsRequest with specific options instead of the existing options

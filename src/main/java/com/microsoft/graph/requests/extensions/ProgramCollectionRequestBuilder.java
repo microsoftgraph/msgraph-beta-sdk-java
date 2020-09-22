@@ -35,10 +35,22 @@ public class ProgramCollectionRequestBuilder extends BaseRequestBuilder implemen
         super(requestUrl, client, requestOptions);
     }
 
-    public IProgramCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IProgramCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IProgramCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ProgramCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

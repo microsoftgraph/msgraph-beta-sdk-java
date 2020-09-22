@@ -104,4 +104,15 @@ public class ReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectio
         return (IReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetSkypeForBusinessParticipantActivityUserCountsCollectionRequest)this;
+    }
+
 }

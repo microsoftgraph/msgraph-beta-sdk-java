@@ -32,10 +32,11 @@ public class DeviceManagementGetComanagedDevicesSummaryRequestBuilder extends Ba
     /**
      * Creates the IDeviceManagementGetComanagedDevicesSummaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementGetComanagedDevicesSummaryRequest instance
      */
-    public IDeviceManagementGetComanagedDevicesSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementGetComanagedDevicesSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

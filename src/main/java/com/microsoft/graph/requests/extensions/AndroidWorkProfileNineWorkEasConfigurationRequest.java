@@ -154,5 +154,16 @@ public class AndroidWorkProfileNineWorkEasConfigurationRequest extends BaseReque
          return (AndroidWorkProfileNineWorkEasConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidWorkProfileNineWorkEasConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidWorkProfileNineWorkEasConfigurationRequest)this;
+     }
+
 }
 

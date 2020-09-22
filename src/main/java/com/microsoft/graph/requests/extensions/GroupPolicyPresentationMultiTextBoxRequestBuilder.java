@@ -34,10 +34,11 @@ public class GroupPolicyPresentationMultiTextBoxRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationMultiTextBoxRequest instance
      */
-    public IGroupPolicyPresentationMultiTextBoxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationMultiTextBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

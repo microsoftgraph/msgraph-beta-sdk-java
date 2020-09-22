@@ -38,10 +38,11 @@ public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmplo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmployeeRequest instance
      */
-    public IEmployeeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmployeeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

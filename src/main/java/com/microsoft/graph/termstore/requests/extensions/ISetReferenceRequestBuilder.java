@@ -28,9 +28,10 @@ public interface ISetReferenceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISetReferenceRequest instance
      */
-    ISetReferenceRequest buildRequest();
+    ISetReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

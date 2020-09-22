@@ -34,10 +34,11 @@ public class ItemPublicationRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemPublicationRequest instance
      */
-    public IItemPublicationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemPublicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

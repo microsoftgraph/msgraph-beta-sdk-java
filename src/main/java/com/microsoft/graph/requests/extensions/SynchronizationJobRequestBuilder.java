@@ -40,10 +40,11 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISynchronizationJobRequest instance
      */
-    public ISynchronizationJobRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationJobRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

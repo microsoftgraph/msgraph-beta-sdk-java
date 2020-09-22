@@ -20,9 +20,10 @@ public interface IVpnConfigurationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVpnConfigurationRequest instance
      */
-    IVpnConfigurationRequest buildRequest();
+    IVpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -22,9 +22,10 @@ public interface IB2xIdentityUserFlowRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IB2xIdentityUserFlowRequest instance
      */
-    IB2xIdentityUserFlowRequest buildRequest();
+    IB2xIdentityUserFlowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

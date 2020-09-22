@@ -36,10 +36,11 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder implements ICom
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IComplianceRequest instance
      */
-    public IComplianceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IComplianceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

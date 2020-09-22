@@ -36,10 +36,11 @@ public class AndroidForWorkTrustedRootCertificateReferenceRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IAndroidForWorkTrustedRootCertificateReferenceRequest instance
      */
-    public IAndroidForWorkTrustedRootCertificateReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkTrustedRootCertificateReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

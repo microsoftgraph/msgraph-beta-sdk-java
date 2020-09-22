@@ -20,6 +20,8 @@ import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeCardCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeCardRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestBuilder;
@@ -38,9 +40,10 @@ public interface IScheduleRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IScheduleRequest instance
      */
-    IScheduleRequest buildRequest();
+    IScheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -74,6 +77,10 @@ public interface IScheduleRequestBuilder extends IRequestBuilder {
     ISwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests();
 
     ISwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id);
+
+    ITimeCardCollectionRequestBuilder timeCards();
+
+    ITimeCardRequestBuilder timeCards(final String id);
 
     ITimeOffReasonCollectionRequestBuilder timeOffReasons();
 

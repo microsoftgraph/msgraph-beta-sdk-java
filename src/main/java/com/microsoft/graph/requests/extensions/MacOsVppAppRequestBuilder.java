@@ -38,10 +38,11 @@ public class MacOsVppAppRequestBuilder extends BaseRequestBuilder implements IMa
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOsVppAppRequest instance
      */
-    public IMacOsVppAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOsVppAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

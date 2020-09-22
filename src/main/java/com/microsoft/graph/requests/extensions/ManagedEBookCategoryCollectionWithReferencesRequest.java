@@ -59,6 +59,11 @@ public class ManagedEBookCategoryCollectionWithReferencesRequest extends BaseCol
         return (ManagedEBookCategoryCollectionWithReferencesRequest)this;
     }
 
+    public IManagedEBookCategoryCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedEBookCategoryCollectionWithReferencesRequest)this;
+    }
+
     public IManagedEBookCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedEBookCategoryCollectionWithReferencesRequest)this;

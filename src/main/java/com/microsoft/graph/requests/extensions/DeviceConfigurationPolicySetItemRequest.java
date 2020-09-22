@@ -154,5 +154,16 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
          return (DeviceConfigurationPolicySetItemRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceConfigurationPolicySetItemRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceConfigurationPolicySetItemRequest)this;
+     }
+
 }
 

@@ -78,6 +78,11 @@ public class UserCollectionWithReferencesRequest extends BaseCollectionRequest<U
         return (UserCollectionWithReferencesRequest)this;
     }
 
+    public IUserCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserCollectionWithReferencesRequest)this;
+    }
+
     public IUserCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserCollectionWithReferencesRequest)this;

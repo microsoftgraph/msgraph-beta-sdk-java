@@ -34,10 +34,11 @@ public class Windows10NetworkBoundaryConfigurationRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10NetworkBoundaryConfigurationRequest instance
      */
-    public IWindows10NetworkBoundaryConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10NetworkBoundaryConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -104,4 +104,15 @@ public class PrivilegedRoleAssignmentRequestMyCollectionRequest extends BaseColl
         return (IPrivilegedRoleAssignmentRequestMyCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleAssignmentRequestMyCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IPrivilegedRoleAssignmentRequestMyCollectionRequest)this;
+    }
+
 }

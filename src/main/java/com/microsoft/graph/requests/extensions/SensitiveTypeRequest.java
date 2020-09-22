@@ -154,5 +154,16 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
          return (SensitiveTypeRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISensitiveTypeRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SensitiveTypeRequest)this;
+     }
+
 }
 

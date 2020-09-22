@@ -161,6 +161,7 @@ import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITrustFrameworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoleManagementRequestBuilder;
@@ -1342,6 +1343,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the InformationProtection
      */
     IInformationProtectionRequestBuilder informationProtection();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the OrganizationalBranding
+     */
+    IOrganizationalBrandingRequestBuilder branding();
 
     /**
      * Gets the GraphServiceRequestBuilder

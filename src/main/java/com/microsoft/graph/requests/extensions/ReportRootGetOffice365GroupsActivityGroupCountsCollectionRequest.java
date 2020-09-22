@@ -104,4 +104,15 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsCollectionRequest ex
         return (IReportRootGetOffice365GroupsActivityGroupCountsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365GroupsActivityGroupCountsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IReportRootGetOffice365GroupsActivityGroupCountsCollectionRequest)this;
+    }
+
 }

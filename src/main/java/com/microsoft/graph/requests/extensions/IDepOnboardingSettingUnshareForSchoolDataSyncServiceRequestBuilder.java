@@ -17,9 +17,10 @@ public interface IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuil
     /**
      * Creates the IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest instance
      */
-    IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest buildRequest();
+    IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest with specific options instead of the existing options

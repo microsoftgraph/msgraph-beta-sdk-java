@@ -32,10 +32,11 @@ public class PrinterGetCapabilitiesRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IPrinterGetCapabilitiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrinterGetCapabilitiesRequest instance
      */
-    public IPrinterGetCapabilitiesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrinterGetCapabilitiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

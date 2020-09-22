@@ -38,10 +38,11 @@ public class AndroidForWorkEnterpriseWiFiConfigurationRequestBuilder extends Bas
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkEnterpriseWiFiConfigurationRequest instance
      */
-    public IAndroidForWorkEnterpriseWiFiConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkEnterpriseWiFiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

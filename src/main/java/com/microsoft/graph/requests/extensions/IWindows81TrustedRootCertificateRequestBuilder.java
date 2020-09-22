@@ -20,9 +20,10 @@ public interface IWindows81TrustedRootCertificateRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81TrustedRootCertificateRequest instance
      */
-    IWindows81TrustedRootCertificateRequest buildRequest();
+    IWindows81TrustedRootCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

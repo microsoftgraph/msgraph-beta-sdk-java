@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.SearchRequest;
 import com.microsoft.graph.models.extensions.SearchResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Search Entity Query Collection Request.
  */
-public interface ISearchEntityQueryCollectionRequest {
+public interface ISearchEntityQueryCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<ISearchEntityQueryCollectionPage> callback);
 

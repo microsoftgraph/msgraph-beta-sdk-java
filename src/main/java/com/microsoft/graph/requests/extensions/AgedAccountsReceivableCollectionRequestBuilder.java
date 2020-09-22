@@ -36,10 +36,22 @@ public class AgedAccountsReceivableCollectionRequestBuilder extends BaseRequestB
         super(requestUrl, client, requestOptions);
     }
 
-    public IAgedAccountsReceivableCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAgedAccountsReceivableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAgedAccountsReceivableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AgedAccountsReceivableCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

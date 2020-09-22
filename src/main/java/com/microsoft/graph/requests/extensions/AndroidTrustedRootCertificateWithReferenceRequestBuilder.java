@@ -35,10 +35,11 @@ public class AndroidTrustedRootCertificateWithReferenceRequestBuilder extends Ba
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidTrustedRootCertificateWithReferenceRequest instance
      */
-    public IAndroidTrustedRootCertificateWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidTrustedRootCertificateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

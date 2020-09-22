@@ -38,10 +38,11 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppConsentRequestRequest instance
      */
-    public IAppConsentRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppConsentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

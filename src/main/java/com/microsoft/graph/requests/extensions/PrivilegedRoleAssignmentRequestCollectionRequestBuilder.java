@@ -37,10 +37,22 @@ public class PrivilegedRoleAssignmentRequestCollectionRequestBuilder extends Bas
         super(requestUrl, client, requestOptions);
     }
 
-    public IPrivilegedRoleAssignmentRequestCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPrivilegedRoleAssignmentRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPrivilegedRoleAssignmentRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PrivilegedRoleAssignmentRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

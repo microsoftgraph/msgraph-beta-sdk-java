@@ -17,9 +17,10 @@ public interface IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBui
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest buildRequest();
+    IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest with specific options instead of the existing options

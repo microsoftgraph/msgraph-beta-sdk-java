@@ -48,10 +48,11 @@ public class DeviceManagementReportsGetHistoricalReportRequestBuilder extends Ba
     /**
      * Creates the IDeviceManagementReportsGetHistoricalReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetHistoricalReportRequest instance
      */
-    public IDeviceManagementReportsGetHistoricalReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetHistoricalReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

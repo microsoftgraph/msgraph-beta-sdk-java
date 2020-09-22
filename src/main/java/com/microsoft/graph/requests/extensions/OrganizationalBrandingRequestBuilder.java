@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationalBranding;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingLocalizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -34,10 +38,11 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationalBrandingRequest instance
      */
-    public IOrganizationalBrandingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationalBrandingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -51,16 +56,11 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder imp
     }
 
 
-
-    public IOrganizationalBrandingBackgroundImageStreamRequestBuilder backgroundImage() {
-        return new OrganizationalBrandingBackgroundImageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("backgroundImage"), getClient(), null);
+    public IOrganizationalBrandingLocalizationCollectionRequestBuilder localizations() {
+        return new OrganizationalBrandingLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizations"), getClient(), null);
     }
 
-    public IOrganizationalBrandingBannerLogoStreamRequestBuilder bannerLogo() {
-        return new OrganizationalBrandingBannerLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("bannerLogo"), getClient(), null);
-    }
-
-    public IOrganizationalBrandingSquareLogoStreamRequestBuilder squareLogo() {
-        return new OrganizationalBrandingSquareLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogo"), getClient(), null);
+    public IOrganizationalBrandingLocalizationRequestBuilder localizations(final String id) {
+        return new OrganizationalBrandingLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("localizations") + "/" + id, getClient(), null);
     }
 }

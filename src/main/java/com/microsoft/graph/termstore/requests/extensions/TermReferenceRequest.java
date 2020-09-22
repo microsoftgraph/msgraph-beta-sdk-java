@@ -74,6 +74,16 @@ public class TermReferenceRequest extends BaseRequest implements ITermReferenceR
         return (TermReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITermReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TermReferenceRequest)this;
+    }
+    /**
      * Puts the Term
      *
      * @param srcTerm the Term reference to PUT

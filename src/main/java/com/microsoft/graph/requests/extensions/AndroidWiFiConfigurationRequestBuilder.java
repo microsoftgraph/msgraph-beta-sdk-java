@@ -34,10 +34,11 @@ public class AndroidWiFiConfigurationRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWiFiConfigurationRequest instance
      */
-    public IAndroidWiFiConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidWiFiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

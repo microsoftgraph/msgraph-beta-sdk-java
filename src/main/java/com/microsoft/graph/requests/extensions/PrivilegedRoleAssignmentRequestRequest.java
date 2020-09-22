@@ -156,5 +156,16 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
          return (PrivilegedRoleAssignmentRequestRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPrivilegedRoleAssignmentRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PrivilegedRoleAssignmentRequestRequest)this;
+     }
+
 }
 

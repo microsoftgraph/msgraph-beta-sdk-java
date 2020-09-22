@@ -32,10 +32,11 @@ public class PrinterResetDefaultsRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IPrinterResetDefaultsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrinterResetDefaultsRequest instance
      */
-    public IPrinterResetDefaultsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrinterResetDefaultsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

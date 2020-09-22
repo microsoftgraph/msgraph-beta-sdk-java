@@ -60,6 +60,11 @@ public class ManagementConditionCollectionWithReferencesRequest extends BaseColl
         return (ManagementConditionCollectionWithReferencesRequest)this;
     }
 
+    public IManagementConditionCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagementConditionCollectionWithReferencesRequest)this;
+    }
+
     public IManagementConditionCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagementConditionCollectionWithReferencesRequest)this;

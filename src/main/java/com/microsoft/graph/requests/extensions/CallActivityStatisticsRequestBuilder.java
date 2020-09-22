@@ -34,10 +34,11 @@ public class CallActivityStatisticsRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICallActivityStatisticsRequest instance
      */
-    public ICallActivityStatisticsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallActivityStatisticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

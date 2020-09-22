@@ -17,9 +17,10 @@ public interface IDeviceManagementIntentUpdateSettingsRequestBuilder extends IRe
     /**
      * Creates the IDeviceManagementIntentUpdateSettingsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementIntentUpdateSettingsRequest instance
      */
-    IDeviceManagementIntentUpdateSettingsRequest buildRequest();
+    IDeviceManagementIntentUpdateSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementIntentUpdateSettingsRequest with specific options instead of the existing options

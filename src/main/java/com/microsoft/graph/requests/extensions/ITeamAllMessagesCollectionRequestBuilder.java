@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.ITeamAllMessagesCollectionRequest
  */
 public interface ITeamAllMessagesCollectionRequestBuilder extends IRequestBuilder {
 
-    ITeamAllMessagesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ITeamAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ITeamAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

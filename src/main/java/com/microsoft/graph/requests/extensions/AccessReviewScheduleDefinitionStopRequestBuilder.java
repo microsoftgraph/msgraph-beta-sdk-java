@@ -32,10 +32,11 @@ public class AccessReviewScheduleDefinitionStopRequestBuilder extends BaseAction
     /**
      * Creates the IAccessReviewScheduleDefinitionStopRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewScheduleDefinitionStopRequest instance
      */
-    public IAccessReviewScheduleDefinitionStopRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewScheduleDefinitionStopRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

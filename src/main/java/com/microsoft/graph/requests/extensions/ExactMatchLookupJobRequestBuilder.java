@@ -38,10 +38,11 @@ public class ExactMatchLookupJobRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExactMatchLookupJobRequest instance
      */
-    public IExactMatchLookupJobRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExactMatchLookupJobRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

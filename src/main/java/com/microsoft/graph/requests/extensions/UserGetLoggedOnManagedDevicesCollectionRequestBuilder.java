@@ -35,11 +35,23 @@ public class UserGetLoggedOnManagedDevicesCollectionRequestBuilder extends BaseF
     public UserGetLoggedOnManagedDevicesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IUserGetLoggedOnManagedDevicesCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserGetLoggedOnManagedDevicesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserGetLoggedOnManagedDevicesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserGetLoggedOnManagedDevicesCollectionRequest request = new UserGetLoggedOnManagedDevicesCollectionRequest(
                 getRequestUrl(),

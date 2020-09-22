@@ -20,9 +20,10 @@ public interface IWindows10PFXImportCertificateProfileRequestBuilder extends IRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10PFXImportCertificateProfileRequest instance
      */
-    IWindows10PFXImportCertificateProfileRequest buildRequest();
+    IWindows10PFXImportCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

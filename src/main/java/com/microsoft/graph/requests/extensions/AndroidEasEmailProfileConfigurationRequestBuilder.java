@@ -36,10 +36,11 @@ public class AndroidEasEmailProfileConfigurationRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidEasEmailProfileConfigurationRequest instance
      */
-    public IAndroidEasEmailProfileConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidEasEmailProfileConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.ITiIndicatorUpdateTiIndicatorsCol
  */
 public interface ITiIndicatorUpdateTiIndicatorsCollectionRequestBuilder extends IRequestBuilder {
 
-    ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

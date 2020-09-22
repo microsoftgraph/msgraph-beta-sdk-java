@@ -32,10 +32,11 @@ public class DepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequestBuil
     /**
      * Creates the IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest instance
      */
-    public IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingSyncWithAppleDeviceEnrollmentProgramRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

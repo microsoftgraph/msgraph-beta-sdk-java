@@ -34,10 +34,11 @@ public class PasswordAuthenticationMethodRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPasswordAuthenticationMethodRequest instance
      */
-    public IPasswordAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPasswordAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

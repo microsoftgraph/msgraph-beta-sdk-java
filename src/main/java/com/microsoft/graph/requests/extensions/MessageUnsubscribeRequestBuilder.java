@@ -32,10 +32,11 @@ public class MessageUnsubscribeRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the IMessageUnsubscribeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageUnsubscribeRequest instance
      */
-    public IMessageUnsubscribeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageUnsubscribeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

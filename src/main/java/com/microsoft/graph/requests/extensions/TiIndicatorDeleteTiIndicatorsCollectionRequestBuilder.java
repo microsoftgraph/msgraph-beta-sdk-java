@@ -39,11 +39,23 @@ public class TiIndicatorDeleteTiIndicatorsCollectionRequestBuilder extends BaseA
 			bodyParams.put("value", value);
 		}
       }
-
-    public ITiIndicatorDeleteTiIndicatorsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ITiIndicatorDeleteTiIndicatorsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ITiIndicatorDeleteTiIndicatorsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TiIndicatorDeleteTiIndicatorsCollectionRequest request = new TiIndicatorDeleteTiIndicatorsCollectionRequest(
                 getRequestUrl(),

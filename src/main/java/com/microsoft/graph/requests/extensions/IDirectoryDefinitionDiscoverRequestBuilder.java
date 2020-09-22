@@ -17,9 +17,10 @@ public interface IDirectoryDefinitionDiscoverRequestBuilder extends IRequestBuil
     /**
      * Creates the IDirectoryDefinitionDiscoverRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryDefinitionDiscoverRequest instance
      */
-    IDirectoryDefinitionDiscoverRequest buildRequest();
+    IDirectoryDefinitionDiscoverRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDirectoryDefinitionDiscoverRequest with specific options instead of the existing options

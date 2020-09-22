@@ -38,10 +38,11 @@ public class IosVpnConfigurationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosVpnConfigurationRequest instance
      */
-    public IIosVpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

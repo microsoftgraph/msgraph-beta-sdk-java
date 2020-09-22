@@ -38,10 +38,11 @@ public class WindowsPhone81ImportedPFXCertificateProfileRequestBuilder extends B
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81ImportedPFXCertificateProfileRequest instance
      */
-    public IWindowsPhone81ImportedPFXCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81ImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

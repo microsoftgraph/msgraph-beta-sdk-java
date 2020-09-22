@@ -42,10 +42,11 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRbacApplicationRequest instance
      */
-    public IRbacApplicationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRbacApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

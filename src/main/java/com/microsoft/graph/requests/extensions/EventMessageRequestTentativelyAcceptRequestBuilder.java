@@ -38,10 +38,11 @@ public class EventMessageRequestTentativelyAcceptRequestBuilder extends BaseActi
     /**
      * Creates the IEventMessageRequestTentativelyAcceptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventMessageRequestTentativelyAcceptRequest instance
      */
-    public IEventMessageRequestTentativelyAcceptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventMessageRequestTentativelyAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

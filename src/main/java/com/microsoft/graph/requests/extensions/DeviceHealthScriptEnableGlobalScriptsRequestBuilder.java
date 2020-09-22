@@ -32,10 +32,11 @@ public class DeviceHealthScriptEnableGlobalScriptsRequestBuilder extends BaseAct
     /**
      * Creates the IDeviceHealthScriptEnableGlobalScriptsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptEnableGlobalScriptsRequest instance
      */
-    public IDeviceHealthScriptEnableGlobalScriptsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptEnableGlobalScriptsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

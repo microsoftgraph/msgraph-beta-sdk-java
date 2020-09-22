@@ -34,10 +34,11 @@ public class DeviceComplianceScriptRunSummaryRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceScriptRunSummaryRequest instance
      */
-    public IDeviceComplianceScriptRunSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceComplianceScriptRunSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

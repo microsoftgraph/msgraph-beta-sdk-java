@@ -38,10 +38,22 @@ public class DeviceShellScriptCollectionRequestBuilder extends BaseRequestBuilde
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceShellScriptCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceShellScriptCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceShellScriptCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceShellScriptCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

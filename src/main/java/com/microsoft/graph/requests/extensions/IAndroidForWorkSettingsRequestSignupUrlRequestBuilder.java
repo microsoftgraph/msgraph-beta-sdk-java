@@ -17,9 +17,10 @@ public interface IAndroidForWorkSettingsRequestSignupUrlRequestBuilder extends I
     /**
      * Creates the IAndroidForWorkSettingsRequestSignupUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsRequestSignupUrlRequest instance
      */
-    IAndroidForWorkSettingsRequestSignupUrlRequest buildRequest();
+    IAndroidForWorkSettingsRequestSignupUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidForWorkSettingsRequestSignupUrlRequest with specific options instead of the existing options

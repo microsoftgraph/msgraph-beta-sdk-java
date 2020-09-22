@@ -36,10 +36,11 @@ public class ManagedDeviceOverrideComplianceStateRequestBuilder extends BaseActi
     /**
      * Creates the IManagedDeviceOverrideComplianceStateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceOverrideComplianceStateRequest instance
      */
-    public IManagedDeviceOverrideComplianceStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceOverrideComplianceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

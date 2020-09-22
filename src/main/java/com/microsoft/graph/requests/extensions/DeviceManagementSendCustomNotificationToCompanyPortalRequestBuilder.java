@@ -38,10 +38,11 @@ public class DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder
     /**
      * Creates the IDeviceManagementSendCustomNotificationToCompanyPortalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementSendCustomNotificationToCompanyPortalRequest instance
      */
-    public IDeviceManagementSendCustomNotificationToCompanyPortalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementSendCustomNotificationToCompanyPortalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

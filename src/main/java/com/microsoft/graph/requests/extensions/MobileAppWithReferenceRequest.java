@@ -119,4 +119,14 @@ public class MobileAppWithReferenceRequest extends BaseRequest implements IMobil
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMobileAppWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppWithReferenceRequest)this;
+    }
 }

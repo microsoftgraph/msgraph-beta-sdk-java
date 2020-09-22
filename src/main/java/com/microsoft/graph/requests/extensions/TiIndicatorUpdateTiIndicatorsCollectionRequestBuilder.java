@@ -39,11 +39,23 @@ public class TiIndicatorUpdateTiIndicatorsCollectionRequestBuilder extends BaseA
 			bodyParams.put("value", value);
 		}
       }
-
-    public ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ITiIndicatorUpdateTiIndicatorsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TiIndicatorUpdateTiIndicatorsCollectionRequest request = new TiIndicatorUpdateTiIndicatorsCollectionRequest(
                 getRequestUrl(),

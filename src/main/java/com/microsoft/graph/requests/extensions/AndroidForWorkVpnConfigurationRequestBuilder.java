@@ -36,10 +36,11 @@ public class AndroidForWorkVpnConfigurationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkVpnConfigurationRequest instance
      */
-    public IAndroidForWorkVpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkVpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

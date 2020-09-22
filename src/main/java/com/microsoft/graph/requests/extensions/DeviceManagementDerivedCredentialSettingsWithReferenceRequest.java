@@ -93,4 +93,14 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequest exten
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceManagementDerivedCredentialSettingsWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementDerivedCredentialSettingsWithReferenceRequest)this;
+    }
 }

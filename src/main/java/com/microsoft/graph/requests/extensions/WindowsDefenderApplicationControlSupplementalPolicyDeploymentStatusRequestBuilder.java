@@ -36,10 +36,11 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -39,10 +39,11 @@ public class ManagementConditionRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagementConditionRequest instance
      */
-    public IManagementConditionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

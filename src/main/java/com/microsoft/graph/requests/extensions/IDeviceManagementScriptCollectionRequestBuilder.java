@@ -27,8 +27,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IDeviceManagementScriptCollectionRequestBuilder extends IRequestBuilder {
 
-    IDeviceManagementScriptCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDeviceManagementScriptCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDeviceManagementScriptCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDeviceManagementScriptRequestBuilder byId(final String id);

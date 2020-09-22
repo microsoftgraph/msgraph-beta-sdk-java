@@ -34,10 +34,11 @@ public class GroupPolicyPresentationDropdownListRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationDropdownListRequest instance
      */
-    public IGroupPolicyPresentationDropdownListRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationDropdownListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

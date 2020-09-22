@@ -32,10 +32,11 @@ public class WindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequ
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

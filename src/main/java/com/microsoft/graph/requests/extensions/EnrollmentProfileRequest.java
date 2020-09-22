@@ -169,5 +169,16 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
          return (EnrollmentProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEnrollmentProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EnrollmentProfileRequest)this;
+     }
+
 }
 

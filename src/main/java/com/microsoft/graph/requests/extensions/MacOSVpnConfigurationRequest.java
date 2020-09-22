@@ -156,5 +156,16 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
          return (MacOSVpnConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSVpnConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MacOSVpnConfigurationRequest)this;
+     }
+
 }
 

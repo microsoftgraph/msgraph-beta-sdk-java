@@ -35,10 +35,11 @@ public class TiIndicatorRequestBuilder extends BaseRequestBuilder implements ITi
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITiIndicatorRequest instance
      */
-    public ITiIndicatorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITiIndicatorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

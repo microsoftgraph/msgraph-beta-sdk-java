@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IUserExperienceAnalyticsDeviceStartupProcessCollectionRequestBuilder extends IRequestBuilder {
 
-    IUserExperienceAnalyticsDeviceStartupProcessCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IUserExperienceAnalyticsDeviceStartupProcessCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IUserExperienceAnalyticsDeviceStartupProcessCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IUserExperienceAnalyticsDeviceStartupProcessRequestBuilder byId(final String id);

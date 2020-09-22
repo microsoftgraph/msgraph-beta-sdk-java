@@ -34,10 +34,11 @@ public class UnsupportedDeviceConfigurationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUnsupportedDeviceConfigurationRequest instance
      */
-    public IUnsupportedDeviceConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUnsupportedDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

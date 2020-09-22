@@ -34,10 +34,11 @@ public class MobileAppInstallSummaryRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppInstallSummaryRequest instance
      */
-    public IMobileAppInstallSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppInstallSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

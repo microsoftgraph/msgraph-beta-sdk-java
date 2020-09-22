@@ -34,10 +34,11 @@ public class SynchronizationJobRestartRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the ISynchronizationJobRestartRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobRestartRequest instance
      */
-    public ISynchronizationJobRestartRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationJobRestartRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

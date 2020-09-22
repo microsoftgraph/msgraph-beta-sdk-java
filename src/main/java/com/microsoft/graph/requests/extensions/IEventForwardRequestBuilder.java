@@ -17,9 +17,10 @@ public interface IEventForwardRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IEventForwardRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventForwardRequest instance
      */
-    IEventForwardRequest buildRequest();
+    IEventForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEventForwardRequest with specific options instead of the existing options

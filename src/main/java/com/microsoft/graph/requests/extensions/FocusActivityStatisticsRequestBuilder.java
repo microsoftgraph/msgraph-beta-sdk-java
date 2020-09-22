@@ -34,10 +34,11 @@ public class FocusActivityStatisticsRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFocusActivityStatisticsRequest instance
      */
-    public IFocusActivityStatisticsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFocusActivityStatisticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

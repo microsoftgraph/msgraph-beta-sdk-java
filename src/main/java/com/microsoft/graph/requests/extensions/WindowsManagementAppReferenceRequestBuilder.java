@@ -40,10 +40,11 @@ public class WindowsManagementAppReferenceRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IWindowsManagementAppReferenceRequest instance
      */
-    public IWindowsManagementAppReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsManagementAppReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

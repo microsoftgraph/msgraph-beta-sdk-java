@@ -40,8 +40,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IUserCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IUserCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IUserCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IUserWithReferenceRequestBuilder byId(final String id);

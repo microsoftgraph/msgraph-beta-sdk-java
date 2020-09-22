@@ -77,4 +77,15 @@ public class RequestRecordDecisionsRequest extends BaseRequest implements IReque
         return (RequestRecordDecisionsRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IRequestRecordDecisionsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RequestRecordDecisionsRequest)this;
+    }
+
 }

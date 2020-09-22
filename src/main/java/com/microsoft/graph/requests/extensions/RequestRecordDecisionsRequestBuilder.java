@@ -36,10 +36,11 @@ public class RequestRecordDecisionsRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IRequestRecordDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRequestRecordDecisionsRequest instance
      */
-    public IRequestRecordDecisionsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRequestRecordDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class FileClassificationRequestRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFileClassificationRequestRequest instance
      */
-    public IFileClassificationRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFileClassificationRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

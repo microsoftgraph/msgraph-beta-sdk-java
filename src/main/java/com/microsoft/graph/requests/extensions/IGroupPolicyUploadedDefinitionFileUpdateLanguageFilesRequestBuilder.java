@@ -17,9 +17,10 @@ public interface IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequestBui
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest buildRequest();
+    IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileUpdateLanguageFilesRequest with specific options instead of the existing options

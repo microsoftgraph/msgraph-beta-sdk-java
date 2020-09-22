@@ -66,6 +66,16 @@ public class PrintTaskTriggerReferenceRequest extends BaseRequest implements IPr
         return (PrintTaskTriggerReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrintTaskTriggerReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintTaskTriggerReferenceRequest)this;
+    }
+    /**
      * Puts the PrintTaskTrigger
      *
      * @param srcPrintTaskTrigger the PrintTaskTrigger reference to PUT

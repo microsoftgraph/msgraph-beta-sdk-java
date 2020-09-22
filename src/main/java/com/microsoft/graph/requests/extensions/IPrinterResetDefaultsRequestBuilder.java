@@ -17,9 +17,10 @@ public interface IPrinterResetDefaultsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPrinterResetDefaultsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrinterResetDefaultsRequest instance
      */
-    IPrinterResetDefaultsRequest buildRequest();
+    IPrinterResetDefaultsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrinterResetDefaultsRequest with specific options instead of the existing options

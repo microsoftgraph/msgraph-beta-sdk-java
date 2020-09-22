@@ -34,10 +34,11 @@ public class MuteParticipantsOperationRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMuteParticipantsOperationRequest instance
      */
-    public IMuteParticipantsOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMuteParticipantsOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

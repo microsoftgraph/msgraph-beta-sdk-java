@@ -17,9 +17,10 @@ public interface IDeviceManagementEnableLegacyPcManagementRequestBuilder extends
     /**
      * Creates the IDeviceManagementEnableLegacyPcManagementRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableLegacyPcManagementRequest instance
      */
-    IDeviceManagementEnableLegacyPcManagementRequest buildRequest();
+    IDeviceManagementEnableLegacyPcManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementEnableLegacyPcManagementRequest with specific options instead of the existing options

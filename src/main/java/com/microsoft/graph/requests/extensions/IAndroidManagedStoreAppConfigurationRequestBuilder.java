@@ -20,9 +20,10 @@ public interface IAndroidManagedStoreAppConfigurationRequestBuilder extends IReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidManagedStoreAppConfigurationRequest instance
      */
-    IAndroidManagedStoreAppConfigurationRequest buildRequest();
+    IAndroidManagedStoreAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

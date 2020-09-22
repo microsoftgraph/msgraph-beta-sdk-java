@@ -34,10 +34,11 @@ public class ExactMatchUploadAgentRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExactMatchUploadAgentRequest instance
      */
-    public IExactMatchUploadAgentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExactMatchUploadAgentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

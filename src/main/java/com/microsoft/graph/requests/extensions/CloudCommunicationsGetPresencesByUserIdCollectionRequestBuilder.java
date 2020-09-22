@@ -39,11 +39,23 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder ext
 			bodyParams.put("ids", ids);
 		}
       }
-
-    public ICloudCommunicationsGetPresencesByUserIdCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICloudCommunicationsGetPresencesByUserIdCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICloudCommunicationsGetPresencesByUserIdCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CloudCommunicationsGetPresencesByUserIdCollectionRequest request = new CloudCommunicationsGetPresencesByUserIdCollectionRequest(
                 getRequestUrl(),

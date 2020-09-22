@@ -34,10 +34,11 @@ public class GroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequestBuilder 
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest instance
      */
-    public IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyUploadedDefinitionFileRemoveLanguageFilesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

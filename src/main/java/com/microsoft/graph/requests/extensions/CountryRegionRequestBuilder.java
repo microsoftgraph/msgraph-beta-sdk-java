@@ -34,10 +34,11 @@ public class CountryRegionRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICountryRegionRequest instance
      */
-    public ICountryRegionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICountryRegionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

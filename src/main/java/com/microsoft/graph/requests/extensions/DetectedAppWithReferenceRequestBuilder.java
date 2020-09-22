@@ -39,10 +39,11 @@ public class DetectedAppWithReferenceRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDetectedAppWithReferenceRequest instance
      */
-    public IDetectedAppWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDetectedAppWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

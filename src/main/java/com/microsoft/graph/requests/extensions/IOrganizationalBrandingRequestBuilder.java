@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationalBranding;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -20,9 +22,10 @@ public interface IOrganizationalBrandingRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationalBrandingRequest instance
      */
-    IOrganizationalBrandingRequest buildRequest();
+    IOrganizationalBrandingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -33,10 +36,8 @@ public interface IOrganizationalBrandingRequestBuilder extends IRequestBuilder {
     IOrganizationalBrandingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IOrganizationalBrandingBackgroundImageStreamRequestBuilder backgroundImage();
+    IOrganizationalBrandingLocalizationCollectionRequestBuilder localizations();
 
-    IOrganizationalBrandingBannerLogoStreamRequestBuilder bannerLogo();
-
-    IOrganizationalBrandingSquareLogoStreamRequestBuilder squareLogo();
+    IOrganizationalBrandingLocalizationRequestBuilder localizations(final String id);
 
 }

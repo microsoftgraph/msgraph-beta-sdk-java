@@ -32,10 +32,11 @@ public class DeviceHealthScriptGetRemediationHistoryRequestBuilder extends BaseF
     /**
      * Creates the IDeviceHealthScriptGetRemediationHistoryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptGetRemediationHistoryRequest instance
      */
-    public IDeviceHealthScriptGetRemediationHistoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptGetRemediationHistoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

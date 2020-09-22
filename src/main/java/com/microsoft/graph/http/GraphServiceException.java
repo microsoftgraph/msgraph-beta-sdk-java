@@ -45,6 +45,7 @@ import static okhttp3.internal.Util.closeQuietly;
  * An exception from the Graph service
  */
 public class GraphServiceException extends ClientException {
+    private final static HttpResponseHeadersHelper  responseHeadersHelper = new HttpResponseHeadersHelper();
 
     private static final long serialVersionUID = -7416427229421064119L;
 
@@ -112,7 +113,7 @@ public class GraphServiceException extends ClientException {
      * The response headers
      */
     private final List<String> responseHeaders;
-    
+
     /**
      * Whether to log the full error response
      */
@@ -175,12 +176,52 @@ public class GraphServiceException extends ClientException {
     }
     
     /**
-     * Gets the The HTTP status code
+     * Gets the HTTP status code
      *
      * @return The HTTP status response code
      */
     public int getResponseCode() {
     	return responseCode;
+    }
+
+    /**
+     * Gets the response headers
+     * @return the response headers
+     */
+    public List<String> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    /**
+     * Gets the error returned by the service
+     * @return the error returned by the service
+     */
+    public GraphErrorResponse getError() {
+        return error;
+    }
+
+    /**
+     * Gets the HTTP method of the request
+     * @return the HTTP method of the request
+     */
+    public String getMethod() {
+        return method;
+    }
+
+    /**
+     * Gets the URL of the request
+     * @return the URL of the request
+     */
+    public String getUrl() {
+        return url;
+    }
+    
+    /**
+     * Gets the request headers
+     * @return the request headers
+     */
+    public List<String> getRequestHeaders() {
+        return requestHeaders;
     }
 
     /**
@@ -413,7 +454,7 @@ public class GraphServiceException extends ClientException {
 
         final int responseCode = response.code();
         final List<String> responseHeaders = new LinkedList<>();
-        final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
+        final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
         for (final String key : headers.keySet()) {
             final String fieldPrefix;
             if (key == null) {
@@ -435,7 +476,7 @@ public class GraphServiceException extends ClientException {
         }
         GraphErrorResponse error;
         try {
-            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response));
+            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response));
         } catch (final Exception ex) {
             error = new GraphErrorResponse();
             error.error = new GraphError();

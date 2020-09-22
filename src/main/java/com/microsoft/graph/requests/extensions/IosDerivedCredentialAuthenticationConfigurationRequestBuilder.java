@@ -36,10 +36,11 @@ public class IosDerivedCredentialAuthenticationConfigurationRequestBuilder exten
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosDerivedCredentialAuthenticationConfigurationRequest instance
      */
-    public IIosDerivedCredentialAuthenticationConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosDerivedCredentialAuthenticationConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

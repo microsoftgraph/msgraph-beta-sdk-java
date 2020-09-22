@@ -154,5 +154,16 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
          return (EvaluateLabelJobResponseRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEvaluateLabelJobResponseRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EvaluateLabelJobResponseRequest)this;
+     }
+
 }
 

@@ -32,10 +32,11 @@ public class AndroidForWorkEnrollmentProfileRevokeTokenRequestBuilder extends Ba
     /**
      * Creates the IAndroidForWorkEnrollmentProfileRevokeTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkEnrollmentProfileRevokeTokenRequest instance
      */
-    public IAndroidForWorkEnrollmentProfileRevokeTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkEnrollmentProfileRevokeTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

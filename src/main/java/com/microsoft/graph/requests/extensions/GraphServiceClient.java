@@ -315,6 +315,8 @@ import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequest
 import com.microsoft.graph.requests.extensions.DataClassificationServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;

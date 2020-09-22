@@ -20,9 +20,10 @@ public interface ICallActivityStatisticsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICallActivityStatisticsRequest instance
      */
-    ICallActivityStatisticsRequest buildRequest();
+    ICallActivityStatisticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

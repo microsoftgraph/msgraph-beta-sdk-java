@@ -64,6 +64,16 @@ public class ManagedEBookCategoryReferenceRequest extends BaseRequest implements
         return (ManagedEBookCategoryReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedEBookCategoryReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedEBookCategoryReferenceRequest)this;
+    }
+    /**
      * Puts the ManagedEBookCategory
      *
      * @param srcManagedEBookCategory the ManagedEBookCategory reference to PUT

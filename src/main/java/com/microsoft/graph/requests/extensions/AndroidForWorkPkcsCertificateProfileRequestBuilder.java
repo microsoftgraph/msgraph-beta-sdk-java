@@ -38,10 +38,11 @@ public class AndroidForWorkPkcsCertificateProfileRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkPkcsCertificateProfileRequest instance
      */
-    public IAndroidForWorkPkcsCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkPkcsCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

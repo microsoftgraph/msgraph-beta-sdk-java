@@ -34,10 +34,11 @@ public class AllowedDataLocationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAllowedDataLocationRequest instance
      */
-    public IAllowedDataLocationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAllowedDataLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

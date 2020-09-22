@@ -34,10 +34,11 @@ public class GroupPolicySettingMappingRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicySettingMappingRequest instance
      */
-    public IGroupPolicySettingMappingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicySettingMappingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class GroupPolicyPresentationTextRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationTextRequest instance
      */
-    public IGroupPolicyPresentationTextRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

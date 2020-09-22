@@ -21,9 +21,10 @@ public interface IDeviceManagementScriptDeviceStateRequestBuilder extends IReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementScriptDeviceStateRequest instance
      */
-    IDeviceManagementScriptDeviceStateRequest buildRequest();
+    IDeviceManagementScriptDeviceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

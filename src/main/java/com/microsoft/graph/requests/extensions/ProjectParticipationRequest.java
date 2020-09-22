@@ -154,5 +154,16 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
          return (ProjectParticipationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IProjectParticipationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ProjectParticipationRequest)this;
+     }
+
 }
 

@@ -34,10 +34,11 @@ public class IosEducationDeviceConfigurationRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosEducationDeviceConfigurationRequest instance
      */
-    public IIosEducationDeviceConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosEducationDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

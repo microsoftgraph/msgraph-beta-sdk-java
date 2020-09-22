@@ -17,9 +17,10 @@ public interface ISynchronizationJobProvisionOnDemandRequestBuilder extends IReq
     /**
      * Creates the ISynchronizationJobProvisionOnDemandRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobProvisionOnDemandRequest instance
      */
-    ISynchronizationJobProvisionOnDemandRequest buildRequest();
+    ISynchronizationJobProvisionOnDemandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISynchronizationJobProvisionOnDemandRequest with specific options instead of the existing options

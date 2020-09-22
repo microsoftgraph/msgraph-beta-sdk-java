@@ -64,6 +64,16 @@ public class AndroidDeviceOwnerTrustedRootCertificateReferenceRequest extends Ba
         return (AndroidDeviceOwnerTrustedRootCertificateReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAndroidDeviceOwnerTrustedRootCertificateReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidDeviceOwnerTrustedRootCertificateReferenceRequest)this;
+    }
+    /**
      * Puts the AndroidDeviceOwnerTrustedRootCertificate
      *
      * @param srcAndroidDeviceOwnerTrustedRootCertificate the AndroidDeviceOwnerTrustedRootCertificate reference to PUT

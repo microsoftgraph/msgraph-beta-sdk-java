@@ -159,5 +159,16 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
          return (IntuneBrandingProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIntuneBrandingProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IntuneBrandingProfileRequest)this;
+     }
+
 }
 
