@@ -42,10 +42,11 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITrustFrameworkRequest instance
      */
-    public ITrustFrameworkRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

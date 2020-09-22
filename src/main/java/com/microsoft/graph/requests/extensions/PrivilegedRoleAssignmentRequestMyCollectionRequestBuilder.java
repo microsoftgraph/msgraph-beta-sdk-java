@@ -35,11 +35,23 @@ public class PrivilegedRoleAssignmentRequestMyCollectionRequestBuilder extends B
     public PrivilegedRoleAssignmentRequestMyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IPrivilegedRoleAssignmentRequestMyCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPrivilegedRoleAssignmentRequestMyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPrivilegedRoleAssignmentRequestMyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PrivilegedRoleAssignmentRequestMyCollectionRequest request = new PrivilegedRoleAssignmentRequestMyCollectionRequest(
                 getRequestUrl(),

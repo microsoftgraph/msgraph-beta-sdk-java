@@ -34,10 +34,11 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest instance
      */
-    public IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

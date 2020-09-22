@@ -59,6 +59,11 @@ public class PrintConnectorCollectionWithReferencesRequest extends BaseCollectio
         return (PrintConnectorCollectionWithReferencesRequest)this;
     }
 
+    public IPrintConnectorCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrintConnectorCollectionWithReferencesRequest)this;
+    }
+
     public IPrintConnectorCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (PrintConnectorCollectionWithReferencesRequest)this;

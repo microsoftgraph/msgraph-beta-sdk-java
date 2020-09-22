@@ -158,5 +158,16 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
          return (UserAnalyticsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IUserAnalyticsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (UserAnalyticsRequest)this;
+     }
+
 }
 

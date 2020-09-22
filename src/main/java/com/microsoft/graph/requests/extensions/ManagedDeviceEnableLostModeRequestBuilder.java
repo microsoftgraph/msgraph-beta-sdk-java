@@ -38,10 +38,11 @@ public class ManagedDeviceEnableLostModeRequestBuilder extends BaseActionRequest
     /**
      * Creates the IManagedDeviceEnableLostModeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceEnableLostModeRequest instance
      */
-    public IManagedDeviceEnableLostModeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceEnableLostModeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DeviceSetupConfigurationRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceSetupConfigurationRequest instance
      */
-    public IDeviceSetupConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceSetupConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

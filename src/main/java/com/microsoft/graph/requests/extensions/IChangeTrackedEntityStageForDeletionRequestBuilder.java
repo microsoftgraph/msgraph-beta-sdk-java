@@ -17,9 +17,10 @@ public interface IChangeTrackedEntityStageForDeletionRequestBuilder extends IReq
     /**
      * Creates the IChangeTrackedEntityStageForDeletionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IChangeTrackedEntityStageForDeletionRequest instance
      */
-    IChangeTrackedEntityStageForDeletionRequest buildRequest();
+    IChangeTrackedEntityStageForDeletionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IChangeTrackedEntityStageForDeletionRequest with specific options instead of the existing options

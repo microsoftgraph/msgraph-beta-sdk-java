@@ -34,10 +34,11 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder implements IAppSc
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppScopeRequest instance
      */
-    public IAppScopeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppScopeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

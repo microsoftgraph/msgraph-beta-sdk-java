@@ -164,5 +164,16 @@ public class AccessPackageRequest extends BaseRequest implements IAccessPackageR
          return (AccessPackageRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAccessPackageRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AccessPackageRequest)this;
+     }
+
 }
 

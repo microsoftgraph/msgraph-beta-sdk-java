@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Device Management Get Role Scope Tags By Ids Collection Request.
  */
-public interface IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest {
+public interface IDeviceManagementGetRoleScopeTagsByIdsCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IDeviceManagementGetRoleScopeTagsByIdsCollectionPage> callback);
 

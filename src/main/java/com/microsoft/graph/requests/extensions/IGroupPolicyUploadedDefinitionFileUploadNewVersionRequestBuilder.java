@@ -17,9 +17,10 @@ public interface IGroupPolicyUploadedDefinitionFileUploadNewVersionRequestBuilde
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest instance
      */
-    IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest();
+    IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupPolicyUploadedDefinitionFileUploadNewVersionRequest with specific options instead of the existing options

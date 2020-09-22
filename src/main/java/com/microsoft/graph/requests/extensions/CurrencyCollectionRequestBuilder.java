@@ -36,10 +36,22 @@ public class CurrencyCollectionRequestBuilder extends BaseRequestBuilder impleme
         super(requestUrl, client, requestOptions);
     }
 
-    public ICurrencyCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICurrencyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICurrencyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CurrencyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

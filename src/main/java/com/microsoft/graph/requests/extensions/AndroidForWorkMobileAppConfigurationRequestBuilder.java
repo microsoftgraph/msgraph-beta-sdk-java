@@ -34,10 +34,11 @@ public class AndroidForWorkMobileAppConfigurationRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkMobileAppConfigurationRequest instance
      */
-    public IAndroidForWorkMobileAppConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkMobileAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

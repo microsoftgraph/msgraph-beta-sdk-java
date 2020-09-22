@@ -17,9 +17,10 @@ public interface IEducationSubmissionSubmitRequestBuilder extends IRequestBuilde
     /**
      * Creates the IEducationSubmissionSubmitRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSubmissionSubmitRequest instance
      */
-    IEducationSubmissionSubmitRequest buildRequest();
+    IEducationSubmissionSubmitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationSubmissionSubmitRequest with specific options instead of the existing options

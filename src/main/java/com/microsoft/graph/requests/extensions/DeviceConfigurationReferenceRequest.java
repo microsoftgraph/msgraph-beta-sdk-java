@@ -95,6 +95,16 @@ public class DeviceConfigurationReferenceRequest extends BaseRequest implements 
         return (DeviceConfigurationReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceConfigurationReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceConfigurationReferenceRequest)this;
+    }
+    /**
      * Puts the DeviceConfiguration
      *
      * @param srcDeviceConfiguration the DeviceConfiguration reference to PUT

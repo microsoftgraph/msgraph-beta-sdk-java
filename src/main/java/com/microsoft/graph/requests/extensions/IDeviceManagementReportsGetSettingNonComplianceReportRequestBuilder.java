@@ -17,9 +17,10 @@ public interface IDeviceManagementReportsGetSettingNonComplianceReportRequestBui
     /**
      * Creates the IDeviceManagementReportsGetSettingNonComplianceReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetSettingNonComplianceReportRequest instance
      */
-    IDeviceManagementReportsGetSettingNonComplianceReportRequest buildRequest();
+    IDeviceManagementReportsGetSettingNonComplianceReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementReportsGetSettingNonComplianceReportRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IDeviceCompliancePolicySetScheduledRetireStateRequestBuilder ex
     /**
      * Creates the IDeviceCompliancePolicySetScheduledRetireStateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicySetScheduledRetireStateRequest instance
      */
-    IDeviceCompliancePolicySetScheduledRetireStateRequest buildRequest();
+    IDeviceCompliancePolicySetScheduledRetireStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceCompliancePolicySetScheduledRetireStateRequest with specific options instead of the existing options

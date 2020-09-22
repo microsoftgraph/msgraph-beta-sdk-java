@@ -32,10 +32,11 @@ public class SalesQuoteMakeInvoiceRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the ISalesQuoteMakeInvoiceRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesQuoteMakeInvoiceRequest instance
      */
-    public ISalesQuoteMakeInvoiceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesQuoteMakeInvoiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -40,10 +40,11 @@ public class GroupPolicyDefinitionValueRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyDefinitionValueRequest instance
      */
-    public IGroupPolicyDefinitionValueRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyDefinitionValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

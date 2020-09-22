@@ -49,10 +49,11 @@ public class GroupEvaluateDynamicMembershipRequestBuilder extends BaseActionRequ
     /**
      * Creates the IGroupEvaluateDynamicMembershipRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupEvaluateDynamicMembershipRequest instance
      */
-    public IGroupEvaluateDynamicMembershipRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupEvaluateDynamicMembershipRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

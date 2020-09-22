@@ -39,10 +39,22 @@ public class ManagementConditionStatementCollectionRequestBuilder extends BaseRe
         super(requestUrl, client, requestOptions);
     }
 
-    public IManagementConditionStatementCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IManagementConditionStatementCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IManagementConditionStatementCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagementConditionStatementCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -34,10 +34,11 @@ public class SecurityQuestionAuthenticationMethodRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityQuestionAuthenticationMethodRequest instance
      */
-    public ISecurityQuestionAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityQuestionAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

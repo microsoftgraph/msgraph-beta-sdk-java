@@ -39,11 +39,23 @@ public class PolicySetGetPolicySetsCollectionRequestBuilder extends BaseActionRe
 			bodyParams.put("policySetIds", policySetIds);
 		}
       }
-
-    public IPolicySetGetPolicySetsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPolicySetGetPolicySetsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPolicySetGetPolicySetsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PolicySetGetPolicySetsCollectionRequest request = new PolicySetGetPolicySetsCollectionRequest(
                 getRequestUrl(),

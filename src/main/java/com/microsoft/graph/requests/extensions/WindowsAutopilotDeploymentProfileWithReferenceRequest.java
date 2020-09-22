@@ -102,4 +102,14 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequest extends BaseR
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WindowsAutopilotDeploymentProfileWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsAutopilotDeploymentProfileWithReferenceRequest)this;
+    }
 }

@@ -42,9 +42,10 @@ public interface IDeviceCompliancePolicyReferenceRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyReferenceRequest instance
      */
-    IDeviceCompliancePolicyReferenceRequest buildRequest();
+    IDeviceCompliancePolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

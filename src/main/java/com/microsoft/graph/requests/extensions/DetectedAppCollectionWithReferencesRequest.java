@@ -59,6 +59,11 @@ public class DetectedAppCollectionWithReferencesRequest extends BaseCollectionRe
         return (DetectedAppCollectionWithReferencesRequest)this;
     }
 
+    public IDetectedAppCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DetectedAppCollectionWithReferencesRequest)this;
+    }
+
     public IDetectedAppCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DetectedAppCollectionWithReferencesRequest)this;

@@ -42,10 +42,11 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApprovalWorkflowProviderRequest instance
      */
-    public IApprovalWorkflowProviderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApprovalWorkflowProviderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -46,10 +46,11 @@ public class CustomerRequestBuilder extends BaseRequestBuilder implements ICusto
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICustomerRequest instance
      */
-    public ICustomerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICustomerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

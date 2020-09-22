@@ -34,10 +34,11 @@ public class MacOSEndpointProtectionConfigurationRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSEndpointProtectionConfigurationRequest instance
      */
-    public IMacOSEndpointProtectionConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSEndpointProtectionConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

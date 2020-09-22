@@ -34,10 +34,11 @@ public class ManagedEBookCategoryRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedEBookCategoryRequest instance
      */
-    public IManagedEBookCategoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedEBookCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

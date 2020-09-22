@@ -34,10 +34,11 @@ public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPermissionGrantConditionSetRequest instance
      */
-    public IPermissionGrantConditionSetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPermissionGrantConditionSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

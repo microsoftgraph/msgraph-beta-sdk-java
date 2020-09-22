@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionP
  */
 public interface IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequestBuilder extends IRequestBuilder {
 
-    IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IMdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

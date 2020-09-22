@@ -26,6 +26,14 @@ public class VppTokenRevokeLicensesBody {
     @Expose
     public Boolean notifyManagedDevices;
 
+    /**
+     * The revoke Untracked Licenses.
+     * 
+     */
+    @SerializedName("revokeUntrackedLicenses")
+    @Expose
+    public Boolean revokeUntrackedLicenses;
+
 
     /**
      * The raw representation of this class

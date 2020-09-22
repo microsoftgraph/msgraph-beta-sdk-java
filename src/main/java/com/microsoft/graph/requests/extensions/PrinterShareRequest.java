@@ -164,5 +164,16 @@ public class PrinterShareRequest extends BaseRequest implements IPrinterShareReq
          return (PrinterShareRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPrinterShareRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PrinterShareRequest)this;
+     }
+
 }
 

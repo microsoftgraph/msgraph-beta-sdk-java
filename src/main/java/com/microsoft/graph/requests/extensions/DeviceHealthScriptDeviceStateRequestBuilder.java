@@ -36,10 +36,11 @@ public class DeviceHealthScriptDeviceStateRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceHealthScriptDeviceStateRequest instance
      */
-    public IDeviceHealthScriptDeviceStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptDeviceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

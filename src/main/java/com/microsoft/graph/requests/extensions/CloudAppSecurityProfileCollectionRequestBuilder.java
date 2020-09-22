@@ -36,10 +36,22 @@ public class CloudAppSecurityProfileCollectionRequestBuilder extends BaseRequest
         super(requestUrl, client, requestOptions);
     }
 
-    public ICloudAppSecurityProfileCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICloudAppSecurityProfileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICloudAppSecurityProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CloudAppSecurityProfileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

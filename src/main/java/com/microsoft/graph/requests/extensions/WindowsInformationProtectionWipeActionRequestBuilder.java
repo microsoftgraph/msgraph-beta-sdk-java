@@ -34,10 +34,11 @@ public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionWipeActionRequest instance
      */
-    public IWindowsInformationProtectionWipeActionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionWipeActionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

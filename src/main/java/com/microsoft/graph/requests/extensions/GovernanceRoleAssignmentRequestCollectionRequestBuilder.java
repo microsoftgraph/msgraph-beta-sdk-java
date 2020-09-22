@@ -37,10 +37,22 @@ public class GovernanceRoleAssignmentRequestCollectionRequestBuilder extends Bas
         super(requestUrl, client, requestOptions);
     }
 
-    public IGovernanceRoleAssignmentRequestCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IGovernanceRoleAssignmentRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IGovernanceRoleAssignmentRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GovernanceRoleAssignmentRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

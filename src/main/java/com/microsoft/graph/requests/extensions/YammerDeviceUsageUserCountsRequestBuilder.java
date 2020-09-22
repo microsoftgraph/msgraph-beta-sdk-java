@@ -34,10 +34,11 @@ public class YammerDeviceUsageUserCountsRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IYammerDeviceUsageUserCountsRequest instance
      */
-    public IYammerDeviceUsageUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IYammerDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -41,10 +41,11 @@ public class SynchronizationJobValidateCredentialsRequestBuilder extends BaseAct
     /**
      * Creates the ISynchronizationJobValidateCredentialsRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobValidateCredentialsRequest instance
      */
-    public ISynchronizationJobValidateCredentialsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationJobValidateCredentialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

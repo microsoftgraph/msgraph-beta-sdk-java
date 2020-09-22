@@ -34,10 +34,11 @@ public class WindowsKioskConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsKioskConfigurationRequest instance
      */
-    public IWindowsKioskConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsKioskConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

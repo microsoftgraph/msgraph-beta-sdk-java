@@ -173,5 +173,16 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
          return (GroupPolicyPresentationValueRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IGroupPolicyPresentationValueRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (GroupPolicyPresentationValueRequest)this;
+     }
+
 }
 

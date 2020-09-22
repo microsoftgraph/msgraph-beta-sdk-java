@@ -17,9 +17,10 @@ public interface IGroupPolicyConfigurationUpdateDefinitionValuesRequestBuilder e
     /**
      * Creates the IGroupPolicyConfigurationUpdateDefinitionValuesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyConfigurationUpdateDefinitionValuesRequest instance
      */
-    IGroupPolicyConfigurationUpdateDefinitionValuesRequest buildRequest();
+    IGroupPolicyConfigurationUpdateDefinitionValuesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupPolicyConfigurationUpdateDefinitionValuesRequest with specific options instead of the existing options

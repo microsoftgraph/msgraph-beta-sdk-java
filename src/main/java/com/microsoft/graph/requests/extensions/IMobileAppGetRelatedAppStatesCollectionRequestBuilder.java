@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IMobileAppGetRelatedAppStatesColl
  */
 public interface IMobileAppGetRelatedAppStatesCollectionRequestBuilder extends IRequestBuilder {
 
-    IMobileAppGetRelatedAppStatesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IMobileAppGetRelatedAppStatesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IMobileAppGetRelatedAppStatesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

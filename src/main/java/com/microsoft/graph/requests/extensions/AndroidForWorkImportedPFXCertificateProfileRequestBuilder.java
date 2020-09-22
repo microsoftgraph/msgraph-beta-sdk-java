@@ -38,10 +38,11 @@ public class AndroidForWorkImportedPFXCertificateProfileRequestBuilder extends B
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkImportedPFXCertificateProfileRequest instance
      */
-    public IAndroidForWorkImportedPFXCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

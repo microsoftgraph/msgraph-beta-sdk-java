@@ -169,5 +169,16 @@ public class IosCertificateProfileBaseRequest extends BaseRequest implements IIo
          return (IosCertificateProfileBaseRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosCertificateProfileBaseRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IosCertificateProfileBaseRequest)this;
+     }
+
 }
 

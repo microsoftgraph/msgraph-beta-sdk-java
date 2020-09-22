@@ -20,9 +20,10 @@ public interface IDeviceCompliancePolicyPolicySetItemRequestBuilder extends IReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyPolicySetItemRequest instance
      */
-    IDeviceCompliancePolicyPolicySetItemRequest buildRequest();
+    IDeviceCompliancePolicyPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

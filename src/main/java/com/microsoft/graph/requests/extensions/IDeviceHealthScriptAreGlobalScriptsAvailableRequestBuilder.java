@@ -17,9 +17,10 @@ public interface IDeviceHealthScriptAreGlobalScriptsAvailableRequestBuilder exte
     /**
      * Creates the IDeviceHealthScriptAreGlobalScriptsAvailableRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptAreGlobalScriptsAvailableRequest instance
      */
-    IDeviceHealthScriptAreGlobalScriptsAvailableRequest buildRequest();
+    IDeviceHealthScriptAreGlobalScriptsAvailableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceHealthScriptAreGlobalScriptsAvailableRequest with specific options instead of the existing options

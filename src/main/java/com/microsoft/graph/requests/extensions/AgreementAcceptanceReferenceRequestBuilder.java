@@ -36,10 +36,11 @@ public class AgreementAcceptanceReferenceRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IAgreementAcceptanceReferenceRequest instance
      */
-    public IAgreementAcceptanceReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAgreementAcceptanceReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

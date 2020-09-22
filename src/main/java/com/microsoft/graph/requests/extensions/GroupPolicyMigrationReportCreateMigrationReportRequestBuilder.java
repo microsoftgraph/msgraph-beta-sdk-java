@@ -34,10 +34,11 @@ public class GroupPolicyMigrationReportCreateMigrationReportRequestBuilder exten
     /**
      * Creates the IGroupPolicyMigrationReportCreateMigrationReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupPolicyMigrationReportCreateMigrationReportRequest instance
      */
-    public IGroupPolicyMigrationReportCreateMigrationReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyMigrationReportCreateMigrationReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

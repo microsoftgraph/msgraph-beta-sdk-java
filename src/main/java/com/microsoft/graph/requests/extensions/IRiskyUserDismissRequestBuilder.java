@@ -17,9 +17,10 @@ public interface IRiskyUserDismissRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IRiskyUserDismissRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRiskyUserDismissRequest instance
      */
-    IRiskyUserDismissRequest buildRequest();
+    IRiskyUserDismissRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IRiskyUserDismissRequest with specific options instead of the existing options

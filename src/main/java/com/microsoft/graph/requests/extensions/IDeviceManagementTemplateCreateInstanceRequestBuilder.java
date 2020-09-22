@@ -17,9 +17,10 @@ public interface IDeviceManagementTemplateCreateInstanceRequestBuilder extends I
     /**
      * Creates the IDeviceManagementTemplateCreateInstanceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementTemplateCreateInstanceRequest instance
      */
-    IDeviceManagementTemplateCreateInstanceRequest buildRequest();
+    IDeviceManagementTemplateCreateInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementTemplateCreateInstanceRequest with specific options instead of the existing options

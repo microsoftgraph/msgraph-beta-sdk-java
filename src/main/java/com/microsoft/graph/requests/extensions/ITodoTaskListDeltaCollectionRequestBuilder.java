@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.ITodoTaskListDeltaCollectionReque
  */
 public interface ITodoTaskListDeltaCollectionRequestBuilder extends IRequestBuilder {
 
-    ITodoTaskListDeltaCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ITodoTaskListDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ITodoTaskListDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

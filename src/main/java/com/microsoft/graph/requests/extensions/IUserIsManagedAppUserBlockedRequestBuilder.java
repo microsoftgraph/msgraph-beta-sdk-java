@@ -17,9 +17,10 @@ public interface IUserIsManagedAppUserBlockedRequestBuilder extends IRequestBuil
     /**
      * Creates the IUserIsManagedAppUserBlockedRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserIsManagedAppUserBlockedRequest instance
      */
-    IUserIsManagedAppUserBlockedRequest buildRequest();
+    IUserIsManagedAppUserBlockedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserIsManagedAppUserBlockedRequest with specific options instead of the existing options

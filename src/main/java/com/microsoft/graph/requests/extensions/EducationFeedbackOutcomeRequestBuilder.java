@@ -34,10 +34,11 @@ public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationFeedbackOutcomeRequest instance
      */
-    public IEducationFeedbackOutcomeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationFeedbackOutcomeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

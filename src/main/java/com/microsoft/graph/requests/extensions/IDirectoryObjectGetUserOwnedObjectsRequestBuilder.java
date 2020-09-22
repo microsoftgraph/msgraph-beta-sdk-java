@@ -17,9 +17,10 @@ public interface IDirectoryObjectGetUserOwnedObjectsRequestBuilder extends IRequ
     /**
      * Creates the IDirectoryObjectGetUserOwnedObjectsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryObjectGetUserOwnedObjectsRequest instance
      */
-    IDirectoryObjectGetUserOwnedObjectsRequest buildRequest();
+    IDirectoryObjectGetUserOwnedObjectsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDirectoryObjectGetUserOwnedObjectsRequest with specific options instead of the existing options

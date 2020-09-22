@@ -34,10 +34,11 @@ public class NotificationRequestBuilder extends BaseRequestBuilder implements IN
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INotificationRequest instance
      */
-    public INotificationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

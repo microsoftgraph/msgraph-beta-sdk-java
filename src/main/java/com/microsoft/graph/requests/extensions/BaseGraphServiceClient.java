@@ -315,6 +315,8 @@ import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequest
 import com.microsoft.graph.requests.extensions.DataClassificationServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
@@ -1847,6 +1849,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IInformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(getServiceRoot() + "/informationProtection", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the OrganizationalBranding
+     */
+    public IOrganizationalBrandingRequestBuilder branding() {
+        return new OrganizationalBrandingRequestBuilder(getServiceRoot() + "/branding", this, null);
     }
 
     /**

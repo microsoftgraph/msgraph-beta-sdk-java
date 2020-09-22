@@ -34,10 +34,11 @@ public class WindowsStoreAppRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsStoreAppRequest instance
      */
-    public IWindowsStoreAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -33,10 +33,22 @@ public class PrivilegedRoleAssignmentCollectionReferenceRequestBuilder extends B
         super(requestUrl, client, requestOptions);
     }
 
-    public IPrivilegedRoleAssignmentCollectionReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPrivilegedRoleAssignmentCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPrivilegedRoleAssignmentCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PrivilegedRoleAssignmentCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }

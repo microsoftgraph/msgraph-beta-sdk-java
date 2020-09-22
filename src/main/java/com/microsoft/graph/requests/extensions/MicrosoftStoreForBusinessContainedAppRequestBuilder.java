@@ -34,10 +34,11 @@ public class MicrosoftStoreForBusinessContainedAppRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMicrosoftStoreForBusinessContainedAppRequest instance
      */
-    public IMicrosoftStoreForBusinessContainedAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMicrosoftStoreForBusinessContainedAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -35,10 +35,22 @@ public class AccessReviewDecisionCollectionRequestBuilder extends BaseRequestBui
         super(requestUrl, client, requestOptions);
     }
 
-    public IAccessReviewDecisionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAccessReviewDecisionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAccessReviewDecisionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessReviewDecisionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -32,10 +32,11 @@ public class ExactMatchSessionCancelRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IExactMatchSessionCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IExactMatchSessionCancelRequest instance
      */
-    public IExactMatchSessionCancelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExactMatchSessionCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

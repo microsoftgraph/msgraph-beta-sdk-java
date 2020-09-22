@@ -38,10 +38,11 @@ public class PresentationRequestBuilder extends BaseRequestBuilder implements IP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPresentationRequest instance
      */
-    public IPresentationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPresentationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

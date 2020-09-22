@@ -35,10 +35,11 @@ public class MacOSTrustedRootCertificateWithReferenceRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSTrustedRootCertificateWithReferenceRequest instance
      */
-    public IMacOSTrustedRootCertificateWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSTrustedRootCertificateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class MacOSMicrosoftEdgeAppRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSMicrosoftEdgeAppRequest instance
      */
-    public IMacOSMicrosoftEdgeAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSMicrosoftEdgeAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

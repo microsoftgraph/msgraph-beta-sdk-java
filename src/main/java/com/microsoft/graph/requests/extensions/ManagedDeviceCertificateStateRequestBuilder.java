@@ -34,10 +34,11 @@ public class ManagedDeviceCertificateStateRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceCertificateStateRequest instance
      */
-    public IManagedDeviceCertificateStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceCertificateStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

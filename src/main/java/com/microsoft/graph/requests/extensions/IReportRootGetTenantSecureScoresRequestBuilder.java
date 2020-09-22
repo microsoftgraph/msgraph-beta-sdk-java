@@ -17,9 +17,10 @@ public interface IReportRootGetTenantSecureScoresRequestBuilder extends IRequest
     /**
      * Creates the IReportRootGetTenantSecureScoresRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTenantSecureScoresRequest instance
      */
-    IReportRootGetTenantSecureScoresRequest buildRequest();
+    IReportRootGetTenantSecureScoresRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetTenantSecureScoresRequest with specific options instead of the existing options

@@ -39,11 +39,23 @@ public class ReportRootGetEmailAppUsageVersionsUserCountsCollectionRequestBuilde
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("period", period));
 		}
       }
-
-    public IReportRootGetEmailAppUsageVersionsUserCountsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetEmailAppUsageVersionsUserCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetEmailAppUsageVersionsUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetEmailAppUsageVersionsUserCountsCollectionRequest request = new ReportRootGetEmailAppUsageVersionsUserCountsCollectionRequest(
                 getRequestUrl(),

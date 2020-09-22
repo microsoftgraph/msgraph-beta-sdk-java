@@ -17,9 +17,10 @@ public interface IBookingBusinessPublishRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IBookingBusinessPublishRequest
      *
+     * @param requestOptions the options for the request
      * @return the IBookingBusinessPublishRequest instance
      */
-    IBookingBusinessPublishRequest buildRequest();
+    IBookingBusinessPublishRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IBookingBusinessPublishRequest with specific options instead of the existing options

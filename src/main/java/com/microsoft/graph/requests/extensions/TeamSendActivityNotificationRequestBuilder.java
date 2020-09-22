@@ -47,10 +47,11 @@ public class TeamSendActivityNotificationRequestBuilder extends BaseActionReques
     /**
      * Creates the ITeamSendActivityNotificationRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamSendActivityNotificationRequest instance
      */
-    public ITeamSendActivityNotificationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamSendActivityNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -154,5 +154,16 @@ public class Office365GroupsActivityFileCountsRequest extends BaseRequest implem
          return (Office365GroupsActivityFileCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOffice365GroupsActivityFileCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Office365GroupsActivityFileCountsRequest)this;
+     }
+
 }
 

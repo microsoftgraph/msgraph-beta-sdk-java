@@ -34,10 +34,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsRequestSignupUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

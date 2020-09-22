@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationHas
  */
 public interface IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequestBuilder extends IRequestBuilder {
 
-    IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

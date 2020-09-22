@@ -40,10 +40,11 @@ public class RoleScopeTagWithReferenceRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRoleScopeTagWithReferenceRequest instance
      */
-    public IRoleScopeTagWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleScopeTagWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

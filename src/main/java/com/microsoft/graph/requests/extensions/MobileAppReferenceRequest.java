@@ -90,6 +90,16 @@ public class MobileAppReferenceRequest extends BaseRequest implements IMobileApp
         return (MobileAppReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMobileAppReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppReferenceRequest)this;
+    }
+    /**
      * Puts the MobileApp
      *
      * @param srcMobileApp the MobileApp reference to PUT

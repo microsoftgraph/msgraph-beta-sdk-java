@@ -113,4 +113,15 @@ public class ReportRootGetM365AppUserCountsRequest extends BaseRequest implement
         return (ReportRootGetM365AppUserCountsRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetM365AppUserCountsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetM365AppUserCountsRequest)this;
+    }
+
 }

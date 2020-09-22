@@ -34,10 +34,11 @@ public class FileClassificationRequestFileStreamRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFileClassificationRequestFileStreamRequest instance
      */
-    public IFileClassificationRequestFileStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFileClassificationRequestFileStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

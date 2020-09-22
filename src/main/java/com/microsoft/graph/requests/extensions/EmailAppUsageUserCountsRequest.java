@@ -154,5 +154,16 @@ public class EmailAppUsageUserCountsRequest extends BaseRequest implements IEmai
          return (EmailAppUsageUserCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEmailAppUsageUserCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EmailAppUsageUserCountsRequest)this;
+     }
+
 }
 

@@ -36,10 +36,22 @@ public class IpSecurityProfileCollectionRequestBuilder extends BaseRequestBuilde
         super(requestUrl, client, requestOptions);
     }
 
-    public IIpSecurityProfileCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IIpSecurityProfileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IIpSecurityProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IpSecurityProfileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

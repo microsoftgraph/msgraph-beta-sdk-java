@@ -17,9 +17,10 @@ public interface IChannelCompleteMigrationRequestBuilder extends IRequestBuilder
     /**
      * Creates the IChannelCompleteMigrationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IChannelCompleteMigrationRequest instance
      */
-    IChannelCompleteMigrationRequest buildRequest();
+    IChannelCompleteMigrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IChannelCompleteMigrationRequest with specific options instead of the existing options

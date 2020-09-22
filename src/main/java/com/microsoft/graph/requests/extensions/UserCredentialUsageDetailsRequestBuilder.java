@@ -34,10 +34,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserCredentialUsageDetailsRequest instance
      */
-    public IUserCredentialUsageDetailsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserCredentialUsageDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

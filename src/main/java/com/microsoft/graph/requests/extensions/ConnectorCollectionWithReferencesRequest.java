@@ -59,6 +59,11 @@ public class ConnectorCollectionWithReferencesRequest extends BaseCollectionRequ
         return (ConnectorCollectionWithReferencesRequest)this;
     }
 
+    public IConnectorCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ConnectorCollectionWithReferencesRequest)this;
+    }
+
     public IConnectorCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ConnectorCollectionWithReferencesRequest)this;

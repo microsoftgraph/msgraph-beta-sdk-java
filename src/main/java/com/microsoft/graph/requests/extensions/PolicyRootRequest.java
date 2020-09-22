@@ -42,6 +42,8 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollection
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
@@ -193,6 +195,17 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      */
      public IPolicyRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PolicyRootRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPolicyRootRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PolicyRootRequest)this;
      }
 

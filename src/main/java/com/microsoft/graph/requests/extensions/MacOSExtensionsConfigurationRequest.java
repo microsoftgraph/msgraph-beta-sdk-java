@@ -154,5 +154,16 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
          return (MacOSExtensionsConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSExtensionsConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MacOSExtensionsConfigurationRequest)this;
+     }
+
 }
 

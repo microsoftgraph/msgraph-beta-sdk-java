@@ -34,10 +34,11 @@ public class AndroidForWorkAppConfigurationSchemaRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkAppConfigurationSchemaRequest instance
      */
-    public IAndroidForWorkAppConfigurationSchemaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkAppConfigurationSchemaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IManagedDeviceOverrideComplianceStateRequestBuilder extends IRe
     /**
      * Creates the IManagedDeviceOverrideComplianceStateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceOverrideComplianceStateRequest instance
      */
-    IManagedDeviceOverrideComplianceStateRequest buildRequest();
+    IManagedDeviceOverrideComplianceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceOverrideComplianceStateRequest with specific options instead of the existing options

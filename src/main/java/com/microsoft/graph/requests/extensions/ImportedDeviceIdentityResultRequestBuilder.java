@@ -34,10 +34,11 @@ public class ImportedDeviceIdentityResultRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IImportedDeviceIdentityResultRequest instance
      */
-    public IImportedDeviceIdentityResultRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IImportedDeviceIdentityResultRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

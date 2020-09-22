@@ -154,5 +154,16 @@ public class DeviceManagementReportScheduleRequest extends BaseRequest implement
          return (DeviceManagementReportScheduleRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementReportScheduleRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceManagementReportScheduleRequest)this;
+     }
+
 }
 

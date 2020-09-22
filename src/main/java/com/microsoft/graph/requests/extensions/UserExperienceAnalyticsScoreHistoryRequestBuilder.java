@@ -34,10 +34,11 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsScoreHistoryRequest instance
      */
-    public IUserExperienceAnalyticsScoreHistoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsScoreHistoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

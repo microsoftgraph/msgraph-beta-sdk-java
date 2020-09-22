@@ -17,9 +17,10 @@ public interface IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDevic
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest instance
      */
-    IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest buildRequest();
+    IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsAutopilotDeviceIdentityUnassignResourceAccountFromDeviceRequest with specific options instead of the existing options

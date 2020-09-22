@@ -34,10 +34,11 @@ public class PersonAnniversaryRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonAnniversaryRequest instance
      */
-    public IPersonAnniversaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonAnniversaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

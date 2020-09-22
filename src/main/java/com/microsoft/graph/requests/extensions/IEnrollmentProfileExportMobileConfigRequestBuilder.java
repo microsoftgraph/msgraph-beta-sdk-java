@@ -17,9 +17,10 @@ public interface IEnrollmentProfileExportMobileConfigRequestBuilder extends IReq
     /**
      * Creates the IEnrollmentProfileExportMobileConfigRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEnrollmentProfileExportMobileConfigRequest instance
      */
-    IEnrollmentProfileExportMobileConfigRequest buildRequest();
+    IEnrollmentProfileExportMobileConfigRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEnrollmentProfileExportMobileConfigRequest with specific options instead of the existing options

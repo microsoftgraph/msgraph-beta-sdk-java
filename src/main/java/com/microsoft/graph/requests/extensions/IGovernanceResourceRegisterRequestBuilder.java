@@ -17,9 +17,10 @@ public interface IGovernanceResourceRegisterRequestBuilder extends IRequestBuild
     /**
      * Creates the IGovernanceResourceRegisterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGovernanceResourceRegisterRequest instance
      */
-    IGovernanceResourceRegisterRequest buildRequest();
+    IGovernanceResourceRegisterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGovernanceResourceRegisterRequest with specific options instead of the existing options

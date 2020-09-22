@@ -34,10 +34,11 @@ public class AndroidDeviceOwnerCompliancePolicyRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerCompliancePolicyRequest instance
      */
-    public IAndroidDeviceOwnerCompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

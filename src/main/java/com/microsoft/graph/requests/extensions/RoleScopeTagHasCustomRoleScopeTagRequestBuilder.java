@@ -32,10 +32,11 @@ public class RoleScopeTagHasCustomRoleScopeTagRequestBuilder extends BaseFunctio
     /**
      * Creates the IRoleScopeTagHasCustomRoleScopeTagRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRoleScopeTagHasCustomRoleScopeTagRequest instance
      */
-    public IRoleScopeTagHasCustomRoleScopeTagRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleScopeTagHasCustomRoleScopeTagRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

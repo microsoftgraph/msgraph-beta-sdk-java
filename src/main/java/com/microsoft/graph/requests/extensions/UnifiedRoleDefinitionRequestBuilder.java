@@ -38,10 +38,11 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUnifiedRoleDefinitionRequest instance
      */
-    public IUnifiedRoleDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUnifiedRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

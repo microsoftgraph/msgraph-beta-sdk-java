@@ -34,10 +34,11 @@ public class WindowsUpdateStateRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsUpdateStateRequest instance
      */
-    public IWindowsUpdateStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsUpdateStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

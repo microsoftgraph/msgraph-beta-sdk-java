@@ -34,10 +34,11 @@ public class AuditEventRequestBuilder extends BaseRequestBuilder implements IAud
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuditEventRequest instance
      */
-    public IAuditEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuditEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

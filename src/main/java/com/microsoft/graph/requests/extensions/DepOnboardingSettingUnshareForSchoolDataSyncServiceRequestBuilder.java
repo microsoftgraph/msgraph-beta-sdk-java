@@ -32,10 +32,11 @@ public class DepOnboardingSettingUnshareForSchoolDataSyncServiceRequestBuilder e
     /**
      * Creates the IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest instance
      */
-    public IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingUnshareForSchoolDataSyncServiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

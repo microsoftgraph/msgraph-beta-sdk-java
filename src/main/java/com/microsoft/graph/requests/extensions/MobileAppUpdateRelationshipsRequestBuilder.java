@@ -34,10 +34,11 @@ public class MobileAppUpdateRelationshipsRequestBuilder extends BaseActionReques
     /**
      * Creates the IMobileAppUpdateRelationshipsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppUpdateRelationshipsRequest instance
      */
-    public IMobileAppUpdateRelationshipsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppUpdateRelationshipsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

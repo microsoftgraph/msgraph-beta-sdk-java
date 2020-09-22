@@ -34,10 +34,11 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserConsentRequestRequest instance
      */
-    public IUserConsentRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserConsentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

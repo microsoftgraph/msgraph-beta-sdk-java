@@ -34,10 +34,11 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationValueBooleanRequest instance
      */
-    public IGroupPolicyPresentationValueBooleanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationValueBooleanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -40,10 +40,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIdentityGovernanceRequest instance
      */
-    public IIdentityGovernanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIdentityGovernanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

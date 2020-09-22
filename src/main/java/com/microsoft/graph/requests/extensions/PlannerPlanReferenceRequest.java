@@ -74,6 +74,16 @@ public class PlannerPlanReferenceRequest extends BaseRequest implements IPlanner
         return (PlannerPlanReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPlannerPlanReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PlannerPlanReferenceRequest)this;
+    }
+    /**
      * Puts the PlannerPlan
      *
      * @param srcPlannerPlan the PlannerPlan reference to PUT

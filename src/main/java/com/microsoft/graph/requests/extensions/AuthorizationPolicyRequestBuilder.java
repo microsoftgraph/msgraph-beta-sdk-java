@@ -34,10 +34,11 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuthorizationPolicyRequest instance
      */
-    public IAuthorizationPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthorizationPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

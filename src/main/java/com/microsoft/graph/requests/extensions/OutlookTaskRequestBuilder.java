@@ -46,10 +46,11 @@ public class OutlookTaskRequestBuilder extends BaseRequestBuilder implements IOu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOutlookTaskRequest instance
      */
-    public IOutlookTaskRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOutlookTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserAnalyticsRequest instance
      */
-    public IUserAnalyticsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

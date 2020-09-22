@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserCo
  */
 public interface IReportRootGetEmailActivityUserCountsCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetEmailActivityUserCountsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetEmailActivityUserCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetEmailActivityUserCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

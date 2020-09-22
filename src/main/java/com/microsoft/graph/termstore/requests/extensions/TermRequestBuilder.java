@@ -44,10 +44,11 @@ public class TermRequestBuilder extends BaseRequestBuilder implements ITermReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermRequest instance
      */
-    public ITermRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

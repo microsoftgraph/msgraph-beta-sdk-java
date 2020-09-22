@@ -110,10 +110,11 @@ public class ProfileRequestBuilder extends BaseRequestBuilder implements IProfil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IProfileRequest instance
      */
-    public IProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

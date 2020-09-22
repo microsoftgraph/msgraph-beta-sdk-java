@@ -90,6 +90,16 @@ public class ApplicationReferenceRequest extends BaseRequest implements IApplica
         return (ApplicationReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IApplicationReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApplicationReferenceRequest)this;
+    }
+    /**
      * Puts the Application
      *
      * @param srcApplication the Application reference to PUT

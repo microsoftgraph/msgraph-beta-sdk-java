@@ -32,10 +32,11 @@ public class EducationSynchronizationProfileResumeRequestBuilder extends BaseAct
     /**
      * Creates the IEducationSynchronizationProfileResumeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileResumeRequest instance
      */
-    public IEducationSynchronizationProfileResumeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSynchronizationProfileResumeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

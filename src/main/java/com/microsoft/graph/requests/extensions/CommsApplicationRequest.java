@@ -162,5 +162,16 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
          return (CommsApplicationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICommsApplicationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (CommsApplicationRequest)this;
+     }
+
 }
 

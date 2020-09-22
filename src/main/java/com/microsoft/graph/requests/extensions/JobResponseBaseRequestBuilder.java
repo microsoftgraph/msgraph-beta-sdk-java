@@ -34,10 +34,11 @@ public class JobResponseBaseRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IJobResponseBaseRequest instance
      */
-    public IJobResponseBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IJobResponseBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

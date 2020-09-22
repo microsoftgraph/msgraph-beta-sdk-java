@@ -32,10 +32,11 @@ public class ManagedDeviceRevokeAppleVppLicensesRequestBuilder extends BaseActio
     /**
      * Creates the IManagedDeviceRevokeAppleVppLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRevokeAppleVppLicensesRequest instance
      */
-    public IManagedDeviceRevokeAppleVppLicensesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRevokeAppleVppLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

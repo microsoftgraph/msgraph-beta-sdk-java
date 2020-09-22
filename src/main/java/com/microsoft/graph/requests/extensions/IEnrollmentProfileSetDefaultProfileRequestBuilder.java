@@ -17,9 +17,10 @@ public interface IEnrollmentProfileSetDefaultProfileRequestBuilder extends IRequ
     /**
      * Creates the IEnrollmentProfileSetDefaultProfileRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEnrollmentProfileSetDefaultProfileRequest instance
      */
-    IEnrollmentProfileSetDefaultProfileRequest buildRequest();
+    IEnrollmentProfileSetDefaultProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEnrollmentProfileSetDefaultProfileRequest with specific options instead of the existing options

@@ -59,6 +59,11 @@ public class AgreementAcceptanceCollectionWithReferencesRequest extends BaseColl
         return (AgreementAcceptanceCollectionWithReferencesRequest)this;
     }
 
+    public IAgreementAcceptanceCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AgreementAcceptanceCollectionWithReferencesRequest)this;
+    }
+
     public IAgreementAcceptanceCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AgreementAcceptanceCollectionWithReferencesRequest)this;

@@ -38,10 +38,11 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessReviewScheduleDefinitionRequest instance
      */
-    public IAccessReviewScheduleDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewScheduleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

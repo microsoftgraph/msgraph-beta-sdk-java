@@ -34,10 +34,11 @@ public class PersonWebsiteRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonWebsiteRequest instance
      */
-    public IPersonWebsiteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonWebsiteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

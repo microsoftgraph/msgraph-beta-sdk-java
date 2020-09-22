@@ -36,10 +36,11 @@ public class DeviceAppManagementTaskUpdateStatusRequestBuilder extends BaseActio
     /**
      * Creates the IDeviceAppManagementTaskUpdateStatusRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceAppManagementTaskUpdateStatusRequest instance
      */
-    public IDeviceAppManagementTaskUpdateStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceAppManagementTaskUpdateStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

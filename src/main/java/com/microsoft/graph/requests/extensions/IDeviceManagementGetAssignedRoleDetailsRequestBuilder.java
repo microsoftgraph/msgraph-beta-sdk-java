@@ -17,9 +17,10 @@ public interface IDeviceManagementGetAssignedRoleDetailsRequestBuilder extends I
     /**
      * Creates the IDeviceManagementGetAssignedRoleDetailsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementGetAssignedRoleDetailsRequest instance
      */
-    IDeviceManagementGetAssignedRoleDetailsRequest buildRequest();
+    IDeviceManagementGetAssignedRoleDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementGetAssignedRoleDetailsRequest with specific options instead of the existing options

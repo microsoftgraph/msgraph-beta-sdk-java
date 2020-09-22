@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailAppUsageUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Email App Usage User Counts Collection Request.
  */
-public interface IReportRootGetEmailAppUsageUserCountsCollectionRequest {
+public interface IReportRootGetEmailAppUsageUserCountsCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetEmailAppUsageUserCountsCollectionPage> callback);
 

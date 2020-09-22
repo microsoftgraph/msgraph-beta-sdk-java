@@ -32,10 +32,11 @@ public class DeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequestBu
     /**
      * Creates the IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest instance
      */
-    public IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

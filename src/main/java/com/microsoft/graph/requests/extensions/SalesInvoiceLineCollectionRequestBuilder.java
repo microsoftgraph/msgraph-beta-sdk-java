@@ -36,10 +36,22 @@ public class SalesInvoiceLineCollectionRequestBuilder extends BaseRequestBuilder
         super(requestUrl, client, requestOptions);
     }
 
-    public ISalesInvoiceLineCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISalesInvoiceLineCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISalesInvoiceLineCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SalesInvoiceLineCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

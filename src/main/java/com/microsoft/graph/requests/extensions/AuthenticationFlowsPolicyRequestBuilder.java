@@ -34,10 +34,11 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuthenticationFlowsPolicyRequest instance
      */
-    public IAuthenticationFlowsPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationFlowsPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

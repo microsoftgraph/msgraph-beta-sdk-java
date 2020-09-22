@@ -34,10 +34,11 @@ public class WindowsPhone81StoreAppRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81StoreAppRequest instance
      */
-    public IWindowsPhone81StoreAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81StoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

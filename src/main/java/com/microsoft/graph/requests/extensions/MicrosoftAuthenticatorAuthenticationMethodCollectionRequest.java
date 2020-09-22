@@ -85,6 +85,17 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionRequest extends
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMicrosoftAuthenticatorAuthenticationMethodCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MicrosoftAuthenticatorAuthenticationMethodCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

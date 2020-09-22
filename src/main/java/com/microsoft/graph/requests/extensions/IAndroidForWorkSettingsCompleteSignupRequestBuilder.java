@@ -17,9 +17,10 @@ public interface IAndroidForWorkSettingsCompleteSignupRequestBuilder extends IRe
     /**
      * Creates the IAndroidForWorkSettingsCompleteSignupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsCompleteSignupRequest instance
      */
-    IAndroidForWorkSettingsCompleteSignupRequest buildRequest();
+    IAndroidForWorkSettingsCompleteSignupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAndroidForWorkSettingsCompleteSignupRequest with specific options instead of the existing options

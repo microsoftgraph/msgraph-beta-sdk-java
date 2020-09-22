@@ -34,10 +34,11 @@ public class DimensionValueRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDimensionValueRequest instance
      */
-    public IDimensionValueRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDimensionValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

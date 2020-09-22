@@ -17,9 +17,10 @@ public interface IEventMessageRequestDeclineRequestBuilder extends IRequestBuild
     /**
      * Creates the IEventMessageRequestDeclineRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventMessageRequestDeclineRequest instance
      */
-    IEventMessageRequestDeclineRequest buildRequest();
+    IEventMessageRequestDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEventMessageRequestDeclineRequest with specific options instead of the existing options

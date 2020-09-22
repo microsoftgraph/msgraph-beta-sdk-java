@@ -34,10 +34,11 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICompanyInformationRequest instance
      */
-    public ICompanyInformationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICompanyInformationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

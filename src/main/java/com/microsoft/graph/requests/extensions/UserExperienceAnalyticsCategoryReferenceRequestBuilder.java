@@ -40,10 +40,11 @@ public class UserExperienceAnalyticsCategoryReferenceRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IUserExperienceAnalyticsCategoryReferenceRequest instance
      */
-    public IUserExperienceAnalyticsCategoryReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsCategoryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

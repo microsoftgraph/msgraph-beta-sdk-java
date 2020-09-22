@@ -34,10 +34,11 @@ public class DeviceManagementBooleanSettingInstanceRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementBooleanSettingInstanceRequest instance
      */
-    public IDeviceManagementBooleanSettingInstanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementBooleanSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

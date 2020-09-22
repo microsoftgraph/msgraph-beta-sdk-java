@@ -47,11 +47,23 @@ public class ReportRootGetUserArchivedPrintJobsCollectionRequestBuilder extends 
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodEnd", periodEnd));
 		}
       }
-
-    public IReportRootGetUserArchivedPrintJobsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IReportRootGetUserArchivedPrintJobsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IReportRootGetUserArchivedPrintJobsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetUserArchivedPrintJobsCollectionRequest request = new ReportRootGetUserArchivedPrintJobsCollectionRequest(
                 getRequestUrl(),

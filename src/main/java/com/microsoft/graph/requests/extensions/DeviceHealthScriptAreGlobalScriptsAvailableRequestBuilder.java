@@ -32,10 +32,11 @@ public class DeviceHealthScriptAreGlobalScriptsAvailableRequestBuilder extends B
     /**
      * Creates the IDeviceHealthScriptAreGlobalScriptsAvailableRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptAreGlobalScriptsAvailableRequest instance
      */
-    public IDeviceHealthScriptAreGlobalScriptsAvailableRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptAreGlobalScriptsAvailableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class CircularGeofenceManagementConditionRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICircularGeofenceManagementConditionRequest instance
      */
-    public ICircularGeofenceManagementConditionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICircularGeofenceManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

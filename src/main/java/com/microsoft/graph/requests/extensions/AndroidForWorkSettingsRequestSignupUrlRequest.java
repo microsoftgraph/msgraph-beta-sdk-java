@@ -77,4 +77,15 @@ public class AndroidForWorkSettingsRequestSignupUrlRequest extends BaseRequest i
         return (AndroidForWorkSettingsRequestSignupUrlRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAndroidForWorkSettingsRequestSignupUrlRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AndroidForWorkSettingsRequestSignupUrlRequest)this;
+    }
+
 }

@@ -34,10 +34,11 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder ext
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkypeForBusinessDeviceUsageDistributionUserCountsRequest instance
      */
-    public ISkypeForBusinessDeviceUsageDistributionUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISkypeForBusinessDeviceUsageDistributionUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

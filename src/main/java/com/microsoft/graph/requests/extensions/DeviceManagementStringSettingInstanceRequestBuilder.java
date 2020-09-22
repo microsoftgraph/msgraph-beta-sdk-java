@@ -34,10 +34,11 @@ public class DeviceManagementStringSettingInstanceRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementStringSettingInstanceRequest instance
      */
-    public IDeviceManagementStringSettingInstanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementStringSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

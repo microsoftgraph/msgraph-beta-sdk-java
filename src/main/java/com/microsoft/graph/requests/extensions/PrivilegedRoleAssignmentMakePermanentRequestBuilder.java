@@ -38,10 +38,11 @@ public class PrivilegedRoleAssignmentMakePermanentRequestBuilder extends BaseAct
     /**
      * Creates the IPrivilegedRoleAssignmentMakePermanentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentMakePermanentRequest instance
      */
-    public IPrivilegedRoleAssignmentMakePermanentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleAssignmentMakePermanentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

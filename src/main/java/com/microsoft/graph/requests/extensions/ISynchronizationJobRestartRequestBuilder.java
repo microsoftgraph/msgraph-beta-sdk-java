@@ -17,9 +17,10 @@ public interface ISynchronizationJobRestartRequestBuilder extends IRequestBuilde
     /**
      * Creates the ISynchronizationJobRestartRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISynchronizationJobRestartRequest instance
      */
-    ISynchronizationJobRestartRequest buildRequest();
+    ISynchronizationJobRestartRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISynchronizationJobRestartRequest with specific options instead of the existing options

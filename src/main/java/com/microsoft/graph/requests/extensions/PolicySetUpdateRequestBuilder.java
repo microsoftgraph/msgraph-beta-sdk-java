@@ -41,10 +41,11 @@ public class PolicySetUpdateRequestBuilder extends BaseActionRequestBuilder impl
     /**
      * Creates the IPolicySetUpdateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPolicySetUpdateRequest instance
      */
-    public IPolicySetUpdateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPolicySetUpdateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

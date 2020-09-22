@@ -34,10 +34,11 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAgreementFileLocalizationRequest instance
      */
-    public IAgreementFileLocalizationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAgreementFileLocalizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,22 @@ public class NotificationCollectionRequestBuilder extends BaseRequestBuilder imp
         super(requestUrl, client, requestOptions);
     }
 
-    public INotificationCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public INotificationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public INotificationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotificationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

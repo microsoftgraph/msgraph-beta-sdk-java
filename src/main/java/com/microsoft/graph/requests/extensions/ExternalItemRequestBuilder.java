@@ -34,10 +34,11 @@ public class ExternalItemRequestBuilder extends BaseRequestBuilder implements IE
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExternalItemRequest instance
      */
-    public IExternalItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExternalItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsUserActivityCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Teams User Activity Counts Collection Request.
  */
-public interface IReportRootGetTeamsUserActivityCountsCollectionRequest {
+public interface IReportRootGetTeamsUserActivityCountsCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetTeamsUserActivityCountsCollectionPage> callback);
 

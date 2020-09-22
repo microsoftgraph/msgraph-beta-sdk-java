@@ -34,10 +34,11 @@ public class ManagedDeviceTriggerConfigurationManagerActionRequestBuilder extend
     /**
      * Creates the IManagedDeviceTriggerConfigurationManagerActionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceTriggerConfigurationManagerActionRequest instance
      */
-    public IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceTriggerConfigurationManagerActionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

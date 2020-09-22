@@ -39,10 +39,11 @@ public class RoleScopeTagRequestBuilder extends BaseRequestBuilder implements IR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRoleScopeTagRequest instance
      */
-    public IRoleScopeTagRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleScopeTagRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

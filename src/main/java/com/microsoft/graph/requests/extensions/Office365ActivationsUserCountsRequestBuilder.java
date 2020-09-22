@@ -34,10 +34,11 @@ public class Office365ActivationsUserCountsRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365ActivationsUserCountsRequest instance
      */
-    public IOffice365ActivationsUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOffice365ActivationsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

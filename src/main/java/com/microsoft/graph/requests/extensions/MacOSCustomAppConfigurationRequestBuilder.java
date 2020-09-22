@@ -34,10 +34,11 @@ public class MacOSCustomAppConfigurationRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSCustomAppConfigurationRequest instance
      */
-    public IMacOSCustomAppConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSCustomAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

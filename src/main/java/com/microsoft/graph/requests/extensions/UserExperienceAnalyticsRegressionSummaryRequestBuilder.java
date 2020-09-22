@@ -39,10 +39,11 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsRegressionSummaryRequest instance
      */
-    public IUserExperienceAnalyticsRegressionSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsRegressionSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

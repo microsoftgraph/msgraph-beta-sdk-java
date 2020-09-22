@@ -35,10 +35,11 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder implements IVppTo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVppTokenRequest instance
      */
-    public IVppTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVppTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -53,8 +54,8 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder implements IVppTo
 
 
 
-    public IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices) {
-        return new VppTokenRevokeLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeLicenses"), getClient(), null, notifyManagedDevices);
+    public IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices, final Boolean revokeUntrackedLicenses) {
+        return new VppTokenRevokeLicensesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeLicenses"), getClient(), null, notifyManagedDevices, revokeUntrackedLicenses);
     }
 
     public IVppTokenSyncLicensesRequestBuilder syncLicenses() {

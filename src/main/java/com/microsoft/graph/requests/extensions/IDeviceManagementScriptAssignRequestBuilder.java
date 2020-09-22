@@ -17,9 +17,10 @@ public interface IDeviceManagementScriptAssignRequestBuilder extends IRequestBui
     /**
      * Creates the IDeviceManagementScriptAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementScriptAssignRequest instance
      */
-    IDeviceManagementScriptAssignRequest buildRequest();
+    IDeviceManagementScriptAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementScriptAssignRequest with specific options instead of the existing options

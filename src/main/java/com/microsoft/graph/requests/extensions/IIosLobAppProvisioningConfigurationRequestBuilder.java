@@ -31,9 +31,10 @@ public interface IIosLobAppProvisioningConfigurationRequestBuilder extends IRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosLobAppProvisioningConfigurationRequest instance
      */
-    IIosLobAppProvisioningConfigurationRequest buildRequest();
+    IIosLobAppProvisioningConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

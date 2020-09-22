@@ -38,10 +38,11 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFin
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFinancialsRequest instance
      */
-    public IFinancialsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFinancialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

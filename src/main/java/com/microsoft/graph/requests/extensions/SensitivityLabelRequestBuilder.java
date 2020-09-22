@@ -41,10 +41,11 @@ public class SensitivityLabelRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISensitivityLabelRequest instance
      */
-    public ISensitivityLabelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISensitivityLabelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

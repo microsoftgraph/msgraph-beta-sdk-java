@@ -25,19 +25,22 @@ public class VppTokenRevokeLicensesRequestBuilder extends BaseActionRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param notifyManagedDevices the notifyManagedDevices
+     * @param revokeUntrackedLicenses the revokeUntrackedLicenses
      */
-    public VppTokenRevokeLicensesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean notifyManagedDevices) {
+    public VppTokenRevokeLicensesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean notifyManagedDevices, final Boolean revokeUntrackedLicenses) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("notifyManagedDevices", notifyManagedDevices);
+        bodyParams.put("revokeUntrackedLicenses", revokeUntrackedLicenses);
     }
 
     /**
      * Creates the IVppTokenRevokeLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IVppTokenRevokeLicensesRequest instance
      */
-    public IVppTokenRevokeLicensesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVppTokenRevokeLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -55,6 +58,10 @@ public class VppTokenRevokeLicensesRequestBuilder extends BaseActionRequestBuild
 
         if (hasParameter("notifyManagedDevices")) {
             request.body.notifyManagedDevices = getParameter("notifyManagedDevices");
+        }
+
+        if (hasParameter("revokeUntrackedLicenses")) {
+            request.body.revokeUntrackedLicenses = getParameter("revokeUntrackedLicenses");
         }
 
         return request;

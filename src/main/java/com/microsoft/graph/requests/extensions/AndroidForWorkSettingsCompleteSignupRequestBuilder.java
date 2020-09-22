@@ -34,10 +34,11 @@ public class AndroidForWorkSettingsCompleteSignupRequestBuilder extends BaseActi
     /**
      * Creates the IAndroidForWorkSettingsCompleteSignupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsCompleteSignupRequest instance
      */
-    public IAndroidForWorkSettingsCompleteSignupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkSettingsCompleteSignupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder ex
     /**
      * Creates the IManagedDeviceCreateDeviceLogCollectionRequestRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceCreateDeviceLogCollectionRequestRequest instance
      */
-    IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest();
+    IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceCreateDeviceLogCollectionRequestRequest with specific options instead of the existing options

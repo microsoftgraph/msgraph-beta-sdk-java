@@ -169,5 +169,16 @@ public class PrintOperationRequest extends BaseRequest implements IPrintOperatio
          return (PrintOperationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPrintOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PrintOperationRequest)this;
+     }
+
 }
 

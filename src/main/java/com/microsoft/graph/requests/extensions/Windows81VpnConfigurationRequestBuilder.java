@@ -34,10 +34,11 @@ public class Windows81VpnConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81VpnConfigurationRequest instance
      */
-    public IWindows81VpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows81VpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

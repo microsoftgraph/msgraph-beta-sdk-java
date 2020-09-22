@@ -17,9 +17,10 @@ public interface IEducationSynchronizationProfileResumeRequestBuilder extends IR
     /**
      * Creates the IEducationSynchronizationProfileResumeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileResumeRequest instance
      */
-    IEducationSynchronizationProfileResumeRequest buildRequest();
+    IEducationSynchronizationProfileResumeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationSynchronizationProfileResumeRequest with specific options instead of the existing options

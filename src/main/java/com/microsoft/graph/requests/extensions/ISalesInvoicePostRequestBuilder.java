@@ -17,9 +17,10 @@ public interface ISalesInvoicePostRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ISalesInvoicePostRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesInvoicePostRequest instance
      */
-    ISalesInvoicePostRequest buildRequest();
+    ISalesInvoicePostRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISalesInvoicePostRequest with specific options instead of the existing options

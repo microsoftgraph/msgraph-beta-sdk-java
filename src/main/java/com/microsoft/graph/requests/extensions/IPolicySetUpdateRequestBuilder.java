@@ -17,9 +17,10 @@ public interface IPolicySetUpdateRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPolicySetUpdateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPolicySetUpdateRequest instance
      */
-    IPolicySetUpdateRequest buildRequest();
+    IPolicySetUpdateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPolicySetUpdateRequest with specific options instead of the existing options

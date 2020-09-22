@@ -169,5 +169,16 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
          return (AndroidWiFiConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidWiFiConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidWiFiConfigurationRequest)this;
+     }
+
 }
 

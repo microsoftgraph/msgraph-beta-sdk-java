@@ -32,10 +32,11 @@ public class AndroidManagedStoreAccountEnterpriseSettingsUnbindRequestBuilder ex
     /**
      * Creates the IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest instance
      */
-    public IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedStoreAccountEnterpriseSettingsUnbindRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ComanagedDevicesSummary;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevicesSummary;
+import com.microsoft.graph.models.extensions.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
@@ -169,6 +170,30 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealth
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineCollectionRequestBuilder;
@@ -269,6 +294,14 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFil
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelSiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelSiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelSiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelSiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
@@ -504,6 +537,17 @@ public class DeviceManagementRequest extends BaseRequest implements IDeviceManag
      */
      public IDeviceManagementRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceManagementRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementRequest)this;
      }
 

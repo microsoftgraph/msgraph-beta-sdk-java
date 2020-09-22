@@ -154,5 +154,16 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
          return (EmailActivitySummaryRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEmailActivitySummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EmailActivitySummaryRequest)this;
+     }
+
 }
 

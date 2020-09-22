@@ -34,10 +34,11 @@ public class AccountRequestBuilder extends BaseRequestBuilder implements IAccoun
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccountRequest instance
      */
-    public IAccountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

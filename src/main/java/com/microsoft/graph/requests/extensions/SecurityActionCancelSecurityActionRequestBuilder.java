@@ -32,10 +32,11 @@ public class SecurityActionCancelSecurityActionRequestBuilder extends BaseAction
     /**
      * Creates the ISecurityActionCancelSecurityActionRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISecurityActionCancelSecurityActionRequest instance
      */
-    public ISecurityActionCancelSecurityActionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityActionCancelSecurityActionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

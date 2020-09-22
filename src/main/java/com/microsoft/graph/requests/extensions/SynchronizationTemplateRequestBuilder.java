@@ -36,10 +36,11 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISynchronizationTemplateRequest instance
      */
-    public ISynchronizationTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISynchronizationTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

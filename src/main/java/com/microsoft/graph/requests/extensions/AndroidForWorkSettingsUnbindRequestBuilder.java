@@ -32,10 +32,11 @@ public class AndroidForWorkSettingsUnbindRequestBuilder extends BaseActionReques
     /**
      * Creates the IAndroidForWorkSettingsUnbindRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAndroidForWorkSettingsUnbindRequest instance
      */
-    public IAndroidForWorkSettingsUnbindRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkSettingsUnbindRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

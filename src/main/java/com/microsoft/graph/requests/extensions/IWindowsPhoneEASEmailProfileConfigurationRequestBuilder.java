@@ -20,9 +20,10 @@ public interface IWindowsPhoneEASEmailProfileConfigurationRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhoneEASEmailProfileConfigurationRequest instance
      */
-    IWindowsPhoneEASEmailProfileConfigurationRequest buildRequest();
+    IWindowsPhoneEASEmailProfileConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

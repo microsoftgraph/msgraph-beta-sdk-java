@@ -17,9 +17,10 @@ public interface IMobileAppUpdateRelationshipsRequestBuilder extends IRequestBui
     /**
      * Creates the IMobileAppUpdateRelationshipsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppUpdateRelationshipsRequest instance
      */
-    IMobileAppUpdateRelationshipsRequest buildRequest();
+    IMobileAppUpdateRelationshipsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMobileAppUpdateRelationshipsRequest with specific options instead of the existing options

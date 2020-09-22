@@ -38,10 +38,11 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IImportedWindowsAutopilotDeviceIdentityUploadRequest instance
      */
-    public IImportedWindowsAutopilotDeviceIdentityUploadRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IImportedWindowsAutopilotDeviceIdentityUploadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

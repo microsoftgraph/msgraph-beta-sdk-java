@@ -34,10 +34,11 @@ public class DefaultDeviceCompliancePolicyRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDefaultDeviceCompliancePolicyRequest instance
      */
-    public IDefaultDeviceCompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDefaultDeviceCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

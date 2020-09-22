@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPar
  */
 public interface IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

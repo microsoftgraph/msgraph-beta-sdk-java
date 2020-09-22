@@ -34,10 +34,11 @@ public class SharePointActivityUserCountsRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharePointActivityUserCountsRequest instance
      */
-    public ISharePointActivityUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharePointActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

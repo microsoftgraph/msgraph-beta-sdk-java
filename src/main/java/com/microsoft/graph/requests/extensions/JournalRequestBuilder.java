@@ -40,10 +40,11 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IJournalRequest instance
      */
-    public IJournalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IJournalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class TrustFrameworkKeySetUploadCertificateRequestBuilder extends BaseAct
     /**
      * Creates the ITrustFrameworkKeySetUploadCertificateRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadCertificateRequest instance
      */
-    public ITrustFrameworkKeySetUploadCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkKeySetUploadCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

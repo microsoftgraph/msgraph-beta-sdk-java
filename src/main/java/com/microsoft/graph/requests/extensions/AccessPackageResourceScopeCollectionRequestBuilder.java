@@ -36,10 +36,22 @@ public class AccessPackageResourceScopeCollectionRequestBuilder extends BaseRequ
         super(requestUrl, client, requestOptions);
     }
 
-    public IAccessPackageResourceScopeCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAccessPackageResourceScopeCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAccessPackageResourceScopeCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AccessPackageResourceScopeCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

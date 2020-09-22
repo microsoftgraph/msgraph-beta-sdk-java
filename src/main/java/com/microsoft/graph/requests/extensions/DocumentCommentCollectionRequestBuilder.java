@@ -36,10 +36,22 @@ public class DocumentCommentCollectionRequestBuilder extends BaseRequestBuilder 
         super(requestUrl, client, requestOptions);
     }
 
-    public IDocumentCommentCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDocumentCommentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDocumentCommentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DocumentCommentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

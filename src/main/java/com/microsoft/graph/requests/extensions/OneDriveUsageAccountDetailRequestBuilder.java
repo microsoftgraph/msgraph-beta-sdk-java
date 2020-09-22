@@ -34,10 +34,11 @@ public class OneDriveUsageAccountDetailRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOneDriveUsageAccountDetailRequest instance
      */
-    public IOneDriveUsageAccountDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOneDriveUsageAccountDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

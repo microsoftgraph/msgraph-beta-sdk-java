@@ -17,9 +17,10 @@ public interface IApplicationTemplateInstantiateRequestBuilder extends IRequestB
     /**
      * Creates the IApplicationTemplateInstantiateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationTemplateInstantiateRequest instance
      */
-    IApplicationTemplateInstantiateRequest buildRequest();
+    IApplicationTemplateInstantiateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IApplicationTemplateInstantiateRequest with specific options instead of the existing options

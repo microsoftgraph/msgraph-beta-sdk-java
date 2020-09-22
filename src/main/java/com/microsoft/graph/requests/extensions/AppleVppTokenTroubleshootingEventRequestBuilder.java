@@ -34,10 +34,11 @@ public class AppleVppTokenTroubleshootingEventRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppleVppTokenTroubleshootingEventRequest instance
      */
-    public IAppleVppTokenTroubleshootingEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppleVppTokenTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

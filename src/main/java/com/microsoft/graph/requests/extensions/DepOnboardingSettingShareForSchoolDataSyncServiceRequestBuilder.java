@@ -32,10 +32,11 @@ public class DepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilder ext
     /**
      * Creates the IDepOnboardingSettingShareForSchoolDataSyncServiceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingShareForSchoolDataSyncServiceRequest instance
      */
-    public IDepOnboardingSettingShareForSchoolDataSyncServiceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepOnboardingSettingShareForSchoolDataSyncServiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

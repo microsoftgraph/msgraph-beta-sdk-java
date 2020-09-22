@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IImportedDeviceIdentitySearchExis
  */
 public interface IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequestBuilder extends IRequestBuilder {
 
-    IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

@@ -34,10 +34,11 @@ public class WebAccountRequestBuilder extends BaseRequestBuilder implements IWeb
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWebAccountRequest instance
      */
-    public IWebAccountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWebAccountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

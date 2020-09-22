@@ -46,10 +46,11 @@ public class DeviceManagementReportsGetCachedReportRequestBuilder extends BaseAc
     /**
      * Creates the IDeviceManagementReportsGetCachedReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetCachedReportRequest instance
      */
-    public IDeviceManagementReportsGetCachedReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetCachedReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

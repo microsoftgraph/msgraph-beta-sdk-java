@@ -39,11 +39,23 @@ public class DeviceManagementGetRoleScopeTagsByResourceCollectionRequestBuilder 
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("resource", resource));
 		}
       }
-
-    public IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementGetRoleScopeTagsByResourceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementGetRoleScopeTagsByResourceCollectionRequest request = new DeviceManagementGetRoleScopeTagsByResourceCollectionRequest(
                 getRequestUrl(),

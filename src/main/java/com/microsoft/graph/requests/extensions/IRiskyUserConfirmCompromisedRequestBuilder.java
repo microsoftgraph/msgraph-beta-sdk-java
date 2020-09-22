@@ -17,9 +17,10 @@ public interface IRiskyUserConfirmCompromisedRequestBuilder extends IRequestBuil
     /**
      * Creates the IRiskyUserConfirmCompromisedRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRiskyUserConfirmCompromisedRequest instance
      */
-    IRiskyUserConfirmCompromisedRequest buildRequest();
+    IRiskyUserConfirmCompromisedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IRiskyUserConfirmCompromisedRequest with specific options instead of the existing options

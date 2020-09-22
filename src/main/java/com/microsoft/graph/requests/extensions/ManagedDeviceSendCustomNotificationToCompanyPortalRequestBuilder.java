@@ -36,10 +36,11 @@ public class ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder ex
     /**
      * Creates the IManagedDeviceSendCustomNotificationToCompanyPortalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceSendCustomNotificationToCompanyPortalRequest instance
      */
-    public IManagedDeviceSendCustomNotificationToCompanyPortalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceSendCustomNotificationToCompanyPortalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

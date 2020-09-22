@@ -34,10 +34,11 @@ public class NetworkIPv4ConfigurationManagementConditionRequestBuilder extends B
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INetworkIPv4ConfigurationManagementConditionRequest instance
      */
-    public INetworkIPv4ConfigurationManagementConditionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INetworkIPv4ConfigurationManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

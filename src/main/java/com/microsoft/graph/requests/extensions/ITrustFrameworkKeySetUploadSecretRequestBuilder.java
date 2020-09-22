@@ -17,9 +17,10 @@ public interface ITrustFrameworkKeySetUploadSecretRequestBuilder extends IReques
     /**
      * Creates the ITrustFrameworkKeySetUploadSecretRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetUploadSecretRequest instance
      */
-    ITrustFrameworkKeySetUploadSecretRequest buildRequest();
+    ITrustFrameworkKeySetUploadSecretRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITrustFrameworkKeySetUploadSecretRequest with specific options instead of the existing options

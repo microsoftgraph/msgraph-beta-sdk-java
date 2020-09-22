@@ -154,5 +154,16 @@ public class DirectorySettingTemplateRequest extends BaseRequest implements IDir
          return (DirectorySettingTemplateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDirectorySettingTemplateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DirectorySettingTemplateRequest)this;
+     }
+
 }
 

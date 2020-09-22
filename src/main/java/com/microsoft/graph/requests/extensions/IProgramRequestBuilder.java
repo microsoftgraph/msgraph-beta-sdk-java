@@ -22,9 +22,10 @@ public interface IProgramRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IProgramRequest instance
      */
-    IProgramRequest buildRequest();
+    IProgramRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

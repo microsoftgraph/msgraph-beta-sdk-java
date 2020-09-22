@@ -158,5 +158,16 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
          return (Windows10PkcsCertificateProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10PkcsCertificateProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Windows10PkcsCertificateProfileRequest)this;
+     }
+
 }
 

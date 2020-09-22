@@ -38,10 +38,11 @@ public class AgreementFileRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAgreementFileRequest instance
      */
-    public IAgreementFileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAgreementFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

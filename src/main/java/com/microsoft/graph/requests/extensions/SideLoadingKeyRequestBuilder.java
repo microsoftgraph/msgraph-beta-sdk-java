@@ -34,10 +34,11 @@ public class SideLoadingKeyRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISideLoadingKeyRequest instance
      */
-    public ISideLoadingKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISideLoadingKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

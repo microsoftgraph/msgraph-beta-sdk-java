@@ -17,9 +17,10 @@ public interface IUserTeamworkSendActivityNotificationRequestBuilder extends IRe
     /**
      * Creates the IUserTeamworkSendActivityNotificationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserTeamworkSendActivityNotificationRequest instance
      */
-    IUserTeamworkSendActivityNotificationRequest buildRequest();
+    IUserTeamworkSendActivityNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserTeamworkSendActivityNotificationRequest with specific options instead of the existing options

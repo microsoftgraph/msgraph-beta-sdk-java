@@ -22,9 +22,10 @@ public interface IWindows81TrustedRootCertificateWithReferenceRequestBuilder ext
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81TrustedRootCertificateWithReferenceRequest instance
      */
-    IWindows81TrustedRootCertificateWithReferenceRequest buildRequest();
+    IWindows81TrustedRootCertificateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

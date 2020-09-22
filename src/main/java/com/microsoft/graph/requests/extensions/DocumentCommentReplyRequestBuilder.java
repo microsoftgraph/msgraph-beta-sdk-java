@@ -34,10 +34,11 @@ public class DocumentCommentReplyRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDocumentCommentReplyRequest instance
      */
-    public IDocumentCommentReplyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDocumentCommentReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

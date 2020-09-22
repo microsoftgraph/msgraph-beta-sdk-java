@@ -36,10 +36,22 @@ public class LinkedResourceCollectionRequestBuilder extends BaseRequestBuilder i
         super(requestUrl, client, requestOptions);
     }
 
-    public ILinkedResourceCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ILinkedResourceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ILinkedResourceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new LinkedResourceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

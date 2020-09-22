@@ -154,5 +154,16 @@ public class PrintDocumentRequest extends BaseRequest implements IPrintDocumentR
          return (PrintDocumentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPrintDocumentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PrintDocumentRequest)this;
+     }
+
 }
 

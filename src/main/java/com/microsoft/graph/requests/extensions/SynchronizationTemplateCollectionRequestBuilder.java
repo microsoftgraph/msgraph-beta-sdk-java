@@ -36,10 +36,22 @@ public class SynchronizationTemplateCollectionRequestBuilder extends BaseRequest
         super(requestUrl, client, requestOptions);
     }
 
-    public ISynchronizationTemplateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISynchronizationTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISynchronizationTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SynchronizationTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

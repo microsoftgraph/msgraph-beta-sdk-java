@@ -76,6 +76,16 @@ public class AdministrativeUnitReferenceRequest extends BaseRequest implements I
         return (AdministrativeUnitReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAdministrativeUnitReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AdministrativeUnitReferenceRequest)this;
+    }
+    /**
      * Puts the AdministrativeUnit
      *
      * @param srcAdministrativeUnit the AdministrativeUnit reference to PUT

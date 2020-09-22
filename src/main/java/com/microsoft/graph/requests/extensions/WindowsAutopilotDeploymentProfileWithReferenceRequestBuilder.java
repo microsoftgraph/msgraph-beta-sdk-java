@@ -44,10 +44,11 @@ public class WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsAutopilotDeploymentProfileWithReferenceRequest instance
      */
-    public IWindowsAutopilotDeploymentProfileWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeploymentProfileWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

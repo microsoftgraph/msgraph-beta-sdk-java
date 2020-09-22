@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.InformationProtectionAction;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -22,7 +23,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Information Protection Label Evaluate Removal Collection Request.
  */
-public interface IInformationProtectionLabelEvaluateRemovalCollectionRequest {
+public interface IInformationProtectionLabelEvaluateRemovalCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<IInformationProtectionLabelEvaluateRemovalCollectionPage> callback);
 

@@ -34,10 +34,11 @@ public class LookupResultRowRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ILookupResultRowRequest instance
      */
-    public ILookupResultRowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ILookupResultRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

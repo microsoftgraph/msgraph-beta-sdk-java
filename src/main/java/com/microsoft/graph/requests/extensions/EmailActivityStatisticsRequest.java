@@ -154,5 +154,16 @@ public class EmailActivityStatisticsRequest extends BaseRequest implements IEmai
          return (EmailActivityStatisticsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEmailActivityStatisticsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EmailActivityStatisticsRequest)this;
+     }
+
 }
 

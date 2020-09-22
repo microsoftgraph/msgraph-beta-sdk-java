@@ -158,5 +158,16 @@ public class AndroidForWorkScepCertificateProfileRequest extends BaseRequest imp
          return (AndroidForWorkScepCertificateProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidForWorkScepCertificateProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidForWorkScepCertificateProfileRequest)this;
+     }
+
 }
 

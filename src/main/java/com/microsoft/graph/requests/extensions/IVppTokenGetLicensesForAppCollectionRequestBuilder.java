@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IVppTokenGetLicensesForAppCollect
  */
 public interface IVppTokenGetLicensesForAppCollectionRequestBuilder extends IRequestBuilder {
 
-    IVppTokenGetLicensesForAppCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IVppTokenGetLicensesForAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IVppTokenGetLicensesForAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

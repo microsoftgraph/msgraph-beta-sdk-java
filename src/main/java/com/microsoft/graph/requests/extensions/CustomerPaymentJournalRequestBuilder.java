@@ -40,10 +40,11 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICustomerPaymentJournalRequest instance
      */
-    public ICustomerPaymentJournalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICustomerPaymentJournalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class BookingAppointmentCancelRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IBookingAppointmentCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IBookingAppointmentCancelRequest instance
      */
-    public IBookingAppointmentCancelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingAppointmentCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

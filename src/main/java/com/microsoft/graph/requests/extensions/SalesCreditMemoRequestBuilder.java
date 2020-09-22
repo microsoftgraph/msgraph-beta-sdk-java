@@ -44,10 +44,11 @@ public class SalesCreditMemoRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISalesCreditMemoRequest instance
      */
-    public ISalesCreditMemoRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesCreditMemoRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

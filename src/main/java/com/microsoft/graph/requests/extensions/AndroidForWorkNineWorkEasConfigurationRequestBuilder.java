@@ -34,10 +34,11 @@ public class AndroidForWorkNineWorkEasConfigurationRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkNineWorkEasConfigurationRequest instance
      */
-    public IAndroidForWorkNineWorkEasConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkNineWorkEasConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

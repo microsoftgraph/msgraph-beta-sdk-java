@@ -154,5 +154,16 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
          return (RiskDetectionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IRiskDetectionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (RiskDetectionRequest)this;
+     }
+
 }
 

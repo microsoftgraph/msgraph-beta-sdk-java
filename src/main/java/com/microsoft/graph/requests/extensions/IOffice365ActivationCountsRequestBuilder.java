@@ -20,9 +20,10 @@ public interface IOffice365ActivationCountsRequestBuilder extends IRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365ActivationCountsRequest instance
      */
-    IOffice365ActivationCountsRequest buildRequest();
+    IOffice365ActivationCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

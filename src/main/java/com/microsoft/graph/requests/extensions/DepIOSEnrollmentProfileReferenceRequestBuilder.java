@@ -36,10 +36,11 @@ public class DepIOSEnrollmentProfileReferenceRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IDepIOSEnrollmentProfileReferenceRequest instance
      */
-    public IDepIOSEnrollmentProfileReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepIOSEnrollmentProfileReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -8,12 +8,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -27,9 +26,10 @@ public interface IOrganizationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationRequest instance
      */
-    IOrganizationRequest buildRequest();
+    IOrganizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -40,9 +40,12 @@ public interface IOrganizationRequestBuilder extends IRequestBuilder {
     IOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IOrganizationalBrandingCollectionRequestBuilder brandings();
-
-    IOrganizationalBrandingRequestBuilder brandings(final String id);
+    /**
+     * Gets the request builder for OrganizationalBranding
+     *
+     * @return the IOrganizationalBrandingRequestBuilder instance
+     */
+    IOrganizationalBrandingRequestBuilder branding();
 
     ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration();
 

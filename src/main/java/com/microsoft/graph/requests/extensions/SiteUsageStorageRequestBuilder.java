@@ -34,10 +34,11 @@ public class SiteUsageStorageRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISiteUsageStorageRequest instance
      */
-    public ISiteUsageStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISiteUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

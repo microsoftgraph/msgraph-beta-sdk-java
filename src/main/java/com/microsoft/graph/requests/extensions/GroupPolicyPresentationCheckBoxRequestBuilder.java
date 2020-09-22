@@ -34,10 +34,11 @@ public class GroupPolicyPresentationCheckBoxRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationCheckBoxRequest instance
      */
-    public IGroupPolicyPresentationCheckBoxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationCheckBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

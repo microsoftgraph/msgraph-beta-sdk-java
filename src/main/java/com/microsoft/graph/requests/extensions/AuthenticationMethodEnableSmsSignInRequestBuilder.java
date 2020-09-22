@@ -32,10 +32,11 @@ public class AuthenticationMethodEnableSmsSignInRequestBuilder extends BaseActio
     /**
      * Creates the IAuthenticationMethodEnableSmsSignInRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAuthenticationMethodEnableSmsSignInRequest instance
      */
-    public IAuthenticationMethodEnableSmsSignInRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuthenticationMethodEnableSmsSignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

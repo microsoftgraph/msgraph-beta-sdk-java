@@ -174,5 +174,16 @@ public class ManagementConditionRequest extends BaseRequest implements IManageme
          return (ManagementConditionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagementConditionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ManagementConditionRequest)this;
+     }
+
 }
 

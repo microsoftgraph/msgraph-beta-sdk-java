@@ -34,10 +34,11 @@ public class ServicePrincipalGetPasswordSingleSignOnCredentialsRequestBuilder ex
     /**
      * Creates the IServicePrincipalGetPasswordSingleSignOnCredentialsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalGetPasswordSingleSignOnCredentialsRequest instance
      */
-    public IServicePrincipalGetPasswordSingleSignOnCredentialsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IServicePrincipalGetPasswordSingleSignOnCredentialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

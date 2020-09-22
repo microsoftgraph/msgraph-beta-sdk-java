@@ -34,10 +34,11 @@ public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IYammerGroupsActivityCountsRequest instance
      */
-    public IYammerGroupsActivityCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IYammerGroupsActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

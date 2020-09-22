@@ -17,9 +17,10 @@ public interface IIosVppAppRevokeDeviceLicenseRequestBuilder extends IRequestBui
     /**
      * Creates the IIosVppAppRevokeDeviceLicenseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IIosVppAppRevokeDeviceLicenseRequest instance
      */
-    IIosVppAppRevokeDeviceLicenseRequest buildRequest();
+    IIosVppAppRevokeDeviceLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IIosVppAppRevokeDeviceLicenseRequest with specific options instead of the existing options

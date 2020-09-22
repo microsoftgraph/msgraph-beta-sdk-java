@@ -68,6 +68,16 @@ public class DetectedAppReferenceRequest extends BaseRequest implements IDetecte
         return (DetectedAppReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDetectedAppReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DetectedAppReferenceRequest)this;
+    }
+    /**
      * Puts the DetectedApp
      *
      * @param srcDetectedApp the DetectedApp reference to PUT

@@ -34,10 +34,11 @@ public class AndroidForWorkTrustedRootCertificateRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkTrustedRootCertificateRequest instance
      */
-    public IAndroidForWorkTrustedRootCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidForWorkTrustedRootCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

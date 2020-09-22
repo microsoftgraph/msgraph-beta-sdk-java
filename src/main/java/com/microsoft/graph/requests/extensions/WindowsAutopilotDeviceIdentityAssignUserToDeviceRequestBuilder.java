@@ -36,10 +36,11 @@ public class WindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder exte
     /**
      * Creates the IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest instance
      */
-    public IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -23,9 +23,9 @@ public enum WindowsHealthMonitoringScope
     */
     BOOT_PERFORMANCE,
     /**
-    * user Experience Analytics
+    * windows Updates
     */
-    USER_EXPERIENCE_ANALYTICS,
+    WINDOWS_UPDATES,
     /**
     * For WindowsHealthMonitoringScope values that were not expected from the service
     */

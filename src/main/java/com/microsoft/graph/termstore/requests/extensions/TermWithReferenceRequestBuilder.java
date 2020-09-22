@@ -45,10 +45,11 @@ public class TermWithReferenceRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermWithReferenceRequest instance
      */
-    public ITermWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

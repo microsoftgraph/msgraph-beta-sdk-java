@@ -34,10 +34,11 @@ public class AzureADWindowsAutopilotDeploymentProfileRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAzureADWindowsAutopilotDeploymentProfileRequest instance
      */
-    public IAzureADWindowsAutopilotDeploymentProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAzureADWindowsAutopilotDeploymentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

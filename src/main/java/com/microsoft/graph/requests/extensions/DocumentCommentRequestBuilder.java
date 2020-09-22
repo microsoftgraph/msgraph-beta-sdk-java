@@ -38,10 +38,11 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDocumentCommentRequest instance
      */
-    public IDocumentCommentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDocumentCommentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

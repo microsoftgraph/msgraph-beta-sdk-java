@@ -51,10 +51,11 @@ public class ChatRequestBuilder extends BaseRequestBuilder implements IChatReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IChatRequest instance
      */
-    public IChatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

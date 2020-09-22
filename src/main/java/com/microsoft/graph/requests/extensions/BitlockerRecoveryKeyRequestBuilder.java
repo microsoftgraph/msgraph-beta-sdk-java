@@ -34,10 +34,11 @@ public class BitlockerRecoveryKeyRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBitlockerRecoveryKeyRequest instance
      */
-    public IBitlockerRecoveryKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBitlockerRecoveryKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

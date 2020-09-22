@@ -34,10 +34,11 @@ public class DeviceLogCollectionResponseRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceLogCollectionResponseRequest instance
      */
-    public IDeviceLogCollectionResponseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceLogCollectionResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

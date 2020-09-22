@@ -32,6 +32,10 @@ import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectio
 import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeCardCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeCardRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeCardCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeCardRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
@@ -70,10 +74,11 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IScheduleRequest instance
      */
-    public IScheduleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IScheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -128,6 +133,13 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
 
     public ISwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id) {
         return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests") + "/" + id, getClient(), null);
+    }
+    public ITimeCardCollectionRequestBuilder timeCards() {
+        return new TimeCardCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeCards"), getClient(), null);
+    }
+
+    public ITimeCardRequestBuilder timeCards(final String id) {
+        return new TimeCardRequestBuilder(getRequestUrlWithAdditionalSegment("timeCards") + "/" + id, getClient(), null);
     }
     public ITimeOffReasonCollectionRequestBuilder timeOffReasons() {
         return new TimeOffReasonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons"), getClient(), null);

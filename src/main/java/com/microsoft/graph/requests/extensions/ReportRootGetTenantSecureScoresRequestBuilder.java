@@ -34,10 +34,11 @@ public class ReportRootGetTenantSecureScoresRequestBuilder extends BaseFunctionR
     /**
      * Creates the IReportRootGetTenantSecureScoresRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTenantSecureScoresRequest instance
      */
-    public IReportRootGetTenantSecureScoresRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetTenantSecureScoresRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

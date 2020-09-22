@@ -23,9 +23,10 @@ public interface IPrintConnectorReferenceRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintConnectorReferenceRequest instance
      */
-    IPrintConnectorReferenceRequest buildRequest();
+    IPrintConnectorReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

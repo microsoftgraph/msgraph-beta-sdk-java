@@ -34,10 +34,11 @@ public class RiskyUserHistoryItemRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRiskyUserHistoryItemRequest instance
      */
-    public IRiskyUserHistoryItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRiskyUserHistoryItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

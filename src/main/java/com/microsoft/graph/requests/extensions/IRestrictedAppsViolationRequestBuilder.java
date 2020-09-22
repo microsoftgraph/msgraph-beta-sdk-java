@@ -20,9 +20,10 @@ public interface IRestrictedAppsViolationRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRestrictedAppsViolationRequest instance
      */
-    IRestrictedAppsViolationRequest buildRequest();
+    IRestrictedAppsViolationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

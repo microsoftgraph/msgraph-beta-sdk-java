@@ -32,10 +32,11 @@ public class EducationSubmissionReturnRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IEducationSubmissionReturnRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSubmissionReturnRequest instance
      */
-    public IEducationSubmissionReturnRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSubmissionReturnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

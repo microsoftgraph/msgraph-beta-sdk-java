@@ -17,9 +17,10 @@ public interface IDeviceHealthScriptAssignRequestBuilder extends IRequestBuilder
     /**
      * Creates the IDeviceHealthScriptAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptAssignRequest instance
      */
-    IDeviceHealthScriptAssignRequest buildRequest();
+    IDeviceHealthScriptAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceHealthScriptAssignRequest with specific options instead of the existing options

@@ -20,9 +20,10 @@ public interface ISkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkypeForBusinessDeviceUsageDistributionUserCountsRequest instance
      */
-    ISkypeForBusinessDeviceUsageDistributionUserCountsRequest buildRequest();
+    ISkypeForBusinessDeviceUsageDistributionUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

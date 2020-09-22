@@ -34,10 +34,11 @@ public class DelegatedPermissionClassificationRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDelegatedPermissionClassificationRequest instance
      */
-    public IDelegatedPermissionClassificationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDelegatedPermissionClassificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

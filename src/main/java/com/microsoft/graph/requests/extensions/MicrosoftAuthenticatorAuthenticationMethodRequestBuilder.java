@@ -34,10 +34,11 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends Ba
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
-    public IMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class PersonAnnotationRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonAnnotationRequest instance
      */
-    public IPersonAnnotationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonAnnotationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

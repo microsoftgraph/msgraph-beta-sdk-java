@@ -110,4 +110,15 @@ public class PrivilegedSignupStatusCompleteSetupCollectionRequest extends BaseCo
         return (IPrivilegedSignupStatusCompleteSetupCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrivilegedSignupStatusCompleteSetupCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IPrivilegedSignupStatusCompleteSetupCollectionRequest)this;
+    }
+
 }

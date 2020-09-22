@@ -34,10 +34,11 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationPolicySetItemRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceMobileAppConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

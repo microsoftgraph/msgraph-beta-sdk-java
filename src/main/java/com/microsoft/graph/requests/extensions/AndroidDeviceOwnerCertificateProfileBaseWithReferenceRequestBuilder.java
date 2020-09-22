@@ -37,10 +37,11 @@ public class AndroidDeviceOwnerCertificateProfileBaseWithReferenceRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest instance
      */
-    public IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerCertificateProfileBaseWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

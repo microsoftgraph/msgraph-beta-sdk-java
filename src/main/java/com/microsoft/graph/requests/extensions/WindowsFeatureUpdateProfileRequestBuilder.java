@@ -43,10 +43,11 @@ public class WindowsFeatureUpdateProfileRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsFeatureUpdateProfileRequest instance
      */
-    public IWindowsFeatureUpdateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsFeatureUpdateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

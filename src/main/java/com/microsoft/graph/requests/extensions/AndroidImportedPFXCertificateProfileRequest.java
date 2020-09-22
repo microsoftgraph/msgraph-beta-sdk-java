@@ -158,5 +158,16 @@ public class AndroidImportedPFXCertificateProfileRequest extends BaseRequest imp
          return (AndroidImportedPFXCertificateProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidImportedPFXCertificateProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidImportedPFXCertificateProfileRequest)this;
+     }
+
 }
 

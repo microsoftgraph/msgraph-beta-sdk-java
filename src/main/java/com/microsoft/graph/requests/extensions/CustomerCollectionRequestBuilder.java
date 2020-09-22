@@ -36,10 +36,22 @@ public class CustomerCollectionRequestBuilder extends BaseRequestBuilder impleme
         super(requestUrl, client, requestOptions);
     }
 
-    public ICustomerCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICustomerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICustomerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CustomerCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

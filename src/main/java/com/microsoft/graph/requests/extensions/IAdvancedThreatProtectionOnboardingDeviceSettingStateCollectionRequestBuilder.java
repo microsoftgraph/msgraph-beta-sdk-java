@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder extends IRequestBuilder {
 
-    IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder byId(final String id);

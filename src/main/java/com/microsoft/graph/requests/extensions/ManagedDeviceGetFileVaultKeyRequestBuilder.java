@@ -32,10 +32,11 @@ public class ManagedDeviceGetFileVaultKeyRequestBuilder extends BaseFunctionRequ
     /**
      * Creates the IManagedDeviceGetFileVaultKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceGetFileVaultKeyRequest instance
      */
-    public IManagedDeviceGetFileVaultKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceGetFileVaultKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -154,5 +154,16 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
          return (CallActivityStatisticsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICallActivityStatisticsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (CallActivityStatisticsRequest)this;
+     }
+
 }
 

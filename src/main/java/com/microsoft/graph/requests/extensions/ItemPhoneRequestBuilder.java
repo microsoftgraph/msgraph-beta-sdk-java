@@ -34,10 +34,11 @@ public class ItemPhoneRequestBuilder extends BaseRequestBuilder implements IItem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemPhoneRequest instance
      */
-    public IItemPhoneRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemPhoneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

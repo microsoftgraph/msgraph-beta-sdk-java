@@ -103,4 +103,14 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TermWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITermWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TermWithReferenceRequest)this;
+    }
 }

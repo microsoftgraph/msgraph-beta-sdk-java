@@ -37,10 +37,11 @@ public class DataLossPreventionPolicyRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDataLossPreventionPolicyRequest instance
      */
-    public IDataLossPreventionPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDataLossPreventionPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

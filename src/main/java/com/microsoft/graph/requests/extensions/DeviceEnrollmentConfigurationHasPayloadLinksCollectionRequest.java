@@ -109,4 +109,15 @@ public class DeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest exten
         return (IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDeviceEnrollmentConfigurationHasPayloadLinksCollectionRequest)this;
+    }
+
 }

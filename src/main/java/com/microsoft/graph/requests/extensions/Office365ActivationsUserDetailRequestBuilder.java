@@ -34,10 +34,11 @@ public class Office365ActivationsUserDetailRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365ActivationsUserDetailRequest instance
      */
-    public IOffice365ActivationsUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOffice365ActivationsUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

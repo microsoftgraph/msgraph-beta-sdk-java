@@ -154,5 +154,16 @@ public class WindowsPhone81TrustedRootCertificateRequest extends BaseRequest imp
          return (WindowsPhone81TrustedRootCertificateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsPhone81TrustedRootCertificateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WindowsPhone81TrustedRootCertificateRequest)this;
+     }
+
 }
 

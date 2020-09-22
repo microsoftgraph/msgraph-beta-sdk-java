@@ -34,10 +34,11 @@ public class PersonResponsibilityRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonResponsibilityRequest instance
      */
-    public IPersonResponsibilityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonResponsibilityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

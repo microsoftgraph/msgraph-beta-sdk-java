@@ -25,9 +25,10 @@ public interface IUnifiedRoleAssignmentMultipleRequestBuilder extends IRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUnifiedRoleAssignmentMultipleRequest instance
      */
-    IUnifiedRoleAssignmentMultipleRequest buildRequest();
+    IUnifiedRoleAssignmentMultipleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

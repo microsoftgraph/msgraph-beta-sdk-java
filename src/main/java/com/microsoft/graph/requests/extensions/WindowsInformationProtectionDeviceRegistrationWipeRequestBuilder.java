@@ -32,10 +32,11 @@ public class WindowsInformationProtectionDeviceRegistrationWipeRequestBuilder ex
     /**
      * Creates the IWindowsInformationProtectionDeviceRegistrationWipeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsInformationProtectionDeviceRegistrationWipeRequest instance
      */
-    public IWindowsInformationProtectionDeviceRegistrationWipeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionDeviceRegistrationWipeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

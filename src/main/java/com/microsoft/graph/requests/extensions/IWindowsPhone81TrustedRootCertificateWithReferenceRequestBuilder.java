@@ -22,9 +22,10 @@ public interface IWindowsPhone81TrustedRootCertificateWithReferenceRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81TrustedRootCertificateWithReferenceRequest instance
      */
-    IWindowsPhone81TrustedRootCertificateWithReferenceRequest buildRequest();
+    IWindowsPhone81TrustedRootCertificateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

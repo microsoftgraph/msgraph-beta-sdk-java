@@ -34,10 +34,11 @@ public class Windows81TrustedRootCertificateRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81TrustedRootCertificateRequest instance
      */
-    public IWindows81TrustedRootCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows81TrustedRootCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

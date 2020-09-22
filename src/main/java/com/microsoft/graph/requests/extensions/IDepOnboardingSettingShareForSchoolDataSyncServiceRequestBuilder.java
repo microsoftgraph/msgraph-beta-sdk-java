@@ -17,9 +17,10 @@ public interface IDepOnboardingSettingShareForSchoolDataSyncServiceRequestBuilde
     /**
      * Creates the IDepOnboardingSettingShareForSchoolDataSyncServiceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingShareForSchoolDataSyncServiceRequest instance
      */
-    IDepOnboardingSettingShareForSchoolDataSyncServiceRequest buildRequest();
+    IDepOnboardingSettingShareForSchoolDataSyncServiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDepOnboardingSettingShareForSchoolDataSyncServiceRequest with specific options instead of the existing options

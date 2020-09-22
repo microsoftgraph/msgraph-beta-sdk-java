@@ -36,10 +36,22 @@ public class DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementAutopilotPolicyStatusDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementAutopilotPolicyStatusDetailCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

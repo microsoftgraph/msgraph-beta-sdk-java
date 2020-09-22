@@ -37,10 +37,22 @@ public class WindowsDefenderApplicationControlSupplementalPolicyCollectionReques
         super(requestUrl, client, requestOptions);
     }
 
-    public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IWindowsDefenderApplicationControlSupplementalPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsDefenderApplicationControlSupplementalPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

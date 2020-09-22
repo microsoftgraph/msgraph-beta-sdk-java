@@ -34,10 +34,11 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
-    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

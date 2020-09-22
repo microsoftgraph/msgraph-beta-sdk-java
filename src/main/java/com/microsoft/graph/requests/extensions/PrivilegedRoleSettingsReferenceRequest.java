@@ -64,6 +64,16 @@ public class PrivilegedRoleSettingsReferenceRequest extends BaseRequest implemen
         return (PrivilegedRoleSettingsReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPrivilegedRoleSettingsReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (PrivilegedRoleSettingsReferenceRequest)this;
+    }
+    /**
      * Puts the PrivilegedRoleSettings
      *
      * @param srcPrivilegedRoleSettings the PrivilegedRoleSettings reference to PUT

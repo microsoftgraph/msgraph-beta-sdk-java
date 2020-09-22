@@ -17,9 +17,10 @@ public interface IDataClassificationServiceClassifyExactMatchesRequestBuilder ex
     /**
      * Creates the IDataClassificationServiceClassifyExactMatchesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDataClassificationServiceClassifyExactMatchesRequest instance
      */
-    IDataClassificationServiceClassifyExactMatchesRequest buildRequest();
+    IDataClassificationServiceClassifyExactMatchesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDataClassificationServiceClassifyExactMatchesRequest with specific options instead of the existing options

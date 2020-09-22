@@ -70,6 +70,16 @@ public class ManagementConditionStatementReferenceRequest extends BaseRequest im
         return (ManagementConditionStatementReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagementConditionStatementReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagementConditionStatementReferenceRequest)this;
+    }
+    /**
      * Puts the ManagementConditionStatement
      *
      * @param srcManagementConditionStatement the ManagementConditionStatement reference to PUT

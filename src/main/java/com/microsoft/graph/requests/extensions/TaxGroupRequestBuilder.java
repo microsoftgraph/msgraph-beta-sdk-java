@@ -34,10 +34,11 @@ public class TaxGroupRequestBuilder extends BaseRequestBuilder implements ITaxGr
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITaxGroupRequest instance
      */
-    public ITaxGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITaxGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,22 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionRequestBuilder e
         super(requestUrl, client, requestOptions);
     }
 
-    public IAndroidManagedStoreAppConfigurationSchemaCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IAndroidManagedStoreAppConfigurationSchemaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IAndroidManagedStoreAppConfigurationSchemaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidManagedStoreAppConfigurationSchemaCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

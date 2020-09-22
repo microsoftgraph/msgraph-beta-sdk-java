@@ -38,10 +38,11 @@ public class DimensionRequestBuilder extends BaseRequestBuilder implements IDime
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDimensionRequest instance
      */
-    public IDimensionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDimensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

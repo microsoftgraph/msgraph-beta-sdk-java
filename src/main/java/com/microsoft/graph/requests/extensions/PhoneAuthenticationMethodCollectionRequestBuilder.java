@@ -36,10 +36,22 @@ public class PhoneAuthenticationMethodCollectionRequestBuilder extends BaseReque
         super(requestUrl, client, requestOptions);
     }
 
-    public IPhoneAuthenticationMethodCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPhoneAuthenticationMethodCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPhoneAuthenticationMethodCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PhoneAuthenticationMethodCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

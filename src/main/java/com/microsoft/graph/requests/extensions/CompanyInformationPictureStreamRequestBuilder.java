@@ -34,10 +34,11 @@ public class CompanyInformationPictureStreamRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICompanyInformationPictureStreamRequest instance
      */
-    public ICompanyInformationPictureStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICompanyInformationPictureStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

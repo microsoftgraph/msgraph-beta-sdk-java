@@ -68,6 +68,16 @@ public class AccessReviewScheduleDefinitionReferenceRequest extends BaseRequest 
         return (AccessReviewScheduleDefinitionReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAccessReviewScheduleDefinitionReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (AccessReviewScheduleDefinitionReferenceRequest)this;
+    }
+    /**
      * Puts the AccessReviewScheduleDefinition
      *
      * @param srcAccessReviewScheduleDefinition the AccessReviewScheduleDefinition reference to PUT

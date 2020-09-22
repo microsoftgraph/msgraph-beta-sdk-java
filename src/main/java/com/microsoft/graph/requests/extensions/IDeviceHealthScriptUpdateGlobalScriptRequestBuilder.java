@@ -17,9 +17,10 @@ public interface IDeviceHealthScriptUpdateGlobalScriptRequestBuilder extends IRe
     /**
      * Creates the IDeviceHealthScriptUpdateGlobalScriptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptUpdateGlobalScriptRequest instance
      */
-    IDeviceHealthScriptUpdateGlobalScriptRequest buildRequest();
+    IDeviceHealthScriptUpdateGlobalScriptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceHealthScriptUpdateGlobalScriptRequest with specific options instead of the existing options

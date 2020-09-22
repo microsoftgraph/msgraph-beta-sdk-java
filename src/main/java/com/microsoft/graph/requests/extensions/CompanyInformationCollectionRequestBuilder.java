@@ -36,10 +36,22 @@ public class CompanyInformationCollectionRequestBuilder extends BaseRequestBuild
         super(requestUrl, client, requestOptions);
     }
 
-    public ICompanyInformationCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICompanyInformationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICompanyInformationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CompanyInformationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

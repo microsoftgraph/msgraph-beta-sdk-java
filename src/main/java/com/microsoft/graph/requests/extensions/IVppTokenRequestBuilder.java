@@ -21,9 +21,10 @@ public interface IVppTokenRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVppTokenRequest instance
      */
-    IVppTokenRequest buildRequest();
+    IVppTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -33,7 +34,7 @@ public interface IVppTokenRequestBuilder extends IRequestBuilder {
      */
     IVppTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices);
+    IVppTokenRevokeLicensesRequestBuilder revokeLicenses(final Boolean notifyManagedDevices, final Boolean revokeUntrackedLicenses);
     IVppTokenSyncLicensesRequestBuilder syncLicenses();
 
 }

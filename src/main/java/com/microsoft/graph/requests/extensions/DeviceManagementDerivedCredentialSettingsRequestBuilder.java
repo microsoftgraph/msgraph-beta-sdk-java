@@ -34,10 +34,11 @@ public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends Bas
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementDerivedCredentialSettingsRequest instance
      */
-    public IDeviceManagementDerivedCredentialSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementDerivedCredentialSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

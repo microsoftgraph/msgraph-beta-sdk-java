@@ -72,4 +72,15 @@ public class DepOnboardingSettingGetEncryptionPublicKeyRequest extends BaseReque
         return (DepOnboardingSettingGetEncryptionPublicKeyRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDepOnboardingSettingGetEncryptionPublicKeyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DepOnboardingSettingGetEncryptionPublicKeyRequest)this;
+    }
+
 }

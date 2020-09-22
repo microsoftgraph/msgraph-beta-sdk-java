@@ -17,9 +17,10 @@ public interface IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionReques
     /**
      * Creates the IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest instance
      */
-    IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest buildRequest();
+    IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceHealthScriptGetGlobalScriptHighestAvailableVersionRequest with specific options instead of the existing options

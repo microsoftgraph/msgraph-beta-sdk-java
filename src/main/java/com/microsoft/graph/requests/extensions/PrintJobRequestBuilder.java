@@ -43,10 +43,11 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder implements IPrint
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrintJobRequest instance
      */
-    public IPrintJobRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintJobRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -24,9 +24,10 @@ public interface IAndroidForWorkCertificateProfileBaseReferenceRequestBuilder ex
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidForWorkCertificateProfileBaseReferenceRequest instance
      */
-    IAndroidForWorkCertificateProfileBaseReferenceRequest buildRequest();
+    IAndroidForWorkCertificateProfileBaseReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

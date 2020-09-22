@@ -43,10 +43,11 @@ public class PrivilegedRoleRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPrivilegedRoleRequest instance
      */
-    public IPrivilegedRoleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

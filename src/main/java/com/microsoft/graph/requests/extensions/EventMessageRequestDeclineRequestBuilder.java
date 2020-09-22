@@ -38,10 +38,11 @@ public class EventMessageRequestDeclineRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IEventMessageRequestDeclineRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventMessageRequestDeclineRequest instance
      */
-    public IEventMessageRequestDeclineRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventMessageRequestDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

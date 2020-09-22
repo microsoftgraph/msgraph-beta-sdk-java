@@ -34,10 +34,11 @@ public class SharePointSiteUsageFileCountsRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharePointSiteUsageFileCountsRequest instance
      */
-    public ISharePointSiteUsageFileCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharePointSiteUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

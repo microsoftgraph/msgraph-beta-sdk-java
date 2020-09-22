@@ -34,10 +34,11 @@ public class EmbeddedSIMDeviceStateRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmbeddedSIMDeviceStateRequest instance
      */
-    public IEmbeddedSIMDeviceStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmbeddedSIMDeviceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

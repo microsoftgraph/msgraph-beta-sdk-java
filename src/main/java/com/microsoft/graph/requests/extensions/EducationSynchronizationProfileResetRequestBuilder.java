@@ -32,10 +32,11 @@ public class EducationSynchronizationProfileResetRequestBuilder extends BaseActi
     /**
      * Creates the IEducationSynchronizationProfileResetRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSynchronizationProfileResetRequest instance
      */
-    public IEducationSynchronizationProfileResetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSynchronizationProfileResetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

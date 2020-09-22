@@ -32,10 +32,11 @@ public class ManagedDeviceRotateFileVaultKeyRequestBuilder extends BaseActionReq
     /**
      * Creates the IManagedDeviceRotateFileVaultKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRotateFileVaultKeyRequest instance
      */
-    public IManagedDeviceRotateFileVaultKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRotateFileVaultKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

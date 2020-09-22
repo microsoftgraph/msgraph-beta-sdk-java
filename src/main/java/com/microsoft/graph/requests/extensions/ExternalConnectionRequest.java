@@ -168,5 +168,16 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
          return (ExternalConnectionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IExternalConnectionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ExternalConnectionRequest)this;
+     }
+
 }
 

@@ -44,10 +44,11 @@ public class UserTeamworkSendActivityNotificationRequestBuilder extends BaseActi
     /**
      * Creates the IUserTeamworkSendActivityNotificationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserTeamworkSendActivityNotificationRequest instance
      */
-    public IUserTeamworkSendActivityNotificationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserTeamworkSendActivityNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

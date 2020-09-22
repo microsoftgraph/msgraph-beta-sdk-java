@@ -34,10 +34,11 @@ public class SoftwareOathAuthenticationMethodRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISoftwareOathAuthenticationMethodRequest instance
      */
-    public ISoftwareOathAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISoftwareOathAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

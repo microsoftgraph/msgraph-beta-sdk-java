@@ -73,4 +73,15 @@ public class ReportRootGetGroupPrintUsageSummaryRequest extends BaseRequest impl
         return (ReportRootGetGroupPrintUsageSummaryRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetGroupPrintUsageSummaryRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetGroupPrintUsageSummaryRequest)this;
+    }
+
 }

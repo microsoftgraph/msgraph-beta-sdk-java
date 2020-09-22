@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionHasPa
  */
 public interface IAndroidManagedAppProtectionHasPayloadLinksCollectionRequestBuilder extends IRequestBuilder {
 
-    IAndroidManagedAppProtectionHasPayloadLinksCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IAndroidManagedAppProtectionHasPayloadLinksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IAndroidManagedAppProtectionHasPayloadLinksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

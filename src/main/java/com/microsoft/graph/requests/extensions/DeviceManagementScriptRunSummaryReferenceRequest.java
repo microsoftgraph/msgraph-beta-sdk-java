@@ -64,6 +64,16 @@ public class DeviceManagementScriptRunSummaryReferenceRequest extends BaseReques
         return (DeviceManagementScriptRunSummaryReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceManagementScriptRunSummaryReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceManagementScriptRunSummaryReferenceRequest)this;
+    }
+    /**
      * Puts the DeviceManagementScriptRunSummary
      *
      * @param srcDeviceManagementScriptRunSummary the DeviceManagementScriptRunSummary reference to PUT

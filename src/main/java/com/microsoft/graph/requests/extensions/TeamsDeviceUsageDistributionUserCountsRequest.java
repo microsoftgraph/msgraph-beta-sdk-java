@@ -154,5 +154,16 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
          return (TeamsDeviceUsageDistributionUserCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITeamsDeviceUsageDistributionUserCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (TeamsDeviceUsageDistributionUserCountsRequest)this;
+     }
+
 }
 

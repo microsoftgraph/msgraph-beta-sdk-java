@@ -17,9 +17,10 @@ public interface IPrivilegedRoleAssignmentMakeEligibleRequestBuilder extends IRe
     /**
      * Creates the IPrivilegedRoleAssignmentMakeEligibleRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleAssignmentMakeEligibleRequest instance
      */
-    IPrivilegedRoleAssignmentMakeEligibleRequest buildRequest();
+    IPrivilegedRoleAssignmentMakeEligibleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrivilegedRoleAssignmentMakeEligibleRequest with specific options instead of the existing options

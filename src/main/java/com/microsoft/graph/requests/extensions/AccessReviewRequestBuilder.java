@@ -46,10 +46,11 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder implements IA
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAccessReviewRequest instance
      */
-    public IAccessReviewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

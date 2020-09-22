@@ -34,10 +34,11 @@ public class Fido2AuthenticationMethodRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFido2AuthenticationMethodRequest instance
      */
-    public IFido2AuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFido2AuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

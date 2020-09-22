@@ -20,9 +20,10 @@ public interface ITeamsDeviceUsageUserDetailRequestBuilder extends IRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsDeviceUsageUserDetailRequest instance
      */
-    ITeamsDeviceUsageUserDetailRequest buildRequest();
+    ITeamsDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

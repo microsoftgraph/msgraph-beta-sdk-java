@@ -32,10 +32,11 @@ public class DeviceManagementGetAssignedRoleDetailsRequestBuilder extends BaseFu
     /**
      * Creates the IDeviceManagementGetAssignedRoleDetailsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementGetAssignedRoleDetailsRequest instance
      */
-    public IDeviceManagementGetAssignedRoleDetailsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementGetAssignedRoleDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class OfficeClientConfigurationPolicyPayloadStreamRequestBuilder extends 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfficeClientConfigurationPolicyPayloadStreamRequest instance
      */
-    public IOfficeClientConfigurationPolicyPayloadStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeClientConfigurationPolicyPayloadStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

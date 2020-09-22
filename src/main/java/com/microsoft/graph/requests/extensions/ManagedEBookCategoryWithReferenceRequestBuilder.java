@@ -35,10 +35,11 @@ public class ManagedEBookCategoryWithReferenceRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedEBookCategoryWithReferenceRequest instance
      */
-    public IManagedEBookCategoryWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedEBookCategoryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder extends IRequestBuilder {
 
-    IIosLobAppProvisioningConfigurationAssignmentCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IIosLobAppProvisioningConfigurationAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IIosLobAppProvisioningConfigurationAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IIosLobAppProvisioningConfigurationAssignmentRequestBuilder byId(final String id);

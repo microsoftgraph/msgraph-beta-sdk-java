@@ -22,9 +22,10 @@ public interface IWindowsPhone81ImportedPFXCertificateProfileRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81ImportedPFXCertificateProfileRequest instance
      */
-    IWindowsPhone81ImportedPFXCertificateProfileRequest buildRequest();
+    IWindowsPhone81ImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

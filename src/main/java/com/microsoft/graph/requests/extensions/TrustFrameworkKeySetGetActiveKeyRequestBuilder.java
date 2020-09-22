@@ -32,10 +32,11 @@ public class TrustFrameworkKeySetGetActiveKeyRequestBuilder extends BaseFunction
     /**
      * Creates the ITrustFrameworkKeySetGetActiveKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetGetActiveKeyRequest instance
      */
-    public ITrustFrameworkKeySetGetActiveKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkKeySetGetActiveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

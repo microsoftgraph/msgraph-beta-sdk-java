@@ -34,10 +34,11 @@ public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IW
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkPositionRequest instance
      */
-    public IWorkPositionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkPositionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

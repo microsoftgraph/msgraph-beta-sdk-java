@@ -158,5 +158,16 @@ public class FeatureRolloutPolicyRequest extends BaseRequest implements IFeature
          return (FeatureRolloutPolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IFeatureRolloutPolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (FeatureRolloutPolicyRequest)this;
+     }
+
 }
 

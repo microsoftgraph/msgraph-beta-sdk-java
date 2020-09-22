@@ -17,9 +17,10 @@ public interface IAccessReviewInstanceSendReminderRequestBuilder extends IReques
     /**
      * Creates the IAccessReviewInstanceSendReminderRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceSendReminderRequest instance
      */
-    IAccessReviewInstanceSendReminderRequest buildRequest();
+    IAccessReviewInstanceSendReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAccessReviewInstanceSendReminderRequest with specific options instead of the existing options

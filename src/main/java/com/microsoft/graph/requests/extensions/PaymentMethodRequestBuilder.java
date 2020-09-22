@@ -34,10 +34,11 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPaymentMethodRequest instance
      */
-    public IPaymentMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPaymentMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

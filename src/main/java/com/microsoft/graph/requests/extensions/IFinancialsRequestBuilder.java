@@ -22,9 +22,10 @@ public interface IFinancialsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFinancialsRequest instance
      */
-    IFinancialsRequest buildRequest();
+    IFinancialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

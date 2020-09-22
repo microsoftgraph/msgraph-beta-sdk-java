@@ -40,10 +40,11 @@ public class MacOSEnterpriseWiFiConfigurationRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSEnterpriseWiFiConfigurationRequest instance
      */
-    public IMacOSEnterpriseWiFiConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSEnterpriseWiFiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -113,4 +113,15 @@ public class ReportRootManagedDeviceEnrollmentFailureTrendsRequest extends BaseR
         return (ReportRootManagedDeviceEnrollmentFailureTrendsRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootManagedDeviceEnrollmentFailureTrendsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootManagedDeviceEnrollmentFailureTrendsRequest)this;
+    }
+
 }

@@ -38,10 +38,11 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder implements IRevi
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IReviewSetRequest instance
      */
-    public IReviewSetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReviewSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

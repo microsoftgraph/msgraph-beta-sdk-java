@@ -34,10 +34,11 @@ public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsDeviceUsageDistributionUserCountsRequest instance
      */
-    public ITeamsDeviceUsageDistributionUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsDeviceUsageDistributionUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

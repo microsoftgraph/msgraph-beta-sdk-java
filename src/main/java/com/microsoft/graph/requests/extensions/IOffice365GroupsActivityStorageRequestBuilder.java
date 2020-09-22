@@ -20,9 +20,10 @@ public interface IOffice365GroupsActivityStorageRequestBuilder extends IRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOffice365GroupsActivityStorageRequest instance
      */
-    IOffice365GroupsActivityStorageRequest buildRequest();
+    IOffice365GroupsActivityStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

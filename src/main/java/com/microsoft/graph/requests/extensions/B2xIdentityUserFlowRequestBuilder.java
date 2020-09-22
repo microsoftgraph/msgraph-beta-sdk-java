@@ -38,10 +38,11 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IB2xIdentityUserFlowRequest instance
      */
-    public IB2xIdentityUserFlowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IB2xIdentityUserFlowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

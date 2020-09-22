@@ -34,10 +34,11 @@ public class OneDriveActivityUserDetailRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOneDriveActivityUserDetailRequest instance
      */
-    public IOneDriveActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOneDriveActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

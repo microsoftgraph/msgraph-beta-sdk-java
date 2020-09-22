@@ -37,10 +37,22 @@ public class TodoTaskListCollectionRequestBuilder extends BaseRequestBuilder imp
         super(requestUrl, client, requestOptions);
     }
 
-    public ITodoTaskListCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ITodoTaskListCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ITodoTaskListCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TodoTaskListCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -35,10 +35,11 @@ public class DeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementDerivedCredentialSettingsWithReferenceRequest instance
      */
-    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementDerivedCredentialSettingsWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

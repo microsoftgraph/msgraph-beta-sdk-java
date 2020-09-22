@@ -59,6 +59,11 @@ public class GroupPolicyDefinitionCollectionWithReferencesRequest extends BaseCo
         return (GroupPolicyDefinitionCollectionWithReferencesRequest)this;
     }
 
+    public IGroupPolicyDefinitionCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (GroupPolicyDefinitionCollectionWithReferencesRequest)this;
+    }
+
     public IGroupPolicyDefinitionCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (GroupPolicyDefinitionCollectionWithReferencesRequest)this;

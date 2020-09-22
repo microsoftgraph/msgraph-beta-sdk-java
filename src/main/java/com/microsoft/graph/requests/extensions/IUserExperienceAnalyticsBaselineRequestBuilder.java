@@ -21,9 +21,10 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsBaselineRequest instance
      */
-    IUserExperienceAnalyticsBaselineRequest buildRequest();
+    IUserExperienceAnalyticsBaselineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -47,5 +48,12 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics();
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics();
 
 }

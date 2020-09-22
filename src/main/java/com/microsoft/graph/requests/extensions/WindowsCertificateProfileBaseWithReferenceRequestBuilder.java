@@ -35,10 +35,11 @@ public class WindowsCertificateProfileBaseWithReferenceRequestBuilder extends Ba
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsCertificateProfileBaseWithReferenceRequest instance
      */
-    public IWindowsCertificateProfileBaseWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsCertificateProfileBaseWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

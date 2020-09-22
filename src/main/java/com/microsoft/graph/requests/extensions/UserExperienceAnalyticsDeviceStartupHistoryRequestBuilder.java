@@ -34,10 +34,11 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsDeviceStartupHistoryRequest instance
      */
-    public IUserExperienceAnalyticsDeviceStartupHistoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsDeviceStartupHistoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

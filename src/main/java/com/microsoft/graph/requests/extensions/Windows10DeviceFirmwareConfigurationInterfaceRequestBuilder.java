@@ -34,10 +34,11 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10DeviceFirmwareConfigurationInterfaceRequest instance
      */
-    public IWindows10DeviceFirmwareConfigurationInterfaceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10DeviceFirmwareConfigurationInterfaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

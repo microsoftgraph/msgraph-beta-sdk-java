@@ -17,9 +17,10 @@ public interface IExactMatchSessionCancelRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IExactMatchSessionCancelRequest
      *
+     * @param requestOptions the options for the request
      * @return the IExactMatchSessionCancelRequest instance
      */
-    IExactMatchSessionCancelRequest buildRequest();
+    IExactMatchSessionCancelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IExactMatchSessionCancelRequest with specific options instead of the existing options

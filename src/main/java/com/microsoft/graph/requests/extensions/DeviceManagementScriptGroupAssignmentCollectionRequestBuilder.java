@@ -36,10 +36,22 @@ public class DeviceManagementScriptGroupAssignmentCollectionRequestBuilder exten
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceManagementScriptGroupAssignmentCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementScriptGroupAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementScriptGroupAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementScriptGroupAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

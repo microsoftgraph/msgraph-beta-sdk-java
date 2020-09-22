@@ -34,10 +34,11 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEnrollmentRestrictionsConfigurationPolicySetItemRequest instance
      */
-    public IEnrollmentRestrictionsConfigurationPolicySetItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEnrollmentRestrictionsConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

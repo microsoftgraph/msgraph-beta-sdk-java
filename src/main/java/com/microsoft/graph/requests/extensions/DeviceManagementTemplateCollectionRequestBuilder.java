@@ -39,10 +39,22 @@ public class DeviceManagementTemplateCollectionRequestBuilder extends BaseReques
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceManagementTemplateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -25,6 +25,7 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilde
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;
@@ -41,9 +42,10 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicyRootRequest instance
      */
-    IPolicyRootRequest buildRequest();
+    IPolicyRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -60,6 +62,13 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
      * @return the IAuthenticationFlowsPolicyRequestBuilder instance
      */
     IAuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy();
+
+    /**
+     * Gets the request builder for B2cAuthenticationMethodsPolicy
+     *
+     * @return the IB2cAuthenticationMethodsPolicyRequestBuilder instance
+     */
+    IB2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy();
 
     /**
      * Gets the request builder for DeviceRegistrationPolicy

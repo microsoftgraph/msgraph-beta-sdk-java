@@ -34,10 +34,11 @@ public class IosVppAppAssignedDeviceLicenseRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosVppAppAssignedDeviceLicenseRequest instance
      */
-    public IIosVppAppAssignedDeviceLicenseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVppAppAssignedDeviceLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

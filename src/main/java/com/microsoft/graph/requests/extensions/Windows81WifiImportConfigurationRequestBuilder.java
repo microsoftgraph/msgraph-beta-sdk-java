@@ -34,10 +34,11 @@ public class Windows81WifiImportConfigurationRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81WifiImportConfigurationRequest instance
      */
-    public IWindows81WifiImportConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows81WifiImportConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

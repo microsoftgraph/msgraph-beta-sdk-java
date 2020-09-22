@@ -21,9 +21,10 @@ public interface IActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
      */
-    IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest();
+    IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

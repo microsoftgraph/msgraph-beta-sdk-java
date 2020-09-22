@@ -34,10 +34,11 @@ public class UserPFXCertificateRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserPFXCertificateRequest instance
      */
-    public IUserPFXCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserPFXCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

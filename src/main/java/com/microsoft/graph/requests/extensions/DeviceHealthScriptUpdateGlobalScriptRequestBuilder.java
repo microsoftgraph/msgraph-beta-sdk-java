@@ -34,10 +34,11 @@ public class DeviceHealthScriptUpdateGlobalScriptRequestBuilder extends BaseActi
     /**
      * Creates the IDeviceHealthScriptUpdateGlobalScriptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceHealthScriptUpdateGlobalScriptRequest instance
      */
-    public IDeviceHealthScriptUpdateGlobalScriptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceHealthScriptUpdateGlobalScriptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

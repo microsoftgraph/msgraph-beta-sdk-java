@@ -34,10 +34,11 @@ public class WindowsManagementAppHealthStateRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsManagementAppHealthStateRequest instance
      */
-    public IWindowsManagementAppHealthStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsManagementAppHealthStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

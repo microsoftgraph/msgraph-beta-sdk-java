@@ -32,10 +32,11 @@ public class ChangeTrackedEntityStageForDeletionRequestBuilder extends BaseActio
     /**
      * Creates the IChangeTrackedEntityStageForDeletionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IChangeTrackedEntityStageForDeletionRequest instance
      */
-    public IChangeTrackedEntityStageForDeletionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChangeTrackedEntityStageForDeletionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

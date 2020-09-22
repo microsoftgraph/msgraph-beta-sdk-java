@@ -51,6 +51,10 @@ public enum DeviceManagementTemplateType
     */
     DEVICE_CONFIGURATION_FOR_OFFICE365,
     /**
+    * cloud PC
+    */
+    CLOUD_PC,
+    /**
     * For DeviceManagementTemplateType values that were not expected from the service
     */
     UNEXPECTED_VALUE

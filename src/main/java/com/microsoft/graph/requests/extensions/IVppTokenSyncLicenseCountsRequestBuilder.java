@@ -17,9 +17,10 @@ public interface IVppTokenSyncLicenseCountsRequestBuilder extends IRequestBuilde
     /**
      * Creates the IVppTokenSyncLicenseCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IVppTokenSyncLicenseCountsRequest instance
      */
-    IVppTokenSyncLicenseCountsRequest buildRequest();
+    IVppTokenSyncLicenseCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IVppTokenSyncLicenseCountsRequest with specific options instead of the existing options

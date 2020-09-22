@@ -17,9 +17,10 @@ public interface IDeviceLogCollectionResponseCreateDownloadUrlRequestBuilder ext
     /**
      * Creates the IDeviceLogCollectionResponseCreateDownloadUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceLogCollectionResponseCreateDownloadUrlRequest instance
      */
-    IDeviceLogCollectionResponseCreateDownloadUrlRequest buildRequest();
+    IDeviceLogCollectionResponseCreateDownloadUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceLogCollectionResponseCreateDownloadUrlRequest with specific options instead of the existing options

@@ -35,10 +35,11 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsDevicePerformanceRequest instance
      */
-    public IUserExperienceAnalyticsDevicePerformanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsDevicePerformanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

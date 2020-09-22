@@ -34,10 +34,11 @@ public class EmailAppUsageUserDetailRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmailAppUsageUserDetailRequest instance
      */
-    public IEmailAppUsageUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmailAppUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -35,25 +35,23 @@ public class SiteDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilde
     public SiteDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
+    
     /**
-     * The request builder for this collection of Site
+     * Creates the request
      *
-     * @param requestUrl     the request URL
-     * @param client         the service client
      * @param requestOptions the options for this request
-     * @param token the token
+     * @return the IUserRequest instance
      */
-    public SiteDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String token) {
-        super(requestUrl, client, requestOptions);
-     	 if(token!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("token", token));
-		}
-      }
-
-    public ISiteDeltaCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISiteDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISiteDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteDeltaCollectionRequest request = new SiteDeltaCollectionRequest(
                 getRequestUrl(),

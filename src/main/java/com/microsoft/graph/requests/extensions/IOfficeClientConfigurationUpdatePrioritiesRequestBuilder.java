@@ -17,9 +17,10 @@ public interface IOfficeClientConfigurationUpdatePrioritiesRequestBuilder extend
     /**
      * Creates the IOfficeClientConfigurationUpdatePrioritiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOfficeClientConfigurationUpdatePrioritiesRequest instance
      */
-    IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest();
+    IOfficeClientConfigurationUpdatePrioritiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IOfficeClientConfigurationUpdatePrioritiesRequest with specific options instead of the existing options

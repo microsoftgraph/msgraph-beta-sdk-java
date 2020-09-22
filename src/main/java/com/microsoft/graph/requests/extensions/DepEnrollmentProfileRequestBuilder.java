@@ -34,10 +34,11 @@ public class DepEnrollmentProfileRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDepEnrollmentProfileRequest instance
      */
-    public IDepEnrollmentProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDepEnrollmentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

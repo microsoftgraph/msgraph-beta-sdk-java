@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccoun
  */
 public interface IReportRootGetOneDriveUsageAccountDetailCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetOneDriveUsageAccountDetailCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetOneDriveUsageAccountDetailCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetOneDriveUsageAccountDetailCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

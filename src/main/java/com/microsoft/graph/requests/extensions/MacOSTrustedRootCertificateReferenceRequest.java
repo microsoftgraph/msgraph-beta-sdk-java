@@ -64,6 +64,16 @@ public class MacOSTrustedRootCertificateReferenceRequest extends BaseRequest imp
         return (MacOSTrustedRootCertificateReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMacOSTrustedRootCertificateReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MacOSTrustedRootCertificateReferenceRequest)this;
+    }
+    /**
      * Puts the MacOSTrustedRootCertificate
      *
      * @param srcMacOSTrustedRootCertificate the MacOSTrustedRootCertificate reference to PUT

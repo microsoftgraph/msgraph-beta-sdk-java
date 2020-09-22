@@ -17,9 +17,10 @@ public interface IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequestBuilder
     /**
      * Creates the IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest instance
      */
-    IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest buildRequest();
+    IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWindowsAutopilotDeviceIdentityAssignUserToDeviceRequest with specific options instead of the existing options

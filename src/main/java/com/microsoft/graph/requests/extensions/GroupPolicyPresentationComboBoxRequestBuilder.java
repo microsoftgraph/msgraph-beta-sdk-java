@@ -34,10 +34,11 @@ public class GroupPolicyPresentationComboBoxRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationComboBoxRequest instance
      */
-    public IGroupPolicyPresentationComboBoxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationComboBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

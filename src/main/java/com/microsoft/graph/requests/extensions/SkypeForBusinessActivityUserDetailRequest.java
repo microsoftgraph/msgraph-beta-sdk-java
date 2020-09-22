@@ -154,5 +154,16 @@ public class SkypeForBusinessActivityUserDetailRequest extends BaseRequest imple
          return (SkypeForBusinessActivityUserDetailRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISkypeForBusinessActivityUserDetailRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (SkypeForBusinessActivityUserDetailRequest)this;
+     }
+
 }
 

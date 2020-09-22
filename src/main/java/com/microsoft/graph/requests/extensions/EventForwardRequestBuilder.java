@@ -36,10 +36,11 @@ public class EventForwardRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the IEventForwardRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventForwardRequest instance
      */
-    public IEventForwardRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

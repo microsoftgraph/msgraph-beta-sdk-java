@@ -34,10 +34,11 @@ public class ApplicationTemplateInstantiateRequestBuilder extends BaseActionRequ
     /**
      * Creates the IApplicationTemplateInstantiateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationTemplateInstantiateRequest instance
      */
-    public IApplicationTemplateInstantiateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationTemplateInstantiateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

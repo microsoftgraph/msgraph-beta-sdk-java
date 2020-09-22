@@ -34,10 +34,11 @@ public class PolicySetAssignmentRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicySetAssignmentRequest instance
      */
-    public IPolicySetAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPolicySetAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

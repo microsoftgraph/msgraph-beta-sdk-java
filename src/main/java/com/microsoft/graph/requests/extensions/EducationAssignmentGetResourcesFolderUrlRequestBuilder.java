@@ -32,10 +32,11 @@ public class EducationAssignmentGetResourcesFolderUrlRequestBuilder extends Base
     /**
      * Creates the IEducationAssignmentGetResourcesFolderUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationAssignmentGetResourcesFolderUrlRequest instance
      */
-    public IEducationAssignmentGetResourcesFolderUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationAssignmentGetResourcesFolderUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

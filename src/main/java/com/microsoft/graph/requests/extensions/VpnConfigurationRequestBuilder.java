@@ -34,10 +34,11 @@ public class VpnConfigurationRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVpnConfigurationRequest instance
      */
-    public IVpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

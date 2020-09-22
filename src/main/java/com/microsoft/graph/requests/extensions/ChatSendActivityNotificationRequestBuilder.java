@@ -47,10 +47,11 @@ public class ChatSendActivityNotificationRequestBuilder extends BaseActionReques
     /**
      * Creates the IChatSendActivityNotificationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IChatSendActivityNotificationRequest instance
      */
-    public IChatSendActivityNotificationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChatSendActivityNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

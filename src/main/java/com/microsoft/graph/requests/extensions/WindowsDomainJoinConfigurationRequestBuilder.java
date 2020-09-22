@@ -38,10 +38,11 @@ public class WindowsDomainJoinConfigurationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsDomainJoinConfigurationRequest instance
      */
-    public IWindowsDomainJoinConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsDomainJoinConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

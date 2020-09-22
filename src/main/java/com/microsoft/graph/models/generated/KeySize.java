@@ -19,6 +19,10 @@ public enum KeySize
     */
     SIZE2048,
     /**
+    * size4096
+    */
+    SIZE4096,
+    /**
     * For KeySize values that were not expected from the service
     */
     UNEXPECTED_VALUE

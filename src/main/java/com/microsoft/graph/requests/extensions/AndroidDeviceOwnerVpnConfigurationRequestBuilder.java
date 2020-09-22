@@ -38,10 +38,11 @@ public class AndroidDeviceOwnerVpnConfigurationRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerVpnConfigurationRequest instance
      */
-    public IAndroidDeviceOwnerVpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerVpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

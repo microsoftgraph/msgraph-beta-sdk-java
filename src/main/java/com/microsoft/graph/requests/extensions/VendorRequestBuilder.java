@@ -44,10 +44,11 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVendorRequest instance
      */
-    public IVendorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVendorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

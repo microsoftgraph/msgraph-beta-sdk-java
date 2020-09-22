@@ -21,9 +21,10 @@ public interface IWindows10VpnConfigurationRequestBuilder extends IRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10VpnConfigurationRequest instance
      */
-    IWindows10VpnConfigurationRequest buildRequest();
+    IWindows10VpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

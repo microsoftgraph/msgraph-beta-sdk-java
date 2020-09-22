@@ -20,9 +20,10 @@ public interface IAndroidDeviceComplianceLocalActionLockDeviceRequestBuilder ext
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceComplianceLocalActionLockDeviceRequest instance
      */
-    IAndroidDeviceComplianceLocalActionLockDeviceRequest buildRequest();
+    IAndroidDeviceComplianceLocalActionLockDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

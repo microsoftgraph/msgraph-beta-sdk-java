@@ -35,10 +35,11 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
     /**
      * Creates the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest instance
      */
-    public IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPerformanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -59,5 +60,26 @@ public class UserExperienceAnalyticsRegressionSummarySummarizeDeviceRegressionPe
       }
 
         return request;
+    }
+    public IUserExperienceAnalyticsMetricCollectionRequestBuilder manufacturerRegression() {
+        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsMetricRequestBuilder manufacturerRegression(final String id) {
+        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression") + "/" + id, getClient(), null);
+    }
+    public IUserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression() {
+        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsMetricRequestBuilder modelRegression(final String id) {
+        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression") + "/" + id, getClient(), null);
+    }
+    public IUserExperienceAnalyticsMetricCollectionRequestBuilder operatingSystemRegression() {
+        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsMetricRequestBuilder operatingSystemRegression(final String id) {
+        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression") + "/" + id, getClient(), null);
     }
 }

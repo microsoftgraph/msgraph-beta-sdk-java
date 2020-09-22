@@ -169,5 +169,16 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
          return (ItemFacetRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IItemFacetRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ItemFacetRequest)this;
+     }
+
 }
 

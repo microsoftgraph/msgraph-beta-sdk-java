@@ -11,6 +11,7 @@ import com.microsoft.graph.models.generated.DevicePlatformType;
 import com.microsoft.graph.models.extensions.ManagementCondition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Management Condition Get Management Conditions For Platform Collection Request.
  */
-public interface IManagementConditionGetManagementConditionsForPlatformCollectionRequest {
+public interface IManagementConditionGetManagementConditionsForPlatformCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IManagementConditionGetManagementConditionsForPlatformCollectionPage> callback);
 

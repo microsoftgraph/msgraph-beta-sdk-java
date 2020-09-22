@@ -32,10 +32,11 @@ public class AccessReviewInstanceApplyDecisionsRequestBuilder extends BaseAction
     /**
      * Creates the IAccessReviewInstanceApplyDecisionsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAccessReviewInstanceApplyDecisionsRequest instance
      */
-    public IAccessReviewInstanceApplyDecisionsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAccessReviewInstanceApplyDecisionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

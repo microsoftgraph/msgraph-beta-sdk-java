@@ -154,5 +154,16 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
          return (TrustFrameworkPolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITrustFrameworkPolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (TrustFrameworkPolicyRequest)this;
+     }
+
 }
 

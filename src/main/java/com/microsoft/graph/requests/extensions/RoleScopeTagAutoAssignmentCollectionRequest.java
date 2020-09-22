@@ -85,6 +85,17 @@ public class RoleScopeTagAutoAssignmentCollectionRequest extends BaseCollectionR
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IRoleScopeTagAutoAssignmentCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleScopeTagAutoAssignmentCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

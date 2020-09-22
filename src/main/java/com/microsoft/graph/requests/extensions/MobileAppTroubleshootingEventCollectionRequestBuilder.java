@@ -36,10 +36,22 @@ public class MobileAppTroubleshootingEventCollectionRequestBuilder extends BaseR
         super(requestUrl, client, requestOptions);
     }
 
-    public IMobileAppTroubleshootingEventCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IMobileAppTroubleshootingEventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IMobileAppTroubleshootingEventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppTroubleshootingEventCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

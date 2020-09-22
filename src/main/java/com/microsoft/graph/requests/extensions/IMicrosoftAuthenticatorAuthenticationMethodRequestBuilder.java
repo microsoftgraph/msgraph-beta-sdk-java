@@ -20,9 +20,10 @@ public interface IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder exten
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
-    IMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest();
+    IMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

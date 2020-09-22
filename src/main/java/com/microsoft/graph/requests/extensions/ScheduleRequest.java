@@ -32,6 +32,10 @@ import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectio
 import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeCardCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeCardRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeCardCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeCardRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
@@ -187,6 +191,17 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      */
      public IScheduleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ScheduleRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IScheduleRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ScheduleRequest)this;
      }
 

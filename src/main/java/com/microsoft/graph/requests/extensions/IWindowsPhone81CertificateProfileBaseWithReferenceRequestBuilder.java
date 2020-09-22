@@ -22,9 +22,10 @@ public interface IWindowsPhone81CertificateProfileBaseWithReferenceRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81CertificateProfileBaseWithReferenceRequest instance
      */
-    IWindowsPhone81CertificateProfileBaseWithReferenceRequest buildRequest();
+    IWindowsPhone81CertificateProfileBaseWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

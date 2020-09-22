@@ -154,5 +154,16 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
          return (IosikEv2VpnConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosikEv2VpnConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IosikEv2VpnConfigurationRequest)this;
+     }
+
 }
 

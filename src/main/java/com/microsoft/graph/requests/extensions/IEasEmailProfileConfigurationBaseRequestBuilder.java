@@ -20,9 +20,10 @@ public interface IEasEmailProfileConfigurationBaseRequestBuilder extends IReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEasEmailProfileConfigurationBaseRequest instance
      */
-    IEasEmailProfileConfigurationBaseRequest buildRequest();
+    IEasEmailProfileConfigurationBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

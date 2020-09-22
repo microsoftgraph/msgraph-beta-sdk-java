@@ -24,9 +24,10 @@ public interface IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder ext
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequest instance
      */
-    IUserExperienceAnalyticsCategoryWithReferenceRequest buildRequest();
+    IUserExperienceAnalyticsCategoryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

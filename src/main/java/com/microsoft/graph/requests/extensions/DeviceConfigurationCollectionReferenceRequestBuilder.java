@@ -40,10 +40,22 @@ public class DeviceConfigurationCollectionReferenceRequestBuilder extends BaseRe
         super(requestUrl, client, requestOptions);
     }
 
-    public IDeviceConfigurationCollectionReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceConfigurationCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceConfigurationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }

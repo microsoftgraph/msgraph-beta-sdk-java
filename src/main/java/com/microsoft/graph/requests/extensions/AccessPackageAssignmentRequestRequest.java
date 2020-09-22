@@ -160,5 +160,16 @@ public class AccessPackageAssignmentRequestRequest extends BaseRequest implement
          return (AccessPackageAssignmentRequestRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAccessPackageAssignmentRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AccessPackageAssignmentRequestRequest)this;
+     }
+
 }
 

@@ -35,6 +35,14 @@ public enum UserExperienceAnalyticsOperatingSystemRestartCategory
     */
     SHUTDOWN_WITHOUT_UPDATE,
     /**
+    * long Power Button Press
+    */
+    LONG_POWER_BUTTON_PRESS,
+    /**
+    * boot Error
+    */
+    BOOT_ERROR,
+    /**
     * For UserExperienceAnalyticsOperatingSystemRestartCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -154,5 +154,16 @@ public class AppScopeRequest extends BaseRequest implements IAppScopeRequest {
          return (AppScopeRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAppScopeRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AppScopeRequest)this;
+     }
+
 }
 

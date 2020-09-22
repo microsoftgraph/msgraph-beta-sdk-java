@@ -17,9 +17,10 @@ public interface IEventMessageRequestAcceptRequestBuilder extends IRequestBuilde
     /**
      * Creates the IEventMessageRequestAcceptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventMessageRequestAcceptRequest instance
      */
-    IEventMessageRequestAcceptRequest buildRequest();
+    IEventMessageRequestAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEventMessageRequestAcceptRequest with specific options instead of the existing options

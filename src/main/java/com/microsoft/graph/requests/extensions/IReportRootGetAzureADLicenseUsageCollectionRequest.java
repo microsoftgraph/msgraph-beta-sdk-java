@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AzureADLicenseUsage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Azure ADLicense Usage Collection Request.
  */
-public interface IReportRootGetAzureADLicenseUsageCollectionRequest {
+public interface IReportRootGetAzureADLicenseUsageCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetAzureADLicenseUsageCollectionPage> callback);
 

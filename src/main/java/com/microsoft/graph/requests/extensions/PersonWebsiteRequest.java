@@ -154,5 +154,16 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
          return (PersonWebsiteRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPersonWebsiteRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PersonWebsiteRequest)this;
+     }
+
 }
 

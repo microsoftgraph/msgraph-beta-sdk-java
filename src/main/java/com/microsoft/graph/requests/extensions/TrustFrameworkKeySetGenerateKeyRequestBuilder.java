@@ -40,10 +40,11 @@ public class TrustFrameworkKeySetGenerateKeyRequestBuilder extends BaseActionReq
     /**
      * Creates the ITrustFrameworkKeySetGenerateKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITrustFrameworkKeySetGenerateKeyRequest instance
      */
-    public ITrustFrameworkKeySetGenerateKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrustFrameworkKeySetGenerateKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

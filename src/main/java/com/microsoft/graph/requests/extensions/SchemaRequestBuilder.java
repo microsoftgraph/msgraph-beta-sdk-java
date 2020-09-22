@@ -34,10 +34,11 @@ public class SchemaRequestBuilder extends BaseRequestBuilder implements ISchemaR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISchemaRequest instance
      */
-    public ISchemaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISchemaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

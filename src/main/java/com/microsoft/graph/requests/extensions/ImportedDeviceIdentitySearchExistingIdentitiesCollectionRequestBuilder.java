@@ -39,11 +39,23 @@ public class ImportedDeviceIdentitySearchExistingIdentitiesCollectionRequestBuil
 			bodyParams.put("importedDeviceIdentities", importedDeviceIdentities);
 		}
       }
-
-    public IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest request = new ImportedDeviceIdentitySearchExistingIdentitiesCollectionRequest(
                 getRequestUrl(),

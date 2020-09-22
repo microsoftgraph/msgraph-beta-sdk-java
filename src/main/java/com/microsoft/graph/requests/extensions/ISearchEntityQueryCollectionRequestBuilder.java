@@ -21,8 +21,20 @@ import com.microsoft.graph.requests.extensions.ISearchEntityQueryCollectionReque
  */
 public interface ISearchEntityQueryCollectionRequestBuilder extends IRequestBuilder {
 
-    ISearchEntityQueryCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ISearchEntityQueryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ISearchEntityQueryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

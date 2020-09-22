@@ -17,9 +17,10 @@ public interface IReportRootGetM365AppUserDetailRequestBuilder extends IRequestB
     /**
      * Creates the IReportRootGetM365AppUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetM365AppUserDetailRequest instance
      */
-    IReportRootGetM365AppUserDetailRequest buildRequest();
+    IReportRootGetM365AppUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetM365AppUserDetailRequest with specific options instead of the existing options

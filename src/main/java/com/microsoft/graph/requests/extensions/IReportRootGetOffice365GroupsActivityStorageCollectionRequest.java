@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365GroupsActivityStorage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Report Root Get Office365Groups Activity Storage Collection Request.
  */
-public interface IReportRootGetOffice365GroupsActivityStorageCollectionRequest {
+public interface IReportRootGetOffice365GroupsActivityStorageCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IReportRootGetOffice365GroupsActivityStorageCollectionPage> callback);
 

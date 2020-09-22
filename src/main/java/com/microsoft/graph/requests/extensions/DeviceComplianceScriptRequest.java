@@ -165,5 +165,16 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
          return (DeviceComplianceScriptRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceComplianceScriptRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceComplianceScriptRequest)this;
+     }
+
 }
 

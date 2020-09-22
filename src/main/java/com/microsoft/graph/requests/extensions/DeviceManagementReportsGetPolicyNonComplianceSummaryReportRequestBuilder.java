@@ -50,10 +50,11 @@ public class DeviceManagementReportsGetPolicyNonComplianceSummaryReportRequestBu
     /**
      * Creates the IDeviceManagementReportsGetPolicyNonComplianceSummaryReportRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementReportsGetPolicyNonComplianceSummaryReportRequest instance
      */
-    public IDeviceManagementReportsGetPolicyNonComplianceSummaryReportRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementReportsGetPolicyNonComplianceSummaryReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

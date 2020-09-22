@@ -39,11 +39,23 @@ public class DeviceManagementTemplateCompareCollectionRequestBuilder extends Bas
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("templateId", templateId));
 		}
       }
-
-    public IDeviceManagementTemplateCompareCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDeviceManagementTemplateCompareCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDeviceManagementTemplateCompareCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementTemplateCompareCollectionRequest request = new DeviceManagementTemplateCompareCollectionRequest(
                 getRequestUrl(),

@@ -38,10 +38,11 @@ public class PublishedResourceRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPublishedResourceRequest instance
      */
-    public IPublishedResourceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPublishedResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

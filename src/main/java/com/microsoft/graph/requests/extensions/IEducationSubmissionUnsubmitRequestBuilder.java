@@ -17,9 +17,10 @@ public interface IEducationSubmissionUnsubmitRequestBuilder extends IRequestBuil
     /**
      * Creates the IEducationSubmissionUnsubmitRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEducationSubmissionUnsubmitRequest instance
      */
-    IEducationSubmissionUnsubmitRequest buildRequest();
+    IEducationSubmissionUnsubmitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IEducationSubmissionUnsubmitRequest with specific options instead of the existing options

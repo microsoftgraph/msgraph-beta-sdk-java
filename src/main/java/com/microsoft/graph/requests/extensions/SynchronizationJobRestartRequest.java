@@ -77,4 +77,15 @@ public class SynchronizationJobRestartRequest extends BaseRequest implements ISy
         return (SynchronizationJobRestartRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ISynchronizationJobRestartRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SynchronizationJobRestartRequest)this;
+    }
+
 }

@@ -22,9 +22,10 @@ public interface IUserExperienceAnalyticsMetricWithReferenceRequestBuilder exten
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserExperienceAnalyticsMetricWithReferenceRequest instance
      */
-    IUserExperienceAnalyticsMetricWithReferenceRequest buildRequest();
+    IUserExperienceAnalyticsMetricWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -40,11 +40,23 @@ public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceD
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("summarizeBy", summarizeBy));
 		}
       }
-
-    public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest request = new UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionRequest(
                 getRequestUrl(),

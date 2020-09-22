@@ -32,10 +32,11 @@ public class DeviceManagementEnableUnlicensedAdminstratorsRequestBuilder extends
     /**
      * Creates the IDeviceManagementEnableUnlicensedAdminstratorsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementEnableUnlicensedAdminstratorsRequest instance
      */
-    public IDeviceManagementEnableUnlicensedAdminstratorsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementEnableUnlicensedAdminstratorsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

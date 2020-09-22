@@ -34,10 +34,11 @@ public class ApprovalStepRequestBuilder extends BaseRequestBuilder implements IA
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApprovalStepRequest instance
      */
-    public IApprovalStepRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApprovalStepRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

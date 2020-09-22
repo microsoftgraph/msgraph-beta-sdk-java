@@ -27,9 +27,10 @@ public interface IManagementConditionStatementReferenceRequestBuilder extends IR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagementConditionStatementReferenceRequest instance
      */
-    IManagementConditionStatementReferenceRequest buildRequest();
+    IManagementConditionStatementReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

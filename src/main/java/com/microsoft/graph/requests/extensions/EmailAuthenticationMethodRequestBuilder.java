@@ -34,10 +34,11 @@ public class EmailAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEmailAuthenticationMethodRequest instance
      */
-    public IEmailAuthenticationMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEmailAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

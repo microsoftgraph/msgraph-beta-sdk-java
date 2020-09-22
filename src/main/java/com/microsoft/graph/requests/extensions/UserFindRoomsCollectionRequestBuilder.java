@@ -49,11 +49,23 @@ public class UserFindRoomsCollectionRequestBuilder extends BaseFunctionRequestBu
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("roomList", roomList));
 		}
       }
-
-    public IUserFindRoomsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserFindRoomsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserFindRoomsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserFindRoomsCollectionRequest request = new UserFindRoomsCollectionRequest(
                 getRequestUrl(),

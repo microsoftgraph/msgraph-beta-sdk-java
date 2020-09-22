@@ -34,10 +34,11 @@ public class SkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISkypeForBusinessPeerToPeerActivityMinuteCountsRequest instance
      */
-    public ISkypeForBusinessPeerToPeerActivityMinuteCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISkypeForBusinessPeerToPeerActivityMinuteCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

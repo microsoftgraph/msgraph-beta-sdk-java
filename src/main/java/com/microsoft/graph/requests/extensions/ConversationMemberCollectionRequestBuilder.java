@@ -9,12 +9,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.ConversationMember;
+import com.microsoft.graph.models.extensions.ActionResultPart;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequest;
+import com.microsoft.graph.requests.extensions.IConversationMemberAddCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -36,10 +38,22 @@ public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuild
         super(requestUrl, client, requestOptions);
     }
 
-    public IConversationMemberCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IConversationMemberCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IConversationMemberCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConversationMemberCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
@@ -49,4 +63,8 @@ public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuild
     }
 
 
+
+    public IConversationMemberAddCollectionRequestBuilder add(final java.util.List<ConversationMember> values) {
+        return new ConversationMemberAddCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, values);
+    }
 }

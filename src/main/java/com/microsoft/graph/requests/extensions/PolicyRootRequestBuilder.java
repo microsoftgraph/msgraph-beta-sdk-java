@@ -42,6 +42,8 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollection
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
@@ -76,10 +78,11 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicyRootRequest instance
      */
-    public IPolicyRootRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPolicyRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -101,6 +104,15 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      */
     public IAuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
         return new AuthenticationFlowsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationFlowsPolicy"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for B2cAuthenticationMethodsPolicy
+     *
+     * @return the IB2cAuthenticationMethodsPolicyRequestBuilder instance
+     */
+    public IB2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
+        return new B2cAuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("b2cAuthenticationMethodsPolicy"), getClient(), null);
     }
 
     /**

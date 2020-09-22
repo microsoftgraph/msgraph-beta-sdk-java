@@ -162,5 +162,16 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
          return (EducationSubmissionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEducationSubmissionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (EducationSubmissionRequest)this;
+     }
+
 }
 

@@ -38,10 +38,11 @@ public class DeviceManagementCollectionSettingInstanceRequestBuilder extends Bas
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementCollectionSettingInstanceRequest instance
      */
-    public IDeviceManagementCollectionSettingInstanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementCollectionSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

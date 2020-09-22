@@ -34,10 +34,11 @@ public class WindowsUniversalAppXContainedAppRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsUniversalAppXContainedAppRequest instance
      */
-    public IWindowsUniversalAppXContainedAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsUniversalAppXContainedAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

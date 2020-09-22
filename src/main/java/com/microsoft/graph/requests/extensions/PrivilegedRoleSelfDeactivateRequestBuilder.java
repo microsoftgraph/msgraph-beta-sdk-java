@@ -32,10 +32,11 @@ public class PrivilegedRoleSelfDeactivateRequestBuilder extends BaseActionReques
     /**
      * Creates the IPrivilegedRoleSelfDeactivateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrivilegedRoleSelfDeactivateRequest instance
      */
-    public IPrivilegedRoleSelfDeactivateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrivilegedRoleSelfDeactivateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

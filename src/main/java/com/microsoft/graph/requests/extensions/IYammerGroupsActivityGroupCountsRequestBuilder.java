@@ -20,9 +20,10 @@ public interface IYammerGroupsActivityGroupCountsRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IYammerGroupsActivityGroupCountsRequest instance
      */
-    IYammerGroupsActivityGroupCountsRequest buildRequest();
+    IYammerGroupsActivityGroupCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

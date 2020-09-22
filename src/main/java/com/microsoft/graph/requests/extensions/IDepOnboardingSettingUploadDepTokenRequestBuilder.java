@@ -17,9 +17,10 @@ public interface IDepOnboardingSettingUploadDepTokenRequestBuilder extends IRequ
     /**
      * Creates the IDepOnboardingSettingUploadDepTokenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDepOnboardingSettingUploadDepTokenRequest instance
      */
-    IDepOnboardingSettingUploadDepTokenRequest buildRequest();
+    IDepOnboardingSettingUploadDepTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDepOnboardingSettingUploadDepTokenRequest with specific options instead of the existing options

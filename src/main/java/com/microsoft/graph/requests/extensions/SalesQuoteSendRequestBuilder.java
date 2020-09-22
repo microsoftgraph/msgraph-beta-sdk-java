@@ -32,10 +32,11 @@ public class SalesQuoteSendRequestBuilder extends BaseActionRequestBuilder imple
     /**
      * Creates the ISalesQuoteSendRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesQuoteSendRequest instance
      */
-    public ISalesQuoteSendRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISalesQuoteSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

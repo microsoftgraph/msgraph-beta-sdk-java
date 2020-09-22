@@ -17,9 +17,10 @@ public interface IMobileAppGetMobileAppCountRequestBuilder extends IRequestBuild
     /**
      * Creates the IMobileAppGetMobileAppCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppGetMobileAppCountRequest instance
      */
-    IMobileAppGetMobileAppCountRequest buildRequest();
+    IMobileAppGetMobileAppCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMobileAppGetMobileAppCountRequest with specific options instead of the existing options

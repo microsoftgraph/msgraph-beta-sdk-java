@@ -154,5 +154,16 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
          return (Office365GroupsActivityGroupCountsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOffice365GroupsActivityGroupCountsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Office365GroupsActivityGroupCountsRequest)this;
+     }
+
 }
 

@@ -17,9 +17,10 @@ public interface IVppTokenRevokeLicensesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IVppTokenRevokeLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IVppTokenRevokeLicensesRequest instance
      */
-    IVppTokenRevokeLicensesRequest buildRequest();
+    IVppTokenRevokeLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IVppTokenRevokeLicensesRequest with specific options instead of the existing options

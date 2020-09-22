@@ -17,9 +17,10 @@ public interface IUserWipeManagedAppRegistrationByDeviceTagRequestBuilder extend
     /**
      * Creates the IUserWipeManagedAppRegistrationByDeviceTagRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserWipeManagedAppRegistrationByDeviceTagRequest instance
      */
-    IUserWipeManagedAppRegistrationByDeviceTagRequest buildRequest();
+    IUserWipeManagedAppRegistrationByDeviceTagRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserWipeManagedAppRegistrationByDeviceTagRequest with specific options instead of the existing options

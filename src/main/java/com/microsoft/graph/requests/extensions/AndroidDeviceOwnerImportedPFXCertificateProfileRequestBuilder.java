@@ -38,10 +38,11 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequestBuilder exten
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidDeviceOwnerImportedPFXCertificateProfileRequest instance
      */
-    public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

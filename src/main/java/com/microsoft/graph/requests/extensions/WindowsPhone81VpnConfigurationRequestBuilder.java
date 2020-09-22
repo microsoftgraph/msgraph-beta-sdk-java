@@ -36,10 +36,11 @@ public class WindowsPhone81VpnConfigurationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81VpnConfigurationRequest instance
      */
-    public IWindowsPhone81VpnConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81VpnConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

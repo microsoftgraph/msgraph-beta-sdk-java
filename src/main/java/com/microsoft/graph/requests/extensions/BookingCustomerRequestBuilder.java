@@ -34,10 +34,11 @@ public class BookingCustomerRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBookingCustomerRequest instance
      */
-    public IBookingCustomerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBookingCustomerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

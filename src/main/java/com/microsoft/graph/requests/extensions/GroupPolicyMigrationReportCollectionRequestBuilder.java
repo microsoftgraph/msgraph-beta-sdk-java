@@ -38,10 +38,22 @@ public class GroupPolicyMigrationReportCollectionRequestBuilder extends BaseRequ
         super(requestUrl, client, requestOptions);
     }
 
-    public IGroupPolicyMigrationReportCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IGroupPolicyMigrationReportCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IGroupPolicyMigrationReportCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupPolicyMigrationReportCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

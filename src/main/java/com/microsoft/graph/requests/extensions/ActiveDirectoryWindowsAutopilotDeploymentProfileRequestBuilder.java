@@ -36,10 +36,11 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
      */
-    public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

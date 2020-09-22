@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IReportRootGetAzureADFeatureUsage
  */
 public interface IReportRootGetAzureADFeatureUsageCollectionRequestBuilder extends IRequestBuilder {
 
-    IReportRootGetAzureADFeatureUsageCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IReportRootGetAzureADFeatureUsageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IReportRootGetAzureADFeatureUsageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

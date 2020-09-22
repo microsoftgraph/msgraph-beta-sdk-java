@@ -17,9 +17,10 @@ public interface ISalesQuoteMakeInvoiceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ISalesQuoteMakeInvoiceRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISalesQuoteMakeInvoiceRequest instance
      */
-    ISalesQuoteMakeInvoiceRequest buildRequest();
+    ISalesQuoteMakeInvoiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ISalesQuoteMakeInvoiceRequest with specific options instead of the existing options

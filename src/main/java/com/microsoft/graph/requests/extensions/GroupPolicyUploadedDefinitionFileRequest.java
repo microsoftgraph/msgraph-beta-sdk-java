@@ -159,5 +159,16 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
          return (GroupPolicyUploadedDefinitionFileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IGroupPolicyUploadedDefinitionFileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (GroupPolicyUploadedDefinitionFileRequest)this;
+     }
+
 }
 

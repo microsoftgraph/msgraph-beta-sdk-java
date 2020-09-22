@@ -158,5 +158,16 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
          return (B2xIdentityUserFlowRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IB2xIdentityUserFlowRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (B2xIdentityUserFlowRequest)this;
+     }
+
 }
 

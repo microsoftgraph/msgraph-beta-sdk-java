@@ -44,10 +44,11 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityBaselineTemplateRequest instance
      */
-    public ISecurityBaselineTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityBaselineTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

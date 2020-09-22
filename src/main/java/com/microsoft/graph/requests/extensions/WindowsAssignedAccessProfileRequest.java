@@ -154,5 +154,16 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
          return (WindowsAssignedAccessProfileRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsAssignedAccessProfileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WindowsAssignedAccessProfileRequest)this;
+     }
+
 }
 

@@ -35,10 +35,11 @@ public class ManagedDeviceCreateDeviceLogCollectionRequestRequestBuilder extends
     /**
      * Creates the IManagedDeviceCreateDeviceLogCollectionRequestRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceCreateDeviceLogCollectionRequestRequest instance
      */
-    public IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceCreateDeviceLogCollectionRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

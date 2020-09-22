@@ -20,9 +20,10 @@ public interface IWindows10EnrollmentCompletionPageConfigurationPolicySetItemReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
      */
-    IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest();
+    IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

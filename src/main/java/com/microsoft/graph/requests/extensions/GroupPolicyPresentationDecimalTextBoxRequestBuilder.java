@@ -34,10 +34,11 @@ public class GroupPolicyPresentationDecimalTextBoxRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupPolicyPresentationDecimalTextBoxRequest instance
      */
-    public IGroupPolicyPresentationDecimalTextBoxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupPolicyPresentationDecimalTextBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

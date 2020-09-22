@@ -38,10 +38,11 @@ public class MacOSImportedPFXCertificateProfileRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSImportedPFXCertificateProfileRequest instance
      */
-    public IMacOSImportedPFXCertificateProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSImportedPFXCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

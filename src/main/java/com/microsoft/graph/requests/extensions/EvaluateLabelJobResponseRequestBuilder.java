@@ -34,10 +34,11 @@ public class EvaluateLabelJobResponseRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEvaluateLabelJobResponseRequest instance
      */
-    public IEvaluateLabelJobResponseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEvaluateLabelJobResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

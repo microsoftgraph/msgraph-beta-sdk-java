@@ -174,10 +174,11 @@ public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompan
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICompanyRequest instance
      */
-    public ICompanyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICompanyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

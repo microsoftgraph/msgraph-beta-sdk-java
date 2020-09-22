@@ -32,10 +32,11 @@ public class PrintDocumentUploadDataRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IPrintDocumentUploadDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrintDocumentUploadDataRequest instance
      */
-    public IPrintDocumentUploadDataRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPrintDocumentUploadDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

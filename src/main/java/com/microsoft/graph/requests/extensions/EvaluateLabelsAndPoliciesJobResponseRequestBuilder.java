@@ -34,10 +34,11 @@ public class EvaluateLabelsAndPoliciesJobResponseRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEvaluateLabelsAndPoliciesJobResponseRequest instance
      */
-    public IEvaluateLabelsAndPoliciesJobResponseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEvaluateLabelsAndPoliciesJobResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

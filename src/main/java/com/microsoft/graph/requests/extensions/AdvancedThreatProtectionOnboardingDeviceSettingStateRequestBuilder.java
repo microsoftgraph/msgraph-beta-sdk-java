@@ -34,10 +34,11 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest instance
      */
-    public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

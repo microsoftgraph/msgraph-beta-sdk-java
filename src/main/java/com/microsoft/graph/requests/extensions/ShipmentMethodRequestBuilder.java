@@ -34,10 +34,11 @@ public class ShipmentMethodRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IShipmentMethodRequest instance
      */
-    public IShipmentMethodRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IShipmentMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -93,4 +93,14 @@ public class DepMacOSEnrollmentProfileWithReferenceRequest extends BaseRequest i
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DepMacOSEnrollmentProfileWithReferenceRequest)this;
     }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDepMacOSEnrollmentProfileWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DepMacOSEnrollmentProfileWithReferenceRequest)this;
+    }
 }

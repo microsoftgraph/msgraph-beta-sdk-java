@@ -162,5 +162,16 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
          return (StoreRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IStoreRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (StoreRequest)this;
+     }
+
 }
 

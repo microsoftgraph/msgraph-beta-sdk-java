@@ -17,9 +17,10 @@ public interface IPrinterGetCapabilitiesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPrinterGetCapabilitiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPrinterGetCapabilitiesRequest instance
      */
-    IPrinterGetCapabilitiesRequest buildRequest();
+    IPrinterGetCapabilitiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPrinterGetCapabilitiesRequest with specific options instead of the existing options

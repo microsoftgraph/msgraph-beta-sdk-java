@@ -17,9 +17,10 @@ public interface IDeviceConfigurationAssignedAccessMultiModeProfilesRequestBuild
     /**
      * Creates the IDeviceConfigurationAssignedAccessMultiModeProfilesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceConfigurationAssignedAccessMultiModeProfilesRequest instance
      */
-    IDeviceConfigurationAssignedAccessMultiModeProfilesRequest buildRequest();
+    IDeviceConfigurationAssignedAccessMultiModeProfilesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceConfigurationAssignedAccessMultiModeProfilesRequest with specific options instead of the existing options

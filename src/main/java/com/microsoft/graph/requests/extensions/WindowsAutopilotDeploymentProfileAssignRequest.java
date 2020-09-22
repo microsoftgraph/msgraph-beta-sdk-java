@@ -77,4 +77,15 @@ public class WindowsAutopilotDeploymentProfileAssignRequest extends BaseRequest 
         return (WindowsAutopilotDeploymentProfileAssignRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWindowsAutopilotDeploymentProfileAssignRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WindowsAutopilotDeploymentProfileAssignRequest)this;
+    }
+
 }

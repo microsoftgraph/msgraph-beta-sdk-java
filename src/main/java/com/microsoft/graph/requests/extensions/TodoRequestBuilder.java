@@ -38,10 +38,11 @@ public class TodoRequestBuilder extends BaseRequestBuilder implements ITodoReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITodoRequest instance
      */
-    public ITodoRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITodoRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

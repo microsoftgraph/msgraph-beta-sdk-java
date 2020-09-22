@@ -35,10 +35,22 @@ public class ConnectorCollectionRequestBuilder extends BaseRequestBuilder implem
         super(requestUrl, client, requestOptions);
     }
 
-    public IConnectorCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConnectorCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -64,6 +64,16 @@ public class IosTrustedRootCertificateReferenceRequest extends BaseRequest imple
         return (IosTrustedRootCertificateReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IIosTrustedRootCertificateReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IosTrustedRootCertificateReferenceRequest)this;
+    }
+    /**
      * Puts the IosTrustedRootCertificate
      *
      * @param srcIosTrustedRootCertificate the IosTrustedRootCertificate reference to PUT

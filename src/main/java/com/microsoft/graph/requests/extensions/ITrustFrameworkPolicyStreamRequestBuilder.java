@@ -22,9 +22,10 @@ public interface ITrustFrameworkPolicyStreamRequestBuilder extends IRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITrustFrameworkPolicyStreamRequest instance
      */
-    ITrustFrameworkPolicyStreamRequest buildRequest();
+    ITrustFrameworkPolicyStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
