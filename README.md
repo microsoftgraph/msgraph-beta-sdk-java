@@ -33,11 +33,23 @@ Add the dependency in `dependencies` in pom.xml
 
 ```xml
 <dependency>
-	<groupId>com.microsoft.graph</groupId>
-	<artifactId>microsoft-graph-beta</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+  <groupId>com.microsoft.graph</groupId>
+  <artifactId>microsoft-graph-beta</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
 </dependency>
 ```
+
+Add the repository in `repositories` in pom.xml
+
+```xml
+<repository>
+  <id>sonatype-snapshot</id>
+  <name>Sonatype Snapshot</name>
+  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+</repository>
+```
+
+>**Note:** if the `repositories` node doesn't exist, add it in `project`. For more information about the maven repositories configuration, [refer to this documentation](https://maven.apache.org/guides/mini/guide-multiple-repositories.html).
 
 ### 1.3 Enable ProGuard (Android)
 
