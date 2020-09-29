@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RiskDetection;
 import com.microsoft.graph.models.extensions.RiskyUser;
-import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.RiskDetectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.RiskDetectionCollectionPage;
 import com.microsoft.graph.requests.extensions.RiskyUserCollectionResponse;
@@ -26,8 +25,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Identity Protection Root.
  */
-public class IdentityProtectionRoot extends Entity implements IJsonBackedObject {
+public class IdentityProtectionRoot implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Risk Detections.

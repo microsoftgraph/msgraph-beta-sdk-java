@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TrustFrameworkKeySet;
 import com.microsoft.graph.models.extensions.TrustFrameworkPolicy;
-import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionPage;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionResponse;
@@ -26,8 +25,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Trust Framework.
  */
-public class TrustFramework extends Entity implements IJsonBackedObject {
+public class TrustFramework implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Key Sets.

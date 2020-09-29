@@ -22,7 +22,6 @@ import com.microsoft.graph.models.extensions.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.extensions.DirectoryRoleAccessReviewPolicy;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.IdentitySecurityDefaultsEnforcementPolicy;
-import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.AuthorizationPolicyCollectionResponse;
@@ -50,8 +49,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Policy Root.
  */
-public class PolicyRoot extends Entity implements IJsonBackedObject {
+public class PolicyRoot implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Authentication Flows Policy.

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ExternalConnection;
-import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionPage;
 
@@ -23,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the External.
  */
-public class External extends Entity implements IJsonBackedObject {
+public class External implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Connections.
