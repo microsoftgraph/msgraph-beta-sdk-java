@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RbacApplication;
 import com.microsoft.graph.models.extensions.RbacApplicationMultiple;
-import com.microsoft.graph.models.extensions.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,8 +21,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Role Management.
  */
-public class RoleManagement extends Entity implements IJsonBackedObject {
+public class RoleManagement implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Directory.
