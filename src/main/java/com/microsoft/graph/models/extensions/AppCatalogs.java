@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamsApp;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionPage;
 
@@ -22,18 +23,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the App Catalogs.
  */
-public class AppCatalogs implements IJsonBackedObject {
+public class AppCatalogs extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Teams Apps.

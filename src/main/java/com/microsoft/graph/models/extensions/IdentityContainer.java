@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import com.microsoft.graph.models.extensions.ContinuousAccessEvaluationPolicy;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionResponse;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionResponse;
@@ -30,18 +31,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Identity Container.
  */
-public class IdentityContainer implements IJsonBackedObject {
+public class IdentityContainer extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Conditional Access.

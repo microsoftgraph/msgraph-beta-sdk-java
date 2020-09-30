@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.CallCollectionResponse;
 import com.microsoft.graph.requests.extensions.CallCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
@@ -25,18 +26,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Comms Application.
  */
-public class CommsApplication implements IJsonBackedObject {
+public class CommsApplication extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Calls.

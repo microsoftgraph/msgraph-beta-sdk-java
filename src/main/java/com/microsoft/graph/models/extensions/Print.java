@@ -16,6 +16,7 @@ import com.microsoft.graph.models.extensions.PrinterShare;
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.PrintService;
 import com.microsoft.graph.models.extensions.PrintTaskDefinition;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintOperationCollectionResponse;
@@ -41,18 +42,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Print.
  */
-public class Print implements IJsonBackedObject {
+public class Print extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Settings.

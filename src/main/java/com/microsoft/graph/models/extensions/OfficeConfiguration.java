@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.OfficeClientCheckinStatus;
 import com.microsoft.graph.models.extensions.OfficeUserCheckinSummary;
 import com.microsoft.graph.models.extensions.OfficeClientConfiguration;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionPage;
 
@@ -24,18 +25,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Office Configuration.
  */
-public class OfficeConfiguration implements IJsonBackedObject {
+public class OfficeConfiguration extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Tenant Checkin Statuses.
