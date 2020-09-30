@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessReviewSet;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
+import com.microsoft.graph.models.extensions.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,18 +23,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Identity Governance.
  */
-public class IdentityGovernance implements IJsonBackedObject {
+public class IdentityGovernance extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Access Reviews.

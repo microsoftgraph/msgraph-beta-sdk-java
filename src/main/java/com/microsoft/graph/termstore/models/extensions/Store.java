@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.models.extensions.Set;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.termstore.requests.extensions.GroupCollectionResponse;
 import com.microsoft.graph.termstore.requests.extensions.GroupCollectionPage;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionResponse;
@@ -25,18 +26,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Store.
  */
-public class Store implements IJsonBackedObject {
+public class Store extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Default Language Tag.
