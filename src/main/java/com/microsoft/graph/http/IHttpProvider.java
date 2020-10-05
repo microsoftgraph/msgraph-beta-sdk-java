@@ -69,7 +69,7 @@ public interface IHttpProvider {
      * @param <BodyType>   the type of the object to send to the service in the body of the request
      */
     <Result, BodyType> void send(final IHttpRequest request,
-                                 final ICallback<Result> callback,
+                                 final ICallback<? super Result> callback,
                                  final Class<Result> resultClass,
                                  final BodyType serializable);
 
@@ -123,6 +123,6 @@ public interface IHttpProvider {
     <Result, BodyType> Request getHttpRequest(final IHttpRequest request,
                                               final Class<Result> resultClass,
                                               final BodyType serializable,
-                                              final IProgressCallback<Result> progress)
+                                              final IProgressCallback<? super Result> progress)
             throws ClientException;
 }

@@ -16,6 +16,10 @@ plugins {
     id 'com.jfrog.bintray' version '1.8.5'
 }
 
+java {
+    modularity.inferModulePath = true
+}
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -31,12 +35,12 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'
     
-    implementation 'com.google.code.gson:gson:2.8.6'
+    api 'com.google.code.gson:gson:2.8.6'
     
     implementation 'com.squareup.okhttp3:okhttp:3.12.1'
     
     // Core Http library 
-    implementation 'com.microsoft.graph:microsoft-graph-core:1.0.5'
+    api 'com.microsoft.graph:microsoft-graph-core:1.0.5'
 }
 
 def pomConfig = {
@@ -54,12 +58,20 @@ def pomConfig = {
 //Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
 //Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
 
+tasks.jar {
+    manifest {
+        attributes('Automatic-Module-Name': project.property('mavenGroupId'))
+    }
+}
+
 task sourceJar(type: Jar) {
+    outputs.cacheIf { true }
     from sourceSets.main.allJava
     archiveClassifier = 'sources'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
+    outputs.cacheIf { true }
     from javadoc.destinationDir
     archiveClassifier = 'javadoc'
 }
